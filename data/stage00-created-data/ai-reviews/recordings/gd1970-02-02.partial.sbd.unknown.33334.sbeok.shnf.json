@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard recording featuring a beautiful Dark Star into St. Stephen and a solid Mason's Children fragment.",
+  "review": "The partial show shines with an exquisite Dark Star that flows seamlessly into St. Stephen, capped by a brief but enjoyable Mason’s Children segment. Reviewers rave about the crystal‑clear soundboard source, calling it “excellent” and noting the recording captures the band at its best for this era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All detailed reviews praise both performance (standout Dark Star/St Stephen) and technical quality (soundboard excellent), yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with no reported drop‑outs or muddiness; reviewers liken it to a fresh afternoon soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "St. Stephen",
+      "Mason's Children"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Partial set flows nicely: Dark Star → St. Stephen → Mason’s Children, with the first two highlighted as superb moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mason's Children": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T15:18:08.785289+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-02-02.partial.sbd.unknown.33334.sbeok.shnf"
+}

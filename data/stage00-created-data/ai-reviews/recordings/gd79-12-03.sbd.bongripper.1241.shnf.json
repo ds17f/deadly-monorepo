@@ -1,0 +1,40 @@
+{
+  "summary": "Soundboard‑derived recording of an impressive Uptown Theater show, highlighted by a tight band and a standout Althea performance.",
+  "review": "Both reviewers give the concert strong marks, noting that the band was exceptionally tight and that Bob Weir’s playing left a big impression. The Althea rendition is singled out as a personal favorite, and Jerry’s vocal tone is described as sounding like he’s smiling. No concrete comments on recording fidelity were offered, so technical quality remains uncertain.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two consistent 4‑star reviews praise the musical performance strongly; lack of recording‑specific feedback limits certainty about audio quality, resulting in a solid but not exceptional overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not comment on sound clarity, mix balance, or any recording issues; the filename suggests a soundboard source but no audible assessment is provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert featured an unusual three‑song finish (Althea, St. of Circumstance, Johnny B. Goode) that impressed the reviewer; overall the band played tight and kept the audience guessing, a hallmark of classic Dead shows."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal tone sounded like he was smiling, adding a warm vibe to the performance.",
+    "Phil": "",
+    "Bob": "Weir made a big impression; his playing was described as awesome.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:48:58.235224+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-12-03.sbd.bongripper.1241.shnf"
+}

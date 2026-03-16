@@ -1,0 +1,55 @@
+{
+  "summary": "Soundboard capture of a transformative New Year's show – Midnight Hour shines, Dark Star runs deep – but the tape suffers from occasional clipping and high‑level distortion.",
+  "review": "Fans rave about this late‑1989 New Year’s performance, calling it a life‑changing set with an outstanding Midnight Hour and a haunting half‑Dark Star. The Charlie Miller board is praised for its crispness by some listeners, yet several note severe clipping and over‑driven levels that make parts of the recording harsh. Overall the music outweighs the technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews celebrate the musical performance (multiple 5‑star comments, standout song praise) while recording quality receives mixed feedback; weighting favours the strong show, yielding a solid 4‑plus rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Clipping and overly high input levels reported by several reviewers (cassette‑deck feel, fried levels), but others note higher volume, crisper sound and praise Charlie Miller's boards."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Midnight Hour",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "New Year's fanfare leads into a memorable second‑set opener; Bill Kreutzmann’s final NYE appearance is highlighted, giving the show an emotional arc."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann's last New Year's drumming is specifically praised and remembered as a special moment."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "BBM": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T02:48:26.337138+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-12-31.prefm.miller.23574.sbeok.shnf"
+}

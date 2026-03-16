@@ -1,0 +1,39 @@
+{
+  "summary": "Enthusiastic fan praise for a Dark Star performance, though recording details are unclear",
+  "review": "The sole reviewer gave the tape a perfect five‑star rating, calling it “Wow!” and highlighting Dark Star as the standout moment. No information is provided about the source or audio fidelity, so the technical quality remains unknown while the musical impression is unmistakably positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Only one brief, enthusiastic review; strong indication of a great performance but no data on recording quality limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer did not comment on sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Insufficient detail to assess set pacing or flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T05:50:53.041404+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-29.149594.5-1.tobin.flac1648"
+}

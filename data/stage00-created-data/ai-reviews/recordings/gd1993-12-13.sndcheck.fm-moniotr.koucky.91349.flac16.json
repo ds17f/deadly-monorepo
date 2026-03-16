@@ -1,0 +1,39 @@
+{
+  "summary": "A rough soundcheck recording with uneven performance; Vince's keyboard work draws criticism.",
+  "review": "The tape captures a quirky sound‑check featuring a piano/drum run‑through of the Doors’ “Love Me Two Times” and a sloppy rendition of “I Fought The Law.”  Recording quality is only fair, typical of a board feed from a rehearsal, and the performance suffers from tentative keyboard work that some reviewers suspect was aided by a drum machine.  Overall the show feels more like a garage‑band experiment than a polished Dead concert.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "medium",
+    "rationale": "Both reviews are low (2‑3 stars) and focus on weak performance and amateurish sound, yielding a below‑average rating despite the recording being only modestly listenable."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Soundcheck capture with piano/drum track; not polished, some lo‑fi character but generally understandable. No specific complaints about clarity beyond the informal nature of the source."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "I Fought The Law"
+    ],
+    "setlist_flow": "A disjointed soundcheck set rather than a structured concert, featuring brief runs through songs with little cohesion."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's keyboard playing is criticized as sounding wrong; reviewer speculates a drum machine was used to mask rehearsal shortcomings.",
+    "Drums": "Possible use of a drum machine for Vince is mentioned, but no direct comments on the drummer."
+  },
+  "song_mentions": {
+    "I Fought The Law": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:43:31.401911+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-12-13.sndcheck.fm-moniotr.koucky.91349.flac16"
+}

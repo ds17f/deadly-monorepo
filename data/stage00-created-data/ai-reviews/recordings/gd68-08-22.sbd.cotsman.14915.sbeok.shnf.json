@@ -1,0 +1,81 @@
+{
+  "summary": "High‑quality soundboard source that captures a blistering August ’68 show highlighted by an epic Alligator > Caution jam, soaring Dark Star and tight The Eleven.",
+  "review": "The recording is a mostly stereo sound‑board capture with excellent clarity on the second set; occasional mono bleed and brief cuts in the first half keep it from being flawless. Musically the performance is lauded as one of the band’s early‑summer peaks – a monster Dark Star, fiery Alligator > Caution, tight The Eleven and a powerhouse Other One dominate the praise. Reviewers repeatedly note Jerry’s soaring leads, Phil’s aggressive bass duels and Bill’s drum fireworks, making this a must‑listen for 1968 Dead fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Over two dozen reviews overwhelmingly rate the show 4–5 stars and cite standout jams; recording quality is praised as the best available source despite minor mono sections, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Stereo sound‑board capture (256 kbps MP3) with very clear instrument separation on the second set. First‑set material is mono and shows a few clipping artifacts (St. Stephen intro) and brief cuts in Dark Star/Other One, but overall the mix is clean and lively."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Alligator > Caution",
+      "The Eleven",
+      "St. Stephen",
+      "Death Don't Have No Mercy",
+      "The Other One",
+      "New Potato (Caboose)",
+      "Good Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A shaky opening (partial mono St. Stephen) gives way to a soaring second set where the band rides a wave of intensity, moving from The Eleven into a masterful Dark Star and then an explosive Alligator‑Caution sequence that culminates in a powerful Good Night."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for endless runs, soaring solos (Alligator, Caution) and strong vocal presence; his tone is described as “full bloom” and “beyond amazing.”",
+    "Phil": "Noted for aggressive, almost funky bass lines, dueling with Jerry in The Eleven, and a rare extended solo during New Potato.",
+    "Bob": "",
+    "Keys": "References to “perfect organ embellishments” (likely Pigpen/keyboard) during Death Don't; otherwise no explicit keyboard commentary.",
+    "Drums": "Bill’s drumming described as “going nuts,” with a notable drum solo in the Alligator jam and tight, energetic support throughout."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Alligator > Caution": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "The Eleven": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "New Potato (Caboose)": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Good Night": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-24T08:52:56.680718+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-08-22.sbd.cotsman.14915.sbeok.shnf"
+}

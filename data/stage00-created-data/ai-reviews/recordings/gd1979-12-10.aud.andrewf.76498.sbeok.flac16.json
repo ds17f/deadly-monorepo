@@ -1,0 +1,39 @@
+{
+  "summary": "Muddy audience recording captures an outstanding, high‑energy Truckin' performance.",
+  "review": "The two fan reviews agree the source is an audience tape that suffers from hiss and a generally muddied sound, making it less than ideal for audiophiles.  However, the show itself shines – especially the Truckin' that one reviewer calls possibly the best ever, indicating strong energy and musical fire despite the recording limitations.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show quality is praised (especially Truckin') while recording quality is noted as poor/muddy; weighted average yields a solid >4‑star rating but limited review count reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Muddied by hiss and background noise; overall clarity is compromised, though the performance can still be heard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure; reviewers highlight high energy but give no specifics about pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T03:20:31.422882+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-10.aud.andrewf.76498.sbeok.flac16"
+}

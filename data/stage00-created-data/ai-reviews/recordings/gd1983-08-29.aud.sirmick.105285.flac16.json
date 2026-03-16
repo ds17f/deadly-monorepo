@@ -1,0 +1,31 @@
+{
+  "summary": "Audience recording with mixed sound quality – praised for tight bass and opera‑house ambience by one reviewer, but others report blown‑out, saturated levels making it unlistenable.",
+  "review": "The show itself receives little commentary beyond a note that the Hult Center bass sounded tight and perfect. Recording quality is contentious: some listeners describe an amazing, clear balcony capture, while others say the levels are completely blown out and the tape is practically unlistenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Three reviews give widely divergent scores (0, 1, 5) and conflicting remarks about audio quality; with no musical details, the rating leans low due to prevalent complaints of blown‑out levels."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers note totally blown‑out and saturated levels making parts unlistenable; one reviewer praises the tight, perfect bass and an opera‑house‑like ambience from a balcony position."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or song flow were provided in the reviews."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Bass described as tight and perfect by one reviewer.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T09:10:35.335900+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-08-29.aud.sirmick.105285.flac16"
+}

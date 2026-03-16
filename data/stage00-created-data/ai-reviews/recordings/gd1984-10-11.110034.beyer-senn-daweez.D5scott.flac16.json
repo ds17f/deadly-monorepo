@@ -1,0 +1,39 @@
+{
+  "summary": "Good‑sounding source with fuller mids and a solid mid‑80s performance, only marred by a brief flub on \"Playing in the Band\".",
+  "review": "The reviewer praises the Beyer/Sen 421 combo capture for its fullness and reduced boom, noting it sounds better than most other sources. The show is described as a solid warm‑up during a strong two‑night run, with only a minor slip at the start of \"Playing in the Band\". Recording quality is generally good, though the reviewer had to splice in a drum track to fill missing bits.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Single detailed review rates the show 4 stars, highlighting strong sound and performance with only minor issues; confidence is medium due to limited sample size."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Fuller mids, less boomy than other sources; some missing sections required splicing in a drum track; overall clear and balanced despite minor gaps."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Playing in the Band"
+    ],
+    "setlist_flow": "Described as a solid warm‑up show during a two‑night run, maintaining consistent energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:49:33.085650+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-11.110034.beyer-senn-daweez.D5scott.flac16"
+}

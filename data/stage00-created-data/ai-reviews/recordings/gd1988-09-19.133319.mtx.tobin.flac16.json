@@ -1,0 +1,39 @@
+{
+  "summary": "Weak performance with sub‑par Jerry guitar work and a lazy China Doll; recording source not identified.",
+  "review": "The sole reviewer found the concert disappointing, calling out Jerry Garcia’s poor form and describing the second set as a sloppy practice session that culminated in a lackluster China Doll. No comments were made about the audio source or fidelity, so the technical quality remains unclear.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one review, rating it 2 stars and focusing on negative musical aspects; insufficient data for a higher confidence assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not mention sound quality, mix, or source type, leaving recording characteristics unclear."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "China Doll"
+    ],
+    "setlist_flow": "Second set described as a two‑song practice jam followed by a lazy rendition of China Doll; overall performance deemed sloppy."
+  },
+  "band_member_comments": {
+    "Jerry": "Not in good form according to reviewer.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Doll": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T14:06:26.020645+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-19.133319.mtx.tobin.flac16"
+}

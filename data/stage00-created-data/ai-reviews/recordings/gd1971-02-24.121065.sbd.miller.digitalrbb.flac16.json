@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard recording with superb stereo imaging and a full Good Lovin', highlighted by strong set‑closing performances.",
+  "review": "The three fan reviews praise the high‑fidelity, soundboard source – noting crisp stereo separation that places Bobby’s guitar on one side and the other mix on the opposite ear. The show itself is well received, especially the unedited Good Lovin' and the powerful closing numbers that “Pig” (Phil) steals the spotlight with.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "All three reviewers give 4‑5 stars, highlighting both a clean soundboard capture and strong musical moments; limited sample size yields medium confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Stereo imaging praised (right/left separation of guitars), full Good Lovin' retained, no chopping or drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set closers are singled out as a highlight, with the performance of “Pig” (Phil) stealing attention at the end of the show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "\"Pig steals this one hands down with the set closing numbers\" – positive nod to Phil’s impact on the close.",
+    "Bob": "\"Bobby's guitar in my right ear\" – clear mention of Bob Weir’s guitar presence and tone.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T03:19:11.495800+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-02-24.121065.sbd.miller.digitalrbb.flac16"
+}

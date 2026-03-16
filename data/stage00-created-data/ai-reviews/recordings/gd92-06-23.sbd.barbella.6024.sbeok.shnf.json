@@ -1,0 +1,70 @@
+{
+  "summary": "Soundboard recording of a mixed‑quality show where the soaring “So Many Roads” and a blistering New Speedway Boogie dominate an otherwise uneven set.",
+  "review": "The SBD capture is clear enough to enjoy Garcia’s vocal power on New Speedway Boogie and his screaming climax on So Many Roads, though occasional tape‑gen hiss is noted. Musically the concert shines in the first‑set highlights (Speedway Boogie, Stagger Lee) but the second set receives mixed reactions, with some fans calling it jam‑less while others love the Help‑Slip‑Franklin’s sequence. Overall the performance is memorable for its emotional peaks despite an uneven setlist.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the So Many Roads and first‑set moments, and the soundboard source is described as decent to good; a few negative comments about setlist balance keep the rating just above four."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD with some cassette‑gen hiss and occasional tape noise, but overall listenable and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads",
+      "New Speedway Boogie",
+      "Help > Slipknot! > Franklin's Tower",
+      "Stagger Lee"
+    ],
+    "poor_songs": [
+      "Long Way to Hear This",
+      "Corinna"
+    ],
+    "setlist_flow": "First set is praised for energy and strong solos, while the second set is described as uneven—some find it jam‑less or poorly sequenced, though a few enjoy the Help‑Slip‑Franklin’s transition."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocal howl on New Speedway Boogie and his soaring scream at the end of So Many Roads are repeatedly highlighted; his tone and solo work (especially Stagger Lee) receive strong praise, though a few note occasional volume drops.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince’s synth chords during the Help‑Slip transition are criticized for sounding weak; otherwise keyboards are not a major focus of the reviews.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 8,
+      "negative_mentions": 2,
+      "total_mentions": 10
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Help > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Stagger Lee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mobile/Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T07:39:52.163731+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-23.sbd.barbella.6024.sbeok.shnf"
+}

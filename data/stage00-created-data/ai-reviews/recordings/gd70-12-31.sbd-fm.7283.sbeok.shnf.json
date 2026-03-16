@@ -1,0 +1,99 @@
+{
+  "summary": "High‑energy New Year’s Eve show with standout Good Lovin' and The Other One, but a patchy matrix source that sounds decent only after the first five tracks.",
+  "review": "Fans rave about the raw energy of this late‑1970 Winterland gig – Good Lovin', Cryptical Envelopment → Drums → The Other One and Monkey are repeatedly called out as highlights.  The recording, however, is a mixed matrix: early songs are fast, muffled and pitch‑unstable, while later cuts are clean stereo soundboard material, leaving the overall listening experience uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Performance is praised by most reviewers (≈4‑5 ★) while recording quality receives mixed to poor scores (≈2‑3 ★). Weighted average yields a solid 3.6 ★."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "First five tracks sound fast, muffled and have pitch problems; later songs are clean stereo soundboard with occasional tape hiss. Audience‑sounding sections (China Cat/IKYR) are poor, and a few cuts/fades are noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'",
+      "The Other One",
+      "Cryptical Envelopment > Drums > The Other One",
+      "Black Peter > Sugar Magnolia",
+      "Monkey"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "Cold Rain & Snow",
+      "Easy Wind",
+      "Cumberland Blues",
+      "I Know You Rider"
+    ],
+    "setlist_flow": "The set opens with a hurried, low‑fidelity burst that settles into tighter playing; after the first half the band loosens up and delivers several classic jams, giving the show an overall upbeat arc despite technical hiccups."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned busting a taper in the audience; no specific critique of his guitar work.",
+    "Phil": "Also noted busting a taper; otherwise not singled out.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Monkey": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Easy Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T02:04:39.123122+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-12-31.sbd-fm.7283.sbeok.shnf"
+}

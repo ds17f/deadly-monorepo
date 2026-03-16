@@ -1,0 +1,31 @@
+{
+  "summary": "A 4‑star rating with enthusiastic thanks but no details on sound or performance.",
+  "review": "The reviewer gave the recording a solid four‑star rating and expressed gratitude for its availability, even linking to the UPSers community site. No specific comments were made about the audio fidelity, source type, or musical highlights of the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only one brief review; while the rating is positive (4 stars), there are no details on either recording quality or performance to justify a higher score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T23:28:47.789542+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-17.147684.schoepsCMC5MK4.ebel.flac16"
+}

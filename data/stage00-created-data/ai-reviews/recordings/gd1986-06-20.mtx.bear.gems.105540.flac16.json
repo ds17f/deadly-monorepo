@@ -1,0 +1,39 @@
+{
+  "summary": "Decent performance with a standout Good Lovin! rap, but the matrix recording suffers from feedback and squeaky sound throughout.",
+  "review": "The show is praised as a nice Greek gig with memorable moments like the Bobby‑Jerry rap in Good Lovin! and a solid encore featuring Quinn. However, listeners note that the sound is off all night – feedback and squeaking dominate, making the matrix mix only fair despite being an upgrade over other versions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "low",
+    "rationale": "One review highlights a good performance but repeatedly complains about poor sound quality; the rating reflects a decent show hampered by technical flaws."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Feedback, squeaking and overall off‑sound reported throughout the night; reviewer says it's a little better than other recordings but still problematic."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin!"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall a nice set with an enjoyable encore, though the poor audio detracts from the flow."
+  },
+  "band_member_comments": {
+    "Jerry": "His rap in Good Lovin! is highlighted as a fun moment.",
+    "Phil": "",
+    "Bob": "Bobby (Bob) joins Jerry on the Good Lovin! rap, noted positively.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:05:00.809168+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-06-20.mtx.bear.gems.105540.flac16"
+}

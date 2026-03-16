@@ -1,0 +1,71 @@
+{
+  "summary": "A powerhouse Alpine ’81 second set with Lost Sailor→Saint and a soaring Truckin', captured in crisp soundboard early on but later marred by audience‑filled (AUD) sections.",
+  "review": "The performance shines – Jerry’s tone is on fire, the Lost Sailor > Saint sequence is inspired, He’s Gone flows into an epic Truckin' and the post‑drum jam into The Other One is a highlight. Recording quality is split: the first half is clean soundboard material, while the latter portion falls back to an audience (AUD) source that sounds thinner and less defined.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (average ~4.6/5) while noting a drop in audio fidelity after the drum segment (recording average ~3.5/5). Weighted combination yields ~4.3 stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Front‑half is crisp soundboard with excellent clarity, high‑end sparkle and natural cymbals; later sections switch to an AUD (audience) filler that sounds thinner, dynamic range a bit squashed and overall less detailed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "He's Gone",
+      "Truckin'",
+      "The Other One",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "Second set is a continuous high‑energy ride – Sailor>Saint kicks off, He’s Gone segues smoothly into an expansive Truckin', followed by a hot jam that leads into Drums/Space and a strong Other One. The transition into Stella Blue feels abrupt but remains musically satisfying."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring tone, inspired playing on Sailor>Saint, hot pre‑drum work and overall fire throughout the set.",
+    "Phil": "Noted for heavy, unusual fingering during the jam sections (especially on Truckin').",
+    "Bob": "Occasional lyrical flubs on Truckin' but his energy lifts the performance; vocal treatment sometimes mars The Other One.",
+    "Keys": "Brent’s interplay with Jerry on Lost Sailor highlighted; keyboard texture described as “liquid” and adds depth.",
+    "Drums": "Bill Kreutzmann’s drum segment is a classic ’81 jam; Billy’s whistle intro on Truckin' is singled out as a highlight."
+  },
+  "song_mentions": {
+    "Lost Sailor": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Saint Of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T13:05:10.604554+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-07-11.set2-sbd.fink.14020.sbeok.shnf"
+}

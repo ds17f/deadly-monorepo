@@ -1,0 +1,76 @@
+{
+  "summary": "Excellent soundboard capture of the Shoreline ’94 show, highlighted by a soaring Terrapin Station and stellar Stella Blue despite a sloppy first set.",
+  "review": "The Miller‑remastered SBD delivers crystal‑clear audio that lets listeners hear every nuance of this 1994 Shoreline performance. While the early part of the concert is described as sloppy and tired, the second set shines with a powerful Terrapin Station, a phenomenal Stella Blue, and an extended Drums‑Space‑I Need a Miracle suite. Overall the show is praised for its high points even though the first half leaves something to be desired.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Recording quality is rated excellent by multiple reviewers; musical performance has mixed feedback (sloppy early set but strong second‑set highlights) resulting in a weighted average around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Remastered Miller SBD praised as crisp and clear; no significant dropouts or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Stella Blue",
+      "Baby Blue",
+      "Jack Straw",
+      "Ramble On Rose",
+      "Drums > Space > I Need a Miracle"
+    ],
+    "poor_songs": [
+      "Pre‑Terrapin first set (general sloppy performance)"
+    ],
+    "setlist_flow": "First set is described as uneven and sluggish, but momentum builds after Terrapin Station, leading to a tight Drums/Space segment and strong second‑set closers."
+  },
+  "band_member_comments": {
+    "Jerry": "Early in the show Jerry sounds out of the loop and sloppy; later he 'brutally slays' Terrapin Station and rescues the performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drums segment is highlighted as solid and expansive (28‑minute Drums>Space>I Need a Miracle)."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Peggy O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums > Space > I Need a Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T01:25:17.387105+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-09-17.sbd.miller.119979.flac16"
+}

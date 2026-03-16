@@ -1,0 +1,74 @@
+{
+  "summary": "High‑quality matrix capture of the wild 1985 Greek finale, highlighted by a smoking Half‑Step > Promised Land and a powerful Cryptical > The Other One sequence despite some uneven moments.",
+  "review": "The Chappy matrix delivers crystal‑clear sound that lets the band’s 85‑era energy shine through. While Jerry’s vocals and guitar are occasionally off‑kilter, the set features standout moments like Half‑Step into Promised Land, a ferocious Cryptical > The Other One suite, and an inspired Brokedown Palace, all supported by Brent’s lush organ and Mickey’s thunderous drums.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the matrix sound and highlight several strong performances; a few note uneven playing, yielding an overall solid but not flawless show."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑balanced matrix mix that fills in audience ambience; occasional PA hiccups and slight unevenness noted by a reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half-Step > Promised Land",
+      "Cryptical Envelopment > The Other One > Cryptical Envelopment",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Midnight Hour",
+      "Scarlet Begonias"
+    ],
+    "setlist_flow": "First set feels a bit disjointed with Jerry out of sync, but the second set builds momentum with strong transitions and an expansive drum‑space segment, delivering a wild 1985 vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Struggles early (sour tone on Midnight Hour) and voice deterioration noted, but later delivers raunchy solos and powerful vocals on Cryptical.",
+    "Phil": "Provides the loudest, most forceful bass of the night, especially during The Other One.",
+    "Bob": "Steps in to save the set with strong performance on \"L.L. Rain\" (LL Rain).",
+    "Keys": "Brent’s organ adds beautiful textures throughout, highlighted in the Cryptical suite.",
+    "Drums": "Mickey’s beam work shines; tribal drum interplay creates a memorable space/space segment."
+  },
+  "song_mentions": {
+    "Midnight Hour": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half-Step > Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment > The Other One > Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T04:59:45.346430+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-16.matrix.chappell.85833.sbeok.flac16"
+}

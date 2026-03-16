@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent audience recording of a late‑80s Brent‑focused show, highlighted by Hey Pocky Way, Believe It Or Not and the hilarious Blackbird blooper.",
+  "review": "The tape captures a fun, high‑energy 1988 performance where Brent Mydland shines on keyboards and backup vocals, especially on Hey Pocky Way and Women Are Smarter. Standout moments include the rare Jerry‑led Believe It Or Not and the comical Blackbird mishap that got the whole audience laughing. The audience‑sourced recording is clear, well‑balanced and far superior to other tapes of this show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All three reviews are highly positive (4–5 stars) and praise both the musical performance and the recording quality; consistent comments allow a confident high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp capture with minimal muddiness; audience mic placement (Shure SM57) provides good balance and captures crowd reactions and laughter."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hey Pocky Way",
+      "Women Are Smarter",
+      "Blackbird",
+      "Believe It Or Not",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth, energetic set that showcases Brent's keyboard work and vocal harmonies; playful moments like the Blackbird blooper keep momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Delivers a heartfelt performance of the rare \"Believe It Or Not\" and joins in the laughter during Blackbird.",
+    "Phil": "",
+    "Bob": "Shares in the on‑stage laughter during the Blackbird mishap.",
+    "Keys": "Brent Mydland is highlighted as being at his best, with standout keyboard playing and backup vocals throughout.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hey Pocky Way": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Women Are Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blackbird": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Believe It Or Not": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T10:03:35.716544+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-06-23.127253.shureSM57.chuckm.flac16"
+}

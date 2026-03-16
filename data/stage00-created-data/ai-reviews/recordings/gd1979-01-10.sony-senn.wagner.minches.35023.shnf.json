@@ -1,0 +1,39 @@
+{
+  "summary": "Recording is poor – key Dark Star segment is almost gone and mic information was listed incorrectly.",
+  "review": "Both reviewers lament that the show’s centerpiece, Dark Star, is virtually absent from this source, making the recording largely unusable for fans seeking that performance. In addition, the original mic configuration was mis‑identified, further undermining confidence in the technical fidelity of the tape.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.5,
+    "confidence": "low",
+    "rationale": "Only two brief, zero‑star reviews focus on missing music and incorrect source details, indicating a very negative perception with limited data."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Key Dark Star portion missing; original mic list wrong (two Sony 54P + one Sennheiser 441)."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Dark Star"
+    ],
+    "setlist_flow": "Not discussed; reviewers only note the loss of a major highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T18:52:04.334582+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-10.sony-senn.wagner.minches.35023.shnf"
+}

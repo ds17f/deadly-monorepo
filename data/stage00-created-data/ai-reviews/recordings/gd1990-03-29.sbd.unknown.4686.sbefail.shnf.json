@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording with subdued vocals; Brent forgets lyrics on 'We Can Run', the only notable slip.",
+  "review": "The mix is clear but the vocal level sits low, making it hard to hear the singers. Brent's keyboard work is solid overall, though he missed a few words during 'We Can Run'. The performance itself is unremarkable aside from that lyrical stumble.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "low",
+    "rationale": "Only one brief review; 4‑star rating suggests a generally positive view, but the noted vocal mix issue and lyric slip keep the overall score in the mid‑range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Vocals are low in the mix; otherwise clear instrumentally. No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "We Can Run"
+    ],
+    "setlist_flow": "No specific comments on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent missed words during 'We Can Run'.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "We Can Run": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T05:47:08.750007+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-29.sbd.unknown.4686.sbefail.shnf"
+}

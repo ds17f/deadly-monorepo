@@ -1,0 +1,31 @@
+{
+  "summary": "Great show and recording praised by one reviewer, but another flags poor audio quality",
+  "review": "One fan gives the performance a glowing five‑star rating, calling both the music and the tape “great” despite an overly R&B ending. Another reviewer rates it zero stars and tags the file SSIA, indicating they found the audio substandard. With such divergent feedback and no concrete details on source type, the overall impression is mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only two brief reviews with opposite ratings; one praises both show and recording, the other condemns the audio, leading to an average rating and low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "One reviewer calls it a great recording, while another labels it SSIA (substandard), giving mixed signals about clarity and fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The set is generally praised, though one comment notes an overly R&B‑styled ending that may feel out of place to some listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T09:03:11.583085+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-07.nak700.glassberg.motb.82371.sbeok.flac24"
+}

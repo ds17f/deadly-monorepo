@@ -1,0 +1,98 @@
+{
+  "summary": "Soundboard capture of a solid 1994 MSG show with standout Bird Song, epic Terrapin, rare Spoonful and strong overall performance.",
+  "review": "The concert is praised for its unique first‑set flow, a soaring Bird Song, a marathon 23‑minute Terrapin with an unforgettable coda, and the rarity of a stand‑alone Spoonful. Reviewers note that the soundboard recording is very good and clear, letting Jerry’s vocal phrasing and Vince’s organ solo shine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Two detailed reviews highlight a high‑quality performance with several standout songs; recording is described as very good, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the audio as very good with no major issues; clear soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Terrapin",
+      "Spoonful",
+      "So Many Roads",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is noted as unique and fun with a rare stand‑alone Spoonful; the second set builds to an epic Terrapin featuring a long ’90s‑era coda, and the show closes emotionally with Brokedown Palace."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal phrasing and improvisational guitar work are highlighted, especially new melodic discoveries in jams.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince delivers a notable organ solo; keyboards add texture throughout.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack A Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "If the Shoe fits": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mags": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:50:23.285505+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-19.137089.sbd.miller.flac1648"
+}

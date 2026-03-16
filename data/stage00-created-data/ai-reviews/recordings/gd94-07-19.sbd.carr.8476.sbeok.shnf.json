@@ -1,0 +1,100 @@
+{
+  "summary": "Pristine digital soundboard capture of the 7‑19‑94 Deer Creek show where a monster 17‑minute “Playin’ in the Band” and a scorching “Throwing Stones” dominate, while opinions on “Foolish Heart” remain divided.",
+  "review": "The recording is an excellent SBD (digital soundboard) with crystal‑clear guitar tone and punchy drums, making the legendary Playin' jam and Throwing Stones sequence shine.  The performance is generally strong – a snappy Shakedown opener, solid first set, and a second set that erupts into one of the era’s most celebrated jams – but “Foolish Heart” splits listeners, some calling it a highlight, others the worst of the run.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 20 reviews provide consistent praise for the recording quality (excellent digital SBD) and for key musical moments (Playin', Throwing Stones).  Mixed comments about Foolish Heart and a few weaker songs pull the overall impression down slightly, yielding a strong‑plus rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Digital SBD described as \"perfect\", crisp guitar tone, clear percussion and vocals.  A few reviewers note minor quirks (e.g., occasional choppiness), but overall the mix is balanced and very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' in the Band",
+      "Throwing Stones",
+      "Foolish Heart",
+      "Shakedown"
+    ],
+    "poor_songs": [
+      "Broken Arrow",
+      "Cheesy Answers"
+    ],
+    "setlist_flow": "Strong, snappy opener (Shakedown → Jack‑A‑Roe → Big River), a middling first set that builds into an explosive second set highlighted by the 17‑minute Playin' > Drum jam > Wharf Rat arc and a fiery Throwing Stones.  The show’s momentum peaks in the second half, despite occasional lyrical slips."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for inventive, crisp guitar tone during Playin', powerful vocals on Foolish Heart (though some note lyric slip‑ups), and overall strong presence; a few note he sounded “out of it” at times.",
+    "Phil": "Highlighted as a top performer in the jam, taking melodic leads and driving the psychedelic intensity of Playin'.",
+    "Bob": "",
+    "Keys": "Generally competent (one reviewer mentions “Vince even plays competently”), no standout solos noted.",
+    "Drums": "Percussion receives strong accolades – the Throwing Stones groove and the post‑Playin' drum jam are described as powerful, with crisp, audible drums throughout."
+  },
+  "song_mentions": {
+    "Playin' in the Band": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Throwing Stones": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Foolish Heart": {
+      "positive_mentions": 6,
+      "negative_mentions": 4,
+      "total_mentions": 10
+    },
+    "Shakedown": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Broken Arrow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cheesy Answers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Saint": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "\"I Want to Tell You\"": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T23:37:04.970109+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-07-19.sbd.carr.8476.sbeok.shnf"
+}

@@ -1,0 +1,66 @@
+{
+  "summary": "Scorching Black Peter and epic China>Rider>High Time drive this '70 set",
+  "blurb": "The show bursts open with a fiery Black Peter and rolls into a blistering China Cat Sunflower > I Know You Rider > High Time suite. Highlights include a ferocious The Other One, a monster Turn On Your Lovelight, and high‑octane drumming that keeps the momentum rolling.",
+  "review": "March 7, 1970 at Santa Monica Civic Auditorium captures the Dead in top form. Jerry’s guitar is “mind‑numbingly fast” on The Other One and soars over Black Peter, while his vocals shine on Good Lovin'. Phil lays down a “machine‑gun” bass intro that drives the groove into the drum break and beyond. Bob burns through the Rider section of the China>Rider sequence, adding crisp leads that complement Pigpen’s powerful vocal delivery – even if organ solos are scarce. The dual drummers unleash a tribal, high‑energy Drums segment that propels the Not Fade Away → Good Lovin' transition into an unforgettable The Other One and culminates in a monster Turn On Your Lovelight. Despite typical 1970 audience hiss and occasional splices, the tape is surprisingly listenable and captures the concert’s intensity.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 24,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "The single audience recording describes the performance with overwhelmingly positive language – scorching Black Peter, epic China>Rider>High Time suite, fierce The Other One and monster Lovelight – and lists no poor songs or major musical flaws. Though the source is an audience tape (mixed technical quality), the sentiment toward the playing itself is clearly positive, warranting a moderate +0.8 adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.8 = 3.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-03-07.aud.hanno.6156.sbeok.shnf",
+    "reason": "Despite typical audience hiss, the tape is surprisingly listenable and captures the show’s intensity, making it the most complete source of this performance."
+  },
+  "key_highlights": [
+    "Scorching Black Peter that launches the set.",
+    "Epic China Cat Sunflower > I Know You Rider > High Time suite ignites the second half.",
+    "Fierce The Other One and monster Turn On Your Lovelight keep the energy high.",
+    "High‑octane, tribal‑like Drums segment propels the flow into Good Lovin' and beyond."
+  ],
+  "song_highlights": [
+    "Black Peter",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "High Time",
+    "The Other One",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s tone is blistering and his solos on Black Peter and The Other One are described as “mind‑numbingly fast,” with a beautiful vocal on Good Lovin'.",
+    "Phil": "Lesh delivers a “machine‑gun” bass intro into Good Lovin' and provides a driving, punchy low end throughout the set.",
+    "Bob": "Weir’s rhythm/lead work burns through the Rider portion of the China>Rider sequence, adding crisp, energetic leads.",
+    "Pigpen": "Pigpen’s vocals are powerful – “delivers like a man” – and his stage antics heighten the show’s excitement, though organ solos are largely absent.",
+    "Mickey": "Hart contributes a tribal‑like, high‑energy Drums segment that propels the NFA → Good Lovin' transition.",
+    "Billy": "Kreutzmann matches Hart in delivering a driving, high‑octane drum performance that fuels the jam flow."
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-19T17:17:03.044507+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Black Peter"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider",
+      "High Time"
+    ],
+    [
+      "Not Fade Away",
+      "Drums",
+      "Good Lovin'",
+      "The Other One",
+      "Turn On Your Lovelight",
+      "Not Fade Away"
+    ]
+  ]
+}

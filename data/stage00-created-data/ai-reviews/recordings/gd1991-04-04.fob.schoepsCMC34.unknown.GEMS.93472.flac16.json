@@ -1,0 +1,57 @@
+{
+  "summary": "A well‑rehearsed, in‑sync 1991 show with standout versions of Terrapin Station, Ramble on Rose, Help on the Way and He's Gone, captured in a great‑sounding recording.",
+  "review": "Both reviewers rave about the tight, rehearsed playing of the band – noting Garcia, Lesh, Weir, Hart, Kreutzmann, Welnick and Hornsby – and highlight several superb song performances. The recording is praised as “great,” though no technical details are given, making it a highly enjoyable listen overall.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Both reviews are very positive (5 and 4 stars) and emphasize strong musical performance; recording quality is described as great, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it a “great recording” with no reported flaws; no specifics on soundboard vs. audience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station (TLEO)",
+      "Ramble on Rose",
+      "Help on the Way (HSF)",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The band is described as well‑rehearsed and in sync, cutting heads across all three nights, indicating a smooth, energetic flow throughout the set."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised as part of an in‑sync, well‑rehearsed band.",
+    "Phil": "Mentioned among the tight rhythm section contributing to the show's cohesion.",
+    "Bob": "Included in the list of players delivering a polished performance.",
+    "Keys": "Bruce Hornsby noted for his keyboard work adding depth to the set.",
+    "Drums": "Bill Kreutzmann and Mickey Hart highlighted as part of the solid, synchronized rhythm foundation."
+  },
+  "song_mentions": {
+    "Terrapin Station (TLEO)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way (HSF)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:19:42.394809+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-04.fob.schoepsCMC34.unknown.GEMS.93472.flac16"
+}

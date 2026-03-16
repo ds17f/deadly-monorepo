@@ -1,0 +1,44 @@
+{
+  "summary": "Clear audience recording with a slight pitch issue; Stella Blue shines as the highlight.",
+  "review": "Both reviewers praise the audio for its clarity and well‑rounded sound, noting only a minor quarter‑tone sharpness on the song \"Cassidy.\" The performance of \"Stella Blue\" is singled out as especially good, making this a worthwhile listen despite the unknown set details.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Two 4‑star reviews highlight solid sound quality and a standout song; limited data on the musical performance keeps confidence low."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Very clear and well‑rounded audio; slight pitch sharpness (~¼ tone) on \"Cassidy\" noted by one reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:21:16.452579+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-12-29.nak100.holtz-bolton.jaz.105032.flac16"
+}

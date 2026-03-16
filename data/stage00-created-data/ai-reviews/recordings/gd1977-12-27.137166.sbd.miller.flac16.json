@@ -1,0 +1,100 @@
+{
+  "summary": "Crisp Miller soundboard capture of a solid late‑1977 show, highlighted by scorching Brown Eyed Women, hot Cassidy and a one‑of‑a‑kind Samson encore.",
+  "review": "The recording delivers clear, crisp sound despite the occasional channel reversal and a need for a high‑frequency boost on the second set. Musically the concert sits in the middle of the legendary ’77 winter run – strong moments like Brown Eyed Women, Cassidy, Scarlet Begonias and the surprise Samson encore stand out, while some first‑set numbers feel a bit loose. Overall fans appreciate both the superb audio quality and the generally high‑energy performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the soundboard’s crispness and many highlight strong performances; only one review gives an average rating due to a few uneven songs, leading to a high overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, superb Miller soundboard source; channels are reversed and the second set benefits from a boost in highs. Minor EQ quirks but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brown Eyed Women",
+      "Cassidy",
+      "Scarlet Begonias",
+      "Samson"
+    ],
+    "poor_songs": [
+      "Bertha",
+      "Around & Around"
+    ],
+    "setlist_flow": "First set is uneven with a few loose moments, but the second set picks up energy and culminates in an unexpected Samson encore that lifts the whole concert."
+  },
+  "band_member_comments": {
+    "Jerry": "Emphatic statements on Cassidy and strong solo work on Scarlet Begonias; noted for “Jer’s tone” being perfect.",
+    "Phil": "",
+    "Bob": "Top playing praised, especially his rhythm guitar throughout the show.",
+    "Keys": "Keith's keyboard work highlighted as great on Brown Eyed Women and throughout the jam sections.",
+    "Drums": "The drummers engage in playful banter (watch comment) but no specific performance critique."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated>He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Around & Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:12:09.061459+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-12-27.137166.sbd.miller.flac16"
+}

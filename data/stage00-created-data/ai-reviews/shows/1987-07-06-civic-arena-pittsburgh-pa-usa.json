@@ -1,0 +1,69 @@
+{
+  "summary": "High‑energy second set with Neville Brothers & scorching Shakedown Street",
+  "blurb": "The night erupts in a blistering second set highlighted by a guest‑spot from the Neville brothers, a soaring Shakedown Street into Knockin' On Heaven's Door, and a powerhouse Samson & Delilah. Jerry’s rare skat singing and Brent’s driving keys keep the momentum rolling. Overall a solid, high‑octane show that ranks among the best of ’87.",
+  "review": "July 6, 1987 – Civic Arena, Pittsburgh. The Dead took the house on a wild ride, kicking off with a tight first set that featured a bright “Franklin’s Tower” and a gritty “Desolation Row”. But it was the second set where the magic truly ignited: “Shakedown Street” opened the set with Jerry’s exuberant skat‑singing and Brent’s chunky organ, then the Neville brothers dove in for an unforgettable “Iko Iko”/“Day‑O” medley that had the audience roaring. The momentum surged into a soaring “Knockin’ On Heaven’s Door”, capped by a rollicking “Good Lovin'”. Highlights also include a ferocious “Samson & Delilah” and the ever‑steady groove of “Johnny B. Goode”. Across multiple soundboard sources the mix is crystal‑clear, capturing every nuance from Mickey’s intense drumming on “Day‑O” to Phil’s thunderous bass surge in the “Iko Iko” jam. Even the audience recording shines with warm bass and vivid crowd sing‑alongs, making this night feel like a true “comeback party” for Garcia. In short, it’s a high‑energy, guest‑spiced showcase that stands out as one of the tour’s finest performances.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 49,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "The majority of recordings (6) describe the show in glowing terms – ‘high‑energy’, ‘scorching Shakedown Street’, ‘stellar guest spot’, and repeatedly praise Jerry’s performance and the second‑set flow. Only two mixed reviews note unevenness due to a poor matrix mix, but they still highlight strong moments like Samson & Delilah. The overall consensus is strongly positive, justifying a +1.4 sentiment boost.",
+      "final_calculation": "2.5 + 0.4 + 1.4 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd87-07-06.aud.gardner.3829.sbeok.shnf",
+    "reason": "Excellent soundboard capture with crisp, clear mix, no drop‑outs, and vivid crowd energy that showcases the Neville Brothers guest spot and high‑octane second set."
+  },
+  "key_highlights": [
+    "Neville Brothers’ electrifying guest jam on Iko Iko/Day‑O",
+    "Shakedown Street → Knockin' On Heaven's Door climax",
+    "Samson & Delilah delivers a ferocious, unforgettable performance",
+    "Jerry’s rare skat singing and comeback‑vibe energy throughout"
+  ],
+  "song_highlights": [
+    "Shakedown Street",
+    "Samson & Delilah",
+    "Iko Iko*",
+    "Banana Boat Song (Day-O)*",
+    "Knockin' On Heaven's Door",
+    "Franklin's Tower"
+  ],
+  "band_performance": {
+    "Jerry": "Energetic jumping, fine guitar tone, rare skat singing on Shakedown Street, ecstatic vocals and a clear comeback vibe that lifted the whole band.",
+    "Phil": "Solid, thunderous bass with a lightning‑fast surge during the Iko Iko jam, anchoring the high‑energy second set.",
+    "Bob": "",
+    "Brent": "Driving keyboard work that fuels the Shakedown Street jam and adds texture throughout; supportive Art Neville parts enhance the guest spots.",
+    "Mickey": "Intense drumming highlighted on Johnny B. Goode and Day‑O, adding powerful punch to the set’s climaxes.",
+    "Billy": "Solid, hard‑hitting drum work that locks in with Mickey, especially evident during the high‑energy jams."
+  },
+  "processed_recordings": 8,
+  "processed_date": "2025-09-16T00:23:01.630303+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Shakedown Street"
+    ],
+    [
+      "Samson & Delilah"
+    ],
+    [
+      "Iko Iko*",
+      "Banana Boat Song (Day-O)*",
+      "Man Smart, Woman Smarter*",
+      "Drums",
+      "Space",
+      "Knockin' On Heaven's Door",
+      "Good Lovin'"
+    ],
+    [
+      "Feel Like A Stranger",
+      "Franklin's Tower"
+    ]
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Good audience recording that captures a monster 49‑minute He's Gone > Truckin' > Playing in the Band sequence at RFK Stadium.",
+  "review": "The tape, recorded by an audience member with a Sony deck, delivers clear and immersive sound for most of the show, though a few listeners note some fuzziness. Musically the concert shines thanks to an epic He’s Gone → Truckin' → Playing in the Band stretch and a strong start with Promised Land. Overall fans are enthusiastic about both the performance and the listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Four out of five reviewers gave 5‑star praise for the show and recording, with only one noting minor audio fuzz; the performance highlights are repeatedly praised."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and immersive audience capture; a few listeners mention occasional fuzziness or less‑than‑perfect fidelity, but overall the tape is listenable and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Truckin'",
+      "Playing in the Band",
+      "Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert opens strong with Promised Land and builds into a massive 49‑minute He’s Gone → Truckin' → Playing in the Band jam, delivering a high‑energy flow that fans remember fondly."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T14:15:57.629504+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-09.sonytc.monte-barry.91236.flac16"
+}

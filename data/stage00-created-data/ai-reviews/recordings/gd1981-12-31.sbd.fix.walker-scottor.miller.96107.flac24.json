@@ -1,0 +1,39 @@
+{
+  "summary": "Acoustic set is enjoyed but Joan Baez’s vocals on “Must've Been the Roses” are harsh; recording details are not mentioned.",
+  "review": "The reviewer loves most of the acoustic portion, calling the song “Must've Been the Roses” great until the guest vocalist joins. They criticize Joan Baez’s singing as awful, yet still award a five‑star rating, indicating overall enjoyment despite that flaw. No comments are made about the recording source or sound quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one review; high star rating suggests a positive overall impression, but lack of technical details limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound quality, mix, or source type were provided by the reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Must've Been the Roses"
+    ],
+    "setlist_flow": "Acoustic set highlighted; overall performance praised except for criticism of guest vocalist Joan Baez on one song."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Must've Been the Roses": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T18:01:31.642908+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-31.sbd.fix.walker-scottor.miller.96107.flac24"
+}

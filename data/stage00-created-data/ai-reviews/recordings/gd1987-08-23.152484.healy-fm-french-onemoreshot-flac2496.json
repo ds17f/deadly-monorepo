@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent FM‑recorded set with standout Santana‑enhanced Iko Iko and All Along the Watchtower, captured in surprisingly clear quality.",
+  "review": "Both reviewers rave about the audio despite it being sourced from a Sony Walkman picking up an FM broadcast, calling the fidelity amazing. The performance is highlighted for the surprise guest appearance of Carlos Santana on “Iko Iko” and “All Along the Watchtower,” making those moments the show’s high points.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Two reviews (average 4.5 stars) praise both the music and the surprisingly good recording; limited sample size lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Recorded via FM signal to a Walkman; reviewers note crystal‑clear sound given the unconventional source, no reported dropouts or noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Iko Iko",
+      "All Along the Watchtower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on pacing; focus is on the surprise Santana guest, implying a memorable moment within the set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T02:26:52.570530+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-08-23.152484.healy-fm-french-onemoreshot-flac2496"
+}

@@ -1,0 +1,66 @@
+{
+  "summary": "Strong Dark Star arc with soaring China Cat/High Time run",
+  "blurb": "The second set builds into an 18‑minute Dark Star → Saint Stephen → The Eleven sequence and closes with a marathon Turn On Your Lovelight. Jerry delivers raw power on Dark Star while Pigpen drives the band on Turn On Your Lovelight. Early songs suffer from tape hiss and occasional vocal distortion, but the overall performance remains compelling.",
+  "review": "On July 5, 1969 at Chicago’s Electric Theater the Dead delivered a show that still feels vivid despite the limitations of the surviving soundboard tape. The first half wobbles a bit – “It’s All Over Now Baby Blue” is muffled and “Mama Tried” suffers vocal distortion – but the band quickly finds its stride. A highlight is the 18‑minute second‑set suite: Dark Star erupts with raw power, flows into Saint Stephen and then The Eleven, showcasing tight interplay even as Jerry occasionally flubs phrases. The set closes with an expansive Turn On Your Lovelight where Pigpen’s organ roars, holding the group together while the guitars soar. China Cat Sunflower segues cleanly into High Time, delivering a bright, uplifting moment that contrasts with the muddier early material. While tape hiss and occasional wobble color the listening experience, the performance captures the band in an adventurous 1969 phase, making it a worthwhile listen for fans of this era.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.9,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 9,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.3,
+      "sentiment_rationale": "The recording analysis uses a mixed sentiment label, but positive remarks dominate (strong Dark Star arc, soaring China Cat/High Time run, marathon Turn On Your Lovelight) while negatives are limited to tape hiss and occasional flubs. This yields a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.3 = 2.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-07-05.sbd.cotsman.4282.sbefail.shnf",
+    "reason": "Only available SBD captures the full show; despite tape hiss it provides decent stereo separation and includes all key moments."
+  },
+  "key_highlights": [
+    "Epic Dark Star → Saint Stephen → The Eleven suite that defines the second set.",
+    "Marathon Turn On Your Lovelight driven by Pigpen’s organ work.",
+    "Bright China Cat Sunflower into High Time transition adds a soaring mid‑set lift.",
+    "Raw power on Dark Star despite occasional tape hiss and early song muddiness."
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "Saint Stephen",
+    "The Eleven",
+    "China Cat Sunflower",
+    "High Time",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Shows raw power on Dark Star, though his phrasing slips on Saint Stephen and The Eleven.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-24T16:09:44.922358+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dark Star",
+      "Saint Stephen",
+      "The Eleven",
+      "It's All Over Now Baby Blue"
+    ],
+    [
+      "China Cat Sunflower"
+    ],
+    [
+      "High Time",
+      "Mama Tried"
+    ],
+    [
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

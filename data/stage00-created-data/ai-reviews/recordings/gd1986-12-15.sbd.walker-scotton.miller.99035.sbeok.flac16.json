@@ -1,0 +1,129 @@
+{
+  "summary": "Soundboard recording of the historic post‑coma return show is mostly clear with a few mix quirks, and the performance shines on Althea, Terrapin Station, Push Comes to Shove and an inspired Touch.",
+  "review": "The December 1986 Oakland concert captures the band’s triumphant comeback after Jerry Garcia’s coma. Reviewers rave about the energy‑filled set – especially Althea, Terrapin Station, Push Comes to Shove, My Brother Esau and a scorching Touch – while noting that the Charlie Miller SBD source is generally good but suffers from an early mix “bump” and occasional muddiness. Overall the musical delivery outweighs the technical hiccups, making it a must‑listen for Deadheads.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (6 out of 8) are 4–5 stars praising the show’s historic energy and standout songs; only two low‑star reviews flag personal dislike for specific moments. Recording quality is good but not flawless, so a solid 4.2 reflects strong performance with modest technical issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp Charlie Miller SBD source; reviewers mention a slight lack of “bump,” early mix roughness, and occasional muddiness, but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Terrapin Station",
+      "Push Comes to Shove",
+      "My Brother Esau",
+      "Touch",
+      "Wharf Rat",
+      "Good Lovin'",
+      "Black Muddy River"
+    ],
+    "poor_songs": [
+      "Iko Iko",
+      "Black Muddy River"
+    ],
+    "setlist_flow": "The set is uptempo and exuberant, reflecting the band’s “back from the dead” vibe. The first set feels intentional and joyous; the second set relaxes into a looser groove with occasional sloppiness (e.g., drums/space and some jams). Overall pacing is strong despite minor lyrical flubs."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as inspirational, emotional, with perfect tone and fiery solos; reviewers note his comeback spirit after the coma.",
+    "Phil": "Praised as amazing and psyched, keeping the band grounded with solid bass work throughout.",
+    "Bob": "Mentioned stumbling on lyrics early (“Bob messes up Playin’”) and a few lyrical flubs, but also noted strong slide work and excitement.",
+    "Keys": "",
+    "Drums": "Bill and Mickey are noted as tuned‑in and driving the groove; however, the Drums>Space segment is called “not the most pleasant.”"
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Push Comes to Shove": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "My Brother Esau": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "See, See Rider Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down the Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums/Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:35:22.450674+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-12-15.sbd.walker-scotton.miller.99035.sbeok.flac16"
+}

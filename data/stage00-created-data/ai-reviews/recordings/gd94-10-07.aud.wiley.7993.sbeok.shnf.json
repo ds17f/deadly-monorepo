@@ -1,0 +1,46 @@
+{
+  "summary": "Audience‑sourced tape delivers a solid Philly performance with Jerry’s soaring moments, but the show is uneven and divisive among listeners.",
+  "review": "The recording (an audience tape) is generally clear enough to enjoy the concert, and several reviewers highlight Jerry Garcia’s wailing guitar work as a high point. However opinions on the music itself are split – some call it a “killer” Philadelphia night while others label it a phoned‑in, lackluster set with a disappointing encore.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Show quality is divided (strong praise for Jerry and certain jams vs. criticism of overall energy), while recording quality is consistently described as good; the mixed feedback yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers note that the audience (AUD) copies sound good and capture the moment well; no specific complaints about muddiness or dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger"
+    ],
+    "poor_songs": [
+      "JBG Encore"
+    ],
+    "setlist_flow": "Listeners describe a generally well‑played set typical of Philly Spectrum shows, but many felt the band never broke out into anything special and that the second set fell flat for some."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for wailing guitar tones on several tracks, but also criticized for sounding bored or hindered by health issues in later reviews.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "JBG Encore": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T02:44:51.051097+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-10-07.aud.wiley.7993.sbeok.shnf"
+}

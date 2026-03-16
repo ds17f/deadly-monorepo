@@ -1,0 +1,75 @@
+{
+  "summary": "A high‑energy Spectrum show captured on a lively audience recording, highlighted by scorching Shakedown Street, Peggy‑O, Promised Land and a memorable Wharf Rat.",
+  "review": "Fans rave about the electric atmosphere of this 1990 Philadelphia gig – the band rides a hot Shakedown opening, delivers standouts like Peggy‑O, The Promised Land, Scarlet Begonias and an unforgettable Wharf Rat jam. The audience tape is praised for its clarity and ability to convey the arena’s buzz, though a few note that the levels are occasionally “in‑your‑face.” Overall the performance and recording combine to make this a must‑listen Deadhead favorite.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews (12 + out of 18) are 4–5 stars and focus on the show’s energy, standout songs and a solid audience recording; only one low‑rating comment mentions level spikes, so the combined show/recording quality merits a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Most listeners describe the tape as clear and lively, capturing the Spectrum’s crowd energy. One reviewer notes that the levels are spiked and “too in‑your‑face,” but overall the audience mix is considered very good for an AUD source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Peggy-O",
+      "The Promised Land",
+      "Scarlet Begonias",
+      "Wharf Rat",
+      "Foolish Heart (jam)",
+      "Memphis Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its nonstop momentum – a fiery Shakedown opener, high‑octane mid‑set jams and an uplifting finish that kept the arena bouncing."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his vocal delivery (“Jerry’s singing is right on”) and inspired guitar work, with several reviewers thanking him directly.",
+    "Phil": "Mentioned only in passing (a “fun night” comment) – no specific musical appraisal.",
+    "Bob": "",
+    "Keys": "One reviewer wonders about the new keyboardist ‘Vince’ and compliments the keyboards on Memphis Blues; another credits Brent’s influence for lighting Jerry up.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T11:32:44.342462+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-09-10.aud.wiley.11807.sbeok.shnf"
+}

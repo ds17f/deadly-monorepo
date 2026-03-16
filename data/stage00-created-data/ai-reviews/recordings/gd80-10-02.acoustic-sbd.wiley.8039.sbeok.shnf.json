@@ -1,0 +1,86 @@
+{
+  "summary": "A superb Fall‑1980 acoustic set captured on a crystal‑clear soundboard, highlighted by a gorgeous “Lay Me Down” and fiery “Cassidy”.",
+  "review": "Fans rave about this acoustic Warfield tape – the vocals and harmonies are tight, the band is in great form and songs like Lay Me Down, Bird Song, Cassidy and Jack‑a‑Roe shine. The soundboard source delivers fantastic clarity with only a few minor bass‑level quirks and a shaky start on Dark Hollow, making it an excellent listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over ten enthusiastic 5‑star reviews praise both the musical performance (standout acoustic numbers) and the recording quality (clear, tasty soundboard), with only minor technical complaints."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear mix; bass a bit high but easily corrected with EQ. Minor shakiness on the opening of Dark Hollow and a slightly rough ending to Ripple, otherwise flawless."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lay Me Down",
+      "Bird Song",
+      "Cassidy",
+      "Jack-a-Roe",
+      "Iko Iko"
+    ],
+    "poor_songs": [
+      "Dark Hollow",
+      "Ripple"
+    ],
+    "setlist_flow": "Typical fall‑1980 acoustic first set – tight vocal harmonies, strong song transitions and a few surprise filler tracks (Wharf Rat, Heaven Help the Fool) that add historic flavor."
+  },
+  "band_member_comments": {
+    "Jerry": "Ends “Lay Me Down” on guitar while Bob attempts another chorus; no criticism of his playing.",
+    "Phil": "Bass output is high/tasty – some listeners note a boosted low end but overall solid performance.",
+    "Bob": "Vocals on “Lay Me Down” slip briefly, prompting a light‑hearted exchange with the band.",
+    "Keys": "Brent (keyboard) smooths over the vocal mishap, humorously reminding everyone that mistakes happen.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lay Me Down": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Heaven Help the Fool": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Hollow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ripple": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:53:54.716405+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-02.acoustic-sbd.wiley.8039.sbeok.shnf"
+}

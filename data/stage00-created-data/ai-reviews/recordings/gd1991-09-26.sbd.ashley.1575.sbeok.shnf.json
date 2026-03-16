@@ -1,0 +1,58 @@
+{
+  "summary": "Remastered recording delivers crystal‑clear sound while the concert dazzles with a transcendent Dark Star, soaring Picasso Moon and Bruce Hornsby’s massive keyboards.",
+  "review": "The fans rave about both the musical magic and the high‑quality remaster of this show. Highlights include an unforgettable Dark Star, a powerful Picasso Moon, and Bruce Hornsby’s huge keyboard work, though some feel his aggressive accordion on Broken Down Palace was out of place. Overall the performance is described as spectacular and the audio as superb.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Four of five reviews are 4‑5 stars praising the show; recording is called “great” and “remastered” with no technical complaints, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly praise the recording and remastering as clear, powerful and faithful to the live experience; no specific flaws are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Picasso Moon",
+      "Saint Of Circumstance"
+    ],
+    "poor_songs": [
+      "Broken Down Palace"
+    ],
+    "setlist_flow": "The concert is described as a spectacular, near‑transcendent performance that caps a six‑night run; the energy stays high throughout with only one song noted as over‑bearing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby’s keyboards are praised for their hugeness, though his aggressive accordion on ‘Broken Down Palace’ is criticized by one reviewer.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint Of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Down Palace": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T02:07:38.239509+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-26.sbd.ashley.1575.sbeok.shnf"
+}

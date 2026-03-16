@@ -1,0 +1,52 @@
+{
+  "summary": "Matrix recording captures a hot 1979 Pittsburgh show with standout Sugaree and an all‑time favorite Althea.",
+  "review": "The matrix source provides a decent, if not pristine, listening experience—enough to hear Jerry’s rescuing guitar work on Sugaree despite a few sour notes in Jack Straw. Fans consistently point to the take‑off on Sugaree and the long, mellow Althea as highlights of an otherwise solid performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the show (Sugaree take‑off, Althea) and give 4–5 stars, while noting recording is only fair compared to other 1979 tapes; weighted average yields a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Matrix blend with acceptable clarity; a few sour notes on Jack Straw and overall fidelity not as high as other 1979 recordings, but sound is still listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Althea"
+    ],
+    "poor_songs": [
+      "Jack Straw"
+    ],
+    "setlist_flow": "The concert reportedly takes off on Sugaree and maintains momentum, with Althea serving as a long, mellow centerpiece; some feel the performance isn’t consistently 'on' throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Sour notes noted on Jack Straw but his guitar work on Sugaree is praised for rescuing the moment.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:43:06.865251+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-01.aud.unknown.31330.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Fantastic audience recording of a relaxed yet inspired show with a thunder‑thick Fire transition and pitch‑corrected playback",
+  "review": "The audience capture is praised as outstanding, delivering clear ambience despite the venue’s poor acoustics; a pitch‑corrected version even fixes the usual half‑step speed issue. Musically the band is described as sweet, relaxed and inspired, highlighted by Phil Lesh’s “magic” on the fiery transition into Fire, though part of the first set is missing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "One detailed, enthusiastic review gives high marks for performance and an excellent‑ish audience recording, tempered only by the missing portion of the first set."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Outstanding audience capture with clear ambience; pitch‑corrected to fix typical half‑step speed issue. First‑set segment is missing, limiting completeness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Relaxed yet inspired performance that leveraged McNichols' acoustics; strong second‑set energy with a thunderous transition into Fire."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Praised for showing his magic fully during the transition into Fire.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T13:12:57.908520+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-07-13.135740.nak300.schley.flac1644"
+}

@@ -1,0 +1,82 @@
+{
+  "summary": "Excellent soundboard capture of a classic 5/30/69 Portland show – crisp mix, stellar Dark Star and The Eleven, with a few rough edges.",
+  "review": "The Charlie Miller‑sourced soundboard delivers crystal‑clear mids with only the faint hiss expected from ’69 tapes, making every jam audible—from Jerry’s soaring Dark Star solo to the marathon St. Stephen intro. Musically the night shines on Dark Star, The Eleven, Cosmic Charlie and a ripping Doin’ That Rag, though some listeners note occasional tuning woes and a cut‑off Turn On Your Lovelight.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Over twenty reviews (mostly 5‑star) praise both performance and recording; show quality rates ~4.5, recording quality ~4.2, yielding a weighted average of 4.4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Mix is clean and balanced with slight tape hiss; occasional splice in The Eleven→Lovelight noted, but overall superior to most 1969 recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Eleven",
+      "St. Stephen",
+      "Cosmic Charlie",
+      "Turn On Your Lovelight",
+      "Doin' That Rag"
+    ],
+    "poor_songs": [
+      "Cosmic Charlie (some reviewers note poor vocal delivery)",
+      "Turn On Your Lovelight (cut off at the end)"
+    ],
+    "setlist_flow": "The set rolls from a gentle Morning Dew into high‑energy jams, building momentum through Me & My Uncle and Doin' That Rag before launching into an expansive Dark Star that feeds directly into Cosmic Charlie, The Eleven and a truncated Turn On Your Lovelight, maintaining a psychedelic intensity throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Dark Star is highlighted as intense; broken strings add drama but also showcase his signature string‑bending feats.",
+    "Phil": "Bass described as steady and sure, anchoring the improvisations.",
+    "Bob": "Vocals praised on Me & My Uncle and noted for white‑noise contributions on Lovelight.",
+    "Keys": "Keith (Bobby) gets kudos for Cosmic Charlie and the extended St. Stephen intro, adding rich keyboard textures.",
+    "Drums": "Bill and Mickey are lauded for near‑unison playing; occasional aggressive accents mentioned."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "The Eleven": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 4,
+      "negative_mentions": 2,
+      "total_mentions": 6
+    },
+    "St. Stephen": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Doin' That Rag": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-24T14:53:46.515812+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-05-30.sbd.miller.87516.sbeok.flac16"
+}

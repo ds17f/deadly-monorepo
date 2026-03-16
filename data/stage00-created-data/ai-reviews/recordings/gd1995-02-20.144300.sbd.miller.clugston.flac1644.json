@@ -1,0 +1,63 @@
+{
+  "summary": "A crisp soundboard capture of a 1995 show with a standout Uncle John's Band jam, but Jerry’s late‑set playing splits opinion.",
+  "review": "The recording is widely praised for its clarity and rarity – an excellent‑sounding soundboard that even needed pitch correction work. Musically the concert shines on the second‑set Uncle John's Band extended jam, Little Red Rooster and strong Eyes of the World percussion, though several reviewers note Jerry’s playing toward the end feels uneven. Overall listeners are divided between admiration for the high‑quality audio and mixed feelings about the performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Two reviewers give strong positive scores (4 stars) highlighting both sound quality and musical moments, while two rate it poorly (1‑2 stars) mainly due to performance issues. The average leans toward a solid but not stellar show, yielding a 3.6 rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced soundboard recording praised for clarity; some comments note the need for pitch/speed correction but no major noise or drop‑out problems."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band",
+      "Little Red Rooster",
+      "Friend of the Devil",
+      "Foolish Heart",
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set contains solid moments (e.g., Little Red Rooster) while the second set builds to a memorable Uncle John's Band jam and strong percussion on Eyes of the World. Jerry’s guitar work is described as uneven toward the end, creating a split in listener opinion."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for solid tone early in the show but criticized for sloppy timing and weak playing toward the end.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince Welnick’s piano/keys are highlighted as clean‑tuned and a five‑star contribution, often overshadowed by drama around Jerry.",
+    "Drums": "Drums and Space segments receive high praise; percussion on Eyes of the World is noted as especially powerful."
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T04:58:47.948568+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-02-20.144300.sbd.miller.clugston.flac1644"
+}

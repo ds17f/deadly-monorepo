@@ -1,0 +1,72 @@
+{
+  "summary": "A superb Charlie Miller soundboard captures a loose, space‑filled show with standout Foolish Heart and Watchtower moments despite some mixed performance notes.",
+  "review": "The recording is praised for its clear, well‑balanced soundboard capture, letting the band’s carefree, space‑y vibe shine through. Reviewers highlight energetic jams on Foolish Heart, Space and a memorable Watchtower transition, though a few find parts of the setlist uneven. Overall the show feels loose and fun, with Jerry’s vocals and guitar work receiving particular acclaim.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly and describe the soundboard as superb, but a few note uneven performance sections; the weighted average of show (70%) and recording (30%) yields an overall four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced soundboard capture praised as superb sounding; occasional comments about slight muddiness or mix crowding but generally crisp and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart",
+      "Space",
+      "Watchtower",
+      "Sugaree",
+      "Candyman"
+    ],
+    "poor_songs": [
+      "Saint",
+      "Foolish Heart (in one review)",
+      "Watchtower (in some reviews)"
+    ],
+    "setlist_flow": "The concert is described as loose and carefree, with a spacey mood early on. While the first set holds solid energy, several reviewers feel the second set loses momentum, though the Watchtower‑Peter transition is highlighted as a high point."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for vibrant vocals, strong guitar tone, and gravitas on Candyman; repeats final verse of Foolish Heart with extra fun.",
+    "Phil": "",
+    "Bob": "Weir sounds solid in the first set, getting a little raspy toward the end.",
+    "Keys": "Both Vince and Bruce are present; reviewers note mix crowding but appreciate Bruce's piano work and Vince's vocal contributions.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T22:59:32.369562+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-08-13.sbd.miller.109241.flac16"
+}

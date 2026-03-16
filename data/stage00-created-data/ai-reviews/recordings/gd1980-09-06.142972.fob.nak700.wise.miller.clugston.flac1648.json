@@ -1,0 +1,100 @@
+{
+  "summary": "Good‑quality matrix recording of a legendary 1980 show with standout performances on Greatest Story Ever Told, Mexicali Blues and more",
+  "review": "The tape captures a historic late‑‘80 pivot show that fans revere for its high energy and adventurous setlist. Reviewers praise a slew of highlights – from the soaring \"Greatest Story Ever Told\" to the fiery \"Mexicali Blues\" and a superb \"Friend of the Devil\" – while noting the recording is a clear matrix source that still needs slight pitch correction.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The show receives enthusiastic praise with many standout songs and only minor performance dips; the recording is judged clear and listenable despite small speed/pitch issues, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Multiple audience/soundboard sources were stitched together; the best 2nd‑set matrix (nak700_wise_miller_clugston) is clear but runs slightly fast and needs a +2 % pitch correction for the SBD portion. Some versions are muddy or run too fast, but overall the image is solid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Greatest Story Ever Told",
+      "Mexicali Blues",
+      "Friend of the Devil",
+      "Far From Me",
+      "Little Red Rooster",
+      "China Cat Sunflower > I Know You Rider",
+      "Promised Land",
+      "Lost Sailor",
+      "Althea",
+      "Space"
+    ],
+    "poor_songs": [
+      "Tennessee"
+    ],
+    "setlist_flow": "First set maintains a high, sustained level of playing with several explosive moments; the second set is a bit more uneven but offers adventurous segues and risks that hint at the band’s upcoming evolution."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is repeatedly lauded – wrangling Mexicali Blues, bursting on Friend of the Devil, and delivering brilliant lead work throughout.",
+    "Phil": "",
+    "Bob": "Weir’s vocals slip on \"Saturday Night\" (he loses his voice), but his rhythm playing still supports the band.",
+    "Keys": "Brent (Keith) and Jerry lock in tightly on Far From Me; overall keyboard contributions are noted as right‑on‑the‑dime for several tunes.",
+    "Drums": "The drummers deliberately pull out during \"Space\" to create a head/body tweak, adding a playful texture."
+  },
+  "song_mentions": {
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:26:14.151750+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-09-06.142972.fob.nak700.wise.miller.clugston.flac1648"
+}

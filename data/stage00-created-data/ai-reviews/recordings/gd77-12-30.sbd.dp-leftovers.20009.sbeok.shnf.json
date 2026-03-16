@@ -1,0 +1,119 @@
+{
+  "summary": "Soundboard leftovers from 12‑30‑77 capture a fire‑filled show (Peggy‑O, Let It Grow, Estimated) with good audio but the release is frustratingly incomplete.",
+  "review": "The performance on this fragment of the 30 December 1977 run is widely praised – Jerry’s guitar is “on fire,” Peggy‑O and Let It Grow sparkle, and the second set delivers classic Estimated Prophet, Eyes of the World and St. Stephen jams.  The source is a soundboard (SBD) that sounds solid, though listeners note occasional level quirks and a few digital skips; the biggest complaint is that only four songs are available here, the rest being locked behind Dick’s Picks #10.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (70% weight) while recording quality is good but not flawless; the missing portion drags the overall rating down, yielding an average of about four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD source, but some listeners report level/balance quirks and brief digital skips (e.g., Mississippi Half‑Step). The file is a ‘leftovers’ generation from a bricked source that has been patched."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Let It Grow",
+      "Estimated Prophet",
+      "Eyes of the World",
+      "St. Stephen",
+      "Samson & Delilah",
+      "Ship of Fools",
+      "Big River",
+      "Mississippi Half-Step"
+    ],
+    "poor_songs": [
+      "Passenger"
+    ],
+    "setlist_flow": "Reviewers describe a sterling first set (Mississippi Half‑Step, Looks Like Rain, Row Jimmy, Big River, Peggy‑O) and an even more consistent second set with huge jams.  Overall the show is called “sterling” and “the best of the run,” despite the incomplete release."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for being on fire, delivering peak‑form licks and taking songs like Let It Grow into far‑out orbits.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:24:58.314764+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-12-30.sbd.dp-leftovers.20009.sbeok.shnf"
+}

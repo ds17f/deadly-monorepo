@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent audience recording with astonishing depth and frequency response, featuring a stellar second set highlighted by Slipknot! and Morning Dew.",
+  "review": "Both reviewers rave about the tape's rich, crystal‑clear sound that captures the magic of this unknown 1984 show, especially the soaring second set. The performance is praised for its powerful Slipknot! segment (despite a splice quirk) and a goose‑bumps‑inducing Morning Dew, while the audience source delivers an immersive listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Both reviews give 5 stars and emphasize superb audio fidelity plus standout performances; the strong positive consensus yields a near‑top rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Depth and frequency response described as amazing; tape noted for rich, clear sound. One reviewer mentions a weird splice on the Slipknot segment in the SBD version, but the AUD source is praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Slipknot!",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set receives special praise; reviewers highlight its energy and seamless flow, especially the Slipknot! transition into a moving Morning Dew."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Slipknot!": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T15:10:14.239464+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-01.nak304.mikeg-suraci.79458.sbeok.flac16"
+}

@@ -1,0 +1,56 @@
+{
+  "summary": "Good soundboard source with a solid performance despite some sloppy moments and tired vocals from Jerry",
+  "review": "The recording is considered the best available copy of this show, captured from a soundboard and generally clear. Musically the band delivers strong highlights like Franklin's Tower, Lost Sailor and a standout Terrapin Station, though the set drifts into sloppiness at times and Jerry’s vocals sound tired.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it praises several songs and the source quality but notes vocal fatigue and occasional sloppiness, leading to a moderate overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Described as the best copy available; no specific audio flaws mentioned, implying clear and balanced sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Lost Sailor",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The band moves from a sloppy Help on the Way into a tighter Franklin's Tower, then carries momentum through Lost Sailor and Terrapin Station, showing good recovery after early missteps."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as lazy and tired throughout most of the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T04:57:54.631373+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-12.sbd.drgseeds.17264.shnf"
+}

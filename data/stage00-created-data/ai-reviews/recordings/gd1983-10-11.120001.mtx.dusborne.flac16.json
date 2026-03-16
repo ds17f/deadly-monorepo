@@ -1,0 +1,73 @@
+{
+  "summary": "A stellar matrix recording that puts you right in the middle of a legendary 1983 show, highlighted by a scorching St. Stephen and an unmatched Throwing Stones instrumental.",
+  "review": "The performance is consistently high‑energy from start to finish, with first‑set gems like Jack Straw and Birdsong and a second set that rockets through a breakout Wang Dang, a thunderous Bertha, and a once‑in‑a‑lifetime St. Stephen moment. The matrix source captures both the crystal‑clear board mix and the room’s roar, delivering an immersive listening experience praised by every reviewer.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five‑star reviews rave about both the musical performance and the exceptional matrix recording; weighting heavily toward show quality yields a near‑top rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Immersive, crystal‑clear sound that feels like being there; captures both board clarity and audience energy with no reported dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Throwing Stones",
+      "Wang Dang",
+      "Bertha",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds strong momentum with Jack Straw and Birdsong, while the second set erupts into a high‑octane pre‑drums run (highlighted by Bertha) and an unforgettable St. Stephen that drove the crowd wild."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work on the Throwing Stones instrumental is singled out as one of the best ever heard.",
+    "Phil": "Sang lead on a rare China Doll performance, even using his own mic—a first in years.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The pre‑drums run is described as \"rockin,\" and the show ends with the classic Bobby finishing sequence."
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wang Dang": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T11:43:59.899162+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-11.120001.mtx.dusborne.flac16"
+}

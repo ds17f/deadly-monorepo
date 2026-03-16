@@ -1,0 +1,85 @@
+{
+  "summary": "Soundboard capture of a magical Ventura show with a standout second set, but the mix is bright and lacking high‑frequency detail.",
+  "review": "Fans rave about the energy of this June 14‑87 Ventura performance – especially the scorching Scarlet > Fire on the Mountain jam, an uptempo Playing in the Band and a rare Mighty Quinn. The recording is a soundboard (Healy SBD/mic‑matrix) that many describe as crisp yet overly bright with missing 6 kHz detail, giving it a mixed technical quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the musical performance (especially the second set) and give high star ratings, but several note serious tonal issues in the mix, pulling the overall score toward the middle of the scale."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Bright, “Dolby‑off” high‑end; cymbals harsh; noticeable loss of frequencies around 6 kHz; matrix mix described as insufficient and muffled in places."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hell in a Bucket",
+      "Scarlet Begonias > Fire on the Mountain",
+      "Playing in the Band",
+      "Truckin' > Wharf Rat",
+      "The Mighty Quinn"
+    ],
+    "poor_songs": [
+      "Throwing Stones (mix issues)"
+    ],
+    "setlist_flow": "First set deemed average, second set praised as the highlight of the three‑night run with strong jams and seamless transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for a \"cracking\" performance on Hell in a Bucket and overall tight playing.",
+    "Phil": "",
+    "Bob": "Noted for his Madonna concert T‑shirt; no specific musical comment.",
+    "Keys": "Brent (keyboard) singled out as solid on the first set.",
+    "Drums": "Bill and Mickey lauded as part of the Rhythm Devils, especially during the jam sections."
+  },
+  "song_mentions": {
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin' > Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Mighty Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might as Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:52:13.265307+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-06-14.sbd.walker-scotton.miller.83755.sbeok.flac16"
+}

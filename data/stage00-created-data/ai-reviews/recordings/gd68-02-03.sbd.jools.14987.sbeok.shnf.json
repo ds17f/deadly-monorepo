@@ -1,0 +1,74 @@
+{
+  "summary": "A solid soundboard capture of an early‑68 classic set, highlighted by a scorching China Cat > Eleven transition, a tight Cryptical → Other One suite and bright guitar work that even earns Duane Allman comparisons.",
+  "review": "The recording, taken from the original soundboard, delivers clear guitars and drums that let listeners hear the band’s early psychedelic fire.  Highlights include a blistering China Cat Sunflower into The Eleven, an intense Cryptical Envelopment → The Other One run and a rare Born‑Crossed‑Eyed, all backed by Pigpen’s colorful organ.  While a few reviewers note occasional choppiness in The Eleven and a slightly primitive mix, the overall performance is praised as one of the standout shows from the February 1968 period.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 5‑star with strong praise for both performance and sound; only a few note minor recording flaws, yielding an overall rating just above 4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Guitars and drums are described as clear and crisp for an old show; some listeners mention C/C+ fidelity, a need to speed up slightly, and occasional choppiness on The Eleven, but overall the mix is listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "The Eleven",
+      "Cryptical Envelopment",
+      "The Other One",
+      "New Potato Caboose",
+      "Born Crossed Eyed"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical early‑68 set with tight transitions—most praised are the China Cat > Eleven jam and the Cryptical → Other One suite, giving the show a cohesive, exploratory feel."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is lauded, even compared to Duane Allman, and his playing on Dark Star and other jams is highlighted as stellar.",
+    "Phil": "",
+    "Bob": "Forgot some lyrics during The Other One, but his vocal contributions are otherwise well‑received.",
+    "Keys": "Pigpen’s organ is noted for adding color and being louder than usual, especially in the Other One and New Potato sections.",
+    "Drums": "Drums are clear; Mickey Hart’s complex rhythmic ideas receive specific praise."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Eleven": {
+      "positive_mentions": 4,
+      "negative_mentions": 2,
+      "total_mentions": 6
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "New Potato Caboose": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Born Crossed Eyed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T07:25:15.201094+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-02-03.sbd.jools.14987.sbeok.shnf"
+}

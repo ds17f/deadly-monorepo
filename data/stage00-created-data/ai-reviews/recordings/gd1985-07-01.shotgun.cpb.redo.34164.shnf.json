@@ -1,0 +1,39 @@
+{
+  "summary": "Good audience recording captures a strong two‑set show highlighted by a soaring Dupree’s and an especially praised second set.",
+  "review": "Both reviewers give the performance four stars, noting that set 2 is widely celebrated while set 1 holds its own with a soaring \"Dupree's\" among other gems. The shotgun‑mic audience capture delivers clear, close‑miked sound that listeners describe as “killer” and “nice,” with no reported audio flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently positive 4‑star reviews emphasize strong musical performance and good sound quality, yielding a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers praise the close, clear shotgun mic capture and overall killer sound; no dropouts or muddiness mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dupree's Diamond Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set 2 is highlighted as a fan favorite, while set 1 is noted as nearly as good, giving the concert a balanced and engaging two‑set flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:22:44.971490+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-07-01.shotgun.cpb.redo.34164.shnf"
+}

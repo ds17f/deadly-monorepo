@@ -1,0 +1,62 @@
+{
+  "summary": "Vivid audience recording captures a high‑energy show highlighted by stellar China Cat → Rider and Comes A Time moments.",
+  "review": "The crowd‑sourced tape delivers the “supernatural” Dead atmosphere that many fans crave, with clear mids and an energetic mix that lets the band‑and‑audience interaction shine. Musically the concert shines in the second set – China Cat into Rider, a five‑song seg, and a powerful Comes A Time are repeatedly praised, while the remix brings out extra detail despite a few listeners finding the bass overwhelming.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show and recording highly (4‑5 stars) noting standout performances and good audio, with only a couple of lower ratings focused on bass balance."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape praised for its energy and clarity; remix enhances detail. Reviewers note the crowd reaction (heads exploding) adds to the experience, though one comment calls the bass overwhelming."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "Rider",
+      "Comes A Time",
+      "The Passenger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is a highlight with seamless transitions (China→Rider and a five‑song seg), while the first set opens explosively and leads into an emotional Comes A Time."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as “plugged in” and “airborne,” delivering powerful lead lines through China Cat and Comes A Time.",
+    "Phil": "Bass described as overwhelming by one reviewer, suggesting a very forward low‑end presence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:12:13.665560+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-10.nak700.wise.miller.100402.flac16"
+}

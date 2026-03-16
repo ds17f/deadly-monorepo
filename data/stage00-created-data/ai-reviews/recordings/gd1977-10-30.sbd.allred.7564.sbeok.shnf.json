@@ -1,0 +1,45 @@
+{
+  "summary": "Tinny‑sounding soundboard recording with prominent harpsichord textures, highlighted by strong performances of Candyman and Peggy-O.",
+  "review": "The two reviewers note a slightly tinny mix but appreciate the distinctive Keith Godchaux harpsichord that floats through the sound. Both Candyman and Peggy-O receive praise – the former as a gem worth listening to and the latter for its crisp drum line and overall treat. The recording is a modest soundboard capture that delivers enjoyable moments despite its limited fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is viewed positively (standout songs, good drum work) while recording quality is described as tinny; weighted average yields a solid but not outstanding rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix sounds a bit tinny with Godchaux's harpsichord prominently floating; overall clarity is adequate but lacks warmth."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers focus on individual highlights rather than overall pacing, noting the mid‑set numbers as particularly rewarding."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's harpsichord is described as special and harpsichordesque, adding a unique texture to the mix.",
+    "Drums": "Peggy-O's drum line is called crisp and excellent."
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T05:54:23.190968+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-30.sbd.allred.7564.sbeok.shnf"
+}

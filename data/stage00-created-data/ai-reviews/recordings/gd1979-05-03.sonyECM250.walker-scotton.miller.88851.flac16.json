@@ -1,0 +1,91 @@
+{
+  "summary": "High‑quality audience tape of a 1979 show that delivers strong second‑set jams (Big River, Samson, Tennessee Jed) while the new keyboardist is still finding his footing.",
+  "review": "The audience recording is praised as one of the better copies available, offering clear sound that lets listeners enjoy the band’s interplay. Highlights include a scorching Samson, an inspired Big River jam and a soulful Black Peter, though reviewers note the first set is uneven and the new keyboard player sounds tentative. Overall it’s a solid performance captured with good fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Reviewers give an average of 4 stars, highlighting several standout songs and a clear audience recording while also noting the new keyboardist’s adjustment period and some weaker moments."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as a very nice audience tape, clearer than many other copies; no major drop‑outs or muddiness mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big River (jam)",
+      "Samson",
+      "Tennessee Jed",
+      "Black Peter",
+      "Stagger Lee"
+    ],
+    "poor_songs": [
+      "Row Jimmy",
+      "Useless Blues"
+    ],
+    "setlist_flow": "First set is considered uneven, but the second set builds momentum with strong jams and tight transitions, showcasing Jerry’s lead work and solid band conversation."
+  },
+  "band_member_comments": {
+    "Jerry": "Shredded Samson, delivered emotional Black Peter, and provided excellent guitar chatter throughout.",
+    "Phil": "Made a silly joke early on but helped carry the show; noted for conversational interplay with Jerry and Bob.",
+    "Bob": "Great interplay with Jerry on the Big River jam and contributed to the second‑instrumental conversation.",
+    "Keys": "The new keyboardist was still figuring out his role, leading to some tentative moments.",
+    "Drums": "Used drums to walk around a bit during extended jams; no specific criticisms noted."
+  },
+  "song_mentions": {
+    "Big River (jam)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Useless Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T20:56:44.436885+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-05-03.sonyECM250.walker-scotton.miller.88851.flac16"
+}

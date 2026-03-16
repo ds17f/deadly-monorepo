@@ -1,0 +1,68 @@
+{
+  "summary": "Excellent soundboard recording with a sparkling 'Loser' solo and second‑set highlights like 'Dancin’ in the Streets', despite ongoing debates about its authenticity.",
+  "review": "The Miller‑mastered soundboard source is crisp, well‑balanced and benefits from careful audience patches, making the tape sound almost studio‑quality. Musically the show shines on the second half – Scarlet Begonias → Fire, a killer 'Loser' solo, 'Dancin’ in the Streets' and a standout Brown Eyed Women – while some listeners feel the first set drifts a bit. Overall the performance is praised by most fans, even if a few still argue the concert never really happened.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈15 out of 18) give 4‑5 stars and praise both the audio quality and musical moments; only a few raise authenticity concerns or critique the first set, resulting in a strong positive consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller mastering praised as 'splendid', clean SB patches, occasional high‑mid harshness that could use gentle EQ; audience patches blend well and overall the tape is crisp and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Dancin' in the Streets",
+      "Scarlet Begonias > Fire on the Mountain",
+      "Brown Eyed Women",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as a little sleepy, but the second set picks up dramatically with St Stephen leading into a high‑energy stretch of Scarlet Begonias → Fire and a soaring Dancin’ in the Streets."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on 'Loser' is repeatedly highlighted as exceptional.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin' in the Streets": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T23:54:58.447647+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-08.ecm33p.moore.berger.miller.117027.flac24"
+}

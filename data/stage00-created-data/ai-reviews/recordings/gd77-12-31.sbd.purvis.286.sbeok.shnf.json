@@ -1,0 +1,79 @@
+{
+  "summary": "Soundboard recording of decent quality captures a high‑energy New Year’s Eve 1977 show with smoking Scarlet→Fire→Truckin'→Wharf Rat and standout Jack Straw, NFA and Friend of the Devil performances.",
+  "review": "The SBD capture is generally clear and well‑balanced – a few reviewers note a rough start but most describe the sound as good enough to enjoy the entire night. Musically the show is praised for its nonstop rock drive, with Jerry “on fire” and a blistering Scarlet/Fire/Truckin'/Wharf Rat sequence that many fans cite as a highlight; other favorites include Jack Straw, Not‑Fade‑Away and Friend of the Devil. While a handful of comments are critical (especially one negative take on Truckin'), the overwhelming tone is positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈70 %) give 4‑5 stars and highlight strong musical moments; recording quality is described as good/clear by most, with only occasional minor complaints."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and balanced soundboard feed; a few reviewers mention a rough opening or modest drop‑outs but overall the mix is clear enough to hear individual instruments and vocals."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Truckin' > Wharf Rat",
+      "Jack Straw",
+      "Not Fade Away",
+      "Friend of the Devil",
+      "Music Never Stopped"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans note a relentless, rocking flow with no space‑y jams – a tight New Year’s Eve set that keeps the energy high from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly called “on fire”, loud and delivering scorching guitar work throughout the night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's piano solo on Friend of the Devil is singled out as a sweet, melodic highlight.",
+    "Drums": "The two‑drummer era (Billy & Mickey) gets mixed remarks – praised for Billy’s swing feel and solid rhythm, while some feel the dual setup adds too much shuffle."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T07:31:54.862508+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-12-31.sbd.purvis.286.sbeok.shnf"
+}

@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent audience recording captures a carnival‑filled Houston show with standout Row Jimmy, Birdsong and Sugar Magnolia, even though Jerry’s health made parts of the second set uneven.",
+  "review": "The Oade Brothers’ audience tape is crystal‑clear and balances the band beautifully, delivering an immersive “Astroworld” atmosphere.  The performance is generally high‑energy – highlights include a fiery Row Jimmy/Jack Straw opener, superb Birdsong, a tight Wheel > Other One, and soaring Morning Dew and Sugar Magnolia – but Jerry’s onstage stamina wavers at times, making the pre‑drums segment feel shaky.  Overall the show is fun and memorable despite those occasional hiccups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (8/12) praise both the music and the recording; show quality averages around 4 ★ and recording quality is described as excellent, yielding a weighted rating of ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Oade Brothers’ audience mix is praised as crisp, clean and well‑balanced; listeners note “great sound quality,” “exquisite AUD,” and no major dropouts or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw > Row Jimmy",
+      "Birdsong",
+      "Wheel > Other One",
+      "Morning Dew",
+      "Sugar Magnolia",
+      "C.C. Rider"
+    ],
+    "poor_songs": [
+      "Pre‑drums segment"
+    ],
+    "setlist_flow": "The set opens with a high‑energy Jack Straw > Row Jimmy, flows through tight first‑set numbers, and while the second set is a bit short and uneven (notably the pre‑drums segment), it recovers with strong Wheel/Other One, Morning Dew and an uplifting Sugar Magnolia encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – some reviewers note he looked ill or leaned on his amp, while others say his tone was heavy and he delivered solid leads on Row Jimmy, Birdsong and the second‑set climaxes.",
+    "Phil": "Phil’s bass is highlighted for a powerful intro on Wheel > Other One and generally steady support throughout; no major complaints.",
+    "Bob": "Praised as a “real whizzer” with strong vocals; Bob’s presence adds energy, especially on Sugar Magnolia.",
+    "Keys": "Vince’s Casio‑style keyboard is described as bubble‑gum pop yet heavy, contributing to the carnival vibe; overall keyboards are solid despite Brent’s earlier absence.",
+    "Drums": "Pre‑drums segment was called “nightmarish” by one reviewer, but others found the drum break inspiring and well‑executed."
+  },
+  "song_mentions": {
+    "Jack Straw > Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Birdsong": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wheel > Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "C.C. Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Pre‑drums segment": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:07:30.577728+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-08-30.schoeps-oade.sacks.25470.sbeok.flacf"
+}

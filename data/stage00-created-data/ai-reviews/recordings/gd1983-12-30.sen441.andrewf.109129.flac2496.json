@@ -1,0 +1,39 @@
+{
+  "summary": "Strong New Year's performance with a heavy Terrapin Station and solid audience recording that captures the event’s energy despite minor glitches.",
+  "review": "Both reviewers praise the musical tightness of this late‑year show – Jerry’s aggressive, throaty guitar work and an unusually heavy take on Terrapin Station stand out. The audience tape is favored for its balanced mix and authentic ambience, though it contains occasional patches and glitches that keep it from being flawless.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised (≈4/5) while recording quality is good but not perfect (≈3.5/5); weighted average yields ~3.9 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Nice audience tape with a natural balance that puts Jerry forward; some minor patches and glitches are present, but the ambience adds historic feel."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A rollicking New Year's show that kept a steady groove from start to finish; the heavy Terrapin moment in the second set is highlighted as a peak."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is described as throaty, aggressive and front‑and‑center – reviewers love the louder, more present tone on the audience mix.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "One reviewer notes that soundboard mixes from this era had too much Brent (keyboards), whereas the audience tape offers a better balance.",
+    "Drums": "Kick drum is said to be overly prominent in the house SBD; the audience recording provides a more balanced percussion level."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:28:04.807465+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-12-30.sen441.andrewf.109129.flac2496"
+}

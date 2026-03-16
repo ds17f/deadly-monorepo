@@ -1,0 +1,63 @@
+{
+  "summary": "High‑quality soundboard capture of a solid 1989 show with a standout Bird Song, soaring Terrapin Station and an inspired second set.",
+  "review": "The performance is praised for its energetic jams – especially Bird Song, Terrapin Station, Black Peter and U.S. Blues – and Jerry Garcia’s excited playing on his new MIDI rig adds a fresh sparkle. Reviewers describe the recording as their favorite source for this date, indicating clear and reliable soundboard quality with no noted flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Two detailed, highly positive reviews highlight strong musical performance and a well‑received source; the third review provides no substantive criticism."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific sound issues are mentioned; reviewers call it their favorite source for this date, implying clear and reliable audio."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Terrapin Station",
+      "Black Peter",
+      "U.S. Blues",
+      "Shakedown Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as solid with an especially nice second set; while not earth‑shattering, the flow feels cohesive and energetic."
+  },
+  "band_member_comments": {
+    "Jerry": "His excitement over a new MIDI rig translates into spacy, inspired playing and a 'great jam' feel throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:42:06.599208+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-18.sbd.walker-scotton.miller.83776.sbeok.flac16"
+}

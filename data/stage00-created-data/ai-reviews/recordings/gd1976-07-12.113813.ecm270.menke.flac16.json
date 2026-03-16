@@ -1,0 +1,31 @@
+{
+  "summary": "Audience‑sourced WAV stream with decent clarity, but the show isn’t available for download and musical details are scarce.",
+  "review": "The recording is identified as an audience (Aud) source that has been transferred to lossless WAV for streaming only, which reviewers appreciate for preserving quality. No comments were made about the performance itself, so the musical content remains uncharacterized beyond the date reference. Availability is limited to streaming, which some users find frustrating.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Two positive star ratings (4‑5) contrast with a zero‑star comment about lack of download; limited performance info keeps confidence moderate."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "WAV streaming, no lossy compression; reviewers note clear source but mention that only streaming is offered, limiting accessibility."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No performance details provided in the reviews; focus is on recording format and availability."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T06:07:21.718235+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-07-12.113813.ecm270.menke.flac16"
+}

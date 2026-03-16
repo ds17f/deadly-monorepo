@@ -1,0 +1,81 @@
+{
+  "summary": "Rare March‑1972 show with the only “How Sweet It Is” and a fun Bo Diddley set, but plagued by very poor audience recording quality.",
+  "review": "The performance is celebrated for its unique setlist – the sole Dead rendition of “How Sweet It Is”, early versions of “Are You Lonely For Me”, a full Bo Diddley medley and standout moments like “Looks Like Rain” and “Smokestack Lightning”. Unfortunately the tape is riddled with splices, glitches and mismatched sources, making it difficult to hear the music clearly. Listeners who value rarity will appreciate the show, but most will find the audio quality a major barrier.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Show is highly prized for rare songs (≈4.5/5) while recording quality is consistently described as poor (≈2/5). Weighted average yields ~3.8."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Numerous splices, glitches and mixes of different audience sources; overall muddy, low‑fidelity sound that often obscures the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "How Sweet It Is",
+      "Are You Lonely For Me",
+      "Bo Diddley Medley",
+      "Looks Like Rain",
+      "Smokestack Lightning",
+      "Top of the World",
+      "Pollution",
+      "Slow Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "An early‑1972 set packed with rare covers and first‑time performances; the Bo Diddley segment dominates the first set, followed by a handful of seldom‑played originals that make the show historically significant despite the audio flaws."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewers note Jerry’s grin on stage but give no specific commentary on his playing.",
+    "Phil": "",
+    "Bob": "One reviewer calls out Bob Weir’s heartfelt delivery of “Looks Like Rain”.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "How Sweet It Is": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Are You Lonely For Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bo Diddley Medley": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Top of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Pollution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slow Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T12:19:39.026974+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-03-25.aud.hanno.8838.sbeok.shnf"
+}

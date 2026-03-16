@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a mellow, deliberately laid‑back show with standout versions of “Oh Babe It Ain't No Lie”, “On the Road Again”, “Tennessee Jed” and a dreamy “Terrapin”.",
+  "review": "The recording is praised as the best‑sounding version on the Archive, offering crisp front‑of‑house sound that still lets the enthusiastic New York crowd be heard. Musically the band delivers a focused, low‑key performance – Jerry whispers through the first set and keeps the second set simmering, highlighted by superb renditions of “Oh Babe It Ain't No Lie”, “On the Road Again”, “Tennessee Jed” and an almost somnambulant “Terrapin”.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "One detailed review rates the show 4 stars, lauds the recording as superb and highlights several strong song performances; combined with excellent soundboard quality this yields a high‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as the best‑sounding version on the Archive; crisp front‑of‑house mix with audible crowd enthusiasm that adds authenticity rather than detracting from clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Oh Babe It Ain't No Lie",
+      "On the Road Again",
+      "Tennessee Jed",
+      "Terrapin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A deliberately mellow, laid‑back first set that stays focused; second set picks up slightly but retains a simmering vibe, resulting in an overall calm and very nice concert experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Whispers through the first set, ignores crowd prodding, keeps playing very mellow and deliberately.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums are prominent at the start of “On the Road Again” and help keep the New York audience subdued for most of the show."
+  },
+  "song_mentions": {
+    "Oh Babe It Ain't No Lie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "On the Road Again": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T05:10:22.437948+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-23.120072.fob-nak700.gatto-jaeger.dusborne.flac16"
+}

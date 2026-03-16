@@ -1,0 +1,51 @@
+{
+  "summary": "A full‑sound audience (AUD) capture of a rare sound‑check, highlighted by an epic Jam (featuring Slipknot!) and a lively Bird Song, with surprisingly clear audio for an old crowd recording.",
+  "review": "Fans rave about this unusual sound‑check release, calling the extended Jam near‑mythic and noting that the final minutes before Wharf Rat are especially transcendent. The audience‑sourced tape is praised as fuller and cleaner than many vintage soundboard versions, lacking the harsh cuts found elsewhere. Overall the performance and recording both earn strong recommendations.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "All ten reviews are 4‑5 stars, uniformly praising the jam and bird song while highlighting the surprisingly good AUD recording; this consistent enthusiasm yields a high rating with strong confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Full sound with added crowd reaction, no harsh cuts in Bird Song or jam sections, clearer than comparable SBD tapes despite the muddy, crowded original circumstances."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jam",
+      "Bird Song",
+      "Slipknot!"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A relaxed sound‑check/rehearsal set that builds into a soaring Jam (ending just before Wharf Rat), offering an unusually high‑energy snapshot of the band."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his celestial guitar work during the jam, with reviewers hearing 'stars' and 'angels' in his playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jam": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T15:45:25.592454+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-07-27.aud.weiner.gdadt26.26363.sbeok.shnf"
+}

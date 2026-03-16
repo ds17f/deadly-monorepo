@@ -1,0 +1,80 @@
+{
+  "summary": "Good matrix recording of a quirky Spring ’90 show with standout Help>Slip>Franks, Dire Wolf and Iko‑Iko, but a few sloppy moments in the second set.",
+  "review": "The Miller‑87742 mastering of the Healy board‑and‑mic mix delivers a clear, well‑balanced sound that many fans find superior to the official Cutler mix. Musically the concert is uneven – the first set leans toward Brent’s keyboard‑driven vibe with solid highlights like Dire Wolf and the opening trio, while the second set shines on Help>Slip>Franks, Iko Iko and Attics of My Life before slipping into a sloppy Terrapin and a plodding Standing on the Moon.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Reviews note good recording quality (board‑and‑mic/matrix) but describe an uneven performance with both strong highlights and noticeable low points, leading to a mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Miller.87742 mastering of the Healy board‑and‑mic mix praised as clear and possibly better than the official Cutler mix; energized Tobin matrix adds ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Dire Wolf",
+      "Iko Iko",
+      "Attics of My Life"
+    ],
+    "poor_songs": [
+      "Terrapin",
+      "Standing on the Moon"
+    ],
+    "setlist_flow": "First set is Brent‑centric and solid, second set starts strong with Iko Iko and an excellent transition into Uncle John's Band, then loses momentum with a sloppy Terrapin and a plodding Standing on the Moon before recovering around Not Fade Away."
+  },
+  "band_member_comments": {
+    "Jerry": "Limited fireworks from Jerry in the first set; overall subdued guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics of My Life": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T06:00:43.546542+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-30.sbd.miller.87742.sbeok.flac16"
+}

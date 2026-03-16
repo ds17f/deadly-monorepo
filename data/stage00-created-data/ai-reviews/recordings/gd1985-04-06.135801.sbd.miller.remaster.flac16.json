@@ -1,0 +1,55 @@
+{
+  "summary": "Clean soundboard capture of a rare China Cat Sunflower → I Know You Rider / Playing in the Band → Uncle John's Band sequence, though Jerry’s vocals are weak.",
+  "review": "The recording is praised for its clarity and clean sound, preserving an unusual second‑set medley that only appears a handful of times. Reviewers love the rare China Cat Sunflower > I Know You Rider and Playing in the Band > Uncle John's Band pairing, but one notes that Jerry Garcia’s voice sounds completely shot on this night. Overall the show is memorable, with the vocal flaw the only real drawback.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is highlighted by a rare song combination and strong audience reaction, while recording quality is described as clean; mixed feelings about Jerry's vocals lower the overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Described as clean with no dropout issues; no further technical complaints noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Playing in the Band > Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set features an exceptionally rare sequence of China Cat Sunflower into I Know You Rider followed by Playing in the Band into Uncle John's Band, giving the show a special flow that fans cherish."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocals are described as completely shot on this recording.",
+    "Phil": "\"Hiya Hiya Hiya Kids, Can you Hear Me?!?\" – Phil’s spoken interjection is noted.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T03:13:08.619939+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-06.135801.sbd.miller.remaster.flac16"
+}

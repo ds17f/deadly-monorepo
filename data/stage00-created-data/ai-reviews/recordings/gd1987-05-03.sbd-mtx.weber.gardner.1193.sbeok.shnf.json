@@ -1,0 +1,87 @@
+{
+  "summary": "Excellent audience recording that captures a heavy, early‑70s‑style set highlighted by Brent’s Good Times Blues and Phil’s rumbling bass.",
+  "review": "Both reviewers rave about the show’s deliberate, weighty playing – from Phil’s massive bass presence to Brent’s standout Good Times Blues and the playful Little Bunny Foo Foo interlude. The audience tape is praised for its clarity, especially in the low end, making the performance feel vivid despite a few electronic hiccups on Bob’s guitar.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical performance with many standout moments and an audience recording noted for good clarity, especially bass; limited to two detailed reviews."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape captures the low‑end remarkably well – “real and true to life” bass presence – and overall is clearer than most audience recordings; no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Times Blues",
+      "Peggy-O",
+      "Cassidy",
+      "Iko Iko",
+      "The Stranger",
+      "Ship of Fools",
+      "Bite",
+      "Black Peter",
+      "Touch"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A deliberately paced first half with heavy, rumbling bass and exploratory jams, followed by a playful second set that includes quirky interludes (Little Bunny Foo Foo) and space‑y, psychedelic renditions of classics."
+  },
+  "band_member_comments": {
+    "Jerry": "Joins Brent in the light‑hearted ‘Little Bunny Foo Foo’ break after Bob’s electronic trouble.",
+    "Phil": "Delivers a massive, rumbling bass that sounds especially vivid on this outdoor recording.",
+    "Bob": "Suffers electronic glitches during the show but contributes to the playful vibe.",
+    "Keys": "Brent shines on Good Times Blues and delivers strong keyboard work on Touch; overall keyboard performance praised.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Times Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:18:30.103751+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-05-03.sbd-mtx.weber.gardner.1193.sbeok.shnf"
+}

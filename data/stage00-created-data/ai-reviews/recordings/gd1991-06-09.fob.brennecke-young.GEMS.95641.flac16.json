@@ -1,0 +1,45 @@
+{
+  "summary": "A lively audience recording captures a vibrant 1991 show highlighted by an outstanding Rubin & Cherise performance.",
+  "review": "Fans rave about the energetic summer concert, singling out Rubin & Cherise and the Playin' Jam as show‑highlights. The audience (AUD) source is praised for its clarity and liveliness, though one listener notes occasional mix quirks that bury some guitars. Overall the performance feels magical and well‑recorded.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (4–5) and enthusiastic comments about both the music and recording quality; only minor mix complaints keep it just shy of perfection."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear, lively AUD recording praised as great by several reviewers; one comment mentions a weird mix that muffles Bob's guitar and Brent's vocals."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Rubin & Cherise",
+      "Playin' Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is remembered as a sunny, feel‑good summer set with strong energy throughout and seamless transitions that kept the vibe high."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry's guitar work is noted as being in fine form and delivering great tone.",
+    "Phil": "",
+    "Bob": "Mix issues occasionally buried his guitar, making it hard to hear at times.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Rubin & Cherise": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T20:37:25.888634+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-09.fob.brennecke-young.GEMS.95641.flac16"
+}

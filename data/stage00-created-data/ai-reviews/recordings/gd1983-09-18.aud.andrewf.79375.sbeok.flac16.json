@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent audience recording of a vibrant 1983 show with a soaring second set and standout “Liberty” performance.",
+  "review": "Fans rave about the crystal‑clear, sweet‑sounding audience pull that captures the energy of this 1983 concert. The second set is repeatedly described as magical, and the first live hearing of “Liberty” is highlighted as a special moment. Overall both the music and the tape quality are praised.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All four reviews are enthusiastic (4‑5 stars) and comment on both great performance—especially the second set—and a pristine audience recording, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience tape described as ‘dialed‑in’, ‘perfect sound’ and ‘sweet‑sounding’; no complaints about dropouts, muddiness or balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Liberty"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set singled out as a highlight with an atmospheric vibe; overall show called solid, fun and energetic."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:44:44.122268+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-18.aud.andrewf.79375.sbeok.flac16"
+}

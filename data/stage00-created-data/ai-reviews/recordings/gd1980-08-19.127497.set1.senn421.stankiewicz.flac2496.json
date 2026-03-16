@@ -1,0 +1,39 @@
+{
+  "summary": "Fat, clean audience recording captures a scorching 20‑minute opening that ranks among the band’s best performances.",
+  "review": "The source is an audience (AUD) capture that sounds “very fat with lots of clean reverb,” giving the impression of being mic’d just behind the board – clear enough for listeners to enjoy the performance. Reviewers rave about the 20‑minute opening jam, calling it one of the best the Dead ever did and even comparing the show to the legendary 2/27/81 concert. While one reviewer gives a glowing five‑star rating, another is less enthusiastic, resulting in an overall mixed sentiment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (especially the opening jam) and a well‑recorded audience source push the rating up, but only two reviews with divergent opinions lower confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as very fat with clean reverb, semi‑near clapping that isn’t annoying, and a soundstage that feels like it’s just behind the board – overall clear and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Opening jam (20+ minute performance)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show opens with an exceptional, extended jam that sets a high bar; reviewers liken the overall flow to the classic 2/27/81 concert."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for being relaxed and letting loose at the Uptown venue, delivering a scorching opening performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T01:46:19.859296+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-08-19.127497.set1.senn421.stankiewicz.flac2496"
+}

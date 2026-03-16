@@ -1,0 +1,63 @@
+{
+  "summary": "Soundboard recording with a bit of hiss and vocal quirks, but the show shines thanks to a soaring Morning Dew and tight transitions like Eyes → Samson.",
+  "review": "The performance is highlighted by an emotional Morning Dew, smooth segues such as Eyes into Samson, and a memorable Foolish Heart and Corrina jam. While the soundboard source captures the band well, listeners note a faint hiss and uneven vocal levels that keep the recording from being pristine. Overall the musical moments outweigh the technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Strong show quality with several standout songs and emotional peaks, tempered by consistent comments about hiss and vocal volume issues that lower the recording rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Noticeable background hiss and occasional low‑volume or muffled vocals (especially on Foolish Heart), but overall a clear enough mix to enjoy the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Eyes",
+      "Samson",
+      "Foolish Heart",
+      "Corrina"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth transitions—particularly the Eyes → Samson segue—and an emotional high point with Morning Dew give the set a cohesive, uplifting flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Delivers a heartfelt lead on Morning Dew; vocal level inconsistencies noted in the recording.",
+    "Phil": "Described as experimental; hiss seems to recede when his part is cranked up.",
+    "Bob": "Typical Bob presence ('bobber') mentioned but no specific performance critique.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:46:57.667275+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-05-24.sbd.larson.8704.sbeok.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "A sluggish 1995 performance with a disengaged Jerry Garcia; recording source and quality unclear.",
+  "review": "Reviewers lament the lack of energy, noting that Jerry Garcia appeared bored and went through the motions, which dragged down the overall concert experience. No concrete information about the audio source or fidelity is provided, and a second, brief review gives a neutral three‑star rating without comment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.1,
+    "confidence": "medium",
+    "rationale": "One strongly negative review (1 star) dominates the impression of a poor show; the only other feedback is neutral with no details, leading to a low overall rating but limited data for high confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewers mentioned soundboard vs. audience or any audio clarity issues; recording source is not identified."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Performance described as sluggish and disengaged, especially early in the set, with no specific highlights noted."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as looking bored and playing half‑heartedly, seeming uninterested in the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T10:28:45.063628+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-21.aud.unknown.larson.35122.flac16"
+}

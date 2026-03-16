@@ -1,0 +1,64 @@
+{
+  "summary": "A superb matrix mix of the 1974 Wall‑of‑Sound show, featuring a jaw‑dropping 45‑minute Playing in the Band and crystal‑clear balance between soundboard and audience feeds.",
+  "review": "The Tobin matrix does an outstanding job marrying the SBD and AUD sources – the sync is tight, the ambience fills out the mix without muddying it, and the overall clarity is top‑notch despite a slight shortfall in bass presence. Musically the concert is legendary: a marathon first set flows straight into a second‑set opener of Playing in the Band that stretches over 40 minutes, with standout moments from Weather Report Suite, Let It Grow and China Doll. The energy is relentless and the percussive work is described as “seething beast of percussive perfection.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (mostly 4‑5 stars) praise both the performance (epic jams, strong energy) and the matrix recording (excellent balance and sync). Minor issues (bass level, one disliked tune) keep it just shy of a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Tight synchronization, balanced blend of SBD and AUD, no echo/reverb artifacts. Aud feed a bit low and bass is thin on the soundboard side, but overall clarity and depth are superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "China Doll",
+      "Weather Report Suite",
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "Money Money"
+    ],
+    "setlist_flow": "A marathon first set (≈90 min) with virtually no gaps, leading into a second‑set opener of an epic Playing in the Band that sustains high energy for over 40 minutes; the pacing keeps momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Opening guitar doodles highlighted as energetic and tight.",
+    "Phil": "Bass noted as practically missing from the soundboard feed, though overall mix compensates.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Percussive perfection praised; Bill Kreutzmann’s cymbal splashes singled out."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China Doll": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Money Money": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T19:49:28.144317+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-05-21.sbd.matrix.tobin.87114.sbeok.flac16"
+}

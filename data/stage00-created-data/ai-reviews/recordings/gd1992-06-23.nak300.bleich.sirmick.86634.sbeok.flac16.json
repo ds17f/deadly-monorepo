@@ -1,0 +1,31 @@
+{
+  "summary": "Mixed performance with missing favorites; no clear info on recording quality",
+  "review": "The reviewer gave the tape four stars, appreciating that it captured Jerry Garcia’s later‑year playing, but lamented that many of their favorite songs were omitted and the show wasn’t a “beast.” No details about sound quality or source were provided, leaving the technical side uncertain.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only one review; positive star rating but comments indicate disappointment with setlist and no recording‑quality details."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer did not comment on clarity, mix, or source type; only mentions that the tape was taken by a taper."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer felt the concert wasn’t a ‘beast’ and noted many favorite songs were missing, suggesting a less satisfying set for them."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentions enjoying recordings from Jerry’s later years but no specific performance notes.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T07:43:31.726648+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-23.nak300.bleich.sirmick.86634.sbeok.flac16"
+}

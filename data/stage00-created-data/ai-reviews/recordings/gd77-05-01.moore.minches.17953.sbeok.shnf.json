@@ -1,0 +1,31 @@
+{
+  "summary": "Muddy audience recording where the band sounds distant; a few listeners find it usable after EQ tweaks, but overall clarity is poor.",
+  "review": "The three reviews focus almost entirely on the audio quality. Two reviewers describe the tape as muddy and less clear than other audience recordings, while one enthusiast notes that with a low‑frequency roll‑off the sound can be brought forward and enjoys the characteristic Jerry Moore ambience. No comments were made about the musical performance or specific songs.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Average reviewer rating is ~3.3 stars; most feedback highlights poor clarity, but one reviewer rates it highly after EQ adjustment, leading to a mixed overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Described as muddy and distant with heavy audience presence; band sounds farther away than on comparable recordings. One reviewer suggests low‑frequency roll‑off can improve perceived proximity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-24T22:12:15.545816+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-05-01.moore.minches.17953.sbeok.shnf"
+}

@@ -1,0 +1,91 @@
+{
+  "summary": "A legendary NYE ’76 show – funk‑filled Playin’ In The Band, a monster Good Lovin' > Samson transition and soaring Help/Slip/NFA/Dew – captured on an audience FM tape with solid, if not pristine, sound.",
+  "review": "Fans rave about this New Year’s Eve performance as one of the best ’76 concerts, highlighting the explosive Playin’ In The Band jam, the unforgettable Good Lovin' > Samson segue and the extended Help‑Slip‑Not Fade Away‑Dew sequence.  The recording is an FM broadcast (audience source) that delivers decent clarity; a few reviewers note hiss, PCM‑generation artifacts and a bass‑heavy mix, but overall it remains very listenable.  Energy builds from a slow start into sustained funk and improvisational fire throughout both sets.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 20 reviews overwhelmingly praise the musical performance (show rating ~4.8) while noting a good‑to‑fair recording quality (~4.0). Weighted average yields ~4.6 stars with consistent sentiment across reviewers."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "FM broadcast capture; some hiss and PCM‑generation artifacts mentioned, bass can dominate the mix, but overall clarity is respectable and the tape sounds ‘decent’ to ‘excellent’ to most listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' In The Band",
+      "Good Lovin' > Samson",
+      "Help > Slip > Not Fade Away > Dew",
+      "L.L. Rain",
+      "Scarlet Begonias",
+      "Morning Dew",
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Both sets start a bit slow, then the band builds momentum—LL Rain fuels the first set climax, while the second set erupts with a massive Good Lovin'‑Samson groove and an extended Help/Slip/NFA/Dew jam that carries the show to its peak."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring leads, funky riffs on the Good Lovin' transition, vocal highlights (especially on Promised Land) and driving the improvisational flow.",
+    "Phil": "Bass is front‑and‑center; many note a dominant mix that lets his thumping lines shine throughout the night.",
+    "Bob": "Solid rhythm work and vocal contributions; noted for a mini solo behind Jerry’s chord solo and strong presence on Samson and other jams.",
+    "Keys": "Keith shows early timing quirks but recovers with higher‑note flourishes later; overall keyboards add color to the jams.",
+    "Drums": "Bill Kreutzmann and Mickey Hart provide a cooking backbeat, two brief drum solos, though some reviewers feel pacing slips toward the end."
+  },
+  "song_mentions": {
+    "L.L. Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' In The Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Good Lovin' > Samson": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Help > Slip > Not Fade Away > Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T08:49:37.608579+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-12-31.preFM.warner.18524.20760.sbeok.shnf"
+}

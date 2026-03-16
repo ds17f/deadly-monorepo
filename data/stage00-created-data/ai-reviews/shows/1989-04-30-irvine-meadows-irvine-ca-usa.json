@@ -1,0 +1,64 @@
+{
+  "summary": "Energetic first set with Deal and Stella Blue; second set falters",
+  "blurb": "The show shines on a lively first set featuring Deal, Estimated Prophet, Eyes Of The World and a soaring Stella Blue. Jerry’s tight guitar work and Phil’s thunderous bass drive the energy. The second set loses focus after the early songs, making it uneven.",
+  "review": "On April 30 1989 at Irvine Meadows the Dead delivered an electric first set that still feels fresh. From the opening “Mississippi Half‑Step Uptown Toodeloo” through a rollicking “Deal,” the band fed off a chaotic crowd, with Jerry’s tight, driving guitar and Phil’s thunderous bass (“PHIL‑BASS!!!”) propelling songs like “Estimated Prophet” into an inspired segue with “Eyes Of The World.” Highlights such as “Stella Blue” and “Truckin'” showcase Brent’s tasteful keys and the dual‑drum engine of Mickey and Billy. However, by the second set the momentum sputters—reviewers note a careless mess after a few numbers, the crowd babble overwhelms the mix on the FOB recording, and even the soundboard captures a dip in focus. For fans who love the high‑octane first half but can tolerate an uneven latter portion, this show remains a noteworthy snapshot of ’89 Dead energy.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.8,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 19,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.2,
+      "sentiment_rationale": "Mixed sentiments across recordings: strong praise for the first set and Jerry/Phil performance, but consistent criticism that the second set collapses into a careless mess. The positive notes outweigh the negatives just enough to merit a modest upward adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.2 = 2.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd89-04-30.sbd.clugston.13757.sbefail.shnf",
+    "reason": "Clear soundboard capture with good clarity, preserving the energetic first set despite occasional crowd and jet noise."
+  },
+  "key_highlights": [
+    "First set energy peaks on Deal and Stella Blue",
+    "Estimated Prophet > Eyes Of The World segue shines",
+    "Jerry’s tight guitar and Phil’s thunderous bass drive the band",
+    "Second set loses focus after early songs, making it uneven"
+  ],
+  "song_highlights": [
+    "Deal",
+    "Stella Blue",
+    "Estimated Prophet",
+    "Eyes Of The World",
+    "Truckin'"
+  ],
+  "band_performance": {
+    "Jerry": "Tight, driving guitar work that kept the band locked in, especially on Deal and the second‑set jams.",
+    "Phil": "Powerful, punchy bass (“PHIL-BASS!!!”) that propelled the first set’s momentum.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-16T19:15:54.248505+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Picasso Moon",
+      "Deal"
+    ],
+    [
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "Truckin'",
+      "Gimme Some Lovin'",
+      "Stella Blue",
+      "Around & Around",
+      "Good Lovin'"
+    ]
+  ]
+}

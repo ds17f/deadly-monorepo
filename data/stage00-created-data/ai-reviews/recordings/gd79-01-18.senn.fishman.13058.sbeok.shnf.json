@@ -1,0 +1,125 @@
+{
+  "summary": "A middling show plagued by sloppy playing and generic jams, captured on an unknown‑source recording of average quality.",
+  "review": "The performance is largely underwhelming – many songs are described as sloppy, indistinct or lacking dynamics, with only a few moments like “From the Heart of Me” and “He’s Gone” receiving modest praise. The review gives no concrete information about the audio source, so recording quality is assumed to be average at best.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "low",
+    "rationale": "Only one detailed review, which leans toward negative on the musical side and provides no clear recording‑quality assessment; thus a modest rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments about soundboard or audience clarity; reviewers focus solely on performance, implying the audio is at least listenable but not highlighted as exceptional."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "From the Heart of Me",
+      "He's Gone"
+    ],
+    "poor_songs": [
+      "Promised Land",
+      "Tennessee",
+      "Friend of the Devil",
+      "Jack Straw",
+      "Ramble On Rose",
+      "Miracle",
+      "Bertha",
+      "Good Lovin'",
+      "Wharf Rat"
+    ],
+    "setlist_flow": "Both sets are described as ordinary and lacking cohesion; transitions feel bland, with occasional bright spots but overall the evening feels generic and under‑cooked."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed remarks – praised for belting early on but later criticized for noodling, a lack of personality, and a weak outro solo.",
+    "Phil": "",
+    "Bob": "Weir is credited with rescuing the performance during “One O’Clock” sections, providing needed direction.",
+    "Keys": "",
+    "Drums": "Briefly noted that drums helped build momentum into \"Truckin'\", but no detailed evaluation."
+  },
+  "song_mentions": {
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Tennessee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mama's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Little Long Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "From the Heart of Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Around And Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:40:00.730436+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-01-18.senn.fishman.13058.sbeok.shnf"
+}

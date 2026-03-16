@@ -1,0 +1,57 @@
+{
+  "summary": "Good soundboard capture of a fiery Feb ’70 show featuring a blazing Eleven into Caution/NFA/Cumberland and a standout Uncle John's Band.",
+  "review": "The recording is a solid sound‑board source that, despite the era’s low‑level Pigpen organ mix, delivers clear enough audio to enjoy the band’s hot jamming. Highlights include an energetic Eleven that launches a seamless Caution → Not Fade Away → Cumberland sequence and a poignant Uncle John’s Band solo by Jerry. Overall reviewers feel this transitional performance is a valuable snapshot of the Dead in early ’70.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Eight detailed reviews, most 4‑5 stars, praise strong jams and key songs while noting only minor recording quirks; weighted average of show (70%) and recording (30%) yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Pretty good overall; typical period low Pigpen organ that is barely audible, but the mix remains clear enough to hear the jams and vocals."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Eleven",
+      "Cumberland Blues",
+      "Uncle John's Band",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, jam‑focused flow from The Eleven into a Caution → Not Fade Away → Cumberland segment, capped by an emotional Uncle John’s Band; reviewers note the show captures the band in a transitional, exploratory phase."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Uncle John's Band is described as poignant and sweet; overall guitar work praised throughout the set.",
+    "Phil": "Attempts to re‑enter Caution after NFA are noted but deemed ineffective, highlighting his bass presence in the jam transitions.",
+    "Bob": "",
+    "Keys": "Low Pigpen organ mix typical of early ’70 recordings, barely audible according to one reviewer.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-19T15:32:04.278519+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-02-05.sbd.bean.3911.sbeok.shnf"
+}

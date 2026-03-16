@@ -1,0 +1,31 @@
+{
+  "summary": "Mixed feedback – a solid 4‑star rating from one listener but another calls the performance rushed and gives it zero stars.",
+  "review": "The two reviews provide little concrete information about the recording itself, leaving its source and clarity unknown. One reviewer gave a generic four‑star score, while the other complained that the band sounded overly hurried, suggesting pacing issues in the show. No specific songs or player highlights were mentioned.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.7,
+    "confidence": "medium",
+    "rationale": "Only two brief reviews with contradictory sentiment; limited detail forces a cautious middle rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on soundboard, audience mix, clarity, or other technical aspects."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "One reviewer felt the band was moving too quickly, implying a rushed overall feel; no other set‑list observations provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T06:20:08.003968+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-23.120025.chasingwilma.flac24"
+}

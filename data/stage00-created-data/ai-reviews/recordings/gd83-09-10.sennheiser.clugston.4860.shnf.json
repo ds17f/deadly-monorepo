@@ -1,0 +1,78 @@
+{
+  "summary": "Warm audience recording of a high‑energy ’83 show with standout performances of Cold Rain & Snow, China Doll and The Music Never Stopped",
+  "review": "The crowd‑sourced tape captures an electric two‑day Santa Fe run – a solid first set and a second set made unforgettable by Mickey’s birthday drum solo and a double rainbow.  Fans rave about Jerry’s soaring lead guitar, Phil’s rare vocal cameo on Cold Rain & Snow, and the blazing China Doll/China > Rider jam, while the recording is warm and listenable though not audiophile‑perfect.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.5 stars; show quality is consistently praised while recording quality is described as warm but not pristine, yielding a solid 4‑plus overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Warm audience tape with decent clarity; listeners note it isn’t top‑notch and could use more warmth, but the mix is generally listenable and captures crowd energy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain and Snow",
+      "China Doll",
+      "The Music Never Stopped",
+      "I Know You Rider",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is praised for its drive, second set becomes legendary thanks to a rain‑induced double rainbow during Mickey’s birthday drum solo and high‑octane jams; occasional long weather‑related breaks but overall momentum stays strong."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work repeatedly described as killer, with soaring solos and crisp tone.",
+    "Phil": "Notable for a novelty cowboy hat/harmony on Cold Rain & Snow and a flawless, warm tone during the show.",
+    "Bob": "Bob Weir (referred to as Bobby) gets credit for solid rhythm work; his presence noted in jam sections.",
+    "Keys": "Brent Mydland’s keyboards highlighted in jams (“Bobby & Brent dominated jam”).",
+    "Drums": "Mickey Hart’s birthday drum solo is a focal point, described as powerful enough to conjure a double rainbow."
+  },
+  "song_mentions": {
+    "Cold Rain and Snow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "My Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish jam/Other One space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:23:02.948617+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-09-10.sennheiser.clugston.4860.shnf"
+}

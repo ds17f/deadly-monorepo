@@ -1,0 +1,94 @@
+{
+  "summary": "A superb sound‑board capture of a legendary Dead night – excellent performances of Big Bossman, Dark Star, Pigpen classics and a Duane Allman‑enhanced Sugar Magnolia.",
+  "review": "Reviewers rave about the show’s musical firepower, citing standout renditions of Big Bossman, Loser, Playing in the Band, Hard to Handle, Dark Star and several Pigpen numbers. The soundboard source is praised as crisp and “excellent,” though a few note an archive‑induced slowdown and minor audio anomalies on Wharf Rat. Overall the performance shines despite mixed technical complaints.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Strong musical praise (70% weight) combined with generally good but occasionally criticized recording quality (30% weight) yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the mix crisp and “excellent,” though one notes the Archive’s April‑Fool slowdown that makes playback sound terrible, and another mentions a few audio anomalies on Wharf Rat."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Bossman",
+      "Loser",
+      "Playing In The Band",
+      "Hard To Handle",
+      "Dark Star",
+      "Casey Jones",
+      "Sugar Magnolia (Duane Allman)",
+      "It Hurts Me Too",
+      "Good Lovin'"
+    ],
+    "poor_songs": [
+      "Wharf Rat (audio anomalies)"
+    ],
+    "setlist_flow": "The concert opens with a full New Riders set, then rolls into a tight Dead set that balances high‑energy rockers and soulful Pigpen blues, with appreciated breaks between songs that let the audience atmosphere shine."
+  },
+  "band_member_comments": {
+    "Jerry": "Highlighted for singing ‘Sing Me Back Home’ (called “Jerry’s song”) and praised for his overall presence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Big Bossman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard To Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It Hurts Me Too": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T05:38:21.755257+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-26.sbd.unknown.2214.shnf"
+}

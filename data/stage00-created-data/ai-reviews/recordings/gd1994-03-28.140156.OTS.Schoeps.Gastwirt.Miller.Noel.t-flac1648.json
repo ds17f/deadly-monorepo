@@ -1,0 +1,69 @@
+{
+  "summary": "Noisy audience recording masks a decent 1994 show with solid first‑set highlights like West LA, Peggy‑O and an excellent Rain cover.",
+  "review": "The tape suffers from high‑level noise and break‑up, making it difficult to raise the volume without distortion. Musically the performance is respectable – the first set delivers strong moments (West LA, Roses, Peggy‑O, Masterpiece) and the second set opens with a standout Beatles cover, Rain, though the overall song selection there was less inspiring for some listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Show quality is decent to good while recording quality is poor; weighted average yields an overall three‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Excessive noise and breakup at higher volumes; limited listenability beyond low levels."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "West LA",
+      "Roses",
+      "Peggy-O",
+      "Masterpiece",
+      "Rain",
+      "Box of Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid with several strong picks; second set opens strongly but overall song choices are uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Positive remarks on his contributions to West LA, Roses and Peggy‑O.",
+    "Phil": "",
+    "Bob": "Consistently great playing noted throughout the first set.",
+    "Keys": "Special mention of epic Vince singing (keyboard/vocal contribution).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "West LA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:56:06.415514+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-28.140156.OTS.Schoeps.Gastwirt.Miller.Noel.t-flac1648"
+}

@@ -1,0 +1,98 @@
+{
+  "summary": "High‑quality soundboard capture of a blazing second set – the Wheel, funky Shakedown Street and stellar interplay make this show a fan favorite.",
+  "review": "The recording is a solid soundboard source with minimal hiss but suffers from a few tape cuts (Jack Straw intro, Shakedown Street start, Never Trust a Woman and a reel‑cut Wharf Rat). Musically the second set shines – Garcia’s fire on The Wheel, Mydland’s funky keyboards on Shakedown Street, tight jams on Good Times, Spanish Jam and Saint of Circumstance keep listeners hooked.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of reviews (5‑star) rave about the performance while noting only minor recording glitches; strong consensus gives a high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Minimal analog hiss, generally clear mix. Notable issues: cut beginnings of Jack Straw, Shakedown Street and Never Trust a Woman; reel‑cut in Wharf Rat and missing ending of the show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Wheel",
+      "Shakedown Street",
+      "Good Times",
+      "Spanish Jam",
+      "Saint of Circumstance",
+      "Lost Sailor"
+    ],
+    "poor_songs": [
+      "Jack Straw (intro cut)",
+      "Never Trust a Woman (cut)",
+      "Wharf Rat (reel‑cut)"
+    ],
+    "setlist_flow": "The second set is an uninterrupted, jam‑heavy journey that builds momentum from the pre‑drums Wheel through Shakedown Street and into extended improvisations, delivering a cohesive and uplifting groove."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is repeatedly described as \"throwing serious heat\", \"almost speaking\" on The Wheel and delivering funky wah‑wah tones; one reviewer notes his vocals (and Bob's) are muffled.",
+    "Phil": "",
+    "Bob": "Bob Weir’s whistle intro on Truckin' is highlighted; vocal clarity criticized by a single reviewer.",
+    "Keys": "Brent Mydland’s keyboards provide \"funky off‑speed\" backing, delicate interplay on The Wheel and drive the Shakedown Street groove.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Wheel": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Good Times": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Spanish Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Never Trust a Woman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T13:48:28.748809+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-08-28.sbd.painoman.8670.sbeok.shnf"
+}

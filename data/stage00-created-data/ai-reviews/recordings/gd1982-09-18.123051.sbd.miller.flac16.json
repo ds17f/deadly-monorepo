@@ -1,0 +1,52 @@
+{
+  "summary": "Crisp soundboard upgrade captures a high‑energy second set highlighted by a soaring \"It's All Over Now Baby Blue\" encore.",
+  "review": "The Miller SBD mix brings out the crowd’s excitement with clear, crisp audio that many reviewers say eclipses earlier flat releases. Musically the show shines in its electric second set and an uplifting encore, though a few flubs in “Truckin’” are noted. Overall the recording is both technically excellent and musically rewarding.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most detailed reviews praise the upgraded sound quality and strong second‑set performance, outweighing a few off‑topic low‑star entries."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix that captures crowd energy; considered a significant upgrade over previous flat releases. No major dropouts or balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "It's All Over Now Baby Blue",
+      "Throwing Stones"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "Solid first set followed by a high‑energy second set that builds to an uplifting encore; reviewers note the flow feels natural and exciting."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Strong bass work at the start of the Samson segment, described as “bomb justice.”",
+    "Bob": "Bob Weir’s contribution noted in the second‑set intro (referred to as \"Booby before Samson\").",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "It's All Over Now Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:48:17.513564+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-18.123051.sbd.miller.flac16"
+}

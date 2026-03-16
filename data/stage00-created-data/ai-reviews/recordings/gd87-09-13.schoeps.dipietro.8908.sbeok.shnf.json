@@ -1,0 +1,69 @@
+{
+  "summary": "Audience‑sourced tape with decent but glitchy sound captures a high‑energy show highlighted by a smoking Scarlet > Fire and tight Throwing Stones jams",
+  "review": "The performance is praised for its electric third‑night energy, especially the standout Scarlet > Fire transition and the forward‑moving Throwing Stones. While most listeners find the recording listenable, several note a brief SB glitch in Scarlet and occasional silence gaps that detract from an otherwise solid audience capture.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently rated high (tight jams, energetic playing) while recording quality varies from decent to glitch‑prone; weighting the two yields a mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Generally clear enough for listening but suffers from a brief SB glitch ~4:15 into Scarlet, occasional silence gaps between tracks, and some overall muddiness reported by a few reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Throwing Stones",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Scarlet > Fire (not as spacey or innovative)",
+      "The Other One (hushed opening disliked by some)"
+    ],
+    "setlist_flow": "Third‑night show is tight and energetic with strong transitions, especially the seamless Scarlet > Fire segue; a few songs are brief but the overall pacing keeps momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly noted as cogent and cutting lines, delivering pure tone throughout the night.",
+    "Phil": "",
+    "Bob": "His vocal delivery is described as “strange” on The Other One, but no major instrumental critique.",
+    "Keys": "Brent’s piano work is praised for its pounding energy during the second set.",
+    "Drums": "Bill’s drumming is called tight and well‑paced, providing an ‘evil’ drive into a haunting Space."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Good Lovin > La Bamba > Keep on Loving Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stagger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:09:06.946860+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-13.schoeps.dipietro.8908.sbeok.shnf"
+}

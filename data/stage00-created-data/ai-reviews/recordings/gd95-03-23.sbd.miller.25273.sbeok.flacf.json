@@ -1,0 +1,91 @@
+{
+  "summary": "Excellent soundboard capture of a legendary ’95 show – Unbroken Chain, Scarlet > Fire and Days Between roar on crystal‑clear tape.",
+  "review": "The Charlie Miller SBD is crisp, well‑balanced and lets the Grand Piano shine, making this one of the cleanest 1995 recordings. Musically the night is a high point for the late‑era Dead: Unbroken Chain launches a second set that erupts into a scorching Scarlet > Fire, a magical Matilda‑Drums/Space jam and an emotionally charged Days Between, with The Weight closing on a high note.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews rate the show 4‑5 stars and praise both performance and tape quality; only a handful are negative, giving a strong consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear SBD with full piano detail, solid bass response and minimal noise. One reviewer notes a brief dropout early in the set, but virtually all comments describe the tape as crisp, balanced and well‑mastered."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Unbroken Chain",
+      "Scarlet > Fire",
+      "Days Between",
+      "Matilda > Drums/Space jam",
+      "The Weight"
+    ],
+    "poor_songs": [
+      "First set (overall – considered mediocre by several reviewers)",
+      "Scarlet (vocal lyric flubs)"
+    ],
+    "setlist_flow": "The first set is viewed as serviceable but uneventful; the second set explodes after Unbroken Chain, with seamless segues into Scarlet > Fire, a soaring Matilda jam, an inspired Space, and a heartfelt Days Between that carries the concert to its climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is praised as energetic and ‘on fire’ on many songs; vocal lyric flubs are noted, especially on Scarlet, but his soloing remains a highlight.",
+    "Phil": "Lefs’s bass is described as solid (often needing the listener to crank the low end), and his vocals on Unbroken Chain receive specific praise.",
+    "Bob": "Weir’s rhythm guitar and vocals get few mentions; generally regarded as steady and supportive.",
+    "Keys": "Bruce Hornsby’s grand‑piano is repeatedly called magical, driving the band forward. Vince’s contributions are criticized by several reviewers as less effective.",
+    "Drums": "Mickey & Bill’s drumming is highlighted in the post‑Matilda jam and Space, described as tight, powerful and a key part of the show’s energy."
+  },
+  "song_mentions": {
+    "Unbroken Chain": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 12,
+      "negative_mentions": 3,
+      "total_mentions": 15
+    },
+    "Days Between": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Matilda > Drums/Space jam": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "The Weight": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Corrina": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "So Many Roads": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Easy Answers": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T06:27:32.475063+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-03-23.sbd.miller.25273.sbeok.flacf"
+}

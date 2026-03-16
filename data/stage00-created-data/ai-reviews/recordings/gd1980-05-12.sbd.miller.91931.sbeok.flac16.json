@@ -1,0 +1,58 @@
+{
+  "summary": "Excellent soundboard recording of a solid 1980 show, highlighted by Lazy Lightning → Supplication and a powerful Caution Jam, with generally strong performances.",
+  "review": "The audience gets a clean SBD capture that many reviewers call “excellent” or at least “good for the period.” Musically the concert is praised for its tight first‑set flow (Jack Straw → Alabama → El Paso, Lazy Lightning → Supplication, China Rider) and a standout Estimated → He's Gone → Caution Jam, while Brent’s keyboards draw mixed feelings. Overall the show is regarded as a good example of an often‑overlooked 1980 era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the performance 4–5 stars and note high‑quality soundboard audio; only minor criticisms (e.g., Brent’s keyboards, average China → Rider) keep the rating just above a solid “good” level."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers praise the clarity and overall fidelity (“excellent sound quality”, “hats off to Charlie Miller”). No major drop‑outs reported, only occasional period‑specific tape quirks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw > Alabama > El Paso",
+      "Lazy Lightning > Supplication",
+      "Estimated > He's Gone > Caution Jam"
+    ],
+    "poor_songs": [
+      "China > Rider"
+    ],
+    "setlist_flow": "The first set is described as tight and inspiring, with seamless transitions; the second set maintains momentum thanks to a strong Caution Jam, though some feel the China‑Rider transition lacks extra guitar breaks."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised – “Jerry is on it and all over it,” indicating solid lead guitar throughout.",
+    "Phil": "Highlighted positively during the Caution Jam (“listen to Phil”).",
+    "Bob": "",
+    "Keys": "Mixed opinions: some call Brent annoying, others defend his playful contribution.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw > Alabama > El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning > Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Estimated > He's Gone > Caution Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-12T23:29:35.016711+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-12.sbd.miller.91931.sbeok.flac16"
+}

@@ -1,0 +1,58 @@
+{
+  "summary": "Great 1992 California show with Jerry’s blazing Bertha and Desolation Row, captured in a solid soundboard transfer.",
+  "review": "The performance shines on highlights like Bertha, Desolation Row and a sweet Box of Rain, though Truckin’ loses some momentum. The Charlie Miller‑handled CM/soundboard transfer is praised as crisp and an improvement over earlier releases, making the recording pleasant to listen to despite a few rough spots.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly (average ~4‑5 stars) and commend the recording quality, with only one mixed review noting a sloppy Truckin’. Weighted scoring yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Described as a perfect CM transfer and an improvement over earlier SB releases; clear and balanced with no major issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Desolation Row",
+      "Box of Rain"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "Overall a solid 1992 Dead set, average to wonderful with occasional slips (e.g., Truckin'), but strong moments that capture the sunny California vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for going off on Bertha and Desolation Row, delivering sunshine‑filled playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:29:03.665452+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-05-20.sbd.miller.92387.sbeok.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Crisp soundboard capture of a solid first set, but the second‑set 'Fire' unravels, leaving an overall mixed performance.",
+  "review": "The recording is praised for its crystal‑clear board mix that lets listeners feel the heat of the night. Musically the show starts strong with a good first set, yet the second‑set collapses around 'Fire' as Jerry loses his way, turning what could have been great into an okay performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Strong, crisp soundboard recording pushes the rating up, but the show is judged only average due to a poorly executed 'Fire' segment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the tape as the crispest sounding board, with clear detail and no noted mix problems."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Fire"
+    ],
+    "setlist_flow": "First set is solid; second set begins strong but loses momentum when 'Fire' falls apart, resulting in an overall mixed impression."
+  },
+  "band_member_comments": {
+    "Jerry": "Loses his way during 'Fire', causing the band to lose rhythm.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:09:53.012107+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-20.111527.sbd.BEAR.gems.flac16"
+}

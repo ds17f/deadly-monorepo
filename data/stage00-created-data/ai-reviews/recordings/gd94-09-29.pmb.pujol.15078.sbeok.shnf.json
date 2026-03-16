@@ -1,0 +1,74 @@
+{
+  "summary": "Excellent audience recording captures a vibrant Boston show with standout performances of Eyes, He's Gone, Spanish Jam, The Other One, Wharf Rat and Sugar Magnolia.",
+  "review": "The tape is an audience capture that many reviewers say sounds almost as clear as a soundboard, with crisp drums and Jerry’s guitar front‑and‑center. Musically the concert flows from an earthy first set into a second‑set psychedelic marathon highlighted by Eyes, He's Gone, Spanish Jam, The Other One, Wharf Rat and a soaring Sugar Magnolia. Keyboardist Vince’s playing draws mixed comments but overall doesn’t detract from the strong band chemistry.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (4‑5) and enthusiastic language indicate a great show; recording quality is repeatedly praised as excellent, yielding a weighted average around 4.4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners note soundboard‑like ambience, crisp clarity, clear drums up front and Jerry’s guitar with a clean sting; no major dropouts or muffiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "He's Gone",
+      "Spanish Jam",
+      "The Other One",
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as earthy and fun, second set a seamless psychedelic journey with extended jams that maintain momentum from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for crisp guitar tone and solid playing; appears in good shape throughout the show.",
+    "Phil": "",
+    "Bob": "Mentioned his song \"Corrina\" as a downer, but no specific criticism of his playing.",
+    "Keys": "Vince’s keyboard work is generally criticized for being stiff, yet on this tape he is described as tolerable and fitting into the band’s flow.",
+    "Drums": "Drums are clear, upfront, with thundering rolls that drive the jams."
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T01:51:32.638976+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-09-29.pmb.pujol.15078.sbeok.shnf"
+}

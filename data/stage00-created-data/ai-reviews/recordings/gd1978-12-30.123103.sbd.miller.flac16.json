@@ -1,0 +1,75 @@
+{
+  "summary": "Crisp soundboard capture of a first‑set‑for‑the‑ages 1978 show, with Jerry’s scorching guitar and strong vocal performances despite the recording ending early.",
+  "review": "The concert is praised for an electrifying first set – Jack Straw, They Love Each Other, Loser, Passenger, Tennessee Jed, Sugaree and The Promised Land are highlighted as standout moments, and Donna Jean’s vocals receive special mention. The soundboard source is described as generally crisp but not perfectly clean and it cuts off before the end of the second set, so the recording is solid but incomplete.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Three reviews (two detailed) give mostly 4‑5 stars and emphasize strong musical performance; recording quality is good but has minor imperfections and an early cut, leading to a high‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and clean sound, though not the sharpest ever heard; recording ends before the conclusion of Set 2, leaving the latter part incomplete."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "They Love Each Other",
+      "Loser",
+      "Passenger",
+      "Tennessee Jed",
+      "Sugaree",
+      "The Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as \"for the ages\" with no wasted time between tunes; energy high and many songs packed in, though the second set is cut short by the recording."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work lauded as sweet, hot swagger on Loser, Passenger and Tennessee Jed.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith is noted as missing (MIA) during this era, diminishing the keyboard presence.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T18:14:08.613643+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-12-30.123103.sbd.miller.flac16"
+}

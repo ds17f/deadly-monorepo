@@ -1,0 +1,63 @@
+{
+  "summary": "Very good recording of an energetic show featuring standout performances of Shakedown Street, Samson and Brother Esau",
+  "review": "The three fan reviews praise the concert’s high energy, noting a rocking first set that opens with Shakedown Street and Samson and delivers a memorable take on Brother Esau. While no technical details are given, listeners describe the sound as very good, making the show enjoyable despite the lack of specific recording information.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Consistently positive comments about both performance and overall sound quality; limited technical detail lowers confidence slightly."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers call the audio \"very good\" and \"also very good\" but give no specifics about mix, clarity, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Samson",
+      "Brother Esau",
+      "Eyes of the World > Man Smart",
+      "Women Smarter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set opens strong with Shakedown Street and Samson, keeping a rocking vibe throughout; jam sections (e.g., Eyes of the World into unexpected segues) add surprise and excitement."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World > Man Smart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Women Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T11:15:42.124194+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-09.120042.aud.chasingwilma.flac24"
+}

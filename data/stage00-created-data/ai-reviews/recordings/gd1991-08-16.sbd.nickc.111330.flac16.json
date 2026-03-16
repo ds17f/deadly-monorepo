@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a dynamic show with standout Scarlet Begonias, The Other One and Fire, despite minor start‑up roughness.",
+  "review": "The recording is praised as a full, dynamic SBD source with crisp USB quality, only hampered by a brief mic dropout and a rough beginning to the first two tracks. Musically the show shines – the opening trio of Scarlet Begonias/Space, the ethereal transition into Fire, and a soaring performance of The Other One are highlighted as superb moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and describe both the performance and soundboard recording in glowing terms; only one low star rating is unrelated to music quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Full, dynamic SBD with crisp USB mix; minor mic blink‑out on Bob's vocal and a rough start to the first two tracks noted but overall very clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "The Other One",
+      "Fire",
+      "It's All Over"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong second‑set opening trio and seamless transitions (e.g., VOTC into Fire) are praised; the set is described as a smooth, energetic cruise."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers gorgeous jams, takes full control in the middle of The Other One and leads the band with confidence.",
+    "Phil": "Lesh provides a \"bomb\" at 5:27 and locks in solidly with heavy tribal drumming support.",
+    "Bob": "Weir's vocal reading on The Other One is highlighted as a pleasure; he also attempts a brief solo.",
+    "Keys": "Vince contributes backup vocals on Fire; Hornsby adds a short keyboard solo.",
+    "Drums": "Bill (drums) offers heavy tribal rhythms that drive the performance."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Over": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T23:19:36.752656+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-08-16.sbd.nickc.111330.flac16"
+}

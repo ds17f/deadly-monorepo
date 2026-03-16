@@ -1,0 +1,76 @@
+{
+  "summary": "Scorching Scarlet>Fire, tight Let It Grow jam, marathon of jams",
+  "blurb": "The show builds from a modest first set into an explosive second set highlighted by the Let It Grow → The Wheel → Music Never Stopped sequence and a fiery Scarlet Begonias > Fire On The Mountain in the third set. Jerry's guitar tone is praised throughout, while Brent provides solid new‑era keyboards. Standout moments include Estimated Prophet, Terrapin Station and a powerful U.S. Blues encore.",
+  "review": "On October 14 1980 at the Warfield, the Dead delivered one of their most marathon‑style outings of the era—a 35‑song trek that swings from gentle acoustic intimacy to high‑octane improvisation. The first set rolls along with solid staples, but it’s the second set that truly ignites: a seamless Let It Grow → The Wheel → Music Never Stopped chain that showcases Brent’s lush keyboards and Jerry’s “perfect” tone, followed by an epic Estimated Prophet jam that feels both spacious and urgent. By the time the third set erupts into Scarlet Begonias > Fire On The Mountain, the band is fully locked in; Jerry’s envelope‑filter work on Terrapin Station adds a fresh texture, while Bill’s drumming (joined by Mickey) drives the extended Playing In The Band/Space/Need A Miracle stretch. The night closes with a raucous U.S. Blues and a tender Brokedown Palace, leaving the audience buzzing about what many fans now call one of 1980’s highlight performances.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 47,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All six recordings are marked positive; multiple reviewers repeatedly praise the same standout moments (Scarlet>Fire, Let It Grow > Wheel > Music jam, Estimated Prophet) and consistently commend Jerry’s guitar tone and Brent’s keyboards. No negative sentiment about performance appears across analyses, just minor recording quirks, warranting a strong positive adjustment.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd80-10-14.sbd-aud.gardner.3828.sbeok.shnf",
+    "reason": "Excellent soundboard capture of the full marathon, crisp balance on electric sets and includes the iconic Scarlet>Fire and Let It Grow → Wheel → Music jam; only a tiny gap in the audio due to disc‑splitting."
+  },
+  "key_highlights": [
+    "Scorching Scarlet Begonias > Fire On The Mountain that ignites the third set",
+    "Monster Let It Grow → The Wheel → Music Never Stopped sequence in the second set",
+    "Powerful Estimated Prophet jam and Terrapin Station with Jerry’s envelope‑filter tone",
+    "Tight acoustic set adds depth before the high‑energy electric marathon"
+  ],
+  "song_highlights": [
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "Let It Grow",
+    "The Wheel",
+    "The Music Never Stopped",
+    "Estimated Prophet",
+    "Morning Dew",
+    "U.S. Blues"
+  ],
+  "band_performance": {
+    "Jerry": "His guitar tone is described as perfect and his envelope‑filter work on Terrapin Station shines; vocals are a bit subdued but overall brilliance drives the jams.",
+    "Phil": "Provides a solid, rumbling bass foundation (noted only in passing during PITB), with no major criticisms or standout moments recorded.",
+    "Bob": "Steady rhythm guitar throughout; a “birthday cake” moment is mentioned but there’s no specific performance critique.",
+    "Brent": "Delivers the new‑era keyboard sound that underpins the long jams; his tone and vocal contributions are praised as solid and essential to the show’s flow.",
+    "Mickey": "",
+    "Billy": "His drumming in the jam sections is called wonderful, adding drive and excitement to the extended improvisations."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-13T04:55:34.469602+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain"
+    ],
+    [
+      "Let It Grow",
+      "The Wheel",
+      "The Music Never Stopped"
+    ],
+    [
+      "Estimated Prophet",
+      "Terrapin Station",
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Uncle John's Band",
+      "Morning Dew",
+      "Playing In The Band",
+      "Good Lovin'"
+    ],
+    [
+      "U.S. Blues"
+    ]
+  ]
+}

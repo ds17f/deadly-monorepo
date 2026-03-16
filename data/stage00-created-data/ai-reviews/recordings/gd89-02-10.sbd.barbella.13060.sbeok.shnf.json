@@ -1,0 +1,103 @@
+{
+  "summary": "High‑quality soundboard recording of a spring 1989 show with standout performances of Stranger, Let It Grow and Wharf Rat.",
+  "review": "Fans rave about this February 10 1989 concert, citing scorching versions of Stranger, Let It Grow, Wharf Rat, Sugar Magnolia and a marathon Playing jam. The soundboard source is generally clear and balanced, though a few listeners note a slight slowdown/pitch issue and occasional mids‑range dullness.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are glowing (5‑star) and praise both the musical set and the audio quality; a few mixed comments lower the average slightly, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the sound clear and decent; one notes it may be from a tape transferred too slowly (lower pitch) and another mentions the mix is not overly forward. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Let It Grow",
+      "Wharf Rat",
+      "Sugar Magnolia",
+      "Just a Little Light",
+      "Playing"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "Gimme Some Lovin",
+      "Masterpiece"
+    ],
+    "setlist_flow": "First set builds gently with strong mid‑tempo numbers; the second set launches into a deep, jam‑heavy groove (Just A Little Light → Truckin' → Crazy Fingers → Playing) before closing with Wharf Rat, Sugar and a quiet Baby Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar builds to solid crescendos, tone described as decent for ’89; vocals are okay but not spectacular.",
+    "Phil": "Anchors the music with strong bass and vocal leads (especially on Gimme); some criticism of his flange‑heavy vocal effect on certain songs.",
+    "Bob": "Voice sounds good; occasional over‑active outro jam and a clangy guitar tone on Masterpiece noted.",
+    "Keys": "Brent’s keyboards are solid, but his heavy flange on vocals and the odd Gimme Some Lovin duet draw criticism.",
+    "Drums": "Bill & Mickey keep time without major flubs, though some reviewers feel the 80s drumming isn’t at its peak."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Wharf Rat": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Just a Little Light": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Gimme Some Lovin": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T16:36:13.485794+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-02-10.sbd.barbella.13060.sbeok.shnf"
+}

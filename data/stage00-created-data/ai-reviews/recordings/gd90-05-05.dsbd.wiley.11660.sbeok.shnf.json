@@ -1,0 +1,65 @@
+{
+  "summary": "Fair‑quality audience recording of a blistering hot California show that still delivers standout Help‑Slip‑Franklin’s, Loose Lucy and Loser despite some vocal wobble from Garcia.",
+  "review": "The performance shines with classic jams – the Help>Slip>Franklin’s sequence, a ripping Loose Lucy, and an inspired Loser – and Phil’s bass drives the set. Heat‑induced fatigue shows up in Garcia’s voice and the mix is marred by a mono‑heavy, hi‑hat‑dominated broadcast feed that many listeners find thin, but the overall groove keeps fans engaged.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is generally praised (≈4 /5) while recording quality is rated fair to poor (≈2.5 /5); weighted combination yields ~3.6 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Recorded from the KPFK FM broadcast; many reviewers note a mono‑sounding mix heavy on hi‑hats, occasional drop‑outs and lack of clarity. Some find it clear enough, but overall balance is poor."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help>Slip>Franklin's",
+      "Loose Lucy",
+      "Mr. Fantasy",
+      "Loser",
+      "Race Is On"
+    ],
+    "poor_songs": [
+      "Help>Slip>Franklin's (some find it sloppy due to heat and vocal strain)"
+    ],
+    "setlist_flow": "Long, scorching first set that settles into a smoother second set; the groove stays tight despite fatigue, with the band pulling together for classic jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is praised early on but later described as shaky and out of key because of heat.",
+    "Phil": "Repeatedly lauded as a ‘beast’ and lead‑bass driver; his low‑end groove is highlighted as a show highlight.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard solo on Queen Jane Approx. gets special praise; some note his keys “disappear” during Race Is On.",
+    "Drums": "Bill's drumming noted as high‑octane and driving the set."
+  },
+  "song_mentions": {
+    "Help>Slip>Franklin's": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Loose Lucy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Race Is On": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-17T06:42:01.035650+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-05-05.dsbd.wiley.11660.sbeok.shnf"
+}

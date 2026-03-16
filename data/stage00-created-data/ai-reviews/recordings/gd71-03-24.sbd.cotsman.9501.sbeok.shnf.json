@@ -1,0 +1,62 @@
+{
+  "summary": "Excellent soundboard capture of a scorching 1971 Winterland show highlighted by an unforgettable Hard to Handle and tight band interplay",
+  "review": "The recording is a crisp, intimate sound‑board source that lets every instrument shine – even the slight hiss is tolerable. Musically the performance is fire‑hot, with Hard to Handle hailed as one of the best ever, plus standout moments in The Phil Zone, Greatest Story and the Truckin’ > Drums > Other One sequence. Overall the band sounds lean, powerful and tightly locked together.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly praise both the musical performance (70% weight) and the sound‑board clarity (30% weight), yielding a near‑exceptional combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with intimate instrument separation; occasional mild hiss and a few cuts/incomplete sections noted but not detracting from overall listenability."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard to Handle",
+      "The Phil Zone",
+      "Greatest Story",
+      "Truckin' > Drums > Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy, tight performance with seamless transitions; the band sounds lean and powerful, though the source is missing a few sections at the end."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for scorching tone and soaring solo on Hard to Handle; his interplay with Phil highlighted as a peak.",
+    "Phil": "Bass described as thick‑dickened, powerful ‘bomb‑dropping’; his chording and dueling solos with Jerry are singled out as highlights.",
+    "Bob": "Noted for delivering the first solo on Hard to Handle and contributing strong rhythm/vocals throughout.",
+    "Keys": "",
+    "Drums": "Billy’s drumming lauded for being lean and tough; Mickey’s absence mentioned as a positive in this era."
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 19,
+      "negative_mentions": 0,
+      "total_mentions": 19
+    },
+    "The Phil Zone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin' > Drums > Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "GSET": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T03:45:02.724405+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-03-24.sbd.cotsman.9501.sbeok.shnf"
+}

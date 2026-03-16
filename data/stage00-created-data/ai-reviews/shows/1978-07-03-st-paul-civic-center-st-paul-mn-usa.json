@@ -1,0 +1,73 @@
+{
+  "summary": "High‑energy set with soaring Peggy-O, fiery Deal>Terrapin and tight jams",
+  "blurb": "The band roars through a punchy first set highlighted by Peggy-O and a scorching Deal > The Music Never Stopped transition. The second set delivers a classic Scarlet Begonias > Fire on the Mountain jam and a soulful Stella Blue. Recording captures the hall’s ambience with clear audience mix despite occasional drum muffling.",
+  "review": "July 3, 1978 at the St. Paul Civic Center finds the Dead firing on all cylinders. Jerry Garcia is in top form – aggressive fretwork on Loser, soaring vocals on Peggy‑O and a blistering solo that drives the Deal > The Music Never Stopped segue. Keith Godchaux adds tasteful Nashville‑style piano flourishes on Mama Tried and the second‑set jams, while Phil Lesh’s bass sits high in the mix, pushing the band forward especially toward the set close. The highlight is the seamless Scarlet Begonias > Fire On The Mountain transition that rolls into a heartfelt Stella Blue before the group caps the night with an exuberant Sugar Magnolia. Even though Werewolves of London flops and the drums occasionally sound “shoes‑in‑dryer,” the audience‑mix recording captures the room’s energy, making this show a must‑listen for anyone craving 1978 Dead firepower.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 20,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Two recordings label the show as positive and one is mixed, but all three praise Jerry’s aggressive playing, Keith’s piano flourishes, and standout songs (Peggy-O, Deal > Terrapin, Scarlet Begonias > Fire). Positive language such as “high‑energy,” “soaring,” and “fiery” appears consistently, outweighing isolated criticisms of Werewolves and drum muddiness. This yields a strong positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.2 = 4.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1978-07-03.aud.unknown.120130.sbeok.flac16",
+    "reason": "Crystal‑clear audience mix that captures the hall’s ambience and highlights the high‑energy performance, especially Peggy‑O and Deal > Terrapin."
+  },
+  "key_highlights": [
+    "Jerry’s aggressive, soaring solos on Peggy-O, Loser and the Deal > The Music Never Stopped transition.",
+    "Keith Godchaux’s Nashville‑style piano touches on Mama Tried and throughout the second set.",
+    "Scarlet Begonias > Fire On The Mountain jam leading into a soulful Stella Blue.",
+    "Audience mix provides vivid hall ambience despite occasional drum muffling."
+  ],
+  "song_highlights": [
+    "Peggy-O",
+    "Deal",
+    "The Music Never Stopped",
+    "Cassidy",
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "Stella Blue",
+    "Sugar Magnolia"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers aggressive fretwork and soaring solos, especially on Loser, Peggy-O and the Deal > Terrapin transition, keeping the band’s momentum high.",
+    "Phil": "Lesh’s bass sits prominently in the mix, adding drive throughout the set and anchoring the jam sections toward the end.",
+    "Bob": "Weir’s contribution is mostly unremarkable; his slide on Werewolves of London drew criticism and the song itself fell flat.",
+    "Keith": "Provides tasteful Nashville‑style piano flourishes, notably on Mama Tried and during the second‑set jams, adding melodic depth.",
+    "Mickey": "Drums are energetic but at times sound muffled (“shoes‑in‑dryer”) and rushed, though they still propel the band forward.",
+    "Billy": "Keeps a solid rhythmic foundation; like Mickey, his playing is powerful but occasionally lacks clarity in this audience recording."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-25T13:44:55.086306+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Peggy-O"
+    ],
+    [
+      "Deal",
+      "The Music Never Stopped"
+    ],
+    [
+      "Cassidy"
+    ],
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain"
+    ],
+    [
+      "Dancin' In The Street",
+      "Drums",
+      "Not Fade Away",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ]
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "summary": "Audience recording captures a festive, dance‑hall vibe with tight Day Job and Jerry’s soaring Eyes, but the sound is uneven in places.",
+  "review": "The show is remembered as light‑hearted and fun, highlighted by a fast, tight performance of “Day Job” and a fiery “Eyes” where Jerry really goes off. The audience (AUD) source is generally good, though listeners note that the recording is only OK in spots. Overall the performance shines despite some technical roughness.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Strong musical moments (70% weight) offset by a mixed audience recording quality (30% weight); reviewers are split between praise and mild criticism."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Terrific in parts according to one reviewer, but another notes the audio is only OK in spots; typical audience ambience with occasional uneven levels."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Day Job"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Feels like a high‑school dance vibe—light, festive and energetic—with a refreshed band energy after the NYE break, especially evident in the second set."
+  },
+  "band_member_comments": {
+    "Jerry": "Goes off during \"Eyes\"; tight and fast feel throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Day Job": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:43:12.460193+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-02-18.112038.beyer-senn.daweez.d5scott.flac16"
+}

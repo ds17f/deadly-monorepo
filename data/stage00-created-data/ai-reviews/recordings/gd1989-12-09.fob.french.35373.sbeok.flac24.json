@@ -1,0 +1,31 @@
+{
+  "summary": "Download problems reported; reviewers give no feedback on audio or performance",
+  "review": "The sole review focuses entirely on downloading difficulties and does not address the concert’s musical performance or recording quality. Consequently, there is insufficient information to evaluate the show itself or the sound source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one review that mentions technical download issues and provides a 4‑star rating, but offers no insight into music or audio quality, making any rating speculative."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source; reviewer only notes download problems."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T02:03:52.358146+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-09.fob.french.35373.sbeok.flac24"
+}

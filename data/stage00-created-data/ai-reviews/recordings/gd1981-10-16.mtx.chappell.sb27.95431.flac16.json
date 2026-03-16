@@ -1,0 +1,45 @@
+{
+  "summary": "Nice‑sounding matrix mix captures a classic Amsterdam show highlighted by a soaring Bird Song and a smoking Wheel.",
+  "review": "The audience‑plus‑soundboard matrix created by Chris Chappell delivers a warm, full sound that most fans find superior to the old dry SBD tapes.  The performance itself is widely praised – an acoustic set with a gorgeous Bird Song and a fiery Wheel, plus a memorable electric burst despite Jerry’s hoarse voice in the second set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "All six reviews are favorable (average 4.5★), with strong praise for both the musical performance and the matrix mix; only minor preferences for older tape versions were noted."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Matrix of soundboard and audience mixed to fill sonic gaps; praised for fullness and warmth, though one reviewer prefers an old cassette version. No major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic set described as 'absolutely lovely' with Bird Song and The Wheel smoking; electric set energetic despite Jerry’s reduced vocals, overall classic and cohesive performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Likely dealing with a cold/throat issue – sings less in the second set.",
+    "Phil": "",
+    "Bob": "Some reviewers note his Pigpen‑style renditions weren’t their favorite, but overall his playing fits the great acoustic vibe.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:04:21.736132+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-16.mtx.chappell.sb27.95431.flac16"
+}

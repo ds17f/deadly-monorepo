@@ -1,0 +1,62 @@
+{
+  "summary": "Excellent soundboard recording with clear mix; standout performances of Uncle John's Band, Big River, Stagger Lee and Bird Song despite a loose start.",
+  "review": "The show is praised for its strong second half of the first set, highlighted by Bob Weir’s powerful renditions of Uncle John's Band and Big River and Jerry Garcia’s deep dive into Stagger Lee. Although the opening feels a bit loose, the overall performance shines and the soundboard capture is clear and well‑balanced.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "One detailed review gives a solid 4‑star rating; the musical performance is good with several standout moments, and the soundboard recording is described as great."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear mix with good instrument separation; reviewer notes no issues hearing any band member."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band",
+      "Big River",
+      "Stagger Lee",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set starts a little loose but gains momentum in the latter half, delivering strong vocals and tighter playing."
+  },
+  "band_member_comments": {
+    "Jerry": "Gets into Stagger Lee with notable focus.",
+    "Phil": "",
+    "Bob": "Belts on Uncle John's Band and Big River; described as strong tonight.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T23:33:02.342354+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-08.sbd.hinko.32427.sbeok.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Good audience tape that captures a wildly energetic Dead show with an edgy Miles Davis guest set.",
+  "review": "The recording is an audience patch praised as state‑of‑the‑art for 1970, delivering clear and lively sound. The concert itself is described as frantic, full‑throttle and “outside,” with the band riding a high‑energy groove for about fifty minutes, though Cowboy Song is noted for its murky weirdness.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it rates the show highly and notes a good‑quality audience recording, leading to an overall strong rating but limited confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience patch described as a 'good job of taping' and state‑of‑the‑art for 1970; no major dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Cowboy Song"
+    ],
+    "setlist_flow": "A chaotic yet high‑energy set that runs roughly fifty minutes, with the band in full throttle mode and a notable Miles Davis‑inspired guest segment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cowboy Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T18:03:20.934173+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-04-09.145715.sbd.aud.wise.cousinit.hanno.joeb.sirmick.flac16"
+}

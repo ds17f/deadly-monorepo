@@ -1,0 +1,64 @@
+{
+  "summary": "Audience‑sourced (AUD) recording with mix glitches and pitch quirks, but it captures a memorable 1978 show highlighted by “If I Had the World to Give”, “Eyes of the World” and the laid‑back jam on “Aiko”.",
+  "review": "The performance is praised by most reviewers for its emotive Garcia vocals, sublime Eyes of the World, and a rare early rendition of If I Had the World to Give, while a few note low energy and sloppy moments. The recording is an audience tape that suffers from missing mix elements (Jerry’s guitar), a blown speaker, and needed pitch corrections, making it only fair in fidelity. Overall the show shines despite technical imperfections.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the musical performance highly (average ~4‑5 stars) while the detailed technical review rates the recording as fair/poor; weighting show 70% and recording 30% yields a combined rating around 3.4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audience tape with missing Jerry mix, blown speaker on guitar, occasional muffled sections, required pitch adjustments (+1% to match The Other One), edit cuts in SBDs, and overall less‑than‑ideal balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "If I Had the World to Give",
+      "Eyes of the World",
+      "Aiko"
+    ],
+    "poor_songs": [
+      "Stagger Lee",
+      "Sugaree"
+    ],
+    "setlist_flow": "Short first set with some mix problems and a sluggish Stagger Lee, followed by a longer second set where the band recovers energy; Eyes of the World shines as the highlight while the overall momentum is uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Emotive playing praised but frequently lost in the mix (blown speaker, missing from AUD), with occasional strong jam sections.",
+    "Phil": "Bass sometimes hard to hear due to mix issues; Space segment noted as a highlight for Phil fans.",
+    "Bob": "Prominent slide guitar throughout, though at times it feels like a practice session rather than musical contribution.",
+    "Keys": "",
+    "Drums": "Billy broke his wrist prior to the show, leading to one‑handed drumming and moments where the drums fell behind the beat."
+  },
+  "song_mentions": {
+    "If I Had the World to Give": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Aiko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T14:30:09.254146+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-08-30.s2.sbd.miller.110151.flac16"
+}

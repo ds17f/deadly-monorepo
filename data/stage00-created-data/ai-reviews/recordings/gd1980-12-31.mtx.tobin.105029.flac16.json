@@ -1,0 +1,51 @@
+{
+  "summary": "A stellar matrix mix captures an electrifying New Year's Eve performance with standout versions of “On the Road Again”, “China Rider” and “Scarlet Fire”.",
+  "review": "Listeners rave about this matrix‑only recording, calling it a work of art with superb room sound and well‑balanced SBD panning. The show itself is praised for its flowing New Year’s set – an acoustic ’80s opener followed by a soaring China Rider and a fiery Scarlet Fire combo – making it a must‑hear despite the audience being unusually loud in places.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 5) and enthusiastic comments on both performance and matrix mix outweigh a single neutral note about audience level."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the matrix as “sickest copy”, a “work of art” with great room sound and SBD panning; one note mentions the audience being very loud, but overall the mix is praised for clarity and balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "On the Road Again",
+      "China Rider",
+      "Scarlet Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The New Year’s show flows nicely from an acoustic ’80s first set into a powerful China Rider and culminates with a favorite Scarlet Fire combo, keeping energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "On the Road Again": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T07:35:52.185410+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-12-31.mtx.tobin.105029.flac16"
+}

@@ -1,0 +1,70 @@
+{
+  "summary": "Stellar St. Stephen>Dance>Music flow with tight Boston groove",
+  "blurb": "The show delivers a relaxed ’76 vibe highlighted by a soaring Saint Stephen → Dancin' → Music Never Stopped sequence and a seamless Sugar Magnolia → Eyes Of The World → Stella Blue transition. Jerry’s mellow tone and Keith’s piano work add depth throughout.",
+  "review": "June 11, 1976 at Boston Music Hall captures the band in peak ‘76 form – a laid‑back groove that still bursts into fireworks. Set 1 builds nicely from tight funk on Scarlet Begonias into the soaring Saint Stephen → Dancin' → Music Never Stopped suite, while Lazy Lightning and Supplication keep the energy humming. The second set is where the night truly shines: Sugar Magnolia flows straight into an ecstatic Eyes Of The World that melts into a soulful Stella Blue, punctuated by a heartfelt Sugaree and a rousing encore of Johnny B. Goode. Across all recordings, reviewers rave about Jerry’s “jaw‑dropping” runs on Saint Stephen, Phil’s “mad” bass lines in Samson & Delilah, Keith’s lush piano on the Eyes→Stella Blue segue, and Mickey’s fluid drumming with Bill’s steady beats. The best‑sounding source is the JMason soundboard capture, praised for its crystal‑clear mix despite a minor channel swap.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 50,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.5,
+      "sentiment_rationale": "All nine recordings are marked positive except one mixed audience tape; multiple reviewers consistently describe the performance as 'stellar', 'tight', and 'exceptional' with repeated praise for key sequences (Saint Stephen→Dancin', Sugar Magnolia→Eyes). This strong, uniform positivity warrants a high positive sentiment boost.",
+      "final_calculation": "2.5 + 0.4 + 1.5 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd76-06-11.sbd.jmason.7824.sbeok.shnf",
+    "reason": "Excellent soundboard source with crisp, balanced mix and minimal technical flaws; captures the band’s nuances best."
+  },
+  "key_highlights": [
+    "Saint Stephen → Dancin' → Music Never Stopped suite showcases peak improvisational flow.",
+    "Sugar Magnolia → Eyes Of The World → Stella Blue transition is seamless and emotionally resonant.",
+    "Scarlet Begonias opens the set with tight funk that sets a relaxed ‘76 groove."
+  ],
+  "song_highlights": [
+    "Scarlet Begonias",
+    "Saint Stephen",
+    "Dancin' In The Street",
+    "The Music Never Stopped",
+    "Sugar Magnolia",
+    "Eyes Of The World",
+    "Stella Blue",
+    "Lazy Lightning"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers stripped‑down solos with jaw‑dropping runs on Saint Stephen and Samson, his tone mellow and bell‑like throughout.",
+    "Phil": "Lesh’s bass is ‘sick’ and ‘mad’, especially the descending line in Samson & Delilah and the driving groove under Scarlet.",
+    "Bob": "",
+    "Brent": "Keith’s piano shines on the Eyes Of The World → Stella Blue transition, adding a lush layer to the climax.",
+    "Mickey": "Hart’s cowbell and fluid drumming weave seamlessly with Bill’s beats, providing a steady yet adventurous backbone.",
+    "Billy": "Kreutzmann’s solid, supportive rhythms complement Hart’s textures, keeping the groove tight."
+  },
+  "processed_recordings": 8,
+  "processed_date": "2025-09-23T03:56:43.376366+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Scarlet Begonias",
+      "Looks Like Rain"
+    ],
+    [
+      "Saint Stephen",
+      "Dancin' In The Street",
+      "The Music Never Stopped"
+    ],
+    [
+      "Sugar Magnolia",
+      "Eyes Of The World",
+      "Stella Blue",
+      "Sunshine Daydream"
+    ],
+    [
+      "Lazy Lightning",
+      "Supplication"
+    ]
+  ]
+}

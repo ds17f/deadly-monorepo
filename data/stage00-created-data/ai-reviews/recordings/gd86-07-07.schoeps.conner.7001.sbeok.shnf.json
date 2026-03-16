@@ -1,0 +1,75 @@
+{
+  "summary": "Audience‑sourced tape with fair sound captures a historically significant but uneven show – the iconic “Satisfaction” intro shines while Jerry’s illness drags the performance down.",
+  "review": "The recording is an audience/matrix capture that is listenable but not pristine, offering enough clarity to enjoy the famed band introductions during \"Satisfaction\". Musically the concert is a mixed bag: Jerry Garcia was visibly ill and often left the stage, leading to sloppy first‑set numbers, yet the second set contains a memorable Terrapin jam and a strong Playin' jam. Fans are divided – some cherish the historic moment, others find it one of the weaker late‑summer ’86 performances.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "high",
+    "rationale": "Over 30 reviews give a consistent picture: recording is merely adequate (fair), while the musical performance is generally viewed as below average despite a few standout moments, yielding an overall mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners describe it as a decent audience tape or matrix – clear enough to hear the band intro and crowd but lacking the polish of a soundboard. No major drop‑outs are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Satisfaction (band introductions)",
+      "Terrapin (post‑Jerry jam)",
+      "Playin' Jam"
+    ],
+    "poor_songs": [
+      "Baby Blue",
+      "Desolation Row",
+      "Terrapin (overall performance concerns)"
+    ],
+    "setlist_flow": "First set is short and hampered by Jerry’s illness and a shaky Dylan collaboration; the second set picks up energy, highlighted by an extended Terrapin jam after Jerry steps off stage."
+  },
+  "band_member_comments": {
+    "Jerry": "Visibly sick (tooth abscess, later coma), voice scraggly, walked off stage, but still delivered strong solos for fans who appreciate his effort.",
+    "Phil": "Praised as 'killer' on bass by several reviewers; took over lead after Jerry left the stage during Terrapin.",
+    "Bob": "Helped Dylan with vocals, occasionally irritated, but showed enthusiasm especially in the later part of the show.",
+    "Keys": "Brent (keyboards) stepped in after Jerry’s exit and contributed to the post‑Terrapin jam; no specific criticism of keyboard tone.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Satisfaction": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Playin' Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "It Must Have Been the Roses": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:29:15.024820+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-07-07.schoeps.conner.7001.sbeok.shnf"
+}

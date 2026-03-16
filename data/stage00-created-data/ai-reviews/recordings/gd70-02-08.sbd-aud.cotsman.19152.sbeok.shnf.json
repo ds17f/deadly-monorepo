@@ -1,0 +1,92 @@
+{
+  "summary": "A solid matrix mix captures a fire‑filled 2/8/70 show highlighted by a blistering Smokestack Lightning opener, soaring Dark Star and an epic Lovelight.",
+  "review": "The performance is widely praised – the band rolls out a thunderous Smokestack Lightning, a majestic Dark Star, tight St. Stephen > Not Fade Away sandwiches and a sprawling 35‑minute Love Light that many call one of the era’s best. The recording is a composite of soundboard and audience sources; it sounds better than average with good overall balance but suffers from a slightly low drum mix, occasional tinny/phased artifacts and uneven levels in the middle section.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (many standout songs, strong second set) while recording quality is described as good but with notable flaws; weighted average yields a ~4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Audience source praised, soundboard sections clear. Mix slightly low on drums, occasional tinny/phased character and balance issues in the middle of the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Smokestack Lightning",
+      "Dark Star",
+      "Lovelight (35 min)",
+      "St. Stephen > Not Fade Away > St. Stephen",
+      "Morning Dew",
+      "China Cat Sunflower > I Know You Rider",
+      "Sitting On Top of the World"
+    ],
+    "poor_songs": [
+      "Dire Wolf"
+    ],
+    "setlist_flow": "A high‑energy opener with Smokestack Lightning sets the tone, the first set flows through solid roots (Morning Dew, China Cat), and the second set builds to a peak with Dark Star, the Stephen/NFA sandwich and an expansive Love Light that carries the show to a triumphant close."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is highlighted throughout – crisp tone on Smokestack, soaring leads in Dark Star and high‑part harmonies on China Cat Sunflower.",
+    "Phil": "",
+    "Bob": "Weir’s vocal/guitar interplay with Garcia is repeatedly praised, especially during the second‑set jams.",
+    "Keys": "",
+    "Drums": "Drums are noted as a bit low in the mix and occasionally muddied by the composite source."
+  },
+  "song_mentions": {
+    "Smokestack Lightning": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "St. Stephen > Not Fade Away > St. Stephen": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Lovelight (35 min)": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sitting On Top of the World": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Hurt Me Too": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Top Of The World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T15:46:06.155157+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-02-08.sbd-aud.cotsman.19152.sbeok.shnf"
+}

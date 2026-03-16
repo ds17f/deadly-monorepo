@@ -1,0 +1,72 @@
+{
+  "summary": "Deep, immersive audience recording captures a jam‑heavy 1991 show with standout \"Eyes\", \"Loose Lucy\" and a scorching Truckin’/New Speedway Boogies sequence.",
+  "review": "The performance is praised for its nonstop improvisational energy, highlighted by an electrifying opener (Eyes), a rocking Loose Lucy, and what many call the best Truckin' → New Speedway Boogies jam of the era. The audience recording supplied by Andrew F delivers a vivid sense of venue ambience, though listeners note it could use a touch more volume.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Three enthusiastic reviews (two 4‑star and one highly positive despite a 0 rating) praise the show’s improvisation and specific songs, while noting only minor volume issues in an audience source."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, deep venue ambience that feels real; a slight overall low‑volume level is mentioned but no major distortion or dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Loose Lucy",
+      "Truckin'",
+      "New Speedway Boogies"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert flows as a continuous jam session, with improvisational peaks (Dark Star/Other One tease) that keep the energy high from opener through the extended Truckin' sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Several reviewers spotlight Phil’s bass work, noting his crucial role in the jam leading up to the Eleven‑style tease.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway Boogies": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T21:32:32.522429+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-17.aud.andrewf.86660.sbeok.flac16"
+}

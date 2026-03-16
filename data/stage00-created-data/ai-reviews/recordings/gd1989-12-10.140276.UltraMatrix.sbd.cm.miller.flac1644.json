@@ -1,0 +1,75 @@
+{
+  "summary": "Ultra‑matrix capture of an electric show with a scorching “I’m A Man” jam and standout contributions from Jerry, Phil, Brent and Bobby.",
+  "review": "Both reviewers rave about the high‑energy performance, especially the fiery rendition of “I’m A Man,” the tight masterful runs on Masterpiece, Loser and Victim, and Brent’s keyboard work alongside Hornsby’s accordion. The matrix mix is assumed solid (no complaints), though one reviewer notes a brief oddity in Jerry’s tone at the start of Stella Blue. Overall the concert is described as fun, rare and unforgettable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Two detailed 5‑star reviews praise the musical performance heavily; recording quality is not mentioned but UltraMatrix sources are generally good, leading to a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on sound; UltraMatrix mixes are typically clear and balanced, so assumed solid with no noticeable issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I’m A Man",
+      "Masterpiece",
+      "Loser",
+      "Victim",
+      "Rider"
+    ],
+    "poor_songs": [
+      "Stella Blue"
+    ],
+    "setlist_flow": "Starts high‑energy but a bit rough, tightens around Masterpiece and builds to the highlight “I’m A Man,” with strong mid‑set momentum before a brief stumble on Stella Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "Nice solo after Bruce; occasional odd tone at the beginning of Stella Blue that threw him off briefly.",
+    "Phil": "Very into “I’m A Man,” channeling Duck Dunn and setting a fiery tone for the song.",
+    "Bob": "Bobby’s guitar work is spotlighted and praised throughout the show.",
+    "Keys": "Brent shines on B3 and answers beautifully; Hornsby adds accordion/piano flavor on several numbers.",
+    "Drums": "Post‑drums section described as solid."
+  },
+  "song_mentions": {
+    "I’m A Man": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Woman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T02:10:53.497720+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-10.140276.UltraMatrix.sbd.cm.miller.flac1644"
+}

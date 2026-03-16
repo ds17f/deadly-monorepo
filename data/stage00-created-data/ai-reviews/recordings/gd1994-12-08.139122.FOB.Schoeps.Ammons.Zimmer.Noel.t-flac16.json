@@ -1,0 +1,31 @@
+{
+  "summary": "Recording source unknown and audio quality not commented on; reviewer condemns the very short first set as a total bust.",
+  "review": "The lone review offers no insight into the tape’s soundboard or audience mix, leaving the recording quality indeterminate. The only feedback focuses on the concert itself, describing the abbreviated first set as a disappointment and essentially a bust.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one review with a zero‑star rating; negative sentiment dominates while no recording details are provided, resulting in a very low overall score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments about sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer notes the first set was unusually short and unsatisfying."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T04:13:14.109788+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-12-08.139122.FOB.Schoeps.Ammons.Zimmer.Noel.t-flac16"
+}

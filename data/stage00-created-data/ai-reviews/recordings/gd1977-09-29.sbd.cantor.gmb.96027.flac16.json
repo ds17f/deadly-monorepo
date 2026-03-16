@@ -1,0 +1,56 @@
+{
+  "summary": "A late‑'77 soundboard capture that’s generally crisp but hampered by mono imaging, delivering a mellow set highlighted by a heartfelt Franklin's Tower and a memorable Stella Blue.",
+  "review": "The recording is praised for its excellent soundboard quality, though one reviewer notes it plays back in mono with a missing left channel, reducing instrument separation. Musically the show shines with delicate, mellow playing, standout moments like Franklin’s Tower, Stella Blue, and Uncle John’s Band, while the first‑set rhythm section feels stiff to some listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the performance highly (4–5 stars) and enjoy the music, but divergent opinions on the recording’s stereo integrity and rhythm section keep confidence at a moderate level."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and first‑rate soundboard capture; however, one reviewer reports mono playback with the left channel missing, leading to poor instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Stella Blue",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is praised for its delicate, mellow vibe and a strong closing thirty minutes; the first set receives criticism for a stiff rhythm section that diminishes momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice sounds especially good; even when he slips on Stella Blue he turns it into a masterpiece.",
+    "Phil": "Provides stage banter about the TKO fight after Half‑Step, but no specific bass commentary.",
+    "Bob": "Guitar work comes through beautifully, adding depth to the performance.",
+    "Keys": "",
+    "Drums": "The drummers are described as lacking fluidity and providing a stiff rhythm section."
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T04:07:09.300618+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-09-29.sbd.cantor.gmb.96027.flac16"
+}

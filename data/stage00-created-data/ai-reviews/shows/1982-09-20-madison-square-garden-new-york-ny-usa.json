@@ -1,0 +1,75 @@
+{
+  "summary": "Blazing Shakedown Street and flawless Scarlet>Fire at MSG",
+  "blurb": "The show erupts with a twelve‑minute Shakedown Street opener and a seamless Scarlet Begonias → Fire on the Mountain transition. Brent’s keyboards drive the jams while Jerry’s guitar shines throughout, making this a must‑listen performance.",
+  "review": "On September 20, 1982 the Dead turned Madison Square Garden into a high‑octane playground. The first set kicked off with an inspired twelve‑minute “Shakedown Street” that showcased Jerry’s crisp, sharp guitar and Brent’s playful keyboards, setting a feverish tone for the night. Highlights kept rolling: “Dupree’s Diamond Blues” delivered tight ensemble work, while the second set reached its apex with the legendary Scarlet Begonias → Fire on the Mountain segue, praised across every source as a rare moment of precision and beauty. The band rode that momentum into an electrifying Spanish Jam that flowed straight into “Truckin'” and a soaring “The Other One,” keeping the crowd in a perpetual state of euphoria. Brent’s keys added depth to “Terrapin Station” and his vocal touches brightened “El Paso.” Even with a few recordings suffering from muddy fidelity, the best matrix mix captures every nuance, making this show one of the standout MSG performances of the early ’80s.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 35,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.8,
+      "sentiment_rationale": "Ten of eleven recordings are uniformly positive, repeatedly praising the same standout moments (Shakedown Street, Scarlet>Fire, Spanish Jam sequence) and noting Jerry’s crisp guitar and Brent’s energetic keyboards. No consistent negative comments appear, just one mixed‑quality note, so a strong positive sentiment adjustment is applied.",
+      "final_calculation": "2.5 + 0.3 + 1.8 = 4.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1982-09-20.mtx.seamons.97897.sbeok.flac16",
+    "reason": "Crystal‑clear matrix mix captures the full energy and nuance of the performance with no dropouts, delivering the definitive listening experience."
+  },
+  "key_highlights": [
+    "Twelve‑minute “Shakedown Street” opener that sets a feverish tone.",
+    "Seamless Scarlet Begonias → Fire on the Mountain transition, a show‑defining peak.",
+    "Epic Spanish Jam → Truckin' → The Other One sequence delivering nonstop momentum.",
+    "Brent’s keyboards driving the jams and adding depth to Terrapin Station."
+  ],
+  "song_highlights": [
+    "Shakedown Street",
+    "Dupree's Diamond Blues",
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "Spanish Jam",
+    "Truckin'",
+    "The Other One",
+    "Terrapin Station",
+    "Stella Blue",
+    "Sugar Magnolia"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar is crisp and sharp all night, delivering spectacular licks on Shakedown Street, a blistering solo on Good Times, and sustained intensity through the Scarlet>Fire sequence.",
+    "Phil": "Lesh provides a solid, sometimes highlighted bass foundation—most notably his four‑string intro into The Other One that ‘shook the Garden.’",
+    "Bob": "",
+    "Brent": "Mydland’s keyboards are playful and driving, adding depth to every jam—from the soaring “Terrapin Station” to the fun “Day Job” feel noted in multiple sources.",
+    "Mickey": "Provides subtle yet deliberate drumming that underpins the transitions, especially during the extended second‑set jams.",
+    "Billy": "Delivers tight, energetic drum work that fuels the high‑octane flow of Shakedown Street and the seamless segues throughout."
+  },
+  "processed_recordings": 11,
+  "processed_date": "2025-09-14T02:04:32.779480+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Shakedown Street",
+      "New Minglewood Blues"
+    ],
+    [
+      "Dupree's Diamond Blues"
+    ],
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain"
+    ],
+    [
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "Spanish Jam",
+      "Truckin'",
+      "The Other One",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ]
+  ]
+}

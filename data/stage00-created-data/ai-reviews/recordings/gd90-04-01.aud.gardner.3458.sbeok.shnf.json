@@ -1,0 +1,45 @@
+{
+  "summary": "Crisp audience tape captures an electric Atlanta show with strong crowd vibe and solid performances, highlighted by Franklin's Tower and Touch of Grey.",
+  "review": "The recording is a clear, well‑balanced audience capture that conveys the excitement of the spring‑1990 tour, with vocals and crowd energy coming through strongly. The concert itself is remembered fondly for its high‑energy atmosphere and moments like Franklin’s Tower and Touch of Grey, though one reviewer found it overall average compared to adjacent nights.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the lively performance and the crisp audience recording; only a single mixed review tempers the score, yielding a solid 4‑plus rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Levels are well‑balanced, vocals clear and strong, crowd captured with high energy; several reviewers call it crisp and better than typical Omni audience tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Touch of Grey"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The three‑night Atlanta run is described as increasingly electric, with the crowd and band feeding off each other; while one fan called this particular night average, overall the vibe and song selection are praised."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer nostalgically misses Jerry’s presence, indicating his performance left a lasting impression.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T06:07:08.612897+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-04-01.aud.gardner.3458.sbeok.shnf"
+}

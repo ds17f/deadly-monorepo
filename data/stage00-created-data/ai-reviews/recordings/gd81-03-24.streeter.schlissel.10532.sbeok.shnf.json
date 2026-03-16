@@ -1,0 +1,39 @@
+{
+  "summary": "A great European show highlighted by a funny Brokedown Palace false start; recording quality not discussed but presumed adequate.",
+  "review": "Both reviewers rave about the performance, calling it a solid show with a sweet first set and noting Jerry's humorous lyric slip on Brokedown Palace. No specific audio‑quality comments were made, so the source is unknown but likely listenable. Overall the concert receives high praise from the fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Both reviews are positive (5 and 4 stars) and focus on strong musical performance; lack of recording‑quality details limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers did not comment on sound quality, mix, or source type; no issues were reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans praised the sweet first set and overall flow, highlighting a humorous moment early in the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Starts singing the wrong line on Brokedown Palace, apologizes to the crowd—a funny moment noted by reviewers.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:14:45.672892+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-03-24.streeter.schlissel.10532.sbeok.shnf"
+}

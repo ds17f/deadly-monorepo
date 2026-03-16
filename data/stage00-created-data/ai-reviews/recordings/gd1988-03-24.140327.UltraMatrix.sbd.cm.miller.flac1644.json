@@ -1,0 +1,39 @@
+{
+  "summary": "Fair matrix recording with a nice opening performance of Looks Like Rain.",
+  "review": "The lone review points out that the show opened strongly with a standout rendition of “Looks Like Rain,” calling it a ‘Nice Opener.’ No comments were made about the audio fidelity, so the recording is assumed to be average in quality. With a three‑star rating, the overall impression is modestly positive but not enthusiastic.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one brief review (3 stars) that highlights a single song and gives no recording details, leading to a neutral overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on sound clarity or mix; reviewers did not mention any audio issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opener praised; no further information on overall set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:46:16.989317+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-24.140327.UltraMatrix.sbd.cm.miller.flac1644"
+}

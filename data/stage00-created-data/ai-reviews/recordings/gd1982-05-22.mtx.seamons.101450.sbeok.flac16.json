@@ -1,0 +1,39 @@
+{
+  "summary": "Phenomenal matrix recording that puts you right in the hall with the band; performance is solid though fans note the missing “Deal.”",
+  "review": "All four reviewers rave about the immersive, crystal‑clear matrix sound, calling it one of the best they’ve heard. While no specific musical highlights are mentioned, there is a brief complaint that “Deal” was not played, suggesting a minor setlist disappointment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently 5‑star reviews highlight an exceptional matrix recording; despite limited commentary on the performance, the overall enthusiasm and lack of major issues justify a high rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Immersive, crisp sound that feels like being inside the venue; no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Deal (not performed)"
+    ],
+    "setlist_flow": "No specific comments on pacing or flow were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T21:12:54.476313+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-05-22.mtx.seamons.101450.sbeok.flac16"
+}

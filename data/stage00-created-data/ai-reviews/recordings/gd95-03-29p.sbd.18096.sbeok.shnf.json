@@ -1,0 +1,58 @@
+{
+  "summary": "A quirky monitor‑mix recording with a loud Phil bass and faint keys, offering a disjointed yet fascinating glimpse of the 1995 show, highlighted by Unbroken Chain and Help on the Way.",
+  "review": "The release captures an unusual stage‑monitor feed where Phil’s bass dominates and Vince’s keyboards are almost buried, giving listeners a novel “ear‑piece” perspective. Musically the performance is uneven – some praise the raw energy of Unbroken Chain and the quirky Golden Brown overlay, while others lament Jerry’s mumbling on Help on the Way and overall weak playing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Average star rating (≈3.4) from 18 reviews, with strong praise for novelty but frequent criticism of performance and mix balance; weighting yields a mid‑range score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Monitor mix – Phil’s bass is turned up loudly, drums sit just behind, while Vince and Bobby are almost inaudible. The balance is uneven but the recording is clear enough to hear the on‑stage earpiece conversation and odd overlays (e.g., Golden Brown)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Unbroken Chain",
+      "Estimated Prophet",
+      "Golden Brown"
+    ],
+    "poor_songs": [
+      "Help on the Way"
+    ],
+    "setlist_flow": "The set feels disorganized and light‑hearted, with a long wait before opening second set with The Chain. Listeners note the novelty of hearing the band’s monitor mix but also describe uneven playing and occasional lyrical mumbling."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – some listeners hear his voice barely on certain tracks and criticize mumbling on Help on the Way, while others defend his performance as typical Dead stage banter.",
+    "Phil": "His bass is prominently loud in the mix; reviewers praise its clarity and note his perfect‑pitch vocal moments.",
+    "Bob": "Often described as nearly absent in the monitor feed, though a few reviewers joke about his presence.",
+    "Keys": "Vince’s keyboards are low in the mix, but one reviewer points out an interesting Golden Brown snippet woven into Unbroken Chain.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Unbroken Chain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Help on the Way": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Golden Brown": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T07:10:26.272373+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-03-29p.sbd.18096.sbeok.shnf"
+}

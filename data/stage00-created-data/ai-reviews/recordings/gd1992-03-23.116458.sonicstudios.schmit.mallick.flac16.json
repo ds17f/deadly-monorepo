@@ -1,0 +1,42 @@
+{
+  "summary": "Decent FLAC transfer that benefits from a treble boost, capturing an enjoyable Palace of Auburn Hills show despite some venue‑date confusion.",
+  "review": "The recording is generally clear and sounds good once the high‑end is boosted, although the digital transfer was noted as slow. Fans who attended praise the hospitality, Brent's interaction, and describe the concert as awesome, while a few listeners were disappointed by missing expected Dark Star/Other One jams, giving the overall impression a mixed but mostly positive vibe.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (positive live experience vs. disappointment over missing songs) and recording quality is decent but requires EQ boost; with limited detailed feedback the rating reflects a moderate overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Audio sounds clear after treble boost; reviewer noted the transfer was very slow, suggesting no major fidelity issues but possible ripping/encoding limitations."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Fans enjoyed the overall atmosphere and performance, though some were let down by the absence of anticipated Dark Star/Other One sections; venue confusion (Copps vs. Palace) adds to mixed impressions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:17:53.494251+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-23.116458.sonicstudios.schmit.mallick.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Hot, energetic performance highlighted by a great Take Me to the River, but the SBD suffers from noticeable pitch‑speed problems.",
+  "review": "The show is praised as one of the strongest two‑night runs, with the band sounding hot and eager—especially on Take Me to the River. However, listeners report that the soundboard recording plays back too fast, creating pitch and speed issues that detract from an otherwise stellar performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is rated high based on multiple positive comments (≈4.5/5), but recording quality is judged poor due to pitch/speed complaints, resulting in a weighted overall rating around 3.8."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Several reviewers note the SBD plays back too fast, causing pitch and speed distortion; no other technical issues were mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Take Me to the River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Consistently high energy throughout both nights, with a particularly strong first set that includes Take Me to the River; overall pacing described as mellow and powerful."
+  },
+  "band_member_comments": {
+    "Jerry": "Band sounded hot and eager, possibly compensating for 'old Jerry' being absent.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Take Me to the River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T07:48:17.799735+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-04-02.sbd-monitor.unknown.93209.shnf"
+}

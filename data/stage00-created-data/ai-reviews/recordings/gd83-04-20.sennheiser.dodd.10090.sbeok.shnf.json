@@ -1,0 +1,75 @@
+{
+  "summary": "Good‑quality soundboard tape with a strong first set (Loser, Cumberland, Looks Like Rain) and a solid but quieter second set, highlighted by crisp China Cat → I Know You Rider and expressive Jerry solos.",
+  "review": "The recording captures a classic spring‑’83 Dead show. Reviewers rave about the epic first half – razor‑sharp Loser, Cumberland Blues, a soaring Looks Like Rain solo and a crystal‑clear China Cat Sunflower → I Know You Rider – while noting that the second set sounds quieter due to a change from Beyer to Senn 421 microphones, though Eyes of the World and Deal still shine. Overall the tape is praised for its musicality despite some level issues.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 4‑star ratings praising the performance; a couple note low volume and one gives a 1‑star rating for the recording level, leading to an overall moderate–positive assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "First set recorded with Beyer mics (clear, full), second set with Senn 421s resulting in noticeably lower levels; overall tape is clean but volume uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Cumberland Blues",
+      "Looks Like Rain",
+      "China Cat Sunflower > I Know You Rider",
+      "Eyes of the World",
+      "Deal",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as epic and tightly played; second set deemed fair – still enjoyable but affected by quieter mic setup. Overall a solid B+ spring‑’83 performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry's far‑out solo on Looks Like Rain, beautiful licks during Eyes of the World, and crisp guitar work on China Cat → I Know You Rider.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T06:00:30.105747+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-20.sennheiser.dodd.10090.sbeok.shnf"
+}

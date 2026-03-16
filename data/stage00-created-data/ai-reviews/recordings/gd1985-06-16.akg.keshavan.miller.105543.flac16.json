@@ -1,0 +1,46 @@
+{
+  "summary": "Excellent audience recording with booming bass and a fun, sloppy 1985 Greek show highlighted by a spot‑on Fire performance",
+  "review": "The tape captures the mid‑80s Greek concert with crystal‑clear highs, present mids and a thunderous low end thanks to Rango’s AKG mic setup, delivering an almost flawless listening experience. Musically the show is quintessential 1985 – fast‑paced, a little sloppy but full of energy, with Jerry’s rendition of Fire standing out while The Other One draws some criticism for weak vocal support.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Five detailed reviews give an average user rating of 4.2; recording quality is praised as pristine, and the performance, while noted as sloppy, is described as fun with standout moments."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Pristine audio fidelity with gleaming highs, clear mids and booming bass; AKG mics provide a clean, immersive soundstage despite being an audience capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire"
+    ],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": "Typical 1985 Greek set – lightning‑fast first set, a little sloppy but high‑energy throughout; the second half delivers fun jams despite occasional vocal weaknesses."
+  },
+  "band_member_comments": {
+    "Jerry": "His Fire performance is praised as nailing all three verses exactly as recorded, showcasing tight guitar work and vocals.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T05:06:29.345779+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-16.akg.keshavan.miller.105543.flac16"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard capture of a strong show (extended Bertha, epic The Other One & Comes A Time) hampered by intermittent Keith‑piano distortion.",
+  "review": "The performance is widely praised – an extended Bertha, the cryptical sections of The Other One and a moving Comes A Time make this night stand out.  However the SBD suffers from recurring piano mic distortion that flares up especially on disc 3, making listening uncomfortable for some fans.  Musically it’s a solid Fall ’71 show; technically it’s only fair.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers love the musical content (≈4‑star show quality) but repeatedly note piano distortion that drags recording quality down to about fair; combined weighted score yields ~3.6."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Intermittent static/distortion in Keith's piano mic, especially on disc 3; distortion comes and goes but can be annoying. Apart from the keyboard issues the mix is otherwise clean with no audience patches."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "The Other One",
+      "Comes A Time",
+      "Cryptical Envelopment"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Setlist mirrors the following night with added Bertha and Black Peter; the second half builds a powerful arc through The Other One (with cryptical sections) into a heartfelt Comes A Time."
+  },
+  "band_member_comments": {
+    "Jerry": "Briefly noted as “knowing” the appropriate moment for Comes A Time, no specific performance comments.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Frequent reports of piano channel distortion/static; Keith’s amp/signal appears to have overloaded the board, causing audible problems throughout much of the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-20T09:10:00.910646+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-11-06.sbd.lai.6253.sbefail.shnf"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "A high‑energy 1982 show with a scorching Boz Scaggs blues set, captured on a decent but acoustically uneven recording.",
+  "review": "Fans rave about the fast, tight performance and especially the blazing Boz Scaggs/Cipolina blues segment, along with standout moments like Althea and the first Lovelight since Pig. The recording is solid overall, though listeners report flat room acoustics and a need to be close to the stage for clear sound.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Three detailed positive reviews praise the musical performance while noting only moderate recording issues; the weighted mix yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Overall decent capture, but room acoustics were flat and listeners far from the stage experienced muffled sound; no specific mention of soundboard vs. audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Boz Scaggs set",
+      "Althea",
+      "Lovelight",
+      "Starship"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fast, tight first half followed by a high‑gear second half; the blues-heavy Boz Scaggs/Cipolina segment is highlighted as the strongest portion."
+  },
+  "band_member_comments": {
+    "Jerry": "Seen standing with his back to the audience at the drum riser, delivering a powerful opening riff and maintaining strong guitar energy throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill (Kreutzmann) counted off the opening; drums drive the high‑energy second half."
+  },
+  "song_mentions": {
+    "Boz Scaggs set": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Starship": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T21:25:28.508023+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-05-28.senn441.unknown.87547.sbeok.flac16"
+}

@@ -1,0 +1,105 @@
+{
+  "summary": "Decent soundboard capture of an uneven 1985 show – the historic Women > Aiko > Women medley shines amid generally lackluster performances.",
+  "review": "The recording is a solid sound‑board source that sounds clear enough, though vocal clarity suffers and some sections feel muddy. Musically the band was off‑kilter; while a few numbers like Jack Straw, Dupree’s, Esau, Bird Song and the Women > Aiko > Women medley stand out, many tracks are sloppy or under‑performed, making for a short, uneven set.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show poorly (average ★2.2) and note only modest recording quality; the weighted combination yields a low overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear sound‑board feed with decent instrument balance; vocal clarity is compromised and occasional muddiness noted, but no major dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Dupree's",
+      "Women > Aiko > Women",
+      "Esau",
+      "Bird Song",
+      "Terrapin Station",
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Minglewood Blues",
+      "Hell in a Bucket / Might As Well",
+      "Throwing Stones",
+      "Touch"
+    ],
+    "setlist_flow": "The set is unusually short with limited jamming; transitions feel rushed and several songs suffer from sloppy execution, though the first set contains a few energetic moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are described as croaky, cracked and rough throughout, but his guitar work remains sharp on tracks like Terrapin.",
+    "Phil": "",
+    "Bob": "Bob Weir contributes occasional vocal lines (e.g., in Woman Smarter) but no specific instrumental comments.",
+    "Keys": "Brent Mydland receives praise for his lively playing; older Keith/Donna era keyboards are mentioned negatively by some reviewers.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dupree's": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Women > Aiko > Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Esau": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Might As Well": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:47:23.093647+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-02-19.sbd.barbella.9879.sbeok.shnf"
+}

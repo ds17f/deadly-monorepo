@@ -1,0 +1,88 @@
+{
+  "summary": "Soundboard recording with a pleasant, slightly gritty mix captures an outstanding May‑27‑1993 show highlighted by a crushing Shakedown, masterful Masterpiece and the fiery Picasso→Fire combo.",
+  "review": "The performance is widely praised as one of the best of ’93 – tight first‑set work, a monster Shakedown, soaring Masterpiece, and a memorable Picasso > Fire sequence capped by a “better than TV” Gloria. The SBD source is generally clean and lively, though several listeners note a low‑end muddiness and a touch of grittiness that gives the tape character but can mask some instrument detail.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and call it a top‑1993 performance; recording quality is good with minor mix quirks, leading to an overall strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and lively soundboard, but several notes of a slight grittiness, low instrument levels vs. high master level, and minimal audience bleed that can make the mix feel a bit flat at times."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Masterpiece",
+      "Dire Wolf",
+      "Picasso > Fire",
+      "Cassidy > Uncle John’s Girl > Cassidy (UJB)",
+      "Gloria",
+      "Wave to the Wind",
+      "Cumberland"
+    ],
+    "poor_songs": [
+      "Wharf Rat"
+    ],
+    "setlist_flow": "First set is tight and energetic, delivering several of the year's best renditions; the second set offers surprising twists (Picasso→Fire, UJB sandwich) and a soaring Gloria finale, though a few moments (e.g., Wharf Rat) feel uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for powerful guitar tone, banjo‑like phrasing on Cumberland, and a scorching solo that many call one of his best.",
+    "Phil": "Mixed – some reviewers love his vocal on “High Time,” while others dismiss his solo‑band material as weak; overall bass work isn’t specifically critiqued.",
+    "Bob": "Vocals noted as thin on Gloria by one reviewer, but the “better than TV” shout is celebrated as a highlight.",
+    "Keys": "Vince’s piano receives strong praise for excellent playing and helping shape the new ’93 sound; Brent is later lauded by a reviewer who calls him irreplaceable.",
+    "Drums": "Bill’s drumming is generally solid; post‑drum “Other One” transition is called flat by one critic."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Masterpiece": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dire Wolf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Picasso > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Cassidy > Uncle John’s Girl > Cassidy (UJB)": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Gloria": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:19:57.259958+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-05-27.sbd.georges.1932.sbeok.shnf"
+}

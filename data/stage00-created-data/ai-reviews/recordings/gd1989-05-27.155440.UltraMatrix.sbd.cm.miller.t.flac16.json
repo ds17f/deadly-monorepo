@@ -1,0 +1,39 @@
+{
+  "summary": "Negative review focusing on a disastrous guest performance; no information on recording quality.",
+  "review": "The sole reviewer condemns Clarence Clemons' appearance on \"The Big Man,\" calling the playing pedestrian and godawful, which they say ruins an otherwise good show. No comments are made about the sound source or audio fidelity, so the recording quality remains unknown.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.3,
+    "confidence": "low",
+    "rationale": "Only one review, extremely negative about the guest performance and no mention of recording quality; rating reflects poor show with unknown audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "unknown",
+    "technical_notes": "No reviewer comments on sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "The Big Man"
+    ],
+    "setlist_flow": "Reviewer does not discuss set flow; only notes that the guest spot detracted from the performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Big Man": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T19:35:27.805899+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-05-27.155440.UltraMatrix.sbd.cm.miller.t.flac16"
+}

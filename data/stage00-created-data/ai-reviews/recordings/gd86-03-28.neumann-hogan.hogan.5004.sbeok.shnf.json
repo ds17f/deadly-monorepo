@@ -1,0 +1,83 @@
+{
+  "summary": "Good audience tape of a solid ’86 show, highlighted by Box of Rain, Playing in the Band and a stellar Dear Mr. Fantasy.",
+  "review": "The recording is an audience‑sourced tape that listeners describe as clear enough to enjoy, with “not bad” and even “top‑notch” sound quality despite the crowd ambience. Musically the concert shines on the second set – Playing in the Band opens a flowing jam sequence, Franklin’s Tower and Miracle follow, and Dear Mr. Fantasy is repeatedly called the high point, while Box of Rain makes a memorable appearance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4 ★ with consistent praise for both performance and tape quality; only one mixed review noting few Garcia tunes."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as “not bad” audience recording, top‑notch sound by some reviewers; clear enough for enjoyment with typical crowd ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Playing in the Band",
+      "Franklin's Tower",
+      "Dear Mr. Fantasy",
+      "Miracle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set receives most praise – it opens with Playing in the Band and flows through seamless transitions, extended jams, and a powerful Dear Mr. Fantasy finale; first set is solid but noted for having few Garcia‑lead songs."
+  },
+  "band_member_comments": {
+    "Jerry": "Tripel notes only five Garcia tunes all night, indicating a sparse Jerry presence.",
+    "Phil": "Stellablu122 thanks Phil for the special Box of Rain moment.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:07:52.195575+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-03-28.neumann-hogan.hogan.5004.sbeok.shnf"
+}

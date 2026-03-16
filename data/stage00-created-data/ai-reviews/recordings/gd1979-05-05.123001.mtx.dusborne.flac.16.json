@@ -1,0 +1,45 @@
+{
+  "summary": "Punchy matrix recording that captures a top‑shelf Baltimore show with a killer second set and standout Sugaree and The Music Never Stopped performances.",
+  "review": "The matrix source delivers excellent clarity and the much‑needed punch missing from straight soundboards, while also preserving the enthusiastic crowd vibe of late‑’79 Baltimore. Musically the concert is a fan favorite – Jerry’s voice shows a hint of his laryngitis but still powers through an inspired Sugaree, and the second set (including The Music Never Stopped) is described as killer.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (average >4.5), multiple reviewers praise both the musical performance and the matrix recording quality, with only minor technical quibbles."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Punchy, clear mix that balances board detail with audience ambience; a small blemish noted where an audience splice (Samson) wasn’t reverbed or bass‑adjusted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "The Music Never Stopped"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for added punch; the second set is called \"killer\" and flows smoothly, with strong crowd energy captured by the matrix."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice shows a bit of strain from his 1979 laryngitis but still delivers strong guitar work and crazy sound effects; Sugaree vocal strain noted.",
+    "Phil": "",
+    "Bob": "Vocals described as strained on his parts, yet the performance remains enjoyable.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T21:09:08.208135+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-05-05.123001.mtx.dusborne.flac.16"
+}

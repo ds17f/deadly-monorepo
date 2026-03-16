@@ -1,0 +1,56 @@
+{
+  "summary": "Tight 1993 audience tape with a standout, monster‑sized Morning Dew and powerful Saint of Circumstance.",
+  "review": "The show is praised for tight playing throughout, an especially inspired second set featuring a drum‑driven Victim, a solid Terrapin Station, and a monumental Morning Dew that many reviewers call the high point. The audience recording (1993 AUD) is described as “quite good” and “great,” offering clear enough sound to enjoy the performance despite typical tape limitations.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "All five reviews are favorable, highlighting strong musical moments and a decent audience recording; average star rating is 3.8, weighted toward show quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note the tape sounds good for a ’93 audience (AUD) source—clear enough to hear details, no major drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Saint of Circumstance",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as eclectic and solid; second set builds momentum with a drum‑driven Victim, strong Saint of Circumstance, tight Terrapin Station, culminating in an epic Morning Dew that blew the roof off."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly called out for being inspired, precise and delivering perfect playing throughout especially on Morning Dew.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The Victim is highlighted as drum‑driven, indicating strong percussion work."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:25:51.819539+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-09.akg.gardner.5440.sbeok.shnf"
+}

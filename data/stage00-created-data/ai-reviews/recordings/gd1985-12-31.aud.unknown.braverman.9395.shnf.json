@@ -1,0 +1,45 @@
+{
+  "summary": "Clear syndicated broadcast captured from the audience with a poignant Ricky Nelson tribute opening and closing featuring Not Fade Away.",
+  "review": "The show is remembered for its spontaneous tribute to Ricky Nelson, opening and bookending the set near Brokedown Palace with Buddy Holly’s “Not Fade Away.” The recording comes from an audience tap of the national radio broadcast, offering surprisingly clear sound but lacking the full fidelity of a soundboard mix.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Strong musical moment (tribute) boosts show rating; recording is decent but not soundboard quality, leading to an overall good but not exceptional score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Recorded from an audience member during a live national FM broadcast; clarity described as very clear but missing the depth of a dedicated soundboard mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert opened and closed with a spontaneous tribute to Ricky Nelson, using Not Fade Away as the thematic bookends around the Brokedown Palace segment, creating a unique and memorable flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T12:25:01.626316+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-12-31.aud.unknown.braverman.9395.shnf"
+}

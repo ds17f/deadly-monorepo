@@ -1,0 +1,69 @@
+{
+  "summary": "A solid audience recording of the rain‑soaked 3/29/93 Knick show, highlighted by a scorching Loser and tight first set despite mixed feelings on the second half.",
+  "review": "The performance captures an energetic first set with standout moments like The Stranger, Loser and Here Come Sunshine, while the rain‑themed second set divided listeners—some praised Box of Rain’s intensity, others found it weak. Reviewers note that the audience mic setup is clear and lively, preserving crowd ambience without noticeable dropouts. Overall the show is remembered fondly for Jerry's fiery soloing, even if opinions on the later songs vary.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise the performance, but a few give low scores and criticize the second set; recording quality is consistently described as good, leading to an overall moderate‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience microphone capture (Schoeps) is clear and lively, conveying crowd energy; no major complaints about muddiness or dropouts were mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Here Come Sunshine",
+      "The Stranger"
+    ],
+    "poor_songs": [
+      "Box of Rain",
+      "He's Gone"
+    ],
+    "setlist_flow": "First set is described as tight and high‑energy with several highlights; the second set’s rain theme received mixed reactions, with some fans loving its intensity and others feeling it fell flat."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise Jerry's passionate guitar work and a memorable Loser solo, noting his excitement on stage.",
+    "Phil": "",
+    "Bob": "A few reviewers felt Bob struggled, describing his vocals as weak on Throwing Stones and overall lackluster in the second set.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Here Come Sunshine": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T11:52:54.403822+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-29.schoeps.raras.8376.sbeok.shnf"
+}

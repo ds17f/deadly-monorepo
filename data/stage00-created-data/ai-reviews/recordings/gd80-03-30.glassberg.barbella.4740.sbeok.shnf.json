@@ -1,0 +1,108 @@
+{
+  "summary": "Clear audience tape captures a high‑energy set highlighted by scorching Scarlet > Fire and tight Alabama Getaway, but occasional slip‑ups and a rough Sailor‑and‑Saint keep the show mixed.",
+  "review": "The Glassberg audience recording is surprisingly clear for an AUD source, letting listeners hear the punchy bass on Fire and the soaring jam from Estimated into Eyes. The performance swings between fire‑brand moments – Scarlet > Fire, Alabama Getaway, and a sweet post‑Eyes jam – and uneven spots such as a botched Sailor‑and‑Saint and some lyric flubs early in the first set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Average star rating from 12 detailed reviews (~3.8) combined with a strong‑plus recording (good) and a show that is praised for several peaks but marred by notable slip‑ups."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Praised as crystal‑clear AUD from Barry Glassberg; captures the room energy well. Some reviewers note typical era‑AUD quirks and occasional cuts, but overall the mix is clean and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "Estimated>Eyes",
+      "Alabama Getaway",
+      "Promised Land",
+      "Peggy-O",
+      "Loser"
+    ],
+    "poor_songs": [
+      "Sailor and Saint",
+      "First‑set Alabama/Promised Land (lyric slips)",
+      "St. of Circumstance (cut end)"
+    ],
+    "setlist_flow": "The set opens with a high‑octane Alabama Getaway that sets an energetic tone, moves through a solid first half, then peaks in the second set with Scarlet>Fire and a soaring Estimated>Eyes sequence before winding down with occasional rough patches."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone on Scarlet and the jam into Eyes is praised, but reviewers note several missteps – truncated jams, forgotten parts during Sailor‑and‑Saint, and lyric slips early in the show.",
+    "Phil": "Lesch’s bass is highlighted as “bombs” that drive Fire forward; overall solid thumping throughout.",
+    "Bob": "Weir has a few flubbed lyrics and moments of rough playing, but his rhythm work remains steady.",
+    "Keys": "Brent’s synth (mid‑80s era) is criticized for sounding like a toy piano; no other keyboard comments noted.",
+    "Drums": "Bill/Mickey’s drumming receives compliments, especially on the Inspired Estimated>drums section and the tight transition into Eyes."
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Estimated>Eyes": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eyes": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sailor and Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "St. of Circumstance": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T21:45:00.401964+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-03-30.glassberg.barbella.4740.sbeok.shnf"
+}

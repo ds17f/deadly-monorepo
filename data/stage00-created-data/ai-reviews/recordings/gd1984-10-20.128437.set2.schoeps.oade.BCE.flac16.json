@@ -1,0 +1,45 @@
+{
+  "summary": "Solid show but the recording is over‑levelled on Shakedown Street and Samson, making those sections sound harsh.",
+  "review": "The performance itself is praised as a monster set, especially the renditions of Shakedown Street and Samson, but the recording levels were set too high for those songs, resulting in clipping. Apart from that issue the rest of the tape sounds good, though the limited feedback makes it hard to assess overall sound quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only one moderate‑rated review; the show is viewed positively while the recording suffers from level problems on two tracks, leading to an overall middling score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Levels too high on Shakedown Street and Samson causing distortion; rest of the set sounds acceptable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Samson"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No comments on pacing or structure; reviewer focused solely on recording levels."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T23:25:28.452040+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-20.128437.set2.schoeps.oade.BCE.flac16"
+}

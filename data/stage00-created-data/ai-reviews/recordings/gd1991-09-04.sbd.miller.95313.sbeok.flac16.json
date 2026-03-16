@@ -1,0 +1,31 @@
+{
+  "summary": "Recording quality unknown and show received minimal feedback; reviewer left early with a zero‑star rating",
+  "review": "The sole review provides no details about the audio source or performance, only noting that the listener sang for a short time before departing. With a zero‑star rating and no substantive comments, both the recording and the concert are judged negatively.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.5,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 0‑star rating; insufficient information to assess specifics, but overall sentiment is clearly negative."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No technical comments; reviewer gave zero stars and left the show early."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T23:48:34.804811+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-04.sbd.miller.95313.sbeok.flac16"
+}

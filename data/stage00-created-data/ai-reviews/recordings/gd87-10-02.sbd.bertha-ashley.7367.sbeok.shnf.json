@@ -1,0 +1,120 @@
+{
+  "summary": "Good‑clean soundboard capture of a mixed‑quality show highlighted by a stellar Let It Grow and a memorable Watchtower.",
+  "review": "The recording is a clean, well‑balanced soundboard tape that many reviewers describe as crisp, though some wish it had more of the usual live grit. Musically the concert is uneven – Jerry’s lead on “Let It Grow” and Bob’s pirate‑like vocal on “Watchtower” earn high praise, while several numbers (e.g., “China,” “Rooster,” “Truckin’”) are called listless or lackluster. Overall fans find it a decent, if not spectacular, Dead performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed with both strong and weak moments (≈3/5) while the recording is generally good/clean (≈4/5); weighted combination yields about a 3.3‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Very clean and crisp sound; some listeners note the audio is overly polished with little of the usual gritty ambience, but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Watchtower"
+    ],
+    "poor_songs": [
+      "China",
+      "Rooster",
+      "Truckin’",
+      "Ease"
+    ],
+    "setlist_flow": "The set swings between bright moments (e.g., the energetic Let It Grow) and several middling or listless jams, making the pacing feel uneven despite a few high points."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for one of his finest performances on Let It Grow and for consistent muscular guitar work on Watchtower.",
+    "Phil": "Noted for youthful swagger that helps lift songs; a cute ‘Gimme’ moment is highlighted.",
+    "Bob": "His gritty, pirate‑like vocals on Watchtower are singled out as a major highlight.",
+    "Keys": "Brent’s bluster and swagger add energy to otherwise bland tunes.",
+    "Drums": "Described as lacking distinction; the space segment is called long and involved but not particularly inspiring."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rooster": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stagger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Row": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ease": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Muddy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:34:18.165815+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-10-02.sbd.bertha-ashley.7367.sbeok.shnf"
+}

@@ -1,0 +1,86 @@
+{
+  "summary": "Soundboard recording with occasional mix problems, but the show shines thanks to a monster Other One and an epic 16‑minute Comes A Time.",
+  "review": "The performance is widely praised for its exploratory jams – especially The Other One, Eyes of the World and a marathon Comes A Time that many consider one of ’76’s best. While the soundboard source delivers good clarity in parts, the early first set suffers from missing instruments and pitch quirks, requiring audience mixes to fill gaps. Overall the musical highlights outweigh the technical hiccups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Show quality is consistently rated high (average ~4.6/5) with multiple standout jams; recording quality is mixed but generally acceptable (~3.2/5). Weighted combination yields a solid 4.2‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Early first‑set mix drops several players (Bob, Keith) and has pitch issues; later sections are clear and well balanced. Some reviewers note the recording is \"iffy\" or \"terrible\" at the start but bearable overall."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Eyes of the World",
+      "Comes A Time",
+      "Big River",
+      "Sugaree"
+    ],
+    "poor_songs": [
+      "U.S. Blues",
+      "Not Fade Away"
+    ],
+    "setlist_flow": "First set hampered by mix problems, but musically solid; second set is a highlight with extended jams and strong transitions, making it worth an official release according to several reviewers."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar work receives high praise – angular leads, powerful solos on The Other One and Uptown Toodelo, and overall \"umph\" on the show.",
+    "Phil": "Phil’s bass lines are noted especially during Eyes of the World where he locks in with the rhythm section; occasional mention of his quoting GDRFB.",
+    "Bob": "Bob Weir is sometimes missing from the mix (first set), but when present his playing on Eyes and other jams is described as flexible and energetic.",
+    "Keys": "Keith's piano/organ contributions are highlighted – riff interplay with Jerry, standout moments on Big River, Sugaree and the jam sections.",
+    "Drums": "The drummers receive positive nods for their extended jams (Space, TOOs) and tight work on Comes A Time."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Eyes of the World": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Comes A Time": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uptown Toodelo": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-23T06:42:34.349571+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-07-17.sbd.fricker-fix.tetzeli.34708.sbefail.flac16"
+}

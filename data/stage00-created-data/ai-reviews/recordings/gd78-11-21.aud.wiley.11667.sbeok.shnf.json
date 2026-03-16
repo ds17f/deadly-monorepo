@@ -1,0 +1,90 @@
+{
+  "summary": "High‑energy Rochester show with scorching Truckin’ and solid Jack Straw, captured on a decent audience tape.",
+  "review": "Fans rave about the blazing Truckin’, the fiery Jack Straw, and the inspired Cassidy and Deal performances, noting Jerry Garcia’s soaring solos and an overall electric vibe. The recording is an audience‑sourced tape – okay for most of the set with occasional rough patches – but it still delivers enough clarity to enjoy the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the musical performance (many standout songs, strong Jerry work) outweighs modest recording concerns; weighted average yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners note the tape is okay but lacks soundboard sources, with some rough patches and occasional patchy sections; a few tracks are described as sounding board‑like while most retain typical audience ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Jack Straw",
+      "Cassidy",
+      "Deal",
+      "Eyes"
+    ],
+    "poor_songs": [
+      "Loser"
+    ],
+    "setlist_flow": "The concert maintains high energy from start to finish, with a punchy first set highlighted by Cassidy and Jack Straw, followed by an explosive second set featuring Truckin’ and extended jams that keep the audience on its feet."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for ‘flying’ solos, shredding Truckin’, and a howling, screaming tone throughout the night.",
+    "Phil": "",
+    "Bob": "Weir has a mixed reception – a half‑line stumble early on but recovers; another reviewer notes he rushes a bit during Eyes.",
+    "Keys": "",
+    "Drums": "Mickey and Bill receive nods for solid high‑hat work and keeping the groove tight, especially during the jam sections."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cassidy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T16:43:43.595210+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-11-21.aud.wiley.11667.sbeok.shnf"
+}

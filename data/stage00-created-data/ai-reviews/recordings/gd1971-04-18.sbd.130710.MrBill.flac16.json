@@ -1,0 +1,82 @@
+{
+  "summary": "Clean soundboard capture of an energetic 1971 college show, highlighted by a soaring Sugar Magnolia and marathon Good Lovin'.",
+  "review": "The recording is a well‑balanced soundboard tape with virtually no crowd bleed, letting the band’s tight, bare‑bones performance shine. Reviewers rave about standout moments like Sugar Magnolia, Truckin' and a 24‑minute Good Lovin', while noting a brief wobble in Loser. Overall the show feels lively and concise, showcasing strong interplay among the members.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical performance with many highlighted songs and a clean soundboard recording; limited detailed feedback (only one in‑depth review) keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, crisp mix with almost no crowd noise; reviewers describe it as a \"pretty nice board\" and note the clean capture of instruments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia",
+      "Truckin'",
+      "Good Lovin'",
+      "Hard to Handle",
+      "Round Round (Roundx2)",
+      "Uncle John's Band",
+      "Next Time You See Me"
+    ],
+    "poor_songs": [
+      "Loser"
+    ],
+    "setlist_flow": "A concise, bare‑bones college gig that moves from tight song‑by‑song renditions into extended jams (notably a 24‑minute Good Lovin'), with the band staying focused despite limited improvisational space."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for great tone, Chuck Berry riff, and overall strong guitar work.",
+    "Phil": "Noted for heavy bass on Hard to Handle and leading charge; some comment about limited elbow room.",
+    "Bob": "Compliments on vocal harmonies and primal scream moments.",
+    "Keys": "",
+    "Drums": "Bill is described as \"bad ass\" with deep funky rhythm, driving the groove."
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Round Round (Roundx2)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Next Time You See Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T05:13:26.034182+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-18.sbd.130710.MrBill.flac16"
+}

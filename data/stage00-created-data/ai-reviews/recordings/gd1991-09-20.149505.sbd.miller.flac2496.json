@@ -1,0 +1,51 @@
+{
+  "summary": "Soundboard recording captures a classic Help‑Slip‑Fire sequence from the Boston Fall ’91 run.",
+  "review": "The show is praised for its classic Help > Slip > Fire on the Mountain segment, with the reviewer noting it stands out even when compared to the preceding nine‑night MSG stretch. The source appears to be a soundboard tape and no audio flaws are mentioned, implying solid clarity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "A single 4‑star review highlights a standout song sequence and gives no recording complaints; weighting favors the strong musical moment while assuming decent soundboard quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific audio issues reported; presumed clear soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way",
+      "Slipknot!",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer notes familiarity with the preceding MSG run and calls the Boston set classic, suggesting a well‑structured and engaging performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "most_positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:27:13.576707+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-20.149505.sbd.miller.flac2496"
+}

@@ -1,0 +1,95 @@
+{
+  "summary": "High‑end audience recording captures a post‑Brent MSG show with standout Samson & Delilah, He's Gone and Standing on the Moon performances.",
+  "review": "The three fan reviews praise this audience (AUD) source for its clear high‑frequency detail and overall balance, noting only occasional mix quirks such as overly bright keyboards or low levels. Musically the show is highlighted for powerful renditions of Samson & Delilah, a marathon He's Gone, and an evolving Standing on the Moon, with solid first‑set numbers like Hell in a Bucket and Cold Rain & Snow. Despite some mixed comments about early‑night tightness and a bland Space segment, the consensus is that the performance shines and the recording makes it very listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Two strong 4‑star reviews emphasize excellent sound and a great set, while the third 3‑star review notes only minor mix issues; weighted scoring yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp high‑end detail and well‑balanced overall, though some reviewers note occasional crowd noise, low overall level, and moments where keyboards sit too high in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson & Delilah",
+      "He's Gone",
+      "Standing on the Moon",
+      "Hell in a Bucket",
+      "Cold Rain & Snow"
+    ],
+    "poor_songs": [
+      "Space"
+    ],
+    "setlist_flow": "A strong, song‑filled first set that builds momentum into a second set packed with extended jams; the band navigates post‑Brent adjustments smoothly, delivering high energy despite occasional mix hiccups."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixes sometimes bury his guitar early on, but his improvisational spark is evident in the jams and the late‑night boost after the drummers step back.",
+    "Phil": "Dominant throughout—driving Iko Iko, powering Samson & Delilah, and providing superb bass work during He's Gone.",
+    "Bob": "Occasionally gets lost or buried in the mix, yet leads the final jam section and delivers solid rhythm/vocal work.",
+    "Keys": "Vince's keyboards are highlighted for texture; at times they sit too high in the mix or are low‑level overall, but his solos add key color to jams.",
+    "Drums": "Kreutzmann/Hart deliver a classic arena‑acid‑test drumming feel with typical exits and returns that shape the second‑set flow."
+  },
+  "song_mentions": {
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T12:25:49.786392+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-16.bk4011.tdarian.french.88947.sbeok.flac16"
+}

@@ -1,0 +1,64 @@
+{
+  "summary": "Mixed first set but soaring Dark Star and strong PITB sandwich",
+  "blurb": "The second set shines with a soaring Dark Star, an inventive Playing In The Band sandwich and a thrilling Wharf Rat transition. Jerry’s voice sounds weary at times but his guitar stays compelling, while Phil delivers a growly bass foundation. Highlights include the Victim Or The Crime opener and the standout Dark Star jam.",
+  "review": "On November 1, 1990 at Wembley Arena the Dead delivered a night of contrasts. The first set stumbled after a solid start – “Maggie’s Farm” fell flat and Jerry’s voice grew hoarse on several numbers – but the energy rebounded in the second set. Kicking off with “Victim Or The Crime,” the band launched into a powerful “Touch Of Grey” before launching an epic “Playing In The Band” sandwich that rolled straight into a soaring, Hornsby‑led Dark Star. After the usual drums and space excursions, the jam returned to Dark Star and back into another “Playing In The Band” before veering into an electrifying “Wharf Rat” that felt like a surprise payoff. Throughout, Phil’s growly bass provided a sturdy anchor while Bruce Hornsby’s piano added sweet texture, especially on Dark Star. Though Jerry’s vocal weariness was evident, his guitar work remained spirited and he linked nicely with the keyboards during the climactic jams. The show closes with a rousing “Throwing Stones” and a brief “U.S. Blues,” leaving fans with a mixed but memorable performance that shines in its second‑set improvisations.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.1,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 18,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "Most recordings describe the show as mixed, noting a weak first set but praising several second‑set moments (Dark Star, Playing In The Band sandwich, Wharf Rat). Positive language appears consistently for those highlights, while criticisms focus on vocal fatigue and uneven early songs, leading to a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.5 = 3.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd90-11-01.sbd.ladner.8068.sbeok.shnf",
+    "reason": "Soundboard source with generally clear and balanced audio, capturing the strong second‑set jams while preserving most of the performance nuances."
+  },
+  "key_highlights": [
+    "Soaring Dark Star jam led by Hornsby’s piano",
+    "Tight Playing In The Band sandwich spanning two Dark Stars",
+    "Unexpected transition into a vibrant Wharf Rat",
+    "Victim Or The Crime opener sets an adventurous tone"
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "Playing In The Band",
+    "Wharf Rat",
+    "Victim Or The Crime"
+  ],
+  "band_performance": {
+    "Jerry": "Voice sounds tired and occasionally hoarse, but his guitar remains spirited and he links well with the keyboards during the climactic jams.",
+    "Phil": "Growly, gravely bass is a highlight of the era, providing a solid foundation throughout the set.",
+    "Bob": "",
+    "Brent": "Bruce Hornsby’s piano work shines, especially on Dark Star, adding sweet melodic texture and occasional lead moments.",
+    "Mickey": "Drumming stays tight and supportive, contributing to the energetic flow of the second‑set jams.",
+    "Billy": "Bill Kreutzmann delivers solid groove work, keeping the rhythm steady through the extended improvisations."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-17T14:46:30.732791+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Dark Star",
+      "Drums",
+      "Space",
+      "Jam",
+      "Dark Star",
+      "Playing In The Band",
+      "Wharf Rat",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Victim Or The Crime",
+      "Touch of Grey"
+    ]
+  ]
+}

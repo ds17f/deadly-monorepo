@@ -1,0 +1,31 @@
+{
+  "summary": "Good audience recording despite the venue's poor acoustics; no specific performance highlights mentioned.",
+  "review": "The audience tape captures the show with decent clarity, though the building’s crappy sound makes the mix a bit muddy. Reviewers gave it a solid four‑star rating and note that it is one of the better audience sources available for this date, but they provide no comments on the musical performance itself.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only a single four‑star review focusing on recording quality; no detailed show commentary to adjust rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough for an audience tape but the venue's acoustics are described as 'crappy sounding', leading to a slightly muddy mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments about set structure or musical performance were provided in the review."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T12:25:20.249331+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-12-31.135434.aud.Holtz.NakCM104.flac16"
+}

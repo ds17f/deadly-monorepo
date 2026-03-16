@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent matrix remix of a fiery Fall ’83 second set featuring scorching Help > Slip and a wild Wang Dang Doodle.",
+  "review": "The show is hailed as the epitome of the 1983 tour, with a blistering second‑set that includes a smoking Help > Slip sequence and an unforgettable, if mic‑troubled, Wang Dang Doodle. Reviewers rave about Dave Usborne’s remix/mastering, calling the audio crisp, upgraded and one of the best you’ll hear from this era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Multiple reviewers give 4‑5 stars and praise both the performance (especially the second set) and the high‑quality remix, outweighing a few neutral or nonsensical comments."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Remixed and mastered by Dave Usborne; reviewers describe the sound as crisp, upgraded and among the best available for this era, with only minor mic‑issue artifacts on Wang Dang Doodle."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip",
+      "Wang Dang Doodle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is described as the epitome of ’83—fiery and high‑energy—but some feel it doesn’t fully elevate toward the very end."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as going \"ape\" and delivering shredding, wild guitar work in the second set.",
+    "Phil": "",
+    "Bob": "Noted mic issues during Wang Dang Doodle, affecting his vocals.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slip": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:31:05.565481+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-11.131805.mtx.remix.dusborne.flac16"
+}

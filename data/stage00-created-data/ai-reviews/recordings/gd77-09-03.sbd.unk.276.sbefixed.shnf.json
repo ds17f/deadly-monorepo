@@ -1,0 +1,87 @@
+{
+  "summary": "Soundboard source with fair‑ish fidelity captures a legendary 1977 Englishtown show highlighted by an incendiary Half‑Step, soaring Estimated→Eyes and monster NFA.",
+  "review": "The performance is universally praised – half‑step, the Estimated → Eyes transition, He's Gone and Not Fade Away are repeatedly called out as top‑tier ’77 moments, with a scorching second set that many rank among the year’s best. The SBD (soundboard) recording is decent enough to enjoy but suffers from compression, a thin high end and occasional muddiness, so listeners note it isn’t as pristine as the official Dick’s Picks release.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews (4‑5 stars) celebrate the musical performance, while recording comments are mixed but generally acceptable; weighting 70 % show quality and 30 % audio quality yields a solid 4.3‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "SBD source (unk_276). Reviewers note compression, a tinny mid‑range and limited high‑frequency clarity; some describe it as “muddy” or “crisp” in parts. Overall listenable but not as clean as the official DP release."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step",
+      "Estimated > Eyes",
+      "He's Gone",
+      "Not Fade Away",
+      "Loser",
+      "Music Never Stopped",
+      "Peggy-O"
+    ],
+    "poor_songs": [
+      "Truckin' (occasionally described as weak or muffled)"
+    ],
+    "setlist_flow": "High‑energy first set with classic openers and a blistering Half‑Step; second set builds into an epic Estimated→Eyes segue, followed by a monster He's Gone → NFA jam, culminating in a fiery Loser/Truckin' finish. The festival atmosphere (150 k+ heads, heat, long day) adds to the show’s legendary status."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his soaring solos on Half‑Step and Eyes, a ‘leap’ moment during Half‑Step, and overall tight, “on” playing; some note his guitar tone as perfect.",
+    "Phil": "Mentioned fondly in banter (“i heart phil”) and occasional stage comments; no specific performance criticism.",
+    "Bob": "",
+    "Keys": "Keith’s electric‑based keyboards noted positively; Donna Jean’s vocal shouts on Estimated praised.",
+    "Drums": "Mickey’s cast mentioned; a few reviewers note drums sound thin in this SBD mix, while others say the drum presence is heavy and crisp."
+  },
+  "song_mentions": {
+    "Mississippi Half-Step": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "He's Gone": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Not Fade Away": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Truckin'": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Loser": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Peggy-O": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T03:49:16.428389+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-09-03.sbd.unk.276.sbefixed.shnf"
+}

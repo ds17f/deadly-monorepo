@@ -1,0 +1,57 @@
+{
+  "summary": "Rough audience tape of a focused ’74 show with standout Eyes of the World, Jack Straw and Saturday Night despite low‑fi sound.",
+  "review": "The performance is praised as one of the most focused 1974 shows – eyes‑of‑the‑world is called near‑flawless, Jack Straw shines and the transition into Saturday Night flows smoothly. Recording quality suffers from typical audience‑tape limitations (muffled bass and lo‑fi clarity), but listeners who tolerate that can still enjoy the band playing as one.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is rated high based on multiple positive comments, while recording quality is judged fair/poor; weighted average yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Low‑fi audience tape – described as sounding like a hand‑held microphone, muffled bass making Phil hard to hear, but still listenable for the era."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Jack Straw",
+      "Saturday Night",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A focused ’74 set with strong transitions (notably Eyes of the World into Saturday Night) and a cohesive band performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Solid, not goofing around; praised for heartfelt playing.",
+    "Phil": "Bass sometimes buried in the tape but still notable – “sails a pirate ship” through Sugaree.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T00:29:05.237794+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-09-14.aud.hanno.6162.sbeok.shnf"
+}

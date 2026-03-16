@@ -1,0 +1,100 @@
+{
+  "summary": "An almost flawless sound‑board capture of a spring‑1970 show highlighted by an incendiary Other One jam and crystal‑clear playing from the whole band.",
+  "review": "The recording is crisp, balanced and feels like you’re sitting in the first row – most reviewers call it “soundboard quality” with no audible hiss or muddiness. Musically the night is a showcase of peak 1970 Dead: a scorching Cryptic‑Drums‑Jam‑Other One sequence, blistering Dire Wolf, soulful Lovelight and powerhouse performances of Man’s World, Candyman and Dancin’. The only blemishes are a few missing tracks (China Cat Sunflower > I Know You Rider) and the early fade‑out on Hard to Handle.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Over 70 reviews overwhelmingly praise both performance and audio quality; show quality (70 %) is clearly outstanding and recording quality (30 %) is described as excellent, yielding a near‑perfect combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with balanced vocals and instruments; no noticeable tape hiss or distortion. A few reviewers note occasional cuts/fade‑outs (Hard to Handle) but overall the sound is comparable to top‑tier Dead soundboards."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Cryptical Envelopment > Drums > Jam > The Other One",
+      "Dire Wolf",
+      "Lovelight",
+      "Candyman",
+      "Man's World",
+      "Cold Rain & Snow",
+      "Dancin'",
+      "Cumberland Blues"
+    ],
+    "poor_songs": [
+      "Hard to Handle (cut early)",
+      "China Cat Sunflower > I Know You Rider (missing)"
+    ],
+    "setlist_flow": "The concert builds from a tight first set into the legendary mid‑show Cryptical/Drums jam, then erupts with an Other One suite that drives the second half. Even with missing tunes the pacing stays relentless and energetic, delivering classic 1970 spring momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for “smoking” guitar tone, deliberate creativity, and wailing leads throughout the night.",
+    "Phil": "Noted for a grooving, thundering bass that anchors the Other One suite and keeps the band locked in.",
+    "Bob": "Mentioned mainly for his vocal exchanges on Lovelight/NFA sandwich; some reviewers note “Bob’s histrionics” adding excitement.",
+    "Keys": "Few direct comments – one reviewer calls the keyboards “perfectly balanced”; another mentions extra keyboardist (third guitarist/keyboard) during the jam, but overall no complaints about the keys mix.",
+    "Drums": "The Cryptical‑Envelopment > Drum jam is repeatedly called “scorching”, “intense” and a highlight of the show."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 25,
+      "negative_mentions": 0,
+      "total_mentions": 25
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Dire Wolf": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Lovelight": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Candyman": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Man's World": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Dancin'": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Hard to Handle": {
+      "positive_mentions": 2,
+      "negative_mentions": 3,
+      "total_mentions": 5
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-19T18:23:24.284644+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-04-15.sbd.kaplan.14354.sbeok.shnf"
+}

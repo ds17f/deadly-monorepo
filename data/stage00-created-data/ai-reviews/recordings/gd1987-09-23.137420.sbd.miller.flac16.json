@@ -1,0 +1,39 @@
+{
+  "summary": "Generally praised show with a standout Bird Song; recording source unknown and no specific sound issues noted.",
+  "review": "Reviewers are enthusiastic about the performance, highlighting a strong rendition of Bird Song and calling the overall concert \"great\" or \"smokin.\" No concrete details on the recording technique were given, so the source type remains unclear but there are no reported audio problems.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Four reviews lean positive about the show with only a brief note of disappointment on an unnamed first song; recording quality is not discussed, suggesting it is at least listenable."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound clarity, mix, or source type were provided in the reviews."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed commentary on set structure or pacing was given."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:24:31.371652+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-23.137420.sbd.miller.flac16"
+}

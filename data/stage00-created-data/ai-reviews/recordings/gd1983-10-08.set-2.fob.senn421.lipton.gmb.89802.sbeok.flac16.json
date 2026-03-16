@@ -1,0 +1,61 @@
+{
+  "summary": "A high‑energy Richmond show with a killer second set – highlighted by Playing in the Band > Crazy Fingers, Truckin' and Wharf Rat – captured on an unspecified source that listeners describe as solid.",
+  "review": "Both reviewers rave about the performance, especially the second‑set flow where the Playin > Crazy Fingers sequence and the vocal delivery stand out. The recording’s technical details aren’t discussed, but the overall sound is deemed good enough to recommend downloading.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical praise (70% weight) with no serious complaints about the audio, though source type is unknown, leading to a solid but not perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers do not mention specific sound issues; they simply note that the show sounds good and is worth downloading."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band > Crazy Fingers",
+      "Truckin'",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is praised for its seamless transitions, strong vocal harmonies and powerful post‑drum jams, making it a highlight of the tour."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for giving his all on Truckin' and delivering strong vocals from his side of the stage.",
+    "Phil": "",
+    "Bob": "Noted using a new Telecaster with a whammy bar, which he employed to good effect during the jam.",
+    "Keys": "",
+    "Drums": "Post‑drum sections described as 'killer' throughout the show."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "007 Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T11:00:55.557016+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-08.set-2.fob.senn421.lipton.gmb.89802.sbeok.flac16"
+}

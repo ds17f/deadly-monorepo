@@ -1,0 +1,45 @@
+{
+  "summary": "Clear audience recording that captures the band’s energy, highlighted by a ripping Jerry and standout performances of Half‑Step and Jack Straw.",
+  "review": "Both reviewers gave this tape five stars, praising its lively audience sound (AUD source) that conveys the concert’s excitement. The first set already shines with an energetic half‑step jam and a powerful Jack Straw, and Jerry Garcia’s guitar work is repeatedly noted as “rippin.” No technical flaws are reported, making it both an enjoyable musical and listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Both reviews are enthusiastic (5‑star) and focus on strong performance and good audience recording quality; limited number of reviews lowers confidence to medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the AUD source as clear, energetic and well‑balanced, with no noted dropouts or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half-Step",
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Only the first set is mentioned, but reviewers felt it was high‑energy and flowing well, with strong openings that showcase the band’s momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"rippin\" – guitar tone and playing highlighted positively.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T03:38:30.386647+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-06-09.141360.akg-d224.troy.miller.smith.sirmick.flac2496"
+}

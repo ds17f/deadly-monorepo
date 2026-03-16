@@ -1,0 +1,63 @@
+{
+  "summary": "A shaky front‑of‑house recording plagued by mix problems captures a lackluster 1994 show where only Liberty (and to a lesser extent Picasso Moon) shine.",
+  "review": "The recording suffers from persistent sound‑mix issues that many reviewers describe as “wrong the whole night,” making the listening experience uneven. Musically the performance is generally viewed as sub‑par, with songs like Corrina and Half‑Step cited as weak points, while Liberty (and occasionally Picasso Moon) provide the few highlights. Jerry’s playing swings from “off the rails” early on to moments of soulful expression later in the set.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.1,
+    "confidence": "medium",
+    "rationale": "Most reviewers gave low star ratings (0‑2) and complained about both performance and sound quality; a few noted occasional highlights, leading to an overall poor but not catastrophic rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Multiple reviewers mention FOH mix problems and overall bad sound throughout the night; one reviewer rates the capture itself as ~3 stars, indicating that while the source may be decent, the front‑of‑house mix severely hampers clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Liberty",
+      "Picasso Moon"
+    ],
+    "poor_songs": [
+      "Corrina",
+      "Half-Step"
+    ],
+    "setlist_flow": "Setlists are described as short and predictable, with new tunes providing the only real lift; overall the show feels uneven and lacking tightness."
+  },
+  "band_member_comments": {
+    "Jerry": "His playing is called off‑the‑rails early on but later praised for pouring out soul, indicating inconsistency.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "One reviewer longs for the days before Vince, suggesting dissatisfaction with keyboard work.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Liberty": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Picasso Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Half-Step": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T01:05:21.989294+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-08-03.fob-schoeps.sisler-pujol.20291.sbeok.shnf"
+}

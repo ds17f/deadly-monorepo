@@ -1,0 +1,31 @@
+{
+  "summary": "Soundboard recording of a lively US Festival set; reviewers love the fun atmosphere even though no specific audio details are given.",
+  "review": "The single fan review is exuberant, recalling the Dead’s upbeat presence at the US Festival and describing the concert as a “time‑sugeree” party that left them with the time of their life. While the reviewer gives five stars, they do not comment on the sound quality, so the recording is assumed to be a decent soundboard capture based on the .sbd tag.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic 5‑star review, praising the show’s vibe; no concrete recording details, so rating leans on positive sentiment but confidence is low due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments about clarity or mix; assumed acceptable soundboard quality based on file type and overall positive rating."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Review emphasizes the festive, high‑energy atmosphere of the Dead’s set at the festival rather than specific song flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T00:40:16.542404+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-05.142714.sbd.healy.streeter.dalton.miller.clugston.flac1648"
+}

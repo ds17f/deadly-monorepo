@@ -1,0 +1,45 @@
+{
+  "summary": "Warm audience recording captures a fiery Jerry‑led performance highlighted by an epic Dark Star and a powerful Other One.",
+  "review": "The show is praised for its high energy, especially Jerry Garcia’s incendiary leads on the early tunes and the standout stretches of Dark Star and The Other One. Although captured with a handheld mic that leaves the sound a bit muddy, the recording retains enough warmth and atmosphere to make the performance highly enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Eight reviews consistently rate the show 4–5 stars; reviewers love the musical performance while noting only moderate recording limitations, leading to a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Handheld‑mic audience capture; some muddiness and lack of clarity but retains warmth and enough detail for an enjoyable listen."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early songs start a bit chilly, then the band heats up quickly; the set builds to powerful peaks with Dark Star and The Other One providing the high points."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry’s fire, pedal‑steel‑like leads, double bends and overall stellar guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T13:18:49.713884+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-04-15.aud.komar.miller.31523.flac16"
+}

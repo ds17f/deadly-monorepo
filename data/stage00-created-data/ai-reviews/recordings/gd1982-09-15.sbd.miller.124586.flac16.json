@@ -1,0 +1,51 @@
+{
+  "summary": "Matrix recording that settles into a clean soundboard after the first two audience tracks, capturing a fiery set 2 and the debut of Touch despite an awkward “Playing” opener.",
+  "review": "The tape starts with two audience‑sourced tracks before switching to full soundboard during Dupree's Diamond Blues, yielding very nice clarity for the bulk of the show. Fans rave about the scorching first version of Touch and a rippin' second set, though the unusual “Playing in the Band” opener is seen as a pacing misstep. Overall the performance shines, especially in the second half, while the recording quality is solid after the initial audience segment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Strong musical highlights (Touch, energetic set 2) and good soundboard quality offset a few critical comments about the opening song; three detailed reviews give enough basis for a solid rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "First two tracks are audience recordings (AUD) and then it switches to full soundboard (SBD) during Dupree's, resulting in very nice sound and clear mix for the majority of the concert."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch"
+    ],
+    "poor_songs": [
+      "Playing in the Band"
+    ],
+    "setlist_flow": "The set opens with an unusual \"Playing\" > Crazy Fingers pairing that many felt disrupted pacing, but the second set is described as rippin' and features a scorching debut of Touch."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:16:18.304457+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-15.sbd.miller.124586.flac16"
+}

@@ -1,0 +1,79 @@
+{
+  "summary": "Excellent soundboard captures a solid spring ’94 show with sparkling Jerry work, standout Truckin', Might As Well and a spectacular Standing on the Moon > Good Lovin' sequence.",
+  "review": "The recording is a high‑quality soundboard that faithfully renders the band’s tight groove and Vince’s newly integrated organ tone. Musically the concert shines in the second set with a smoking Truckin’ jam, an inspired Might As Well revival, and the dazzling Standing on the Moon > Good Lovin' medley, though Row Jimmy draws mixed reactions. Overall the performance feels like a lively Nassau‑style dance party with occasional intense peaks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Both reviewers praise the show’s musical moments and note an excellent soundboard, yielding a strong combined rating despite some song‑specific criticism."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix that reveals both delicate filigrees and high‑intensity wall‑to‑wall moments; Vince’s organ is well‑balanced. No major dropouts or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Might As Well",
+      "Standing on the Moon > Good Lovin'",
+      "Miracle"
+    ],
+    "poor_songs": [
+      "Row Jimmy"
+    ],
+    "setlist_flow": "A delicate, light‑fingered first set gives way to a rocking groove, while the second set builds into intense jams (Truckin' → Miracle) and culminates with a spectacular Standing on the Moon > Good Lovin' sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for sparkling, light‑fingered filigrees and dynamic tone; described as ‘in and out’ but generally strong.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince’s organ sound is noted as more integrated and decent, adding depth to the mix.",
+    "Drums": "Drums>Space segment highlighted as interesting and engaging."
+  },
+  "song_mentions": {
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Might As Well": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums>Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:30:21.692900+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-23.139365.sbd.ebel.flac1644"
+}

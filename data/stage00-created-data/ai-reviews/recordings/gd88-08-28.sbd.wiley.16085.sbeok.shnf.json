@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording that leans vocal‑heavy; the concert is uneven with a standout Terrapin Station but generally loose playing and off‑key vocals.",
+  "review": "The show captures a sunny Sunday afternoon where the drums and space sections shine, and Terrapin Station rises as a high point. However, the overall performance is hampered by sloppy playing and vocal woes from both Jerry and Bob, while the mix emphasizes vocals to the detriment of balance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Three reviews give low‑to‑moderate scores (2–3 stars) and note both positive moments (drums, Terrapin Station) and significant negatives (sloppy playing, vocal problems). Weighted toward show quality, the rating settles around an average 3‑star level."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix is heavily vocal‑centric, making instrumental balance thin; no dropout issues reported but the vocal emphasis highlights off‑key singing and detracts from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set feels loose and at times sloppy, with a lack of spark; drums and space segments provide the most engaging moments while vocal inconsistencies drag the performance down."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is described as never having been the same after his 1986 incident and generally off‑key on this night.",
+    "Phil": "",
+    "Bob": "Bob's vocals are noted as particularly bad, contributing to the overall lack of spark.",
+    "Keys": "Brent Mydland's vocal performance was poor; reviewer also mentions not being a fan of Brent's playing.",
+    "Drums": "Drums and the Rhythm Devils section receive praise as highlights of the show."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T12:44:20.298403+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-08-28.sbd.wiley.16085.sbeok.shnf"
+}

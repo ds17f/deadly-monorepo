@@ -1,0 +1,39 @@
+{
+  "summary": "Clean first‑set sound captures a solid performance highlighted by the fantastic “The loser”.",
+  "review": "The reviewer rates the show four stars, calling it solid and noting that the first set sounds very clean. The recording quality is praised as clear, while the performance gets a positive nod thanks to the standout “The loser” moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review; it gives a 4‑star rating and mentions clean sound and a solid show, leading to an overall four‑star assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "First set is described as very clean; no glitches or muffiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The loser"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall solid show with no specific flow issues mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T20:36:45.491010+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-07.140152.sbd.miller.flac2496"
+}

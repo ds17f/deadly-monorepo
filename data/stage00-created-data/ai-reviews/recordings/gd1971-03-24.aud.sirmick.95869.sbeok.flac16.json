@@ -1,0 +1,46 @@
+{
+  "summary": "Rough audience recording of a tired early‑'71 show, but Hard To Handle shines as the highlight.",
+  "review": "The tape captures a March 1971 performance that sounds fatigued and uneven – the band is transitioning from a two‑drummer lineup and the mix can be harsh enough to hurt the ears.  Hard To Handl​e stands out as a bright spot, while even The Other One feels a bit logey.  The setlist is mostly intact though the order needs a little readjustment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review; it notes poor sound quality and a generally sloppy performance, with a single song highlighted positively."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Sound is harsh and ear‑fatiguing; overall mix is rough with occasional muffling, making listening uncomfortable for some."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard To Handle"
+    ],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": "Set appears complete but the first‑set break is missing; track order needs minor readjustment to reflect the original flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum section sounds tired and unsettled as the band transitions from a two‑drummer configuration."
+  },
+  "song_mentions": {
+    "Hard To Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T03:48:47.214819+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-03-24.aud.sirmick.95869.sbeok.flac16"
+}

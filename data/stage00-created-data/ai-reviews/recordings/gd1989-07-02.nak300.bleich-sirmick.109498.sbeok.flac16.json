@@ -1,0 +1,39 @@
+{
+  "summary": "Enthusiastic fan praise for a Hendrix‑style drum jam on “Eyes of the World” and a great setlist, but no concrete details on recording source; overall impressions are mixed.",
+  "review": "One reviewer gives the show five stars, raving about a Hendrix‑like riff during the drums on Eyes of the World and calling the setlist \"great\". The second review offers a zero‑star rating with only a brief comment that adds no useful information, leaving the overall assessment ambiguous.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Based on one highly positive review and one vague negative rating; limited data prevents a strong conclusion."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers do not mention the recording source, clarity, or mix; comments focus solely on performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer calls the setlist great but provides no detailed analysis of pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T20:04:48.213478+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-02.nak300.bleich-sirmick.109498.sbeok.flac16"
+}

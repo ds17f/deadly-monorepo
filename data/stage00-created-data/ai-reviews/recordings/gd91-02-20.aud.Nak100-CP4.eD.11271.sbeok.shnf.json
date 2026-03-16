@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent front‑row audience recording captures a high‑energy ’91 show highlighted by scorching Sugaree, Scarlet > Fire and a stellar Masterpiece.",
+  "review": "The tape – a four‑mic front‑row audience mix recorded by Charlie Miller – is praised as one of the best‑sounding audience recordings on the Archive, with crisp, meatier‑than‑usual sound and superb instrument balance. The performance itself is described as energetic from start to finish, featuring inspired Jerry Garcia work, strong second‑set creativity (drums, jams, Other One teases) and standout versions of Sugaree, Scarlet > Fire, Masterpiece and the Mighty Quinn.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All reviews are 4‑5 stars; reviewers uniformly praise both the musical performance and the audio quality, noting several standout songs and a superb front‑row audience mix."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Four‑mic front‑row taper mix (Nakamichi 300/CP4 + AKG C1000S). Reviewers call it crisp, meatier‑than‑usual, one of the best‑sounding audience recordings with excellent instrument balance and good mixing of keyboards."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Bird Song",
+      "Scarlet > Fire",
+      "Masterpiece",
+      "Cumberland Blues",
+      "The Other One",
+      "Estimated Jam",
+      "Mighty Quinn"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, upbeat first set followed by an epic second set with creative drum‑jam transitions and a flowing Other One suite; the energy stays high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised for inspired playing, perfect tone and filling the gap left by Hornsby.",
+    "Phil": "",
+    "Bob": "Noted for starting a song in a high key and for improved mix on this night; piano work adds to the show’s energy.",
+    "Keys": "Vince (early‑stage keyboardist) receives strong compliments for his contribution and better blend than previous nights; Brent is absent but not missed by reviewers.",
+    "Drums": "Drums receive special mention for creativity, especially in the second‑set drum/jam/Other One teases."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Masterpiece": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mighty Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:18:32.239680+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-02-20.aud.Nak100-CP4.eD.11271.sbeok.shnf"
+}

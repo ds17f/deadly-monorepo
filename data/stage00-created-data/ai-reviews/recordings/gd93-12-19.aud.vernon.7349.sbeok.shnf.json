@@ -1,0 +1,57 @@
+{
+  "summary": "Audience recording captures a solid Bay‑Area show with a smoking second set, standout Space and an unforgettable So Many Roads ending, all rendered in good sound quality.",
+  "review": "The performance is praised as one of the last great home‑turf shows, featuring a tight first set, a blistering second set highlighted by Space and Jerry’s soaring So Many Roads finale, plus a rare Days Between solo. The audience tape is described as surprisingly clear—better than some soundboard releases—making the show enjoyable despite the era’s mixed reputation.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Reviews are generally positive about the musical performance (solid sets, standout jams) but note average to good recording quality; four reviews give a spread of 5‑3 stars, leading to an overall rating just under 4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough for the Coliseum venue; reviewers call it \"nice\" and even better than some SBD releases, with no major drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "So Many Roads (ending)",
+      "Days Between",
+      "Scarlet > Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid first set followed by a smoking second set; the post‑drums segment and Space provide an adventurous climax, while So Many Roads delivers an emotional finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for a rare solo on Days Between, an \"out there\" Space performance, and an unforgettable ending to So Many Roads that still moves listeners.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mention of a strong post‑drums segment leading into the Space jam."
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads (ending)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T19:08:55.553775+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-12-19.aud.vernon.7349.sbeok.shnf"
+}

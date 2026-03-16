@@ -1,0 +1,50 @@
+{
+  "summary": "Excellent audience‑recorded sound captures a high‑energy show with a strong second set, despite a few rushed moments and vocal strain.",
+  "review": "The performance is praised for its professionalism, energetic playing from Bob and Jerry, and a particularly solid second set. Vocal issues from Jerry’s lingering laryngitis and an overly fast “Eyes” are the main musical blemishes, but the warm, sweet‑spot audience recording by Glassberg makes the show highly listenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (high energy, solid second set) weighted heavily, combined with an excellent audience recording; minor vocal and tempo issues keep the rating just below a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Warm, fuzzy ‘sweet‑spot’ capture from high above the crowd; no significant dropouts or muddiness noted."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Eyes",
+      "Black Peter"
+    ],
+    "setlist_flow": "The concert maintains strong momentum throughout, building to an especially compelling second set. A few rushed tempos early on (notably “Eyes”) and vocal strain on “Half‑Step”/“Black Peter” are the only noticeable dips."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocal strain from lingering January laryngitis noted on Half‑Step and Black Peter, but extra effort praised later in the set.",
+    "Phil": "",
+    "Bob": "Extra effort highlighted; contributed to the show’s high energy and good lovin'.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T23:22:56.937733+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-09-05.nak700.glassberg.wise.2484.shnf"
+}

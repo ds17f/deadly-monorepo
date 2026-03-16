@@ -1,0 +1,45 @@
+{
+  "summary": "Acoustic soundboard recording of a rare Bob Weir Band show with Garcia and Hart, delivering a unique and enjoyable performance.",
+  "review": "This acoustic set captures an unusual side‑project featuring the Bob Weir Band with Jerry Garcia sitting in for the whole night and Mickey Hart on drums. Reviewers praise its uniqueness and the fun renditions of songs like “Oh Boy” and “Deep Elm Blues,” and note that the soundboard source streams cleanly despite a lack of detailed technical commentary.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers are enthusiastic, highlighting the historic lineup and enjoyable acoustic set; recording is described as stream‑ready with no major flaws, yielding a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific audio complaints; reviewers mention the file streams well and captures the acoustic ambience clearly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Oh Boy",
+      "Deep Elm Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A concise ten‑song acoustic set that feels intimate and historic, showcasing rare material and first‑time (or early) performances in a relaxed venue."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia sits in for the entire show (noted by reviewers).",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey Hart joins on drums for most of the set (mentioned in review)."
+  },
+  "song_mentions": {
+    "Oh Boy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deep Elm Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T16:20:24.867682+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-11-17.acoustic.sbd.samaritano.32879.sbeok.flac16"
+}

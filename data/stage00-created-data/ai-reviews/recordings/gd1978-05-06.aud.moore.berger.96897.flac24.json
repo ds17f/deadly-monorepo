@@ -1,0 +1,79 @@
+{
+  "summary": "Stunning audience recording with massive, clear sound and a blistering first set highlighted by Sugaree, Peggy‑O, Looks Like Rain and Deal.",
+  "review": "Both reviewers rave about the crystal‑clear AUD source, noting its big, immersive mix and only an inaudible house‑mix hiss. The performance is described as transcendent – the opening set “blazing” with standout renditions of Sugaree, Peggy‑O, Looks Like Rain and Deal, while the second set delivers solid Playin' In The Band and a fiery One More Saturday Night encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Consistently 5‑star reviews praising both the musical performance (exceptional first set, strong second set) and the audio quality (excellent audience recording with minimal issues)."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Big, clear sound with a superb bass mix; only a faint house‑mix distortion noted by one reviewer, which does not affect enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Peggy-O",
+      "Looks Like Rain",
+      "Deal",
+      "Playin' In The Band",
+      "One More Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as blazing and transcendent; second set solid with jazzy Playin' In The Band and a high‑energy One More Saturday Night encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is praised as perfect, his leads are called shimmering, scorching and on fire throughout the show.",
+    "Phil": "The bass mix is highlighted as astonishing, indicating Phil Lesh’s playing shines in this recording.",
+    "Bob": "Weir’s tasteful slide work on Sugaree receives specific commendation.",
+    "Keys": "Donna Jean Godchaux’s vocal performances are described as over‑the‑top yet oddly perfect, adding a special character to several numbers.",
+    "Drums": "Both drummers are lauded for a ‘galaxy of greatness’ in the Deal jam and driving energy on the encore."
+  },
+  "song_mentions": {
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' In The Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:15:09.816203+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-05-06.aud.moore.berger.96897.flac24"
+}

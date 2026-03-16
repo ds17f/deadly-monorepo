@@ -1,0 +1,31 @@
+{
+  "summary": "Review only notes an incorrect concert date; no information on recording or performance quality.",
+  "review": "The sole reviewer points out that the tape is mislabeled as 10/11/89 when it should be 10/11/80, offering no commentary on the soundboard source, audio clarity, or musical performance. Consequently, there are no insights into standout moments, band playing, or technical fidelity.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one brief review focusing on a metadata error; no data to assess musical or recording quality, leading to a conservative low rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on audio clarity, mix, or source type; review solely mentions wrong date."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure or performance quality."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T04:37:52.967145+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-11.156343.akg-se5-wiseman-miller-clugston.flac2496"
+}

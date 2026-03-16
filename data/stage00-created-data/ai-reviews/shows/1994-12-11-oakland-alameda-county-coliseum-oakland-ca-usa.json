@@ -1,0 +1,66 @@
+{
+  "summary": "Strong Days Between jam, mixed first set, solid second half",
+  "blurb": "The first set stumbles through a clunky Help > Slip transition and a few out‑of‑tune moments. The second set lifts the night with a fiery Days Between solo, tight Watchtower, and an uplifting Sugar Magnolia. Jerry’s playing is uneven early but peaks later, while Vince gains confidence on keyboards.",
+  "review": "December 11, 1994 at the Oakland‑Alameda County Coliseum delivered a show of highs and lows that still sparks conversation among Deadheads. The opening trio – Help On The Way → Slipknot → Franklin’s Tower – felt rough; reviewers note lyrical slips and a clunky segue that left the first set feeling “rough”. Yet the band quickly regained its footing in the second set, where Mickey’s Beam‑like textures added a Pink‑Floyd‑esque sheen to the drums, and the rhythm section settled into an autopilot groove. The highlight was undoubtedly Jerry’s blazing solo on Days Between, described as “fiery and expressive”, followed by a soaring All Along The Watchtower that propelled the band into a seamless transition onto Sugar Magnolia. Vince Welnick’s keyboards grew more confident toward the end, adding depth without overwhelming the mix, while Bob Weir’s distorted tone alternated between energetic grit and occasional tuning wobble.\n\nAmong the three available recordings, the soundboard capture (gd94-12-11.sbd.unknown.12525.sbeok.shnf) offers the clearest picture of this roller‑coaster performance. Though it registers some MIDI horn artifacts on Sugar Magnolia and minor tuning quirks, its good overall fidelity makes it the best listening choice for fans who want to hear the standout Days Between jam and Watchtower while still experiencing the show’s raw edges. If you prefer a slightly more distant ambience with all instruments audible, the audience‑derived recording (gd1994-12-11.aud.unknown.swayne.86104.flac16) is an acceptable alternative.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 20,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.7,
+      "sentiment_rationale": "Mixed sentiments across recordings: two note rough first‑set playing and tuning issues, but all three highlight the strong Days Between jam, Watchtower, and overall second‑set momentum. Positive remarks outweigh negatives slightly, yielding a modest +0.7 adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.7 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd94-12-11.sbd.unknown.12525.sbeok.shnf",
+    "reason": "Good soundboard capture with clear audio; includes the standout Days Between and Watchtower performances despite minor artifacts."
+  },
+  "key_highlights": [
+    "Fiery Days Between solo that lifts the second set",
+    "Tight All Along The Watchtower leading into a smooth Sugar Magnolia transition",
+    "Mickey's Beam‑like textures adding Pink‑Floyd‑esque color to the drums",
+    "Vince gaining confidence on keyboards toward the end"
+  ],
+  "song_highlights": [
+    "Days Between",
+    "All Along The Watchtower",
+    "Eyes Of The World",
+    "Sugar Magnolia",
+    "The Promised Land",
+    "Black Throated Wind"
+  ],
+  "band_performance": {
+    "Jerry": "Lyrics stumble early and a few out‑of‑tune moments appear, but his solo on Days Between is praised as fiery and expressive.",
+    "Phil": "",
+    "Bob": "Distorted guitar tone provides energy; however it drifts out of tune at times, especially during Sugar Magnolia with the MIDI horn effect.",
+    "Brent": "",
+    "Vince": "Keyboards gain confidence toward the end, delivering functional support without major issues.",
+    "Mickey": "His Beam vibrations add a Pink‑Floyd‑esque texture; overall rhythm sometimes runs on autopilot.",
+    "Billy": "Drums lock in for a smooth transition into Sugar Magnolia and maintain solid drive throughout the second set."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-19T04:24:05.163373+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "All Along The Watchtower",
+      "Days Between",
+      "Sugar Magnolia"
+    ],
+    [
+      "Tennessee Jed",
+      "The Promised Land"
+    ],
+    [
+      "Black Throated Wind"
+    ]
+  ]
+}

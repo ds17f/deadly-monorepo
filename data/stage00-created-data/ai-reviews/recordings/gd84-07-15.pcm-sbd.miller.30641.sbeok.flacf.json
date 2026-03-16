@@ -1,0 +1,72 @@
+{
+  "summary": "Stellar 1984 soundboard capture with a smoking Bird Song/Dancin' opener and a powerful Dark Star, though a few mix quirks surface.",
+  "review": "The recording is an A+‑grade 1984 SBD that delivers crisp, clear sound for almost the entire set, only occasionally burying Garcia’s guitar. Musically the show shines – the Dancin’ > Bird Song opening, a soaring Bird Song, a fiery Dark Star and tight China Cat → Rider jams make it a highlight of the Greek run, with most fans calling it one of the best ’80s performances despite minor complaints about Cumberland and a single weak song.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "23 reviews overwhelmingly positive (average 4.39 stars). The majority praise both performance and recording quality; only a handful of dissenting comments affect the overall sentiment, yielding a strong but not perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear SBD with A+ fidelity. Reviewers note occasional mix issues – Garcia’s guitar sometimes sits low in the front, but overall the sound is balanced and very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Dark Star",
+      "Dancin' > Bird Song",
+      "China Cat > Rider",
+      "Playin' > Uncle John's Band",
+      "Cumberland"
+    ],
+    "poor_songs": [
+      "Don't Need Love",
+      "Cumberland (mixed opinions)"
+    ],
+    "setlist_flow": "The show kicks off with a joyous Dancin’ into Bird Song, delivering a high‑energy first set that builds to a fiery Dark Star in the second. Seamless transitions through China Cat → Rider and the Playin' / UJB combo keep momentum, while the band stays tight throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is described as “buzzing”, “scorching” and “mind‑bending,” though a few reviewers note his guitar sits low in the mix on parts of the set.",
+    "Phil": "Lesh’s bass is praised for “dropping bombs” and providing a strong rhythmic foundation; fans love his active role in the China Cat jams.",
+    "Bob": "Bobby is mentioned positively (“bobby being bobby!”) with no specific criticism beyond a brief road‑crew reference at the start of Brokedown Palace.",
+    "Keys": "Brent’s keyboards receive glowing praise – “shines,” “sparkling,” and “greatest keyboard player of the period” – but one reviewer explicitly dislikes his voice/keyboard style, giving a single negative viewpoint.",
+    "Drums": "The drummers (Mickey/Bill) are lauded for “insane energy pre‑drums,” “crash cymbal happy,” and solid reading throughout the set."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Dark Star": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Dancin' > Bird Song": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Cumberland": {
+      "positive_mentions": 4,
+      "negative_mentions": 2,
+      "total_mentions": 6
+    },
+    "Don't Need Love": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T20:34:34.762009+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-07-15.pcm-sbd.miller.30641.sbeok.flacf"
+}

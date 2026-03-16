@@ -1,0 +1,64 @@
+{
+  "summary": "Snappy, fun show captured on a soundboard with good‑to‑excellent clarity; highlights include a belted Iko Iko and a tight Half‑Step → Franklin's transition despite a weaker finish.",
+  "review": "The recording is a solid soundboard capture that many reviewers describe as crisp and sparkling, letting the band’s upbeat first set shine. Highlights are Jerry’s powerful vocal on Iko Iko and a rare 1/2‑step into Franklin’s Tower, though the second half loses steam with a lackluster Sugar Magnolia and Day Job.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and praise both performance and recording; only a few note minor performance dips, resulting in an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Consistently described as snappy, crisp, and sparkling; no major drop‑outs mentioned, though early source was once considered low‑grade before this restoration."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Iko Iko",
+      "Half Step into Franklin's Tower",
+      "One More Saturday Night"
+    ],
+    "poor_songs": [
+      "Sugar Magnolia",
+      "Day Job"
+    ],
+    "setlist_flow": "First set is funky and tight, second set opens strong with a solid pre‑drum groove but drifts into space toward the end, leaving the finale weaker."
+  },
+  "band_member_comments": {
+    "Jerry": "Early playing and vocals are praised (belting Iko Iko), but later in the second set his guitar work and voice are said to go downhill.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Half Step into Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Day Job": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T12:28:52.771985+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-02-08.sbd.ladner.20724.sbeok.shnf"
+}

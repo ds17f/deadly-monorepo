@@ -1,0 +1,31 @@
+{
+  "summary": "Recording and performance details are largely absent; reviewers give little concrete information about this show.",
+  "review": "The two reviews provide minimal insight into the actual concert recording. One reviewer leaves a cryptic comment with a zero‑star rating, while the other praises Bruce Hornsby’s playing at a different Philadelphia venue but does not address the sound or music of this specific Dead performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "medium",
+    "rationale": "Only two reviews with vague, unrelated comments; one positive (4 stars) and one negative (0 stars) lead to an average rating around the middle of the scale."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentioned soundboard, audience mix, clarity, or any technical aspects of the audio."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure or pacing was provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T21:44:31.047300+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-19.109345.sbd.lai.shnf"
+}

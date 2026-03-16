@@ -1,0 +1,85 @@
+{
+  "summary": "Excellent soundboard recording of a fire‑hot February ’73 show, highlighted by an incandescent Dark Star→Eyes→China Doll sequence and soaring Bird Song.",
+  "review": "The SBD capture is clean and well‑balanced, with only a brief mix quirk where Bob’s vocals disappear in the first set. Musically the performance is often described as “ridiculous” – Jerry’s guitar sings, Phil’s bass grooves, and Keith’s keyboards weave counter‑point, delivering standout jams on Dark Star, Eyes of the World, China Doll, Bird Song and Playing in the Band. The flow is seamless, with tight transitions and an energetic crowd that keeps the music rolling from start to finish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Over a dozen detailed reviews overwhelmingly rate the show 4‑5 stars, praising both performance and sound quality; only minor technical complaints are noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean mix with strong instrument separation. One reviewer notes Bob’s vocal disappears early in the first set and a missing China > Rider segment, but overall the SBD is superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star → Eyes of the World → China Doll",
+      "Bird Song",
+      "Playing in the Band",
+      "Box of Rain",
+      "Tennessee Jed"
+    ],
+    "poor_songs": [
+      "Wave the Flag"
+    ],
+    "setlist_flow": "Reviewers rave about seamless transitions (e.g., Dark Star into Eyes, then China Doll) and a nonstop jam flow that kept the crowd energized throughout both sets."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for making his guitar ‘sing’, delivering wah‑wah riffs, laser‑like leads and sparkling jazzy tones.",
+    "Phil": "His bass is described as tasty and driving; vocal on Box of Rain highlighted as great.",
+    "Bob": "Missing from the mix in the first set but comes in strong later; otherwise no performance issues noted.",
+    "Keys": "Keith’s keyboards weave counter‑point with Jerry, adding jazzy textures and melodic interplay.",
+    "Drums": "Bill (drums) is credited with driving the train on jams like Dark Star and Eyes, providing a solid rhythmic foundation."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Eyes of the World": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "China Doll": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playing in the Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wave the Flag": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T05:38:31.870557+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-02-22.pset2-sbd.carman.12215.sbeok.shnf"
+}

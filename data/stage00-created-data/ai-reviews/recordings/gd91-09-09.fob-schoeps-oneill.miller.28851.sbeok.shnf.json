@@ -1,0 +1,57 @@
+{
+  "summary": "Great performance highlighted by an epic Morning Dew and a stellar New Speedway/Playin' jam; recording quality is not described but presumed decent.",
+  "review": "Fans rave about this show, calling the Morning Dew \"EPIC\" and praising the New Speedway & Playin' Reprise jam as standout moments. The Other One also receives positive nods. No specific comments on the audio source are given, so the recording quality remains unclear but does not appear to detract from enjoyment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "All three reviewers gave 4‑5 stars and highlighted several strong performances; lack of recording‑quality details keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No reviewer mentioned soundboard, audience, or any audio issues; the recording is presumed listenable but its exact source and fidelity are not specified."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "New Speedway Boogie",
+      "Playing in the Band (Playin' Reprise jam)",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the run as solid and the show as great, indicating a well‑flowing set with memorable high points."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band (Playin' Reprise jam)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T00:13:27.199504+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-09-09.fob-schoeps-oneill.miller.28851.sbeok.shnf"
+}

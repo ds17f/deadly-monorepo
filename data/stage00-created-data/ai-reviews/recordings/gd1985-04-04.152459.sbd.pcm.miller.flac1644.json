@@ -1,0 +1,31 @@
+{
+  "summary": "Recording appears to be mislabeled; reviewers flag the date as incorrect.",
+  "review": "Both reviewers point out that the file is incorrectly dated, asserting it is from 4/4/85 rather than a 1984 show. No comments are made about the audio quality or musical performance, leaving those aspects unassessed.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only two brief reviews, both focusing on a metadata error and assigning zero stars; no information on show or recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No audio‑quality comments provided; reviewers only mention incorrect dating."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T03:03:54.440146+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-04.152459.sbd.pcm.miller.flac1644"
+}

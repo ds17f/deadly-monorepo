@@ -1,0 +1,102 @@
+{
+  "summary": "Crystal‑clear audience tape of a high‑energy Radio City show with standout acoustic set and killer moments like Mexicali Blues, Casey Jones and China Doll",
+  "review": "The recording is an audience (AUD) capture that many fans describe as “hissless,” “crystal clear” and among the best of the 1980 series, despite a slight pitch fastness. Musically the show shines with an exceptional acoustic set and memorable electric highlights – Feel Like a Stranger, Mexicali Blues, Big Railroad Blues, Music Never Stopped, Samson & Delilah, Casey Jones and a soaring China Doll finale – though Sugar Magnolia is noted as only so‑so.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 5) and enthusiastic language point to an excellent audience recording and a very good performance; weighted scoring yields ~4.2"
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners praise crystal‑clear, hissless sound with strong bass response; minor issues mentioned are a slight fast pitch (-1%) and the tape taking a moment to settle early in the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like a Stranger",
+      "Mexicali Blues",
+      "Big Railroad Blues",
+      "Music Never Stopped",
+      "Samson & Delilah",
+      "Casey Jones",
+      "China Doll"
+    ],
+    "poor_songs": [
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "The acoustic set opens the show and is described as essentially perfect, followed by two electric sets that build energy; overall pacing is tight with a particularly uplifting third‑set finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia praised for solid playing throughout, extra licks on Mexicali Blues, RxR Blues and one‑of‑a‑kind solos.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Billy and Mickey highlighted for driving the groove on Music Never Stopped; drummers noted as energetic."
+  },
+  "song_mentions": {
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "RxR Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T05:11:57.113688+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-23.cohen.vernon.13140.sbeok.shnf"
+}

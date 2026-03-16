@@ -1,0 +1,71 @@
+{
+  "summary": "Gutty audience tape of a high‑energy Poplar Creek show with scorching Scarlet → Fire and a standout Bird Song, captured in decent but hissy sound.",
+  "review": "The performance is praised for its summer‑time vigor – the opening Bertha>Promised Land, a monster second set that kicks off with a blistering Scarlet → Fire, plus memorable moments like the Bird Song and an incendiary The Other One.  The audience recording is described as “gutty” and a bit hissy with occasional drop‑outs, yet it retains good instrument presence and makes the show very listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rave about the musical intensity and highlight songs, while noting only modest audio flaws (hiss, occasional drop‑out).  The weighted average of strong show quality (≈4.5) and decent recording quality (≈3.5) yields a 4.2 rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Hissy 2nd‑generation tape with occasional drop‑outs (e.g., Cold Rain & Snow), but overall good instrument and vocal presence; not a pristine soundboard, yet clearly listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Sugaree",
+      "The Other One",
+      "Bird Song",
+      "Bertha > Promised Land"
+    ],
+    "poor_songs": [
+      "Sugaree (lyric flubs)",
+      "Dupree's (scrambled lyrics)"
+    ],
+    "setlist_flow": "First set builds with Jerry‑centric jams and a strong Bertha/Promised Land opener; the second set erupts with a monster Scarlet → Fire transition, keeping energy high despite a slightly sloppy middle.  Overall flow is energetic and memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring guitar tone, magical Bird Song, and flawless transitions (Scarlet → Fire); occasional vocal lyric flubs on Sugaree noted.",
+    "Phil": "His “bass bombs” are highlighted as a driving force behind the jams.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work and backing vocals receive nods; some suggest his voice could have taken lead on Sugaree.",
+    "Drums": "Mickey’s precise tom work, snare‑only “blur” style, African drum during Fire, and occasional xylophone touches are lauded."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Sugaree": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha > Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:17:36.698364+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-06-27.aud.dodd.9994.sbeok.shnf"
+}

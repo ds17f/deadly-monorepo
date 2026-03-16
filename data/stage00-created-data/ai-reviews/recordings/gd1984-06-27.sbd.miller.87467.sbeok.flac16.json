@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent soundboard capture with booming bass, highlighted by Phil’s monster low‑end and standout performances of The Loser, Let It Grow and Morning Dew.",
+  "review": "The Miller‑remastered SBD delivers crystal‑clear audio and a jaw‑dropping bass response that lets every instrument shine.  Fans rave about the band’s high energy – especially Phil’s “carpet‑bombing” bass, Brent’s Hammond work and Jerry’s still‑ferocious guitar – with The Loser, Let It Grow and Morning Dew singled out as show‑stealers, despite a few tempo quirks and a rough Estimated→Eyes transition.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive reviews (mostly 5 stars) praise both the superb remastered soundboard and the musical performance; only minor criticisms appear, so a high rating is justified."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Remastered by C. Miller; crystal‑clear mix with extraordinary bass response, no reported dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Loser",
+      "Let It Grow",
+      "Morning Dew",
+      "Cumberland Blues",
+      "Help on the Way"
+    ],
+    "poor_songs": [
+      "Estimated > Eyes"
+    ],
+    "setlist_flow": "First set described as amazing, second set equally strong; overall pacing energetic with a few tempo‑rush moments but generally tight and memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice sounded creaky/poor but guitar work was stellar and shredding; overall still powerful.",
+    "Phil": "Bass presence “mind‑boggling,” fun, articulated, carpet‑bombing the whole show.",
+    "Bob": "",
+    "Keys": "Brent’s Hammond B‑3 praised as a key part of the band’s power; keyboards highlighted positively.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T19:06:05.756913+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-27.sbd.miller.87467.sbeok.flac16"
+}

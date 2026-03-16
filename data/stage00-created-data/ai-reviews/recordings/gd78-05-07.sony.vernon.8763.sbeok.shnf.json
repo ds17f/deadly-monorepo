@@ -1,0 +1,58 @@
+{
+  "summary": "Great audience recording with crisp sound (though low bass) capturing a tight show highlighted by a monster “Music Never Stops” and rocking “Aiko‑Aiko”.",
+  "review": "The tape is an audience (aud) capture that delivers surprisingly clear and crisp music, albeit with noticeably thin bass. The performance itself is praised for its tight playing, standout “Music Never Stops” and the high‑energy “Aiko‑Aiko”, with Bob’s slide work complementing Jerry’s soloing throughout a consistently strong set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All five reviews are enthusiastic (4–5 stars). Show quality is highlighted as excellent with standout moments, while recording quality is good but noted for low bass, yielding a weighted average of ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience mic captures crowd ambience; music comes through crisp and tight. Consistent complaint about thin or missing low bass, but overall listenable and worth downloading."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Music Never Stops",
+      "Aiko-Aiko"
+    ],
+    "poor_songs": [
+      "Scarlet Fire",
+      "He's Gone"
+    ],
+    "setlist_flow": "Tight, energetic performance that stays engaging from start to finish; reviewers especially note the strong second half and overall consistent vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s soloing is praised as creative and tight, forming a solid counterpoint with Bob’s slide work.",
+    "Phil": "",
+    "Bob": "Bob’s slide guitar leads are highlighted as “good” and add a distinctive flavor to the set.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Music Never Stops": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Aiko-Aiko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T12:24:34.625317+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-05-07.sony.vernon.8763.sbeok.shnf"
+}

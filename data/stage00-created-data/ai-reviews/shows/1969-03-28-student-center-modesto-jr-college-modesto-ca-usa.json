@@ -1,0 +1,66 @@
+{
+  "summary": "Smoking Dark Star, epic That's It For The Other One suite",
+  "blurb": "Features a searing Dark Star that morphs into The Eleven and a towering That's It For The Other One suite. Jerry’s guitar is on fire, Phil lays down a thunderous bass line, and Pigpen shines on Schoolgirl. The set flows tightly with strong transitions throughout.",
+  "review": "On March 28 1969 at the Modesto Jr. College Student Center, the Dead delivered one of their classic late‑'60s performances. The show opens with Good Morning Little School Girl before launching into a smoking Dark Star that stretches and evolves into The Eleven, showcasing Jerry’s incendiary guitar work—described by reviewers as “buzzes and stings like an angry hornet” and “a Black Sabbath‑like intensity.”  Death Don't Have No Mercy follows with raw blues fury, while St. Stephen provides tight rock momentum.  The second half culminates in the monumental That's It For The Other One suite (Cryptical Envelopment → The Other One → Cryptical Envelopment), a seamless journey that keeps the energy high from start to finish.  Phil’s bass shines especially on The Eleven, and Pigpen’s harmonica on Schoolgirl adds a soulful edge.  Drummers Mickey Hart and Bill Kreutzmann lock in for powerful grooves, with only a brief buzz‑kill drum segment noted during The Other One.  Overall the set is fluid, engaging, and captures the band at a creative peak.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 40,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Four of five recordings are strongly positive, repeatedly praising Dark Star, The Eleven, Death Don't Have No Mercy and the That's It For The Other One suite; only one recording is mixed and no negative consensus appears.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1969-03-28.sbd.miller.81543.sbeok.flac16",
+    "reason": "Excellent soundboard capture with crystal‑clear fidelity; highlights Dark Star, The Eleven, Death Don't Have No Mercy and the full That's It For The Other One suite, making it the most complete and sonically satisfying version."
+  },
+  "key_highlights": [
+    "Smoking Dark Star that builds into a powerful The Eleven.",
+    "Epic That's It For The Other One suite (Cryptical Envelopment → The Other One → Cryptical Envelopment).",
+    "Intense Death Don't Have No Mercy showcasing raw blues energy.",
+    "Strong first half with tight St. Stephen and fluid transitions throughout."
+  ],
+  "song_highlights": [
+    "Good Morning Little School Girl",
+    "Dark Star",
+    "Saint Stephen",
+    "The Eleven",
+    "Death Don't Have No Mercy",
+    "Cryptical Envelopment",
+    "The Other One"
+  ],
+  "band_performance": {
+    "Jerry": "Incendiary guitar work dominates the night—buzzing, stinging solos and a fat Gibson SG tone that soars on Dark Star and Death Don't Have No Mercy, with a smooth yet edgy attack that even turns Black Sabbath‑like in intensity.",
+    "Phil": "Provides a thunderous, melodic bass foundation; his lines on The Eleven are highlighted as “great Philbass comin’ through,” anchoring the improvisations solidly.",
+    "Bob": "Steps up when Jerry encounters equipment hiccups, delivering strong rhythm guitar and jam support that keeps the momentum driving forward.",
+    "Brent": "",
+    "Mickey": "Drums lock in powerfully, especially during The Other One where his playing is praised; only a brief 18‑second segment is noted as less effective.",
+    "Billy": "Pairs with Mickey for a tight dual‑drum wall of sound throughout the set, contributing to the overall propulsive feel."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-24T12:31:24.077963+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Good Morning Little School Girl"
+    ],
+    [
+      "Dark Star",
+      "Saint Stephen",
+      "The Eleven",
+      "Death Don't Have No Mercy",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Cryptical Envelopment",
+      "The Other One",
+      "Cryptical Envelopment"
+    ]
+  ]
+}

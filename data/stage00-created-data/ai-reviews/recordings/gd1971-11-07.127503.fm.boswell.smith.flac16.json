@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent FM broadcast source capturing one of 1971's best shows with a smoking Cumberland Blues and a legendary Not Fade Away > Goin' Down the Road Feels Bad > Not Fade Away combo.",
+  "review": "Both reviewers rave about the crystal‑clear FM recording, calling it an excellent source that brings out the band’s high energy. The performance is highlighted as one of the year’s finest, featuring a blistering Cumberland Blues and a barn‑burner Saturday Night set, plus arguably the best Not Fade Away > Goin' Down the Road Feels Bad > Not Fade Away sequence. Keith Godchaux’s fresh presence on keyboards adds an extra spark to the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "Consistently 5‑star reviews praise both the musical performance (standout songs, high energy) and the recording quality (excellent FM source), indicating an outstanding show with superb audio."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "FM broadcast capture described as crystal‑clear, crisp, and excellent throughout; no noted flaws or dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland Blues",
+      "Not Fade Away > Goin' Down the Road Feels Bad > Not Fade Away",
+      "Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy set with fresh keyboard spark from Keith Godchaux; seamless transitions, especially the NFA > GDTRFB > NFA sequence, creating a powerful momentum through the night."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith Godchaux's first tour energy is noted as fresh and invigorating throughout the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away > Goin' Down the Road Feels Bad > Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T09:12:46.601065+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-11-07.127503.fm.boswell.smith.flac16"
+}

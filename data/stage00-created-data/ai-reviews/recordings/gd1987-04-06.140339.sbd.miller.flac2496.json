@@ -1,0 +1,39 @@
+{
+  "summary": "Top‑notch 1987 performance praised for its energy and a standout Cumberland Blues, but recording details are unclear",
+  "review": "Reviewers rave about the overall strength of this 1987 show, calling it \"top notch from end to end\" and highlighting a particularly inspired rendition of Cumberland Blues. No comments were made about the source or fidelity of the tape, leaving the recording quality uncertain.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "One reviewer gives a perfect 5‑star rating praising the musical performance, while another assigns 0 stars despite a generally positive comment; with no recording‑quality feedback, the weighted estimate leans toward good show quality but unknown audio fidelity."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": ""
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is described as consistently strong from start to finish, with high energy even on a Monday night."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T21:10:44.342639+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-04-06.140339.sbd.miller.flac2496"
+}

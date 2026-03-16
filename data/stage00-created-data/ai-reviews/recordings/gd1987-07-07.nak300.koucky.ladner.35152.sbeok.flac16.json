@@ -1,0 +1,72 @@
+{
+  "summary": "Strong mid‑80s show with standout performances (Looks Like Rain, Cumberland Blues) captured on a fair‑quality recording that suffers from speed issues.",
+  "review": "Fans who were there describe an electric crowd and a band firing on all cylinders – Jerry’s tone is praised as near‑choir‑like and songs like Looks Like Rain, Cumberland Blues, Candyman and Morning Dew are highlighted. The tape sounds decent overall but several listeners note odd playback speed or other technical quirks that keep the recording from being pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised with multiple standout songs; recording quality is mixed due to reported speed/clarity issues, resulting in a solid but not perfect overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Some reviewers hear the tape as if playback speed is off or the band sounds 'on something', indicating possible speed/clarity problems; no explicit mention of soundboard vs. audience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Cumberland Blues",
+      "Candyman",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High energy, jam‑filled set with the band fully locked in; crowd was especially enthusiastic and the performance is remembered as one of the best of the summer tour."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as sounding like the Mormon Tabernacle Choir and showing life after his coma.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T00:24:58.563394+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-07.nak300.koucky.ladner.35152.sbeok.flac16"
+}

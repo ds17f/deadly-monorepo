@@ -1,0 +1,45 @@
+{
+  "summary": "Crisp audience recording that captures a sweet Cryptical Envelopment and Fire performance.",
+  "review": "The show is remembered fondly for its standout moments like a sweet rendition of Cryptical Envelopment and a solid Fire on the Mountain, with fans describing the overall vibe as enjoyable. The audience‑sourced tape is generally crisp, though occasional wind noise and a slightly muddied bass from Phil are noted. Overall sentiment leans positive despite some minor recording quirks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Reviews highlight strong musical moments and an overall enjoyable experience, while noting a good (though not perfect) audience recording with some wind and bass issues."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp overall sound but occasional wind noise and Phil's bass slightly disturbed, leading to a generally clear yet imperfect capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cryptical Envelopment",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Limited detail in reviews; fans emphasize enjoyable moments and overall good vibe rather than specific set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Wind and Phil's bass disturb the mix, making his low end sound a bit muddy.",
+    "Bob": "Seen standing alone with wine after the show; no direct performance comment.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:42:09.078133+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-07-13.BeyerM160.connor.76913.sbeok.flac16"
+}

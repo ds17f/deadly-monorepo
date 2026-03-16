@@ -1,0 +1,106 @@
+{
+  "summary": "Rich, full‑bodied audience recording that captures an energetic ’85 show with standout Terrapin Station and blazing Johnny B. Goode performances",
+  "review": "The Oade brothers’ audience tape is warm, well balanced and surprisingly clear – the bass is tight, the crowd ambience vivid, though a few listeners note digi‑noise and occasional vocal fade. Musically the concert is high‑energy (rain/snow), featuring a superb Terrapin Station jam, a record‑fast Johnny B. Goode, and one of the best Supplication Jams of ’85, with solid playing from the whole band.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive reviews (mostly 5‑star) praise both the recording fidelity and the performance; only a handful of minor complaints keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Warm, full‑bodied sound with clear bass and good mix balance; occasional digi‑noise and a brief vocal fade after Space noted by some listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Johnny B. Goode",
+      "Supplication Jam",
+      "Cold Rain and Snow",
+      "Tennessee Jed"
+    ],
+    "poor_songs": [
+      "Friend of the Devil",
+      "Minglewood"
+    ],
+    "setlist_flow": "High‑energy first set opened by rain/snow, strong interplay throughout; a few transitions (e.g., Man Smart) felt awkward but overall the pacing stayed lively and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals praised as powerful despite occasional “froggy” tone; guitar work solid with blazing fast Johnny B. Goode, though he fades briefly after Space.",
+    "Phil": "Prominent, tight bass lines noted throughout; stepped in to help Jerry during the show, delivering strong supportive grooves.",
+    "Bob": "",
+    "Keys": "Brent’s Hammond work highlighted as exceptional on Supplication Jam, Terrapin Station and Man Smart; his solos described as rolling licks and even string‑like textures.",
+    "Drums": "Generally solid rhythm section; a brief comment about drums being a limiting factor early in the show."
+  },
+  "song_mentions": {
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Supplication Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Bottom/Superstitious": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby What You Want Me To Do?": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Man Smart (Cardiff)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:28:24.786629+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-03-29.oade-schoeps.sacks.23475.sbeok.flacf"
+}

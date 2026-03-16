@@ -1,0 +1,95 @@
+{
+  "summary": "A solid audience tape captures a lively late‑1979 show highlighted by a smoking Playing in the Band sandwich, epic Wharf Rat, crisp Jerry Garcia tone and fresh Brent Mydland energy.",
+  "review": "The recording is an audience source with clear Sennheiser mic capture that puts you right in the crowd, delivering good overall fidelity despite not matching the pristine SBD version. Musically the concert shines – the second‑set Playing in the Band sandwich, a soaring Wharf Rat, and a fiery Scarlet Begonias > Fire are repeatedly praised, while Jerry’s gritty guitar tone and Brent’s keyboard work add fresh vigor. A few minor hiccups (an aborted Around and Around and a brief memory lapse) keep the set from being flawless but do not diminish the overall excitement.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently positive comments about performance (7/7 reviews) and generally good audience sound quality; only occasional minor negatives, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Decent audience tape with clear Sennheiser mic capture; praised for vivid crowd ambience and clarity, though not as clean as the available SBD version."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Wharf Rat",
+      "Scarlet Begonias > Fire",
+      "Terrapin Station",
+      "Samson & Delilah"
+    ],
+    "poor_songs": [
+      "Around and Around"
+    ],
+    "setlist_flow": "The set builds nicely, with a strong first half and a sinuous second‑set anchored by the classic Playing in the Band sandwich; new Brent energy lifts older tunes while occasional warm‑up moments keep the momentum steady."
+  },
+  "band_member_comments": {
+    "Jerry": "Ripping, gritty guitar tone especially on the second set; noted a brief memory lapse on Terrapin Station.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland fitting in well, providing swirling B3 on Wharf Rat and covering Donna’s harmonies; fresh energy throughout.",
+    "Drums": "Extended ~11‑minute drum/space segment leading into Wharf Rat; solid rhythmic foundation."
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-25T23:33:21.414592+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-10-24.senn.eaton.miller.93142.sbeok.flac16"
+}

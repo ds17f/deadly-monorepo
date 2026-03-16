@@ -1,0 +1,101 @@
+{
+  "summary": "High‑energy Bickershaw show with a stellar Dark Star → Drums → Other One suite; matrix recording is uneven but the soundboard half shines.",
+  "review": "The May 7 1972 Bickershaw performance is celebrated for its rare double‑jam (Dark Star into The Other One) and blistering second‑set highlights like Turn On Your Lovelight, Sugar Magnolia and the Goin’ Down the Road Feeling Bad medley.  The recording blends audience tapes (poor early discs) with master soundboard reels (crisp on the later half), so while the first set can be muddy, the latter portion delivers excellent clarity.  Overall fans rave about Jerry’s soaring solos, Keith’s organ work and a ferocious Other One despite some tuning hiccups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The show is repeatedly described as one of the best of Europe ’72 (strong musical praise, many 5‑star reviews). Recording quality is mixed but the soundboard portion is praised as excellent, giving a solid combined score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Discs 1–2 are audience tapes and are muddy/low‑fidelity; Discs 3–4 are master SBD reels with crisp, well‑balanced mix.  Overall the listening experience improves dramatically after the first ~30 min, though occasional tuning problems affect clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > Drums > The Other One",
+      "Turn On Your Lovelight",
+      "Sugar Magnolia > Turn On Your Lovelight > Goin' Down the Road Feeling Bad",
+      "Mr. Charlie",
+      "China Cat > Rider"
+    ],
+    "poor_songs": [
+      "Sing Me Back Home (out‑of‑tune piano/guitar)",
+      "The Other One (early tuning issues)"
+    ],
+    "setlist_flow": "A marathon ~4 hr set that builds from a solid first half into an explosive second half.  The rare Dark Star/Other One suite anchors the show, while the mid‑set medley of Lovelight/GDT‑RFB keeps the momentum high.  Minor tuning slips and early audience tape quality are the only blemishes."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solos receive universal praise – soaring lead on Dark Star, a flawless second solo in Sugar Magnolia, and an unforgettable guitar burst on Turn On Your Lovelight.",
+    "Phil": "Phil’s bass shines especially during The Other One where his solo is called “the best of the tour”.  Overall solid rhythm foundation noted.",
+    "Bob": "Weir’s chord work in Dark Star is highlighted positively, but he is also blamed for a loud out‑of‑tune guitar intro on The Other One and an untuned piano/guitar on Sing Me Back Home.",
+    "Keys": "Keith (Pigpen) organ on Lovelight is described as “freaking great”; a poorly tuned piano on Sing Me Back Home detracts from the performance.",
+    "Drums": "Bill Kreutzmann’s drumming gets special mention – birthday tribute, powerful fills on The Other One and overall tightness throughout."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 12,
+      "negative_mentions": 1,
+      "total_mentions": 13
+    },
+    "The Other One": {
+      "positive_mentions": 10,
+      "negative_mentions": 4,
+      "total_mentions": 14
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Good Lovin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Casey Jones": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mr. Charlie": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Sing Me Back Home": {
+      "positive_mentions": 5,
+      "negative_mentions": 3,
+      "total_mentions": 8
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-20T13:35:24.638906+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-05-07.sbd-aud.clugston.9193.sbeok.shnf"
+}

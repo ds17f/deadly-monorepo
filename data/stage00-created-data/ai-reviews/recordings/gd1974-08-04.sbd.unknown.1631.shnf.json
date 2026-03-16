@@ -1,0 +1,31 @@
+{
+  "summary": "Review flags a likely mislabeling of the recording, casting doubt on its authenticity.",
+  "review": "The lone reviewer questions the accuracy of this release, noting that Jerry Garcia could not have been alive in 1999 and suggesting the show is mislabeled. No comments are made about the performance or audio quality, so listeners should verify the source before relying on it.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one review, rating of zero stars and a clear complaint about mislabeling; no positive aspects mentioned."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer only mentions possible mislabeling; provides no information on sound clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T23:36:20.164971+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-08-04.sbd.unknown.1631.shnf"
+}

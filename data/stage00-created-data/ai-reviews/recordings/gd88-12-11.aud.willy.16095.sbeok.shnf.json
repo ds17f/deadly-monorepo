@@ -1,0 +1,76 @@
+{
+  "summary": "A solid audience recording that captures a mixed‑quality show – the crowd’s energy shines on Birdsong and Bucket while the performance drifts on uneven moments like Iko and Jack Straw.",
+  "review": "The AUD tape is generally clear and listenable, offering decent ambience and a unique setlist with an Iko opener and Box as the second‑set starter.  Highlights include a powerful Bird Song → Bucket stretch and a well‑executed Foolish Heart, but many listeners note lazy vocals from Jerry and under‑cooked versions of Jack Straw and Row that drag the night down.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 3–4 stars, praising the recording quality but criticizing inconsistent playing; weighted average of show (≈3.5) and tape quality (≈4) yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and listenable audience tape, praised as “high quality” by several reviewers; some note filtered sound, occasional indecipherable tuning, but overall the mix captures crowd reactions well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Bucket",
+      "Foolish Heart",
+      "Quinn"
+    ],
+    "poor_songs": [
+      "Iko",
+      "Jack Straw",
+      "Row"
+    ],
+    "setlist_flow": "The setlist is described as unique with an Iko opener and Box to start the second set; reviewers find the flow uneven, citing a short overall runtime and mixed energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly called out for lazy, half‑step‑behind vocals and a weary guitar tone, though a few notes mention his typical presence.",
+    "Phil": "",
+    "Bob": "Praised as strong on this night by at least one reviewer.",
+    "Keys": "Brent’s keyboards receive strong positive comments for adding life and commanding the space during the show.",
+    "Drums": "Drums/Space described as “the norm” with no specific praise or criticism."
+  },
+  "song_mentions": {
+    "Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Quinn": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bucket": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Row": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:37:27.008742+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-12-11.aud.willy.16095.sbeok.shnf"
+}

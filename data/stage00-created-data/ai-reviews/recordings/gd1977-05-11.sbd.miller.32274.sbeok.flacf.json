@@ -1,0 +1,45 @@
+{
+  "summary": "Good sound quality but unremarkable recording details; the show is solid with a few rough spots like Scarlet Fire and an unfocused post‑UJB space.",
+  "review": "Both reviewers rate this May ’77 performance around four stars, noting that while it contains many spectacular moments, it falls short of the surrounding shows. The recording itself isn’t discussed in depth, implying acceptable but unexceptional sound quality. Musically, highlights are outweighed by a clunky Scarlet Fire and an aimless Garcia solo after Uncle John’s Band, though the overall set is still considered a worthwhile listen.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Two detailed reviews give mostly positive remarks with some performance criticisms; rating reflects solid show quality but lack of recording detail."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments on soundboard, audience bleed, or clarity; reviewers focus on musical aspects, suggesting the audio is at least listenable."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Scarlet Fire",
+      "Uncle John's Band (post‑UJB space)"
+    ],
+    "setlist_flow": "The concert is viewed as a respectable performance in the context of an outstanding run, but suffers from a few lackluster moments that make it feel slightly anticlimactic compared to adjacent shows."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's solo after Uncle John's Band is described as aimless and unfocused.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Fire": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T00:37:13.369180+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-11.sbd.miller.32274.sbeok.flacf"
+}

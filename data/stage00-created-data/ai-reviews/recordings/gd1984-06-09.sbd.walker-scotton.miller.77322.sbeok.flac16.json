@@ -1,0 +1,51 @@
+{
+  "summary": "High‑quality soundboard capture of a tight, spacey show featuring standout performances of Deal, I Need a Miracle and Bertha.",
+  "review": "The recording is praised as a real‑board tape with crisp overall sound, though a few early mix issues and a taper drop‑off toward the end are noted. Musically the concert delivers spacey jams, tight playing and several “gold” moments—especially Deal → I Need a Miracle → Bertha—and Jerry’s guitar work receives particular acclaim.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong musical performance with multiple highlighted songs and solid playing, combined with generally good soundboard quality despite minor mix and taper fade‑out issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp real‑board sound praised; early set has bass low in the mix, later the taper’s quality fades toward the end."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "I Need a Miracle",
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Show starts strong, builds into a hot middle with spacey jamming and tight playing, then taper quality declines near the end."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry is described as shredding again – his guitar work stands out positively.",
+    "Phil": "Phil’s bass was low in the mix at first but when it came up the whole band sounded better.",
+    "Bob": "Bob delivered notable jazz‑run improvisations during the set.",
+    "Keys": "",
+    "Drums": "Pre‑drum segment is called “gold,” indicating a strong drum performance."
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T17:58:41.889715+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-09.sbd.walker-scotton.miller.77322.sbeok.flac16"
+}

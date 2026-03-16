@@ -1,0 +1,85 @@
+{
+  "summary": "Good‑quality audience recording with crisp sound (though a bit slow) captures an energetic 4/2/90 show highlighted by The Weight, Let It Grow, Foolish Heart and a powerful Last Time.",
+  "review": "The audience tape delivers clear, full‑bodied audio that puts the crowd ambience front‑and‑center, even if the playback speed is slightly low. Musically the concert shines – The Weight appears for the second time, Let It Grow and Foolish Heart soar, and the band rides a wave of excitement through Last Time and Death Don't Have No Mercy. A few reviewers note a technically challenged Other One, but overall the performance is praised as a peak‑era Dead show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong musical performance (standout songs and high energy) combined with generally good sound quality; only minor issues (pitch slowdown, one weak Other One) keep it from a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and full‑presence mix with noticeable crowd reverb; reviewers praise clarity but several note the tape plays about a quarter‑tone slow, suggesting a pitch/frequency correction would improve it."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Weight",
+      "Let It Grow",
+      "Foolish Heart",
+      "Last Time",
+      "Death Don't Have No Mercy"
+    ],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": "Second‑night energy builds from a quirky opener into a tight first set, then launches into a song‑focused second set that feels both jazzy and psychedelic – a smooth, high‑groove arc with the crowd riding every transition."
+  },
+  "band_member_comments": {
+    "Jerry": "Sweet lick highlighted as 'never heard again' and many reviewers call Foolish Heart an all‑Jerry moment.",
+    "Phil": "Bass noted for taking over from the start; strong presence throughout the show.",
+    "Bob": "",
+    "Keys": "Brent’s keyboards described as ‘shakin’ like Ray Charles’, adding vivid color to the mix.",
+    "Drums": "Drum capture praised for unusual accuracy and precision in an audience source."
+  },
+  "song_mentions": {
+    "The Weight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Foolish Heart": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Last Time": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T06:17:53.043377+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-04-02.nak.nawrocki.3299.sbeok.shnf"
+}

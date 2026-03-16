@@ -1,0 +1,61 @@
+{
+  "summary": "Early‑71 show shines with a monster “The Other One” and solid soundboard source, but suffers from wow‑flutter, pitch wobble and occasional dropouts.",
+  "review": "Fans rave about the powerful early‑Keith performance – especially the fiery “The Other One”, a standout “One More Saturday Night” and strong guitar work throughout. The recording is a soundboard dump that captures the energy yet is marred by speed instability, wow‑flutter and a few audible dropouts, giving it a fair technical rating.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars for performance while repeatedly noting recording flaws; weighted combination of strong musical content (≈4.2) and mediocre audio quality (≈3.0) yields ~3.8."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Wow‑flutter, pitch errors and speed wobble throughout; noticeable buzzes and dropouts on songs like “Beat on Down the Line” and “Biosphere Drums”; overall decent balance but dusty and uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "One More Saturday Night",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A sprawling, lopsided ’71 set with a nearly two‑hour first set and a tighter second; not a barn‑burner but consistently enjoyable, highlighted by strong improvisations and solid transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise Jerry’s lead work – pedal‑steel cameo, aggressive fills on “El Paso”, and an especially fiery solo on “The Other One”.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith Godchaux is singled out for early‑era keyboard brilliance; reviewers note his barrel‑house style adds flavor.",
+    "Drums": "Billy Kreutzmann gets kudos for a “very good” drum performance, with the second‑set drums rated better than most ’71 shows."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ramble": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T08:39:12.052570+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-10-26.sbd.cotsman.9761.sbeok.shnf"
+}

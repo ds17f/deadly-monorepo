@@ -1,0 +1,64 @@
+{
+  "summary": "A solid recording that delivers the high‑energy vibe of this spring‑84 East Coast show, highlighted by a blistering Slipknot! jam and an unforgettable Black Peter despite the venue’s acoustic quirks.",
+  "review": "Fans rave about the powerful second set – especially the insane Slipknot! stretch, soaring Eyes of the World and haunting Black Peter – and note Jerry’s smiling stage presence and strong guitar work. The audio is generally clear with very good vocal definition, though the unconventional gym‑like venue produced uneven acoustics that can sound muddy away from the front rows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over 20 reviews, the majority are 4–5 stars praising the performance and noting only minor recording/acoustic issues; this yields a strong combined show‑plus‑recording score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Vocals clear and overall mix decent, but venue’s “airplane‑hangar” acoustics cause occasional muddiness; some listeners note the need for a boost in clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Slipknot!",
+      "Black Peter",
+      "Eyes of the World",
+      "Help > Slipknot! > Franklin's Tower"
+    ],
+    "poor_songs": [
+      "Minglewood"
+    ],
+    "setlist_flow": "The second set is described as powerful and tightly jammed, with a memorable drum/space segment; early‑show acoustics were rough but the front‑row experience was excellent."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his big smile, strong guitar riffs (especially on Eyes of the World) and an iconic vocal delivery on Black Peter.",
+    "Phil": "Noted for “rattling all night” – solid bass foundation throughout the show.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums/space section called fantastic; rhythm section highlighted as a high point."
+  },
+  "song_mentions": {
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T15:57:35.426941+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-04-17.nak.james.8460.sbeok.shnf"
+}

@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent sound‑board recording of a magical, rain‑soaked show with standout performances of Looks Like Rain, Space jam and classic second‑set numbers.",
+  "review": "The GD92‑05‑29 capture is a hiss‑less, crisp sound‑board DAT with virtually no gaps; only minor vocal roughness and occasional wind noise in audience feeds are noted. Musically the night shines thanks to a thunder‑and‑rain‑enhanced first set that builds into a spectacular second set featuring a smoking Looks Like Rain, an intense Space jam, and strong renditions of Sugar Magnolia, Weight and Promised Land.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise both performance and audio; only a few low ratings exist, giving an overall strong combined impression."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, hiss‑less DAT with no flips or gaps. Reviewers call the mix outstanding; minor issues are vocal roughness in spots and wind noise on audience versions, but the board feed is clean."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Space",
+      "Tighten Up (TLEO)",
+      "Memphis Blues",
+      "Sugar Magnolia",
+      "Weight",
+      "All Along The Watchtower",
+      "Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is described as a bit slow but picks up with TLEO and Memphis Blues; the weather adds drama, especially during Looks Like Rain. The second set is consistently praised, highlighted by an adventurous Space/drums segment and strong closers."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly noted as 'on' and magical; his lead on Looks Like Rain and Promised Land draws high praise, though one reviewer mentions him sounding perturbed early in the first set.",
+    "Phil": "",
+    "Bob": "Bob Weir’s vocal on Looks Like Rain is highlighted as a key emotional moment.",
+    "Keys": "Vince’s keyboard solo timing is called out as slightly late during TLEO; otherwise keyboards are not specifically mentioned.",
+    "Drums": "Hart and Kreutzmann receive glowing remarks for an intense, psychedelic ride into Space, described as the creative high point of the night."
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tighten Up (TLEO)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Along The Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:53:17.493439+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-05-29.sbd.ladner.21320.sbeok.shnf"
+}

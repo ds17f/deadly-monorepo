@@ -1,0 +1,86 @@
+{
+  "summary": "A crisp sound‑board capture of a pig‑pen‑heavy 1971 show, highlighted by a smoking Smokestack Lightning and clear, upfront guitars.",
+  "review": "The recording is a solid sound‑board source with the guitar and kick drum sitting nicely in the mix, only marred by occasional hum, minor channel‑swap quirks, and a few tiny glitches. Musically the show shines – Pig Pen dominates with standout performances of Smokestack Lightning, Turn On Your Love Light, Next Time You See Me and tight renditions of Bertha, Casey Jones and Big River Blues. Overall the performance feels in‑the‑pocket and is repeatedly praised as one of the best fall ’71 concerts.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4–5 stars, emphasizing strong musical moments and a generally clean sound‑board recording; only minor technical complaints keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and balanced mix with guitar slightly forward, kick drum free of the usual mechanical noise. Listeners note occasional hum/feedback at the start, a global left‑right channel swap, but overall the sound is praised as excellent for a 1971 source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Smokestack Lightning",
+      "Turn On Your Love Light",
+      "Next Time You See Me",
+      "Bertha",
+      "Casey Jones",
+      "Big River Blues",
+      "Black Peter",
+      "El Paso"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is pig‑pen‑centric, flowing smoothly from high‑energy blues numbers into classic rockers; reviewers highlight the seamless transitions and the band’s tight, in‑the‑pocket performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar sits a bit higher in the mix and is praised for its clarity and tone throughout the show.",
+    "Phil": "Bass is described as rich and fat, especially on the driving numbers.",
+    "Bob": "His rhythm guitar is notably forward in the mix, adding impact to Bertha and Casey Jones.",
+    "Keys": "Keith's piano addition fills out the 1971 sound, giving depth that was previously missing.",
+    "Drums": "Bill Kreutzmann’s drumming on Love Light is called \"super‑funky\"; kick drum pedal works cleanly with no mechanical noise."
+  },
+  "song_mentions": {
+    "Smokestack Lightning": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Turn On Your Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Next Time You See Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T10:13:13.277067+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-12-02.sbd.lai.6255.sbeok.shnf"
+}

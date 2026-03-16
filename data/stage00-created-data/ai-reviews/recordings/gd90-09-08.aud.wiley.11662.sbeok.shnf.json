@@ -1,0 +1,44 @@
+{
+  "summary": "Fair audience‑sourced recording with occasional drops, but an energetic show featuring strong Jerry vocals and a standout Terrapin Station jam.",
+  "review": "The performance is lively – Jerry’s voice is powerful, the band plays with more discipline than usual, and the post‑Terrapin jam shines. Recording quality is mixed: a generally tolerable audience capture suffers from a two‑second power loss on “Eyes” and occasional muffled pockets‑recorder sound. Listeners who value playing will enjoy it despite the technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Show quality is moderate to good (energetic, strong vocals, notable Terrapin jam) while recording quality ranges from tolerable to poor, pulling the overall rating toward the middle of the scale."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Generally tolerable audience capture; noticeable 2‑second power drop in “Eyes,” low mix of Wince, occasional muffled pocket‑recorder sound. Some reviewers praise a clear rig setup."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The band plays with tighter discipline than earlier shows, limiting free‑form excursions but delivering an energetic set; the jam after Terrapin Station stands out as a high point."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals strong and commanding with plenty of ripping guitar runs.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Reviewers hear more keyboard presence than expected, suggesting a solid mix for the keys.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T11:24:05.366886+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-09-08.aud.wiley.11662.sbeok.shnf"
+}

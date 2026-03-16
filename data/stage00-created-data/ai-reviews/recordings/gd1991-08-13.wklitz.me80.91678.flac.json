@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent audience recording captures a strong show with standout performances of Picasso Moon and Let It Grow.",
+  "review": "Fans praise this tape for its clear, high‑quality audience sound and a well‑played set that includes a superb Picasso Moon opener and a solid Let It Grow. The second set’s early run and post‑drum jam keep the energy high, and the encore is noted as awesome.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The majority of detailed reviews are 4‑5 stars highlighting both superb sound quality (audience source) and a tight, enjoyable performance with no reported flaws."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the recording \"very nice sounding AUD\" and \"great sound\" with no mention of drop‑outs or muddiness; overall clarity and balance are praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Picasso Moon",
+      "Let It Grow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a strong set list, a great opener with Picasso Moon, solid Let It Grow, energetic runs at the start of set 2 and after the drums, and an awesome encore."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Picasso Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T23:00:16.268800+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-08-13.wklitz.me80.91678.flac"
+}

@@ -1,0 +1,58 @@
+{
+  "summary": "Clean soundboard recording of a solid mid‑80s/late‑80s show, with Garcia’s Masterpiece shining amid generally thin‑sound and underwhelming Watchtower.",
+  "review": "The Miller‑team soundboard capture is clear and well‑balanced, though some listeners note the era’s thinner tonal character. Musically the concert is competent, featuring a strong Garcia solo on “Masterpiece” but suffering from lackluster performances of “Watchtower,” “Desolation Row,” and “Queen Jane.” Overall it’s a decent representation of the 1987‑90 period with both highlights and drawbacks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Recording quality is praised as clear, while show quality receives mixed feedback – strong moments on Masterpiece but several songs criticized, resulting in a moderate‑high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the audio as clear and great thanks to Miller’s Dream Team, though one notes a thin, overly clean sound compared with earlier raw recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Masterpiece"
+    ],
+    "poor_songs": [
+      "Watchtower",
+      "Desolation Row",
+      "Queen Jane"
+    ],
+    "setlist_flow": "The concert is viewed as standard fare for the late‑80s era, with solid playing but limited improvisation and a few weaker Dylan covers that disrupt the overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solo on “Masterpiece” is praised as superior to Weir’s version.",
+    "Phil": "Comments about Phil’s bass tone changing after instrument swaps, leading to a loss of the earlier ‘fat clean’ sound.",
+    "Bob": "Weir’s Dylan covers are criticized as ineffective and poorly executed.",
+    "Keys": "Brent’s Hammond B‑3 work is described as reduced, with MIDI usage disliked.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Watchtower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T23:08:18.699288+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-06-20.sbd.miller.93080.sbeok.flac16"
+}

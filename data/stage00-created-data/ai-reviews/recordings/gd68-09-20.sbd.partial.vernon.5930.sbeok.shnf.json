@@ -1,0 +1,63 @@
+{
+  "summary": "Partial 9/20/68 Berkeley soundboard with clear stage banter and standout drum work, but the set is incomplete and musical performance is mixed.",
+  "review": "The recording captures a decent‑quality soundboard tape from late September ’68 (likely Berkeley), with crisp stage chatter and especially strong drum moments that many fans enjoy. The show itself is only partially represented – missing “Schoolgirl” and other material – and the performances are judged average, with “St. Stephen” and a brief “Dark Star” getting modest praise while “Eleven” feels short‑changed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Average show quality (70% weight) combined with generally good but incomplete recording (30% weight); reviewers average ~3.4 stars, so rating leans slightly higher due to positive comments on drums and clarity."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear stage banter and decent fidelity for a 1968 tape; some reviewers note the recording is \"quite good\" but the source is partial, with missing portions of the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Dark Star"
+    ],
+    "poor_songs": [
+      "Schoolgirl (missing/low vocals)",
+      "Eleven (shorter and less energetic)"
+    ],
+    "setlist_flow": "The tape is incomplete, making the flow feel disjointed; a 25‑minute drum solo dominates the second half, which some listeners love while others find it overly long."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work includes a strange vibrating tone behind “Several Seasons” and he laughs during his vocal on St. Stephen.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum work is highlighted as fantastic, with an extended 25‑minute solo that is a major draw for listeners."
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Schoolgirl": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Eleven": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-24T09:12:34.415555+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-09-20.sbd.partial.vernon.5930.sbeok.shnf"
+}

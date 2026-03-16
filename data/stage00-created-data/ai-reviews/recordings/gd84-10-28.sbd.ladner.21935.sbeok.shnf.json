@@ -1,0 +1,74 @@
+{
+  "summary": "A high‑energy 1984 Berkeley show captured in a solid matrix mix, spotlighting the crushing Terrapin > Playing in the Band > China Doll sequence.",
+  "review": "Fans rave about the dark, heavy second‑set jam—Terrapin into Playing in the Band and China Doll—plus tight Playing In The Band, Space and standout drums. The recording blends a crisp soundboard feed with occasional audience patches, resulting in an overall clear and enjoyable listening experience despite minor imperfections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently enthusiastic reviews (mostly 4‑5 stars) praise both the musical performance and the recording quality; minor audience patches keep the technical rating just below “excellent.”"
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Soundboard is praised as crisp and well‑balanced, with a few audience patches noted but no jarring cuts; overall listenable and clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin > Playing in the Band > China Doll",
+      "Playing In The Band",
+      "Jam",
+      "Space",
+      "Drums",
+      "Cold Rain and Snow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as tight and flowing, with an especially powerful second‑set jam that builds into a dark, heavy climax; the intimate venue adds to the vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Riffing on J.S. Bach during the space and wailing on every song; vocals noted as past their prime but still solid.",
+    "Phil": "Bass playing described as 'on' and a key part of the overall wailing sound.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drumming highlighted as top‑notch, especially in the second‑set jam and space."
+  },
+  "song_mentions": {
+    "Terrapin > Playing in the Band > China Doll": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing In The Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T23:32:09.259863+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-28.sbd.ladner.21935.sbeok.shnf"
+}

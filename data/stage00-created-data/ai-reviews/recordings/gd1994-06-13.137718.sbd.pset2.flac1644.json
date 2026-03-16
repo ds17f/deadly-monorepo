@@ -1,0 +1,45 @@
+{
+  "summary": "Partial soundboard captures a high‑energy Seattle show highlighted by a scorching Fire on the Mountain and a thunderous Morning Dew closer.",
+  "review": "The recording is a partial soundboard mix that, while missing some sections, delivers clear enough audio to enjoy Jerry Garcia’s impassioned playing. Fans rave about the “huge Scarlet‑Fire” (Fire on the Mountain) and the thundering set‑closer Morning Dew, making this June 1994 Seattle show a memorable one.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Both reviewers are enthusiastic (4–5 stars); the performance is praised for energy and standout songs, while the partial soundboard is considered good but not perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Partial soundboard source; some sections missing (e.g., SBD), but overall clear and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire on the Mountain",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy first set leading to a thunderous closer; atmospheric Seattle night adds extra excitement."
+  },
+  "band_member_comments": {
+    "Jerry": "Playing his heart out, with powerful guitar work highlighted throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T22:12:25.521999+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-06-13.137718.sbd.pset2.flac1644"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Matrix recording captures a high‑energy 1989 show with standout China>Rider and I’m a Man performances",
+  "review": "The reviewer raves about the matrix mix, saying it dramatically improves the listening experience and delivers crystal‑clear sound. Musically the band is described as “flying high” with an electric crowd, highlighted by powerful renditions of China > Rider and I’m a Man, making for an overall thrilling performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Single enthusiastic 5‑star review praises both the matrix recording quality and the show’s high energy and standout songs, suggesting an excellent experience despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer loves the matrix mix, noting it greatly improves listening; no complaints about clarity or balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China>Rider",
+      "I'm a Man"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy throughout with the crowd on edge waiting for Dark Star; strong momentum especially during China>Rider and I’m a Man."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China>Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I'm a Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T02:12:15.093698+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-10.mtx.tobin.102402.flac16"
+}

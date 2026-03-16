@@ -1,0 +1,87 @@
+{
+  "summary": "Fair‑quality soundboard capture of a 1969 Music Box show that shines with a smoking Dark Star, epic Other One/Alligator/Caution sequence and standout Morning Dew, despite some muddiness and tape‑speed quirks.",
+  "review": "The performance is widely praised – Dark Star, Good Morning Little Schoolgirl, The Other One into Alligator and the ensuing Caution jam are repeatedly called “smoking” or “beautiful,” and Jerry’s guitar work on Morning Dew and the transitions gets special kudos.  Recording-wise reviewers note a general muddiness, tape‑speed issues that raise Dark Star a half step, occasional cut‑outs and low‑level drums, but most consider it acceptable for an early‑’69 SBD.  Overall the show’s musical fire outweighs its technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Numerous detailed reviews (14+) highlight a strong performance with many standout jams; recording issues are noted but not severe enough to outweigh the musical quality, yielding a rating just above 4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "General muddiness and slight hiss (cassette generation), drums often buried in mix, tape runs fast (Dark Star pitched up a half‑step), occasional cut‑outs (missing “Bid You Goodnight”, end of “Death Don't”)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Morning Little Schoolgirl",
+      "Dark Star",
+      "St. Stephen",
+      "Eleven",
+      "The Other One",
+      "Alligator",
+      "Caution",
+      "Morning Dew",
+      "Death Don't"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set launches with a fiery Good Morning Little Schoolgirl and builds through Dark Star > St. Stephen > Eleven.  The second set escalates with an intense Other One that segues into Alligator, then a soaring Caution jam, punctuated by strong drumming and organ work throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for dynamic guitar tone on Dark Star, scorching solos in Morning Dew, and seamless transition into Alligator.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Organ described as deep, present and well‑balanced despite overall muddiness.",
+    "Drums": "Live drums (Mickey & Bill) noted as enjoyable; however, the drum mix is often low or lost in the recording."
+  },
+  "song_mentions": {
+    "Good Morning Little Schoolgirl": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eleven": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Alligator": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Caution": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Death Don't": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T10:54:21.835478+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-02-04.sbd.barbella.7294.sbeok.shnf"
+}

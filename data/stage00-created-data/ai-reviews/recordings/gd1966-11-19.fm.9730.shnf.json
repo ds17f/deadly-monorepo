@@ -1,0 +1,75 @@
+{
+  "summary": "Clear soundboard recording with a touch of hiss captures a high‑energy 1966 show led by Pigpen, highlighted by standout Smokestack Lightning, Cream Puff War and an epic Midnight Hour.",
+  "review": "The SBD source is generally clear though it suffers from slight background hiss, occasional pops and a cut‑off in the middle of “Dancing in the Streets”. Musically the concert is a Pigpen‑heavy powerhouse – tight playing, frantic up‑tempo numbers and several first‑time or rare performances that reviewers call “amazing”, especially Smokestack Lightning into King Bee, Cream Puff War and an 18‑minute Midnight Hour jam.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the performance (tight playing, many standout jams) combined with a mostly clean soundboard recording; minor audio defects keep it from an “excellent” rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Slight background hiss and occasional snap/crackle/pops, but overall clear. No radio interruptions. The version of \"Dancing in the Streets\" is cut off about eight minutes into Jerry's solo."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Smokestack Lightning",
+      "King Bee",
+      "Cream Puff War",
+      "The Same Thing",
+      "Midnight Hour",
+      "Beat It On Down the Line",
+      "Dancing in the Streets"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A fast‑paced, Pigpen‑driven set with many up‑tempo numbers; first‑time debut of Smokestack Lightning leading into a bluesy King Bee, followed by extended jams that keep the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as crisp and front‑and‑center with stellar guitar tone; leads several memorable jams.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill Summers humorously mentioned on drums, but no substantive evaluation of drumming quality."
+  },
+  "song_mentions": {
+    "Smokestack Lightning": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "King Bee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cream Puff War": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Same Thing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Midnight Hour": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Beat It On Down the Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancing in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T05:52:02.284165+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1966-11-19.fm.9730.shnf"
+}

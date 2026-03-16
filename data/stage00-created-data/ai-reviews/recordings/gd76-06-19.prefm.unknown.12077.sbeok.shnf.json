@@ -1,0 +1,84 @@
+{
+  "summary": "A killer set highlighted by a scorching Help > Slip > Franklin's run, captured in generally good FM‑sourced sound despite occasional bass loss and a truncated Cosmic Charlie.",
+  "review": "The show is widely praised for its tight playing, stellar transitions and standout moments like the opening Help > Slip > Franklin's, soaring High Time and an inspired Let It Grow jam.  The recording, sourced from an FM broadcast, is clear enough to enjoy the performance but suffers from a weak low‑end, occasional static blips and a cut ending on Cosmic Charlie.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4–5 stars and rave about the performance; recording quality is generally good with a few technical flaws, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "FM broadcast source; clear overall but missing sub‑woofer bass, occasional static blip that cuts off the end of Cosmic Charlie, and some FM multiplex glitches.  Still captures the band’s energy well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Playin' in the Band",
+      "High Time",
+      "Let it Grow",
+      "Dancin' in the Streets",
+      "Cosmic Charlie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A powerful opener with Help‑Slip‑Franklin's, seamless transitions through Music Never Stopped and a high‑energy second set that builds through Playin', Let It Grow into Dancin' in the Streets and finishes with an enthusiastic Not Fade Away encore."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal delivery is described as heartfelt and emotional; guitar tone praised as perfect, especially during solos and the interplay with Bob.",
+    "Phil": "Bass noted as present but lacking low‑end punch; one reviewer says Phil isn’t “up front” enough in the mix.",
+    "Bob": "Commended for tight rhythm work and a memorable short Dark Star melody tease within the Slip jam; praised for musical communication with Jerry.",
+    "Keys": "Keith's piano on High Time highlighted as the perfect counterpart to Jerry’s vocals; no other keyboardist mentioned.",
+    "Drums": "The drum work is called “great drumz” and noted for a funky, insistent groove during Let It Grow."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Let it Grow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Dancin' in the Streets": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T04:53:21.081739+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-06-19.prefm.unknown.12077.sbeok.shnf"
+}

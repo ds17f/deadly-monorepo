@@ -1,0 +1,71 @@
+{
+  "summary": "Strong 1976 performance with a standout second set (Help>Slip>Frank, Dancin'>Cosmic Charlie) but hampered by slow‑pitch, muddy MP3 crowd noise.",
+  "review": "Fans rave about the fast‑paced first set and an especially tasty second set featuring a brilliant Help → Slipknot → Franklin's sequence and a soaring Dancin' → Cosmic Charlie medley. However, the available MP3 suffers from pitch slowdown, muffled mids and loud audience bleed, making the recording only fair despite the musical excellence.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "The show itself receives high praise (especially the second set), but multiple reviewers note serious playback speed and fidelity problems that pull the overall experience down."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Pitch runs too slow, muddy mids, crowd noise drowns instruments; MP3 quality is low with occasional drop‑outs. Reviewers note it is not a clean soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancin' > Cosmic Charlie",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Big River",
+      "Playing in the Band",
+      "Crazy Fingers"
+    ],
+    "poor_songs": [
+      "Franklin's Tower (second half)",
+      "Around"
+    ],
+    "setlist_flow": "A fast‑paced, bright opening with Big River leading into an 18‑minute Playing in the Band. The second set builds from Crazy Fingers through Dancin' and Cosmic Charlie into a soaring Help → Slipknot → Franklin's medley before winding down, though the final Franklin's Tower feels a bit flat."
+  },
+  "band_member_comments": {
+    "Jerry": "His lead tone is described as pure and beautiful, though one reviewer notes he gets confused and pushes too fast early on.",
+    "Phil": "Takes strong vocal leads into Help; praised for “sublime Leshy Phil‑o‑drama” and solid bass interplay.",
+    "Bob": "Adds humor with the classic “eternal question”; brings rhythm back effectively during the second set.",
+    "Keys": "",
+    "Drums": "Exploratory, primordial drumming highlighted especially in Slipknot!; overall drum work praised."
+  },
+  "song_mentions": {
+    "Dancin' > Cosmic Charlie": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T04:22:33.481675+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-06-14.sony.vernon.10917.sbeok.shnf"
+}

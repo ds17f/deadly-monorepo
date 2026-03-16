@@ -1,0 +1,54 @@
+{
+  "summary": "Mislabeled tracks but captures Bruce Hornsby's debut and the final Gimme Some Lovin' performance.",
+  "review": "The set suffers from a confusing track list – several songs are mislabeled, making the second set hard to follow.  On the plus side, this recording documents Bruce Hornsby's first show with the Dead and includes the last rendition of \"Gimme Some Lovin'\" performed without Brent Mydland, which many fans find noteworthy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Only two brief reviews; one points out a serious labeling issue (negative) while the other highlights a historic lineup change and a unique song performance (positive).  Recording quality is unclear, so rating leans toward an average‑to‑good show with moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity; the main issue reported is mislabelled track titles that confuse set order."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Gimme Some Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Track mislabeling makes the second‑set flow hard to follow, though the actual performance includes notable moments such as Hornsby's debut and the final \"Gimme Some Lovin'.\""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby's first show with the band is highlighted.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Weight": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T12:16:37.432600+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-15.senn-me80.litzenberger.91474.sbeok.flac16"
+}

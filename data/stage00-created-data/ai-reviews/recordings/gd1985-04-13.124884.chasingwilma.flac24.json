@@ -1,0 +1,39 @@
+{
+  "summary": "Clean audience recording with Jerry's fiery guitar work, but the Terrapin intro is cut and the source is disputed.",
+  "review": "The tape sounds clear and captures a strong performance – especially Garcia’s scorching guitar – yet listeners are frustrated by the missing beginning of “Terrapin Station” and accusations that the file is an unauthorized copy. The overall listening experience is decent, but the technical flaw and provenance issues dampen enthusiasm.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "high",
+    "rationale": "Most reviewers criticize the missing Terrapin intro and question the source, pulling the average rating down despite a few positive comments about performance and sound quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear and clean overall, but the Terrapin Station intro is cut; some reviewers claim the recording is an unauthorized copy of another taper's work."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing; focus is on the missing intro and overall performance quality."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar described as \"on fire\" though vocals were noted as a bit brutal.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-15T03:52:09.288980+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-13.124884.chasingwilma.flac24"
+}

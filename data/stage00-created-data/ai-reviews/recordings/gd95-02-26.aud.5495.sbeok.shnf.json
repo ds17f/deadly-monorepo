@@ -1,0 +1,76 @@
+{
+  "summary": "Decent audience recording captures a lackluster Mardi Gras show with a few bright spots like Estimated Prophet, Box of Rain and Eyes of the World.",
+  "review": "The tape is reasonably clear for an audience source, but the performance falls short of expectations – the first set is described as dull and Jerry’s playing appears exhausted.  Highlights include a strong Box of Rain closer and a fun Estimated Prophet jam with guest saxophonist David Murray, while songs such as Mama Tried and Lazy River are widely criticized.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is generally regarded as below average with many negative comments, but the recording itself is praised as clear and listenable; the weighted combination yields a modest rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers note the sound is clear and “quite good,” with no major drop‑outs or distortion mentioned.  No specific board source is identified."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Estimated Prophet",
+      "Eyes of the World",
+      "So Many Roads"
+    ],
+    "poor_songs": [
+      "Mama Tried",
+      "Lazy River",
+      "West L.A. Fadeaway"
+    ],
+    "setlist_flow": "The first set is repeatedly called flat and lack‑lustre, while the second set shows occasional sparks—especially the David Murray guest spots—but overall the concert feels uneven and under‑energized."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly described as tired, slouching, and playing poorly (e.g., sloppy fingerpicking on Lazy River and missed cues).",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "One reviewer notes the absence of Brent’s vocal contribution on “Let The Good Times Roll,” suggesting a missing keyboard/voice element.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "West L.A. Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Lazy River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T05:27:59.341362+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-02-26.aud.5495.sbeok.shnf"
+}

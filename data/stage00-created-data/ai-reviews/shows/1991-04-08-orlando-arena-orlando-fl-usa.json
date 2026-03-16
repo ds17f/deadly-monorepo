@@ -1,0 +1,70 @@
+{
+  "summary": "High‑energy show with stellar Eyes Of The World, Truckin' and Jerry’s relaxed guitar",
+  "blurb": "The second set builds into a soaring Eyes Of The World that flows into tight jams on Truckin', The Wheel and I Need A Miracle. Jerry delivers sculpted, effortless lead while Vince and Bruce add bright keyboard textures. Highlights include Maggie’s Farm, Morning Dew and an exuberant Johnny B. Goode encore.",
+  "review": "On April 8 1991 the Dead took Orlando Arena by storm, opening with a punchy first set that featured a tight, no‑strain rendition of Maggie’s Farm and a breezy take on Mississipi Half‑Step Uptown Toodeloo. The real fireworks ignited in the second set: Eyes Of The World unfolded like a sunrise, morphing into a monster Truckin' that kept the crowd dancing through an expansive drum‑and‑space excursion, then surged forward into The Wheel and a heartfelt I Need A Miracle before closing with a beautifully plaintive Morning Dew. Jerry’s guitar was described as “sculpted, relaxed and effortless,” delivering his signature horn‑like tone while feeding off the audience’s energy. Vince’s keyboards added enthusiastic color, and Bruce Hornsby’s surprise piano cameo shone on the late‑night jams. The night capped with a rollicking Johnny B. Goode that left everyone smiling. Across multiple recordings the performance is consistently praised for its high energy, tight transitions and memorable improvisations, making this show a standout entry from the early‑90s era.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Four of the five recordings are explicitly positive, highlighting Jerry’s guitar, strong keyboard work and several standout songs; only one is mixed with no negative commentary. The consensus of “sculpted”, “effortless” guitar, “killer” solos and “stellar” second‑set jams warrants a strong positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 1.6 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd91-04-08.sbd.ingle.10060.sbeok.shnf",
+    "reason": "Soundboard source with crisp, balanced mix; captures the band’s dynamics despite early FM‑like interference that was corrected mid‑show."
+  },
+  "key_highlights": [
+    "High‑energy first set leading into an expansive second set jam marathon",
+    "Jerry Garcia’s sculpted, effortless guitar tone throughout",
+    "Bruce Hornsby piano cameo and Vince Welnick’s enthusiastic keyboards add bright textures",
+    "Strong audience capture of Phil Lesh’s bass on the audience recording"
+  ],
+  "song_highlights": [
+    "Maggie's Farm",
+    "Eyes Of The World",
+    "Truckin'",
+    "The Wheel",
+    "I Need A Miracle",
+    "Morning Dew",
+    "Johnny B. Goode"
+  ],
+  "band_performance": {
+    "Jerry": "Sculpted, relaxed and effortless guitar work; amazing fret‑work that fed off the audience’s energy.",
+    "Phil": "Bass is clear and present, especially noted on the warm audience recording.",
+    "Bob": "Solid rhythm guitar with no flubs, notably tight on Truckin'.",
+    "Brent": "",
+    "Mickey": "Provides a solid rhythmic foundation and shines during the Jingo jam segment.",
+    "Billy": ""
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-17T18:52:24.869699+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Me And My Uncle",
+      "Maggie's Farm"
+    ],
+    [
+      "Eyes Of The World",
+      "Man Smart, Woman Smarter"
+    ],
+    [
+      "Truckin'",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "I Need A Miracle",
+      "Morning Dew"
+    ],
+    [
+      "Johnny B. Goode"
+    ]
+  ]
+}

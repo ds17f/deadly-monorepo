@@ -1,0 +1,65 @@
+{
+  "summary": "Terrapin>Playing segue shines, Stella Blue glows, Brent's new song debuts",
+  "blurb": "The second set delivers a soaring Terrapin Station → Playing In The Band transition followed by an inspired Space and Not Fade Away jam. Stellar renditions of Stella Blue and the debut of Brent Mydland’s \"Easy To Love You\" round out a late‑summer show that keeps the energy high throughout.",
+  "review": "August 14, 1979 at McNichols Sports Arena captured one of the Dead’s most fluid late‑summer outings. The first set rolls along with classic barn burners like Jack Straw and Tennessee Jed before Brent Mydland slips in his brand‑new composition \"Easy To Love You\" – a moment that, while divisive among listeners, marks an important step forward for the keyboardist. The second set is where the night truly soars: a seamless Terrapin Station into Playing In The Band segue launches a cosmic Space and a thunderous Not Fade Away that feels almost pre‑planned, while Stella Blue unfolds with Jerry’s masterful guitar phrasing and Phil’s rock‑solid bass foundation. Highlights such as Samson & Delilah, Ship Of Fools, and the uplifting Promised Land round out an evening that, despite a few weaker first‑set cuts, remains a high‑water mark for the 1979 run. The crystal‑clear soundboard capture (Walker‑Scotton‑Miller) showcases every nuance, making this show a must‑listen for anyone wanting to hear the band at their improvisational peak.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 16,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.3,
+      "sentiment_rationale": "Two recordings are clearly positive, praising the Terrapin→Playing segue, Stella Blue and overall band tightness; one recording is mixed but only notes isolated weak songs while still highlighting the same high points. The consensus leans strongly positive, warranting a substantial sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 1.3 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1979-08-14.sbd.walker-scotton-miller.32500.flac16",
+    "reason": "Crystal‑clear soundboard capture that preserves the full dynamic range of the performance and includes every song without drop‑outs."
+  },
+  "key_highlights": [
+    "Seamless Terrapin Station → Playing In The Band segue with expansive Space",
+    "Brent Mydland’s debut of \"Easy To Love You\"",
+    "Stella Blue and Not Fade Away jam showcase Jerry’s masterful guitar work",
+    "Samson & Delilah and Ship Of Fools lift the second‑set momentum"
+  ],
+  "song_highlights": [
+    "Terrapin Station",
+    "Playing In The Band",
+    "Stella Blue",
+    "Easy To Love You",
+    "Not Fade Away",
+    "Samson & Delilah"
+  ],
+  "band_performance": {
+    "Jerry": "His vocals are described as beautiful and clear, while his guitar leads the Terrapin‑Playing segue and delivers a masterful solo on Stella Blue that reignites the show.",
+    "Phil": "Provides a steady, supportive bass foundation that locks in with the drums during the extended jams.",
+    "Bob": "",
+    "Brent": "Debuts his new composition \"Easy To Love You,\" adding fresh keyboard textures; opinions vary but his presence is felt throughout the set.",
+    "Mickey": "Drums deliver an extended, sidereal Space section and a remarkable transition into Playing In The Band.",
+    "Billy": "Locks in tight grooves with Mickey, driving the rhythmic pulse that underpins the second‑set peaks."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-25T22:41:47.773169+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Terrapin Station",
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "Not Fade Away",
+      "Stella Blue",
+      "Good Lovin'"
+    ],
+    [
+      "Easy To Love You"
+    ],
+    [
+      "Samson & Delilah"
+    ]
+  ]
+}

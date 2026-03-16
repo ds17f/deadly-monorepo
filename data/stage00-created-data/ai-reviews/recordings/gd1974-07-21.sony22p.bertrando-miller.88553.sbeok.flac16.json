@@ -1,0 +1,75 @@
+{
+  "summary": "Audience recording captures the powerful 1974 energy with a spectacular second‑set PITB sandwich, soaring Promised Land and daring Seastones experiments.",
+  "review": "The show is hailed as a classic ’74 performance – the second‑set “sandwich” (Playing In The Band → Spanish jam → Wharf Rat) shines, and highlights like Promised Land, Jack Straw, Ship Of Fools and the Phil‑&‑Ned Seastones segment get repeated praise.  Though it’s an audience tape with a bit of early crowd noise, listeners love how the recording conveys the Wall of Sound’s intensity and the crowd’s excitement.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (average >4) and overwhelmingly positive comments about both performance and recording quality; many reviewers highlight the second set and specific songs, while noting only mild audience‑noise issues."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Early audience noise described as mildly irritating but quickly overwhelmed by music; overall clear enough to capture crowd reactions and the Wall of Sound’s power."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Promised Land",
+      "Playing In The Band",
+      "Jack Straw",
+      "Ship Of Fools",
+      "Mississippi Half-Step",
+      "Tennessee Jed",
+      "Seastones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second‑set “sandwich” praised as spectacular; the show’s flow is described as energetic and cohesive, especially the transition from PITB into the Spanish jam and Wharf Rat."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Praised for his experimental Seastones collaboration with Ned Lagin, described as blowing heads off.",
+    "Bob": "",
+    "Keys": "Keith is noted (on acid) but receives no criticism; his playing contributes to the experimental vibe.",
+    "Drums": "Bill Kreutzmann highlighted for powerful crash cymbals and a “Korean” style that adds extra excitement."
+  },
+  "song_mentions": {
+    "Promised Land": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship Of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Seastones": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-22T22:43:45.821095+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-07-21.sony22p.bertrando-miller.88553.sbeok.flac16"
+}

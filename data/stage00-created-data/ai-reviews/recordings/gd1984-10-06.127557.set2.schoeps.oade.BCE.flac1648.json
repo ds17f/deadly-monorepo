@@ -1,0 +1,69 @@
+{
+  "summary": "Crystal‑clear audience recording captures a soaring second set with standout jams like Scarlet > Fire, Space, and China Doll.",
+  "review": "The tape, taken by the legendary Doug Oade (with Jim Wise), delivers crisp, high‑fidelity sound that far outshines other sources.  Fans rave about a psychedelic, dark‑tinged second set – from a tight Phil/Lesh space jam to a bouncy Scarlet Begonias → Fire on the Mountain and an unforgettable China Doll – while the first set still holds memorable moments despite a brief amp hiccup for Jerry.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All four reviews are enthusiastic (4‑5 ★) and highlight both an excellent audience recording and a high‑energy show with many praised songs, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear tape recorded by Doug Oade (and Jim Wise) using high‑end microphones; reviewers note it as a huge improvement over other sources and describe it as ‘unbelievable’ and ‘incredibly crisp.’"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Space",
+      "Playing In The Band",
+      "China Doll",
+      "Cassidy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is highlighted for its dark, psychedelic depth and seamless jams (Phil/Lesh space jam, Scarlet > Fire, China Doll), while the first set still offers strong moments despite a brief amp issue during Space."
+  },
+  "band_member_comments": {
+    "Jerry": "His amp went out at the start of Space, forcing the band into an impromptu jam; overall his playing is praised throughout the show.",
+    "Phil": "Praised for a tight space jam with Bobby before Jerry re‑joined, contributing to the set’s psychedelic flow.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:16:59.470193+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-06.127557.set2.schoeps.oade.BCE.flac1648"
+}

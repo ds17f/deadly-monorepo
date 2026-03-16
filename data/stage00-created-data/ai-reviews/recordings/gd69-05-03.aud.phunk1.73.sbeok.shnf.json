@@ -1,0 +1,62 @@
+{
+  "summary": "Exceptional 1969 audience recording with stellar performances of The Other One and He Was a Friend of Mine, despite low‑sitting vocals.",
+  "review": "The show is hailed as a high‑energy ‘69 Winterland party, highlighted by an incendiary The Other One, a soaring He Was a Friend of Mine and tight jams on Doing That Rag and Cryptical Envelopment.  The audience tape sounds astonishingly clear for its era—organ and drums sit front‑and‑center, vocals are buried but audible, and the overall mix is punchy and lively.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both performance (standout songs, strong playing) and recording quality (exceptional AUD fidelity), with many 4‑5 star reviews."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Surprisingly clear for a 1969 AUD; organ and drums are forward, Tom Constanten’s keys are loud, vocals sit low in the mix but remain audible. No major drop‑outs or hiss reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "He Was a Friend of Mine",
+      "Doing That Rag",
+      "Cryptical Envelopment"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A psychedelic‑country vibe with relentless energy; the first set builds into a fiery second set, capped by an ethereal jam at the end."
+  },
+  "band_member_comments": {
+    "Jerry": "Outstanding solo on The Other One; tone described as burning and stellar.",
+    "Phil": "Bass is huge, raw and damaged in a glorious way; repeatedly called ‘tremendous’ and a ‘stud’.",
+    "Bob": "Pigpen’s wailing vocals cut through despite being low‑sitting in the mix.",
+    "Keys": "Tom Constanten’s organ is remarkably forward and loud, adding a rich texture.",
+    "Drums": "Bill and Mickey’s drumming is powerful and drives the jams; drums are prominent and energetic."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "He Was a Friend of Mine": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Doing That Rag": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T14:13:48.084216+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-05-03.aud.phunk1.73.sbeok.shnf"
+}

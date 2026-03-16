@@ -1,0 +1,31 @@
+{
+  "summary": "The lone review gives a modest 4‑star rating but offers no detail on the audio or performance, merely noting an incorrect song order.",
+  "review": "With only a brief comment about the setlist being out of order, reviewers provide no insight into the sound quality, mix, or musical highlights. The positive star rating suggests the recording is at least decent, but the lack of specifics leaves both the recording and show qualities undefined.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only one short review with a 4‑star rating; no concrete information on performance or audio quality, so the rating is an estimate based on the star level."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": ""
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T17:00:26.300569+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-10-30.sbd.19809.shnf"
+}

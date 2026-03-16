@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent recording of an outstanding show, though specifics are scarce.",
+  "review": "The reviewer rates both the audio fidelity and the performance as excellent, awarding five stars. No details on source type or setlist are given, but the brief praise indicates a high‑quality capture of a top‑notch Dead concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "Single five‑star review praises both recording and show; limited detail reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the recording as excellent; no further technical details provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T21:13:44.899324+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-05-22.nak300.unknown.101328.sbefail.flac16"
+}

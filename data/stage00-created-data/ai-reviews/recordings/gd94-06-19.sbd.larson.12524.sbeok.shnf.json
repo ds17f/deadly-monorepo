@@ -1,0 +1,70 @@
+{
+  "summary": "Excellent soundboard capture of the legendary June 19 1994 Eugene show, highlighted by a scorching Scarlet>Fire, a 23‑minute Fire on the Mountain and an emotional The Other One.",
+  "review": "The recording is a clean, well‑balanced soundboard tape that lets the band’s late‑summer energy shine through.  Fans rave about the second set – a blistering Scarlet>Fire, a marathon Fire on the Mountain, and a heartfelt Other One – while noting the first set was weaker but still solid.  Overall the show is remembered as one of the best from the 1994 tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "A large majority of reviews (≈70%) are 4‑5 stars and praise both the performance and the soundboard quality; only a few note a weak first set.  The weighted average yields a rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers describe the tape as crisp, clear and well‑mixed; one mentions an earlier audience source but says the current soundboard is terrific. No significant drop‑outs or muddiness are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Fire on the Mountain",
+      "The Other One",
+      "Bird Song",
+      "Samson"
+    ],
+    "poor_songs": [
+      "Way to Go Home"
+    ],
+    "setlist_flow": "The first set is described as uneven or “weak,” but the second set is consistently praised for its flow, extended jams and high energy, making the overall concert a classic late‑summer outing."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his guitar tone, phrasing and the emotional weight of his playing (e.g., “Jerry’s tone is perfect,” “revival of Jerry’s phrasing”).",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The rhythm section is called “on top of things” with a drummer‑guided jam during Fire; post‑drum segment praised as solid."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Way to Go Home": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T22:32:36.729452+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-06-19.sbd.larson.12524.sbeok.shnf"
+}

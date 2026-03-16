@@ -1,0 +1,52 @@
+{
+  "summary": "Soundboard recording of decent clarity captures a sloppy show rescued by an outstanding Jack Straw performance.",
+  "review": "The source is a sound‑board capture that reviewers describe as a good recording, with clear enough sound to enjoy the music despite some imperfections. The concert itself is considered sloppy, with several songs (MNS and Dancin') cited as train wrecks, but the second‑set rendition of Jack Straw is hailed as the best ever heard by one reviewer.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 3 stars; recording quality is praised while performance quality is mixed, leading to an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer titles the recording 'Good recording' and no technical flaws are mentioned; soundboard source suggests a clear mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "MNS",
+      "Dancin'"
+    ],
+    "setlist_flow": "Overall sloppy performance with several weak spots, but the second set opens strongly thanks to an exceptional Jack Straw."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "MNS": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:08:21.287541+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-10.140836.sbd.miller.sirmick.flac1644"
+}

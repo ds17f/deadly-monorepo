@@ -1,0 +1,105 @@
+{
+  "summary": "Mixed‑quality audience tape of an early Brent era show with solid jams (Drums → Not Fade Away) but uneven playing and a flawed Lost Sailor/Saint debut",
+  "review": "The performance captures the first live appearance of Lost Sailor / Saint, featuring strong moments like Loser, Estimated Prophet, Black Peter and a standout Drums‑to‑Not Fade Away jam. However, reviewers note vocal flubs on Saint, weak Bob on Lost Sailor/Saint and a generally uneven soundboard‑like tape that suffers from high‑end rolloff and occasional muddiness.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is average with several praised songs but notable weak spots; recording quality is fair to poor, pulling the weighted score down."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers complain of tape hiss, high‑end fluctuation and overall 'sucks', while one praises clear instrument separation; overall the tape is listenable but not hi‑fi."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Estimated Prophet",
+      "Peggy-O",
+      "Althea",
+      "Deal",
+      "El Paso",
+      "Not Fade Away",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Lost Sailor",
+      "Saint",
+      "Ship of Fools"
+    ],
+    "setlist_flow": "Early Brent‑era set feels uneven – the first Lost Sailor/Saint is shaky, but the mid‑set jam (Drums → Not Fade Away) and several tight numbers lift the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Mostly good vocal work; praised on Peggy-O, Althea, Deal and El Paso, but flubs on Saint and goes through the motions on Ship of Fools.",
+    "Phil": "",
+    "Bob": "Struggles on Lost Sailor and Saint; his playing described as ‘pretty bad’ for those songs.",
+    "Keys": "Brent's debut praised – piano/keys are clear, no mistakes, fits the band perfectly.",
+    "Drums": "Jam from Drums into Not Fade Away highlighted as a high point."
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:43:58.319006+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-08-31.nak.glyde.9973.sbeok.shnf"
+}

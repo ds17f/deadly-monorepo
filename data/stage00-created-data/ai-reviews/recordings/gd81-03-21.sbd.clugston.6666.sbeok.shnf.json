@@ -1,0 +1,75 @@
+{
+  "summary": "Crisp soundboard captures a phenomenal March ’81 performance highlighted by an out‑of‑this‑world Althea and a tight, smoking China Cat.",
+  "review": "The show is repeatedly praised as one of the best of 1981, with Althea’s transcendent jam, a fire‑breathing China Cat, and standout moments from Eyes of the World, Alabama Getaway and Peggy‑O. The soundboard source is described as crystal‑clear, letting every note of Phil’s bass and Brent’s keyboards shine, while the drums are noted as especially powerful.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "All nine reviews (excluding one anomalous 0‑star entry) are strongly positive, most awarding 4–5 stars and highlighting both superb musical performance and excellent soundboard fidelity."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with full bass presence; drums are punchy and articulate. Reviewers note no drop‑outs or muffling – the recording lets every instrument be heard distinctly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "China Cat",
+      "Eyes of the World",
+      "Alabama Getaway",
+      "Peggy-O",
+      "Tennessee Jed",
+      "LIG"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe an energetic first set that builds into a soaring second half, with seamless transitions and jam‑heavy moments that keep the momentum high from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead on Althea is described as “sweet” and transcendent; his tone on China Cat is tight and otherworldly.",
+    "Phil": "Bass is crystal‑clear – reviewers can hear every note without muffling, especially during the jams.",
+    "Bob": "",
+    "Keys": "Brent’s solo (on ‘Rooster’) is called “non‑pareil”; keyboards sit well in the mix throughout.",
+    "Drums": "Drum work gets high praise (“Great Drumz”, “Billy trashed his kit”); the rhythm section drives the show forward."
+  },
+  "song_mentions": {
+    "China Cat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LIG": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:01:55.652452+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-03-21.sbd.clugston.6666.sbeok.shnf"
+}

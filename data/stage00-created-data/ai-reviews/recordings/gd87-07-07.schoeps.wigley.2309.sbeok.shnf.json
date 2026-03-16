@@ -1,0 +1,69 @@
+{
+  "summary": "Good‑sounding indoor recording captures a scorching Roanoke performance with US Blues, Scarlet Fire and Crazy Fingers blazing.",
+  "review": "The tapes from the July 7 1987 Roanoke shows convey the hot, high‑energy vibe that fans remember – Jerry leads the band into fiery renditions of US Blues, Scarlet Fire, Crazy Fingers and Comes A Time, while the new indoor PA adds a slight echo but still sounds clear. Reviewers repeatedly praise the performance and note the recording is solid enough to enjoy without major flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "13 consistently enthusiastic reviews (mostly 4‑5 stars) highlight strong musical performance and a clear, listenable recording; no significant complaints about audio quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No major audio complaints; reviewers note the venue was small and “echoey” with an indoor PA setup, but the energy comes through clearly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "US Blues",
+      "Scarlet Fire",
+      "Crazy Fingers",
+      "Comes A Time",
+      "Looks Like Rain",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Two‑night run was hot and tightly paced; the band stayed upbeat, cranking out high‑energy jams that flowed well despite the intimate arena setting."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for leading the charge, delivering snappy vocal slides and strong guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drummers received compliments for perfect beat and great drumming throughout."
+  },
+  "song_mentions": {
+    "Scarlet Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "US Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T00:24:20.202233+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-07-07.schoeps.wigley.2309.sbeok.shnf"
+}

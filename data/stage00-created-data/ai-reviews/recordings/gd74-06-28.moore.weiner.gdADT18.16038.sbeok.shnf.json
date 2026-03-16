@@ -1,0 +1,100 @@
+{
+  "summary": "A wildly praised 1974 show with stellar Sugar Magnolia/Scarlet Begonias and a mind‑blowing Weather Report → U.S. Blues suite, captured on an audience tape that is muffled but still listenable.",
+  "review": "Fans rave about the second‑set jams – especially the Weather Report → U.S. Blues suite, Mind Left Body (MLB) jam and classic Sugar Magnolia/Scarlet Begonias pair – calling it one of ’74’s finest performances. The recording is an audience source that many describe as muddy and heavy on crowd noise, yet most consider it sufficiently clear to enjoy the music. Overall the musical payoff outweighs the sonic shortcomings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Show quality is consistently rated very high (standout jams, many 5‑star reviews) while recording quality is mixed (muffled, crowd‑heavy but still listenable). Weighted average yields a solid 4.1."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Multiple reviewers note muffled sound and excessive crowd noise; however several call it \"listenable\" and appreciate the ambience. No mention of a soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia",
+      "Scarlet Begonias",
+      "Mind Left Body",
+      "Weather Report → U.S. Blues",
+      "U.S. Blues",
+      "Dark Star",
+      "Ship of Fools",
+      "Promised Land",
+      "Sunshine Daydream"
+    ],
+    "poor_songs": [
+      "Seastones",
+      "First set (pedestrian)"
+    ],
+    "setlist_flow": "The first set is described as ordinary and by‑the‑numbers, but the second set erupts into psychedelic brilliance with extended jams and a memorable Weather Report → U.S. Blues suite that many rank among the band’s best."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his guitar tone and improvisational fire (e.g., \"Leo Jerry was really a Tiger\", \"Jerry's lilting 70's sound\").",
+    "Phil": "Noted for calling the Boston Garden a \"garbage can\"; no direct performance critique.",
+    "Bob": "",
+    "Keys": "Keith’s keyboard work on the Weather Report → U.S. Blues suite is called \"delicious grooving\" and essential to the jam’s success.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mind Left Body": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Weather Report → U.S. Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "U.S. Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Seastones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "First set": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T22:07:07.868107+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-06-28.moore.weiner.gdADT18.16038.sbeok.shnf"
+}

@@ -1,0 +1,76 @@
+{
+  "summary": "Scarlet>Fire climax, solid acoustic set, mixed tape quality",
+  "blurb": "The show delivers a strong acoustic first set with Dire Wolf and Ripple, followed by a powerful electric stretch highlighted by the Scarlet Begonias → Fire on the Mountain sequence. China Cat Sunflower into I Know You Rider and an upbeat U.S. Blues encore add extra sparkle. While audience recordings vary in fidelity, the performance is consistently praised for Jerry’s golden tone and tight band interplay.",
+  "review": "On October 22, 1980 at the Warfield, the Dead rolled out a three‑set marathon that balances folk‑rock intimacy with electric firepower. Set 1 opens on an acoustic high note – Dire Wolf and Ripple showcase Garcia’s shimmering guitar tone and the group’s tight vocal harmonies. The second set builds momentum with Alabama Getaway into a classic Greatest Story Ever Told, though the pacing dips around Friend Of The Devil and Peggy‑O. The real highlight arrives in Set 3: a searing Scarlet Begonias → Fire on the Mountain transition that lifts the band to a euphoric peak before diving into an exploratory jam through Lost Sailor, Saint Of Circumstance, and Space. A rousing encore of U.S. Blues caps the night.\n\nRecording-wise the available tapes are all audience sources with varying fidelity. The “gd80-10‑22.sony.wiley” tape (the recommended version) is only fair in quality – low‑generation tape, uneven levels and prominent crowd chatter – but it captures the concert vibe and includes the full setlist. A second audience recording offers clearer room presence yet runs slightly fast and even drops a four‑minute drum segment, while a third source provides no concrete details. Despite these flaws, fans repeatedly note Garcia’s “golden” tone, Phil’s solid bass foundation, and an overall locked‑in band feel, making this show worth seeking for its musical moments rather than pristine sound.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 13,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Two recordings are mixed (highlighting strong moments but noting tape issues) and one is positive, yielding overall moderate praise. Reviewers consistently celebrate the Scarlet Begonias → Fire on the Mountain sequence, Jerry’s golden guitar tone, and solid band interplay, while also pointing out uneven audio levels. This balanced sentiment justifies a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.8 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd80-10-22.sony.wiley.8479.sbefail.shnf",
+    "reason": "Despite fair audio quality, it is the most complete tape and captures the concert vibe with all three sets intact, including the standout Scarlet Begonias → Fire on the Mountain."
+  },
+  "key_highlights": [
+    "Scarlet Begonias → Fire on the Mountain sequence dominates the third set climax",
+    "Acoustic gems like Dire Wolf and Ripple shine in the first set",
+    "China Cat Sunflower > I Know You Rider pairing adds a bright, jam‑heavy moment",
+    "Audience recordings vary; the recommended tape is fair but most complete"
+  ],
+  "song_highlights": [
+    "Dire Wolf",
+    "Ripple",
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "U.S. Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s tone is repeatedly described as golden, perfect and incredibly bright, driving the show’s most memorable moments.",
+    "Phil": "Phil’s bass comes through clearly on several sources, laying a solid foundation for the band’s improvisations.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "The drum sound is noted as loose/approximate with a missing four‑minute segment and a slightly fast tempo in parts.",
+    "Billy": "Drums are described similarly to Mickey’s, with looseness and occasional speed issues."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-13T05:08:28.536869+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dire Wolf"
+    ],
+    [
+      "Bird Song",
+      "Ripple"
+    ],
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain",
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "Drums",
+      "Space",
+      "Not Fade Away",
+      "Goin' Down The Road Feeling Bad",
+      "Good Lovin'"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "U.S. Blues"
+    ]
+  ]
+}

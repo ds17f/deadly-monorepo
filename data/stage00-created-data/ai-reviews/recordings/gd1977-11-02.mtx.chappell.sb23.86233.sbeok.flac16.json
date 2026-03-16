@@ -1,0 +1,75 @@
+{
+  "summary": "A solid matrix recording that captures a high‑energy show – highlights include Lazy Lightning > Supplication, a stellar Truckin’, and a memorable Scarlet/Fire segue.",
+  "review": "The matrix blend of soundboard and audience sources delivers a clear, peppy mix with bright tonal balance, though some listeners note the song splits interrupting the natural flow. Musically the performance shines – Lazy Lightning into Supplication, Looks Like Rain, St. Stephen, Terrapin Station and an especially tight Truckin’ are repeatedly praised.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for the musical performance (standout jams, tight band sync) and generally good matrix sound quality outweigh a single complaint about song splitting."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Bright, clear mix of SBD and audience sources; instruments are well‑balanced and pitch is correct. Some listeners note a change in Keith's piano tone later in the year and criticize the artificial pauses created by splitting songs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightning > Supplication",
+      "Looks Like Rain",
+      "Sunrise",
+      "St. Stephen",
+      "Terrapin Station",
+      "Scarlet > Fire",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall the band stays in sync and delivers tight segues, especially between Scarlet and Fire, though a few reviewers felt the split‑song edits disrupted the natural flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar work highlighted as superb on Truckin' and throughout the jams.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's piano noted to sound different later in the year, but overall keyboards sit well in the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lazy Lightning > Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunrise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T06:15:17.031875+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-11-02.mtx.chappell.sb23.86233.sbeok.flac16"
+}

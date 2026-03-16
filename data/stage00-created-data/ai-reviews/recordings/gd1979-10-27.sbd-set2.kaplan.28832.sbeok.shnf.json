@@ -1,0 +1,39 @@
+{
+  "summary": "Fine soundboard recording of a solid, stock‑set show highlighted by Phil Lesh’s standout The Other One.",
+  "review": "The reviewer finds the performance enjoyable despite an unremarkable setlist, noting that the night’s high point is Phil Lesh’s inspired take on The Other One. The recording quality is described as fine, and the .sbd tag suggests a clean soundboard source, making it a pleasant listen for fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one moderate‑to‑high rating (4 stars) mentioning good show elements and fine recording quality; limited data reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls the recording \"fine quality\" with no noted issues; implies clear, balanced sound typical of a soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as a stock set list but containing nice highlights; overall solid performance with good pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Praised for his performance on The Other One.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T00:12:19.540869+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-10-27.sbd-set2.kaplan.28832.sbeok.shnf"
+}

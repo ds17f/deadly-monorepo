@@ -1,0 +1,45 @@
+{
+  "summary": "Clear soundboard capture of a fiery 1966 set with standout Hey Little One and See That My Grave Is Kept Clean despite missing several tracks.",
+  "review": "The recording is a decent‑to‑good soundboard source, only hampered by occasional wow‑flutter and slight pitch issues, but it presents the band in top form. Reviewers rave about Jerry’s powerful vocals on Hey Little One and the historic performance of See That My Grave Is Kept Clean, while noting that the set is incomplete and a few songs are missing. Overall the show is regarded as an exciting glimpse of the Dead’s early‑mid‑60s energy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (high show score) while noting recording quirks and missing songs (moderate recording score). Weighted combination yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard capture, but some wow & flutter at the start and minor pitch correction needed; several songs are absent from this source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hey Little One",
+      "See That My Grave Is Kept Clean"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early warm‑up feels a bit thin, but the band quickly settles into a classic ’66 vibe; nine songs flow with raw energy and historic significance."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for powerful wailing on Hey Little One and overall vocal presence.",
+    "Phil": "Mentioned declining to sing certain numbers (e.g., \"You Don't Have to Ask\") and letting the band warm up.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hey Little One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "See That My Grave Is Kept Clean": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-26T05:34:25.603635+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd66-07-30.sbd.vernon.9387.sbeok.shnf"
+}

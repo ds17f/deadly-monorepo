@@ -1,0 +1,52 @@
+{
+  "summary": "Audience‑sourced tape with a bit of hiss and a noticeable Terrapin cut captures the historic first live performance of “Shakedown Street” plus strong drums, space and solid vocals.",
+  "review": "The show is celebrated for delivering the debut of “Shakedown Street,” which reviewers describe as funky, raw and electrifying, with Bob Weir’s soulful vocals balancing Garcia’s lead.  The recording is an audience AUD from August 1978 – generally clear and lively but marred by hiss in quiet sections and a nasty cut on the middle of “Terrapin.”  Overall the musical performance outweighs the technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the historic debut and overall energy (show quality ~4.5/5) while noting modest recording issues such as hiss and a cut on Terrapin (recording quality ~3.5/5). Weighted average yields about 4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear audience ambience with some hiss in quieter passages; a prominent cut on “Terrapin” disrupts that song. No major distortion, but the tape’s age shows typical 1978 AUD limitations."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Good Lovin'"
+    ],
+    "poor_songs": [
+      "Terrapin"
+    ],
+    "setlist_flow": "The set is highlighted by the debut of “Shakedown Street,” which energizes the crowd and flows well into a spirited “Good Lovin'.”  Drums and space receive special praise, with an Egyptian‑flavored jam during the middle.  Aside from the Terrapin cut, the pacing feels strong and historic."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for delivering a funky, raw first presentation of “Shakedown Street” and providing great vocals and guitar tone.",
+    "Phil": "",
+    "Bob": "Described as a ‘rock star’ whose smooth, soulful vocals complement Garcia’s lead; noted for adding yin to Garcia’s yang.",
+    "Keys": "Mentioned playing the “Ollin Arageed” space piece that gives an Egyptian feel during the middle of the show.",
+    "Drums": "Drums and the ensuing space jam are highlighted as great, adding drive to the performance."
+  },
+  "song_mentions": {
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T14:37:56.007214+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-08-31.aud.wiley.11480.sbeok.shnf"
+}

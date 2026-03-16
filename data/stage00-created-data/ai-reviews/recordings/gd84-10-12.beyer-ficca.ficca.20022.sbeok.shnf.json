@@ -1,0 +1,110 @@
+{
+  "summary": "A stellar 10/12/84 show with a booming second set (Morning Dew, Cold Rain & Uncle John’s) captured on an audience tape that’s surprisingly clear but shows the typical AUD quirks.",
+  "review": "The performance is widely hailed as one of the best of 1984 – the first set rolls strong and the second set erupts with a thunder‑heavy Cold Rain, a soaring Morning Dew and a jubilant Uncle John’s Band.  The audience recording (AUD) is praised for its high‑end punch and dynamic range, though several listeners note occasional harsh cuts, patches and the need for EQ tweaks, keeping it in the “good” rather than “excellent” tier.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently glowing comments about the musical performance (top‑tier show) offset by recurring but minor complaints about tape quirks; weighting yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Aud tape has more high‑end and beefier levels than the Oade versions, good dynamic range and crisp crowd detail.  Listeners mention patches, occasional harsh cuts after songs, a slightly recessed low end and a need to raise bass/reduce treble for optimal balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Cold Rain and Snow",
+      "Uncle John's Band",
+      "Cumberland Blues",
+      "Lost Sailor / Saint of Circumstance",
+      "Playing in the Band (Reprise)",
+      "Good Lovin'",
+      "On the Road Again",
+      "Jack‑A‑Roe",
+      "It Must Have Been the Roses",
+      "Music Never Stopped",
+      "The Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a powerful opener (“The Stranger”), a tight first set that ends with a double‑whammy of Cumberland Blues and Music Never Stopped, followed by an explosive second set that builds to a climactic Morning Dew before a heartfelt Good Lovin' encore."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is described as powerful, clear and soulful (especially on the Dew), with tight guitar control; one reviewer complained his tone sounded “tin‑can” in this AUD.",
+    "Phil": "Bass is praised for its presence (turning up volume on Morning Dew) but a few listeners wish for more low‑end and suggest EQ boosting the bass.",
+    "Bob": "",
+    "Keys": "Brent Mydland receives kudos (“Brent had soul” on Don't Need Love) and the Beyer 160 mics are lauded for capturing crisp keyboard detail.",
+    "Drums": "Mickey Hart’s drumming is highlighted as “great” with a strong, manic feel in Cold Rain; a few cuts affect drum sections but overall drums are praised."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lost Sailor / Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Need Love": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "On the Road Again": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack‑A‑Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It Must Have Been the Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Playing in the Band (Reprise)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T22:08:08.509834+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-12.beyer-ficca.ficca.20022.sbeok.shnf"
+}

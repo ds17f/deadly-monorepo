@@ -1,0 +1,69 @@
+{
+  "summary": "Gritty Carousel run with stellar Dark Star and rare Born Cross‑Eyed/Spanish Jam",
+  "blurb": "The show delivers a soaring Dark Star and an unusual Born Cross‑Eyed → Spanish Jam pairing, highlighted by strong improvisations in the second set. Jerry’s solo work shines despite occasional unevenness elsewhere.",
+  "review": "On March 30, 1968 at San Francisco’s Carousel Ballroom the Dead cooked up one of their early‑summer marvels. The first set wanders through a classic sequence—Morning Dew into the cryptic envelopment sandwich and a sprawling Dark Star that still manages to sparkle despite some uneven moments. The real fireworks erupt in the second set where a rare Born Cross‑Eyed → Spanish Jam combo erupts, sandwiched between Feedback and Death Don't Have No Mercy, giving listeners a glimpse of the band’s experimental edge. China Cat Sunflower rolls into The Eleven with mixed fluidity, but the overall improvisational flow remains compelling. Jerry Garcia’s guitar work is noted as “distinct from ’66,” delivering a gorgeous tone on Dark Star that many reviewers called terrific, though some felt his playing could be hit‑or‑miss. Pigpen’s organ is muted in parts of the audience captures, yet his presence still adds texture when audible. Bob Weir’s vocal energy lifts Dancin’ In The Street, even if his state was occasionally “drunken.” The crowd’s enthusiasm and the band’s willingness to venture into rare pairings make this a must‑listen for fans who can overlook the occasional muddiness of the recordings.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 30,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Two recordings are clearly positive (audience tapes praised for clarity and hot performance) while one is mixed (soundboard noted as muffled and uneven). The consensus leans strongly toward a high‑energy show with standout Dark Star, Born Cross‑Eyed/Spanish Jam, and China Cat → Eleven moments, outweighing the few negative remarks about pacing.",
+      "final_calculation": "2.5 + 0.3 + 1.2 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd68-03-30.aud.cotsman.14912.sbeok.shnf",
+    "reason": "Surprisingly clear audience tape that captures the hot second‑set improvisations and rare song pairings with better instrument separation than the muffled soundboard."
+  },
+  "key_highlights": [
+    "Stunning Dark Star improvisation that still shines despite mixed overall pacing.",
+    "Rare Born Cross‑Eyed → Spanish Jam combo adds historic value.",
+    "China Cat Sunflower → The Eleven sandwich highlighted as a classic late‑’68 segue.",
+    "Strong second‑set jams with the band pushing exploratory boundaries."
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "The Other One",
+    "Born Cross-Eyed",
+    "Spanish Jam",
+    "China Cat Sunflower",
+    "The Eleven",
+    "Morning Dew"
+  ],
+  "band_performance": {
+    "Jerry": "Distinct from ’66 style, delivering a gorgeous tone and strong Dark Star solo; praised as terrific by many, though some note occasional hit‑or‑miss moments.",
+    "Phil": "",
+    "Bob": "Vocal energy on Dancin’ In The Street stands out; occasional drunkenness mentioned but does not dominate the performance.",
+    "Brent": "Pigpen’s organ is muted in sections of the audience recordings, reducing its usual presence, yet adds texture when audible.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-24T08:14:30.885110+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Cryptical Envelopment",
+      "The Other One",
+      "Cryptical Envelopment",
+      "Dark Star",
+      "China Cat Sunflower",
+      "The Eleven",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Born Cross-Eyed",
+      "Feedback",
+      "Spanish Jam",
+      "Death Don't Have No Mercy"
+    ],
+    [
+      "Morning Dew"
+    ]
+  ]
+}

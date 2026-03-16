@@ -1,0 +1,81 @@
+{
+  "summary": "Decent soundboard recording, but the 1/28‑87 show is marred by shaky performances—only ‘Must Have Been The Roses’ and ‘Row Jimmy’ really shine.",
+  "review": "The SBD source captures a clear picture of the night, though a few listeners note speed/pitch quirks in the second set. Musically the band was still stumbling out of Jerry’s coma; most reviewers call the show one of the weaker ones of the era, with the exception of a few highlights like ‘Must Have Been The Roses’, ‘Row Jimmy’ and a solid ‘Black Peter’. The recording is listenable, but the performance quality keeps it from being a recommended listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "medium",
+    "rationale": "The majority of reviews criticize the musical performance (70% weight) while acknowledging that the soundboard source is fairly clear (30% weight). The mix of very low star ratings with a handful of sentimental high scores yields an overall rating in the low‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD capture; a few users mention occasional speed/pitch issues on the second set and minor drop‑outs, but overall clarity is decent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Must Have Been The Roses",
+      "Row Jimmy",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Get Back",
+      "Shakedown Street",
+      "Bird Song",
+      "Eyes"
+    ],
+    "setlist_flow": "The band struggled to find a groove early on, with the first set feeling directionless and the second set improving only marginally. Many note a lack of cohesion typical of the post‑coma period."
+  },
+  "band_member_comments": {
+    "Jerry": "Frequently described as off‑key, mumbling and sluggish; some reviewers still appreciate his presence after the coma.",
+    "Phil": "Noted as surprisingly audible and solid on this night by one reviewer.",
+    "Bob": "His vocals are called slurred, lyric‑flubbed and often unintelligible throughout the show.",
+    "Keys": "Brent (keyboards) is praised for holding things together; Dan Healy’s vocal effects receive both criticism and occasional praise.",
+    "Drums": "Bill and Mickey are generally regarded as competent and steady despite the overall band wobble."
+  },
+  "song_mentions": {
+    "Get Back": {
+      "positive_mentions": 2,
+      "negative_mentions": 10,
+      "total_mentions": 12
+    },
+    "Must Have Been The Roses": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Row Jimmy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 0,
+      "negative_mentions": 5,
+      "total_mentions": 5
+    },
+    "Bird Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Around and Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-15T18:31:48.381928+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-01-28.sbd.leeds.17073.sbeok.shnf"
+}

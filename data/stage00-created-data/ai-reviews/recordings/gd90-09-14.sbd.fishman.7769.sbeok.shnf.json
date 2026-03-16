@@ -1,0 +1,112 @@
+{
+  "summary": "High‑energy 9/14/90 MSG show captured on a solid soundboard tape; standout performances of Stranger, Scarlet > Fire, Truckin' and Terrapin offset only by occasional hiss.",
+  "review": "The September 14, 1990 Garden concert is remembered for its relentless energy – a blazing Stranger opening, an epic Scarlet > Fire sequence, monster Truckin', and a tight Terrapin Station. Reviewers rave about Jerry’s soaring solos, Vince’s surprisingly strong keyboards and the overall band chemistry, while noting a faint hiss that fades in early and persists throughout but doesn’t ruin the listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, praising both performance and recording; only a few note hiss issues, so the combined show (70%) + recording (30%) rating lands in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced soundboard capture; keyboard work is clear. A faint hiss appears at the start and runs through the tape, but overall the recording is listenable and retains the concert’s energy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Scarlet Begonias > Fire On The Mountain",
+      "Truckin'",
+      "Terrapin Station",
+      "Sugar Magnolia",
+      "Other One",
+      "Wharf Rat",
+      "Sugaree",
+      "Jack-a-roe",
+      "Minglewood Blues",
+      "Black Throated Wind",
+      "Backstretch"
+    ],
+    "poor_songs": [
+      "Don't Ease"
+    ],
+    "setlist_flow": "First set is tight and high‑octane, second set keeps the momentum with strong segues (Scarlet > Fire, Terrapin, Other One) though a few reviewers felt it wasn’t quite as hot as the opener. Overall pacing is excellent for a city show."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight his guitar duels, wa‑wa pedal work on Stranger, soaring solos on Scarlet and Terrapin, and strong vocal delivery.",
+    "Phil": "Bass is prominent and cuts pace changes like a knife; some wish his mix was louder but overall solid.",
+    "Bob": "Strong opening vocals on Stranger, rallying the crowd throughout; praised for energetic rhythm guitar and singing.",
+    "Keys": "Vince (post‑Brent) is called virtuosic, solid on Terrapin, Other One, Wharf Rat and Black Throated Wind; early awkwardness noted but quickly gels with the band.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet Begonias > Fire On The Mountain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin Station": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-a-roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Backstretch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T12:03:19.031396+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-09-14.sbd.fishman.7769.sbeok.shnf"
+}

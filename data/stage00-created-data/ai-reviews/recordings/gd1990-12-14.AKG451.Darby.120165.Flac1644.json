@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent audience recording with clear sound and a scorching 'He's Gone' featuring Jerry's fiery guitar duet.",
+  "review": "The tape captures a crystal‑clear audience mix that balances the crowd’s energy without intrusive chatter, making it ideal for a matrix. Musically the show shines on “He’s Gone,” where Jerry’s on‑fire guitar duels with the keyboards, delivering a standout moment that earns high praise from listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "A single detailed 5‑star review praises both the clear audience recording and an exceptional performance of 'He’s Gone', indicating a top‑tier show and superb audio despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear sound with balanced crowd energy; no annoying audience talk, making it suitable for matrix creation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Not specifically described; reviewer focuses on overall energy and the highlight performance of 'He’s Gone'."
+  },
+  "band_member_comments": {
+    "Jerry": "Fire guitar work, especially during his duet with the keyboards on 'He's Gone'.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Strong keyboard contribution in a duet with Jerry on 'He's Gone'.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T15:42:05.001120+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-14.AKG451.Darby.120165.Flac1644"
+}

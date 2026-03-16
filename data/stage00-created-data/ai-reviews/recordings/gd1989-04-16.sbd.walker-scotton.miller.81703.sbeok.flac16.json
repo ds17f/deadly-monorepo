@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent soundboard recording of a tight Spring‑89 show, highlighted by a smoking Scarlet Begonias → Fire on the Mountain and stellar Bird Song while The Saint falls flat.",
+  "review": "The performance captures one of the hottest nights of the spring‑1989 tour – tight playing, soaring vocals from Bob and Jerry, Brent at his peak and Phil’s bass thundering through the Mecca.  Recording quality is crystal clear and well balanced, though a few reviewers note The Saint as a weak spot and an absent Good Lovin’ encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and repeated praise for both the musical performance and the clear soundboard source drive a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp mix with superb instrument separation; no reported drop‑outs or muffiness. Reviewers repeatedly call the audio \"superb\" and \"awesome\"."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Bird Song",
+      "Mama Tried",
+      "Mexicali Blues",
+      "Stella Blue",
+      "The Mecca"
+    ],
+    "poor_songs": [
+      "The Saint"
+    ],
+    "setlist_flow": "Tight, well‑played set with strong first‑set highlights and a seamless flow into a high‑energy second set; overall the show is described as one of the tightest and hottest of 1989."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"all there\" with brilliant guitar tone and powerful vocals, no noodling.",
+    "Phil": "\"Bombed the Mecca\" – bass was massive and driving throughout the show.",
+    "Bob": "Belting lyrics with crunchy, delicious guitar fills; strong vocal harmonies with Jerry.",
+    "Keys": "Brent Mydland praised as being at his absolute best, lifting the entire band.",
+    "Drums": "Drummers kept a solid beat while remaining creative and adventurous."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Mecca": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T18:51:14.617624+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-16.sbd.walker-scotton.miller.81703.sbeok.flac16"
+}

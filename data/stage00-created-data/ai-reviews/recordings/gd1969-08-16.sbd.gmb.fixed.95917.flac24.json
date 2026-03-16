@@ -1,0 +1,39 @@
+{
+  "summary": "A rough but listenable Woodstock recording highlighted by Pigpen's marathon Turn On Your Lovelight; the sound needs EQ but the performance holds its own.",
+  "review": "The August 16 1969 Woodstock set isn’t the Dead’s greatest, but Pigpen’s 45‑minute Turn On Your Lovelight provides a memorable centerpiece. The audio is an imperfect audience capture that benefits from EQ adjustments, yet it remains enjoyable for fans seeking a historic snapshot.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Reviewers are split between moderate praise of the performance (especially Pigpen’s jam) and notes about sub‑par recording quality that requires EQ; overall rating reflects a decent show hampered by rough audio."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audio is raw with ungrounded mics and limited clarity; reviewers suggest using EQ to improve the listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Turn On Your Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall solid for a festival set; not the Dead’s best night but features an extended Pigpen jam that keeps momentum despite typical Woodstock logistical chaos."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Turn On Your Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T16:43:08.707883+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-08-16.sbd.gmb.fixed.95917.flac24"
+}

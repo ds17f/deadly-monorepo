@@ -1,0 +1,68 @@
+{
+  "summary": "Audience tape with generally good sound (despite occasional speed/pitch issues) captures a solid 7/12/89 show highlighted by Far From Me, Sugaree, Cassidy and Eyes.",
+  "review": "The performance is praised for its energy and song selection – Far From Me, a second‑set Sugaree opener, an inspired jam on Cassidy and the smokey Eyes are repeatedly singled out.  The audience recording is decent overall, though listeners note low first‑set volume and a few tracks (notably “Miracle”) that run too fast because of sampling‑rate problems.  Overall it’s considered a solid show worth revisiting.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight strong musical moments; technical flaws are noted but do not dominate, yielding a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough for an audience tape, though first‑set volume is low and disc 3 suffers from speed/pitch issues due to sampling‑rate errors; otherwise the ambience is captured well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Far From Me",
+      "Sugaree",
+      "Cassidy",
+      "Eyes",
+      "Dear Mr. Fantasy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set 2 opened unusually with Sugaree, creating a memorable moment; the first set was quieter but still solid, while the second half built energy with strong jams and crowd‑pleasers."
+  },
+  "band_member_comments": {
+    "Jerry": "His decision to open the second set with Sugaree is noted as unusual and exciting.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby (keyboards) joined for Sugaree and a few other songs, adding extra texture.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Far From Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T21:07:21.584794+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-07-12.aud-fob.gardner.2554.sbeok.shnf"
+}

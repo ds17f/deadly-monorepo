@@ -1,0 +1,70 @@
+{
+  "summary": "Good audience recording with clear instrumentation and a strong Brent‑focused set highlighted by Roses and Louie Louie.",
+  "review": "The audience tape captured on shotgun mics is surprisingly clean for a 1989 AUD, delivering audible vocals and crisp keyboards while missing a little low‑end bass. The show itself is generally praised – Brent Mydland’s fiery organ work, Jerry’s vocal charm on Roses and a memorable Louie Louie dominate the positives, though some listeners note a lazy first‑set Walkin’ Blues and an uneven second set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers (13 total) give 3‑5 stars, praising both performance and tape quality; only a few note flaws. Weighted toward show quality (70%) the rating lands just under 4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Shotgun mics on Nak 300s give clear separation of instruments and vocals; crowd bleed is low but bass lacks some punch. No major drop‑outs, though one reviewer called it \"terrible\" – overall the tape is listenable and better than many SBD copies."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Roses",
+      "Louie Louie",
+      "Foolish Heart",
+      "Desolation Row"
+    ],
+    "poor_songs": [
+      "Walkin' Blues",
+      "Louie Louie (worst version for some listeners)"
+    ],
+    "setlist_flow": "First set opens with mixed energy – a solid Roses and Desolation Row but a lackluster Walkin' Blues. Brent’s keyboards lift the mood, especially on Foolish Heart. The second set builds momentum with an over‑the‑top Louie Louie and strong organ solos, though a few listeners felt the later portion sagged."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals praised on Roses and generally fine throughout; some note early‑set energy dip.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland receives glowing remarks – described as \"atomic\", delivering fiery solos on Foolish Heart, Big Liver/Big River and Louie Louie.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Roses": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Louie Louie": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Desolation Row": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T18:17:44.635039+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-04-09.nak.7858.sbeok.shnf"
+}

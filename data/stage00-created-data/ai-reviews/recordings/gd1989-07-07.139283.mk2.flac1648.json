@@ -1,0 +1,31 @@
+{
+  "summary": "Recording appears problematic; reviewer points to a separate fixed version.",
+  "review": "The sole review provides no musical commentary and only notes that a fix exists for this file, assigning a zero‑star rating. This suggests significant issues with the recording, while offering no insight into the performance itself.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 0‑star rating; indicates major problems but lacks detail for finer grading."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer claims there is a fix needed, implying serious audio defects or other technical flaws."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T20:39:38.531940+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-07.139283.mk2.flac1648"
+}

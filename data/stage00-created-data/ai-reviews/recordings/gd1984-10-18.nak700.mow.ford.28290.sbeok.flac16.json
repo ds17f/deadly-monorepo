@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent audience recording captures a stellar Jerry‑led performance with standout Throwing Stones > Not Fade Away and The Stranger.",
+  "review": "Reviewers rave about the show, calling it a great performance with Jerry in top form. The audience source is praised as the best available on the site, delivering clear sound that lets the band’s enjoyment of the Throwing Stones > Not Fade Away combo shine, while “The Stranger” is highlighted as one of the finest renditions ever.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical praise (Jerry’s top form, standout songs) combined with an audience recording described as the best available, but rating is based on a single review."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as the best of the available audience recordings on the site; clear and enjoyable with no noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Throwing Stones",
+      "Not Fade Away",
+      "The Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Even though the setlist might seem ordinary, the band’s enthusiasm—especially on the Throwing Stones > Not Fade Away combo—makes for an engaging flow; “The Stranger” is a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "In top form, delivering a great performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T23:11:24.833880+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-18.nak700.mow.ford.28290.sbeok.flac16"
+}

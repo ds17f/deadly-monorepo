@@ -1,0 +1,75 @@
+{
+  "summary": "Clear audience tape captures an energetic Spring ’87 performance with standout Stagger Lee, He's Gone and The Other One.",
+  "review": "The show is praised for its joy and high‑energy playing, with highlights like a blazing Stagger Lee, a soaring He’s Gone into Wharf Rat, and a powerful The Other One.  Recording quality is generally good – clear and low‑hiss – though a few listeners note a slightly mushy texture typical of audience bootlegs.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Reviews consistently give 4–5 stars and highlight numerous standout songs; recording is solid with only minor muffiness, yielding a high combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear sound with little hiss noted by reviewers; described as “fine audience” but also a bit “mushy” in places, typical of audience bootlegs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stagger Lee",
+      "He's Gone",
+      "Shakedown Street",
+      "Truckin'",
+      "The Other One",
+      "Wharf Rat",
+      "Saint"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight a vibrant, flowing set that builds from the bluesy Stagger Lee into an ecstatic He’s Gone → Wharf Rat sequence, with high‑energy mid‑set numbers like Truckin' and The Other One."
+  },
+  "band_member_comments": {
+    "Jerry": "Several reviewers note Jerry's renewed health and vitality in 1987, contributing to the show’s energy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stagger Lee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T20:11:48.744932+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-03-30.sony.kerbel.5572.sbeok.shnf"
+}

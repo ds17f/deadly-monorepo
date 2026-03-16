@@ -1,0 +1,74 @@
+{
+  "summary": "Impeccable soundboard captures a magic second set highlighted by Saint of Circumstance and an emotional Stella Blue, even though the first set feels forgettable.",
+  "review": "The recording is a crystal‑clear soundboard tape with excellent drum mix and a guitar tone that really shines, though Weir can get lost in the balance at times. Musically the show delivers a standout second half – Saint of Circumstance, Foolish Heart, Lazy River Road and a soaring Stella Blue are repeatedly praised – while the first set is generally described as weak or “snoresville.” Overall fans rate the performance highly despite the uneven opening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight strong musical moments; recording quality is repeatedly called excellent, giving a solid combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, immaculate soundboard capture with superb drum mix and highlighted Bobby guitar tone; occasional balance issue where Weir’s parts can get buried."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Saint of Circumstance",
+      "Stella Blue",
+      "Foolish Heart",
+      "Lazy River Road"
+    ],
+    "poor_songs": [
+      "Don't Ease Me In"
+    ],
+    "setlist_flow": "First set is widely described as forgettable or “snoresville,” but the second set is called magical, with tight transitions and high energy that lift the entire concert."
+  },
+  "band_member_comments": {
+    "Jerry": "Aggressive, fast licks (like ’85) and emotional vocal/guitar work on Stella; trumpet‑like runs on Ramble on Rose praised.",
+    "Phil": "",
+    "Bob": "Gorgeous guitar tone highlighted throughout; Bobby’s playing is often singled out as a highlight of the tape.",
+    "Keys": "Trumpet‑style MIDI part during Ramble on Rose noted as a standout keyboard moment.",
+    "Drums": "Drum mix praised as great in headphones, very trippy and “to die for” in the second set."
+  },
+  "song_mentions": {
+    "Saint of Circumstance": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stella Blue": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Foolish Heart": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lazy River Road": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Fought The Law": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T14:22:17.588299+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-16.sbd.eliason.13330.sbeok.shnf"
+}

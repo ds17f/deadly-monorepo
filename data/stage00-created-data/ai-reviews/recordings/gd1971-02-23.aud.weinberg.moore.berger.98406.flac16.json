@@ -1,0 +1,39 @@
+{
+  "summary": "Powerful Other One performance but hampered by very poor audience recording quality",
+  "review": "Reviewers rave about the jaw‑dropping rendition of The Other One, indicating a strong musical show, yet both note that the AUD (audience) source is so low‑fidelity they can’t get through the set. The recording’s muddiness outweighs the performance’s merits for most listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "The show receives praise for a standout Other One, but the audience‑recording quality is described as unlistenable, resulting in an overall low to moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Sound is muddy and difficult to follow; reviewers abandoned listening for a cleaner reference copy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on pacing or flow beyond the highlighted Other One."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T03:13:34.058993+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-02-23.aud.weinberg.moore.berger.98406.flac16"
+}

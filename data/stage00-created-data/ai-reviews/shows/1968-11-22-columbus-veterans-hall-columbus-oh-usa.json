@@ -1,0 +1,64 @@
+{
+  "summary": "Seething Morning Dew & Dark Star amid raw 1968 audience tape",
+  "blurb": "The set opens with a blistering Morning Dew and rolls into an incendiary Dark Star that showcases Jerry’s on‑fire guitar. Highlights include the Other One > Cryptical Envelopment sequence and a powerful New Potato Caboose, while Phil’s bass is often lost in the muddy mix. The performance captures the raw, high‑energy late‑68 Dead despite primitive audience recording quality.",
+  "review": "Columbus Veterans Hall captured a snapshot of the Grateful Dead at the height of their late‑1968 wildness. Jerry Garcia roars through a searing Morning Dew and then launches into an expansive Dark Star that many fans describe as “snarling” and “on‑fire,” while the band rides the momentum into a tight Other One > Cryptical Envelopment pairing and a rousing New Potato Caboose jam. Phil’s bass, though essential to the flow, gets swallowed by the low‑fidelity tape, and Pigpen’s organ is barely audible, but Mickey Hart’s driving percussion (and occasional solo work) keeps the groove relentless. The audience recording is decidedly muddy—typical of 1968 tapes—but recent remastering eases some of the hiss, allowing listeners to hear the raw intensity that makes this show a legendary early‑Dead moment despite its sonic shortcomings.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 21,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "Both recordings repeatedly praise Jerry’s guitar, the Dark Star and Morning Dew, and note high‑energy improvisation, indicating consistent positive sentiment about the performance. The only recurring criticism concerns muddy bass and poor audio fidelity, which affects recording quality but not the show itself, so a modest positive adjustment is applied.",
+      "final_calculation": "2.5 + 0.2 + 0.5 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd68-11-22.aud.cotsman.10088.sbeok.shnf",
+    "reason": "Slightly cleaner after remastering and captures the full set; despite fair audience quality it presents the most listenable version of this raw performance."
+  },
+  "key_highlights": [
+    "Blistering Morning Dew that sets a volcanic tone",
+    "Extended Dark Star with Jerry’s snarling guitar solos",
+    "The Other One > Cryptical Envelopment sequence and New Potato Caboose jam"
+  ],
+  "song_highlights": [
+    "Morning Dew",
+    "Dark Star",
+    "Cryptical Envelopment",
+    "The Other One",
+    "New Potato Caboose"
+  ],
+  "band_performance": {
+    "Jerry": "Searing, on‑fire guitar work with powerful solos that dominate the night.",
+    "Phil": "Bass often muddled and hard to discern through the poor mix, though his playing underpins the jams.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Powerful, driving percussion; solo drumming highlighted in the Other One > Cryptical segment.",
+    "Billy": "Presence uncertain—some accounts suggest he was absent, but no criticism of his playing appears."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-24T09:54:01.493993+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Morning Dew"
+    ],
+    [
+      "Dark Star",
+      "Saint Stephen",
+      "The Eleven",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Cryptical Envelopment",
+      "The Other One",
+      "Cryptical Envelopment",
+      "The Other One Jam",
+      "New Potato Caboose"
+    ]
+  ]
+}

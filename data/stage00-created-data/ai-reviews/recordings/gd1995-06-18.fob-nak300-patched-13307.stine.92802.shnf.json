@@ -1,0 +1,39 @@
+{
+  "summary": "Negative reception; reviewer condemns the Wharf Rat performance and suggests Jerry was forced out.",
+  "review": "The sole review is highly critical, focusing on a bleak interpretation of the Wharf Rat and lamenting that Jerry should have left the band in 1975. No information about the recording source or sound quality is provided, leaving the technical aspects unknown.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one review with a 0‑star rating and strongly negative language about the performance; no data on recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about recording quality were provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Wharf Rat"
+    ],
+    "setlist_flow": "Reviewer did not comment on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewer implies Jerry was forced to continue and should have quit in 1975.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T10:05:54.660301+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-18.fob-nak300-patched-13307.stine.92802.shnf"
+}

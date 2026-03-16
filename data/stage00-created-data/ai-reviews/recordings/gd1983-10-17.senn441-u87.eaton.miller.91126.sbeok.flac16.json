@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent audience recording captures a fiery fall‑83 show highlighted by a scorching Sugaree opener, Deal and To Lay Me Down.",
+  "review": "The audience tape is praised as one of the best‑sounding sources for this tour, delivering clear, balanced sound that even outshines other well‑known recordings. Musically the concert shines with an electrifying Sugaree opening, a blistering Deal, and standout versions of Birdsong and To Lay Me Down, making it a favorite among Deadheads. Overall the performance is described as hot, energetic, and impeccably executed.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the musical performance and the audio quality across multiple detailed reviews; only a few outlier low‑star comments that do not outweigh the majority."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Above‑average front‑of‑house audience recording; crisp, well‑balanced, praised as better than other AUD sources and used for matrix mixes. No major dropouts or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Deal",
+      "To Lay Me Down",
+      "Birdsong"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as a striking, high‑energy fall ’83 performance with a strong opener and seamless flow through the highlighted numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T12:52:43.305485+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-17.senn441-u87.eaton.miller.91126.sbeok.flac16"
+}

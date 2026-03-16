@@ -1,0 +1,39 @@
+{
+  "summary": "Audience tape with solid clarity (though bass‑heavy) captures a stellar 1974 show, highlighted by an iconic China Cat Sunflower → The Rider.",
+  "review": "The recording is an audience source that delivers surprisingly clear detail for the era—Jerry’s lilt shines and Phil’s low end is booming, albeit a bit overpowering on some speakers. Musically the concert is praised as a “show‑stopper,” with the China Cat Sunflower → The Rider segue singled out as possibly the best version from ’73‑’74. Overall the performance earns five‑star enthusiasm despite minor tonal quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Reviewers rate the show 5 stars and describe the recording as very good for an audience tape, yielding a high combined score; limited to one detailed review, confidence is moderate."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough for an audience tape with proper pitch; booming bass can overwhelm some systems and Jerry’s guitar distorts at high peaks, but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > The Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy 1974 set with classic transitions; the China>Rider sequence is highlighted as a peak moment."
+  },
+  "band_member_comments": {
+    "Jerry": "Lilt in his guitar is evident; distortion appears when he pushes the high end.",
+    "Phil": "Bass is booming and can be overpowering on some speakers.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower > The Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T23:28:22.101870+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-07-31.136161.aud.cooper.berger.flac24"
+}

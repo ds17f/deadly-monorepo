@@ -1,0 +1,33 @@
+{
+  "summary": "Excellent audience recording of a solid show, but a weak Brent Mydland moment holds it back from perfection.",
+  "review": "Reviewers praise the sound quality, calling this the best audience source they've heard for the concert, which makes the listening experience very clear and enjoyable. The performance is generally regarded as worthy, though one reviewer docked a star because of a disappointing Brent‑song that didn’t live up to expectations.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only a single review is available; it rates the recording highly but subtracts a star due to a specific weak keyboard moment, leading to an overall four‑star assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced audience mix; reviewer calls it the best audience source they’ve heard for this show."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Brent song"
+    ],
+    "setlist_flow": "No specific comments on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Negative comment about a Brent Mydland‑led song; reviewer felt it detracted from an otherwise worthy performance.",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T10:13:54.212224+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-06-25.149261.fob.unkown.ebel.flac1644"
+}

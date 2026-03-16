@@ -1,0 +1,82 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a legendary ’68 show – soaring Garcia tone, monster Dark Star/Eleven and an all‑out Alligator jam.",
+  "review": "The recording is a sound‑board source that delivers a vivid, slightly hissy but otherwise crisp picture of the band. Musically the performance is near‑canonical for 1968, with a blistering Dark Star → St. Stephen → The Eleven sequence, a ferocious Alligator jam and standout moments from Schoolgirl, The Other One and Lovelight. Reviewers rave about Garcia’s guitar tone, Phil’s bass fire‑power and the tight rhythm section.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly praise both the performance (exceptional Dark Star/Eleven, Alligator, Garcia tone) and the recording quality (crisp soundboard with only minor hiss), yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and balanced; slight tape hiss noted, occasional track‑splitting/editing quirks (first two tracks are excerpts, some cuts in Lovelight)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One",
+      "Alligator",
+      "The Eleven",
+      "Schoolgirl",
+      "St. Stephen",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Lovelight (cut off ending)"
+    ],
+    "setlist_flow": "Reviewers describe a seamless, high‑energy flow—especially the second set’s Dark Star → St. Stephen → Eleven → Death Don't Have Mercy suite and the Alligator/Drums jam that stitches the show together."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone is described as ‘crunchy’, ‘in your face’, ‘on fire’ and a highlight of the Dark Star, Alligator and Eleven jams.",
+    "Phil": "Phil Lesh receives praise for “insane” bass work, driving the train on The Other One and intertwining with Garcia in the psychedelic sections.",
+    "Bob": "",
+    "Keys": "Pigpen’s organ (or Tom Constanten) is noted as well‑mic’d, adding powerful texture throughout; keyboards are highlighted especially on Schoolgirl and Alligator.",
+    "Drums": "Bill Kreutzmann’s drumming is lauded for propelling the Alligator/Drums transition and providing a solid foundation for the jams."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "The Other One": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Alligator": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "The Eleven": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Schoolgirl": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "St. Stephen": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Death Don't Have Mercy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-24T08:44:38.036752+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-08-21.sbd.cotsman.17355.sbeok.shnf"
+}

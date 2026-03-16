@@ -1,0 +1,64 @@
+{
+  "summary": "Good‑quality audience recording of a solid show with standout Althea, Playin' in the Band and white‑hot Big River, though a few numbers fall flat.",
+  "review": "The Aud tape is surprisingly clean and full‑bodied for an audience source, delivering clear sound without the typical muddiness. Musically the concert is enjoyable – Althea shines, Playin' in the Band soars, and Big River burns white‑hot, while a couple of numbers (Friend of the Devil, Estimated Prophet) miss the mark.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Both reviewers are upbeat about the performance and note good recording quality; limited to two reviews so rating reflects a weighted average of show (≈3.2) and sound (≈3.8)."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Full, clean sound with little muddiness; reviewers call it very good for an Aud despite no explicit issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Playin' in the Band",
+      "Big River"
+    ],
+    "poor_songs": [
+      "Friend of the Devil",
+      "Estimated Prophet"
+    ],
+    "setlist_flow": "High energy start with a killer Saturday night opener, tight jams and sweet Jerry ballads throughout; overall solid pacing despite a few weaker moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Sweet ballads noted and killer solos praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:22:00.829491+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-12-29.aud.12926.sbefail.shnf"
+}

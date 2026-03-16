@@ -1,0 +1,31 @@
+{
+  "summary": "Recording praised for excellent sound quality, but no specific show details provided",
+  "review": "The sole review gives the tape a solid four‑star rating and highlights the “excellent sound,” suggesting a clear and well‑balanced recording. No comments are made about the performance, setlist flow, or individual musicians, so the musical quality of this concert remains unassessed.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "Positive feedback on audio quality (4‑star) but only one brief review with no performance details; rating reflects good recording and unknown show quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the audio as “excellent sound,” indicating a clear, well‑balanced capture despite no source specification."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or performance were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T23:33:09.930394+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-28.nak700-nak100.abrams-prior.abrams.88181.sbeok.flac16"
+}

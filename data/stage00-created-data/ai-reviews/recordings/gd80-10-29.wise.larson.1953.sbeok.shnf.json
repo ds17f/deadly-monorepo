@@ -1,0 +1,74 @@
+{
+  "summary": "Decent audience field recording that captures a solid 1980 show with standout China Cat / I Know You Rider, Althea, Terrapin Station and a smoking second set.",
+  "review": "Fans rave about the energy of this October‑29‑1980 Wise field tape – the China Cat / Rider transition, Althea’s dynamics, a beautiful Terrapin Station and a powerful Candyman in a memorable second set.  The audience‑sourced recording is described as clear enough and surprisingly good for a field capture, though one reviewer calls it awful, giving an overall mixed technical impression but strong musical praise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars and highlight several standout performances; recording quality is generally praised as decent for a field tape, offset by a single very negative comment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Field recording captured by Jim Wise; listeners note clear dynamics and good overall balance, though some find the sound muddy or overly loud in places."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Althea",
+      "Me & My Uncle",
+      "Terrapin Station",
+      "Candyman",
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans point to a strong second set with excellent transitions (e.g., Candyman and the Wheel) and high‑energy first‑set moments like China Cat/Rider."
+  },
+  "band_member_comments": {
+    "Jerry": "Fanned during Althea and praised for tone on China Cat / Rider.",
+    "Phil": "",
+    "Bob": "Fanned during Althea; no further specific comments.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T05:36:13.717162+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-29.wise.larson.1953.sbeok.shnf"
+}

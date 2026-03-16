@@ -1,0 +1,39 @@
+{
+  "summary": "Decent audience tape that captures a strong Truckin' feedback section, but the show is hampered by Bob Weir’s illness.",
+  "review": "The recording, made by experienced taper Mark Severson, is an audience capture of acceptable clarity and gives a good sense of the concert ambience. Reviewers highlight the exciting feedback buildup into “Truckin’,” yet note that Bob Weir was sick that night, which dulled his performance. Overall it’s an average show with one clear musical high point.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only a single moderate‑rated review; the show is neither especially strong nor terrible, and the recording quality is acceptable but not exceptional."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Taper known for reliable work; recording is clear enough to follow the music but lacks detailed soundboard polish. No specific complaints about distortion or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set pacing; overall performance is considered average, with the main issue being Bob Weir’s sickness affecting his energy."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir was sick that night and seemed to lack his usual enthusiasm.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T04:09:59.707843+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-30.sonyecm.severson.minches.90677.sbeok.flac16"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "A good-quality recording of an epic late‑era show, featuring standout performances of Friend of the Devil, Ripple, and Touch of Grey.",
+  "review": "Both reviewers rave about this concert as a defining moment in their Dead experience, citing Friend of the Devil, Ripple and Touch of Grey as highlights that made the night unforgettable. The recording is described positively with no audible flaws noted, though the source type isn’t specified by the reviewers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Strong positive comments about the performance and no reported recording problems suggest a high‑quality show; however, only two brief reviews limit certainty."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers did not mention any audio issues or specific source details; overall impression is that the sound is satisfactory."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil",
+      "Ripple",
+      "Touch of Grey"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the concert as an epic, life‑changing experience with a strong overall flow; no specific set‑structure comments were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T07:51:42.966531+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-25.sbd.fix-8959.tetzeli.34801.flac16"
+}

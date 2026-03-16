@@ -1,0 +1,58 @@
+{
+  "summary": "Fair‑sounding monitor soundboard recording of a shaky 1995 show where the Not Fade Away jam shines amid generally weak performances.",
+  "review": "The monitor mix captures the concert but suffers from harsh Vince vocals, low‑level instrumentation and uneven balance. Musically the night is marked by mis‑cues, weak renditions of West L.A., Lazy River Road and Iko, while a standout Not Fade Away provides the only real highlight.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.1,
+    "confidence": "high",
+    "rationale": "The majority of reviews (6‑7) are strongly negative about both performance and recording; only a few note a single strong song. Consistent criticism across nine reviews yields a confident below‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Monitor mix with noticeable balance problems – Vince's vocals described as harsh, Bob's resonator guitar buried low, and overall a lack of clarity compared to typical soundboard releases."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "West L.A.",
+      "Lazy River Road",
+      "Iko"
+    ],
+    "setlist_flow": "The set feels uneven; several songs suffer from mis‑cues and limp tempos, limiting the jam flow. Only the Not Fade Away segment provides a compelling, creative moment."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly criticized for weak vocals, off‑key singing and lackluster guitar work; a few reviewers note his voice as hauntingly beautiful but overall performance is deemed poor.",
+    "Phil": "Mentioned only in a disparaging rant about money; no specific musical comments.",
+    "Bob": "His resonator‑like instrument sits too low in the mix, making it hard to hear.",
+    "Keys": "Vince's keyboard solo receives praise, but his vocal timbre is described as caterwauling and generally out of place.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West L.A.": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Iko": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T05:25:42.531530+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-02-26.sbd.monitor.mix.miller.109244.flac16"
+}

@@ -1,0 +1,78 @@
+{
+  "summary": "Crystal‑clear audience tape captures the fiery Oct 21 1983 Worcester show, highlighted by a smoking Scarlet/Fire, blazing Big Railroad Blues and an unforgettable CC Rider.",
+  "review": "The recording is widely praised as one of the finest audience sources from the era – crisp, well‑balanced and only marred by occasional mic glitches. Musically the concert shines with a monster first set, a legendary Scarlet > Fire stretch, and standout performances of Big Railroad Blues, CC Rider and Wharf Rat, though the second half loses some steam around Truckin'. Overall the show is considered a top‑tier example of the 1983 fall tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4–5) and strong positive language about both performance and sound quality; occasional criticisms are outweighed by the many glowing comments."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as crystal‑clear, tight mix with Phil’s bass prominent and Billy’s hi‑hat sharp. A few reviewers note brief mic drop‑outs or occasional “mike troubles,” but overall the tape is regarded as one of the cleanest audience recordings of the tour."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Big Railroad Blues",
+      "CC Rider",
+      "Wharf Rat",
+      "Uncle John's > Playing",
+      "Miracle"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "Wharf Rat (ending segue)",
+      "Second‑set overall (sluggish moments)"
+    ],
+    "setlist_flow": "First set is tight and energetic, building to an epic Scarlet > Fire that many call the night’s pinnacle. The second set starts strong but becomes uneven, with a few lackluster passages (notably Truckin' and the Wharf Rat outro) that dampen an otherwise fiery performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for “tearing it up” on Scarlet/Fire and delivering high‑energy solos; a few notes about stumbling into Fire and occasional off‑notes.",
+    "Phil": "His bass line is highlighted as strong and prevalent in the mix, with specific kudos for his lead‑in to Music Never Stopped; one reviewer felt he sounded bored later in the night.",
+    "Bob": "Bob Weir’s vocal performance degrades toward the end, described as “shot” by the close of the show.",
+    "Keys": "Brent Mydland receives high praise – “wonderful fills,” “legendary,” and a key part of the show’s magic; keyboards are called “crystal and magnificent.”",
+    "Drums": "Bill Kreutzmann’s hi‑hat is singled out as tight and sweet; overall drumming described as solid despite occasional mic issues."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 12,
+      "negative_mentions": 2,
+      "total_mentions": 14
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "CC Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 4,
+      "total_mentions": 5
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Uncle John's > Playing": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Miracle": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-14T13:33:42.630018+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-10-21.ficca-brennan.markezin.19516.sbeok.shnf"
+}

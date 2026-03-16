@@ -1,0 +1,75 @@
+{
+  "summary": "Stellar Winterland show with a flawless soundboard capture; Dark Star and classic first‑set gems shine.",
+  "review": "Fans rave about this November 11, 1973 Winterland performance, calling it one of the band’s finest—highlighting a scorching Dark Star, soaring Eyes of the World, and a fire‑filled first set with Bertha, China Cat Sunflower > I Know You Rider and Let It Grow. The pitch‑corrected soundboard source is praised as crystal‑clear with no noticeable flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Over ten enthusiastic 5‑star reviews praise both the musical performance and the excellent soundboard recording; no substantive criticisms were noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers explicitly call out an “Excellent soundboard” that is crisp, clear and well‑balanced; no dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Eyes of the World",
+      "Uncle John's Band",
+      "Bertha",
+      "China Cat Sunflower > I Know You Rider",
+      "Let It Grow",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is described as fiery and full of classic highlights, while the second set “speaks for itself” with a legendary Dark Star and strong segues that keep the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s melodic phrasing on U.J.B. and overall guitar work are repeatedly praised as beautiful and majestic.",
+    "Phil": "Phil Lesh’s solo in Dark Star is called “wicked” and a standout moment that left listeners awestruck.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T02:13:05.526153+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-11-11.sbd.pitch-corrected.miller.88485.sbeok.flac16"
+}

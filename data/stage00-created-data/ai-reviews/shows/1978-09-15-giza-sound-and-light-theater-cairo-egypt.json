@@ -1,0 +1,64 @@
+{
+  "summary": "Mixed Egypt show; Estimated Prophet → Eyes shines, Sugar Magnolia soars",
+  "blurb": "The second set delivers a powerful Estimated Prophet into Eyes of the World sequence highlighted by Jerry’s striking chord‑strumming finale. Sugar Magnolia erupts with high energy, while early songs like Jack Straw and The Promised Land feel flat. Overall performance is uneven but contains several memorable moments.",
+  "review": "On September 15, 1978 the Dead took the stage at Giza Sound and Light Theater in Cairo, a historic desert setting that produced a night of highs and lows. The highlight comes early in Set 2 when the band launches into Estimated Prophet and seamlessly flows into Eyes Of The World; Jerry’s unexpected chord‑strumming climax on Estimated is repeatedly praised as a rare spark of brilliance. Later, Sugar Magnolia bursts forth with the kind of joyous drive that makes you forget the earlier missteps. Unfortunately, the first set never quite finds its footing—Jack Straw barely cuts through the mix, and The Promised Land suffers from monitor problems that leave the band sounding disjointed. Recording quality ranges from muddy soundboard tapes riddled with flips to a surprisingly lively audience capture that still manages to convey the desert vibe. Fans who can look past the technical flaws will be rewarded by the standout jams, but those seeking a consistently tight performance may find the show uneven.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 16,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Four recordings are clearly positive (highlighting Sugar Magnolia, Estimated → Eyes, and overall excitement), one is negative (pitch‑off, fragmented set), and three are mixed (good moments but poor mix or uneven playing). The net sentiment leans modestly positive, warranting a +0.6 adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd78-09-15.set2-sbd.murphy.5933.sbeok.shnf",
+    "reason": "Captures the standout Estimated Prophet → Eyes sequence despite mix issues; it's the most complete source of the show’s key moments."
+  },
+  "key_highlights": [
+    "Estimated Prophet into Eyes Of The World sequence with a striking chord‑strumming finale.",
+    "High‑energy Sugar Magnolia that lifts the second set.",
+    "Early songs like Jack Straw and The Promised Land suffer from poor mix and monitor problems.",
+    "Recording quality varies widely; soundboard tapes are muddy while an audience capture retains desert atmosphere."
+  ],
+  "song_highlights": [
+    "Estimated Prophet",
+    "Eyes Of The World",
+    "Sugar Magnolia",
+    "I Need A Miracle",
+    "Big River"
+  ],
+  "band_performance": {
+    "Jerry": "Mixed; delivers chiming arpeggios and a memorable chord‑strumming climax on Estimated Prophet, but overall can be unfocused and ‘all over the place’.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 8,
+  "processed_date": "2025-09-25T15:14:45.521897+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "Terrapin Station",
+      "Sugar Magnolia"
+    ],
+    [
+      "I Need A Miracle"
+    ],
+    [
+      "Mama Tried",
+      "Big River"
+    ]
+  ]
+}

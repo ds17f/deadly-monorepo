@@ -1,0 +1,64 @@
+{
+  "summary": "Manic Eleven climax and relentless Lovelight sandwich",
+  "blurb": "The set bursts with an incendiary Eleven, multiple Lovelight jams, and a soaring Dark Star. Jerry’s guitar is possessed while Phil lays down tight, rhythmic bass throughout.",
+  "review": "June 14, 1969 at the Monterey Performing Arts Center captures the Dead in peak psychedelic overdrive. The show opens with a blazing Turn On Your Lovelight that segues into a classic set‑breaker sequence – Me & My Uncle, Doin’ That Rag and Pigpen’s heartfelt He Was A Friend Of Mine before diving into the dark, winding corridors of Dark Star and Saint Stephen. From there the band rockets into The Eleven, a manic, time‑bending marathon that feels like a volcanic eruption, only to be sandwiched by another Lovelight reprise and a compact drum solo that keeps the energy relentless. Reviewers repeatedly describe Jerry as “possessed,” noting mind‑melting runs on the Eleven and Dark Star, while Phil’s bass is praised for its tightness and sparkling flourishes. Pigpen’s vocal work on He Was A Friend Of Mine and the Lovelight jams shines, even though Tom Constanten’s organ occasionally feels out of place. The overall performance is high‑energy, almost unhinged psychedelic blues that showcases the band at a creative peak.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 36,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All three recordings are uniformly positive, repeatedly praising Jerry’s “possessed” playing, the manic Eleven, Lovelight jams, and overall high‑energy vibe. Multiple sources highlight the same standout songs (Eleven, Dark Star, Lovelight) and note consistent tightness from Phil, making the sentiment strongly favorable.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-06-14.sbd.skinner.5182.sbeok.shnf",
+    "reason": "Decent soundboard capture (B+), well‑balanced, includes the full set and key jams while preserving the band’s dynamics."
+  },
+  "key_highlights": [
+    "Eleven's manic climax builds to a volcanic peak.",
+    "Turn On Your Lovelight sandwich provides nonstop psychedelic jamming.",
+    "Dark Star delivers intense, exploratory improvisation.",
+    "Pigpen’s vocal on He Was A Friend Of Mine shines amid the jams."
+  ],
+  "song_highlights": [
+    "Turn On Your Lovelight",
+    "He Was A Friend Of Mine",
+    "Dark Star",
+    "Saint Stephen",
+    "The Eleven",
+    "Turn On Your Lovelight*"
+  ],
+  "band_performance": {
+    "Jerry": "Possessed throughout, delivering mind‑melting runs on the Eleven, Dark Star and throughout the set.",
+    "Phil": "Tight, rhythmic bass with sparkling runs especially during the Eleven and Saint Stephen.",
+    "Bob": "Pigpen’s vocal performance on He Was A Friend Of Mine and the Lovelight jams stands out as a highlight.",
+    "Brent": "",
+    "Mickey": "Solid drumming overall; delivers a compact drum solo that fuels the set’s momentum.",
+    "Billy": "Provides steady, driving rhythm alongside Mickey, keeping the high‑energy flow intact."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-24T15:32:54.220074+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Turn On Your Lovelight",
+      "Me And My Uncle",
+      "Doin' That Rag",
+      "He Was A Friend Of Mine"
+    ],
+    [
+      "Dark Star",
+      "Saint Stephen",
+      "The Eleven",
+      "Turn On Your Lovelight*",
+      "Drums",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

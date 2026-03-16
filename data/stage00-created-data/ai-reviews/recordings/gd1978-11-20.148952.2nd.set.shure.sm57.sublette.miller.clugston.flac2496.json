@@ -1,0 +1,31 @@
+{
+  "summary": "Recording has noticeable phase problems due to mismatched sources despite a decent overall level.",
+  "review": "The only feedback concerns the audio integrity: reviewers note that the two channels go out of phase after \"Playing in the Band\" and that the tape appears to be stitched from two different sources, resulting in audible phase anomalies throughout. No musical performance details are provided, so listeners should be aware that the technical flaws may affect enjoyment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only one review focused on recording issues; a 4‑star rating suggests moderate overall satisfaction, but phase problems lower the effective score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Channels out of phase after 'Playing in the Band', likely stitched from two different sources; FFT analysis shows a clear change. First part also exhibits some phase irregularities."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T16:39:37.678555+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-11-20.148952.2nd.set.shure.sm57.sublette.miller.clugston.flac2496"
+}

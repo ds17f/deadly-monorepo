@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent matrix recording with spirited playing—Jerry and Phil trade great licks on a standout “Playing in the Band.”",
+  "review": "The matrix source captures crystal‑clear sound, delivering an excellent listening experience. The show shines thanks to Jerry Garcia’s inspired leads and Phil Lesh’s energetic bass work, especially during the extended “Playin’ in the Band” jam that reviewers singled out as a highlight.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "One detailed 5‑star review praises both the superb matrix recording and the high‑energy performance, especially the Jerry/Phil interplay; limited sample size keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Review calls the quality ‘Excellent’ and specifically praises the matrix board mix – clear, balanced, no noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic set with strong interaction between Jerry and Phil throughout; the night is described as a great showing for ’88."
+  },
+  "band_member_comments": {
+    "Jerry": "Great licks, trading leads with Phil during “Playing in the Band.”",
+    "Phil": "Spirited whole night, trading great licks with Jerry.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T11:10:47.786432+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-07-02.mtx-v2.haugh.92583.flac16"
+}

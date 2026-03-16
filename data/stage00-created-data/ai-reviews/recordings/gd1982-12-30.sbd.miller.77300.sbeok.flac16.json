@@ -1,0 +1,58 @@
+{
+  "summary": "Clean soundboard capture of a standout late‑'82 show highlighted by an electrifying Franklin's Tower and fresh Fall ’82 material.",
+  "review": "The performance is praised for Jerry’s soaring leads on Franklin's Tower, Brent’s exuberant keyboard licks, and the inclusion of new Fall‑’82 songs like Feel Like a Stranger, Dupree's Diamond Blues and Throwing Stones. The transfer (Joani’s MSC tape) is described as clean and perfect, giving the recording an excellent soundboard quality despite some mixed feelings about the odd set‑list choices such as Hard to Handle.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong musical performance with multiple standout songs and a clean soundboard transfer outweighs minor criticisms of song selection."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Joani’s MSC tape provides a crisp, clean transfer; reviewers call the mix perfect with no noticeable flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Feel Like a Stranger",
+      "Dupree's Diamond Blues"
+    ],
+    "poor_songs": [
+      "Hard to Handle"
+    ],
+    "setlist_flow": "Unusual set‑list with unique song combinations (e.g., Hard to Handle) that some find aggressive, but overall the pacing is praised for fresh 1982 material and strong second‑set momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for gleeful licks on Franklin's Tower and strong lead work throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent highlighted for extending joyful keyboard licks during Franklin's Tower.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T03:47:27.384700+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-12-30.sbd.miller.77300.sbeok.flac16"
+}

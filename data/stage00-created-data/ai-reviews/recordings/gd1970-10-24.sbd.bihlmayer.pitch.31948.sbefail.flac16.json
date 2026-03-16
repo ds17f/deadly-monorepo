@@ -1,0 +1,79 @@
+{
+  "summary": "Fair‑quality soundboard recording of a funky 1970 show, highlighted by Saint Stephen, Not Fade Away and Lovelight despite a high‑vocal mix.",
+  "review": "The performance shines with tight jams, a dance‑floor‑ready Saint Stephen, a scorching Not Fade Away and a soulful Lovelight that showcase Pigpen’s front‑man charisma. The soundboard source is listenable but suffers from a cloudy mix and vocals sitting too high, giving the overall listening experience a mixed feel.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Reviews praise many songs and band interplay (show quality ~4.5/5) but repeatedly note mix problems and limited spectral range (recording quality ~3.2/5). Weighted average yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Vocals are unusually high in the mix; reviewers describe the audio as cloudy, limited in spectrum and sounding like hallway speakers. Still considered listenable and clearer than some alternate versions."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Saint Stephen",
+      "Not Fade Away",
+      "Lovelight",
+      "Friend of the Devil",
+      "Good Lovin'",
+      "Attics"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with early‑1970 energy, strong mid‑set jams and tight vocal harmonies; transitions such as Saint Stephen into Not Fade Away keep momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for crisp intro on Friend of the Devil, extended jam work and overall solid guitar tone.",
+    "Phil": "Highlighted for leading harmonies and bringing a strong presence to the jams.",
+    "Bob": "Noted for tight backing vocals and solid rhythm playing throughout.",
+    "Keys": "Keyboards are prominent and well‑balanced; reviewers comment on their audible presence despite mix limitations.",
+    "Drums": "Bill Kreutzmann and Mickey Hart receive praise for driving the Good Lovin' groove and overall drum flow."
+  },
+  "song_mentions": {
+    "Saint Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T23:57:46.407116+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-10-24.sbd.bihlmayer.pitch.31948.sbefail.flac16"
+}

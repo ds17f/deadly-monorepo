@@ -1,0 +1,39 @@
+{
+  "summary": "Good‑quality recording highlighted by a Fire on the Mountain that reviewers rank among the band's best.",
+  "review": "The crowd‑pleasing Fire on the Mountain dominates the commentary, with several fans calling this performance one of the finest they’ve heard.  No reviewer mentions any audio flaws, suggesting the tape is at least clear enough to enjoy, though its exact source (soundboard vs. audience) isn’t identified.  Overall the show is praised for its energy and beauty, despite limited detail on the rest of the set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong positive remarks about the Fire on the Mountain (show quality) combined with no reported recording issues yields a high rating, but limited data on overall set and source type reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers do not comment on sound fidelity or mix; absence of complaints implies the recording is listenable and reasonably clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviews focus almost exclusively on Fire on the Mountain, providing little insight into overall set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire on the Mountain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-13T14:05:20.797350+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-08-31.aud.unknown.91893.sbeok.flac16"
+}

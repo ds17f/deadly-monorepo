@@ -1,0 +1,63 @@
+{
+  "summary": "A thrilling post‑coma performance highlighted by a monster Black Peter, but the SBD sounds more like an audience mix.",
+  "review": "The show captures Jerry’s revived energy – Black Peter erupts as a second‑set climax and Terrapin/​The Wheel showcase tight band interplay. Reviewers rave about the music, yet the soundboard recording is widely criticized for sounding muddy and crowd‑dominated, making the listening experience uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "The musical performance is consistently praised (≈4.5/5) while the recording quality is judged poor (≈2.5/5). Weighted average yields ~4.0, reflecting a good show hampered by sub‑par audio."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers say the SBD sounds like an audience recording – muffled vocals (Jerry sounds mic‑less), overly loud crowd, and overall lack of clarity. It is considered mediocre at best."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Terrapin",
+      "The Wheel",
+      "Estimated Prophet",
+      "Scarlet>Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is praised as solid; the second set builds to a powerful climax with Black Peter, reflecting the band’s heightened post‑coma chemistry."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his animated playing and monster guitar tone, especially on Black Peter and during Terrapin/​The Wheel.",
+    "Phil": "",
+    "Bob": "Mentioned in a friendly competition with Jerry on Terrapin Station’s chords.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:15:59.498062+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-03-22.sbd.miller.25580.sbeok.shnf"
+}

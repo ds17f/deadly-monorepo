@@ -1,0 +1,93 @@
+{
+  "summary": "Muffled soundboard recording but a powerhouse show highlighted by Peggy‑O, To Lay Me Down and Foolish Heart",
+  "review": "The performance is widely praised – the first set shines with Peggy‑O, Iko and an emotional To Lay Me Down, while the second delivers a fiery Foolish Heart, Eyes, The Wheel and a soaring drums‑>space jam.  The tape’s soundboard source is noticeably muffled and a few cuts appear, yet all instruments remain audible enough to enjoy the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the musical performance 4‑5 stars and describe it as exceptional; recording quality is consistently called muffled/fair, pulling the weighted overall rating down slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Audio is described as muffled, a bit sheathed in a thick sheet, with occasional drop‑outs (e.g., on \"Don't Ease\"). All parts are still audible and the tape copies sound better than many old tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "To Lay Me Down",
+      "Foolish Heart",
+      "Iko Iko",
+      "Eyes",
+      "The Wheel",
+      "Space"
+    ],
+    "poor_songs": [
+      "Rain",
+      "Don't Ease"
+    ],
+    "setlist_flow": "First set is described as “top‑notch” and emotionally charged, leading into a solid second set with extended jams (drums→space) and an uplifting close.  Energy remains high throughout despite occasional dips."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar on \"To Lay Me Down\" and other numbers is called bright, inspirational and tear‑inducing.",
+    "Phil": "Phil Lesh’s bass is said to “shake me to the core of my existence”.",
+    "Bob": "",
+    "Keys": "Brent Mydland delivers a standout organ solo on \"Foolish Heart\" and vocalizes during \"All Over Now\"; his keyboard work is praised throughout.",
+    "Drums": "The drums‑>space segment receives strong positive remarks for its intensity and creativity."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Foolish Heart": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Iko Iko": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Space": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Don't Ease": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T18:35:40.310816+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-04-13.sbd.nawrocki.5607.sbeok.shnf"
+}

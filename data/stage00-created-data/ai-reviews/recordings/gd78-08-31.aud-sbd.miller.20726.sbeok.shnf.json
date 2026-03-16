@@ -1,0 +1,91 @@
+{
+  "summary": "High‑energy Red Rocks show with a stellar first Shakedown Street and strong NFA→Black Peter, captured on a mixed SBD/AUD source that’s good but has speed/patch issues.",
+  "review": "The performance shines thanks to the debut of Shakedown Street, a ripping Not Fade Away into Black Peter, and solid renditions of Good Lovin', Ship of Fools and Samson. Recording quality is mixed – the early soundboard tracks are crisp while the later audience‑derived AUD segment runs fast and has a missing section in Terrapin, but it remains listenable. Overall fans rave about the vibe and historic setlist despite the technical quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars praising the music; recording issues are noted but not enough to outweigh the strong show performance."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "First ~11 min is soundboard (clear, tight), then switches to audience AUD with speed error and a missing ~1 min of Terrapin; overall decent but not flawless."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Not Fade Away → Black Peter",
+      "Good Lovin'",
+      "Ship of Fools",
+      "Samson"
+    ],
+    "poor_songs": [
+      "Terrapin (cut before climax)",
+      "Half Step Mississippi (poor mix)"
+    ],
+    "setlist_flow": "First set is a bit tentative with mixed mixing, but the second set launches into a peppy Shakedown Street and builds through Space (Ollin Arageed) into a powerful Not Fade Away → Black Peter sequence, delivering a classic Red Rocks arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s snarling vocals and guitar tone are highlighted; his playing on Shakedown Street and the Space jam is described as \"right on the money\" and breathless.",
+    "Phil": "",
+    "Bob": "Bob Weir praised for “throwing fuel on the fire” during Minglewood and solid rhythm work throughout.",
+    "Keys": "Keith (and later Brent) noted for strong playing in the encore; no detailed critique beyond that.",
+    "Drums": "Drums receive praise for a \"cool\" transition into Space, long indulgent fills, and overall tightness on the first Shakedown Street."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "From the Heart of Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away → Black Peter": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Half Step Mississippi": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T14:39:33.197006+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-08-31.aud-sbd.miller.20726.sbeok.shnf"
+}

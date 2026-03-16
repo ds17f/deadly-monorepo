@@ -1,0 +1,73 @@
+{
+  "summary": "Great 1987 show with crisp soundboard recording, standout Women Are Smarter and Desolation Row performances",
+  "review": "The crowd‑pleasing May 10, 1987 concert shines thanks to a solid setlist – Box of Rain, Desolation Row, an unforgettable Women Are Smarter and a rousing Not Fade Away encore – captured on a generally clear soundboard tape (a touch tinny in places).  While a few audience‑tape quirks and mislabeled tracks are noted, the overall listening experience is strong and the band’s energy feels fresh.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers gave 4–5 stars and praised both the musical performance and recording quality; only a few mixed or low‑star notes, leading to an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear overall with a slight tinny character on the soundboard; audience tapes mentioned over‑modulation and a blown channel during SPACE, plus a track‑labeling error, but the tape is generally listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Women Are Smarter",
+      "Box of Rain",
+      "Desolation Row",
+      "Not Fade Away",
+      "Scarlet > Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong first set highlighted by Box of Rain and Desolation Row, an energetic mid‑show Women Are Smarter with a memorable Weir \"F\" bomb, an inventive inverted Playing In The Band segment, and a high‑energy Not Fade Away encore that even sparked crowd chanting."
+  },
+  "band_member_comments": {
+    "Jerry": "A lyric flub on Fire On the Mountain was noted, but his guitar tone overall is solid.",
+    "Phil": "",
+    "Bob": "His rhythm guitar cuts through the mix with a chime‑like quality; notable f‑bomb in Women Are Smarter and an exciting jam in the Stranger segment.",
+    "Keys": "",
+    "Drums": "Mickey’s channel blew out during SPACE, yet the post‑drum/space sequence was praised."
+  },
+  "song_mentions": {
+    "Women Are Smarter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire On the Mountain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:30:29.031261+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-05-10.sbd.walker-scotton.miller.83750.sbeok.flac16"
+}

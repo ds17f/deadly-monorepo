@@ -1,0 +1,63 @@
+{
+  "summary": "Fair audience recording with thin acoustic sound but captures a high‑energy Warfield run featuring standout performances of Deal, Althea and Jack Straw.",
+  "review": "The show is widely praised for its intensity and the strong acoustic/electric sets, especially the manic renditions of Deal, Althea, Jack Straw, China Cat Sunflower and I Know You Rider. The audience‑taped recording is uneven – the acoustic portions sound thin and crowd‑heavy while the electric sections are clearer but still have occasional glitches.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (high scores) while recording quality receives mixed to negative feedback; weighting the strong performance against fair audio yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hollow, thin acoustic sound; heavy crowd noise that can mask instruments; some glitches and murky artifacts, especially on the first song. Electric sections are clearer but still not as crisp as a soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Althea",
+      "Jack Straw",
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert alternates acoustic and electric sets; the acoustic set is praised for its intimacy while the electric set delivers manic intensity and blistering solos."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry's vocals are highlighted as great.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:32:34.392445+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-09-25.menke.vernon.7303.sbeok.shnf"
+}

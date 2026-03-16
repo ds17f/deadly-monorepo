@@ -1,0 +1,78 @@
+{
+  "summary": "A solid audience recording of a middle‑of‑the‑pack July ’81 show, highlighted by a fiery Scarlet Begonias, crushing Fire on the Mountain and an effortless Sugar Magnolia.",
+  "review": "Both reviewers praise this newly patched AUD source as listenable and well balanced, especially after the second set where the mix improves. Musically the concert is described as average in the first set but picks up strongly with standout performances of Scarlet Begonias, Fire on the Mountain, Sugar Magnolia, U.S. Blues and a bright China Cat Sunflower → I Know You Rider sequence.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Two detailed 4‑star reviews note good musical moments and a solid audience recording; the show is decent with strong second‑set highlights, leading to an overall rating just above 4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "AUD‑only source that was previously unlistenable now patched and EQ‑balanced; sound is solid with a noticeable improvement in the second set, though some low‑end/high‑end tweaking is recommended."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Sugar Magnolia",
+      "U.S. Blues",
+      "China Cat Sunflower > I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as average with a few middling moments, while the second half picks up briskly and delivers several high‑points, giving the concert an overall upbeat, forward‑moving feel."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s guitar work is seen as minimal in parts of the first set but becomes amped and fiery on Sugar Magnolia and U.S. Blues, with notable solos into Big River.",
+    "Phil": "Phil’s bass ‘bombs’ are highlighted during China Cat Sunflower, adding power to the jam.",
+    "Bob": "Bob (Bobby) starts a bit muffed early on but steps up later, delivering a sweet vocal and guitar lead on Saint of Circumstance.",
+    "Keys": "Brent Mydland receives praise for his great playing throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:53:48.437968+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-07-08.134092.nak300.bernstein.flac1644"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Bright, clean soundboard capture of a stellar show highlighted by Shakedown Street and Knockin' on Heaven's Door with the Neville Brothers",
+  "review": "The recording is a crisp, bright sound‑board mix that lets Jerry’s skat singing on Shakedown Street and the band’s tight playing shine, even if it misses some of the crowd ambience found on other tapes. The show itself is praised as a “comeback party” with an energetic first set and a second set ignited by the Neville Brothers, featuring standout performances of Shakedown Street, Knockin' on Heaven's Door, Iko‑Iko and more.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviewers gave 5 stars and highlighted both excellent musical moments and a clean recording; the show is described as one of the best ever, and the soundboard quality is praised as bright and clear."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Bright, clean mix with great clarity and instrument separation; lacks some crowd reactions compared to other sources but that makes it ideal for focused listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Knockin' on Heaven's Door",
+      "Iko Iko",
+      "Banana Boat",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid first set with long jams, then a second‑set explosion driven by the Neville Brothers – Shakedown Street opens the set, followed by three guest‑backed numbers and a memorable Knockin' on Heaven's Door."
+  },
+  "band_member_comments": {
+    "Jerry": "Skat singing on Shakedown Street, humble humor during Franklin’s Tower, and overall felt like his ‘comeback party’.",
+    "Phil": "Bass surge early in the Iko‑Iko jam noted as a lightning‑fast highlight.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Banana Boat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T00:15:17.139905+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-06.senn421.zaleski.gems.84623.sbeok.flac16"
+}

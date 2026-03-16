@@ -1,0 +1,76 @@
+{
+  "summary": "High‑quality soundboard capture of a fiery 1979 Stanley Theater show, highlighted by a smoking Scarlet > Fire and Dancin' in the Streets jam.",
+  "review": "The recording is a solid SBD with only minor tape‑flip and AUD‑patch quirks, delivering clear intimacy that lets the band's 24‑song marathon shine.  The performance is consistently strong – the first set burns with Friend of the Devil and Dancin', while the second set rockets through a blistering Scarlet > Fire, Deal → Fire on the Mountain and a memorable Don't Ease.  Brent’s keyboards are praised throughout, and Jerry’s envelope‑filter licks add extra sparkle.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight many standout moments; recording is good with only minor technical blemishes, yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD capture with occasional tape‑flip on Scarlet > Fire and a long AUD patch at the end of Pitstops into Drumz, but overall intimate and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Deal → Fire on the Mountain",
+      "Dancing in the Streets",
+      "Don't Ease",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [
+      "Lost Sailor",
+      "Wharf Rat"
+    ],
+    "setlist_flow": "A marathon 24‑song set that keeps the energy high; first set builds with strong tunes and a massive Dancin', second set erupts with Scarlet > Fire and sustains momentum through the jams, only briefly losing steam on Lost Sailor/Wharf Rat."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for early entrances, envelope‑filter tone work, and overall high‑energy playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work is highlighted as great throughout the tour.",
+    "Drums": "Drums are described as solid and powerful, especially in the second set."
+  },
+  "song_mentions": {
+    "Deal → Fire on the Mountain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Dancing in the Streets": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:24:16.177962+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-11-30.sbd.clugston.3118.sbeok.shnf"
+}

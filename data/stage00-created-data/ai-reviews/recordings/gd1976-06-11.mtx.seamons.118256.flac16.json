@@ -1,0 +1,45 @@
+{
+  "summary": "High‑quality matrix mix captures a superb 6/11/76 show with airy sound and standout performances of Eyes of the World and St. Stephen > Dancin', though occasional channel‑swap glitches are reported.",
+  "review": "The matrix treatment by Betty Board (Hunter Seamons) delivers an airy, soft‑forgiving mix that puts listeners right in the concert hall, and fans rave about the laid‑back 1976 vibe and a second set highlighted by a mesmerizing Eyes of the World and a funky St. Stephen > Dancin' transition. A handful of users report channel‑swapping or looping glitches, but the musical performance is overwhelmingly praised.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The majority of detailed reviews (6 out of 8) give 5‑star praise for both the show and the matrix recording, with only two brief complaints about technical glitches; this yields a strong combined score weighted toward performance."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Airy, crisp mix that blends board and audience sources beautifully; soft, forgiving vocal treatment. Some listeners note channel‑swap issues and occasional song looping glitches."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "St. Stephen > Dancin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as extraordinary with seamless transitions; overall vibe laid‑back and mellow, making it an above‑average 1976 performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's tone described as mellow/quaalude‑smooth, fitting the relaxed 1976 atmosphere.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen > Dancin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T03:55:05.497874+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-11.mtx.seamons.118256.flac16"
+}

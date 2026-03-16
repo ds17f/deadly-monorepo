@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording with mild hiss and low level but captures a high‑energy ’73 set highlighted by a killer Truckin’ and stellar Jerry vocals",
+  "review": "The SBD source is generally clear, though listeners note a slight drop in volume and some background hiss. Musically the show shines – Garcia’s hoarse‑but‑crispy voice and an “off‑the‑chain” performance energize the set, with Truckin’ singled out as a standout moment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Positive comments about the performance (especially Jerry and Truckin’) offset modest recording flaws; limited to two reviews, so rating reflects mixed but generally favorable impressions."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mild hiss and a slightly low volume level noted, but overall sound is decent and captures the band well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Prime‑time ’73 energy with strong vocal delivery; no specific flow issues mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's vocals described as hoarse yet crispy and his voice praised as \"wow\" and \"off the chain\".",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T07:42:16.740174+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-05-20.set3-sbd.cribbs.16531.sbeok.shnf"
+}

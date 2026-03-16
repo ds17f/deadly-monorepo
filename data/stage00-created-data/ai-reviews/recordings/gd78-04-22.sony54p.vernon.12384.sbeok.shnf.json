@@ -1,0 +1,57 @@
+{
+  "summary": "Loud, tank‑like 1978 audience tape that’s a bit faint but showcases an energetic Deal, dramatic Wharf Rat and a jammy Sugar Magnolia.",
+  "review": "The concert captures the 1978 Dead at full volume – a wall of sound that feels like a brigade of tanks rolling through.  Reviewers rave about the marathon Deal (over 40 repeats), a fiery Wharf Rat into Sugar Magnolia, and an especially hot Jack Straw, even though the audience recording is faint and below‑average in clarity.  Overall the performance outweighs the modest audio quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Consistently strong musical praise (standout songs, high energy) combined with uniformly moderate comments about a faint audience tape yields a solid rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audience tape is somewhat faint with noticeable echo from the arena roof; several reviewers call the sound below average, but it remains listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Wharf Rat",
+      "Sugar Magnolia",
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy set with a relentless, loud assault; the band rides a powerful momentum from Deal through Wharf Rat/Sugar Magnolia and keeps the excitement rolling with Jack Straw."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocals (with Donna) scream the repeated ‘Don’t you let that Deal go down’ line; his guitar tone is noted as powerful in the wall‑of‑sound mix.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T11:40:53.591268+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-04-22.sony54p.vernon.12384.sbeok.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Perfect recording of a fan‑favorite show with outstanding audio quality",
+  "review": "The reviewer raves that this is their favorite concert they ever saw, captured on an immaculate Tobin Alpine tape. The recording is described as perfect, making it a must‑listen despite the lack of specific musical commentary.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "low",
+    "rationale": "A single enthusiastic 5‑star review praises both the show and recording; rating reflects the high praise but limited data points."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls it a \"perfect recording\" – crisp, clear, no noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T22:09:00.725202+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-19.mat.tobin.125861.flac16"
+}

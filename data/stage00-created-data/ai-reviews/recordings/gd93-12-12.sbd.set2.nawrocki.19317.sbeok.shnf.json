@@ -1,0 +1,70 @@
+{
+  "summary": "Clear soundboard capture of a chilly San Diego night delivers a solid second set highlighted by a fiery Shakedown Street opener and hot Truckin', despite a few later missteps.",
+  "review": "The recording is praised for its crystal‑clear, excellent soundboard quality that lets the energy of the chilly San Diego show shine through. Fans note a strong second‑set start with Shakedown Street (and Samson) and a scorching Truckin', but the momentum wanes after Space due to lyric slips in Watchtower and a shaky Stella Blue, and the encore \"I Fought the Law\" draws mixed feelings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers highlight an excellent soundboard recording and a generally solid performance with standout moments, while noting specific song missteps that keep the rating from being higher."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Very clear, crisp capture; multiple reviewers call it \"excellent\" and note the clarity of the mix despite the venue's crowd noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Truckin'",
+      "Space"
+    ],
+    "poor_songs": [
+      "I fought the Law",
+      "Watchtower",
+      "Stella Blue"
+    ],
+    "setlist_flow": "Second set opens strong with Shakedown Street > Samson, builds through Space and a hot Truckin', but loses steam after a lyric botch in Watchtower and a shaky Stella Blue; overall a solid show that outshines the first night."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for an energetic, \"hot\" performance and pulling out a fiery 'Nobody's Fault But Mine'.",
+    "Phil": "",
+    "Bob": "Weir missed lyrics in Watchtower, creating a noticeable botch.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I fought the Law": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Watchtower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Nobody's Fault But Mine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:38:14.232406+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-12-12.sbd.set2.nawrocki.19317.sbeok.shnf"
+}

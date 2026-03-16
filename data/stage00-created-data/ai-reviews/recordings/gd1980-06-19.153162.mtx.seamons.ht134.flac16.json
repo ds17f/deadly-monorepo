@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent matrix capture preserves the ambience of a solid show, highlighted by a soaring China Cat Sunflower → The Rider sequence.",
+  "review": "Fans rave about this recording’s vivid ambience and stereo-friendly mix, noting that the matrix source delivers clear sound throughout. The performance shines on the China Cat Sunflower → The Rider transition, even though Jerry’s guitar dips out early in the first tune before coming back strong.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Consistently high star ratings and praise for both performance (≈4/5) and recording quality (≈4.5/5) yield a weighted average around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Spectacular capture of ambience; praised for stereo playback, no major flaws reported though one reviewer hinted the recording was less than perfect compared to the show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "The Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Positive flow highlighted by the China>Rider sequence; minor gripe about Jerry dropping out early but overall a strong performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Drops out for most of China Cat Sunflower, returns later in The Rider – noted as a brief lapse.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:43:04.735793+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-19.153162.mtx.seamons.ht134.flac16"
+}

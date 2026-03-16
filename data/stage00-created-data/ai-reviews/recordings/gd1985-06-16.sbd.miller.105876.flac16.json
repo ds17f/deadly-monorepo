@@ -1,0 +1,117 @@
+{
+  "summary": "High‑quality soundboard capture with a brisk, tight performance highlighted by Looks Like Rain, Scarlet → Fire and the rare Cryptical return.",
+  "review": "The show is praised for its energetic, no‑rushed feel and several standout moments – especially Looks Like Rain, the smoking Scarlet → Fire sequence and the long‑awaited Cryptical reprise.  The Miller SBD source sounds great overall but suffers from early‑set mix problems (missing guitars and a weak Bertha), requiring the matrix/audience feed to fill gaps.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Three five‑star reviews praise the musical performance; one detailed review notes both strong moments and mix flaws, yielding a weighted average of ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD sound, but early‑set mix is sketchy – missing Brent’s guitar and Bobby’s parts on several songs, noticeable dropouts on Bertha.  Reviewers recommend using the matrix/audience mix for the first three tracks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Scarlet > Fire",
+      "Cryptical",
+      "Walkin' Blues",
+      "Samson & Delilah",
+      "Goin' Down the Road Feeling Bad"
+    ],
+    "poor_songs": [
+      "In The Midnight Hour",
+      "Bertha"
+    ],
+    "setlist_flow": "The concert moves at a brisk tempo from start to finish, with a tight first set that suffers from mix issues but recovers as the band locks in.  The second set is praised for its fire‑filled jams and the surprise Cryptical reprise."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is described as bright and hot; he shines on Scarlet, Samson & Delilah, though he misses verses on Tennessee.",
+    "Phil": "Phil’s bass is highlighted as “on fire” when mixed properly; reviewers note his powerful presence throughout the show.",
+    "Bob": "Bobby’s guitar disappears early but later delivers a standout performance on Looks Like Rain and other numbers.",
+    "Keys": "Brent Mydland is buried in the mix at the start, then emerges mid‑set; overall keyboard balance is uneven.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "My Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half-Step Miss": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "In The Midnight Hour": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cryptical": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big RR": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T04:56:26.468694+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-16.sbd.miller.105876.flac16"
+}

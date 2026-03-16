@@ -1,0 +1,87 @@
+{
+  "summary": "Muddy, hiss‑laden soundboard captures a strong 1969 performance highlighted by Dark Star, Lovelight and a soaring China Cat/High Time run.",
+  "review": "The show is widely praised for its energy – Dark Star, an extended Lovelight, and the China Cat Sunflower → High Time sequence are repeatedly called out as highlights.  The recording, however, suffers from tape hiss, muddiness and occasional distortion that keep it from being a clean listening experience, though the stereo mix is respectable for a ’69 board tap.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers love the musical performance (standout jams, strong set flow) while consistently noting poor to fair audio quality; weighted combination yields a solid mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Noticeable tape hiss and muddiness throughout, especially on Baby Blue and early songs; occasional tape wobble and vocal distortion (Momma Tried), but overall a decent two‑channel stereo mix for 1969."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Lovelight",
+      "China Cat Sunflower",
+      "High Time",
+      "St. Stephen"
+    ],
+    "poor_songs": [
+      "Baby Blue (sound issues)",
+      "Casey Jones (early arrangement)",
+      "Momma Tried (vocal distortion)"
+    ],
+    "setlist_flow": "The first half is a little shaky, but the second set builds beautifully into an 18‑minute Dark Star → St. Stephen → The Eleven medley and closes with a marathon Lovelight, giving the concert a strong arc despite occasional rough spots."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised for raw power on Dark Star, but several reviewers note he sounded out of sorts, flubbing phrases in St. Stephen and The Eleven.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen’s organ is highlighted as a driving force – especially on Turn On Your Love Light where he “rocks the house” and holds the band together.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lovelight": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Momma Tried": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Turn On Your Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T16:08:18.444587+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-07-05.sbd.cotsman.4282.sbefail.shnf"
+}

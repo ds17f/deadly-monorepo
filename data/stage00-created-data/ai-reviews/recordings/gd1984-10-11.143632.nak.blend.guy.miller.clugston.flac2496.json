@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive information provided; recording source and performance quality cannot be assessed from the available review.",
+  "review": "The sole review consists only of a brief thank‑you note and does not mention any aspects of the audio or the concert itself, leaving both recording and show quality indeterminate.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.5,
+    "confidence": "low",
+    "rationale": "Only a single 0‑star review is present, offering no detail on performance or sound; the rating reflects the low star score but is highly uncertain."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound quality, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T21:51:52.458031+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-11.143632.nak.blend.guy.miller.clugston.flac2496"
+}

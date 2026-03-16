@@ -1,0 +1,97 @@
+{
+  "summary": "A high‑energy 1973 soundboard recording (remixed by Ashley) that captures a historic night of first‑time songs, highlighted by a soaring Here Comes Sunshine and a blazing Eyes → China Doll sequence.",
+  "review": "The show is widely praised for its electric setlist – the debut of Here Comes Sunshine, Eyes of the World, China Doll, Row Jimmy and several other fresh cuts – and for the band’s loose, fast‑moving playing.  The Ashley remix turns a “rough‑and‑ready” soundboard into an enjoyable listening experience; while a few listeners note occasional crunch or pitch quirks, most describe the audio as clear, powerful and well balanced.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Over 40 reviews overwhelmingly positive (mostly 4‑5 stars) emphasize stellar musical performance and a solid soundboard remix; minor technical quirks keep the rating just below perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Original board is described as “rough” or “crunchy,” but the Ashley remaster is praised for clarity and balance.  A few users note occasional pitch drift, drop‑outs in early tracks, or mislabeled files, yet overall sound is considered strong for a 1973 source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine",
+      "Eyes of the World",
+      "China Doll",
+      "Row Jimmy",
+      "They Love Each Other",
+      "Loose Lucy",
+      "Truckin' > Eyes > China Doll sequence",
+      "Wave That Flag / US Blues",
+      "TLEO"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is aggressive and fast, then eases into a relaxed groove; the second set builds with a seamless Truckin'‑Eyes‑China Doll jam and culminates in an uplifting Here Comes Sunshine, delivering a balanced, high‑energy arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry’s guitar tone as “true to live,” “perfect” after remix, and even call him a “mad bastardo on El Paso.”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Eyes of the World": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "China Doll": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Row Jimmy": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "They Love Each Other": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Loose Lucy": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wave That Flag": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "TLEO": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T04:42:04.324974+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-02-09.sbd.bertha-fink.14939.sbeok.shnf"
+}

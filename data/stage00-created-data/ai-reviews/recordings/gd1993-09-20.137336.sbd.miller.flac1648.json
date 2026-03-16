@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard capture of an uneven show – Jerry sounds half‑awake, though the highlight “Goin’ Down The Road Feeling Bad” stands out.",
+  "review": "The Miller soundboard tape is generally clear but offers little insight into recording quality beyond its source. Musically the performance feels mixed; one reviewer notes Jerry appearing half‑asleep while another points to a strong rendition of “Goin’ Down The Road Feeling Bad.” Overall enthusiasm is low, yielding a modest listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.2,
+    "confidence": "low",
+    "rationale": "Only three brief reviews with minimal detail; comments are mostly lukewarm or critical, leading to an average‑to‑below‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific technical commentary; assumed clean soundboard source typical of Miller recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Goin' Down The Road Feeling Bad"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed set‑list discussion; overall impression is uneven with a notable highlight in the mentioned song."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as 'half awake' during parts of the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Goin' Down The Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:15:42.502375+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-20.137336.sbd.miller.flac1648"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Crystal‑clear 1979 soundboard capture highlighted by a scorching Scarlet > Fire and a near‑perfect second set.",
+  "review": "The Charlie Miller‑transferred soundboard tape delivers an awesome, crystal‑clear recording of a 1979 show that many fans rank among the year’s top five.  Highlights include a searing Scarlet > Fire, fiery Franklin’s, bittersweet Loser and a rollicking US Blues, while the second set is praised as “damn near perfect.”  Minor quirks such as Bob’s unusual “Fire‑uuaahh!” chant are noted but don’t detract from the overall brilliance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both performance and recording across ten detailed reviews; show is described as top‑five of ’79 and the recording is called “awesome” and “crisp.”"
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the tape \"awesome\" and note clear, crisp sound with no reported drop‑outs or balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Franklin's",
+      "Loser",
+      "US Blues",
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as \"damn near perfect\"; overall show remembered as one of the best of 1979 with strong energy from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised, though a mis‑step in Loser led to an odd audience cheer; his guitar tone is noted as solid throughout.",
+    "Phil": "",
+    "Bob": "His “Fire‑uuaahh!” vocal chorus on Scarlet > Fire is called weird by one reviewer, but his open Ibanez chords are praised elsewhere.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Franklin's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T23:17:01.407516+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-09-05.sbd.miller.79748.flac16"
+}

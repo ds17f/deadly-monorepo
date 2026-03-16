@@ -1,0 +1,51 @@
+{
+  "summary": "High‑energy show with soulful Jerry and crisp audience recording that captures the gym‑like vibe at Kaiser",
+  "review": "Fans rave about a vibrant performance—Jerry’s voice and lead work on Tennessee Jed and Desolation Row are highlighted, and the HPW opener sets an exciting tone. The audience (AUD) source is praised for its unusual crispness, though listeners note a slight lack of Phil’s bass presence that can be corrected with EQ.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All three detailed reviews are highly positive about both the musical performance and the AUD recording quality; minor EQ tweaks are the only downside, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear for an audience tape, but bass (Phil) is a bit recessed; listeners suggest EQ adjustments to balance high‑end and boost low frequencies."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tennessee Jed",
+      "Desolation Row",
+      "Help on the Way"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show opened with a strong HPW, followed by energetic numbers like Tennessee Jed; reviewers describe a fun gymnasium atmosphere and a seamless flow that kept the crowd moving."
+  },
+  "band_member_comments": {
+    "Jerry": "Soulful voice and lead work praised on Tennessee Jed and Desolation Row; leads bring chills.",
+    "Phil": "Bass is slightly recessed in this AUD, but can be compensated with EQ.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:18:46.271663+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-02-17.aud.wiley.16113.sbeok.shnf"
+}

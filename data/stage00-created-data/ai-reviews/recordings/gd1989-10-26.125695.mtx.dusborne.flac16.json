@@ -1,0 +1,31 @@
+{
+  "summary": "Reviewer gives a glowing 5‑star rating out of nostalgia, but provides no details on recording or performance",
+  "review": "The sole reviewer is clearly enthusiastic, lamenting that they missed the concert and awarding it five stars. No information is offered about the audio source, sound quality, setlist, or individual performances, so the analysis must remain general.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Rating based on a single enthusiastic 5‑star review; no concrete data on sound quality or musical performance to refine the score"
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about soundboard, audience mix, clarity, or other technical aspects."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T01:47:30.707063+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-26.125695.mtx.dusborne.flac16"
+}

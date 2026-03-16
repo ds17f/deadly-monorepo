@@ -1,0 +1,76 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a laid‑back 1973 Vancouver show highlighted by an epic He's Gone → Truckin' → The Other One sequence, soaring Birdsong and a stellar bass solo.",
+  "review": "This June‑22‑1973 PNE Coliseum recording delivers superb soundboard fidelity – crisp mix, well‑balanced vocals and keyboards, with only minor bird‑song quirks. Musically the show is a relaxed, exploratory masterpiece; the second set rolls from a gorgeous Bird Song into a blazing He's Gone → Truckin' → The Other One stretch, while the first set offers a one‑of‑a‑kind Playin' In The Band and an unforgettable Truckin' bass solo. Fans repeatedly cite the superb guitar tones, Keith’s piano work and Bill’s tight drumming as reasons this concert remains a top‑tier 1973 performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, average rating >4.8, uniformly praising both the musical performance and the soundboard quality; only minor technical complaints. Weighted 70 % show + 30 % recording yields an elite score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑EQ'd mix with clear vocals and guitars; Charlie’s mastering praised. A few reviewers note a slightly distracting Birdsong edit and occasional Bertha sound hiccups, but overall the SBD is considered superior to other versions."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone > Truckin' > The Other One",
+      "Bird Song",
+      "Playin' In The Band",
+      "Truckin' (bass solo)",
+      "Sugar Magnolia",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Bertha"
+    ],
+    "setlist_flow": "A relaxed, laid‑back first set that warms up into an unstoppable second set; long show with seamless transitions and a strong jazz‑inflected groove throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for rich guitar tone, watery noodling, and standout leads on Black Peter and El Paso.",
+    "Phil": "Bass solo in Truckin' called “one of a kind”; bombs in Playin', high notes on BOX, and teasing of Fire noted as highlights.",
+    "Bob": "Solid rhythm work and supportive lead; praised for tone during jams and the overall cohesion he provides.",
+    "Keys": "Keith Godchaux’s piano/electric‑piano highlighted as strong on Bird Song, Big River, and transitions; described as “prominent” and “jazzy”.",
+    "Drums": "Bill Kreutzmann’s drumming called tight, jazz‑based, and a key part of the show’s energetic flow."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 9,
+      "negative_mentions": 1,
+      "total_mentions": 10
+    },
+    "He's Gone > Truckin' > The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Playin' In The Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin' (bass solo)": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T14:46:31.920446+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-22.sbd.miller.88526.sbeok.flac16"
+}

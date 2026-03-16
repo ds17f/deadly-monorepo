@@ -1,0 +1,52 @@
+{
+  "summary": "Excellent Charlie Miller soundboard captures a spell‑binding \"The Other One\", though audience‑heavy and heavily edited cuts of \"Cumberland\" and \"Bobby McGee\" detract.",
+  "review": "The recording is praised for its clean, well‑balanced soundboard mix by Charlie Miller, making the highlight – an electrifying \"The Other One\" that silenced the East Coast crowd – shine. However, two tracks are noted as audience‑heavy and severely edited, and one reviewer found the overall listening experience difficult, resulting in a mixed impression of the show’s consistency.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "One strong positive review (4 ★) highlights superb soundboard quality and a standout performance, while another gives 0 ★ citing poor audience recording; the mixed feedback yields an average rating weighted toward show quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Charlie Miller's soundboard mix is praised as excellent and clear, but several songs are heavily audience‑laden and appear truncated, affecting overall listenability."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Cumberland",
+      "Bobby McGee"
+    ],
+    "setlist_flow": "The East Coast crowd was highly excitable, becoming completely silent during the powerful \"The Other One\"; however, the flow is marred by poorly captured and edited tracks that break momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bobby McGee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T08:06:13.713282+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-08-26.126297.cooper-berger.flac16"
+}

@@ -1,0 +1,62 @@
+{
+  "summary": "The audience recording is divisive—some callers call it the best AUD ever while others deem it distant and awful—but the 1971 show’s classic energy and highlighted jams like “The Other One” and “Not Fade Away” earn praise.",
+  "review": "Opinions on the sound are split: a few reviewers rave about clear vocals and an immersive crowd feel, whereas several label the tape as muddy and barely audible. Musically the concert is regarded as a solid ’71 performance with standout moments such as The Other One, Not Fade Away, Cryptic Envelopment and Uncle John’s Band, even if the set‑list itself isn’t dissected in detail.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is generally positive with several praised jams, but recording quality ranges from excellent (for an audience tape) to unlistenable, pulling the overall rating toward the middle of the scale."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Comments range from \"crisp and clear\" to \"distant, vocals barely audible\"; some note it’s the best AUD they’ve heard while others call it awful. Overall the tape is usable but inconsistent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Not Fade Away",
+      "Cryptic Envelopment",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical early‑71 set with energetic crowd interaction; fans highlight the jam flow in the second set (Cryptic > The Other One > Uncle John’s) and appreciate the historic vibe despite limited source material."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Pig Pen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptic Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T10:01:35.426021+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-12-01.aud.minches-vernon.24765.sbeok.shnf"
+}

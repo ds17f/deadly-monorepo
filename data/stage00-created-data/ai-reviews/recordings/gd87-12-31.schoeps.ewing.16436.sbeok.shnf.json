@@ -1,0 +1,62 @@
+{
+  "summary": "High‑quality audience FOB captures a legendary NYE ’87 show highlighted by Terrapin, I Know You Rider and Bird Song with solid Jerry Garcia work.",
+  "review": "The recording is an audience/front‑of‑house tape that most reviewers describe as clear and well balanced – a good substitute for the original FM mix.  Musically the concert is widely praised for its powerful first set, standout performances of Terrapin Station (Jerry’s churning guitar), a superb I Know You Rider with Neville‑brother backing, and an emotional Bird Song/Other One stretch, though some feel the middle portion drags and note the missing \"Promised Land\" on the DVD release.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, highlighting exceptional performances and a good‑quality audience recording; a few mixed comments lower the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as a high‑quality FOB (front‑of‑house) tape, generally crisp with a rating around 3.5‑4/5; no major dropouts mentioned, though it’s not a pure soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "I Know You Rider",
+      "Bird Song",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, classic first set (Bertha opener, Bird Song), solid second set though some feel the Over‑played \"One>Rat>Throw>Away\" block drags; third set peaks with a legendary I Know You Rider backed by the Neville brothers."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers a growling, churning guitar on Terrapin and belts out fast‑paced lyrics on I Know You Rider; also features in funny \"Ask the Band\" moments.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drumming praised as kick‑ass on I Know You Rider, especially with Neville brother support."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:55:08.241389+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-12-31.schoeps.ewing.16436.sbeok.shnf"
+}

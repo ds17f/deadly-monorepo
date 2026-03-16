@@ -1,0 +1,57 @@
+{
+  "summary": "Crisp soundboard recording of a stellar 1972 show featuring a haunting PITB, expansive Dark Star, and powerful Truckin' jam.",
+  "review": "Both reviewers praise this performance as a highlight of the legendary 1972 year, singling out Jerry’s soaring tone on Playing In The Band, the kaleidoscopic Dark Star, an intense Truckin’ jam, and a soulful Sing Me Back Home. The updated soundboard source is described as crisp and well‑remastered, making the show highly enjoyable despite one reviewer finding Dark Star overly long.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Both reviews are glowing (5 stars) and note excellent musical moments plus a high‑quality crisp soundboard recording; limited to two detailed reviews, so confidence is medium."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Remastered with crystal‑clear clarity; no dropouts or muddiness mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing In The Band",
+      "Dark Star",
+      "Truckin'",
+      "Sing Me Back Home"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, flowing set with a powerful first half highlighted by PITB and an exploratory second half featuring Dark Star, followed by high‑energy Truckin' and a heartfelt close."
+  },
+  "band_member_comments": {
+    "Jerry": "Haunting tone, frenzied wah‑wah work, silky guitar runs praised throughout.",
+    "Phil": "",
+    "Bob": "Sharp vocal accents noted especially during PITB.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sing Me Back Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:20:28.266207+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-10.163863.sbd.miller.gems.flac16"
+}

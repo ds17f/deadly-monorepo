@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard source with fair tracking issues, but the show shines thanks to a thunderous Stella Blue finale.",
+  "review": "The recording is a sound‑board capture that suffers from poor original tracking – described as a “hot mess” – though it has been retracked into something more listenable. Fans are split on the performance, with one reviewer calling it great and another average, but several highlight the ending of Stella Blue as a standout moment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (average to great) while recording quality is only fair due to tracking problems; combined weighted rating yields around a 3‑star level."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Original tracking described as a hot mess; later retracked by Charlie C. into something decent, but no comments on clarity or mix beyond that."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note an enthusiastic crowd and a strong finish, though overall impressions range from average to great; no detailed set‑list analysis provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T10:37:58.424120+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-06-28.sbd.skankweed.7802.shnf"
+}

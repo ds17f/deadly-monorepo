@@ -1,0 +1,57 @@
+{
+  "summary": "High‑quality audience tape captures a solid show with standout El Paso, Tom Thumb’s and a ripping Blow Away.",
+  "review": "The performance is praised as a good, energetic set – not quite the heavy‑hitter of the previous night but still featuring strong moments like El Paso, Tom Thumb’s, Blow Away and an especially poignant Crazy Fingers. The audience recording is regarded as “as good as any board,” with clear crowd ambience and only a slight bass thinness.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Consistently favorable reviews (average 4.3★) highlight both strong musical moments and a high‑quality audience source, yielding a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Very clear for an audience tape, crowd audible, comparable to board recordings; minor comment about a little less bass but not deemed a taper issue."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "El Paso",
+      "Tom Thumb's",
+      "Blow Away",
+      "Crazy Fingers"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as strong and cohesive, with Brent’s keyboards prominent; overall a solid show though slightly less intense than the night before."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil's vocals on Tom Thumb's were noted as solid.",
+    "Bob": "",
+    "Keys": "Brent's keyboard work is highlighted throughout, especially in the second set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blow Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:37:04.214932+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-03.nak300.pasternak.andrewf.89791.sbeok.flac16"
+}

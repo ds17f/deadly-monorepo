@@ -1,0 +1,44 @@
+{
+  "summary": "Recording quality unknown, but fans rave about the Lovelight > Stella Blue > Lovelight segment.",
+  "review": "The sole reviewer gave this recording a perfect rating and highlighted the beautiful Lovelight‑Stella Blue‑Lovelight sequence they uploaded to YouTube. No comments were made about the source or sound quality, so the technical side remains unclear, but the enthusiasm suggests the performance of those songs is a standout moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "A single 5‑star review indicates strong appreciation for the show, especially the Lovelight/Stella Blue segment, but no information on recording quality limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about soundboard vs. audience source, clarity, or mix; reviewers only mention video and song sequence."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lovelight > Stella Blue > Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review focuses on the Lovelight‑Stella Blue‑Lovelight flow, indicating a pleasant highlight but provides no broader set‑list commentary."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:24:54.481761+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-21.130919.boedicker.flac16"
+}

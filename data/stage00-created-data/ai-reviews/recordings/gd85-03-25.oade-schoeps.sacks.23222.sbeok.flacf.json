@@ -1,0 +1,76 @@
+{
+  "summary": "High‑quality Oade soundboard captures a killer first set with Jack Straw, Sugaree and Let It Grow, but the second set is marred by PA ringing and high‑frequency squeaks.",
+  "review": "The recording, sourced from Jim & Doug Oade’s digital soundboard, delivers crystal‑clear audio on the first set – a standout performance highlighted by Jack Straw, Sugaree, Red Rooster and an explosive Let It Grow. Unfortunately the second set suffers from a persistent PA ring and a high‑frequency whine that makes Help on the Way, Slipknot! and Estimated Prophet sound disjointed, limiting its appeal. Overall the show shines early on but loses momentum due to these technical hiccups.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Strong first‑set performance and generally good Oade soundboard quality boost the rating, while recurring PA ringing and high‑frequency squeaks on the second set pull it down to a solid but not outstanding score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Very clear sound from Oade digital recording; however, a persistent PA ring in the second set and intermittent high‑frequency whine on Help on the Way/Slipknot!/Estimated Prophet detract from overall fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Sugaree",
+      "Red Rooster",
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "Help on the Way",
+      "Slipknot!",
+      "Estimated Prophet"
+    ],
+    "setlist_flow": "First set flows brilliantly with high energy and tight playing; second set loses momentum due to technical PA issues that make several songs sound disjointed."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Slipknot!": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T01:56:06.124965+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-03-25.oade-schoeps.sacks.23222.sbeok.flacf"
+}

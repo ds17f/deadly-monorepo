@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard recording of a lively show featuring a standout Truckin' jam and a brief but sweet Dark Star",
+  "review": "Both reviewers enjoyed the performance, highlighting an energetic Truckin' jam and a concise Dark Star that surprised them with its brevity. The file appears to be a patched sound‑board (sbd) source, though no specific audio quality comments were provided. Overall sentiment is strongly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Two reviews, one with a 5‑star rating praising the music; no technical details but filename suggests a soundboard source, leading to an overall good rating with low confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on clarity or mix; assumed decent soundboard quality based on file type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Enthusiastic balcony experience with a lively Truckin' jam and a short, sweet Dark Star that left listeners wanting more."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T06:51:25.363738+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-03-24.170828.sbd.patched.001216.flegel.flac1644"
+}

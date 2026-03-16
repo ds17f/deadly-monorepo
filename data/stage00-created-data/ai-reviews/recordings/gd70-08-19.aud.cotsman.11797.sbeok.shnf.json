@@ -1,0 +1,91 @@
+{
+  "summary": "Audience recording captures a high‑energy electric set with standout Love Light and Cryptical/Other One, but the acoustic portion is weak and a few songs suffer from flubs or distortion.",
+  "review": "The show delivers a hot electric second half highlighted by a scorching Not Fade Away → Love Light sequence, a powerful Cryptical Envelopment/The Other One combo, and strong performances of I Know You Rider, Black Peter and a rare Cocaine Blues. The audience tape is clear on the electric side yet struggles with the acoustic set and shows some high‑end distortion that may require EQ tweaks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is above average with several standout songs, but recording suffers from acoustic deficiencies and occasional distortion, leading to a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Electric set comes through loud and clear; acoustic portion is thin and organ barely audible. Some high‑end distortion present; EQ adjustment may be needed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Love Light",
+      "Not Fade Away > Love Light",
+      "Cryptical Envelopment / The Other One",
+      "I Know You Rider",
+      "Black Peter",
+      "Cocaine Blues"
+    ],
+    "poor_songs": [
+      "Hard to Handle"
+    ],
+    "setlist_flow": "The acoustic set is chopped and less engaging, but the electric half picks up with high energy, tight jams and a strong second‑set flow despite evident band fatigue."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen's piano cuts through strongly on the acoustic songs; organ is barely audible.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Love Light": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cocaine Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T22:36:39.304458+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-08-19.aud.cotsman.11797.sbeok.shnf"
+}

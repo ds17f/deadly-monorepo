@@ -1,0 +1,44 @@
+{
+  "summary": "A high‑energy show highlighted by a roaring St. Stephen, captured in a lively front‑of‑house (FOB) recording.",
+  "review": "Fans rave about the groove‑filled performance, especially the electrifying St. Stephen that sends the crowd into a roar. The FOB recording preserves that audience energy better than the soundboard, offering a clear and engaging listening experience despite missing some fine‑mix detail.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviewers gave 4‑5 stars and praised both the musical excitement and the recording’s ability to capture crowd energy, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Front‑of‑house (FOB) capture delivers the roar of the audience during St. Stephen; some nuance is lost compared with a pure soundboard, but overall clarity and ambience are praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note the band was firmly in a groove all night, delivering a consistently smoking performance with no major dips."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T12:31:24.294864+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-15.fob.nak700.mow.32293.sbeok.flac16"
+}

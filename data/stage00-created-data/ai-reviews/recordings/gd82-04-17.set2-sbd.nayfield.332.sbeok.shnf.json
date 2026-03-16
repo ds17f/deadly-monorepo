@@ -1,0 +1,51 @@
+{
+  "summary": "Clear soundboard capture of an above‑average 1982 show, featuring a standout Baby Blue encore and strong Lost Sailor/Not Fade Away moments.",
+  "review": "The recording offers good separation and clarity with well‑miked drums and bass, only occasional guitar‑related crackles. Musically the second set shines – fans rave about the emotive Baby Blue finale, the tight Lost Sailor/Circumstance combo and the crisp Not Fade Away interaction, making it a solid show despite the missing first nine songs.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average star rating of reviewers is 4.2; comments consistently praise both performance and soundboard quality, with only minor technical quirks."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear separation and lack of muddiness; drums and cymbals well‑miked, bass solid. Minor crackles/pops on Shakedown Street noted but attributed to Jerry's guitar."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Baby Blue",
+      "Lost Sailor",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First nine songs are missing, but the remaining second set flows strongly with a powerful encore; overall pacing is praised despite the cuts."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar work described as smoky and expressive; his vocals noted as strong for this era.",
+    "Phil": "Phil's bass playing called fully engaged during the jam sections.",
+    "Bob": "",
+    "Keys": "Brent Mydland shines on keyboards, leading the Spanish‑style jams and receiving high praise.",
+    "Drums": "The drums and cymbal crashes are well captured and praised for good mic placement."
+  },
+  "song_mentions": {
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-13T20:23:44.800389+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-04-17.set2-sbd.nayfield.332.sbeok.shnf"
+}

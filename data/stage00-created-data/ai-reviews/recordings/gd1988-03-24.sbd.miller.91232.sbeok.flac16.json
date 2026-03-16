@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent soundboard recording captures a high‑energy show with standout Candyman, Terrapin Station and an inspired second set.",
+  "review": "The Miller soundboard tape is crisp and well‑remastered, offering excellent clarity despite a faint cassette generation artifact in the first set. Musically the concert shines – the first set builds solidly while the second set erupts with a killer Candyman, soaring Terrapin Station, an unforgettable Little Light, and inspired playing from Brent on Half‑Step and LLR. Fans rave about Jerry’s vocal power, Bob’s wild space antics and the tight drum work that drives the show forward.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer stars (average ~4.6) and enthusiastic comments about both performance and soundboard quality justify a top‑tier rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑remastered board tape; minor cassette‑generation noise in first set noted but not bothersome. Some reviewers mention BMR letdown, but overall the audio is praised as phenomenal."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Terrapin Station",
+      "Little Light",
+      "Half Step",
+      "Space",
+      "Drums"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solidly played; second set ramps up with high energy, strong transitions and a memorable string into Drums that keeps the crowd engaged."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone and vocals are repeatedly praised – ‘Jer Man’ voice, powerful Candyman delivery, and leading the band through Space.",
+    "Phil": "",
+    "Bob": "Weir’s screaming at the end of Little Light and his space‑time shenanigans are highlighted as spine‑tingling moments.",
+    "Keys": "Brent’s inspired second‑set playing (Half‑Step, LLR) receives glowing remarks; his keyboards drive many of the show’s high points.",
+    "Drums": "Bill's drumming is lauded for a strong string into Drums that anchors the second set."
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Little Light": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T06:42:23.700385+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-24.sbd.miller.91232.sbeok.flac16"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent audience recording of a stellar late‑80s show highlighted by a soaring Sugaree and an epic Uncle John’s jam.",
+  "review": "Fans rave about this performance as one of the top Grateful Dead concerts of the ’80s, citing the ripping Sugaree and the marathon Playing > Uncle John’s > Drums > Space > The Wheel sequence as the show’s crown jewels. The audience tape is praised for its vivid crowd ambience and surprisingly clear sound—better than many SBDs—even though a few listeners note minor imperfections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All eight reviews are enthusiastic, with an average rating of 4.6; the musical performance is described as outstanding and the audience recording is regarded as unusually clear."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Many reviewers call it one of the best audience recordings, noting vivid crowd noise that adds atmosphere; a few mention slight imperfections but overall clarity is praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Uncle John's Jam",
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic, colorful outdoor show with long, flowing jams; the sequence Playing > Uncle John’s > Drums > Space > The Wheel is highlighted as a seamless high point."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for great playing and overall vibe (“Jerry was great”).",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:12:37.886169+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-09-06.set1-sbd.samaritano.23371.sbeok.shnf"
+}

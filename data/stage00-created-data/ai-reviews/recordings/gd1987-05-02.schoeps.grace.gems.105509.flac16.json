@@ -1,0 +1,59 @@
+{
+  "summary": "Audience-sourced recording captures a high‑energy 1987 show with strong crowd acoustics but suffers from echo and mid‑range distortion; the performance shines in Mickey’s drum beam while several songs fall flat.",
+  "review": "The set bursts with the energy of the spring ’87 tour, highlighted by Mickey Hart’s return to the “beam” drum solo, yet the recording is marred by noticeable echo on “Morning Dew” and a harsh mid‑range howl that dulls the “Napalm for Breakfast” drums. While some songs (Push Comes to Shove, Black Muddy River) are regarded as weak, the overall vibe and audience acoustics keep the show enjoyable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Reviews average 4.25 stars; most praise the performance and crowd sound, but multiple comments note recording flaws and weak song selections, leading to a solid yet not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Phenomenal audience acoustics praised, but echo on “Morning Dew” and a harsh mid‑range distortion during the drum segment (Napalm for Breakfast) detract from clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mickey Hart’s beam (drum solo)"
+    ],
+    "poor_songs": [
+      "Push Comes to Shove",
+      "Black Muddy River",
+      "Morning Dew",
+      "Napalm for Breakfast"
+    ],
+    "setlist_flow": "First set slumps a bit in the middle, but overall the spring‑tour energy carries through; second set features an exciting drum solo that lifts the performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Sedula notes Jerry had stopped playing some of the weaker tunes after a few tours.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey’s return to the beam solo is praised, though the “Napalm for Breakfast” segment exposes recording distortion."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Push Comes to Shove": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Napalm for Breakfast": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:11:42.269720+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-05-02.schoeps.grace.gems.105509.flac16"
+}

@@ -1,0 +1,73 @@
+{
+  "summary": "Epic sound‑board capture (with occasional digital blips) highlights a mesmeric Dark Star and a killer Death Don't Have No Mercy.",
+  "review": "The November 2, 1969 Family Dog show shines with one of the era’s most powerful Dark Stars, a thunderous Death Don't Have No Mercy, and strong early material like Good Lovin' and Cold Rain. Reviewers rave about the crisp, deep mix and Phil's booming bass, though several note brief digital noise in the Dark Star section. Overall the performance is considered a classic‑era gem despite minor recording glitches.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive reviews (average ★4.5) praise both the musical set and sound quality; only isolated comments mention digital distortion, leading to a strong but not perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, epic clarity with deep bass response; however there is ~7 seconds of noise at 5:16‑5:23 and additional digital distortion around 5:30‑5:37 & 5:55‑6:07 in Dark Star. Overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Death Don't Have No Mercy",
+      "Good Lovin'",
+      "St. Stephen > The Eleven > Death Don't Have No Mercy",
+      "Seasons of My Heart"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First half (Cold Rain, Good Lovin') is praised for its psychedelic vigor; the second half shows a slight fatigue but still delivers powerful moments like the Dark Star and a soaring Death Don't Have No Mercy, with heavy Pigpen presence adding grit."
+  },
+  "band_member_comments": {
+    "Jerry": "His scream on the St. Stephen → The Eleven transition is highlighted; guitar tone noted as incredible in several reviews.",
+    "Phil": "Bass described as deep, clear and “beyond amazing,” providing a solid low‑end foundation.",
+    "Bob": "Acknowledged for his craftsmanship on country‑flavored tunes such as Seasons of My Heart.",
+    "Keys": "Tom Constanten’s keyboards are praised for enriching the sound and freeing Pigpen to add percussion.",
+    "Drums": "Mickey Hart’s addition is noted as adding a new rhythmic layer, contributing to the heavier, more expansive feel."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Seasons of My Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain And Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T17:53:58.024006+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-11-02.sbd.miller.32273.flac16"
+}

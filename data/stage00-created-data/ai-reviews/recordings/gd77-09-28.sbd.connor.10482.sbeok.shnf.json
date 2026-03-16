@@ -1,0 +1,51 @@
+{
+  "summary": "Good soundboard capture of a solid 1977 Paramount show with Jerry’s fiery guitar work and a standout Eyes of the World, though the first five songs are missing and the drums run loud.",
+  "review": "The recording is a sound‑board source that generally sounds clear and well balanced, but listeners note the drum mix is overly forward and the opening half‑set is absent. Musically the show is a typical ’77 performance – solid overall with Jerry Garcia delivering searing leads and Keith Godchaux’s keyboards shining, highlighted by an especially beautiful Eyes of the World; a few reviewers felt the band sounded a bit tired and Wharf Rat suffered timing problems.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviews praise the performance and sound quality, with only minor complaints about loud drums and missing songs, resulting in a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix; drums are noticeably loud and occasionally sloppy; first five songs of the set are missing, but remaining material is well captured."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World"
+    ],
+    "poor_songs": [
+      "Wharf Rat"
+    ],
+    "setlist_flow": "Typical 1977 set – solid first half (though missing), second half inspired for many listeners; occasional fatigue and loud drum mix detract slightly."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fiery, rapid guitar work and energetic presence onstage.",
+    "Phil": "Bass described as plunking with a felt beat; no criticism noted.",
+    "Bob": "",
+    "Keys": "Keith’s keyboard playing received enthusiastic praise, especially in the jam sections.",
+    "Drums": "Bill Kreutzmann and Mickey Hart are criticized for being too loud and a bit sloppy, often plodding through verses."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T04:01:51.819648+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-09-28.sbd.connor.10482.sbeok.shnf"
+}

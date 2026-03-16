@@ -1,0 +1,39 @@
+{
+  "summary": "Exceptional audience recording with crystal‑clear mix, capturing a top‑tier March ’90 show highlighted by a Phil birthday moment but marred by a pitch issue on Althea.",
+  "review": "The AUD source is praised for its crisp, clean instrument separation, deep resonance and well‑balanced crowd ambience, making it one of the best recordings from March 1990. The performance itself is regarded as an all‑time great, though one reviewer notes that Althea sounds out‑of‑key, suggesting a tape‑speed or mastering anomaly.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Both the musical performance and the audience recording are described as outstanding by multiple reviewers; only a single negative comment about Althea’s key tempers an otherwise stellar consensus."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as crisp, clean instruments/vocals with deep resonance and reverb; crowd noise is present but never overpowers the music. One note of concern: Althea appears in a different key, indicating a possible pitch/recording anomaly."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Althea"
+    ],
+    "setlist_flow": "The show is lauded as one of the best of March 1990; a memorable moment occurs just before the second set when the audience sings Happy Birthday to Phil Lesh, creating an uplifting transition into the second half."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Audience sang Happy Birthday to Phil at the start of the second set.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T03:36:46.159334+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-15.senn-hubbard.cpb.83675.flac16"
+}

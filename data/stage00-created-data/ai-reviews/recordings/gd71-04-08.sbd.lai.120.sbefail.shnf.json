@@ -1,0 +1,77 @@
+{
+  "summary": "Soundboard recording with noticeable noise and drop‑outs but a stellar April ’71 performance highlighted by a soaring Dark Star > St Stephen > Not Fade Away sequence.",
+  "review": "The show shines thanks to a tight first set, a spectacular second set anchored by an intense Dark Star that flows into St. Stephen and a blistering Good Lovin', plus standout moments like China>Rider and Second That Emotion.  The soundboard source suffers from intermittent volume dips, noise and low‑end loss, yet the musical chemistry—especially Jerry’s leads, Phil’s bass gymnastics and Pigpen’s Wurlitzer cameo—makes it worth the effort to clean up.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (average 4‑5 stars) while consistently noting recording flaws; weighting 70 % show quality and 30 % audio quality yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Frequent noise, occasional drop‑outs, volume fluctuations, and missing low end are reported; some glitches in Good Lovin' and other tracks but overall listenable with cleaning."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > St. Stephen > Not Fade Away",
+      "Good Lovin'",
+      "Second That Emotion",
+      "China > Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds nicely with strong Bertha and Loser; the second set launches into a deep Dark Star that transitions smoothly into St. Stephen and NFA, ending with high‑energy Good Lovin' and an encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Hot leads on Rider, soaring wah‑wah on Good Lovin', and clear left‑channel presence; praised for his melodic solos throughout the Dark Star.",
+    "Phil": "Unusual but excellent bass work, especially on Second That Emotion and during the tight interplay in the Dark Star segment.",
+    "Bob": "Terrific solo on Rider and strong vocal contributions on Good Lovin' and the encore.",
+    "Keys": "Pigpen appears on electric Wurlitzer piano during China>Rider; keyboards generally sit well in the mix despite occasional low‑end loss.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star > St. Stephen > Not Fade Away": {
+      "positive_mentions": 8,
+      "negative_mentions": 2,
+      "total_mentions": 10
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Second That Emotion": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "China > Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Not Fade Away": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Sing Me Back Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T04:27:57.654349+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-04-08.sbd.lai.120.sbefail.shnf"
+}

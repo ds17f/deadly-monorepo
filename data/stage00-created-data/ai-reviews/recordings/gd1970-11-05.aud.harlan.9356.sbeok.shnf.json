@@ -1,0 +1,51 @@
+{
+  "summary": "High‑energy 1970 Port Chester show featuring a stellar Other One → Dark Star → St. Stephen sequence captured on surprisingly clear audience tape.",
+  "review": "Fans rave about this non‑soundboard recording, saying it sounds better than many later board tapes and is a joy to listen to with a good EQ and headphones. The performance shines especially during the Other One > Dark Star > St. Stephen stretch, which reviewers single out as the highlight of the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All three reviews are highly positive (4–5 stars), praising both the unexpected recording clarity and the standout second‑set sequence; weighting of show quality (70%) and recording quality (30%) yields a rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Not a soundboard tape, but listeners describe it as clearer than many later board recordings; recommend EQ and good headphones for optimal experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Dark Star",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Port Chester shows are regarded as a class of their own; the Other One → Dark Star → St. Stephen sequence is highlighted as the peak, indicating strong pacing and flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T00:34:04.140364+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-11-05.aud.harlan.9356.sbeok.shnf"
+}

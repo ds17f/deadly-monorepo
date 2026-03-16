@@ -1,0 +1,31 @@
+{
+  "summary": "Recording suffers from a severe phase issue; musical performance not discussed",
+  "review": "The sole review highlights a major technical flaw: the two channels are 180° out of phase, making the mix sound thin until one channel is inverted. No comments were made about the band's playing or setlist, so the show quality cannot be judged from this feedback.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only one brief review; it rates the recording at 3 stars but notes a serious phase problem that likely lowers overall enjoyment, while offering no insight into the musical performance."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Both channels are 180 degrees out of phase; inverting one channel improves sound but the issue indicates a flawed recording."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T16:05:49.366479+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-06-20.126350.akg.flac16"
+}

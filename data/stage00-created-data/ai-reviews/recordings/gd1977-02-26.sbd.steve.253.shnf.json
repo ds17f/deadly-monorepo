@@ -1,0 +1,74 @@
+{
+  "summary": "Pristine Betty Cantor soundboard captures a historic 1977 show with debut Terrapin Station and Estimated Prophet, highlighted by a smoking Help‑Slip‑Franklin’s sequence.",
+  "review": "The recording is a Betty Cantor board that most listeners describe as crystal‑clear and beautifully mastered, despite a few isolated tech glitches that some fans patched with matrix sources. Musically the concert shines – the first set opens with a flawless Terrapin Station and Estimated Prophet, rolls through a sweet Sugaree and an unforgettable Playing > Wheel > Playing transition, while the second set delivers a funk‑laden Help‑Slip‑Franklin’s and a ferocious Around & Around. Overall the performance is hailed as one of the band’s most exciting outings from 1977.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Over ten enthusiastic reviews (average ~4‑star rating) praise both the superb soundboard quality and the exceptional musical moments, outweighing a few negative outliers."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Pristine mastering, crisp clean mix; occasional board glitches noted but generally clear. Some fans created matrix patches to smooth the flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Estimated Prophet",
+      "Sugaree",
+      "Playing in the Band > Wheel > Playing",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Around & Around"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set bursts open with new material (Terrapin, Estimated) and flows into a sweet Sugaree; the iconic Playing‑Wheel‑Playing transition bridges to a second set that escalates with a funk‑laden Help‑Slip‑Franklin’s and an aggressive Around & Around, delivering a seamless, high‑energy journey."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar cuts through crystal‑clear on the board, noted as “just right” and prominent throughout.",
+    "Phil": "",
+    "Bob": "Vocals and rhythm work are praised as sounding good and powerful.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band > Wheel > Playing": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T20:12:42.178934+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-02-26.sbd.steve.253.shnf"
+}

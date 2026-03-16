@@ -1,0 +1,70 @@
+{
+  "summary": "Tight one‑set with fiery Big River and strong jams through The Other One",
+  "blurb": "The Arrowhead show packs a crisp, biting guitar on Big River and a high‑energy sequence from Terrapin Station into The Other One and Wharf Rat. Keith’s keyboards cut through clearly while the drum pair stays low‑key; Good Lovin’ is a weak spot.",
+  "review": "On July 1, 1978 at Arrowhead Stadium the Dead delivered an unusually long single set that felt more like two halves stitched together. The band surged through a scorching Big River – Garcia’s guitar described as “crisp” and “wringing every ounce out of his axe” – before launching into a seamless Terrapin Station → Playing In The Band → Drums → Space → Estimated Prophet → The Other One → Wharf Rat marathon that kept the heat‑induced tuning woes at bay. Keith Godchaux’s keyboards sparkle on the highlighted numbers, and while Mickey Hart mostly stays out, the brief Drums>Space segment adds a low‑key texture appropriate for a festival setting. A few rough edges appear – Good Lovin’ falters and the extreme summer conditions nudged the band’s tuning – but overall the performance remains tight, energetic, and memorable, especially for fans of the mid‑summer jam flow.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 11,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.4,
+      "sentiment_rationale": "Both recordings note strong standout moments (Big River, The Other One, Wharf Rat) and praise Garcia’s guitar and Keith’s keyboards, but also point out a weak Good Lovin’ performance and heat‑related tuning issues, yielding mixed overall sentiment with a modest positive tilt.",
+      "final_calculation": "2.5 + 0.1 + 0.4 = 3.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd78-07-01.wagner.unknown.7355.sbeok.shnf",
+    "reason": "Audience tape captures the unique single‑set flow with crystal‑clear ambience; despite occasional thinness it delivers the most complete representation of the performance."
+  },
+  "key_highlights": [
+    "Big River showcases Garcia’s crisp, fiery guitar work.",
+    "A high‑energy jam chain from Terrapin Station through The Other One and Wharf Rat keeps momentum despite summer heat.",
+    "Unique set configuration with Jack Straw placed mid‑first set and Terrapin/Drums opening the second half adds character."
+  ],
+  "song_highlights": [
+    "Big River",
+    "Friend Of The Devil",
+    "Me And My Uncle",
+    "Terrapin Station",
+    "The Other One",
+    "Wharf Rat",
+    "Johnny B. Goode"
+  ],
+  "band_performance": {
+    "Jerry": "Crisp, fiery solos on Big River, Estimated Prophet and Wharf Rat; described as wringing every ounce from his guitar.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Keith’s keyboards cut through clearly on the highlighted numbers, adding sparkle to Big River and supporting the jam sections.",
+    "Mickey": "Mostly stays out of the mix; when present Drums>Space is low‑key due to festival constraints.",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-25T13:39:01.066037+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Me And My Uncle",
+      "Big River"
+    ],
+    [
+      "Friend Of The Devil"
+    ],
+    [
+      "Terrapin Station",
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "Estimated Prophet",
+      "The Other One",
+      "Wharf Rat",
+      "Around & Around"
+    ],
+    [
+      "Johnny B. Goode"
+    ]
+  ]
+}

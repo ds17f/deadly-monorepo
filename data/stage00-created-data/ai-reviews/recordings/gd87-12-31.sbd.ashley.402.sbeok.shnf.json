@@ -1,0 +1,75 @@
+{
+  "summary": "A high‑energy 12/31/87 show that dazzles with scorching keyboards and classic jams, though the SBD mix suffers from a muffled left channel.",
+  "review": "Fans rave about this performance – Brent’s fiery keys, a blistering Little Red Rooster, Push, Birdsong and Terrapin Station make it one of the most memorable shows of ’87. The soundboard source is generally clear, but several listeners note significant left‑channel muffling that can be distracting on headphones.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Show quality is overwhelmingly positive (mostly 5‑star praise) while recording quality receives mixed feedback, pulling the overall weighted rating to about 4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix is generally excellent with good levels, but a noticeable background noise and muffling/distortion on the left channel make it problematic for headphone listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Little Red Rooster",
+      "Push",
+      "Birdsong",
+      "Music",
+      "Hell",
+      "Uncle John's Band",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as ‘tasty’ and unstoppable; the second set starts strong but some listeners feel it tapers off toward the end."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboard work is highlighted as being on fire throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Push": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T05:53:42.820273+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-12-31.sbd.ashley.402.sbeok.shnf"
+}

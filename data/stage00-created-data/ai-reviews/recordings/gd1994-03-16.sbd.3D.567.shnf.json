@@ -1,0 +1,82 @@
+{
+  "summary": "Good soundboard capture of a memorable Rosemont night with a sweet short Dark Star and standout acoustic Looks Like Rain, despite some first‑set interference.",
+  "review": "The show is praised for its vocal energy from Jerry, a rare Chicago Scarlet/Fire, an acoustic rendition of Looks Like Rain and a concise but lovely Dark Star that lifts the performance. Recording-wise the 3D restoration has produced a generally clear soundboard source, though listeners note PA/FM interference on the first set. Overall the concert is considered one of the better early‑90s Chicago dates.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ~4.5 (show quality) and recording noted as good with some interference, yielding a weighted score of about 4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "First‑set marred by PA/FM interference, but 3D restoration makes the overall mix clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Looks Like Rain",
+      "High Time",
+      "Scarlet/Fire",
+      "Tom Thumb Blues",
+      "So Many Roads"
+    ],
+    "poor_songs": [
+      "Cheezy Answers",
+      "I Fought the Law"
+    ],
+    "setlist_flow": "First set suffers from interference, but later portions deliver highlights such as the short Dark Star, acoustic Looks Like Rain and strong vocal work on So Many Roads."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocal energy highlighted during many roads; ripping the end of So Many Roads.",
+    "Phil": "Tom Thumb Blues noted as a Phil showcase.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet/Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cheezy Answers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Fought the Law": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T19:58:22.661194+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-16.sbd.3D.567.shnf"
+}

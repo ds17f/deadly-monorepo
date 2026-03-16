@@ -1,0 +1,62 @@
+{
+  "summary": "Great vintage soundboard capture of a classic ’69 show with standout Dark Star, The Other One→Lovelight and intense Good Lovin' jams despite minor tape cuts.",
+  "review": "The recording is a solid sound‑board source that sounds remarkably clear for its era, though it contains an occasional painful cut in Dark Star and some audience bleed. Musically the performance shines – Dark Star’s improvisations, the powerful Other One→Lovelight sequence, a blistering Hard to Handle and soaring Good Lovin' jams make this a must‑listen classic.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the music and the vintage soundboard quality; minor technical glitches are noted but do not detract from an overall excellent performance."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Vintage tape sounds great for its age with a clear mix and added audience ambience. A painful cut in Dark Star and occasional sloppy moments are mentioned, but overall the board capture is solid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One > Lovelight",
+      "Good Lovin'",
+      "Hard to Handle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Classic late‑‘60s energy with intense, rising jams and a tight transition from The Other One into Lovelight; a few sloppy spots but the overall flow is vibrant and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen (Ron \"The Pig\") is on organ for both The Other One and Lovelight sections.",
+    "Drums": "Drums are described as wailing, with audience screams captured in the mix."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T18:02:45.648241+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-11-07.sbd.kaplan.19783.sbefail.shnf"
+}

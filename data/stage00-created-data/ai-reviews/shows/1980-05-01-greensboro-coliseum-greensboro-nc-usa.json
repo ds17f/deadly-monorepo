@@ -1,0 +1,75 @@
+{
+  "summary": "Strong Estimated Prophet solo, tight jams & standout Uncle John's transition",
+  "blurb": "The show features a soaring Estimated Prophet solo that segues into an inspired Uncle John's Band, followed by high‑energy jams after Space. Jerry's guitar work stays on point throughout and the set includes solid performances of Big River, New Minglewood Blues and Brokedown Palace.",
+  "review": "May 1, 1980 at Greensboro Coliseum delivered a quintessential early‑'80 Dead experience. The second set shines with an unforgettable Estimated Prophet solo—described by listeners as “sunrise‑like”—that flows seamlessly into Uncle John's Band, creating one of the night’s high points. After Space the band launches into high‑energy improvisations that keep the momentum rolling to Wharf Rat and the raucous close on Johnny B. Goode. Jerry Garcia supplies memorable licks all night, even slipping a funny vocal flub on The Promised Land, while his lead work on Estimated Prophet truly lifts the performance. The first set builds nicely, highlighted by a driving Big River and a spirited New Minglewood Blues, and the encore’s Brokedown Palace offers a gentle, reflective finish. Overall, this is a solid representation of the 1980 era—tight, energetic, and full of moments that Deadheads will want to revisit.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "All three recordings are positive, repeatedly praising the Estimated Prophet solo, the Estimated → Uncle John's transition, and high‑energy post‑Space jams. Consistent language like “strong”, “soaring”, and “solid” across sources indicates strong positive sentiment.",
+      "final_calculation": "2.5 + 0.1 + 1.4 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd80-05-01.glassberg.lutch.5917.sbeok.shnf",
+    "reason": "Good audience capture with clear sound after the opening, highlights the standout Estimated → Uncle John's transition and overall solid performance."
+  },
+  "key_highlights": [
+    "Sunrise‑like solo on Estimated Prophet",
+    "Seamless Estimated Prophet → Uncle John's Band segue",
+    "High‑energy jams following Space",
+    "Strong Jerry guitar work throughout, including a funny vocal flub on The Promised Land"
+  ],
+  "song_highlights": [
+    "Estimated Prophet",
+    "Uncle John's Band",
+    "Space",
+    "Big River",
+    "New Minglewood Blues",
+    "Brokedown Palace",
+    "Alabama Getaway"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers memorable licks all night, a sunrise‑like solo on Estimated Prophet and even a funny vocal flub on The Promised Land.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-12T22:18:33.649529+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Estimated Prophet",
+      "Uncle John's Band",
+      "Jam",
+      "Drums",
+      "Space",
+      "Wharf Rat",
+      "Around & Around",
+      "Johnny B. Goode"
+    ],
+    [
+      "Me And My Uncle",
+      "Big River"
+    ],
+    [
+      "New Minglewood Blues"
+    ],
+    [
+      "Brokedown Palace"
+    ],
+    [
+      "Alabama Getaway",
+      "The Promised Land"
+    ]
+  ]
+}

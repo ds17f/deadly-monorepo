@@ -1,0 +1,51 @@
+{
+  "summary": "A superb outdoor audience recording of the May 12 1974 Reno show, highlighted by a scorching Truckin' and an unforgettable Row Jimmy.",
+  "review": "The May‑12‑74 University of Nevada performance is praised for its raw energy and tight musicianship, with Truckin', The Other One and a legendary Row Jimmy standing out. Reviewers note that the audience tape captures the Wall of Sound ambience beautifully, offering clear outdoor sound despite being an audience source. Overall the show and its recording are deemed essential listening for any 1974 Dead collection.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All three reviews award five stars, consistently praising both performance (standout jams) and the outdoor audience recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp capture of the outdoor Wall‑of‑Sound setup; no hall reverb, good balance of band and crowd ambience after modest cleaning by taper."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One",
+      "Row Jimmy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑octane first set launches with a blistering Truckin', leading into chaotic but thrilling jams that resolve into focused peaks on The Other One and a soaring second half capped by an iconic Row Jimmy."
+  },
+  "band_member_comments": {
+    "Jerry": "Soaring lead guitar throughout, especially his slide work on Row Jimmy; hinted at The Other One with wild improvisation.",
+    "Phil": "Powerful bass foundations, multiple rumbling intros to The Other One and a driving presence in the Truckin' groove.",
+    "Bob": "Vocals stumble on the first verse of The Other One but recover by the end, maintaining the song’s momentum.",
+    "Keys": "Keith's piano adds delicate phases during Row Jimmy, contributing melodic depth to the jam.",
+    "Drums": "Bill Kreutzmann’s drumming described as peak energy and the glue that holds the high‑tempo Truckin' jam together."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T18:56:01.411481+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-05-12.sbd-patch-disk3.cribbs.16749.sbeok.shnf"
+}

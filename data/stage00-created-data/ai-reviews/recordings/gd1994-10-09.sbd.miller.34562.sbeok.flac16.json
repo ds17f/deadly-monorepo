@@ -1,0 +1,75 @@
+{
+  "summary": "Soundboard recording with generally good clarity (aside from a phasey dip after Big River) captures a solid 1994 show highlighted by Broken Arrow, Rain and an inspired Last Comes A Time.",
+  "review": "The performance is praised for its upbeat first set and strong second‑set moments such as Broken Arrow, Rain and a heartfelt rendition of Last Comes A Time. Sound quality is described as terrific for most of the concert, though one reviewer notes a phasey, washed‑out sound after midway through Big River. Overall the show is considered a good representation of the mid‑90s era with inspiring playing from Jerry and solid support from Phil.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (4–5 stars) and praise the soundboard source, while a few note a noticeable drop in audio quality after Big River; weighting show quality (70%) and recording quality (30%) yields an overall rating around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Early and mid‑set sound described as crisp/terrific, but after Big River the mix becomes phasey and washes out detail; a few comments suggest a nicer sounding board could improve it."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Broken Arrow",
+      "Last Comes A Time",
+      "Rain"
+    ],
+    "poor_songs": [
+      "Sunshine Daydream",
+      "Ship of Fools",
+      "Big River"
+    ],
+    "setlist_flow": "Upbeat, long first set followed by a second set with some vocal miscues (Sunshine Daydream, Ship of Fools) but ending strongly on Last Comes A Time and Rain, giving the concert a satisfying arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Inspiring playing with sweet solo on Last Comes A Time; described as frail yet heartfelt in later half.",
+    "Phil": "Great bass work noted especially during Last Comes A Time.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Last Comes A Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T02:48:20.203362+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-09.sbd.miller.34562.sbeok.flac16"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Blazing Cumberland Blues, jammy Truckin', solid early‑70s set",
+  "blurb": "The show delivers a fiery \"Cumberland Blues\" and a loose, improvisational \"Truckin'\". The classic \"Not Fade Away > Goin' Down The Road Feeling Bad > Not Fade Away\" sandwich keeps the energy high throughout. Overall it’s a solid early‑70s performance with strong playing despite an occasionally antagonistic crowd.",
+  "review": "On October 23, 1971 the Grateful Dead took the stage at Detroit’s Easttown Theatre, rolling out a quintessential early‑70s setlist that balances country‑rock numbers with extended jams. Jerry’s vocal presence shines on \"Tennessee Jed\" and his uplifting post‑set message (“Everything's gonna be alright”) caps the night, while Phil provides a steady bass foundation even as reviewers noted some tension with the audience. Keith’s early‑era organ adds texture, and Bill Kreutzmann drives the groove with a Billy Cobham‑style intensity that shines especially on \"Truckin'\" and the “Not Fade Away” sandwich.\n\nThe standout moments—blazing “Cumberland Blues,” jammy “Truckin',” and the high‑energy “Not Fade Away > Goin' Down The Road Feeling Bad > Not Fade Away” sequence—are captured best on the Miller soundboard tape (gd1971-10-23.sbd.miller.111673.flac16). That recording offers crisp early‑70s tone, minimal crowd interference and balances clarity with the band’s live dynamics, making it the recommended source for anyone looking to experience this solid, if occasionally gritty, night in Detroit.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.1,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 19,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "One recording praises the performance (positive) while another notes only poor sound quality (negative). Mixed recordings focus on audio issues, not musical flaws. The dominant sentiment about the show itself is mildly positive, warranting a modest +0.5 adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.5 = 3.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1971-10-23.sbd.miller.111673.flac16",
+    "reason": "Excellent early‑70s soundboard capture with crisp tone, minimal issues, and standout tracks like \"Cumberland Blues\" and \"Truckin'\"."
+  },
+  "key_highlights": [
+    "Blazing \"Cumberland Blues\" showcases Jerry’s lead work.",
+    "\"Truckin'\" delivers a loose, improvisational jam with tight rhythm section.",
+    "High‑energy \"Not Fade Away > Goin' Down The Road Feeling Bad > Not Fade Away\" sandwich drives the second set.",
+    "Early Keith Godchaux organ adds a warm texture characteristic of the era."
+  ],
+  "song_highlights": [
+    "Cumberland Blues",
+    "Truckin'",
+    "Not Fade Away",
+    "Goin' Down The Road Feeling Bad",
+    "Big Railroad Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Strong vocal presence, praised lyric on \"Tennessee Jed\" and uplifting post‑set message; leads the band with fiery playing on \"Cumberland Blues\" and \"Truckin'.\"",
+    "Phil": "Provides a solid bass foundation despite some dry comments reflecting crowd tension.",
+    "Bob": "",
+    "Keith": "Early Keith organ work highlighted as a favorite aspect of this era, adding warmth throughout the set.",
+    "Mickey": "",
+    "Billy": "Drumming likened to Billy Cobham style; praised for driving grooves on \"Truckin'\" and the \"Not Fade Away\" sandwich."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-20T08:32:37.438880+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Cumberland Blues"
+    ],
+    [
+      "Truckin'"
+    ],
+    [
+      "Not Fade Away",
+      "Goin' Down The Road Feeling Bad",
+      "Not Fade Away"
+    ],
+    [
+      "Big Railroad Blues"
+    ]
+  ]
+}

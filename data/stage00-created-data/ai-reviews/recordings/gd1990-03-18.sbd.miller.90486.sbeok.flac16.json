@@ -1,0 +1,75 @@
+{
+  "summary": "Soundboard recording with good clarity captures a solid Hartford show featuring standout Shakedown Street, Truckin→Spoonful and a powerful Morning Dew",
+  "review": "The soundboard tape is praised for its clean quality, and the performance showcases strong first‑set work and a memorable second set that opens with Shakedown Street. Highlights include Brent’s keyboard fire, a smoking Truckin → Spoonful transition and a treat of Morning Dew, though some long‑time fans miss the deep improvisational jams of earlier eras.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show 3‑4 stars and note good sound quality, but a few criticize the lack of extended jams, leading to an overall moderate‑positive rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Great sound quality noted by reviewers; no major dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Truckin → Spoonful",
+      "Morning Dew",
+      "Iko Iko",
+      "Red Rooster",
+      "Mexicali Blues",
+      "It Must Have Been the Roses"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Shows a tight opening with Shakedown Street, solid first set (Red Rooster, Mexicali, Rose), and a well‑played second set that, while not as adventurous as classic ’80s runs, delivers strong transitions and a satisfying close."
+  },
+  "band_member_comments": {
+    "Jerry": "Midi‑style guitar work noted as solid in the first set (Red Rooster, Mexicali, Rose).",
+    "Phil": "Bass highlighted for \"dropping bombs\" and providing a strong foundation.",
+    "Bob": "Energetic and fired‑up playing mentioned, especially on early songs.",
+    "Keys": "Brent's keyboards are described as all over it and a standout throughout the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin → Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It Must Have Been the Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T03:54:23.506076+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-18.sbd.miller.90486.sbeok.flac16"
+}

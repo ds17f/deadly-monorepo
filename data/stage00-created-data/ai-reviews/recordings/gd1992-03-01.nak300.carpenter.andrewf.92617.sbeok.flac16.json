@@ -1,0 +1,69 @@
+{
+  "summary": "Clear soundboard capture of a high‑energy Spring ’92 show with a fiery Jack Straw opener and standout So Many Roads.",
+  "review": "The concert is praised for its electric opening with Jack Straw, strong renditions of The Weight, Althea, So Many Roads, Picasso and Scarlet Begonias, and an overall energetic flow that kept the audience buzzing. Reviewers note that at least part of the tape comes from a soundboard source and sounds remarkably clear, making the set highly enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Consistently positive reviews highlight a strong performance with several standout songs and note a clear soundboard recording, yielding a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "One reviewer reports an amazingly clear soundboard tape of the first set; another calls the audio decent and enjoyable. Overall clarity is praised, with no major drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "The Weight",
+      "So Many Roads",
+      "Althea",
+      "Picasso",
+      "Scarlet Begonias"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic opener with Jack Straw, solid first‑set material, and a high‑energy second‑set opener that keeps the momentum rolling through strong mid‑set numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry's guitar work is highlighted as fiery and energizing, especially on the opening Jack Straw.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T03:41:39.012488+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-01.nak300.carpenter.andrewf.92617.sbeok.flac16"
+}

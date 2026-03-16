@@ -1,0 +1,63 @@
+{
+  "summary": "A superb matrix recording captures a blazing Greek Theatre show highlighted by a Scarlet Begonias → Touch of Grey → Fire on the Mountain sandwich and an unforgettable Dark Star encore.",
+  "review": "The matrix source delivers crystal‑clear instrument separation and well‑defined vocals, fixing the usual hollow soundboard feel while retaining audience ambience. Musically the night shines with a fiery Scarlet‑Begonias/Touch‑of‑Grey/Fire sequence, a soaring Hell in a Bucket, and a rare Dark Star encore that many fans cite as one of ’84’s best moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over ten detailed reviews uniformly praise both the performance (standout jams, energy) and the matrix recording quality; weighting gives a high overall score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix blend balances the bright audience track with the hollow soundboard, delivering clear instrument separation, well‑defined vocals and minimal muddiness. Reviewers note the SBD alone is thin while the AUD alone is trebly; the matrix fixes both."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Touch of Grey",
+      "Fire on the Mountain",
+      "Dark Star",
+      "Hell in a Bucket"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows through a unique Scarlet Begonias → Touch‑of‑Grey → Fire sandwich, building dynamic momentum that peaks with a powerful Dark Star encore; the second set is praised as one of the strongest of the early ’80s."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry's magical lead guitar work and improvisational fire, noting his playing remained strong despite vocal strain.",
+    "Phil": "Bass foundation described as solid and rhythmic, providing a steady groove behind the jams.",
+    "Bob": "Rhythm guitar praised for tight interplay with Phil and supporting the band’s syncopation.",
+    "Keys": "Brent Mydland’s keyboards are noted as fully developed, adding depth to the jam sections.",
+    "Drums": "Both drummers (Bill Kreutzmann & Mickey Hart) receive praise for fresh, dynamic playing that drives the improvisations."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Touch of Grey": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Dark Star": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T20:14:59.092042+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-13.mtx.seamons.105570.flac16"
+}

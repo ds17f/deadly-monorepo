@@ -1,0 +1,63 @@
+{
+  "summary": "High‑energy show with standout Terrapin and Dew jams; audience tape is decent but not pristine.",
+  "review": "The performance shines with glowing renditions of Terrapin, Dew, Friend of the Devil, To Lay Me Down and a scorching Don't Ease Me, making it a memorable sleeper. The recording is an audience tap – listenable and full of ambience, though not top‑notch in clarity or consistency.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong musical praise across five detailed reviews (average show rating ~4.5) balanced by consistent comments that the tape quality is only fair (~3.0). Weighted average yields a 4.2‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Tape has noticeable limitations – occasional muddiness, missing second side, and a few drop‑outs; overall usable but not crystal‑clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin",
+      "Dew",
+      "Friend of the Devil",
+      "To Lay Me Down",
+      "Don't Ease Me"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Small‑venue, high‑energy performance with a sweet second set; the band kept momentum throughout and delivered several memorable jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Stellar playing noted; missed a few words in Terrapin but overall intense.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:06:38.626946+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-10-16.aud.ingle.10058.sbeok.shnf"
+}

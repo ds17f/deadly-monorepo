@@ -1,0 +1,58 @@
+{
+  "summary": "Fair‑quality audience tape of a legendary show highlighted by a jaw‑dropping Not Fade Away and strong Deal/Dancin' moments.",
+  "review": "Fans rave about this performance, calling the second set a “long highlight” with a spectacular Not Fade Away and solid first‑set gems like Deal and Dancin'. The recording is an audience (AUD) capture by Jerry Moore that many describe as low‑fi or so‑so, with better streams available, but the musical brilliance outweighs the technical shortcomings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Show quality is rated very high by multiple 5‑star reviews, while recording quality is noted as mediocre; weighted average yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners note low‑fi/so‑so sound, describing it as 'low quality' and suggesting better streams exist. It is an audience (AUD) recording by Jerry Moore, not a soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "Deal",
+      "Dancin'"
+    ],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": "First set is considered weaker but contains smooth Deal and jam‑filled Dancin'. The second set is praised as a continuous highlight, especially the Not Fade Away jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his playing on this night; reviewers say he 'never sounded this good' and that his guitar drives the standout Not Fade Away.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Mention of the late‑70s/early‑80s era being a ‘fire’ period for keyboards (Brent’s influence), though no specific keyboard performance is detailed.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T23:52:19.182739+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-08.aud.moore.berger.28354.flac16"
+}

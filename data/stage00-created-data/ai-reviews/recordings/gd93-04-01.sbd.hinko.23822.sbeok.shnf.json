@@ -1,0 +1,91 @@
+{
+  "summary": "Clear soundboard capture of a mixed Spring‑93 show – standout Days Between and Jack Straw performances amid generally sloppy playing.",
+  "review": "The SBD recording is clean and free of major technical flaws, but the concert itself draws mixed reactions. Fans rave about the tight Days Between jam, a punchy Jack Straw, and high‑energy moments on Minglewood and Candyman, while others describe the set as sloppy with weak spots like Wave to the Wind and an underwhelming Eternity. Overall it’s a solid document for collectors who enjoy the era despite its uneven execution.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show around 3‑4 stars and note decent soundboard quality; however, many comment on sloppy playing and several low‑star reviews pull the overall rating toward a modest three."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD source with no reported dropouts or muddiness; reviewers only note the recording is their first SBD, implying satisfactory fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Days Between",
+      "Jack Straw",
+      "Minglewood Blues",
+      "Candyman",
+      "Stagger Lee"
+    ],
+    "poor_songs": [
+      "Wave to the Wind",
+      "Eternity"
+    ],
+    "setlist_flow": "The set is described as uneven – energetic highs on Days Between and Jack Straw are offset by sloppy transitions and a lackluster second half, leaving listeners with a mixed impression of pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solos get both praise (tight work on Each Other, nice guitar on Eternity) and criticism (some feel under‑driven).",
+    "Phil": "Phil’s bass is noted as playing behind the rack on Iko Iko; a cello‑like sound on Days Between is highlighted.",
+    "Bob": "Bob Weir’s vocals and interplay are praised, especially on Minglewood Blues and Candyman.",
+    "Keys": "Brent (referred to as Vince) earns kudos for a funky solo during Desolation Row.",
+    "Drums": "Drums/Space described as overwhelming but no specific performance issues noted."
+  },
+  "song_mentions": {
+    "Days Between": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:01:43.486148+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-04-01.sbd.hinko.23822.sbeok.shnf"
+}

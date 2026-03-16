@@ -1,0 +1,51 @@
+{
+  "summary": "A modest audience (aud) recording with mic‑placement quirks captures a killer show highlighted by Let It Grow, Ship of Fools and Stella Blue.",
+  "review": "The performance is consistently praised – reviewers call the Let It Grow, Ship of Fools and Stella Blue renditions the best they’ve heard and rave about the explosive drums/space segue. The audience recording isn’t pristine; mic placement off the shed stacks makes it sound less than ideal, though most listeners find it acceptable for a taping of this caliber.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Show quality is rated very high (standout songs and powerful space segment) while recording quality is mixed but generally listenable, yielding a weighted average around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Mic placement aimed at shed stacks rather than hanging off the shed results in occasional muddiness; overall the aud is decent and clearer than other popular audience sources, but not a clean soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Ship of Fools",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong flow highlighted by an intense drums/space segment and a seamless segue into the ensuing 'miracle' section; overall pacing described as killer."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Praised for mind‑roasting space and powerful, energetic drumming throughout the show."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:49:46.410658+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-06-30.aud.Taggart-Holtz.116720.flac16"
+}

@@ -1,0 +1,88 @@
+{
+  "summary": "Top‑notch matrix recording of a high‑energy 1982 show featuring a blistering Bertha, soaring Truckin’ and an all‑time great China→Rider jam.",
+  "review": "The matrix mix is described as crystal‑clear and enveloping, with only minor early technical quirks that quickly disappear. Musically the concert shines – Phil’s thumping bass, Jerry’s expressive, fast‑paced playing (especially on Bertha) and standout performances of Truckin’, Sugar Magnolia, Roses, China→Rider, Sailor→Saint and Stella Blue are repeatedly praised, while Iko Iko is noted as a slower moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give five‑star ratings and highlight both superb show moments and an excellent matrix mix; the few mixed/negative comments are outweighed by strong praise."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners rave about the clear, enveloping mix and top‑notch balance; a brief early issue with Jerry’s vocal panning is mentioned but quickly resolved, and overall the recording captures the tent‑like atmosphere beautifully."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Truckin’",
+      "Sugar Magnolia",
+      "Roses",
+      "China → Rider",
+      "Sailor > Saint",
+      "Stella Blue",
+      "Stagger Lee"
+    ],
+    "poor_songs": [
+      "Iko Iko"
+    ],
+    "setlist_flow": "A crazy, high‑tempo setlist that builds from a solid first half into an intense second set; the band rides a wave of energy through fast jams and emotional ballads, delivering one of the decade’s most memorable performances."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is described as expressive, fast‑paced (especially on Bertha), with classical‑style fiddling and a shifting vocal position that adds drama.",
+    "Phil": "Praised for his thumping, grumbling bass that anchors the show.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin’": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China → Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T00:12:56.886324+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-10.mtx.seamons.102902.flac16"
+}

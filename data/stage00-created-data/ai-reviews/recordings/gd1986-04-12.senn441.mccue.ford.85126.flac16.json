@@ -1,0 +1,39 @@
+{
+  "summary": "Nice Senn441 soundboard capture of an average 1986 show, highlighted by a surprisingly fast Eyes of the World.",
+  "review": "The recording, made with a Sennheiser 441 front‑of‑house mic, is described as very nice sounding and earns four‑plus stars for its clarity. The performance itself is considered only average (three stars), though reviewers do note a surprisingly brisk rendition of \"Eyes of the World\" as a highlight. Overall the set is enjoyable but not among the Dead's top shows.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Show quality is rated around average (≈3 ★) while recording quality is praised highly (≈4.5 ★); weighting yields a mid‑range overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers call the sound \"very nice sounding\" and give four+ stars to the recording, indicating clear, well‑balanced audio with no major issues noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on pacing; overall considered an average show with a few enjoyable moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:50:34.369705+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-12.senn441.mccue.ford.85126.flac16"
+}

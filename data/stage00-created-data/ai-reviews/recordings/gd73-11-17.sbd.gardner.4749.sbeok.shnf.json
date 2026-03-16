@@ -1,0 +1,83 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a November ’73 show highlighted by the legendary Playin’ > Uncle John’s > Morning Dew sandwich, soaring Here Comes Sunshine and blistering Eyes of the World.",
+  "review": "The recording is an excellent SBD with crisp highs, minimal hiss and only a harmless splice, making every nuance audible. Musically the performance is near‑perfect – Jerry’s guitar weaves purposefully through the famed Playin’ sandwich, Phil’s bass drives the jams, Keith’s keys shine on China Cat → Rider, and the whole band rides an electrifying second set that includes a standout Here Comes Sunshine and a soaring Eyes of the World.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Over 40 reviews overwhelmingly praise both the performance (standout jams, tight transitions) and the soundboard quality (crisp, clear). The few minor complaints (slight hiss, a missed lyric) do not detract from an overall near‑perfect experience."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean mix with very little hiss; occasional splice noted around the UJB segment but it is inaudible to most listeners. No major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' in the Band > Uncle John's Band > Morning Dew > Uncle John's Band > Playin'",
+      "Here Comes Sunshine",
+      "Eyes of the World",
+      "China Cat Sunflower > I Know You Rider",
+      "Brown Eyed Women"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fluid second‑set transitions, especially the famous sandwich and the seamless move from China Cat into Rider. Energy builds from a strong first set through an explosive jam‑heavy second half."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as purposefully meandering at times but leading the jam with searing leads; his solo on Uncle John's is called “gentle shredding” and he “drives the band” throughout.",
+    "Phil": "Praised for “blowing bombs” on Morning Dew, following Jerry closely and adding spice/aggression to the low‑end.",
+    "Bob": "Mentioned for a soulful vocal on Looks Like Rain and solid rhythm work.",
+    "Keys": "Keith’s playing highlighted on China Cat → Rider; occasional mix‑level complaints but overall “bang up job”.",
+    "Drums": "Bill Kreutzmann noted for perfect hi‑hat timing, syncing with Jerry’s intensity; drumming called “tight” and “driving the beat”."
+  },
+  "song_mentions": {
+    "Playin' in the Band > Uncle John's Band > Morning Dew > Uncle John's Band > Playin'": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Eyes of the World": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 10,
+      "negative_mentions": 1,
+      "total_mentions": 11
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T02:45:35.459104+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-11-17.sbd.gardner.4749.sbeok.shnf"
+}

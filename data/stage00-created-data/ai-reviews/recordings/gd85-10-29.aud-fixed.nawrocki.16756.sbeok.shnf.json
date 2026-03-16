@@ -1,0 +1,80 @@
+{
+  "summary": "Excellent audience recording captures a high‑energy show with standout Friend of the Devil, 1/2 Step > Franklin’s Tower and an explosive Other One.",
+  "review": "Both reviewers praise the performance – a short but punchy first set followed by a second set that roars with strong Stranger, a soaring Friend of the Devil, tight 1/2 Step > Franklin’s, and a thunderous Other One that even blew a speaker. The audience tape delivers a vivid “you are there” theatre feel; although one reviewer notes early muffling and echo, the sound improves and is generally regarded as superior to the available soundboard source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Show quality is consistently rated high (energetic set, many standout songs) while recording quality is mostly praised with minor early muffling; combined weighted score yields ~4.3 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Solid theatre ambience with a strong 'you are there' feel; some reviewers note the recording is muffled and echo‑y at the very start but it clears up quickly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil",
+      "1/2 Step > Franklin's Tower",
+      "The Other One",
+      "Crazy Fingers",
+      "Birdsong",
+      "Warf Rat",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A brief, high‑energy first set that sets the mood, followed by a second set that builds momentum with tight transitions and powerful jams, ending on a satisfying Brokedown."
+  },
+  "band_member_comments": {
+    "Jerry": "Strong vocal delivery; occasional lyrical slip during Crazy Fingers but recovers with a soaring outro jam.",
+    "Phil": "Delivers an aggressive bass attack on The Other One that blew a speaker, showcasing his full‑on power.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Highlights include a fantastic drum segment after the Crazy Fingers jam and overall driving rhythmic energy."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "1/2 Step > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Warf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T10:02:15.812198+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-10-29.aud-fixed.nawrocki.16756.sbeok.shnf"
+}

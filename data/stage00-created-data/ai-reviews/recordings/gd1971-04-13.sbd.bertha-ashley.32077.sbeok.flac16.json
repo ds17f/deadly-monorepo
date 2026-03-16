@@ -1,0 +1,85 @@
+{
+  "summary": "A high‑energy 1971 show captured on a soundboard remaster with excellent guitar work and standout performances of Good Lovin', Hard to Handle, Second That Emotion and other classics despite minor clipping.",
+  "review": "The concert is praised for its relentless energy – first‑set numbers are described as “epic” and the second set delivers fireworks on Good Lovin', Hard to Handle and Second That Emotion. The soundboard source has been well remastered, offering clear depth even though a few song beginnings/endings are clipped and there is slight high‑end peaking.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars, highlight numerous standout songs and strong performances, and note only minor recording flaws."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Remastered soundboard with clear depth; occasional tape‑operator glitches (clipped song starts/ends) and slight high‑end peaking, but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'",
+      "Second That Emotion",
+      "Hard to Handle",
+      "Sugar Magnolia",
+      "Truckin'",
+      "Casey Jones",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first set with peppy, dance‑able renditions; strong second set highlighted by a fiery Good Lovin' jam and the wacky groove of Hard to Handle. Opening with Casey Jones adds excitement despite an apparent curfew truncation."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar described as glistening, shredding and \"off the charts\" throughout; also noted playing pedal steel.",
+    "Phil": "Bass feels “like it's sitting in your lap”; sings lead on the intro to Cumberland and contributes heavily to Good Lovin' darkness jam.",
+    "Bob": "Vocal presence highlighted on Good Lovin', Casey Jones and other numbers; joins Jerry in harmonies.",
+    "Keys": "Reviewer wishes Ron’s organ was audible, implying keyboards are present but not fully captured.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Second That Emotion": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hard to Handle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Darkness Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T04:41:24.779071+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-13.sbd.bertha-ashley.32077.sbeok.flac16"
+}

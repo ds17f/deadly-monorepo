@@ -1,0 +1,62 @@
+{
+  "summary": "Excellent audience recording of a legendary Easter‑Sunday show in Irvine with standout China>Rider, Wharf Rat, Space and Black Muddy River performances",
+  "review": "Fans rave about this 1987 Irvine concert as one of the year’s best, highlighting a tightly‑constructed first set, an explosive second‑set A (China Cat Sunflower > I Know You Rider, Wharf Rat, Space) and a remarkable Black Muddy River encore. The audience tape is praised as the “best AUD recording” with crystal‑clear sound that lets every nuance of Jerry’s smiling vocals and guitar work shine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently five‑star praise for both the performance and the audio quality across eight detailed reviews; no negative comments detected."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners call it the best AUD tape, noting superb clarity and balance with no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Wharf Rat",
+      "Space",
+      "Black Muddy River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as nicely constructed; pre‑drums “Cumberland” jam adds a special touch. Second set A is “off the hook,” and the encore delivers a rare, soaring Black Muddy River."
+  },
+  "band_member_comments": {
+    "Jerry": "Smiling all day, stellar vocal moment on \"everyone say...\" (Wharf Rat), and an almost unprecedented guitar solo on Black Muddy River.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Pre‑drums Cumberland jam highlighted as a nice surprise; overall drumming praised as epic."
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:03:24.821328+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-04-19.aud.corso.ford.lmpp.98052.flac16"
+}

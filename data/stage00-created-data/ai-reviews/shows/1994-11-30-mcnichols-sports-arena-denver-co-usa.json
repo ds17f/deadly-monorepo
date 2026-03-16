@@ -1,0 +1,72 @@
+{
+  "summary": "Mixed show with bright Loose Lucy but off‑key Jerry",
+  "blurb": "Loose Lucy, Lazy River Road and the encore Liberty stand out while much of the second set drags. Jerry’s vocals stumble on several numbers and Vince’s keyboards dominate the mix. Overall a fair audience capture of an uneven performance.",
+  "review": "Denver’s Thanksgiving night on November 30‑1994 at McNichols Sports Arena delivered a show that feels more like a missed opportunity than a classic. The first set offered moments of sparkle – “Loose Lucy” and “Lazy River Road” were played with gusto, and the crowd got a solid “Cassidy.” Yet Jerry Garcia was frequently unfocused, slipping on lyrics in “Terrapin Station,” “Crazy Fingers,” and even missing lines in “Standing On The Moon.” Vince Welnick’s keyboard presence leaned heavy, especially an unpleasant solo on “Estimated Prophet,” while the drums kept a steady pulse but never lifted the sagging energy. The second set was plagued by rushed tempos and truncated arrangements, leaving the band sounding like they were merely keeping time. The lone bright spot came at the close with a heartfelt rendition of “Liberty.” For listeners seeking the best version of this night, the audience recording gd94‑11‑30.schoeps.ladner.10542.sbeok.shnf offers the most complete set despite its fair sound quality.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 1.8,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 9,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": -0.8,
+      "sentiment_rationale": "Three recordings show consistent negative sentiment: two are labeled 'negative' and one 'mixed'. Reviewers repeatedly note off‑key vocals, lyric slips, heavy keyboard dominance, and overall disengaged performance, outweighing the few positive song mentions.",
+      "final_calculation": "2.5 + 0.1 + -0.8 = 1.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd94-11-30.schoeps.ladner.10542.sbeok.shnf",
+    "reason": "Most complete source with the full setlist and the only recording that captures the highlight tracks (Loose Lucy, Lazy River Road, Liberty) despite fair audio quality."
+  },
+  "key_highlights": [
+    "Loose Lucy shines as a high‑energy moment.",
+    "Lazy River Road delivers a solid groove amid an uneven set.",
+    "Liberty provides a heartfelt encore finish.",
+    "Vince's heavy keyboard mix and occasional unpleasant solos detract from the overall sound."
+  ],
+  "song_highlights": [
+    "Loose Lucy",
+    "Lazy River Road",
+    "Liberty",
+    "Cassidy",
+    "Space",
+    "Standing On The Moon"
+  ],
+  "band_performance": {
+    "Jerry": "Frequently unfocused and off‑key, with lyric slips on Terrapin Station, Crazy Fingers, and Standing On The Moon; occasional vocal strength noted on the moon line.",
+    "Phil": "",
+    "Bob": "Provides steady rhythm guitar work; acoustic turn on Me & My Uncle noted but otherwise unremarkable.",
+    "Brent": "Vince's keyboards dominate the mix, with a heavy presence throughout; his solo on Estimated Prophet is described as unpleasant to the ears.",
+    "Mickey": "Drums are solid and keep time, offering reliable support despite overall low energy.",
+    "Billy": "Drumming stays tight, complementing Mickey without adding notable excitement."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-19T04:06:54.011288+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Loose Lucy"
+    ],
+    [
+      "Lazy River Road"
+    ],
+    [
+      "Liberty"
+    ],
+    [
+      "Cassidy"
+    ],
+    [
+      "Crazy Fingers",
+      "Estimated Prophet",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Standing On The Moon",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

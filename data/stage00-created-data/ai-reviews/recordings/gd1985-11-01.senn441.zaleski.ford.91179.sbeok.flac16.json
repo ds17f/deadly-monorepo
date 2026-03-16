@@ -1,0 +1,58 @@
+{
+  "summary": "An excellent audience‑sourced recording that delivers a standout 1985 show, with a brilliant second set highlighted by “Gloria”, “High Time” and “Lost Sailor”.",
+  "review": "Fans rave about the crystal‑clear audio – calling it better than other known sources – and praise the performance as one of the year’s gems, especially the second set. The highlights include an exceptional “Gloria” and powerful renditions of “High Time” and “Lost Sailor”, while the only blemish noted is a weaker “Day Job”.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 5‑star with strong praise for both the music and the audio quality; recording is deemed excellent and show performance is consistently lauded, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners describe the audio as crisp, clear and superior to other known sources (e.g., Oade); no major drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Gloria",
+      "High Time",
+      "Lost Sailor"
+    ],
+    "poor_songs": [
+      "Day Job"
+    ],
+    "setlist_flow": "Second set is repeatedly called a ‘real treat’, with seamless energy and mood; overall show regarded as one of the stronger 1985 performances despite occasional odd moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Gloria": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Day Job": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T10:19:42.003784+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-01.senn441.zaleski.ford.91179.sbeok.flac16"
+}

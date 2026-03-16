@@ -1,0 +1,82 @@
+{
+  "summary": "Spectacular Miller soundboard remaster captures a fire‑filled show highlighted by Big Boss Man and Candyman, though some fans find the set uneven.",
+  "review": "The Miller‑remastered soundboard tape delivers crystal‑clear audio that many reviewers call spectacular, making the performance easy to enjoy. Musically the band is largely praised for being “on fire” with standout moments like Big Boss Man and a moving Candyman, but a few listeners note a dip in energy after the opening and cite several songs as weaker points.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Average star rating is 4.0; recording quality receives unanimous praise while show quality is split between high enthusiasm and some criticism, yielding a solid but not outstanding overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller remaster described as spectacular, crisp, and great sound throughout; no technical complaints noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Boss Man",
+      "Candyman"
+    ],
+    "poor_songs": [
+      "Far From Me",
+      "Mexicali Blues",
+      "Bucket",
+      "Looks Like Rain",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    "setlist_flow": "Generally high‑energy and fire‑filled, especially the second set, but a few listeners feel the show loses momentum after a strong opening."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bucket": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T08:27:21.303097+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-09.sbd.miller.91241.sbeok.flac16"
+}

@@ -1,0 +1,70 @@
+{
+  "summary": "Crisp soundboard capture of a scorching outdoor 1979 Rochester show highlighted by a blazing Scarlet>Fire and smoking Half‑Step → Franklin’s, with strong performances throughout.",
+  "review": "The recording is a clean sound‑board source that most listeners describe as clear and “crispy,” though a few note occasional bass drop‑outs. Musically the concert shines – the Mississippi Half‑Step into Franklin’s Tower and the marathon Scarlet Begonias → Fire on the Mountain are repeatedly called spectacular, with Big River, Wharf Rat and Fire on the Mountain also getting high marks. Overall the show is remembered as a hot, high‑energy outdoor set that, despite a curfew‑induced short second set, delivers several standout jams.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (30+) are 4–5 stars and praise both performance and sound quality; only a few low‑star outliers focus on isolated recording flaws or crowd incidents, so the combined show‑and‑recording score is strong."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the board “crispy” and clear; one notes the mix is slightly quiet with bass dropping out, another mentions drums recessed. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step > Franklin's Tower",
+      "Scarlet Begonias > Fire on the Mountain",
+      "Big River",
+      "Wharf Rat",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [
+      "Saint of Circumstance"
+    ],
+    "setlist_flow": "Outdoor daylight show with a high‑energy first set; curfew forced a shorter second set but the band kept momentum, delivering extended jams (notably Scarlet>Fire) and tight transitions. Crowd atmosphere was lively and occasionally chaotic."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring tone on his new ‘Tiger’ guitar, cosmic solos during Scarlet>Fire, occasional lyric slip‑ups but overall stellar playing.",
+    "Phil": "Described as “smoking” and loudly clear on bass; one reviewer noted bass drops in a quiet mix, but most cite strong presence.",
+    "Bob": "His songs (e.g., Saint of Circumstance) received mixed feelings – some find them corny, others enjoy the quirky vibe; no specific instrumental critique.",
+    "Keys": "Brent Mydland praised for “slaying” on keys in Big River and noted a slight mix issue by one reviewer.",
+    "Drums": "Generally solid; one low‑rating review mentioned drums buried, but most listeners hear them well."
+  },
+  "song_mentions": {
+    "Mississippi Half-Step > Franklin's Tower": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:55:40.354357+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-09-01.sbd.dodd.18898.sbeok.shnf"
+}

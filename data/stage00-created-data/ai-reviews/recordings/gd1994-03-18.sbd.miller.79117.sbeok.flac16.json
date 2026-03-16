@@ -1,0 +1,95 @@
+{
+  "summary": "Soundboard recording of a high‑energy 3/18/1994 Rosemont show with crisp audio and standout performances of Stranger, Ramble On Rose and Here Comes Sunshine.",
+  "review": "The SBD capture is generally clear and well‑balanced, though the U.S. Blues segment sounds like an audience feed and is noticeably lower in fidelity. Musically the night shines – Jerry’s fluid guitar and soaring vocals, Vince’s Hornsby‑style keys, Phil’s booming bass and the twin‑drum wall of Billy and Mickey all receive glowing praise, especially on Stranger, Ramble On Rose, Here Comes Sunshine and El Paso. A few reviewers note a rushed first set and weaker closing moments, but overall the show is regarded as one of the band’s memorable 1994 performances.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Average star rating across 7 reviews is ~3.4; most reviewers highlight strong playing and a good soundboard source, offset by comments about rushed moments and one poor‑quality audience track."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall crisp SBD mix with excellent instrument separation. The U.S. Blues portion appears to be sourced from the audience and sounds noticeably worse, but no major drop‑outs or distortion elsewhere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Ramble On Rose",
+      "Here Comes Sunshine",
+      "El Paso",
+      "Brown-Eyed Women"
+    ],
+    "poor_songs": [
+      "U.S. Blues"
+    ],
+    "setlist_flow": "Strong opener with Stranger and an early Deal that energized the crowd; a solid first set that some felt rushed; second set launched by Here Comes Sunshine followed by a soaring Ramble On Rose, keeping momentum high; the third set tapered off slightly, leaving a weaker closing impression for several listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fluid guitar work, soaring solos (Ramble On Rose, El Paso), precise picking on Deal and an especially powerful vocal performance.",
+    "Phil": "Described as loud in the mix, ‘dropping bombs’, and shaking listeners’ souls with his bass lines.",
+    "Bob": "Vocals highlighted as emotive and strong on Stranger, El Paso, Brown‑Eyed Women; harmonies praised throughout.",
+    "Keys": "Vince lauded for Hornsby‑like piano, solid chording, and proving his worth post‑Hornsby despite occasional synth sounds.",
+    "Drums": "Both Billy and Mickey commended for tight, locomotive‑like drive and perfect synchronization."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:11:11.715598+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-18.sbd.miller.79117.sbeok.flac16"
+}

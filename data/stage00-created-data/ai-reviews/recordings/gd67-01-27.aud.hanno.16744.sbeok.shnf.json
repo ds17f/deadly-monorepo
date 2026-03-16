@@ -1,0 +1,57 @@
+{
+  "summary": "Rough audience tape but captures a ferocious early‑'67 set highlighted by blistering Alligator, soaring New Potato Caboose and a legendary Viola Lee Blues.",
+  "review": "The recording is an old‑school hand‑held mono cassette capture – muddy, low‑fidelity and sometimes hard to follow – yet it preserves a historic Avalon Ballroom performance.  Musically the show shines with an incendiary Alligator, a soaring New Potato Caboose and arguably one of the most intense Viola Lee Blues jams ever recorded, plus strong moments from Morning Dew and Pigpen’s organ work.  Fans who can look past the technical flaws will find this a priceless snapshot of the Dead in early‑'67.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "The musical performance is repeatedly praised (standout jams, historic set) while the recording quality is consistently described as poor; weighted averaging of show (≈4.5) and recording (≈2) yields ~3.8."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Hand‑held mono cassette, very muddy, frequent drop‑outs, low instrument separation; some listeners report it becomes listenable after a few seconds but overall unlistenable for most."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alligator",
+      "New Potato Caboose",
+      "Viola Lee Blues",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early‑'67 set builds from a gentle opening into high‑energy jams; the Alligator>Caution sequence and extended Viola Lee showcase the band's improvisational peak, while Pigpen’s organ sits front‑and‑center."
+  },
+  "band_member_comments": {
+    "Jerry": "Frequently praised for fiery, overdriven guitar tone and intense solos (especially on Alligator and Morning Dew).",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen’s organ is highlighted as “swirling”, “dominant” and a major highlight of the performance.",
+    "Drums": "Billy’s drums are noted as low in the mix; later comments mention two‑drummer feel on Alligator>Caution."
+  },
+  "song_mentions": {
+    "Alligator": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "New Potato Caboose": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Viola Lee Blues": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-24T05:41:20.976416+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd67-01-27.aud.hanno.16744.sbeok.shnf"
+}

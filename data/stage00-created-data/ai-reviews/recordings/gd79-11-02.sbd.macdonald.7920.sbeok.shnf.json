@@ -1,0 +1,82 @@
+{
+  "summary": "High‑energy 11/02/79 show captured from a cassette‑master soundboard tape – great performances (Half Step → Franklin’s, Miracle → Bertha, Saint of Circumstance jam) with mostly clear audio despite early half‑step glitches.",
+  "review": "This recording delivers one of the strongest second sets of the late‑’70s era, highlighted by an epic Half Step → Franklin’s opener, a blistering Miracle into Bertha, and a soaring Saint of Circumstance jam that carries the show to a thrilling Casey Jones finale. The soundboard source was transferred from a cassette master, so while most of the mix is clean and distinct, the first verse of Half Step suffers from low monitor levels and occasional tape‑glitches. Overall the musical performance far outweighs the modest technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈80 %) are 4–5 stars and praise the show’s setlist, jams and individual performances; recording issues are noted but described as minor, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Cassette‑master soundboard tape; early half‑step vocal mix is low and there’s a brief fidelity glitch at the start, but overall clarity is high with distinct instrument separation. No major dropouts, just occasional tape‑hiss."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step > Franklin's",
+      "Lazy Lightnin' / Supplication",
+      "Miracle > Bertha",
+      "Saint of Circumstance jam",
+      "Lost Sailor > Saint",
+      "Not Fade Away (Stephen tease)",
+      "Casey Jones"
+    ],
+    "poor_songs": [
+      "Stella Blue"
+    ],
+    "setlist_flow": "First set opens slowly with Half Step but builds momentum through Lazy Lightnin' and Miracle; the second set is a high‑octane showcase—Franklin’s stretches out, Bertha rocks, the Saint of Circumstance jam expands into spacey improvisation, and Casey Jones closes with classic energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for fiery guitar work (especially on Miracle and Not Fade Away) and a standout solo at the end of Not Fade Away; also noted for powerful vocals on Casey Jones.",
+    "Phil": "Highlighted for his “manic, driving bass line” during Lazy Lightnin' / Supplication.",
+    "Bob": "Mentioned for witty pre‑Casey comment (“This is only a test”) and solid vocal contributions throughout.",
+    "Keys": "Brent Mydland’s keyboards are described as sometimes too high in the mix later in the show, but his jams (especially during Saint of Circumstance) receive praise.",
+    "Drums": "Mickey Hart noted for the “drumspace” weirdness and overall solid drumming; no major criticism."
+  },
+  "song_mentions": {
+    "Half Step > Franklin's": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Lazy Lightnin' / Supplication": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Miracle > Bertha": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Saint of Circumstance jam": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Lost Sailor > Saint": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T00:48:23.925908+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-11-02.sbd.macdonald.7920.sbeok.shnf"
+}

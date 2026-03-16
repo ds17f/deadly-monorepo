@@ -1,0 +1,76 @@
+{
+  "summary": "Crisp SBD with studio‑like clarity but a lopsided mix; the second set shines with standout Scarlet → Fire and soaring Space, while the first set suffers from balance issues.",
+  "review": "The recording captures an unusually clean soundboard tape that sounds almost like a studio album, yet the vocal and bass levels dominate and Jerry’s guitar is often buried, especially in the first set. Musically the show is a mixed bag: the early songs feel thin, but the second half delivers classic ’85 magic – a vivid Scarlet Begonias → Fire on the Mountain segue, an incandescent Space, and powerful renditions of The Other One and Samson & Delilah.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is high (strong second set, many praised songs) while recording quality is uneven (excellent clarity but problematic mix), yielding a combined rating just under four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Very crisp and detailed, especially drums and bass; however vocals and bass sit too high, Jerry’s guitar is often washed out or buried, crowd noise absent during songs, first‑set mix varies noticeably."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire On The Mountain",
+      "Space",
+      "The Other One",
+      "Samson And Delilah"
+    ],
+    "poor_songs": [
+      "Bertha (mix issues)",
+      "First set overall (balance problems)"
+    ],
+    "setlist_flow": "The first set feels thin and uneven, but the second set ignites with a superb Scarlet → Fire transition, extended Space, and high‑energy jams that showcase the 1985 fire."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar often buried in mix, especially early tracks; when audible he delivers strong solos (“Dooownn” on Samson) and shines during the second set.",
+    "Phil": "Bass is front‑and‑center, sometimes sounding like a lead instrument; generally clear and praised for its studio‑like presence.",
+    "Bob": "",
+    "Keys": "Brent’s delay effects stand out on Scarlet Begonias; keyboards add experimental overtones that enhance the second‑set jams.",
+    "Drums": "Drum sound is exceptionally clear and “studio‑like,” frequently highlighted as a recording strength."
+  },
+  "song_mentions": {
+    "Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire On The Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson And Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T04:58:09.222260+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-06-16.sbd.barrick.970.sbefail.shnf"
+}

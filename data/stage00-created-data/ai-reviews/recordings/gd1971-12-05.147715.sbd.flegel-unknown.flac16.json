@@ -1,0 +1,57 @@
+{
+  "summary": "A spirited East‑Coast 1971 performance with a blazing Dark Star/Me & My Uncle jam, but the recording suffers from odd stereo imaging and needs mastering.",
+  "review": "The show captures the Dead in an inspired early‑'70s groove – highlights include a wild Dark Star → Me & My Uncle → Dark Star transition into Sitting on Top of the World and a fiery Truckin'. The source is decent, though reviewers note weird stereo spread and a need for better mastering to clean up the mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Both reviewers are enthusiastic about the musical performance (5‑star praise) while noting only moderate recording flaws; weighting favors the strong show, yielding a solid >4 rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Mix has strange stereo imaging and could benefit from mastering and mid‑range correction; overall listenable but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Me & My Uncle",
+      "Sitting on Top of the World",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly with extended jams, especially the Dark Star → Me & My Uncle sequence that evolves into a rare Sitting on Top of the World jam; overall energy is high and festive."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Weir and Pig (Bob) are praised for their smoky performance on the NFA segment.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sitting on Top of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T10:35:01.725096+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-12-05.147715.sbd.flegel-unknown.flac16"
+}

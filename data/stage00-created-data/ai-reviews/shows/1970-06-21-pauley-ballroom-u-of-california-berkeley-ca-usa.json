@@ -1,0 +1,61 @@
+{
+  "summary": "Energetic Easy Wind jam, tight Not Fade Away → Saint Stephen flow",
+  "blurb": "The show features a classic Easy Wind jam followed by a seamless Not Fade Away into Saint Stephen segue that lifts the second half. Jerry’s relaxed playing and his moaning on Candyman add a joyous vibe, while Good Lovin' appears twice with strong drum interludes. Recording quality varies, but the performance remains energetic.",
+  "review": "June 21, 1970 at the Pauley Ballroom captured the Dead in a free‑wheeling early‑summer mood. A standout Easy Wind jam opens Set 1 and sets a breezy tone that carries through to an inspired Not Fade Away → Saint Stephen transition – a highlight praised by every listener who managed to hear it despite the tape’s haze. Jerry Garcia is described as relaxed, perhaps “on a joint,” delivering laid‑back leads and a memorable moan on Candyman that adds character to the set. Good Lovin' gets the full drum‑break treatment twice, showing the band’s rhythmic chemistry. While both audience recordings suffer from typical 1970 tape muffling and occasional cuts (Not Fade Away, Good Lovin'), the second tape is especially echo‑filled and abrasive; the first tape, though hazy, preserves enough clarity to enjoy the energetic flow. Overall the performance shines through the lo‑fi medium, making this a solid early‑’70 snapshot for fans who appreciate raw, joyful playing.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "One recording is explicitly positive and the other mixed; both highlight strong jams (Easy Wind, Not Fade Away → Saint Stephen) and note no serious performance flaws. The consensus leans toward a favorable view of the playing, warranting a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.8 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-06-21.aud.hanno.6160.sbeok.shnf",
+    "reason": "Offers the clearest audio among the two tapes, retains the full set and captures the energetic flow with only minor haze and occasional cuts."
+  },
+  "key_highlights": [
+    "Classic Easy Wind jam that sets a free‑wheeling tone.",
+    "Seamless Not Fade Away → Saint Stephen segue delivering high energy.",
+    "Jerry’s relaxed vibe and Candyman moaning add joyous character.",
+    "Good Lovin' appears twice with drum breaks, showcasing dynamic interplay."
+  ],
+  "song_highlights": [
+    "Easy Wind",
+    "Not Fade Away",
+    "Saint Stephen",
+    "Good Lovin'",
+    "Candyman"
+  ],
+  "band_performance": {
+    "Jerry": "Relaxed, possibly on a joint, contributing to the laid‑back vibe; notable moan on 'Candyman'.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-19T21:18:17.332482+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Easy Wind"
+    ],
+    [
+      "Candyman",
+      "Not Fade Away",
+      "Saint Stephen",
+      "Drums",
+      "Good Lovin'",
+      "Drums",
+      "Good Lovin'"
+    ]
+  ]
+}

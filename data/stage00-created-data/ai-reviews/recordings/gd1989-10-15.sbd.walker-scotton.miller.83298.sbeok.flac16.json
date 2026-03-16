@@ -1,0 +1,85 @@
+{
+  "summary": "Crystal‑clear soundboard recording of a solid show, highlighted by an incendiary Estimated Prophet and a powerful second set.",
+  "review": "The SBD source is praised as crisp and “super sweet,” delivering a clean listening experience with only minor digi‑static that can be attenuated. Musically the concert shines on the second half – Estimated Prophet (Jerry’s solo is called “on fire”), Standing on the Moon and Victim receive strong mentions, while the first set has a few weaker spots like Far From Me and Row Jimmy. Overall fans are enthusiastic, noting both great performance moments and high‑quality audio.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4–5 stars and highlight excellent soundboard quality; only one mixed review lowers the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, sweet SBD with occasional digi‑static (audience patch) that can be reduced; no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Standing on the Moon",
+      "Victim or the Crime",
+      "Good Times"
+    ],
+    "poor_songs": [
+      "Far From Me",
+      "Row Jimmy"
+    ],
+    "setlist_flow": "First set is short and a bit uneven, but the 1:45 second set is described as one of the best of the tour, with strong transitions and high energy."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Estimated Prophet is called \"on fire\"; occasional moments where he 'didn't always find his place' in Victim.",
+    "Phil": "Great bass work noted on Box; overall solid foundation.",
+    "Bob": "Out‑of‑tune keyboards mentioned, but praised for leading the Estimated Prophet section.",
+    "Keys": "Keyboard (Bobby) described as out of tune at times, yet shoulders the Estimated Prophet.",
+    "Drums": "Drummers have a false‑start early in the second set but later provide fun, arena‑shaking beats."
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim or the Crime": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Times": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Box": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:23:25.556132+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-15.sbd.walker-scotton.miller.83298.sbeok.flac16"
+}

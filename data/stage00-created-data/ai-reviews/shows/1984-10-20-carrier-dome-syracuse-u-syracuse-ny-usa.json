@@ -1,0 +1,73 @@
+{
+  "summary": "High‑energy Syracuse show with monster Jack Straw and scorching Shakedown",
+  "blurb": "The Oct 20 1984 carrier dome gig erupts on a searing Jack Straw and a blazing Shakedown Street, followed by an extended jam that rolls through The Other One into Black Peter. Bird Song shines in the first set while Lovelight closes the night on a heartfelt note. Overall the band is locked‑in, delivering one of the era’s most electrifying performances.",
+  "review": "On October 20, 1984 the Grateful Dead turned the Carrier Dome into a sonic furnace. The first set builds momentum with tight renditions of Bertha and a soaring Bird Song that leads straight into a monster Jack Straw – Jerry’s guitar is razor‑sharp, his tone searing through the dome’s reverb. The second set detonates with Shakedown Street, where Brent’s funky wah‑filled keys dance around Jerry’s lead, and the band rides an unrelenting groove into a sprawling jam that weaves He's Gone, Smokestack Lightning, The Other One and Black Peter before resolving on a soulful Turn On Your Lovelight. Across all available sources the performance is described as “high‑energy,” “ferocious,” and “locked‑in,” with only minor grumbles about first‑set unevenness or vocal strain that never dulls the overall blaze.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 84,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Strong positive sentiment across the majority of recordings: repeated praise for Jack Straw, Shakedown Street, Bird Song and The Other One; consistent mentions of \"monster\" jams, \"searing\" guitar and \"ferocious\" drumming. Only a single negative matrix source and a few mixed comments about first‑set balance, none of which outweigh the overwhelming acclaim.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd84-10-20.sbd.mattman.15673.sbeok.shnf",
+    "reason": "Excellent soundboard capture with clear guitar/keyboard mix, full set present and minimal drop‑outs; balances dome reverb while preserving the high‑energy performance."
+  },
+  "key_highlights": [
+    "Monster Jack Straw jam that powers the second half of the show",
+    "Scorching Shakedown Street with Brent’s funky wah‑effects",
+    "Extended The Other One → Black Peter sequence delivering peak improvisation",
+    "Bird Song shines as a soaring opener and Lovelight closes on an emotional note"
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Shakedown Street",
+    "Bird Song",
+    "The Other One",
+    "Black Peter",
+    "He's Gone",
+    "Smokestack Lightning",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Ripping, searing guitar throughout; standout tone on Jack Straw and Black Peter, vocal strain noted but still emotive.",
+    "Phil": "Driving \"bomb zone\" bass that locks the rhythm section together; throws musical bombs during high‑energy peaks.",
+    "Bob": "Solid rhythm work with notable contributions on Bird Song, Samson & Delilah and The Other One; occasional rough vocals but overall strong presence.",
+    "Brent": "Funky wah‑infused keyboards, jazzy fusion piano on Shakedown Street, tasteful delay vocals and \"chopping\" textures that lift the jams.",
+    "Mickey": "Ferocious, steady beats powering the second set’s intensity; adds spacious color during Take a Step Back‑style moments.",
+    "Billy": "Powerful, driving drumming complementing Mickey; together they fuel the high‑octane flow of the show."
+  },
+  "processed_recordings": 12,
+  "processed_date": "2025-09-14T23:27:30.716652+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw"
+    ],
+    [
+      "Shakedown Street",
+      "Samson & Delilah"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "He's Gone",
+      "Smokestack Lightning",
+      "Jam",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "The Other One",
+      "Black Peter",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

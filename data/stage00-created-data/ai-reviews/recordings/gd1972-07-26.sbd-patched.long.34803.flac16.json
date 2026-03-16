@@ -1,0 +1,91 @@
+{
+  "summary": "Clear‑board mix that leans vocal‑forward with occasional hiss, capturing strong performances of Sugaree, Dark Star and a standout Not Fade Away.",
+  "review": "The SBD recording is generally clear and loud, though the vocals sit a bit high in the mix and some instruments are buried. Musically the show is solid mid‑'72 Dead, highlighted by soulful Sugaree, an engaging Dark Star jam and a punchy Not Fade Away, with several other tight cuts despite a few missing sections.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Reviews praise the performance (especially Sugaree, Dark Star and Not Fade Away) and note good recording clarity, but also point out vocal‑forward balance issues and missing elements, leading to a strong yet not flawless overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crystal‑clear vocals that sometimes dominate the mix; high recording levels with slight background hiss; occasional balance problems (vocals over instruments, missing keyboard and drum details) and a brief skip at 1:58 in Beat It On Down The Line."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Dark Star",
+      "Not Fade Away",
+      "I Know You Rider",
+      "Tennessee Jed"
+    ],
+    "poor_songs": [
+      "Casey Jones (cut)",
+      "Brown Eyed Women (missing solo & bridge)"
+    ],
+    "setlist_flow": "A typical mid‑'72 two‑set layout with a long, loose second set; the band builds from solid first‑set work into an extended jam‑filled finale, though gaps between songs and some missing audio make the flow feel uneven at times."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is praised, especially his return in Dark Star and the way he “brings it back” toward the end of the set.",
+    "Phil": "Phil’s stage banter is noted, but his bass lines are often buried under the vocal‑forward mix.",
+    "Bob": "Bob Weir’s vocals sit prominently—sometimes too loudly—but his rhythm work remains solid.",
+    "Keys": "Keith’s piano/organ parts are largely inaudible in this mix, making it hard to assess his contribution.",
+    "Drums": "Bill Kreutzmann’s bass drum and ride cymbal cut through; timing issues are mentioned (behind or ahead of the beat) likely due to monitoring problems."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T15:54:11.903615+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-07-26.sbd-patched.long.34803.flac16"
+}

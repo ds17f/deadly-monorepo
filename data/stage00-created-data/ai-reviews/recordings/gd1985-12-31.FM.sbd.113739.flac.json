@@ -1,0 +1,51 @@
+{
+  "summary": "Good matrix recording of a high‑energy New Year’s Eve show with solid play and standout New Year's Fool and Sugaree moments",
+  "review": "The tape is a decent radio broadcast/matrix mix that captures the crowd‑feed energy of a classic ’85 New Year’s Eve set. Reviewers praise the electric vibe, the opening New Year’s Fool, the seamless Touch transition and an especially fiery Sugaree, while noting only minor quirks like Bob’s chatty banter. Overall the performance is solid and the sound quality good enough for repeated listening.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Four out of five reviews are positive about both the show (high energy, strong song moments) and the matrix recording quality; one review is irrelevant but does not detract from the overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Described as a decent \"Off Air\" radio broadcast with clear matrix mix; no major drop‑outs reported, just typical broadcast ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Year's Fool",
+      "Sugaree",
+      "Touch"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A tight first set opens with New Year's Fool and builds through Touch, maintaining momentum; the second half features a jam‑led segue into Sugaree and a marathon of classics (Terrapin Station, Truckin', Black Peter, Throwing Stones, etc.) that keeps the crowd engaged."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Noted as \"chatty\" in this radio broadcast, adding banter but not detracting from the music.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "New Year's Fool": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T12:21:52.063147+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-12-31.FM.sbd.113739.flac"
+}

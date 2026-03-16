@@ -1,0 +1,83 @@
+{
+  "summary": "High‑quality soundboard capture of a stellar late‑summer show highlighted by an epic Truckin' → The Other One sequence and strong jams throughout.",
+  "review": "The Miller‑sourced soundboard is generally clear and well balanced, though listeners note occasional uneven patches and an overly bright snare that eases later in the set. Musically the performance shines – the Truckin' into The Other One stretch is described as “epic,” with standout moments from Bird Song, Playing In The Band, Sugaree and a powerful finish to Stella Blue. Overall fans rave about the jam‑heavy second half despite minor mix quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 4–5 stars and praise both the musical highlights and the mostly solid soundboard source; a few note mix issues, pulling the average down slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and pure soundboard recording; some uneven patches and a very high snare drum level early in the set, plus occasional rough‑spot patches noted by the transfer notes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One",
+      "Bird Song",
+      "Playing In The Band",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A strong, jam‑focused second set with the iconic Truckin'→Other One transition leading into high‑energy jams; early set is a bit uneven but improves toward the end."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "His bass is prominent in the mix, giving the performance extra depth.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Billy's snare sits too high in the mix at first, causing a harsh edge that eases later in the set."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T16:06:25.741740+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-08-20.sbd.miller.83733.flac16"
+}

@@ -1,0 +1,77 @@
+{
+  "summary": "Crisp‑ish matrix recording of the 3‑21‑94 Richfield show captures an emotionally charged Stella Blue sandwich and strong He's Gone jam despite occasional mix quirks.",
+  "review": "The performance is remembered chiefly for a soaring Lovelight > Stella > Lovelight “sandwich,” a fiery He’s Gone that segues into a Matilda‑style jam, and several standout moments (Peggy O, Queen Jane, Bertha).  Reviewers repeatedly praise Jerry Garcia’s vocal intensity on Stella and his solid guitar tone, while noting the mix is sometimes thin on bass and hi‑hats.  The source is a composite matrix (soundboard plus audience bleed) that sounds clearer than most ’94 tapes but isn’t a true SBD.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 50 reviews, the vast majority rate 4‑5 stars and highlight specific musical peaks; recording quality is described as crisp or good with only occasional mix complaints, giving a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Many callers call the sound “crisp,” “superb,” and “clear,” but several note low bass, missing hi‑hats, and that the tape is a composite (not a pure SBD).  Overall the mix is listenable and better than typical ’94 releases."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Lovelight > Stella > Lovelight",
+      "He's Gone",
+      "Peggy O",
+      "Queen Jane",
+      "Bertha",
+      "New Speedway Boogie"
+    ],
+    "poor_songs": [
+      "Greatest > Bertha (transition noted as clunky)"
+    ],
+    "setlist_flow": "The first set is described as solid with a few bumps, while the second set builds to an emotional climax – Lovelight‑Stella sandwich followed by a jam that morphs into Matilda and a powerful drum/space segment.  The overall pacing is praised for its energy and emotional arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals on Stella called “heart‑wringing,” “emotional” and “one of the best ever”; guitar tone described as solid, crisp, and powerful throughout.",
+    "Phil": "Bass sometimes buried in the mix; one reviewer notes Phil’s signature bar‑chord riff missing at the start of Greatest.",
+    "Bob": "",
+    "Keys": "Vince receives mixed feedback – praised for creativity by some, criticized as a “minus star” by others.",
+    "Drums": "Bill and Mickey get shout‑outs for the jam after He's Gone; drummers are highlighted during the space segment."
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 22,
+      "negative_mentions": 0,
+      "total_mentions": 22
+    },
+    "Lovelight": {
+      "positive_mentions": 16,
+      "negative_mentions": 0,
+      "total_mentions": 16
+    },
+    "He's Gone": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Peggy O": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Queen Jane": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bertha": {
+      "positive_mentions": 6,
+      "negative_mentions": 2,
+      "total_mentions": 8
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-18T20:21:16.027656+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-03-21.sbd.ladner.6258.sbeok.shnf"
+}

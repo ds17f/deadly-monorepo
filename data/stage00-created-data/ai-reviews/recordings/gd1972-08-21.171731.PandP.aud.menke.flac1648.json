@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive review content; reviewer only requested deletion of duplicate upload.",
+  "review": "The sole comment for this recording is a request to remove it as a duplicate, offering no insight into the audio quality or musical performance. Consequently, there are no details on the sound source, setlist, or individual band members, making an assessment impossible beyond noting the lack of useful feedback.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one review exists and it contains no evaluative information about the show or recording; the reviewer expressed dissatisfaction by asking for deletion, leading to a low confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No technical comments were provided; the review only asked for removal of the duplicate upload."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T16:19:15.601988+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-08-21.171731.PandP.aud.menke.flac1648"
+}

@@ -1,0 +1,90 @@
+{
+  "summary": "Clear sound‑board capture with a superb acoustic set and soaring New Speedway Boogie, highlighted by an epic Cryptical → Drums → The Other One sequence.",
+  "review": "This June 7 1970 Fillmore West show shines thanks to a tight acoustic first set and a second‑set that bursts through the Cryptical/Drums/Other One suite, with New Speedway Boogie and Good Lovin' jams standing out. The SBD source is generally clear but suffers occasional bass heaviness, tape warble and a glitch in Cumberland Blues. Overall the performance outweighs the minor sonic flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Over 20 reviews overwhelmingly praise the musical performance while noting only modest recording imperfections; the combined weighting yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced SBD, but listeners report heavy bass, occasional tape warble/hissing, and a splice glitch in Cumberland Blues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Speedway Boogie",
+      "The Other One",
+      "Good Lovin' > Drums > Good Lovin'",
+      "Cryptical Envelopment / Cryptical Reprise",
+      "Casey Jones"
+    ],
+    "poor_songs": [
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "A relaxed acoustic first set leads into a jam‑heavy second set where the Cryptical‑Drums‑Other One suite provides superb continuity; transitions are praised even when individual songs (e.g., Sugar Magnolia) stumble."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice on New Speedway Boogie highlighted as inspired, occasional vocal strain noted; also praised for pedal‑steel work during acoustic numbers.",
+    "Phil": "Some ragged playing and off‑key harmonies mentioned (Silver Threads), otherwise no major commentary.",
+    "Bob": "Weir’s lead vocals on Cosmic Charlie called out positively; his banter with the crowd remembered fondly.",
+    "Keys": "",
+    "Drums": "Quiet, atmospheric drum interludes between Cryptical and The Other One praised; overall drum work described as “fabulous” and “nice build‑up.”"
+  },
+  "song_mentions": {
+    "New Speedway Boogie": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Good Lovin' > Drums > Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Silver Threads and Golden Needles": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T19:07:37.082698+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-06-07.sbd.hollister.98.sbeok.shnf"
+}

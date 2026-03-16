@@ -1,0 +1,78 @@
+{
+  "summary": "A mostly clear soundboard‑matrix capture of the 1973 Indy show, famed for a scorching Truckin', incendiary China > Rider and a soaring Big River‑into‑Playin' jam.",
+  "review": "The recording starts a bit muddy but clears up by the second tune and stays bright through most of the set, with only occasional drop‑outs and an audience‑source switch on Wharf Rat. Musically the concert is celebrated for Jerry’s “smoking” guitar work, Keith’s dazzling keys, and standout moments like Truckin', China > Rider, Big River into Playin' and a memorable Loose Lucy jam.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.6; the show receives consistent praise for performance while recording quality is generally good with minor flaws."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Early tracks are muddled, but clarity improves by the second/third tune. Overall soundboard‑derived and bright, though there are occasional drop‑outs and a noticeable SBD→AUD switch on Wharf Rat."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "China > Rider",
+      "Big River",
+      "Playin'",
+      "Loose Lucy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The band warms up quickly, delivering high energy throughout; the set flows naturally with enthusiastic crowd interaction and several seamless jams (e.g., Big River → Playin')."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for “smoking” guitar tone and extra chops.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith’s solos highlighted as extraordinary, especially on Beat It On Down The Line and throughout the set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down The Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Me and Bobby McGee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T16:43:07.323823+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-10-27.sbd.wier.16583.sbeok.shnf"
+}

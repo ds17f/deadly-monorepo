@@ -1,0 +1,63 @@
+{
+  "summary": "Crisp soundboard capture of a sunny SoCal summer show highlighted by an unforgettable Scarlet > Fire second‑set climax.",
+  "review": "The recording is praised for its crystal‑clear soundboard quality, making every nuance audible. Fans rave about the high‑energy second set – especially the Twilight Zone intro that launches into a top‑tier Scarlet > Fire sequence along with standout moments from She Belongs to Me, Space, US Blues and Satisfaction. Overall the show is remembered as one of the most enjoyable 1985 performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and enthusiastic comments about both performance and audio quality; recording is described as crisp soundboard, and the show receives multiple standout song mentions."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear soundboard mix with no reported dropouts or muffiness; listeners note the master sounds great even years later."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "She Belongs to Me",
+      "Space",
+      "US Blues",
+      "(I Can't Get No) Satisfaction"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is highlighted as a high‑energy, never‑dying performance – the Twilight Zone intro segues into Scarlet > Fire and keeps the momentum rolling through several fan‑favorite jams."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "She Belongs to Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "(I Can't Get No) Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T09:27:41.233255+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-09-15.sbd-set1.aj.376.sbefail.shnf"
+}

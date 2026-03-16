@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent soundboard recording that captures Jerry's joyous playing, even though only a single track of the show is available.",
+  "review": "The reviewers rave about the performance, especially noting how Jerry’s final notes convey he was having a great time. The soundboard source provides clear audio and makes the lone track enjoyable despite the missing remainder of the concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviews are highly positive (4‑5 stars) and praise both the performance and the soundboard quality; no criticisms were noted, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "No specific issues mentioned; reviewers imply clear, enjoyable audio from the soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Only one track is present, so flow cannot be assessed; however, the portion that exists is described as perfect and full of energy."
+  },
+  "band_member_comments": {
+    "Jerry": "His last few notes are highlighted as evidence he was having a real good time.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T23:46:28.690961+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-31.sbd.walker-scotton.miller.106798.flac16"
+}

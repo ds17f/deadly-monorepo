@@ -1,0 +1,33 @@
+{
+  "summary": "Audience recording of a fiery Jerry performance (often cited as the best Terrapin), but mislabeled as a soundboard.",
+  "review": "Reviewers rave about the show, calling it a \"good one\" with Jerry Garcia “on fire” and even suggesting it might be the band’s best take on Terrapin. However, the recording is confirmed to be an audience tape rather than the advertised soundboard source, which limits its technical fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "The musical performance is praised highly (5‑star review) while the recording quality is criticized for being an audience tape, leading to a moderate overall rating weighted toward the strong show but lowered by technical concerns."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Identified as an audience recording rather than a soundboard; no specific comments on clarity or mix, suggesting typical audience tape quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed commentary on pacing or transitions was provided."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"on fire,\" indicating an especially strong guitar performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T19:37:26.495363+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-24.142042.mtx.tobin.flac1644"
+}

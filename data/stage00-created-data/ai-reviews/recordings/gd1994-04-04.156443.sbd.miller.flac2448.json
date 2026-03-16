@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard capture of a magical night with Jerry’s stellar Terrapin Station and a raucous I Fought the Law finale.",
+  "review": "The recording delivers crystal‑clear soundboard quality that lets listeners soak in a truly magical evening. Jerry Garcia is highlighted as fully engaged, nailing Terrapin Station, while the show closes on an energetic I Fought the Law amid an unforgettable Deadhead riot atmosphere.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "Single detailed 5‑star review praises both performance and recording; high praise yields a top rating but limited data lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer explicitly calls the quality great; no technical issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "I Fought the Law"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Even with a chaotic riot incident, the set maintained momentum and ended on a high‑energy note."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as very engaged and on point, especially during Terrapin Station.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Fought the Law": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T21:31:54.438295+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-04-04.156443.sbd.miller.flac2448"
+}

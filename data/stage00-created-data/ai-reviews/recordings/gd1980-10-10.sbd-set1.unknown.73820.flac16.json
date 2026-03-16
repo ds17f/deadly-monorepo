@@ -1,0 +1,39 @@
+{
+  "summary": "Crystal‑clear soundboard capture of an intimate rehearsal, highlighted by masterful acoustic guitar and a beautiful Jack‑A‑Roe performance.",
+  "review": "Both reviewers praise the pristine SBD recording, noting especially clear vocals from Jerry and Bob and superb acoustic guitar work. Although it’s a rehearsal rather than a full concert, the emotional impact—particularly the rendition of \"Jack‑A‑Roe\"—makes it feel like a special live moment, with only minor mix quirks such as an overly close bass drum and tambourine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Both reviews give 4‑star ratings, praising the soundboard quality and musical feel despite it being a rehearsal; recording is good and performance emotionally strong, yielding an overall rating just above four."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crystal‑clear SBD with great vocal clarity and masterful acoustic guitar; bass drum and tambourine sit a bit too close in the mix, but overall very clean."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack-A-Roe"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Rehearsal setting focused on acoustic numbers, giving an intimate and emotionally resonant vibe rather than a typical full‑concert flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals sound great; guitar work described as masterful.",
+    "Phil": "",
+    "Bob": "Vocals sound great.",
+    "Keys": "",
+    "Drums": "Bass drum (and tambourine) sound a little too close in the mix."
+  },
+  "song_mentions": {
+    "Jack-A-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T04:28:27.345345+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-10.sbd-set1.unknown.73820.flac16"
+}

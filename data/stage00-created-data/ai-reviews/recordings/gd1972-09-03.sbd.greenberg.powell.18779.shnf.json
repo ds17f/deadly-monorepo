@@ -1,0 +1,51 @@
+{
+  "summary": "Soundboard recording with rough first set but crystal second set; standout China Cat Sunflower/I Know You Rider and a killer Casey Jones.",
+  "review": "The show is widely praised for its energetic performance, especially the superb China Cat Sunflower → I Know You Rider segue and an outstanding Casey Jones. Recording quality is mixed – the early portion sounds rough until it switches to SBD at Playing in the Band, after which the second set is described as crystal‑clear, though some consider this source inferior to later composites.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the performance highly (5‑star) while noting recording flaws; weighted average of show (≈4.7) and recording (≈3.5) yields ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "First set rough/terrible, switches to SBD at Playing in the Band; second set described as crystal‑clear like a bronze bell. Some reviewers call the tape inferior to newer composites, but overall it’s decent for the era."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "I Know You Rider",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Long, hot‑day concert (≈7 hours) with a rough first set that improves dramatically in the second; transitions are praised and the overall vibe is wild and exciting."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir announced an on‑stage incident to the high seats during the show.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:02:47.479046+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-03.sbd.greenberg.powell.18779.shnf"
+}

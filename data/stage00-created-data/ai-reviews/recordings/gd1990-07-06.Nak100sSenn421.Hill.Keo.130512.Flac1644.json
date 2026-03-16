@@ -1,0 +1,74 @@
+{
+  "summary": "Audience source with fair sound quality captures a stellar second set featuring standout jams and classic Dead cuts.",
+  "review": "The show is praised as one of the best second‑sets of the summer 1990 tour, highlighted by an angelic \"Standing on the Moon\", a bluesy \"He's Gone\" jam, and a soaring post‑space \"Truckin'\" that evoked ’78 vibes. The audience recording (AUD) is the preferred source, but the PA was weak and the tape suffers from poor stereo imaging and loud crowd bleed, making the technical quality only fair.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Review is highly enthusiastic about the musical performance (≈4.8) but notes mediocre recording quality (≈3), yielding a weighted average around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "PA was weak and muffled; audience tape has bad stereo imaging, loud crowd cheer, and occasional tape‑flip cuts to jams."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramble On Rose",
+      "China Cat Sunflower",
+      "Standing on the Moon",
+      "He's Gone",
+      "Truckin'",
+      "Wharf Rat > Greatest Story Ever Told > Around and Around"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set unusually long (~80 min) with solid playing despite sound issues; second set shines with intense jams, sun‑setting ambience and classic song transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned wearing shorts in the heat; praised for great playing throughout the jam sections.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drummers noted for driving the intense jams and building energy during the second set."
+  },
+  "song_mentions": {
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat > Greatest Story Ever Told > Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T08:47:10.639795+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-06.Nak100sSenn421.Hill.Keo.130512.Flac1644"
+}

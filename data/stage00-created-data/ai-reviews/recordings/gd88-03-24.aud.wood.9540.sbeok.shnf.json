@@ -1,0 +1,63 @@
+{
+  "summary": "A decent audience recording that captures the high‑energy show, highlighted by an epic Truckin' climax and a soaring Looks Like Rain.",
+  "review": "The performance is praised for its electric atmosphere, with standout moments like Jerry’s sky‑high note on Truckin', a thunderous rendition of Looks Like Rain, and strong deliveries of Loser and Queen Jane. The tape is an audience recording that suffers from early‑set murkiness, swirling bleed‑through, and uneven fidelity, but improves later and still conveys the quadraphonic ambience of the night.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Reviewers consistently rate the show highly (standout performances, strong energy) while noting significant but not fatal recording flaws; the combined weighting yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audience tape with noticeable swirling and bleed‑through, especially in the first few songs; sound improves later, but overall lacks the clarity of a soundboard. Quadraphonic indoor ambience is evident despite the imperfections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Looks Like Rain",
+      "Loser",
+      "Queen Jane",
+      "Black Muddy River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is described as having tremendous room energy, a powerful first set that builds into an intense second set; listeners note the show’s natural flow and the “sleeper” quality of the latter half."
+  },
+  "band_member_comments": {
+    "Jerry": "Hits an incredibly high note sliding off the fretboard at the end of Truckin', delivering a memorable climax.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey Hart’s work is noted, especially during the transition into Truckin' where the quadraphonic swirl adds to the impact."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:45:31.696834+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-03-24.aud.wood.9540.sbeok.shnf"
+}

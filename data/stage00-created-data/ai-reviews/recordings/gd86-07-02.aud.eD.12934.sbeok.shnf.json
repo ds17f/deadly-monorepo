@@ -1,0 +1,70 @@
+{
+  "summary": "Decent audience tape of an uneven 86 Akron Rubber Bowl show where a standout Desolation Row shines despite Jerry’s off‑night and a botched Baby Blue with Dylan.",
+  "review": "The recording is a solid AUD capture – clear enough for most listeners but not hi‑fi. Musically the concert was hampered by Jerry Garcia’s health problems (he even left the stage during Desolation Row) and an ill‑fated Baby Blue duet with Bob Dylan, yet the band pulled through with a memorable Desolation Row, strong Truckin' and Black Peter performances, and Phil Lesh’s bass stepping into the spotlight.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Show quality is generally below average due to Jerry's off night and a poorly received Dylan collaboration, but the recording is reasonably listenable and a few songs (Desolation Row, Truckin', Black Peter) receive praise."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the sound \"ok\" or \"good for an AUD\", noting it is clear enough on cheap speakers. No major drop‑outs are reported, but ambient stadium noise and heat‑related muddiness are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Desolation Row",
+      "Truckin'",
+      "Black Peter",
+      "Box of Rain",
+      "China Rider"
+    ],
+    "poor_songs": [
+      "Baby Blue"
+    ],
+    "setlist_flow": "First set is described as sub‑par and heat‑slowed, while the second set recovers a bit with China Rider opening and an extended Desolation Row that, despite Jerry’s early exit, becomes a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Off night; his tone suffered, he left the stage during Desolation Row, and his duet on Baby Blue with Dylan was widely criticized.",
+    "Phil": "Praised for stepping up—dancing, melodic bass lines, and carrying the low end in Jerry’s absence.",
+    "Bob": "Mentioned briefly as \"belting lyrics\"; no strong positive or negative comments beyond the botched Baby Blue duet.",
+    "Keys": "Brent (B‑3) shines on the organ when Jerry is out, delivering solid improvisation.",
+    "Drums": "Generally described as okay; no major complaints."
+  },
+  "song_mentions": {
+    "Desolation Row": {
+      "positive_mentions": 3,
+      "negative_mentions": 4,
+      "total_mentions": 7
+    },
+    "Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:54:10.455154+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-07-02.aud.eD.12934.sbeok.shnf"
+}

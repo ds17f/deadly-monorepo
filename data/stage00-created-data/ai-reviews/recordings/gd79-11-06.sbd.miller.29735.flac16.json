@@ -1,0 +1,93 @@
+{
+  "summary": "Excellent soundboard capture of a classic Fall ’79 show with standout performances like Candyman, Terrapin and the Jack‑Straw / Deal combo.",
+  "review": "The recording is a pristine soundboard mix that many reviewers call “extremely good” and “as good as it gets,” making every nuance of the band audible. Musically the concert shines – Jerry’s near‑perfect guitar work, Bob Weir’s strong vocals on a range of numbers, Brent’s early‑era keyboard contributions, and a memorable Terrapin followed by a 22‑minute jam make this one of the finer shows of the late‑1979 period.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "All five reviews are 5‑star and overwhelmingly praise both performance and sound quality; the show is described as flawless with only minor subjective notes, while the soundboard source is called excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note crystal‑clear mix, superior to other sources, with no audible flaws or dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Alabama > Promised Land",
+      "Jack Straw > Deal",
+      "Jack-A-Roe",
+      "Me & My Uncle",
+      "Mexicali Blues",
+      "Looks Like Rain",
+      "Playin' In The Band",
+      "Good Lovin'",
+      "Terrapin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical Fall ’79 set but with refreshing changes (e.g., less China>Rider), a strong first set and a solid second set highlighted by an extended Terrapin jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Near‑perfect guitar tone; doesn’t stretch out as much as some shows but is very close to flawless.",
+    "Phil": "",
+    "Bob": "Very strong throughout the night, delivering exceptional vocals on multiple numbers.",
+    "Keys": "Early Brent era – still learning the vast songbook but contributes solidly to the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama > Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw > Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T01:12:47.932478+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-11-06.sbd.miller.29735.flac16"
+}

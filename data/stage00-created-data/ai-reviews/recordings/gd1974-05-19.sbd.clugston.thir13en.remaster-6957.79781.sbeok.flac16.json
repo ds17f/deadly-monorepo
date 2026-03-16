@@ -1,0 +1,50 @@
+{
+  "summary": "High‑quality soundboard capture of a stellar mid‑'70s show, highlighted by an explosive Truckin’ > jam > MLB Jam sequence.",
+  "review": "The recording is a well‑remastered soundboard tape that delivers the wall‑of‑sound power of a classic 1974 Dead concert, though some listeners note occasional vocal distortion and Jerry’s guitar being buried in the mix. Musically the show shines, especially the Truckin' jam that erupts into an unforgettable MLB Jam, with Phil’s bass, Keith’s funky keys, Billy’s driving drums and Bob’s solid vocals all firing on all cylinders.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the performance and the soundboard quality; a single mixed review notes mix balance issues, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear wall‑of‑sound capture with crisp detail. Some listeners report vocal distortion and Jerry's guitar sitting low in the mix; Keith’s keyboards can be a touch too forward on certain tracks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "MLB Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A classic mid‑70s set that builds smoothly, with the first half solid and the second half exploding into a massive Truckin' jam that carries the energy through to the MLB improvisation."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his drippy solo work, but several reviewers note his guitar is buried low in the mix.",
+    "Phil": "His bass lines are highlighted as driving the Truckin' groove and overall presence is strong.",
+    "Bob": "Vocals described as solid (“Weir is real on it”), though a few mention slight distortion.",
+    "Keys": "Keith’s keyboards are called funky and add sparkle; occasionally too high in the mix according to one reviewer.",
+    "Drums": "Billy (Kreutzmann) praised for punching it out and keeping the jam propulsive."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "MLB Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T19:42:53.841291+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-05-19.sbd.clugston.thir13en.remaster-6957.79781.sbeok.flac16"
+}

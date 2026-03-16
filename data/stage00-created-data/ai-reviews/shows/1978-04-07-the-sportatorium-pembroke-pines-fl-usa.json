@@ -1,0 +1,65 @@
+{
+  "summary": "Tight The Music Never Stopped amid a sluggish start, mixed band chemistry",
+  "blurb": "The show opens with a lackluster first set but recovers in the second, delivering a high‑energy The Music Never Stopped and a fiery Not Fade Away → Black Peter jam. Playing In The Band provides the climactic second‑set peak. Overall performance is uneven, though several moments shine.",
+  "review": "April 7, 1978 at the Sportatorium finds the Dead in a puzzling mood. The first set drags – Jerry’s guitar wanders off‑key on The Promised Land and Jack Straw, Phil’s bass wobbles, and Keith’s keys are buried – but there are flashes of brilliance, like Donna’s vocal lift on The Music Never Stopped and Bob’s trademark “Hammer in time” banter. The second set snaps into gear: a loose Jack Straw segues into Ship Of Fools, then the band launches a space‑filled Not Fade Away that morphs into an incendiary Black Peter, culminating in a soaring Playing In The Band that showcases the group’s improvisational spark. While Bill’s drums feel sluggish early on, they tighten up by the finale, and Mickey’s percussion adds steady drive. Fans who can overlook the uneven opening will be rewarded by the second‑set fireworks and the standout moments captured best on the Miller soundboard transfer.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 21,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Two recordings are clearly positive (highlighting The Music Never Stopped, Jack Straw and tight trippy playing) while the other two are mixed (noting sluggishness but also praising NFA→Black Peter and Playing In The Band). Net sentiment leans mildly positive, warranting a modest +0.8 boost.",
+      "final_calculation": "2.5 + 0.2 + 0.8 = 3.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1978-04-07.sbd.miller.83715.sbeok.flac16",
+    "reason": "Excellent soundboard fidelity with no dropouts, balanced mix and positive musical comments make this the clearest representation of the show."
+  },
+  "key_highlights": [
+    "Scorching Not Fade Away → Black Peter jam that lifts a sluggish set",
+    "High‑energy The Music Never Stopped with a fiery solo from Jerry",
+    "Playing In The Band second‑set climax showcases tight improvisation",
+    "Jack Straw opens the second set lively, setting up the momentum"
+  ],
+  "song_highlights": [
+    "Not Fade Away",
+    "Black Peter",
+    "The Music Never Stopped",
+    "Jack Straw",
+    "Playing In The Band"
+  ],
+  "band_performance": {
+    "Jerry": "Inconsistent – off‑key and lethargic early, but delivers a high‑energy solo on The Music Never Stopped.",
+    "Phil": "Generally solid bass foundation, though occasional out‑of‑tune moments noted in the first set.",
+    "Bob": "Adds humor with his “Hammer in time” comment and provides spoken intros; otherwise not a focal point.",
+    "Brent": "",
+    "Keith": "Keyboard presence is low in the mix on some recordings, making his contributions hard to hear.",
+    "Donna": "Vocal harmonies shine on The Music Never Stopped, adding texture to the performance.",
+    "Mickey": "Provides steady percussion throughout; no specific issues reported.",
+    "Billy": "Drumming feels sluggish early on but tightens up by the second set, especially during Jack Straw."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-25T09:47:33.859007+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Terrapin Station",
+      "Playing In The Band",
+      "Drums",
+      "Not Fade Away",
+      "Black Peter",
+      "Playing In The Band"
+    ],
+    [
+      "The Music Never Stopped"
+    ],
+    [
+      "Jack Straw"
+    ]
+  ]
+}

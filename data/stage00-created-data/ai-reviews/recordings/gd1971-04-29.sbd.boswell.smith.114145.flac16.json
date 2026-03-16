@@ -1,0 +1,58 @@
+{
+  "summary": "Clear soundboard mix captures a smoking Saint Stephen jam and standout Cumberland Blues, even if the Alligator jam feels past its prime.",
+  "review": "The recording is praised for its crystal‑clear organ mix and overall great sound quality, typical of a solid soundboard source. Musically the show shines with a vibrant Saint Stephen jam and a powerful rendition of Cumberland Blues, while some listeners note that the Alligator jam has lost its edge. Overall the performance is regarded as one of the band’s strong ’71 outings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two enthusiastic 5‑star reviews highlight excellent sound and standout jams, offset by a single moderate 3‑star comment about the Alligator jam; the balance yields a strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note a great mix and especially clear Ron’s organ, indicating a clean, well‑balanced soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Saint Stephen",
+      "Cumberland Blues",
+      "Cold Rain and Snow"
+    ],
+    "poor_songs": [
+      "Alligator"
+    ],
+    "setlist_flow": "The set is highlighted by extended jams after Alligator and Drums, with the Saint Stephen jam standing out; overall pacing is praised despite a perceived dip in the Alligator segment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Ron’s organ is described as crystal‑clear, indicating a strong keyboard presence.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Saint Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alligator": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T06:19:37.888320+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-29.sbd.boswell.smith.114145.flac16"
+}

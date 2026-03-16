@@ -1,0 +1,51 @@
+{
+  "summary": "Mixed performance with a fiery second set (Sugar Magnolia, Truckin', St. Stephen) hampered by a harsh, kick‑heavy soundboard recording.",
+  "review": "The show is praised for its strong second‑set energy—especially Sugar Magnolia, an explosive Truckin' and a memorable St. Stephen solo—but the audio suffers from excessive low‑end “kick,” apparent noise‑reduction artifacts, and drums that sound oddly reversed. These technical flaws make listening uncomfortable despite the solid 1977 material.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Performance is generally good with standout moments, but recording quality issues (excessive kick, NR artifacts) significantly detract from enjoyment, pulling the overall rating down."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Excessive kick/bass overwhelms the mix and gives a headache; possible noise‑reduction processing makes drums sound reversed or garbled, reducing clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia",
+      "Truckin'",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is highlighted as the best part of the night with high energy, though some listeners feel the overall show is a bit off‑kilter."
+  },
+  "band_member_comments": {
+    "Jerry": "His St. Stephen solo is described as a near‑divine, extended jam where he 'dances with the Gods.'",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum sound is criticized for sounding reversed, likely due to aggressive noise reduction."
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T05:13:03.461614+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-15.sbd.129898.MrBill.flac16"
+}

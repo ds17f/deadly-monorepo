@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard tape delivers a very good, pretty show highlighted by an outstanding Minglewood Blues.",
+  "review": "Both reviewers praise the performance as a very good and surprisingly pretty set, with special love for the Minglewood Blues and Jerry Garcia’s inspired playing. The recording is described as a nice‑sounding board tape that captures the band clearly, with no reported technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Both reviewers are favorable toward the music and the soundboard source; limited to two reviews but they provide clear positive comments, leading to a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Described as a 'nice tape' with clear board sound; no drop‑outs or muddiness mentioned. Reviewer prefers board over audience but finds both acceptable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; overall impression is that the show flows nicely and sounds pretty."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for an inspired, ‘Goddamn’ moment of playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T08:22:45.289917+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-17.141146.sbd.patched.vernon.cotsman.clugston.flac1644"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Fair-quality recording of an average ’94 Dead show, highlighted by strong performances of Easy Answers, Corrina → Drumz and Days Between.",
+  "review": "The tape appears to be a sub‑par source—listeners note that high‑quality recordings from the Eugene shows are scarce—yet the musical performance is respectable for the era. Reviewers point out new‑tune highlights such as Easy Answers, an excellent Corrina into Drumz segment, and the always‑exciting Days Between. Overall it’s an average 1994 concert with a few standout moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is moderate (average ’94 show with several praised songs) while recording quality is only fair due to lack of high‑quality source; combined gives a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments on sound clarity, but reviewers note that high‑quality recordings from these shows have yet to surface, implying this source is not optimal."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Easy Answers",
+      "Corrina",
+      "Days Between"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical mid‑1990s set with a solid first set close (Easy Answers) and an energetic second set featuring Corrina into Drumz and the climactic Days Between."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Excellent Drumz segment highlighted by reviewers"
+  },
+  "song_mentions": {
+    "Easy Answers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T22:27:50.701823+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-06-18.149181.sbd.graves.flac1648"
+}

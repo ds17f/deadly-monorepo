@@ -1,0 +1,45 @@
+{
+  "summary": "Recording quality is unclear, but fans highlight a few gems such as King Bee and The Dew from this night.",
+  "review": "The lone five‑star review points out that the concert contains several standout moments, specifically calling out “King Bee” and “The Dew” as highlights. No details are given about the source or clarity of the audio, so the technical quality remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Positive musical remarks and a perfect rating suggest a good show, but lack of any recording‑quality comments and only one review limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention soundboard, audience mix, clarity, or any audio issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "King Bee",
+      "The Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer notes a few highlights but provides no broader comments on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "King Bee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:22:53.642206+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-12-08.141521.TS-cmc3-mk2.ebel.flac1644"
+}

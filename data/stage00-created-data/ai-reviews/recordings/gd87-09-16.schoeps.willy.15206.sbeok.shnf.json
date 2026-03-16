@@ -1,0 +1,45 @@
+{
+  "summary": "Nostalgic 1987 show full of crowd excitement; recording is a bit muddy but listenable.",
+  "review": "The concert captures the electric atmosphere that hooked first‑time listeners, with highlights like Scarlet Begonias and a lively Going Down the Road Feels Bad segue. While the audio isn’t pristine—described as “muddy” and not the greatest—it’s still enjoyable and preserves the audience’s response. Overall reviewers rave about the performance despite modest sound quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "All three reviews are favorable toward the show, praising its energy and set moments; recording is noted as muddy but acceptable, yielding a solid combined rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audio described as not the greatest, somewhat muddy, yet captures crowd response; comparable to other muddy SBD sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Going Down the Road Feels Bad"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a strong, electric first set that hooked listeners and a fun overall flow, though some feel later parts became formulaic."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Going Down the Road Feels Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:24:53.766493+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-16.schoeps.willy.15206.sbeok.shnf"
+}

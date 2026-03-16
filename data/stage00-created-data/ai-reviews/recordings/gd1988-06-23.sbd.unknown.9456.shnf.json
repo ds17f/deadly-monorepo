@@ -1,0 +1,69 @@
+{
+  "summary": "Soundboard capture with good clarity (minor flange quirks) of a legendary 1988 Alpine show featuring a soaring \"Believe It Or Not\", emotive Morning Dew and wild Drums/Space jams.",
+  "review": "The three fan reviews rave about the June‑23‑1988 Alpine performance, highlighting rare moments like the debut of \"Believe It Or Not\", a tear‑jerking \"Morning Dew\" and an electrifying Drum & Space segment. The SBD source is praised for its overall clarity despite a noticeable flange effect on Jerry’s guitar, making it a solid listening experience for Deadheads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Reviews consistently rate the show 4–5 stars and emphasize standout musical moments; recording is described as clear enough with only minor quirks, yielding a high combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough to hear both guitars and vocals; a flange‑like effect on Jerry’s guitar/voice is noted as slightly distracting but does not detract from overall enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Believe It Or Not",
+      "Morning Dew",
+      "Drums",
+      "Space"
+    ],
+    "poor_songs": [
+      "Blackbird"
+    ],
+    "setlist_flow": "Unusual set‑list with New Orleans standards opening both sets; high energy from the Iko opener through to a climactic Drum & Space, creating an elemental and lysergic experience."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is praised but a clunky ending on \"Morning Dew\" and a flange effect are noted; his country‑ballad style shines on \"Believe It Or Not\".",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboards) laughed at the flubbed Blackbird, adding to the show’s communal vibe.",
+    "Drums": "\"Drums and Space are awesome\" – rhythm section highlighted for a powerful performance."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Blackbird": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Believe It Or Not": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T10:02:30.074198+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-06-23.sbd.unknown.9456.shnf"
+}

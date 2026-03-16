@@ -1,0 +1,63 @@
+{
+  "summary": "Crisp audience tape of a 1974 show highlighted by an epic Playing in the Band and vibrant performances of Row Jimmy, Ship of Fools, Let It Grow and China Doll.",
+  "review": "The recording captures the full‑sound ambience of a 1974 concert with remarkable clarity for an audience source, even letting the hall’s resonance shine through. Musically the night is anchored by a monster 45‑minute Playing in the Band that many reviewers call spellbinding, plus standout cuts of Row Jimmy, Ship of Fools, Let It Grow and China Doll.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviews praise both the performance (especially Playing in the Band) and the surprisingly excellent audience recording; a few mixed comments about length keep the rating just above good."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, full‑sound capture with ambient perception of the hall; minimal crowd bleed except at song starts/ends; many note it sounds better than some board recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Row Jimmy",
+      "Ship of Fools",
+      "Let It Grow",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows well, opening with high‑energy numbers and building into a marathon Playing in the Band that, while occasionally dragging after 20 minutes, delivers an unforgettable jam."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann's hi‑hat work is praised for its precise snap during the China Doll coda."
+  },
+  "song_mentions": {
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T19:50:37.800657+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-05-21.lee.weiner.gdADT.10150.sbeok.shnf"
+}

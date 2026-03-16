@@ -1,0 +1,39 @@
+{
+  "summary": "Clear soundboard capture of a solid Midwestern tour set that even brings back the rarely‑heard Wharf Rat.",
+  "review": "The recording, sourced from an SBD, sounds surprisingly clear for a Rosemont venue known for poor acoustics, delivering a listenable mix. The show is praised as part of a strong post‑Europe Midwest run with a standout Wharf Rat, though one reviewer felt Jerry and Bob were playing at cross‑purposes, giving the performance a slightly divided feel.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly (4–5 stars) and note good sound quality; one low rating highlights a perceived lack of cohesion, pulling the overall assessment to a solid but not flawless score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD despite Rosemont's reputation for poor sound; reviewers describe the mix as nice and better than expected."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall strong Midwestern tour set, though one reviewer sensed a dialogue‑like tension between Jerry and Bob that made parts feel slightly disjointed."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer felt Jerry seemed to be on a different musical wavelength than Bob that night.",
+    "Phil": "",
+    "Bob": "Same comment as for Jerry – perceived as playing with a different mind, creating a dialogue-like feel.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:02:07.026397+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-06.sbd.miller.108841.flac16"
+}

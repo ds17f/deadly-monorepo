@@ -1,0 +1,91 @@
+{
+  "summary": "Clean, balanced matrix recording of a 1973 show highlighted by a superb Black Peter and smoky Weather Report Suite/Let‑It‑Grow jam.",
+  "review": "The set captures a vibrant 1973 performance with standout moments like a flawless Black Peter, an inspired Weather Report Suite that blossoms into a soaring Let‑It‑Grow jam, and tight renditions of Loose Lucy and Here Comes Sunshine. The matrix source is generally clean and well‑balanced, though listeners note a cut at the start of Sing Your Blues and a mushy ending to the Let‑It‑Grow segment. Overall the musical delivery outweighs the minor technical quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are glowing (5‑star) and praise both the performance and recording; only one outlier is negative, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clean and balanced sound; occasional issues such as an early cut on Sing Your Blues and a slightly mushy ending to the Let‑It‑Grow jam."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Weather Report Suite / Let It Grow jam",
+      "Loose Lucy",
+      "Here Comes Sunshine",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Sing Your Blues Away (cut at beginning)",
+      "Let It Grow ending (mushy)"
+    ],
+    "setlist_flow": "First set mixes classics with a rare Black Peter; second set rolls through extended jams, highlighted by Weather Report Suite transitioning into Let‑It‑Grow, maintaining high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Sing Your Blues Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T14:47:25.505179+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-09-21.sbd.lai.4082.sbefail.shnf"
+}

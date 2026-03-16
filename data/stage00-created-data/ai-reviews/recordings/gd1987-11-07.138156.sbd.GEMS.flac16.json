@@ -1,0 +1,31 @@
+{
+  "summary": "A fan‑favorite show with noticeably better (though still muddy) soundboard quality",
+  "review": "The reviewer raves that this concert is one of their all‑time favorites and praises the upgraded audio compared to earlier releases, even if the mix remains a bit muddy. The performance itself is described as “rocks,” indicating strong musical enjoyment despite the modest recording fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Only one review, but it gives a high show rating (4 stars) and notes an improvement in sound quality; the mix is still muddy, so the overall rating stays just above four."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Improved over previous releases from this era but still described as muddy; no major drop‑outs or distortion mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T05:06:31.549590+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-11-07.138156.sbd.GEMS.flac16"
+}

@@ -1,0 +1,75 @@
+{
+  "summary": "Crisp soundboard capture of an enjoyable 1994 show, highlighted by Truckin', Days Between and a final Smokestack Lightning with a strong second‑set space jam.",
+  "review": "The Miller‑taped soundboard is praised for its crisp, round fidelity, delivering one of the best‑sounding versions of this late‑1994 concert. Musically the performance shines on Truckin', the expansive Days Between/Space segment and the closing Smokestack Lightning, while the first set is viewed as merely serviceable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high praise for recording quality (5‑star) and generally positive comments on the show (mostly 4‑star or higher), with only minor mixed remarks about the first set."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the audio as crisp, round and an upgrade over previous releases; noted as the last performance of Smokestack Lightning captured with superb clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Days Between",
+      "Smokestack Lightning",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Childhood's End",
+      "I Know You Rider",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as forgettable by one reviewer, but overall serviceable; second set praised for solid flow, extended space jam and strong closing numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Solid performance on 'Childhood's End' noted.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Childhood's End": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T03:42:21.207870+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-18.sbd.miller.119523.flac16"
+}

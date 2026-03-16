@@ -1,0 +1,94 @@
+{
+  "summary": "Rich soundboard recording captures a fiery Vegas show highlighted by an epic 17‑minute Bird Song with Carlos Santana and a pristine Jack Straw, though occasional clipping and high‑level issues temper the listening experience.",
+  "review": "The performance is a classic late‑April Vegas run – Jerry’s grin and lyrical focus on Crazy Fingers, a monster Jack Straw, and a soaring 17‑minute Bird Song featuring Carlos Santana keep the energy through two tight sets. The SBD source is generally thick and full of detail, but listeners note occasional clipping and overly hot drum levels that can mud the mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Show quality consistently praised (many 5‑star comments) while recording is good overall but with noted clipping and level problems; weighted average yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Rich, thick SBD sound praised as “chocolate‑shake” like, but several reviewers mention clipping on disc 2 and overly high drum levels that cause muffling; occasional pops/dropouts noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Jack Straw",
+      "Crazy Fingers",
+      "Truckin'",
+      "The Other One",
+      "Wharf Rat",
+      "Box of Rain",
+      "Stella"
+    ],
+    "poor_songs": [
+      "Deal",
+      "Saint of Circumstance"
+    ],
+    "setlist_flow": "A powerful first set opens with a pristine Jack Straw; the 17‑minute Bird Song with Carlos sets up an energetic second set that rides high on jam momentum, though some feel the latter half (Deal, Saint of Circumstance) loses steam."
+  },
+  "band_member_comments": {
+    "Jerry": "His grin at the start and lyrical focus on Crazy Fingers are highlighted; strong lead work especially during the Bird Song jam with Carlos.",
+    "Phil": "Repeatedly described as blazing, punchy, and full‑bodied – a key driver of the show’s energy.",
+    "Bob": "Noted for his big grin early in the set; no detailed instrumental critique beyond that.",
+    "Keys": "Vince Hornsby gets mixed feedback – praised for piano on Jack Straw and supportive touches on Bird Song, but criticized for cheesy synth sounds and over‑digital instrumentation in parts.",
+    "Drums": "Bill’s drumming is mentioned positively in anecdotes, yet several reviewers complain the recording levels are too high, causing drums to sound muffled."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 9,
+      "negative_mentions": 2,
+      "total_mentions": 11
+    },
+    "Jack Straw": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Deal": {
+      "positive_mentions": 3,
+      "negative_mentions": 4,
+      "total_mentions": 7
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T19:10:15.530566+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-04-28.sbd.vernon.6112.sbeok.shnf"
+}

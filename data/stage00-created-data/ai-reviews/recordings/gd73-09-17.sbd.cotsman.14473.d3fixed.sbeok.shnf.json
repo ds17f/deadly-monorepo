@@ -1,0 +1,64 @@
+{
+  "summary": "Soundboard recording captures a unique horn‑filled second set with standout Truckin’ jam and Weather Report Suite, overall good quality.",
+  "review": "The show is remembered for its surprise horn section that turned the Wake of the Flood material into an experimental second set – fans rave about Keith’s soaring jam on Truckin' and the thunderous Weather Report Suite. Recording quality is generally good for a soundboard source, though a few listeners note a muddy hall ambience and a desire for louder guitars.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average star rating of 4.0 across 14 reviews, with most comments praising the unique horn‑enhanced performance and good soundboard quality; a minority dislike the horns, giving a balanced but slightly positive overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced; one reviewer mentions hall sound was terrible (likely venue ambience) while another notes the guitars could be louder. Odd theremin‑like texture in the LLR jam noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Weather Report Suite",
+      "Let Me Sing Your Blues Away"
+    ],
+    "poor_songs": [
+      "Eyes of the World",
+      "Weather Report Suite"
+    ],
+    "setlist_flow": "Second set diverges into Wake of the Flood material with a surprise horn section, creating an experimental and unorthodox but highly effective flow that many fans find memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "His brief vocal line on “Sugar Mag!” is noted positively; no specific guitar comments beyond a desire for louder mix.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith Godchaux praised for an energetic jam on Truckin' and for singing on the rare ‘Let Me Sing Your Blues Away’ tune.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Let Me Sing Your Blues Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Mag!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T17:32:21.102561+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-09-17.sbd.cotsman.14473.d3fixed.sbeok.shnf"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Solid early‑80 set with strong blues numbers and surprising Terrapin",
+  "blurb": "The show opens with tight country‑rock tunes before moving into standout blues moments on “Feel Like A Stranger,” “Samson & Delilah,” and a surprisingly adventurous “Terrapin Station.” The second set builds energy through “Playing In The Band” into an expansive “Space” and heartfelt “Wharf Rat.”",
+  "review": "On March 31, 1980 at the Capitol Theater in Passaic, the Dead delivered a show that feels like a bridge between their classic ’70 chemistry and the tighter, more song‑focused direction of the early ’80s. Jerry’s guitar work shines on the blues‑heavy “Mexicali Blues” and the punchy “Samson & Delilah,” while his solo on “Feel Like A Stranger” shows promise even if it isn’t fully cooked yet. Brent adds warm keyboard textures and a memorable a cappella chorus on “Feel Like A Stranger,” and his backing vocals lift the band’s harmonies throughout. The second half delivers a rare, adventurous take on “Terrapin Station” that many fans cite as a highlight, then rolls into a fluid “Playing In The Band” → “Drums” → “Space” sequence that erupts into a soulful “Wharf Rat.” A few rough edges – a low‑end roll‑off in the audience tape, brief drum dropouts and the missing “Lost Sailor/ Saint Of Circumstance” pair – keep the flow from being uniformly tight, but the overall performance remains compelling for anyone tracking the Dead’s evolution during this period. For listeners seeking the clearest window into this night, the Senn‑Barbella audience tape (gd80-03-31.senn.barbella.4741.sbeok.shnf) offers solid sound and captures most of the show’s highlights.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.9,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 10,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.3,
+      "sentiment_rationale": "Both recordings describe mixed sentiment – many positive notes about standout songs and solos, but also mention missing tracks, a weak Terrapin in one source, and occasional audio glitches. The net tone is mildly favorable, warranting a small positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.3 = 2.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd80-03-31.senn.barbella.4741.sbeok.shnf",
+    "reason": "Clear‑enough audience tape with good overall sound, minimal crowd noise, and captures most of the show’s standout moments."
+  },
+  "key_highlights": [
+    "Feel Like A Stranger showcases early‑80 improvisational spark despite a few loose spots.",
+    "\"Samson & Delilah\" delivers a strong blues solo from Jerry and solid backing vocals.",
+    "Terrapin Station stands out as an adventurous, atypical performance for the era.",
+    "\"Playing In The Band\" → \"Space\" → \"Wharf Rat\" chain provides the second‑set’s biggest energy lift."
+  ],
+  "song_highlights": [
+    "Feel Like A Stranger",
+    "Samson & Delilah",
+    "Terrapin Station",
+    "Playing In The Band",
+    "Wharf Rat"
+  ],
+  "band_performance": {
+    "Jerry": "Jerry delivered solid blues work with standout solos on Mexicali Blues and Samson & Delilah, though his improvisation on “Feel Like A Stranger” felt a bit tentative.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Brent’s keyboards added texture and his vocal harmonies shone, especially the a cappella chorus on “Feel Like A Stranger.”",
+    "Mickey": "Mickey kept a solid rhythmic drive, experimenting with the stack, though a brief tape glitch cuts a drum segment.",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-12T21:51:52.280410+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Feel Like A Stranger"
+    ],
+    [
+      "Samson & Delilah"
+    ],
+    [
+      "Terrapin Station",
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "Wharf Rat",
+      "Good Lovin'"
+    ]
+  ]
+}

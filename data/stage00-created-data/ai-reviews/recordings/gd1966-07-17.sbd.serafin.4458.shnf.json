@@ -1,0 +1,45 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a rare 1966 set with standout performances of In The Pines and Cardboard Cowboy.",
+  "review": "The recording is an exceptional soundboard tape – instruments are crisp, the mix balances Jerry’s lead guitar, Pigpen’s organ and Phil’s bass with striking clarity.  Musically the show shines thanks to two early‑Dead rarities, “In The Pines” and “Cardboard Cowboy,” both praised for their energy and vibe, though a few listeners felt the overall drive was a bit low on one night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All eight reviews are 4‑5 stars, consistently lauding both audio fidelity and musical moments; the weighted average of show (70%) and recording (30%) yields a rating near 4.7."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly describe the tape as crystal‑clear, well‑balanced, with “full sounding atmosphere,” strong organ presence and distinct bass – no mention of noise or dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "In The Pines",
+      "Cardboard Cowboy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early‑1966 set featuring rare material; the flow is praised for its historic value and unique song choices, though a couple of reviewers noted a slight dip in overall energy."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer loved his solo (“the cream of one of Jerry’s finest solos”), another wanted more from him – generally positive but not dominant.",
+    "Phil": "Bass described as “active and moving,” giving the performance a solid low‑end foundation.",
+    "Bob": "",
+    "Keys": "Pigpen’s organ is highlighted repeatedly as a standout element, with his “signature west coast sound” clearly audible.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "In The Pines": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Cardboard Cowboy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-26T05:23:42.564527+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1966-07-17.sbd.serafin.4458.shnf"
+}

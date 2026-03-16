@@ -1,0 +1,45 @@
+{
+  "summary": "Fair soundboard/audience mix captures a funky Scarlet > Fire and a sizzling Dancin’ > Franklin’s with standout Brent keyboard work.",
+  "review": "The recording suffers from mediocre clarity – a digi‑glitch in the first set, audience bleed on the second, and overall non‑pristine sound – but it remains listenable. Musically the show shines thanks to an epic Scarlet > Fire jam and a scorching Dancin’ > Franklin’s, highlighted by Brent’s Herbie‑Hancock‑style synth work and strong interplay from Bob and Jerry.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Average to good musical performance (standout jams) balanced against generally fair recording quality; weighted average of reviewer scores (~3.3) supports a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Many reviewers note mediocre sound on both sets, a single digi‑glitch in Scarlet > Fire, and non‑pristine audio (especially the audience‑sourced second set). Still considered listenable by most."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Dancin' > Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set contains strong peaks and the notable Dancin' > Franklin’s jam; second set is audience‑recorded but features a long, funky Scarlet > Fire. Overall flow is praised for its energy despite mixed recording."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned as being deep into the LL rain jam and contributing to the mellow‑to‑crescendo vibe.",
+    "Phil": "",
+    "Bob": "Praised for being \"waaay into\" the jams and trading riffs with Jerry throughout the show.",
+    "Keys": "Brent receives high praise for Herbie Hancock‑style synth work, especially on Dancin' and the long Scarlet > Fire jam.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancin' > Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-26T03:19:46.522724+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-12-10.sbd.ststephen.3371.sbeok.shnf"
+}

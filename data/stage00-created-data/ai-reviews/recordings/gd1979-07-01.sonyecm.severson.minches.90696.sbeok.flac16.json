@@ -1,0 +1,51 @@
+{
+  "summary": "Good-quality recording captures a great Half-Step > Franklin's Tower, Sugaree and the post‑Dark Star jam.",
+  "review": "The reviewer praises this set for its standout Half‑Step → Franklin's Tower sequence, a solid Sugaree performance, and an engaging post‑Dark Star section. Recording quality is described as good, making the show well worth listening to despite the unknown source type.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only a single positive review (4 stars) mentioning solid performance and decent recording; insufficient data for higher confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes good recording quality with no specific issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half-Step > Franklin's Tower",
+      "Sugaree",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows through strong jams, highlighted by the Half‑Step → Franklin's Tower sequence and Sugaree, with a satisfying post‑Dark Star segment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half-Step > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:06:04.036900+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-07-01.sonyecm.severson.minches.90696.sbeok.flac16"
+}

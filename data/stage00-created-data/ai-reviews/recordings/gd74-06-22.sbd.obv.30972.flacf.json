@@ -1,0 +1,88 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy 1974 Miami show featuring a blazing Greatest Story Ever Told, Bobby McGee and an epic 28‑minute Playing In The Band.",
+  "review": "The recording is praised for its crystal‑clear sound and vivid venue acoustics, delivering an immersive listening experience. Musically the concert shines with Jerry on fire, Phil’s hypnotic bass, and standout performances of Greatest Story Ever Told, Bobby McGee, China Cat Sunflower → I Know You Rider, and a marathon Playing in the Band. Overall the show is described as one of the most exciting and varied Dead outings of ’74.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All reviews are 4‑5 stars, consistently praising both the performance and the soundboard quality; no negative comments were found."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp sound that captures the unique acoustics of the Jai‑Alai Fronton; reviewers report no dropouts or balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Greatest Story Ever Told",
+      "Bobby McGee",
+      "China Cat Sunflower > I Know You Rider",
+      "Eyes of the World > Wharf Rat > Sugar Magnolia",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic and varied set with seamless segues (e.g., Eyes → Wharf Rat → Sugar Magnolia); described as a party‑show vibe that rivals other classic ’74 dates."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised as “on fire” and “at his greatest”.",
+    "Phil": "Noted for a hypnotic, killing bass line.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bobby McGee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T21:06:04.658770+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-06-22.sbd.obv.30972.flacf"
+}

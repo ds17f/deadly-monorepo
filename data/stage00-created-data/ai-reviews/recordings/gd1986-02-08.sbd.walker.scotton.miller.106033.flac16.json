@@ -1,0 +1,80 @@
+{
+  "summary": "Excellent soundboard recording captures a rock‑inspired show highlighted by a stellar Half Step → Franklin’s Tower opening and soaring China Doll/Playing in the Band jam.",
+  "review": "Fans rave about the crystal‑clear SBD tape, calling the sound “out of this world.” The performance shines especially in the second set with a powerful Half Step > Franklin’s Tower transition, a fiery China Doll into Playing in the Band, and an inspiring Space. Overall the concert is praised as one of the best from 1986.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both musical performance and recording quality across four detailed reviews; no significant negatives reported."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, out‑of‑this‑world sound with no dropout or balance issues mentioned; reviewers specifically note the SBD quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step",
+      "Franklin's Tower",
+      "China Doll",
+      "Playing in the Band",
+      "Iko Iko",
+      "Bertha",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for its pacing (Iko Iko start, Bertha > Sat Night close). Second set described as “very rockin,” highlighted by the Half Step > Franklin’s Tower opener and a seamless China Doll > Playing in the Band jam before Drum solo."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sat Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T12:31:14.962577+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-02-08.sbd.walker.scotton.miller.106033.flac16"
+}

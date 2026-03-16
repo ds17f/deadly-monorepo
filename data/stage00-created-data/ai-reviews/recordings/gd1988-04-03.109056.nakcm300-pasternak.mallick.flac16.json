@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent Pasternak recording with matrix‑like clarity, but the performance is marred by a lackluster Jerry Garcia presence.",
+  "review": "The tape captures a superbly balanced sound that many fans liken to a matrix mix, showcasing Jon Pasternak’s skill in finding the sweet spot. However, the reviewer was unable to enjoy the full set and expressed disappointment with Jerry’s weakened stage performance, making the musical experience mixed at best.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Recording quality is rated excellent by the reviewer, but the show itself receives little praise and a negative comment about Jerry’s performance; combined weighting yields a moderate overall score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced mix that sounds almost like a matrix; reviewer highlights the sweet spot and Pasternak’s equipment handling."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer could not listen to the whole concert and noted disappointment with Jerry Garcia's weakened performance, offering no specific comments on set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Negative – reviewer describes \"Jerry dying on stage\" causing consternation.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T07:50:30.182557+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-03.109056.nakcm300-pasternak.mallick.flac16"
+}

@@ -1,0 +1,67 @@
+{
+  "summary": "Short, rushed Nassau set with fiery Foolish Heart & Terrapin encore",
+  "blurb": "The show is a brief, high‑energy outing that builds toward a surprise Terrapin Station encore. Highlights include a scorching Foolish Heart, a soaring China Doll, and solid work from the rhythm section. The performance is marred by a few technical hiccups and a feeling of being rushed.",
+  "review": "On March 28 1991 at Nassau Coliseum the Dead delivered a concise but memorable set that felt a little compressed – the first two songs of the second set were noted as uneven, yet the band rallied into an unforgettable Terrapin Station encore. Jerry’s guitar and vocals shone on Foolish Heart and China Doll, even if his tone slipped at times, while Phil anchored the groove with what reviewers called a “supercell thunderstorm” bass line. Bob pushed through possible illness to deliver strong playing, especially during the finale. Vince’s keyboards occasionally over‑reached in volume but added texture, and the dual drummers provided an African‑bell vibe on the space segment that kept the momentum alive. Despite a noticeable dropout in Let It Grow on some soundboard sources, the overall energy and rare Terrapin encore make this show worth a spin.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 26,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.3,
+      "sentiment_rationale": "Most analyses are mixed but lean positive: multiple recordings praise the Terrapin encore, Foolish Heart and China Doll, while only a few note technical flaws or rushed pacing. The net sentiment is lightly favorable, warranting a modest +0.3 adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.3 = 3.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd91-03-28.sbd.barbella.7287.sbeok.shnf",
+    "reason": "Soundboard source with generally clear audio and the most detailed notes on performance; despite a dropout, it captures the key moments (Foolish Heart, China Doll, Terrapin encore) best."
+  },
+  "key_highlights": [
+    "Rare Terrapin Station encore that surprised fans",
+    "Fiery Foolish Heart performance with strong vocals",
+    "China Doll segue showcases Jerry’s soaring guitar",
+    "Show feels short and rushed but builds energy toward the end"
+  ],
+  "song_highlights": [
+    "Bertha",
+    "Foolish Heart",
+    "China Doll",
+    "Terrapin Station"
+  ],
+  "band_performance": {
+    "Jerry": "Praised on Foolish Heart and China Doll, though his tone was at times quiet or frustrated during the brief set.",
+    "Phil": "Provides a solid, thunderous bass foundation that anchors the band throughout.",
+    "Bob": "Possibly battling illness but delivers strong playing, especially signaling the Terrapin encore.",
+    "Brent": "Vince's keyboards occasionally dominate the mix, but add texture without major complaints.",
+    "Mickey": "Drums feature an African‑bell feel during the space segment, adding rhythmic intrigue.",
+    "Billy": "Percussion is enjoyable and complements the drums>space flow."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-17T17:31:01.324314+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bertha",
+      "Greatest Story Ever Told"
+    ],
+    [
+      "Victim Or The Crime",
+      "Foolish Heart",
+      "Man Smart, Woman Smarter"
+    ],
+    [
+      "Drums",
+      "Space",
+      "China Doll",
+      "Goin' Down The Road Feeling Bad",
+      "Good Lovin'"
+    ],
+    [
+      "Terrapin Station"
+    ]
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "High‑quality soundboard capture of a spirited Frost show with standout performances of Little Bunny Foo Foo, Row Jimmy and a killer Morning Dew.",
+  "review": "The recording is praised as one of the better‑sounding Frost tapes, offering clear mids and a solid mix despite occasional tiny caps. The concert itself is energetic, highlighted by Jerry’s scorching lead work, Phil’s driving bass, Bob’s stellar rhythm on Row Jimmy, and an especially powerful rendition of Morning Dew. Overall the show feels lively and enjoyable even if some listeners note a slight dip in energy later in the set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers (6 of 9) gave 3‑5 stars and highlighted strong playing and a good soundboard source; only one strongly negative review tempers the rating, leading to an overall solid 4+ score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced soundboard capture; praised as one of the best Frost recordings, with only minor mentions of tinny mids or occasional caps that do not detract significantly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Little Bunny Foo Foo",
+      "Row Jimmy",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set launches with high energy and strong jams; second set maintains momentum but some reviewers note a slight taper in intensity, yet the overall vibe remains upbeat and enjoyable."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers call his playing \"killer\" and praise his tone as perfect.",
+    "Phil": "Noted for \"killer playing by Phil\", indicating strong bass performance.",
+    "Bob": "Highlighted for stellar rhythm work on Row Jimmy, with broken‑chord riffing praised.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Little Bunny Foo Foo": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:15:12.523565+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-05-03.sbd.walker-scotton.miller.83738.sbeok.flac16"
+}

@@ -1,0 +1,75 @@
+{
+  "summary": "Superb soundboard capture of an energetic 1986 show with standout Mississippi/Franklin’s, China Doll and a wildly chaotic second set.",
+  "review": "Fans rave about the effortless feel of this February‑1986 performance, highlighting Jerry’s clear vocals, the ripping Mississippi Half‑Step/F​ranklin’s Tower combo and a fiery run through China Doll, Bertha and Saturday Night. The soundboard recording is described as impeccable and “goes unnoticed,” delivering crystal‑clear balance throughout even during the chaotic second set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars, praising both musical performance and recording quality; only a few low or ambiguous ratings appear, so the overall weighted score is strong."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Impeccable, superb soundboard; clarity is high and the recording “goes unnoticed,” with no reported drop‑outs or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step Uptown Toodeloo",
+      "Franklin's Tower",
+      "China Doll",
+      "Bertha",
+      "Saturday Night",
+      "Freight Train",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A strong first set followed by a wildly chaotic but exhilarating second set, with seamless transitions and high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice sounding good; clear vocals noted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Healy (keyboard) on re‑verb during the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mississippi Half-Step Uptown Toodeloo": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Freight Train": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T12:30:16.449527+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-02-08.sbd.miller.32541.flac16"
+}

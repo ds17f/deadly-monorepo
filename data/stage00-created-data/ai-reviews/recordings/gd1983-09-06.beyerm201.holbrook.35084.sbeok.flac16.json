@@ -1,0 +1,82 @@
+{
+  "summary": "A high‑energy show highlighted by a smoking Help > Slip > Franklin’s and strong Uncle John’s jam, captured on an overall good soundboard recording with a minor missing drum segment.",
+  "review": "Fans rave about the tight, extended Help‑Slip‑Franklin’s sequence, Jerry’s soaring solos (Alabama, Dupree’s) and the powerful post‑drums Uncle John’s band jam. The performance is described as fun, intense and full of classic moments, while the recording is generally solid soundboard quality though one reviewer notes a cut in the middle of the Drumz section.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Five out of six reviews are enthusiastic (4‑5 stars) and praise many songs; only one review flags a recording cut and another gives a zero rating without comment, leading to an overall strong but slightly tempered score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced; one reviewer reports the central Drumz segment was cut and Phil’s bass disappears for part of the jam."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower",
+      "Uncle John's Band (post‑drums jam)",
+      "Alabama",
+      "Bird Song",
+      "Lazy Lightning",
+      "The Supplication",
+      "Might As Well"
+    ],
+    "poor_songs": [
+      "Not For Anything (NFA) – noted as a little loose"
+    ],
+    "setlist_flow": "The set is described as relaxed yet intense, building into a spectacular second‑set jam on Help‑Slip‑Franklin’s that launches the band into high‑octane improvisation before winding down with sweet finishes like Brokedown Palace."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise his monster solos (Alabama, Dupree's) and wah‑wah work, calling them tidal‑wave‑like.",
+    "Phil": "Called a “monster” on bass; however one review notes his part drops out during the missing Drumz segment.",
+    "Bob": "Described as coy, funny and delivering strong vocal harmonies throughout.",
+    "Keys": "Brent (keyboards) is singled out for excellent playing (“Listen to what Brent is playing”).",
+    "Drums": "Billy & Mickey are lauded for sounding great; the post‑drums Uncle John’s jam is highlighted as a highlight."
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band (post‑drums jam)": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Alabama": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not For Anything (NFA)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T09:58:21.830533+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-06.beyerm201.holbrook.35084.sbeok.flac16"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Atmospheric audience recording captures an energetic Hampton show with a scorching Help>Slip>Franklin opener, The Wheel and a rocking US Blues encore.",
+  "review": "The tape delivers the raw, crowd‑filled feel of an audience source while still sounding clear enough to enjoy the band’s high‑energy performance. Highlights include a blistering Help > Slip > Franklin opening, a standout rendition of The Wheel, and a rousing US Blues encore, all buoyed by Phil’s powerful vocals. Reviewers note the fog‑filled atmosphere and overall fun vibe despite it not being a “perfect” show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All three reviewers gave 4‑star ratings, praised the performance’s energy and highlighted several standout songs while also noting good sound quality for an audience recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Great sound that captures crowd ambience; listeners feel the fog, lights and excitement. No major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin",
+      "The Wheel",
+      "US Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A high‑octane opening with Help>Slip>Franklin set the tone, followed by a consistently energetic first and second set that built to a powerful US Blues encore; the fog and crowd reactions add to the momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "His vocals were described as “bombs,” delivering strong, emotive singing throughout.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work was praised as a class above, keeping the band tight and supportive.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T04:02:09.840264+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-03-05.bk4011.keyser.25729.sbefail.flac16"
+}

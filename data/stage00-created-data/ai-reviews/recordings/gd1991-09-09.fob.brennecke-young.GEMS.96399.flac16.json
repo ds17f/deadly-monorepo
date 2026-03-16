@@ -1,0 +1,53 @@
+{
+  "summary": "Excellent audience recording captures a solid 1991 set with standout Dark Star and Music Never Stopped, despite a weak opening with Picasso Moon.",
+  "review": "The audience tape is full‑bodied and clear, giving space for the short Playin’ and Dark Star jams to breathe. The show builds after a shaky start with “Picasso Moon,” delivering a powerful mid‑set The Other One and an especially memorable Music Never Stopped, while LLR stays over the top as usual.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "One detailed review praises the audience source and highlights several strong performances, offset only by a lukewarm opening; overall rating reflects good show quality and excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the tape as full, fat, and spacious – a great alternative to the crunchy 1991 soundboard mixes that can be hard on headphones."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Music Never Stopped",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Picasso Moon"
+    ],
+    "setlist_flow": "Starts slowly with “Picasso Moon,” but the mid‑set The Other One signals a relaxed pacing that stretches into an expansive Music Never Stopped jam, giving the impression of a longer, more adventurous set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Mentions Bruce Hornsby's heavy piano on soundboards making them crunchy; prefers audience tape for keyboard clarity.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T00:16:40.329375+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-09.fob.brennecke-young.GEMS.96399.flac16"
+}

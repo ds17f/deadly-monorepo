@@ -1,0 +1,65 @@
+{
+  "summary": "High‑energy ’68 show with blazing Alligator > Caution and dark improvisations",
+  "blurb": "The set delivers a scorching Alligator > Caution pairing, a fiery Dark Star, and an inspired The Other One segue. Jerry’s tone is spot‑on while Phil provides solid bass foundation despite occasional heaviness. Recommended for listeners seeking classic late‑60s intensity.",
+  "review": "On March 16 1968 the Grateful Dead lit up San Francisco’s Carousel Ballroom with a high‑octane performance that still feels fresh today. The first set erupts with an unrelenting Dark Star that roams into soaring solos, while China Cat Sunflower and The Eleven keep the momentum rolling. Set two is where the magic really kicks in: after It Hurts Me Too the band launches into a seamless Cryptical Envelopment → The Other One transition highlighted by a surprising drum segue, then builds to a climactic Alligator → Caution (Do Not Stop On Tracks) sequence that drives the room wild. A brief burst of Feedback leads into an almost ritualistic Good Night before the encore’s haunting Morning Dew closes the night on a high note. Jerry Garcia’s guitar tone is described as perfect and his lead work “soaring” throughout, Phil Lesh lays down a solid—if occasionally heavy—bass foundation, and the twin drummers (Mickey Hart and Bill Kreutzmann) provide that extra push in the The Other One drum bridge. For anyone hunting the raw, exploratory spirit of the late‑60s Dead, this show is a must‑listen.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.8,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 30,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Both recordings praise the musical performance, highlighting Alligator > Caution, Dark Star and The Other One as standout moments with no consistent negative comments about playing; positive language appears across analyses.",
+      "final_calculation": "2.5 + 0.3 + 1.0 = 3.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1968-03-16.sbd.miller.109944.flac16",
+    "reason": "Clear, well‑balanced soundboard capture with only minor tape quirks; best overall fidelity for this high‑energy show."
+  },
+  "key_highlights": [
+    "Alligator > Caution sequence delivers a peak of high‑energy intensity.",
+    "Dark Star showcases extended improvisation and Garcia’s soaring lead work.",
+    "The Other One features a surprising drum segue from Cryptical Envelopment.",
+    "Eleven stands out as a powerful, tightly locked jam in the second set."
+  ],
+  "song_highlights": [
+    "Alligator",
+    "Caution (Do Not Stop On Tracks)",
+    "Dark Star",
+    "The Eleven",
+    "The Other One"
+  ],
+  "band_performance": {
+    "Jerry": "Tone described as perfect; delivers soaring licks in Alligator and fiery phrases throughout Dark Star, driving the show’s high‑energy vibe.",
+    "Phil": "Solid bass foundation with occasional heavy/muddy low end; brief hiccup behind Jerry noted but overall supportive, especially strong on The Eleven.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Part of the drum duo that creates a surprising and effective segue between Cryptical Envelopment and The Other One.",
+    "Billy": "Works with Mickey to push the rhythmic intensity, contributing to the powerful drum bridge into The Other One."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-24T08:02:11.131247+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Alligator",
+      "Caution (Do Not Stop On Tracks)",
+      "Feedback",
+      "And We Bid You Good Night"
+    ],
+    [
+      "Dark Star",
+      "China Cat Sunflower",
+      "The Eleven"
+    ],
+    [
+      "Cryptical Envelopment",
+      "The Other One",
+      "Cryptical Envelopment"
+    ]
+  ]
+}

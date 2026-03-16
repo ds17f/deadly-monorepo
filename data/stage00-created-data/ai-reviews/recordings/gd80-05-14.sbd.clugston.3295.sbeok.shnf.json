@@ -1,0 +1,106 @@
+{
+  "summary": "Good‑soundboard capture of a laid‑back ’80 show with a fiery Comes A Time and a superb Let It Grow → Althea blend.",
+  "review": "The recording is a clear Clugston soundboard tape that sounds solid overall, though the first‑set vocals sit a little high and there’s a slight pitch slowdown on Tennessee Jed. Musically the concert is relaxed but delivers highlights such as Jerry’s scorching Comes A Time, the seamless Let It Grow into Althea transition, and strong moments from The Music Never Stopped, Sugaree and Johnny B. Goode, while songs like Easy To Love You draw mixed feelings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and praise several key performances; a few note set‑list pacing issues and minor mix problems, yielding an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and well‑balanced Clugston SBD; first‑set vocals a bit high, slight pitch slowdown from Tennessee Jed onward, matrix source better for the first set per one reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "Let It Grow > Althea",
+      "The Music Never Stopped",
+      "Sugaree",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [
+      "Easy To Love You",
+      "Alabama Getaway"
+    ],
+    "setlist_flow": "Three‑night run that improves each night; first set described as just‑below‑average, second set tighter with several high points."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise his fiery lead on Comes A Time and overall guitar tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboards highlighted as great on Feel Like a Stranger; strong keyboard work noted in Let It Grow > Althea.",
+    "Drums": "Drummers keep the energy, especially during Space; no specific individual comments."
+  },
+  "song_mentions": {
+    "Comes A Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow > Althea": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Easy To Love You": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "Dough Knees": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:35:50.515679+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-05-14.sbd.clugston.3295.sbeok.shnf"
+}

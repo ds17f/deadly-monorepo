@@ -1,0 +1,80 @@
+{
+  "summary": "Excellent matrix recording captures a soaring 1991 show highlighted by a blistering Jack Straw, sublime Peggy‑O and magic Saturday Night set.",
+  "review": "The concert is praised as one of the best from ’91, with a smoking first set and a second‑set that builds into unforgettable moments – Jack Straw, Uncle John’s Band, The Same Thing and a wild Saturday Night. Reviewers note the matrix source gives crystal‑clear instrument separation (Phil’s bass sits front‑and‑center) and no audible flaws, while Jerry’s guitar work (including his new DigiTech Whammy on Foolish Heart) is described as soaring and powerful.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All four reviewers gave 4‑5 stars, praising both the musical performance and the matrix recording quality; no significant complaints were raised."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix blend captures a clean, balanced mix with prominent Phil bass and clear vocals; reviewers report no drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Peggy-O",
+      "The Same Thing",
+      "Uncle John's Band",
+      "Saturday Night",
+      "Throwing Stones",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as smoking; second set builds into a magical, high‑energy sequence with seamless transitions and an uplifting encore."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is soaring, vocals heartfelt; noted for using a DigiTech Whammy on Foolish Heart and delivering powerful solos throughout.",
+    "Phil": "Bass is front‑and‑center ('Lots of Phil in the mix'), romping all night with energetic Minglewood solo.",
+    "Bob": "Provides glue for the band; lyric slip noted but overall praised for his presence and humor.",
+    "Keys": "Vince (\"Vinny\") is described as rollicking and perfect, adding to the full‑band sound.",
+    "Drums": "Mickey Hart and Bill Kreutzmann are said to 'bang' and drive the music forward."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Same Thing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T03:03:19.087351+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-12-28.mtx.hansokolow.97730.flac16"
+}

@@ -1,0 +1,87 @@
+{
+  "summary": "Excellent soundboard capture of an energetic Tempe ’81 show with a soaring second set highlighted by Estimated Prophet > He's Gone, The Other One and Stella Blue.",
+  "review": "The recording is a pristine sound‑board source with only a brief streaming hiccup during Half Step, making it highly listenable.  Musically the band delivers an energetic first set and a second set that many fans cite as a standout – Jerry stays in the zone, the keyboards float on Estimated Prophet, and The Other One builds to a thrilling climax before a sweet Stella Blue outro.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the performance and the sound quality; only one review is clearly negative, giving an overall strong impression of a great show with excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Sound is described as pristine and solid throughout; a minor streaming glitch (~30 seconds) affects Half Step, but patches are seamless and overall clarity is high."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet > He's Gone",
+      "The Other One",
+      "Stella Blue",
+      "Half Step > Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is tight and energetic, second set soars with strong transitions – especially the Prophet/He's Gone sequence leading into a powerful Other One and a sweet Stella Blue finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for being 'in the zone', having perfect tone and carrying The Other One forward.",
+    "Phil": "",
+    "Bob": "Criticized on this night for sloppy vocals that made listeners wince (noted by one reviewer).",
+    "Keys": "Keyboard work highlighted – Estimated Prophet ‘floats’ and He's Gone 'hums' beautifully.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "LLR": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T13:57:13.088062+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-08-30.sbd.miller.30118.sbeok.flacf"
+}

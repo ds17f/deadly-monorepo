@@ -1,0 +1,51 @@
+{
+  "summary": "Clear matrix mix captures three standout performances—Jack Straw, Row Jimmy, and Shakedown Street—despite an overall average show.",
+  "review": "The reviewer rates the recording a perfect five stars, praising the matrix blend that delivers crisp, well‑balanced sound. While noting the concert isn’t the Dead at their peak, they highlight exceptional versions of Jack Straw (especially its second solo), Row Jimmy, and Shakedown Street as the night’s gems.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "5‑star rating for an excellent matrix recording outweighs a modest appraisal of the overall performance, yielding a solid four‑star overall score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer loves the matrix mix, describing it as clear and well‑preserved from original tape; no noted dropouts or balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Row Jimmy",
+      "Shakedown Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall performance is viewed as not the band’s peak, but specific moments—especially the second solo in Jack Straw—provide high points that lift the set."
+  },
+  "band_member_comments": {
+    "Jerry": "Second solo on Jack Straw singled out as a highlight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:26:07.310643+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-15.all.aud-rolfe.127570.flac2496"
+}

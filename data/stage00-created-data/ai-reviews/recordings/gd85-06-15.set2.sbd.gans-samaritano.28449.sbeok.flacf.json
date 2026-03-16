@@ -1,0 +1,45 @@
+{
+  "summary": "Pristine soundboard recording of an outstanding 1985 second set, highlighted by a stellar Lost Sailor > Saint of Circumstance and She Belongs to Me.",
+  "review": "Fans rave about the crystal‑clear SBD mix, calling it the best‑sounding 1985 show on record, while noting that post‑mix bass trimming slightly tames Phil’s usual eruptions. The musical performance is praised as “great” with Lost Sailor > Saint of Circumstance and She Belongs to Me singled out as standout moments, though a few listeners miss the natural flow because the recording is split into separate tracks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ~4.4/5, strong consensus on excellent sound quality and a great set; only minor criticism about bass processing."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Mix is described as crisp, pristine and perfectly balanced. One reviewer notes that bass frequencies were reduced during post‑processing, which softens Phil's typical “earth‑shattering” eruptions."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lost Sailor > Saint of Circumstance",
+      "She Belongs to Me"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its energy and seamless musical flow, though some listeners are bothered by the artificial track breaks imposed by the SBD file format."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Bass was edited down in post‑mix, muting his usual powerful eruptions according to one reviewer.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lost Sailor > Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "She Belongs to Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T04:47:18.073297+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-06-15.set2.sbd.gans-samaritano.28449.sbeok.flacf"
+}

@@ -1,0 +1,70 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy 1986 show with Jerry ripping “Tiger” and a stellar “Visions of Johanna,” though the second set feels uneven.",
+  "review": "The recording is a crystal‑clear SBD mix that lets every nuance shine, from the soaring vocals on Visions of Johanna to the quirky bird‑chirp effects on the Bird Song. Musically the show shines on Jerry’s incendiary “Tiger” and the opening Box o' Rain → Visions sequence, but the second set drags in places with a sluggish Little Red Rooster and a few missteps from Brent on keys. Overall it’s a must‑listen for Deadheads who love 1986 intensity tempered by a few rough edges.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (average ~3.2/5) while recording quality is excellent (~4.5/5); weighted average yields a solid 3.6 rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners praise the clear vocals, crisp mix and overall superb balance; minor notes about a 2% speed increase but no major audio flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tiger",
+      "Visions of Johanna",
+      "Box o' Rain > Visions of Johanna",
+      "Bird Song",
+      "Terrapin Jam"
+    ],
+    "poor_songs": [
+      "Little Red Rooster"
+    ],
+    "setlist_flow": "First set is widely regarded as superior and tight, while the second set feels uneven—some high points like the Terrapin jam contrast with a sluggish Little Red Rooster and occasional keyboard miscues."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for ripping on “Tiger,” solid playing and singing, and inventive bird‑chirp guitar effects.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s performance is criticized as a misstart that led to an inescapable meltdown throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Tiger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Visions of Johanna": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Box o' Rain > Visions of Johanna": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T15:26:22.147214+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-22.sbd.miller.34767.flac16"
+}

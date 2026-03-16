@@ -1,0 +1,57 @@
+{
+  "summary": "Superb soundboard capture of a partial show highlighted by an epic Dark Star, stellar Eleven and soaring Lovelight",
+  "review": "The recording is widely praised as crystal‑clear soundboard material (with only a faint hiss and a tiny cut in St. Stephen) that puts the drums, cymbals and keyboards right up front. Musically the hour‑long excerpt shines – Dark Star is repeatedly called one of the best ever, The Eleven bursts with enthusiasm, Lovelight rages, and St. Stephen delivers solid energy despite being a truncated set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 20 reviews overwhelmingly praise both the performance (especially Dark Star) and the soundboard quality; only minor complaints about incompleteness keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Superb, front‑center drum/cymbal mix with clear guitar and organ. A faint tape hiss and a brief cut in St. Stephen are noted but do not detract from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Eleven",
+      "Lovelight",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Partial show (Dark Star → St. Stephen → Lovelight, with The Eleven woven in) delivers about 50 minutes of continuous, high‑energy improvisation; despite missing the rest of the concert it feels like a complete musical statement."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers laud Jerry Garcia’s melodic lead work and tone, especially in the late Dark Star section.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "References to Tom Constanten vs. Pigpen on organ; several note Tom Constanten’s presence during Dark Star and a rare Pigpen organ tease.",
+    "Drums": "Cymbals, snare and overall drum mix are repeatedly described as front‑and‑center and exceptionally clear."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 19,
+      "negative_mentions": 0,
+      "total_mentions": 19
+    },
+    "St. Stephen": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Eleven": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lovelight": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-19T13:50:52.336766+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-01-02.partial-early.sbd.86.sbefail.shnf"
+}

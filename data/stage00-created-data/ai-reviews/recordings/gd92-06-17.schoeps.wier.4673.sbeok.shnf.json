@@ -1,0 +1,76 @@
+{
+  "summary": "Fair‑quality audience recording of a solid 1992 show highlighted by an outstanding “Deal” performance",
+  "review": "Fans rave about the second‑set fire and especially Jerry’s otherworldly run on “Deal,” calling it one of the best versions ever. The tape is an audience (AUD) source that many describe as muddy, with track overlap and lacking the clarity of a soundboard, so the listening experience is only fair despite the strong musical moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the show (especially Deal and Good Lovin') while repeatedly noting poor recording quality; weighting gives a solid but not outstanding overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Several comments note muffled/low‑fidelity sound, track overlap between drums and jam sections, and the lack of a proper summer ’92 soundboard. Reviewers suggest seeking a better copy for full detail."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Good Lovin'",
+      "Big River",
+      "The Wheel",
+      "Black Peter",
+      "Fadeaway"
+    ],
+    "poor_songs": [
+      "China Rider"
+    ],
+    "setlist_flow": "First set described as shaky and heavy on cowboy tunes, but a long break leads into a hotter second set with strong jams. Overall the performance is viewed as average‑to‑good despite some uneven moments."
+  },
+  "band_member_comments": {
+    "Jerry": "His run on “Deal” is repeatedly called otherworldly and one of the best ever heard.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T07:11:53.664180+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-17.schoeps.wier.4673.sbeok.shnf"
+}

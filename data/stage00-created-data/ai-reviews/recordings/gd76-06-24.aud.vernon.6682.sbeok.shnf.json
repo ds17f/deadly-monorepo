@@ -1,0 +1,51 @@
+{
+  "summary": "Mellow, energetic 1976 show highlighted by a toe‑tapping Franklin's Tower; audience recording captures the vibe but lacks pristine clarity.",
+  "review": "Fans rave about the relaxed feel of this mid‑summer ’76 concert, calling it smooth and full of energy with standout moments like Franklin’s Tower, Friend of the Devil and Dancing in the Streets. The AUD source delivers a lively atmosphere even though the sound isn’t crystal‑clear, earning a modest rating for audio quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Show performance is consistently praised (average ~4.5/5) while recording quality is noted as only fair (~3/5); weighted average yields a solid 4.1 rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Sound is not excellent—some muddiness and lack of clarity are mentioned, but the audience capture adds atmosphere and conveys the band’s energy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Friend of the Devil",
+      "Dancing in the Streets"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall mellow vibe with a smooth first‑half feel, punctuated by high‑energy bursts such as Dancing in the Streets; transitions felt tight and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancing in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T05:16:59.621706+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-06-24.aud.vernon.6682.sbeok.shnf"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Audience tape with the characteristic arena “hollow” sound captures a solid Philadelphia show highlighted by a great second set.",
+  "review": "The recording is an audience capture from the Spectrum that carries the expected spacious, slightly hollow ambience of a large arena, but it remains clear enough to enjoy. Fans rave about the strong second set and memorable moments like the soaring “Space” jam that rolls into “Morning Dew,” with Jerry’s guitar sizzling and Phil’s bass‑driven chaos shining through. Overall the performance is praised despite the modest tape quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Two reviewers gave solid 3–4 star impressions of a good show with a great second set, while one gave a negative rating but still described the performance positively; recording quality is decent for an audience tape, leading to an overall strong recommendation."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Typical arena ‘hollow’ effect noted, but overall clear enough to follow the music; no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is highlighted as especially strong, with a natural flow that builds energy; the overall show maintains a solid groove despite being an arena gig."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is described as ‘sizzling’ and a highlight of the night.",
+    "Phil": "Bass playing noted for ‘inspired chaos’, driving the jams.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drummers are called ‘remarkable,’ keeping the rhythmic foundation solid."
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:37:00.653782+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-03-24.schoeps.nawrocki.17890.sbeok.shnf"
+}

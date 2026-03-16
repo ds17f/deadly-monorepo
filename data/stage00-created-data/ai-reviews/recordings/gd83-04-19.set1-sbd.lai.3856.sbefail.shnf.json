@@ -1,0 +1,39 @@
+{
+  "summary": "Mixed recording quality with noticeable hiss, but an energetic set highlighted by an extended “It’s All Over Now”.",
+  "review": "The reviews are split on the audio – one calls it a poor, hiss‑filled tape while another finds it acceptable and even better than other versions. The performance is described as high‑energy despite a somewhat disengaged crowd and a shorter‑than‑usual show, with “It’s All Over Now” getting special mention for its extended treatment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is average to good (energetic set, notable song), but recording quality ranges from poor to fair, pulling the overall rating down to around a 3‑star level."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer calls it hissy and poor; another says it's not hissy and decent; a third notes the sound is not spectacular but better than other available versions. Overall, the audio has noticeable tape hiss and limited clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "It's All Over Now"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as energetic yet short, with a crowd that seemed vaguely disinterested. No major flow issues are noted beyond the brief length."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:52:20.690608+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-19.set1-sbd.lai.3856.sbefail.shnf"
+}

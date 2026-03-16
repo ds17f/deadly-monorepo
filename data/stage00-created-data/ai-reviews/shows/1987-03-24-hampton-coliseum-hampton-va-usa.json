@@ -1,0 +1,86 @@
+{
+  "summary": "Terrapin Station fireworks, tight first set, soaring second‑set jams",
+  "blurb": "The first set rolls tight and energetic, highlighted by Jack Straw and a punchy Candyman. The second set launches with Gimme Some Lovin' and builds to an unforgettable Terrapin Station, followed by thunderous drums on Let It Grow. Overall the show is a high‑energy showcase of Jerry’s scorching guitar work.",
+  "review": "On March 24, 1987 the Dead lit up Hampton Coliseum with a performance that still sparks conversation among deadheads. The first set was a brisk, hook‑laden ride—Jack Straw opened the night, then Candyman and New Minglewood Blues kept the groove rolling into a soulful Let It Grow. The second set erupted with a surprise Gimme Some Lovin' opener that segued straight into Black Muddy River and an expansive Playing In The Band, but the centerpiece was the towering Terrapin Station. Jerry’s solo on Terrapin is described as “scorching” and “on fire,” trading fierce leads with Bob while Brent’s organ added texture to Candyman and Dear Mr. Fantasy. The dual drummers thundered through Let It Grow, Space, and a driving Wharf Rat that, despite an awkward transition for some listeners, still captured the band’s kinetic power. The encore closed gently with Brokedown Palace, leaving the audience buzzing from a night of high‑octane improvisation and tight ensemble work.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 35,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Strong positive consensus across seven of eight recordings, repeatedly praising Terrapin Station, Jerry’s fiery guitar work and the high‑energy second set; only two mixed notes (minor keyboard absence and a clunky Wharf Rat transition) temper the enthusiasm but do not outweigh the overall acclaim.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1987-03-24.sbd.milller.94349.sbeok.flac16",
+    "reason": "Healy matrix captures the full energy of the night with clear sound, vibrant crowd presence, and excellent coverage of Terrapin Station and the second‑set jams despite minor mix quirks."
+  },
+  "key_highlights": [
+    "Terrapin Station performance – Jerry’s solo described as scorching and on fire",
+    "High‑energy second set opener Gimme Some Lovin' leading into Black Muddy River and a soaring Let It Grow jam",
+    "Thunderous dual‑drum work driving the jams, especially during Space and Wharf Rat"
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Candyman",
+    "New Minglewood Blues",
+    "Loser",
+    "Gimme Some Lovin'",
+    "Black Muddy River",
+    "Let It Grow",
+    "Terrapin Station",
+    "Dear Mr. Fantasy",
+    "Wharf Rat",
+    "Not Fade Away",
+    "Brokedown Palace"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers an aggressive, on‑fire performance highlighted by a scorching Terrapin solo and fierce lead exchanges with Bob.",
+    "Phil": "Lesh’s bass drops bombs throughout the set, providing a solid foundation; on matrix recordings his tone can saturate and may need EQ adjustment.",
+    "Bob": "Weir steps into lead alongside Jerry during Terrapin Station, creating a memorable guitar duel.",
+    "Brent": "Mydland adds rich organ texture and takes solo spots that enhance Candyman and Dear Mr. Fantasy, despite one note of him missing from an audience tape.",
+    "Mickey": "Hart’s drumming is thunderous and driving, especially evident in the Let It Grow jam and second‑set improvisations.",
+    "Billy": "Kreutzmann pounds out a powerful rhythmic backbone that fuels the high‑energy jams across both sets."
+  },
+  "processed_recordings": 7,
+  "processed_date": "2025-09-15T19:39:32.630265+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw"
+    ],
+    [
+      "Candyman"
+    ],
+    [
+      "New Minglewood Blues"
+    ],
+    [
+      "Loser"
+    ],
+    [
+      "Gimme Some Lovin'",
+      "Black Muddy River"
+    ],
+    [
+      "Let It Grow"
+    ],
+    [
+      "Playing In The Band",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "Dear Mr. Fantasy",
+      "Wharf Rat",
+      "Not Fade Away"
+    ],
+    [
+      "Brokedown Palace"
+    ]
+  ]
+}

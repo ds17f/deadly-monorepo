@@ -1,0 +1,51 @@
+{
+  "summary": "Poor‑quality audience cassette capture of a laid‑back Dark Star → Me & My Uncle → Wharf Rat sequence; the music holds some charm but the audio is far from listenable.",
+  "review": "The recording is an audience‑sourced tape with noticeable hiss and muffled vocals, making it difficult to follow. Musically the show offers a relaxed Dark Star/Me & My Uncle medley that some listeners find enjoyable, though most reviewers criticize the overall sound quality more than the performance itself.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.1,
+    "confidence": "medium",
+    "rationale": "Most reviewers flag the audio as poor or unlistenable, while only a few note any musical positives; this drives the rating toward low despite occasional praise for the Dark Star segment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Cassette hiss, muffled vocals, and overall lack of clarity make the tape hard to listen to; no soundboard source available."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Me & My Uncle",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set features a laid‑back Dark Star → Me & My Uncle → Dark Star → Wharf Rat sequence that many describe as relaxed and spaced, though the overall flow is not highlighted beyond this medley."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith (keyboard) fits right in with the laid‑back vibe.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T14:29:05.290732+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-04-24.aud.unknown.6956.sbeok.shnf"
+}

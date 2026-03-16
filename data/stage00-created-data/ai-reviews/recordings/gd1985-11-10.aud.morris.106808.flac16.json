@@ -1,0 +1,39 @@
+{
+  "summary": "Audience‑heavy recording captures a one‑of‑a‑kind show with the standout first‑set closer “Bucket”.",
+  "review": "Reviewers describe this as a unique concert where the first‑set closer “Bucket” shines, and the overall setlist is praised. The recording is noted as very audience‑heavy, making it less pristine but still enjoyable for fans.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Two positive 4‑star reviews highlight a great performance and standout song; one 3‑star review notes an OK show and audience‑heavy recording, leading to an overall solid rating with moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Very audience‑heavy recording; ambient crowd noise is prominent, but the audio remains listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bucket"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as a one‑of‑a‑kind show with a strong first set closer and a setlist that “speaks for itself,” though overall impression is modestly positive."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:27:12.295782+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-10.aud.morris.106808.flac16"
+}

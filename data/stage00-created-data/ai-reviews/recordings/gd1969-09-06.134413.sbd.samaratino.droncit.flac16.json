@@ -1,0 +1,46 @@
+{
+  "summary": "Good soundboard restoration captures a laid‑back Friend of Mine with solid keys, but the set feels incomplete and the organ on It's All Over Now sounds off‑key.",
+  "review": "The recording is praised for its clear, nicely restored soundboard quality, especially highlighting the relaxed vibe of \"Friend of Mine\" with Jerry’s thick, twangy solo and tasteful keyboards. The show itself is viewed as a solid rocker yet somewhat incomplete, and one reviewer notes that the organ on \"It's All Over Now\" may be out of key.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Reviewers rate the recording highly (4‑5 stars) for sound quality and restoration, but give moderate praise to the performance (average ~3‑4 stars) noting incompleteness and a possible keyboard pitch issue. Weighted average yields about 3.8 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Nice, clear sound with a well‑executed restoration; no major dropouts mentioned. One comment questions an organ/key issue but that relates more to performance than recording fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of Mine"
+    ],
+    "poor_songs": [
+      "It's All Over Now"
+    ],
+    "setlist_flow": "The show is described as a solid rocker but feels incomplete; transitions are decent though the overall set doesn’t reach the high praise of other Dead shows from that era."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo lines are called 'thick and twangy' and praised on Friend of Mine.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Nice keys accompany Jerry on Friend of Mine; however, the organ on It's All Over Now may be out of key.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Friend of Mine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Over Now": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T17:12:42.513797+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-09-06.134413.sbd.samaratino.droncit.flac16"
+}

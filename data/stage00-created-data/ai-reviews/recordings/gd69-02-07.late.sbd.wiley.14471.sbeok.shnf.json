@@ -1,0 +1,79 @@
+{
+  "summary": "High‑energy 1969 late show with blistering Other One and Alligator suite, captured on a decent soundboard tape despite cassette hiss.",
+  "review": "The performance is hailed as one of the finest examples of ’69 Dead, featuring soaring guitar work on The Other One, a monster Cryptical>Other One sequence, and an all‑out Alligator → Drums → Jam marathon that even the Feedback section gets rave reviews.  The soundboard source sounds good overall but suffers from cassette‑master hiss, heavy compression and fade‑ins/outs, which keeps the technical quality at a solid‑good level.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over ten detailed reviews overwhelmingly praise the musical performance while noting consistent but non‑deal recording issues; weighting show quality (70%) and recording quality (30%) yields a high overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Cassette master source introduces noticeable hiss and heavy compression that makes EQ difficult; fade‑ins/outs are present but the mix remains decent and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Cryptical > The Other One",
+      "Alligator",
+      "Death Don't",
+      "Feedback",
+      "Caution"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a high‑energy first set that builds into an explosive second set; jams are fully realized, with the Alligator suite and extended drum/feedback sections highlighted as peak moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is repeatedly called acid‑drenched, soaring, full of tension and pyrotechnic brilliance throughout the show.",
+    "Phil": "Phil’s bass provides a counter‑theme to Jerry and earns specific praise for an inspiring solo during the jam sections.",
+    "Bob": "One reviewer felt Bob Weir’s playing was not particularly strong this night.",
+    "Keys": "",
+    "Drums": "The drummers (Bill ‘Pig’ and Mickey) are lauded for a stellar Alligator performance, fast‑and‑furious drum jams, and overall driving power."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Cryptical > The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Alligator": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Caution": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Feedback": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T11:08:44.976483+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-02-07.late.sbd.wiley.14471.sbeok.shnf"
+}

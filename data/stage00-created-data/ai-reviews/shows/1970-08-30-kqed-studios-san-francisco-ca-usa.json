@@ -1,0 +1,55 @@
+{
+  "summary": "Mixed‑quality studio set with strong Candyman but muddied mix",
+  "blurb": "The five‑song studio set includes a powerful Easy Wind and a slowed‑down Candyman that stand out despite a muddy broadcast. Jerry’s vocal on Brokedown Palace is a highlight, though low bass and quad‑FM split cause noticeable audio issues. Overall listening experience is fair but not clean.",
+  "review": "On August 30, 1970 the Dead slipped into KQED Studios for a brief TV‑studio set that feels more like a high‑energy rehearsal than a full concert. The band delivers a compelling Easy Wind and an unusually slowed‑down Candyman that lets Jerry’s voice linger; his vocal on Brokedown Palace is described as mesmerizing even though the broadcast muffles the bass and introduces quad‑FM wobble. Pigpen, Bob, Mickey and Billy keep the rhythm tight, but the mix frequently drops out, leaving the listener wading through muddied sections. Of the two known sources, the audience recording (gd70-08-30.fm.jupile.12762.sbeok.shnf) offers the clearer picture of the performance despite its flaws, making it the preferred listen for anyone curious about this rare studio moment.\n\nWhile the set contains genuine gems—especially Candyman and the vocal‑rich Brokedown Palace—the technical shortcomings keep the show from reaching classic status. Fans should temper expectations: you’ll hear flashes of brilliance, but the audio will often feel washed out and the bass recessed. If you decide to explore this era, start with the recommended audience capture for the most complete experience.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": -0.5,
+      "sentiment_rationale": "One recording is mixed (highlighting some songs but noting muddy mix) and the other is negative (calling the performance sluggish with only Candyman redeeming). No consistent positive language across recordings, so a modest negative adjustment is applied.",
+      "final_calculation": "2.5 + 0.1 - 0.5 = 2.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-08-30.fm.jupile.12762.sbeok.shnf",
+    "reason": "Fair‑quality audience broadcast with clearer mix and more complete set; captures the standout performances despite some muddiness."
+  },
+  "key_highlights": [
+    "Standout slowed‑down Candyman that shines even through a muddy mix.",
+    "Jerry’s vocal on Brokedown Palace is mesmerizing despite low bass levels.",
+    "High‑energy studio vibe but suffers from quad‑FM split dropouts and muffled bass."
+  ],
+  "song_highlights": [
+    "Easy Wind",
+    "Candyman",
+    "Brokedown Palace"
+  ],
+  "band_performance": {
+    "Jerry": "His voice shines on Brokedown Palace and is praised on the slowed‑down Candyman; vocal presence remains a highlight despite the muddied mix.",
+    "Phil": "Bass is mixed too low, dulling his contribution and affecting overall balance.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-19T22:43:24.024265+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Easy Wind"
+    ],
+    [
+      "Candyman"
+    ],
+    [
+      "Brokedown Palace"
+    ]
+  ]
+}

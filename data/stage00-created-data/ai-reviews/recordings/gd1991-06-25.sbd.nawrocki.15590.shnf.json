@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard capture with great setlist and Jerry's standout Candyman solo.",
+  "review": "The recording is praised for its clear, high‑quality sound – a true soundboard source that lets the grand piano cue and the band’s nuances shine. Fans highlight a superb setlist, noting Bruce Hornsby’s cameo on Jack Straw and an unforgettable Jerry Garcia solo on Candyman. Overall the show is described as great despite a messy venue experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Two detailed, high‑star reviews praise both performance and sound quality; one non‑informative low rating lowers confidence but does not change the overall positive assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers call the sound \"great\" and note clear piano cues, indicating a crisp, well‑balanced mix with no reported issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as nice and well‑chosen; despite venue (KOA) problems, the overall flow and energy of the show are praised."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Candyman is singled out as a memorable highlight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Grand piano cue evoked memories of Keith's playing, indicating strong keyboard presence.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T22:39:38.871467+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-25.sbd.nawrocki.15590.shnf"
+}

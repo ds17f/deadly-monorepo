@@ -1,0 +1,39 @@
+{
+  "summary": "Ambient matrix recording with slight timing/slap‑back echo; the show starts nicely but loses its way during Let It Grow.",
+  "review": "The MTX source is big‑sounding and very ambient, though listeners note a faint timing offset that creates a slap‑back echo. Musically the first set begins well but drifts after Let It Grow, with the band seeming to search for direction as the audience encourages them.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "low",
+    "rationale": "Only one moderate‑rating review; comments suggest an average performance and a fair‑to‑good matrix recording, leading to a low overall score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Very ambient, big‑sounding mix with possible slight timing offset between sources and a touch of slap‑back echo."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Let It Grow"
+    ],
+    "setlist_flow": "First set opens strong but becomes unfocused after Let It Grow, with the band seeming to lose their way and relying on audience encouragement."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T04:43:58.901438+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-16.mtx.tobin.122020.flac16"
+}

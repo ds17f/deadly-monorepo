@@ -1,0 +1,73 @@
+{
+  "summary": "A solid soundboard capture of the US Festival’s early‑morning set – Playin’ → Shakedown fires up a standout Minglewood Blues and one of the best China Cat/Sunflower‑Rider combos of ’82.",
+  "review": "The recording, taken from a soundboard source, is generally clear with only occasional waviness and a brief piano distortion on Brent’s organ that doesn’t detract from the overall listening experience. Musically the show shines: Playin’ in the Band rolls straight into a scorching Shakedown Street, followed by a powerhouse Minglewood Blues and a superb China Cat Sunflower/I Know You Rider sequence, with “Space” and the drums‑encore also getting high marks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over a dozen detailed reviews overwhelmingly praise the setlist, performance energy and soundboard clarity; only minor recording glitches are noted, resulting in a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and balanced; a few reviewers note occasional waviness, piano distortion on Brent’s keyboards during Shakedown, and an uneven mix where Phil’s bass drops out briefly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' in the Band",
+      "Shakedown Street",
+      "Minglewood Blues",
+      "China Cat Sunflower / I Know You Rider",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early‑morning energy kicks off with Playin’ → Shakedown, rolls into Minglewood Blues and culminates in a tight China Cat/Sunflower‑Rider pairing; the set maintains momentum despite the heat and brief early‑show fatigue."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is praised for melting into Shakedown Street, with his tone noted as solid throughout.",
+    "Phil": "Phil’s bass is generally strong, though a few reviewers mention it disappearing briefly in the mix.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s keyboards drive the jams; one reviewer notes occasional distortion on his piano during Shakedown but overall performance is praised.",
+    "Drums": "The drumming (Bill Kreutzmann) receives commendation, especially the drum‑encore segment."
+  },
+  "song_mentions": {
+    "Playin' in the Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Shakedown Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat Sunflower / I Know You Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "(I Can't Get No) Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T00:39:26.613034+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-09-05.sbd-patched.warner.5490.sbeok.shnf"
+}

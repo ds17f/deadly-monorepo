@@ -1,0 +1,64 @@
+{
+  "summary": "Mixed performance with a solid first set and highlights like Wang Dang Doodle, Big RR Blues and White Rabbit; recording quality not discussed.",
+  "review": "Fans describe the first set as tasty and tightly executed, praising the natural pairing of Wang Dang Doodle into Big RR Blues and a strong China Cat > I Know You Rider run. The second set divides opinion – some call it sloppy or disastrous while others rave about wild jams and White Rabbit – and no reviewer comments on the audio source or fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed but leans positive thanks to several standout moments; recording quality is unknown, pulling the overall rating toward the middle of the scale."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviews contain no specific comments about soundboard clarity, audience bleed, or other audio characteristics."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wang Dang Doodle",
+      "Big RR Blues",
+      "China Cat Sunflower > I Know You Rider",
+      "White Rabbit"
+    ],
+    "poor_songs": [
+      "Eyes"
+    ],
+    "setlist_flow": "First set is described as solid and tasty, with smooth song pairings; the second set receives mixed feedback – some label it sloppy or a disaster, others find it wild and exhilarating."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big RR Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "White Rabbit": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:00:10.260384+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-27.121600.sbd.miller.flac16"
+}

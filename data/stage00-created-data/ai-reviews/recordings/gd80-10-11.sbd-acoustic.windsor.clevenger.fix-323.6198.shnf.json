@@ -1,0 +1,39 @@
+{
+  "summary": "Nice acoustic tape capture of a standout Dire Wolf performance",
+  "review": "Both reviewers are enthusiastic about this tape‑sourced recording, highlighting the unique version of Dire Wolf that they’ve long searched for. While no technical details are given, the lack of complaints suggests the sound is at least listenable and pleasant. The show’s main draw is the memorable Dire Wolf rendition.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Two brief but strongly positive reviews focus on a single standout song; no technical criticism, so rating leans toward good show and decent recording."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Tape source (likely audience or personal cassette). Reviewers describe it as a 'very nice version' with no reported issues, but give no specific details on clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dire Wolf"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Insufficient information; reviewers only mention Dire Wolf and do not comment on overall set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dire Wolf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T04:36:59.471113+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-11.sbd-acoustic.windsor.clevenger.fix-323.6198.shnf"
+}

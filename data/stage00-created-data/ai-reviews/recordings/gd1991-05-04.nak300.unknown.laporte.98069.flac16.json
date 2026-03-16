@@ -1,0 +1,51 @@
+{
+  "summary": "Audience‑sourced recording of decent quality captures a nice show highlighted by Speedway Boogie and a Victim → Crazy Fingers jam.",
+  "review": "The reviewer finds this AUD (audience) recording pleasant enough for casual listening, noting the modest 64 kbps MP3 source but no major flaws. Musically the show is praised as “nice,” with The Speedway Boogie singled out as a highlight and the seamless jam from Victim into Crazy Fingers adding extra excitement.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Only one moderately detailed review; positive comments about both performance and acceptable audio quality lead to a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "64 kbps MP3 AUD source; clear enough for enjoyment, no major dropouts or muddiness noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Speedway Boogie",
+      "Victim",
+      "Crazy Fingers"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth transition highlighted by the Victim → Crazy Fingers jam; overall flow described as enjoyable and better than a comparable 5‑3‑91 show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T19:22:32.139013+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-05-04.nak300.unknown.laporte.98069.flac16"
+}

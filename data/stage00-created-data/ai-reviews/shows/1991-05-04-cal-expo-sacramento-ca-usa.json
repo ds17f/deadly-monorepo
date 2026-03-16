@@ -1,0 +1,76 @@
+{
+  "summary": "Tight set with soaring guitar, standout Race Is On & Row Jimmy jam",
+  "blurb": "The band delivers a punchy first set highlighted by \"The Race Is On\" and an expansive \"Row Jimmy\" jam. Jerry’s lead work is on fire while Phil’s bass drives the groove, and the second‑set drums shine through a rapturous solo. Standout moments include \"Touch of Grey\", \"Music Never Stopped\" and a seamless Victim → Crazy Fingers transition.",
+  "review": "On May 4, 1991 at Cal Expo in Sacramento, the Dead rolled out a high‑energy performance that still feels fresh for listeners today. The first set kicked off with a rollicking \"Hell In A Bucket\" and built momentum into a tight, country‑flavored \"The Race Is On\" followed by an expansive \"Row Jimmy\" jam that showcases Jerry’s soaring lead work and Phil’s forward‑present bass. Mid‑set highlights include the upbeat \"New Speedway Boogie\" and a classic “Music Never Stopped” finish. The second set opened with a spooky \"Victim Or The Crime\" that segued into a fiery \"Crazy Fingers\" before launching into a marathon of improvisation – “Playing In The Band”, “Uncle John's Band”, a rapturous drum solo, and the space‑filled journey through \"I Need A Miracle\" to \"Standing On The Moon\". The encore’s \"Touch of Grey\" rounds out a show that balances tight songcraft with free‑form exploration. While Vince’s keyboards sit low in the mix on some recordings, the overall soundboard captures the band’s chemistry, especially the standout drumming and Jerry’s confident guitar throughout.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 14,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.5,
+      "sentiment_rationale": "Four of five recordings are clearly positive, praising the tight set, standout songs (Race Is On, Row Jimmy, Touch of Grey) and strong drumming; only one mixed review notes minor issues. Consistent high praise across multiple sources justifies a solid positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 1.5 = 4.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd91-05-04.sbd.ladner.9117.sbeok.shnf",
+    "reason": "Tight soundboard mix with prominent Phil bass and clear capture of the full set; most reliable source despite some keyboard balance criticism."
+  },
+  "key_highlights": [
+    "Stellar \"The Race Is On\" performance and expansive \"Row Jimmy\" jam.",
+    "Powerful drumming throughout, highlighted by a rapturous second‑set solo.",
+    "Jerry’s soaring guitar work shines on multiple numbers.",
+    "Solid recording quality with prominent bass; minor keyboard mix issues."
+  ],
+  "song_highlights": [
+    "The Race Is On",
+    "Row Jimmy",
+    "Touch of Grey",
+    "The Music Never Stopped",
+    "Victim Or The Crime",
+    "Crazy Fingers",
+    "Uncle John's Band",
+    "New Speedway Boogie"
+  ],
+  "band_performance": {
+    "Jerry": "Jerry delivers soaring, confident guitar work throughout; his playing is a highlight on \"The Race Is On\", \"Row Jimmy\" and the second‑set jams.",
+    "Phil": "Phil's bass is forward‑present and drives the groove, especially evident in the tight feel of \"The Race Is On\" and the extended improvisations.",
+    "Bob": "Bob adds solid rhythm work and a playful vocal moment with a Shatner‑style impression on the encore.",
+    "Vince": "Vince’s keyboards sit low in the mix; reviewers note they sound plodding and buried, though his parts are still present during the jams.",
+    "Mickey": "Mickey provides steady percussion that complements Billy’s dynamic drumming, helping to anchor the improvisational flow.",
+    "Billy": "Bill’s drumming is highlighted as strong and propulsive, delivering a fiery solo that energizes the second set."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-17T19:25:01.172753+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "The Race Is On"
+    ],
+    [
+      "Row Jimmy"
+    ],
+    [
+      "Touch of Grey"
+    ],
+    [
+      "New Speedway Boogie",
+      "The Music Never Stopped"
+    ],
+    [
+      "Victim Or The Crime",
+      "Crazy Fingers",
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Standing On The Moon",
+      "One More Saturday Night"
+    ]
+  ]
+}

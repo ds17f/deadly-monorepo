@@ -1,0 +1,75 @@
+{
+  "summary": "A sunny Santa Cruz show captured on a surprisingly clean audience tape, highlighted by Birdsong, Uncle John’s Band and an all‑time Brokedown Palace.",
+  "review": "The performance is consistently praised – fans cite the bright Birdsong opening, a funky Deep Ellum stretch, dance‑able China>Rider, an intense Truckin' and a magical Brokedown Palace that caps a memorable second set.  The audience recording is described as “crisp” and almost soundboard quality, though one listener complained of cassette‑like degradation, making the overall listening experience very good.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average star rating ≈4.3 with 14 reviews; most comments are enthusiastic about both show and tape quality, only a few isolated negatives."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clean, crisp audience mix that many say approaches soundboard fidelity; occasional high‑treble roll‑off after Alabama noted, one reviewer described it as cassette‑like degradation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong",
+      "Uncle John's Band",
+      "Brokedown Palace",
+      "The Deep Ellum",
+      "China > Rider",
+      "Truckin'",
+      "Ship of Fools"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised but second set described as the ‘wish‑list’ – a funky, danceable stretch highlighted by China>Rider and an intense Truckin', ending with a heartfelt Brokedown Palace."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer noted a friend was more impressed with Bob than Jerry; otherwise no specific comments about Jerry’s playing.",
+    "Phil": "",
+    "Bob": "Several reviewers highlighted Bob Weir’s strong performance, calling it “very well” and noting his presence on the show.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Deep Ellum": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:49:55.074565+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-09-24.neumann.wiley.9200.sbeok.shnf"
+}

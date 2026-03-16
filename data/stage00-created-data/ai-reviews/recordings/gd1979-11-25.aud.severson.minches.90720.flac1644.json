@@ -1,0 +1,51 @@
+{
+  "summary": "Crystal‑clear audience recording captures an awesome late‑’79 show with standout Shakedown Street → Bertha transition and a moving Stella Blue.",
+  "review": "The audience (AUD) tape is praised as crystal clear and arguably the best sound captured at UCLA, making the performance highly enjoyable. Reviewers highlight the second set as the high point of the night, especially the seamless Shakedown Street into Bertha and an emotional rendition of Stella Blue. Overall the show is regarded as a top‑tier late‑1979 Dead concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All three reviews are five‑star and uniformly enthusiastic about both the musical performance and the recording clarity, giving strong evidence of an excellent show with a superb audience capture."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the tape as crystal clear, noting it may be the best sound captured at UCLA; no dropouts or balance issues are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Bertha",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as typical late‑’79 material, while the second set is highlighted as the real highlight of the night with strong energy and seamless transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:12:43.389910+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-25.aud.severson.minches.90720.flac1644"
+}

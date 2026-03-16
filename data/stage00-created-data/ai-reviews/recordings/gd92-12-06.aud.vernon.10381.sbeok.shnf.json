@@ -1,0 +1,39 @@
+{
+  "summary": "Decent recording of a memorable 1992 show highlighted by a standout 'Here Comes Sunshine' opener.",
+  "review": "The three fan reviews paint this as an upbeat breakout performance from 1992, with the sunny opening of \"Here Comes Sunshine\" repeatedly praised. While reviewers share vivid anecdotes about the muddy Arizona venue and even a cat in the crowd, none comment on the audio fidelity, leaving the recording quality indeterminate but likely adequate for listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Average star rating of 4.0 and consistently positive remarks about the show outweigh the lack of technical audio comments."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewers mentioned sound quality, mix, or source type; assessment based on absence of data."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opening with \"Here Comes Sunshine\" set an upbeat tone; overall vibe described as a breakout show despite weather challenges."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T08:41:53.187407+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-12-06.aud.vernon.10381.sbeok.shnf"
+}

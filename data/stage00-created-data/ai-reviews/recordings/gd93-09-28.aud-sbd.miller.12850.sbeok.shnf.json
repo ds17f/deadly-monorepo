@@ -1,0 +1,51 @@
+{
+  "summary": "High‑energy 1993 Boston show captured on a sweet soundboard recording, highlighted by a smoking China Cat/Rider and an often‑cited “So Many Roads” performance.",
+  "review": "The show is praised for being in peak ’93 form with standout moments like the blazing China Cat → Rider sequence and a frequently‑called‑best‑ever rendition of So Many Roads. The SBD source is generally clear and balanced, though a few listeners note lightness in the mix and occasional crackle or mic hiccups. Overall the performance outweighs minor recording quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (10/14) give 5‑star ratings and extol both the music and the SBD sound, with only a handful of lower scores pointing to specific song or recording issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "SBD is described as sweet and clear; some note it is a bit light for certain ears and mention occasional crackling in set 1 and a mic mishap at the start of a song."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat / Rider",
+      "So Many Roads",
+      "I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set shines with high‑energy transitions and a powerful drum/space segment; overall the concert flows strongly, reflecting the band’s peak ’93 form."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for great vibe and strong vocal delivery (headlight comment), solid guitar tone, though one reviewer notes his guitar and voice slipped on the final verse of So Many Roads.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Multiple reviewers highlight the drums and space as exemplary of the 1990s Dead, describing swirling, circular sound that moves the body."
+  },
+  "song_mentions": {
+    "China Cat / Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "So Many Roads": {
+      "positive_mentions": 4,
+      "negative_mentions": 3,
+      "total_mentions": 7
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:58:39.036140+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-28.aud-sbd.miller.12850.sbeok.shnf"
+}

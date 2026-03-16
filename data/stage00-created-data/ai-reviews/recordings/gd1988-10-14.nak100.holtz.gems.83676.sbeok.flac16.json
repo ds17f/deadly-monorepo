@@ -1,0 +1,46 @@
+{
+  "summary": "A solid Dead show hampered by an over‑driven bass and balance problems in the transfer.",
+  "review": "The performance itself is praised – vocal jams on “He’s Gone,” an energetic “Sun Gonna Shine” section in “Rider,” and a quirky Hey Jude closer – but both reviewers note that the bass is painfully over‑driven and the overall mix feels out of balance, with vocals pushed back. The recording quality therefore detracts from an otherwise enjoyable concert.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Show is described positively (around 3.5/5) while the recording is criticized heavily (about 2/5). Weighted average (70% show, 30% recording) yields ~3.1 stars."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Bass is over‑driven and unbalanced; overall mix has a “syballance” problem with vocals recessed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Rider (Sun Gonna Shine verse)",
+      "Hey Jude"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set fits on a single CD, includes an unusual Hey Jude closer and energetic moments like the Sun Gonna Shine section in Rider."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums are noted to have a unique quality."
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider (Sun Gonna Shine verse)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T14:54:47.481296+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-10-14.nak100.holtz.gems.83676.sbeok.flac16"
+}

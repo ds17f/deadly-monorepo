@@ -1,0 +1,57 @@
+{
+  "summary": "Crisp soundboard capture with classic Miller mastering, highlighted by a superb midnight Touch → Let It Grow segue and a scorching Gimme Some Lovin'.",
+  "review": "The Miller‑taped soundboard delivers clear, well‑balanced audio that lets the band’s energy shine through. Highlights include the seamless midnight Touch into Let It Grow, an inspired Gimme Some Lovin', and a strong Desolation Row vocal from Bob, while a few early second‑set hiccups keep things honest. Overall the performance feels tight and celebratory despite minor slip‑ups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Reviews are largely enthusiastic about both the music and the Miller soundboard quality; only one low rating mentions a brief mistake, so the weighted average leans toward a strong positive rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller’s mastering is praised as crisp and clean with no noticeable drop‑outs; listeners describe it as typical excellent Miller work."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch",
+      "Let It Grow",
+      "Gimme Some Lovin'",
+      "Desolation Row"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows well, especially the midnight Touch → Let It Grow segue; second‑set enthusiasm builds after the drums, though early moments show a few miscues."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice sounded better than recent shows and he played admirably despite recent illness.",
+    "Phil": "Bass was 'going nuts' especially on Gimme Some Lovin', adding extra excitement.",
+    "Bob": "Strong vocal performance on Desolation Row, hitting all verses clearly.",
+    "Keys": "",
+    "Drums": "Energy after the drums helped lift the second set; some playful champagne‑induced looseness noted."
+  },
+  "song_mentions": {
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:18:08.179364+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-12-31.sbd.miller.77447.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Clean audience recording of a magical desert show highlighted by an unforgettable second‑set moment and solid keyboard work.",
+  "review": "The concert is remembered as a stormy, sun‑lit desert experience that culminated in a breathtaking second‑set moment when Jerry’s vocals rose over the sunrise. Reviewers praise the clean audience capture and note the transition to Vince Welnick on keys after missing Brent. Overall the performance is described as fun, emotionally resonant, and well‑recorded.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Strong positive comments about the musical performance (magical second set) combined with a very clean audience recording give a high overall rating, though only three reviews limit confidence to medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience tape is described as 'very clean', capturing the desert ambience without noticeable muddiness or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "SOTM"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show built a relaxed daytime vibe that turned dramatic in the second set, with a memorable sun‑break moment during SOTM that many fans cite as a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal delivery on the sunrise moment is highlighted as magical.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Reviewer missed Brent and was getting used to Vince Welnick's keyboard style, indicating noticeable but acceptable transition.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "SOTM": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T06:10:54.714761+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-05-30.116403.josephsonc-640.chuckm.flac16"
+}

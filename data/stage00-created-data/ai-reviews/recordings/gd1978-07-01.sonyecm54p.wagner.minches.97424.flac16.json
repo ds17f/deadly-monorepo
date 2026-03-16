@@ -1,0 +1,82 @@
+{
+  "summary": "Crisp Betty soundboard captures a scorching one‑set Willie Nelson Picnic with standout performances of Friend of the Devil, Big River, The Other One and a stellar Wharf Rat.",
+  "review": "The recording is a clean Betty‑board source (with some balance quirks) that lets listeners hear the Dead’s marathon single set at the 4th Annual Willie Nelson Picnic.  Despite searing heat and a few tuning woes, the band delivers high‑energy renditions – highlights include Friend of the Devil, Big River, The Other One and arguably the best Wharf Rat of ’78.  Overall the show is praised for its excitement while a couple of reviewers note vocal fuzz on Good Lovin’ and the odd monitor issue.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the performance 4‑5 stars and praise the soundboard source, but a few give zero stars and note vocal/monitor problems, leading to a solid yet not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp Betty board capture; some balance issues on the SBD and occasional monitor‑related vocal fuzz, but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil",
+      "Me & My Uncle",
+      "Big River",
+      "Terrapin",
+      "The Other One",
+      "Wharf Rat",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [
+      "Good Lovin'"
+    ],
+    "setlist_flow": "One long set split by a brief break; the band struggled with heat‑induced tuning problems but kept momentum, delivering a high‑energy performance despite the extreme conditions."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for ripping solos on Big River, Estimated and Wharf Rat; described as “wringing all he can” out of his guitar.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith’s keyboard work noted alongside Jerry on Big River.",
+    "Drums": "Mickey stays out for most of the set; Drums>Space appears but is low‑key due to festival constraints."
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T13:37:21.019342+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-07-01.sonyecm54p.wagner.minches.97424.flac16"
+}

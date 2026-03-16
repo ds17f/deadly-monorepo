@@ -1,0 +1,80 @@
+{
+  "summary": "Mixed‑quality recording of a strong San Diego show featuring a thunderous \"The Other One\" and a solid Lost Sailor > Saint of Circumstance suite.",
+  "review": "The performance is generally praised – the band delivers a fiery \"Other One\" with Phil’s thunder bass, and the Lost Sailor/​Saint of Circumstance suite shines. Recording-wise the tape captures moments of clarity but suffers from monitor wash, out‑of‑phase issues and thin vocals that make parts of the set feel distant.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (5‑star comments) while recording quality receives mixed feedback, yielding an overall balanced rating around four stars."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers note monitor wash and a “too close” front‑of‑house mix that makes the balance thin (Dire Wolf, vocals on El Paso). Some moments are crisp and clear, but out‑of‑phase issues and occasional dropouts lower overall fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Lost Sailor > Saint of Circumstance"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is energetic with strong jams; second set starts unevenly but contains highlights like the thunderous \"Other One\" and solid space‑filled improvisations."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for lively playing on Cassidy, a fancy needlepoint solo, and an interesting guitar twist on Greatest, though his vocals sometimes get lost in the mix.",
+    "Phil": "Highlighted for delivering a thunderous bass line on \"The Other One\" that repeats five times—a fan‑favorite moment.",
+    "Bob": "Bobby’s slide on El Paso is louder than Jerry’s vocal and his vocals drop out briefly, indicating recording issues rather than performance faults.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T18:29:10.103806+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-02-19.sony-rango.unknown.28732.shnf"
+}

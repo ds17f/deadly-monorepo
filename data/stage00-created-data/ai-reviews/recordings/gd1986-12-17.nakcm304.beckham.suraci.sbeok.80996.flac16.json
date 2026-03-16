@@ -1,0 +1,80 @@
+{
+  "summary": "Average‑sounding soundboard with recessed vocals and keyboards, but a strong set highlighted by the rare Cumberland→Samson segue, He's Gone and an inspired Peter performance.",
+  "review": "The recording is a soundboard mix that sounds average – loud enough but with the vocal mix pushed back and keyboards almost buried. Musically the show shines, featuring a one‑time Saint → Cumberland transition into Samson, plus standout moments on He’s Gone, the perfect Smile line, and a soaring Peter rendition.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "The performance is praised for many highlights (≈4/5) while the recording quality is only fair (≈3/5); weighted average yields a solid 3.7‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Average sounding; vocals and keyboards sit back in the mix, loud but not as punchy as other nights. Reviewer recommends audience recordings over this board for better balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama",
+      "Saint (St. Stephen)",
+      "Cumberland (2nd set)",
+      "Samson",
+      "He's Gone",
+      "Smile line (from \"Terrapin Station\"?)",
+      "The Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Rare Saint → Cumberland segue followed by the only other Samson of the run; overall set flows well with strong vocal moments and tight transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Sings on several numbers (Smile line, Peter) with his guitar; praised for vocal delivery.",
+    "Phil": "Vocals are a bit recessed in the mix; no specific performance comment.",
+    "Bob": "Adds great flourishes but his guitar can drown Jerry’s vocals during the \"Come and See\" chorus.",
+    "Keys": "Keyboards sit even further back than vocals, making them hard to hear.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alabama": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint (St. Stephen)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smile line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:55:42.176562+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-12-17.nakcm304.beckham.suraci.sbeok.80996.flac16"
+}

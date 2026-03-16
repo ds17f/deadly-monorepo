@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a 1971 show bursting with rich ensemble vocals, a monster \"That's It For the Other One\" jam and standout Dark Star, Wharf Rat and Truckin' performances.",
+  "review": "All four reviewers rave about this recording, calling it one of the best ever heard.  The soundboard source delivers deep, crystal‑clear vocals and lush harmonies while the band rolls through inspired set choices – especially a smoking \"That's It For the Other One\" stretch, soaring Dark Star, and a powerful Wharf Rat.  No complaints about audio or performance were noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "Consistently five‑star reviews praising both the musical performance and the recording quality; strong emphasis on standout jams and excellent soundboard fidelity."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers highlight deep, rich vocals, crystal‑clear mix and label it one of the best recordings available – no audible flaws mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "That's It For the Other One",
+      "Dark Star",
+      "Wharf Rat",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Ensemble singing is praised as a high point; reviewers describe the tune selection as inspired with strong stand‑alone material and seamless, jam‑heavy transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "That's It For the Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T06:00:17.772867+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-28.sbd.miller.106100.flac24"
+}

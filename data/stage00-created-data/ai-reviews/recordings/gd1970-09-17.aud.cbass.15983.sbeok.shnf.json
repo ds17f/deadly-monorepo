@@ -1,0 +1,45 @@
+{
+  "summary": "A fair audience recording that captures the historic first live Box of Rain and a monumental Dark Star despite hissy, quiet sound.",
+  "review": "This show is notable for featuring the debut live performance of \"Box of Rain,\" which many reviewers say sounds almost exactly like the album version, and a powerful, sprawling Dark Star. The recording is an audience tape with noticeable hiss and low volume in the opening minutes, improving somewhat later but never reaching soundboard clarity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Reviewers praise the historic performance (Box of Rain, Dark Star) but criticize the low‑fidelity audience source; the mixed feedback yields an overall average rating just above mediocre."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hissy and quiet in the first few minutes, overall lo‑fi tape sound with limited clarity; some improvement after the opening but never reaches clean soundboard quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing or flow were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil's lyrics are highlighted as sounding great in the Box of Rain performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T22:47:59.458567+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-09-17.aud.cbass.15983.sbeok.shnf"
+}

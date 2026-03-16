@@ -1,0 +1,37 @@
+{
+  "summary": "Matrix recording is marred by a noticeable cut that jumps to the ending of “Goin' Down The Road Feels Bad”, resulting in poor audio quality.",
+  "review": "Both reviewers flag a serious flaw in this ultramatrix source: several minutes of a song disappear and the tape abruptly returns to the end of “Goin' Down The Road Feels Bad”. No comments were made about the musical performance, so the show itself cannot be evaluated from these notes. A fixed version has been posted elsewhere, but the original file is considered low‑quality.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.8,
+    "confidence": "low",
+    "rationale": "Only two brief reviews, both highlighting a major recording defect and providing no positive feedback on performance."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "poor",
+    "technical_notes": "A few minutes of a song are missing; playback jumps to the ending of “Goin' Down The Road Feels Bad” and resumes, creating an obvious edit/cut."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Goin' Down The Road Feels Bad": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T13:50:34.264192+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-15.163871.ultramatrix.miller.flac2496"
+}

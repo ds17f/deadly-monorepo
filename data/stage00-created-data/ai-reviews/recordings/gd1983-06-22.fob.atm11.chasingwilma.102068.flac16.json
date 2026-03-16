@@ -1,0 +1,31 @@
+{
+  "summary": "The band sounded off‑their‑game and the recording quality is unclear, making for a generally disappointing show.",
+  "review": "According to the lone reviewer the performance was far from the band's best, with the night feeling uneven despite some moments of “plenty.” No concrete details about the audio were provided, so the sound quality can only be judged as unremarkable. Overall sentiment is negative, reflecting both a sub‑par show and lack of recording insight.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.1,
+    "confidence": "low",
+    "rationale": "Only one low‑star review mentions poor performance and gives no clear indication of high‑quality audio, leading to a rating just above the reviewer’s 2‑star score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not comment on clarity or mix; only notes hanging with the sound man, implying no major audio issues were highlighted."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The show followed two great concerts but was perceived as weaker, with the band not at their best according to the reviewer."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T07:55:08.552551+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-22.fob.atm11.chasingwilma.102068.flac16"
+}

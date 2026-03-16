@@ -1,0 +1,31 @@
+{
+  "summary": "A joyous, well‑played show with happy Jerry and spacey Bob, but the recording quality is sub‑par.",
+  "review": "The reviewer recalls a late‑starting, high‑spirited performance where Jerry was upbeat, Bob sounded wonderfully spacey, and Phil and Bill were enjoying plenty of wine. The band “played really well,” yet the audio capture is described as sub‑par, suggesting limited clarity. Overall the show is celebrated despite the technical shortcomings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Strong positive comments about the performance (5‑star enthusiasm) offset by a clear complaint about poor sound quality, yielding an overall rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer notes the sound was sub par; likely low fidelity with limited clarity and mix balance."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific set‑list commentary; reviewer simply states the band played really well and were in good spirits."
+  },
+  "band_member_comments": {
+    "Jerry": "Looked happy and ready for anything.",
+    "Phil": "Was drinking a lot of wine during the show.",
+    "Bob": "Sounded spacey as always.",
+    "Keys": "",
+    "Drums": "Bill was drinking a lot of wine."
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T05:12:08.035691+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-02-21.140348.aud.miller.sirmick.flac1648"
+}

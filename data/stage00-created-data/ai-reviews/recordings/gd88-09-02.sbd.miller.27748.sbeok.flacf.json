@@ -1,0 +1,98 @@
+{
+  "summary": "Good‑quality soundboard recording that captures a solid 1988 show with standout Althea, Let It Grow, Scarlet/Fire and a soaring Stella.",
+  "review": "The sbd source is generally clear with only occasional crowd bleed, making the performance easy to follow.  The concert swings between an uneven first set and a much tighter second set highlighted by spectacular Garcia leads on Althea, a fiery Scarlet/Fire sequence, a tight Space‑>Wheel jam and Jerry’s soaring Stella solo.  Overall listeners praise the musical energy despite a few rough patches.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight several exceptional songs; recording is described as decent to good, giving the show a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Decent sbd with a touch of crowd noise; generally crisp and powerful with occasional muffling or dropout noted by a few reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Let It Grow",
+      "Scarlet/Fire",
+      "Space > Wheel",
+      "Stella",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Minglewood (messy)",
+      "Beginnings (missed)",
+      "Terrapin (minor‑league power)"
+    ],
+    "setlist_flow": "First set feels uneven with missed lyrics and spacing; second set tightens up, delivering strong jams and seamless transitions especially around Scarlet/Fire and the Space‑>Wheel sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s leads are called spectacular on Althea and he “slays” Stella; many note his tone and late‑night brilliance.",
+    "Phil": "Bass work noted for powerful crescendos that lift the band’s dynamics.",
+    "Bob": "Weir praised for creative work in Scarlet/Fire and quirky MIDI moments in Watchtower, plus solid rhythm support.",
+    "Keys": "Brent Mydland’s synths described as new‑cutesy (sometimes “nails on a chalkboard”) but also blend nicely with Jerry during Stella.",
+    "Drums": "Both drummers receive commendation for tight playing, driving the Drum‑>Space transition and building crescendos."
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet/Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Space > Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Stella": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Beginnings": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T12:49:47.532587+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-02.sbd.miller.27748.sbeok.flacf"
+}

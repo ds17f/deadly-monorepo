@@ -1,0 +1,105 @@
+{
+  "summary": "Audience‑sourced tape delivers a solid 1984 show – the Shakedown Street opener and a transcendent He's Gone/Space→The Other One are standout moments despite modest low‑end response.",
+  "review": "The recording, taken from the audience, is clear enough for most listeners though it lacks some bass punch (one reviewer gave the sound a 6/10). Musically the concert shines with a smoking He's Gone, an inspiring Space→The Other One jam and a fiery Shakedown Street opener, while occasional set‑list choices like “Might As Well” and “Day Job” are seen as weaker spots. Overall the performance is praised for tight playing, especially Jerry’s solos and Brent’s keyboards.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "The majority of reviews (4‑5 stars) highlight strong musical moments and an enjoyable audience recording; only a few lower scores point to minor sound or setlist issues, yielding a solid but not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear with good ambience; some reviewers note low‑end response could be stronger and one gave the sound a 6/10, but overall considered listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Space > The Other One",
+      "Shakedown Street",
+      "Mexicali Blues",
+      "Me & My Uncle",
+      "Stella Blue",
+      "Ship of Fools",
+      "Peggy-O",
+      "Dupree's Diamond"
+    ],
+    "poor_songs": [
+      "Might as Well",
+      "Day Job"
+    ],
+    "setlist_flow": "The set opens with a powerful Shakedown Street that sets an upbeat tone, moves through tight, fast‑tempo numbers (Me & My Uncle, Mexicali Blues) and builds to a soaring He's Gone into a memorable Space→The Other One jam; the second set maintains energy with solid jams despite a few weaker selections."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for scorching solos, strong tone, and even “practically yelling” on Peggy‑O.",
+    "Phil": "Mentioned positively in passing (“Bobby sounds good along with Phil and the drummers”).",
+    "Bob": "Noted for tasteful picking on Mexicali Blues and solid vocal work throughout.",
+    "Keys": "Brent’s keyboard work highlighted – deep buzzers, trippy textures, and strong interplay with the band.",
+    "Drums": "Mickey Hart and Bill Kreutzmann receive kudos for the off‑beat drum/space segue and overall tightness."
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Space > The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Shakedown Street": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dupree's Diamond": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Might as Well": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Day Job": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T15:48:52.118382+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-04-16.neumann.1298.sbeok.shnf"
+}

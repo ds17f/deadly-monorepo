@@ -1,0 +1,80 @@
+{
+  "summary": "A poorly mixed matrix recording of an uneven show, saved only by a standout Samson & Delilah performance.",
+  "review": "The UltraMatrix SBD capture suffers from serious mix problems – drums locked to one side, many instruments muted and a lopsided balance that makes large portions of the first set sound like a wash.  The band does pull through on a few moments, most notably a strong Samson & Delilah where Garcia is “on” despite the missing players, but overall the performance feels hampered by the faulty FOH and audience mix.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "medium",
+    "rationale": "Show quality is average to below‑average with only a few highlights, while recording quality is poor due to balance and channel issues; the weighted combination yields a low‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "poor",
+    "technical_notes": "Mix is badly balanced – drums panned left, many instruments (Bob, Brent, Phil) muted or turned off for large sections; audience bleed and FOFO problems make the sound muddy despite being an UltraMatrix SBD transfer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson & Delilah"
+    ],
+    "poor_songs": [
+      "Franklin's Tower",
+      "Stagger Lee",
+      "Desolation Row",
+      "Shakedown Street",
+      "Iko Iko"
+    ],
+    "setlist_flow": "First set is plagued by missing instruments and a weak mix, making it feel like a wash; the second set improves slightly with better balance but still suffers from frequent cut‑offs and muted parts."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia shines on Samson & Delilah and has strong moments on Feel Like a Stranger, but many sections are obscured by the bad mix.",
+    "Phil": "Lesh’s bass is largely absent early in the show, only faintly audible later when the mix briefly improves.",
+    "Bob": "Weir’s rhythm guitar is turned off for much of the performance, limiting his presence on songs like Franklin's Tower and Desolation Row.",
+    "Keys": "Brent Mydland’s keyboards are frequently muted by the poor mix; he only comes through clearly on a few brief passages.",
+    "Drums": "Mickey Hart appears sporadically; drums are often stuck in the left channel and lack proper balance throughout."
+  },
+  "song_mentions": {
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T00:19:10.599515+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-06.142126.UltraMatrix.sbd.BHiFiM.miller.flac1644"
+}

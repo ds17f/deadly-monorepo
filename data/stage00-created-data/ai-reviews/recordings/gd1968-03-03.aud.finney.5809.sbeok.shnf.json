@@ -1,0 +1,57 @@
+{
+  "summary": "Historical 1968 Haight‑Street audience tape with pitch‑unstable sound and a modest, mostly historical set – more notable for rarity than musical brilliance.",
+  "review": "The recording is an audience capture from the famed free concert on Haight Street in March 1968.  Listeners note severe pitch problems, missing tracks and overall mediocre performance, though the tape offers a valuable glimpse of the band’s early‑season repertoire.  The sound quality is uneven, making it more of a historical document than a high‑fidelity listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "medium",
+    "rationale": "Most detailed reviews criticize both performance and technical fidelity (2–3 ★), while a few give modest praise (4‑5 ★).  The weighted average leans toward a below‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Field tape with significant pitch drift, hiss/hum, and occasional drop‑outs; several songs missing or incomplete.  The master used for this upload is uncorrected, leading to audible instability throughout."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Viola Lee Blues",
+      "Smokestack",
+      "Hurts Me Too",
+      "Cryptical Envelopment"
+    ],
+    "setlist_flow": "Typical winter ’68 set list, but hampered by missing tracks and uneven playing; the performance feels more like a historical snapshot than a tight concert."
+  },
+  "band_member_comments": {
+    "Jerry": "Jer is noted playing a Les Paul with P90s – a short‑lived experiment – but no specific praise or criticism of his playing beyond that.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Viola Lee Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Smokestack": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Hurts Me Too": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T07:53:36.058701+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-03-03.aud.finney.5809.sbeok.shnf"
+}

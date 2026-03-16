@@ -1,0 +1,52 @@
+{
+  "summary": "High‑quality audience recording featuring a strong first set with the rare Bird Song>Music>Might As Well combo; second set uneven with guest drummers and a disorganized Iko Iko.",
+  "review": "The Miller‑upgraded audience (AUD) transfer is crisp and captures the unique Calypso‑flavored guest appearance, making it a solid listen. Musically the first set shines with tight playing and a standout Bird Song>Music>Might As Well sequence, while the second set feels hit‑or‑miss, hampered by an unrehearsed Iko Iko jam and mixed guest drumming.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Review rates the transfer 5 stars (excellent) and overall show 4 stars, balancing a strong first set with a weaker second set."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Excellent audience capture after Miller upgrade; no soundboard source but clear enough to enjoy the unique guest contributions."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song > Music > Might As Well",
+      "Hey Bo Diddley"
+    ],
+    "poor_songs": [
+      "Iko Iko"
+    ],
+    "setlist_flow": "First set varied and strong; second set begins with guest drums leading to a disorganized Iko Iko jam and overall uneven performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Neville drummers sit in with the Rhythm Devils, resulting in an unstructured drum jam that affects the second‑set flow."
+  },
+  "song_mentions": {
+    "Bird Song > Music > Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Hey Bo Diddley": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T12:41:05.588221+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-02-11.sbd.walker.scotton.miller.117261.flac16"
+}

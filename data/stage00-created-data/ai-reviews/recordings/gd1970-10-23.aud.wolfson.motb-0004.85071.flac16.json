@@ -1,0 +1,80 @@
+{
+  "summary": "A surprisingly clear audience tape of a fiery 1970 show, highlighted by an electrifying Hard to Handle and crisp Good Lovin' performances.",
+  "review": "The recording captures the energy of a late‑October 1970 Dead concert with surprising clarity for an audience source—bass and drums are audible, vocals are clean, and occasional wobble is minor. Musically the show shines on Hard to Handle, Good Lovin', Sugar Magnolia and the powerful Truckin'/Other One jam, delivering a high‑octane set that fans describe as “raging” and “smoking.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars, praising both the performance (standout songs, energy) and the surprisingly good audience recording; consistent positive feedback across 13 reviews yields a high‑confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough to hear band mix, strong bottom end, vocals intelligible; occasional gain quirks and slight wobble noted but not detrimental."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard to Handle",
+      "Good Lovin'",
+      "Sugar Magnolia",
+      "Truckin'",
+      "The Other One",
+      "Not Fade Away",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Shows a strong opening, builds into high‑energy jams (Truckin'/Other One sequence) and finishes powerfully with Uncle John's Band; overall pacing described as raging and very enjoyable."
+  },
+  "band_member_comments": {
+    "Jerry": "Wah‑wah guitar on Sugar Magnolia; pedal steel on NRPS opener; noted for strong tone throughout.",
+    "Phil": "Bass is clear and well‑balanced in the mix, praised by several reviewers.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Offbeat style drumming on Good Lovin' and a memorable drum solo highlighted during the show."
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Good Lovin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "NRPS": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T23:50:17.380546+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-10-23.aud.wolfson.motb-0004.85071.flac16"
+}

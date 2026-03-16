@@ -1,0 +1,51 @@
+{
+  "summary": "A lo‑fi audience cassette that’s only partially audible, but it captures a fiery Cryptical → The Other One → Cosmic Charlie stretch and enthusiastic vocals from Jerry and Bobby.",
+  "review": "The recording is an imperfect, tape‑sourced capture – muffled at times, missing much of the drum mix and incomplete beyond the first half of the set – yet fans can hear a powerful early‑’70 vibe. The highlight is the intense Cryptical/Other One/Cosmic Charlie sequence with Jerry Garcia and Bob Weir delivering impassioned vocals, even if the overall sound quality limits repeat listening.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show performance is praised for standout jams and vocal energy (≈70% weight), but recording quality is consistently described as poor, incomplete, or only listenable at high volume (≈30% weight)."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Tape‑sourced, distorted and muffled; drums are thin or missing; the tape is incomplete, ending after the Cosmic Charlie segment. Listeners report it’s only tolerable at high volume."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cryptical Envelopment",
+      "The Other One",
+      "Cosmic Charlie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set list is fragmentary in the recording, but the early jam sequence (Cryptical → The Other One → Cosmic Charlie) is highlighted as a high‑energy peak."
+  },
+  "band_member_comments": {
+    "Jerry": "His singing is noted as heartfelt and driving during Cryptical.",
+    "Phil": "",
+    "Bob": "Vocals described as “very high‑strung” on Cryptical; strong vocal presence throughout the highlight stretch.",
+    "Keys": "",
+    "Drums": "Commenters note a lack of drum presence or thin drum mix."
+  },
+  "song_mentions": {
+    "Cryptical Envelopment": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T01:29:45.436459+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-11-21.sbd.hanno.14858.sbeok.shnf"
+}

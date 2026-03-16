@@ -1,0 +1,39 @@
+{
+  "summary": "Audience recording of unknown quality featuring a special Branford Marsalis appearance on Birdsong",
+  "review": "The sole review highlights the surprise guest appearance by saxophonist Branford Marsalis during Birdsong, which is praised as a standout moment. No details are given about the audio fidelity, so the recording’s technical merits remain unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single five‑star review emphasizes a unique guest performance, indicating strong show appeal; however, there is no information on recording quality, limiting confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound clarity, mix, or source were provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Not described by reviewers"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T05:50:29.356603+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-29.149590.PandP-aud.tobin.flac16"
+}

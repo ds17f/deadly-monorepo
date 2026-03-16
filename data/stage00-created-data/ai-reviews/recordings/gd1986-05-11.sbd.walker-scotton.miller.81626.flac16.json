@@ -1,0 +1,51 @@
+{
+  "summary": "Great soundboard recording with a nicely flowing set and standout “Comes A Time” and Miracle→U.S. Blues transition, though Jerry’s presence is mixed.",
+  "review": "The show is praised for its smooth flow, solid jamming and memorable moments like the “Comes A Time” rendition and the I Need a Miracle → U.S. Blues transition, while the drum solo receives special love. The soundboard source delivers clear, crisp audio that most reviewers consider good, despite occasional 1986‑era quirks and a few track‑listing inconsistencies.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the performance and recording positively (average ~3.5 ★), with strong comments on sound quality and musical flow; weighting show (70%) and recording (30%) yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, crisp soundboard capture praised by the majority. A few reviewers note typical mid‑80s artifacts and a mismatch between set‑list numbers and actual tracks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "I Need a Miracle",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the set as having a nice flow and cool song selection with strong jamming; one comment mentions track‑number mismatches but no major musical issues."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed remarks – some say he’s only half present, others claim he’s all there; overall his contributions are still viewed as enhancing the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum solo (“drumz”) is highlighted as a favorite moment and praised for its energy."
+  },
+  "song_mentions": {
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T15:54:33.340212+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-05-11.sbd.walker-scotton.miller.81626.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Sweet acoustic performance highlighted by Black Peter and an exceptionally clear mono recording, despite a missing intro and a brief cut.",
+  "review": "Reviewers rave about the acoustic set’s tight playing—especially a standout rendition of \"Black Peter\"—and praise Jerry Garcia’s unusually sweet vocal tone. The audio is described as exceptional and “pretty sweet,” though one note mentions that this mono source skips the first song and has a cut in \"Swing Low,\" making the recording good but not flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Four consistent reviews praise both performance (standout acoustic set, sweet vocals) and sound quality (exceptional audio), with only minor technical omissions lowering the score slightly."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Mono source noted as clear and exceptional; however the tape is missing the first song and contains a cut in \"Swing Low,\" which detracts from completeness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic set described as nicely played with sweet vocals; overall flow is praised despite the missing intro segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry Garcia's voice as unusually sweet and lovely on this acoustic session.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T20:27:27.737904+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-06-04.119921.sbd.acou.unk.miogi.flac16"
+}

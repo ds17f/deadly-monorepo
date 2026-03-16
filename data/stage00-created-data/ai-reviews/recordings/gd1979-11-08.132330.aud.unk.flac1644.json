@@ -1,0 +1,39 @@
+{
+  "summary": "Inspired 1979 fall show with a monumental Morning Dew, but the uncertain source limits sound clarity.",
+  "review": "Both reviewers praise the performance, calling it an inspired gem of the under‑appreciated Fall of ’79 and highlighting the monumental Morning Dew as the night’s centerpiece. The recording itself is described as unclear and in need of better quality, with no concrete information on its source. Overall the music shines despite the technical shortcomings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong praise for the show (70% weight) combined with mixed/unclear comments about recording quality (30% weight) yields a high overall rating, but limited review count lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers note lack of clarity and wish for better sound quality; source not identified, suggesting possible audience or low‑grade tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is described as consistently inspired throughout, with the performance flowing strongly from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-26T01:25:14.068519+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-08.132330.aud.unk.flac1644"
+}

@@ -1,0 +1,50 @@
+{
+  "summary": "Crystal‑clear Schoeps audience recording captures a life‑changing show with standout Truckin' and Mighty Quinn.",
+  "review": "The recording is praised for its crisp, clear Schoeps‑mic audience capture, making the listening experience vivid. Fans recall this concert as a pivotal moment, highlighting energetic performances of Truckin' and The Mighty Quinn, though one reviewer notes the unfortunate omission of Cold Rain & Snow. Overall the show is remembered fondly despite the missing track.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Positive personal recollections and a praised clear audience recording outweigh the complaint about a missing song, yielding an overall good rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Very clear audience capture using Schoeps microphones; crisp and well‑balanced sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Mighty Quinn"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed setlist commentary, but reviewers describe the concert as an unforgettable, high‑energy experience that sparked lifelong fandom."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Mighty Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T21:48:17.333415+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-04-17.schoeps.eD.11658.sbeok.shnf"
+}

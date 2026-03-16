@@ -1,0 +1,71 @@
+{
+  "summary": "Good‑quality soundboard capture of a high‑energy show highlighted by an epic Hell in a Bucket and strong High Time performance",
+  "review": "The recording is generally clear with a solid soundboard mix, though some listeners note the overall level is a bit low. Musically the concert shines on “Hell in a Bucket,” “High Time,” and Bob Weir’s wild vocal delivery, delivering an exciting first set and a lively second set despite occasional weariness in the later numbers.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the performance and note good sound quality, but a few point out vocal issues and low volume, leading to an overall solid but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and balanced overall; some listeners mention the mix sounds a bit low in level but no major distortion or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hell in a Bucket",
+      "High Time",
+      "Big Boss Man"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set rides a friendly, upbeat vibe with “Touch,” “Minglewood” and the highlight “Hell in a Bucket.” The second set keeps momentum with strong renditions of “High Time,” “Fire,” and a spirited close, though a few later cuts feel slightly weary."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice sounded strained (“frog in his throat”) on some numbers, but his guitar work remained solid throughout.",
+    "Phil": "Bass provides a plucky, supportive finish; generally praised as steady and reliable.",
+    "Bob": "Weir delivers high‑energy vocals and “screaming” moments, especially on “Hell in a Bucket,” earning rave remarks.",
+    "Keys": "Brent’s keyboard tones receive positive notes for depth and coloring, highlighted in several songs.",
+    "Drums": "The drum mix is described as distant but adequate; no major complaints."
+  },
+  "song_mentions": {
+    "Hell in a Bucket": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:30:00.166840+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-24.sbd.fishman.21782.sbeok.shnf"
+}

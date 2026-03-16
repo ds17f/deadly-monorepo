@@ -1,0 +1,31 @@
+{
+  "summary": "Recording source unknown and no musical details provided; reviewer gave a zero‑star rating indicating strong dissatisfaction.",
+  "review": "The sole review offers virtually no information about the audio quality or performance, merely noting that the reviewer sang for a bit before leaving. The zero‑star rating suggests they were unhappy with either the recording, the show, or both, but no concrete details are given.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a zero‑star rating; insufficient data to assess positively, so the rating reflects strong negative feedback."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No comments on sound quality or source; reviewer gave lowest possible star rating."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T15:47:33.863356+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-27.set2-fixed.sbd.8193.sbefail.shnf"
+}

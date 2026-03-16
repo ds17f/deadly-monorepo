@@ -1,0 +1,39 @@
+{
+  "summary": "Good vintage ’81 audio with a nice rendition of Looks Like Rain, but the encore suffers from a tracking error.",
+  "review": "The recording is praised for its solid vintage sound and a standout performance of “Looks Like Rain,” making it worth the download. However, listeners note a serious DAT tracking glitch at the start of the encore, which detracts from an otherwise enjoyable tape. Overall the show is decent musically but marred by that technical hiccup.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.7,
+    "confidence": "medium",
+    "rationale": "One positive 4‑star review highlights good audio and a strong song, while another gives 0 stars due to a major tracking error; the mixed feedback leads to a modest rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear vintage ’81 sound, but a huge DAT tracking error occurs at the beginning of the encore."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure; only a positive note on Looks Like Rain and a technical issue in the encore."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:03:38.323195+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-06.aud.unknown.78646.sbeok.flac16"
+}

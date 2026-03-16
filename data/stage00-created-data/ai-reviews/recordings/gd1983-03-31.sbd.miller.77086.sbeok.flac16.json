@@ -1,0 +1,74 @@
+{
+  "summary": "Crystal‑clear soundboard capture of an early‑80s show highlighted by a fiery Feel Like A Stranger opener and a beautiful Brokedown Palace encore, though Garcia’s playing sparks mixed reactions.",
+  "review": "The recording is universally praised for its crisp, audiophile‑grade sound – many reviewers call it the best they’ve ever heard. Musically the concert delivers strong moments (Feel Like A Stranger, Brokedown Palace) and a solid setlist, but Jerry Garcia’s performance divides fans, with some noting sloppy vocals and guitar while others hear him at his best.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently rated excellent; show quality is generally good but polarized by differing opinions on Garcia’s playing, leading to a balanced overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviews repeatedly describe the sound as crisp, clear and superb – a true audiophile‑grade SBD. A few note that vocals and Brent's keyboards are slightly loud, but no major flaws are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like A Stranger",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Terrapin Station",
+      "Wharf Rat",
+      "Far From Me"
+    ],
+    "setlist_flow": "Overall setlist is praised as solid and enjoyable, though one reviewer calls the first half of the second set a \"strange amalgamation\" (Far From Me/Terrapin Station) that feels out of place."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing and vocals receive mixed feedback – some hear sloppy, slurred or apathetic performance, while others describe moments of brilliance.",
+    "Phil": "",
+    "Bob": "One reviewer notes a missing Bob guitar part, calling it a pity.",
+    "Keys": "Brent's keyboard tone is highlighted (B3 through an alternate amp) and at times considered too loud in the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Feel Like A Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "My Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T04:21:18.506247+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-03-31.sbd.miller.77086.sbeok.flac16"
+}

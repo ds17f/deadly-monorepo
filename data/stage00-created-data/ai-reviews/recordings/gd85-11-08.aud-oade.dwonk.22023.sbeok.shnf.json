@@ -1,0 +1,82 @@
+{
+  "summary": "Excellent audience recording captures a high‑energy Rochester show with standout Estimated Prophet and She Belongs to Me.",
+  "review": "The tape delivers crystal‑clear audience sound that lets the crowd’s roar and the venue’s surprisingly good acoustics shine through. Musically the night is highlighted by an inspired Estimated Prophet, a soothing She Belongs to Me and strong second‑set jams, while a few minor flubs on Jack Straw, Eyes of the World and “Esau” keep it from being flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high 4‑5 star ratings, numerous positive comments about both performance and sound quality; only minor criticisms that don’t outweigh the overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp mic placement captures crowd roar and venue ambience; listeners note “phenomenal” and “great AUD sound,” with only occasional minor flubs that don’t detract from overall fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "She Belongs to Me",
+      "The Other One",
+      "Brown Eyed Women",
+      "Might As Well"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "Eyes of the World",
+      "Esau"
+    ],
+    "setlist_flow": "Second set builds a great mood, especially after the first lick of Estimated Prophet; crowd energy is high and transitions feel natural, making the show flow smoothly despite a few small imperfections."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia sounded tired earlier in the tour but was fully committed and smiling during this performance, delivering strong leads on She Belongs to Me and Estimated Prophet.",
+    "Phil": "",
+    "Bob": "Bob’s vocal on Estimated Prophet (referred to as “Bob's estimated”) is highlighted as exciting by reviewers.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "She Belongs to Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Esau": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:09:04.039224+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-11-08.aud-oade.dwonk.22023.sbeok.shnf"
+}

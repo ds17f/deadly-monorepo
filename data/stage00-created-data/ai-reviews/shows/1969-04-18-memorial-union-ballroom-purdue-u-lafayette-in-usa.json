@@ -1,0 +1,68 @@
+{
+  "summary": "Tight blues‑rock set with stellar Hard To Handle and The Other One",
+  "blurb": "The show delivers a punchy opening with Hard To Handle and a soaring Morning Dew. Highlights include an uninterrupted The Other One jam, the Cryptical > Other One sandwich, and an extended Turn On Your Lovelight. Pigpen’s organ and vocals are front‑and‑center throughout.",
+  "review": "April 18, 1969 at Purdue’s Memorial Union Ballroom captures the Dead in a classic late‑‘60s groove. The first half launches with a snarling Hard To Handle that segues into a haunting Morning Dew, then rolls into the signature Cryptical Envelopment → Drums → The Other One → Cryptical sandwich – a seamless flow praised by multiple listeners. Phil’s bass shines especially during The Other One, where his opening after the drum solo drives the improvisation forward. Pigpen’s organ swells on Turn On Your Lovelight and his exuberant stage banter adds character, though a brief sound‑system hiccup creates a dead spot mid‑song. The second half keeps momentum with Sitting On Top Of The World, a gritty I’m A King Bee, and Doin’ That Rag before closing out with Cosmic Charlie and Beat It On Down The Line. While the Miller SBD capture is crisp, Jerry’s guitar occasionally drops out of the mix and the final three tracks appear spliced, but the overall performance remains a solid snapshot of the band’s early‑era energy.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 19,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Positive language dominates (e.g., “classic 1969 groove,” “uninterrupted The Other One,” “Pigpen’s organ prominently featured”), with only a single mixed comment about flat bass and one poor song note. Overall sentiment is clearly favorable, warranting a moderate positive boost.",
+      "final_calculation": "2.5 + 0.1 + 0.8 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-04-18.sbd.miller.88867.sbeok.flac16",
+    "reason": "Charlie Miller’s SBD mix is the crispiest and most complete, despite occasional guitar drop‑outs and a splice at the end."
+  },
+  "key_highlights": [
+    "Hard To Handle launches the set with raw energy.",
+    "The uninterrupted The Other One jam showcases Phil’s bass brilliance.",
+    "Cryptical Envelopment → The Other One sandwich is tight and adventurous.",
+    "Turn On Your Lovelight stretches out with Pigpen’s organ leading."
+  ],
+  "song_highlights": [
+    "Hard To Handle",
+    "Morning Dew",
+    "Cryptical Envelopment",
+    "The Other One",
+    "Sitting On Top Of The World",
+    "I'm A King Bee",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Generally strong playing, though his guitar disappears in parts of the mix.",
+    "Phil": "Bass shines on The Other One; a single reviewer noted occasional flatness.",
+    "Bob": "",
+    "Pigpen": "Organ and vocals are front‑and‑center, adding gritty texture; his on‑stage expletives were noted when the PA blew out.",
+    "Mickey": "Drumming solid with a praised solo leading into The Other One; brief sound‑system failure caused a dead spot mid‑song.",
+    "Billy": "Provides steady rhythmic foundation alongside Mickey; no specific criticisms recorded."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-24T13:28:12.687304+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Hard To Handle"
+    ],
+    [
+      "Morning Dew"
+    ],
+    [
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "Cryptical Envelopment",
+      "Sitting On Top Of The World",
+      "I'm A King Bee"
+    ],
+    [
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "summary": "Decent soundboard recording that captures a magical ’76 show highlighted by the soaring Playin‑Wheel‑Playin jam and superb performances throughout.",
+  "review": "The July 14, 1976 concert shines with an electrifying Playin > Wheel > Playin sequence, tight jams on Eyes and The Other One, and inspired playing from Keith and Jerry.  The SBD source is clear enough for the music to breathe, though it lacks sparkle and shows a bit of mud on the Wheel section.  Overall the performance is regarded as an all‑timer with only minor vocal slip‑ups on Let It Grow.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently strong show praise (playout, jams, individual members) across five detailed reviews and a mostly good soundboard source; minor recording flaws keep it from the top tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Decent SBD with no major drop‑outs, but not sparkling; some muddiness on The Wheel and occasional audience patches in the second set add ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin > Wheel > Playin",
+      "Eyes",
+      "Looks Like Rain",
+      "Friend of the Devil",
+      "The Other One",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Let It Grow"
+    ],
+    "setlist_flow": "Standard ’76 first set leading into a spectacular Playin‑Wheel‑Playin sandwich, followed by a high‑energy second set that opens with B.E. Woman and rides through fast‑paced jams, strong transitions, and an enthusiastic audience‑patched finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for finessing his strings and delivering perfect tone throughout the show.",
+    "Phil": "Bass solo highlighted as a standout moment in the second set.",
+    "Bob": "Weir stumbled on the opening line of Let It Grow, resulting in a brief vocal slip that drew attention from the band.",
+    "Keys": "Keith's playing described as sweet and pleasurable, especially during Eyes and Friend of the Devil.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin > Wheel > Playin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:18:19.828594+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-07-14.sbd.vernon.18594.sbeok.shnf"
+}

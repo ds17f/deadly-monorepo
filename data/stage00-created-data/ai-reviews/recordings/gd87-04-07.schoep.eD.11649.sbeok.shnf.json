@@ -1,0 +1,45 @@
+{
+  "summary": "Audience recording captures a solid show with a smoking Ship of Fools solo and a lively Hell in a Bucket, though vocal clarity is uneven.",
+  "review": "The performance is generally praised – fans love the high‑energy Hell in a Bucket and Jerry Garcia’s psychedelic guitar burst on Ship of Fools. The audience tape is described as wonderful by some listeners, but one reviewer notes hollow vocals and overall poor sound quality, giving the recording a mixed technical picture.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers (3 out of 4) gave 4‑star positive comments about the show and its highlights, while one reviewer complained about poor vocal sound; overall the musical performance is strong and the audience recording is decent but not flawless."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally praised as a wonderful audience capture, though vocals are described as hollow and some listeners find the overall mix lacking clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ship of Fools",
+      "Hell in a Bucket"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans highlight an energetic middle‑section with Hell in a Bucket and a soaring Ship of Fools solo, suggesting the set had strong peaks despite no specific complaints about pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar solo on Ship of Fools is called an \"incredible burst of psychedelic inspiration\".",
+    "Phil": "",
+    "Bob": "Bob Weir “got carried away” during Hell in a Bucket, implying an over‑the‑top performance.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T21:16:49.013717+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-04-07.schoep.eD.11649.sbeok.shnf"
+}

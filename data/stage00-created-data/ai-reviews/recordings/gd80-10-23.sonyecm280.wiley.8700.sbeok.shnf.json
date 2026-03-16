@@ -1,0 +1,31 @@
+{
+  "summary": "Decent performance marred by excessive audience noise on an audience‑sourced recording",
+  "review": "The reviewer feels the concert itself was enjoyable, calling it a “great show,” but criticizes the tape for being overwhelmed with crowd chatter, making the music hard to hear. The source appears to be an audience recording, and the high level of ambient noise detracts from any enjoyment of the performance. No specific songs or band moments are highlighted.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "low",
+    "rationale": "Only one low‑star review; while the show is praised, the recording quality is deemed poor, leading to an overall rating in the lower range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Excessive audience noise overwhelms the mix; instrument clarity suffers, making it a sub‑par listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T05:12:38.065582+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-23.sonyecm280.wiley.8700.sbeok.shnf"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "Soundboard capture of a solid 1984 show with standout Playing in the Band → China Doll sequences and an inspired Black Peter.",
+  "review": "The recording is a typical sound‑board dump that sounds clear enough for most listeners. Musically the concert is praised for its second‑set flow – the Playin > China Doll > Drums > Space > Playin run, a fiery Deal → Miracle → Bertha segment and an inspired Black Peter – making it a worthwhile download despite not being hailed as the year’s absolute pinnacle.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Reviews are uniformly positive about the performance and note several highlight songs; recording quality is assumed decent (soundboard) with no reported flaws, yielding a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit audio comments; presumed typical soundboard clarity and balance without major issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "China Doll",
+      "Black Peter",
+      "Deal",
+      "Miracle",
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight a compelling second‑set arc: Playin > China Doll > Drums > Space > Playin leads into an inspired Black Peter, and the Deal → Miracle → Bertha sequence is called epic."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T17:57:50.960123+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-06-09.sbd.hinko.18251.sbeok.shnf"
+}

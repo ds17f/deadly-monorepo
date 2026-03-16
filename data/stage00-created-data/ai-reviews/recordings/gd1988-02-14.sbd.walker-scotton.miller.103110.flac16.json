@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard copy sounds clear and good, while the show draws mixed reactions – a standout Sampson jam and strong Touch of Grey opener are praised amid comments that the performance feels like it’s “marking time.”",
+  "review": "The recording is a soundboard source that most listeners find clean and enjoyable, especially compared with the audience version. Musically the concert receives mixed feedback: some fans highlight an extraterrestrial‑level Sampson jam and a compelling Touch of Grey opener, while others feel the band is merely marking time and the first set feels abrupt.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is judged as average‑to‑good (≈3.5/5) with both praise and criticism, while the soundboard recording is regarded as good (≈4/5). Weighted combination yields ~3.6 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Listeners report the soundboard copy sounds clear and pleasant; audience recordings were deemed inferior. No major drop‑outs or muddiness noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sampson Jam",
+      "Touch of Grey"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set feels abrupt, ending with a rare Cassidy close due to the dragon parade; momentum builds into a strong second set."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is clearly audible and praised throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboards are highlighted as particularly audible and effective.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sampson Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:07:52.623830+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-02-14.sbd.walker-scotton.miller.103110.flac16"
+}

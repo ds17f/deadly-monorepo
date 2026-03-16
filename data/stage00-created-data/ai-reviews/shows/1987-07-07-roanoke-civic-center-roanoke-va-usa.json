@@ -1,0 +1,69 @@
+{
+  "summary": "High‑energy Roanoke show with blazing Looks Like Rain and tight jams",
+  "blurb": "The set opens with Mississippi Half‑Step Uptown Toodeloo and Candyman, then erupts on a scorching Looks Like Rain. The second half features a driving Wheel, an inspired Morning Dew, and a rousing U.S. Blues encore.",
+  "review": "On July 7, 1987 the Grateful Dead turned the Roanoke Civic Center into a furnace of mid‑summer fire. Jerry Garcia led the charge with his trademark vocal slides and searing guitar work, while Brent’s keyboards filled out the mix and the twin drummers kept a perfect beat that never let the momentum slip. Bob Weir went ‘sick house’ on Looks Like Rain, delivering one of the night’s most memorable verses, and Phil’s bass anchored the high‑octane jams even if it slipped behind the mix in some recordings. Highlights included a blistering Mississippi Half‑Step Uptown Toodeloo, a soaring Candyman, an exuberant Bird Song, a powerful Wheel that rolled straight into Gimme Some Lovin’, and a heartfelt Morning Dew that closed the second set before the band capped the night with a rousing U.S. Blues. Across all available tapes the performance is consistently described as “locked in,” “high‑energy,” and one of the best shows of the summer tour, making it a must‑listen for any Deadhead looking for classic ’80s magic.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 24,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "All recordings convey strong positive sentiment: multiple reviewers call the show 'high‑energy', 'locked in', and highlight standout songs such as Looks Like Rain, Candyman, and The Wheel. No consistent negative comments about performance appear, only isolated recording‑quality complaints, so a sizable positive adjustment is applied.",
+      "final_calculation": "2.5 + 0.2 + 1.4 = 4.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd87-07-07.schoeps.wigley.2309.sbeok.shnf",
+    "reason": "Good‑sounding indoor capture with clear mix, no major audio flaws, and full energy of the performance."
+  },
+  "key_highlights": [
+    "Scorching U.S. Blues and a blazing Looks Like Rain where Bob Weir goes 'sick house'.",
+    "First‑set firepower with Mississippi Half‑Step Uptown Toodeloo, Candyman, and Bird Song.",
+    "Second‑set drive through The Wheel into an inspired Morning Dew.",
+    "Rare Finiculi Finicula opener that set an upbeat vibe for the night."
+  ],
+  "song_highlights": [
+    "Looks Like Rain",
+    "Bird Song",
+    "Candyman",
+    "Mississippi Half-Step Uptown Toodeloo",
+    "The Wheel"
+  ],
+  "band_performance": {
+    "Jerry": "Delivered strong vocals and searing guitar, leading the band with energetic presence throughout.",
+    "Phil": "",
+    "Bob": "Went 'sick house' on Looks Like Rain and contributed a lightning‑fast Me & My Uncle > Mexicali Blues transition.",
+    "Brent": "",
+    "Mickey": "Provided solid, tight drumming that propelled the high‑energy set.",
+    "Billy": "Partnered with Mickey for a perfect beat that kept the momentum blazing."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-16T00:29:13.155992+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Looks Like Rain",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "Gimme Some Lovin'",
+      "Morning Dew",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "Candyman"
+    ],
+    [
+      "Mississippi Half-Step Uptown Toodeloo",
+      "Walkin' Blues"
+    ]
+  ]
+}

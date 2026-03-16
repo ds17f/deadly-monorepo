@@ -1,0 +1,39 @@
+{
+  "summary": "Energetic Atlanta show highlighted by a smoking Truckin', with an unknown but apparently adequate recording.",
+  "review": "Reviewers rave about the high‑energy performance, especially Bob's flawless work on a blazing Truckin' and Jerry feeding off the crowd. No one mentions any audio flaws, so the sound is presumed decent despite the source being unspecified. Overall the show feels like an overlooked gem that deserves more love.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two strong positive reviews praise the performance and recommend the show; lack of recording details keeps confidence moderate."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers did not discuss sound quality or source, implying no major issues were noticed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviews do not describe the set order or pacing in detail."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as feeding off the audience enthusiasm and welcoming cues.",
+    "Phil": "",
+    "Bob": "Bobby (Bob Weir) \"doesn't flub a damn word\" on a smoking Truckin'.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:49:40.931935+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-08.137100.sbd.miller.flac24"
+}

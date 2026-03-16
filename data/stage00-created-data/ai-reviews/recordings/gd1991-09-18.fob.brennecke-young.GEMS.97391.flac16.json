@@ -1,0 +1,58 @@
+{
+  "summary": "Clean audience tape captures a solid show with a standout encore of Brokedown Palace despite a weaker first set.",
+  "review": "Both reviewers praise the recording as a very clean audience source that conveys the energy of the night, noting nice sound quality throughout. The performance is described as solid overall, highlighted by an excellent Brokedown Palace encore, though the first set suffers from three less‑favored songs (Midnight Hour, Wang Dang Doodle, Stuck in Mobile).",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Consistently positive 4‑star reviews emphasize good show quality and a clean audience recording; no major flaws reported."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as a very clean audience tape with nice, clear sound; no dropout or muddiness mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Midnight Hour",
+      "Wang Dang Doodle",
+      "Stuck in Mobile"
+    ],
+    "setlist_flow": "The show starts with a weaker first set featuring three lesser‑played songs, but the energy builds and culminates in a strong encore that leaves listeners satisfied."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Midnight Hour": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stuck in Mobile": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:18:14.887411+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-18.fob.brennecke-young.GEMS.97391.flac16"
+}

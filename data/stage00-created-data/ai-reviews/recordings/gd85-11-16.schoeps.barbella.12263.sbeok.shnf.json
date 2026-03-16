@@ -1,0 +1,45 @@
+{
+  "summary": "Fair‑quality recording of a typical high‑energy LA show, highlighted by a trippy Tennessee Jed → Cumberland Blues opening in the second set",
+  "review": "The reviewer rates the sound quality at three stars – an average, somewhat muddy capture – but praises the concert itself as a classic, raucous Los Angeles performance with a rocking set list and an especially exciting second‑set opener of Tennessee Jed into Cumberland Blues. No specific technical flaws are detailed beyond the overall rating.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "low",
+    "rationale": "Only one brief review; show is described positively while recording quality is only average, leading to a moderate combined score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer gave the sound quality 3‑star rating but offered no detailed comments on clarity, mix balance or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tennessee Jed",
+      "Cumberland Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical LA show of the era – high energy, raucous crowd, and a strong second‑set opener that got fans tripping."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:40:23.797130+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-11-16.schoeps.barbella.12263.sbeok.shnf"
+}

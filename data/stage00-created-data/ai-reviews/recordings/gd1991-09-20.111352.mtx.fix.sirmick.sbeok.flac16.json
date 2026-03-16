@@ -1,0 +1,69 @@
+{
+  "summary": "Matrix recording with a balanced 50/50 mix captures an off‑the‑hook 1991 show featuring a smoking Help > Slipknot! > Fire and scorching Truckin’ performance.",
+  "review": "The matrix source (50% audience, 50% soundboard) is well synced and gives the concert a lively feel, though reviewers wished for a bit more SB in the blend. Musically the show is described as “the very best of 1991,” with standout moments on Help / Slipknot! / Fire, Stagger Lee, Truckin' (smoking jam), Bird Song, Estimated Prophet and the Dew. Overall the performance is praised as great‑great‑GREAT throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "One detailed, highly enthusiastic review gives a 4‑star rating but lauds the show as possibly the best of 1991 and rates the matrix mix 5 stars; this yields a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "50/50 audience‑soundboard blend, well synced encore, clear enough to enjoy but reviewer would prefer slightly more soundboard presence."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slipknot! > Fire",
+      "Stagger Lee",
+      "Truckin'",
+      "Bird Song",
+      "Estimated Prophet",
+      "The Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the entire set as “off the hook,” with a seamless flow and high energy throughout; no pacing issues noted."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slipknot! > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:28:03.216387+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-20.111352.mtx.fix.sirmick.sbeok.flac16"
+}

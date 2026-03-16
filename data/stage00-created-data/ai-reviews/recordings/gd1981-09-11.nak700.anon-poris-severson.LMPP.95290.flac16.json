@@ -1,0 +1,51 @@
+{
+  "summary": "Great audience recording captures a phenomenal 1981 show with soaring Morning Dew and a tasty He's Gone > Truckin' combo, though the mix could be a bit crisper.",
+  "review": "Both reviewers rave about the performance, highlighting the emotional power of Morning Dew and the classic He's Gone → Truckin' sequence. The source is an audience (AUD) recording that sounds solid overall, with only a minor complaint about crispness. The show’s energy and crowd vibe are described as unforgettable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Both reviews give 5‑star ratings, praising the musical performance strongly while noting only a small recording clarity issue; overall rating reflects an outstanding show with good but not perfect audio."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally solid audience mix; minor lack of crispness noted, but clapping is well‑controlled and does not overwhelm the music."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "He's Gone",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows beautifully, with a highlighted He's Gone → Truckin' transition that captures the band’s peak energy; overall vibe described as ecstatic and crowd‑driven."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal delivery is praised (\"belts out lyrics\") and his stage presence noted in the poster description.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T14:13:23.898179+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-09-11.nak700.anon-poris-severson.LMPP.95290.flac16"
+}

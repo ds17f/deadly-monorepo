@@ -1,0 +1,58 @@
+{
+  "summary": "Audience tape with good clarity captures a memorable Help‑Slip‑Fire sequence and a strong second set, despite first‑set pitch quirks.",
+  "review": "The recording is an audience source that delivers clear sound for the standout Help > Slip > Fire segment and the energetic second half of the show. While the first set suffers from a half‑step high pitch anomaly and some keyboard work (Vince) draws criticism, the crowd’s excitement and highlights like Bird Song make it a compelling listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance—especially the Help‑Slip‑Fire combo and second‑set energy—and note decent recording clarity; only a few points of criticism (keyboard, pitch) keep the rating just above four."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear capture with strong presence on Help‑Slip‑Fire; first‑set sounds a half‑step high in pitch, likely tape‑speed issue, but second set returns to true pitch."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Fire On The Mountain",
+      "Bird Song"
+    ],
+    "poor_songs": [
+      "Stagger Lee",
+      "Fire On The Mountain"
+    ],
+    "setlist_flow": "The second set shines with high crowd energy and tight transitions, while the first set is marred by pitch problems and uneven keyboard work."
+  },
+  "band_member_comments": {
+    "Jerry": "His playing on Stagger Lee sounds off and wailing at the end is a bit out of tune, though overall he recovers later in the set.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's keyboard work is criticized as pedestrian and boring, especially during Fire; piano was louder than usual with less delicacy.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Fire On The Mountain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Prophet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:24:03.452026+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-09-20.aud.horwath-goetz.18596.sbeok.shnf"
+}

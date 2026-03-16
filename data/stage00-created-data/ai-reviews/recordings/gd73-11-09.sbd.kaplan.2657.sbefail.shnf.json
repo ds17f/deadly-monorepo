@@ -1,0 +1,98 @@
+{
+  "summary": "Soundboard capture with occasional speed/pitch quirks but a stellar Winterland set – soaring 'Eyes of the World', monster 'Here Comes Sunshine' and killer 'They Love Each Other'.",
+  "review": "The November 9, 1973 Winterland performance is consistently praised for its energy and tight playing, highlighted by standout renditions of \"They Love Each Other\", \"Eyes of the World\", \"Here Comes Sunshine\" and a fiery second‑set flow. The SBD source is clear enough to enjoy, though listeners note pitch‑speed issues, mono punches and occasional drop‑outs that keep it from being pristine. Overall the music more than compensates for the technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Show quality is repeatedly described as outstanding with many standout songs; recording quality is good but has noted speed/pitch and occasional drop‑out issues, yielding a combined weighted rating around 4.5."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD, but listeners report pitch‑speed running fast (needs -2% correction), mono punches that lose instruments, occasional drop‑outs and digi‑static. Still considered listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "They Love Each Other",
+      "Eyes of the World",
+      "Here Comes Sunshine",
+      "Playing in the Band",
+      "Big River",
+      "To Lay Me Down",
+      "China Doll",
+      "Half-Step"
+    ],
+    "poor_songs": [
+      "Row Jimmy"
+    ],
+    "setlist_flow": "A solid first set builds into a high‑energy second set that runs over two hours, delivering multiple climaxes and seamless segues (e.g., China > Rider, WRS > Eyes > China Doll). The pacing is praised for maintaining excitement without any major lulls."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solos are described as loopy, powerful and a key driver of the show’s excitement.",
+    "Phil": "Lesh’s bass work receives repeated praise for being in \"excellent form\" and providing strong harmonic foundation.",
+    "Bob": "Weir is noted for solid rhythm guitar support during jams such as Playing in the Band.",
+    "Keys": "Keith's piano/organ contributions are highlighted on several tunes, especially on Here Comes Sunshine and Me & My Uncle.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "They Love Each Other": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Eyes of the World": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T02:06:01.189678+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-11-09.sbd.kaplan.2657.sbefail.shnf"
+}

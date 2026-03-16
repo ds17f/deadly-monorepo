@@ -1,0 +1,52 @@
+{
+  "summary": "Clear audience tape with occasional mic drop‑outs captures a high‑energy early‑80s performance highlighted by a heartfelt Ship of Fools and an expansive Space jam.",
+  "review": "The recording, taken from the front‑of‑house audience position, is surprisingly clear—every vocal line can be heard and crowd chatter is minimal. The show itself is praised for its high energy, with standout moments on Ship of Fools and a long, flowing Space, though Brown‑Eyed Women suffers from a lyrical slip by Jerry. A brief microphone failure early in the set adds a quirky footnote but does not detract from an overall excellent early‑80s tour performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Three consistent, mostly 4‑5 star reviews highlight a strong musical performance and generally good sound quality despite occasional mic issues."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Very clear vocal capture; audience is well‑grooved with little talking. Noted microphone malfunction for Jerry early in the set and a possible mic‑stand positioned ~15 ft from the SBD, but overall tape is listenable and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ship of Fools",
+      "Space"
+    ],
+    "poor_songs": [
+      "Brown-Eyed Women"
+    ],
+    "setlist_flow": "High‑energy set with the audience in a solid groove; a brief mic glitch is quickly resolved, and the band maintains momentum through emotive numbers and an extended jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Mic malfunction early on; forgets lyrics on Brown‑Eyed Women but delivers strong leads once the new mic is set.",
+    "Phil": "Steps up with lead lines when Jerry's mic fails, keeping the music moving.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Excellent drum sound captured from the 'Bobstar' with plenty of punch."
+  },
+  "song_mentions": {
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:21:03.825397+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-15.fob.at.miller.87725.sbeok.flac16"
+}

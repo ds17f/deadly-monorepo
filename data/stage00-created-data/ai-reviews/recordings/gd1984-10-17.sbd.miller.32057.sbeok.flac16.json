@@ -1,0 +1,85 @@
+{
+  "summary": "Soundboard recording of decent quality captures a sloppy but high‑energy 1984 show, with standout Help > Slipknot! > Franklin’s and West L.A. Fadeaway amid vocal missteps.",
+  "review": "The SBD tape is well‑transferred – clear enough to hear the band despite occasional echo and a bit of distortion in the Space/Other One section. Musically the night is uneven: the first set suffers from lyrical flubs and loose playing, while the second set delivers classic moments such as Help > Slipknot! > Franklin’s, a strong Terrapin, and an inspired West L.A. Fadeaway. Overall the performance is typical of ’84 – high intensity with plenty of slip‑ups.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers note a solid soundboard transfer (recording quality good) but describe the performance as uneven; the weighted average of show vs. recording points to a mid‑to‑high 3‑star range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Great tape transfer, generally clear and balanced; occasional echoy sections and minor distortion on the Space/Other One transition, but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "West L.A. Fadeaway",
+      "Terrapin"
+    ],
+    "poor_songs": [
+      "Slipknot!",
+      "Truckin'",
+      "Stella Blue"
+    ],
+    "setlist_flow": "First set feels loose with missed lyrics and vocal strain; second set picks up intensity, delivering strong jams and classic transitions despite occasional lyrical mishaps."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed: praised for solid tone when not over‑processed, but noted to miss cues, stumble on lyrics (Stella, Terrapin) and seem out of sync with the band.",
+    "Phil": "",
+    "Bob": "Frequent vocal slips – flubbed Truckin', improvised lines in The Other One, and general struggle with lyric delivery throughout the night.",
+    "Keys": "Brent's keyboard work noted as solid musically but his vocal mix was criticized for being too low or over‑reverbed.",
+    "Drums": "Generally competent; one reviewer mentions drums cut out on a transition, otherwise no major complaints."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "West L.A. Fadeaway": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Slipknot!": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brother Esau": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T22:59:52.954647+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-17.sbd.miller.32057.sbeok.flac16"
+}

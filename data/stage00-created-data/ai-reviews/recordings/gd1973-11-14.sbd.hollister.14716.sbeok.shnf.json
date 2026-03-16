@@ -1,0 +1,100 @@
+{
+  "summary": "Bright, cleaned‑up soundboard capture of a late‑'73 San Diego show highlighted by a stellar China Cat → Rider sequence and an epic Other One sandwich.",
+  "review": "The recording is a well‑fixed SBD that sounds noticeably cleaner and brighter than earlier copies, with only minor pitch‑correction quirks. Musically the concert is praised for its second‑set fireworks – a unique China Cat > Rider, a triple‑sandwich The Other One, tight Eyes of the World, and a standout Goin' Down the Road – even if the band sounds a touch tired in places. Overall fans regard it as one of the better ’73 performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviewers gave five stars and highlighted both excellent musical moments and a cleaned‑up soundboard, outweighing minor fatigue comments."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Cleaned up version is brighter and clearer; fixes include pitch correction (−1% to −3% on various tracks) and channel swap. Some cuts are patched from audience sources, but overall the SBD is very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > Rider",
+      "The Other One (triple sandwich)",
+      "Eyes of the World",
+      "Big River",
+      "Wharf Rat",
+      "Goin' Down the Road",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is hailed as one of the year's best, with seamless transitions and a high‑energy sandwich of The Other One; first set has solid highlights but occasional average moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Angular, almost '76‑style playing on China Cat; his lead work on Eyes of the World is described as \"smoking\".",
+    "Phil": "Bass lines in The Other One are noted for their strength alongside Jerry and Bobby.",
+    "Bob": "Vocals praised throughout – especially on Black Throated Wind, Truckin' and Saturday Nite – with “cat‑calling” highlighted.",
+    "Keys": "Keith’s playing shines on Brown‑Eyed Women and adds texture to the second‑set jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saturday Nite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T02:38:36.884098+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-11-14.sbd.hollister.14716.sbeok.shnf"
+}

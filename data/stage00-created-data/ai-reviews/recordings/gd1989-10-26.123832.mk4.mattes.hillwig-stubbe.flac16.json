@@ -1,0 +1,39 @@
+{
+  "summary": "Honest front‑of‑house capture of a flat‑mid Miami arena, highlighted by a wacky Dark Star and a standout second set.",
+  "review": "Both reviewers give the recording five stars, praising its unvarnished FOB sound despite the arena’s less than ideal acoustics – mids are a bit flat but it translates well on good speakers. The show shines in the second half, with the “wacko Dark Star” singled out as a memorable moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high ratings (5 stars) and enthusiastic comments indicate an excellent performance with a solid, if not pristine, audience recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Front‑of‑house capture; arena sound flat in the mids, but clear enough to convey the live experience on a good system."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is highlighted as the high point of the concert, delivering the memorable Dark Star and overall strong performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:48:41.625694+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-26.123832.mk4.mattes.hillwig-stubbe.flac16"
+}

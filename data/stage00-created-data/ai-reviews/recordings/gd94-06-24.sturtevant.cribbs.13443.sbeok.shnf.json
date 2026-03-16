@@ -1,0 +1,87 @@
+{
+  "summary": "Decent audience recording of a hot‑weather Vegas show with mixed performance – highlights include Althea, Standing on the Moon and strong drums, but many note uneven playing.",
+  "review": "The tape captures an audience mix that is generally clear enough to enjoy, though some listeners describe it as muddy. The concert itself swings between high points – a soaring Althea, a powerful Standing on the Moon and tight drumming – and low stretches where Jerry sounds unfocused and several songs feel lifeless.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is uneven (many negative comments versus a few strong positives) giving an effective ~3‑star performance rating, while the audience recording is mostly good but with occasional complaints, raising it to about 3.5. Weighted combination yields ~3.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners praise a clean mix and decent audience ambience, though a few note terrible sound quality or occasional muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Standing on the Moon",
+      "Estimated",
+      "He's Gone"
+    ],
+    "poor_songs": [
+      "Cumberland",
+      "Iko",
+      "Samba In The Rain",
+      "Don't Ease Me In (in one review it was praised, but overall performance felt weak)"
+    ],
+    "setlist_flow": "The set had solid first‑set grooves and a second‑set that launched into extended jams, but heat‑induced fatigue showed up in uneven playing and several lackluster numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as priceless by some, but also “loaded,” “giving up after the first song,” and at times sounding unfocused or impaired.",
+    "Phil": "Forced Jerry to add vocal lines on \"Estimated\"; sings a broken‑arrow verse in one track.",
+    "Bob": "Led the reprise of \"Good Times,\" which was noted as less effective than usual.",
+    "Keys": "Vince's keyboard and vocals were heavily criticized as weak and “fisher‑price” sounding.",
+    "Drums": "Consistently praised; drums are a highlight throughout the era."
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Samba In The Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Traffic/Windwood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T22:39:29.587088+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-06-24.sturtevant.cribbs.13443.sbeok.shnf"
+}

@@ -1,0 +1,80 @@
+{
+  "summary": "Excellent soundboard capture of a stellar ’69 show featuring a sublime Dark Star, soaring Morning Dew and the beloved Mountains of the Moon.",
+  "review": "Reviewers rave about the musical heights reached on this unknown‑date 1969 concert – a melting Dark Star, an “astounding” Morning Dew, a hot The Other One and a beautifully mellow Mountains of the Moon.  The SBD source is praised as clear with only a few brief cuts, making it one of the best‑recorded versions of these classics.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (4–5) and enthusiastic comments about both performance and sound quality; minor recording glitches noted but do not detract from an outstanding show."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑balanced SBD with occasional brief cuts (e.g., Lovelight) and a short dropout noted; overall very listenable and faithful to the band’s sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Morning Dew",
+      "Mountains of the Moon",
+      "The Other One",
+      "Dupree's"
+    ],
+    "poor_songs": [
+      "Chant"
+    ],
+    "setlist_flow": "Reviewers highlight smooth, mellow transitions – Dupree's into Mountains of the Moon leading into a soaring Dark Star, followed by generous jams (Alligator > Drumz > Chant) and an extended Bid You Goodnight that caps the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is repeatedly praised – “intro to Death Don't Hurt Me” described as his best, and overall sound noted as “especially Garcia”.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey Hart’s drumming receives shout‑outs (Gyuto monks reference) and the Alligator > Drumz > Chant sequence is highlighted."
+  },
+  "song_mentions": {
+    "Mountains of the Moon": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dupree's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't Hurt Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Chant": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T11:21:16.548843+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-02-15.sbd.goodbear.2175.sbeok.shnf"
+}

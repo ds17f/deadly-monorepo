@@ -1,0 +1,81 @@
+{
+  "summary": "Clear audience recording captures a powerhouse Red Rocks performance highlighted by Shakedown Street, Scarlet > Fire > Estimated Prophet and an epic Ramble On Rose.",
+  "review": "The show is repeatedly praised for its fiery first set and soaring second‑set energy, with standout moments on Shakedown Street, Scarlet Begonias, Fire on the Mountain, Estimated Prophet, Terrapin Station and a legendary Ramble On Rose.  Listeners note an unusually clear AUD tape that borders on soundboard quality, making the intricate playing of Jerry, Brent, Phil and the drummers easy to hear.  Overall the performance is considered one of the top Red Rocks concerts of the era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over a dozen detailed reviews overwhelmingly praise the musical performance and note very clear audio; weighted rating (70% show, 30% recording) yields a strong 4.5‑plus score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Many reviewers call the tape \"pretty good sounding AUD\" and \"incredibly clear,\" with crisp instrument separation; a few note minor uncertainty about it being soundboard but overall the audio is clean and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Ramble On Rose",
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Estimated Prophet",
+      "Terrapin Station",
+      "Throwing Stones",
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as \"on fire\" with tight transitions; second set builds intensity with jazzy Estimated Prophet and soaring solos, ending with a heartfelt encore.  The Scarlet > Fire > Estimated > Terrapin sequence is repeatedly highlighted for its flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers rave about Jerry's demonic, height‑reaching solos on Ramble On Rose and throughout the set.",
+    "Phil": "Phil’s bass is praised as unusually clear; his \"bomb\" during Ramble On Rose is called a crowd‑moving moment.",
+    "Bob": "Bob (Bobby) gets kudos for passionate vocals on Good Lovin' and overall vocal contribution.",
+    "Keys": "Brent Mydland receives compliments for jazzy fills in Estimated Prophet and for adding texture throughout the show.",
+    "Drums": "Both pre‑drums and post‑drums sections are highlighted as \"amazing\" with the drummers delivering an A‑game performance."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Terrapin Station": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:09:47.107571+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-09-08.sennheiser.dodd.12482.sbeok.shnf"
+}

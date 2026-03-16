@@ -1,0 +1,56 @@
+{
+  "summary": "Good audience recording of an early‑'76 show, highlighted by a smoking Help > Slipknot! > Franklin's Tower and a punchy Friend of the Devil.",
+  "review": "The Jerry Moore AUD copy is described as “pretty good” and noticeably better than other circulating tapes, offering clear enough sound to enjoy the performance. Reviewers rave about the solid set, especially the Help‑Slip‑Franklin’s sequence, a lively Friend of the Devil, and an outstanding Slipknot! where Garcia's tone sounds almost MIDI‑like. Overall the show is praised for its energy and tight playing during their second concert of 1976.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Consistently high star ratings (4‑5) and enthusiastic comments about both the music and the recording quality yield a strong overall score; limited number of reviews keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Jerry Moore audience copy sounds pretty good, better than other low‑quality AUD versions and the patch used on the soundboard; not spectacular but clear enough for enjoyable listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Friend of the Devil",
+      "Slipknot!"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the set as solid throughout with a slightly quicker, punchier pace on Friend of the Devil and a seamless, high‑energy Help‑Slip‑Franklin's sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's tone on Slipknot! is praised as almost MIDI‑like and his overall guitar work is noted as amazing throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Mission": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T03:19:49.097948+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-04.aud.berger.99872.flac16"
+}

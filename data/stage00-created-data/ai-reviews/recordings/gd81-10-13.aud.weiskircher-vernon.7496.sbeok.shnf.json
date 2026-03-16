@@ -1,0 +1,39 @@
+{
+  "summary": "Audience recording delivers a full, real sound (though guitars sit low) and the show shines with an uptempo Dark Star jam after Saint.",
+  "review": "The audience‑sourced tape is praised for its spacious, “real” feel and a mix that puts Phil’s bass up front, even if the three guitars are buried. Musically the highlight is a brief, high‑energy Dark Star‑style improvisation following Saint, with TLMD noted as solid. Overall reviewers find it enjoyable despite some mix quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate 3‑4 stars and comment positively on the recording’s presence and a standout Dark Star jam; limited detail on the full set keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Mix has guitars unusually low, board described as tinny, but AUD feels full, real and places Phil’s bass up front; overall listenable and often preferred to the board version."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star (uptempo jam after Saint)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers mention a notable post‑Saint improvisation and generally enjoy the performance, though they give little detail on overall pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar work is present but buried in the mix; he exits early during the Dark Star jam.",
+    "Phil": "Bass is prominently mixed up front, which reviewers appreciate.",
+    "Bob": "Continues the jam after Jerry leaves, contributing to the uptempo Dark Star section.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:50:11.526426+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-10-13.aud.weiskircher-vernon.7496.sbeok.shnf"
+}

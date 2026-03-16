@@ -1,0 +1,45 @@
+{
+  "summary": "Good‑to‑great FM broadcast of a joyful free concert with standout China Cat Sunflower and a fiery Wang Dang Doodle, captured in solid sound.",
+  "review": "The recording captures the festive atmosphere of the November 3, 1991 “Laughter, Love and Music” benefit at Golden Gate Park. Reviewers rave about the band’s energy – highlighting a beautiful China Cat Sunflower and an inspired Wang Dang Doodle with John Popper – and note that the FM‑derived sound is clear and well‑balanced. The show flows from a circus of guest acts into two full Dead sets, delivering an emotionally charged, crowd‑singing experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Three detailed positive reviews (5, 4, 4 stars) praise both the performance and the FM broadcast quality; no negative points were raised."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the FM sound as good‑to‑great with clear instrument separation; no major flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "Wang Dang Doodle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Festival‑style event with many guest acts leading into two full Dead sets; the band delivered a cohesive, emotionally resonant performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his strong guitar work and excellent partnership with John Fogerty.",
+    "Phil": "",
+    "Bob": "Noted as part of the tight backing on the Fogerty set.",
+    "Keys": "Welnick’s keyboards were highlighted as sounding good; China Cat Sunflower described as beautiful.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T02:48:04.510498+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-11-03.sbd.bootleg.19292.sbeok.shnf"
+}

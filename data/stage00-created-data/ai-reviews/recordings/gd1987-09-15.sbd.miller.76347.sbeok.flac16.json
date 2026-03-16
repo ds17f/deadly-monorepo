@@ -1,0 +1,52 @@
+{
+  "summary": "Good‑quality C Miller soundboard capture of a solid September‑87 show, highlighted by an extended Black Peter and strong second set despite some first‑set mix hiccups.",
+  "review": "The Miller remaster presents a clear soundboard recording that is generally clean, though reviewers note occasional muddiness in the opening songs and a guitar‑mix issue during Tennessee Jed. Musically the concert shines with a soulful, extended Black Peter and a second set that “rips,” while the first set suffers from a few technical glitches and a shaky rendition of Queen Jane.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ≈3.6, but most comments are positive about the performance and recording; weighting favors show quality, yielding a solid above‑average score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "C Miller remaster is crisp overall; first set has some mix problems (muddy ambience, guitar dropping out on Tennessee Jed) but the second half sounds clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Queen Jane",
+      "Tennessee Jed"
+    ],
+    "setlist_flow": "Strong opening with Brent digging into ‘Hey Pockey Way’, but the first set is marred by a few technical slips. The second set picks up momentum and delivers an energetic, ripping performance."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar drops out on Tennessee Jed and sounds buried in the mix early, but overall tone is solid.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboards) is noted for digging into ‘Hey Pockey Way’ and adding energy.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:13:55.011669+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-15.sbd.miller.76347.sbeok.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Good-quality recording with a standout Morning Dew performance.",
+  "review": "The show is described as fairly routine aside from an outstanding rendition of Morning Dew, which the reviewer calls \"fantastic.\" No specific comments about the audio source or mix are provided, so the recording is assumed to be adequately listenable. Overall it seems like a solid, if not spectacular, entry in the Dead catalog.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review (4‑star) mentions a strong Morning Dew but gives no details on recording quality; rating reflects solid show with unknown technical fidelity."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments on sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A generally regular set with Morning Dew as the main highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T17:01:47.193451+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-03-23.145316.nak300-shotgun-omni-mix.dalton.miller.sirmick.flac1648"
+}

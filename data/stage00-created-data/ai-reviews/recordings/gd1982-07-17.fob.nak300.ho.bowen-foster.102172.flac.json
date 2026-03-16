@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent front‑of‑house capture with in‑your‑face sound, highlighted by a killer Truckin' finish and a spacey second set opening with Playin' in the Band and a China Cat jam.",
+  "review": "The recording, taken from Brian Schley's FOB Nak 300 shotgun rig patched through Sennheiser 441s, delivers crystal‑clear, full‑range audio that lets you hear every instrument. The show itself is praised for its energetic first‑set close with Truckin', a adventurous second‑set opener (Playin' in the Band) and a fun China Cat Sunflower jam, making it a standout West Coast performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three detailed reviews are 5‑star, praising both the musical performance and the technical capture; weighted rating (70% show + 30% recording) yields a high overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "FOB shotgun mic (Nak 300) patched to Sennheiser 441s and recorded on a Marantz CD‑330; sound is described as “in your face,” clear, with full instrument separation despite being an audience capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Playin' in the Band",
+      "China Cat Sunflower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds to a high‑energy Truckin' finish; second set opens spacey and exploratory with Playin' leading into a joyous China Cat jam, keeping the momentum flowing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir’s extra licks (“bobby throws in”) are noted as enjoyable highlights.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T21:32:37.495640+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-07-17.fob.nak300.ho.bowen-foster.102172.flac"
+}

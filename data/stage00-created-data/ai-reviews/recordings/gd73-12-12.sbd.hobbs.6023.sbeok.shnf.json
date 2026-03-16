@@ -1,0 +1,88 @@
+{
+  "summary": "Crisp late‑'73 soundboard with a standout first Peggy‑O, hot WRS→Eyes→Dew jam and great Jack Straw, but the tape runs slightly fast and is missing Sugar Magnolia and Casey Jones.",
+  "review": "The recording is a solid 1973 soundboard capture – clear and well‑balanced – though several listeners note a subtle speed/pitch issue that makes vocals sound a bit high. Musically the show shines with the debut of Peggy‑O, an inspired WRS > Eyes > Dew sequence, powerful performances of Brown Eyed Women, Deal, Playin’, Jack Straw and China → Rider; the missing Sugar Magnolia and Casey Jones are the only real blemishes.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance and highlight several exceptional songs, while noting consistent but minor recording speed/pitch quirks and a couple of missing tracks; the weighted average yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp SBD sound with clear instrument separation. A few users detect a slight fast‑tempo/pitch shift (roughly a quarter‑step) and occasional vocal oddities; some tape splice glitches and missing tracks are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Weather Report Suite > Eyes of the World > Morning Dew",
+      "Jack Straw",
+      "China Cat Sunflower > I Know You Rider",
+      "Brown Eyed Women",
+      "Deal",
+      "Playin' in the Band"
+    ],
+    "poor_songs": [
+      "Sugar Magnolia (missing)",
+      "Casey Jones (missing)"
+    ],
+    "setlist_flow": "The show opens with an exciting soundcheck that includes Jerry teaching Keith the Peggy‑O chord, leading into a historic first performance of Peggy‑O. Set 1 flows through tight renditions of Brown Eyed Women, Deal and Playin’. The second set builds momentum with a scorching WRS→Eyes jam that lands on a soulful Morning Dew, followed by Jack Straw and a bright China→Rider close. Missing the usual Sugar Magnolia/Casey Jones finale leaves a small gap."
+  },
+  "band_member_comments": {
+    "Jerry": "In control, sings rare ditties in soundcheck, guitar tone praised; vocals noted as slightly high due to tape speed.",
+    "Phil": "",
+    "Bob": "Shines on Peggy‑O and other numbers; vocal presence highlighted.",
+    "Keys": "Keith learns the Peggy‑O chord during soundcheck; keyboards otherwise solid. Donna Jean absent.",
+    "Drums": "Drum kit sounds faster than later versions, especially on Peggy‑O; overall driving rhythm noted."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Weather Report Suite > Eyes of the World > Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T04:30:03.341249+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-12-12.sbd.hobbs.6023.sbeok.shnf"
+}

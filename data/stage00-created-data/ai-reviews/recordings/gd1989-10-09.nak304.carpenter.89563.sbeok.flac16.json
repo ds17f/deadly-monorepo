@@ -1,0 +1,62 @@
+{
+  "summary": "A thrilling show highlighted by an epic Dark Star and Attics, captured on a vivid audience recording that immerses you in the Coliseum’s excitement.",
+  "review": "Fans rave about this October‑1989 Hampton performance, calling it one of the band’s all‑time greats thanks to a soaring Dark Star, a knockout Death Don’t Have No Mercy and an unforgettable Attics encore. The recording is an audience (matrix‑style) tape that pulls the crowd’s roar into the mix, delivering a lively but not studio‑perfect sound. Overall the musical performance eclipses any minor sonic imperfections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 5) and glowing language praise both the show’s historic improvisations and the immersive audience recording, yielding a top‑tier combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Captures massive crowd excitement; listeners note the tape brings the venue’s atmosphere to life. No major drop‑outs reported, but as with any audience/matrix source it lacks the pristine clarity of a pure soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Attics",
+      "Death Don't Have No Mercy",
+      "Help > Slipknot"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds solidly, leading into a monumental Dark Star that launches the second set. The band rides the high energy into powerful jams (Playin'/Uncle John) and closes with an emotional Attics encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his soaring tone, new effects, and the ‘bomb‑drop’ opening of Dark Star.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboards) missed but lauded for fresh sounds; overall keyboard work described as strange and exciting.",
+    "Drums": "Billy & Mickey highlighted as extraordinary, driving the improvisations with precision."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Attics": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Help > Slipknot": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T23:52:00.890691+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-09.nak304.carpenter.89563.sbeok.flac16"
+}

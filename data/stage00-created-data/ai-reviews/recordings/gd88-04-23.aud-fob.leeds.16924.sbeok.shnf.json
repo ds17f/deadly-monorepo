@@ -1,0 +1,116 @@
+{
+  "summary": "Crystal‑clear front‑of‑house recording of a high‑energy show highlighted by Hell in a Bucket, Pocky Way and an unforgettable Hey Jude cover.",
+  "review": "The FOB mix is praised as crisp and well balanced, making the performance easy to enjoy.  Fans rave about the first‑set punch (Hell in a Bucket, Pocky Way) and a second‑set that builds into a soaring Hey Jude/Beatles moment, though the later half drifts into a few tired combos.  Overall the show feels memorable and the tape captures it beautifully.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and describe both a superb front‑of‑house recording and an exciting performance, with only minor criticisms of later songs."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Front‑of‑house (FOB) mix is described as crystal‑clear, balanced and ‘tremendous sounding’; no dropout or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hell in a Bucket",
+      "Pocky Way",
+      "Hey Jude",
+      "To Lay Me Down",
+      "Miracle"
+    ],
+    "poor_songs": [
+      "Fantasy/Hey Jude",
+      "Lovelite"
+    ],
+    "setlist_flow": "The first set bursts out with high energy and strong vocals, while the second set deepens into a dramatic Drums→Space segment before winding down with a few weaker combos.  The overall pacing keeps listeners engaged despite a dip toward the end."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work and vocal delivery are repeatedly praised – especially his antideluvian chords during Space and emotive singing on To Lay Me Down.",
+    "Phil": "Bass is noted as solid and ‘umph‑y’, providing a strong foundation throughout the set.",
+    "Bob": "Bob Weir’s gritty, muscular voice gets kudos (referred to as “Bobby”) and his lead on songs like To Lay Me Down moves listeners.",
+    "Keys": "Brent Mydland receives shout‑outs for inventive keyboard textures, from ‘Sketches of Spain’ vibes to weaving with Jerry’s guitar.",
+    "Drums": "The Drums→Space segue is highlighted as a mind‑blowing, melting‑away moment that drives the second set."
+  },
+  "song_mentions": {
+    "Hell in a Bucket": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Pocky Way": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fantasy/Hey Jude": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Knockin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "West": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ease": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "UJB": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "GDTRFB": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelite": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:09:23.391732+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-04-23.aud-fob.leeds.16924.sbeok.shnf"
+}

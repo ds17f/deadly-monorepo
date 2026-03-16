@@ -1,0 +1,69 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a high‑energy March ’73 show featuring a smoking China Cat → I Know You Rider, soaring Bird Song, epic Playing in the Band and a beastly Dark Star.",
+  "review": "The recording is praised as exceptionally crisp and immersive – listeners even claim they can hear every nuance from the tenth row.  Musically the concert bursts with energy, highlighted by China Cat Sunflower into I Know You Rider, a jam‑filled Bird Song, an inspired Playing in the Band, and a powerful Dark Star, plus memorable banter after Wave That Flag and Donna Jean’s vocal fireworks on Greatest Story Ever Told.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the soundboard recording (crisp, crystal‑clear) and the musical performance (energetic set, multiple standout songs). Weighting the strong show quality (≈4.6) with excellent recording quality (≈4.8) yields a combined rating around 4.7."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly describe the audio as crisp, crystal‑clear, and front‑row immersive; no significant dropouts or muddiness are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Bird Song",
+      "Playing in the Band",
+      "Dark Star",
+      "Wave That Flag",
+      "Greatest Story Ever Told"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert maintains a high‑energy flow from the opening China Cat into I Know You Rider through the middle‑section jams, with engaging banter (notably after Wave That Flag) and strong vocal contributions from Donna Jean, creating an exciting and cohesive experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for crystal‑clear tone, volume, and a wah‑laden fire on Playing in the Band; some debate about brief pedal‑steel‑like bends.",
+    "Phil": "Mentioned as “stealing shows” with his bass work, adding to the concert’s power.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Wave That Flag": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T06:08:26.577840+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-03-16.sbd.cribbs.19141.sbeok.shnf"
+}

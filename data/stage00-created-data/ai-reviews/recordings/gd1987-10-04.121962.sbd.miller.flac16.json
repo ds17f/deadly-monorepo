@@ -1,0 +1,49 @@
+{
+  "summary": "Recording features an ill‑fitting Devil in a Blue Dress > Miss Molly > Devil sequence and is generally regarded as a poor show with no noted recording strengths.",
+  "review": "The sole reviewer could not get behind the Devil in a Blue Dress → Miss Molly → Devil transition, calling it a bad fit. No comments were made about the sound source or mix, so the technical quality remains unknown, but the overall impression of the performance is negative.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.5,
+    "confidence": "low",
+    "rationale": "Only one review, strongly negative about the song sequence and no information on recording quality; rating reflects poor show perception with uncertain technical assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No reviewer comments on sound clarity, mix, or source; assumed sub‑par given overall negative sentiment."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Devil in a Blue Dress > Miss Molly > Devil"
+    ],
+    "setlist_flow": "The transition between Devil in a Blue Dress and Miss Molly was described as not fitting, suggesting a weak flow in that segment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Devil in a Blue Dress": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Miss Molly": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:54:26.492968+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-10-04.121962.sbd.miller.flac16"
+}

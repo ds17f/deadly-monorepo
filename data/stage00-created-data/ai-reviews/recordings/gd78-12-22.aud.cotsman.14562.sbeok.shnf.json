@@ -1,0 +1,59 @@
+{
+  "summary": "Muddy audience recording, but rescued by a stellar Scarlet Begonias → Fire on the Mountain jam.",
+  "review": "The show is notable for an outstanding second‑set sequence of Scarlet Begonias into Fire on the Mountain, which many reviewers call “sweet” and “one of the very best.”  The audio, captured from the audience, is muddy and has cuts, requiring EQ or headphones to enjoy, but it remains listenable.  The first set is described as unexciting, while the second set finishes abruptly with Wharf Rat.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the second‑set jam (show quality ~4) but criticize the muddy, cut‑filled audience tape (recording quality ~3). Weighted average yields a solid 3½‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Muddy, back‑of‑the‑room sound with noticeable cuts and low clarity; listeners report needing EQ or headphones to improve treble/mids."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as dull, but second set shines with a long Scarlet‑Fire jam and solid Wharf Rat ending; the show ends abruptly without a true encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work on Scarlet Begonias is highlighted as “takes Scarlet out there” and praised for its tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T17:48:28.727899+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-12-22.aud.cotsman.14562.sbeok.shnf"
+}

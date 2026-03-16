@@ -1,0 +1,51 @@
+{
+  "summary": "Solid soundboard capture (B+ level) with a smoking second set highlighted by stellar Truckin', perfect Cassidy and an outstanding The Other One.",
+  "review": "The recording is a solid B+‑grade soundboard tape; the levels run a bit high but remain clear enough to enjoy the performance. Musically the show shines – Phil belts out “Truckin’,” the first set opens with a flawless “Cassidy,” and the second set delivers a monster rendition of “The Other One.” Overall it’s an exciting, well‑performed concert despite minor recording quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviews are highly positive (5, 5, 4 stars) and praise both the show and the recording; the performance is rated excellent while the B+ soundboard quality is good, yielding a weighted average around 4.6."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "B+ grade – generally clear and balanced but with noticeably high levels that make the mix a bit bright."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Cassidy",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for a perfect “Cassidy”; second set described as rocking the whole way through with highlights like “Truckin’” and an outstanding “The Other One.”"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil's vocal performance on “Truckin'” is highlighted as exceptional.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:38:17.462069+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-18.sbd.miller.fix-102444.103186.flac16"
+}

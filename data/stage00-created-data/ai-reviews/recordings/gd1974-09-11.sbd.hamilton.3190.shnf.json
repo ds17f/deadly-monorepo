@@ -1,0 +1,112 @@
+{
+  "summary": "High‑quality soundboard capture of a jazzy, free‑form show with a classic second set and strong performances throughout.",
+  "review": "The recording is a solid soundboard source that suffers only a brief balance hiccup at the start of Scarlet Begonias before settling into an A‑minus quality overall; the mix is clear and the official release sounds great. Musically the concert shines, especially in the exploratory second set where Playing In The Band stretches out for 20+ minutes and the Seastones → Eyes → Jam → Wharf Rat sequence adds a space‑y flavor, while the first and third sets deliver consistently good renditions of classics.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "One detailed review rates the show highly (4 stars) and praises both performance and recording, leading to a strong overall rating despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Early balance issue on Scarlet Begonias quickly fixed; overall crisp mix with A‑minus rating from reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Mexicali Blues",
+      "Jack Straw",
+      "Bobby McGee",
+      "Playing In The Band",
+      "Seastones > Eyes > Jam > Wharf Rat",
+      "Ship"
+    ],
+    "poor_songs": [
+      "Wharf Rat"
+    ],
+    "setlist_flow": "Cohesive first set with solid energy, a particularly exploratory and jazzy second set that builds into extended jams, and a slower third set that never quite picks up speed."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for varied phrasing, watery tone early in the jam, hyper‑driven climax, and consistently tasteful playing.",
+    "Phil": "Noted as strong and supportive, especially during the long Playing In The Band improvisation.",
+    "Bob": "Mentioned alongside Jerry for nailing the jam before the final chorus of Playing In The Band.",
+    "Keys": "Keith is highlighted repeatedly – piano work on early songs, organ support throughout, and superb organ contributions in the jam sections.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box Elder": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bobby McGee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Might Have Been ...": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Seastones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ship": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T00:22:35.112174+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-09-11.sbd.hamilton.3190.shnf"
+}

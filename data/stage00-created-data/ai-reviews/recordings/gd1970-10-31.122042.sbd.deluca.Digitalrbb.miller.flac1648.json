@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality soundboard capture of the dual shows, highlighted by Jerry Garcia’s rare pedal‑steel cameo with the New Riders.",
+  "review": "The package delivers a clean digital soundboard recording that sounds noticeably better than earlier copies, and fans love having both the early and late sets plus the New Riders of the Purple Sage in one set.  Jerry’s unexpected pedal‑steel work with NRPS is singled out as a special moment, and overall the performance is praised despite the lack of detailed song commentary.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Seven reviews overwhelmingly give five‑star praise, noting excellent recording clarity (better than older versions) and a memorable Jerry/NRPS moment; only one neutral three‑star rating without comment lowers the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Digital soundboard source (indicated by .sbd and Digitalrbb); clearer than previous releases, NRPS tracks come through well, no major drop‑outs or muffiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I'm In Love With You"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Package includes both early and late shows plus the New Riders, providing a complete experience that fans describe as ‘cool’ and “never gets old.”"
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for playing pedal steel alongside the New Riders – a rare and praised moment.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "I'm In Love With You": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T00:28:03.504226+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-10-31.122042.sbd.deluca.Digitalrbb.miller.flac1648"
+}

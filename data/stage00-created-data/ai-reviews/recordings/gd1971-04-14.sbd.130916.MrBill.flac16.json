@@ -1,0 +1,100 @@
+{
+  "summary": "Fair‑quality recording of an energetic show packed with Truckin', Bird Song and a standout The Other One.",
+  "review": "The two reviewers agree the performance is hot, with one calling the set list near perfect and highlighting The Other One and Bird Song, while also praising classics like Truckin' and Bertha. No specific comments were made about the tape itself, leaving the recording quality unclear but presumed adequate for listening. Overall sentiment leans mixed due to a moderate three‑star review versus an enthusiastic five‑star rating.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Strong musical praise (70% weight) offset by lack of recording details and a middling three‑star review, yielding an overall good‑to‑great rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not mention sound clarity, mix balance, or source type; recording presumed acceptable but details are absent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Both reviewers describe the set list as near perfect and the performance as very hot, noting a strong flow through classics like Truckin', Deal, Bertha, and a fiery second‑set opener with Bird Song."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "B McGee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Next Time You See Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sing Me Back Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me And My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T04:54:16.079652+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-14.sbd.130916.MrBill.flac16"
+}

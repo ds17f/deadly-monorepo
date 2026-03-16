@@ -1,0 +1,31 @@
+{
+  "summary": "Seamlessly edited soundboard recording; reviewers did not comment on the musical performance.",
+  "review": "The reviewer notes that they only fixed the source to make it seamless for streaming, removing interruptions and overlaps. No observations are given about the band's playing, so the show quality remains undocumented while the technical fix is viewed positively.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Only a single review focusing on a technical edit; no musical commentary to boost rating, but the fix improves listenability."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer performed a seamless edit for streaming, removing glitches/overlaps. Original may have had interruptions, but the fixed version is clean and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No musical details provided in the review."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-26T02:54:42.529606+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-04.sbd.clugston.tetzeli.fix-2535.34937.reflac.flac16"
+}

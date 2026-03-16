@@ -1,0 +1,90 @@
+{
+  "summary": "High‑energy '81 Boulder show captured on a solid soundboard recording; standout LLR, China>Rider and Scarlet→Fire make it a must‑listen.",
+  "review": "The performance is widely praised for its blistering first set that closes with an electric China Cat Sunflower → I Know You Rider and a second set that kicks off with a classic Scarlet → Fire.  Jerry’s solos (LLR, Stella Blue) and Phil’s bass work are repeatedly highlighted, while the soundboard source delivers generally clear audio despite occasional static or splice on Scarlet.  Overall fans deem it one of the best ’81 shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of ~45 reviews rate the show 4–5 stars and emphasize strong musical moments; recording is described as good to excellent, giving a combined weighted rating around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp early tracks with minimal static that fades by Bird Song; one splice noted on Scarlet → Fire; a few reviewers mention slight muddiness in the front‑of‑house mix, but overall the SBD is clean and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "China Cat Sunflower > I Know You Rider",
+      "Scarlet > Fire",
+      "Estimated Prophet > He's Gone",
+      "The Other One > Stella Blue"
+    ],
+    "poor_songs": [
+      "Jack Straw"
+    ],
+    "setlist_flow": "First set builds to a high point with China>Rider; second set opens explosively with Scarlet>Fire and maintains momentum through strong mid‑set jams, ending with an uplifting encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise his solos – LLR’s “sweet rainfall licks,” emotive Stella Blue, and a killer Friend of the Devil; tone described as perfect.",
+    "Phil": "His bass is called “intense” on Rider, delivering powerful unique licks and “huge bombs” during jams.",
+    "Bob": "Noted for occasional drunken humor (“HA!”) during He's Gone and mixed vocal presence; overall solid but sometimes off‑key.",
+    "Keys": "Brent’s (keyboard) interplay shines especially in the Scarlet → Fire segue, adding extra energy to the set.",
+    "Drums": "Bill (and Mickey on drums) are described as strong, driving the space/jam sections with power."
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Estimated Prophet > He's Gone": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One > Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:15:35.959726+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-12-09.sbd.clugston.13061.sbeok.shnf"
+}

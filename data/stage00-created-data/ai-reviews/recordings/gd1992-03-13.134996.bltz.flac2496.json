@@ -1,0 +1,31 @@
+{
+  "summary": "Dull performance with no noted recording strengths",
+  "review": "The sole reviewer describes the concert as a total dud, giving it one star and calling it boring. No details about the audio source or sound quality are provided, so the technical side remains unclear.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one review, rating 1 star, with no additional context; therefore the overall assessment is strongly negative."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No specific comments on sound quality or source; reviewer only expressed dissatisfaction with the show itself."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer found the entire set dull and unsatisfying, labeling it a total dud."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T04:38:35.463988+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-13.134996.bltz.flac2496"
+}

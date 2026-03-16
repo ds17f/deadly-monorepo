@@ -1,0 +1,83 @@
+{
+  "summary": "Excellent soundboard capture of a legendary ’68 show – pristine Dark Star, soaring The Eleven and a standout New Potato make this a must‑listen.",
+  "review": "The digital restoration delivers crystal‑clear, vintage‑era soundboard quality that lets the band’s near‑perfect chops shine. Reviewers rave about the improvisational heights reached on Dark Star, The Eleven, Death Don't Have No Mercy and the superb New Potato, noting tight interplay between Jerry, Phil, Bill and Mickey. Overall the performance is described as fresh, restrained yet electric – a true highlight of 1968.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over a dozen enthusiastic 4‑5 star reviews praise both the musical performance and the restored soundboard quality; only one outlier is mildly critical."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Original tape had aged, but digital transfer restores a crisp, clear mix with excellent instrument separation; reviewers call it \"pristine\" and \"A++++ sound\"."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Eleven",
+      "Death Don't Have No Mercy",
+      "New Potato",
+      "Cryptic Envelopment"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is praised as tighter, second set flows through epic jams (Dark Star → Eleven → Death) with high energy; overall pacing is described as electric and transcendent."
+  },
+  "band_member_comments": {
+    "Jerry": "Blazing guitar tone, masterful solos and a soulful vocal on Death Don't Have No Mercy are highlighted.",
+    "Phil": "Bass work feeds off the group’s tight interplay; praised for feeding each other during jams.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill and Mickey are noted as perfectly in sync and ‘fabulous’, though one reviewer found the isolated drums segment less interesting."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Feedback": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "New Potato": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cryptic Envelopment": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Caution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T09:33:04.223568+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-10-13.sbd.eD.10910.sbeok.shnf"
+}

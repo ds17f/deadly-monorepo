@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard capture of an unforgettable show highlighted by Black Peter, Ship of Fools and Dire Wolf.",
+  "review": "The recording delivers crystal‑clear soundboard fidelity that fans describe as both ‘chunky’ and sweet, while the performance shines with a standout Black Peter, a sparkling Ship of Fools and a powerful Dire Wolf. Reviewers rave about Jerry’s soaring guitar work and the overall high‑energy flow of the set, making this April ’78 show one of the year’s peaks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviews are highly positive (5, 5, 4 stars) and praise both the musical performance and recording quality; consistent enthusiasm across multiple reviewers yields a strong confidence level."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "No complaints about drop‑outs or muddiness; reviewers note crisp, clear soundboard capture with pleasant tonal character."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Ship of Fools",
+      "Dire Wolf"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the show as sparkling and full of peaks, with a strong first set (Dire Wolf) and an especially memorable second‑set vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for wailing and great guitar tone throughout the performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:41:47.644609+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-14.148291.sbd.betty.dalton.miller.sirmick.flac16"
+}

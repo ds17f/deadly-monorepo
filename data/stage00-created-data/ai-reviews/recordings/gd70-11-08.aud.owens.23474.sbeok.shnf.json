@@ -1,0 +1,63 @@
+{
+  "summary": "A legendary 11‑8‑70 electric set – Dark Star, Truckin', Main Ten and more – shines on an audience tape that’s clear in moments but often muddy.",
+  "review": "Fans rave about this night as one of the greatest electric shows of ’70, highlighting a scorching Dark Star, a monster Main Ten jam and the unforgettable Truckin’→Dark Star→Main Ten→Dancin’ in the Streets sequence. The Owens audience recording is praised for its crystal‑clear Dark Star chimes, yet many note inconsistent source changes that make parts sound muffled and lacking hall ambience. Overall the performance outweighs the technical flaws, making it a must‑listen despite the audio shortcomings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Show quality is consistently described as exceptional (≈4.5/5) while recording quality is mixed, ranging from clear moments to muddy sections (≈3/5). Weighted combination yields ~4.1 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Clear Dark Star chimes and good detail on parts of the set; however, source switches introduce muddiness, reduced hall ambience, and inconsistent audience presence, making the tape uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Truckin'",
+      "Main Ten",
+      "Dancin' in the Streets",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The electric set is praised for its unique transitions (Truckin'>Dark Star>Main Ten>Dancin' in the Streets) and a sustained jam energy that rivals other classic ’70 shows."
+  },
+  "band_member_comments": {
+    "Jerry": "No specific remarks beyond general praise for his guitar work during the electric set.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "A reviewer notes a “nice xylophone” from Mickey (drummer) during Dark Star, indicating strong drum/percussion presence."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Main Ten": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dancin' in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T00:58:56.846770+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-11-08.aud.owens.23474.sbeok.shnf"
+}

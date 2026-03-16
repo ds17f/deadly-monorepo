@@ -1,0 +1,68 @@
+{
+  "summary": "Quirky ’82 show with standout Althea and killer Wheel",
+  "blurb": "The second set lifts the concert with an unusual Uncle John's Band → Samson sandwich, a monster Wheel and strong Jerry Garcia guitar work. Despite a chaotic first‑set cut short by equipment woes, highlights include Althea, Good Lovin' and tight jams throughout.",
+  "review": "September 9, 1982 at New Orleans’ Saenger Performing Arts Center was a roller‑coaster of the kind only ’80s Dead could deliver. The night opened unevenly – Bob Weir’s gear quit during Althea, sending the first set into a brief, chaotic tumble. Yet Jerry Garcia’s sweet, singing guitar tone kept everything from falling apart, even adding extra flourishes on Franklin's Tower and stepping into rhythm duties after Weir vanished.\n\nWhen the second set kicked in the band found its stride. An off‑beat Uncle John's Band → Samson & Delilah → Uncle John's Band sandwich surged forward, followed by a monster Wheel that restored the concert’s energy. Estimated Prophet, Eyes Of The World, Wharf Rat and a soulful Good Lovin' all glittered, while Brent Mydland pushed forward on keyboards during Althea, filling the sonic gap left by Weir. Though The Other One sagged a bit and Mississippi Half‑Step was muffled in places, the overall performance is memorable for its quirky twists, Jerry’s steady lead, and that killer Wheel jam.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 14,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Two recordings are clearly positive (highlighting Althea, Uncle John's Band → Samson sandwich and a monster Wheel) while the other two are mixed but still praise major moments; no consistent negative language appears, so a moderate positive adjustment of +1.0 is applied.",
+      "final_calculation": "2.5 + 0.1 + 1.0 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd82-09-09.sbd.willy.11735.sbeok.shnf",
+    "reason": "Excellent soundboard capture with clear, balanced audio; includes the standout Althea and Uncle John's Band → Samson sequence despite missing encores."
+  },
+  "key_highlights": [
+    "Uncle John's Band → Samson & Delilah sandwich lifts the second set",
+    "Monster Wheel restores energy after a rough first set",
+    "Jerry Garcia's sweet guitar tone carries the show through equipment hiccups",
+    "Brent Mydland steps forward on keyboards during Althea"
+  ],
+  "song_highlights": [
+    "Althea",
+    "Uncle John's Band",
+    "Samson & Delilah",
+    "Estimated Prophet",
+    "Eyes Of The World",
+    "The Wheel",
+    "Wharf Rat",
+    "Good Lovin'"
+  ],
+  "band_performance": {
+    "Jerry": "Sweet guitar tone and extra melodic parts kept the band afloat; after Weir left stage he shifted to rhythm/lead, delivering a strong solo on Althea and driving the monster Wheel.",
+    "Phil": "\"The beast\" on bass in one note, though his presence is less audible overall.",
+    "Bob": "Forgot lyrics to The Other One and exited early during Althea due to gear trouble, but sang eloquently on Good Lovin' and kept vocals solid elsewhere.",
+    "Brent": "Stepped forward during Althea, handling both rhythm and lead duties; keyboards were solid throughout the set.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-14T00:50:59.685429+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Althea"
+    ],
+    [
+      "Uncle John's Band",
+      "Samson & Delilah",
+      "Uncle John's Band",
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "The Other One",
+      "Wharf Rat",
+      "Good Lovin'"
+    ]
+  ]
+}

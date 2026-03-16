@@ -1,0 +1,31 @@
+{
+  "summary": "Enthusiastic five‑star rating despite no specific details, indicating overall appreciation of the recording.",
+  "review": "The sole reviewer gives a glowing five‑star rating and thanks the archivist, suggesting strong approval of both performance and audio capture. However, the comment provides no concrete information about sound quality or musical highlights, leaving those aspects unverified.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Only one brief five‑star review; reviewer is positive but gives no details on performance or recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound quality were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or pacing were made."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T15:01:48.246908+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-10-15.152002.ultramatrix.miller.flac2496"
+}

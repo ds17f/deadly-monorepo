@@ -1,0 +1,51 @@
+{
+  "summary": "Crisp audience recording captures a solid '78 show with standout Peggy‑O, Black Peter and the first live Dancin', though the first set feels uneven.",
+  "review": "The audience tape is described as crisp and enjoyable, delivering clear sound that lets the strong performances shine. Reviewers highlight Peggy‑O, Black Peter and the debut of Dancin' as high points, while noting a lack of continuity in the first set. Overall it’s a worthwhile listen for fans despite its uneven flow.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only one moderate‑rated review; positive comments about song quality and crisp recording are balanced by criticism of set continuity, leading to a middling overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp audience tape with no major flaws mentioned; clear enough for an enjoyable listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Black Peter",
+      "Dancin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as lacking continuity, but overall song selection and performance are praised."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:08:50.855322+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-10.senn421.zimmerman.minches.81262.sbeok.flac16"
+}

@@ -1,0 +1,84 @@
+{
+  "summary": "Audience recording captures a lively Landover show with standout Throwing Stones and The Other One, but wavering, tinny sound limits the listening experience.",
+  "review": "The concert was generally well‑played – fans highlight a warm Jack Straw opening, a smoking Throwing Stones/NFA sequence and a sweet (if MIDI‑distracted) Brokedown.  The audience‑sourced tape sits close to the board, giving plenty of room ambience, yet several reviewers note wavering, tinny and occasional guitar glitches that make the mix only fair.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance (especially Throwing Stones, The Other One and Jack Straw) while noting consistent recording flaws; weighting show quality higher yields a solid above‑average score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Wavering and tinny sound, occasional guitar glitches early in the set; however the tape captures strong crowd energy and is positioned near the soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Throwing Stones",
+      "The Other One",
+      "Brokedown"
+    ],
+    "poor_songs": [
+      "Desolation Row"
+    ],
+    "setlist_flow": "First set opens warm but feels restrained; second set builds momentum with a powerful Throwing Stones/NFA wave and solid jams, though occasional vocal muffs keep the energy from fully soaring."
+  },
+  "band_member_comments": {
+    "Jerry": "Early guitar tech issues (wavering tone, muffled words) but later rides the NFA wave effortlessly.",
+    "Phil": "Brief mention of a broken string on bass during the first set.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums described as quiet and breathy in the space segment."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T13:10:12.458893+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-06.aud.ingle.9984.sbeok.shnf"
+}

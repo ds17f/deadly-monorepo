@@ -1,0 +1,86 @@
+{
+  "summary": "Soundboard source suffers from fast‑pitch and balance problems, but the show shines with a monster Wheel and a solid Estimated Prophet.",
+  "review": "The Miller/Clugston SBD captures an uneven first set – Jerry muffs Mississippi Half‑Step and the band wrestles into Althea before Bob Weir quits the stage – but the second set recovers spectacularly, delivering a long, “awful good” Wheel and a tight Estimated Prophet jam. Technical flaws (pitch being 2‑4% fast, a brief Space dropout and overall balance issues) limit the listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Reviewer gave an overall three‑star rating; musical performance is average with clear highlights, while recording quality is notably poor due to pitch and balance problems."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Pitch runs 2‑4% fast across most tracks, requiring correction; brief dropout at start of Space; overall mix balance needs intervention."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wheel",
+      "Estimated Prophet",
+      "Good Lovin'",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [
+      "Mississippi Half-Step",
+      "Feel Like a Stranger",
+      "West L.A. Fadeaway"
+    ],
+    "setlist_flow": "First set feels tentative and is cut short by Bob Weir's equipment exit during Althea; second set picks up momentum, delivering strong jams and a memorable Wheel that restores the concert’s energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Muffs Mississippi Half-Step, adds extra parts on Franklin's Tower, drops a solo in West L.A. Fadeaway, then moves to rhythm/lead after Weir leaves stage.",
+    "Phil": "",
+    "Bob": "Leaves the stage early during Althea due to equipment problems, disrupting the first set.",
+    "Keys": "Brent Mydland steps forward during Althea, taking both rhythm and lead duties.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mississippi Half-Step": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "West L.A. Fadeaway": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T00:48:07.356469+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-09.142762.sbd.healy.streeter.dalton.miller.clugston.fixed.flac1648"
+}

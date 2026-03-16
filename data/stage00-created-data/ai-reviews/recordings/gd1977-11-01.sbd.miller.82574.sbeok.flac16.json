@@ -1,0 +1,91 @@
+{
+  "summary": "Excellent soundboard capture of a Detroit show highlighted by a soaring Terrapin > Estimated Prophet > The Other One sequence, with crisp audio that sounds perfect even turned up loud.",
+  "review": "Fans rave about the powerful second‑set jam—Terrapin into Estimated Prophet into The Other One—and describe the recording as crystal‑clear and ideal for blasting. While a few minor glitches (a reel flip in Truckin' and a missing intro on Friend of the Devil) are noted, the overall performance is tight, the band’s interplay vivid, and the Miller soundboard source shines.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The vast majority of reviewers give 4‑5 stars and praise both the musical performance and the Miller soundboard recording; only a few minor issues keep the average below perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced sound that holds up at high volume. Minor flaws mentioned: reel‑flip in Truckin', a cut start of Friend of the Devil, and missing track numbers (stream‑only)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin > Estimated Prophet > The Other One",
+      "Wharf Rat",
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Friend of the Devil (missing intro)",
+      "Around (flat ending)",
+      "U.S. Blues (flat ending)",
+      "Truckin' (reel flip)"
+    ],
+    "setlist_flow": "First set is warm‑up and a bit uneven (drummer sync issues, missing bits), but the second set delivers a classic late‑70s jam marathon that lifts the whole concert."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone is praised as perfect for loud playback; his on‑stage banter on Looks Like Rain is noted.",
+    "Phil": "Phil’s bass line in Jack Straw is highlighted as unique and distinctive.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drummers are described as occasionally out of sync early, but the drum segment in the second set receives strong positive remarks."
+  },
+  "song_mentions": {
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Might as Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T06:02:02.545361+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-11-01.sbd.miller.82574.sbeok.flac16"
+}

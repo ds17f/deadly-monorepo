@@ -1,0 +1,121 @@
+{
+  "summary": "A solid soundboard capture of the 8/4/89 Sacramento show, clear overall with a few mix quirks, showcasing standout performances of Crazy Fingers‑Cumberland, Deal, Eyes and several soulful ballads.",
+  "review": "The recording is a generally crisp sound‑board source; reviewers praise its clarity while noting occasional muffled bass and early‑show sound hiccups. Musically the concert is lauded for tight playing and memorable jams—especially Crazy Fingers into Cumberland, a smoking Deal, and the flowing Eyes/Wheel sequence—though a minority felt Jerry’s guitar was less inspired on parts of the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (average >4) and describe the board recording as good‑to‑excellent; only a few note minor performance or mix issues, yielding an overall strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced, with praised board sound throughout. Some reviewers mention reduced bass presence (Phil) and a brief early‑show sound problem that irritated Jerry."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Cumberland",
+      "Deal",
+      "Eyes",
+      "Stella Blue",
+      "Baby Blue",
+      "Cassidy",
+      "Never Trust A Woman"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A long, energetic first set followed by a second set that builds momentum with tight transitions (Crazy Fingers→Cumberland, Eyes→Wheel). The flow is described as smooth and “tight,” though a few felt the opening Foolish Heart was uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Most reviewers praise his lead work and solos (especially on Deal and the jam sections), but one reviewer calls his playing uninspired and notes he seemed annoyed by early sound problems.",
+    "Phil": "Positive remarks about his bass licks in Cumberland and “bombs” near the end of Mags; a few note that his low‑end is less audible in this mix.",
+    "Bob": "Briefly mentioned as rocking out during the second set (positive vibe).",
+    "Keys": "Brent’s piano work receives strong praise, highlighted on Never Trust A Woman and an early solo after Foolish Heart. No specific comments about Keith or Vince.",
+    "Drums": "The pre‑drum segment in set 2 is singled out as a favorite; drums are described as decent overall."
+  },
+  "song_mentions": {
+    "Never Trust A Woman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cumberland": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha > Greatest Story": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "SSDD": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space Jam -> The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T22:19:13.074397+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-08-04.sbd.miller.89884.sbeok.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Decent but somewhat distant recording captures a pretty good show highlighted by Bird Song.",
+  "review": "The upload offers a decent, slightly distant‑sounding capture that still lets the performance shine. Reviewers describe the concert as \"pretty good\" with Bird Song standing out as a highlight, even planning to open a radio show with it. While the audio isn’t crystal‑clear, it’s listenable enough for fans who have waited years for this material.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review; reviewer gave 4 stars and praised the show while noting only modest recording quality, leading to a solid but not exceptional overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Decent recording but with a distant feel typical of Shoreline captures; clarity is acceptable though not crisp."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall pretty good performance; no specific criticisms about pacing or flow were mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T19:35:57.437151+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-05-11.111121.NeumannKMF4-daweez.d5scott.flac16"
+}

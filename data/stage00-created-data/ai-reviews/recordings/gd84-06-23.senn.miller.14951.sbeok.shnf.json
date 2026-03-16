@@ -1,0 +1,106 @@
+{
+  "summary": "Decent tape of a typical mid‑80s Harrisburg show with mixed performance quality and solid sound for an audience recording",
+  "review": "The show is remembered as a classic early‑career outdoor Dead experience – some fans cite standout moments like Space, Truckin', Black Peter and Brent Midland’s B‑3 solo, while others criticize flubbed riffs in Estimated and the over‑used Day Job encore. The tape sounds good for an audience source; listeners note it needed only modest EQ to sound clear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is split (many nostalgic positives vs several sharp criticisms) and recording quality is generally good but not exceptional, yielding a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers say the tape sounds good and only needed light EQ; no major dropouts or distortion are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "Truckin'",
+      "Spoonful",
+      "Black Peter",
+      "Going Down The Road",
+      "Saturday Night",
+      "Killer Eyes",
+      "Music Never Stopped",
+      "Peggy-O"
+    ],
+    "poor_songs": [
+      "Estimated",
+      "Day Job",
+      "Don't Ease Me In"
+    ],
+    "setlist_flow": "Typical mid‑80s set with a mix of high energy (fast‑tempo Eyes) and relaxed jams; pacing feels uneven to some listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "Flubs noted in Estimated and occasional unfocused playing, but also praised for tearing it up on several songs.",
+    "Phil": "",
+    "Bob": "Hand‑shake/jump onstage before Estimated; vocals mentioned positively by some fans.",
+    "Keys": "Brent Midland’s piano/B‑3 solo highlighted as a high point.",
+    "Drums": "Mickey Hart’s playing noted as impressive, though not fully captured in the mix."
+  },
+  "song_mentions": {
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Day Job": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Going Down The Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Killer Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T18:34:02.305194+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-06-23.senn.miller.14951.sbeok.shnf"
+}

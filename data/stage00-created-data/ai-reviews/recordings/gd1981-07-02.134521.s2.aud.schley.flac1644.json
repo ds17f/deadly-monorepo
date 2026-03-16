@@ -1,0 +1,45 @@
+{
+  "summary": "Energetic sleeper set highlighted by Eyes of the World and Truckin', captured on a lively audience tape.",
+  "review": "The reviewer calls this show a “sleeper set” that bursts with energy, especially noting a killer performance of Eyes of the World and a scorching Truckin'. The audience recording (aud) is praised for its vivid vibe despite some crackle, delivering a satisfying quality‑to‑vibe ratio. Overall it feels like you’re right in the action.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Single enthusiastic review rates the show 4 stars and praises both performance and recording; limited data leads to low confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audible crackle noted but overall energetic mix with decent clarity for an audience tape; vibe captures the concert well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as a sleeper set that builds high energy, with strong jams and an exciting outro; overall flow praised."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir’s chord work “slinging up the neck” is highlighted positively.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:21:30.286969+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-07-02.134521.s2.aud.schley.flac1644"
+}

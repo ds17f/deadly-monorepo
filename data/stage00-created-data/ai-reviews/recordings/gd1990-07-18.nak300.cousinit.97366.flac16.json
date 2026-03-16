@@ -1,0 +1,39 @@
+{
+  "summary": "High‑energy 1990 show with Jerry on fire and a solid soundboard capture despite a brief drum cut and mono quirks.",
+  "review": "The performance is described as one of the top shows of the era, with the band “on” and a particularly powerful The Other One > Dew sequence.  The recording is generally praised – it sounds great and captures the crowd’s excitement – though listeners note a short drum‑to‑space cut that needs patching and that the mix plays back in mono.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly (4–5 stars) and praise the musical energy, while recording comments are mixed but overall favorable; combined weighting yields a strong above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and energetic, but contains a brief drum‑to‑space cut that requires patching; playback is mono and some reviewers note vocal emphasis that can bury instruments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans highlight a soaring musical conversation throughout, especially the intense The Other One > Dew segment; overall pacing is praised as lively and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"on\" all night with exceptional guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "A short cut in the drums > space section is noted; otherwise performance is solid."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T10:12:34.850578+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-18.nak300.cousinit.97366.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Hollow‑sounding recording with an unclear performance, reviewers are not impressed",
+  "review": "The lone review notes that the audio feels “pretty hollow,” suggesting a weak or poorly mixed source. No details about the musical performance, setlist flow, or individual players are provided, leaving the show quality uncertain.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 0‑star rating and a single criticism of the recording; no positive information to offset it."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer describes the audio as “pretty hollow,” indicating lack of clarity, depth, or proper mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T15:01:40.902933+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-09.nak300.laporte.89799.sbeok.flac16"
+}

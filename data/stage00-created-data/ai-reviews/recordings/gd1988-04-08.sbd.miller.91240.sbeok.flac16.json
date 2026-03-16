@@ -1,0 +1,84 @@
+{
+  "summary": "A solid soundboard remaster captures a compact Worcester show with standout Garcia solos (Rooster, Queen Jane, Loser) and a brisk second set of classics.",
+  "review": "The C‑Miller remaster delivers good‑quality board sound that retains the characteristic rubbery April ’88 vibe. The performance shines especially in the first‑set guitar work—three distinct Garcia solos—and the quick, punchy second set, though some listeners note a hoarse Jerry vocal and a generally loose mix.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance and decent remaster quality; only one clear negative review lowers the average, yielding a solid but not outstanding rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Remastered by C Miller; clear overall with the typical loose, rubbery April ’88 board tone and slight vocal hoarseness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Rooster",
+      "Queen Jane Approximately",
+      "Loser",
+      "Crazy Fingers",
+      "Uncle John's Band",
+      "Black Muddy River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A concise two‑hour set that moves quickly, especially the second half where classics are played at a brisk tempo; overall the show feels tight despite its short length."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is a bit hoarse but his guitar work is exceptional—three varied solos (Rooster, Queen Jane, Loser) receive high praise.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane Approximately": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T08:23:41.274281+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-08.sbd.miller.91240.sbeok.flac16"
+}

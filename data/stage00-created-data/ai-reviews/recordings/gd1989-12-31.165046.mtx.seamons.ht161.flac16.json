@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent matrix recording captures a thrilling set with a Sugar Magnolia opener, Bonnie Raitt‑featured Big Boss Man, and an expansive Dark Star.",
+  "review": "The matrix mix praised by the reviewer is clear and well‑balanced, delivering an enjoyable listening experience. The show itself is highlighted for its strong opening with Sugar Magnolia, a memorable Big Boss Man duet with Bonnie Raitt, and a deep, exploratory Dark Star, making it a standout performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Single five‑star review emphasizes both superb matrix sound quality and an exciting setlist; limited data lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix mix praised as clear, balanced, and enjoyable throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia",
+      "Big Boss Man",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opener with Sugar Magnolia, followed by a unique Bonnie Raitt‑enhanced rendition of Big Boss Man, leading into an expansive Dark Star."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T02:49:34.362915+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-31.165046.mtx.seamons.ht161.flac16"
+}

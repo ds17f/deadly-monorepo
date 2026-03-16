@@ -1,0 +1,59 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a late‑1989 Dead show, highlighted by a soaring Foolish Heart and a fired‑up The Other One.",
+  "review": "The recording is praised as far superior to other SBD sources – crisp, clear and “light years better” than comparable tapes.  Musically the concert is described as a strong, energetic performance with standout moments such as Foolish Heart (despite one mixed comment on Garcia’s vocal), The Other One, Crazy Fingers > Stella Blue and a solid Playing in the Band jam.  Overall the consensus is highly positive, with only minor criticism of a few vocal passages.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All ten reviews are favorable; recording quality is repeatedly called excellent and the show is described as fantastic with only one modest complaint about vocals."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers note this SBD is clearer, crisper and “light years better” than other soundboard copies; no drop‑outs or noise issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart",
+      "The Other One",
+      "Crazy Fingers > Stella Blue",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "Foolish Heart (vocals inaudible on opening verses)"
+    ],
+    "setlist_flow": "The set is praised for its high energy and solid pacing; reviewers wish Jack Straw had appeared later, but overall the flow from first to second set feels strong and satisfying."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is lauded (best Foolish Heart) though one reviewer notes his opening verses on Foolish Heart are barely audible, reflecting a common early‑90s vocal issue.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drumming receives positive remarks, described as great and driving the jams."
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers > Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T22:55:52.586827+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-08-19.sbd.hinko.23066.sbeok.shnf"
+}

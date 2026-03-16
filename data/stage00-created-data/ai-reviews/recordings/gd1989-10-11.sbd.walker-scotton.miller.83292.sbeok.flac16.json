@@ -1,0 +1,111 @@
+{
+  "summary": "Soundboard recording captures a solid 1989 Dead show with strong moments like “Let the Good Times Roll” and “When I Paint My Masterpiece,” though performance consistency varies.",
+  "review": "The Miller‑taped soundboard is generally clear and well‑balanced, earning praise for its fidelity. While several reviewers highlight high‑energy highlights such as the opener “Let the Good Times Roll,” a fiery “Bertha,” and an inspired rendition of “When I Paint My Masterpiece,” one detailed critique points to numerous flubs and uneven playing throughout both sets, especially on songs like “Terrapin” and “Estimated.” Overall sentiment is mixed, reflecting both enthusiastic appreciation for the era’s vibe and disappointment with specific performance lapses.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised (≈4.5/5) while show quality receives mixed feedback, averaging around 3.7/5; weighted combination yields ~4.0 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the sound perfect or great; one notes the balance can be corrected on second set but overall clarity and energy are high."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let the Good Times Roll",
+      "Bertha",
+      "When I Paint My Masterpiece"
+    ],
+    "poor_songs": [
+      "Greatest Story",
+      "Althea",
+      "Cassidy",
+      "A Little Light",
+      "Dough Knees",
+      "Loser",
+      "Estimated",
+      "Terrapin",
+      "Wheel"
+    ],
+    "setlist_flow": "The first set starts shakily with several missteps, but recovers on the later songs; the second set contains a mix of unique moments and more sloppy stretches, ending on a satisfying “Baby Blue.”"
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – loses the thread on “Loser” but delivers a solid solo; does something cool during “When I Paint My Masterpiece.”",
+    "Phil": "",
+    "Bob": "Voice struggles on “Greatest Story,” monotone through “Estimated,” and an awkward slide attempt on “Althea.”",
+    "Keys": "Brent (keys) not at his best on “A Little Light” and only one player stays on point during a flubbed “Dough Knees.”",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let the Good Times Roll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "When I Paint My Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "A Little Light": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dough Knees": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:02:36.511864+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-11.sbd.walker-scotton.miller.83292.sbeok.flac16"
+}

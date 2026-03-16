@@ -1,0 +1,73 @@
+{
+  "summary": "Excellent soundboard capture of a vibrant 1990 European show, highlighted by stellar Maggie’s Farm, Sugaree and an explosive Truckin’ performance.",
+  "review": "The SBD recording is crystal‑clear with superb instrument separation, only occasional hiss from the early patch. The concert delivers a tight first set and a second‑set that soars – memorable renditions of Maggie’s Farm, Sugaree, High Time, China > Rider and an electrifying Truckin’ make this one of the tour’s standouts. Fans repeatedly note the bright, full tone of Jerry’s guitar, Phil’s booming bass bombs and the tight dual‑drum attack of Bill and Mickey.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviews (10/13) rate the show 4–5 stars, praising both performance and recording quality; only one low‑star review is a joke. Weighted average of show (70%) and recording (30%) yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear SBD mix with excellent separation; a little hiss on early patches but overall superb fidelity and balanced instrument levels."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Maggie's Farm",
+      "Sugaree",
+      "Truckin'",
+      "High Time",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly from a tight first half into a second set that builds energy with strong transitions (China > Rider, Space‑>Wheel, etc.), delivering both mellow moments and high‑octane jams."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is described as bright, full, clear and “Wolf”‑like; solos are praised and his vocals noted as strong.",
+    "Phil": "Bass is highlighted for big bombs, crunchy presence and leading the band in several sections (China, Rider).",
+    "Bob": "Weir’s rhythm work and vocal leads (especially on China) receive positive mentions; occasional falsetto backup noted.",
+    "Keys": "Bruce Hornsby’s piano/keys are lauded as lovely, driving the band with solid chords and tasteful fills.",
+    "Drums": "Bill Kreutzmann and Mickey Hart are repeatedly praised for crisp, pronounced beats and tight dual‑drum interplay."
+  },
+  "song_mentions": {
+    "Maggie's Farm": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugaree": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "High Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T13:36:30.750068+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-10-17.dsbd.wiley.11613.sbeok.shnf"
+}

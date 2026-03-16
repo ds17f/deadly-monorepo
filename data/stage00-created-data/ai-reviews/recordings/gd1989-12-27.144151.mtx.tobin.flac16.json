@@ -1,0 +1,70 @@
+{
+  "summary": "Matrix recording captures a strong show with standout Bird Song and jaw‑dropping jams on Uncle John’s Band and Playing in the Band, though some MIDI‑laden moments feel silly.",
+  "review": "The performance is highlighted by a dark, chocolatey‑spicy Bird Song and scorching jams that lift Uncle John’s Band and Playing in the Band to new heights. While the recording (a matrix mix) is generally clean enough to enjoy the music, the heavy use of MIDI on Tomb Thumb's Blues and a flat ending to Never Trust a Woman keep it from being perfect.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "A single 5‑star review praises most of the show and mentions no serious recording flaws; the only drawbacks are artistic (MIDI overuse, a weak Never Trust a Woman)."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No explicit sound‑quality complaints; reviewers note MIDI effects as distracting but overall the mix is clear enough to enjoy the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Uncle John's Band (jam)",
+      "Playing in the Band (jam)",
+      "Greatest Story"
+    ],
+    "poor_songs": [
+      "Never Trust a Woman",
+      "Tomb Thumb's Blues"
+    ],
+    "setlist_flow": "The set flows through inventive jams and strong song choices, with the second half building momentum despite a few over‑produced moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Tomb Thumb's Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Never Trust a Woman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Uncle John's Band (jam)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band (jam)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T02:21:49.516358+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-27.144151.mtx.tobin.flac16"
+}

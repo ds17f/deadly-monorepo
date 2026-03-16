@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent audience recording that captures a tight rhythm section and several fine moments, but the concert itself is only mildly memorable.",
+  "review": "The tape delivers crystal‑clear, well‑balanced sound that rivals many matrix recordings, with drums and bass tight and no harsh wash. Musically the show offers highlights like a superb Tennessee Jed, a glowing China Doll/Playin' segment, Morning Dew and Sugar Magnolia, though the overall set is described as typical and never quite reaches brilliance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised as excellent, while show performance is judged average‑good; the weighted combination yields a solid mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners note crisp, full‑range sound with no wash or boominess, tight drums and bass, nuanced capture of instruments and vocals; comparable to a matrix recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tennessee Jed",
+      "China Doll (Playin')",
+      "Morning Dew",
+      "Sugar Magnolia",
+      "Space"
+    ],
+    "poor_songs": [
+      "Bertha"
+    ],
+    "setlist_flow": "First set described as typical with a few good moments; second set contains several highlights but never attains a truly magnificent performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Forgot the lyrics to Shakedown, but delivered a strong Tennessee Jed.",
+    "Phil": "His bass presence and subtle nuances are clearly heard in the recording.",
+    "Bob": "Vocal scat on Shakedown was a crowd‑pleaser; short trip through Space noted as fun.",
+    "Keys": "",
+    "Drums": "Tight, well‑balanced, no wash or boom‑iness."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T06:48:33.731501+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-05-14.fob.sonyecm220t.keshavan.miller.94396.sbeok.flac16"
+}

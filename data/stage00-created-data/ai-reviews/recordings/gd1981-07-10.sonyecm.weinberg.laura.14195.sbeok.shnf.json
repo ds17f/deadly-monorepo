@@ -1,0 +1,45 @@
+{
+  "summary": "Balanced, crystal‑clear soundboard capture of a tight 1981 show with a standout Eyes of the World and a jam‑filled second set.",
+  "review": "The recording is praised for its clean, balanced mix and crystal‑clear Jerry guitar tone, making it one of the best‑sounding OHR releases. The performance itself is described as tight, fun and “pretty hot,” with a strong second set highlighted by an exciting drum jam and memorable renditions of Eyes of the World and Playing in the Band.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Reviews consistently give 4‑5 stars, highlighting both excellent musical performance (70% weight) and high‑quality soundboard recording (30% weight)."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Balanced mix with clean lines from start to finish; crystal‑clear Jerry guitar, minimal crowd bleed. Some digital editing noted (muted audience on China Doll/Casey Jones and silent playlist gaps), but overall the sound is praised as crisp and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show flows strongly, especially the second set where a surprising drum jam energizes the band. Overall pacing is tight and fun."
+  },
+  "band_member_comments": {
+    "Jerry": "Crystal‑clear guitar tone and pretty vocal performance; praised as “clean my clock” from the first song.",
+    "Phil": "",
+    "Bob": "Snarls nail the attitude throughout; generally positive mentions of his presence on several songs.",
+    "Keys": "",
+    "Drums": "Jam out of drums brought a refreshing element of surprise."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:56:37.745462+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-07-10.sonyecm.weinberg.laura.14195.sbeok.shnf"
+}

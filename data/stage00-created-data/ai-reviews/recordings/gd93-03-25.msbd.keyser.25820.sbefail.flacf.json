@@ -1,0 +1,51 @@
+{
+  "summary": "Fair soundboard patch with occasional level quirks documents a fun Chapel Hill show highlighted by the rare \"Wave to the Wind\" jam.",
+  "review": "The recording is a board‑patch capture that suffers from a few level inconsistencies and an audience “touch” at the start, but it remains listenable.  Musically the concert is described as decent and enjoyable, with standout moments like the one‑off \"Wave to Wind\" and strong jams on Eternity and Liberty.  Overall the show isn’t legendary, but fans appreciate its historical drama and unique material.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Four reviews give an average of 3.75 stars; comments praise the performance’s rare songs while noting recording level issues, leading to a solid but not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Board patch with a pause at the start caused audience “touch” and uneven levels; multiple decks used for second set, resulting in some screwy level balance but overall usable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wave to the Wind",
+      "Eternity",
+      "Liberty"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Shows were decent and fun, with a new venue vibe in Chapel Hill; not exceptional but enjoyable, especially due to rare material."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Described as \"uber‑angry\" about the board patch situation.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wave to the Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T11:30:34.631796+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-25.msbd.keyser.25820.sbefail.flacf"
+}

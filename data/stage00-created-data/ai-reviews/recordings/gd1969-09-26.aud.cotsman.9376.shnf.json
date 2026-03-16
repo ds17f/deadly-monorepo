@@ -1,0 +1,42 @@
+{
+  "summary": "A tape plagued by bleed‑through issues, yet the music still moved at least one listener profoundly.",
+  "review": "The performance is described as life‑changing by a first‑time fan, but the recording itself suffers from obvious tape‑reuse artifacts that surface during King Bee and become unmistakable on Death Don't Have No Mercy. The source appears to be an audience cassette with poor fidelity, making the listening experience uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.2,
+    "confidence": "medium",
+    "rationale": "Mixed reviewer sentiment: one enthusiastic 5‑star comment versus two negative ratings that focus on serious recording flaws; overall rating falls toward the lower end."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Tape was reused, causing audible bleed‑through of previous material (notably throughout King Bee and at 6:12 of Death Don't Have No Mercy). Sound is muffled and lacks clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or pacing were provided in the reviews."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "King Bee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T17:20:00.402809+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-09-26.aud.cotsman.9376.shnf"
+}

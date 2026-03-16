@@ -1,0 +1,75 @@
+{
+  "summary": "Soundboard recording of the April 7 1995 Tampa show captures a mixed‑quality performance – solid sound, stellar moments like Visions and Unbroken Chain, but uneven playing especially from Garcia.",
+  "review": "The SBD source is generally clear and well‑balanced, though a few reviewers note occasional mix quirks that could use a remix. Musically the concert swings between high points (Visions of Johanna, Unbroken Chain, Corrina→Drums→Space) and weaker stretches (Samba in the Rain, an uneven Eyes of the World), with many fans highlighting Jerry’s moving Visions and the emotional Days Between while lamenting his inconsistent guitar work. Overall sentiment is mixed but leans positive because the recording preserves a historically significant last‑spring‑95 show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Over 50 reviews provide detailed comments; recording quality is consistently rated good/excellent, while performance quality varies widely, yielding a weighted average around the mid‑3 range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers praise crisp, well‑balanced SBD sound; a few note occasional drop‑outs or a need for remixing of drum/space balance but overall the tape is listenable and preserves stage ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Visions of Johanna",
+      "Unbroken Chain",
+      "Days Between",
+      "Corrina > Drums > Space"
+    ],
+    "poor_songs": [
+      "Samba in the Rain",
+      "Eyes of the World (in some opinions)"
+    ],
+    "setlist_flow": "First set opens strong with Jack Straw and Peggy‑O, builds through Visions and Loose Lucy; second set veers into darker territory—Unbroken Chain and Corrina jam are high points, but long droning Space and a lackluster Samba create uneven pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for emotive vocals on Visions and occasional hot solos (e.g., harmonizer on Corrina), but many note his guitar was thin, inconsistent, or “absent” due to health issues.",
+    "Phil": "Generally regarded as solid; some reviewers call the Unbroken Chain bass line a “Phil zone” highlight.",
+    "Bob": "Vocals and slide work receive occasional praise; noted for keeping energy up when Jerry falters.",
+    "Keys": "Vince's keyboards described as artificial by early reviewers, later appreciated for acoustic piano moments and less processed sound.",
+    "Drums": "Mickey & Bill’s drumming gets mixed notes – a “strange beat” in Unbroken Chain, but the extended Drums→Space segment is celebrated by many."
+  },
+  "song_mentions": {
+    "Visions of Johanna": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Days Between": {
+      "positive_mentions": 9,
+      "negative_mentions": 3,
+      "total_mentions": 12
+    },
+    "Unbroken Chain": {
+      "positive_mentions": 8,
+      "negative_mentions": 1,
+      "total_mentions": 9
+    },
+    "Eyes of the World": {
+      "positive_mentions": 6,
+      "negative_mentions": 5,
+      "total_mentions": 11
+    },
+    "Corrina > Drums > Space": {
+      "positive_mentions": 7,
+      "negative_mentions": 2,
+      "total_mentions": 9
+    },
+    "Samba in the Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 5,
+      "total_mentions": 5
+    },
+    "U.S. Blues": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-19T08:11:59.535814+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-04-07.sbd.7688.sbeok.shnf"
+}

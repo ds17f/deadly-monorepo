@@ -1,0 +1,51 @@
+{
+  "summary": "Enjoyable Bill Graham tribute with stellar guest performances; recording quality not specified but the show shines.",
+  "review": "The concert is praised for its memorable guest appearances—John Popper’s harp on “Wang Dang Doodle,” John Fogerty’s CCR contributions, Neil Young’s soulful “Forever Young” encore, and a heartfelt “Amazing Grace” with Joan Baez and Kris Kristofferson. Reviewers found the overall listening experience highly enjoyable, though no details about the audio source or clarity were provided.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Both reviewers highlight a superb performance with notable guest artists; lack of recording‑quality comments prevents a higher rating, but the musical content merits a strong score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentioned soundboard, audience mix, or clarity, so technical quality cannot be assessed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wang Dang Doodle",
+      "Forever Young",
+      "Amazing Grace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A tribute‑style set with multiple guest artists that flows naturally, culminating in a moving encore and closing hymn."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Forever Young": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Amazing Grace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T02:49:49.478821+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-11-03.150807.ultra.miller.flac1648"
+}

@@ -1,0 +1,64 @@
+{
+  "summary": "The Kevin Tobin matrix source is praised as very good, and the show shines with a revived Garcia on Loser, The Music Never Stopped and S>F, but a bloated 20‑minute Space and a weak encore hold it back.",
+  "review": "This recording benefits from a high‑quality matrix mix that the reviewer calls the best overall source. Musically the concert is highlighted by an energized Garcia on Loser, The Music Never Stopped and the S>F sequence, though the 20‑minute Space and the two‑song encore are described as disastrous. Overall it’s a mixed but memorable snapshot of the band’s early‑’90s resurgence.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "Only one review (3‑star) provides both strong positive and clear negative points; the show is decent with standout moments, while the recording is regarded as very good."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls Kevin Tobin's Matrix the best overall source and says it (and GEMS) are both very good, indicating clear, balanced sound with no noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "The Music Never Stopped",
+      "S>F"
+    ],
+    "poor_songs": [
+      "Space",
+      "Encore"
+    ],
+    "setlist_flow": "The two latter shows of the run are praised for recapturing old magic, but the first three nights fell flat. On this night the flow is interrupted by an overly long Space and a disappointing encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as revived and shining, making this one of the few shows in the early‑'90s that truly impressed the reviewer.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "S>F": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Encore": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:17:09.723421+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-12-17.dts.tobin.88013.flac"
+}

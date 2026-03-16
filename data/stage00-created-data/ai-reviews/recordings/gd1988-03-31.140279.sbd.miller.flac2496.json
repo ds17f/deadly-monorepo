@@ -1,0 +1,57 @@
+{
+  "summary": "Average show with Hell In A Bucket highlighted and strong Scarlet>Fire, Samson and Terrapin performances, but recording quality is not documented.",
+  "review": "The concert is viewed as a fairly average outing overall – the first set was unremarkable while the pre‑drums portion of the second set shines, especially the Scarlet>Fire sequence, a ripping Samson, and a well‑played Terrapin. Hell In A Bucket receives a specific shout‑out as a highlight. No reviewers commented on the audio source or fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Two reviews give modest to positive scores (3 and 4 stars) with no recording comments, leading to an average show rating around 3.5 and a neutral assumed recording quality; combined weighted score yields ~3.3."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not discuss sound clarity, mix or source type, so the recording is presumed average but unverified."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hell In A Bucket",
+      "Scarlet>Fire",
+      "Samson",
+      "Terrapin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as average; pre‑drums second set highlighted as strong with several standout jams; post‑drum portion deemed decent."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hell In A Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:32:22.592584+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-31.140279.sbd.miller.flac2496"
+}

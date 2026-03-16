@@ -1,0 +1,44 @@
+{
+  "summary": "Excellent audience recording that captures a lackluster show, highlighted only by an unusual complete stop between Sailor and Saint.",
+  "review": "The tape is praised as a superb audience‑matrix hybrid – close to the stage, clear and surprisingly detailed for a crowd source. Unfortunately the performance itself falls flat; both songs in the set are described as lackluster and the overall show never rises above mediocrity despite the high‑quality recording.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "medium",
+    "rationale": "Review rates the show poorly (2 ★) but extols the recording quality; weighting gives a low overall score around 2‑3 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Close, above‑crowd position with matrix‑like fidelity; clear and detailed despite being an audience capture."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Sailor > Saint"
+    ],
+    "setlist_flow": "Overall lackluster performance with no memorable moments beyond a curious complete stop between Sailor and Saint."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sailor": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T03:35:13.696708+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-11.128800.naks.mason.partial.flac16"
+}

@@ -1,0 +1,75 @@
+{
+  "summary": "Crisp soundboard capture of a high‑energy ’67 show, highlighted by a smoking The Other One and soaring Lovelight.",
+  "review": "The recording delivers surprisingly clear, well‑balanced audio for its era, with every instrument audible despite only one drummer on the kit. Musically the band is tight and energetic – Jerry’s guitar roars through The Other One, Lovelight bursts with fire, and the early psychedelic set flows smoothly from Morning Dew to New Potato Caboose.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 5) and enthusiastic comments about both performance and sound quality; strong show with multiple standout songs and a clear, well‑mixed soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Sound is crisp and all instruments are audible; reviewers note good fidelity for a 1967 tape. Only one drummer is present, which some mention as a historic quirk."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Lovelight",
+      "New Potato Caboose",
+      "Morning Dew",
+      "Beat It",
+      "Cold Rain and Snow",
+      "It Hurts Me Too"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy, tight playing with seamless transitions; the band moves from blues‑rock numbers into psychedelic jams (Cryptical/Other One) without sloppiness."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as brutal, vicious, sweet‑passionate and even “magma discharge,” delivering one of the greatest early solos on The Other One.",
+    "Phil": "Phil’s bass work gets praised for counterpoint with Jerry and strong ensemble playing during the jam sections.",
+    "Bob": "Bob Weir’s rhythm guitar and vocals are noted as solid, especially on Beat It.",
+    "Keys": "",
+    "Drums": "Only one drummer (Bill) is present; reviewers note the tight drumming despite Mickey not yet joining."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "New Potato Caboose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It Hurts Me Too": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T06:37:43.725823+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1967-10-22.sbd.yerys.1525.shnf"
+}

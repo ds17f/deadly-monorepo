@@ -1,0 +1,31 @@
+{
+  "summary": "A 5‑star fan rating despite no detailed information on sound or performance",
+  "review": "The sole review gives the recording a perfect five‑star score, indicating strong enthusiasm, but provides no specifics about audio fidelity, setlist, or individual performances. With such limited commentary, we can only infer that the listener found the show enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Only one brief 5‑star review; positive sentiment but no concrete details to assess quality"
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "unknown",
+    "technical_notes": "No comments on sound clarity, mix, or source type"
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Not mentioned in the review"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T08:53:57.404348+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-06.139741.fob.beyer.m160.streeter.miller.clugston.flac1644"
+}

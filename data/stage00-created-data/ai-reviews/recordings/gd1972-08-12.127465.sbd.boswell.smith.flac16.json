@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard recording of a consistently strong show, highlighted by a stellar “Big Railroad” performance.",
+  "review": "Both reviewers rave about the musical consistency of this concert, calling it the start of four months of top‑flight touring and singling out the electric rendition of “Big Railroad” as near‑legendary. The soundboard source is praised for its tube‑enhanced clarity, with only a minor gripe about separate tuning tracks that doesn’t detract from the overall high quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Show is described as excellent and recording as high‑quality; despite a low star rating in one review (related to editing), the overall commentary is overwhelmingly positive, yielding a strong but cautiously weighted rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear tube‑enhanced sound; minor annoyance that tuning tracks are separate files rather than stitched to song endings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Railroad"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Consistent and tight performance that kicks off a four‑month stretch of high‑caliber shows; pacing praised for its steadiness."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Big Railroad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T16:00:24.888049+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-08-12.127465.sbd.boswell.smith.flac16"
+}

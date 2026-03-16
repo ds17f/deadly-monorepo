@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent soundboard capture of an early‑71 show highlighted by a rare Big Railroad Blues, the debut of \"Sing Me Back Home\", and a tight second set that even squeezes in Bertha.",
+  "review": "Fans rave about the crystal‑clear soundboard recording, praising Betty Cantor’s mix and the vivid presence of Pigpen. Musically the concert shines with standout moments – Jerry’s soaring solo on Big Railroad Blues, the first live rendition of \"Sing Me Back Home\", a solid China Rider and The Other One, plus an energetic finish that tucks Bertha into the set. Overall the performance is described as wild, rare‑song‑laden and superb throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All seven reviews are overwhelmingly positive, with an average of 4.7 stars; no serious complaints about the recording or performance were noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced mix by Betty Cantor; vocals and instruments are crisp with no reported dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Railroad Blues",
+      "Sing Me Back Home",
+      "China Rider",
+      "The Other One",
+      "Bertha",
+      "Bobby McGee"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe a wild, varied set list with a particularly strong second set; the rare Big Railroad Blues appears early and Bertha is cleverly slipped in near the end."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Big Railroad Blues is highlighted as superb and was later used for Skull & Roses.",
+    "Phil": "Noted changing a battery during the first \"Sing Me Back Home\" while keeping the band tight; PA level seemed boosted to capture it.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sing Me Back Home": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bobby McGee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T04:02:20.799360+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-05.sbd.cantor.gmb.96269.flac16"
+}

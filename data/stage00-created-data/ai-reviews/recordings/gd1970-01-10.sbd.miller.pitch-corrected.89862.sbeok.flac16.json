@@ -1,0 +1,39 @@
+{
+  "summary": "Five‑star rating praising the intact Good Lovin' track; recording source and quality not mentioned.",
+  "review": "The reviewer awards five stars, mainly because the \"Good Lovin'\" performance is left whole rather than being broken into separate files. They also remark on a common practice from later‑era shows of treating Mickey Hart’s drum solo as its own track, but give no specific feedback on the audio fidelity or mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "A single five‑star review highlights a strong show element (full Good Lovin') and raises no recording complaints, resulting in a high rating but limited data lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix balance, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer only mentions the desire to keep Good Lovin' unedited and notes drum‑solo track handling; no broader set‑list comments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Reviewer references Mickey Hart’s drum solo being isolated as a separate track on later shows."
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T14:32:38.179688+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-01-10.sbd.miller.pitch-corrected.89862.sbeok.flac16"
+}

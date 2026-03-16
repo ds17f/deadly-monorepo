@@ -1,0 +1,67 @@
+{
+  "summary": "Soundboard source with occasional speed/pitch quirks captures a solid Fillmore East set highlighted by Duane Allman's guest lead on Sugar Magnolia and standout Dark Star, Hard to Handle and Mama Tried.",
+  "review": "The Miller sound‑board tape is the most complete version of this April ’71 Fillmore run, though it suffers from occasional speed wavering, channel swaps and tape‑flip gaps. Musically the show delivers strong moments – a smoking Dark Star, an inspired Hard to Handle, Duane Allman’s soaring lead on Sugar Magnolia and a memorable Mama Tried – but many fans consider it a step below the surrounding nights.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average of reviewer stars (4.25) weighted toward strong musical performance; recording issues noted but not fatal, yielding a solid 4‑star overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Complete uncut SBD, but exhibits speed/pitch wavering, occasional channel swaps, tape‑flip gaps and missing AUD patches; still the best available source for this show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard to Handle",
+      "Dark Star",
+      "Mama Tried",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second of five Fillmore East shows; Duane Allman sits in for the first three second‑set numbers, giving the set a special boost. Overall solid but many fans rank other nights higher."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil's bass is noted as prominent on the Dawk Staw jam, contributing to its quartet feel.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dawk Staw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T05:39:57.548292+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-26.sbd.miller.105814.flac16"
+}

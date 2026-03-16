@@ -1,0 +1,51 @@
+{
+  "summary": "A solid soundboard capture with nice tone and standout China>Rider and Scarlet>Fire sequences, though one listener notes some tape whine.",
+  "review": "The recording is generally praised for its clear sound and Willy's good work on the tapes, delivering a strong performance that includes a tasty Friend of the Devil and a snappy China Cat Sunflower > I Know You Rider transition followed by a fiery Scarlet Begonias > Fire on the Mountain. A minority of listeners complain about tape whine, giving the technical side a mixed rating.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is positively described (packed first set, solid second set) while recording quality receives both praise and criticism; the weighted average yields a mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note a nice, clear sound and good tape work by Willy, but one reviewer mentions noticeable whine/tape hiss."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil",
+      "China Cat Sunflower > I Know You Rider",
+      "Scarlet Begonias > Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as packed with goodies, second set paced well with a snappy opening and strong transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for getting into Friend of the Devil and delivering great tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:17:20.950665+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-09.sbd.willy.7827.sbeok.shnf"
+}

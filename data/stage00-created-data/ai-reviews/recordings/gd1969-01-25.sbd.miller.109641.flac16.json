@@ -1,0 +1,97 @@
+{
+  "summary": "Good‑quality soundboard capture of a classic early‑69 show with standout The Eleven, Lovelight and Caution, but mixed mix issues and a weaker second set.",
+  "review": "The recording is a solid soundboard source that sounds surprisingly clear for its age, though the organ sits high in the mix and vocals are often buried. Musically the first set shines – The Eleven, Lovelight and Caution receive frequent praise – while the second half feels like a rehearsal run‑through with Dupree’s Diamond Blues and Doin’ That Rag falling short of their later brilliance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Many reviewers give 4‑star ratings, highlighting strong performances on several key songs while noting consistent mix problems and an uneven second set; the weighted average of show (≈3.8) and recording quality (≈3.6) yields a rating around 3.7."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Levels are off at the start, organ (TC) is high in the mix and often overpowers other instruments; vocal mics are weak or inaudible on The Eleven and parts of Lovelight. Despite these quirks the overall balance is decent for a 41‑year‑old tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Eleven",
+      "Lovelight",
+      "Caution",
+      "Feedback"
+    ],
+    "poor_songs": [
+      "Dark Star (audio problems)",
+      "Alligator (short, unfocused)",
+      "Dupree's Diamond Blues (weak rendition)",
+      "Doin' That Rag (weak rendition)"
+    ],
+    "setlist_flow": "First set follows the classic early‑69 template (Dark Star → St. Stephen → The Eleven → Lovelight) and is praised for its energy; the second set feels more like a warm‑up, with several songs still being worked out and overall less cohesion."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work remains solid throughout, though his vocals are sometimes buried by the mix.",
+    "Phil": "Phil’s bass shines, especially during the Lovelight section.",
+    "Bob": "",
+    "Keys": "Tom Constanten is prominently featured – many love his organ runs, but others find the high‑mix level distracting.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Doin' That Rag": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Alligator": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Lovelight": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Caution": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Feedback": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "And We Bid You Good Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T10:39:55.444201+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-01-25.sbd.miller.109641.flac16"
+}

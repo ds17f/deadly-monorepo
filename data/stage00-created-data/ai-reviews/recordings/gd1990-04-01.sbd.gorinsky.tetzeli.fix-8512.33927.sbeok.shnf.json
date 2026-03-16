@@ -1,0 +1,45 @@
+{
+  "summary": "Recording source unknown but listeners praise a sweet Truckin' and a standout It’s All Over Now Baby Blue.",
+  "review": "Both reviewers gave high marks, highlighting the sweet rendition of Truckin' and calling It’s All Over Now Baby Blue their new favorite. No specific comments were made about the tape quality or band members, so the recording appears acceptable but uncharacterized.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Both reviews are very positive (4‑ and 5‑star) and mention two standout songs, but there is no information on recording source or technical quality, limiting confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not comment on soundboard vs. audience, clarity, or mix; no issues were reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "It’s All Over Now Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Not enough detail in reviews to assess overall set flow or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It’s All Over Now Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T06:08:58.698517+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-04-01.sbd.gorinsky.tetzeli.fix-8512.33927.sbeok.shnf"
+}

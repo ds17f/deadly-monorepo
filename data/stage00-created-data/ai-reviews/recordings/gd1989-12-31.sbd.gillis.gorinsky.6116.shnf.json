@@ -1,0 +1,39 @@
+{
+  "summary": "Substandard, uninspired performance despite a Dark Star appearance; recording quality not addressed",
+  "review": "The lone reviewer finds the show lackluster and uninspired, even though Dark Star is on the setlist. No comments are made about the audio source or its fidelity, leaving the recording quality unclear.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.1,
+    "confidence": "low",
+    "rationale": "Only one low‑star (2) review; negative sentiment on the performance and no information on recording quality results in a rating just above the reviewer’s score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewers mentioned soundboard, audience, or any audio characteristics."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Dark Star"
+    ],
+    "setlist_flow": "Reviewer describes the overall show as substandard and uninspired; no positive flow comments provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T02:49:10.350073+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-31.sbd.gillis.gorinsky.6116.shnf"
+}

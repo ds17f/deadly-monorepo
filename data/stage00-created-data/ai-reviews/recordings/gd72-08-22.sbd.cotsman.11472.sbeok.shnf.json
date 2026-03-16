@@ -1,0 +1,63 @@
+{
+  "summary": "Soundboard capture of a fiery ’70s set that smokes from start to finish, driven by an explosive Other One and a scorching GDTRFB solo.",
+  "review": "The show is consistently praised for its high‑energy second set, with The Other One hailed as a “sonic assassin” bass showcase and the GDTRFB solo described as raw, hot and goose‑bump inducing. The soundboard source is generally clear, though a few listeners note that the mix improves after about eight minutes and the final NFA fades out early.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All seven reviews are overwhelmingly positive (average 4.9 stars) and focus on stellar musical moments; recording comments note only minor mix quirks, resulting in a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall clear soundboard capture; mix gets noticeably better after ~8 min, last NFA cuts out early but does not detract from overall enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Going Down the Road Feeling Bad",
+      "Truckin'",
+      "Stella Blue",
+      "Tennessee Jed"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the concert as smoking from start to finish, with a particularly powerful second set that builds momentum and maintains high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "His GDTRFB solo is called “exquisite & raw” and “goes berserk”, delivering goose‑bumps; even when he forgets lyrics on Stella Blue his playing remains strong.",
+    "Phil": "Praised as a “true sonic‑assassin” with a nonstop, destructive bass solo during The Other One that drives the jam to epic heights.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Going Down the Road Feeling Bad": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T16:22:23.547888+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-08-22.sbd.cotsman.11472.sbeok.shnf"
+}

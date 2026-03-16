@@ -1,0 +1,87 @@
+{
+  "summary": "Excellent soundboard recording of a tight show with a smoking Shakedown > Greatest Story transition, massive He's Gone jam and standout Satisfaction and Truckin'.",
+  "review": "The Miller‑sourced SBD captures the band in fine form – Jerry’s guitar is loud and clear, Brent’s keyboards shine, and the second set flows beautifully from Shakedown Street into The Greatest Story Ever Told, through a monster He's Gone that rolls straight into Drums and an energetic Truckin'.  Recording quality is crisp and well‑balanced, making the standout moments (He's Gone, Satisfaction, Candyman, Althea, Space) shine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4–5 stars praising both performance and soundboard clarity; only a few mixed/low scores appear, so the combined show (70%) + recording (30%) rating is strong."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Well‑mixed SBD with crisp clarity, prominent Brent keyboards, loud Jerry guitar, no noted drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Shakedown Street",
+      "The Greatest Story Ever Told",
+      "Satisfaction",
+      "Truckin'",
+      "Candyman",
+      "Althea",
+      "Space",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is praised for its seamless flow – Shakedown > Greatest Story transition, a big He's Gone jam leading into Drums and a high‑energy Truckin', with Space weaving back into the mix."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently noted as loud, clear and nailing his ballads; guitar tone praised.",
+    "Phil": "",
+    "Bob": "Vocal contributions highlighted (whistle on Bobby) and mentioned in vocal lineup.",
+    "Keys": "Brent Mydland’s keyboards are prominent throughout the mix, with several reviewers calling out his presence.",
+    "Drums": "The Drums segment is praised for showcasing classic improvisational space."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Satisfaction": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:21:55.694185+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-11-29.sbd.miller.108844.flac16"
+}

@@ -1,0 +1,56 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy Bruce Hornsby debut night, highlighted by stellar performances of Samson and Eyes of the World with a tasty Dark Star tease.",
+  "review": "The recording is a clean, well‑balanced soundboard tape that lets the band’s renewed focus shine through Bruce Hornsby’s first show of the year. Fans rave about the powerful first set and an especially inspired second set – Samson, Eyes of the World and a tantalizing Dark Star tease are singled out as standouts. Despite a rumored power hiccup, the performance flows beautifully and the mix preserves every instrument with clarity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 5) and enthusiastic comments about both the musical performance and the clear soundboard source indicate an outstanding show with excellent recording quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Balanced mix, crisp instrument separation, captures Bruce’s keyboards and Jerry’s guitar tease clearly; no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson",
+      "Eyes of the World",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High energy throughout, first set solid and well‑played, second set described as powerful and cohesive despite a possible power outage; ties nicely into the following night’s show."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his Dark Star tease and obvious excitement playing with Bruce.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby’s debut is highlighted as a key factor that brought focus and energy to the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T17:37:44.441336+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-03-31.sbd.miller.120029.flac16"
+}

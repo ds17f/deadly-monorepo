@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a tight ’81 show highlighted by Bird Song, Cassidy and a superb Let It Grow performance.",
+  "review": "The Miller‑sourced soundboard delivers crystal‑clear, tightly balanced audio that lets the band’s chemistry shine. Reviewers rave about the second set energy, especially the brisk Bird Song, soaring Cassidy, a standout Let It Grow and a memorable Wharf Rat outro jam, while noting superb drum work and Jerry Garcia’s clean guitar tone.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) paired with repeated praise for both performance and recording quality; only one outlier low rating does not outweigh the overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean, tight mix with all instruments well balanced; Miller’s mastering preserves clarity and dynamics, no significant drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Cassidy",
+      "Let It Grow",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly, with a particularly strong second‑set finish; the band feels tight throughout and delivers an inspired ’81 energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone is described as clean, tight and a highlight of the performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drums receive strong praise for being very good and driving the ’81 energy."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:26:11.455010+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-11-30.sbd.miller.108843.flac16"
+}

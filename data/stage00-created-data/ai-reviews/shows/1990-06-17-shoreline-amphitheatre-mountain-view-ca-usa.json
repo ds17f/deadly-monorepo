@@ -1,0 +1,77 @@
+{
+  "summary": "Strong Shakedown Street, soaring Stella Blue and tight jams",
+  "blurb": "The show features a burning Shakedown Street that stretches into a fluid Bird Song, followed by an epic Playing In The Band > Eyes Of The World segue and an uplifting Stella Blue. Jerry’s tone and solos are repeatedly praised, while Brent adds bright keyboard textures throughout. Overall the performance is energetic with solid set flow.",
+  "review": "June 17, 1990 at Shoreline Amphitheatre captured a summer‑night Dead that was both relaxed and incendiary. The first set opened with a smoky, evolving Shakedown Street that segued into a crisp Little Red Rooster and a heartfelt Bird Song before closing on The Promised Land. In the second set the band kicked off with a rollicking Iko Iko and Picasso Moon, then launched into a powerful Playing In The Band > Eyes Of The World jam that built momentum after the drums finally clicked. Brent Mydland’s keyboards shimmered—especially on Iko Iko and during the soaring space passages—and Jerry Garcia delivered “perfect guitar tone” and an ecstatic final solo on Stella Blue that left the crowd buzzing. The set closed with a soulful Turn On Your Lovelight and a warm encore of The Weight, making this a memorable, high‑energy Shoreline outing.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 26,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Four recordings are explicitly positive, praising standout songs (Shakedown Street, Bird Song, Playing In The Band > Eyes Of The World, Stella Blue) and Jerry’s tone plus Brent’s keyboards; two recordings are mixed but still note strong moments. Consistent acclaim across multiple sources warrants a solid positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.2 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd90-06-17.sbd.ladner.10062.sbeok.shnf",
+    "reason": "Decent soundboard clarity captures the full set with good balance and no major dropouts, making it the most reliable listening source."
+  },
+  "key_highlights": [
+    "Smoking Shakedown Street that evolves over many minutes",
+    "Epic Playing In The Band > Eyes Of The World jam",
+    "Soaring Stella Blue with an emotional solo from Jerry",
+    "Brent Mydland’s bright keyboard textures, especially on Iko Iko"
+  ],
+  "song_highlights": [
+    "Shakedown Street",
+    "Bird Song",
+    "Playing In The Band",
+    "Eyes Of The World",
+    "Stella Blue",
+    "Iko Iko",
+    "I Will Take You Home",
+    "The Weight"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia is praised for perfect tone, emotional solos and an ecstatic final solo on Stella Blue; his playing is described as “on fire” throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Brent’s keyboards are highlighted as bright, spacy and even vocal on Iko Iko, providing a “threshold of the forever” texture that lifts the jams.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-17T08:06:21.404808+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Shakedown Street",
+      "Little Red Rooster"
+    ],
+    [
+      "Bird Song",
+      "The Promised Land"
+    ],
+    [
+      "Playing In The Band",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "I Will Take You Home",
+      "I Need A Miracle",
+      "Stella Blue",
+      "Throwing Stones",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Iko Iko"
+    ],
+    [
+      "The Weight"
+    ]
+  ]
+}

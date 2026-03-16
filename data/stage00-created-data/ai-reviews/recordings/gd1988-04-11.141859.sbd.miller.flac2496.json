@@ -1,0 +1,31 @@
+{
+  "summary": "Soundboard recording with imbalanced mix and a shaky, loosely cohesive performance",
+  "review": "The show is described as shaky with moments of good playing but overall lacking cohesion, while the soundboard source suffers from an imbalanced mix that detracts from clarity. Listeners should expect an uneven experience both musically and technically.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.7,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review notes both recording issues and a mediocre performance; the weighted average of show (≈2.8) and recording (≈2.5) yields a low‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Imbalanced mix; soundboard capture is uneven, leading to less clarity and consistency across the set."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Performance described as lacking cohesion with an overall shaky feel despite occasional good playing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T08:33:17.307854+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-11.141859.sbd.miller.flac2496"
+}

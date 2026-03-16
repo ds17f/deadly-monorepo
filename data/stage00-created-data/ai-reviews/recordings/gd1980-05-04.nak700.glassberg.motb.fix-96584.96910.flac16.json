@@ -1,0 +1,52 @@
+{
+  "summary": "Good audience recording that captures a strong show highlighted by an excellent Mississippi Half‑Step → Franklin’s Tower sequence despite some vocal roughness.",
+  "review": "Both reviewers praise the jam quality, especially the opening Mississippi Half‑Step into Franklin’s Tower and the scorching first half of the second set. The audience (Aud) source is described as crisp and well‑balanced, though Jerry’s vocals on Half‑Step are noted as a bit off‑key, which can be softened with reverb.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two detailed 4‑star reviews highlight strong musical moments and generally good sound quality; minor vocal issues keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience recording is praised for crispness, definition and a pleasant balance; reverb can be applied to smooth out Jerry’s vocal cracks, but overall the mix holds together with minimal boom."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [
+      "Mississippi Half-Step"
+    ],
+    "setlist_flow": "Opener (Mississippi → Franklin’s) is called a great combo, and the first half of the second set is described as a scorcher, giving the concert strong momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals on Half‑Step are noticeably strained, but guitar work remains solid; reverb can improve his vocal presence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T22:30:46.511976+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-04.nak700.glassberg.motb.fix-96584.96910.flac16"
+}

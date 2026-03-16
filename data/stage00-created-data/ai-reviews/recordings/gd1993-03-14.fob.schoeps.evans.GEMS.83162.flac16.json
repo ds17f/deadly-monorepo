@@ -1,0 +1,62 @@
+{
+  "summary": "Audience recording that’s decent despite some muffled acoustics and a high‑bass mix, highlighted by a powerful Stella Blue and solid late‑era performances.",
+  "review": "The tape captures a solid late‑era Dead show played in a snowstorm, with fans pointing out standout moments like Stella Blue, Brown Eyed Women, Cold Rain & Snow and Terrapin Station. The audience recording is generally good but a few reviewers note muffled acoustics and an overly prominent Phil bass in the remastered source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑star ratings praising the performance and deeming the recording listenable, with only minor technical complaints; overall weighted score falls in the good range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear audience capture, though some note muffled acoustics and an unusually high Phil bass level in the remastered mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Brown Eyed Women",
+      "Cold Rain and Snow",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid, late‑era set that kept momentum despite harsh weather; no major missteps but lacks the fireworks of earlier peak periods."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s passion shines through, especially on Stella Blue.",
+    "Phil": "Bass is very prominent in this source—some love it, others find it overly high.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T10:21:30.288858+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-14.fob.schoeps.evans.GEMS.83162.flac16"
+}

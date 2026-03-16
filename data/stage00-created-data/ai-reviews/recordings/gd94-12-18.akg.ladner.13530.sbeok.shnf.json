@@ -1,0 +1,128 @@
+{
+  "summary": "Audience recording captures a high‑energy 1994 Los Angeles show with scorching Victim or the Crime, soaring Terrapin Station and many other standouts.",
+  "review": "The audience‑sourced tape is clear enough to enjoy the band's tight, upbeat playing, especially on Touch of Grey, Terrapin Station, Victim or the Crime and a fiery Baby Blue encore. Reviewers rave about Jerry’s vocal and guitar work, Phil’s snapping bass, Vince’s keyboards and the powerful drum attack, while noting only occasional minor listening‑quality quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the musical performance and the audience recording quality; standout songs are repeatedly highlighted, with only a few low‑star outliers."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience capture is clear and lively, preserving the show’s energy; some listeners note tolerable listening quality but no major dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "Greatest Story Ever Told",
+      "Walking Blues",
+      "Tom Thumb's Blues",
+      "El Paso",
+      "Loose Lucy",
+      "Let It Grow",
+      "Victim or the Crime",
+      "Crazy Fingers",
+      "Playin' in the Band",
+      "Terrapin Station",
+      "The Last Time",
+      "Attics of My Life",
+      "Baby Blue",
+      "Spanish Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a strong opening one‑two punch, seamless transitions and sustained high energy throughout both sets, culminating in an emotionally satisfying encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for solid vocals, crisp guitar tone, energetic solos and even trying out new picks; considered among his better late‑era performances.",
+    "Phil": "Noted for snapping bass strings with authority, smart bomb moments, and driving the Terrapin groove.",
+    "Bob": "Acoustic work on El Paso highlighted; harmonies praised and credited with sustaining Jerry’s performance in later years.",
+    "Keys": "Vince's keyboards contribute to space jams and add Mydland‑like textures; overall keyboard presence described as strong.",
+    "Drums": "Drummers receive high praise for powerful beats, varied cymbal work and a standout opening on Victim or the Crime."
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walking Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb's Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Victim or the Crime": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics of My Life": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T04:41:51.529727+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-12-18.akg.ladner.13530.sbeok.shnf"
+}

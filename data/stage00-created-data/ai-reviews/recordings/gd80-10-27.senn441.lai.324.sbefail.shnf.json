@@ -1,0 +1,86 @@
+{
+  "summary": "Bright, crisp audience recording of an iconic 1980 Radio City show – scorching Truckin' and Scarlet>Fire plus stellar acoustic Birdsong and Minglewood.",
+  "review": "The performance is widely praised for its solid first set, a superb acoustic segment (Birdsong, Minglewood Blues, Wharf Rat) and high‑energy electric numbers like Truckin', Scarlet > Fire and the Space > Warf Rat sequence. The Sennheiser‑441 audience tape captures the band with excellent clarity – bright, upfront and detailed – despite a bit of crowd bleed on the acoustic side.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer stars (average ~4.6), strong praise for both musical performance and recording clarity, with only minor comments about acoustic crowd noise."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Bright, up‑front mix with crisp highs and solid low end; Sennheiser 441 mics capture room ambience nicely. Slight crowd distraction on the acoustic set but overall very clear and dynamic."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Scarlet > Fire",
+      "Birdsong",
+      "Minglewood Blues",
+      "Wharf Rat",
+      "Space > Warf Rat",
+      "Peggy-O",
+      "Row Jimmy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as solid and comfortable; acoustic set praised for energy and clarity; electric sets deliver powerful Truckin' opener, a fire‑filled Scarlet > Fire, and a memorable Space > Warf Rat jam. Some note the second set is less exploratory but still high‑octane."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for powerful vocals and great guitar tone throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Birdsong": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space > Warf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Heaven Help the Fool": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T05:30:05.459026+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-27.senn441.lai.324.sbefail.shnf"
+}

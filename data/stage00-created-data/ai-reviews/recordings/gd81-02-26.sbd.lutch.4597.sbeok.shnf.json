@@ -1,0 +1,103 @@
+{
+  "summary": "Crisp soundboard recording with strong mid‑'80s energy – Bird Song, China > Rider and the massive He's Gone jam lead the show.",
+  "review": "The February 26 1981 Uptown Theater set captures a solid early‑’80s Dead run.  Reviewers rave about the soaring Bird Song, the fiery China > Rider transition and an expansive He's Gone jam, while noting a clean but bass‑light mix that can feel deceptive at times.  Overall the performance is energetic and well‑played, making it one of the better recordings from this three‑night stretch.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over 20 reviews give an average of ~4 ★, with consistent praise for musical highlights and generally good soundboard quality; only occasional complaints about low bass or piano tone."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers describe the mix as crisp, well‑balanced and “killer,” though several note a recessed low‑end (weak bass) and Brent’s piano tone sounding “toy‑like.”  The recording is clean but can feel deceptive because of those frequency issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "China > Rider",
+      "He's Gone",
+      "Rooster",
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set builds slowly, peaking with the long Bird Song and a solid China > Rider transition.  The second set sustains momentum with an epic He's Gone jam, strong Sam­son and a high‑energy finish featuring Truckin' → Black Peter → GDTRFB."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for adventurous improvisation, smoky solo on Samson and solid guitar tone; vocal performance noted as uneven by a few reviewers.",
+    "Phil": "Highlighted for heavy, bass‑driven lines (especially on Passenger) and a strong finish to Althea; one reviewer wished his bass were more audible.",
+    "Bob": "Vocals described as weak on this night, but no major instrumental criticism.",
+    "Keys": "Brent’s piano/keyboard tone draws mixed reactions – some call it “toy‑piano” and awful, others enjoy the quirky sound and his solo on Big River.",
+    "Drums": "Bill Kreutzmann’s drumming is generally praised as solid; a few note that after the drum break the set loses momentum."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "He's Gone": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Rooster": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T07:47:12.740388+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-02-26.sbd.lutch.4597.sbeok.shnf"
+}

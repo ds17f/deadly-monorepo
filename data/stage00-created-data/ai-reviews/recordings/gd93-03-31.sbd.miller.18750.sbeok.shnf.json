@@ -1,0 +1,57 @@
+{
+  "summary": "Fair soundboard capture hampered by a flange‑type vocal artifact, but the show delivers solid moments – Sugar Magnolia, a lazy River Road jam and an emotional Standing on the Moon – amid generally mixed performance energy.",
+  "review": "The recording is a soundboard source that suffers from an odd flange‑like effect on the vocals, making the mix only fair despite being listenable. Musically the concert swings between tight playing (notably Sugar Magnolia and the Playin’ Jam) and restrained, uninspired stretches that leave the setlist feeling uneven. Listeners who appreciate the occasional bright moments will find value, but the overall vibe is mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Eight reviews show a split between low (1‑3) and modestly high (4) ratings; most comment on sloppy or restrained playing and a noticeable vocal flange issue, yielding an overall mixed impression with fair recording quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers note a strange flange‑type/pitch‑shifty effect on the vocals and occasional muddiness; otherwise the mix is acceptable but not crystal clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia",
+      "Lazy River Road",
+      "Standing on the Moon",
+      "Playin' Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is described as sluggish and uninspired until \"Let It Grow,\" while the second set, though promising on paper, feels generally restrained; overall pacing is uneven with occasional high‑energy peaks."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is praised for clean picking, a wonderful country twang on Sugar Magnolia, and strong solos, but also criticized as uninspired, wan, or in 'bad shape' by some reviewers.",
+    "Phil": "Phil Lesh receives positive nods for multiple bass ‘bombs’ that add power to the performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T11:56:40.634056+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-31.sbd.miller.18750.sbeok.shnf"
+}

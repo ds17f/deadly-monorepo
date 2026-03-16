@@ -1,0 +1,78 @@
+{
+  "summary": "High‑energy 1978 show with a stellar second set (The Other One, Stella Blue, Mojo) captured on a mostly clear soundboard despite some hiss and cuts.",
+  "review": "Fans rave about the explosive second‑set sequence Space → Mojo → The Other One → Stella Blue and the tight playing throughout, especially Garcia’s ferocious peaks. The SBD source is generally clean, though a few reviewers note hiss, splices and a slight pitch issue. Overall the performance outweighs the minor technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Over 40 reviews overwhelmingly praise the musical performance (many 4‑5‑star ratings) while noting only modest recording imperfections; weighted average of show (≈4.8) and recording quality (≈3.9) yields ~4.5."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD with occasional hiss, a noticeable splice/cut on the middle of Stella Blue and a slight pitch‑high issue noted by one reviewer; overall balanced mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Stella Blue",
+      "Mojo",
+      "Bertha > Good Lovin'",
+      "Estimated"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second‑set flow is highlighted as a seamless ride from Space into Mojo, then the incendiary The Other One and a blissful Stella Blue; first set described as solid with strong Promised Land and good transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is repeatedly lauded – ferocious peaks on The Other One, soaring tone on Stella Blue, and overall ‘killer’ performance throughout.",
+    "Phil": "A few reviewers note Phil’s bass “burping” or wish for a stronger low end, but most describe his playing as tight and supportive.",
+    "Bob": "Weir’s slide work shines on Stagger Lee; his rhythm guitar and occasional vocals receive positive nods.",
+    "Keys": "",
+    "Drums": "Drumming is praised for solid grooves; one reviewer mentions a lengthy Hamza El Din drum solo and the “drumz” transitions that fuel the jams."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 12,
+      "negative_mentions": 1,
+      "total_mentions": 13
+    },
+    "Stella Blue": {
+      "positive_mentions": 14,
+      "negative_mentions": 0,
+      "total_mentions": 14
+    },
+    "Mojo": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Estimated": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Bertha > Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stagger Lee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Space": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-25T15:51:14.415140+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-10-21.sbd.popi.6100.sbeok.shnf"
+}

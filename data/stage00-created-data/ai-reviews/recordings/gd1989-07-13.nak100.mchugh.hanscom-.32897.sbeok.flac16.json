@@ -1,0 +1,81 @@
+{
+  "summary": "Good‑quality (unknown source) recording captures a rain‑soaked stadium show with standout performances of Looks Like Rain, Terrapin, The Other One and a surprising To Lay Me Down.",
+  "review": "The concert is remembered as a solid 1989 summer show with a powerful second set that builds through a superb Terrapin into a rainy, spacey The Other One, plus an unexpected but tasty To Lay Me Down. Reviewers praise the chest‑pounding bass, crisp organ work and Jerry’s vocal/guitar moments despite the downpour, and note the recording sounds better than comparable tapes from the same tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Three detailed 4‑star reviews highlight strong musical performance and decent sound quality; no major complaints, giving a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note chest‑pounding bass and good clarity despite heavy rain; one reviewer says it sounds better than other tapes from the tour, though no explicit board source is identified."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Terrapin",
+      "The Other One",
+      "To Lay Me Down",
+      "Cold Rain and Snow",
+      "Wharf Rat",
+      "Throwing Stones",
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as solid with some OK moments; second set praised for a steady build, Terrapin leading into The Other One amid rain ambience and a strong closing sequence of Rat, Stones and Good Lovin'."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised on Cold Rain and Snow where his vocal/guitar work is highlighted as clean and crunchy.",
+    "Phil": "Noted for teasing Dark Star during the pre‑Helilna warm‑up.",
+    "Bob": "",
+    "Keys": "Brent's organ described as 'killer' with broad, rich tones throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T21:14:38.853472+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-13.nak100.mchugh.hanscom-.32897.sbeok.flac16"
+}

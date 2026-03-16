@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy Hawaiian show with standout China Cat Sunflower, Black Peter and a phenomenal Lovelight.",
+  "review": "The recording is an SBD (Goodbear) that listeners describe as crisp, clear and well balanced. The performance is upbeat and tight – the band launches into a superb China Cat Sunflower, drives a dynamite Black Peter and delivers a soaring Love Light, with only a minor lyrical slip on Hard to Handle. Overall the vibe feels like a classic ’69‑style set played in a Hawaiian paradise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and praise both the musical performance and the soundboard quality; only one modest 3‑star review notes a small vocal slip, so the weighted average is strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners repeatedly note clear, crisp SBD sound with excellent balance; no major drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "Black Peter",
+      "Love Light"
+    ],
+    "poor_songs": [
+      "Hard to Handle"
+    ],
+    "setlist_flow": "High‑energy, ’69‑style set that feels tight and well‑paced; the band rides a strong groove throughout the Hawaiian shows."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead guitar is praised as “wailing” with great tone; his humorous intro before Dire Wolf is noted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen’s organ work is highlighted as top‑form, especially on China Cat Sunflower and Lovelight.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hard to Handle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T14:57:09.321480+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-01-23.sbd.goodbear.88.sbeok.shnf"
+}

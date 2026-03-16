@@ -1,0 +1,46 @@
+{
+  "summary": "Excellent soundboard mix captures the debut of “Mission In The Rain,” but the overall performance is middling with a meandering second set.",
+  "review": "The recording is praised for its great sound‑board mix, delivering clear and balanced audio. While the show features a notable debut of Garcia’s solo ballad “Mission In The Rain,” reviewers find the rest of the concert, especially the Help > Slip > Franklin’s sequence, to be lackluster and unfocused.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "The review rates the show a 3‑star average, noting strong recording quality but only moderate musical performance; with one detailed review confidence is medium."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it a “great SB mix,” indicating clear, well‑balanced sound with no noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mission In The Rain"
+    ],
+    "poor_songs": [
+      "Help > Slip > Franklin's"
+    ],
+    "setlist_flow": "First set described as more cohesive; second set feels slow and meandering, leading to an overall mediocre concert experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solo ballad “Mission In The Rain” highlighted as a favorite.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mission In The Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help > Slip > Franklin's": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T03:18:16.135344+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-04.153710.sbd.martin.smith.clugston.flac2496"
+}

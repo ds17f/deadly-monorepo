@@ -1,0 +1,87 @@
+{
+  "summary": "Crystal‑clear soundboard capture of the legendary July 3 1988 Oxford Plains show – soaring Bird Song, a smoking Hey Pocky Way and tight playing from the whole band.",
+  "review": "The recording is an excellent SBD source; reviewers rave about its crispness, deep bass extension and lack of the usual “canned” feel. The performance itself is remembered for the ultra‑light over Bird Song, a blistering Hey Pocky Way that launches a second set packed with Queen Jane, Touch of Grey, I Will Take You Home and an inspired jam flow. Minor quirks (a brief hiss on Sugaree, a loose Estimated) do not detract from the overall high‑energy, fan‑favorite show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive reviews (majority 5‑star) praise both musical performance and recording fidelity; only a handful of minor complaints keep the score just below perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear mix with strong bass extension; occasional brief hiss on Sugaree, slight bass ‘unruliness’ on some systems and one note of tinny pitch‑shift on a particular SBD copy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Hey Pocky Way",
+      "Queen Jane",
+      "Touch of Grey",
+      "I Will Take You Home",
+      "Eyes of the World"
+    ],
+    "poor_songs": [
+      "Estimated",
+      "Looks Like Rain"
+    ],
+    "setlist_flow": "A short, punchy first set leads into a powerhouse second set that opens with Hey Pocky Way, rides through tight jams (Touch, Eyes) and finishes with an emotional Dear Mr. Fantasy → Hey Jude finale; overall pacing is praised as energetic and well‑balanced."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as strong and excited (especially on Dear Mr. Fantasy); guitar tone noted as good, and he’s seen smiling at the glider during Bird Song.",
+    "Phil": "Bass repeatedly called ‘thundering’, with excellent extension and clean presence; some listeners note a heavy mix but generally love his playing.",
+    "Bob": "Bobby’s pink Telecaster/Modulus Pepto gets mixed mentions – praised for energy, occasional roughness on vocals and guitar level changes noted by tape‑makers.",
+    "Keys": "Brent Mydland dominates the praise: ‘big Brent night’, superb Hammond work on Walking Blues, standout piano solo in Eyes of the World, and driving Hey Pocky Way performance.",
+    "Drums": "Mickey & Bill (Rhythm Devils) get kudos for a tight pre‑drums/space segment and an energetic drum circle; one reviewer calls it ‘muscular’."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Hey Pocky Way": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Queen Jane": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Touch of Grey": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "I Will Take You Home": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Eyes of the World": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T11:22:28.609205+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-07-03.sbd.ststephen.3908.sbeok.shnf"
+}

@@ -1,0 +1,94 @@
+{
+  "summary": "Soundboard source needing pitch correction, but a decent show highlighted by a strong \"It's All Over Now\" and peaking drums.",
+  "review": "The recording is an upgraded soundboard (SBD) that runs fast and requires about –1.5% pitch adjustment, with Keith Hornsby sitting prominently in the mix. Musically the concert is uneven – the first set has a few standout moments like \"It's All Over Now\" while many numbers feel average or below, but the second set offers highlights such as a compelling Terrapin jam and energetic drums.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it rates the show around average (2½‑3 stars) and notes recording quirks, leading to a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Runs fast and needs –1.5% pitch correction; Hornsby is unusually heavy in the mix compared to Vince, but no major clarity issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "It's All Over Now",
+      "China Cat Sunflower",
+      "Terrapin Station (Playing in the Band > Terrapin)",
+      "Drums",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Wang Dang",
+      "Dire Wolf",
+      "Queen Jane",
+      "Althea",
+      "Last Time"
+    ],
+    "setlist_flow": "First set is a mixed bag with a few high points; second set starts unevenly but builds into a strong mid‑set Terrapin jam and lively drums before tapering off."
+  },
+  "band_member_comments": {
+    "Jerry": "Skips verses at times, leads a MIDI jam after the Terrapin segment, generally 'game' in places.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith Hornsby dominates the mix more than usual, becoming the focal point of many songs.",
+    "Drums": "Drums were peaking around this time, providing a high‑energy highlight."
+  },
+  "song_mentions": {
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station (Playing in the Band > Terrapin)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Last Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T04:29:27.853259+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-11.141717.sbd.cm.miller.flac1644"
+}

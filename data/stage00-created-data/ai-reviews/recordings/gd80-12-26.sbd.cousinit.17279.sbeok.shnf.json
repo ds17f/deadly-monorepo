@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording with a missing final five minutes makes listening poor, and the show is an average warm‑up set highlighted only by a strong 'To Lay Me Down' filler.",
+  "review": "The performance is a middling warm‑up gig that some fans find merely average; the only notable musical moment mentioned is an excellent version of \"To Lay Me Down\" that feels out of place. Technically the recording suffers from a significant cut at the end, prompting listeners to seek an audience source instead.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "medium",
+    "rationale": "Two low‑star reviews point out poor recording (missing last five minutes) and a mediocre show, while one moderate review notes a single standout song; weighted average yields a rating around 2.4 with medium confidence from three consistent comments."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Last five minutes of the track are missing, making the recording incomplete; no other specific sound quality comments were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "To Lay Me Down"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers found the placement of \"To Lay Me Down\" odd and suggest the overall set feels like a warm‑up with uneven flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T07:13:08.514498+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-12-26.sbd.cousinit.17279.sbeok.shnf"
+}

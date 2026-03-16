@@ -1,0 +1,76 @@
+{
+  "summary": "Good‑quality soundboard recording of a high‑energy ’85 show with standout “She Belongs To Me”, “Estimated Prophet” and “Satisfaction” despite some rough spots.",
+  "review": "Fans rave about the electric second set – “She Belongs To Me”, “Estimated Prophet”, “Sugar Mag” and “Satisfaction” are repeatedly highlighted as fireworks, while Phil’s bass solo in Jack Straw gets special praise. The tape is a soundboard source that sounds solid overall but suffers occasional channel fades and a few bad‑eyes moments, giving it a good but not flawless listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Strong musical performance (many standout songs, enthusiastic fan comments) weighted at 70% and decent soundboard recording with minor glitches weighted at 30% yield an overall four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced, but reviewers note occasional tape cuts, channel fades and a few “bad eyes” moments that affect specific sections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "She Belongs To Me",
+      "Estimated Prophet",
+      "Sugar Magnolia",
+      "Satisfaction",
+      "Iko Iko"
+    ],
+    "poor_songs": [
+      "Revolution",
+      "Eyes of the World"
+    ],
+    "setlist_flow": "First set is mixed – fun start but some rough numbers (e.g., Revolution, Eyes). The second set shines with tight jams and crowd‑pleasing moments; overall energy builds to a memorable encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals slip on “Revolution” (“butchers the words”), but his guitar work on “She Belongs To Me” is praised as one of his best.",
+    "Phil": "Tight, funky playing on “Estimated Prophet”, leads the band in a standout bass solo during “Jack Straw”.",
+    "Bob": "\"Atomic Bobby\" antics highlighted – skipping across stage, wild crowd interaction during “Satisfaction”.",
+    "Keys": "Brent’s limited appearance (only a few bars of “Baby What You Want Me To Do”) noted; otherwise keyboards not a focus.",
+    "Drums": "Interplay between the two drummers noted as “tight” on the jam after “Estimated Prophet”."
+  },
+  "song_mentions": {
+    "She Belongs To Me": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Revolution": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Satisfaction": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:07:50.883872+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-11-08.sbd.clugston.5301.sbeok.shnf"
+}

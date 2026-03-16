@@ -1,0 +1,74 @@
+{
+  "summary": "High‑energy 1974 Roosevelt Stadium show captured on a surprisingly clear audience tape – stellar Eyes of the World and a 30‑minute Playing > Scarlet > Playing jam.",
+  "review": "The performance is consistently praised as one of the best from ’74, with Jerry’s soaring solos, Phil’s relentless bass, and a marathon Playing‑Scarlet‑Playing sequence that many fans cite as a highlight.  Although the source is an audience recording, listeners note it sounds remarkably clear for its age – hiss and pop are present but the mix lets you hear every instrument and the crowd ambience, making the tape both historically valuable and enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews (≈80 %) are 4‑5 stars and extol the musical performance; recording quality, while noted as vintage audience tape, is repeatedly described as “good”, “clear” and “better than many SBDs”.  The weighted combination yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Vintage audience tape with noticeable hiss, occasional pops and phasing, but surprisingly clear separation of instruments; crowd is audible without drowning the music.  Some reviewers note a low‑frequency buzz and occasional mix quirks (Bob’s guitar lower), yet overall balance is praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Playing > Scarlet > Playing",
+      "Uncle John's Band",
+      "Bertha",
+      "The Other One",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe a tight, energetic first set that builds into an epic second‑set jam.  The iconic Playin‑Scarlet‑Playin stretch dominates the middle, while the later songs (Bertha, Sugar Magnolia, etc.) keep the momentum high and the crowd engaged."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for blistering guitar solos, powerful vocals and extra energy (“you guys are too much”).",
+    "Phil": "His bass is highlighted as crystal‑clear, relentless and a driving force throughout the show.",
+    "Bob": "Generally fine, though a few reviewers note his guitar sits low in the mix on certain passages.",
+    "Keys": "Keyboard presence (Keith) is noted as solid and contributes to the jam sections.",
+    "Drums": "The drumming is described as tight, driving and well‑balanced; no major complaints."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Playing > Scarlet > Playing": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T23:57:08.612017+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-08-06.merin.weiner.gdADT.5914.sbefail.shnf"
+}

@@ -1,0 +1,76 @@
+{
+  "summary": "Good audience recording of a magical night highlighted by Ripple and strong performances of Foolish Heart, Victim and Box of Rain.",
+  "review": "The show is remembered fondly for its emotional Ripple encore and a laid‑back set that lets songs like Foolish Heart, Victim, Bird Song and Dew shine.  The audience tape, produced by Charlie Miller, offers full‑bodied sound with decent reverb, though some listeners note occasional mix oddities and a few muddy spots.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical moments (especially Ripple and the mid‑set jams) while noting variable but generally decent audio quality, yielding a solid above‑average combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Full sound with good reverb; described as the best of the audience versions by some, but others call it \"so‑so\" and mention a weird mix or occasional muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ripple",
+      "Foolish Heart",
+      "Victim",
+      "Box of Rain",
+      "Bird Song",
+      "Dew"
+    ],
+    "poor_songs": [
+      "Franklin's Tower"
+    ],
+    "setlist_flow": "A mellow, laid‑back set that builds into an emotional Ripple encore; listeners recall a long intermission followed by a unique, almost otherworldly second half."
+  },
+  "band_member_comments": {
+    "Jerry": "Healy’s rear‑speaker effects and occasional vocal phasing were noted, but no specific guitar praise.",
+    "Phil": "",
+    "Bob": "Bob was cited for switching to Big River after forgetting the opening verse of Franklin's Tower.",
+    "Keys": "Keyboardist (Healy) sent unusual sounds through rear speakers and added phasing effects that some found intrusive.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ripple": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Box of Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Foolish Heart": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Victim": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T12:57:53.205317+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-03.aud.miller.5913.sbeok.shnf"
+}

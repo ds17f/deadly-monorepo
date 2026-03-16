@@ -1,0 +1,95 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a fire‑blazing 1978 show – Jerry’s guitar wails, U.S. Blues and Truckin’ roar, with only early‑set vocal dropouts.",
+  "review": "The recording is a well‑remastered soundboard (sbd) that sounds crisp, loud and balanced, though the first two songs suffer from missing vocals and a few glitches at the start. Musically the concert is legendary – the second set is described as “unparalleled,” with scorching Truckin’, an incendiary U.S. Blues, a monster New Minglewood Blues, a ferocious Lazy Lightning > Supplication, and a flawless Row Jimmy. Jerry’s playing (wind‑mills, screaming solos) and the dual‑drum fireworks are repeatedly praised, while the only real blemishes are vocal fade‑outs on Jack Straw/Dire Wolf and an overly long Drum solo.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive comments about performance (70% weight) and a high‑quality soundboard with only minor technical hiccups (30% weight) lead to a near‑excellent overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Remastered sbd sounds clear, loud and well balanced. Early‑set glitches: vocal drop‑outs on the first two tracks, a few click‑pop artifacts, but overall crisp with no boom or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "U.S. Blues",
+      "New Minglewood Blues",
+      "Row Jimmy",
+      "Lazy Lightning > Supplication",
+      "Bertha",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [
+      "Jack Straw (vocals missing)",
+      "Dire Wolf (vocals fade out)",
+      "Truckin' (sloppy start in some reviews)",
+      "Drums (too long for a few listeners)"
+    ],
+    "setlist_flow": "First set is tight and energetic, building momentum into an explosive second set. The show maintains high intensity throughout; only the early vocal issues slightly disrupt the flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly called \"on fire,\" with superb guitar tone, wind‑mill theatrics, screaming U.S. Blues solo and a relentless improvisational drive. Vocals missing on opening songs due to mix problems.",
+    "Phil": "Mentioned only in passing (lights‑off protest) and for solid bass foundation; no specific performance critique.",
+    "Bob": "General praise for vocal contributions (“great singing by all”), but no detailed comments on his rhythm work.",
+    "Keys": "Keyboards described as “great” early on, yet several reviewers note Keith’s piano disappearing during jams (e.g., Estimated Prophet).",
+    "Drums": "Bill Kreutzmann and Mickey Hart receive high marks for heavy beats and dual‑drum excitement; a few listeners felt the Drum solo ran too long."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 3,
+      "total_mentions": 8
+    },
+    "U.S. Blues": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Row Jimmy": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Lazy Lightning > Supplication": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Bertha": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T10:25:36.463037+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-04-12.sbd.ashley-bertha.14085.sbeok.shnf"
+}

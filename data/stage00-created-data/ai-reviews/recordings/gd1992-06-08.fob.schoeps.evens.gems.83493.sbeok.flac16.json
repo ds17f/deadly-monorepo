@@ -1,0 +1,39 @@
+{
+  "summary": "Good audience-sourced recording with a nice‑sounding crowd and a memorable Dark Star snippet",
+  "review": "The lone review praises the audience tape for its pleasant sound, noting that the second verse of “Dark Star” feels reminiscent of the later Star Lake shows. While no detailed performance critique is offered, the nostalgic tone and 4‑star rating suggest an overall positive impression of both the show’s vibe and the recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Only one review (4 stars) provides a generally positive view; recording quality is described as nice, and the show receives nostalgic praise but lacks detailed performance analysis."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the audience tape as \"nice sounding\" with no noted flaws or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewer focuses on nostalgic feel rather than pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T06:39:31.037806+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-08.fob.schoeps.evens.gems.83493.sbeok.flac16"
+}

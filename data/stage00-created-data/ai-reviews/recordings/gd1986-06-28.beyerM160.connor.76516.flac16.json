@@ -1,0 +1,65 @@
+{
+  "summary": "Good front‑of‑house audience recording that captures a bright, energetic show highlighted by Ramble On Rose, China Doll and a killer Saturday Night > Baby Blue encore.",
+  "review": "The FOB audience tape is clear enough to enjoy the band’s lively midsummer performance – Jerry’s lead shines on Looks Like Rain and a lightning‑fast Touch of Grey, while Ramble On Rose, China Doll and both encore numbers stand out. The second set meanders with some space jams that feel less cohesive and a post‑China Doll pacing that a few fans found too frantic. Overall the show is enjoyable and the recording is solid, though not flawless.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Strong musical moments and generally good front‑of‑house audio give a solid rating; mixed comments about pacing and cohesion keep the score from higher tiers."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "FOB audience mix captures guitar, vocals and ambience clearly; occasional muddiness noted around fast transitions but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramble On Rose",
+      "China Doll",
+      "Saturday Night > Baby Blue",
+      "Touch of Grey",
+      "Looks Like Rain"
+    ],
+    "poor_songs": [
+      "Post‑China Doll fast‑paced tunes (perceived as too hurried)"
+    ],
+    "setlist_flow": "First set bursts with bright energy; second set offers space jams that feel uneven and a rapid post‑China Doll segment, but the encore delivers a satisfying close."
+  },
+  "band_member_comments": {
+    "Jerry": "Lead guitar shines on Looks Like Rain and the ultra‑fast Touch of Grey; overall tone praised.",
+    "Phil": "",
+    "Bob": "Vocals/rap noted as strong during the Looks Like Rain recovery.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ramble On Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saturday Night > Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:35:44.516153+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-06-28.beyerM160.connor.76516.flac16"
+}

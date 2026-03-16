@@ -1,0 +1,94 @@
+{
+  "summary": "Reasonably good audience recording captures a solid show highlighted by Crazy Fingers, Estimated Prophet and an emotional Stella Blue.",
+  "review": "The tape is an audience recording that sounds clear enough for the era, with Bob Weir unusually forward in the mix and Jerry Garcia’s guitar well‑defined. The performance shines on the second set – Crazy Fingers, Estimated Prophet, Hand Jive, Aiko and a moving Stella Blue stand out, though the Midnight Hour feels a bit ragged.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "Only one moderate review; the show receives several strong song praises (≈3.5/5) while the audience recording is decent but not pristine (≈3/5), yielding a weighted average around 3.4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reasonably good audience capture; Bob Weir is prominent in the mix, Jerry's guitar clear; overall quieter than previous night but some raggedness on Midnight Hour."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big River",
+      "Sugaree",
+      "Jack Straw",
+      "Crazy Fingers",
+      "Estimated Prophet",
+      "Hand Jive",
+      "Aiko",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Midnight Hour"
+    ],
+    "setlist_flow": "First set builds nicely to a strong Jack Straw closer; second set delivers fresh material (Box opener) and several high‑energy jams, making it the recommended half for most listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone clear and fine; no need to hide his playing.",
+    "Phil": "",
+    "Bob": "Way out front in the mix; great work on Crazy Fingers, Estimated Prophet (screams at end), and overall strong presence.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hand Jive": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Aiko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Midnight Hour": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:48:50.604624+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-12-16.nakcm304.beckham.suraci.sbeok.80849.flac16"
+}

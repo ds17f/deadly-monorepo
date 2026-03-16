@@ -1,0 +1,93 @@
+{
+  "summary": "High‑quality soundboard capture of a jam‑heavy June 1970 Fillmore West set, highlighted by a smoking Dancing Jam, rare New Orleans and an epic Alligator‑to‑Lovelight sequence.",
+  "review": "The Miller SBD transfer delivers clear, well‑balanced audio that lets the band’s interplay shine—especially Jerry’s soaring guitar on the post‑Alligator jam and the thunderous drum work. Musically the show is a showcase of 1970 peak Dead: scorching Dancing Jam, a rare New Orleans, a monster Alligator‑into‑Lovelight suite and an unforgettable Attics of My Life, with only the closing Uncle John’s Band stumbling due to a dropped guitar mix. Overall the performance is praised as one of the era’s finest despite minor recording quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (average ~3.9) with strong positive language about both the music and sound quality; only a few isolated criticisms, giving a solid combined show‑and‑recording rating in the 4‑star range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑balanced SBD transfer with strong instrument separation; a few reviewers note it isn’t as razor‑sharp as the legendary 5/15 or 9/19 tapes and one mentions minor drop‑outs, but overall the sound is praised as excellent for a 1970 archive source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancing Jam",
+      "New Orleans",
+      "Alligator (post‑Alligator jam)",
+      "Lovelight > Not Fade Away > Lovelight",
+      "Attics of My Life",
+      "Darkness Darkness Jam",
+      "Candyman",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [
+      "Uncle John's Band"
+    ],
+    "setlist_flow": "The second set ignites after Alligator and rolls into a marathon jam that morphs through Lovelight, Not Fade Away and back to Lovelight, creating an hour‑plus continuous flow. The first half is solid but the real fire starts with the post‑Alligator improvisations, making the overall pacing exhilarating despite a weaker UJB closer."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring guitar on the Alligator jam and tight interplay with Bob; noted that his guitar drops out of the mix during the Uncle John's Band outro.",
+    "Phil": "",
+    "Bob": "His rhythmic support and interplay with Jerry after the Alligator drums are highlighted as a key strength.",
+    "Keys": "",
+    "Drums": "Drummers receive high praise for locked‑in, powerful playing throughout the jams; a criticism is noted for Billy's off‑beat feel on the Uncle John's Band finale."
+  },
+  "song_mentions": {
+    "Dancing Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "New Orleans": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Alligator": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Lovelight > Not Fade Away > Lovelight": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Attics of My Life": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Darkness Darkness Jam": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Candyman": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Next Time You See Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T20:50:19.084992+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-06-06.sbd.miller.86951.sbeok.flac16"
+}

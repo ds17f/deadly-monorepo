@@ -1,0 +1,86 @@
+{
+  "summary": "Murky audience tape of an okay show; second‑set jams into Fade Away and the Not Fade Away → Stella Blue flow stand out, but thin sound limits enjoyment.",
+  "review": "The performance is respectable with a nice jam into Fade Away and a pretty transition from Not Fade Away into Stella Blue, and the second set is described as a dream by one listener. However, several reviewers note the recording is cloudy, thin and lacking high‑end detail, making many moments hard to hear. Overall the show is decent but the audio quality keeps it from being a must‑listen.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Show quality is generally praised (good song selection, strong jams) while recording quality is consistently described as murky and thin; the weighted average yields a modest rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Cloudy, murky sound with minimal high‑end; drums are hard to hear and overall tape feels thin, though some note it is clearer than many older audience tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fade Away",
+      "Stella Blue",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Sugaree",
+      "Promised",
+      "China/Rider",
+      "Sampson"
+    ],
+    "setlist_flow": "The set flows well, highlighted by a nice jam into Fade Away and an attractive transition from Not Fade Away to Stella Blue; the second set is praised as a dream despite the recording’s limitations."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is noted as occasionally sloppy with missed lyrics but generally audible throughout.",
+    "Phil": "Lesh's thick grooves are highlighted positively, providing musical depth even on a thin tape.",
+    "Bob": "Weir is mentioned both for lyrical slips and for being clearly present and easy to follow.",
+    "Keys": "",
+    "Drums": "The drums suffer from low high‑end and are difficult to discern in the recording."
+  },
+  "song_mentions": {
+    "Promised": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might as Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sampson": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China/Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T20:27:00.585310+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-02-11.naks.vernon.16468.sbeok.shnf"
+}

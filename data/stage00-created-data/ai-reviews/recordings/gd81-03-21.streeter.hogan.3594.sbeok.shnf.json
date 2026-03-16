@@ -1,0 +1,69 @@
+{
+  "summary": "Energetic 1981 Rainbow show captured on a clear audience tape, highlighted by Althea, Let It Grow and an electrifying Estimated/Not Fade Away.",
+  "review": "Fans rave about the high‑energy performance – Jerry is fully into it and songs like Althea, Let It Grow, China Cat/Rider and Jack Straw shine. The audience recording, while featuring typical crowd ambience and distance from the stage, delivers surprisingly good clarity that lets the band's excitement come through. Standout moments include a lightning‑fast segue from Let It Grow into China Cat and powerful renditions of Estimated and Not Fade Away.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Consistently high praise for the musical performance and a generally good audience recording give a strong overall rating, though only four reviews limit confidence to medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Typical crowd noise and stage distance noted, but reviewers describe the sound as wonderful and capture the energy well; no major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Let It Grow",
+      "China Cat",
+      "Jack Straw",
+      "Estimated",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with high energy, featuring a famously fast transition from Let It Grow into China Cat and sustained excitement throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as fully into the performance, driving the show’s energy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:03:58.377080+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-03-21.streeter.hogan.3594.sbeok.shnf"
+}

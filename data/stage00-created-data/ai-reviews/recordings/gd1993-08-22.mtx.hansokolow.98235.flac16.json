@@ -1,0 +1,85 @@
+{
+  "summary": "Matrix recording captures the high‑energy Autzen ’93 show with a stellar Help > Slipknot! > Franklin’s sequence and solid soundboard‑plus‑crowd mix.",
+  "review": "The performance is praised for its flowing setlist, scorching Jerry Garcia solo, and an especially tight second‑set Help > Slipknot! > Franklin's Tower that many call the best of the era. The matrix source provides a clear mix with just enough audience ambience to convey the venue’s vibe, though a few sound glitches are noted during Jack Straw. Overall the show is remembered as one of the top Autzen concerts.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and enthusiastic comments about both the music and the mix indicate a strong show with good but not flawless recording quality."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Great mix with added crowd ambience that enhances the live feel; occasional sound problems (not from taping) noted during Jack Straw but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slipknot! > Franklin's Tower",
+      "Days Between",
+      "Ship of Fools",
+      "Sampson",
+      "Corrina"
+    ],
+    "poor_songs": [
+      "Jack Straw"
+    ],
+    "setlist_flow": "The set flows naturally, building from a solid first set into an exceptionally tight and energetic second set that many reviewers cite as the highlight of the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's solo is described as scorching, central to the show's magic, and the primary reason fans love this recording.",
+    "Phil": "",
+    "Bob": "Bob Weir appeared frustrated during Jack Straw, even walking offstage amid sound issues.",
+    "Keys": "Vince (on keyboards) is noted but reviewers say the performance shines regardless of who’s at the keys.",
+    "Drums": "The Drums/Space segment is called out as 'out of control' in a positive, high‑energy sense."
+  },
+  "song_mentions": {
+    "Help > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Days Between": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sampson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums/Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T15:57:01.587722+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-08-22.mtx.hansokolow.98235.flac16"
+}

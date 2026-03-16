@@ -1,0 +1,74 @@
+{
+  "summary": "Fair soundboard capture of a mixed‑bag show that still delivers highlights like a smoking Black Peter and an unforgettable Ship solo.",
+  "review": "The performance on 6/9/92 is uneven – many listeners found the set boring or distracted, yet several songs (Black Peter, Ship of Fools, Big River and Space) receive strong praise. The recording is generally decent with a balanced mix for keyboards and vocals, but PA problems make Jerry’s final solo in Eyes almost inaudible, leaving the overall sound quality at best fair.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Reviews are split between very low (1‑star) and high (4‑5‑star) scores; the show has a few standout moments but is widely considered uneven, and the recording is decent yet marred by noticeable mix issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix is generally well‑balanced (eyes and Vince are clear) but Jerry’s final solo in Eyes is virtually lost due to PA problems; some listeners note the recording sounds less “up‑front” than ideal."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Ship of Fools",
+      "Big River",
+      "Space"
+    ],
+    "poor_songs": [
+      "Victim"
+    ],
+    "setlist_flow": "The concert drifts in energy – the first set is described as uninspired, while the second set contains the praised moments. Overall pacing feels uneven, with a few high points amid generally lackluster playing."
+  },
+  "band_member_comments": {
+    "Jerry": "Often described as distracted and angry, his solo on Ship of Fools is hailed as the best ever; however his final solo in Eyes was barely audible due to PA issues.",
+    "Phil": "",
+    "Bob": "Caught in a spitting incident after \"Victim\" and mentioned as being muted during a technical glitch at the start of that song.",
+    "Keys": "Vince’s piano on Big River receives strong praise for its jazzy feel; his mix is noted as well‑balanced throughout.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T06:43:24.083964+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-09.schoeps-akg.stevens.12574.sbeok.flacf"
+}

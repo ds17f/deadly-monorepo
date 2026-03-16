@@ -1,0 +1,39 @@
+{
+  "summary": "A red‑hot '93 show captured on a surprisingly clear outdoor audience recording.",
+  "review": "The concert bursts with energy – Jerry Garcia is described as \"on fire\" and the band “red hot”, making this one of the most beautiful late‑era performances. Although the tape is an outside (audience) source that sounds a bit thin at first, it quickly reveals a wide, balanced sound that faithfully reproduces the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "5‑star review praises both the musical performance and the surprisingly good outdoor audience recording; weighting gives a high overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Initial disappointment due to outdoor mic placement, but quickly becomes balanced with wide spread and faithful reproduction of the concert."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Spoonful"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy opening; Jerry’s guitar dominates the first song and carries momentum throughout, creating an exhilarating flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"on fire\", firing on all cylinders with superb guitar tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T14:48:28.936489+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-21.AKG451.Darby.118166.Flac1644"
+}

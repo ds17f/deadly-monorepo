@@ -1,0 +1,82 @@
+{
+  "summary": "UltraMatrix soundboard delivers a warm, round mix that captures a dark‑era show highlighted by an epic 26‑minute Dark Star and strong renditions of Little Red Rooster, Brown‑Eyed Women and The Wheel.",
+  "review": "The 10/26/89 performance is praised for its intense, free‑form Dark Star and solid first‑set work, with standout moments on Little Red Rooster, Brown‑Eyed Women and The Wheel. The upgraded SBD (UltraMatrix) provides a warmer, more natural sound than the official release, though some mix quirks and missing late‑show elements are noted. Overall the show is considered a must‑hear snapshot of the band’s transitional 1989–1990 period.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Both reviewers highlight strong musical moments and excellent sound quality; weighting 70% show (≈4.3) + 30% recording (≈4.0) yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "UltraMatrix SBD offers a warmer, rounder tone with slightly better frequency balance than the OFF mix; some listeners note missing late‑show elements and added reverb/echo, but overall clarity and instrument separation are high."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Little Red Rooster",
+      "Brown-Eyed Women",
+      "Don't Ease Me In",
+      "The Wheel",
+      "Watchtower"
+    ],
+    "poor_songs": [
+      "Blow Away",
+      "Estimated"
+    ],
+    "setlist_flow": "First set builds with strong blues and folk cuts, while the second set dives into a darker, experimental mood culminating in an intense 26‑minute Dark Star and powerful drums; occasional missteps (e.g., Blow Away) are outweighed by the overall adventurous flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is highlighted for warm tone on Foolish Heart, a strong solo on Big River, and intense playing throughout Dark Star.",
+    "Phil": "Phil Lesh described as a ‘monster’ on Brown‑Eyed Women and praised for his midi effects during Dark Star.",
+    "Bob": "Bob Weir noted for giving space to Brent’s keys, a slightly sloppy slide practice early in the show, but delivers an energetic vocal on Watchtower.",
+    "Keys": "Brent Mydland’s keyboards are prominent and praised on Little Red Rooster and Stagger Lee; his all‑in attempt at Blow Away is seen as less successful.",
+    "Drums": "Bill Kreutzmann’s drumming highlighted on Victim and the drum segment; Mickey Hart’s charge during drums is described as “hot” and crowd‑piercing."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blow Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:46:55.664060+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-26.147766.UltraMatrix.sbd.cm.miller.flac16"
+}

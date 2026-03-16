@@ -1,0 +1,39 @@
+{
+  "summary": "Crisp, high‑fidelity recording delivers a high‑energy show highlighted by a smoking Keep On Growing performance.",
+  "review": "All three reviewers rave about the energy and musicianship of this 1985 show, singling out Jerry Garcia’s soaring guitar work on “Keep On Growing.” The audio is described as crystal‑clear and rewarding to listeners with good stereo gear, indicating a very listenable recording despite the source type not being specified.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both performance (70% weight) and audio clarity (30% weight) across three detailed reviews yields a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note crisp, clear sound that rewards good stereo equipment; no mention of drop‑outs or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Keep On Growing"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy from start to finish with a particularly strong second half highlighted by Jerry’s entrance on Keep On Growing."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work, especially toward the end of Keep On Growing, is described as “as good as it gets.”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Keep On Growing": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T05:23:15.308018+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-22.nak100.holtz.86805.sbeok.flac16"
+}

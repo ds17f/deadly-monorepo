@@ -1,0 +1,31 @@
+{
+  "summary": "Awesome sounding recording of an incredible show",
+  "review": "The sole fan review rates the performance and audio a perfect five stars, calling it an 'incredible show' with awesome sound. While no technical details are provided, the enthusiasm suggests both the music and the capture are highly enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Single 5‑star review praises both sound and performance; lack of detail limits confidence"
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the audio as 'awesome' but gives no specifics about source or mix"
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T06:54:21.940717+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-26.142502.WeberSmall.Garrett.Mattes.Donaldson.Ammons.Noel.t-flac1644"
+}

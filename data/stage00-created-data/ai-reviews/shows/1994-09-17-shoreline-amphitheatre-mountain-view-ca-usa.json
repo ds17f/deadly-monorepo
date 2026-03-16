@@ -1,0 +1,74 @@
+{
+  "summary": "Terrapin Station soar, strong second set jams",
+  "blurb": "The show builds from a shaky first set into a powerful Terrapin Station and an expansive Drums‑Space‑I Need A Miracle segment. Highlights include Stella Blue, Jack Straw and the seamless Playing In The Band → Uncle John's Band flow.",
+  "review": "September 17, 1994 at Shoreline Amphitheatre captures the Dead in classic late‑’90s form – a show that stumbles early but recovers spectacularly. Jerry’s vocals are solid overall, though a few lyric slips and an out‑of‑sync opening give way to a “brutally slays” Terrapin Station that lifts the entire performance. The second set is where the magic truly happens: a monster Terrapin Station followed by a 28‑minute Drums > Space > I Need A Miracle excursion, then an emotionally resonant Stella Blue and a rousing One More Saturday Night. Vince’s keyboards sit in the mix without stealing the spotlight, while Mickey and Bill drive the rhythmic engine with authority throughout. The first set does contain some uneven moments – notably the opening “sloppy” feel – but the band quickly finds its groove, delivering tight transitions, strong Jack Straw, and a standout Playing In The Band → Uncle John's Band segue that sets up the second‑set fireworks.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 22,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Two recordings are clearly positive (Terrapin Station, Stella Blue, strong drums) while one notes mixed feelings about a sloppy first set. The overall tone is upbeat with consistent praise for the second‑set highlights, meriting a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.8 = 3.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd94-09-17.sbd.ladner.10068.sbeok.shnf",
+    "reason": "Clear, crisp soundboard capture that faithfully renders the Terrapin Station and Stella Blue moments with no drop‑outs."
+  },
+  "key_highlights": [
+    "Monster Terrapin Station performance that turns the show around",
+    "Expansive 28‑minute Drums > Space > I Need A Miracle segment",
+    "Stella Blue delivered with emotional depth",
+    "Seamless Playing In The Band → Uncle John's Band transition"
+  ],
+  "song_highlights": [
+    "Terrapin Station",
+    "Stella Blue",
+    "Jack Straw",
+    "The Same Thing",
+    "Ramble On Rose",
+    "Playing In The Band",
+    "Uncle John's Band",
+    "Drums",
+    "Space",
+    "I Need A Miracle"
+  ],
+  "band_performance": {
+    "Jerry": "Strong vocals and inspired guitar work; early lyric slips give way to a powerful Terrapin Station that rescues the show.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Vince’s keyboards are present and supportive, though not a focal point of the night.",
+    "Mickey": "Great drumming highlighted throughout, especially on Terrapin Station and the extended drum/space segment.",
+    "Billy": "Solid percussion work that drives the long Drums > Space jam with energy and precision."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-19T01:27:39.847760+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Corinna",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Stella Blue",
+      "One More Saturday Night"
+    ],
+    [
+      "Jack Straw"
+    ],
+    [
+      "The Same Thing"
+    ],
+    [
+      "Ramble On Rose"
+    ]
+  ]
+}

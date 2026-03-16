@@ -1,0 +1,31 @@
+{
+  "summary": "A five‑star fan calls the recording a personal hero, though no specifics about sound or performance are provided.",
+  "review": "The only reviewer gives the show a glowing five‑star rating and describes it as \"my hero,\" indicating strong enthusiasm. However, the review contains no details on recording quality, setlist, standout moments, or individual band members.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "A single enthusiastic five‑star rating suggests high enjoyment, but the lack of any descriptive comments about audio or musical performance limits confidence in assigning a precise rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on recording quality were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T21:46:28.909732+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-19.150372.FOB.Schoeps.Brotman.Metchick.Miller.Noel.t-flac1648"
+}

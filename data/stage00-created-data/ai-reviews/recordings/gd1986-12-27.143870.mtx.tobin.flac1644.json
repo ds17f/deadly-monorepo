@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent matrix recording of a mixed‑quality 1986 show with a fun Playing in the Band sandwich and strong Mighty Quinn moment",
+  "review": "The only matrix available of this December 1986 Oakland concert is praised for its exceptional sound quality, crisp crowd ambience and well‑balanced mix. Musically the setlist has highlights – a frenetic first set, a Playing in the Band sandwich, a rousing Mighty Quinn opener to the second set and an intimate Comes A Time – but the reviewer cautions that 1986 was generally a bleak year for the Dead, keeping expectations modest.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "One detailed review gives 3 stars; recording quality is rated excellent while the show is described as decent but not outstanding, leading to a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Crowd roar captured clearly, well‑balanced mix, no noticeable dropouts; reviewer calls it 'exceptional in sound quality' and the best version available."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Mighty Quinn",
+      "Comes A Time",
+      "Rooster (birdsong reference)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is frenetic with a short 50‑minute run; Playing in the Band serves as a sandwich framing the show. Second set opens with an energetic Mighty Quinn, followed by an abbreviated Truckin' into Smokestack Lightning and a quiet Comes A Time."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as 'coked to the gills', indicating high‑energy guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mighty Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rooster (birdsong reference)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:03:18.786250+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-12-27.143870.mtx.tobin.flac1644"
+}

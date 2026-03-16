@@ -1,0 +1,107 @@
+{
+  "summary": "Excellent soundboard capture of a fiery show with standout renditions of Box of Rain, He's Gone, The Other One and an unexpected I Know You Rider.",
+  "review": "The recording is a clean, well‑balanced soundboard mix that lets Keith’s keys shine and captures Jerry’s hard‑riffs without muddiness. Musically the concert is a high‑energy romp – mellow set one builds into a powerful second set highlighted by Box of Rain, He's Gone, a blazing The Other One with an I Know You Rider out of space, and a fiery Greatest Story/Promised Land/Bertha sequence. The only blemish mentioned is a slightly over‑the‑top Sugar Magnolia ending.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "One detailed, enthusiastic review praises both the performance and the soundboard quality; weighting gives a high overall score but limited sample lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp mix with Keith’s keyboards nicely balanced; drums are brief but audible; no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "He's Gone",
+      "The Other One",
+      "I Know You Rider",
+      "Greatest Story Ever Told",
+      "Promised Land",
+      "Bertha"
+    ],
+    "poor_songs": [
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "Set one builds mellowly and transitions smoothly into a high‑octane second set; the band takes adventurous detours (I Know You Rider out of space) while keeping strong song-to-song continuity."
+  },
+  "band_member_comments": {
+    "Jerry": "Riffs hard throughout El Paso, never stops getting in his licks, and drives the intensity of The Other One.",
+    "Phil": "Provides solid bass riffs and a nice baritone vocal on He's Gone.",
+    "Bob": "",
+    "Keys": "Keith's keyboard work is noted as “nice in the mix,” adding depth to the performance.",
+    "Drums": "Billy’s drum solo is very brief (1:33) but effective; overall percussion supports the jams."
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "T.L.E.O.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Nobody's Fault": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T07:21:25.376576+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-03-31.sbd.hamilton.2986.sbeok.shnf"
+}

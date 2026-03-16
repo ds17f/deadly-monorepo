@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent audience recording capturing one of the band’s most energetic shows with a stellar St. Stephen and standout jams like Throwing Stones, Wang Dang Doodle and Bertha.",
+  "review": "The tape is hailed as one of the best audience recordings of this era, delivering crystal‑clear sound that lets the high‑octane performance shine. Highlights include a historic return of St. Stephen, blistering Throwing Stones jams, and a second set packed with Wang Dang Doodle, Jack Straw, Birdsong, Bertha and a rare Phil‑led China Doll, all driven by an electrifying stage energy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews are overwhelmingly positive, praising both the exceptional audience recording quality and the show’s high‑energy performance with multiple standout songs."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Repeatedly described as one of the best audience recordings of the era—clear, crisp, and full of stage energy; no technical flaws mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Throwing Stones",
+      "Wang Dang Doodle",
+      "Jack Straw",
+      "Birdsong",
+      "Bertha",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set packed with strong starters (Jack Straw, Birdsong) and a high‑energy second set that builds through a rock‑inspired pre‑drums run (especially Bertha), culminating in unforgettable jams."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Noted for taking lead vocals on the rare China Doll performance, his mic’d vocal adding a special moment.",
+    "Bob": "Praised for getting raucous with the rhythms during Throwing Stones and overall jam intensity.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T11:45:55.829832+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-11.118673.atm11.chasingwilma.flac16"
+}

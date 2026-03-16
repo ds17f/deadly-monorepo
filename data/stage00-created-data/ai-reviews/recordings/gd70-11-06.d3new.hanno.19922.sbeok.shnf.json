@@ -1,0 +1,39 @@
+{
+  "summary": "A high‑energy Capitol Theatre show with a scorching \"Good Lovin'\", but the audience tape sounds fast and uneven, leaving listeners wishing for a soundboard.",
+  "review": "Reviewers rave about the performance – especially the blistering rendition of “Good Lovin’” that drives the set forward – while noting the recording is an audience source that feels rushed and a bit muddy. The show is recommended for Deadheads who can overlook the tape’s technical flaws, though many hope a proper soundboard will surface someday.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Strong positive comments on the musical performance (70% weight) offset by consistent complaints about the audience‑tape quality (30% weight), resulting in an overall solid but not perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Tape sounds fast and a bit muddy; listeners perceive speed changes especially on “Good Lovin’”. No soundboard, so ambience is present but clarity suffers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its relentless drive and fast‑paced jams, with “Good Lovin’” highlighted as a high‑octane climax that keeps the energy up throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-20T00:39:49.291558+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-11-06.d3new.hanno.19922.sbeok.shnf"
+}

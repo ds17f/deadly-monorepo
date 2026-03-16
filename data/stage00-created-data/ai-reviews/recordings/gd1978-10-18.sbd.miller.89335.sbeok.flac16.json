@@ -1,0 +1,58 @@
+{
+  "summary": "High‑energy Winterland show captured on soundboard with standout Truckin', Wharf Rat and The Music Never Stopped, despite a few tired moments.",
+  "review": "The consensus among reviewers is that this winter‑land performance delivers strong vocals, soaring jams and memorable moments – especially the fiery Truckin' and an inspired rendition of The Music Never Stopped. Recording quality is generally praised as a clean soundboard source, though a few listeners note faded Garcia vocals and a slightly disjointed Sugaree ending.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show 4‑5 stars and highlight several standout songs; recording quality is not criticized, leading to an overall strong rating with moderate confidence due to mixed comments on a few songs."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No major complaints about clarity or mix; one comment about Garcia's vocals fading, but generally considered clean and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Wharf Rat",
+      "The Music Never Stopped"
+    ],
+    "poor_songs": [
+      "Sugaree"
+    ],
+    "setlist_flow": "High‑energy performance with a few signs of fatigue (as noted by one reviewer), but overall the band kept momentum, delivering strong jams and memorable transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's vocals were described as fading on one track, yet his guitar solos on Wharf Rat received high praise for being long, wailing and soulful.",
+    "Phil": "Noted singing on Truckin', adding to the spectacle of the performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:38:26.350636+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-10-18.sbd.miller.89335.sbeok.flac16"
+}

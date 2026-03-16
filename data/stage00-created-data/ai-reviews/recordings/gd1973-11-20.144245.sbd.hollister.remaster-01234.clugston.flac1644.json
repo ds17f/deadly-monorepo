@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard remaster of a solid 11/20‑73 performance, though Sunshine Daydream suffers from strained vocals.",
+  "review": "The reviewer rates the show a perfect five stars, praising it as an excellent cross‑section of the band’s period material and lamenting that the two consecutive shows were not released together. The remastered soundboard source is described as clear with no technical complaints, but the vocal performance on Sunshine Daydream (Bob and Donna Jean) is noted as shredded. Overall the show is viewed as a solid, high‑quality Dead concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "One detailed five‑star review highlights an outstanding performance and clean recording, offset only by a vocal issue on a single song."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Remastered soundboard provides a clear, well‑balanced mix; no audio flaws or clarity issues mentioned in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Sunshine Daydream"
+    ],
+    "setlist_flow": "Described as an excellent cross‑section of period songs, delivering a solid overall performance despite one vocal weak point."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Vocal performance on Sunshine Daydream noted as shredded (strained).",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sunshine Daydream": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T02:56:37.441510+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-11-20.144245.sbd.hollister.remaster-01234.clugston.flac1644"
+}

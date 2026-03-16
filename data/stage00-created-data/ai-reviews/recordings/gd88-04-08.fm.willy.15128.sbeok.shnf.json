@@ -1,0 +1,98 @@
+{
+  "summary": "Good‑quality matrix recording of a short 4/8/88 Worcester show – strong Jack Straw and Playin' jams, but vocal strain and brief set keep it from being stellar.",
+  "review": "The mix is clean and well‑balanced for a non‑direct soundboard source, capturing the crowd while keeping the instruments clear. Musically the night shines with a fiery Jack Straw opener, a tight Playin' jam that flows into Crazy Fingers and Uncle John’s Band, and an energetic Drums/Space > Too sequence, though Garcia’s voice is noticeably strained and the overall set runs short. Overall the performance is enjoyable for fans who appreciate the era’s improvisational peaks despite its brevity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 3‑4 stars, praising the mix and several jams while noting vocal issues, short song lengths and occasional over‑played Black Peter; this balances to a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Non‑direct SBD source with clean mix; captures crowd ambience well. Some note Bobby (Godchaux) guitar is loud in the mix, but no major static or dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Playin'",
+      "Crazy Fingers",
+      "Uncle John's Band",
+      "Drums > Space > Too",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Loser",
+      "Let It Grow",
+      "Black Peter"
+    ],
+    "setlist_flow": "Set 1 opens strongly with Jack Straw and stays lively, though several songs feel truncated. Set 2 is jam‑heavy – Playin' into Crazy Fingers, Uncle John’s Band and a memorable Drums/Space > Too – but the overall show is unusually short."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work on Jack Straw is praised; his voice sounds great early but becomes strained/under‑weather later in the night.",
+    "Phil": "",
+    "Bob": "Weir’s vocal on Lovelight is described as merely 'alright' and not a highlight.",
+    "Keys": "Brent Godchaux’s keyboard (and guitar) is noticeably loud in the mix; some reviewers call it ‘2½ Godchauxs’ for this night.",
+    "Drums": "Bill Kreutzmann and Mickey Hart provide an energetic Drums/Space segment, especially during the Too jam."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Playin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Too": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T08:22:31.889526+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-04-08.fm.willy.15128.sbeok.shnf"
+}

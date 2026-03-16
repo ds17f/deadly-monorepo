@@ -1,0 +1,66 @@
+{
+  "summary": "A solid soundboard capture of the historic 12‑29‑68 Miami Pop Festival, highlighted by a fire‑engine Other One, soaring Eleven and a crisp Dark Star.",
+  "review": "The recording (a soundboard source) delivers clear, well‑balanced audio that lets the band’s high‑energy performance shine.  Fans repeatedly praise Jerry’s blistering guitar on The Other One, the powerful eleven‑minute jam of “Eleven,” and a tight Dark Star that hints at the band’s ’69 evolution.  The set is short but packed with classic late‑’68 material—Lovelight, St Stephen, Cryptical Envelopment—all delivered with urgency despite a rushed festival schedule.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (19) give 4‑5 stars and highlight exceptional performances; recording is consistently described as good to excellent, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑mixed for a 1968 SBD; several reviewers note “very good” or “excellent” sound, while one mentions slight over‑mixing in the right ear but nothing that hinders enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Eleven",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A brief, high‑octane set typical of late ’68—tight song structures (St. Stephen, Lovelight) followed by expansive jams (Eleven, The Other One > Cryptical).  Energy stays elevated throughout despite the festival’s time pressure."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as ‘on fire’, blasting out of the drums on The Other One and delivering manic leads; a few note slight tuning quirks but overall his playing is a major highlight.",
+    "Phil": "Phil’s bass work gets special mention for focused interplay with Jerry and the drums during the Eleven jam.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum segment leading into The Other One > Cryptical is praised as powerful; drummers are noted for exploding energy."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eleven": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T10:11:30.091146+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-12-29.sbd.cotsman.5425.sbeok.shnf"
+}

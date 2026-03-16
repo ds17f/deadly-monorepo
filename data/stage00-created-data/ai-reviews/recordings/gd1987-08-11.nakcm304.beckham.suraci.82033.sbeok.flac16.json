@@ -1,0 +1,81 @@
+{
+  "summary": "Clean soundboard capture of a solid Red Rocks set featuring Cold Rain, High Time and Tons of Steel.",
+  "review": "The recording is notably clear with minimal audience bleed, though the Round/Round segment loses a bit of life. The performance is a reliable one – highlights include the Cold Rain opener, a soaring High Time, and Brent‑My­dland’s standout work on Tons of Steel, all wrapped up by Jerry’s warm goodnight at the encore.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Reviews praise a clean recording and solid show highlights, yielding a good‑to‑great overall impression; minor criticisms keep the rating from higher tiers."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clean clarity with very low audience noise; slight dullness on the Round/Round transition but otherwise crisp and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain",
+      "High Time",
+      "Tons of Steel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth set flow with a quiet, tasteful transition from the GDTRFB segment into Round/Round; the second half builds nicely toward an emotional encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Gives a heartfelt goodnight at the encore.",
+    "Phil": "",
+    "Bob": "Bob’s vocal on Little Red Rooster is highlighted.",
+    "Keys": "Brent Mydland’s keyboards shine during Tons of Steel.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tons of Steel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing into China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T01:35:18.381670+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-08-11.nakcm304.beckham.suraci.82033.sbeok.flac16"
+}

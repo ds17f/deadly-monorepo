@@ -1,0 +1,92 @@
+{
+  "summary": "A polished soundboard captures a scorching summer‑92 Dead show with Jerry and Bob in peak form, standout second‑set journeys and only a few minor slip‑ups.",
+  "review": "The recording is a clean, well‑balanced soundboard that even picks up the band’s on‑stage chatter, making it feel like you’re back at Rich Stadium. Musically the concert delivers high energy from the opening Touch of Grey through a powerful Let It Grow, while the second set rolls with strong segues – Estimated Prophet into Same Thing, He’s Gone, The Other One and The Wheel – despite occasional slower spots such as Ramble on Rose. Overall fans rave about the interplay between Garcia and Weir and the vibrant 1992 summer‑tour vibe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviews are highly positive, praising both performance (especially Jerry/Bob interplay and second‑set highlights) and the flawless soundboard; minor miscues keep it from a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Polished, clear mix with good instrument separation; captures band communication through monitor mics; no significant flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Touch of Grey",
+      "Althea",
+      "Estimated Prophet",
+      "He’s Gone",
+      "The Other One",
+      "The Wheel"
+    ],
+    "poor_songs": [
+      "Ramble on Rose"
+    ],
+    "setlist_flow": "First set mixes hot openers with slower, thoughtful numbers; second set builds momentum with seamless segues and adventurous jams, keeping the energy high despite a few slower moments."
+  },
+  "band_member_comments": {
+    "Jerry": "In peak form, trading musical leads with Bob and delivering powerful guitar work.",
+    "Phil": "Bass turned up louder than ever, providing a ripping foundation on Touch of Grey.",
+    "Bob": "Also in top shape, matching Jerry’s intensity throughout the show.",
+    "Keys": "",
+    "Drums": "Drums > Space > The Other One highlighted a far‑out journey with a hidden Spanish jam."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Same Thing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He’s Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T06:28:06.972272+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-06.140277.sbd.cm.miller.flac1644"
+}

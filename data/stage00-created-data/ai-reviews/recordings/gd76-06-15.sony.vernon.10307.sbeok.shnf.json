@@ -1,0 +1,63 @@
+{
+  "summary": "High‑energy show with standout versions of Stella Blue, Cassidy, Let It Grow and The Wheel captured on a generally good audience recording (though some hiss and noise are noted).",
+  "review": "Fans rave about the performance – the first set is called great, the second “promising”, and songs like Stella Blue, Cassidy, Let It Grow and The Wheel receive special praise. The tape is an audience recording; most listeners find it clear and well‑balanced, but a few note hiss from nitrous tanks and occasional low‑mic noise that can be distracting.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong musical praise across most reviews (70%+ weighting) combined with generally good but uneven recording quality yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, non‑boomy sound with good ambience; some hiss attributed to nitrous tanks and occasional low‑mic crowd noise noted by a few reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Cassidy",
+      "Let It Grow",
+      "The Wheel",
+      "LLR"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as great, second set as promising; overall energy high with a smooth flow that keeps the audience engaged."
+  },
+  "band_member_comments": {
+    "Jerry": "His tone on Stella Blue is likened to a violin, praised for its beauty.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LLR": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T04:35:46.596487+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-06-15.sony.vernon.10307.sbeok.shnf"
+}

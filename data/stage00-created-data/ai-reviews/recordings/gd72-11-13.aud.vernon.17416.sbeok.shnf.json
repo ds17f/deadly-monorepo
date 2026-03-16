@@ -1,0 +1,45 @@
+{
+  "summary": "Audience recording of a powerful Dark Star > Morning Dew sequence, but the sound quality is poor",
+  "review": "The show shines on the Dark Star into Morning Dew jam, with the music’s intensity cutting through an unremarkable recording. Reviewers overwhelmingly criticize the audio – calling it muffled, pocket‑recorded and almost unusable – while one fan still praises the performance despite the technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "medium",
+    "rationale": "Three reviews give a wide star spread (5, 2, 0) and all flag serious recording problems; only one mentions the music positively, leading to a low‑average rating with moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Described as unexceptional, muffled, pocket‑recorded, and “complete shit”; lacks clarity and has abrasive early‑70s soundboard qualities."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on overall flow; only the Dark Star > Morning Dew sequence is highlighted."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T01:13:35.974648+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-11-13.aud.vernon.17416.sbeok.shnf"
+}

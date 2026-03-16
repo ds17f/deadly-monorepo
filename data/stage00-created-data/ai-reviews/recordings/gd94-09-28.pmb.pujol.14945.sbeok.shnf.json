@@ -1,0 +1,84 @@
+{
+  "summary": "A high‑energy Boston ’94 show brimming with standout Foolish Heart, Victim and Lazy River Road, captured on a clear audience tape.",
+  "review": "The September 28 1994 Boston run is praised for its soaring second set – a killer Foolish Heart solo, an emotional Victim, and a fiery Lazy River Road that lifts the whole concert.  The recording is an audience capture using shotgun mics that delivers good clarity despite typical crowd ambience, making the performance easy to enjoy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high marks for musical performance (many 4‑star reviews) and several comments praising the audience recording quality; only minor criticisms noted."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Recorded with shotgun capsules and DAT, delivering a clear audience mix with good instrument separation; occasional ambient crowd noise but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart",
+      "Victim",
+      "Lazy River Road",
+      "Eternity",
+      "Lovelight",
+      "All Over Now Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opener LTGTR > Bertha > Greatest Story > West LA fires the first set, while the second set builds through Victim → Foolish Heart → Looks Like Rain → Lazy River Road → Eternity, ending with a heartfelt Lovelight and Baby Blue encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry's soaring guitar tone, especially on Foolish Heart, LLR and the post‑space solo; occasional lyrical mumbling noted but overall praised.",
+    "Phil": "Phil's bass work is called \"great\" and \"driving\" throughout the show, keeping the band tightly locked.",
+    "Bob": "Bob Weir (referred to as Bobby) is noted for strong vocals and a loud presence in the mix; his contributions on GSET and Baby Blue are praised.",
+    "Keys": "Vince’s keyboard playing and harmonies receive specific praise, especially during Eternity and post‑space sections.",
+    "Drums": "The drummers' performance is described as \"good\" with an energetic jam after Samba; the transition into Space is highlighted."
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Victim": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Over Now Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T01:46:09.050110+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-09-28.pmb.pujol.14945.sbeok.shnf"
+}

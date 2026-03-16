@@ -1,0 +1,70 @@
+{
+  "summary": "Good‑quality soundboard capture of a 1977 second set that shines on Iko Iko, Wharf Rat and Sugar Magnolia despite missing tracks and occasional performance hiccups.",
+  "review": "The recording (soundboard) sounds clear and vivid for most of the set, though listeners note drum dropouts and a few beat‑drops in early songs. Musically the night delivers classic ’77 energy with a funky Iko Iko groove, an inspired Wharf Rat jam and a soaring Sugar Magnolia, even if Jerry’s guitar/vox slips on Passenger, Terrapin and Ramble On Rose. Overall the show is praised for its high‑octane moments while being hampered by missing songs and some technical glitches.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is strong on several jams but marred by performance issues and missing material; recording quality is generally good with occasional dropouts, leading to a weighted rating around 3.7."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix with occasional drum drop‑outs and missing transition into Iko; some beat‑drops on early songs, but most of the set sounds crisp and full."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Iko Iko",
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Ramble On Rose",
+      "Passenger",
+      "Terrapin"
+    ],
+    "setlist_flow": "Second set is incomplete (first two songs missing) but picks up momentum with a peppy Ramble On Rose, then moves through a rocky middle before delivering strong jams on Iko Iko, Wharf Rat and Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "Innovative riff in Wharf Rat praised, but guitar tone and vocal delivery flagged as weak on Passenger, Terrapin and Ramble On Rose.",
+    "Phil": "Lesh highlighted for 'bouncing notes off the ceiling' early in the set, creating a rain‑like soundscape.",
+    "Bob": "",
+    "Keys": "Possible guest appearance by Ned Lagin speculated; no concrete keyboard commentary.",
+    "Drums": "Dropouts noted in drum track and transition into Iko; overall groove on Iko praised."
+  },
+  "song_mentions": {
+    "Ramble On Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T04:38:52.787192+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-07.sbd-set2.miller.80753.sbeok.flac16"
+}

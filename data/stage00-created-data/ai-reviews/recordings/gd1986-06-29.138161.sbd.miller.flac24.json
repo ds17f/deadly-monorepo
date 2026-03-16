@@ -1,0 +1,47 @@
+{
+  "summary": "Soundboard recording suffers from a very low Jerry mix on several songs, making the guitar barely audible.",
+  "review": "Both reviewers point out a serious imbalance in this soundboard tape – Jerry Garcia's guitar disappears on Shakedown Street, Estimated Prophet and Eyes of the World, while the audience feed shows it clearly. No comments were made about the musical performance itself, so the show quality remains unknown. The mix issue dominates the listening experience.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "medium",
+    "rationale": "Consistent criticism of a major recording flaw (Jerry's guitar buried) with no positive show feedback leads to a low overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Jerry Garcia's guitar is barely audible on three key tracks (Shakedown Street, Estimated Prophet, Eyes of the World); mix appears low for his instrument typical of some 80s boards."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided in reviews about set structure or performance quality."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar is barely audible on Shakedown Street, Estimated Prophet and Eyes of the World due to low mix.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:41:09.542286+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-06-29.138161.sbd.miller.flac24"
+}

@@ -1,0 +1,76 @@
+{
+  "summary": "Decent Charlie Miller soundboard with some first‑set sound issues, but the show shines on Deal, Ship of Fools and a solid Eyes→Drums→Space sequence.",
+  "review": "The recording captures a typical early‑90s Dead concert – the soundboard is clear enough but suffers from first‑set problems and occasional feedback. Musically the night is mixed: the first set is uneven while the second set builds momentum with highlights like Deal, a nice Ship of Fools solo (and Jerry’s rare “50 years upon my head” line), strong Eyes→Drums→Space, Black Peter and a sweet Brokedown Encore. Overall it’s a fun, not epic, performance that benefits from good lighting and Vince’s keyboard work.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Reviews show a blend of positive (standout songs, good keyboards) and negative (first‑set sound problems, weak Victim/Way To Go Home), leading to an overall above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "First set has noticeable sound problems and occasional feedback/ear‑monitor issues; overall clarity is acceptable for a Charlie Miller sbd capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Ship of Fools",
+      "Eyes > Drums > Space",
+      "Black Peter",
+      "Brokedown Encore"
+    ],
+    "poor_songs": [
+      "Victim",
+      "Way To Go Home"
+    ],
+    "setlist_flow": "First set feels uneven with sound hiccups; second set opens a bit snoozy but gains momentum through Ship of Fools, Eyes→Drums→Space and ends on a sweet encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Solo on Ship of Fools praised; attempts to lift the show with Eyes; noted by one reviewer as being in decline.",
+    "Phil": "",
+    "Bob": "Mentioned as losing interest during this period.",
+    "Keys": "Vince (keyboards) sounded good and improving throughout the night.",
+    "Drums": "Cassidy (drummer) described as exceptional; Drums segment received positive remarks."
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Way To Go Home": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes > Drums > Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Encore": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T06:44:33.257912+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-09.sbd.miller.89985.sbeok.flac16"
+}

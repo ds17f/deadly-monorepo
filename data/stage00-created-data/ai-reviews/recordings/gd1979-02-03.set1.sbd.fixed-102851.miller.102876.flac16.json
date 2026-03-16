@@ -1,0 +1,51 @@
+{
+  "summary": "Good soundboard recording with a prominent Phil mix, featuring an outstanding China Rider and strong early‑'79 performance",
+  "review": "The set captures one of the best China Rider performances of early ’79, with Garcia’s frenetic lead work and a lively audience. The SBD source is generally clear but leans heavy on Phil’s bass, making the mix slightly unbalanced despite overall good clarity. Set 2 is noted as more consistent, and the show is regarded as a contender for the best of that period.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the musical performance (especially China Rider) and give 3‑4 stars, while a few note mix issues; weighting show quality higher yields an overall rating just above four."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall SBD capture but bass (Phil) is prominent and can drown other instruments; occasional audience patch in China Rider, but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Rider",
+      "Music",
+      "Wolf"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set uneven, second set more consistent; the show builds to a high point with China Rider and closes strongly with Music."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s busy, frenetic playing is highlighted as superb, with his “Wolf” chords sounding great.",
+    "Phil": "Bass is very prominent—some find it too heavy while others love the ‘PHAT PHIL’ presence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T20:00:24.628346+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-02-03.set1.sbd.fixed-102851.miller.102876.flac16"
+}

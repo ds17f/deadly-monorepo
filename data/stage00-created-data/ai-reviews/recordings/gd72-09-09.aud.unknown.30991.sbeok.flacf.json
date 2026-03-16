@@ -1,0 +1,39 @@
+{
+  "summary": "Crisp 1972 audience tape with excellent sound but pitched down, making it a top aud despite speed issues.",
+  "review": "This recording is an audience capture from ’72 that fans praise for its surprisingly clear and crisp audio – especially on “Bird”.  The main drawback mentioned across reviews is the slow‑down/pitch problem, which many listeners correct themselves.  Overall the tape is regarded as one of the better ’72 auds, even if it needs a speed fix.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Reviewers consistently praise the audio clarity (good to excellent) but note pitch/speed issues; no musical performance details are given, leading to a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear audience capture praised as one of the best ’72 auds, but the tape runs slow/pitched down (requires speed correction). Some reviewers compare it unfavorably to soundboard tapes only because of the speed issue."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:09:29.618025+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-09-09.aud.unknown.30991.sbeok.flacf"
+}

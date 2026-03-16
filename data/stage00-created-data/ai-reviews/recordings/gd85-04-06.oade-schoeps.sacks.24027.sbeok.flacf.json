@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent audience recording of a 1985 show with standout Uncle John’s Band and strong crowd‑driven second set.",
+  "review": "The tape captures an energetic 1985 concert where the Philadelphia crowd fuels the band, delivering memorable solos and a rescued second half led by Bob Weir's vocals. Jerry Garcia’s guitar work shines despite his strained voice, and the audience recording is praised as crisp and lively. Overall the performance and sound quality are consistently rated very highly.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All but one review give 5‑star ratings, highlighting superb show energy and an excellent audience tape; recording quality is uniformly described as “excellent,” yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the tape \"excellent\" and note that crowd ambience adds excitement without drowning out the music; no significant distortion or drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is solid, but the second half of the second set is rescued by Bob Weir taking most vocal duties while Jerry focuses on guitar; overall flow is praised for its high energy and crowd interaction."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as shot/poor, but his guitar playing is called \"ass‑off\" and he compensates with strong solos.",
+    "Phil": "",
+    "Bob": "Takes over vocal duties in the second half of the second set, rescuing the performance; praised for singing all the songs.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T03:10:23.878599+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-06.oade-schoeps.sacks.24027.sbeok.flacf"
+}

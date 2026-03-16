@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent audience recording captures a solid 1979 show with standout Shakedown Street → Bertha, soaring Jack Straw, and superb Stella Blue/Deal moments.",
+  "review": "The tape is an outstanding audience (aud) capture – listeners praise its crystal‑clear instrument separation and subtle details like the Mind Left Body tease. Musically the concert is described as a tight, high‑energy performance with highlights such as Shakedown Street into Bertha, a powerful Jack Straw, and memorable renditions of Stella Blue, Deal and the teasing into Stella Blue.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "All five reviewers give 5‑star ratings, uniformly praising both the musical performance and the recording quality; the consensus is strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Highly praised for superb instrument separation, crisp clarity, and subtle audible teases; recorded with high‑end mics (AT811) and noise reduction, delivering a clean, immersive sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Bertha",
+      "Stella Blue",
+      "Deal",
+      "Jack Straw",
+      "Mind Left Body"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a strong, nonstop energy from the opening through the close, with smooth transitions (e.g., Shakedown Street → Bertha) and effective jams that kept the momentum high all night."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil Lesh is highlighted as the main thruster, delivering a powerful low‑end drive especially on Jack Straw.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mind Left Body": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:11:06.210877+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-25.nak700.menke.motb.90638.sbeok.flac24"
+}

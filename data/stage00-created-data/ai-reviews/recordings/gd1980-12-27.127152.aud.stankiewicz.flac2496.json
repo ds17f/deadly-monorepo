@@ -1,0 +1,52 @@
+{
+  "summary": "An excellent audience (AUD) recording that captures a strong first set and a thunderous Drums‑>Space, though the second set stumbles a bit on China>Rider.",
+  "review": "The tape is widely praised as one of the best‑sounding AUD recordings, with crisp detail and surprisingly strong bass for an audience source. Musically the show delivers a very good first set and a standout Drums‑>Space and Wheel sequence, but the China>Rider transition in the second set is noted as a weak spot, leading to mixed feelings about the overall performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently described as stellar/excellent (weight 30%). Show quality is mostly positive with a few criticisms (weight 70%), yielding an overall weighted rating around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Repeatedly called the best‑sounding AUD tape, crisp and sweet with strong bass presence for an audience recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Drums > Space",
+      "The Wheel"
+    ],
+    "poor_songs": [
+      "China > Rider"
+    ],
+    "setlist_flow": "First set is described as very good and tightly performed; second set has a stumble in China>Rider but recovers with a thunderous drums/space and excellent Wheel segment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Praised for great playing throughout the first set.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Thunderous drums and a creative, standout space section noted by reviewers."
+  },
+  "song_mentions": {
+    "Drums > Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T07:21:40.698798+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-12-27.127152.aud.stankiewicz.flac2496"
+}

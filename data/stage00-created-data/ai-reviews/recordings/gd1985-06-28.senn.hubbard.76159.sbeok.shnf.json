@@ -1,0 +1,45 @@
+{
+  "summary": "Decent 1985 Hershey Park show with solid Throwing Stones and Not Fade Away, but rain‑soaked performance and mixed recording make it only a modest listen.",
+  "review": "The concert captures a rainy night at Hershey Park where the band managed some strong moments – notably a powerful Throwing Stones and an energetic Not Fade Away. Jerry’s vocal tone is thin and he mostly sticks to guitar, while Bob’s vocals are largely absent, giving the show a sloppy feel overall. The recording quality isn’t described in detail, so it sits somewhere in the middle of listenable but unremarkable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "low",
+    "rationale": "Only one detailed review; shows moderate musical highlights but mentions vocal issues and rain‑induced sloppiness, with no clear recording quality assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention soundboard or audience source; no specific audio clarity comments, only that the performance felt sloppy due to rain."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Throwing Stones",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Rain made the concert feel messy and uneven, but a few high‑energy numbers provided notable highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice sounds shot; mainly playing guitar rather than singing.",
+    "Phil": "",
+    "Bob": "Could have sung more; his vocals were largely missing.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T06:35:55.326579+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-28.senn.hubbard.76159.sbeok.shnf"
+}

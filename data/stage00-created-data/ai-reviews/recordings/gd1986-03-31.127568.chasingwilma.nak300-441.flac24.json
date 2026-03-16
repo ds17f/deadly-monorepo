@@ -1,0 +1,45 @@
+{
+  "summary": "Crystal‑clear capture that even reveals a bottle smash on Billy's snare during Comes A Time, capped by a rare Johnny B. Goode close with no encore.",
+  "review": "Both reviewers gave the recording five stars, noting its impressive detail – you can actually hear a broken bottle hitting Bill Kreutzmann’s snare in the middle of “Comes A Time.” The show is highlighted by an unusual set finish with “Johnny B. Goode” ending the second set and no encore, making it a memorable performance for collectors.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Both reviews are 5‑star and praise specific moments; limited data (only two reviews) but consensus is strongly positive, indicating a great show with excellent recording detail."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Very clear overall; listeners can pick out subtle ambient sounds such as a bottle smashing on the snare, showing good capture of both music and crowd ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set ends abruptly with Johnny B. Goode and no encore, an unusual but memorable conclusion to the show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bottle smash audible on Billy's snare highlights Bill Kreutzmann's drum work and the recording's ambient capture."
+  },
+  "song_mentions": {
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:21:57.700031+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-31.127568.chasingwilma.nak300-441.flac24"
+}

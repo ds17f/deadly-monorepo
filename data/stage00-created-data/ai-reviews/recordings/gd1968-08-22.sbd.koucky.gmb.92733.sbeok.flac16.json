@@ -1,0 +1,74 @@
+{
+  "summary": "Soundboard capture of the second half delivers stellar performances (St. Stephen, The Eleven, Dark Star, The Other One) yet is incomplete compared to the full Cotsman version.",
+  "review": "The koucky recording showcases a high‑energy mid‑summer ’68 show with standout moments like an inspired Eleven jam, a beautifully voiced Death Don't Have No Mercy, and a dark, tightly crafted Dark Star. Audio quality is decent for a soundboard source but the set is missing the first half and some of the night’s best material, so listeners are urged to seek the more complete Cotsman version.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Reviewers praise the musical performance strongly but note that the recording is incomplete and some vocal levels are low, pulling the overall rating down."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Decent clarity for a soundboard capture; Jerry's vocals are low on St. Stephen, and the tape only contains the second half of the show, omitting early highlights."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "The Eleven",
+      "Death Don't Have No Mercy",
+      "Dark Star",
+      "The Other One",
+      "New Potato Caboose"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong mid‑set flow with seamless transitions (e.g., The Eleven into Death, and The Other One into New Potato), though the recording stops before the first half concludes."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocal volume low on St. Stephen but powerful later; guitar duels with Phil in The Eleven.",
+    "Phil": "Engages in tight duel during The Eleven, zooms on bass throughout, and delivers a rare extended solo after New Potato.",
+    "Bob": "",
+    "Keys": "Organ adds perfect embellishments on Death Don't Have No Mercy.",
+    "Drums": "Bill (Kreutzmann) goes 'nuts' on drums, driving the high‑energy jams."
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Potato Caboose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alligator": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T08:54:30.566406+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-08-22.sbd.koucky.gmb.92733.sbeok.flac16"
+}

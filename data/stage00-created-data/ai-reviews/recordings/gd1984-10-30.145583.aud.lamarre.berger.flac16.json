@@ -1,0 +1,46 @@
+{
+  "summary": "Decent recording of an engaging show with a standout Cassidy jam and a well‑played second set, though The Other One feels a bit flat.",
+  "review": "The reviewer enjoys the early Cassidy improvisation and finds the second set solid overall, but notes that The Other One never quite takes off. No specific comments on tape quality are given, so the source is unclear, but the performance merits a four‑star rating.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review; it praises parts of the show (Cassidy, set two) while critiquing The Other One, resulting in a balanced four‑star assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on audio clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy"
+    ],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": "Second set described as well‑played overall; first set contains a vivid Cassidy jam that ‘wakes up’ the listener, but The Other One feels less engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T23:42:42.911905+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-30.145583.aud.lamarre.berger.flac16"
+}

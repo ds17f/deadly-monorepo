@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard recording of decent clarity captures a mixed‑bag show with strong moments like Ship of Fools and Comes a Time but overall uneven performance.",
+  "review": "The set offers a few bright spots – the first‑set highlights “Ship of Fools,” “Desolation Row” and a later “Comes a Time” – and the band’s exploratory jam at the end of “Stranger” is praised in hindsight. However, many listeners recall a gloomy second set, backstage drama (bottle incident, Phil Lesh yelling) and an overall uneven feel that keeps the show from rising higher. The soundboard source plays at the correct speed and the drums/space are clear, though some gaps and missing pieces keep the recording quality only fair.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.7,
+    "confidence": "medium",
+    "rationale": "Show quality is viewed as uneven (average ~2.3/5) while the soundboard recording is decent (~3.5/5). Weighted combination yields a rating in the 2.5‑3.4 range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Plays at correct speed, drums and space are clear, but reviewers note missing pieces, occasional crowd noise (bottle hit) and overall lack of polish."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ship of Fools",
+      "Desolation Row",
+      "Comes a Time",
+      "Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set felt fun and dance‑able, second set turned gloomy with long meandering jams and backstage tension; overall pacing uneven but contains memorable moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Wah pedal work noted on the jam after “Stranger”; also mentioned for his playing on “Comes a Time.”",
+    "Phil": "Seen yelling at Bobby backstage, no specific musical comment.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums and space sections described as great."
+  },
+  "song_mentions": {
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:19:44.774741+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-31.sbd.walker-scotton.miller.106111.flac16"
+}

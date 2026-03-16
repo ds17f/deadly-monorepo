@@ -1,0 +1,51 @@
+{
+  "summary": "Muddy soundboard capture of an exploratory late‑84 show, highlighted by a stellar Playing In The Band/Drums/Space jam.",
+  "review": "The recording is a soundboard source that suffers from muddiness and low volume, likely due to some Dolby processing, but it remains listenable. Musically the concert is praised for its exploratory jams, especially the extended Playing In The Band → Drums → Space sequence, though the setlist is considered fairly typical of the last months of 1984.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality receives strong positive comments (≈4 stars) while recording quality is noted as muddy and low‑volume (≈2.5 stars); weighted average yields about 3.6."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Muddy sound, reduced loudness, possible Dolby processing; overall decent but not crisp."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing In The Band",
+      "Drums",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Exploratory and jam‑heavy typical of late‑1984, not a uniquely varied set but strong in extended improvisations."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:18:14.133265+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-12-29.sbd.walker-scotton.miller.106169.flac16"
+}

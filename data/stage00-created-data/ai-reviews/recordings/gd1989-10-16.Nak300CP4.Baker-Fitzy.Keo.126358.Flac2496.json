@@ -1,0 +1,31 @@
+{
+  "summary": "Audience recording with limited sound quality despite the reviewer’s appreciation of the tapers.",
+  "review": "The sole review notes that this night was difficult to capture well, describing both the audience (AUD) and even the soundboard tapes as less than ideal. While the reviewer gives the release a five‑star rating out of gratitude for Fitzy, Baker, and Keo, the technical quality is regarded as poor, and no musical highlights are mentioned.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only one review; it praises the effort but repeatedly mentions weak sound quality, with no information on performance. Weighted toward a low recording rating and neutral show assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Sound is muddy and difficult to capture clearly; even the soundboard tapes are described as not great."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T00:36:32.183328+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-16.Nak300CP4.Baker-Fitzy.Keo.126358.Flac2496"
+}

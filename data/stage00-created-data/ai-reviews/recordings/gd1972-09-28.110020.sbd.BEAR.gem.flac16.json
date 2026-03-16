@@ -1,0 +1,45 @@
+{
+  "summary": "Clear soundboard source with a front‑heavy Bob mix, highlighted by a scorching China Cat Sunflower → Playing in the Band transition.",
+  "review": "The show is praised for its tight communication and heat, especially the China Cat Sunflower into Playing in the Band segment that many fans call solid. The recording is a soundboard capture that sounds clear overall, though Bob Weir’s guitar sits high in the mix, which some find less than ideal but still useful for hearing the interplay with Garcia.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (mostly 5‑ and 4‑star reviews) plus a generally good soundboard recording, tempered by mix imbalance on Bob’s guitar."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall sound; however Bob Weir's guitar is unusually high in the mix, making the balance a bit off."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "Playing In The Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic performance with tight band communication; the China Cat Sunflower → Playing in the Band transition is highlighted as a solid moment."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his interplay with Bob, though no specific tonal comments.",
+    "Phil": "",
+    "Bob": "His guitar sits high in the mix, which is not ideal but showcases the interaction with Garcia.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T04:28:00.340572+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-28.110020.sbd.BEAR.gem.flac16"
+}

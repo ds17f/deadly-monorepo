@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard recording of a legendary 1969 show with smoking Dark Star and the early Main Ten jam, though the archive is missing several tracks.",
+  "review": "Fans rave about the performance – calling the jams “awesome,” the set list “unbelievable,” and highlighting a gorgeous Dark Star journey that segues into the early Main Ten (the precursor to Playing In The Band). The soundboard source delivers crisp, 5‑star audio quality, but several reviewers lament that key songs are absent from the streaming version.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Show is praised as exceptional with standout jams and set list; recording quality is rated excellent by reviewers. Missing tracks and a few zero‑star notes pull the overall rating down slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers award 5‑star sound, describing it as clear and powerful; no complaints about muddiness or mix issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Main Ten"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as ‘unbelievable’ with a seamless, high‑energy flow—particularly the Dark Star journey into the Main Ten jam that exemplifies the band’s late‑1969 metamorphosis."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Main Ten": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T18:08:43.101518+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-11-08.sbd.wise.17433.shnf"
+}

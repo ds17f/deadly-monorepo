@@ -1,0 +1,75 @@
+{
+  "summary": "Well‑balanced soundboard captures a high‑energy February ’69 show highlighted by a scorching Eleven→Caution suite and a fiery Dark Star despite occasional cuts.",
+  "review": "The performance is widely praised for its explosive jams – especially the legendary Eleven > Caution sequence, a soaring Dark Star, and an inspired Seven instrumental.  The soundboard recording is solid for its era, offering good clarity though it suffers from some muddiness, a missing end of “Cryptical,” and occasional cuts.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight exceptional musical moments; technical flaws are noted but not enough to outweigh the show’s strength, yielding a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Solid, well‑balanced soundboard for 1969 with clear instrument separation; some reviewers note muddy/lifeless mids and a missing ending to “Cryptical,” plus occasional cuts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Eleven",
+      "Caution",
+      "Dark Star",
+      "Seven",
+      "We Bid You Goodnight"
+    ],
+    "poor_songs": [
+      "Cryptical (cut)"
+    ],
+    "setlist_flow": "The set flows through classic early‑’69 jam vehicles, building intensity from the opening into a powerful Eleven→Caution suite and closing with a tranquil “Bid You Goodnight.”  Minor interruptions are noted but do not disrupt overall momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is repeatedly praised for inventive solos, shredding licks, and hot playing on The Eleven, Dark Star, and throughout the show.",
+    "Phil": "",
+    "Bob": "Bob (referred to as “Pig”) gets credit for his vocal rap in Caution, adding energy to the performance.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Eleven": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Caution": {
+      "positive_mentions": 8,
+      "negative_mentions": 1,
+      "total_mentions": 9
+    },
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Seven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "We Bid You Goodnight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cryptical": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T10:58:12.508623+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-02-05.sbd.cotsman.8993.sbeok.shnf"
+}

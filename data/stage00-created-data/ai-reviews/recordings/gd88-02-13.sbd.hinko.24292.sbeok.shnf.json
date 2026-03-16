@@ -1,0 +1,58 @@
+{
+  "summary": "Solid soundboard recording that captures a laid‑back late‑80s show with strong moments like Black Muddy River and Sugaree, though the performance feels typical and occasionally low‑energy.",
+  "review": "The SBD capture is clear and reliable – reviewers repeatedly note good board quality and crisp instrument balance. Musically the band plays well and delivers a few highlights (Black Muddy River, Sugaree, an enjoyable Iko Iko), but many feel the setlist is fairly typical of the era and at times a bit subdued.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the soundboard quality (good‑to‑excellent) while the musical performance is judged solid but unexceptional, yielding an overall rating in the mid‑range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Consistently described as clear and crisp; “right on” for an SBD. A few listeners call it merely decent, but no major drop‑outs or muffiness are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Muddy River",
+      "Sugaree",
+      "Iko Iko"
+    ],
+    "poor_songs": [
+      "Cold Rain and Snow"
+    ],
+    "setlist_flow": "Typical late‑80s Dead set – well‑played and cohesive in spots (notably the “We Want Phil” chant), but overall laid‑back and lacking the high energy of earlier eras."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for strong guitar tone and solos; reviewers say his playing makes them smile.",
+    "Phil": "Mentioned positively in moments like the “We Want Phil” chant and noted as interesting when paired with Jerry on certain tracks.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s Hammond B‑3 organ work is highlighted as a standout element (“cannot be beat”).",
+    "Drums": "Drums/Space are described as sufficient but not especially memorable."
+  },
+  "song_mentions": {
+    "Black Muddy River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:00:46.646291+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-02-13.sbd.hinko.24292.sbeok.shnf"
+}

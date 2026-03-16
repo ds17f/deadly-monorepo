@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard recording captures a high‑energy 1987 show with stellar Shakedown Street, Deal and Terrapin Station performances.",
+  "review": "The concert is praised for its tight, coherent playing and standout moments like the opening Shakedown Street, a fiery Deal, and an engaging Terrapin Station jam. Reviewers note the recording sounds great—clear and well‑balanced—making the high‑energy performance easy to enjoy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Four out of five reviewers give 5 stars and highlight strong musical moments; one moderate review does not detract from the overall positive impression. Recording is described as great sound, supporting a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers specifically mention 'great sound' and clear mix; no dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Deal",
+      "Terrapin Station",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy, tight set with a glorious shakedown opener and sustained momentum through the second half; overall coherent and lively performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Spot‑on guitar riffs noted by reviewers, contributing to the band's coherence.",
+    "Phil": "Nice bass work from Phil Lesh highlighted during the Terrapin jam.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:20:48.113057+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-11-14.122199.sbd.miller.flac16"
+}

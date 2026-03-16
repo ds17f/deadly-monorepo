@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent matrix/audience recording with crystal‑clear bass and a stellar set highlighted by Touch, The Greatest Story Ever Told and a smoking Truckin’→Smokestack Lightning",
+  "review": "Both reviewers rave about the audio – it’s clear, not overly bright, with plenty of low end and superb stereo separation that captures stage ambience. The performance is described as “wicked good,” featuring standout moments like a sparkly Touch solo, focused runs on Loser, dense The Greatest Story Ever Told, and an inspiring Truckin’→Smokestack Lightning jam.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Both reviewers give high marks (4‑5 stars) and praise both the musical performance and the recording quality, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear and detailed AUD source with lots of bass, not too bright; great stereo separation, subtle stage hum adds realism, minimal space issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch",
+      "The Greatest Story Ever Told",
+      "Loser",
+      "Victim > Foolish",
+      "Crazy Fingers",
+      "Truckin'",
+      "Smokestack Lightning",
+      "Don't Ease Me In"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A concise first set rounded out by a bonus \"Don't Ease\" and an explosive second set that builds into a memorable Truckin' → Smokestack Lightning jam, showcasing tight transitions and playful interplay."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple sparkly and focused solos (Touch, Loser, Crazy Fingers) plus playful lead on Truckin'.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey highlighted as particularly playful during the Truckin' jam."
+  },
+  "song_mentions": {
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim > Foolish": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:10:11.508714+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-03.nak300.holtz.jaz.103622.flac16"
+}

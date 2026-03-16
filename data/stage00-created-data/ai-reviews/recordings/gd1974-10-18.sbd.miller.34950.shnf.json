@@ -1,0 +1,50 @@
+{
+  "summary": "Excellent soundboard capture featuring a super‑spacy Seastones segue into Dark Star and a moving Morning Dew.",
+  "review": "The single five‑star review praises the show’s spacey vibe, highlighting the experimental Seastones piece that flows into an expansive Dark Star and a heartfelt rendition of Morning Dew. While no specific recording comments are given, the .sbd designation suggests a clear soundboard source, making this a must‑listen for fans of the band’s more psychedelic moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Only one highly positive review (5 stars) with enthusiastic language; rating reflects strong show impression and presumed good soundboard quality but limited data."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on audio fidelity; assumed clear typical of soundboard recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer emphasizes a space‑filled sequence starting with Seastones, moving through an exploratory Dark Star, and concluding with an emotive Morning Dew."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Seastones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T01:25:26.449759+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-10-18.sbd.miller.34950.shnf"
+}

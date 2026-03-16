@@ -1,0 +1,81 @@
+{
+  "summary": "Solid late‑'92 set with strong They Love Each Other and China Cat",
+  "blurb": "The show delivers a warm rendition of \"They Love Each Other\" and a nicely segued \"China Cat Sunflower > I Know You Rider\". Jerry’s voice is raspy from recent health issues, but his guitar still shines on the later numbers. Overall the performance is steady with highlights in the second set, though recording quality varies.",
+  "review": "December 2, 1992 at McNichols Sports Arena captures a transitional Grateful Dead – fresh off Jerry’s illness yet already finding its groove. The first set rolls through heartfelt material like \"Feel Like A Stranger\" and “They Love Each Other,” with the latter standing out for its lyrical warmth despite the band’s occasional volume wobble. By the second set, the classic pairing of \"China Cat Sunflower > I Know You Rider\" lands cleanly, and the group builds momentum into a powerful \"He's Gone\" that segues into an intense visual drum segment where Mickey swaps his kit for congas and bongos. The encore’s “Rain” offers a poignant emotional lift, showing Jerry reconnecting with the audience even as his voice stays low‑key. While the soundboard capture (gd1992-12-02.140248.sbd.cm.miller.flac1644) isn’t pristine – early bleed‑through and some mic quirks are evident – it remains the most complete and listenable source, delivering enough clarity to appreciate Vince Welnick’s organic piano work and the band’s solid rhythm foundation.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.4,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 11,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": -0.2,
+      "sentiment_rationale": "Mixed sentiment dominates the recordings, with one positive note about a recording and two negative comments on performance/recording quality; no consistent praise across multiple sources to warrant a positive boost.",
+      "final_calculation": "2.5 + 0.1 - 0.2 = 2.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1992-12-02.140248.sbd.cm.miller.flac1644",
+    "reason": "Fair‑quality soundboard capture with the most complete set and clearer audio after the first song, making it the best source despite early bleed‑through."
+  },
+  "key_highlights": [
+    "Strong renditions of \"They Love Each Other\" and the classic \"China Cat Sunflower > I Know You Rider\" segues.",
+    "Jerry’s raspy vocal tone but bright guitar work on later numbers, especially \"Rider\"/\"I Know You Rider\".",
+    "Vince Welnick delivers an organic piano performance; synth textures stay minimal.",
+    "Mickey Hart’s conga/bongo‑focused drum segment adds a visual and rhythmic highlight."
+  ],
+  "song_highlights": [
+    "They Love Each Other",
+    "The Same Thing",
+    "Jack-A-Roe",
+    "Let It Grow",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "He's Gone",
+    "Drums",
+    "Rain"
+  ],
+  "band_performance": {
+    "Jerry": "Voice sounds raspy and lower due to health issues; guitar shines on later songs, especially the \"Rider\" segment, though volume is occasionally turned down.",
+    "Phil": "Provides steady, solid bass support throughout, stepping in when Bob drops out.",
+    "Bob": "Shows vocal strain and steps offstage intermittently, returning for later numbers with a lugubrious tone.",
+    "Vince": "Delivers an organic piano performance; mic issues early on but recovers, while Bralove's synth stays minimal.",
+    "Mickey": "Focuses on congas and bongos, creating an intense visual drum segment that stands out in the second set.",
+    "Billy": "Maintains a steady rhythmic foundation alongside Mickey, complementing the percussion dynamics."
+  },
+  "processed_recordings": 7,
+  "processed_date": "2025-09-18T08:24:06.428622+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "They Love Each Other"
+    ],
+    [
+      "The Same Thing"
+    ],
+    [
+      "Jack-A-Roe"
+    ],
+    [
+      "Let It Grow"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Truckin'",
+      "He's Gone",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Wharf Rat",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Rain"
+    ]
+  ]
+}

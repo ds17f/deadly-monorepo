@@ -1,0 +1,46 @@
+{
+  "summary": "Soundboard capture of historic Woodstock set with a marathon Turn On Your Lovelight, but the performance is uneven and not among the Dead's best.",
+  "review": "The recording provides a decent sound‑board source that benefits from an EQ tweak, preserving a slice of history rather than delivering pristine audio. Musically the show is mixed – Pigpen’s 45‑minute Turn On Your Lovelight stands out, while other moments like High Time feel dragged and the overall gig falls short of the band’s peak in ’69.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is judged average/uneven (70% weight) while the soundboard source is acceptable (30%). Combined score lands in the low‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No major audio defects noted; reviewers suggest using EQ for optimal playback. Not described as crystal‑clear but acceptable for a historic archive recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Turn On Your Lovelight"
+    ],
+    "poor_songs": [
+      "High Time"
+    ],
+    "setlist_flow": "The set is highlighted by an epic, extended Turn On Your Lovelight but overall feels uneven and less compelling than other 1969 performances."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Turn On Your Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T16:40:18.590939+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-08-16.sbd.gmb.95857.flac24"
+}

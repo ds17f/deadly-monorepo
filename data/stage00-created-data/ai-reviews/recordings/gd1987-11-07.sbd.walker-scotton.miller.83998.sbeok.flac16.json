@@ -1,0 +1,47 @@
+{
+  "summary": "Fair soundboard recording of a mixed‑quality show, highlighted by an epic One More Saturday Night encore after a 32‑minute standing ovation.",
+  "review": "The performance is uneven – some fans note sloppy moments (Jerry and Brent seemingly forgetting parts of One More Saturday Night) and weak song transitions, while others rave about the massive standing‑ovation encore. The remastered soundboard tape sounds good overall, but several reviewers report track‑ordering problems and occasional noise toward the end.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (both strong encore and weak transitions) and recording is generally decent but marred by track‑messing complaints, leading to an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Nice sounding remaster noted, but multiple reviewers report messed‑up tracks and noise toward the end of the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "One More Saturday Night"
+    ],
+    "poor_songs": [
+      "One More Saturday Night",
+      "Hey Pocky Way"
+    ],
+    "setlist_flow": "Song transitions described as weak, though the show closed with a memorable 32‑minute standing ovation for One More Saturday Night."
+  },
+  "band_member_comments": {
+    "Jerry": "Sounds like Jerry forgot how to play One More Saturday Night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent had a pitch shifter applied during Hey Pocky Way.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Hey Pocky Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:04:06.813867+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-11-07.sbd.walker-scotton.miller.83998.sbeok.flac16"
+}

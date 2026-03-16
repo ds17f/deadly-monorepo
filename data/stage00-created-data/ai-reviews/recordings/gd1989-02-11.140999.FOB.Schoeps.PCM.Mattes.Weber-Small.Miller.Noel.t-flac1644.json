@@ -1,0 +1,63 @@
+{
+  "summary": "Decent soundboard capture with a bass‑heavy, slightly muffled mix, but a solid show highlighted by a stellar Box of Rain and an inspiring second set.",
+  "review": "The recording is a soundboard (SBD) source that sounds decent overall yet suffers from a bass‑forward, muffled balance that some listeners find unbalanced. Musically the concert is praised for a strong first set and a second set that really takes off, featuring standout performances of Box of Rain, Estimated Prophet, Take You Home, Black Peter and Eyes of the World, with especially enthusiastic remarks about the drums and guest percussionists Flora and Airto.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Reviews are uniformly 4–5 stars and emphasize good musical moments, while recording quality is noted as uneven; weighted average yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Described as bassy, muffled and unbalanced by one reviewer, though another calls it nice‑sounding; overall the mix is decent but not crystal clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Estimated Prophet",
+      "Take You Home",
+      "Black Peter",
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid first set followed by a second set that really takes off, with an especially spacy Estimated Prophet leading into Take You Home and strong drumming throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums praised as awesome, especially the contributions of guest percussionists Flora and Airto."
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Take You Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T16:45:32.391314+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-02-11.140999.FOB.Schoeps.PCM.Mattes.Weber-Small.Miller.Noel.t-flac1644"
+}

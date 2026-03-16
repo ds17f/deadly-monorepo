@@ -1,0 +1,100 @@
+{
+  "summary": "Soundboard recording with occasional mix drop‑outs captures a strong LA Coliseum show highlighted by a ripping Deal, rare Bertha > Greatest Story segue and solid second‑set jams.",
+  "review": "The sbd source provides generally clear audio, though reviewers note a brief moment where Jerry drops out of the mix and some first‑set PA hiccups. Musically the concert is praised for its powerful Shakedown Street opener, an uncommon Bertha > Greatest Story transition, a ten‑minute plus Deal, and a second set packed with strong Foolish Heart, Uncle John’s Band and other jams. The only real blemish mentioned is a dislike of Picasso Moon.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Show receives high praise with many standout moments, while the soundboard recording is solid but has minor mix drop‑outs; weighted average yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall clear sbd audio, but occasional mix issues (Jerry’s brief disappearance) and first‑set PA problems are noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Bertha > The Greatest Story Ever Told",
+      "The Deal",
+      "Foolish Heart",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [
+      "Picasso Moon"
+    ],
+    "setlist_flow": "Energetic first set with a stellar Shakedown opener and rare Bertha > Greatest Story pairing; Set I closes on an expansive Deal. Second set delivers long, cohesive jams (UJB, Miracle, Not Fade Away) with a solid Rhythm Devils > Space segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Briefly drops out of the mix during the first set but otherwise delivers ripping guitar throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Rhythm Devils > Space described as well‑played and characteristic of the era."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "TStones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T19:56:32.391068+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-01.140453.sbd.miller.flac2496"
+}

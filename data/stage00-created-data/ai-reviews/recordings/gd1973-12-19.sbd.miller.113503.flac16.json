@@ -1,0 +1,95 @@
+{
+  "summary": "Remastered soundboard capture of a late‑1973 show with crystal‑clear audio and standout performances of Here Comes Sunshine and the legendary Truckin’ → Nobody’s Fault But Mine → The Other One sequence.",
+  "review": "The recording is praised for its superb clarity – a meticulously remastered two‑track soundboard that sounds almost like a fresh Dick's Picks release. Musically the concert shines in the second set, highlighted by an epic Here Comes Sunshine and a jaw‑dropping Truckin’/Nobody’s Fault/The Other One/Insect Fear jam, while the first set is solid but uneven.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of reviews rate the show 5 stars, noting excellent performance and top‑notch sound; only one review is mixed (3 stars). Weighted average yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Remastered SBD with crisp, balanced mix; reviewers repeatedly call the audio \"top notch\", \"clear\" and \"superb\". Some note edited tracks/pitch corrections in releases, but the file itself is praised as high‑fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine",
+      "Nobody's Fault But Mine",
+      "The Other One",
+      "Insect Fear Jam",
+      "Truckin'",
+      "Stella Blue",
+      "Casey Jones"
+    ],
+    "poor_songs": [
+      "Playing in the Band (first set version)",
+      "Truckin' (first set version)",
+      "Dire Wolf",
+      "Black Throated"
+    ],
+    "setlist_flow": "First set is solid with a spectacular HCS but includes some weaker moments; the second set erupts into a classic late‑1973 peak, especially the Truckin’→Nobody’s Fault→The Other One sequence and ensuing Insect Fear jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar tone and improvisational engine are repeatedly praised – his jams on 'Truckin'' and the seamless segues are called \"perfect\" and \"the engine giving Truckin' the extra push\".",
+    "Phil": "Lesh’s bass work gets special mention: his Decon jam is described as a \"bomb at the perfect spot\", though his solo was omitted from the official release.",
+    "Bob": "",
+    "Keys": "Keith Godchaux's piano/organ chords are highlighted as coming in \"just right\" and adding an ethereal feeling to the jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Nobody's Fault But Mine": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Insect Fear Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T04:51:38.285849+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-12-19.sbd.miller.113503.flac16"
+}

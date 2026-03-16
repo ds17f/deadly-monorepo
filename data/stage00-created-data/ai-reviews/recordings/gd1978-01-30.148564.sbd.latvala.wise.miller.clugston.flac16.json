@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent 1/30/78 Chicago show with a sizzle‑filled second set and standout Ship of Fools and Eyes of the World, captured in clear sound despite an unspecified source type.",
+  "review": "Both reviewers rave about this 1978 Chicago concert, calling the second set a \"sizzle fest\" and highlighting Ship of Fools and Eyes of the World as peak moments. The performance is praised for Jerry Garcia’s explosive leads, strong vocal work from both Jerry and Bob, Donna’s on‑key singing, and Keith’s tasteful keyboard flourishes. While no explicit technical details are given, the mix is noted to be superior to the Miller version, suggesting a clean and well‑balanced recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "High praise for the musical performance (70% weight) combined with generally positive comments about the mix quality (30% weight) leads to a strong rating, but only two reviews limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers mention it sounds better than the Miller mix and is not too low, but give no detailed comments on clarity, balance, or audience bleed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ship of Fools",
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as a sizzling showcase while the first set is solid; overall flow receives enthusiastic approval."
+  },
+  "band_member_comments": {
+    "Jerry": "Explodes on his leads and his vocals are in fine form.",
+    "Phil": "",
+    "Bob": "Vocals noted as fine and strong.",
+    "Keys": "Adds nice flourishes.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T08:51:58.431299+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-30.148564.sbd.latvala.wise.miller.clugston.flac16"
+}

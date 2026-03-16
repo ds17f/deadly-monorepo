@@ -1,0 +1,73 @@
+{
+  "summary": "Tight 1988 show with emotive To Lay Me Down and fierce The Other One",
+  "blurb": "The set is solidly paced with smooth transitions, highlighted by a soaring To Lay Me Down and an intense The Other One. Jerry’s vocals shine and Brent’s keyboards drive the jams, especially on Playing > Crazy Fingers > Samson & Delilah.",
+  "review": "On December 29, 1988 at the Oakland‑Alameda County Coliseum the Dead delivered a tightly‑knit performance that rewards repeated listening. The first set rolls along with a punchy Hell In A Bucket → Sugaree opener and moves into an expressive To Lay Me Down where Jerry’s vocal is described as superb, backed by Brent’s vivid keyboard textures. Let It Grow follows with its gentle sway before the band launches into a second‑set marathon: Playing In The Band segues into Crazy Fingers, then into Samson & Delilah, looping back through Playing and soaring on Eyes Of The World. The highlight is an intense The Other One that builds from a humming matrix intro into a powerful jam, while the encore’s Mighty Quinn caps a night of strong interplay between Jerry and Brent. Across the board reviewers note solid pacing, tight transitions (e.g., Playin' into Crazy Fingers), and a rhythm section that locks in without any major missteps, making this show a standout late‑‘80s offering.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All three recordings are marked positive; reviewers repeatedly praise the vocal on To Lay Me Down, the intense The Other One, and Brent's keyboard work, with no consistent negative comments about performance. This strong consensus yields a high positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.1 + 1.6 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd88-12-29.sbd.popi.6313.sbeok.shnf",
+    "reason": "Soundboard source with good clarity, clean mix and no major flaws; captures the tight interplay and highlighted songs best."
+  },
+  "key_highlights": [
+    "Emotive vocal on To Lay Me Down and expressive guitar work.",
+    "Intense The Other One that builds from a humming intro into a powerful jam.",
+    "Tight Playin' > Crazy Fingers > Samson & Delilah sequence with strong Jerry‑Brent interplay."
+  ],
+  "song_highlights": [
+    "Hell In A Bucket",
+    "Sugaree",
+    "To Lay Me Down",
+    "Let It Grow",
+    "Playing In The Band",
+    "Crazy Fingers",
+    "Samson & Delilah",
+    "Eyes Of The World",
+    "The Other One"
+  ],
+  "band_performance": {
+    "Jerry": "Superb vocal on To Lay Me Down and expressive, tasteful guitar work throughout, especially holding back nicely on Eyes Of The World.",
+    "Phil": "Bass provides a solid foundation with notable ‘pebble attack’ on Crazy Fingers, keeping the groove tight.",
+    "Bob": "",
+    "Brent": "Energetic keyboard contributions—toy piano textures and ‘sick’, chilling fills—that drive the jams and fuel the Jerry‑Brent interplay.",
+    "Mickey": "",
+    "Billy": "Drumming is solid and interesting, though not highlighted as a standout during Space."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-16T15:51:22.139263+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Hell In A Bucket",
+      "Sugaree"
+    ],
+    [
+      "To Lay Me Down",
+      "Let It Grow"
+    ],
+    [
+      "Playing In The Band",
+      "Crazy Fingers",
+      "Samson & Delilah",
+      "Playing In The Band",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Stella Blue",
+      "Throwing Stones",
+      "Not Fade Away"
+    ]
+  ]
+}

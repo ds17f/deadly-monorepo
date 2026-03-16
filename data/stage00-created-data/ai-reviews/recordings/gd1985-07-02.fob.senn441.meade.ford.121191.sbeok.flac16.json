@@ -1,0 +1,79 @@
+{
+  "summary": "Clear audience recording of a classic summer‑'85 show with standout Lost Sailor/​Saint combo and soaring Terrapin Station.",
+  "review": "The audience‑mic capture is solid – listeners note good clarity and recommend a matrix to blend in the board’s sterility. Musically the concert shines, highlighted by a powerful Lost Sailor → Saint of Circumstance sequence, an inspired Terrapin Station, and energetic jams on Women Are Smarter and Crazy Fingers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All four reviewers give 4–5 stars and praise both the performance (numerous standout songs) and the audio quality, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Decent 441‑mic audience capture; clear overall but board is sterile – reviewers suggest a matrix could improve depth."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lost Sailor → Saint of Circumstance",
+      "Terrapin Station",
+      "Women Are Smarter (Man Smart, Woman Smarter)",
+      "Crazy Fingers",
+      "Throwing Stones",
+      "Turn On Your Love Light"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong momentum after Jerry's solo in Friend of the Devil, with a seamless transition into the second‑set jams; extended Terrapin solos flow naturally into drums."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his ripping solo on Friend of the Devil and extended Terrapin-ending solos into the drum break.",
+    "Phil": "",
+    "Bob": "Mentioned wearing a pink alligator T‑shirt, but no specific musical comment.",
+    "Keys": "",
+    "Drums": "The drum segment is praised for its extension and integration with Jerry's jam."
+  },
+  "song_mentions": {
+    "Lost Sailor": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Women Are Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Turn On Your Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:29:43.836133+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-07-02.fob.senn441.meade.ford.121191.sbeok.flac16"
+}

@@ -1,0 +1,52 @@
+{
+  "summary": "Balcony audience capture of a fiery Winterland show with standout Playing In The Band and China Rider, decent audio that improves as the set progresses.",
+  "review": "This recording, taken from the balcony at Winterland, delivers a solid audience sound that gets clearer in the second half. The performance is described as one of the most exciting of 1977, highlighted by Jerry Garcia’s souped‑up Wolf guitar on Playing In The Band (and its reprise) and fiery renditions of China Rider and China Doll.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Reviewers praise the show’s energy and standout songs while noting only a decent (not pristine) audience recording; combined weighting yields a strong but not perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Recorded from the balcony at Winterland; described as a decent AUD that improves later in the set, with some early‑set sloppiness but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing In The Band",
+      "Playing In The Band (Reprise)",
+      "China Rider",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early part a bit sloppy, but the fire builds quickly; overall an enthusiastic and high‑energy performance that sustains momentum through the second half."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his souped‑up Wolf guitar tone and wild soloing reminiscent of Pete Townshend.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing In The Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:20:07.085697+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-12-29.133041.aud.troy-smith.flac24"
+}

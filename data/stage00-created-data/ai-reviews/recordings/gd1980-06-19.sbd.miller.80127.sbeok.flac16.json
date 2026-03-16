@@ -1,0 +1,31 @@
+{
+  "summary": "Good‑sound soundboard recording but suffers from tracking errors that mislabel the China Cat track and shift the US Blues encore to the end of Set 1.",
+  "review": "The FLAC capture delivers very clear, high‑quality audio typical of a soundboard source, though the reviewer notes a serious tracking issue—track 11 is mislabeled as \"China Cat\" when it’s actually the US Blues encore, which was placed at the end of Set 1 to fit on two discs. The performance itself isn’t discussed, so listeners should expect solid sound but be aware of the song‑order anomaly.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only one brief review; it praises the audio quality but flags a significant tracking problem, leading to an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and well‑balanced sound, but tracking is off—track titles misaligned (\"China Cat\" actually US Blues) and encore moved to end of Set 1."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Encore was placed at the end of Set 1 to fit onto two discs, resulting in an unconventional set flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T00:42:27.518827+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-19.sbd.miller.80127.sbeok.flac16"
+}

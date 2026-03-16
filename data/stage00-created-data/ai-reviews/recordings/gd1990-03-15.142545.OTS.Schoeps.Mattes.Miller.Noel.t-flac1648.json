@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent recording of a hot show highlighted by an unforgettable Terrapin Station performance",
+  "review": "The reviewer raves about the energy of this concert, calling it a \"hot show\" and noting that the Terrapin Station rendition was possibly the best they've ever witnessed. The recording is praised as solid and worth getting, with no technical complaints mentioned.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "A single five‑star review emphasizes a stellar performance (especially Terrapin) and a good recording, leading to a high rating despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the recording as \"Good Recording\" with no noted flaws; no specific details on soundboard vs. audience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is described as a high‑energy, \"hot\" show with Terrapin Station standing out as the marquee moment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T03:37:06.118321+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-15.142545.OTS.Schoeps.Mattes.Miller.Noel.t-flac1648"
+}

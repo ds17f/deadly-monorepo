@@ -1,0 +1,71 @@
+{
+  "summary": "Loose yet magical second set with Terrapin Station and Let It Grow",
+  "blurb": "The show delivers a loose‑but‑tight vibe highlighted by a soaring Let It Grow and a powerful Hell In A Bucket → Terrapin transition that carries into U.S. Blues. Touch of Grey starts sluggishly, but the second set recovers with strong performances of Terrapin Station and an energetic encore.",
+  "review": "On September 11, 1985 at Oakland’s Henry J. Kaiser Convention Center the Dead were in a loosely tight groove that felt almost magical. The first set rolls along with solid staples, but it’s the second set that truly shines – after a sluggish Touch of Grey, the band launches into a smoking Hell In A Bucket that segues flawlessly into Terrapin Station, then rides the wave through a spirited Space and a soulful Stella Blue before closing with Good Lovin'. The encore’s U.S. Blues caps a night where Let It Grow glows in the first set and the Terrapin transition lifts the whole performance. Jerry’s lead work is strong throughout, even if he flubbed a lyric on Touch of Grey, drawing good‑natured audience titters. Overall the show feels like a late‑’80s gem: not flawless, but full of memorable moments that reward any Deadhead’s ear.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 10,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Two recordings are clearly positive, praising Let It Grow, Terrapin Station and the Hell In A Bucket → Terrapin transition; one is mixed but offers no negative criticism of the performance. The consensus is a generally strong show with only minor flaws, justifying a moderate positive sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 1.0 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1985-09-11.sbd.walker-scotton.miller.105709.flac16",
+    "reason": "Soundboard source with good overall fidelity, highlighting Let It Grow and the Hell In A Bucket → Terrapin segment despite slight clarity loss compared to top‑tier SBDs."
+  },
+  "key_highlights": [
+    "Terrapin Station transition from Hell In A Bucket lifts second set momentum",
+    "Let It Grow shines in the first set with a warm, expansive vibe",
+    "U.S. Blues delivers an energetic encore finish",
+    "Touch of Grey start drags but provides a memorable lyric slip"
+  ],
+  "song_highlights": [
+    "Let It Grow",
+    "Hell In A Bucket",
+    "Terrapin Station",
+    "U.S. Blues",
+    "Touch of Grey"
+  ],
+  "band_performance": {
+    "Jerry": "He delivers strong leads throughout, though he slipped a lyric during Touch of Grey, prompting audience chuckles.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-15T09:15:35.898095+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Let It Grow",
+      "Deal"
+    ],
+    [
+      "Hell In A Bucket"
+    ],
+    [
+      "Terrapin Station",
+      "Man Smart, Woman Smarter",
+      "Drums",
+      "Space",
+      "Gimme Some Lovin'",
+      "Stella Blue",
+      "Good Lovin'"
+    ],
+    [
+      "U.S. Blues"
+    ],
+    [
+      "Touch of Grey"
+    ]
+  ]
+}

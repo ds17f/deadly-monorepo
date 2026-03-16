@@ -1,0 +1,71 @@
+{
+  "summary": "High‑quality soundboard capture of an outstanding 1993 Shoreline show, highlighted by a scorching So Many Roads and vivid Scarlet Fire.",
+  "review": "The performance is repeatedly praised for its energy and tight playing, with the first set described as “tight, sharp” and the second set called “money,” especially noting a blistering So Many Roads and an engaging Scarlet Fire. The soundboard source is generally clear but suffers occasional glitches – distortion on parts of the second‑set Attics, interference after drums, and a cut‑off Lucy in the Sky – yet these issues are deemed minor compared to the musical excellence.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the show (standout songs, tight playing) combined with mostly positive comments about a soundboard recording that has only minor technical flaws."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Minor glitches reported – occasional distortion on Attics, interference after drums, and Lucy in the Sky cut off near the end. Overall clarity is strong with crisp instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads",
+      "Scarlet Fire",
+      "Promised Land",
+      "Lucy in the Sky"
+    ],
+    "poor_songs": [
+      "Attics",
+      "Lucy in the Sky",
+      "Touch of Grey"
+    ],
+    "setlist_flow": "First set described as tight and sharp, building strong momentum; second set lauded for its flow and energy with a “big 4” before drums, despite a few technical hiccups."
+  },
+  "band_member_comments": {
+    "Jerry": "Crisp, clean guitar tone; especially strong lyrical ending on So Many Roads.",
+    "Phil": "Bass crisp and clean; gives the classic arm‑swing signal during Lucy in the Sky.",
+    "Bob": "Rhythm guitar described as crisp and clean throughout.",
+    "Keys": "",
+    "Drums": "Generally solid, but some interference after drums and tech troubles after Space."
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lucy in the Sky": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Attics": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:01:32.250266+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-08-25.sbd.wiley.11812.sbeok.shnf"
+}

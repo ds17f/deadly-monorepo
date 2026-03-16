@@ -1,0 +1,57 @@
+{
+  "summary": "A soundboard capture that’s a little muddy but still clear enough to showcase an explosive early‑68 set highlighted by a monster Viola Lee Blues and stellar Clementine.",
+  "review": "The recording is a sound‑board (sbd) source that some listeners call “rough” or “a bit out of pitch,” yet it remains listenable and preserves the band’s raw energy. Musically this show is repeatedly praised as one of the best early‑68 performances – the opening Viola Lee Blues, a soaring Clementine, a tight The Other One and an electrifying Good Morning Little Schoolgirl all receive rave notices.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly positive about the performance (standout jams, top‑tier songs) with only modest complaints about muddy sound; the weighted average yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note a slightly muddy mix and occasional pitch quirks, but overall clarity is sufficient to hear the instruments and the iconic jams; no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Viola Lee Blues",
+      "Clementine",
+      "The Other One",
+      "Good Morning Little Schoolgirl"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early‑68 set flows from a blistering Viola Lee opening into varied moods – jazzy Clementine, concise The Other One, and a bluesy finish with Schoolgirl – delivering a compact yet high‑energy experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his soaring guitar tone (Les Paul or Gibson SG) and blistering solos throughout the set.",
+    "Phil": "Noted for solid, time‑keeping bass work on Clementine and overall tightness of the rhythm section.",
+    "Bob": "",
+    "Keys": "Brent (and occasionally Keith) receive brief acknowledgments; no strong consensus either way.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Viola Lee Blues": {
+      "positive_mentions": 16,
+      "negative_mentions": 0,
+      "total_mentions": 16
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Clementine": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Good Morning Little Schoolgirl": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    }
+  },
+  "processed_date": "2025-09-24T07:18:47.454992+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-02-02.sbd.jools.15801.sbeok.shnf"
+}

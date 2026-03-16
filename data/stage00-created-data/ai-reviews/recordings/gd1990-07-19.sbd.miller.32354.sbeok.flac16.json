@@ -1,0 +1,118 @@
+{
+  "summary": "Excellent soundboard capture of a stellar summer‑90 Deer Creek show with soaring Jerry, beastly Phil, and standout performances of Jack Straw, Desolation Row, Playing > China Doll > Uncle John’s, and They Love Each Other.",
+  "review": "Fans rave about this July‑1990 Deer Creek concert, calling it a \"restored my faith\" moment with Jerry in top form and Phil commanding the band. The Miller‑engineered soundboard recording is praised as crystal‑clear and well balanced, letting every highlight—from a blistering Jack Straw to an incandescent Desolation Row and a high‑energy Playing > China Doll > Uncle John’s sandwich—shine through.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews are 5‑star, praising both the musical performance and the Miller soundboard recording; only one outlier low rating does not change the overall high assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller soundboard capture described as crisp, clear, with Phil's bass audible and no reported drop‑outs or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "They Love Each Other",
+      "Desolation Row",
+      "Row Jimmy",
+      "Foolish Heart",
+      "Playing in the Band",
+      "China Doll",
+      "Uncle John's Band",
+      "Black Peter",
+      "Not Fade Away",
+      "Watchtower",
+      "Althea",
+      "The Promised Land"
+    ],
+    "poor_songs": [
+      "Picasso Moon"
+    ],
+    "setlist_flow": "Reviewers note a solid first set with strong openings, an energetic second‑set sandwich (Playing > China Doll > Uncle John’s) and a powerful post‑space sequence (Watchtower → Black Peter → Not Fade Away), creating a cohesive and high‑impact concert flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry's soaring lead guitar, tight solos (especially on China Doll), and his overall heightened energy compared to the previous night.",
+    "Phil": "Phil is repeatedly praised as 'in charge', with a beastly bass presence that is both audible and driving throughout the show.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Desolation Row": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Picasso Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T10:19:48.230066+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-19.sbd.miller.32354.sbeok.flac16"
+}

@@ -1,0 +1,105 @@
+{
+  "summary": "Decent soundboard capture of a mixed‑quality show that shines in its second set with standout Deal, Black Peter and jam highlights.",
+  "review": "The recording is a solid soundboard (B+ to nice‑sounding) though some listeners note it isn’t crystal clear. The concert starts unevenly – weak vocals and a sloppy first set – but recovers strongly in the second half with high‑energy performances of Deal, Black Peter, Women Are Smarter, Candyman and jammed sections of Supplication, Bird Song and Lazy Lightning.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 3‑4 stars and praise several songs while noting a weak first set; recording quality is described as decent but not great, yielding an overall mid‑to‑upper‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally praised as a B+ or nice‑sounding SB; some note the sound isn’t great or has occasional drop‑outs, but keyboards (Brent's B‑3) are highlighted as sweet."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Supplication",
+      "Lazy Lightning",
+      "Bird Song",
+      "Deal",
+      "Women Are Smarter",
+      "Candyman",
+      "Estimated Prophet",
+      "Eyes",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Dancing in the Streets",
+      "El Paso"
+    ],
+    "setlist_flow": "First set is uneven with weak vocals and a few missteps, but the second set lifts the concert with strong transitions and high‑energy jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Good performance on Black Peter; overall solid guitar work noted.",
+    "Phil": "",
+    "Bob": "Vocals described as weak on the first set.",
+    "Keys": "Brent's B‑3 organ sounds sweet and adds to the positive feel of the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Women Are Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancing in the Streets": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:44:56.344797+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-07-07.sbd.miller.30649.sbeok.flacf"
+}

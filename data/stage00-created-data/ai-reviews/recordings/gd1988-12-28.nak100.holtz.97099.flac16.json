@@ -1,0 +1,51 @@
+{
+  "summary": "Wonderful audience recording captures a punchy first set and quiet gems on He's Gone and Lovelight, making this NYE kickoff a fan favorite.",
+  "review": "The audience‑sourced tape is praised for its clear and lively sound, delivering an energetic first set that kicks off the New Year’s Eve show. Reviewers highlight the delicate moments in He's Gone and Lovelight as standout performances, and note the overall tight playing throughout the concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Single positive review (4 stars) emphasizes both excellent audience recording quality and strong musical performance, but limited data reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as a wonderful‑sounding audience recording with clear detail throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish",
+      "He's Gone",
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as punchy and energetic, perfect for a NYE start; quiet sections on He's Gone and Lovelight provide dynamic contrast."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Foolish": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:43:45.699212+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-12-28.nak100.holtz.97099.flac16"
+}

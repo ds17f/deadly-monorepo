@@ -1,0 +1,60 @@
+{
+  "summary": "Built To Last debut and jammy Playing In The Band shine",
+  "blurb": "The second set bursts with the historic debut of Built To Last and a deep‑grooving Playing In The Band. Jerry’s vocals are zestful on the new song and his tone shines on Dear Mr. Fantasy into the Hey Jude finale. Phil’s low‑end bass drives the jam while Brent adds magical keyboard textures.",
+  "review": "On October 20, 1988 at The Summit in Houston, the Dead delivered a memorable second set that has become a touchstone for late‑’80s fans. After a modest first set, the band launched into an electrifying China Cat Sunflower → I Know You Rider segue before settling into a thunderous Playing In The Band that showcases Phil Lesh’s deep, powerful bass foundation. The highlight of the night is the debut of Built To Last – Jerry’s vocals are described as zestful and lyric‑perfect, while Brent Mydland weaves magical fantasy moments that lead into an emotional Dear Mr. Fantasy → Hey Jude finale. The encore Black Muddy River rounds out a show that, despite mixed recording sources, shines in its improvisational vigor. Among the available tapes, the ultramatrix capture (gd1988‑10‑20.152119.ultramatrix.healy‑pearson.miller.flac2496) offers the clearest soundboard core with balanced audience ambience, faithfully rendering the band’s energy and making it the recommended listening version.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.5,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 17,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.9,
+      "sentiment_rationale": "Two recordings are explicitly positive, praising the Built To Last debut and a strong Playing In The Band jam. Three recordings are mixed, noting excellent song performances but critiquing audio quality. No consistent negative comments about musical execution appear, so the overall sentiment is modestly positive, warranting a +0.9 adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.9 = 3.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1988-10-20.152119.ultramatrix.healy-pearson.miller.flac2496",
+    "reason": "Good soundboard core with well‑balanced audience mix; captures the Built To Last debut and Playing In The Band clearly, offering the best overall listening experience."
+  },
+  "key_highlights": [
+    "Historic debut of \"Built To Last\" delivered with zestful vocals.",
+    "Jammy, bass‑driven \"Playing In The Band\" showcases tight group chemistry.",
+    "\"Dear Mr. Fantasy\" → \"Hey Jude Finale\" delivers an emotional climax.",
+    "Brent’s magical keyboard moments add texture to the second‑set flow."
+  ],
+  "song_highlights": [
+    "Built To Last",
+    "Playing In The Band",
+    "Dear Mr. Fantasy",
+    "Hey Jude Finale"
+  ],
+  "band_performance": {
+    "Jerry": "Vocals on Built To Last are zestful and lyric‑perfect; his tone on Dear Mr. Fantasy → Hey Jude is praised as outstanding.",
+    "Phil": "Bass provides deep, powerful low end that drives the Playing In The Band jam.",
+    "Bob": "",
+    "Brent": "Keyboard work adds magical fantasy moments; a memorable on‑stage tumble is recounted during the performance.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-16T15:21:53.933356+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Built To Last",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Dear Mr. Fantasy",
+      "Hey Jude Finale",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Playing In The Band"
+    ]
+  ]
+}

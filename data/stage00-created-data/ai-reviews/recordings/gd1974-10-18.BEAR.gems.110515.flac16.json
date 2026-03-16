@@ -1,0 +1,128 @@
+{
+  "summary": "Spectacular matrix recording with crystal‑clear sound and a stellar mid‑1974 Winterland performance highlighted by Dark Star, Tennessee Jed and an inspired Jerry Garcia.",
+  "review": "The tape delivers exceptionally clear audio—many reviewers call it the best GD sound ever—with ambient micing that gives a natural live feel. Musically the show is often described as the band’s peak of the run: Jerry’s tone shines on Dark Star/Dew, the second set is called “classic,” and several songs (Around & Around, Mexicali, El Paso, Tennessee Jed) receive high praise despite a few weaker moments in the third set. Overall the performance and recording are praised far more than any shortcomings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star ratings, noting excellent sound quality and a top‑tier performance; only one low rating concerns mislabeling, so the weighted average is around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Spectacular clarity with ambient on‑stage mics; many say it sounds better than typical soundboard releases. No major dropouts, though a few reviewers note minor SQ issues on specific tracks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Around & Around",
+      "Mexicali",
+      "El Paso",
+      "Tennessee Jed",
+      "Jack Straw",
+      "Dark Star",
+      "Dew",
+      "Promised Land"
+    ],
+    "poor_songs": [
+      "Sugaree",
+      "Peggy-O",
+      "Bertha",
+      "Row Jimmy",
+      "Not Fade Away",
+      "GSET"
+    ],
+    "setlist_flow": "The first set takes a minute to get going but soon locks in, the second set is described as classic and high‑energy, while the third set has mixed moments—some disappointing cuts but saved by strong jams like GDTRFB and Dark Star."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for excellent tone, soaring solos on Dark Star/Dew and overall stellar guitar work.",
+    "Phil": "Highlighted for his “sweet touch” in the feedback/space sections and solid bass interplay with Ned Lagin.",
+    "Bob": "Noted as strong rhythm‑guitar/vocal contribution throughout the show.",
+    "Keys": "Keith is commended for good piano tone (often more piano than organ) and overall keyboard presence.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "GSET": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One (GDTRFB)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T01:32:26.256788+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-10-18.BEAR.gems.110515.flac16"
+}

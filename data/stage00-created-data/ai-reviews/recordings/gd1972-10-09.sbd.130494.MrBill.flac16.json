@@ -1,0 +1,39 @@
+{
+  "summary": "Good‑quality soundboard recording with a decent show highlighted by a strong “Playing in the Band” but hampered by modest hiss and mixed performance polish.",
+  "review": "The remastered SBD capture is generally clear and well‑balanced, though listeners note background hiss and slight high‑frequency compression artifacts that affect cymbals. Musically the concert is solid – Jerry, Bob and Phil are audible and “Playing in the Band” receives praise – but several reviewers feel the performance lacks the experimental spark of a classic Dead show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (average‑to‑good) while recording quality is generally good with minor issues; the weighted average yields a four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Background hiss and compression artifacts are audible, especially on cymbals and quieter passages; high‑end sounds sound slightly lossy. Overall mix is praised as clear and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is considered decent overall but not polished; it delivers a few sweet moments without the superlative experimentalism typical of top Dead shows."
+  },
+  "band_member_comments": {
+    "Jerry": "Positive remarks about hearing his guitar clearly and the mix highlighting his playing.",
+    "Phil": "Mixed comments – praised for being audible in the mix, but one reviewer criticizes his singing ability.",
+    "Bob": "Positive mention of his presence in the mix; no specific performance critique.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T00:18:03.431009+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-10-09.sbd.130494.MrBill.flac16"
+}

@@ -1,0 +1,79 @@
+{
+  "summary": "High-energy Providence show with strong Shakedown Street and Sugar Magnolia",
+  "blurb": "The set features a punchy first half highlighted by Stagger Lee, Cassidy and Looks Like Rain, leading into a fiery second set anchored by Shakedown Street, Space and a soaring Sugar Magnolia. Phil’s bass shines and Jerry delivers high‑octane guitar work, though the Miracle > Black Peter segue dips slightly.",
+  "review": "April 1, 1986 at the Providence Civic Center captures a gritty, high‑octane snapshot of the Dead in their mid‑80s stride. The first set rolls off with bluesy vigor – Gimme Some Lovin' into Little Red Rooster, then a snarling Stagger Lee and a crisp Cassidy that keep the groove rolling into Looks Like Rain and Big Railroad Blues before landing on an uplifting The Music Never Stopped. The second set erupts with a monster Shakedown Street that feeds straight into Estimated Prophet, Eyes of the World, and a tight Drums‑Space segment; the band then rides the wave through I Need A Miracle into Black Peter before bursting out on a soaring Sugar Magnolia. Highlights like Sugar Magnolia’s bended‑knee strum, Jerry’s energetic (if occasionally “baked”) guitar work, Phil’s blazing bass that fans note as “almost never” heard this well, and Bob’s vocal delay on Looks Like Rain give the night its special flavor, while the Miracle > Black Peter transition feels like a minor dip. The encore closes with a heartfelt Box of Rain, rounding out an evening that, despite a few rough edges, delivers plenty of memorable moments for any Deadhead willing to ride the Providence roller‑coaster.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.0,
+      "sentiment_rationale": "All three recordings are labeled with mixed sentiment – reviewers praise several songs (Shakedown Street, Sugar Magnolia, etc.) but also note dips (Miracle > Black Peter) and no single strong positive or negative trend emerges across sources.",
+      "final_calculation": "2.5 + 0.1 + 0.0 = 2.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd86-04-01.fob-schoeps.miller.25529.sbeok.shnf",
+    "reason": "Excellent front‑of‑house matrix with crisp, clear mix that captures the band’s energy and provides the most complete, high‑quality listening experience."
+  },
+  "key_highlights": [
+    "High‑octane first set that feeds into a monster Shakedown Street jam.",
+    "Standout Sugar Magnolia bended‑knee strum and Looks Like Rain vocal delay.",
+    "Phil’s blazing bass lines described as “almost never” heard this well.",
+    "Minor dip in the Miracle > Black Peter segue noted by some listeners."
+  ],
+  "song_highlights": [
+    "Shakedown Street",
+    "Space",
+    "Cassidy",
+    "The Music Never Stopped",
+    "Stagger Lee",
+    "Box of Rain",
+    "Sugar Magnolia",
+    "Looks Like Rain",
+    "Big Railroad Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers high‑octane guitar energy throughout, though a few listeners felt he was a bit \"baked\" and not fully locked in on some passages.",
+    "Phil": "Blazing bass lines shine; fans note his playing is \"almost never\" heard this well on a show, making the low end a highlight.",
+    "Bob": "Vocal delay/sampling on Looks Like Rain and an iconic bended‑knee strum on Sugar Magnolia are singled out as standout moments.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-15T14:32:42.229523+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Shakedown Street"
+    ],
+    [
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Black Peter",
+      "Sugar Magnolia"
+    ],
+    [
+      "Cassidy"
+    ],
+    [
+      "Looks Like Rain",
+      "Big Railroad Blues",
+      "The Music Never Stopped"
+    ],
+    [
+      "Stagger Lee"
+    ],
+    [
+      "Box of Rain"
+    ]
+  ]
+}

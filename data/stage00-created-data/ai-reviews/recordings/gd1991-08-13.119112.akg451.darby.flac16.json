@@ -1,0 +1,68 @@
+{
+  "summary": "Excellent audience capture of a summer ’91 Cal Expo classic, featuring a monster Sugaree, soaring Let It Grow and a mind‑blowing Space → All Along The Watchtower transition.",
+  "review": "The recording is an outstanding audience tape that delivers crystal‑clear piano and crowd ambience, making listeners feel right in the front row at Cal Expo. Musically the show is relaxed yet inspired – Jerry lays down slide on Sugaree, the band rolls through a fiery Let It Grow, and the Space into All Along The Watchtower segue is described as a total mind‑blower.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "low",
+    "rationale": "Single detailed 5‑star review praises both performance and recording; the show is highlighted as exceptional and the audience source is called excellent."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Very clear piano and instrument balance for an audience tape; crowd energy captured well, no noted distortions or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Let It Grow",
+      "Foolish Heart",
+      "Eyes of the World",
+      "Space > All Along The Watchtower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Relaxed, loose, and high‑energy performance with a big outdoor crowd; strong second set opener and seamless transitions keep momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Adds slide guitar on Sugaree and delivers sweet runs on Eyes of the World; overall stellar tone.",
+    "Phil": "Uses a weird effects pedal during Space/All Along The Watchtower, creating a psychedelic texture.",
+    "Bob": "",
+    "Keys": "Bruce Hornsby’s Baldwin grand piano is front‑stage, clearly heard and adds joyful energy to the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Along The Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T23:01:04.708798+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-08-13.119112.akg451.darby.flac16"
+}

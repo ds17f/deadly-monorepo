@@ -1,0 +1,45 @@
+{
+  "summary": "Audience‑sourced recording is poor and incomplete, but the performance shines with a stellar first Casey Jones and an exuberant Dancing in the Streets.",
+  "review": "Fans rave about the historic first rendition of \"Casey Jones\" and the joyous \"Dancing in the Streets\" jam, calling them classic moments that transport listeners to a sunny Central Park afternoon. Unfortunately, multiple reviewers label the audio as hopeless, incomplete, or badly recorded, especially beyond those highlights, making the tape difficult to enjoy as a whole.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Positive comments focus on two standout songs and overall performance (high show weight), while several reviewers condemn the recording quality, pulling the combined rating down to an average level."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers describe the audio as hopeless, bad, and incomplete; the rest of the show suffers from poor and missing audience recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Casey Jones",
+      "Dancing in the Streets"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is highlighted by an early Casey Jones followed by extended jamming, culminating in a fun \"Dancing in the Streets\" segment; overall flow praised despite limited recording."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Casey Jones": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Dancing in the Streets": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T15:45:20.478464+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-06-22.sbd.kaplan.17892.sbeok.shnf"
+}

@@ -1,0 +1,61 @@
+{
+  "summary": "Solid 1981 Edinburgh show with strong Let It Grow and The Other One",
+  "blurb": "The setlist rolls through a typical early‑'80s flow, with Let It Grow, Estimated Prophet and The Other One standing out. The first set feels a little rusty for an opener, and the recording is missing the encore and Eyes Of The World.",
+  "review": "On September 30, 1981 the Grateful Dead opened their European tour at Edinburgh’s Playhouse Theater. While the band was still shaking off some early‑tour rust in the first set – a few tentative transitions among Alabama Getaway, Greatest Story Ever Told and Candyman – they quickly found their groove. Let It Grow blossoms into an extended jam that showcases Jerry’s lyrical lead and Brent’s tasteful keys, while the second set delivers a soaring Estimated Prophet followed by a fiery The Other One that rides a long, propulsive drum solo from Mickey and Bill. Unfortunately the recording cuts off before the encore (U.S. Blues) and omits Eyes Of The World, leaving the night feeling a bit incomplete despite its strong moments.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 10,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.0,
+      "sentiment_rationale": "One recording praised the show (positive) while the other highlighted a missing track (negative). The mixed sentiment does not constitute consistent praise or criticism, so no adjustment is applied.",
+      "final_calculation": "2.5 + 0.1 + 0.0 = 2.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd81-09-30.sbd.jim.12229.sbeok.shnf",
+    "reason": "Good‑quality soundboard capture that presents the full performance (except encore) with clear audio and highlights like Let It Grow, Estimated Prophet and The Other One."
+  },
+  "key_highlights": [
+    "Let It Grow expands into a memorable jam early in Set 1.",
+    "Estimated Prophet delivers a tight, propulsive performance.",
+    "The Other One features an intense, long drum solo that drives the second set.",
+    "Overall cohesive flow despite a slightly rusty opening."
+  ],
+  "song_highlights": [
+    "Let It Grow",
+    "Estimated Prophet",
+    "The Other One"
+  ],
+  "band_performance": {
+    "Jerry": "Shows engaging stage presence, even doing a pre‑show interview on Radio Forth, and delivers solid lead guitar throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Provides a powerful drum solo that energizes the crowd and underpins The Other One's climax.",
+    "Billy": "Locks in with Mickey during the extended drum break, adding drive to the second‑set improvisations."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-13T15:10:12.629142+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Althea",
+      "Let It Grow",
+      "Don't Ease Me In"
+    ],
+    [
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Stella Blue",
+      "Good Lovin'"
+    ]
+  ]
+}

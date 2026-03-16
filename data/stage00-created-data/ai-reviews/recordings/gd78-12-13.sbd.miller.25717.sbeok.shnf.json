@@ -1,0 +1,31 @@
+{
+  "summary": "Soundboard source with very poor audio quality; however Keith’s playing gets a nod and the band sounds decent to some listeners.",
+  "review": "The recording is widely criticized for sounding muffled and filtered, with several reviewers urging listeners to seek another soundboard version. One reviewer does praise Keith’s unusually strong keyboard work and notes that Phil’s bass was solid, suggesting the musical performance isn’t terrible despite the audio flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Two 1‑star reviews condemn the recording, one 4‑star review praises the playing, and a 5‑star review is unrelated; overall rating settles around average due to strong negative bias on sound quality but some positive performance notes."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Multiple reviewers describe the audio as filtered, muffled, and generally bad; one suggests it’s “sucked through a couple of tons of shit.” No specific mix issues beyond overall low fidelity are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No song‑specific comments; reviewers only note general performance quality, with one highlighting Keith’s keyboard work and Phil’s presence."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil is described as nice and present.",
+    "Bob": "",
+    "Keys": "Keith is having a better‑than‑usual night for this period.",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T17:13:48.978178+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-12-13.sbd.miller.25717.sbeok.shnf"
+}

@@ -1,0 +1,76 @@
+{
+  "summary": "Matrix recording with good sound quality captures a high‑energy 1985 show featuring standout Stagger Lee, Crazy Fingers and a flawless Stranger → Eyes → Goin' Down the Road sequence.",
+  "review": "The performance is praised for its explosive first set (Stagger Lee, Crazy Fingers, Don't Ease Me In) and a second‑set marathon highlighted by a seamless Stranger > Eyes of the World > Goin' Down the Road Feeling Bad jam. The matrix source is generally clear, though a few reviewers note occasional instrument dropouts and tonal quirks, and Jerry’s vocals receive mixed comments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly (4‑5 stars) while a couple are strongly negative; recording is praised as excellent but with some technical glitches, leading to an overall weighted rating around 3.8."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Matrix blend praised for clarity and balance; however a few listeners report instruments disappearing for minutes and occasional tonal oddities, especially in High Time."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stagger Lee",
+      "Crazy Fingers",
+      "Don't Ease Me In",
+      "The Stranger",
+      "Eyes of the World",
+      "Goin' Down the Road Feeling Bad"
+    ],
+    "poor_songs": [
+      "High Time"
+    ],
+    "setlist_flow": "First set described as solid and highlight‑rich; second set a long, flowing jam with flawless transitions from The Stranger into Eyes of the World and then Goin' Down the Road."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals receive mixed feedback – some call them terrible or worsening, others say they were good for ’85, while his guitar work is consistently praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T06:12:09.725292+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-27.mtx.seamons.fix.92963.sbeok.flac16"
+}

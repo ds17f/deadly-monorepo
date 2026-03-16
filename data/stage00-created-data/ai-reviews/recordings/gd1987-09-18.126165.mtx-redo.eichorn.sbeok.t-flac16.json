@@ -1,0 +1,39 @@
+{
+  "summary": "A legendary 1987 MSG show with Brent’s keyboards shines, captured in a crisp SBD/Audience matrix that’s enjoyable but could use a bit more mix polish.",
+  "review": "The performance is hailed as one of the best mid‑80s Dead shows – emotional Dew and a standout “Knocking at Your Back Door” make it unforgettable, especially with Brent on keys. The matrix blend of soundboard and audience sources delivers clear, energetic sound, though a few listeners note the SBD portion could be crisper and better mixed. Overall the show and recording are received very positively.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both performance (≈4.5) and recording quality (≈4.0) across four reviews yields a weighted average of ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Mix of soundboard and audience sources; generally clear and crisp with good energy, but the soundboard portion is described as slightly dry and could benefit from a tighter mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Knocking at Your Back Door"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy flow praised by reviewers; audience interaction is highlighted as vital, making the concert feel legendary and emotionally resonant."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work is specifically praised for adding crisp energy to the night.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Knocking at Your Back Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:47:35.158648+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-18.126165.mtx-redo.eichorn.sbeok.t-flac16"
+}

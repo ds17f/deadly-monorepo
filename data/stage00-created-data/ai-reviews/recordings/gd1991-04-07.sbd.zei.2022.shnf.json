@@ -1,0 +1,31 @@
+{
+  "summary": "Great performance with an excellent set list; recording quality not specified.",
+  "review": "The concert is praised as a great show with an excellent set list and well‑played material. Reviewers did not mention any details about the source or clarity of the audio, so the technical quality remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "Only one 4‑star review highlighting a strong show; no information on recording quality, leading to a modest rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix balance, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer notes an excellent set list and well‑played performance but gives no specifics on pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T18:44:01.797436+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-07.sbd.zei.2022.shnf"
+}

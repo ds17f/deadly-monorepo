@@ -1,0 +1,63 @@
+{
+  "summary": "High‑fidelity Pearson/Healy soundboard captures a rare‑filled Boston ‘91 show with standout Shakedown, Train to Cry and First Nobody's Fault performances.",
+  "review": "The recording is praised for its crisp, board‑derived audio quality that lets listeners enjoy the post‑Brent piano era despite some mixed feelings about the keyboard sound. Musically the concert is highlighted for rare gems like Train to Cry, First Nobody's Fault and a killer Shakedown opener, with strong energy through the first two thirds of the set and memorable moments from Stella Blue and Heaven’s Door.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show receives high praise for rare song performances and energy (5‑star review) while recording quality is noted as excellent; mixed 3‑star reviews temper the overall enthusiasm, yielding a solid but not outstanding rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the Pearson/Healy board capture as crisp and clear, with excellent fidelity that outweighs any personal preferences about the post‑Brent piano era."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Train to Cry",
+      "First Nobody's Fault",
+      "Stella Blue",
+      "Heaven's Door"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong first two‑thirds of the concert with high energy; rare second‑set gems flow smoothly (e.g., First Nobody's Fault segues from He's Gone into Spoonful), creating a well‑paced and memorable show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Post‑Brent dueling piano era noted; some reviewers less fond of the keyboard sound but overall the board capture is praised.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Train to Cry": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "First Nobody's Fault": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:45:48.011287+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-22.150637.sbd.pearson-healy.miller.flac2496"
+}

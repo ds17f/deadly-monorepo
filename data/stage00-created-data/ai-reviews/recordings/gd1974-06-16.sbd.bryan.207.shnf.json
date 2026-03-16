@@ -1,0 +1,50 @@
+{
+  "summary": "Soundboard recording with a slightly panoramic mix captures a stellar second set highlighted by an epic Eyes of the World > Big River transition and a marathon Playing in the Band.",
+  "review": "The show is praised for its powerful second‑set flow, featuring a 26‑minute Eyes of the World into Big River segue and a 29‑minute stretch of Playing in the Band that keeps the energy high. The source is generally regarded as great, though one reviewer notes the sound leans a bit on the panoramic side. Overall sentiment is mixed due to an outlier complaint about availability rather than performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Two reviewers rate the show and source highly (5 & 4 stars) while a third gives a low rating for unrelated availability issues; recording is soundboard and mostly good with minor panoramic coloration, leading to an overall strong but not flawless score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall clear soundboard capture, though one reviewer mentions the mix is a bit on the panoramic side."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World > Big River",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set builds an epic arc with long, seamless jams and strong transitions, especially the Eyes‑Big River segue."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T20:30:40.658635+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-06-16.sbd.bryan.207.shnf"
+}

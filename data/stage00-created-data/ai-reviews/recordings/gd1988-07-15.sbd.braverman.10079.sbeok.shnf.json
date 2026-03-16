@@ -1,0 +1,57 @@
+{
+  "summary": "Recording quality not discussed; the concert delivers strong interplay and standout moments like a smoking Shakedown Street opener and solid Scarlet/Fire, but suffers from out‑of‑tune vocals in the second set.",
+  "review": "Fans note that the band sounds refreshed after a break, with excellent interplay and a five‑star jam on Shakedown Street plus solid performances of Scarlet Begonias and Fire on the Mountain. However, Bob Weir’s post‑space tuning problems and missing Brent’s Hammond parts mar portions of the second set, and a few forgotten lyrics keep the show from being flawless.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show has several high points (notable jams and strong songs) but notable performance flaws; recording quality is unknown, lowering the overall score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewers commented on sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Never Trust a Woman"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for desire and interplay; second set described as problematic with out‑of‑tune vocals and missing keyboard textures."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia appears confused about verses in some songs, leading to lyrical slips.",
+    "Phil": "",
+    "Bob": "Weir is noticeably out of tune after the space segment throughout several numbers.",
+    "Keys": "Brent's Hammond organ is largely absent in many sections of the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Never Trust a Woman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T11:31:18.542661+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-07-15.sbd.braverman.10079.sbeok.shnf"
+}

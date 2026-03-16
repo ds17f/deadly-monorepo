@@ -1,0 +1,75 @@
+{
+  "summary": "Vivid audience recording captures a stellar 10/19/89 Spectrum show highlighted by a smoking Help‑Slip‑Franklins and powerhouse Cumberland.",
+  "review": "The 10‑19‑89 Spectrum gig is widely praised as the high point of that run, with a blistering first set, a legendary Help > Slip > Franklin’s sequence, soaring Estimated > Eyes and a searing post‑space. The audience (quadraphonic “cement doughnut”) recording is generally described as clear, immersive and full of the venue’s rumbling ambience, making the performance feel almost live.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and highlight numerous standout moments; recording quality is praised as exceptional audience capture despite one low‑rating comment, yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear audience mix with quadraphonic “cement doughnut” effect; captures ambient sounds, Brent's synth textures and the rumbling space. A few reviewers note minor gaps between songs but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Cumberland",
+      "Estimated > Eyes",
+      "Dear Mr. Fantasy > Hey Jude (reprise)",
+      "Death Don't Have No Mercy"
+    ],
+    "poor_songs": [
+      "Baby Blue"
+    ],
+    "setlist_flow": "Strong, solid first set that builds into a second‑set peak with Help‑Slip‑Franklins, Estimated‑Eyes and an intense post‑space; the energy stays high throughout despite a few song‑to‑song gaps noted by one reviewer."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for ripping guitar licks on Cumberland, delivering an outstanding solo on Dear Mr. Fantasy, and generally “tearing it up” across the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s trippy synth work during Estimated‑Eyes is highlighted; reviewers miss his presence after his passing.",
+    "Drums": "Drum and space sections described as scary, rumbling like a train, with the quadraphonic mix adding extra impact."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cumberland": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Space": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dear Mr. Fantasy > Hey Jude (reprise)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:57:25.432820+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-10-19.nak.rob_r.7595.sbefail.shnf"
+}

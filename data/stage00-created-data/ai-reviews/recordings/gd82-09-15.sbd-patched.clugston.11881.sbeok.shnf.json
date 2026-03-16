@@ -1,0 +1,83 @@
+{
+  "summary": "A mixed‑quality matrix recording (audience base with soundboard patches) that captures a high‑energy ’82 show highlighted by stellar Playing in the Band, Crazy Fingers and a soaring Sailor > Saint jam.",
+  "review": "The performance is widely praised – front‑row fans rave about Jerry’s smooth yet fiery playing, the explosive first‑set jams (Playing in the Band, Crazy Fingers) and a standout Sailor > Saint/Lost > Saint sequence.  The audio, however, suffers from audience hiss, tape noise and patchy soundboard sections that keep it from being truly clear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers give the show 4‑5 stars for musical performance, but many dock points (2‑3 stars) because of the poor‑to‑fair audio quality; weighted average yields a solid mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Primarily an audience recording with several soundboard patches (Playin' → Crazy Fingers, later SBD sections).  Notable hiss, tape noise and occasional muffling; some moments are crisp (later SBD mix gives better bass), but overall the audio is inconsistent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Crazy Fingers",
+      "Shakedown",
+      "Stella Blue",
+      "Sailor > Saint",
+      "Touch of Grey",
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "Shakedown (mixed opinions)",
+      "Second set (some felt lacking energy)"
+    ],
+    "setlist_flow": "The first set is described as a ‘second‑set’ in intensity, with relentless jams that keep the momentum.  The second set divides opinion – some love the NFA jam and Stella Blue, others think it loses steam."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for smooth playing, going 'nuts' on Saint and delivering a cat‑like wail on Shakedown; his tone is highlighted as a high point.",
+    "Phil": "Listeners note that the SBD patches bring out Phil’s bass better than the audience portions; one reviewer (a bassist) wishes he’d open shows with The Other One.",
+    "Bob": "His vocal and stage presence are noted (“Bob swore during Saint of Circumstance”), adding character to the performance.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Touch of Grey": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Day Job": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:24:49.443226+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-09-15.sbd-patched.clugston.11881.sbeok.shnf"
+}

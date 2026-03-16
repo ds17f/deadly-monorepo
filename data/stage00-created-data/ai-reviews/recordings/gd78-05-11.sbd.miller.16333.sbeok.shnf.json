@@ -1,0 +1,74 @@
+{
+  "summary": "Excellent soundboard upgrade captures a mixed‑bag ’78 show with standout Werewolves of London, Peggy‑O and the Drums, but an uneven first set and some sloppy vocals.",
+  "review": "The SBD upgrade delivers crystal‑clear audio that lets listeners hear the band’s chemistry – especially on the fiery Werewolves of London, a perfect Peggy‑O and a highlight‑filled Drum segment.  However, reviewers note a flat, lifeless first set, sub‑par vocal performances (notably on Stella) and an uneven Scarlet > Fire, giving the concert an overall mixed impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is judged average‑to‑good (mix of strong and weak moments) while recording quality is praised as excellent; the weighted combination yields a ~4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners repeatedly mention the sound being crisp and the SBD upgrade providing clear, balanced audio. One reviewer notes phase artifacts in an alternate triple‑matrix source, but the primary SBD file is praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Werewolves of London",
+      "Peggy-O",
+      "Drums"
+    ],
+    "poor_songs": [
+      "Scarlet > Fire",
+      "Stella"
+    ],
+    "setlist_flow": "The first set is described as flat and lifeless, with only a few bright spots (e.g., Tennessee Jed transition). The second set picks up thanks to the Drums and Werewolves of London, but overall the performance swings between inspired jams and sloppy moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar praised on Werewolves and other jams; his vocal on Stella described as poor.",
+    "Phil": "Phil Lesh’s bass growls highlighted during the Werewolves of London rendition.",
+    "Bob": "Bob Weir’s chemistry with Donna Jean is noted, along with a growl on Supplication and solid rhythm work.",
+    "Keys": "",
+    "Drums": "The drum segment is singled out as a set highlight; overall percussion described as loose but exciting."
+  },
+  "song_mentions": {
+    "Werewolves of London": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lightning > Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:41:05.652113+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-05-11.sbd.miller.16333.sbeok.shnf"
+}

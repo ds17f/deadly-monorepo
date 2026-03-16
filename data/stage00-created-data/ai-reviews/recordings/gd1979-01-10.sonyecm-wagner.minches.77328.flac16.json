@@ -1,0 +1,50 @@
+{
+  "summary": "A solid front‑of‑house audience capture of an inspired show – Jerry’s gritty Miracle and a soaring Dark Star shine, though the mix is a bit muffled in the highs.",
+  "review": "The performance is widely praised as one of the band’s classic “shakedown” nights, highlighted by a blistering rendition of The Miracle and a powerful Dark Star. The recording, made with two Sony 54P mics and an Sennheiser 441, is generally good but lacks bright high‑end detail compared to other audience sources.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (5‑star) and note standout songs, while the recording is judged good but not pristine; the weighted average yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Louder than some other audience tapes but muffled and missing bright highs; high frequencies are subdued, making it harder to separate Phil’s bass from Bobby’s guitar at times."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Miracle",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe the set as a classic Dead “shakedown” with strong momentum, especially in the second half where The Miracle and Dark Star drive the energy."
+  },
+  "band_member_comments": {
+    "Jerry": "His gritty blues‑laden tone on The Miracle and Dark Star is repeatedly praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T18:50:49.008881+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-10.sonyecm-wagner.minches.77328.flac16"
+}

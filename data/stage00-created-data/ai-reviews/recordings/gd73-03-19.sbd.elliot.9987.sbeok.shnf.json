@@ -1,0 +1,68 @@
+{
+  "summary": "Soundboard recording of a mellow 1973 show with standout Box of Rain, He's Gone and Loose Lucy, though a few listeners note the playback speed sounds off.",
+  "review": "The concert is praised for its relaxed vibe and strong performances of songs like Box of Rain, He's Gone, Truckin' and a lo‑down version of Loose Lucy. Most reviewers find the tape quality solid—levels are balanced and the mix clear—while a minority complain that the pitch sounds too fast, making vocals sound chipmunk‑like. Overall the show is regarded as an enjoyable snapshot of the 1973 Dead era.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the performance and tape highly (4‑5 stars) with only one low rating focused on perceived speed issues; show quality is strong while recording quality ranges from good to excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Levels and mix are generally praised as near‑perfect, but a few listeners note the playback speed/pitch sounds high, giving a chipmunk effect. Minor tape decay noted by one reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "He's Gone",
+      "Truckin'",
+      "The Other One",
+      "Loose Lucy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second‑set focus on Europe ’72 material creates a mellow, cohesive flow with highlights like the intro to China Cat Sunflower and strong group improvisations."
+  },
+  "band_member_comments": {
+    "Jerry": "Some reviewers say his vocals sound sped up like chipmunks, but others note solid guitar work and no major issues.",
+    "Phil": "Praised for on‑key singing and superb bass/piano/guitar trading licks, especially on Box of Rain.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T06:13:13.460370+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-03-19.sbd.elliot.9987.sbeok.shnf"
+}

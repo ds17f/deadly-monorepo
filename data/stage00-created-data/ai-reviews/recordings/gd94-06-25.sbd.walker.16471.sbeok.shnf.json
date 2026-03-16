@@ -1,0 +1,80 @@
+{
+  "summary": "Soundboard capture of a blistering Vegas night – the mix is clean and strong, but the performance swings between scorching highs (Mississippi, Liberty, Stella Blue, Shoe Fits) and heat‑drained lows.",
+  "review": "The recording is a well‑balanced sound‑board tape with crisp reverb and plenty of clarity despite the desert heat. The show itself is wildly divisive: fans rave about moments like \"Mississippi,\" the soaring Liberty jam and an inspired Stella Blue, yet many note that the extreme temperature sapped energy, especially in the second set where songs such as Cassidy and The Last Time fell flat.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "high",
+    "rationale": "The majority of reviewers praise the recording quality (clean mix, strong SB) while opinions on the musical performance are split; weighted averaging of show (≈3) and recording (≈4.5) yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clean, well‑balanced mix with neat reverb; many note it as a strong SB tape. No major dropouts reported, only occasional comment that the heat affected ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi",
+      "Liberty",
+      "Stella Blue",
+      "Shoe Fits"
+    ],
+    "poor_songs": [
+      "Cassidy",
+      "The Last Time"
+    ],
+    "setlist_flow": "First set held up despite the furnace‑like arena; second set felt uneven, with new material and extended jams battling heat‑induced fatigue."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for elite tone and energetic leads (Liberty, Stella Blue); some note a brief “bogged down” space jam.",
+    "Phil": "Generally positive mentions of Phil‑tuned songs; no specific criticism or praise beyond generic \"any Phil tune is good.\"",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "One reviewer highlighted the drums as a 5‑star element, noting they were especially strong this night."
+  },
+  "song_mentions": {
+    "Mississippi": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Long Way to Go Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shoe Fits": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Cassidy": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "The Last Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Easy Answers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T22:42:53.451528+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-06-25.sbd.walker.16471.sbeok.shnf"
+}

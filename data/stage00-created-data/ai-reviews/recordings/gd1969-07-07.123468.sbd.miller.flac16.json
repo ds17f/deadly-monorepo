@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a stellar park show featuring a soaring Dark Star → St Stephen → Eleven sequence and a fiery Lovelight.",
+  "review": "The recording is praised as one of the better summer‑’69 soundboards, delivering crisp clarity and a clean mix (the Eleven track even includes its high‑green chilly winds intro). Musically the concert shines with a top‑drawer Dark Star into St Stephen into Eleven, plus an inspired Lovelight that some fans thought featured the Allman brothers. Overall the performance is celebrated as a standout moment in Atlanta’s music history.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show and recording highly (5‑star praise for both musical performance and soundboard quality), with only a single outlier focusing on Allman‑Brother confusion; weighted average yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced mix; noted as one of the better summer‑’69 soundboards. Eleven track includes its high‑green chilly winds intro; no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "St. Stephen",
+      "Eleven",
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows brilliantly, highlighted by a seamless Dark Star → St Stephen → Eleven suite and an exuberant Lovelight that energized the crowd."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Tom Constanten’s organ work is singled out as a strong contribution, reinforcing why he was invited to join the band.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T16:10:33.529900+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-07-07.123468.sbd.miller.flac16"
+}

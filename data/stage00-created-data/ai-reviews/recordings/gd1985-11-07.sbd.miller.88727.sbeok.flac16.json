@@ -1,0 +1,80 @@
+{
+  "summary": "Excellent soundboard remix of a blistering 1985 Rochester show with a monster High Time, scorching Let It Grow and a smoking Touch‑>Samson sequence.",
+  "review": "The crowd‑filled Rochester concert is captured in a crisp, well‑remastered sound‑board mix that lets every instrument shine.  The performance is pure 1985 fire—high energy first set, a monster Deal, and an unforgettable second set highlighted by a beastly High Time, Old‑School Let It Grow, Touch > Samson and a soaring Midnight Hour encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All but one review are 5‑star rave reviews praising both the music and the remastered sound; recording is a high‑quality soundboard source, and the show is repeatedly called classic, giving it top marks."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Remastered by Charles Miller (CM) with crystal‑clear mix; reviewers note outstanding copy, superb balance and no noticeable dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Time",
+      "Let It Grow",
+      "Touch > Samson",
+      "Deal",
+      "Midnight Hour",
+      "Stella Blue",
+      "Loser"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds strong momentum to a \"monster\" Deal; second set ignites with Touch > Samson and a beastly High Time, culminating in an intense Let It Grow segue into drums and a fiery Midnight Hour encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as ‘barking out the Loser’ and his playing feels almost percussive – reviewers note his intensity throughout.",
+    "Phil": "Phil’s vocal contribution is highlighted (“Phil singing”) and his bass work underpins the high‑energy groove.",
+    "Bob": "Bob Weir is mentioned only in a whimsical post‑Dire Wolf chat about an imagined Tiny Dancer; no direct performance comment.",
+    "Keys": "Brent Mydland gets credit for “slashing” keyboards, adding fire to the mix.",
+    "Drums": "The drummers’ intensity ramps up especially during Let It Grow and the second set, creating a palpable increase in energy."
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch > Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Midnight Hour": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T10:58:23.792233+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-07.sbd.miller.88727.sbeok.flac16"
+}

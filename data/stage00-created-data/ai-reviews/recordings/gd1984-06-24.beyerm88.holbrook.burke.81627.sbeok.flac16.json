@@ -1,0 +1,39 @@
+{
+  "summary": "Good audience recording captures a high‑energy Saratoga show with a standout revived 'Dancin' in the Street' opener.",
+  "review": "The audience tape is consistently clear and free of major crowd intrusion, offering an enjoyable listening experience despite not being A+ quality. The concert bursts with energy from the opening, especially the revived 60s arrangement of 'Dancin' in the Street' that gets the crowd wild and sets a great tone for the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Single positive 4‑star review highlights strong performance and decent recording; limited data yields modest confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Consistent audience tape with limited crowd intrusion; not A+ but clear enough for a pleasant listen."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancin' in the Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy start with an enthusiastic revived arrangement of 'Dancin' in the Street', keeping momentum and audience excitement throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dancin' in the Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T18:52:18.988512+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-24.beyerm88.holbrook.burke.81627.sbeok.flac16"
+}

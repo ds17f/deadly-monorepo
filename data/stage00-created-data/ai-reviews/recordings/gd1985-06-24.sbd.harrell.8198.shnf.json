@@ -1,0 +1,90 @@
+{
+  "summary": "Excellent soundboard capture of a legendary rain‑soaked 1985 Cincinnati show highlighted by thunderous drums, epic Samson, Let It Grow, Cryptical Envelopes and a monster Smokestack Lightning.",
+  "review": "The recording is a clean soundboard source that lets listeners hear the storm’s drama as clearly as the band’s playing.  Fans rave about the intense second set – from the lightning‑lit Let It Grow to a ferocious Samson, a blistering Smokestack Lightning and a towering Wharf Rat – all amplified by thunder‑matching drums and inspired improvisation.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All five reviews are 5‑star, praising both the performance and the audio; the show is described as one of the best ever while the soundboard quality is called crisp and immersive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced mix with no reported dropouts or muffling; captures ambient storm sounds without sacrificing instrument definition."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson",
+      "Let It Grow",
+      "Cryptical Envelopes",
+      "Smokestack Lightning",
+      "Wharf Rat",
+      "Comes A Time",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as sunny and solid; a sudden rainstorm turned the second set into a dramatic, high‑energy experience with thunder‑matched drums and extended improvisations that kept momentum despite weather."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for soaring tone, emotional solos (especially on Comes A Time) and steady presence during the storm.",
+    "Phil": "Mentioned only briefly; reviewers note his limited appearance (“Where’s Phil? He shows up once in a while”).",
+    "Bob": "Referred to as “Bobby,” described as manic, driving the band forward, and trading guitars with Garcia for much of the show.",
+    "Keys": "Brent Mydland gets kudos for his first solo of the night and tasteful fills throughout; keyboards add texture especially in Cryptical and space sections.",
+    "Drums": "Mickey Hart and Bill Kreutzmann’s thundering drumming is highlighted as echoing the actual thunderstorm, creating a powerful rhythmic backdrop."
+  },
+  "song_mentions": {
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "R&R": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "GLove": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T05:42:57.038190+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-24.sbd.harrell.8198.shnf"
+}

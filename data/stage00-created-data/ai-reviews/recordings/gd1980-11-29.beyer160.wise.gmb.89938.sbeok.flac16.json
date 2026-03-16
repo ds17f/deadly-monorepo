@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent matrix recording with warm, full sound; standout performances of Shakedown, Stella Blue and Casey Jones.",
+  "review": "Fans rave about this 1980 Gainesville show, calling the recording the best‑sounding of the three available Auds thanks to its balanced matrix mix and just enough crowd ambience. The performance shines with a disco‑blues flavored Shakedown, an emotional Stella Blue, and a comforting Bob Weir shout‑out before Casey Jones, while Brent Mydland’s keyboards add extra warmth.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 5) and uniformly enthusiastic comments about both the musical performance and the matrix recording quality indicate an exceptional show with excellent technical capture."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Full, crisp sound with a warm, sweet tone; crowd noise is mixed just enough to add presence without muddying the mix. Reviewers describe it as the best‑sounding of the three Auds and note great balance across instruments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Stella Blue",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert flows smoothly, maintaining high energy throughout and building to an emotional climax around Casey Jones; the vibe stays consistently strong from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bobby's shout‑out before Casey Jones was highlighted as a comforting moment for fans.",
+    "Keys": "Brent Mydland's keyboards are praised for their strong presence and warm contribution to the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T06:11:22.429109+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-11-29.beyer160.wise.gmb.89938.sbeok.flac16"
+}

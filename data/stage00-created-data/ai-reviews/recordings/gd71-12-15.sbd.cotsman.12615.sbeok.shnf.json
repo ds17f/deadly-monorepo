@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard recording with mixed fidelity—early portion compressed and muddy, but superb second set featuring a smoking Lovelight suite and stellar Dark Star—show is highly praised.",
+  "review": "The show shines thanks to an inspired Pigpen on the Lovelight > King Bee > I'm A Man > Lovelight sequence, a ripping Bertha, solid Mr. Charlie and an electrifying Dark Star that lifts the second set. Recording quality is uneven: the first half suffers from compression, clipping and muddiness, while the mix clears up dramatically from Dark Star onward, delivering excellent sound for the highlight portion.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the performance 4‑5 stars and praise key songs; recording quality is mixed but improves in the second set, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Early tracks are compressed, clipped and a bit muddy with guitars low in the mix; keyboards (Keith's piano) become clear later. From Dark Star onward a different source kicks in, offering excellent clarity and balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lovelight > King Bee > I'm A Man > Lovelight",
+      "Bertha",
+      "Mr. Charlie",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First half is hampered by sub‑par source quality, but the second set—starting with Dark Star and featuring the Lovelight suite—flows brilliantly and is widely regarded as the highlight of this performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Good night on guitar; rips out an outstanding Bertha, smokes on the Lovelight suite, and delivers bluesy playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's piano is clear and sits well in the mix once the source improves.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lovelight > King Bee > I'm A Man > Lovelight": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mr. Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-20T11:20:36.769020+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-12-15.sbd.cotsman.12615.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Muffled audience tape captures a spirited Jack Straw performance, but poor audio limits the listening experience.",
+  "review": "The concert features an enthusiastic Garcia on \"Jack Straw,\" with his characteristic joyous fills noted by listeners. Unfortunately the audience‑sourced recording suffers from severe azimuth and muffling problems that make large portions of the show difficult to hear. The surrounding political drama and police presence are also mentioned, adding a mixed feel to the overall impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Show quality receives modest praise (especially Garcia’s playing on Jack Straw) while recording quality is described as largely unacceptable, pulling the combined rating down."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Severe azimuth issues and muffled audio make many sections hard to hear; one reviewer called it unbearable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; focus is on the energy of the opening Jack Straw and overall concert atmosphere."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as joyous, rambunctious, and delivering characteristic fills at the end of verses.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:00:04.477899+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-05-30.aud.vernon.14837.sbeok.shnf"
+}

@@ -1,0 +1,80 @@
+{
+  "summary": "High‑energy mid‑80s show captured on a crisp audience tape; standout jams like Let It Grow, Cryptical / Drums / Space and Samson shine despite occasional glitches.",
+  "review": "The concert is widely praised for its soaring second set and memorable moments – Jerry’s noodling in Space, the fiery Samson and the epic Cryptical‑Drums‑Space sequence are repeatedly highlighted.  The Nak300 audience source delivers a full‑range, summer‑amphitheatre ambience that most reviewers rate as good to excellent, with only minor drop‑outs noted on U.S. Blues.  A single dissenting review points to sloppy playing and an “old‑man” vocal tone, but the consensus is overwhelmingly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ≈ 4.15; most comments praise both performance and recording quality, with only isolated negative remarks."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Full‑range Nak300 audience tape captures the outdoor amphitheatre vibe; generally clear and crisp. Minor glitches noted on U.S. Blues and occasional drop‑outs, but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Minglewood",
+      "Cryptical Envelopment / Drums / Space",
+      "Samson",
+      "Smokestack Lightning"
+    ],
+    "poor_songs": [
+      "Terrapin Station (flubbed) "
+    ],
+    "setlist_flow": "First set builds strong momentum with bright, energetic numbers; second set escalates into high‑octane jams and weather‑driven intensity, highlighted by dramatic drums/space sections."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring noodling in Space, crisp guitar edge, occasional vocal “old‑man” character that fans find endearing; a rare flub on Terrapin Station noted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums/Space receives glowing remarks – ‘Harry loses his mind’ and thunderous playing that mirrored the stormy weather."
+  },
+  "song_mentions": {
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station (flubbed)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment / Drums / Space": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T05:41:50.473027+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-06-24.nak300.lai.360.sbeok.shnf"
+}

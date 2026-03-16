@@ -1,0 +1,70 @@
+{
+  "summary": "A muddy audience tape that struggles to deliver the music, yet strong moments like Truckin' and The Other One still shine through.",
+  "review": "The show contains several musical highlights – a superb Truckin' with a fiery Garcia solo, an inspiring run of The Other One, plus solid performances of Steppin' Out and China/Rider. Unfortunately the audience‑sourced recording is extremely muddy and often unlistenable, making those moments hard to enjoy.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "high",
+    "rationale": "Consistently low scores for sound quality drag the overall rating down despite a few praised performances; many detailed reviews give confidence in this assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Extremely muddy, low‑fidelity tape with inconsistent levels and frequent drop‑outs; reviewers describe it as unlistenable in places, though faintly audible."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One",
+      "Steppin' Out",
+      "China/Rider"
+    ],
+    "poor_songs": [
+      "Boss Man",
+      "Casey Jones"
+    ],
+    "setlist_flow": "First set regarded as unremarkable; second set lifts the performance with a strong Truckin', an expansive Other One suite, and solid transitions that showcase tight interplay."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's solo on Truckin' is highlighted as very nice and powerful.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith (keys) gets praised for melodic space segments and jazzy interplay during The Other One.",
+    "Drums": "A drum break leading into The Other One is noted positively."
+  },
+  "song_mentions": {
+    "Steppin' Out": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China/Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Boss Man": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T15:53:26.573540+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-04-07.aud.sirmick.31329.sbeok.flacf"
+}

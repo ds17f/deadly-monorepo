@@ -1,0 +1,77 @@
+{
+  "summary": "Mellow first set, strong Blow Away, Brent shines throughout",
+  "blurb": "The concert opens with a relaxed set featuring a crisp El Paso and a brief lyric slip on Bertha. The second set kicks up the energy with a powerful Blow Away, tight Drums>Space transition, and standout vocal work on Tom Thumb's Blues. Brent Mydland’s keyboards dominate, especially on Black Muddy River and Stella Blue.",
+  "review": "April 3, 1989 at Pittsburgh’s Civic Arena delivers a mellow first set that eases the crowd in with solid song choices – a clean‑cut El Paso, the ever‑reliable Greatest Story Ever Told (aside from a tiny lyric slip on Bertha) and a nicely paced Jack‑A‑Roe. Jerry’s tone is described as “real cool,” growing more confident as the night progresses, while Bob Weir shines vocally, earning the tongue‑in‑cheek moniker “All Wier.”\n\nThe second set turns up the heat. Blow Away erupts with Brent Mydland’s keyboards front‑and‑center, feeding into a fluid Estimated Prophet → Crazy Fingers → Uncle John’s Band sequence that keeps the band locked in. A spirited Drums>Space segment revives the momentum before the band rolls through Stella Blue and Sugar Magnolia, ending the night on an uplifting encore of Johnny B. Goode and Black Muddy River. Across multiple recordings the show is praised for its strong song selection, Brent’s dominant keys, and Jerry’s engaging leads, despite a few uneven moments noted in some sources.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 29,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Five out of eight recordings are marked positive, highlighting standout performances (El Paso, Blow Away, Brent's keyboards) and consistent praise for the band's tightness. Mixed comments note occasional unevenness but no recurring negative criticism about playing. The overall consensus is strongly favorable, justifying a +1.4 sentiment boost.",
+      "final_calculation": "2.5 + 0.3 + 1.4 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd89-04-03.sbd.harrel.7507.sbeok.shnf",
+    "reason": "High‑quality soundboard capture, crisp and solid throughout with only a minor digital static blip; showcases the standout songs and Brent’s keyboard work clearly."
+  },
+  "key_highlights": [
+    "El Paso opens the show with bright energy.",
+    "Blow Away features dominant Brent keyboards and drives the second set.",
+    "Tight Drums>Space transition lifts the momentum into Stella Blue.",
+    "Black Muddy River in the encore shines as a year‑standout performance."
+  ],
+  "song_highlights": [
+    "El Paso",
+    "Blow Away",
+    "Jack-A-Roe",
+    "Black Muddy River",
+    "Stella Blue",
+    "Just Like Tom Thumb's Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Tone praised as ‘real cool’; minor lyric slip on Bertha but overall strong, leading high‑energy moments like Stella Blue and teasing the Greatest Story.",
+    "Phil": "Solid chant vocals on Tom Thumb's Blues; above‑average bass work noted especially in the second set.",
+    "Bob": "Shining vocal presence and tight harmonies earn the playful ‘All Wier’ label; overall strong contribution.",
+    "Brent": "Spot‑on keyboards dominate throughout, particularly on Blow Away, Black Muddy River, and Stella Blue; mixed early second‑set but shines later.",
+    "Mickey": "",
+    "Billy": "Drums>Space segment credited with turning the show around, providing a solid rhythmic foundation for the second half."
+  },
+  "processed_recordings": 8,
+  "processed_date": "2025-09-16T17:43:21.229454+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "El Paso"
+    ],
+    [
+      "Blow Away"
+    ],
+    [
+      "Jack-A-Roe"
+    ],
+    [
+      "Johnny B. Goode",
+      "Black Muddy River"
+    ],
+    [
+      "Estimated Prophet",
+      "Crazy Fingers",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "Gimme Some Lovin'",
+      "I Need A Miracle",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    [
+      "Just Like Tom Thumb's Blues"
+    ]
+  ]
+}

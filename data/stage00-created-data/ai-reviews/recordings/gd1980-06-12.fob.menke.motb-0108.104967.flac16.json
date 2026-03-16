@@ -1,0 +1,57 @@
+{
+  "summary": "Cleaned‑up audience tape captures a fiery June 1980 Portland show with standout Cassidy, Alabama Getaway and a scorching Fire on the Mountain.",
+  "review": "The MOTB‑processed audience recording is surprisingly clear for a 1980 source, letting the high‑energy performance shine. Reviewers repeatedly highlight the hot jams in Cassidy, the fresh drive of Alabama Getaway and the volcanic Fire on the Mountain that even prompted an early exit due to Mt. St. Helens ash. Overall the show is praised as one of the stronger early‑summer 1980 dates.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and cite strong performances plus a well‑cleaned audience recording; only a few low‑star comments relate to historical facts, not the music."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "MOTB team’s cleanup yields crisp, balanced sound despite typical 1980 board limitations; audience ambience is present but does not mask instrument clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama Getaway",
+      "Cassidy",
+      "Scarlet Fire",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first set followed by an early exit after Fire on the Mountain due to ash; the remaining material maintains high intensity and strong song transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as 'spitting fire' on Fire on the Mountain, adding a fiery edge to the performance.",
+    "Phil": "",
+    "Bob": "Highlighted as 'on' for the entire show, delivering solid rhythm guitar and vocals.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T00:27:49.034369+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-12.fob.menke.motb-0108.104967.flac16"
+}

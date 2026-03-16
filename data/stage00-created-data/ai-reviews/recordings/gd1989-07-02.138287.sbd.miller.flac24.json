@@ -1,0 +1,76 @@
+{
+  "summary": "Soundboard mix with occasional balance quirks, but the July ’89 show dazzles thanks to a perfect Tennessee Jed and other early‑tour highlights.",
+  "review": "The recording is an SBD (soundboard) capture that suffers from some goofy EQ spots and occasional mic drop‑outs, yet it remains listenable. Musically the concert shines – Jerry’s solo on Tennessee Jed is called “perfection,” and Queen Jane Approximately and To Lay Me Down rank among the year’s best performances, though a few songs suffer from mix issues. Overall the show feels strong for the era despite an uneven second set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Two reviewers are highly positive while one gives a moderate rating and points out recording flaws; the show is praised for several standout moments, but technical quirks keep the overall score just under four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "SBD balance goes goofy in places (especially early and during Dough Knees), occasional mic drop on Jerry’s vocals for Eyes, and overall mix is less clean than the matrix version."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tennessee Jed",
+      "Queen Jane Approximately",
+      "To Lay Me Down",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Dough Knees",
+      "He's Gone",
+      "Eyes"
+    ],
+    "setlist_flow": "An energetic first set with a superb Tennessee Jed and strong early‑tour material; the second set is uneven – solid moments like Friend of the Devil and Sugar Magnolia but hampered by mix hiccups and a looser overall feel."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solo on Tennessee Jed is described as perfection; his tone and improvisational teasing are praised, though his mic drops during Eyes.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland uses a violin preset for Friend of the Devil but is pulled from the mix early in his solo.",
+    "Drums": "Mickey Hart’s “space‑gun” style fills are highlighted, adding texture to the second set."
+  },
+  "song_mentions": {
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane Approximately": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dough Knees": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T20:03:39.905697+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-02.138287.sbd.miller.flac24"
+}

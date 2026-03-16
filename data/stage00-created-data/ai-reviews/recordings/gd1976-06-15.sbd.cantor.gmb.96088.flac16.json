@@ -1,0 +1,70 @@
+{
+  "summary": "Excellent soundboard recording of a standout ’76 show with a smoking St. Stephen, Dancing>Wheel, Sugar Begonias and Candyman solo, despite weak Stella Blue and an odd Johnny B. Goode encore.",
+  "review": "The tape sounds pristine – a crystal‑clear soundboard capture that even benefits from superb remastering. Musically the concert shines with a fiery St. Stephen opening the second set, the mesmerizing Dancing>Wheel sequence, a brilliant Sugar Begonias and a sublime Candyman solo, while the first set stays mellow yet solid. The only real blemishes are a sluggish Stella Blue and a controversial Johnny B. Goode encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (mostly 5‑star), strong praise for both performance and audio quality, with only minor song‑specific criticisms."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix; guitar and vocals come through distinctly; praised remastering; no reported dropouts or noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Dancing>Wheel",
+      "Sugar Begonias",
+      "Candyman"
+    ],
+    "poor_songs": [
+      "Stella Blue",
+      "Johnny B. Goode"
+    ],
+    "setlist_flow": "First set described as mellow but solid; second set launches with an incredible St. Stephen, dips briefly before soaring again with Dancing>Wheel and a superb Sugar Begonias, delivering an overall high‑energy performance despite a weak Stella Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar comes through loud, clear and with great tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancing>Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T04:26:57.050258+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-15.sbd.cantor.gmb.96088.flac16"
+}

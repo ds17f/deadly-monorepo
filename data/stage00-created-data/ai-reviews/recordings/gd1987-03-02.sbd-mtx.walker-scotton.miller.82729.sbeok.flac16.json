@@ -1,0 +1,56 @@
+{
+  "summary": "Excellent matrix mix captures a high‑energy show highlighted by a soaring Feel Like a Stranger, stellar Morning Dew and a classic Bird Song",
+  "review": "The recording is a gorgeous matrix blend (often credited to Dr. Don Pearson) that sounds clear and well balanced throughout. Fans rave about the performance – Jerry’s wailing on Feel Like a Stranger, an inspired Morning Dew and a soaring Bird Song stand out, while the overall energy of the night is described as top‑notch.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the musical performance and the mix quality across nine detailed reviews, with only a few mixed comments that do not outweigh the overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix blend praised as \"gorgeous\" and crystal‑clear; no dropouts or major flaws noted. The mix is attributed to Dr. Don Pearson, delivering a well‑balanced soundstage."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like a Stranger",
+      "Morning Dew",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy pacing with a memorable first‑set close on Feel Like a Stranger and an uplifting second half featuring Morning Dew and Bird Song; overall flow described as strong and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry’s wailing guitar on \"Feel Like a Stranger\", describe his tone as superb, though one mentions he sounded a bit tired. Overall his playing is seen as the driving force of the night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:01:31.749686+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-02.sbd-mtx.walker-scotton.miller.82729.sbeok.flac16"
+}

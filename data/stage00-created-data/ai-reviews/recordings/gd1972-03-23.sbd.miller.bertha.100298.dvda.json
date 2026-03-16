@@ -1,0 +1,31 @@
+{
+  "summary": "Highly rated recording (5‑star) though reviewers give no detail on sound or performance",
+  "review": "The sole review gives the recording a perfect five‑star rating but provides no information about audio fidelity, setlist, or individual performances. Consequently, while sentiment is clearly positive, there are no concrete observations to assess either the recording quality or the musical show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one five‑star review; rating leans high due to enthusiasm but lacks substantive detail, so confidence is low."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T12:14:53.553127+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-03-23.sbd.miller.bertha.100298.dvda"
+}

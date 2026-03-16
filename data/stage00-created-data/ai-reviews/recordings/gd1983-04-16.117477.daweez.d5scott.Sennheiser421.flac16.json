@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent audience recording of a solid 1983 show with rare \"You Know\" and \"Black Queen\" highlights.",
+  "review": "The tape captures an excellent audience mix that presents a good‑ish 1983 performance, boosted by the rarity of \"You Know\" and the powerful delivery of \"Black Queen.\" While another show from the following night is cited as stronger, this recording still earns a solid four‑star rating thanks to its clear sound and enjoyable set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it praises both the show (good performance, rare songs) and the recording (excellent audience capture), leading to a weighted estimate just under four stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the tape as an \"excellent audience recording\" with no noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "You Know",
+      "Black Queen",
+      "Stills"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall a solid ’83 show; not the peak of the run but enjoyable, especially due to rare tracks."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "You Know": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Queen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stills": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:33:56.289232+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-16.117477.daweez.d5scott.Sennheiser421.flac16"
+}

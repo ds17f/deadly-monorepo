@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent audience recording of an epic Hartford show with blistering Alabama Getaway and a mind‑blowing Scarlet > Fire, captured in pristine quality.",
+  "review": "The Jim Vita tape delivers crystal‑clear sound that lets listeners hear every nuance of the performance. Jeff highlights a first set that “kicks butt” and a legendary second set anchored by a scorching Scarlet > Fire, noting Jerry’s soaring solo peak. Overall the show is described as an epic, must‑hear experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Single 5‑star review praises both the musical performance (epic, standout songs) and the recording quality (amazing), leading to a high rating but confidence is low due to limited sample size."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer repeatedly praises Jim Vita's recording quality as amazing, indicating a clear, well‑balanced capture despite being an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama Getaway",
+      "Scarlet > Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as “kicks butt”; second set labeled legendary and mind‑blowing, suggesting a strong, escalating flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Peak of his solo in Fire was highlighted as a standout moment.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T12:19:01.227846+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-14.163913.nak304.vita.miller.clugston.flac2496"
+}

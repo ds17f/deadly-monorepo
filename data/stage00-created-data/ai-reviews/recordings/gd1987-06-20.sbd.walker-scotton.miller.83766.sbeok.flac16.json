@@ -1,0 +1,110 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy 1987 Greek show featuring a blistering Watchtower, soaring Space opener and standout Iko/Looks Like Rain → Deal sequence.",
+  "review": "The recording, mastered by Charlie Miller from the Walker‑Scotton tapes, is crisp, warm and conveys the audience’s presence – an outstanding soundboard source. Musically the night is a highlight of ’87: a surprise Space as Set 2 opener, incendiary Watchtower, powerful The Other One, and an unforgettable Iko / Looks Like Rain → Deal stretch drive the second set to fever pitch. Overall the performance is consistently high‑energy with only minor mix quirks (early low organ) that don’t detract from the experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Eight detailed reviews, most giving 4‑5 stars and praising both the musical performance and recording quality; only one neutral/negative outlier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, warm mix with strong audience ambience. Minor early‑set organ level dip noted, but overall clear and well‑balanced; Miller’s mastering praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Watchtower",
+      "Space (Set 2 opener)",
+      "Iko",
+      "Looks Like Rain → Deal",
+      "The Other One",
+      "Bird Song",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A punchy, short first set with strong openers (Bucket → Franklin's) leads into a surprise Space to kick off the second set. After three songs the band breaks for an experimental Drums segment, then returns with a soaring post‑drums sequence that builds to Watchtower and The Other One before closing on a high‑octane Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for stratospheric bends, crazy solo work (especially on Watchtower and Space), vocal conviction on Loser and strong overall guitar energy.",
+    "Phil": "Noted matching Jerry lick‑for‑lick on The Other One; solid bass foundation throughout.",
+    "Bob": "Strong vocals on Watchtower and Wharf Rat; guitar effects praised though a reviewer disliked his wah use on Loser.",
+    "Keys": "Brent’s organ briefly low in the mix early, then delivers massive B3 sound on Gimme Lovin and nice fills on Esau and Bird Song.",
+    "Drums": "Mickey’s drumming described as trippy, background‑radiation‑like during Drums; post‑drums sequence highlighted as “sickest” of the era."
+  },
+  "song_mentions": {
+    "Bucket>Franklin's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Iko": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Deal": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Drums": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Gimme Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T23:04:19.010792+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-06-20.sbd.walker-scotton.miller.83766.sbeok.flac16"
+}

@@ -1,0 +1,73 @@
+{
+  "summary": "Solid soundboard capture with good clarity highlights a stellar Death Don't Have No Mercy and rare Franklin’s Tower, despite occasional low‑volume mix quirks.",
+  "review": "The show is celebrated for its energetic second set, featuring an iconic Death Don't Have No Mercy solo by Jerry, a rare early Franklin's Tower, and strong performances of China Cat, You Can Run and Sugar Magnolia. The SBD recording is generally clear and well‑balanced, though listeners note a low‑volume mix in places and a brief drop‑out during the Terrapin improvisation.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the performance 4‑5 stars and praise key moments, while recording quality is described as good with minor issues; combined weighting yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD with solid instrument balance; occasional low‑volume mix requiring volume boost and a ~1 minute drop‑out around the Terrapin segment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Death Don't Have No Mercy",
+      "Franklin's Tower",
+      "China Cat Sunflower",
+      "You Can Run",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A high‑energy second set anchored by Death Don't and an extended Terrapin improvisation, with a brief hiccup when Phil briefly left the stage; overall flow remains compelling."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Death Don't is described as \"supremely great\" and \"Hendrix‑level\", with high‑octave verses and searching stabs between songs.",
+    "Phil": "Briefly exited mid‑Terrapin due to a broken strap, but returned strong; praised for his work at the end of Johnny B. Goode.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s vocal verse on Death Don't is highlighted as chilling; keyboards provide solid support throughout.",
+    "Drums": "One reviewer urges listeners \"Don't miss drums!\" indicating a strong percussion performance."
+  },
+  "song_mentions": {
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "You Can Run": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T23:05:46.269780+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-09-29.sbd.17703.sbeok.shnf"
+}

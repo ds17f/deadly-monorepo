@@ -1,0 +1,52 @@
+{
+  "summary": "Rich, warm sound with low levels captures a great spring‑90 show highlighted by a stellar The Weight and an inspiring The Other One.",
+  "review": "The recording delivers a rich and warm tonal quality, though the overall level is modest and needs to be turned up. Musically the concert shines – reviewers rave about The Weight and praise this version of The Other One as a prelude to legendary shows that followed, with only a single sore spot noted on Looks Like Rain. Overall the performance is regarded as one of the stronger spring ’90 outings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Three out of four reviewers rate the show highly (5,5,4 stars) and praise key songs; recording comments are uniformly positive aside from low volume, yielding a combined weighted score around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Rich and warm sound with balanced tonality, but overall levels are low requiring higher playback volume."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Weight",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Looks Like Rain"
+    ],
+    "setlist_flow": "No detailed comments on pacing, but reviewers note a consistently strong spring‑90 performance without any noticeable dips."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T05:30:04.919809+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-28.schoeps.mattes.miller.28381.sbeok.shnf"
+}

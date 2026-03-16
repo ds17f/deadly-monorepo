@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard source with a flipped‑stereo mix but still delivers an excellent 1989 show highlighted by a moving \"He's Gone\" and energetic jams.",
+  "review": "The recording is a true soundboard capture, though listeners note the left/right channels are swapped and the mix sounds odd at times. Musically the concert shines – Jerry’s mournful lead on “He’s Gone,” Brent’s wild keyboard excursions (and his brief tumble during “Foolish Heart”), and overall tight jamming make it a memorable performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the show’s energy and musical moments, while only a few flag channel‑swap issues; the balance yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Channel polarity appears reversed (left/right flipped), mix described as bizarre, but many note stronger, truer sound than other tape sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Foolish Heart"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert flows with high energy, tight jams and emotional moments; the band stays on its feet throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for a heartfelt performance on \"He's Gone,\" delivering mournful phrasing.",
+    "Phil": "Mentioned as being panned left for most of the show, but no specific performance comment.",
+    "Bob": "",
+    "Keys": "Brent’s right‑channel keyboards are highlighted as “going nuts,” and his brief fall off the stool during \"Foolish Heart\" is noted.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T19:41:05.506366+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-06-18.dsbd.miller.83709.sbeok.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Fair‑quality recording of a decent show with a highlight on Crazy Fingers and an intriguing drum section.",
+  "review": "The two reviewers give the performance a middling three‑star rating, describing the concert as \"decent but not great\" while calling Crazy Fingers a standout moment. The drum duo gets special mention for an unusual, almost electronic intro that makes the Drums/Space segment worth checking out, but no comments are made about the clarity or source of the audio.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Both reviews are neutral‑to‑average (3 stars) and focus mainly on the drums and a single song highlight; with only two brief comments, confidence is moderate."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not comment on soundboard vs. audience or specific clarity issues; no major audio problems were noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as decent but not great overall, with the drum segment standing out as an interesting, trippy interlude."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Intro to Drums is long and features electro‑type textures; reviewers found it intriguing and a highlight of the show."
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T04:07:10.634866+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-06.schoeps.andrewf.85418.flac1648"
+}

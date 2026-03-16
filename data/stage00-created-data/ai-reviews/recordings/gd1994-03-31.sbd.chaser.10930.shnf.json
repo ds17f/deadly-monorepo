@@ -1,0 +1,52 @@
+{
+  "summary": "A mixed‑quality show with a standout SOTM moment but lifeless Eyes of the World and a shaky Saint of Circumstance, recorded from an unidentified source.",
+  "review": "The performance is generally good for a 1994 date – Jerry’s playing is praised as still strong – and one song (referred to as “sotm”) is highlighted as the night’s high point. However, reviewers found Eyes of the World lifeless and Saint of Circumstance suffering rhythm/tempo issues, giving the concert an uneven feel. No details about the recording itself were mentioned, so its technical quality remains unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Three reviews give a blend of positive (4‑star) and negative (2‑star) impressions; the show has both strong and weak moments, while recording quality is not addressed."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviews contain no comments about soundboard vs. audience sources or audio clarity, so the technical quality cannot be assessed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "SOTM"
+    ],
+    "poor_songs": [
+      "Eyes of the World",
+      "Saint of Circumstance"
+    ],
+    "setlist_flow": "Overall solid set with one highlighted moment, but several numbers suffered from lackluster execution, leading to an uneven listening experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewer notes that Jerry 'hadn't gone out yet,' indicating his guitar work was still strong.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "SOTM": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T21:15:45.243552+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-31.sbd.chaser.10930.shnf"
+}

@@ -1,0 +1,86 @@
+{
+  "summary": "Crystal‑clear soundboard capture of an explosive New Year’s Eve show featuring a smoking Lazy Lightning / Supplication, stellar One More Saturday Night and fiery Scarlet / Fire.",
+  "review": "The recording is praised as a 10/10, crisp soundboard transfer that lets the band’s high energy shine through. Fans highlight blistering jams like Lazy Lightning > Supplication, an inspired One More Saturday Night and a fiery Scarlet > Fire, while noting weaker moments on Truckin' and Casey Jones. Overall the performance is viewed as one of the stronger NYE shows of ’77 despite a few uneven spots.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Two enthusiastic 5‑star reviews praise both the music and the pristine soundboard, while a single 3‑star review notes only modest issues; weighted average yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the transfer as crystal‑clear, 10/10 sound quality and the best available clarity for this show; no major flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightning > Supplication",
+      "One More Saturday Night",
+      "Scarlet > Fire",
+      "Friend of the Devil",
+      "Wharf Rat > Not Fade Away"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "Casey Jones"
+    ],
+    "setlist_flow": "A short, punchy first set leads into a second set with high‑octane jams; the middle of the show shines while the later portions lose some momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is described as explosive and in the zone, especially on Lazy Lightning/Supplication and Wharf Rat > Not Fade Away; attempts a longer solo on Casey Jones that feels premature.",
+    "Phil": "Noted for a great performance on Jack Straw.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drummers are praised as pounding the show, though Bobby (Mickey) gets hoarse toward the end."
+  },
+  "song_mentions": {
+    "Lazy Lightning > Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat > Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream Reprise": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:33:21.196518+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-12-31.sbd.purvis.tetzeli.fix-286.35291.sbeok.shnf"
+}

@@ -1,0 +1,62 @@
+{
+  "summary": "Rich yet occasionally muddy audience tape captures a stellar Dark Star into Sugar Magnolia transition and a fire‑filled Good Lovin' sandwich.",
+  "review": "The show is widely praised for its soaring second‑set momentum – the Dark Star that rolls straight into an explosive Sugar Magnolia, a “sandwich” of Good Lovin', and a standout Playin in the Band.  While most listeners describe the performance as one of the hottest of the ’72 European run, the audience recording is noted as cloudy and boomy with occasional drop‑outs that can obscure keyboards and drums.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong musical performance highlighted by multiple reviewers outweighs the mixed technical quality of an audience tape; overall enthusiasm and high star ratings drive a >4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners report a muddy, boomy sound with pitch warbling spots and long dropouts in Truckin' and Dark Star; keyboards and drums can become mushy.  Some reviewers note the tape’s “rich” and “wonderful” tonal character that still lets Jerry’s guitar cut through."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Sugar Magnolia",
+      "Good Lovin'",
+      "Playin in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is described as high‑energy and seamless, with a legendary Dark Star → Sugar Magnolia transition, an off‑the‑chain Good Lovin' sandwich, and tight drumming that drives the momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Pedal‑steel on LLR praised; his Strat tone is described as perfect and cuts through the misty recording.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keyboards often dissolve into a mushy texture, making them hard to discern in parts of the tape.",
+    "Drums": "Bill Kreutzmann is lauded for “god‑like” fire, especially on the NFA > GDTRFB > NFA stretch, though some note drums become muddy and lose definition."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Playin in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T13:54:06.418373+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-04-14.aud.vernon.23662.sbeok.shnf"
+}

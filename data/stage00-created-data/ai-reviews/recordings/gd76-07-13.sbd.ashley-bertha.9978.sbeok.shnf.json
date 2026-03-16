@@ -1,0 +1,79 @@
+{
+  "summary": "Clear soundboard recording of a classic ’76 show with standout Crazy Fingers, Let‑It‑Grow and High Time performances.",
+  "review": "The performance is widely praised for its slow‑paced ’76 vibe, exceptional jams on Crazy Fingers, Let It Grow, High Time and Stella Blue, and strong vocal harmonies from Donna. The soundboard source is generally clear but suffers from tape hiss, occasional drops and a muddy opening to Mississippi Half Step, keeping the technical rating at good rather than excellent.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight superb musical moments; recording flaws are noted but do not dominate the experience, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD with occasional tape hiss, fluffy/hissy board texture, cuts and drop‑outs in parts of set 2, and a muddy opening on Mississippi Half Step; bass reproduction is praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Let It Grow",
+      "High Time",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Mississippi Half Step"
+    ],
+    "setlist_flow": "A relaxed, slow‑paced first set that builds into a jam‑heavy second half; the early part of set 2 has some technical hiccups but the momentum recovers with High Time and Stella Blue, ending on an energetic Dancin' encore."
+  },
+  "band_member_comments": {
+    "Jerry": "His Travis Bean tone is described as slippery, slinky and splendid; fills and vocal nuances receive particular praise.",
+    "Phil": "Bass is noted as deep, rich and well‑reproduced despite occasional muddiness.",
+    "Bob": "",
+    "Keys": "Keyboard work (Keith) gets kudos for the atmospheric ‘Stella’ chords and overall support throughout the set.",
+    "Drums": "Drum/space sections are mentioned as interesting but generally solid."
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Let It Grow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "High Time": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mississippi Half Step": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:12:38.176052+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-07-13.sbd.ashley-bertha.9978.sbeok.shnf"
+}

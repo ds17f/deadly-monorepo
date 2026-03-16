@@ -1,0 +1,57 @@
+{
+  "summary": "Crisp soundboard captures a favorite show featuring stellar Friend of the Devil, Foolish and Truckin' performances",
+  "review": "The recording is a clean, crisp sound‑board source that lets listeners hear every nuance, while the performance shines with standout versions of Friend of the Devil, Foolish and an incendiary Truckin'. Reviewers rave about the solos from Jerry Garcia and Vince Welnick, calling this one of the best shows they own.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "A single five‑star review praises both the musical performance and the recording quality; with limited data the rating is high but confidence remains low."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear soundboard mix; reviewer notes it sounds great and even tried to find an audience source for comparison."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil",
+      "Foolish",
+      "Truckin'",
+      "Visions"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set 2 highlighted as a high point with strong solos and an “average” space segment; overall flow praised as one of the reviewer’s favorites."
+  },
+  "band_member_comments": {
+    "Jerry": "Excellent solo noted by the reviewer.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince (keys) receives praise for his solos.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Visions": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T05:12:36.971588+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-02-21.145492.akg460b.lerond.t-flac1648"
+}

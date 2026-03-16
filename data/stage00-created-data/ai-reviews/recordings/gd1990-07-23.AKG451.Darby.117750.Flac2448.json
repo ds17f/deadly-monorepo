@@ -1,0 +1,76 @@
+{
+  "summary": "Good audience capture of Brent Mydland's final shows, featuring strong early set with Loser, Far From Me, Blow Away and a standout Estimated > Eyes sequence despite later energy drop.",
+  "review": "The recording is an impressive audience tape that manages to stay clear enough to hear every band member even in the notoriously bad acoustics of the Credit Union 1 Amphitheater. The show shines early with Brent‑era highlights like Loser, Far From Me, Blow Away, a jammy Tennessee and a superb Estimated > Eyes, though the momentum wanes after Terrapin Station.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "Show is solid with several standout performances but loses steam later; recording quality is good for a difficult venue, leading to an overall rating just under 4 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Despite the venue's acoustic challenges (skewed highs/lows, low volume), the audience recording remains audible with a reasonably full range and decent speaker balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Far From Me",
+      "Blow Away",
+      "Tennessee Jed",
+      "Estimated > Eyes",
+      "Foolish Heart"
+    ],
+    "poor_songs": [
+      "Terrapin Station"
+    ],
+    "setlist_flow": "Early part of the concert is energetic and fire‑filled, especially with new material; energy tapers after Terrapin Station, leading to a less compelling second half."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's B3 work and vocals are praised as vital to the show; his toy‑piano sound can be irritating but overall he adds strong musicality.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blow Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T11:03:57.184923+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-23.AKG451.Darby.117750.Flac2448"
+}

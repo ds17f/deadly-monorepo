@@ -1,0 +1,81 @@
+{
+  "summary": "Exceptional audience recording captures an epic fan‑favorite show highlighted by a stellar Feel Like a Stranger opener and rare gems like Jack‑a‑Roe.",
+  "review": "The taper’s Nak 100/CP4 setup delivers a crystal‑clear, sweet‑spot audience tape that many consider the definitive source for this concert.  The performance itself is described as “epic,” with standout moments including Feel Like a Stranger, rare renditions of Jack‑a‑Roe and On the Road Again, and a memorable Good Lovin' encore, making it a top‑10 favorite for those who were there.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the musical performance and the audio quality across ten detailed reviews."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Nak 100/CP4 microphones provide sweet‑spot placement; clear, instrument‑separate sound with no buzzing that plagued earlier copies. Reviewers call it the best known source for this show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like a Stranger",
+      "Jack-a-Roe",
+      "On the Road Again",
+      "Dew",
+      "Playin reprise",
+      "Good Lovin'",
+      "Roses",
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Rare and unique songs pepper the set, giving it a special, almost ceremonial feel; the show builds to a perfect ending with Good Lovin' as an encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as having great fun on Feel Like a Stranger, working hard for 'Roses', and delivering superb tone.",
+    "Phil": "",
+    "Bob": "Noted bantering with Garcia at the start of the show.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "On the Road Again": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin reprise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T22:18:27.379491+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-12.nak100.holtz.gems.101952.flac16"
+}

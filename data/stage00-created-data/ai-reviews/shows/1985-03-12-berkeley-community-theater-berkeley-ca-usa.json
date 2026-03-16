@@ -1,0 +1,72 @@
+{
+  "summary": "Uneven Berkeley show with fiery Touch‑Playin’ jam but many listless moments",
+  "blurb": "The second set delivers a scorching Touch → Playing in the Band jam and a punchy Not Fade Away > Love Light finish. Garcia shines on Little Red Rooster, yet the first set drags and several numbers feel sloppy, especially Touch of Grey.",
+  "review": "On March 12, 1985 at the Berkeley Community Theater the Dead offered a mixed bag of inspiration and fatigue. The night opened with bright moments – Iko Iko and a spirited Little Red Rooster that let Brent’s keyboard solo and Bob’s vocal grit shine – but the energy quickly waned, leaving songs like Dupree's Diamond Blues and Looks Like Rain feeling listless.  The second set provided the high point: an explosive Touch of Grey segued into a blistering Playing In The Band jam (“Touch → Playin’”) that reminded listeners why the band could still ignite a room.  That momentum fizzled again on Throwing Stones, yet the set closed with a rousing Not Fade Away > Turn On Your Lovelight combo that lifted the mood before an unremarkable encore of U.S. Blues.\n\nAudience recordings capture the ambience well – the first recording offers the cleanest mix and highlights the standout jam, while the other two are raw but suffer from uneven playing throughout.  Overall, the performance is uneven: moments of fire are offset by sloppy execution and a generally listless feel, making this show more of a curiosity for completists than a must‑listen classic.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 8,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": -0.5,
+      "sentiment_rationale": "All three recordings describe the show as mixed with repeated criticism of sloppy or listless playing (Touch of Grey, Throwing Stones, Looks Like Rain) and only isolated highlights. The consistent negative remarks outweigh the positives, leading to a modest negative sentiment adjustment.",
+      "final_calculation": "2.5 + 0.1 - 0.5 = 2.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd85-03-12.senn421.barbella.10256.sbeok.shnf",
+    "reason": "Good audience mix with clear instrument balance, captures the standout Touch → Playin’ jam and has no major drop‑outs."
+  },
+  "key_highlights": [
+    "Scorching Touch → Playing in the Band jam in the second set",
+    "Brent’s solo on Little Red Rooster shines",
+    "Energetic Not Fade Away > Turn On Your Lovelight finish",
+    "Overall uneven performance with several listless moments"
+  ],
+  "song_highlights": [
+    "Iko Iko",
+    "Little Red Rooster*",
+    "Touch of Grey",
+    "Playing In The Band",
+    "Not Fade Away",
+    "Turn On Your Lovelight",
+    "Looks Like Rain"
+  ],
+  "band_performance": {
+    "Jerry": "Strong solos on Little Red Rooster and the Playin' jam, but sloppy and off‑color on Touch of Grey; overall guitar tone weaker than usual.",
+    "Phil": "",
+    "Bob": "Passionate vocals on Little Red Rooster; vocal delivery spotty on Dupree's Diamond Blues and listless on Looks Like Rain.",
+    "Brent": "Impressive keyboard solos on Little Red Rooster; otherwise no notable keyboard moments recorded.",
+    "Mickey": "Energetic drumming highlighted in the early second‑set \"Drumz!!!\" segment.",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-15T01:13:45.778650+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Iko Iko"
+    ],
+    [
+      "Little Red Rooster*"
+    ],
+    [
+      "Touch of Grey"
+    ],
+    [
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "He's Gone",
+      "Throwing Stones",
+      "Not Fade Away",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Looks Like Rain"
+    ]
+  ]
+}

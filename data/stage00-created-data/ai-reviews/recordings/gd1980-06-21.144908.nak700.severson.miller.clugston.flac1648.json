@@ -1,0 +1,31 @@
+{
+  "summary": "Fantastic recording praised as great despite lack of show details",
+  "review": "The sole reviewer rates the tape five stars and calls it a \"great recording,\" indicating excellent audio quality, though no comments are made about the musical performance or specific songs.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Only one brief review; it is highly positive about the recording but provides no insight into the show, so rating leans toward strong recording quality with limited overall confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the recording as great with no issues noted."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T01:19:58.566243+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-21.144908.nak700.severson.miller.clugston.flac1648"
+}

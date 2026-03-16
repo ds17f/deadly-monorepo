@@ -1,0 +1,97 @@
+{
+  "summary": "Crisp soundboard capture of a high‑energy ’84 show, highlighted by a smoking Help>Slip>Franklin’s, blazing El Paso and Wharf Rat, despite a few slip‑ups.",
+  "review": "The recording is a clean soundboard source that delivers the bright, jittery vibe of the Dead’s early‑mid‑80s era.  The second set shines with Help>Slip>Franklin’s, an inspired El Paso, and a thunderous Wharf Rat, while the first set offers fun rarities like Iko Iko.  Minor misfires in Slipknot! and a weak Peggy‑O are noted, but they don’t outweigh the overall excitement.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviewers (8/11) rate the show 4‑5 stars and praise both performance and recording; only a few note specific flaws, yielding a strong positive consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear throughout; reviewers repeatedly call the sound “beautiful” or “excellent,” with only occasional brief glitches (e.g., a slip‑up in the Slipknot→Franklin transition)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help>Slip>Franklin's",
+      "El Paso",
+      "Wharf Rat",
+      "Sailor>Saint",
+      "Franklin's",
+      "Iko Iko"
+    ],
+    "poor_songs": [
+      "Slipknot!",
+      "Peggy-O"
+    ],
+    "setlist_flow": "First set is solid with quirky blues and rarities; the second set erupts into jazzy funk, delivering a memorable Help>Slip>Franklin’s sequence and powerful close with Wharf Rat."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as energetic and crisp on many numbers (Help>Slip>Franklin's, Wharf Rat), though a few reviewers note sloppy cues and a haggard tone during Slipknot.",
+    "Phil": "Phil’s bass work gets praise for thoughtful phrasing on Sailor>Saint and his occasional vocal moments (standing in front of Bob’s mic).",
+    "Bob": "Bob’s vocals are highlighted as mature on Sailor>Saint and he shares mic duties with Jerry; some reviewers note his contribution to the “rare” Iko Iko moment.",
+    "Keys": "Brent Mydland’s keyboards receive glowing remarks, especially on Franklin’s and the jazzy funk feel of the second set.",
+    "Drums": "The drums are praised for strong drive on Wharf Rat, but a few mis‑cue moments in Help>Slip are mentioned."
+  },
+  "song_mentions": {
+    "Help>Slip>Franklin's": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "El Paso": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sailor>Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "Smokestack>Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T23:56:26.407337+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-11-02.sbd.braverman.9753.sbeok.shnf"
+}

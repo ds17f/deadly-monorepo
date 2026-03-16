@@ -1,0 +1,39 @@
+{
+  "summary": "Thrilling Loose Lucy moment makes this show a standout, though the recording quality is not described.",
+  "review": "Allan recalls a perfect night in Las Vegas highlighted by an electrifying performance of “Loose Lucy” that sent the crowd into a frenzy. No details about the audio source or fidelity are provided, so the technical quality remains unclear, but the emotional impact of the show is unmistakably positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "low",
+    "rationale": "A single 5‑star review praises the musical performance heavily while offering no insight on recording quality; the rating reflects a strong show with unknown audio fidelity."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention any aspects of sound quality, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loose Lucy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure; the show is remembered primarily for the special Loose Lucy moment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T19:02:46.555487+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-27.mtx.sirmick.102906.sbeok.flac16"
+}

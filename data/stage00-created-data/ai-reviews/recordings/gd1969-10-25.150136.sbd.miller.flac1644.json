@@ -1,0 +1,57 @@
+{
+  "summary": "Crystal‑clear soundboard recording that captures a rare early Dark Star, soaring High Time and a blazing China Cat > I Know You Rider from an enigmatic one‑set show.",
+  "review": "The Miller soundboard cut is described as “out of this world,” delivering exceptional clarity and balance. Listeners rave about the performance – especially the early Dark Star, the fragment of High Time, and the fiery China Cat Sunflower > I Know You Rider sequence – noting the unusual two‑drummer/two‑keyboard lineup. One reviewer gave a zero‑star rating, making the overall sentiment mixed despite strong praise from the other two.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Show quality is highlighted as excellent with several standout songs, and recording quality is praised as superb; a single low‑star outlier keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as crystal‑clear, crisp, and “out of this world” with no noted dropouts or balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "High Time",
+      "China Cat > I Know You Rider",
+      "Cold Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "One‑set show featuring an opening band, then the Dead delivering a tight set that builds from Cold Rain into a soaring Dark Star and peaks with High Time and a blazing China Cat > Rider sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T17:37:12.401507+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-10-25.150136.sbd.miller.flac1644"
+}

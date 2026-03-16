@@ -1,0 +1,75 @@
+{
+  "summary": "Crystal‑clear audience tape that captures a legendary second set – Help > Slip > Franklin’s blazing, epic Playin’, and Jerry’s scorching leads.",
+  "review": "The audience recording is praised for its crispness, fullness and the way it puts listeners right in the middle of the April ’83 crowd. Musically the show is a fan favorite – the Help‑Slip‑Franklin’s sequence, an extended Playin’ and soaring Let It Grow make it one of the era’s top performances, with Jerry’s guitar and Brent’s keyboards standing out. Minor grumbles about Stephen Stills and one song’s mix do not detract from the overall excitement.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive comments on both performance (multiple 5‑star rave reviews, many standout song mentions) and recording quality (consistent praise for crisp, full AUD), with only a few isolated criticisms."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers call the tape \"crisp\", \"fullness\" and note that crowd ambience adds depth; no major drop‑outs or distortion reported, only occasional generic digital‑transfer loss remarks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's",
+      "Playin'",
+      "Let It Grow",
+      "Peggy-O",
+      "Not Fade"
+    ],
+    "poor_songs": [
+      "Love the One You're With"
+    ],
+    "setlist_flow": "The first set builds nicely and ends strong, while the second set launches into a space‑y marathon highlighted by the Help‑Slip‑Franklin’s trio, a long Playin', and improvisational fireworks that keep the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for \"fat licks\", smoky tone and lead work that outshines even guest Stills.",
+    "Phil": "Noted for tight timing, slapping the low end and wild vocal bursts during extended spaces.",
+    "Bob": "",
+    "Keys": "Brent’s bell‑like synths, xylophone effects and arpeggiated counterpoint are highlighted as key texture contributors.",
+    "Drums": "Mickey’s drumming is described as \"incredible\", with new cymbals and creative percussion (chain over drum) adding excitement."
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Love the One You're With": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Women R Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:40:37.466053+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-17.rolfe.weiner.7317.sbeok.shnf"
+}

@@ -1,0 +1,80 @@
+{
+  "summary": "Decent remastered matrix capture of a mixed‑bag show – strong Push Comes to Shove and Jack Straw shine, but the overall performance feels mellow and uneven.",
+  "review": "The recording is a nicely remastered matrix that sounds clear enough for most listeners. Musically the concert has a few high points (Push Come to Shove, Jack Straw, Terrapin Station, Black Muddy River) but suffers from weak vocals early on and an overall mellow vibe that keeps it from being a standout Dead show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is average with several praised songs but also notable weak moments; recording quality is good thanks to the remastered matrix, leading to a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Remastered matrix sounds nice and clear; no major drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Push Comes to Shove",
+      "Jack Straw",
+      "Terrapin Station",
+      "Black Muddy River"
+    ],
+    "poor_songs": [
+      "Franklin's Tower",
+      "Peggy O'"
+    ],
+    "setlist_flow": "The first half feels tentative with weak vocals, picks up in the middle (Push Comes to Shove, Jack Straw) and ends on a mellow note that some listeners find too laid‑back."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice sounded weak and confused early (Franklin's Tower) but improves later in the set.",
+    "Phil": "",
+    "Bob": "Bobby (Bob Weir) helped compensate for Jerry’s vocal issues, especially on Jack Straw.",
+    "Keys": "Brent (Mydland) contributed solid keyboard work that lifted the performance.",
+    "Drums": "Drummers received praise for a \"cool\" feel during Deal:YES! and throughout the set."
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy O'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Push Comes to Shove": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T21:10:17.543591+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-04-06.sbd-patched.hinko-miller.25809.sbeok.shnf"
+}

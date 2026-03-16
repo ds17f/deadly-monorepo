@@ -1,0 +1,72 @@
+{
+  "summary": "Good‑quality soundboard capture of a memorable 6/22/86 show with standout Fire On The Mountain, Box of Rain and Lovelight, though Jerry’s second‑set playing was uneven for some listeners.",
+  "review": "The recording (soundboard) sounds solid overall with only minor drop‑outs that can be fixed, delivering a clear picture of the band’s late‑summer vibe. Fans rave about the mellow Fire On The Mountain opener, the long first set and a triumphant Box of Rain, while others note Jerry Garcia’s vocals were stellar but his guitar work slipped on parts of the second set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Seven detailed reviews overwhelmingly rate the show 4‑5 stars and praise the recording; only one low‑star review points to performance flaws, giving a strong overall positive impression with solid technical quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Minor snap/drop‑out glitches noted (fixable in post), but generally clear and well‑balanced soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire On The Mountain",
+      "Box of Rain",
+      "Lovelight",
+      "Sweet Sweet Summertime",
+      "Space",
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Fire On The Mountain (as noted by one reviewer for sloppy guitar)",
+      "Samson/Ship (ragged performances mentioned)"
+    ],
+    "setlist_flow": "A long, jam‑heavy first set followed by a slow, mellow Fire opener to the second set; double encore with U.S. Blues. Overall pacing praised for its relaxed Sunday‑afternoon feel, though one listener felt the second set lost momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as perfect and goose‑bump inducing; his solo on Fire was a highlight for many, but another reviewer called his guitar work dreadful on Fire and ragged later in the set.",
+    "Phil": "Forgot lyrics during Box of Rain but recovered nicely; famously cleared his throat before the song, delighting the crowd.",
+    "Bob": "Delivered an improvised \"Sweet Sweet Summertime\" within Lovelight that many fans label as one of the sickest freak‑outs of ’86.",
+    "Keys": "Brent Mydland’s background vocals and ragtime staccato were praised; some noted a lack of signature Lovelight licks before Bob’s summer rap.",
+    "Drums": "Mickey Hart’s delayed fills on Lovelight were highlighted as “killer delays,” and the Drumz > Space > Truckin' sequence was called psychedelic and essential."
+  },
+  "song_mentions": {
+    "Fire On The Mountain": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Sweet Sweet Summertime": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:16:24.876286+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-06-22.sbd.lai.388.sbefail.shnf"
+}

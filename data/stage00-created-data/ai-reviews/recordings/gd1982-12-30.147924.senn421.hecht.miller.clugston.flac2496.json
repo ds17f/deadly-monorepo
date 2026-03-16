@@ -1,0 +1,31 @@
+{
+  "summary": "A high‑energy show described as a night‑time highlight, though no details about the recording source or sound quality are given.",
+  "review": "The reviewer raves that the concert \"blew the roof off\" and calls it the \"show of my life,\" emphasizing the excitement and great atmosphere. No information is provided about the audio source or clarity, so the technical side remains unclear while the musical performance is praised as a standout night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "A single 5‑star review conveys strong enthusiasm for the performance, but the lack of any recording‑quality comments limits confidence in rating the audio component."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not mention soundboard, audience mix, clarity, or any technical aspects; only the live experience is discussed."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The reviewer focuses on overall excitement and energy rather than set structure, indicating a generally high‑energy performance without specific song or pacing details."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Reviewer notes being seated on \"Phil's side\" of the venue, implying appreciation for his presence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T03:49:30.253264+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-12-30.147924.senn421.hecht.miller.clugston.flac2496"
+}

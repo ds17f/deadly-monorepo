@@ -1,0 +1,39 @@
+{
+  "summary": "Recording quality unknown; show criticized for the out‑of‑place placement of “St. of Circumstance”.",
+  "review": "The lone reviewer is disappointed, noting that “St. of Circumstance” feels misplaced without its usual partner and even calls out a bias against Lost Sailor fans. No information about the audio source or sound quality was provided, leaving the recording itself unevaluated.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one review with a 0‑star rating and clear criticism; no data on recording quality to boost the score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments about sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "St. of Circumstance"
+    ],
+    "setlist_flow": "Reviewer feels the set’s flow is disrupted by the placement of “St. of Circumstance” without its usual partner."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. of Circumstance": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:15:41.485123+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-07-06.135065.chasingwilma.flac24"
+}

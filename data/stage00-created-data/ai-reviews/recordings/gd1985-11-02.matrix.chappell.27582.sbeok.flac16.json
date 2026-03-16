@@ -1,0 +1,45 @@
+{
+  "summary": "Matrix recording captures a vivid, high‑energy set featuring a soaring China Doll and memorable PITB tease, though pitch drift detracts slightly.",
+  "review": "Fans rave about the party atmosphere and the killer matrix sound that brings out highlights like China Doll and Brother Esau, with Jerry’s guitar after the ballad getting special praise. A few listeners note pitch‑correction issues, keeping the technical quality solid but not flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Four of five reviews are glowing (5★/4★) and highlight strong musical moments; only one notes modest recording flaws, resulting in a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Most listeners describe the matrix as \"killer\" and vivid, but some report pitch‑drift/lack of correction that mars the otherwise clear sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Doll",
+      "Brother Esau"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is remembered as a party night with a smooth groove, highlighted by an emotional China Doll followed by a fiery PITB tease that kept the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "His playing after China Doll is described as \"ready to roll a fatty,\" indicating energetic lead work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T10:32:24.030370+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-02.matrix.chappell.27582.sbeok.flac16"
+}

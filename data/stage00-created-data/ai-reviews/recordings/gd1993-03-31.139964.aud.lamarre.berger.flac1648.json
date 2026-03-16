@@ -1,0 +1,47 @@
+{
+  "summary": "A life‑changing 1993 show remembered fondly, but the recording’s source and sound quality are not described.",
+  "review": "The reviewer describes this March 1993 concert as a pivotal, almost epic experience that introduced them to the Dead’s improvisational spirit. No details about the audio source or fidelity are given, so the technical side of the tape remains unknown while the musical impact is clearly positive.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Only one review, which praises the show emotionally but gives a modest 3‑star rating and provides no recording information; therefore the overall assessment leans slightly above average."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not mention soundboard, audience, or any audio characteristics, leaving the technical quality indeterminate."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The set featured many familiar classics (e.g., \"Skeletons,\" a Working Man’s Dead tune) and even a Stones cover, giving the newcomer a broad taste of the band's repertoire."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Skeletons": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Workingman's Dead": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stones cover": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T11:57:54.891951+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-31.139964.aud.lamarre.berger.flac1648"
+}

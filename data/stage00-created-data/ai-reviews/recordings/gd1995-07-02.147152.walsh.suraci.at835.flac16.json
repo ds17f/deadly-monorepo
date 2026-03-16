@@ -1,0 +1,31 @@
+{
+  "summary": "Recording source is disputed; reviewers note it is not a soundboard and give no performance details.",
+  "review": "The only review flags that, contrary to the filename implying an sbd (soundboard) origin, this source is not a soundboard recording. No further comments are made about audio clarity, mix quality, or the musical performance, leaving both recording and show quality undefined.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.5,
+    "confidence": "low",
+    "rationale": "A single brief review with a zero‑star rating and no substantive information about sound or performance suggests low overall value."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "unknown",
+    "technical_notes": "Reviewer specifically states the file is not a soundboard source despite the filename; no other technical observations are provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T11:53:32.349699+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-02.147152.walsh.suraci.at835.flac16"
+}

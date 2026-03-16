@@ -1,0 +1,116 @@
+{
+  "summary": "Solid spring‑'90 soundboard capture with crisp mix but occasional vocal slips; the show shines on Estimated Prophet, He's Gone and a soaring Wharf Rat.",
+  "review": "The Miller SBD delivers a clean, well‑balanced picture of the March 1990 Hamilton concert, though a few vocal moments (Jerry and Brent) wander off‑key. Musically the band is in solid late‑period form – Estimated Prophet builds into a masterpiece, He's Gone and I Need a Miracle sparkle, and the second set’s Wharf Rat/Standing on the Moon/Promised Land medley is a highlight. The only real blemish is the awkward Crazy Fingers → Cumberland Blues transition.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance and note good soundboard quality, but several call out vocal inconsistencies and a weak song transition, pulling the overall rating down from stellar."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, crisp SBD with solid instrument separation; occasional vocal mix issues (Jerry & Brent) and minor confusion in a few moments but no drop‑outs or major distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "He's Gone",
+      "Wharf Rat",
+      "I Need a Miracle",
+      "Victim -> Standing on the Moon"
+    ],
+    "poor_songs": [
+      "Crazy Fingers",
+      "Cumberland Blues"
+    ],
+    "setlist_flow": "Typical early‑90 spring tour pacing – a concise first set with strong mid‑set moments (Half‑Step, Minglewood) and a second set that builds to an Estimated/Wharf Rat peak before a high‑energy encore. The only flow hiccup is the forced Crazy Fingers → Cumberland Blues segue."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals sometimes off‑key; solo praised as “up in the heights” and a highlight of the night.",
+    "Phil": "",
+    "Bob": "Adds funny, playful touches before the end jam; generally solid throughout.",
+    "Keys": "Brent’s vocal performance noted as not always spot‑on; use of MIDI on Lovelight and other keys highlighted.",
+    "Drums": "Mickey stays out for most of Space but otherwise provides a tight backbone."
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "He's Gone": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hey Pocky Way": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Victim -> Standing on the Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Heaven's Door": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T04:23:17.933404+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-21.sbd.miller.107870.flac16"
+}

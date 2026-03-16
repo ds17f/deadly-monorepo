@@ -1,0 +1,31 @@
+{
+  "summary": "Soundboard recording with noticeable phase glitches and a muddy, unbalanced mix, but the band plays solidly throughout.",
+  "review": "The two fan reviews agree that this Miller SBD suffers from technical problems – an out‑of‑phase issue in Rider/IKYR and a generally mushy, overly loud mix that pushes Vince’s keyboards and Bobby’s guitar forward.  Aside from those flaws the performance is described as “mostly very well‑played,” though no particular songs or set moments are highlighted.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "One reviewer gave a low 2‑star rating due to severe recording defects, while the other gave 4 stars noting decent playing despite mix issues; the average lands in the middle of the scale."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Phase‑out issue around 2:30 into 'I Know You Rider' and also affecting 'Rider'; Vince's keyboards sit unusually high in the mix; overall mix described as mushy, hectic, brittle with Bobby (Bob Weir) very loud."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers focused almost entirely on audio problems rather than musical highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bobby is very loud in the mix.",
+    "Keys": "Vince's keyboards are disproportionately high compared to other board sources.",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T16:13:22.019755+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-02-19.141764.sbd.miller.flac2496"
+}

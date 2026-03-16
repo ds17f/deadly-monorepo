@@ -1,0 +1,50 @@
+{
+  "summary": "A solid matrix recording captures a short but intense show with Jerry on fire, highlighted by a Stephen tease in Not Fade Away and a stellar Lost Sailor > Saint jam.",
+  "review": "Both reviewers praise the performance – the first set is described as excellent aside from a slow‑starting Mississippi Half-Step, while the second set delivers a rare Stephen tease at Not Fade Away and an explosive Lost Sailor > Saint transition. The recording is mainly audience‑sourced with occasional soundboard feed, giving it decent clarity overall.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (high praise for Jerry and key jams) combined with a generally good matrix recording yields an above‑average rating despite limited review count."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Mostly audience tape with the soundboard (sbd) kicking in after a while; overall clear enough to enjoy, no major drop‑outs noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "Lost Sailor > Saint"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Short but intense show – first set solid overall, second set delivers a surprising Stephen tease and an exceptional jam out of Saint leading into the drums."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry is described as 'on fire' and dominant throughout the performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mississippi Half-Step": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor > Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T00:51:23.896197+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-11-02.aud.schlissel.12761.sbeok.shnf"
+}

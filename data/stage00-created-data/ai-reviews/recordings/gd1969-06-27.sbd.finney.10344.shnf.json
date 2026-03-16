@@ -1,0 +1,39 @@
+{
+  "summary": "Good recording of a fun show highlighted by a standout Casey Jones performance",
+  "review": "Reviewers describe the concert as a bunch of fun with the band clearly enjoying themselves, and several note that this version of 'Casey Jones' is a favorite. While no technical details are given, the positive ratings suggest the sound quality is at least good enough for enjoyable listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Overall high star ratings (average 4.25) and enthusiastic comments about the performance indicate a strong show; lack of technical detail limits certainty but suggests recording is adequate."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments on sound clarity or mix; reviewers' high ratings imply acceptable audio quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The whole concert is described as fun and energetic, with the band clearly having a great time."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T15:50:25.268451+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-06-27.sbd.finney.10344.shnf"
+}

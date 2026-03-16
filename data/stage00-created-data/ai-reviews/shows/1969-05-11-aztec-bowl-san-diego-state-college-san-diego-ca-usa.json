@@ -1,0 +1,58 @@
+{
+  "summary": "Explosive The Other One and fiery Alligator amid high‑energy festival set",
+  "blurb": "The show delivers a jaw‑dropping The Other One sequence and an electrifying Dead/Santana jam, plus a scorching Alligator performance. Jerry’s guitar is on fire while the dual drummers drive relentless percussion. Recording quality is muddy, but the musical moments stand out.",
+  "review": "On May 11, 1969 at the Aztec Bowl, the Dead took the stage after a marathon of opening acts and launched into one of their most intense early‑summer performances. The first half builds through Morning Dew and the classic Cryptical Envelopment sandwich before exploding on a loopy, totally fired‑up \"The Other One\" that many fans describe as jaw‑dropping. Mid‑set the band rolls into an unplanned Dead/Santana jam – extra percussion, cowbell, and a wall of rhythm that feels like a spring‑groove celebration – before launching into a fiery rendition of \"Alligator\" that showcases Garcia’s progressive guitar intensity. The set closes with the customary Turn On Your Lovelight, leaving the audience buzzing despite the muddy, cut‑filled audience recordings that capture the raw energy more than pristine fidelity.\n\nWhile both available tapes suffer from muffled sound and occasional drop‑outs, they still convey the high‑octane improvisation that defined this historic show. Jerry’s guitar work is a highlight throughout, especially on \"The Other One\" where his loopy phrasing rides the storm of drums. The dual‑drum attack – Mickey and Bill – is front‑and‑center, with extra percussion and cowbell driving the jam sections. Even with technical flaws, this concert remains a vivid snapshot of the Dead’s early‑summer firepower and their willingness to blend with guest musicians on the fly.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Both recordings label sentiment as mixed, but the comments consistently praise standout moments – a jaw‑dropping The Other One, an electrifying Dead/Santana jam, and a fiery Alligator – without any recurring criticism of the musical performance itself. Positive language appears across sources, warranting a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-05-11.fm.cotsman.6296.sbefail.shnf",
+    "reason": "Captures the historic The Other One and Dead/Santana jam more clearly than the other tape, despite overall audience‑recorded mud."
+  },
+  "key_highlights": [
+    "Jaw‑dropping The Other One sequence with loopy Garcia phrasing",
+    "Electrifying Dead/Santana jam featuring extra percussion and cowbell",
+    "Fiery Alligator performance showcasing progressive guitar work",
+    "High‑energy festival vibe despite muddy audience recording"
+  ],
+  "song_highlights": [
+    "The Other One",
+    "Alligator"
+  ],
+  "band_performance": {
+    "Jerry": "Totally fired up, delivering an electrifying The Other One with signature loopy phrasing and progressive intensity during the percussion‑driven sections.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "The dual‑drum attack was front‑and‑center, with extra percussion and cowbell driving the high‑energy jams.",
+    "Billy": "Alongside Mickey, his drumming helped build a relentless rhythmic foundation that powered the jam sections."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-24T14:29:35.700642+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Cryptical Envelopment",
+      "The Other One",
+      "Cryptical Envelopment"
+    ],
+    [
+      "Alligator",
+      "Drums*",
+      "Jam",
+      "Drums*",
+      "Turn On Your Lovelight*"
+    ]
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Nice mellow Jerry show with standout Iko, Jack Straw and He's Gone; recording quality not specified",
+  "review": "The reviewer enjoyed a relaxed Sunday night performance where Jerry stayed in a mellow groove and the band let I Know You Rider, Jack Straw and He's Gone shine. No specific comments on the audio source were made, but the positive 4‑star rating suggests an acceptable listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "Only one review; it praises the musical performance strongly (70% weight) but gives no details on recording quality, so rating leans toward a solid show with assumed decent audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No reviewer comments about sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I Know You Rider",
+      "Jack Straw",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Relaxed Sunday night vibe with Jerry in a mellow mode; the highlighted songs carry the momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Mellow, relaxed playing noted by reviewer",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T05:20:21.221018+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-26.nak300.morrone.friend.116426.flac1644"
+}

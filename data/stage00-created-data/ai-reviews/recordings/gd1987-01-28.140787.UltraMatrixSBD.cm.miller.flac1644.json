@@ -1,0 +1,39 @@
+{
+  "summary": "Mixed performance with a standout Eyes of the World transition, recording quality not commented on",
+  "review": "The show is uneven – Jerry Garcia was largely off‑night, though a few moments (notably the drums → Eyes of the World transition) sparkled. Reviewers focus on the musical performance and give no clear assessment of the UltraMatrix source, leaving its sound quality uncertain.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Three reviews give mixed impressions (average ★3); show quality is average with one highlighted moment, while no concrete recording‑quality feedback is provided, leading to a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not discuss sound clarity, mix, or source type; the UltraMatrix label suggests a matrix recording but no explicit evaluation is given."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is described as uneven with Jerry frequently missing, but the second‑set drums‑to‑Eyes transition provides a brief highlight before the performance slips again."
+  },
+  "band_member_comments": {
+    "Jerry": "Mostly off; more 'miss' than 'hit', voice cracks or laughs on Eyes of the World, occasional nice noodling during the drum transition.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Magic moment in drums → Eyes of the World transition; drummers linger and lift the music briefly."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:32:32.673183+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-01-28.140787.UltraMatrixSBD.cm.miller.flac1644"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Fair audience recording with noticeable bass issues but a lively crowd; the show is remembered mainly for an inspired China Cat intro and mixed performance impressions.",
+  "review": "The spectrum audience tape captures the Dead’s trademark crowd‑singing vibe, though listeners report muddy mids, weak low end and a generally “muddy bad mix” that improves after dialing back the bass. Musically the set is uneven – Jerry’s inventive variations at the start of China Cat are praised, while other moments (e.g., his work on SOTM) feel sluggish to some fans.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Eight reviews give an average of ~3.25 stars; comments split between positive (good crowd, standout China Cat) and negative (bass problems, muddy mix, Jerry’s uneven playing), leading to a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Clear crowd presence; bass often too loud or thin, overall muddy mix. Listeners note the need for EQ adjustments (lower bass) to achieve a cleaner sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on pacing; reviewers focus more on overall vibe and specific moments rather than set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for inventive variations at the start of China Cat; elsewhere described as struggling, especially on SOTM, with a ‘last‑leg’ feel.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T05:41:19.869588+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-03-17.schoeps.13400.sbeok.shnf"
+}

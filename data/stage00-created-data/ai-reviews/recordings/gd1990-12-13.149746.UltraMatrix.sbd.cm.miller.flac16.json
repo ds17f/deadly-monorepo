@@ -1,0 +1,63 @@
+{
+  "summary": "Soundboard recording with mix quirks but a stellar second set highlighted by Help > Slipknot! > Franklin's Tower and The Other One > Morning Dew",
+  "review": "The UltraMatrix SBD capture is generally clear, though the mix often mutes Bobby’s rhythm guitar and parts of the drum kit, making the first set feel thin. The second set more than makes up for it, delivering a packed Help‑Slip‑Franklin's sequence, an unexpectedly great The Other One into Morning Dew, and strong playing from all members. Overall the performance shines despite the recording’s occasional balance issues.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Based on a single detailed review that praises the second set heavily but notes notable mix problems, resulting in a rating slightly below the reviewer’s 4‑star score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD source but rhythm guitar and portions of the drum kit are mixed out; frequencies present with EQ, occasional tape noise noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "The Other One > Morning Dew"
+    ],
+    "poor_songs": [
+      "Wang Dang",
+      "Friend"
+    ],
+    "setlist_flow": "First set feels thin due to missing guitar parts, while the second set is a high‑point with strong transitions and memorable improvisations."
+  },
+  "band_member_comments": {
+    "Jerry": "Great on Big River and Ramble (roaring MIDI solo); quotes Bach in Space.",
+    "Phil": "Detectable in the mix for Help; otherwise not specifically mentioned.",
+    "Bob": "Rhythm guitar turned off/down for much of the show, leading to a thinner sound; appears later with a fine solo.",
+    "Keys": "Bruce’s playing praised on Wang Dang and other keys‑driven songs.",
+    "Drums": "Healy mixed out half the drum kits at times, but overall drumming remains solid."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Friend": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T15:26:12.330761+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-13.149746.UltraMatrix.sbd.cm.miller.flac16"
+}

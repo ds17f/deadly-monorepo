@@ -1,0 +1,62 @@
+{
+  "summary": "High‑energy 1981 Buffalo show captured on an excellent audience tape with standout Shakedown Street and Bertha performances",
+  "review": "Fans rave about the electric atmosphere of this September 26, 1981 performance in Buffalo, highlighting a punchy first set (Shakedown Street, Ramble On Rose) and a memorable second‑set featuring Bertha. The audience recording is praised as crisp and surprisingly clear, making the night feel almost like a soundboard release.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars, consistently praising both the musical excitement and the surprisingly high‑quality audience recording; only a few minor mixed comments keep it just shy of an exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers describe the tape as crisp, clear and “as good as a soundboard,” with no major drop‑outs or distortion noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Bertha",
+      "Brown Eyed Women",
+      "Ramble On Rose"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A high‑energy first set that many consider the highlight, followed by a solid second set; overall pacing is praised for keeping the momentum alive throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is repeatedly called “fantastic,” “tight,” and the driving force behind the first set’s excitement.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "On The Road Again": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T14:59:19.394079+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-09-26.aud.talmadge.12554.sbeok.shnf"
+}

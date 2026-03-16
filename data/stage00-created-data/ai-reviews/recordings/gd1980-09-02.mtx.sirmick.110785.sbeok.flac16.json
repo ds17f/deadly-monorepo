@@ -1,0 +1,112 @@
+{
+  "summary": "Good‑quality matrix recording captures a solid first set and uneven second set, highlighted by standout performances of Minglewood Blues, Sugaree, Morning Dew and strong Jerry Garcia work.",
+  "review": "The Sir‑Mick matrix blend softens the usual harshness of a soundboard and adds natural reverb, delivering a clear and listenable mix that most reviewers praised. Musically the show shines in its opening set – Minglewood Blues, Sugaree, Friend of the Devil and an early Brent‑era keyboard sweep are repeatedly lauded – while the second set is more mixed, with Althea, Terrapin and Ship dragging down the flow but a soaring Morning Dew rescuing the night. Overall sentiment is mixed to positive.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Five detailed reviews give an average of 4.4 stars; most praise the matrix recording and many songs, while a few note performance flaws. Weighted toward show quality (70%) the composite rating lands in the strong‑good range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Softened SBD board with natural reverb blends well with audience; minor pitch adjustments needed (-1% to +2%) and occasional muddy mix on certain tracks, but overall clearer than pure SBD sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood Blues",
+      "Sugaree",
+      "Friend of the Devil",
+      "China Cat > I Know You Rider",
+      "Don't Ease Me In",
+      "Morning Dew",
+      "Sugar Magnolia",
+      "Alabama Getaway"
+    ],
+    "poor_songs": [
+      "Althea",
+      "Terrapin",
+      "Iko",
+      "Ship",
+      "China > Rider"
+    ],
+    "setlist_flow": "First set is consistently strong and tight, showcasing Brent-era keyboard flourishes and Jerry's improvisational flair. The second set is uneven – a sluggish Althea start and weaker moments on Terrapin and Ship are offset by an inspiring jam into Space and a superb Morning Dew that lifts the close."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for snarling tones, adventurous snaking figures, beautiful vocal tone on Morning Dew, and strong interplay with the rhythm section.",
+    "Phil": "",
+    "Bob": "Noted for slide work on Minglewood Blues and rhythmic attacks that complement Jerry’s leads.",
+    "Keys": "Brent's sweeping flourishes are highlighted as a key part of the early‑'80s sound, especially in the first set.",
+    "Drums": "Bill is commended for picking up lost beats, resetting the band confidently, though some reviewers felt the drumming on later songs was less engaging."
+  },
+  "song_mentions": {
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Iko": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ship": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T02:42:46.577040+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-09-02.mtx.sirmick.110785.sbeok.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Poor audience recording with subpar sound; reviewers note no standout musical moments.",
+  "review": "The sole review criticizes the audio quality, calling it inferior to another audience tape of the same concert. No comments are made about the performance itself, leaving the musical content unassessed.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one low‑star review mentioning poor sound and no positive remarks about the show; rating reflects the negative assessment of recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Muffled/low‑fidelity audio; reviewer states another audience recording is far superior."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T01:08:23.762482+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-10-16.137663.set2.aud.smith.sirmick.sbeok.flac16"
+}

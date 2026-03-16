@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent audience recording captured on Sony ECM220T mics, featuring a tight 1982 performance highlighted by a funky Touch of Grey",
+  "review": "Fans rave about the crystal‑clear audience capture made from high‑quality Sony ECM220T microphones, noting the mix is generally superb though vocals sit forward and Phil’s bass sounds a bit muffled. Musically the show is praised as one of the band’s tightest of ’82 with Jerry delivering a funky vocal on Touch of Grey, despite a few comments about a rushed ending.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 5‑star, highlighting outstanding performance and superb tape quality; minor mix complaints lower the recording rating slightly but overall the show/recording combo is judged excellent."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Recorded from audience cassettes using Sony ECM220T mics – crisp and clear overall. Some listeners note vocals are prominent and Phil’s bass sounds muffled/under‑driven in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Tight, inspiring playing throughout with an amazing set list; a few reviewers felt the show ended a bit rushed."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for delivering a funky vocal on Touch of Grey and overall strong guitar work.",
+    "Phil": "Bass described as mushy, flat and buried in the mix due to instrument change.",
+    "Bob": "",
+    "Keys": "Brent's Yamaha CP‑70 piano sounds weak and flat compared with his earlier Rhodes tone.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T02:37:14.969649+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-10-09.sonyecm220T.keshavan.miller.93683.sbeok.flac24"
+}

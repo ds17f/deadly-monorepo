@@ -1,0 +1,89 @@
+{
+  "summary": "Good matrix recording with a noticeable dip in the second‑set source, but a stellar Pittsburgh ’85 show highlighted by Crazy Fingers, Terrapin Station and an impromptu Brokedown Palace.",
+  "review": "The concert captures a classic early‑summer 1985 Dead run in Pittsburgh.  While the first set shines with a tight Jack Straw → It Must Have Been The Roses opener and strong close, the second set suffers from a change of audio source that dulls its impact, though it recovers with standout performances of Crazy Fingers, Terrapin Station and an unexpected Brokedown Palace jam.  Overall the show is praised for its energy and song selection despite the minor recording hiccup.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Four detailed reviews overwhelmingly praise the musical performance and only note a specific drop in audio quality for part of the second set; this yields a high overall rating with strong confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Two different audio sources are used – the first set sounds clear and balanced, but the second set drops in fidelity due to the source change.  Aside from that dip the mix is crisp and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw > It Must Have Been The Roses",
+      "Crazy Fingers",
+      "Terrapin Station",
+      "The Throwing Stones",
+      "Turn On Your Love Light",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is tight and energetic, opening with Jack Straw → It Must Have Been The Roses and closing strong with Cassidy, Ramblin' Rose (RRB) and Promised Land.  The second set starts slowly with Women Are Smarter, but quickly builds momentum through Crazy Fingers, Terrapin Station and a memorable encore jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Ends the show with an impromptu Brokedown Palace jam and does some light “diddling” after the encore.",
+    "Phil": "",
+    "Bob": "Spotted wearing a pink alligator T‑shirt; no specific playing comments.",
+    "Keys": "",
+    "Drums": "Post‑drum segment described as standard fare."
+  },
+  "song_mentions": {
+    "Jack Straw > It Must Have Been The Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Women Are Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Revolution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Turn On Your Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:32:44.533217+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-07-02.senn421.barbella.12082.sbeok.shnf"
+}

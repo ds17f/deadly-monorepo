@@ -1,0 +1,89 @@
+{
+  "summary": "Good soundboard capture of a memorable July ’90 show featuring standout performances of Just A Little Light, Scarlet/Fire and Crazy Fingers despite a muddy venue.",
+  "review": "The recording is a solid sound‑board mix that sounds clear overall, with only occasional clunky spots.  The concert shines especially in the second set – “Just A Little Light”, “Scarlet > Fire”, “Miracle” and an intense “Crazy Fingers” are repeatedly praised, while the first set gets mixed remarks.  Venue problems (mud, poor PA) are noted, but they don’t detract from the strong playing, particularly Jerry’s vocals and guitar, Phil’s bass work in Scarlet, and Brent’s keyboard moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "22 reviews provide a consistent picture: strong musical performance (70% weight) with many standout songs and positive band comments, plus a generally good sound‑board recording (30% weight).  The mix of a few negative venue/first‑set notes brings the rating just above 4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Board is praised as clear and well‑mixed; some reviewers note occasional clunky moments or a CD‑burn error on “He’s Gone”, but overall the audio is acceptable and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Just A Little Light",
+      "Dear Mr. Fantasy",
+      "Friend of the Devil",
+      "Scarlet/Fire",
+      "Miracle",
+      "Crazy Fingers",
+      "Touch Of Grey"
+    ],
+    "poor_songs": [
+      "Birdsong",
+      "He's Gone",
+      "Touch Of Grey"
+    ],
+    "setlist_flow": "The first set is described as thin or flub‑prone, but the second set delivers a powerful surge with excellent transitions (e.g., Miracle → Crazy Fingers → Dear Mr. Fantasy).  Overall pacing improves dramatically after the break."
+  },
+  "band_member_comments": {
+    "Jerry": "His singing is noted as clear and classic (especially on Touch Of Grey) and his guitar tone receives praise.",
+    "Phil": "Highlighted for an intense, note‑dense performance in Scarlet/Fire and generally praised for “mescheviously” messing with the band.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard moments are repeatedly called great – a standout Brent solo and memorable contributions to Dear Mr. Fantasy.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Just A Little Light": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet/Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Birdsong": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Touch Of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T10:32:31.244570+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-07-21.sbd.conner.7832.sbeok.shnf"
+}

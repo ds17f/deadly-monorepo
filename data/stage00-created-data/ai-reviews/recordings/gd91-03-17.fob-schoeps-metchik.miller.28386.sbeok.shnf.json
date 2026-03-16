@@ -1,0 +1,45 @@
+{
+  "summary": "Good front‑of‑house audience recording despite early muffling, capturing a strong set highlighted by Reuben/Cherise and New Speedway Boogie.",
+  "review": "The show is consistently praised for its adventurous vibe and a great setlist, with special treats like the one‑off Reuben / Cherise piece and a killer New Speedway Boogie. The front‑of‑house (FOB) recording is usable – early clapper noise and muffled sections can be cleaned up with EQ, but overall it sounds pleasant. Reviewers are enthusiastic about both the performance and the listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Show quality is rated around 4/5 by multiple reviewers, while recording quality averages about 3/5; weighted combination yields a solid 3.7 rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Muffled sounding in places and an early loud clapper/talking, but overall a nice‑sounding FOB tape that benefits from modest EQ adjustments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Reuben / Cherise",
+      "New Speedway Boogie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Great setlist with a feeling of adventure; the band delivered special treats for the Landover/DC crowd and kept energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Reuben / Cherise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:29:40.011677+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-03-17.fob-schoeps-metchik.miller.28386.sbeok.shnf"
+}

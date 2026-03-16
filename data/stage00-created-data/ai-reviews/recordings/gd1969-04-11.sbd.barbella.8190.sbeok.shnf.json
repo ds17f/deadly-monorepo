@@ -1,0 +1,60 @@
+{
+  "summary": "Soundboard recording suffers from low levels and a noisy second half, but the show shines – Jerry’s monster guitar and a standout “It’s a Sin” keep it compelling.",
+  "review": "The April 11 1969 Tucson performance delivers classic Dead energy with a ripping set, highlighted by an inspired “Cryptical Envelopes → It’s a Sin” and Jerry Garcia’s ferocious guitar tone. However, the soundboard capture is uneven – Dark Star and St. Stephen sit far too low, the second half becomes muddy and the drums feel chaotic – leaving listeners to boost the volume in post‑production.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the musical performance (many 4–5 star comments) while several note serious recording flaws (quiet sections, noisy second half). Weighted blend of strong show quality and fair recording yields a mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Low recording levels on Dark Star and St. Stephen; overall quietness; second half described as bad sound with chaotic drumming. Some listeners report they can correct the volume issues in post‑production."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "It’s a Sin",
+      "Cryptical Envelopes → It’s a Sin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first half is solid, but the second half suffers from poor audio despite strong playing; overall set feels classic 1969 Dead with high energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as a “monster” electric‑guitar player with legendary tone.",
+    "Phil": "Praised for his rig and bass presence (though mostly gear talk).",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Noted as chaotic/uneven in the second half."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It’s a Sin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T12:52:39.118717+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-04-11.sbd.barbella.8190.sbeok.shnf"
+}

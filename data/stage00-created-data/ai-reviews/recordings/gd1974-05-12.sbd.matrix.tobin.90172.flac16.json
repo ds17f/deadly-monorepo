@@ -1,0 +1,39 @@
+{
+  "summary": "Muffled matrix recording of a modest show, highlighted by a smoking The Other One > MLB jam.",
+  "review": "The concert delivers solid energy and smooth segues, with the extended Other One > MLB sequence earning particular praise. However, the matrix source sounds cramped—often described as being recorded in a closet—which detracts from the listening experience. Overall the performance is decent but the audio quality keeps it from being a standout release.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is moderate (energy, good segues, notable Other One > MLB) while recording quality is consistently described as muffled/closet‑like, leading to a weighted average around the high‑mid 3s."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Audio sounds cramped and muffled, likened to playing under a pillow or in a closet; some listeners note it settles after repeated listening but overall lacks clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One > MLB"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Performance is energetic with good segues, though the set as a whole is considered unremarkable rather than spectacular."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One > MLB": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T18:54:25.850017+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-05-12.sbd.matrix.tobin.90172.flac16"
+}

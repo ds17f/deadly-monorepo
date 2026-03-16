@@ -1,0 +1,80 @@
+{
+  "summary": "Soundboard capture of Bruce Hornsby's first night delivers strong performances with The Weight and Touch of Grey, though Vince's synth draws mixed reactions.",
+  "review": "The recording is a clean sound‑board source that lets the band’s energy shine—Jerry’s soaring solo on Stella Blue, Bruce Hornsby’s grand‑piano debut on The Weight, and tight renditions of Touch of Grey and Bird Song stand out.  While most fans praise the setlist flow and the rare post‑Brent \"Gimme Some Lovin'\", Vince’s Casio‑style synth work and a few slower numbers (Stella Blue, Box of Rain) generate some dissent.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers gave 3–5 stars (average ~4), highlighting strong musical moments and a clear soundboard recording; criticisms are limited to keyboard tone, keeping the overall rating high."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Listeners repeatedly note an \"awesome\" or \"crisp\" sound with strong clarity from the first notes of Touch; no major drop‑outs or balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Weight",
+      "Touch of Grey",
+      "Bird Song",
+      "Gimme Some Lovin'"
+    ],
+    "poor_songs": [
+      "Stella Blue",
+      "Box of Rain"
+    ],
+    "setlist_flow": "A blend of new material (Bruce’s piano debut, Touch of Grey) and classic Dead staples creates a lively arc; the energy from Hornsby lifts the show despite some friction over Vince’s synth textures."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Stella Blue is praised as a highlight; his interaction with Bruce during The Weight shows both brilliance and a brief off‑beat moment.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby’s grand piano debut receives strong praise; Vince’s synth/\"Casio\" rig is repeatedly criticized for sounding out of place and overbearing.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Weight": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Touch of Grey": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Box of Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T12:13:34.236387+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-09-15.sbd.barbella.7770.sbeok.shnf"
+}

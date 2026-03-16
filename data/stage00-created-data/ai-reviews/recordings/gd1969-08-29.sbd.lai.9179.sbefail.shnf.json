@@ -1,0 +1,61 @@
+{
+  "summary": "Soundboard recording of good quality captures a short but R&B‑rich 1969 set highlighted by a fiery “New Orleans” and “Casey Jones”.",
+  "review": "The three fan reviews are uniformly enthusiastic, calling the show a must‑have for collectors and praising the Pigpen‑driven R&B vibe. Standout moments include a “funky Casey Jones” opener, an electrifying “New Orleans”, and a long, tasty “Lovelight”. The soundboard source is generally clear, though a few reviewers note low‑bitrate MP3 artifacts and suggest using EQ for optimal playback.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "All three reviews are strongly positive about both performance and sound; recording is good but mentions of MP3 quality keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix praised as \"great sound\"; a couple of comments about low‑bitrate MP3s and recommendation to use EQ indicate minor fidelity issues but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Orleans",
+      "Casey Jones",
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A concise ten‑song set that leans heavily into R&B thanks to Pigpen, delivering a tight, high‑energy flow with memorable transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia embraces the R&B feel, even singing “Good Lovin’” and adding soulful guitar tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen’s organ/keyboard work is highlighted as the driving R&B force behind the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "New Orleans": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Searchin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T16:56:20.176288+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-08-29.sbd.lai.9179.sbefail.shnf"
+}

@@ -1,0 +1,66 @@
+{
+  "summary": "Playin' sandwich shines; Help‑Slip‑Franklin sequence sizzles",
+  "blurb": "The show delivers a standout Playin' > Supplication > Playin' sandwich and a scorching Help On The Way → Slipknot → Franklin's Tower sequence. Jerry’s guitar burns on Slipknot while Keith’s piano adds staccato flair, and the drums thunder throughout. Overall a high‑energy performance despite modest audience mix.",
+  "review": "On September 24, 1976 at William & Mary College Hall the Dead turned in an electrifying set that still feels fresh. The first set kicks off with a rare Playin' > Supplication > Playin' sandwich that instantly lifts the mood, and the band rides that momentum into a solid mid‑set run of classics. The second set is where the night truly ignites: Help On The Way launches straight into a blistering Slipknot that showcases Jerry’s scorching licks, while Keith Godchaux’s piano runs weave staccato brilliance through the H>S>F transition and into Franklin's Tower. Bill Kreutzmann and Mickey Hart deliver thunderous power, their drums driving the groove even as the slip‑knot split creates an intriguing hiccup. The evening closes on a joyous high with The Music Never Stopped, leaving the crowd buzzing despite the audience tape’s occasional flatness in Jerry and Phil’s mix. For anyone hunting that 1976 magic, this show captures the band at a peak of creative fire.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 24,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "All available commentary is overwhelmingly positive: the Playin' sandwich, Help‑Slip‑Franklin sequence, Keith’s piano improvisations, and thunderous drums are repeatedly praised. No negative performance notes appear across the analysis, just minor mix flatness, so a strong positive adjustment of +1.4 is applied.",
+      "final_calculation": "2.5 + 0.2 + 1.4 = 4.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd76-09-24.aud.unknown.16901.sbeok.shnf",
+    "reason": "Clear audience tape with good stereo separation that captures the energy of the performance and all key moments, making it the most listenable version despite modest mix depth."
+  },
+  "key_highlights": [
+    "Iconic Playin' > Supplication > Playin' sandwich opens Set 1",
+    "Help On The Way → Slipknot → Franklin's Tower sequence rocks in Set 2",
+    "Keith Godchaux’s improvisational piano runs on the H>S>F transition",
+    "Thunderous dual‑drum work from Bill and Mickey throughout"
+  ],
+  "song_highlights": [
+    "Playing In The Band",
+    "Supplication",
+    "Playing In The Band",
+    "Help On The Way",
+    "Slipknot",
+    "Franklin's Tower",
+    "The Music Never Stopped"
+  ],
+  "band_performance": {
+    "Jerry": "Scorching Slipknot licks and overall guitar fire; mix is low in the audience tape but his playing still shines.",
+    "Phil": "\"Thunder juice\" praised, though barely audible or flat in parts of the audience recording.",
+    "Bob": "Adds energetic belaying/challenging vibes with affection, helping drive the set forward.",
+    "Brent": "Keith Godchaux’s piano receives high praise for improvisational runs on Help‑Slip‑Franklin and his staccato lead into Franklin's Tower, standing out as a keyboard highlight.",
+    "Mickey": "Thunderous power on drums; contributes to the overall heavy rhythmic drive.",
+    "Billy": "Thunderous power alongside Mickey; drum split during Slipknot noted as an interesting change."
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-23T07:22:44.823933+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Supplication",
+      "Playing In The Band"
+    ],
+    [
+      "Help On The Way",
+      "Slipknot",
+      "Drums",
+      "Slipknot",
+      "Franklin's Tower",
+      "The Music Never Stopped",
+      "Stella Blue",
+      "Around & Around"
+    ]
+  ]
+}

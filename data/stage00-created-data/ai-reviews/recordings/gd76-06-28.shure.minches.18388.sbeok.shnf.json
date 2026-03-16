@@ -1,0 +1,81 @@
+{
+  "summary": "Fair audience recording of a high‑energy summer ’76 show, highlighted by a stellar “Eyes of the World” jam and the proto‑Fire “Happiness is Drumming” segment.",
+  "review": "The performance shines with an unforgettable intro jam on “Eyes of the World,” a soaring “High Time,” and a sweet “Happiness is Drumming” that many fans liken to an early Fire on the Mountain. While the playing—especially Phil’s bass work and Jerry’s vocals—is widely praised, the audience tape suffers from low‑generation tape hiss, uneven crowd‑banter edits and occasional mix muddiness, making it a mixed‑quality listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers laud the musical performance (≈4.5/5) while the recording is described as fair to poor (≈3/5); weighted together this yields a solid ~4.1 rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Low‑generation tape with minimal hiss but noticeable crowd‑banter editing issues; mix could be clearer, and some listeners describe it as weak or “shitty,” though the basic sound is present."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "High Time",
+      "Happiness is Drumming",
+      "Fire on the Mountain",
+      "Scarlet Begonias",
+      "The Wheel",
+      "Wharf Rat",
+      "Mississippi Half-Step"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a strong opening jam that sustains energy throughout, with mid‑70s “dancin’” vibe and seamless transitions into the proto‑Fire jam; overall pacing is praised despite occasional location‑related fatigue."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as awesome and his guitar tone/energy highlighted in the opening jam.",
+    "Phil": "Bass work receives high praise—slides, fretless debate, “big brown” tone—and is considered a standout element of the show.",
+    "Bob": "",
+    "Keys": "Keith (and occasional Donna) noted for solid playing; Keith’s keyboards blend well with the band’s mid‑70s sound.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Happiness is Drumming": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T05:39:12.140537+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-06-28.shure.minches.18388.sbeok.shnf"
+}

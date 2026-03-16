@@ -1,0 +1,39 @@
+{
+  "summary": "Fair soundboard capture of a mixed‑quality show – Jerry’s guitar burns, but the overall performance feels sloppy and the tape isn’t spectacular.",
+  "review": "The recording is a soundboard source that delivers decent but not superb clarity; listeners note some muddiness and even a walk‑man‑style roughness. Musically the night has flashes of brilliance—Jerry Garcia’s tone is punchy and clean—but the band’s playing is described as sloppy, with Bob Weir’s “Dupree's Diamond Blues” singled out as a low point and an encore that left fans disappointed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "medium",
+    "rationale": "Reviews are split between praise for Jerry’s guitar tone and criticism of overall sloppy playing and sub‑par recording quality, yielding a modest average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Sound not superb; some reviewers describe it as muffled or mediocre, one mentions a walk‑man capture that was overwritten. Overall listenable but lacking crispness."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Dupree's Diamond Blues"
+    ],
+    "setlist_flow": "Second set described as interesting, but the encore is lamented; overall set praised for length yet marred by sloppy and flawed playing."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is punchy, clean and “on fire,” though his voice sounds a bit rough and some note his playing was a little rough.",
+    "Phil": "",
+    "Bob": "Weir experiments with an odd effects pedal that sounded like a steel‑drum and his performance on “Dupree's Diamond Blues” is called out as the worst of the night.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T17:59:28.109852+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-09.sbd.walker-scotton.miller.106006.flac16"
+}

@@ -1,0 +1,85 @@
+{
+  "summary": "Historic 1969 show with Janis Joplin’s legendary Lovelight and a scorching Dark Star; soundboard source is hissy and degraded but still enjoyable.",
+  "review": "The performance shines thanks to the once‑in‑a‑lifetime guest spot by Janis Joplin on Lovelight, a searing Dark Star, and tight early‑Dead energy throughout.  While the recording suffers from noticeable hiss, limited dynamics and possible source mismatches (disc 2), the musical moments are strong enough that fans consider it a must‑have historical document.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over two dozen reviews overwhelmingly praise the music (Lovelight, Dark Star, Eleven, etc.) while repeatedly noting poor audio quality; weighting 70 % show + 30 % recording yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Noticeable hiss and very limited dynamic range; disc 2 (Me & My Uncle / Lovelight) sounds like a different, more degraded source with digital static on the Uncle track and multi‑generation analog noise on Lovelight."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lovelight (with Janis Joplin)",
+      "Dark Star",
+      "The Eleven",
+      "Sittin' on Top of the World",
+      "Dupree's",
+      "Cold Rain and Snow",
+      "Dire Wolf"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Classic early‑69 set: acoustic numbers (Me & My Uncle, Dire Wolf) open the first set, a high‑energy second set builds to a guest‑jam Lovelight, followed by an expansive Dark Star and fiery Eleven; the pacing feels natural and the guest appearance adds a rare highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for beautiful tone, nimble soloing on Me & My Uncle and Lovelight, and leading the Dark Star with “rage”.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Mention of TC on keyboards (Tom Constanten) in one review; no detailed appraisal.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lovelight (with Janis Joplin)": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Dark Star": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Eleven": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sittin' on Top of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dupree's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T15:13:38.686734+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-06-07.sbd.kaplan.9074.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Good‑quality audience recording of a solid show with enjoyable “Eyes”",
+  "review": "The audience tape is surprisingly clear for a crowd source, letting the cheers add atmosphere while keeping the music audible. The performance isn’t highlighted by any standout moments according to the reviewer, but it’s described as a good overall show and the rendition of “Eyes” was especially enjoyed.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Single 5‑star review praises both the recording quality for an audience source and the overall show, though no detailed musical analysis is provided."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear for an audience tape; crowd cheering adds ambience, no major flaws noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generally solid pacing with no specific issues mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T11:24:01.266290+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-09.139664.aud.lamarre.berger.flac16"
+}

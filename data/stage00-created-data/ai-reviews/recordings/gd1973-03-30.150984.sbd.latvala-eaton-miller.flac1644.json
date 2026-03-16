@@ -1,0 +1,31 @@
+{
+  "summary": "Mixed feedback – fans love the Rochester performance but at least one reviewer notes first‑set sound issues.",
+  "review": "The three reviews are split: two listeners praise the show as a great memory and give it high marks, while another calls out poor sound on the first set and rates it zero. No concrete details about song quality or recording source are provided, leaving the technical assessment vague.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Average star rating (5+4+0)/3 = 3.0 with mixed comments; enough reviews for a moderate confidence level."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer mentions the first set needs a sound update, suggesting inconsistent or sub‑par audio quality; no other technical details are given."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or pacing were made in the reviews."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T07:13:18.527557+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-03-30.150984.sbd.latvala-eaton-miller.flac1644"
+}

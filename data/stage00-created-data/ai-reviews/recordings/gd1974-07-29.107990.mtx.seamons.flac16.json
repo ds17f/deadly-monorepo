@@ -1,0 +1,45 @@
+{
+  "summary": "Unknown‑quality matrix source, but the show dazzles with a stellar The Other One that segues into an epic Spanish Jam.",
+  "review": "Reviewers rave about this performance, calling the transition from The Other One into a soaring Spanish Jam a highlight that can make anyone’s day. While no specific comments on the audio fidelity are provided, the musical moment is described as “friggin' SWEET,” indicating strong overall enjoyment of the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "low",
+    "rationale": "Single 5‑star review praises the performance heavily; no recording quality feedback, so rating leans on the show's strength while accounting for unknown audio fidelity."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on sound clarity, mix, or source type; recording quality cannot be assessed from available feedback."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Spanish Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The transition from The Other One into a Spanish Jam is highlighted as the key high point of the set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T23:16:05.867304+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-07-29.107990.mtx.seamons.flac16"
+}

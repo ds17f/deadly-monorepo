@@ -1,0 +1,59 @@
+{
+  "summary": "Excellent audience recording with strong bass; show mixes high points like High Time and Brokedown Palace with slower, sleepy moments.",
+  "review": "The tape captures a top‑of‑the‑line audience sound with unusually clear bass and overall excellent fidelity. Musically the concert delivers standout moments – High Time, Row Jimmy, The Dew (rare) and a beloved encore of Brokedown Palace – but several of Jerry’s numbers feel overly slow and The Dew comes across as sleepy for some listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Both reviewers praise the recording quality (excellent) but diverge on performance, giving one a perfect score and the other a middling 3‑star rating; weighted average yields a solid 3.6."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Bass is punchy and clearer than typical audience tapes; overall clarity is high with no reported drop‑outs or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Time",
+      "Row Jimmy",
+      "The Dew",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "The Dew"
+    ],
+    "setlist_flow": "Set includes several fan‑favorite sweet songs and a strong encore, but the pacing feels uneven with some overly slow tempos that dampen momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Sweet tone praised, but many of his tunes are described as too slow.",
+    "Phil": "Bass noted as unusually strong and prominent.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:51:07.856327+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-16.111170.fob.glassberg.motb-0164.flac16"
+}

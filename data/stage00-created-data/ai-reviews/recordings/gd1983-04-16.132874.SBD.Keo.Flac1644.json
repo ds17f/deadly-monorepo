@@ -1,0 +1,31 @@
+{
+  "summary": "Reviews provide no substantive information about the recording or performance.",
+  "review": "The sole review is a meta‑comment indicating a broken link and offers no insight into sound quality, setlist, or band performance. Consequently, there is insufficient data to assess either the audio fidelity or musical merits of this show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one non‑descriptive review was provided; while it carries a 5‑star rating, there is no content to evaluate the show or recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "unknown",
+    "technical_notes": "No comments on sound clarity, mix, or source type were given."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T05:31:32.649387+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-16.132874.SBD.Keo.Flac1644"
+}

@@ -1,0 +1,81 @@
+{
+  "summary": "Solid early set, standout Althea and Terrapin jam, mixed later vibe",
+  "blurb": "The first set sizzles with Cold Rain And Snow, Althea and Tennessee Jed. The second set delivers a memorable Terrapin Station jam and strong drums/space segment, while vocal fatigue shows up later in the night.",
+  "review": "May 19, 1992 at Cal Expo captured a typical early‑'90s Dead show – tight, melodic and peppered with both high points and a few weary moments. Jerry opened strong, his voice bright on Cold Rain And Snow and Althea, and delivered a fiery solo on Tennessee Jed before fatigue crept in during the later half of the set. Phil held down a solid groove all night, while Vince’s digital piano sparked divided opinions – some loved his energetic “Way To Go Home” solo, others found the Casio tone grating. The second set shines with the China Cat Sunflower → I Know You Rider segue and an expansive Terrapin Station that rolls into a crisp drums‑and‑space excursion, highlighted in audience recordings for its crystal‑clear separation. The encore closes the night with a fun Baba O’Riley/Tomorrow Never Knows medley. Overall the show is enjoyable and representative of the era, though the vocal weariness prevents it from being a classic.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Two recordings are clearly positive (highlighting Tennessee Jed, China>Rider and Terrapin jam) while three are mixed; no recording reports consistent negative performance issues. This moderate consensus yields a modest +1.0 sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 1.0 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd92-05-19.sbd.wiley.7856.sbefail.shnf",
+    "reason": "Good‑quality soundboard with clear mix; captures the band’s nuances despite some vocal fatigue, making it the most reliable listening source."
+  },
+  "key_highlights": [
+    "Althea delivers an incendiary performance early in set one.",
+    "Terrapin Station jam and subsequent drums/space segment stand out as a highlight of the second set.",
+    "Tennessee Jed features a great Jerry solo.",
+    "The encore’s Baba O’Riley into Tomorrow Never Knows rounds out the night with energetic energy."
+  ],
+  "song_highlights": [
+    "Althea",
+    "Cold Rain And Snow",
+    "Looks Like Rain",
+    "Terrapin Station",
+    "Tennessee Jed",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Baba O'Riley",
+    "Tomorrow Never Knows"
+  ],
+  "band_performance": {
+    "Jerry": "Strong start with bright vocals and fiery solos on Althea and Tennessee Jed; later shows vocal fatigue and less inspired playing.",
+    "Phil": "Consistently solid bass foundation throughout the night, keeping the groove steady.",
+    "Bob": "",
+    "Brent": "Vince’s digital piano draws mixed reactions – energetic “Way To Go Home” solo praised by some, while others find the Casio tone shrill.",
+    "Mickey": "Drums/space segment shines with crisp, ethereal interplay, especially highlighted in audience recordings.",
+    "Billy": "Percussion work is strong throughout, contributing to the memorable Terrapin jam and overall rhythmic drive."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-18T05:28:14.104762+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Althea"
+    ],
+    [
+      "Cold Rain And Snow"
+    ],
+    [
+      "Looks Like Rain"
+    ],
+    [
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Black Peter",
+      "Sugar Magnolia"
+    ],
+    [
+      "Tennessee Jed"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Baba O'Riley",
+      "Tomorrow Never Knows"
+    ]
+  ]
+}

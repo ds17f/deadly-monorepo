@@ -1,0 +1,82 @@
+{
+  "summary": "Decent soundboard recording but a short, sub‑par set with lukewarm vocals and a few bright moments.",
+  "review": "The board sounds pretty good, though the reviewer notes it could use a touch of reverb to soften the dry edge. Musically the show is described as one of the shortest and less than average, with marginal Jerry vocals and a disappointing ending to the R&R > One More Saturday Night sequence, yet the reviewer does highlight several enjoyable segments such as Bertha > Good Lovin', Candyman, El Paso, Let It Grow, and Not Fade Away > Morning Dew.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "low",
+    "rationale": "The single review rates the show 2 stars and calls it below average, while noting a decent soundboard; this yields a low overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear board recording but slightly dry; reviewer suggests adding a little reverb to soften it up."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Good Lovin'",
+      "Candyman",
+      "El Paso",
+      "Let It Grow",
+      "Not Fade Away",
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "R&R > One More Saturday Night"
+    ],
+    "setlist_flow": "The set is noted as unusually short and less than average, with a weak ending to the R&R > One More Saturday Night sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are described as only marginal tonight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "R&R > One More Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:53:30.665476+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-15.137403.sbd.msc.happyjack.flac16"
+}

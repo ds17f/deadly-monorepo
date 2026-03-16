@@ -1,0 +1,79 @@
+{
+  "summary": "Box of Rain shines; epic Morning Dew/Rain close, solid mid‑set",
+  "blurb": "The second set builds momentum with a standout Box of Rain and a soaring The Wheel that leads into an unforgettable Morning Dew/Rain finale. Jerry delivers powerful vocals throughout, while Vince’s piano drives the jams. Recording quality is good but the mix pushes Vince forward.",
+  "review": "On March 17 1994 at Rosemont Horizon the Dead offered a show that swings between a slightly uneven first set and a second‑set that truly takes off. Highlights include Jerry Garcia’s “acoustic‑bolt” vocal tone on Touch of Grey and an inspired performance of Box of Rain, while Vince Welnick’s grand piano and organ work fuel the momentum into The Wheel and the soaring All Along The Watchtower. The night culminates in a memorable Morning Dew that segues seamlessly into the encore Rain, leaving fans with one of the more satisfying close‑of‑show moments from this era. Though the soundboard capture is generally clear, listeners note Vince sitting a bit high in the mix and Phil occasionally buried early on; nevertheless the overall energy and musicianship make this a solid entry for any 1994 Dead collection.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 18,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "One recording is positive and the other mixed; consistent praise for Box of Rain, The Wheel, Morning Dew/Rain and Jerry's vocals yields modest positive sentiment without overwhelming consensus.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd94-03-17.sbd.ladner.8023.sbeok.shnf",
+    "reason": "Good‑quality soundboard capture that highlights the standout tracks and provides a clear, complete version of the show."
+  },
+  "key_highlights": [
+    "Box of Rain delivers an emotional peak with deep Lesh backing.",
+    "The Wheel rolls into an expansive jam leading to The Watchtower.",
+    "Epic Morning Dew → Rain close showcases strong Space and drums.",
+    "Jerry's powerful vocal performance is noted as one of his best."
+  ],
+  "song_highlights": [
+    "Box of Rain",
+    "The Wheel",
+    "Morning Dew",
+    "Rain",
+    "Althea",
+    "Lazy River Road",
+    "Iko Iko",
+    "Playing In The Band",
+    "Uncle John's Band",
+    "Wang Dang Doodle"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers a powerful vocal performance with an acoustic‑bolt tone, praised as one of his best; guitar work on Morning Dew is clear and sparkling.",
+    "Phil": "Digs deep and shines on Box of Rain, though early mix occasionally buries his bass.",
+    "Bob": "Vocals and tasteful color are highlighted, despite a brief out‑of‑tune acoustic moment and a disliked steel‑drum/guitar blend on The Wheel.",
+    "Vince": "Provides grand piano and organ that drive the jams; praised for musicality but sometimes sits too high in the mix.",
+    "Mickey": "Percussion adds depth to the Space segment, complementing the second‑set flow.",
+    "Billy": "Drumming is remarkable, especially during the second‑set jam leading into Morning Dew."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-18T20:08:47.916150+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Box of Rain",
+      "Iko Iko"
+    ],
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "All Along The Watchtower",
+      "Morning Dew"
+    ],
+    [
+      "Rain"
+    ],
+    [
+      "Althea"
+    ],
+    [
+      "Lazy River Road"
+    ],
+    [
+      "Wang Dang Doodle"
+    ]
+  ]
+}

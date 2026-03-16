@@ -1,0 +1,84 @@
+{
+  "summary": "Crystal‑clear soundboard with a few muddy patches captures a legendary ’72 show highlighted by a soaring Dark Star, Bird Song and Playin'",
+  "review": "The patched soundboard source delivers a mostly crisp mix that lets the band’s 1972 peak shine – Jerry’s incendiary solos, Phil’s floating bass lines and a guest‑spot from David Crosby all sparkle.  Fans rave about the marathon Dark Star, the soaring Bird Song and the fiery Playin', while the only technical gripe is occasional muddiness in the patched sections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive fan commentary (most 5‑star) praises both performance and recording; minor comments about muddy patches lower the technical score slightly, yielding a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and focused instruments; occasional muddy sections in patched areas but the Charlie Miller‑level fixes restore completeness. No major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Bird Song",
+      "Playin'",
+      "He's Gone",
+      "Truckin'",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set rolls with tight jams on GSET, Bird Song and Playin'; the second set launches into a marathon Dark Star that flows into powerful He's Gone > Truckin' and a heartfelt Black Peter, delivering an arc of high‑energy improvisation."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as ‘determined to rock’ with superb, articulate solos throughout the night.",
+    "Phil": "Noted for floating around Jerry in Dark Star and providing a strong Phil/Billy section.",
+    "Bob": "Praised especially on “Deal” where his interplay with Jerry shines; overall playing called fantastic.",
+    "Keys": "Guest guitarist David Crosby adds interesting texture, loud but complementary (especially on Sugar Magnolia).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 10,
+      "negative_mentions": 1,
+      "total_mentions": 11
+    },
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:16:12.148377+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-09-10.sbd.patched.greenberg-powell.22793.sbeok.shnf"
+}

@@ -1,0 +1,83 @@
+{
+  "summary": "Clear soundboard capture of a high‑energy 1985 Alpine show with Jerry on fire and standout performances of Walking Blues, Althea, Brown Eyed Women and a tight Half‑Step/Lost Sailor flow.",
+  "review": "The recording is a nicely balanced soundboard tape that lets the band’s electricity shine through – Jerry’s guitar is described as “on fire,” Brent and Bob drive the bluesy jams, and the crowd energy is palpable. The setlist flows seamlessly with highlights like Walking Blues, Althea, Brown Eyed Women, Keep on Growing into Half‑Step and Lost Sailor, though a few reviewers note Lost Sailor sounded a bit loose.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers give high marks (4–5 stars) and praise both the performance and sound quality; only one low‑star, vague comment tempers confidence slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Very nice, clear sound with no reported dropouts or major issues; reviewers highlight crispness and energy in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Walking Blues",
+      "Althea",
+      "Brown Eyed Women",
+      "Keep On Growing",
+      "Half Step",
+      "Lost Sailor",
+      "Mr. Fantasy",
+      "Miracle"
+    ],
+    "poor_songs": [
+      "Lost Sailor"
+    ],
+    "setlist_flow": "Reviews praise seamless transitions (Althea → Cassidy → Brown Eyed Women, Keep on Growing → Half Step → Lost Sailor → Saint) and an especially tight Set II order."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"on fire\" with great guitar tone and strong vocals.",
+    "Phil": "",
+    "Bob": "Mentioned as \"Bobby\" playing alongside Brent on Walking Blues.",
+    "Keys": "Brent Mydland praised for slashing away on Miracle and co‑leading Walking Blues.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Walking Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Keep On Growing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T05:21:31.550845+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-22.123486.sbd.miller.flac16"
+}

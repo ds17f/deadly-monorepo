@@ -1,0 +1,100 @@
+{
+  "summary": "A pristine soundboard capture of the 3/30/90 show, highlighted by a smoking Help > Slip > Franklin’s and a seamless Playin’ → China Doll → Uncle John’s Band → Terrapin sequence.",
+  "review": "The recording is an excellent SBD mix that sounds crystal‑clear and fully captures the band’s fire‑filled performance.  Musically the concert shines with a monster second set – the pre‑drums medley, Help>Slip>Franklin’s, Tom Thumb, Dire Wolf and a soaring Standing on the Moon are repeatedly praised as standout moments.  Overall the show is regarded as one of the best pure‑Dead dates of spring 1990.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 20 enthusiastic reviews consistently rate the performance and recording at five stars, noting flawless soundboard quality and multiple highlight songs; the weighted average yields a near‑exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Praised as a Healy SBD mixdown – crisp, clear, balanced with no noticeable drop‑outs or muffiness; listeners describe it as “absolutely perfect” and “top‑notch”."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help>Slip>Franklin's",
+      "Playin' in the Band",
+      "China Doll",
+      "Uncle John's Band",
+      "Terrapin Station",
+      "Tom Thumb",
+      "Dire Wolf",
+      "Standing on the Moon"
+    ],
+    "poor_songs": [
+      "Not Fade Away",
+      "Franklin's (mixed opinions)",
+      "Gimme Some Lovin'"
+    ],
+    "setlist_flow": "The set flows seamlessly with a 42‑minute pre‑drums magic segment; transitions (Playin'→China Doll→UJB, Help>Slip>Frank) are highlighted as fluid and inspiring, making the second set feel like one continuous journey."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his guitar tone, especially on Slipknot/Help>Slip>Franklin's and the emotive Standing on the Moon solo.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "The Healy soundboard mix provides pristine keyboard presence; no specific performance comments were made.",
+    "Drums": "The pre‑drums sequence is described as “seamless” and “beautiful,” indicating solid, inspiring drumming throughout."
+  },
+  "song_mentions": {
+    "Help>Slip>Franklin's": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Tom Thumb": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Franklin's": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T05:57:09.546700+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-03-30.sbd.gorinsky.8511.sbeok.shnf"
+}

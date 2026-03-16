@@ -1,0 +1,92 @@
+{
+  "summary": "Crisp soundboard capture of an ’89 all‑star show with a blistering second set – Pocky Way → Playing → Rider → Terrapin and a standout Memphis Blues.",
+  "review": "The Miller‑upgraded soundboard delivers crystal‑clear audio with perfect balance, making every nuance audible. Musically the concert shines especially in the second set where Hey Pocky Way flows into a superb Playing‑Rider‑Terrapin sequence, complemented by an inspired Memphis Blues and memorable solos from Jerry on guitar (and even oboe). Overall the performance is rated among the band’s best of 1989.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All detailed reviews praise both the musical performance and the recording quality; several give 5‑star ratings, indicating an exceptional show captured with excellent soundboard fidelity."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly note the crisp, clear mix and the effective use of FOB/AUD patches; no significant drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hey Pocky Way",
+      "Playing > Know You Rider > Terrapin Station",
+      "Memphis Blues",
+      "Stagger Lee",
+      "Saturday Night",
+      "Cold Rain and Snow",
+      "We Can Run",
+      "Let It Grow",
+      "Throwing Stones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows tightly, with a high‑energy first half and a second‑set highlight where Pocky Way segues into Playing, Rider (rarely without China Cat) and a massive Terrapin; transitions are seamless and the crowd interaction feels organic."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praised his guitar work – a beautiful solo on Stagger Lee, flawless tone throughout, and even an oboe cameo adding space.",
+    "Phil": "A few notes of technical difficulty with the bass were mentioned, but no specific performance criticism.",
+    "Bob": "",
+    "Keys": "Brent (keyboards) overcame noted organ/bass glitches, delivering interesting organ work on \"Row Jimmy\" and supporting the tight jams.",
+    "Drums": "Bill's drumming got a spotlight during a four‑minute drum break before Terrapin; overall rhythm section praised for energy."
+  },
+  "song_mentions": {
+    "Hey Pocky Way": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing > Know You Rider > Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Memphis Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "We Can Run": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T22:23:53.293074+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-08-05.sbd.miller.89885.sbeok.flac16"
+}

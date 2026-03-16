@@ -1,0 +1,81 @@
+{
+  "summary": "High‑quality matrix recording of a historic, marathon June 10 1973 show – brilliant Dark Star/He's Gone/Truckin' sequence and strong guest jam, though the first set is uneven.",
+  "review": "The patched Miller/Tobin source delivers a clear, well‑balanced mix that captures both the band and the audience ambience, making this one of the best available versions of the June 10 1973 concert. Musically the show shines in its epic second‑set Dark Star > He's Gone > Wharf Rat > Truckin' run, the soaring Bird Song, and the Allman‑guest driven third set, but the opening set suffers from a few sloppy moments and Jerry’s occasionally unfocused playing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 5‑star with strong praise for both the sound quality (matrix source, excellent patches) and the musical highlights; only a few comments note inconsistency, yielding an overall rating in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Patched Miller soundboard with audience crossfades provides crisp instrument separation and lively crowd ambience; reviewers call it the \"best source\" despite occasional minor muffling in quieter passages."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > He's Gone > Wharf Rat > Truckin'",
+      "Eyes",
+      "Bird Song",
+      "Sugar Magnolia",
+      "That's All Right, Mama"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "Looks Like Rain"
+    ],
+    "setlist_flow": "A marathon three‑set gig (≈6 hours) with a tentative first set, an explosive second set anchored by a 26‑minute Dark Star and strong mid‑set jams, and a guest‑filled third set featuring the Allman Brothers that adds a bluesy flavor. The flow swings from lo‑energy opening to high‑octane climaxes."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – praised for moments of soaring lead (Dark Star, Truckin') and solid rhythm on Bird Song, but several reviewers note he sounded off or “phoned in” on early songs.",
+    "Phil": "Consistently highlighted as a strong anchor; his bass work on Morning Dew, Box of Rain, and the Dark Star jam receives commendation.",
+    "Bob": "Positive remarks about his rhythm guitar tone on Jack Straw and vocal delivery on Bird Song; otherwise not heavily mentioned.",
+    "Keys": "Keith (or Brent) gets specific praise for a standout post‑verse solo on Bird Song and overall keyboard texture throughout the show.",
+    "Drums": "Bill’s drumming is lauded for driving the second‑set jams and delivering a powerful solo before the final verse of Wave That Flag; Mick's contributions in the Allman guest set are also noted."
+  },
+  "song_mentions": {
+    "Dark Star > He's Gone > Wharf Rat > Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "That's All Right, Mama": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T14:34:20.701550+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-10.sbd.miller.tobin.patched-89730.90979.flac16"
+}

@@ -1,0 +1,128 @@
+{
+  "summary": "Nice audience recording of a strong show with standout Brown‑Eyed Women, Fever, and an epic Playing In The Band/Drums/Space jam",
+  "review": "The reviewer praises Joe D'Amico’s tape as clear and well‑balanced, capturing the band’s energy throughout. Musically the concert is highlighted by a superb Brown‑Eyed Women, the only known Dead version of Fever, and a marathon second‑set sequence that flows from Playing In The Band through Drums, Space, The Other One and beyond. Overall it’s deemed a good show with solid recording quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "One detailed review gives a 4‑star rating, emphasizing strong musical performance and a well‑recorded tape; the limited number of reviews lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced audience recording with minimal noise; captures full band dynamics and retains ambience without noticeable drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brown-Eyed Women",
+      "Fever",
+      "Scarlet > Fire",
+      "Playing In The Band > Drums > Space > The Other One > Stella Blue > Throwing Stones > Good Lovin' > La Bamba > Good Lovin'",
+      "Knockin' On Heaven's Door"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set builds nicely from fun openers to a high point with Brown‑Eyed Women and Fever; the second set launches strong with Scarlet>Fire and maintains momentum through an extended jam sequence, ending with a satisfying encore."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum segment is noted as solid within the long second‑set jam."
+  },
+  "song_mentions": {
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fever": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "When I Paint My Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "La Bamba": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin' On Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:10:31.799069+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-13.nak300.damico.90082.sbeok.flac16"
+}

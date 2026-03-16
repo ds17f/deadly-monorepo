@@ -1,0 +1,96 @@
+{
+  "summary": "A high‑energy Alpine Valley show – highlighted by the first ever performance of “Foolish Heart” and strong jams – recorded on a modest audience tape that’s cloudy but still conveys the vibe.",
+  "review": "The concert is remembered for its scorching summer heat, relentless crowd enthusiasm and standout moments such as the debut of “Foolish Heart”, ripping renditions of “Mississippi”, “Bird Song” and a monster second‑set sequence (GDTRFB → Miracle → Fantasy → Throwing → NFA).  The recording is an audience capture that suffers from limited clarity and a ‘cloudy’ mix, yet it preserves the feeling of the night for fans who value atmosphere over fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance (average 4‑5 stars) while several note poor audio quality; weighting musical strength (70 %) against recording issues (30 %) yields a solid ~4.1 rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Cloudy, low‑fidelity mix with limited clarity; some reviewers call it “B” quality or “lacking in quality,” but the tape still captures crowd atmosphere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart",
+      "Mississippi",
+      "Stranger",
+      "Bird Song",
+      "Promised Land",
+      "Playin'",
+      "UJB",
+      "GDTRFB > Miracle > Fantasy > Throwing > NFA"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth segues (e.g., Mississippi into Stranger) and a powerful second set that kept the energy high; reviewers note the band let jams breathe and the rhythm section provided solid “meat” throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fiery guitar work, strong vocal delivery and turning up the heat in the latter part of the show.",
+    "Phil": "",
+    "Bob": "Highlighted for adding extra heat in the second set and delivering solid licks.",
+    "Keys": "Brent’s confidence on keyboards (e.g., “Never Trust”) is noted as a high point.",
+    "Drums": "The rhythm section/drums are described as providing the meat of the performance, with a dark, driving feel."
+  },
+  "song_mentions": {
+    "Mississippi": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "UJB": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "GDTRFB > Miracle > Fantasy > Throwing > NFA": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Knockin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T09:41:59.741979+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-06-19.sennheiser.ladner.17267.sbeok.shnf"
+}

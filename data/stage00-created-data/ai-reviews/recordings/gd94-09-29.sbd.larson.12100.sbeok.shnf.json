@@ -1,0 +1,82 @@
+{
+  "summary": "High‑quality soundboard capture of a stellar 1994 Boston show – crushing second set, standout Eyes and Wharf Rat, with only the “I Fought the Law” encore dragging it down.",
+  "review": "The recording is a solid mid‑’90s soundboard that many reviewers compare favorably to the Bertha remaster, offering clear balance and good fidelity for the era. Musically the band delivers an exceptional performance – the first set rocks, the second set soars with highlights like Eyes, Wharf Rat, Let It Grow and a soaring Garcia solo, while the encore “I Fought the Law” is widely panned.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ≈4.2, with consistent praise for playing and recording quality; only a few minor criticisms (encore, one low‑star outlier) keep the score just below perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear sound comparable to the Bertha remaster; no major dropouts or distortion noted, solid balance for a 1994 board recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Wharf Rat",
+      "Let It Grow",
+      "Estimated",
+      "He's Gone",
+      "Sugar Magnolia",
+      "Peggy O"
+    ],
+    "poor_songs": [
+      "I Fought the Law"
+    ],
+    "setlist_flow": "Rock‑solid first set with a ripping opener, second set praised for seamless transitions and high energy; encore considered weak and lifeless."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and solos are repeatedly lauded – “amazing” Garcia tone, “wild” playing, superb Peggy O rendition, and a passionate solo on Wharf Rat.",
+    "Phil": "Phil’s vocals receive compliments (\"excellent\", \"heartfelt\") and his lead on several numbers is highlighted.",
+    "Bob": "Bob’s vocal contributions described as “passionate cry for the voices in his head” and generally strong throughout.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Fought the Law": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T01:50:22.828705+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-09-29.sbd.larson.12100.sbeok.shnf"
+}

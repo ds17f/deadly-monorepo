@@ -1,0 +1,82 @@
+{
+  "summary": "A solid soundboard capture (though occasionally muffled) that shines thanks to a surprise Ripple encore and standout moments like Morning Dew, Peggy‑O and the Box jam.",
+  "review": "The recording is a genuine SBD source that sounds clearer than the old matrix version, with only occasional distant or muddy passages. Musically the show is remembered for its magical Ripple encore, a powerful Morning Dew, and strong performances of Peggy‑O and Box, even if Jerry’s vocals were uneven on some numbers. Overall fans view it as an above‑average to great gig despite mixed opinions about a few songs.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Average star rating across 26 reviews is ~3.6; most reviewers praise the Ripple encore and several songs, while a minority criticize recording quality or Jerry’s vocals, yielding a mixed‑positive overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and better than previous matrix versions; some listeners note occasional muffled or distant sound and minor drop‑outs, but the mix is usable for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ripple",
+      "Morning Dew",
+      "Peggy-O",
+      "Box",
+      "Stranger > Franklin's"
+    ],
+    "poor_songs": [
+      "Victim",
+      "Foolish Heart",
+      "Eyes (short version)"
+    ],
+    "setlist_flow": "The first set builds a warm, soulful vibe; the second set features strong jams and a surprise double‑encore with Saturday Night > Ripple that lifts the crowd. Some transitions feel disjointed, but the overall pacing keeps energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – praised for guitar interplay and occasional soaring moments (e.g., Peggy‑O), but several reviewers cite vocal flubs, a thin voice on \"Eyes\" and uneven singing.",
+    "Phil": "Positive notes about his bass “zingers” during Dew and a highlighted hilite reel on Box; generally solid foundation.",
+    "Bob": "Slide solo on Rooster repeatedly called out as a high point; overall good rhythm work.",
+    "Keys": "Brent’s keyboard contributions noted as funny/outro moments and solid playing throughout, especially in the second set jams.",
+    "Drums": "Drums groove described as solid with a satisfying “Space” segment; occasional comments on the drum break being enjoyable."
+  },
+  "song_mentions": {
+    "Ripple": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Peggy-O": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Box": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Going Down The Road/Fire on the Mountain (GDTRFB)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T12:55:49.858106+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-03.sbd.miller.27749.sbeok.flacf"
+}

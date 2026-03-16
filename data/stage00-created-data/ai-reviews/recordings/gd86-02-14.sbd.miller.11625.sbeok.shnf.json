@@ -1,0 +1,71 @@
+{
+  "summary": "Excellent Charlie Miller soundboard captures a stellar ’86 show with a soaring Keep On Growing and a fiery Lost Sailor > Saint of Circumstance.",
+  "review": "The recording is widely praised as one of the highest‑quality tape captures in the archive, delivering crisp, balanced sound despite a few wobblier moments in the second set. Musically the concert shines with standout performances of Keep On Growing, Lost Sailor > Saint of Circumstance, Wharf Rat and Throwing Stones, while Terrapin and Lady With A Fan show minor slips. Overall fans describe it as an unforgettable Valentine’s Day‑era Dead experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4.5★, most comments are glowing about both performance and tape quality; only minor criticisms of the second set keep it from a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Charlie Miller tape is described as crystal‑clear, high‑fidelity and one of the best recordings in the archive; a few reviewers note slight wobble in the second set but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Keep On Growing",
+      "Lost Sailor > Saint of Circumstance",
+      "Wharf Rat",
+      "Throwing Stones",
+      "Stranger"
+    ],
+    "poor_songs": [
+      "Terrapin",
+      "Lady With A Fan"
+    ],
+    "setlist_flow": "First set is consistently strong; second set mixes high‑energy peaks (Lost Sailor > Saint, Wharf Rat) with a few rough spots, but overall the concert maintains momentum and excitement."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is praised as rocking and funky, though he slips on lyrics during Lady With A Fan.",
+    "Phil": "Noted for conducting the band with his waving bass and providing a steady foundation despite health rumors.",
+    "Bob": "",
+    "Keys": "Brent’s funky keyboard playing receives specific commendation.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Keep On Growing": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lost Sailor > Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Lady With A Fan": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T12:52:43.655630+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-02-14.sbd.miller.11625.sbeok.shnf"
+}

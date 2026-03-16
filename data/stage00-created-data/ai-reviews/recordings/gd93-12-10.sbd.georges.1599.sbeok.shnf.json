@@ -1,0 +1,86 @@
+{
+  "summary": "Soundboard recording of good quality captures a mixed‑bag show – strong moments like Dark Star, Eternity and The Corrina contrast with uneven jams and a weary Jerry.",
+  "review": "The SBD source is generally crisp, fat and lush, though a few listeners note distant snare miking and occasional mix quirks. Musically the concert swings between highlights (a soaring Dark Star, an intense Eternity, bouncy The Corrina and a solid Terrapin Station) and weaker spots (disappointing post‑Terrapin jam, a lackluster FOTM solo and signs of Jerry’s fatigue). Overall fans are divided, with many praising Branford Marsalis’ contributions while others feel the band never quite clicked.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "11 reviews provide a clear picture: recording quality is consistently praised (good‑to‑excellent), but performance ratings range from 1 to 5 stars, yielding an average around 3.5–3.8 after weighting show quality more heavily."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and lush SBD sound praised by several reviewers; a few note distant snare mic placement and minor mix imbalances but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Eternity",
+      "The Corrina",
+      "Terrapin Station"
+    ],
+    "poor_songs": [
+      "Terrapin jam (post‑Terrapin)",
+      "FOTM solo (Vince)",
+      "Scarlet > Fire (Garcia’s lack of engagement)"
+    ],
+    "setlist_flow": "Setlist is uneven – the first set and early second‑set attempts feel tentative, while the Dark Star/ETERNITY peak gives the concert its high points. Some listeners felt the show never fully gelled, others called it a true gem."
+  },
+  "band_member_comments": {
+    "Jerry": "Classic tone and vocal inflection praised by several fans; however, other reviewers note he sounded off, weary and occasionally out of sync with Branford.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince’s solo in FOTM described as weak; otherwise keyboards receive little specific commentary.",
+    "Drums": "One reviewer mentions the snare sounding distant (possible mic issue); no major drumming complaints beyond tempo feel."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "SOTM": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "SMR": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "FOTM": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:32:55.959970+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-12-10.sbd.georges.1599.sbeok.shnf"
+}

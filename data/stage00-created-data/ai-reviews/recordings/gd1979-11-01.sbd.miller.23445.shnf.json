@@ -1,0 +1,69 @@
+{
+  "summary": "Crystal‑clear soundboard recording of a fall‑79 show, anchored by an out‑of‑this‑world Scarlet > Fire jam and tight band playing.",
+  "review": "The SBD capture is praised for its crisp, even mix that lets the band’s energy shine through.  Fans repeatedly single out the legendary Scarlet > Fire transition, along with standout performances of Candyman, Terrapin Station, Mexicali and Black Peter.  A few reviewers note Jerry’s guitar sitting low in the mix early on, but overall the show is celebrated as one of the era’s highlights.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 40 reviews overwhelmingly positive about both performance and sound quality; only a handful of moderate criticisms, giving a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear, and well‑balanced throughout.  A few comments about Jerry’s guitar being low in the mix early on and occasional tape‑age artifacts, but no major drop‑outs or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Candyman",
+      "Terrapin Station",
+      "Mexicali",
+      "Peggy-O",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set builds steadily with strong renditions of Candyman, Mexicali and Black Peter; the second set erupts into a marathon Scarlet > Fire that many consider a peak of the fall‑79 tour, followed by relaxed finishes like Terrapin and Peggy‑O."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – some say his guitar sits low in the mix and he’s slow to lock in early, but others praise his wah‑filled breaks and overall contribution to the jam.",
+    "Phil": "Consistently praised (“Welcome to the Phil zone!”) for tight bass work throughout the show.",
+    "Bob": "",
+    "Keys": "Brent (keyboardist) receives glowing remarks for injecting fresh energy, especially during the Scarlet > Fire transition; a few reviewers find parts of that jam repetitive, but overall his playing is highlighted as a major strength.",
+    "Drums": "Mickey’s drumming is noted in one comment about turning Scarlet into “country‑rock,” otherwise drums are described as solid and driving."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 14,
+      "negative_mentions": 3,
+      "total_mentions": 17
+    },
+    "Candyman": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin Station": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Mexicali": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-26T00:37:54.172284+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-01.sbd.miller.23445.shnf"
+}

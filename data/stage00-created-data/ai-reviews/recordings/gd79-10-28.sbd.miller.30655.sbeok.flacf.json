@@ -1,0 +1,69 @@
+{
+  "summary": "High‑energy 10/28/79 show captured on a solid soundboard tape – standout Half Step > Franklin's Tower, Althea and long jams, with generally good recording clarity.",
+  "review": "The concert is praised for its monster opener (Half Step into Franklin’s Tower) and a second set that keeps the momentum with Althea, Passenger, Music Never Stopped and an epic Playing in the Band. The Miller SBD source delivers clear, balanced sound though one reviewer notes a lack of dynamics; overall listeners find the tape listenable and the performance memorable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers (8/9) give 4‑5 stars, highlighting exceptional jams and a clean soundboard source; only one low‑rating comment about Jerry’s attack and dynamics tempers the score slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD with no long audience patches, praised as solid and crisp; a single note about limited dynamics but overall considered listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step > Franklin's Tower",
+      "Althea",
+      "Passenger",
+      "Music Never Stopped",
+      "China Cat > Rider",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A marathon opener (Half Step → Franklin’s) sets a high bar, and the second set sustains the vibe with strong transitions (China Cat > Rider, long PITB). The show is described as a nonstop jamfest that rivals other great 1979 dates."
+  },
+  "band_member_comments": {
+    "Jerry": "Most praise his interplay with Phil and his jams on Half Step‑Franklin's, though one reviewer feels he \"fails to really attack\" the opening.",
+    "Phil": "Highlighted for his bass work in the Half Step/Franklin's and Playing in the Band sections; listeners are urged to hear his lines.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s keyboards receive strong commendations – “solid on the keys,” groundbreaking presence on the double‑slam opener.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half Step > Franklin's Tower": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-26T00:19:29.649076+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-10-28.sbd.miller.30655.sbeok.flacf"
+}

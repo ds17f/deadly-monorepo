@@ -1,0 +1,79 @@
+{
+  "summary": "Soundboard recording of the NYE ’83 show captures an electrifying Estimated Prophet → Eyes of the World sequence, but occasional hiss and drop‑outs keep the audio from being flawless.",
+  "review": "The performance is highlighted by a scorching Estimated Prophet into Eyes of the World that many reviewers call the best they’ve ever heard, plus a memorable Good Night Irene arrangement and a sweet Brokedown Palace.  The soundboard source is generally clear and “crispy,” yet listeners note noticeable hiss and a few channel drop‑outs that require fixing.  Overall the show is enjoyable with several high points, though some songs feel flat and Jerry’s vocals were not at their peak.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical highlights (especially Estimated Prophet→Eyes) while noting only moderate recording flaws; the weighted average of show (≈4.2) and recording quality (≈3.5) yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced soundboard capture, but noticeable tape hiss and isolated drop‑outs (e.g., in Touch of Grey) that some reviewers had to patch."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet > Eyes of the World",
+      "Good Night Irene",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Big Boss Man",
+      "Touch of Grey"
+    ],
+    "setlist_flow": "Typical three‑set NYE layout with a solid first set, an unremarkable second set except for the Prophet/Eyes pairing, and a fun third set that includes surprise moments like Good Night Irene.  The encore was tacked onto the end of the second set, adding to the quirky flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals were thin or deteriorating on this night, but his guitar work—especially on Estimated Prophet—was virtuoso and carried the show.",
+    "Phil": "Attempted to start Morning Dew in the third set before being sidetracked by Good Night Irene.",
+    "Bob": "Delivered a brief “Mighty Fine” comment after Good Night Irene; no major vocal critiques beyond the general note about his voice.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated Prophet > Eyes of the World": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Good Night Irene": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Boss Man": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:35:19.548465+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-12-31.sbd.miller.13963.sbeok.shnf"
+}

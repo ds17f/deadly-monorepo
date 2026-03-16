@@ -1,0 +1,60 @@
+{
+  "summary": "Clear soundboard recording of a solid 1973 show, highlighted by an excellent Eyes > Stella jam and a rare one‑drummer Black Peter.",
+  "review": "The remastered tape offers a clean, well‑balanced stereo image with good instrument presence, though a brief dropout is noted at the end of Dark Star. Musically the concert is tight and energetic, featuring an especially strong Eyes > Stella sequence and a coveted one‑drummer Black Peter performance, even if the rest of the set feels more typical than spectacular for the year.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Reviews praise the recording’s clarity and note only minor issues, while describing the show as good with a few standout moments; weighted average yields a rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and clean soundboard capture with strong stereo image and instrument presence; minor dropout at the end of Dark Star noted but otherwise very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes > Stella",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is cleanly played with good energy, a nice middle‑set flow and an extended jam on Eyes that stands out; other numbers are solid but not uniquely memorable for the era."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil's bass is described as warm and nicely present in the mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "A rare one‑drummer Black Peter highlight is noted, underscoring Bill Kreutzmann’s performance."
+  },
+  "song_mentions": {
+    "Eyes > Stella": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T15:24:07.966466+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-30.sbd.128248.flac16"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "Sharp, upbeat performance with standout vocals and guitar, but the soundboard suffers from popping and dropouts.",
+  "review": "The show is praised for Jerry Garcia’s fiery voice and pure guitar work, plus strong renditions of Stella Blue, Cold Rain and Snow, Friend, Althea, The Wheel and Shakedown. While the band sounds crisp and energetic, reviewers note significant popping, stuttering and drop‑outs in the recording – especially on Althea – suggesting a need for remastering.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Positive comments about performance (≈4 /5) balanced against clear technical flaws in the recording (≈2.5 /5). Weighted average yields a solid‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "First reviewer calls the mix crisp and sharp; another reports lots of popping, stuttering and dropouts (especially during Althea) and asks for a remaster."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Cold Rain and Snow",
+      "Friend",
+      "Althea",
+      "The Wheel",
+      "Shakedown"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Upbeat tempos throughout; the band sounds sharp, cohesive and having a great time, ranking near the top of the reviewer’s personal show list."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as on fire, with a voice that blends strength and vulnerability; guitar tone described as pure and healthy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:39:01.180784+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-12-12.sbd.miller.91959.sbeok.flac16"
+}

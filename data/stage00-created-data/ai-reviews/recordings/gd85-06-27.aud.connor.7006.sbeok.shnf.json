@@ -1,0 +1,88 @@
+{
+  "summary": "Fair‑quality audience tape captures a high‑energy 1985 SPAC show with standout Crazy Fingers → Supplication → High Time sequence and a soaring Supplication jam.",
+  "review": "The recording is an audience (aud) source that suffers from some hiss, muffled mids and thin bass but still conveys the wild crowd atmosphere. Musically the show is praised for its relentless energy, especially the Crazy Fingers‑Supplication‑High Time medley, a powerful Supplication jam, and classic first‑set surprises like Midnight Lightning, Stagger Lee and Women Are Smarter Than Me. The only notable musical hiccup is an over‑eager Lazy Lightnin tease that falls flat.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4–5 stars and highlight strong performances; recording quality is noted as decent but imperfect, yielding an overall high‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hiss and lost fidelity common to many ’85 audience tapes; sound described as muffled, flat bass response, but crowd ambience captured well. Some channel effects (e.g., bottle‑rocket whistle) noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers > Supplication > High Time",
+      "Supplication Jam",
+      "Midnight Lightning",
+      "Stagger Lee",
+      "Stranger",
+      "Eyes of the World",
+      "Women Are Smarter Than Me",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Lazy Lightnin (tease)"
+    ],
+    "setlist_flow": "High‑energy outdoor set with a surprise first‑set medley, strong crowd interaction, and a flowing second half that keeps the momentum alive despite a few uneven teases."
+  },
+  "band_member_comments": {
+    "Jerry": "Attempted an aggressive Lazy Lightnin tease but it sounded forced and was 'shot down' by the band.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lazy Lightnin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Supplication Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers > Supplication > High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Midnight Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Women Are Smarter Than Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T06:13:32.705436+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-06-27.aud.connor.7006.sbeok.shnf"
+}

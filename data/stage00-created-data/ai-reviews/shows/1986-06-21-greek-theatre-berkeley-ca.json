@@ -1,0 +1,80 @@
+{
+  "summary": "Solid '86 Greek show with standout He's Gone>Smokestack and China>Rider",
+  "blurb": "The first set delivers a tight, inspiring flow highlighted by Friend Of The Devil and C.C. Rider, while the second set shines on Saint Of Circumstance, He’s Gone > Smokestack Lightning and an energetic The Other One jam. Jerry’s tone is dialed‑in and the rhythm section keeps a nonstop groove.",
+  "review": "On June 21 1986 at Berkeley’s Greek Theatre the Dead put together a show that feels both solid and occasionally inspired. The opening stretch rides high on crisp renditions of The Promised Land, Friend Of The Devil and a searing C.C. Rider, setting an uplifting tone for the night. The second set offers a memorable Saint Of Circumstance (the first without the usual Lost Sailor segue), a gospel‑charged He’s Gone > Smokestack Lightning that lifts the crowd into a near‑spiritual vibe, and a surprising decision to dive straight into a hefty The Other One jam in place of Space. Throughout, Jerry’s guitar is described as “dialed‑in” with sparkling tone and slide work, while Bob Weir adds humor and strong vocals, especially during Not Fade Away. Phil Lesh anchors the band despite a missed intro on The Other One, and Brent’s keyboards sit comfortably under the mix. Mickey Hart and Bill Kreutzmann lock into a relentless groove that fuels the extended jams. While one low‑energy recording notes a dip after Desolation Row, the majority of sources agree the performance is lively, with multiple recordings praised for excellent sound quality—particularly the master board capture that showcases the band’s nuanced dynamics.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.7,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 20,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Three recordings are clearly positive, highlighting standout songs and strong playing; one mixed review notes uneven energy but still mentions good moments; only a single negative review cites low energy. The overall sentiment leans positively, warranting a moderate +1.0 adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.0 = 3.7"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd86-06-21.sbd.brame.15406.sbeok.shnf",
+    "reason": "Excellent soundboard source described as a 'master board' with crisp, clean, dial‑in sound and no notable flaws; captures the show’s highlights beautifully."
+  },
+  "key_highlights": [
+    "He’s Gone > Smokestack Lightning delivers a gospel‑charged climax in Set 2.",
+    "The Other One jam replaces Space, providing an extended, high‑energy improvisation.",
+    "China Cat Sunflower > I Know You Rider sequence shines on the matrix recording.",
+    "Saint Of Circumstance appears without the usual Lost Sailor segue, offering a fresh take."
+  ],
+  "song_highlights": [
+    "The Promised Land",
+    "Friend Of The Devil",
+    "C.C. Rider",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Saint Of Circumstance",
+    "He's Gone",
+    "Smokestack Lightning",
+    "The Other One",
+    "Not Fade Away"
+  ],
+  "band_performance": {
+    "Jerry": "Dialed‑in with sparkling tone, strong slide work on C.C. Rider and energetic playing throughout despite occasional health concerns noted in one source.",
+    "Phil": "Solid bass foundation; contributed a vocal intro on The Other One, keeping the groove steady.",
+    "Bob": "Delivered humorous banter, held hands during Not Fade Away, and provided strong vocals especially on the closing jams.",
+    "Brent": "",
+    "Mickey": "Along with Billy kept a nonstop groove, driving the extended The Other One jam forward.",
+    "Billy": "Maintained relentless rhythm, crucial to the high‑energy flow of both sets."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-15T16:14:44.342593+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Alabama Getaway",
+      "The Promised Land"
+    ],
+    [
+      "Friend Of The Devil"
+    ],
+    [
+      "C.C. Rider"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Saint Of Circumstance",
+      "Gimme Some Lovin'",
+      "He's Gone",
+      "Smokestack Lightning",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Wharf Rat",
+      "Throwing Stones",
+      "Not Fade Away"
+    ]
+  ]
+}

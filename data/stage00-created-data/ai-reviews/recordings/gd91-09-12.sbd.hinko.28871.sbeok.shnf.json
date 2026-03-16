@@ -1,0 +1,51 @@
+{
+  "summary": "Clean soundboard recording of an energetic 1991 Garden show; the band delivers solid performances (Bucket, Bertha) with seamless splice work making it an easy listen.",
+  "review": "Both reviewers praise this 1991 performance as a consistently good night, highlighting the raucous crowd and tight renditions of Bucket and Bertha, plus a smooth Tom Thumb from Phil. The soundboard source is noted for its seamless splices and overall good clarity, resulting in an enjoyable listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Two detailed reviews are uniformly positive (4‑ and 5‑star). The show is described as excellent with standout songs, while the recording is praised for seamless splices and good sound quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Splices are described as seamless; overall sound is clear and pleasant with no major flaws mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bucket",
+      "Bertha",
+      "Tom Thumb"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set opens with a high‑octane run through Bucket and Bertha and maintains momentum throughout, highlighted by Phil's smooth Tom Thumb; the crowd energy adds to a consistently strong flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Sound amazing (as noted by reviewer).",
+    "Phil": "Delivers a smooth version of Tom Thumb.",
+    "Bob": "Sound amazing (as noted by reviewer).",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T00:42:14.061367+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-09-12.sbd.hinko.28871.sbeok.shnf"
+}

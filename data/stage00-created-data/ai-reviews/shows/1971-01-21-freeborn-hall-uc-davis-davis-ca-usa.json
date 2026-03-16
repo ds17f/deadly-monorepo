@@ -1,0 +1,68 @@
+{
+  "summary": "Monster The Other One, tight Smokestack→Truckin' segue, soaring China Cat",
+  "blurb": "The second set shines with a sprawling The Other One and a seamless Smokestack Lightning into Truckin' transition that rolls straight into Cosmic Charlie. Jerry’s space‑guitar work is highlighted on The Other One, while China Cat Sunflower lifts the energy before the show closes with Uncle John’s Band.",
+  "review": "On January 21, 1971 at Freeborn Hall in Davis, California, the Dead delivered a high‑octane performance that still shines despite the only available tapes being audience recordings of mixed fidelity. The first set rolls through classics – Cold Rain And Snow, Me And My Uncle and an energetic run from Smokestack Lightning into Truckin' – but it’s the second set where the magic truly unfolds. A monster rendition of The Other One showcases Garcia’s “space‑guitar” interplay, praised as remarkable by multiple listeners, and flows effortlessly into a reprise of Cryptical Envelopment before launching into Cosmic Charlie. The segue from Smokestack Lightning straight into Truckin' is tight and propels the band into a soaring China Cat Sunflower that lifts the whole show, while Casey Jones closes the first set with a punchy performance. Although the audience tapes suffer from a thin PA mix, muffled organ and occasional drop‑outs, the energy and musicianship cut through. For the best listening experience, the community’s recommended soundboard partial (gd1971-01-21.153406.sbd.partial.martin.smith.clugston.flac1648) captures the performance with far clearer detail.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 10,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.0,
+      "sentiment_rationale": "Both available recordings are described as having mixed sentiment – praise for certain songs but no consistent strong positive or negative language across the set, leading to a neutral adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.0 = 2.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1971-01-21.153406.sbd.partial.martin.smith.clugston.flac1648",
+    "reason": "Soundboard partial provides the clearest audio, preserving the band’s dynamics and allowing listeners to hear the strong performances that the audience tapes only hint at."
+  },
+  "key_highlights": [
+    "Monster The Other One jam with space‑guitar interplay",
+    "Tight Smokestack Lightning → Truckin' segue fueling a seamless set flow",
+    "Soaring China Cat Sunflower leading into I Know You Rider",
+    "Energetic Cosmic Charlie transition and solid Casey Jones finish"
+  ],
+  "song_highlights": [
+    "The Other One",
+    "Truckin'",
+    "Smokestack Lightning",
+    "China Cat Sunflower",
+    "Cosmic Charlie",
+    "Casey Jones"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers remarkable space‑guitar interplay on The Other One and rides high throughout the set, especially during the tight Smokestack→Truckin' transition.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-20T02:12:04.097663+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "Cryptical Envelopment",
+      "Cosmic Charlie"
+    ],
+    [
+      "Smokestack Lightning",
+      "Truckin'"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Casey Jones"
+    ]
+  ]
+}

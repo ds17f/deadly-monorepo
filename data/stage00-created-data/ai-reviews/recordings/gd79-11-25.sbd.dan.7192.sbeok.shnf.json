@@ -1,0 +1,113 @@
+{
+  "summary": "Soundboard recording with clear vocals (despite some digi‑noise) captures a stellar 1979 UCLA show highlighted by a soaring Stella Blue and killer Althea.",
+  "review": "The performance is widely praised – the first set is called “rich, full, tight” with standout moments like Stella Blue, Althea, Jack Straw and an inspired Lost Sailor.  The soundboard source delivers excellent clarity and balanced vocals, though a few reviewers note occasional digital spikes that were later cleaned up.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Show quality is consistently rated very high (many 5‑star comments) and recording quality is good overall, with only minor digital noise issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced sound; occasional digi‑noise spikes noted in several tracks, later cleaned up by Charlie Miller. Noise reduction applied between songs; vocals are crisp."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Althea",
+      "He's Gone > The Other One",
+      "Lost Sailor",
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is highlighted as a favorite, with a rich, full sound and tight playing; transitions such as Shakedown Street → Bertha are praised."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia wails on Tennessee Jed, Big River, Loser and Althea; his tone described as 'sick horn‑like' and he uses distinctive distortion.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland's synth work called funky; overall keyboards and vocals are noted for clarity and balance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:08:48.616806+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-11-25.sbd.dan.7192.sbeok.shnf"
+}

@@ -1,0 +1,70 @@
+{
+  "summary": "Good soundboard capture of a solid 1983 show with a standout Scarlet > Fire segue, though guitars sit low and there’s a noticeable Dew cut.",
+  "review": "The performance is high‑energy and features memorable moments like the unique Scarlet > Fire transition, strong Jack Straw, and the first‑time‑heard \"Maybe You Know\". The SBD source sounds good overall but suffers from low guitar levels early on and an abrupt cut during the Dew section, making the audience mix a preferable backup for some listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (average show rating ≈4) while noting consistent recording issues (low guitars, a cut), yielding a solid combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall SBD capture but guitars are low in the mix and Garcia’s tone is quiet early; a harsh edit cuts out before the first Dew guitar solo, prompting some listeners to prefer an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Jack Straw",
+      "Maybe You Know",
+      "Estimated",
+      "Ramble On Rose"
+    ],
+    "poor_songs": [
+      "Eyes"
+    ],
+    "setlist_flow": "A solid, high‑energy spring ’83 set that rewards repeated listening; the second set shines with a memorable Scarlet > Fire segue and inventive keyboard work, though it never reaches transcendent heights."
+  },
+  "band_member_comments": {
+    "Jerry": "Rough/\"horse\" vocal tone noted; spot‑on early playing but loses steam in \"Eyes\".",
+    "Phil": "",
+    "Bob": "Weir’s vocals described as somewhat horse‑like, but overall solid musicianship.",
+    "Keys": "Brent’s keyboard contributions praised as unusually creative, especially during the Scarlet > Fire transition.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Maybe You Know": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T05:07:52.853106+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-13.sbd.lai.23849.sbeok.shnf"
+}

@@ -1,0 +1,86 @@
+{
+  "summary": "Excellent audience recording captures a mind‑bending second set – Playin' → MLB jam, Half Step and Wharf Rat soaring – with vivid ambience and crystal‑clear moments.",
+  "review": "The tape delivers an outstanding listening experience; the audience‑sourced recording preserves the room’s natural reverb while remaining surprisingly clear, only a hint of thinness in places. Musically the show is a Dead classic: a solid first set gives way to a second‑set that erupts with a monster Playin' into an explosive MLB jam, a razor‑sharp Half Step and a fiery Wharf Rat, plus standout moments like Let It Grow and Morning Dew. Reviewers rave about Jerry’s transcendent guitar work and the band’s high‑octane improvisations.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, virtually all five‑star, praise both performance (standout second set) and recording (excellent audience tape). The weight of comments yields a rating in the top tier."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Aud source praised for vivid ambience, natural room reverb and overall clarity; a few notes about slight thinness or EQ tweaks (cut ~2 kHz, boost ~8 kHz) but no major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin'",
+      "MLB Jam",
+      "Half Step",
+      "Wharf Rat",
+      "Let It Grow",
+      "Morning Dew",
+      "Here Comes Sunshine",
+      "Cold Rain and Snow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as average/average‑bland, but the second set launches into a seamless, high‑energy journey with superb transitions (Half Step → Playin' → MLB Jam) that many reviewers call one of the best of ’73."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly hailed for phenomenal, all‑time guitar work throughout the show, especially on Let It Grow and Morning Dew.",
+    "Phil": "Noted for his banter (spotlight comment) and solid bass presence; occasional railings about song choices add humor.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin'": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Half Step": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "MLB Jam": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T03:46:21.306150+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-12-02.aud.vernon.17278.sbeok.shnf"
+}

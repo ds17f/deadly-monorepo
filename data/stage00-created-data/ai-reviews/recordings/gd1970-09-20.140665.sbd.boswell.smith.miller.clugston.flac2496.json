@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent‑sounding recording of an epic show with a praised acoustic first set and a standout \"Not Fade Away\" in the second set.",
+  "review": "Both reviewers rave about the performance, calling it an epic show that sounds excellent. The acoustic first set is highlighted as a treat and the second set’s “Not Fade Away” receives special praise. No technical flaws are mentioned, suggesting a high‑quality source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Both reviews are enthusiastic (5 stars) and focus on strong musical performance with no recording complaints, indicating an excellent show and recording; however only two reviews limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the sound as \"excellent\" and note no issues such as muddiness or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic first set is called a \"real treat,\" followed by a second set with strong material like “Not Fade Away,” giving the concert an overall epic and satisfying flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T23:25:51.977022+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-09-20.140665.sbd.boswell.smith.miller.clugston.flac2496"
+}

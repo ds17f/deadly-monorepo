@@ -1,0 +1,31 @@
+{
+  "summary": "Soundboard recording presumed good, but no details on performance",
+  "review": "The lone review simply points listeners to a download source and rates the item 4 stars, implying a generally positive impression. No specific comments about audio fidelity or musical performance are provided, so the recording is assumed to be of decent soundboard quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 4‑star rating; no concrete details on sound or show, so rating is an estimate based on the star level and filename indicating a soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments about clarity or mix; presumed acceptable given the 4‑star rating and SBD designation in the filename."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Insufficient information to evaluate set structure or performance quality."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-26T05:50:12.276658+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1966-11-18.169871.sbd.flegel.ciaffa.miller.flac2444"
+}

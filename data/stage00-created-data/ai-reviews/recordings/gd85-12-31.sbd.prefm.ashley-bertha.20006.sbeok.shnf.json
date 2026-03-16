@@ -1,0 +1,86 @@
+{
+  "summary": "A solid sound‑board capture of the famed 1985 New Year’s gig, praised for a soaring Terrapin, fiery Throwing Stones and a magical Midnight Hour despite occasional mix quirks.",
+  "review": "The recording delivers a clear, well‑balanced sound‑board source (though some listeners note Jerry’s vocals sit low in the mix and the bass can be a touch heavy). Musically the show is celebrated for its high‑energy first set, a blistering Touch of Grey that ran too fast, and a second half packed with highlights – Terrapin Station, Throwing Stones, Black Peter, Let It Grow and an especially inspired Midnight Hour. Overall fans regard it as one of the stronger ’85 New Year’s performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Average star rating across 24 reviews is ~3.8; most comments praise the performance and key songs while noting only minor mix issues, yielding a strong overall recommendation."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp overall with clear instrument separation; occasional complaints of low‑in‑mix Jerry vocals and an overly forward bass on the FM feed, but no dropouts or major glitches."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Throwing Stones",
+      "Black Peter",
+      "Midnight Hour",
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "Touch of Grey (ran too fast)",
+      "Truckin' (only passable for some listeners)"
+    ],
+    "setlist_flow": "The first set builds momentum with a punchy Touch of Grey segue, while the second set delivers classic peaks – a soaring Terrapin, tight Playin', and a heartfelt Midnight Hour that carries the show to a memorable close."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals sometimes buried in the mix but his guitar work is praised, especially on Let It Grow and Terrapin Station.",
+    "Phil": "Highlighted for sweet bass runs during Let It Grow; generally solid throughout.",
+    "Bob": "His lyrical delivery on Throwing Stones and other numbers is noted as strong; occasional “Bobby’s treatment of the lyrics” receives specific praise.",
+    "Keys": "Brent (keyboard) gets shout‑outs for his work on Terrapin and overall supportive playing.",
+    "Drums": "The drummers are described as high‑energy, sometimes too fast (notably early in the set), but also delivering great grooves on Throwing Stones and Midnight Hour."
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Throwing Stones": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Black Peter": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Let It Grow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Midnight Hour": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Playing in the Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-15T12:19:47.675611+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-12-31.sbd.prefm.ashley-bertha.20006.sbeok.shnf"
+}

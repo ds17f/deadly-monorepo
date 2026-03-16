@@ -1,0 +1,39 @@
+{
+  "summary": "Audience‑recorded set captures a magical Sugar Magnolia high point despite limited technical details",
+  "review": "The lone fan review praises the second‑set Sugar Magnolia as an \"incredibly high moment,\" indicating a memorable musical peak. No specific comments on recording fidelity are given, though the filename suggests an audience source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Positive show impression (standout Sugar Magnolia) but only one brief review and no recording details; rating reflects good performance with unknown audio quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments on sound clarity or mix; filename indicates audience taping, so quality cannot be assessed beyond typical audience expectations."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review only highlights Sugar Magnolia; overall set flow not described."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:19:29.464026+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-08.142843.set2.aud.sterry.beckwith.miller.clugston.flac2496"
+}

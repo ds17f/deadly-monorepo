@@ -1,0 +1,73 @@
+{
+  "summary": "Crystal‑clear audience tape of an ’80‑’81 show that bursts with high‑energy second‑set gems like Scarlet > Fire, Estimated > Eyes and a smoking UJB jam.",
+  "review": "The recording, captured from the back‑of‑board audience feed, is praised for its clarity, richness and balanced ambience despite a brief skip in Fire On The Mountain. Musically the concert shines – Jerry’s vocals and lead guitar are in top form, Phil’s bass booms, the drums drive an unstoppable second set, and highlights such as Scarlet > Fire, Estimated > Eyes, UJB and Truckin' keep fans enthralled.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive reviews (majority 5‑star) highlight an exceptional performance and a very good audience recording; only minor flaws (a skip and acoustic issues) keep the rating just below perfect."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note crisp, rich sound with excellent ambience; a single skip at ~1:19 in Fire On The Mountain and generally poor venue acoustics are the only drawbacks mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Estimated > Eyes",
+      "UJB",
+      "Truckin'",
+      "Fire On The Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is repeatedly described as a high‑energy, nonstop flow with excellent transitions; the first set is smooth but less frequently highlighted."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised for strong vocals and scorching lead guitar work throughout the show.",
+    "Phil": "Bass is noted as powerful and boomy, cutting through the arena mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum segment is described as solid and energizing; post‑drum jams receive particular admiration."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "UJB": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire On The Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-13T10:58:43.119073+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-05-05.nak300-mow.ford.28356.sbeok.flac"
+}

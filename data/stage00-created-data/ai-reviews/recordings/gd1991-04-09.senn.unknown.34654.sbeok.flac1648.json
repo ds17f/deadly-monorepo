@@ -1,0 +1,39 @@
+{
+  "summary": "Good show highlighted by a memorable Not Fade Away, though recording source and quality are not specified",
+  "review": "The reviewer rates the performance highly (4 stars) and cites the Not Fade Away moment as the standout of the night, praising both the band and the crowd’s participation. No details about the tape source or audio fidelity are provided, leaving the recording quality unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Only one review, but it is positive (4‑star) and emphasizes a strong performance; lack of recording info keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source type were given in the review."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:55:16.329875+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-09.senn.unknown.34654.sbeok.flac1648"
+}

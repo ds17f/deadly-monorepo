@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent audience recording with punchy bass and standout performances of Shakedown Street, Birdsong, Terrapin Station and more",
+  "review": "The MK21 audience mix is praised as the best version available, delivering clearer bass response and a punchier overall sound. Reviewers also highlight an underrated concert featuring strong first‑set cuts like Shakedown Street and Birdsong, with the second set lighting up on Rider, Terrapin Station, All Along the Watchtower and Peter.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Single highly‑rated (5‑star) review that lauds both the musical performance and the audio quality, indicating an outstanding show captured in an excellent audience mix."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Better bass response and punchier sound than other audience versions; no reported flaws or dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Birdsong",
+      "Rider",
+      "Terrapin Station",
+      "All Along the Watchtower",
+      "Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set highlighted by Shakedown Street and Birdsong; second set ignites with Rider, Terrapin Station, Watchtower and Peter."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:43:54.776500+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-18.120496.mk21.sbeok.flac16"
+}

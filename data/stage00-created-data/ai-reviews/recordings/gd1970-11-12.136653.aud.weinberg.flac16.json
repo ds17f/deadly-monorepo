@@ -1,0 +1,31 @@
+{
+  "summary": "Very low‑quality recording with uncertain provenance; listeners struggle to hear the music.",
+  "review": "Both reviewers complain that the tape is hard to listen to because of poor sound quality and they question whether it even comes from a known show in the November 1970 run. No musical details or standout moments are mentioned, indicating the performance cannot be evaluated from these comments.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.8,
+    "confidence": "medium",
+    "rationale": "Both reviews focus on bad sound quality and uncertain source; no positive show commentary to offset the technical flaws."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers describe the audio as hard to listen due to SQ; provenance is unclear, possibly misidentified from a 46th Street run."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T01:17:51.514980+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-11-12.136653.aud.weinberg.flac16"
+}

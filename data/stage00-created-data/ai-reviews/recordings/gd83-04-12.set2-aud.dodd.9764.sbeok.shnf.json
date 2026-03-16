@@ -1,0 +1,51 @@
+{
+  "summary": "Clean audience recording of a solid show featuring standout Sailor, Saint and The Other One, despite a slightly thin bass.",
+  "review": "The performance is praised for its strong moments on Sailor, Saint and the ever‑favored The Other One. The audience tape sounds clean overall, with drums cutting through nicely, though the bass comes across as a bit thin. Overall it’s an enjoyable set that earns a solid four‑star rating.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Single positive review rates the show 3.5 (rounded to 4) and notes clean recording; limited data leads to low confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Recording described as pretty clean; drums stand out nicely, but bass sounds a little thin."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sailor",
+      "Saint",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall positive flow with highlighted moments; no major pacing issues mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Bass noted as slightly thin in the mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums stand out nicely in spots, adding to the show's appeal."
+  },
+  "song_mentions": {
+    "Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T04:58:27.227992+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-12.set2-aud.dodd.9764.sbeok.shnf"
+}

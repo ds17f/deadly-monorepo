@@ -1,0 +1,116 @@
+{
+  "summary": "High‑energy 1990 show captured on a solid audience tape with excellent presence; standout performances from Jerry, Brent and the whole band.",
+  "review": "The crowd‑recorded (AUD) source delivers surprisingly clear presence and a lively mix that lets the band’s fire shine through. Reviewers rave about the soaring guitar work on Loser, epic Bird Song, a monster The Other One, and a superb sequence of Scarlet Begonias into Estimated Prophet, while noting only a tiny hiccup in Sugar Magnolia. Overall the performance is described as one of the best shows of the era with every member firing on all cylinders.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All six reviews are 4‑5 stars and overwhelmingly praise both the musical performance and the tape’s presence; only minor sound comments appear, supporting a high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note better presence than other AUDs, clear enough to enjoy the band’s dynamics, with no major drop‑outs or muddiness mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Bird Song",
+      "The Other One",
+      "Stella Blue",
+      "Scarlet Begonias",
+      "Estimated Prophet",
+      "Ship of Fools > Man Smart (Woman Smarter)",
+      "Last Time",
+      "Peggy-O",
+      "Queen Jane Approximately",
+      "Minglewood Blues"
+    ],
+    "poor_songs": [
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "The concert is described as ‘on fire from note 1’, with seamless segues (e.g., Brent’s noodling between Bird Song and the next jam) and a powerful second set that builds into a rapturous encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is called ‘smokin’ hot’, “possessed” on Loser, and he never wants to stop his solo – consistently praised.",
+    "Phil": "",
+    "Bob": "Weir’s falsetto described as perfection; his vocal lines (‘Your sister…’) called classic, and his singing on Estimated Prophet noted as ‘sick’.",
+    "Keys": "Brent’s switch to the B‑3 organ is highlighted as a perfect call; his playing on The Touch and his noodling between jams are praised.",
+    "Drums": "The drums/space segment is appreciated as a nice breather, indicating solid rhythmic support."
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools > Man Smart (Woman Smarter)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane Approximately": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "BTW": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T03:48:14.690138+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-16.aud.unknown.91782.flac16"
+}

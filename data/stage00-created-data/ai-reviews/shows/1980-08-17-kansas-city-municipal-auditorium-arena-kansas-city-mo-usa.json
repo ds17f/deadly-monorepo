@@ -1,0 +1,71 @@
+{
+  "summary": "Tight set with standout Scarlet>Fire, solid Truckin' and Good Lovin'",
+  "blurb": "Features a crisp Scarlet Begonias → Fire on the Mountain transition, strong Brent Mydland keyboards, and tight renditions of Truckin' and Good Lovin'. Jerry’s guitar work is bright though occasionally thin; Phil anchors with clear bass. Overall a solid 1980 performance worth hearing.",
+  "review": "The August 17, 1980 show at Kansas City Municipal Auditorium captures the Dead early in Brent Mydland’s tenure, delivering a tight, energetic set. Highlights include a seamless Scarlet Begonias → Fire on the Mountain segue that feels fresh and lively, with Brent’s keyboards adding bright texture throughout songs like Friend Of The Devil and Samson & Delilah. Jerry offers his characteristic melodic phrasing, punctuated by a crisp pedal accent after Scarlet, though some passages sound a bit thin in the mix. Phil provides solid, audible bass support, while Mickey Hart and Bill Kreutzmann keep the rhythm animated with notable drum breaks that lift Truckin' and Good Lovin'. Despite minor early‑second‑set sound hiccups on the SBD, the band maintains momentum through a lively second set and wraps up with an upbeat U.S. Blues encore.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 12,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "One recording praised the show with standout songs and tight performance (positive sentiment), while the other was mixed, noting average quality due to mix issues. The overall consensus leans mildly positive, warranting a modest boost.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1980-08-17.sbd.miller.93037.sbeok.flac16",
+    "reason": "Soundboard source with good overall clarity, captures Brent’s keyboards and the tight Scarlet>Fire transition; fewer technical issues than the audience tape."
+  },
+  "key_highlights": [
+    "Scarlet Begonias → Fire on the Mountain segue is crisp and energetic.",
+    "Brent Mydland’s fresh keyboard textures shine throughout the set.",
+    "Tight drumming with notable breaks after Good Lovin' and during Truckin'.",
+    "Strong performances of Truckin', Good Lovin', and Friend Of The Devil despite minor sound hiccups."
+  ],
+  "song_highlights": [
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "Friend Of The Devil",
+    "Samson & Delilah",
+    "Truckin'",
+    "Good Lovin'",
+    "Sugaree"
+  ],
+  "band_performance": {
+    "Jerry": "Crisp pedal accent after Scarlet, bright melodic phrasing but occasional thinness in the mix.",
+    "Phil": "Clear bass presence, especially on Friend Of The Devil; no major issues noted.",
+    "Bob": "",
+    "Brent": "Strong debut on keyboards, adding fresh texture and energy to the band’s sound.",
+    "Mickey": "Tight and animated drumming with notable breaks that lift Good Lovin' and Truckin'.",
+    "Billy": "Consistently tight rhythm work complementing Mickey's fills; overall solid drum performance."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-13T01:40:45.878960+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "Truckin'",
+      "Wharf Rat",
+      "Good Lovin'"
+    ],
+    [
+      "Friend Of The Devil"
+    ],
+    [
+      "Samson & Delilah"
+    ],
+    [
+      "Jack Straw",
+      "Sugaree"
+    ]
+  ]
+}

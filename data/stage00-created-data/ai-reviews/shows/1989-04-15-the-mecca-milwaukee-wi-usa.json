@@ -1,0 +1,68 @@
+{
+  "summary": "High‑energy '89 Mecca show with killer Half Step and Blow Away",
+  "blurb": "The set bursts open with a driving Mississippi Half‑Step Uptown Toodeloo and an inspired Blow Away featuring Brent’s memorable rap. Highlights include a tight Half Step jam, powerful renditions of Franklin’s Tower and Morning Dew, and a fiery second‑set flow from China Cat Sunflower into All Along the Watchtower.",
+  "review": "On April 15, 1989 at The Mecca, the Dead delivered a concise yet electrifying performance. Jerry Garcia matched Phil Lesh’s fire, laying down solid lead work and an especially strong opening solo on Mississippi Half‑Step Uptown Toodeloo, though his vocal on Terrapin Station was noted as weaker than usual. Phil’s bass was “on fire” throughout, anchoring the band’s high‑energy momentum. Brent Mydland stole several moments: his rap on Blow Away split fans but remains unforgettable, and his keyboards drove the exuberant Half Step jam and lit up the second set. Bob Weir’s rhythm guitar and vocals stayed audible and well‑placed, adding to the tight ensemble feel. The show’s flow kept the foot on the accelerator from start to finish, with standout moments like Franklin’s Tower, Morning Dew, and a blazing All Along the Watchtower that capped an already potent set.\n\nRecording-wise, the best listening experience comes from the GEMS soundboard capture (gd1989-04-15.sbd.healy.gems.80277.flac16), praised for its crystal‑clear dynamics and ability to convey the band’s energy without noticeable flaws. While a matrix source offers a complete show, it suffers from tape hiss and a fast‑pitch anomaly that detracts from the overall sound quality.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 24,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Four recordings expressed clear positive sentiment (soundboard captures praised, standout songs highlighted) while three were mixed, noting both strengths and minor issues. No negative consensus appeared, leading to a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.2 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1989-04-15.sbd.healy.gems.80277.flac16",
+    "reason": "Superb GEMS soundboard clarity captures the band’s high‑energy performance and standout Half Step jam without audible flaws."
+  },
+  "key_highlights": [
+    "Blow Away – Brent’s polarizing rap and emotive keyboard work.",
+    "Mississippi Half-Step Uptown Toodeloo – driving opener with strong Jerry lead.",
+    "Half Step jam – praised as fiery and memorable.",
+    "Franklin's Tower & Morning Dew – standout, high‑energy renditions."
+  ],
+  "song_highlights": [
+    "Blow Away",
+    "Mississippi Half-Step Uptown Toodeloo",
+    "Franklin's Tower",
+    "Morning Dew"
+  ],
+  "band_performance": {
+    "Jerry": "Matches Phil’s fire, delivers solid lead work and a strong opening solo on Half Step; vocals on Terrapin Station noted as less powerful.",
+    "Phil": "On fire throughout, providing strong bass lines that drive the set.",
+    "Bob": "Provides audible, well‑placed vocals and steady rhythm guitar support.",
+    "Brent": "Shines with an emotive rap on Blow Away (divisive but memorable) and fiery keyboard work that powers Half Step and the second‑set jams.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-16T18:48:03.535605+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Blow Away",
+      "The Promised Land"
+    ],
+    [
+      "Mississippi Half-Step Uptown Toodeloo"
+    ],
+    [
+      "Feel Like A Stranger",
+      "Franklin's Tower"
+    ],
+    [
+      "Playing In The Band",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "I Will Take You Home",
+      "All Along The Watchtower",
+      "Morning Dew"
+    ]
+  ]
+}

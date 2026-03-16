@@ -1,0 +1,31 @@
+{
+  "summary": "Highly praised show with no specific recording details provided",
+  "review": "The sole review rates this performance a perfect five stars and simply calls it a \"Great show,\" indicating strong enthusiasm for the music. No information is given about the source or audio fidelity, nor are any particular songs or moments highlighted, so listeners should expect an enjoyable concert but cannot assess recording quality from this feedback.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one brief review, but it gives a 5‑star rating and positive language about the show; lack of recording comments limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound quality, clarity, or mix were provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The reviewer did not comment on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T06:14:10.480057+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-07-13.150753.sbd.koda.miller.flac2496"
+}

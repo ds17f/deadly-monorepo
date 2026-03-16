@@ -1,0 +1,75 @@
+{
+  "summary": "A stellar 1970 show with standout versions of Till the Morning Comes, Good Lovin' and Uncle John's Band, captured on a mostly good‑soundboard source despite some treble/hiss issues.",
+  "review": "Fans rave about the inspired performances—especially Till the Morning Comes, the jam‑filled Uncle John's Band, and a scorching Good Lovin'—making this one of the most intense shows of the era. The soundboard recording is generally clear but suffers from occasional trebly highs, low vocals and an infamous left‑channel bleed that ruins a few moments, leading to mixed opinions on audio quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews (5‑star) praise the musical performance and highlight numerous standout songs, while a minority flag serious recording flaws; weighting show quality higher yields an overall rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard mix with a slight treble emphasis and low vocal levels; some reviewers report hiss and an intrusive left‑channel guitar bleed on I Know You Rider/Good Lovin', plus track‑splitting annoyance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Till the Morning Comes",
+      "Uncle John's Band",
+      "Good Lovin'",
+      "Cold Rain and Snow",
+      "China Cat Sunflower > I Know You Rider"
+    ],
+    "poor_songs": [
+      "Casey Jones"
+    ],
+    "setlist_flow": "The set flows with high energy, featuring a powerful opening, an extended jam at the end of Uncle John's Band, and a memorable second‑set sequence that keeps the momentum alive."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his post‑drums volume boost on Good Lovin' and overall inspired playing, but noted to go out‑of‑sync during Casey Jones.",
+    "Phil": "His vocals on Till the Morning Comes are highlighted as a key reason for that song's rarity and impact.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Till the Morning Comes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T23:32:05.596724+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-10-04.sbd.cousinit.19985.sbeok.shnf"
+}

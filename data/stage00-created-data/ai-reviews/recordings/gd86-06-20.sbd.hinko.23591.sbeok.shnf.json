@@ -1,0 +1,81 @@
+{
+  "summary": "Clean soundboard recording with strong moments—standout Comes A Time and Drums‑Space—but muddy Midnight Hour and uneven playing make it a mixed‑quality show.",
+  "review": "The set captures a high‑spirited performance featuring a beautiful segue into Comes A Time, Brent’s shimmering keys, and an inspiring Drums>Space. Recording quality is generally good for a soundboard source, though Midnight Hour sounds muddy and vocals can be echoey. The show swings between blinding brilliance and limp, uninspired passages, giving it a mixed but enjoyable character.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers gave 4‑star ratings praising several songs and the overall soundboard clarity; only one reviewer was more critical, pulling the average down to a solid but not exceptional score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clean and balanced, but Midnight Hour is muddy and some vocals (e.g., Me & My Uncle) sound echoey. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "Drums>Space",
+      "West L.A. Fadeaway",
+      "Playin' jam (outro)"
+    ],
+    "poor_songs": [
+      "Midnight Hour",
+      "Uncle John's Band",
+      "Peter"
+    ],
+    "setlist_flow": "The band was in high spirits, delivering short‑sweet jams and smooth segues (notably into Comes A Time). While several moments shine, the performance is uneven, with some limp stretches that prevent it from being a classic."
+  },
+  "band_member_comments": {
+    "Jerry": "Performance described as both ‘blinding brilliance’ in parts and ‘limp, uninspired’ at times; high spirits noted.",
+    "Phil": "Stands out on West L.A. Fadeaway and is highlighted during the band introduction (“Phil how do you do”).",
+    "Bob": "Introduces the band during Good Lovin; vocal harmonies are criticized as stepping on him; his intro attempts levity.",
+    "Keys": "Brent’s mid‑80s keyboard flair praised in Comes A Time; also referenced humorously as “that guy on keyboards.”",
+    "Drums": "Drums>Space is singled out as a highlight; Mickey and Bill are noted as the ‘drummers’ during the intro."
+  },
+  "song_mentions": {
+    "Midnight Hour": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "West L.A. Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums>Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Playin' jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:03:57.085215+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-06-20.sbd.hinko.23591.sbeok.shnf"
+}

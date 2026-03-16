@@ -1,0 +1,76 @@
+{
+  "summary": "Crisp audience mix captures a fiery Red Rocks performance highlighted by scorching Alabama Getaway and fresh Mexicali Blues, though the second set feels rushed.",
+  "review": "The tape offers a clear, nicely balanced sound that many reviewers describe as crisp and “awesome mix,” making it one of the better 1984 Red Rocks audience recordings. Musically the show shines early with Jerry’s incendiary Alabama Getaway, a standout Mexicali Blues and a top‑flight Scarlet Begonias > Touch sequence, but the second set is noted as hurried and uneven. Overall listeners enjoy the performance despite some recording quirks and backstage mystery.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the musical performance (average 4‑5 stars) and the sound quality, with only one strongly negative comment about the second‑set pacing; the blend yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and nicely balanced mix praised by several reviewers; some note mic placement issues and occasional bass/treble imbalance, with the suraci_78162 source recommended for first‑set clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama Getaway",
+      "Mexicali Blues",
+      "Red Rooster",
+      "Scarlet Begonias > Touch",
+      "Greatest Story Ever Told",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [
+      "Althea"
+    ],
+    "setlist_flow": "First set builds strong momentum and peaks early; second set is described as rushed with uneven energy, leading to mixed feelings about overall pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as on fire during Alabama Getaway and taking extra joy on Scarlet Begonias; his guitar work praised throughout.",
+    "Phil": "Noted for a cannonball‑style burst on Touch, though later sections are called “belly flops” by one reviewer.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias > Touch": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T18:10:21.028518+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-12.nakcm304-mikeg-suraci.suraci.78162.flac16"
+}

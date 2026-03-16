@@ -1,0 +1,61 @@
+{
+  "summary": "Powerful audience recording captures an electric Dark Star and soaring Jerry, with generally good soundstage despite occasional muffled moments.",
+  "review": "The show is remembered as a monster performance – Dark Star erupts, the crowd goes wild and Jerry’s solo is described as soulful and transcendent. The audience source delivers a booming, enveloping soundstage that many praise, though a few note muddiness on early tracks and it can’t match a pristine SBD.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers celebrate the music (especially Dark Star) and give high marks for performance; recording quality is praised by the majority but a few criticisms keep the overall rating just above four."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners describe a wonderful soundstage, booming presence of Phil and enveloping crowd energy. A handful mention muffled or hollow early‑track audio and that it doesn’t reach SBD fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Fantasy-Jude-Fantasy",
+      "Death Don't Have No Mercy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is repeatedly highlighted as superior to the SBD versions, with Dark Star and extended jams generating massive crowd reaction; overall pacing is described as thrilling and unforgettable."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers gush about Jerry’s soaring solo on Dark Star and the soul he brings to the performance.",
+    "Phil": "One reviewer notes a booming Phil presence that adds energy to the mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Fantasy-Jude-Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T23:53:59.196057+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-10-09.schoeps.howland.443.sbeok.shnf"
+}

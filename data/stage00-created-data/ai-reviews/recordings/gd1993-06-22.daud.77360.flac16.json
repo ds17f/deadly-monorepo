@@ -1,0 +1,31 @@
+{
+  "summary": "Audience DAT capture using high‑grade Neumann mics suggests good sound quality, but no details on the musical performance are provided.",
+  "review": "The lone review supplies technical recording information – a left‑hand position with Neumann KM140 microphones feeding an Aerco preamp into a Casio DA‑R100 DAT deck – indicating a fairly clear audience source. No comments are made about the band's playing, setlist, or standout moments, so the show quality cannot be assessed from this input.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "low",
+    "rationale": "Only one review (4‑star) focused on recording gear; suggests decent audio but offers no insight into performance, leading to an average combined rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Recorded with Neumann KM140 microphones, Aerco power supply/preamp, and a Casio DA‑R100 DAT deck – indicative of a clear, well‑captured audience source."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T15:05:44.623913+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-22.daud.77360.flac16"
+}

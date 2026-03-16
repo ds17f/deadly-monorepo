@@ -1,0 +1,31 @@
+{
+  "summary": "Review focuses solely on download availability; no information on audio or performance quality.",
+  "review": "The lone review is a request for downloading the show and expresses frustration over missing seeds, offering no insight into the recording source, sound quality, or musical performance. Consequently, both the technical and musical aspects of this concert remain undetermined.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one review that does not discuss sound or performance; rating reflects lack of positive information and the negative tone regarding availability."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on audio clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T20:51:02.035972+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-19.dts.tobin.89354.sbeok.flac16"
+}

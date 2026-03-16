@@ -1,0 +1,59 @@
+{
+  "summary": "Fair‑quality soundboard recording of a high‑energy ’84 New Haven show with standout The Other One, China Cat / Rider, Stella Blue and Sugar Magnolia",
+  "review": "The performance is widely praised for its relentless energy – hitmeister calls the second set “over the top” and highlights The Other One, a blistering China Cat / Rider, a beautiful Stella Blue and a classic Sugar Magnolia. Recording quality is inconsistent; reviewers note it’s the best of the notoriously poor ’84 New Haven tapes but still suffers from muddiness, mis‑labelled tracks and a bad copy of the encore on track 10.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance while acknowledging significant recording flaws; weighting shows (70%) and recording (30%) yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Recording is the best available of the ’84 New Haven runs but still suffers from overall muddiness, mis‑labelled tracks and a low‑fidelity copy of the encore on track 10."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "China Cat Sunflower / I Know You Rider",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Track 10 (mis‑labelled China Cat Sunflower – low‑quality encore copy)"
+    ],
+    "setlist_flow": "The show opens hot and maintains intensity throughout; however, the archive track list is shifted by one after an AUD recording of US Blues mislabeled as China Cat, causing some confusion."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T16:51:20.171184+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-24.sbd.walker-scotton.miller.32620.sbeok.flac16"
+}

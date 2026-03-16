@@ -1,0 +1,75 @@
+{
+  "summary": "Crisp soundboard capture of an energetic April ’83 show highlighted by a monster Scarlet>Fire and stellar Brent keyboard jams.",
+  "review": "The recording is a solid sound‑board source that sounds balanced and clear, though listeners may need to turn the volume up and note a slight echo on some sections. Musically the concert shines – Jerry’s inventive lead work and Phil’s blazing bass drive a half‑hour of Scarlet>Fire, while Brent’s analog keyboards add a laid‑back groove to new songs like West LA, Esau and Maybe You Know. The intimate college gym setting fuels an energetic second set that many fans recall as a classic early‑80s experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and praise both the performance (standout jams, strong playing) and the recording (crisp, balanced sound), outweighing minor volume/echo issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and balanced overall; some reviewers note you have to turn the volume up, a slight echo in parts, and a brief audience splice (3:44‑9:42) but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "West LA",
+      "Esau",
+      "Maybe You Know",
+      "Far From Me",
+      "Touch",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic, classic early‑80s set with a memorable second set; new material is played confidently and the intimate gym atmosphere adds to the show’s momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for blazing, inventive guitar work and strong lead playing throughout the night.",
+    "Phil": "Noted as ‘blazing’ alongside Jerry, indicating a solid bass foundation.",
+    "Bob": "Fans remark on his quirky spoken moments at the end of the first set (hillbilly accent, funny banter).",
+    "Keys": "Brent’s analog keyboard jams are highlighted as some of his best for this period, adding groovy texture.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "West LA": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Esau": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Maybe You Know": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:06:15.795892+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-13.sbd.sacks.1614.sbeok.shnf"
+}

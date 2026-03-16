@@ -1,0 +1,45 @@
+{
+  "summary": "Good FM broadcast capture with solid sound and a sweet second set highlighted by Music Never Stopped and Scarlet Fire",
+  "review": "The recording, sourced from an old FM radio broadcast, delivers clear audio that listeners find “good” to “great,” despite the lack of a full first‑set. Musically the show shines in the second half, with standout performances of Music Never Stopped and a combined Scarlet/Fire track, while the missing Good Lovin’ isn’t seen as a major loss.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two strong positive reviews (4‑ and 5‑star) emphasize excellent music and decent sound, balanced against limited technical detail and only three total reviews."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note the sound is good/great; no specific issues like drop‑outs or muddiness are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Music Never Stopped",
+      "Scarlet Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set largely skipped by a reviewer, but the second set is praised as sweet and engaging, making the overall flow enjoyable."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T21:43:32.372382+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-04-27.fm.doinker.91889.flac16"
+}

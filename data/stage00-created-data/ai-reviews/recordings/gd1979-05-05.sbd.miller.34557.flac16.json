@@ -1,0 +1,51 @@
+{
+  "summary": "Crisp Charlie Miller sound captures a solid 1979 show highlighted by an adventurous Sugaree and funky Dancin', though the set is overall good rather than legendary.",
+  "review": "The recording benefits from Miller’s crisp, rich soundboard capture, making every nuance audible. Musically the concert delivers a few standout moments – a special Sugaree, a super‑funky Dancin’, and an above‑average Scarlet Fire – while the rest of the set remains solid but not earth‑shaking. Overall fans find it an enjoyable, well‑recorded performance from this era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is good with several highlighted songs but not exceptional; recording quality is praised as crisp and rich, leading to a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Charlie Miller's engineering provides crisp, rich sound with no noted issues; clear mix and good balance throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Dancin'",
+      "Scarlet Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is average save for Sugaree, Dancin' and Scarlet Fire; second set described as very good but not spectacular."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T21:07:42.937965+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-05-05.sbd.miller.34557.flac16"
+}

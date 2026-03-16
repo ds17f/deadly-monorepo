@@ -1,0 +1,75 @@
+{
+  "summary": "Soundboard recording with very good clarity (a little thin on the highs) captures a stellar Spring ’77 show highlighted by scorching “Scarlet > Fire”, a gorgeous “High Time”, and an explosive Terrapin‑Station jam.",
+  "review": "The SBD source is clean and well balanced, though reviewers note it could use a touch more high‑frequency sparkle. Musically the concert shines – Jerry’s near‑perfect Travis Bean tone, Donna’s standout vocal on “Jack‑A‑Roe”, and a second‑set Terrapin > Playing > Wharf Rat sequence that many fans call legendary. Overall the performance is rated five stars by the community with only minor recording nit‑picks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently 5‑star show comments (≈70% weight) and a solid 4‑star recording assessment (≈30% weight) yield an overall rating near 4.7."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Very clear overall; reviewers praise the mix but mention slightly lacking highs and a faint hiss between tracks that can be tamed by modest treble boost."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "High Time",
+      "Terrapin Station > Playing > Wharf Rat > Playing",
+      "Jack‑A‑Roe",
+      "B.E. Women",
+      "Samson > Bertha > Good Lovin'",
+      "Estimated > Terrapin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds nicely with a sweet “High Time” and strong vocal moments; the second set erupts into a classic Terrapin jam chain and ends with a high‑energy Sugar Mag encore that lets Bobby’s drumming shine."
+  },
+  "band_member_comments": {
+    "Jerry": "Near‑perfect Travis Bean tone praised, though some note the aluminum neck sounds slightly tinny compared to later Wolf guitar tones.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith is described as loose and independent, adding a relaxed vibe on keyboards.",
+    "Drums": "Bobby (the drummer) “loses it” in the Sugar Mag encore, indicating high energy playing."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin Station > Playing > Wharf Rat > Playing": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack‑A‑Roe": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "B.E. Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson > Bertha > Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated > Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T01:20:26.192794+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-17.sbd.leonard.1107.sbeok.shnf"
+}

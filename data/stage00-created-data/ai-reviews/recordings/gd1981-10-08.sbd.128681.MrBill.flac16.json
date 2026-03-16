@@ -1,0 +1,63 @@
+{
+  "summary": "Soundboard from ’81 with solid but slightly limited high‑end, capturing a rare Scarlet Begonias → Fire on the Mountain → Playing in the Band → Terrapin Station run and standout Bob Weir chord work.",
+  "review": "The recording is a soundboard capture that most listeners find clear and enjoyable, though a few note that the playback deck trims some upper‑frequency sparkle. Musically the show shines thanks to an uncommon four‑song sequence (Scarlet Begonias, Fire on the Mountain, Playing in the Band, Terrapin Station) and inventive rhythm guitar from Bob Weir during The Music Never Stopped.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is praised for rare song ordering and strong playing, while recording quality is generally good but mentioned as lacking high‑end response; overall score lands in the solid‑good range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Boards are an upgrade over earlier tapes, clear overall, but playback deck limits upper‑frequency response; transfer/upload praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Playing in the Band",
+      "Terrapin Station",
+      "The Music Never Stopped"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A rare four‑song block (Scarlet > Fire > Playing > Terrapin) appears only a handful of times, giving the concert a unique flow; overall performance described as well played."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir explores alternative chord voicings during The Music Never Stopped and is praised for his rhythm work.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:33:33.949403+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-08.sbd.128681.MrBill.flac16"
+}

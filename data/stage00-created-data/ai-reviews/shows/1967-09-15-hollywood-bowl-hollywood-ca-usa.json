@@ -1,0 +1,66 @@
+{
+  "summary": "Solid mid‑'67 set with fierce Viola Lee Blues and Morning Dew",
+  "blurb": "The Hollywood Bowl show delivers a tight rhythm section, soaring Jerry leads on Morning Dew, and an expansive Viola Lee Blues jam. Pigpen’s organ/harmonica adds the classic 1967 flavor while Alligator and Beat It On Down The Line keep the energy high.",
+  "review": "On September 15, 1967 the Grateful Dead took the Hollywood Bowl by storm with a set that captures the band in peak mid‑'60s form. Jerry Garcia’s “full‑hog” leads roar through Morning Dew and Alligator, while Phil Lesh’s thumping fretless bass underpins the extended Viola Lee Blues journey. Pigpen’s organ and harmonica inject the raw, bluesy vibe that defines this era, and the rhythm section drives songs like Cold Rain And Snow and Beat It On Down The Line with relentless drive. Although the only surviving audience tape is fair‑quality—marked by hiss, drop‑outs, and muffled mids—it still conveys the excitement of a night shared with Jefferson Airplane and Big Brother & The Holding Company, making it a worthwhile listen for anyone interested in the Dead’s early live evolution.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.1,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 18,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "The single analysis labels sentiment as mixed, primarily due to recording‑quality complaints (hiss, drop‑outs). The musical commentary is uniformly positive—no poor songs are listed and several tracks receive strong praise—so a modest positive adjustment of +0.5 reflects the overall favorable view of the performance while accounting for the audio limitations.",
+      "final_calculation": "2.5 + 0.1 + 0.5 = 3.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd67-09-15.aud.vernon.9192.sbeok.shnf",
+    "reason": "Only complete capture of the show; despite fair audio it preserves the strong performances and historic set."
+  },
+  "key_highlights": [
+    "Viola Lee Blues expands into a soaring psychedelic jam.",
+    "Jerry’s lead on Morning Dew is highlighted as “full‑hog” and tightly controlled.",
+    "Alligator and Beat It On Down The Line keep the set energetic and driving."
+  ],
+  "song_highlights": [
+    "Viola Lee Blues",
+    "Cold Rain And Snow",
+    "Beat It On Down The Line",
+    "Morning Dew",
+    "Alligator"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers full‑hog leads, especially a tight, soaring solo on Morning Dew.",
+    "Phil": "Lesh’s fretless bass thumps away, providing a solid low end throughout the jams.",
+    "Bob": "",
+    "Brent": "Pigpen’s organ and harmonica add the characteristic 1967 vibe, enhancing the bluesy feel of the set.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-24T06:35:04.183836+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Viola Lee Blues"
+    ],
+    [
+      "Cold Rain And Snow"
+    ],
+    [
+      "Beat It On Down The Line",
+      "Good Morning Little School Girl"
+    ],
+    [
+      "Morning Dew"
+    ],
+    [
+      "Alligator",
+      "Caution (Do Not Stop On Tracks)",
+      "Feedback"
+    ]
+  ]
+}

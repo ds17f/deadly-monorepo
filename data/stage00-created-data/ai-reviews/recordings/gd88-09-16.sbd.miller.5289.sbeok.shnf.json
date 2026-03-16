@@ -1,0 +1,92 @@
+{
+  "summary": "A high‑energy 1988 NYC show captured on a crisp Miller soundboard with standout Minglewood Blues and a smoking China Cat Sunflower → I Know You Rider sequence.",
+  "review": "The performance is widely praised for its relentless energy, tight playing and several highlight moments – especially the ripping Minglewood Blues, Uncle John’s Band > Mexicali, the China‑Rider medley and an inspired Sugar Magnolia. The Miller SBD source is described as clear, balanced and “great sounding,” though a few listeners note a slightly sterile feel in the mix. Overall the show is considered one of the stronger late‑‘80s dates despite minor set‑list dips like Ship of Fools.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 5‑star, highlighting exceptional musical moments and an excellent Miller soundboard recording; a few mixed comments do not outweigh the overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently praised for clarity and balance (\"great C Miller sound\", \"exceptional sound\"); one comment notes a slightly sterile character but no major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood Blues",
+      "Uncle John's Band > Mexicali",
+      "China Cat Sunflower > I Know You Rider",
+      "Sugar Magnolia",
+      "Masterpiece > Birdsong",
+      "Terrapin Station"
+    ],
+    "poor_songs": [
+      "Ship of Fools",
+      "Lay Me Down"
+    ],
+    "setlist_flow": "The first set builds solid energy that peaks in the second set; transitions such as Estimated → Terrapin and the high‑octane second‑set jam flow are highlighted, though some feel Ship of Fools stalls momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for high‑energy playing and intense solos (especially on Sugaree), though one reviewer felt his tone was a bit straight/sterile.",
+    "Phil": "Mentioned only for a brief announcement about his son before the second set; no musical critique.",
+    "Bob": "",
+    "Keys": "Brent’s intro to Hey Pocky Way is called out as a slip‑up; otherwise keyboards are not specifically discussed.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Minglewood Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band > Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Masterpiece > Birdsong": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Hey Pocky Way": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Lay Me Down": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T13:54:08.231487+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-16.sbd.miller.5289.sbeok.shnf"
+}

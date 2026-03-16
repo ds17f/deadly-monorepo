@@ -1,0 +1,66 @@
+{
+  "summary": "High‑energy 1984 Vegas show with blazing fast Eyes and stellar China Cat→Rider jam; soundboard capture is generally clean but has noticeable cracks and vocal flubs.",
+  "review": "The performance bursts with tight jams – the rapid \"Eyes\" out of Space, a thunderous \"Might As Well\", and an all‑time favorite China Cat→Rider sequence dominate the set.  While the soundboard source is mostly crisp, listeners note crackle around \"Bertha\", a vocal flub on \"Brown Eyed Girl\" and some abrupt cuts in the middle of songs.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers (≈70 %) give 4‑5 stars and praise the musical flow; a minority cite lyrical slip‑ups and recording glitches that pull the average down."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clean and clear with good instrument separation.  Notable issues: crackle/\"mix adjustments\" around \"Bertha\", a vocal delay on the early \"Brown Eyed Girl\" verse, occasional tuning pauses and abrupt cuts in \"Saint of Circumstance\" and \"Black Peter\"."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Might As Well",
+      "China Cat > Rider",
+      "Lost Sailor > Saint of Circumstance",
+      "All Over Now (keyboard solo)",
+      "Mighty Swell"
+    ],
+    "poor_songs": [
+      "Music Never Stopped"
+    ],
+    "setlist_flow": "The first set builds with fast‑paced jams, but tension between Jerry and Bob shows up in the \"Music Never Stopped\" ending.  The second set erupts into a smoking run – rapid Eyes, an extended Black Peter/Truckin' tease, then the beloved China Cat→Rider jam before winding down with soulful ballads."
+  },
+  "band_member_comments": {
+    "Jerry": "Fast‑paced \"Eyes\" and a thunderous Mighty Swell; noted for plugging into Aladdin's amp.  Vocal flubs on early songs and a brief musical “argument” with Bob over song order.",
+    "Phil": "\"ON\" – Phil’s bass is highlighted as especially solid; several reviewers call his playing \"on\" throughout the show.",
+    "Bob": "His slide fills on Black Peter receive praise, but he forgets lyrics in \"Music Never Stopped\" and clashes with Jerry over set transitions.",
+    "Keys": "Brent (Keith) gets a rave for an all‑time best solo on \"All Over Now\" and his chimey presence shines during the China Cat→Rider jam.",
+    "Drums": "Long tuning pauses before the “Jerry‑less” jam are noted; drum kit is described as “rising” and adding height to the improvisations."
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Lost Sailor > Saint of Circumstance": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 0,
+      "negative_mentions": 5,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-14T15:14:56.524214+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-04-06.sbd.willy.10159.sbeok.shnf"
+}

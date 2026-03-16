@@ -1,0 +1,122 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy ’87 New York run, anchored by an epic Uncle John’s > Playing jam and blazing High Time.",
+  "review": "The recording is generally praised as clear, well‑balanced and “superb” – most reviewers call it one of the best‑sounding tapes from the era despite a lone complaint about crowd bleed. Musically the show shines with a monster Uncle John’s > Playing/Playin’ sequence, a soaring High Time, powerful Black Muddy River and a fiery Maggie’s Farm, while the drums/space segment is repeatedly lauded. A few notes of sloppiness appear on Crazy (Crazy Fingers) but overall the performance is tight, inventive and unforgettable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly positive about both music and sound; only isolated negative points. Weighted heavily toward show quality (70%) with strong recording praise, yielding a rating in the top‑tier range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced mix praised by most listeners; occasional crowd bleed noted and one reviewer claims mislabeling, but overall sound is described as superb with clear instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band > Playing",
+      "High Time",
+      "Black Muddy River",
+      "Maggie's Farm",
+      "U.S. Blues",
+      "Drums",
+      "Space"
+    ],
+    "poor_songs": [
+      "Crazy Fingers"
+    ],
+    "setlist_flow": "The set is described as tight and high‑energy, with the first set delivering strong classics (Mississippi, All Over Now) and a second set that builds into an extended Playin’ jam, followed by a powerful drum/space excursion and a fiery closing sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his sparkling solos, flushed notes on Mississippi, occasional vocal strain, and a few flubs that don’t detract from the overall performance.",
+    "Phil": "Crowd chants “We Want Phil” and his steady bass presence are mentioned; no major criticisms.",
+    "Bob": "His nuanced, slightly buzzed vocals on songs like Big River receive praise, as does his interplay with Jerry during jams.",
+    "Keys": "Brent’s “tinkling” keyboards throughout the set, especially during Playin’ and the high‑time phaser effect, are highlighted as trippy and effective.",
+    "Drums": "The drum duo receives glowing remarks – described as superb, astonishing, and a key reason for the show’s impact."
+  },
+  "song_mentions": {
+    "Uncle John's Band > Playing": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Playing in the Band": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "High Time": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "U.S. Blues": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Black Muddy River": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Maggie's Farm": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Drums": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Space": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Miracle": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mississippi": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T03:54:56.698577+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-19.sbd.mccarthy.396.sbeok.shnf"
+}

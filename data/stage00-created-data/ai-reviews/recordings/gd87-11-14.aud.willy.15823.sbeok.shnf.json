@@ -1,0 +1,114 @@
+{
+  "summary": "Audience‑sourced tape with thin sound but captures a legendary ’87 second set – Maggie’s > Cumberland > Terrapin + Lovelight fire, despite occasional vocal slips.",
+  "review": "The show is widely praised for its explosive second‑set jam marathon (Maggie's Farm into Cumberland, Playin', Terrapin Station and a soaring Lovelight) and the crowd‑pleasing finale with The Mighty Quinn. Recording quality is mixed – listeners note thin, sometimes muffled audio and occasional drop‑outs, yet the performance shines through enough to make it a fan favorite.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Strong, consistent praise for the musical performance (especially the second set) outweighs modest recording flaws; many 5‑star reviews give a clear positive consensus."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Thin and occasionally muffled sound; some reviewers mention drop‑outs or “sound sucked,” but overall the tape is listenable and captures the energy of the night."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Maggie's Farm",
+      "Cumberland",
+      "Terrapin Station",
+      "Lovelight",
+      "Space",
+      "Miracle",
+      "Stella Blue",
+      "The Mighty Quinn"
+    ],
+    "poor_songs": [
+      "Rooster",
+      "Althea"
+    ],
+    "setlist_flow": "First set is solid with fun openers like Shakedown, but the second set is the highlight – a seamless jam chain from Maggie's > Cumberland > Playin' into a monster Terrapin and an electrifying Lovelight before closing with Quinn."
+  },
+  "band_member_comments": {
+    "Jerry": "Emotional guitar work; spotlighted to rescue Maggie's Farm when Bob slipped; praised for “very emotional” playing on Terrapin.",
+    "Phil": "Drops “great bombs” after the brother verse in Maggie's, adding extra excitement.",
+    "Bob": "Forgot lyrics during Maggie's Farm and showed some vocal slips early, but recovers later and delivers strong vocals overall.",
+    "Keys": "Brent adds vocal improvisations on Althea/Deal; his contributions noted as “great” by reviewers.",
+    "Drums": "Mickey jumps quickly into drums, delivering tight percussion and a memorable weird ending to Space."
+  },
+  "song_mentions": {
+    "Maggie's Farm": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Cumberland": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Mighty Quinn": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rooster": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:22:10.824477+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-11-14.aud.willy.15823.sbeok.shnf"
+}

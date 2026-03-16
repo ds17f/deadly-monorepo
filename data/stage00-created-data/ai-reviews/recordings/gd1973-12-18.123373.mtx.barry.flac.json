@@ -1,0 +1,39 @@
+{
+  "summary": "Matrix recording praised, especially the standout Dark Star performance",
+  "review": "The matrix blend of soundboard and audience is highlighted as a big plus, with the reviewer calling it “good” and loving the way the crowd ambience comes through. The show’s Dark Star (and hinted‑at Eyes of the World) are singled out as highlights, while the second comment offers only a brief thank‑you without substantive critique.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "One enthusiastic 5‑star review praises both recording and performance; the other provides no evaluative detail and a zero‑star rating, resulting in an overall positive but uncertain assessment."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer specifically enjoys the matrix mix of soundboard clarity with audience presence, describing it as “GOOD” and expressing enthusiasm for the ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure; only a brief mention of Dark Star (and possibly Eyes of the World) as highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T04:44:37.349235+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-12-18.123373.mtx.barry.flac"
+}

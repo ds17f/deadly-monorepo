@@ -1,0 +1,51 @@
+{
+  "summary": "Good matrix recording of an era‑spanning show with a strong first set highlighted by Slipknot!, Lazy River Road and a memorable Estimated jam.",
+  "review": "The two reviewers note a solid matrix source that captures the band well, describing it as a good recording overall. Musically the show is seen as mixed – one fan calls it an average performance but points to the first set’s Slipknot! and Lazy River Road as highlights, while another praises the era and singles out the Estimated jam as a must‑hear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality ranges from average to great (average rating ~3.5) and recording is described as good; weighted combination yields a mid‑high 3‑star range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the matrix source as good, with no major dropouts or clarity issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Slipknot!",
+      "Lazy River Road",
+      "Estimated"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is highlighted as the stronger half; overall flow receives mixed comments, with one reviewer finding the show average and another calling it a great representation of the era."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:35:08.378057+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-22.126108.mtx-redo.eichorn.flac16"
+}

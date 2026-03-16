@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent soundboard remaster captures a thrilling 1972 show with standout Bertha, Dark Star and the first Philo Stomp, plus unusually clear Bob Weir rhythm/lead work.",
+  "review": "The recording is praised for its crystal‑clear mix—especially the audibility of Bob’s guitar—and the masterful engineering by Charlie Miller and SIR‑Mick. Musically the concert shines with focused jamming, highlighted by a powerful Playin‑in‑the‑Band sequence, a memorable first Philo Stomp, and strong performances of Bertha, Don’t Ease Me In and Dark Star.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All three reviewers are enthusiastic; two give 5‑star ratings and the third praises the performance despite a missing star rating. Both show quality and recording quality are described as excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Engineers Charlie Miller and SIR‑Mick deliver a clean, balanced mix with unusually audible Bob Weir guitar fills throughout the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Don’t Ease Me In",
+      "Brown Eyed Women",
+      "Playing in the Band",
+      "The Other One",
+      "Dark Star",
+      "Philo Stomp"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert builds strong thematic jams that flow into Dark Star, with the first Philo Stomp providing a highlight of Phil’s bass work; overall pacing is described as focused and thrilling."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "First Philo Stomp noted as great, showcasing his bass-driven jam.",
+    "Bob": "Audible lead fills on Bertha, Don’t Ease Me In and Brown Eyed Women; guitar work described as more interesting than typical rhythm parts.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don’t Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Philo Stomp": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T00:29:25.798967+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-10-18.139725.sbd.miller.sirmick.remaster.flac16"
+}

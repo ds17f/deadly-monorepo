@@ -1,0 +1,31 @@
+{
+  "summary": "Great performance but hindered by a very poor audio copy",
+  "review": "The reviewer rates the concert itself around 3.8/5, calling it a great show, yet condemns this particular FLAC copy as the worst they've heard, recommending an alternate 24‑bit source. Recording quality is therefore judged poor while the musical performance is viewed positively.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one review; reviewer praises the show (~3.8/5) but gives the audio copy a 1/5, resulting in a weighted average around 3.0 stars."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer calls this the worst audio copy of an otherwise great show and suggests using a different 24‑bit source."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewer simply notes the overall show as good."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-12T22:31:08.399437+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-04.akg1000.118912.wise.minches.flac24"
+}

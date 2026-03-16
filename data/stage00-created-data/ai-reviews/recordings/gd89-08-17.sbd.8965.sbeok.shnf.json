@@ -1,0 +1,39 @@
+{
+  "summary": "Nice soundboard capture with a few early‑song glitches; the first set shines while the second set feels lazy and under‑intense.",
+  "review": "The board recording is generally clear and enjoyable, though listeners note a drop‑out in the opening quarter of \"Hell in a Bucket.\" Musically, the band delivers a strong first set, but the second set drifts into a sloppy, low‑energy vibe that leaves the show less memorable overall.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "One reviewer praises the recording and first set (4★), another criticizes performance consistency (2★). Weighted toward show quality gives an average rating around 3.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall nice, clear sound; minor board issue affecting the first quarter of \"Hell in a Bucket\"."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Hell in a Bucket"
+    ],
+    "setlist_flow": "First set described as great and energetic; second set considered flowing but lazy, lacking intensity."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bobby's vocal banter on \"Good Lovin'\" (denial) is noted, adding a humorous moment.",
+    "Keys": "Keyboards stand out positively for the reviewer.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hell in a Bucket": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T22:41:14.196646+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-08-17.sbd.8965.sbeok.shnf"
+}

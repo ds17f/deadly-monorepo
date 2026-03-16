@@ -1,0 +1,70 @@
+{
+  "summary": "An excellent soundboard capture of a scorching spring‑1990 show, anchored by an unforgettable Scarlet Begonias → Fire on the Mountain sequence.",
+  "review": "The recording is a clean, well‑balanced soundboard that lets every nuance of the band shine. Musically the concert is a heater – the second set erupts with a blistering Scarlet/Fire, a loopy Truckin' jam and a joyful Baby Blue encore, while the first set delivers tight, vibrant performances. Reviewers overwhelmingly praise the show despite a few minor song‑specific critiques.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high 5‑star reviews highlight both superb soundboard quality and an outstanding performance, with only one mixed 4‑star review and a single irrelevant low rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers thank Mr. Miller for a clean board; no complaints of distortion, drop‑outs or muddiness – the mix is crisp and well balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Truckin'",
+      "Baby Blue",
+      "Roses",
+      "West L.A. Fadeaway"
+    ],
+    "poor_songs": [
+      "Hey Jude"
+    ],
+    "setlist_flow": "The show opens with high‑energy material (FLAS, West L.A.) that sets a heater tone, a concise yet vibrant first set, and a second set that builds to a peak with Scarlet/Fire, followed by a spacey drum jam into The Other One and a jubilant Baby Blue encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for space‑infused, midi‑laden improvisations leading into The Other One and for overall fiery lead work.",
+    "Phil": "Noted for a strong bass prelude that feeds into the post‑drum Other One segment.",
+    "Bob": "His vocals and rhythm guitar are described as bouncing, vibrant, especially on early songs like West L.A. and Roses.",
+    "Keys": "Brent Mydland receives kudos for psychedelic bluesy keyboard work during the second set.",
+    "Drums": "The drum jam into space is highlighted as a standout moment."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Jude": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West L.A. Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T04:31:23.430106+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-22.sbd.miller.107871.flac16"
+}

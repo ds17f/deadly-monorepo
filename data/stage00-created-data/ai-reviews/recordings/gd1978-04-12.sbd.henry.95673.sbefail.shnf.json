@@ -1,0 +1,39 @@
+{
+  "summary": "Memorable 'pots and pans' Drums segment, but recording source and audio quality are unclear.",
+  "review": "Both reviewers vividly recall the chaotic Pots‑and‑Pans episode during the Drums portion of this show, which makes it a standout moment for fans. Neither review comments on the fidelity of the tape, leaving the recording quality indeterminate. Overall sentiment is mixed, with one reviewer rating it highly and another expressing frustration.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Limited feedback – only two reviews, one very positive about the experience and one negative; no concrete audio quality info, so a moderate rating is assigned."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentions soundboard, audience mic, or clarity; comments focus on visual/experience aspects rather than audio fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Drums"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviews highlight only the Drums segment with pots and pans; no broader commentary on set pacing or flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T10:29:21.031222+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-12.sbd.henry.95673.sbefail.shnf"
+}

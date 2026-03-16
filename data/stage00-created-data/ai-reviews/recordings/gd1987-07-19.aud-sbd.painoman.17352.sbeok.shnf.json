@@ -1,0 +1,70 @@
+{
+  "summary": "High‑quality soundboard capture of the legendary 1987 Dylan/Dead concert, featuring a magical third set with standouts like \"Frankie Lee\" and \"Let It Grow\".",
+  "review": "The SBD recording delivers clear, well‑balanced audio that lets listeners hear every nuance of the July 19, 1987 show at Autzen Stadium. Reviewers rave about the tightness of the Dead set and especially the third Dylan set, calling it magical and recommending it repeatedly. Jerry Garcia’s guitar work is highlighted as mesmerizing, while the overall mix is praised as solid with only minor “OK” audience bleed.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All six reviews are five‑star and uniformly praise both performance (especially the Dylan third set) and recording quality, giving a strong consensus for an excellent show with good soundboard audio."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "SBD source; clear and balanced overall. Reviewers note the audience (aud) bleed is only \"OK\" but the third set sounds especially good, with no major drop‑outs or muddiness mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Frankie Lee",
+      "Judas Priest",
+      "Stuck Inside of Memphis",
+      "Let It Grow",
+      "Iko Iko"
+    ],
+    "poor_songs": [
+      "Peggy-O"
+    ],
+    "setlist_flow": "The concert builds nicely from a strong opening (Iko Iko, Let It Grow) through a solid second set, climaxing with a tightly executed third Dylan/Dead set that reviewers describe as magical and near‑perfect."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry Garcia’s mesmerizing guitar tone and phrasing, calling his playing \"irreplaceable\" and a key part of the show’s magic.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Frankie Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Judas Priest": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stuck Inside of Memphis": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T01:09:07.572284+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-19.aud-sbd.painoman.17352.sbeok.shnf"
+}

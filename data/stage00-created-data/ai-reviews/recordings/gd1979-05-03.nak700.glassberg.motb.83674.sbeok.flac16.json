@@ -1,0 +1,31 @@
+{
+  "summary": "Boxy audience recording, but a very nice second set makes the show enjoyable",
+  "review": "The tape is an audience source that sounds a bit tinny and boxy, limiting its fidelity. Musically, reviewers highlight a \"very nice\" second set, indicating strong performance despite the modest audio quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "One review gives 4 stars and praises the second set while noting only mild recording flaws; weighted estimate yields a solid 4‑star rating but confidence is low due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audio described as \"bit tin boxy\" – thin, slightly muffled sound typical of older audience tapes."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Second set singled out as very nice; overall performance viewed positively despite limited audio detail."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T20:55:32.628598+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-05-03.nak700.glassberg.motb.83674.sbeok.flac16"
+}

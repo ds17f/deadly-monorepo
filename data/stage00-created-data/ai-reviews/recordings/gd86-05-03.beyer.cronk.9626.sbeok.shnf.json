@@ -1,0 +1,31 @@
+{
+  "summary": "Fun show marred by a noisy, warped cassette recording",
+  "review": "The performance is generally regarded as enjoyable, but the audio suffers from severe hiss, modulation and over‑applied noise reduction that make it difficult to listen to. Reviewers note that other versions of this concert sound much clearer, recommending those instead.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "high",
+    "rationale": "All three reviewers criticize the recording quality heavily while only giving modest praise to the show itself; consistent low star ratings lead to a clear negative overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "High‑end modulation and hissiness, likely from a warped cassette before digital transfer; aggressive noise reduction further degrades the sound."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing; reviewers simply describe the show as fun despite audio issues."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T15:38:52.537457+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-05-03.beyer.cronk.9626.sbeok.shnf"
+}

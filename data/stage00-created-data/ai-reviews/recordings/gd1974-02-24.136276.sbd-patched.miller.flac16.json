@@ -1,0 +1,81 @@
+{
+  "summary": "Crystal‑clear soundboard recording of a smoky ’74 show highlighted by an epic Dark Star and a soaring Weather Report Suite.",
+  "review": "Both reviewers rave about the performance – a smoking setlist with a monster Dark Star, tight Playing in the Band, and a gorgeous Weather Report Suite that rides a wave of Keith’s keyboards. The patched Miller soundboard source delivers virtually transparent clarity, making the vintage tape sound as fresh as ever.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Two detailed 5‑star reviews praise both musical execution and audio fidelity; only one cryptic low‑star entry, which actually compliments the sound quality, so overall rating is strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners describe the audio as virtually transparent and uninterrupted; no dropouts or balance issues were noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "China Cat Sunflower",
+      "Playing In The Band",
+      "Weather Report Suite Prelude > Weather Report Suite Part 1 > Let It Grow > Row Jimmy, Ship Of Fools",
+      "Promised Land",
+      "Sugar Magnolia",
+      "It's All Over Now Baby Blue",
+      "The Roses"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set opens with a rare Rose‑laden opener and builds through high‑energy jams (China Cat, Playing in the Band) into an expansive Weather Report Suite before closing on classic crowd‑pleasers like Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocal phrasing on Sugar Magnolia’s opening line and his “gambling” lyric are singled out; his guitar tone is praised throughout Dark Star.",
+    "Phil": "",
+    "Bob": "Weir gets credit for a “cowboy‑tune” vibe and contributes strong vocals on Sugar Magnolia.",
+    "Keys": "Keith’s presence is highlighted especially during the Dark Star → Morning Dew segment of the Weather Report Suite.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Weather Report Suite Prelude > Weather Report Suite Part 1 > Let It Grow > Row Jimmy, Ship Of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Over Now Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T18:27:57.141268+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-02-24.136276.sbd-patched.miller.flac16"
+}

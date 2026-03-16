@@ -1,0 +1,86 @@
+{
+  "summary": "Excellent soundboard capture of a spring‑'91 classic highlighted by an epic Dark Star and soaring Birdsong",
+  "review": "The SBD source is remarkably clear – listeners describe it as buttery, crisp and “sexcellent”.  Musically the show shines with a thunderous Dark Star, a gorgeous Birdsong and a powerhouse second set featuring China‑Cat Sunflower, Looks Like Rain and Peggy‑O.  A few minor gripes (Jack Straw’s lack of crescendo, a synth‑y Baby Blue) don’t dent the overall brilliance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over ten detailed reviews overwhelmingly praise both performance and recording; weighted average of show (≈4.7) and tape quality (≈4.8) yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Solid, clear mix with buttery highs and tight lows; reviewers note “solid”, “crisp”, “sexcellent”.  No major drop‑outs or distortion mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Birdsong",
+      "China Cat Sunflower",
+      "Looks Like Rain",
+      "Peggy-O"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "Baby Blue"
+    ],
+    "setlist_flow": "First set builds nicely with strong Jack Straw, Peggy‑O and Candyman leading into a highlight‑filled Birdsong.  Second set erupts with an “unreal” China‑Cat transition jam, a soaring Dark Star, powerful Looks Like Rain and a fiery drum duet, ending on a synth‑tinged Baby Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for incendiary lead work – “perfect tone”, driving the Dark Star and Birdsong with intense fire.",
+    "Phil": "Noted for solid bass lines, especially on TT Blues and Looks Like Rain; praised for locking in with Bruce and Jerry.",
+    "Bob": "Vocals generally strong but a vocal‑delay effect on LLR was called “cringe”.",
+    "Keys": "Vince’s higher‑pitched keyboard voicings noted; electronic/spacey textures add color, though Baby Blue’s synth feel divided opinion.",
+    "Drums": "The drum duet described as “insane” and a highlight of the night."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Birdsong": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T17:56:32.971684+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-01.sbd.miller.31966.sbeok.flac16"
+}

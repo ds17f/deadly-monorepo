@@ -1,0 +1,39 @@
+{
+  "summary": "Audience tape with noticeable crackle captures a beloved show highlighted by an enthusiastic St. Stephen.",
+  "review": "The recording is an audience source that suffers from some crackling and limited fidelity, but it conveys the energy of a favorite concert for the reviewer. The performance itself is praised, especially the moment when the crowd shouted to Phil during St. Stephen, making it a memorable highlight despite the rough tape quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "Only one review; reviewer gave 4 stars and expressed strong positive feelings about the show, but mentions audible crackle which lowers the recording score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Noticeable crackling and ambient crowd noise; captures atmosphere but lacks clarity of a soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Enthusiastic audience interaction, with a memorable Phil moment during St. Stephen; overall enjoyment outweighs tape imperfections."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Crowd shouted to Phil for St. Stephen, indicating strong audience connection.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T20:38:51.950635+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-09.140670.FOB.Schoeps.unknown.Ammons.Noel.t-flac1648"
+}

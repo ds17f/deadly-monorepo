@@ -1,0 +1,39 @@
+{
+  "summary": "Harsh, out‑of‑phase recording with a notably out‑of‑tune Jerry on “Row Jimmy”, requiring EQ tweaks",
+  "review": "The single fan review flags this tape as slightly harsh and suffering from phase problems, recommending listeners adjust the EQ. Musically the show is marred by Jerry Garcia’s guitar being terribly out of tune during Row Jimmy, with no other highlights mentioned.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "low",
+    "rationale": "Only one low‑star review; both the performance (out‑of‑tune guitar) and recording (harsh, phase issues) are criticized, leading to a rating just above the 2‑star level."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Harsh tonal balance, noticeable phase problems ('hemispheres out of phase'), EQ adjustments needed; overall sound is difficult to listen through."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Row Jimmy"
+    ],
+    "setlist_flow": "No comments on set structure; the only specific performance issue noted is an out‑of‑tune guitar on Row Jimmy."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar horribly out of tune during Row Jimmy, described as a 'crime'.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:19:45.972561+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-05-03.nak700.cousinit.98294.flac16"
+}

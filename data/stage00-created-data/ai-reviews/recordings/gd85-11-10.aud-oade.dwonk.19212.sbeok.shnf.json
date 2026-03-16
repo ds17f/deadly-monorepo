@@ -1,0 +1,68 @@
+{
+  "summary": "Rich Oade audience mix captures a stellar Feel Like a Stranger performance with standout segues and strong second‑set energy.",
+  "review": "Fans rave about the soaring ending of \"Feel Like a Stranger\" and the novelty half‑step into \"I Know You Rider,\" calling this one of the best versions ever. The Oade audience recording is praised for its big, rich sound and clear vocal presence, making the show highly listenable despite a few comments about fading vocals later in the set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 3.7/5, with most reviewers highlighting excellent performance and a good‑to‑excellent Oade audience mix; the weight of positive comments pushes the overall AI rating to around four stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Big, rich Oade sound with a neat mix and high modulation on Jerry’s vocals; no major drop‑outs or distortion noted, though one reviewer mentioned occasional vocal fade."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like a Stranger",
+      "Half-Step > I Know You Rider",
+      "Cassidy",
+      "Playing in the Band",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set features memorable segues (Half‑Step into I Know You Rider, Stagger Lee into Cassidy) and a powerful closing jam on \"Feel Like a Stranger,\" giving the second half an especially strong momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are highlighted for their presence in the mix (high modulation), though one reviewer noted they sounded fading/spotty later in the show.",
+    "Phil": "His role in the Half‑Step > I Know You Rider transition is praised as a fun novelty.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Feel Like a Stranger": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Half-Step > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:23:08.658102+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-11-10.aud-oade.dwonk.19212.sbeok.shnf"
+}

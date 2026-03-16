@@ -1,0 +1,58 @@
+{
+  "summary": "A clear, well‑mixed recording captures a scorching second set highlighted by The Other One, Comes A Time and a rare It's Nobody's Fault But Mine.",
+  "review": "This show delivers a blistering second set – the band tears into The Other One, rolls through a soaring Comes A Time and even slips into the seldom‑heard It's Nobody's Fault But Mine.  The mix is notably clear and balanced, though tension erupts when Brent sings \"I Don't Need Love Anymore\" causing Jerry to briefly walk off stage.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the musical performance and the clear, well‑balanced recording; only a single critical comment lowers the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note the mix is clearer than comparable Oade source, with balanced drums and no major dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Comes A Time",
+      "It's Nobody's Fault But Mine"
+    ],
+    "poor_songs": [
+      "I Don't Need Love Anymore"
+    ],
+    "setlist_flow": "Second set launches hot, builds tension during Brent’s vocal, but rebounds strongly with classic jams; overall flow remains high despite the brief Jerry walk‑off."
+  },
+  "band_member_comments": {
+    "Jerry": "Walked off stage during Brent's \"I Don't Need Love Anymore\" then rejoined for a rare \"It's Nobody's Fault But Mine\".",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland sang \"I Don't Need Love Anymore\", creating on‑stage tension.",
+    "Drums": "Kick drum noted as less overpowering than in Oade source; Jerry was searching for drums during the tense moment."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "It's Nobody's Fault But Mine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Don't Need Love Anymore": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T08:34:32.238232+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-09-03.beyer.agan.1681.sbefail.shnf"
+}

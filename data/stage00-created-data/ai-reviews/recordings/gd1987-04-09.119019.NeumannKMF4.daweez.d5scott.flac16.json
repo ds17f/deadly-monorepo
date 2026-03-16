@@ -1,0 +1,45 @@
+{
+  "summary": "Recording source unknown, but this first‑night capture delivers electrifying drums, a soaring Space and arguably the best China Doll ever heard.",
+  "review": "The reviewer, who witnessed the concert live, raves about the Rhythm Devils segment, an inspiring Space, and what they call the best China Doll they've ever experienced. No technical details about the tape are given, but the 4‑star rating reflects a highly enjoyable performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one review; strong positive comments about the musical performance but no information on recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention any aspects of soundboard, audience mix, clarity or other technical qualities."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First night praised for a powerful Rhythm Devils/drums segment followed by an inspired Space and a superb China Doll, making the show feel like pure bliss."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Mentions Brent Mydland’s presence (refers to his B‑3 organ) and Bill Kreutzmann’s drumming in earlier shows, indicating appreciation for the keyboards.",
+    "Drums": "Highly positive remarks about Mickey Hart’s drumming during the Rhythm Devils, describing it as “goosebumps” material."
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T21:24:40.425169+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-04-09.119019.NeumannKMF4.daweez.d5scott.flac16"
+}

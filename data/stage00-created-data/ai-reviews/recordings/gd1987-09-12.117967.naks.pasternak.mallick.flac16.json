@@ -1,0 +1,31 @@
+{
+  "summary": "Very limited feedback; no details on recording or performance quality",
+  "review": "The sole review offers only a brief personal note and provides no information about the audio source, sound clarity, setlist, or individual performances, making it impossible to assess the show's musical merits or the recording's technical fidelity.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.5,
+    "confidence": "low",
+    "rationale": "Only one vague review with a zero-star rating; no substantive comments on music or sound quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about audio clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T03:05:40.360088+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-12.117967.naks.pasternak.mallick.flac16"
+}

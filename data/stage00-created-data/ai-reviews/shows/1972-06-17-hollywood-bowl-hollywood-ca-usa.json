@@ -1,0 +1,65 @@
+{
+  "summary": "Stella Blue debut, soaring China Cat Sunflower, monster Truckin’/Other One jam",
+  "blurb": "The show delivers a historic Pigpen farewell highlighted by the first‑ever Stella Blue and a blistering Truckin’ → The Other One sequence. Jerry’s guitar shines on China Cat Sunflower and Playing In The Band, while Keith’s organ adds depth throughout. Overall a powerful performance despite modest audience recording quality.",
+  "review": "June 17, 1972 at the Hollywood Bowl captured one of the Grateful Dead’s most emotionally charged evenings. Pigpen’s final appearance is felt in every organ swell, especially on the debut of Stella Blue, and the band rides that energy into a soaring China Cat Sunflower → I Know You Rider segue and a tight Playing In The Band. The second set builds momentum with a monster Truckin’ → The Other One jam that rolls straight into a beautifully rendered Ramble On Rose. Jerry’s tone is warm and present, Phil locks in solid bass foundations, and Bill Kreutzmann drives the rhythm with his characteristic precision. Keith’s piano/organ work complements Pigpen’s soulful playing, rounding out a show that feels both historic and musically exhilarating.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 56,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Multiple recordings (two positive, one mixed) consistently praise the performance: debut of Stella Blue, strong Pigpen organ farewell, monster Truckin'/The Other One jam, and tight band interplay. No recurring negative comments about musical execution were found, just recording fidelity issues.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1972-06-17.shure.melton.miller.116272.flac16",
+    "reason": "Front‑row audience mic provides clear organ and guitar, good overall fidelity, and captures the debut of Stella Blue and key jams without the severe dropouts found in other tapes."
+  },
+  "key_highlights": [
+    "First ever performance of \"Stella Blue\" with poignant Pigpen organ",
+    "Monster Truckin' → The Other One jam that showcases tight improvisation",
+    "Soaring China Cat Sunflower → I Know You Rider segue and strong Playing In The Band"
+  ],
+  "song_highlights": [
+    "Stella Blue",
+    "The Other One",
+    "Playing In The Band",
+    "China Cat Sunflower",
+    "Truckin'",
+    "Ramble On Rose"
+  ],
+  "band_performance": {
+    "Jerry": "Tight, warm‑toned guitar work and expressive vocals; his amp tone is captured directly, shining on Stella Blue, China Cat Sunflower, and Playing In The Band.",
+    "Phil": "Solid bass foundation with supportive interplay; noted for a lighthearted opening joke and steady groove throughout the jams.",
+    "Bob": "Vocal form strong on Black Throated Wind and energetic delivery on Beat It On Down The Line; stage antics (hat incident) add liveliness.",
+    "Keith": "Prominent organ/piano presence, especially on Stella Blue, complementing Pigpen's organ and adding depth to the second‑set jams.",
+    "Mickey": "",
+    "Billy": "Perfect drumming for this era; drives the rhythm with precision, highlighted as a key element in the Truckin'/The Other One flow."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-20T14:59:26.553351+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Stella Blue"
+    ],
+    [
+      "Truckin'",
+      "Drums",
+      "The Other One",
+      "Ramble On Rose"
+    ],
+    [
+      "Playing In The Band"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ]
+  ]
+}

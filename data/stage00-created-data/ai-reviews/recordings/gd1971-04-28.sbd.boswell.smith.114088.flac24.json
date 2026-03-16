@@ -1,0 +1,45 @@
+{
+  "summary": "A powerful show highlighted by Bird Song and a historic The Other One, captured in an overall good‑quality (source unspecified) recording.",
+  "review": "Both reviewers rave about the performance – Pigpen shines on Bird Song and the band delivers a memorable, historic rendition of The Other One with Tom Constanten joining for the final jam.  No specific technical issues are noted, suggesting the recording is at least solid enough to enjoy the music.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Strong positive comments about the musical performance (standout songs and guest appearance) outweigh the lack of concrete recording‑quality details."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit technical commentary; reviewers imply the audio is adequate for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers emphasize a high‑energy set, noting strong Pigpen contributions and an especially historic The Other One jam that closes the show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Tom Constanten joins the jam at the end of The Other One.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T06:01:52.753442+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-28.sbd.boswell.smith.114088.flac24"
+}

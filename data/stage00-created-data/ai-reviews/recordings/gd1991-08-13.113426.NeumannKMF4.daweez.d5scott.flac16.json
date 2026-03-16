@@ -1,0 +1,31 @@
+{
+  "summary": "Decent show with average performance, recording considered better than typical soundboard but no specific details",
+  "review": "The reviewer finds the concert merely good—not outstanding—rating it a middling three stars. While they note the recording sounds better than a standard soundboard, there are no concrete comments on clarity or mix.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review; the show is described as only “good” and the recording quality isn’t detailed, leading to a low‑confidence average rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments on sound clarity or mix; reviewer only implies it sounds better than typical soundboard recordings."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Overall described as a decent but unremarkable performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T23:02:08.309260+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-08-13.113426.NeumannKMF4.daweez.d5scott.flac16"
+}

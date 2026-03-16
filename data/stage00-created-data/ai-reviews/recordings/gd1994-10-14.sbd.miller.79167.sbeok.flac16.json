@@ -1,0 +1,100 @@
+{
+  "summary": "Crisp soundboard capture of a 1994 show highlighted by an epic Scarlet>Fire, though the second‑set song choices drag it down.",
+  "review": "The recording is praised for its crystal‑clear, well‑balanced mix – many reviewers call it phenomenal and one of the best Charlie Miller uploads. Musically the concert shines on the first set and the 32‑minute Scarlet>Fire opener, with standout versions of Box of Rain, Ramble on Rose, Fire on the Mountain and a solid Jack Straw start, but the second‑set selection (Corrina, Samba, Looks Like Rain) leaves several fans disappointed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently rated excellent while show quality is mixed – strong first set and Scarlet>Fire versus weaker second‑set choices, yielding an overall rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear, well‑balanced mix; many reviewers describe the sound as phenomenal and superbly remastered by Charlie Miller."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "Box of Rain",
+      "Ramble on Rose",
+      "Fire On The Mountain",
+      "Jack Straw",
+      "Attics",
+      "Liberty",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Corrina",
+      "Samba",
+      "Looks Like Rain"
+    ],
+    "setlist_flow": "First set is energetic and well‑played; the 32‑minute Scarlet>Fire opener electrifies the crowd, but the second set loses momentum with less popular selections like Corrina and Samba, leading to a mixed overall pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work on Scarlet>Fire and other jams is praised as fiery and inspiring, though several reviewers note his vocals sound weak and strained at this point in ’94.",
+    "Phil": "Phil’s bass shines on the Box of Rain and he delivers solid support throughout; one reviewer calls his playing “nice”.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drumming is highlighted as a strong element – one reviewer simply says “check out drums”, indicating an especially tight rhythm section."
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 7,
+      "negative_mentions": 3,
+      "total_mentions": 10
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire On The Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Samba": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:21:35.526896+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-14.sbd.miller.79167.sbeok.flac16"
+}

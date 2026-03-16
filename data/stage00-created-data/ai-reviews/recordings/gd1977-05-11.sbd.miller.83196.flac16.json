@@ -1,0 +1,106 @@
+{
+  "summary": "A pristine soundboard capture of a classic May ’77 show, highlighted by a smoking Sugaree, Fire on the Mountain and a powerhouse second set.",
+  "review": "The recording is a high‑quality SBD upgrade that delivers crisp, bass‑heavy mix with only minor glitches that have been patched. Musically the performance is near‑flawless – Jerry’s guitar and vocals soar, Phil locks in tight, and the second half erupts with standout versions of Sugaree, Fire on the Mountain, Samson & Delilah, Uncle John’s and Wharf Rat. Overall it ranks among the top shows of Spring ’77.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over a dozen enthusiastic 5‑star reviews praise both the performance and the soundboard quality; only one mixed review tempers the score, yielding an overall rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, energetic mix with a bass‑heavy character and occasional echo; minor glitches/pitch corrections were patched but do not detract from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Fire on the Mountain",
+      "Scarlet > Fire",
+      "Samson & Delilah",
+      "Uncle John's",
+      "Wharf Rat",
+      "Looks Like Rain",
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds solid momentum with strong renditions of Big River, Loser and Sugaree; second set launches into a high‑energy peak featuring Samson, Fire, and a seamless UJB → Wharf Rat transition."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for scorching guitar tones, powerful vocals and memorable solos throughout the show.",
+    "Phil": "Noted for solid bass foundation and several “tremendous moments” alongside Jerry.",
+    "Bob": "",
+    "Keys": "Keith’s Moog/Hammond textures get special mention (especially on Loser) and the mix is described as bass‑heavy with a hint of echo.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Deal": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T00:30:00.426309+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-11.sbd.miller.83196.flac16"
+}

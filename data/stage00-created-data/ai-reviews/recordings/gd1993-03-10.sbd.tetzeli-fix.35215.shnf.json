@@ -1,0 +1,84 @@
+{
+  "summary": "Crystal‑clear soundboard captures a solid early‑90s show with standout jams on “Stranger”, “Let It Grow” and an unforgettable “All All Over Now, Baby Blue” encore.",
+  "review": "The recording is praised as one of the cleanest SBD’s ever released – instruments are distinct, the mix round and full. The performance is a strong first set and a second set that, while occasionally clunky, delivers high‑energy moments such as “Stranger”, a savage 12‑minute “Let It Grow” and an all‑time great “All All Over Now, Baby Blue”. Overall fans find it a solid 1993 concert, though some note the “Way to Go” as a low point.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Recording quality is rated excellent; show quality is solid but not universally hailed as top‑tier for the year, yielding an overall rating around four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as the cleanest SBD around – crisp, distinct instruments, round and full mix with no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Let It Grow",
+      "All All Over Now, Baby Blue",
+      "The Wheel"
+    ],
+    "poor_songs": [
+      "The Way to Go"
+    ],
+    "setlist_flow": "First set is consistently strong; second set delivers big jams but feels a bit clunky in places, with uneven pacing despite several high points."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his fat funky tone, soaring solos, and ‘Jimi‑lessons’ on Watchtower; also noted for vocal delivery on Peggy-O.",
+    "Phil": "Mentioned delivering “supremely phunky fills” during the Corrina jam.",
+    "Bob": "Highlighted for trading blues licks with Jerry on The Same Thing and adding extra verses to Corrina.",
+    "Keys": "Vince (keys) is lauded for co‑leading jams on Stranger, Let It Grow and other high‑energy moments.",
+    "Drums": "The drummers are noted for pushing the jam forward, especially during Queen Jane and the overall rhythmic drive."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All All Over Now, Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Way to Go": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T10:05:30.508929+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-10.sbd.tetzeli-fix.35215.shnf"
+}

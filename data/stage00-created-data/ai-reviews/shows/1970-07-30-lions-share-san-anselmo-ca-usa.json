@@ -1,0 +1,60 @@
+{
+  "summary": "Acoustic set delivers strong folk‑gospel tunes, highlighted by To Lay Me Down",
+  "blurb": "The show opens with a relaxed acoustic set featuring standout performances of 'To Lay Me Down', 'Rosa Lee McFall', and 'Swing Low (Sweet Chariot)'. Jerry’s vocal phrasing is praised while Phil’s bass occasionally overwhelms the mix. Recording quality is generally good, though some hiss and bass muddiness are noted.",
+  "review": "On July 30, 1970 at Lion's Share in San Anselmo, the Grateful Dead offered a concise, acoustic‑focused first set that feels like a snapshot of their early‑70s folk‑gospel mood. Highlights include a beautifully rendered 'To Lay Me Down', the heartfelt delivery on 'Rosa Lee McFall' and 'A Voice From On High*', and Jerry Garcia’s soulful vocal phrasing on 'Swing Low (Sweet Chariot)'. While Phil Lesh’s bass provides a rich foundation, several listeners note that it sits too forward, creating occasional muddiness that buries some of Jerry’s picking. The set flows smoothly into a brief New Riders of the Purple Sage segment where Mickey Hart adds his percussive touch. Of the two available soundboard sources, the Cotsman recording (gd70-07-30.sbd.cotsman.17077.sbeok.shnf) offers clearer vocals and guitar with only minor bass over‑emphasis and tape hiss, making it the preferred listening choice.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.7,
+      "sentiment_rationale": "One recording is clearly positive, the other mixed; overall sentiment leans positive with multiple reviewers praising the acoustic set and standout songs, offset by some criticism of bass muddiness and hiss.",
+      "final_calculation": "2.5 + 0.1 + 0.7 = 3.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-07-30.sbd.cotsman.17077.sbeok.shnf",
+    "reason": "Good soundboard source with clear vocals and guitar; only minor bass forwardness and tape hiss, making it the clearest representation of the performance."
+  },
+  "key_highlights": [
+    "Beautiful acoustic performances, especially 'To Lay Me Down' and folk‑gospel numbers.",
+    "Jerry Garcia’s vocal phrasing shines on 'Swing Low (Sweet Chariot)' and other songs.",
+    "Phil Lesh’s bass adds richness but can be overly forward, causing occasional muddiness.",
+    "New Riders of the Purple Sage segment adds eclectic flavor with Mickey Hart’s percussion."
+  ],
+  "song_highlights": [
+    "To Lay Me Down",
+    "Rosa Lee McFall",
+    "A Voice From On High*",
+    "Swing Low (Sweet Chariot)"
+  ],
+  "band_performance": {
+    "Jerry": "His vocal phrasing shines on 'Swing Low (Sweet Chariot)' and the folk numbers; a few reviewers note his picking gets lost under an overly loud bass and mention a brief profanity during banter.",
+    "Phil": "Bass lines are praised for richness, though some listeners complain the bass sits too forward, creating muddiness that occasionally obscures other instruments.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Featured in the New Riders of the Purple Sage segment, adding percussion flavor to the eclectic second half.",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-19T22:17:08.327971+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "To Lay Me Down"
+    ],
+    [
+      "Rosa Lee McFall"
+    ],
+    [
+      "A Voice From On High*"
+    ],
+    [
+      "Swing Low (Sweet Chariot)"
+    ]
+  ]
+}

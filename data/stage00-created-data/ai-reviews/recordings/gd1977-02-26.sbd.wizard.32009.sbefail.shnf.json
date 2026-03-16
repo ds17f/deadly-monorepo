@@ -1,0 +1,57 @@
+{
+  "summary": "Betty‑board soundboard delivers crystal‑clear mix while the set shines with a monster Eyes of the World and a smoking Slipknot! despite occasional track‑break frustrations.",
+  "review": "The recording benefits from Betty’s meticulous board work, giving every instrument – especially Jerry’s clear lead tones and Phil’s rare bass solo – excellent definition. The performance is highlighted by an electrifying Eyes of the World jam that flows into a standout Slipknot!, plus tight renditions of Around And Around and Dancing in the Street. A few listeners complain about excessive track breaks, which detracts from an otherwise superb listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Four out of five reviews rave about both the musical performance and the high‑quality Betty‑board mix; only one review is sharply negative, focusing on track‑break issues rather than the music itself."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Betty’s board provides a balanced, crisp sound with clear Jerry guitar and audible bass solo. The only drawback mentioned is the profusion of track breaks that interrupt playback."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Slipknot!",
+      "Around And Around",
+      "Dancing in the Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set moves smoothly from a tight first half (despite an early technical hiccup) into a second half that builds momentum, highlighted by extended jams and seamless transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "His tone is described as clear, cool and delectable; notable use of a Moog synth and the new Mutron envelope filter.",
+    "Phil": "Delivers a rare, distinct bass solo during Eyes of the World – praised as amazing.",
+    "Bob": "Mentioned briefly having technical difficulties early in the first set, but no specific performance critique.",
+    "Keys": "Keith appears only fleetingly on an electric keyboard/Moog; reviewers note his brief appearance and later skepticism toward synths.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancing in the Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around And Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T20:14:08.963554+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-02-26.sbd.wizard.32009.sbefail.shnf"
+}

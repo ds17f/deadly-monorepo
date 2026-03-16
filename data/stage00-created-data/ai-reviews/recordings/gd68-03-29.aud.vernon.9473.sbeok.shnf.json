@@ -1,0 +1,62 @@
+{
+  "summary": "A surprisingly clear 1968 audience tape that captures a soaring New Potato Caboose and radiant Morning Dew, making it one of the best‑sounding shows of the era.",
+  "review": "The recording is widely praised as the finest audience source from ’68 – crisp enough to rival many early soundboards – and it showcases a high‑energy performance highlighted by an epic New Potato Caboose and a beautiful Morning Dew.  While some reviewers note minor mix quirks (Phil low in the blend, truncated Lovelight) and wish for a complete set, the overall musical impact is very strong.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, emphasizing excellent sound quality and standout performances; a few lower scores are outweighed by the consensus of high praise."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners describe it as the best ’68 audience tape, with surprising clarity, good instrument separation and minimal echo; occasional mix issues (Phil low, Lovelight cut short) are noted but do not detract from overall listenability."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "New Potato Caboose"
+    ],
+    "poor_songs": [
+      "Lovelight"
+    ],
+    "setlist_flow": "The set opens powerfully with Morning Dew, builds through the Quick/Dead tour momentum, peaks at New Potato Caboose, then loses a bit of drive toward the end; overall pacing is strong despite an incomplete recording."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as howling, sustained and at its best during New Potato Caboose.",
+    "Phil": "Bass is noted as deep and impressive on some tracks, though a few reviewers feel Phil sits low in the mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "New Potato Caboose": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Born Cross-Eyed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T08:06:04.322210+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-03-29.aud.vernon.9473.sbeok.shnf"
+}

@@ -1,0 +1,95 @@
+{
+  "summary": "Excellent matrix recording captures a high‑energy 1990 show with standout To Lay Me Down → The Promised Land and vibrant Jerry Hornsby jams.",
+  "review": "The performance is described as sparkling, unhurried joy with several highlights – the fiery To Lay Me Down/Promised Land sequence, a soaring Row Jimmy flute moment, and an exuberant second‑set pre‑drums segment that rolls into Sugar Magnolia and a Knockin’ on Heaven’s Door encore. Charlie Miller’s matrix mix is repeatedly praised for its crispness, superb separation, and just enough audience ambience to convey the concert atmosphere.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All six reviews are overwhelmingly positive (five 5‑star, one 4‑star) and consistently praise both the musical performance and the high‑quality matrix recording."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced sound with great instrument separation; audience ambience is present but never overpowers the mix. Reviewers call it “sound couldn’t be better” and note no audible flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "To Lay Me Down > The Promised Land",
+      "Foolish Heart / The Other One",
+      "Row Jimmy",
+      "Sugar Magnolia",
+      "Knockin' on Heaven's Door"
+    ],
+    "poor_songs": [
+      "Loser"
+    ],
+    "setlist_flow": "The show is described as a short, high‑energy incarnation with an unhurried feel. The first‑set closer (To Lay Me Down/Promised Land) “smokes,” followed by a pre‑drums second set that builds momentum into joyful closers like Sugar Magnolia and a heartfelt encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s flute on Row Jimmy and his energetic vocals on Half Step were highlighted; his guitar tone throughout the show received praise.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby’s lively keyboards added excitement, while Vince’s early contributions are noted; reviewers appreciate the keyboard chemistry without criticizing the transition.",
+    "Drums": "The pre‑drums segment of the second set was singled out for its energy and impact."
+  },
+  "song_mentions": {
+    "To Lay Me Down": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Promised Land": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Picasso Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T12:35:08.282699+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-18.sbd.miller.79022.sbeok.flac16"
+}

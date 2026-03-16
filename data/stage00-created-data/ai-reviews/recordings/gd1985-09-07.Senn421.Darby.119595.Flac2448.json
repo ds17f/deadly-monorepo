@@ -1,0 +1,39 @@
+{
+  "summary": "Clear, well‑balanced mix captures a high‑energy show with a standout Baby Blue performance",
+  "review": "The reviewer praises the recording’s mix and dynamics, noting that the subtle guitar work shines in quieter moments. The band is described as strong and energetic, with Baby Blue highlighted as a particular highlight of the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one detailed review, but it is overwhelmingly positive about both performance and sound quality; no rating was given by the reviewer."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Mix is praised as clear and dynamic; listeners hear subtle guitar nuances, indicating a clean recording though source type isn’t specified."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is remembered as energetic with cool song choices, delivering strong momentum throughout the set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Subtle guitar work noted in quiet parts (referred to as 'Bobby').",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T09:01:02.959655+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-07.Senn421.Darby.119595.Flac2448"
+}

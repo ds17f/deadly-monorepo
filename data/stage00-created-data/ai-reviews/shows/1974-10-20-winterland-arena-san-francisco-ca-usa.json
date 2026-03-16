@@ -1,0 +1,65 @@
+{
+  "summary": "High‑energy ’74 Winterland with soaring China>Rider and transcendent second set",
+  "blurb": "The show delivers a blistering China Cat Sunflower > I Know You Rider and an ecstatic second‑set jam that peaks with The Other One into Wharf Rat. Jerry’s guitar shines, Keith’s keyboards sparkle on Cold Rain & Snow, and the dual drummers create a powerful wall of sound despite occasional mix quirks.",
+  "review": "October 20, 1974 at Winterland captured one of the band’s most electrifying evenings. The first set is a roller‑coaster that builds from a tight Jack Straw into a soaring China Cat Sunflower > I Know You Rider, while the second set ventures deep into experimental territory with a 30‑minute Seastones suite and a monster jam through The Other One into Wharf Rat before looping back to Playing In The Band. By the third set the band is still on fire—Good Lovin’, Eyes Of The World and Stella Blue flow effortlessly, though the mix lets the bass drum dominate at times. Jerry Garcia’s guitar work is described as eloquent and crystal‑clear, peppered with memorable riffs that lift each song. Keith Godchaux adds jazzy flourishes on Cold Rain & Snow and a synth‑laden soundscape on Seastones, while Phil Lesh provides towering bass lines, especially on The Other One. Both drummers lock in for most of the night; Mickey’s return is noted as a special moment even if his playing feels slightly out of sync early on, and Bill delivers solid, “great” support throughout.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 48,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Five of six detailed recordings are positive and one is mixed; reviewers consistently praise the high‑energy performance, standout jams (China>Rider, The Other One, Seastones) and strong individual playing, with no recurring negative criticism about the music itself.",
+      "final_calculation": "2.5 + 0.4 + 1.4 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1974-10-20.sbd.alligator.GEMS.94851.flac16",
+    "reason": "Good soundboard source with clear instrument separation; captures the high‑energy set and key highlights despite a bass‑drum heavy mix."
+  },
+  "key_highlights": [
+    "Soaring China Cat Sunflower > I Know You Rider transition",
+    "Epic second‑set jam through The Other One into Wharf Rat",
+    "Groundbreaking 30‑minute Seastones experimental suite",
+    "Tight dual‑drummer interplay and powerful Wall of Sound ambience"
+  ],
+  "song_highlights": [
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "The Other One",
+    "Wharf Rat",
+    "Seastones*"
+  ],
+  "band_performance": {
+    "Jerry": "Eloquent, dynamic guitar work with crystal‑clear tone; memorable riffs on Wharf Rat and soaring leads on China>Rider, though some mixes bury his sound.",
+    "Phil": "Towering bass lines, especially on The Other One; generally in top form with solid groove despite occasional mix emphasis.",
+    "Bob": "Powerful vocals on Tennessee Jed and rock‑n‑roll energy on Around & Around; noted for a goofy “Gen‑e‑see” line during Tennessee Jed.",
+    "Keith": "Rhodes sparkle on Cold Rain & Snow, jazzy contributions throughout, and synth work on Seastones praised as futuristic highlights.",
+    "Mickey": "Guest appearance adds special moment but at times feels under‑rehearsed and slightly out of sync early in the show.",
+    "Billy": "Great drumming that locks with Mickey for most of the night; provides a solid rhythmic foundation throughout."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-23T01:56:11.718061+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Playing In The Band",
+      "Drums**",
+      "Not Fade Away***",
+      "Drums**",
+      "The Other One",
+      "Wharf Rat",
+      "Playing In The Band"
+    ],
+    [
+      "Seastones*"
+    ]
+  ]
+}

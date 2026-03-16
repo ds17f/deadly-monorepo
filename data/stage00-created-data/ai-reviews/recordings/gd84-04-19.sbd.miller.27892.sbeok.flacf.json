@@ -1,0 +1,75 @@
+{
+  "summary": "Crystal‑clear soundboard recording of an ’84 concert that delivers a haunting Baby Blue, a scorching China Cat → I Know You Rider run and several other standout jams.",
+  "review": "Fans rave about the pristine soundboard source and rate the performance among the best of the early‑'80s run, highlighting China Cat→Rider, Wharf Rat, Bird Song, Estimated Prophet, Baby Blue and a powerful second set that closes with The Wheel and Sugar Magnolia. Jerry Garcia’s improvisational guitar work is repeatedly praised, as are Brent Mydland’s eerie keyboard textures. No technical flaws or weak songs were reported.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer stars (average ~4.8) and uniformly glowing comments about both the music and the soundboard quality justify a top‑tier rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp soundboard capture praised as “practically perfect”; no dropout or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Wharf Rat",
+      "Bird Song",
+      "Estimated Prophet",
+      "Alligator (Baby Blue)",
+      "The Wheel",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a soaring second set with seamless transitions and epic jams, especially the China Cat→Rider sequence and an emotionally charged Baby Blue encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone and improvisational runs are highlighted as superb, with mentions of “Junky Jerry yearning” and his still‑rocking playing despite personal struggles.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s synth/keyboard effects are noted for creating a haunting atmosphere on Baby Blue.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alligator (Baby Blue)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T16:02:37.495714+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-04-19.sbd.miller.27892.sbeok.flacf"
+}

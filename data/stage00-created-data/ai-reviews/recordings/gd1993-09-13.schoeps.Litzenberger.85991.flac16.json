@@ -1,0 +1,39 @@
+{
+  "summary": "Good matrix recording that captures the lively Scarlet performance with solid audience ambience.",
+  "review": "Both reviewers find the show enjoyable, especially highlighting the energy of \"Scarlet\" and Jerry Garcia’s ripping guitar work. The recording is praised for its audience presence (AUD) and Phil’s bass in the mix, though one notes a cleaner version existed, suggesting the current sound is good but not pristine.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Two moderate (3‑star) reviews give balanced praise for the performance and mention decent but not exceptional audio quality, leading to a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Includes audience mic capture giving an atmospheric feel; clarity acceptable though not as clean as earlier versions."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific criticism; reviewers felt the set flowed well enough to highlight Scarlet."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry's guitar work described as \"ripping\" and energetic.",
+    "Phil": "Phil's bass presence noted positively in this mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:51:04.475217+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-13.schoeps.Litzenberger.85991.flac16"
+}

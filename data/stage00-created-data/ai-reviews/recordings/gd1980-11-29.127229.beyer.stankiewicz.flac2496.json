@@ -1,0 +1,39 @@
+{
+  "summary": "Warm Beyer audience recording captures a killer ’80 show highlighted by an outstanding “The Other One” performance.",
+  "review": "Fans rave about the superb Beyer‑88 audience capture – warm, clear and right in the sweet spot – making the missing soundboard irrelevant. The concert itself is described as a “killer” gig with many calling it one of the best shows of the era, especially praising a monster rendition of “The Other One”. A few light‑hearted notes about Bob’s pre‑encore banter add extra charm.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews are highly favorable (four 5‑star, one 4‑star); both the musical performance and the Beyer audience recording are praised without criticism."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Beyer 88 mics provide a warm, balanced sound that sits in the sweet spot; reviewers note crystal‑clear detail and say “who needs a board”, indicating no noticeable dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Show described as a high‑energy, killer performance with strong second‑set momentum; fans highlight the memorable “Other One” and enjoy the band’s onstage banter."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob’s pre‑encore “game” comment is noted as a humorous, in‑show moment that fans enjoy.",
+    "Keys": "Brent’s keyboards are singled out for elevating the stellar rendition of “The Other One”.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T06:14:36.127803+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-11-29.127229.beyer.stankiewicz.flac2496"
+}

@@ -1,0 +1,84 @@
+{
+  "summary": "Soundboard source with noticeable pitch/speed quirks, yet the second‑set Playin’ > Uncle John’s > Morning Dew sandwich makes this show shine.",
+  "review": "The performance is a classic early‑'70s Dead outing: a slightly uneven first set that builds into an unforgettable second‑set featuring the deep Playin' → Uncle John's Band → Morning Dew sandwich and a soaring “circle” jam. The recording, taken from an SBD cassette, suffers from speed‑up (about half‑step fast), wow‑and‑flutter and occasional level spikes at UJB, but listeners generally find it listenable and worth the musical payoff.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the music (especially the second‑set jam) while repeatedly noting technical flaws in the tape speed and fidelity; weighting show quality higher yields a solid >4 rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Cassette SBD runs fast (~½ step), exhibits wow‑and‑flutter, occasional volume spikes at the UJB segment, and some cuts; overall intelligible but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' In The Band > Uncle John's Band > Morning Dew > Uncle John's Band > Playin'",
+      "\"Circle\" jam (second set)",
+      "Jack Straw",
+      "Deal"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "First set is uneven, with a few lackluster moments, but picks up around Jack Straw and Deal. The second set lifts the whole show, delivering a deep jam sandwich and an intense “circle” improvisation that many reviewers cite as the highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for fierce, swirling solos (“masterful swirl”), intense playing on Jack Straw, Playin', and the UJB sandwich.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith’s cascading riffs on Wharf Rat are highlighted; overall keyboard work noted as solid.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin' In The Band": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Morning Dew": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T02:09:33.233644+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-11-10.sbd.unknown.3290.sbeok.shnf"
+}

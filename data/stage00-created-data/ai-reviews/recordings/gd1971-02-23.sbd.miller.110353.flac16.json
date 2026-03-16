@@ -1,0 +1,105 @@
+{
+  "summary": "Excellent soundboard capture of a fiery Port Chester show with standout Birdsong, The Other One/Wharf Rat suite and a scorching Johnny B. Goode.",
+  "review": "The recording is near‑CD quality on a soundboard source, delivering a lively mix with punchy drums and thumping bass while preserving the band’s energy. Musically the performance shines – Birdsong rings beautifully, the Truckin' > Drums > The Other One > Wharf Rat sequence is a high point, and Jerry’s Les Paul tone and solos are spectacular. Minor tuning quirks and a few songs that don’t quite reach their later heights keep it from being flawless, but overall it’s a must‑listen show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4–5 stars and praise both the performance and the near‑CD sound quality; weighting show (70%) and recording (30%) yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Near‑CD clarity with a lively mix; punchy drums, thumping bass, and clear organ. Minor guitar tuning slips noted but overall crisp and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong",
+      "The Other One > Wharf Rat",
+      "Truckin' > Drums > The Other One > Wharf Rat",
+      "Morning Dew",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [
+      "Greatest Story"
+    ],
+    "setlist_flow": "First set starts a bit scratchy but builds to strong moments like Uncle John's and Morning Dew; second set ramps up intensity with the classic Truckin'‑Drums‑Other One‑Wharf Rat suite, delivering a high‑energy climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his sunburst Les Paul tone, staccato intro on The Other One and sustained notes; overall guitar work described as spectacular.",
+    "Phil": "Noted for punchy, thumping bass lines that drive the music; also highlighted as a full‑time vocalist in 1971.",
+    "Bob": "His segue between China/Rider mentioned as well played; no specific vocal comments.",
+    "Keys": "Blue Ron’s Hammond B‑3 organ praised as sounding “pretty good”; Pigpen’s subtle organ fills receive positive nods.",
+    "Drums": "Punchy drums highlighted throughout, especially the Drum solo within the Truckin' > Drums segment."
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bobby McGee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Greatest Story": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T03:12:37.858045+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-02-23.sbd.miller.110353.flac16"
+}

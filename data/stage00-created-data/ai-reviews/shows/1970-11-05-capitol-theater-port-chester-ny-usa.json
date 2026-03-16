@@ -1,0 +1,58 @@
+{
+  "summary": "Stellar Dark Star & Other One sequence despite rough tape",
+  "blurb": "The show delivers a space‑heavy Dark Star that segues into an explosive The Other One and a crowd‑responsive Saint Stephen. Not Fade Away/Going Down the Road jam adds extra fire, while the band rides a rumbly, funky groove throughout.",
+  "review": "Port Chester’s November 5 1970 Capitol Theater show is one of those early‑’70 gems that shines through even a grainy audience recording. Jerry Garcia stretches out in a bluesy, Coltrane‑like fashion on a 21‑minute Dark Star that feels both cosmic and razor‑sharp, then hands the reins to an intense The Other One that morphs seamlessly into Saint Stephen. Phil Lesh’s bass is rumbly yet funky, laying down a rolling foundation that propels the Not Fade Away/Going Down the Road jam into a joyous climax. Though the tape suffers from hiss and bass distortion, the musical arc—from hard‑rockers like Truckin’ to the gentle Turn On Your Lovelight—remains compelling, making this performance one of the year’s top shows.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 23,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Two recordings describe the performance as stellar (Dark Star, Other One, St. Stephen) and one recording is outright positive; despite mixed comments on audio quality, the consensus on musical playing is strongly positive, warranting a solid sentiment boost.",
+      "final_calculation": "2.5 + 0.2 + 1.2 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-11-05.aud.warner.17182.sbeok.shnf",
+    "reason": "Complete show capture with the full Dark Star/Other One sequence, despite poor audio quality; it remains the most comprehensive source."
+  },
+  "key_highlights": [
+    "Space‑heavy Dark Star that anchors the first set",
+    "The Other One → Dark Star → Saint Stephen segue delivers high energy",
+    "Not Fade Away/Going Down the Road jam adds fire and crowd interaction"
+  ],
+  "song_highlights": [
+    "The Other One",
+    "Dark Star",
+    "Saint Stephen",
+    "Not Fade Away"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s lead work is described as bluesy, Coltrane‑like and ‘killing it’ throughout Dark Star and the extended jams.",
+    "Phil": "Phil’s bass is rumbly yet funky, with rolling bottom runs that drive the Not Fade Away jam forward.",
+    "Bob": "",
+    "Pigpen": "Guest keyboards (Ned Lagin and Keith) add an abstract, feedback‑laden layer to The Other One → Dark Star sequence, though they’re barely audible on this tape.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-20T00:36:30.716858+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Truckin'",
+      "Drums",
+      "The Other One",
+      "Dark Star",
+      "Saint Stephen",
+      "Not Fade Away",
+      "Goin' Down The Road Feeling Bad",
+      "Not Fade Away",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

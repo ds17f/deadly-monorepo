@@ -1,0 +1,39 @@
+{
+  "summary": "Mixed recording quality – hissy and distant – but a highlight performance of “Saint of Circumstance”.",
+  "review": "One reviewer raves about the show, especially the rendition of “Saint of Circumstance”, while another warns that the tape suffers from noticeable hiss and a distant, low‑fidelity sound. The recording is likely an audience capture with modest clarity, making it more appealing to collectors than audiophiles.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "low",
+    "rationale": "Positive note on a standout song boosts the show rating, but the recording’s hiss and lack of fidelity lower the overall score; limited review count reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Tape hiss present, sound is distant and lacks fidelity; not suitable for listeners who prefer loud, clear GD recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Saint of Circumstance"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:40:30.605222+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-12-28.aud.glyde.10534.sbeok.shnf"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Good audience recording with improved clarity, featuring a sprawling 72‑minute Bird Song and a hefty Other One.",
+  "review": "The taper’s master offers a noticeable step up from other available sources, delivering clearer sound for this unknown‑date show. Musically the performance shines with an epic 72‑minute Bird Song and a powerful, hefty rendition of The Other One.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "One detailed 4‑star review highlights strong musical moments and notes the recording is an improvement over previous versions, indicating a good show and decent recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Marked improvement over other available tapes; clearer than typical audience sources though no specific technical issues are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing or flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:41:44.032627+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-19.154185.aud.deal.smith.clugston.flac16"
+}

@@ -1,0 +1,58 @@
+{
+  "summary": "Excellent soundboard capture of a fiery Luxembourg show with standout 'It Hurts Me Too', rippin' PITB and Promised Land, despite a weak Truckin'.",
+  "review": "Both reviewers rave about the superb 1972 European performance – highlighting Pigpen’s classic “It Hurts Me Too”, an incendiary “Playing In The Band” that segues into a slam‑dance “Promised Land”, and tight groove throughout. The soundboard mix is described as crystal‑clear and worthy of five stars, though one reviewer notes Bob Weir’s cheesy banter and a sub‑par vocal on “Truckin’”. Overall the set is praised as a condensed, high‑energy snapshot of Europe ’72.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Both reviewers gave 5‑star ratings and praised both performance and soundboard quality; only minor vocal criticism prevents a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Mix described as crisp, well‑produced and 5‑star; no technical flaws mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "It Hurts Me Too",
+      "Playing In The Band",
+      "Promised Land"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "First set described as hot and tightly condensed, delivering a powerful snapshot of the Europe ’72 era with strong transitions and high dance‑ability."
+  },
+  "band_member_comments": {
+    "Jerry": "Weir's running commentary is called 'cheesy' and his vocals stumble on 'Truckin'' but are solid elsewhere.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "It Hurts Me Too": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T14:00:59.893835+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-05-16.sbd.23825.sbeok.shnf"
+}

@@ -1,0 +1,58 @@
+{
+  "summary": "Immaculate DSBD sound captures a tight, well‑played show with standout performances of Picasso Moon, Black Peter and the Eyes>est>terrapin sequence.",
+  "review": "The recording is an expertly remastered DSBD capture – crisp after an initial loud tuning burst – that showcases a very solid setlist. Reviewers rave about the precision of the band, especially the opening \"Picasso Moon\" and the flowing first‑set highlights, while a few criticize Vince’s keyboard solo on Fire on the Mountain.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Most reviewers (5‑star) praise both the musical performance and the high‑quality soundboard recording; only a single low rating comments on keyboard playing, so overall rating is strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "DSBD source with immaculate remaster; initial tuning is very loud but volume can be lowered – otherwise crystal‑clear and well balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Picasso Moon",
+      "Black Peter",
+      "Eyes>est>terrapin"
+    ],
+    "poor_songs": [
+      "Fire on the Mountain"
+    ],
+    "setlist_flow": "Solid first set with strong song selection; the concert flows smoothly and maintains high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Several reviewers criticize Vince's keyboard solo on Fire on the Mountain, calling it poorly executed.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Picasso Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes>est>terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T02:31:13.101732+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-10-30.dsbd.hinko.25262.sbeok.shnf"
+}

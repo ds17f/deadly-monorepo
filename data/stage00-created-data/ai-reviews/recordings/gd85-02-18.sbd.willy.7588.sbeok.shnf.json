@@ -1,0 +1,112 @@
+{
+  "summary": "Soundboard capture of the first 1985 show – solid setlist highlights like Iko Iko, C.C. Rider and a fiery He's Gone, but marred by fast‑pitch, panning quirks and uneven vocals.",
+  "review": "The recording is a typical ’85 soundboard with decent clarity but noticeable speed‑up and odd panning that can be distracting. Musically the band delivers high energy on the first set (Iko Iko, C.C. Rider, Baby What You Want Me To Do) while the second set swings between scorching moments (Samson, He's Gone, Spoonful, Eyes of the World) and weaker spots (Looks Like Rain, Mexicali/Me‑My‑Uncle mishap). Overall it’s a mixed‑bag performance that many fans still revisit for its standout jams.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Broad set of reviews (18) shows consistent praise for several songs and energy, balanced by repeated complaints about recording speed/panning and vocal flaws; weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Generally clear SBD tape but suffers from noticeable fast pitch, odd stereo panning that some listeners find disorienting, occasional drop‑outs (Looks Like Rain omitted), and a few moments of muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Iko Iko",
+      "C.C. Rider",
+      "Samson",
+      "He's Gone",
+      "Spoonful",
+      "Eyes of the World",
+      "Going Down the Road",
+      "Sugar Magnolia",
+      "Baby What You Want Me To Do"
+    ],
+    "poor_songs": [
+      "Looks Like Rain",
+      "Me & My Uncle > Mexicali (first half)",
+      "China Doll",
+      "Ramblin' Rose"
+    ],
+    "setlist_flow": "First set is praised for tight playing and upbeat vibe; the second set is uneven, delivering a scorching Samson/He's Gone sequence but slipping into sloppy moments like China Doll and a botched Me‑My‑Uncle/Mexicali transition."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals swing from defiant and energetic (post‑bust) to hoarse and rushed; guitar tone generally praised, though the whole band runs slightly fast.",
+    "Phil": "Bass highlighted positively on China Cat Sunflower by one reviewer.",
+    "Bob": "Vocal delivery described as hoarse and at times lyric‑flubbed (Me & My Uncle), but lead lines on Rider receive praise.",
+    "Keys": "Brent’s organ work praised on blues standards like Baby What You Want Me To Do; overall keyboard presence noted as solid.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "C.C. Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Spoonful": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Going Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby What You Want Me To Do": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Me & My Uncle > Mexicali (first half)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ramblin' Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:41:48.226239+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-02-18.sbd.willy.7588.sbeok.shnf"
+}

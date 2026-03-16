@@ -1,0 +1,51 @@
+{
+  "summary": "Lively 1982 summer show with debut performances of “Day Job” and “West LA Fadeaway”, strong Jerry vocals and sizzling Brent keyboards; recording source unknown but generally acceptable.",
+  "review": "The concert is praised for its clean setlist, the first-ever renditions of “Day Job” and “West LA Fadeaway”, a shining “Black Peter”, and notably strong vocal work from Jerry after a short tour break. Reviewers also highlight Brent Mydland’s sizzling keyboard work. No specific comments on the audio source were provided, so recording quality is assumed to be average.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Three positive reviews (average ~4.3) indicate a strong performance; lack of recording details lowers confidence and drags the overall weighted rating to around four stars."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not discuss soundboard, audience mix, or clarity; no complaints suggest at least listenable audio but no praise for fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Day Job",
+      "West LA Fadeaway",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans note a solid song selection with the excitement of debuting two new numbers, strong vocals and tight playing throughout despite the outdoor heat."
+  },
+  "band_member_comments": {
+    "Jerry": "Strong vocal performance noted; voice had time to recover after short tour break.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland described as sizzling on keyboards.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Day Job": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West LA Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T00:27:13.625397+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-28.sbd.walker-scotton.miller.106166.flac16"
+}

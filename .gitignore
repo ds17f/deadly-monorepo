@@ -68,3 +68,16 @@ docker-compose.override.yml
 ui/.next/
 ui/out/
 ui/data/
+
+# Data pipeline
+data/stage01-collected-data/
+data/stage02-generated-data/
+data/stage02-processed-data/
+data/stage03-search-data/
+data/data.zip
+data/data-v*.zip
+data/**/__pycache__/
+data/scripts/.venv/
+data/scripts/review-processor/.venv/
+data/scripts/review-processor/.review-processor/
+data/backups/

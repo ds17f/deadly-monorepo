@@ -1,0 +1,103 @@
+{
+  "summary": "Miller soundboard delivers excellent audio of a hot ’79 show packed with standout Shakedown, Althea, and epic medleys.",
+  "review": "The recording is praised for its crystal‑clear Miller SBD quality, often called the best you can get from this era.  The performance shines with over‑the‑top Phil on “Shakedown,” funky Brent keyboards, Jerry’s chicken‑walk on “Big River,” and monster medleys like “I Need a Miracle → Bertha → Good Lovin'” and “Truckin' → Nobody's Fault But Mine.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the musical performance (standout jams, strong set flow) and the recording quality (crisp Miller SBD). Weighting 70% show + 30% recording yields a rating above 4.5."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller soundboard noted as 'best damn sound', crisp and clear throughout; only minor lyric slips mentioned, no drop‑outs or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Althea",
+      "I Need a Miracle",
+      "Bertha",
+      "Good Lovin'",
+      "Truckin'",
+      "Nobody's Fault But Mine",
+      "Big River",
+      "Friend of the Devil",
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Long, flowing medleys (I Need a Miracle → Bertha → Good Lovin', Truckin' → Nobody's Fault but Mine) keep energy high; set closes strong with Althea > Let’s Take It Easy > Deal."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry delivers his trademark chicken walk on “Big River” and a sweet solo on Althea.",
+    "Phil": "Phil is described as ‘over the top’ on Shakedown, driving the band.",
+    "Bob": "Bob noted at the monitor, adding to the overall vibe (no specific performance comment).",
+    "Keys": "Brent’s keyboards are called funky and a highlight of the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Nobody's Fault But Mine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:31:36.895881+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-08-13.set1-sbd.miller.87271.flac16"
+}

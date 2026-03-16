@@ -1,0 +1,74 @@
+{
+  "summary": "Great soundboard recording with crisp audio, highlighted by energetic China Rider, Crazy Fingers and a standout Minglewood jam.",
+  "review": "The show is remembered as one of the best from the Europe‑90 tour – high energy, tight playing and memorable moments like China Rider opening the set, a soaring Crazy Fingers and an ecstatic Minglewood. The soundboard source captures the venue’s ambience well; reviewers call it “great” and “crisp,” with only minor imperfections noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most of the 17 substantive reviews rate the performance 4‑5 stars, praising both musicianship and sound quality; only a few note minor flaws, giving an overall strong positive consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Consistently described as crisp, great‑sounding and well‑balanced. A couple of reviewers mention the sound isn’t perfect (volume turned down for venue size), but no major dropouts or distortion are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Rider",
+      "Crazy Fingers",
+      "Minglewood",
+      "Sugaree"
+    ],
+    "poor_songs": [
+      "Crazy Fingers (inconsistent performance noted by one reviewer)"
+    ],
+    "setlist_flow": "The set is praised for its upbeat vibe and tight transitions, especially the opening China Rider and the high‑energy second half. A few reviewers felt the energy dipped later in the second set, describing some jams as lazy."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead guitar shines on Sugaree, Crazy Fingers and Minglewood; several reviewers call his playing “textbook Dead” and “especially on.”",
+    "Phil": "Phil’s bass work is highlighted as amazing by one reviewer; otherwise noted as solid throughout the night.",
+    "Bob": "",
+    "Keys": "The new keyboardists (Vince & Bruce) are mentioned filling in after Brent’s death, adding honky‑tonk piano flavor and keeping the sound full.",
+    "Drums": "Pre‑drum segment and “NFA” (no‑fun?) praised; overall drum work considered tight."
+  },
+  "song_mentions": {
+    "China Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Minglewood": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T14:09:14.013048+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-10-27.sbd.braverman.9373.sbefail.shnf"
+}

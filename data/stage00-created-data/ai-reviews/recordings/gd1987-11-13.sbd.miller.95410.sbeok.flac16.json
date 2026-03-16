@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent soundboard capture of the 11/13/87 show, highlighted by a blistering Estimated jam and strong renditions of Bird Song, Bertha, Sugar and Sugaree.",
+  "review": "The recording is an excellent Charlie Miller sound‑board mix that sounds clear and full, with only a slight thinness in the low end for listeners without sub‑woofers. Musically the concert delivers high energy, especially the soaring Estimated jam, and solid performances of Bird Song, Bertha, Sugar, Sugaree and other era staples.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Most reviewers gave 4–5 stars and praised both the performance (intense jams, standout songs) and the soundboard recording quality; only one moderate comment noted thin bass."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Fine, clear mix with wonderful overall sound; a few notes about slightly thin bass for those without sub‑woofers but generally crisp and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated",
+      "Bird Song",
+      "Music Never Stopped",
+      "Bertha",
+      "Sugar",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical late‑80s setlist but energized, with strong transitions into jam-heavy closing sections; the Estimated jam especially drives the show’s momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work on the Estimated jam is described as whammy‑bar‑laden, screaming and intense.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboards are praised for shining on the jams that close each set.",
+    "Drums": "Electronic drum fills (likely Mickey Hart) are noted as perfect and add to the later‑day Dead vibe."
+  },
+  "song_mentions": {
+    "Estimated": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:15:25.279981+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-11-13.sbd.miller.95410.sbeok.flac16"
+}

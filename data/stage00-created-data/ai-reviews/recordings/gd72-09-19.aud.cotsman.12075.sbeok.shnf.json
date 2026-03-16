@@ -1,0 +1,51 @@
+{
+  "summary": "Fair audience tape of a strong ’72 show highlighted by an epic He's Gone > Other One > Stella Blue sequence and a standout Half‑Step jam.",
+  "review": "The performance shines with a scorching He's Gone → Other One → Stella Blue segue, a beloved Half‑Step, and even a solid Bird Song, despite the miserable weather and occasional breaks. The recording is an old audience tape – cut to conserve tape and missing a reel – so clarity is uneven, but listeners still find it listenable enough to enjoy the show’s high points.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is generally praised (strong jams and set flow) while recording quality is noted as poor‑to‑fair; the weighted average yields a modest 3.3‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Old outside audience tape, cut to conserve tape resulting in missing notes and a missing reel; sound described as cloudy, muffled, but acceptable for its age."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone > Other One > Stella Blue",
+      "Half Step",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Weather‑induced mini breaks disrupted the flow, but transitions – especially the He's Gone → Other One → Stella Blue sequence – kept momentum high; NRPS opened and even performed a rare Riders track."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone > Other One > Stella Blue": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:41:23.592374+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-09-19.aud.cotsman.12075.sbeok.shnf"
+}

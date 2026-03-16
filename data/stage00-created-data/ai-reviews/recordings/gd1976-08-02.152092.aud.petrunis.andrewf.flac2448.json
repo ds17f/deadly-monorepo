@@ -1,0 +1,39 @@
+{
+  "summary": "Decent audience tape captures a fun 1976 show with crisp PA sound and a standout Samson & Delilah performance.",
+  "review": "Both reviewers describe the concert as an enjoyable, high‑energy gig from the mid‑70s, highlighting the particularly exciting rendition of “Samson and Delilah.” The audience recording, while noisy with hoots and crowd chatter, still conveys a surprisingly clear PA mix with articulated cymbals and booming bass.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is praised (especially Samson & Delilah) while recording quality is only modestly good due to audience source and crowd noise; limited to two reviews, so confidence is medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp cymbals and booming bass indicate a clear PA capture despite being an audience tape; some mic‑position quirks and prominent hoots/hollers add noise but overall the sound is listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson and Delilah"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a lively, fun atmosphere typical of the bicentennial summer shows; despite limited detail on set structure, the energy and crowd enjoyment are emphasized."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Samson and Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:02:48.343380+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-08-02.152092.aud.petrunis.andrewf.flac2448"
+}

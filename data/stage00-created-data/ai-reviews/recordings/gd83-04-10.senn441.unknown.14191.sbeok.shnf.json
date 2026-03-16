@@ -1,0 +1,78 @@
+{
+  "summary": "Audience‑sourced recording captures a high‑energy, fast‑paced show highlighted by a scorching second set with standout performances of China Doll, Uncle John’s Band and Dark Star.",
+  "review": "The tape (audience source) delivers clear, lively sound that conveys the electric exchange between band and crowd, especially in the blistering second set. Reviewers rave about Jerry’s transcendent solos, Brent’s carnival‑style keyboards and several killer songs – China Doll, Uncle John’s Band, Dark Star and more – while noting a fast‑rocking, almost frantic first half. Overall the performance is praised as an intense, memorable night with excellent recording quality for an audience capture.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Across 17 reviews the average rating is ~4.35; most comments are enthusiastic about both the music and the audio, with many 5‑star praises and no serious complaints."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers note the AUD source sounds good/awesome; the audience mix captures the venue’s energy and is clear enough to hear individual instruments, especially keyboards and guitar."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Doll",
+      "Uncle John's Band",
+      "Dark Star",
+      "The Girl with Lobotomy Eyes",
+      "Touch of Grey"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as standard and fast‑paced, while the second set erupts with high energy, rapid tempos and extended jams that many reviewers call 'crackling' and 'smoking'. The show feels like a rock‑heavy, almost deadline‑driven performance that never loses its excitement."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for transcendent noodlings, fast ripping solos and even “making up notes” that impressed fellow musicians.",
+    "Phil": "Mentioned only in passing (farty noises near Phil), no specific musical appraisal.",
+    "Bob": "",
+    "Keys": "Brent’s ‘carnival’ keyboard work is highlighted as a standout element of the night.",
+    "Drums": "Drums receive positive nods, including mention of “Wheel Playin” and overall solid rhythmic drive."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Girl with Lobotomy Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T04:43:32.263412+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-10.senn441.unknown.14191.sbeok.shnf"
+}

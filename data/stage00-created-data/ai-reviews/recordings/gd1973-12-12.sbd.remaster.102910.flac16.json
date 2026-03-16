@@ -1,0 +1,80 @@
+{
+  "summary": "Excellent soundboard recording of a 1973 show with standout Eyes‑Morning Dew, Peggy‑O and classic second‑set jams, captured in crystal‑clear mix",
+  "review": "The remastered soundboard capture is praised for its crisp, instrument‑balanced mix, letting every part shine even if Phil’s bass briefly dips out on some headphones. Musically the show shines with a smoking Eyes → Morning Dew sequence, a classic Peggy‑O, and a powerhouse second set that includes Jack Straw, China Cat Sunflower > I Know You Rider, Big River and Deal, making it one of the era’s most celebrated performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All seven reviews are 4‑5 stars, repeatedly highlighting superb musicianship and an excellent soundboard mix; the weighted average yields a near‑top rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, instrument‑balanced mix with all parts prominent; occasional comment about Phil’s bass dropping in/out likely due to listener's headphones rather than the source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Morning Dew",
+      "Peggy-O",
+      "Jack Straw",
+      "China Cat Sunflower > I Know You Rider",
+      "Big River",
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a relaxed, breathing room in the performance, solid pacing throughout and the inclusion of the sound‑check and tuning adds to the flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as being at his peak with soaring lead guitar work.",
+    "Phil": "Provides a strong bass foundation; a few notes of occasional drop‑out but overall dominant throughout.",
+    "Bob": "Solid rhythm guitar and vocal support, complementing Jerry beautifully.",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann’s drumming praised for locking tightly with Phil's groove."
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blue Suede Shoes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T04:26:25.834897+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-12-12.sbd.remaster.102910.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "An exquisitely restored audience recording of a legendary May ’77 show, highlighted by soaring renditions of Morning Dew and Scarlet/Fire.",
+  "review": "The Moore‑Miller restoration brings this mysterious May 1977 performance to vivid life, delivering crystal‑clear sound that lets the band’s magic shine through. Reviewers rave about the transcendent moments—especially the climactic Morning Dew and the fiery Scarlet/Fire sequence—while noting the recording’s lush, vibrant quality. The show is repeatedly called “great” and “terrific,” with no reported flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All five reviews are 5‑star, uniformly praising both the musical performance and the restored audio; the show is described as legendary and the recording as lustrous, warranting a top‑tier rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Restored by Charlie Miller to sound lush and vibrant; reviewers call it “lustrous,” “vibrant,” and note the clean, crisp presentation despite being an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Scarlet/Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the concert as a uniquely compelling performance that stands out among May ’77 dates, with a seamless flow and powerful climaxes."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet/Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T23:53:00.566263+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-08.ecm33p.moore.berger.miller.117026.flac16"
+}

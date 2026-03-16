@@ -1,0 +1,93 @@
+{
+  "summary": "Clear FOH capture of the massive PA delivers a solid 1993 East Coast show highlighted by a long wah‑wah‑laden Playing in the Band and a standout Bertha > Good Lovin' sequence.",
+  "review": "The front‑of‑house recording faithfully reproduces the huge PA sound with minimal crowd distraction, making it an enjoyable listen. Musically the concert is praised for its solid first set, rare covers and a memorable second set featuring a long jam on Playing in the Band with Jerry’s wah‑wah pedal, followed by classic jams through Corrina, Attics of My Life and Throwing Stones > Not Fade Away. The only drawback noted is Bob Weir’s vocal strain during the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "The review is detailed and highly positive about both performance and recording; weighting gives a strong overall score despite only one source."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "FOB mic captures the massive PA accurately; crowd hoots are present but not distracting, providing clear instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha > Good Lovin'",
+      "Playing in the Band",
+      "Corrina",
+      "Attics of My Life",
+      "Throwing Stones > Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid first set with rare covers (Ramble On Rose, Lazy River Road, Broken Arrow) followed by a classic late‑70s style second set that builds into long jams and a well‑chosen encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Uses a real wah‑wah pedal on Playing in the Band, delivering standout guitar work.",
+    "Phil": "His side of the venue is noted; he leads a rare cover of Robbie Robertson's Broken Arrow.",
+    "Bob": "Struggles with vocals due to polyps, affecting his performance.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha > Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics of My Life": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:37:07.571074+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-06.149528.fob.sennheiserMKH40.ebel.flac1648"
+}

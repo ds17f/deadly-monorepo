@@ -1,0 +1,56 @@
+{
+  "summary": "Excellent soundboard capture of a short but stellar show highlighted by a smoking Dark Star and superb St. Stephen → Mason's Children transition.",
+  "review": "The recording is an exceptionally clear SBD that preserves the band at a creative peak in early‑1970, with Garcia delivering a marathon, exploratory Dark Star and Weir shining on St. Stephen.  The only drawback is the abrupt splice that cuts off Mason’s Children, leaving listeners wishing for the rest of the concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ~4.7 with uniformly enthusiastic comments about performance and sound quality; minor criticisms are limited to the recording’s brevity."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, resonant SBD with excellent clarity and balance.  The tape splice cuts off Mason's Children early, but overall fidelity is outstanding."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "St. Stephen",
+      "Mason's Children"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers love the fluid transition from St. Stephen into Mason’s Children and note the sustained intensity throughout the 20‑plus minute Dark Star, though the snippet ends abruptly."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solo is described as “smoking,” exploratory, and a highlight of the Dark Star; his tone and improvisational fire are repeatedly praised.",
+    "Phil": "Mentioned as playing with conviction after a recent New Orleans bust; no specific bass technique noted.",
+    "Bob": "Weir gets “shining moments” in the Dark Star according to reviewers.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "St. Stephen": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mason's Children": {
+      "positive_mentions": 5,
+      "negative_mentions": 4,
+      "total_mentions": 9
+    },
+    "Cumberland": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T15:16:46.774385+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-02-02.sbd.cotsman.17809.sbeok.shnf"
+}

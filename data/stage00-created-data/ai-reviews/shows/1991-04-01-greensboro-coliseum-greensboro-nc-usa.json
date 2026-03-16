@@ -1,0 +1,75 @@
+{
+  "summary": "Epic Dark Star, soaring Bird Song, tight China>Rider flow",
+  "blurb": "The show delivers an epic Dark Star and a soaring Bird Song early in the set. Highlights include a legendary China Cat Sunflower → I Know You Rider transition, a powerful drum duet, and consistently tight playing from the whole band.",
+  "review": "On April 1, 1991 at Greensboro Coliseum the Dead were firing on all cylinders. The first set kicked off with a punchy Jack Straw and a bright Peggy‑O before moving into the hypnotic Bird Song that set the tone for an unforgettable night. The second set was where the magic truly unfolded – a seamless China Cat Sunflower → I Know You Rider segue, a rain‑soaked Looks Like Rain, and a double‑Dark Star adventure punctuated by an “insane” drum duet that sent the audience into a frenzy. Jerry’s tone on Dark Star was described as perfect, his Bird Song solo soaring, while Bruce Hornsby’s piano added extra juice (even if a touch forward in the mix). Phil laid down a rock‑solid bass foundation throughout, and both Mickey and Billy locked in for that thunderous duet. All told, this spring ’91 run stands out as one of the era’s high points, with the Greensboro show capturing the band at peak energy and improvisational brilliance.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 65,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All but one analysis are positive, repeatedly praising the Dark Star, Bird Song, China>Rider sequence and overall band tightness. Multiple recordings call the performance 'epic', 'soaring' and 'legendary', while only a single source notes a minor dropout on Peggy‑O. This strong consensus yields a high positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1991-04-01.sbd.zei.2021.sbeok.shnf",
+    "reason": "Clear soundboard capture with good overall balance; despite a slightly forward Hornsby mix it preserves the band’s energy and highlights the show’s key moments."
+  },
+  "key_highlights": [
+    "Epic, multi‑section Dark Star with soaring Jerry solo.",
+    "Bird Song opens the set with radiant lead work.",
+    "Legendary China Cat Sunflower → I Know You Rider transition.",
+    "Powerful drum duet during the second‑set space segment."
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "Bird Song",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Jack Straw",
+    "Looks Like Rain",
+    "Black Peter"
+  ],
+  "band_performance": {
+    "Jerry": "Incendiary lead work throughout – perfect tone on Dark Star, soaring Bird Song solo and a standout Jack Straw solo that fans call ‘iconic’.",
+    "Phil": "Solid, lock‑step bass foundation, especially during Dark Star and Looks Like Rain; praised for syncing tightly with Hornsby’s keyboards and Jerry’s lead.",
+    "Bob": "Vocals strong overall; occasional vocal delay effect on Looks Like Rain noted but not detrimental to the performance.",
+    "Bruce Hornsby": "Adds extra juice and energy, driving the Rider and enriching the jams; mix places his piano forward, occasionally masking other instruments but still enhances the show’s excitement.",
+    "Vince Welnick": "Provides higher‑pitched keyboard textures that color the second set, especially on Dark Star and space sections.",
+    "Mickey": "Together with Billy delivers an ‘insane’ drum duet that propels the second‑set climax.",
+    "Billy": "Shares the high‑energy drum interplay; both drummers lock in tightly for a powerful rhythmic foundation."
+  },
+  "processed_recordings": 10,
+  "processed_date": "2025-09-17T18:06:32.926650+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dark Star",
+      "Drums",
+      "Space",
+      "Dark Star",
+      "Playing In The Band",
+      "Black Peter",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Jack Straw",
+      "Peggy-O"
+    ],
+    [
+      "Looks Like Rain"
+    ]
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Boxy, bass‑poor audience recording of a great show.",
+  "review": "The reviewer describes the performance as a great show despite only being able to listen to a small portion. The AUD source is noted as very boxy and lacking low‑end, which limits the listening experience but doesn’t detract from the overall enjoyment of the music.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Review praises the show as great (high musical value) while calling out noticeable recording flaws (boxy, bassless). Weighted blend of strong show quality and fair recording quality yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Boxy sound with missing low frequencies; overall clarity limited, but audible enough to recognize the performance."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T20:17:34.433276+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-02-09.144051.aud.unknown.gagne.smith.miller.clugston.flac2496"
+}

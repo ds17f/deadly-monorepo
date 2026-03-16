@@ -1,0 +1,77 @@
+{
+  "summary": "High‑energy 1987 Utah show shines with stellar playing despite a flawed matrix mix that mutes Bobby’s guitar.",
+  "review": "The performance is praised as “incredible” with standout moments on Minglewood Blues, Cassidy, Stella Blue and the entire second set.  The UltraMatrix source captures a clear soundboard signal but suffers from poor mixes – missing much of Bobby’s guitar and occasional clipping – requiring a pitch correction for the second set.  Overall fans love the music and consider it a hidden gem even if the recording isn’t perfect.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show quality is rated very high (stellar playing, many standout songs) while recording quality is only fair due to mix problems; the weighted average yields a ~4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Original UltraMatrix combines SBD and FM sources; clear soundboard but bad mix (no Bobby guitar in many sections), over‑PA monitoring, occasional clipping, needs -1% pitch correction for second set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood Blues",
+      "Cassidy",
+      "Stella Blue",
+      "The Wheel",
+      "Watchtower"
+    ],
+    "poor_songs": [
+      "Big Boss Man",
+      "Promised Land",
+      "Truckin'"
+    ],
+    "setlist_flow": "First set builds a strong sequence with high‑level jams; second set is “meaty” with six songs before and after the drum solo, delivering consistently high energy despite occasional mix frustrations."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar thrives on Minglewood Blues and delivers moments of incredulity throughout the set; his tone is praised even though the mix often drowns it out.",
+    "Phil": "Lesh’s bass work is highlighted as a joy on Row Jimmy and he provides powerful intros (Whole Lotta Love) and strong playing on The Wheel.",
+    "Bob": "Bobby’s guitar is frequently missing or turned down in the mix, with occasional monotone shouting on Sugar Mag; when audible his slide work adds nastiness that makes Jerry thrive.",
+    "Keys": "Brent Mydland is at his peak, sounding “like Keith” on Push Comes to Shove and delivering strong keyboards throughout the second set.",
+    "Drums": "Intense drum performance with lots of gear for an outdoor show; the drums segment is described as “intense” and worth listening to."
+  },
+  "song_mentions": {
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Boss Man": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T02:17:51.503034+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-08-20.140236.UltraMatrix.sbd.cm.miller.flac1644"
+}

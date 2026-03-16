@@ -1,0 +1,59 @@
+{
+  "summary": "High‑energy Monterey set with stellar Viola Lee Blues and solid recording, though plagued by a bad harmonica on Alligator/Caution.",
+  "review": "The performance captures the historic Monterey Pop moment – Jerry’s guitar is ferocious, Viola Lee Blues erupts, and the band delivers raw, high‑octane improvisation. The sound quality is surprisingly clear for a 1967 tape, but a mis‑mic'd harmonica drags down Alligator (and occasionally Cold Rain & Snow). Overall fans deem it a must‑listen despite those flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4–5 stars, praising the musical energy and recording clarity; only a minority note technical or performance issues, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Many reviewers describe the tape as crisp, clean, and ‘sparkling 8‑track stereo’; a few note occasional glitches and crowd bleed but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Viola Lee Blues",
+      "Alligator > Caution",
+      "Caution"
+    ],
+    "poor_songs": [
+      "Cold Rain and Snow",
+      "Alligator (harmonica issue)"
+    ],
+    "setlist_flow": "A short, high‑energy set sandwiched between The Who and Jimi Hendrix; the band rides a primal momentum with occasional technical hiccups but overall maintains an exciting, historic flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised for his ferocious, breakneck guitar work – ‘all over that guitar’, ‘out‑of‑control’, though one reviewer noted he was out of tune at times.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen’s organ and vocal parts are highlighted as powerful on Caution; however his harmonica (or a stand‑in player) is widely condemned for being off‑key and badly miked, especially during Alligator.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Viola Lee Blues": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Alligator": {
+      "positive_mentions": 8,
+      "negative_mentions": 10,
+      "total_mentions": 18
+    },
+    "Caution": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 5,
+      "negative_mentions": 6,
+      "total_mentions": 11
+    }
+  },
+  "processed_date": "2025-09-24T06:05:17.972458+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd67-06-18.sbd.mandrake.19586.sbeok.shnf"
+}

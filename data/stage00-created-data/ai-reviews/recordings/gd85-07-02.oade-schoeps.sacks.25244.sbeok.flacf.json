@@ -1,0 +1,63 @@
+{
+  "summary": "Crystal‑clear audience recording of a laid‑back show highlighted by a memorable Brokedown Palace encore and strong performances of Terrapin Station, Throwing Stones/Turn On Your Love Light, Women Are Smarter and Crazy Fingers.",
+  "review": "The Oades audience tape delivers an exceptionally warm and clear sound that captures the mellow vibe of this late‑tour concert. Fans love the quirky encore where Jerry forgets a verse of Brokedown Palace, and they point out solid moments like Terrapin Station and the Throwing Stones/Turn On Your Love Light medley, though some note the second set isn’t especially groundbreaking.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Recording quality is praised as crystal‑clear (excellent) while the musical performance is solid but not spectacular (average‑to‑good), yielding a weighted average around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear, warm audience capture praised as 'incredible' with no noticeable dropouts or mix issues; listeners compare it to the high‑fidelity feel of Reckoning/Bear's Choice."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace",
+      "Terrapin Station",
+      "Throwing Stones / Turn On Your Love Light",
+      "Women Are Smarter",
+      "Crazy Fingers"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall a relaxed, laid‑back set that leans toward mellow grooves; the second set is short and more about vibe than fireworks, reflecting a desire to wind down before heading back to California."
+  },
+  "band_member_comments": {
+    "Jerry": "Forgot the opening verse of Brokedown Palace during the encore, saying \"hello\" before restarting – endearing moment that fans loved.",
+    "Phil": "",
+    "Bob": "Spotted in a pink alligator T‑shirt during the show.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones / Turn On Your Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Women Are Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:27:52.711623+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-07-02.oade-schoeps.sacks.25244.sbeok.flacf"
+}

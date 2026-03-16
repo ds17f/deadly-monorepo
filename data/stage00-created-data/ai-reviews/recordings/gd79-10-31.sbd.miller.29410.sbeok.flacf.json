@@ -1,0 +1,100 @@
+{
+  "summary": "Soundboard source with solid, clear audio (minor AUD bleed) captures a powerhouse ’79 show highlighted by an epic Shakedown Street and killer second‑set jams.",
+  "review": "The recording is a soundboard capture that sounds clean for most of the concert, though a brief audience‑sourced segment mutes Jerry’s vocals on Wharf Rat. Musically the night is a classic late‑1979 performance – a tight first set leads into a monster Shakedown Street, soaring Passenger, Ramblin’ Rose and an unforgettable Eyes of the World → Truckin' sequence that Deadheads repeatedly cite as a highlight.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars, praising both the musical flow and the soundboard quality; only minor complaints about a muffled vocal segment keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced SBD for most of the set. A short AUD‑derived portion (post‑Wharf Rat) is a bit muffled and some reviewers note slight pitch/speed issues that benefit from minor correction."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "China Cat > I Know You Rider",
+      "Passenger",
+      "Eyes of the World > Truckin'",
+      "Saint of Circumstance"
+    ],
+    "poor_songs": [
+      "Wharf Rat"
+    ],
+    "setlist_flow": "First set builds energy with tight, upbeat numbers; second set erupts into a marathon Shakedown Street and a series of high‑octane jams that keep the momentum soaring to the finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as moving around onstage during Ramblin' Rose, delivering aggressive, monster guitar tone.",
+    "Phil": "Noted for a muscular, “quite…muscular” bass presence that drives the jams.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums praised as hypnotic and mid‑’80s style; space segment called “very interesting” and “hypnotic”."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "China Cat > I Know You Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Ramblin' Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated > Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World > Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums > Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T00:28:29.747478+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-10-31.sbd.miller.29410.sbeok.flacf"
+}

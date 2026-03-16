@@ -1,0 +1,57 @@
+{
+  "summary": "Audible audience tape of an intimate acoustic set with standout Deep Elem and Cassidy performances; recording is decent but a bit bass‑heavy and occasionally echoey.",
+  "review": "The show captures a rare acoustic Dead session featuring John Kahn on upright bass, with highlights like Deep Elem, Cassidy, To Lay Me Down and the Bird Song. Reviewers praise the relaxed pacing and space between numbers, though the audience recording is described as slightly bass‑heavy and not pristine. Overall it’s an enjoyable listen despite modest tape quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong acoustic performance with several praised songs outweighs minor recording flaws; consistent positive comments across four detailed reviews."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally audible and clear, but a bit bass‑heavy; some echo from the venue and one reviewer notes the tape isn’t great overall."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deep Elem",
+      "Cassidy",
+      "To Lay Me Down",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The acoustic set flows gently with ample space between tunes, creating a relaxed atmosphere that many reviewers found appealing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Not heard on electric bass; John Kahn handles acoustic bass for this set.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deep Elem": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:17:37.736349+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-05-22.aud.munder.9829.sbeok.shnf"
+}

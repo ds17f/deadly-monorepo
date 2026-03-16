@@ -1,0 +1,69 @@
+{
+  "summary": "Very good audience recording of a legendary Ventura show, highlighted by soulful Ship of Fools and the psychedelic Not Fade Away → The Other One → Wharf Rat suite.",
+  "review": "Listeners rave about this 1982‑87 Ventura performance, calling it one of the best shows they ever saw. Standout moments include a moving \"Ship of Fools\" gospel bridge and an epic second‑set flow from \"Not Fade Away\" into \"The Other One\" and \"Wharf Rat.\" The audience tape is praised as clear and surprisingly clean for an outdoor crowd recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All substantive reviews are highly positive, praising both the musical performance (standout songs, Jerry's guitar) and the surprisingly good audience recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners describe the tape as a very good audience recording with clear sound and no major drop‑outs or echo; outdoor setting contributed to clean capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ship of Fools",
+      "Not Fade Away",
+      "The Other One",
+      "Wharf Rat",
+      "Loser",
+      "Crazy Finger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set praised for its psychedelic flow, seamlessly linking \"Not Fade Away\" into \"The Other One\" and then into \"Wharf Rat,\" while the first set featured a memorable \"Loser\" and soulful \"Ship of Fools.\""
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry Garcia's guitar work as 'speaking' and 'genius,' especially during the NFA→Other One suite.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Finger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T21:41:38.418820+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-07-18.fob.unknown.vansant.fixed-100203.100727.flac16"
+}

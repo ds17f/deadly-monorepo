@@ -1,0 +1,50 @@
+{
+  "summary": "Excellent soundboard capture of a solid Boston benefit gig – Loser and Foolish Heart shine, but the night isn’t legendary.",
+  "review": "The SBD recording is described as amazing with crystal‑clear mix and Phil’s bass sitting nicely in the front. The show delivers a respectable performance – sweet moments like Jerry’s solo on “Loser” and a warm “Foolish Heart”, though occasional flubs keep it from being a classic. Overall it’s a solid, enjoyable set that benefits from high‑quality audio but lacks any mind‑blowing peaks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show as average‑good (3–4 stars) while praising the recording quality as excellent; weighted combination yields a ~4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the sound \"amazing\" and note a clear, crisp mix with Phil’s bass prominent – typical of a high‑quality SBD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Foolish Heart"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid, steady flow from start to finish; the benefit show feels cohesive with a mix of upbeat numbers and ballads, but nothing reaches a transcendent peak."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – sweet solo on “Loser” and strong moments, but occasional flubs (e.g., ending of Foolish Heart).",
+    "Phil": "Positive – bass is highlighted as nice in the mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:45:16.307649+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-25.dsbd.miller.28787.sbeok.flacf"
+}

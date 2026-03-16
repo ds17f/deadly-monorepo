@@ -1,0 +1,57 @@
+{
+  "summary": "Decent audience recording with overly loud vocals but strong performances of Loser, Cumberland, Eyes and Space.",
+  "review": "The audience‑sourced tape is surprisingly clear for a crowd recording, though the vocal mic sits too close to the speakers making the singers sound excessively loud. Musically the show shines on \"Loser,\" \"Cumberland,\" an incendiary \"Eyes of the World\" and a spacey interlude that showcases Jerry’s wild, high‑speed distortion runs. Overall the set feels energetic even if the mix isn’t perfectly balanced.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "low",
+    "rationale": "Only one review; it praises the performance but notes vocal level issues, leading to a good‑but‑not‑exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Vocals are unusually loud due to mic placement; otherwise the audience tape is clear and usable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Cumberland",
+      "Eyes of the World",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set highlights include \"Loser\" and \"Cumberland,\" while the second set delivers a ripping \"Eyes of the World\" and an adventurous space segment, keeping the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia rips through \"Eyes of the World\" with ridiculous metal‑distortion, high‑speed fusion runs.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T06:02:10.242147+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-20.120098.beyer.dyche.flac16"
+}

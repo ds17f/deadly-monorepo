@@ -1,0 +1,47 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy 1982 show highlighted by a stellar West L.A. Fadeaway and a punchy Truckin' second set.",
+  "review": "The recording is a clean soundboard source that reproduces the festive atmosphere of the night, while the performance shines with Jerry’s standout vocals on West L.A. Fadeaway and a powerful second‑set surge anchored by Truckin'. A lone blemish is the poorly received Far From Me, but overall the show is regarded as a classic early‑80s Dead concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4.6/5, most comments praise both the musical performance and the soundboard quality; only one song receives notable criticism."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the capture as \"nice\" and \"great\", noting clear, crisp audio that conveys the fun of the night."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "West L.A. Fadeaway",
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Far From Me"
+    ],
+    "setlist_flow": "A solid, if not exceptional, first set followed by a powerful second set that many reviewers singled out as a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal on West L.A. Fadeaway is praised as possibly the best ever recorded.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Mixed feelings about Brent Mydland: some praise his contributions after settling in, while one reviewer thinks his singing should have been cut earlier.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "West L.A. Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T00:24:51.810467+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-28.sbd.walker.scotton.miller.112828.flac16"
+}

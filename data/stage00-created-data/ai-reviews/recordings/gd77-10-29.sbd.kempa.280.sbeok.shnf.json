@@ -1,0 +1,74 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a legendary 1977 show with smoking performances of Eyes, St. Stephen and Estimated Prophet.",
+  "review": "The tape delivers a clean, well‑balanced soundboard mix that lets the relaxed yet still fiery fall ’77 vibe shine through. Fans rave about two amazing sets highlighted by standout renditions of Eyes, St. Stephen, Jack Straw, Dire Wolf and an inspired Estimated Prophet, while Jerry’s new Wolf guitar adds a warm wooden tone. The only blemish is a brief odd noise during Minglewood Blues.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "All five reviews are 5‑star and praise both the performance and the clean soundboard recording; minor glitches do not detract from an overall exceptional experience."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Very clean and clear mix, crisp instrument separation. A few odd noises are noted during Minglewood Blues but otherwise no drop‑outs or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "St. Stephen",
+      "Jack Straw",
+      "Dire Wolf",
+      "Estimated Prophet",
+      "One More Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Two tightly‑woven, high‑energy sets that balance laid‑back groove with classic Dead improvisation; the second half maintains the momentum and delivers memorable transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "His new Wolf guitar gives a warm wooden tone and he “carries the flame” throughout the performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T05:32:14.796609+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-10-29.sbd.kempa.280.sbeok.shnf"
+}

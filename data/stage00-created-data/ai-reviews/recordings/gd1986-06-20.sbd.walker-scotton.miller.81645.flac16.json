@@ -1,0 +1,113 @@
+{
+  "summary": "Decent soundboard capture of a shaky first set that improves in the second, highlighted by strong West LA, Let It Grow and Comes A Time performances.",
+  "review": "The recording is a respectable sound‑board source with clear enough audio to make the show listenable, though some fans prefer an alternate audience tape for better drum balance. Musically the concert starts off ragged – poor vocals from Bob and over‑busy drumming on songs like Midnight Hour and 1/2 Step – but the second half lifts off with a smoking West LA Fadeaway, a jammy Let It Grow, an epic Comes A Time and a memorable Good Lovin rap.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "high",
+    "rationale": "Average show quality (uneven first set, strong second set) balanced with good‑enough soundboard recording yields an overall mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and listenable; reviewers note it’s the only thing keeping the set above two stars, though some suggest a different audience recording sounds better for drums."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "West LA Fadeaway",
+      "Let It Grow",
+      "Comes A Time",
+      "Good Lovin",
+      "Playin'",
+      "Candyman"
+    ],
+    "poor_songs": [
+      "Midnight Hour",
+      "1/2 Step",
+      "El Paso"
+    ],
+    "setlist_flow": "First set is disjointed and plagued by vocal and drum issues; the band finds cohesion in the second set, delivering tighter jams and memorable moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for nice leads early on and a spot‑on performance on Comes A Time; described as being in good form.",
+    "Phil": "Mentioned only in an extended Good Lovin rap (“phil… even ole Garcia”), no specific musical appraisal.",
+    "Bob": "Heavy criticism of his vocals (loogy, throat issues) at the start, but later praised for a solid recovery on Playin' and overall improvement.",
+    "Keys": "Briefly referenced in the Good Lovin rap (“guy on keyboards need love”) without performance detail.",
+    "Drums": "First review condemns nonstop fills and lack of simple beat; another reviewer suggests listening to an alternative audience tape for better drum sound."
+  },
+  "song_mentions": {
+    "Midnight Hour": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "1/2 Step": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "West LA Fadeaway": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "UJB": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around X 2": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Quinn": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:01:29.243519+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-06-20.sbd.walker-scotton.miller.81645.flac16"
+}

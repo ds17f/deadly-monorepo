@@ -1,0 +1,31 @@
+{
+  "summary": "An average show recorded on an audience tape that swings between clear moments and wind‑muffled sections.",
+  "review": "The concert was a sunny, breezy affair with good vibes and dancing crowds, but the performance itself is described as sloppy and forgetful, offering nothing especially memorable. The recording, likely taken from the audience, captures the wind and hose effects – sometimes sounding great, other times muffled – making it a mixed‑quality listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review; both the musical performance and recording are described as average to fair, leading to a middling overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Wind and hose spraying created variable sound clarity; some sections sound great while others are muffled or distorted."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The set is portrayed as generally average, with a relaxed, carefree atmosphere but no notable peaks or tightness in the performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T08:00:24.084260+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-08-24.nak100.holtz.jaz.99010.flac16"
+}

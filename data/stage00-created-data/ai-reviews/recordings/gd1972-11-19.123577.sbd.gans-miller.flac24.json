@@ -1,0 +1,117 @@
+{
+  "summary": "High‑energy 11/19/72 Houston show captured on a solid soundboard tape with clear instrument separation and standout performances of Dark Star, Stella Blue and Box of Rain.",
+  "review": "The concert is praised for its fire‑starter setlist – dark, soaring jams like Dark Star and Goin’ Down sit beside tight numbers such as Jack Straw, China Cat and a phenomenal Stella Blue. The soundboard source delivers an overall clean mix with Phil’s bass front‑and‑center and Jerry’s guitar bright in the mix, despite occasional fade‑out quirks noted by one reviewer.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All five reviewers gave 5‑star ratings and highlighted both superb musical moments and a generally clear recording; the few minor sound‑fade comments do not detract from overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp with excellent instrument separation (especially Phil’s bass). One reviewer notes occasional fade‑out issues and a brief “Bertha” glitch, but the mix is balanced and lively."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Stella Blue",
+      "Box of Rain",
+      "China Cat Sunflower",
+      "Playin' in the Band",
+      "Goin' Down",
+      "Jack Straw",
+      "Bird Song",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a strong first set that sets up an even more explosive second set, with seamless transitions and a jam‑heavy middle that keeps the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar is bright and forward in the mix; his backing vocals on B.I.O.D.T.L. are highlighted.",
+    "Phil": "Bass is hot, isolated and often front‑and‑center; phenomenal on Stella Blue.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Goin' Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "B.I.O.D.T.L.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "T.I.F.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:05:27.917740+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-11-19.123577.sbd.gans-miller.flac24"
+}

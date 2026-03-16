@@ -1,0 +1,31 @@
+{
+  "summary": "Listeners find the recording unusually slow with no details on source or sound quality.",
+  "review": "Both reviewers complain that the performance sounds too slow, suggesting a possible speed/pitch issue with the transfer. No information is provided about the recording source or specific musical highlights, leaving the technical and musical quality ambiguous.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.5,
+    "confidence": "low",
+    "rationale": "Two brief reviews both gave 0 stars and focused on a negative tempo issue; no positive comments or additional data are available."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers note the playback sounds unusually slow, indicating possible speed or pitch problems in the transfer."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The set is perceived as too slow, which detracts from the overall flow and enjoyment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T05:51:15.548649+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-29.AKG451.Berger.Currier.Keo.121843.Flac1644"
+}

@@ -1,0 +1,68 @@
+{
+  "summary": "High‑quality soundboard capture of a mellow 1989 Pittsburgh show with standout El Paso and The Greatest Story Ever Told.",
+  "review": "The recording is a clean pure‑soundboard source with only a brief digital static hiccup, making it very listenable.  Musically the concert is praised for its relaxed pacing, strong second set and memorable moments like an inspired El Paso, a powerful opening of The Greatest Story Ever Told, and a ripping Blow Away, while Bob Weir’s presence and Brent’s keyboards receive special love.  A few minor slips (Jerry’s missed Bertha lyric) are noted but don’t detract from the overall enjoyable performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.25, with consistent praise for both the soundboard quality and the musical performance; weighting favors the strong show content."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Pure soundboard recording described as crisp and solid throughout; a slight digital static blip around the first minute of The Greatest Story Ever Told is the only noted issue."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "El Paso",
+      "The Greatest Story Ever Told",
+      "Blow Away"
+    ],
+    "poor_songs": [
+      "Bertha (opening lyric slip)"
+    ],
+    "setlist_flow": "A mellow, easy‑going first set with strong song choices and a double encore; the second set is highlighted as fairly strong with Brent’s keyboards prominent and a powerful Blow Away."
+  },
+  "band_member_comments": {
+    "Jerry": "His tone is praised and he sounds 'real cool'; a minor slip on Bertha's opening lyric is noted but overall his playing improves as the night progresses.",
+    "Phil": "Phil’s chant vocals are mentioned positively on Tom Thumb’s; no major critiques.",
+    "Bob": "Several reviewers focus on Bob Weir, calling the show “All Wier” and highlighting his shining presence and vocal tightness.",
+    "Keys": "Brent (keyboardist) receives strong praise for being 'spot on' and prominent throughout the set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "El Paso": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blow Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:36:21.114894+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-04-03.sbd.harrel.7507.sbeok.shnf"
+}

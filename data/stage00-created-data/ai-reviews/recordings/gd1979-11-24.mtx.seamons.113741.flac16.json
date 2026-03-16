@@ -1,0 +1,74 @@
+{
+  "summary": "Excellent matrix capture of a high‑energy 1979 show featuring a top‑shelf Terrapin / Playing in the Band and a killer second set.",
+  "review": "The MTX is praised as crisp, well‑balanced and virtually flawless, with several reviewers calling it “great” or “high quality.”  Musically the concert shines – fans highlight a monster Terrapin / Playing in the Band sequence, scorching China / Rider, a ripping Sugar Magnolia/Saturday Night pair and an overall high‑energy flow, despite one reviewer noting occasional Garcia lapses.  Overall the performance and recording are considered standout for this era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The majority of reviews (9 out of 10) award 4‑5 stars, praising both the matrix mix and the musical performance; only one review is critical of the show.  Strong consensus yields a high confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers describe the MTX as “great,” “high quality,” and “crisp”; no technical flaws are reported.  One reviewer mentions the original audience (AUD) source sounds superb, reinforcing that the underlying material is strong."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station > Playing in the Band",
+      "China Cat Sunflower > I Know You Rider",
+      "Sugar Magnolia",
+      "Saturday Night Live",
+      "Althea",
+      "Passenger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is described as high‑energy and inventive, with a particularly powerful second set.  A few miscues and occasional lyric slips are noted but they do not detract from the overall excitement and strong song transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer cites Garcia lapsing into forgetfulness and missing the ‘x‑factor,’ but most listeners are satisfied with his playing throughout the show.",
+    "Phil": "Solid bass work is highlighted, with a reviewer calling Phil’s performance “solid.”",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station > Playing in the Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saturday Night Live": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T01:59:10.119778+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-24.mtx.seamons.113741.flac16"
+}

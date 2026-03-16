@@ -1,0 +1,87 @@
+{
+  "summary": "High‑quality soundboard recording with occasional cuts, capturing a standout Seattle ’79 show highlighted by a blazing Half‑Step/Franklin’s opener and soaring Sugaree.",
+  "review": "The performance is praised for its tight second set flow, memorable Half‑Step → Franklin’s opening, hot Sugaree, and a joyous Shakedown Street encore. The SBD source offers clear separation but suffers from a few choppy sections, a missing intro to Playing In The Band, and the beginning of Stagger Lee being cut, while Jerry’s guitar sits low in the mix for some listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (4‑5 stars) celebrate the musical performance and only note modest technical glitches; the show quality dominates the rating with a solid but not flawless recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear instrument separation, keyboards and rhythm guitar louder than Jerry’s lead. Notable issues: cut intro to Playing In The Band, missing start of Stagger Lee, occasional choppy drops (around & around, Shakedown). Overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half-Step > Franklin's Tower",
+      "Sugaree",
+      "Stella Blue",
+      "Truckin'",
+      "Around & Around",
+      "Shakedown Street",
+      "Passenger"
+    ],
+    "poor_songs": [
+      "Stagger Lee"
+    ],
+    "setlist_flow": "Reviewers highlight a seamless transition from the first set into an epic second set, with strong jams that maintain momentum and a satisfying encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone described as mellow and touching; several reviewers note his guitar is turned down in the mix.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keyboards are louder than Jerry’s guitar; Brent's early contribution praised as surprisingly confident.",
+    "Drums": "Drum space/jam sections (e.g., into Stella Blue) called “great and trippy.”"
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Half-Step > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Passenger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Playing In The Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:05:09.170778+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-07-01.sbd.barrick.315.sbeok.shnf"
+}

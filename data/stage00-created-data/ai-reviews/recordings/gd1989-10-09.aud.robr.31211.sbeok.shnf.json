@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent audience tape that only needs a touch of treble boost, featuring a legendary late‑period Dark Star and standout Feel Like a Stranger.",
+  "review": "Both reviewers rave about the musical performance – highlighting the first late‑period Dark Star, a powerful Feel Like a Stranger and the re‑emergence of Death Don't and Attics – while noting that the tape sounds crisp and only requires a slight treble boost. The recording is praised as the best available audience source for this show, making it highly recommended despite a minor stumble after Death Don't.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Both reviews are strongly positive (4‑ and 5‑star) and focus on excellent performance and high‑quality audio, yielding a rating in the upper‑range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Sound is clear and crisp; reviewers note it is less tinny than comparable tapes and only needs a slight treble boost for perfection."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Feel Like a Stranger",
+      "Death Don't",
+      "Attics"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall historic and superb performance; a minor stumble is mentioned after Death Don't but does not detract from the show's strength."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's 'Wolf' guitar with MIDI synth is highlighted, and his playing on Dark Star is praised as outstanding.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T23:54:39.366024+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-09.aud.robr.31211.sbeok.shnf"
+}

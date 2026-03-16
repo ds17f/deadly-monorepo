@@ -1,0 +1,39 @@
+{
+  "summary": "Good‑quality soundboard capture of a fan‑favorite 1991 show highlighted by an electrifying Althea performance.",
+  "review": "The recording is a decent‑to‑good soundboard source that lets listeners enjoy what many reviewers call one of the best 1991 shows, especially the blazing Althea where Jerry’s solo shines.  While a few note a slightly fuzzy edge to the mix, the overall musical vibe—tight playing, strong Brent keyboards and an energized indoor atmosphere—is overwhelmingly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars praising the performance (especially Althea) and noting a generally good soundboard recording; weighted average yields ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most listeners describe the sound as solid and enjoyable, with occasional remarks of fuzziness or minor mix imperfections but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight a strong first set (with Althea) and an overall energetic indoor summer show; the set is described as consistently hot from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Althea is repeatedly praised, with comments that he 'put his soul' into it.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland adds color and texture; one reviewer expressed a personal dislike for an accordion‑like sound element.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-17T20:47:44.159434+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-06-12.sbd.oconnor-wier.13266.sbeok.shnf"
+}

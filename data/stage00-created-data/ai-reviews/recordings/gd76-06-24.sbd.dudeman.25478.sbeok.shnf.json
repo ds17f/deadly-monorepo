@@ -1,0 +1,83 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a stellar ’76 show, highlighted by a smoking Help > Slip > Franklin’s and an incendiary second set.",
+  "review": "The recording is praised as one of the best‑sounding ’76 tapes, with every instrument sitting cleanly in the mix and only minor first‑set quirks. Musically the concert shines – the second half of the second set (Help > Slip > Franklin’s, Dancing in the Street, Promised Land) is described as “on fire,” while the first set holds its own with strong renditions of Rain & Snow and Big River.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All seven reviews are overwhelmingly positive (average 4.7★), highlighting both superb soundboard quality and standout performances, especially the second‑set jams."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, intimate mix with every instrument distinct; archivists removed clicks/pops and balanced levels. A few reviewers note minor first‑set simulcast issues, but overall the sound is crisp and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help>Slip>Franklin's",
+      "Dancing in the Street",
+      "Promised Land",
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is described as “on fire” with seamless transitions (H>S>F, Wharf Rat > Dancing > Sugar Magnolia). First set is solid and enjoyable, rounding out a well‑balanced concert."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and soloing receive high praise, especially on the Help>Slip>Franklin's sequence; even called for “Samson” during the second set.",
+    "Phil": "",
+    "Bob": "Vocals highlighted as sweet and in‑tune, particularly duets like Looks Like Rain and Cassidy.",
+    "Keys": "Keith’s interplay with Garcia shines on Promised Land where they double up on chorus solos.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help>Slip>Franklin's": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dancing in the Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T05:16:13.845969+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-06-24.sbd.dudeman.25478.sbeok.shnf"
+}

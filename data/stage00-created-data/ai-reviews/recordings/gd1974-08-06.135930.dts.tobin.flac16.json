@@ -1,0 +1,31 @@
+{
+  "summary": "Recording appears to contain only noise with no audible music; the show cannot be evaluated",
+  "review": "The sole review reports that the file is silent or filled with noise and offers no musical content, making both the recording quality and performance assessment impossible. This suggests a corrupted or mis‑labeled source rather than an actual concert capture.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one review, rating 0 stars, indicating the file is unusable; no positive aspects to offset the severe issue."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer hears only noise/no music, implying a corrupted or silent recording."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Cannot evaluate due to lack of audible content"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T23:58:09.765388+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-08-06.135930.dts.tobin.flac16"
+}

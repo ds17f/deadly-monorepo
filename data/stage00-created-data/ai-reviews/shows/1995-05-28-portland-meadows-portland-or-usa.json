@@ -1,0 +1,67 @@
+{
+  "summary": "Uneven mid‑90s set with strong Row Jimmy and Black Peter moments",
+  "blurb": "The show drifts with sluggish tempos but delivers highlights such as Row Jimmy, Black Peter, Peggy‑O and a solid Box of Rain encore. Jerry’s playing is inconsistent, often sounding exhausted, while the rhythm section struggles on slower numbers. Fans may appreciate the standout jams despite the overall uneven performance.",
+  "review": "Portland Meadows, May 28 1995 – The Dead rolled into the Pacific Northwest with a set that feels more like a work‑in‑progress than a classic. The first half meanders through plodding tempos; Jack Straw and Let It Grow never quite find their groove, and Jerry’s guitar and vocals often sound tired, with solos described as sloppy. Yet there are bright spots: Peggy‑O shines briefly, Row Jimmy erupts with energy, and Black Peter in the second set is a highlight that lifts the whole performance. The rhythm section wavers – Bill and Mickey are called out for being conspicuous and sometimes unable to lock into the slower grooves, though an audience tape notes moments of “awesome” drumming. The encore caps things off with a heartfelt Box of Rain, offering a glimpse of the band’s enduring chemistry. While the show is uneven and many songs feel under‑cooked, the flashes of brilliance make it worth a listen for those who enjoy the late‑90s Dead’s raw, unpolished charm.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 49,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 0.3,
+      "sentiment_rationale": "Multiple recordings note standout moments (Row Jimmy, Black Peter, Peggy‑O) and two reviews are explicitly positive, while the other two are mixed about performance quality. The net sentiment leans slightly positive, warranting a modest +0.3 adjustment.",
+      "final_calculation": "2.5 + 0.4 + 0.3 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1995-05-28.sbd.mrod.28467.sbeok.shnf",
+    "reason": "Clear soundboard capture with balanced mix and full show coverage; despite uneven performance, it offers the cleanest audio for this concert."
+  },
+  "key_highlights": [
+    "Row Jimmy delivers a high‑energy jam that cuts through the sluggish first set.",
+    "Black Peter in Set 2 stands out as a tight, emotive performance.",
+    "Peggy‑O provides one of the few moments where Jerry sounds focused.",
+    "Box of Rain encore showcases the band's lingering cohesion."
+  ],
+  "song_highlights": [
+    "Peggy-O",
+    "Row Jimmy",
+    "Black Peter",
+    "Box of Rain",
+    "Around & Around"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia sounds exhausted and his solos are often sloppy, though he pulls together decent moments on Peggy‑O and Row Jimmy.",
+    "Phil": "Phil is mostly in the background, offering encouragement but without notable bass highlights.",
+    "Bob": "Weir is observed watching Jerry; no specific guitar or vocal commentary recorded.",
+    "Brent": "Vince’s keyboards receive little attention beyond brief references during Watchtower/Space sections.",
+    "Mickey": "The dual drummers are uneven – at times conspicuous and struggling with slower tempos, though an audience tape cites a burst of \"awesome\" drumming.",
+    "Billy": "Bill shares the same mixed assessment as Mickey; moments of distraction offset occasional energetic bursts."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-19T09:09:45.285941+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Peggy-O"
+    ],
+    [
+      "Row Jimmy"
+    ],
+    [
+      "Crazy Fingers",
+      "Corinna",
+      "Drums",
+      "Space",
+      "All Along The Watchtower",
+      "Black Peter",
+      "Around & Around"
+    ],
+    [
+      "Box of Rain"
+    ]
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Strong performance recorded on an audience source; the tape sounds good but bass is over‑driven and needs EQ.",
+  "review": "Both reviewers rate the concert a solid 4 stars, noting the show itself was very good throughout. The recording is praised as very good overall, though listeners should be prepared for a heavily boosted bass that can sound like a \"bucking bronco\" and may require equalization.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Only two brief reviews, both give 4‑star ratings and highlight a good show with decent recording that needs EQ for the bass."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough but bass is extremely boomy ('bucking bronco'); listeners should apply EQ to tame low‑end."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Overall solid and consistent performance; no specific issues noted."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T10:06:16.962012+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-21.aud.weiskircher.32143.sbefail.shnf"
+}

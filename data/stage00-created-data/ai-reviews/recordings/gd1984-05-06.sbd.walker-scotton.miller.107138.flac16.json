@@ -1,0 +1,51 @@
+{
+  "summary": "Clear soundboard capture of a well‑paced show highlighted by Black Peter and a strong Hell‑in‑a‑Bucket/Dire Wolf stretch.",
+  "review": "The recording is praised for its clear, face‑board mix and solid transfer, making the performance easy to hear. Fans note a nicely controlled energy flow with standout moments like Jerry’s vocal on Black Peter and an elegant Hell‑in‑a‑Bucket → Dire Wolf sequence. Overall sentiment is mixed‑positive, with most reviewers enjoying the show while one finds it merely standard.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Most reviews rate the show and recording 4/5 and comment positively on performance and sound quality; a few neutral/low ratings pull the average down slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, face‑board sound with a solid transfer; no major dropouts or muffiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Hell in a Bucket",
+      "Dire Wolf"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe an elegant pacing and controlled energy, especially through the Hell‑in‑a‑Bucket → Dire Wolf segment; one reviewer calls the show standard with no obvious highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "Great vocal performance noted on Black Peter.",
+    "Phil": "",
+    "Bob": "Mention of \"Bobby chomping at the bit\" indicating energetic playing.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T17:34:43.129183+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-05-06.sbd.walker-scotton.miller.107138.flac16"
+}

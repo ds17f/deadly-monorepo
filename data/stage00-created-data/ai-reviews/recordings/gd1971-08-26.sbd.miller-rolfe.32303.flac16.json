@@ -1,0 +1,82 @@
+{
+  "summary": "Rough recording with bass distortion but a stellar second set – Pigpen shines, Empty Pages and Saint Stephen stand out.",
+  "review": "Fans rave about the energy of this ’71 outdoor show, especially Pigpen’s performances, the heartbreaking “Empty Pages,” and a tight, pop‑groove take on “Saint Stephen.” The soundboard is uneven – bass muddies in places and the mix drops in and out – yet the second set sounds crisp enough to make the concert worth a listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong musical praise across most reviews (average 4.4★) outweighs the single noted recording flaw; show quality is high, recording quality fair."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Bass heavily distorted and occasional drop‑outs (“goes in and out”), but later parts of the set are clearer and more balanced; no explicit soundboard/audience label."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Empty Pages",
+      "Saint Stephen",
+      "Hard To Handle",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set feels fresh and vibrant with many new, unreleased tunes; Pigpen dominates the first half while the second half builds into a powerful emotional climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Interesting rhythm patterns on “Truckin’” and a noticeable punch‑up of T’s at phrase ends.",
+    "Phil": "\"Phil bombs like elephants walk\" – heavy, thundering bass noted throughout the show.",
+    "Bob": "Weir takes lead vocal on a Rider lyric (“wish I was a headlight…”) – a rare Bob‑lead moment.",
+    "Keys": "Subtle, polished keyboard textures under Bobby McGee; occasional “Pig” keys in the background.",
+    "Drums": "A 14‑second drum excerpt split off as its own track on “The Other One”; tambourine highlighted on “Saint Stephen.”"
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Empty Pages": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bobby McGee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hard To Handle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint Stephen": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-20T07:56:28.458511+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-08-26.sbd.miller-rolfe.32303.flac16"
+}

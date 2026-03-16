@@ -1,0 +1,83 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy 1987 Long Beach show featuring a smoking Morning Dew, The Other One and an epic Watchtower.",
+  "review": "The recording is praised for its crystal‑clear soundboard quality with superb instrument separation, making every nuance audible. Fans rave about the electric second set – highlighted by a blistering Morning Dew, a soaring The Other One, and what many call the best Watchtower of the year. Overall the performance feels infused with electricity and camaraderie, delivering an unforgettable Dead experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews (10‑plus) give 4–5 stars and specifically commend both the musical performance and the high‑quality soundboard source; only a few note an average show, keeping the overall rating strong."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with excellent separation of instruments; reviewers repeatedly describe the sound as \"great\", \"super quality\" and note no major glitches."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "The Other One",
+      "Watchtower",
+      "Scarlet > Fire",
+      "Cassidy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A lively first set followed by an electrified second set that builds to a powerful Watchtower; the pacing feels natural and the band stays tightly locked throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"maniac\" on guitar with ferocious energy; his playing is highlighted during The Other One and Watchtower.",
+    "Phil": "",
+    "Bob": "Called \"possessed\" on vocals/guitar, especially on The Other One.",
+    "Keys": "",
+    "Drums": "Drums>Space segment noted for giving a \"contact buzz\" – a thrilling rhythmic moment."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy Water": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:26:19.796147+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-11-15.sbd.nawrocki.4750.sbefail.shnf"
+}

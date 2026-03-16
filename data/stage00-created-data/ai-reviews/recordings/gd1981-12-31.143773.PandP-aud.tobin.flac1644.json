@@ -1,0 +1,31 @@
+{
+  "summary": "Vague 5‑star review provides no details on recording or performance.",
+  "review": "The only review is cryptic and offers no insight into the sound source, audio clarity, or musical highlights of this show. Although the reviewer gave a perfect five‑star rating, there is insufficient information to evaluate either the recording quality or the performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "A single 5‑star review suggests strong positive sentiment, but the lack of any substantive comments prevents a reliable assessment of show or recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about soundboard, audience mix, clarity, or other technical aspects were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T18:08:42.683278+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-31.143773.PandP-aud.tobin.flac1644"
+}

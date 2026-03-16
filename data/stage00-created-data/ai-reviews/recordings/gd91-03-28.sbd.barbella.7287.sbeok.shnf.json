@@ -1,0 +1,69 @@
+{
+  "summary": "Soundboard capture of a short but fiery Nassau show, highlighted by a smoking Foolish Heart and an unforgettable Terrapin encore despite occasional drop‑outs.",
+  "review": "The recording is a decent soundboard (SBD) with a few glitches – a dropout in “Let It Grow” and a splice on the intro to “China Doll”. Musically the night is uneven: the band delivers high energy on “Foolish Heart”, “Terrapin” (encore) and several tight jams, but the abbreviated set feels rushed and the first two songs of the second set are described as sloppy. Overall fans are split – many love the standout moments while others lament the short length and occasional missteps.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "The majority of reviewers (8‑9 out of 14) give 3–5 stars and praise specific songs, but a sizable minority (4–5 reviews) rate the show low (1–3 stars) citing short length and performance issues. Recording quality is generally good with minor flaws, leading to an overall mixed rating around the mid‑3 range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD but suffers a noticeable dropout in “Let It Grow”, a splice at the start of “China Doll”, and occasionally loud keyboard (Vince) levels."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Foolish Heart",
+      "Terrapin Encore",
+      "China Doll",
+      "Bertha",
+      "Victim"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is unusually short and feels rushed, with the first two songs of the second set described as poorly played. Energy builds toward the end, culminating in a surprise Terrapin encore that many fans cite as the highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone and vocals receive mixed remarks – praised on “Foolish Heart” and “China Doll”, but noted as quiet or frustrated during the short set.",
+    "Phil": "Bass is highlighted as solid and even ‘supercell thunderstorm’ on some tracks; overall a steady anchor for the band.",
+    "Bob": "Speculated to have been ill (intestinal distress) affecting performance, yet his guitar signals the Terrapin encore and he’s praised for strong playing in parts of the set.",
+    "Keys": "Vince’s keyboards are sometimes too loud or “dangling”, but no major complaints beyond volume balance.",
+    "Drums": "Drum work is positively noted – an African‑bell feel on the space segment and a generally enjoyable “drums > space” section."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Terrapin Encore": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T17:26:31.045167+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-03-28.sbd.barbella.7287.sbeok.shnf"
+}

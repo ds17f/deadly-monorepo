@@ -1,0 +1,69 @@
+{
+  "summary": "Muffled audience tapes make the show hard to enjoy, but Dark Star and the Sugar Magnolia/Lovelight segment shine for those who can brave the low‑fi bass.",
+  "review": "The performance features a stellar Dark Star and a sweet Sugar Magnolia into Lovelight that many fans cite as highlights, yet the two AUD recordings are so muffled and bass‑heavy that the music is often buried. Listeners with tolerant ears will appreciate the second‑set matrix excerpt, but most will find the audio quality poor enough to limit enjoyment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Reviews consistently criticize the AUD recording quality (poor) while praising key songs like Dark Star and Sugar Magnolia; weighting 70% show (good) and 30% recording (poor) yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Both AUD tapes are described as muffled, bass‑overloaded and generally low‑fidelity, making it difficult to discern the performance; only a portion captured via soundboard (SBD) sounds decent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Sugar Magnolia",
+      "Lovelight",
+      "Portland Woman",
+      "Schoolgirl",
+      "Easy Wind"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set matrix focuses on the extended Dark Star, with a strong Sugar Magnolia/Lovelight segment; overall pacing is praised despite audio limitations."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Portland Woman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Schoolgirl": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T23:08:27.507420+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-09-19.aud-toner-weinberg.warner.25473.sbeok.flacf"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Clear soundboard capture of a vibrant first set highlighted by Half Step, West LA and Bird Song.",
+  "review": "Both reviewers give the recording four stars, praising the newly surfaced sound‑board source and an energetic first set. Jerry’s playing is described as happy and lively, with standout renditions of “Half Step,” “West LA” and “Bird Song.” The second set isn’t present on this tape, but the existing material sounds clean and well‑balanced.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only two reviews, both positive (4★) and mentioning good board quality and strong first‑set performance; limited data yields a low confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note the newly circulated boards are a welcome addition; no complaints about dropouts, muddiness or other issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step",
+      "West LA",
+      "Bird Song",
+      "Rooster"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is praised as energetic and cohesive; second set missing from this source but reviewers are hopeful it will appear later."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as happy and energetic, with great tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West LA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T12:24:20.923030+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-07-31.142396.s1.sbd.miller.flac1648"
+}

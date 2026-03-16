@@ -1,0 +1,64 @@
+{
+  "summary": "Crystal‑clear soundboard captures a strong Boston Garden farewell set highlighted by a soaring Jack Straw opener, spacey Dark Star and standout Hornsby keyboards.",
+  "review": "The SBD source delivers pristine audio that lets the band’s confident, space‑filled jams shine. Reviewers rave about the powerful Jack Straw opening, the beautiful Cold Rain and Candyman performances, and a luminous Dark Star in the second set, while noting a single misstep on Broken Down Palace where Hornsby’s accordion was too aggressive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All six reviews are overwhelmingly positive (average 4.8★) and praise both the musical performance and the high‑quality soundboard recording; only a minor criticism of one song does not detract from the overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "SBD with crisp, clear mix; no dropouts or muddiness mentioned. Reviewers specifically call out the great quality of this recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Cold Rain",
+      "Candyman",
+      "Dark Star"
+    ],
+    "poor_songs": [
+      "Broken Down Palace"
+    ],
+    "setlist_flow": "The show opens strong with Jack Straw, maintaining momentum through confident, spacey jamming that peaks with a luminous Dark Star in the second set; overall pacing is praised as fluid and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Hornsby's keyboard work is highlighted as gorgeous and energizing (Jack Straw, Cold Rain, Candyman), though his aggressive accordion on Broken Down Palace drew criticism for being too prominent.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Down Palace": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T02:03:02.166551+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-26.sbd.miller.76050.sbeok.flac16"
+}

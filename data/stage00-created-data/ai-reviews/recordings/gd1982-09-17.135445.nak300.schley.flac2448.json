@@ -1,0 +1,57 @@
+{
+  "summary": "An outstanding audience recording of the legendary 9/17/82 show delivers crystal‑clear sound and highlights like Bertha, High Time, Touch of Grey and a soaring GDTRFB→Morning Dew.",
+  "review": "Both reviewers rave that this tape captures one of the most solid performances ever—rock‑solid from start to finish with memorable renditions of Bertha, High Time, Touch of Grey and an electrifying GDTRFB→Morning Dew. The audience recording is praised as “off the charts” and transports listeners right into the Cumberland venue, making it one of the best Dead bootlegs available.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Both reviews give 5‑star ratings, uniformly praise both the musical performance and the recording quality, and provide detailed positive comments; thus the combined show (70%) + recording (30%) rating is near top."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners describe the sound as “off the charts,” immersive and crystal‑clear, with the audience mic capturing the venue’s atmosphere perfectly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "High Time",
+      "Touch of Grey",
+      "GDTRFB>Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Rock‑solid from start to finish; transitions flow naturally and the second half builds to a powerful GDTRFB→Morning Dew climax."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "GDTRFB>Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:40:20.932999+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-17.135445.nak300.schley.flac2448"
+}

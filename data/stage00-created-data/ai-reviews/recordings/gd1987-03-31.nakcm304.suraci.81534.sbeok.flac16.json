@@ -1,0 +1,31 @@
+{
+  "summary": "A favorite recording of the show, generally hot in performance but marred by occasional flaws",
+  "review": "The reviewer considers this the best available tape of the concert, noting that the performance is often exciting while suffering from some slip‑ups (“stnanks”). No specific technical details are given, but the overall tone suggests a solid recording despite minor issues.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only one review (4‑star) that praises the recording while mentioning performance flaws; limited data leads to a modest rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it their favorite version, implying decent sound, but no explicit comments on clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Generally a hot show in parts, though the performance is described as ‘fraught with stnanks’, indicating occasional missteps."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T20:28:22.486453+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-31.nakcm304.suraci.81534.sbeok.flac16"
+}

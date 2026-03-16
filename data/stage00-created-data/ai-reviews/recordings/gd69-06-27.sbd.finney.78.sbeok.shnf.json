@@ -1,0 +1,61 @@
+{
+  "summary": "Soundboard capture of an early‑1970s show with a standout Casey Jones and Dire Wolf, good overall sound despite minor anomalies.",
+  "review": "The set is praised for its historic, “infant” versions of classics like Casey Jones, Dire Wolf (featuring Bob’s vocals and Jerry’s steel pedal) and an organic Dark Star jam. Reviewers note the recording is generally clear – a typical soundboard source – though one points out some minor sound‑level glitches. Overall the performance is regarded as a fascinating glimpse into the Dead’s developmental period.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Strong musical highlights and enthusiastic reviewer comments (mostly 5‑star) outweigh only minor recording issues, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard capture; one reviewer mentions slight sound problems/anomalies but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Casey Jones",
+      "Dire Wolf",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early‑era, experimental vibe with songs still being worked out; the band’s growth is evident as they move from tentative jams to more confident playing."
+  },
+  "band_member_comments": {
+    "Jerry": "His steel pedal work on Dire Wolf and dominant guitar on Baby Blue are highlighted.",
+    "Phil": "",
+    "Bob": "Bob (referred to as \"Bobby\") provides vocals on Dire Wolf, noted as a highlight.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Duprees": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T15:51:08.908798+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-06-27.sbd.finney.78.sbeok.shnf"
+}

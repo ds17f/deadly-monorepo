@@ -1,0 +1,50 @@
+{
+  "summary": "Clear soundboard after a rough start captures a fun 1979 show with the polka‑styled Mexicali Blues and a solid Franklin’s Tower.",
+  "review": "The recording is a soundboard tape that suffers from a muddy mix in the opening minutes but settles into crisp, clear audio for the rest of the concert. Fans rave about the playful “polka” intro to Mexicali Blues and praise the relaxed yet powerful rendition of Franklin’s Tower, noting the band was clearly enjoying themselves.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show is generally praised with standout songs, while the recording has a brief mix issue; weighted average of show (≈4) and recording (≈3.5) yields about a 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mix is muddy at the very beginning, but clears up to a crisp, clear soundboard for the bulk of the show; subtle harmonics and banter are audible."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mexicali Blues",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical late‑70s set with a fun, relaxed vibe; highlights include the polka‑styled Mexicali Blues intro and a solid Franklin’s Tower that reflects the slower tempo of ’79 shows."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Repeatedly references ‘polka’ during Mexicali Blues, adding humor and showing the band’s light‑hearted mood.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T00:50:44.763784+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-02.sbd.unknown.4672.shnf"
+}

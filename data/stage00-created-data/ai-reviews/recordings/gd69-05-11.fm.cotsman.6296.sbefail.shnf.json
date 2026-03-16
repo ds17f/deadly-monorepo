@@ -1,0 +1,45 @@
+{
+  "summary": "Muddy, cut‑filled audience recording of a historic San Diego show that shines on a jaw‑dropping \"The Other One\" and an electrifying Dead/Santana jam.",
+  "review": "The performance is remembered for a spectacular \"The Other One\" sequence and a memorable crossover jam with Santana, with Jerry Garcia described as fired up. Unfortunately the audio source is an FM broadcast tape that suffers from muff‑ness, frequent cuts and compression, making it a poor‑quality listen compared to the better‑recorded 5/29 show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "high",
+    "rationale": "Reviews consistently praise the musical highlights (especially The Other One and the Santana jam) but criticize the recording as muddy, shaky and heavily cut; the weighted average of show (+70%) and recording (+30%) yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Muffled/muddy sound, many cuts, shaky level, compressed and blown‑out frequencies; overall less clear than the duplicate 5/29 recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Dead/Santana jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A long, festival‑style day with several opening acts (Lee Michaels, Tarantula, Santana, Canned Heat) leading into the Dead set; despite a warm day and mixed audience energy, the second half delivered high‑energy improvisation."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as totally fired up, delivering an electrifying \"Other One\" sequence with his signature loopy phrasing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dead/Santana jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T14:27:25.310850+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-05-11.fm.cotsman.6296.sbefail.shnf"
+}

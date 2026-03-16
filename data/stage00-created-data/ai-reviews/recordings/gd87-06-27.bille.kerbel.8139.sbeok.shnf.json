@@ -1,0 +1,79 @@
+{
+  "summary": "Audience‑tape recording of a sunny Alpine Valley night captures strong performances – Let It Grow and Terrapin shine, though the tape is only fair in clarity.",
+  "review": "The show is remembered for its high‑energy second set, with highlights like a mesmerising Terrapin, the first ever Let It Grow of ’87 and a smooth Uncle John > Playing sequence. The recording is an audience source – typical crowd ambience and occasional mud‑dy spots make it listenable but not pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the performance 4‑5 stars and praise several songs, while noting the tape is a normal audience recording with only modest sound quality; the weighted average yields a solid mid‑range score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "No soundboard exists for this night; reviewers describe a typical audience tape with ambient crowd noise, decent overall balance but occasional muddiness and limited clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Terrapin",
+      "Uncle John > Playing",
+      "Wharf"
+    ],
+    "poor_songs": [
+      "Too"
+    ],
+    "setlist_flow": "The first set is described as lively but uneven, while the second set digs deeper into classics with internal jams and strong transitions, especially the Terrapin‑Drums segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his rhythm work on Minglewood and for leading a powerful Let It Grow; one reviewer notes he forgets lyrics during Wharf, suggesting he was \"incredibly high.\"",
+    "Phil": "Chanted by the crowd (“We want Phil”) and heard giving a witty security remark during Tom Thumb Blues; also credited with prompting a lyric reminder for Jerry on Wharf.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s Hammond organ work highlighted on Minglewood, plus his “fiddlish synth” solo during Friend of the Devil is noted as a high point.",
+    "Drums": "Typical drum segment; no specific praise or criticism beyond being part of the Terrapin‑Drums flow."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John > Playing": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Too": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T23:26:23.987145+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-06-27.bille.kerbel.8139.sbeok.shnf"
+}

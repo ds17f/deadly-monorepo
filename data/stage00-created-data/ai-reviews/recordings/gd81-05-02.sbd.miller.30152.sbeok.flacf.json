@@ -1,0 +1,87 @@
+{
+  "summary": "Decent soundboard capture of a mellow spring‑81 show featuring standout Birdsong, Scarlet>Fire and a soaring Stella Blue.",
+  "review": "The recording is a solid soundboard source that delivers clear, decent audio without major flaws. Musically the concert is praised for its relaxed first set and an especially strong second half highlighted by Birdsong, Scarlet>Fire, Estimated into Terrapin, and a beautiful Stella Blue finale. While two reviewers rate it highly, one gives a zero‑star rating, leaving overall sentiment mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Most reviewers highlight strong musical performance and an acceptable recording; the outlier zero‑star review pulls the average down, resulting in a mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Described as a decent/clear soundboard capture with no significant dropouts or balance issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong",
+      "Candyman",
+      "Terrapin",
+      "Sugaree",
+      "Althea",
+      "Scarlet>Fire",
+      "Estimated",
+      "Not Fade Away",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Mellow first set that picks up in the second; reviewers note smooth transitions, especially the Scarlet>Fire flow into Estimated and a soaring close with Stella Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "Highlighted as 'on' with strong guitar work throughout.",
+    "Phil": "",
+    "Bob": "Praised for unique chord explorations and an excellent slide on Not Fade Away.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:44:56.089449+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-05-02.sbd.miller.30152.sbeok.flacf"
+}

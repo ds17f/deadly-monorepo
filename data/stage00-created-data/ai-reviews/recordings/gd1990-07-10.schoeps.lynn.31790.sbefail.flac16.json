@@ -1,0 +1,40 @@
+{
+  "summary": "Solid audience‑style tape of a hot, storm‑blown night delivers a blazing show highlighted by fiery The Other One jams and an electrifying Promised Land despite the power cut.",
+  "review": "The performance is praised for its high energy and strong desire throughout, with Phil’s influence shining on multiple powerful renditions of The Other One. While the recording isn’t pristine, listeners note that EQ brings it to a very good level and it sounds crisper than many older audience tapes, capturing the excitement of the night even if speakers can’t fully reproduce the live sound.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Reviews consistently highlight an excellent show (standout jams, great vibe) and a decent‑to‑good recording that improves with EQ; weighting 70% show + 30% recording yields ~4.3 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Not the best quality but clearer than older audience tapes; murky compared to board, however EQ makes it very good and adds crispness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A scorching daytime set turned dramatic by a sudden storm and power outage during Promised Land, yet the band kept strong momentum and delivered multiple high‑energy Other One improvisations."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Multiple reviewers note Phil’s inspiration on The Other One jams, calling them some of the best post‑1975 renditions.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T09:06:10.303731+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-10.schoeps.lynn.31790.sbefail.flac16"
+}

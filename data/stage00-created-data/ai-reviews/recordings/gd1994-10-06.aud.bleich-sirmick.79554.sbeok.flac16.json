@@ -1,0 +1,31 @@
+{
+  "summary": "Good recording quality but runs way too fast; no musical highlights mentioned.",
+  "review": "Reviewers note that the audio source sounds clear, yet the playback speed is significantly faster than normal, which detracts from listening. No specific comments on the performance, setlist flow, or individual band members are provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only two brief reviews; one praises sound quality but flags a serious speed issue, the other gives no useful information."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Sound is described as good/clear, but the recording runs very fast (speed/pitch problem)."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information on performance quality or set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T02:39:54.856769+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-06.aud.bleich-sirmick.79554.sbeok.flac16"
+}

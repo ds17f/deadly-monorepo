@@ -1,0 +1,81 @@
+{
+  "summary": "Rare, clear audience tape captures a solid 1974 European set highlighted by a soaring Truckin' > MLB > Wharf Rat jam and strong Garcia work, though some reviewers note uneven playing and keyboard slips.",
+  "review": "The recording is praised for its unusually crisp audience sound that lets listeners hear Bob Weir’s rhythm guitar and Jerry Garcia’s bright tone. Musically the show shines on Deal (1974), a standout Scarlet Begonias, the Truckin'‑MLB‑Wharf Rat sequence and an energetic triple encore, but a few critics find the overall performance lackluster with off‑key keyboards and sloppy moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly for its rare, clear audience recording and several standout jams, but a couple of negative reviews cite poor execution and keyboard issues, pulling the overall average down to just under 4 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners describe the tape as unusually clear for a 1974 audience recording, with good bass presence (though some suggest turning it up) and rare ability to hear Bob Weir. One reviewer notes a cut in Sugar Magnolia; otherwise the mix is crisp."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Wharf Rat",
+      "Deal (1974)",
+      "Scarlet Begonias",
+      "Eyes of the World"
+    ],
+    "poor_songs": [
+      "Scarlet Begonias",
+      "Wharf Rat Suite"
+    ],
+    "setlist_flow": "The first set builds nicely with Deal, a standout Scarlet and a solid Wharf Rat Suite. The second set is jam‑heavy, featuring the celebrated Truckin' > MLB > Wharf Rat sequence and a Mind Left Body Jam that segues into the encore. A high‑energy triple encore (Eyes of the World, U.S. Blues, etc.) lifts the show, but overall execution is uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is described as wonderful, bright and shining throughout, especially on Deal and the jam sections.",
+    "Phil": "",
+    "Bob": "Reviewers note that Bob Weir’s rhythm guitar is audible more than on typical soundboard tapes and credit his contributions to the overall texture.",
+    "Keys": "Keith's keyboard playing is called noticeably off by a critic, suggesting a dip in performance quality.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Deal (1974)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mind Left Body Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-23T00:33:08.181429+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-09-14.philips-Schinzel.teute-greenberg.9890.shnf"
+}

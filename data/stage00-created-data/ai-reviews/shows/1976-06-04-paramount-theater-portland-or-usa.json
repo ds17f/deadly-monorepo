@@ -1,0 +1,73 @@
+{
+  "summary": "Strong set with smoking Help>Slip>Franklin's and Cosmic Charlie",
+  "blurb": "The show delivers a smoking Help On The Way → Slipknot → Franklin’s Tower sequence and a soaring Cosmic Charlie in the second set. Jerry’s guitar shines on Candyman, Let It Grow and Slipknot while Keith’s piano glitters on Sugaree. Overall a solid 1976 performance with a few uneven moments.",
+  "review": "Portland’s Paramount Theater captured an energetic mid‑summer 1976 Dead run that still feels fresh today. The first set builds momentum through tight country‑rock numbers and bursts into a high‑octane Help On The Way → Slipknot → Franklin’s Tower medley that reviewers call “smoking” and “high‑energy.” In the second set, Cosmic Charlie erupts into a stellar jam, segueing into an expansive Let It Grow that showcases Garcia’s lyrical solo work alongside Keith Godchaux’s shimmering piano. The night also marks the debut of Mission In The Rain, a heartfelt ballad that highlights Jerry’s emotive phrasing. While the rhythm section stays dialed in and the vocal harmonies are on point, some listeners note a meandering feel to parts of the second set and patchy audio in matrix copies. Nonetheless, the show’s strong song selection, standout improvisations, and solid band interplay make it a worthwhile listen, especially when sourced from the best‑available recording.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.7,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 25,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Two recordings are clearly positive (soundboard excellence, strong musical highlights) while three are mixed (praise for specific songs but criticism of second‑set flow and audio patches). The overall tone leans mildly positive, justifying a moderate +1.0 sentiment boost.",
+      "final_calculation": "2.5 + 0.2 + 1.0 = 3.7"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd76-06-04.sbd.cotsman.9797.sbeok.shnf",
+    "reason": "Matrix mix with clear soundboard portions, good instrument separation and the most complete capture of the strong set despite occasional patchy audience sections."
+  },
+  "key_highlights": [
+    "Smoking Help On The Way → Slipknot → Franklin’s Tower sequence.",
+    "Cosmic Charlie and Let It Grow showcase expansive improvisation.",
+    "First live performance of Mission In The Rain with a heartfelt Garcia solo.",
+    "Tight rhythm section; drummers are dialed in, Keith’s piano glitters."
+  ],
+  "song_highlights": [
+    "Help On The Way",
+    "Slipknot",
+    "Franklin's Tower",
+    "Cosmic Charlie",
+    "Let It Grow",
+    "Mission In The Rain",
+    "Candyman",
+    "Sugaree"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers memorable solos on Candyman, Cosmic Charlie, Let It Grow and a near‑MIDI tone on Slipknot; while a few moments feel less energetic, his overall playing is a highlight.",
+    "Phil": "Lesh provides solid, grounding bass work, notably locking in during the Stella Blue transition and supporting the groove throughout.",
+    "Bob": "",
+    "Keith": "Keith’s piano sparkles on Sugaree and adds lyrical depth to the second‑set jams, especially during Cosmic Charlie and Let It Grow.",
+    "Mickey": "Hart stays tight, adding texture without overpowering the mix.",
+    "Billy": "Kreutzmann is dialed in, driving the rhythmic pulse that keeps the sets moving."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-23T03:22:10.547726+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Help On The Way",
+      "Slipknot",
+      "Franklin's Tower"
+    ],
+    [
+      "Cosmic Charlie",
+      "Let It Grow",
+      "Drums",
+      "Let It Grow",
+      "Stella Blue"
+    ],
+    [
+      "Mission In The Rain"
+    ],
+    [
+      "Candyman"
+    ],
+    [
+      "Sugaree"
+    ]
+  ]
+}

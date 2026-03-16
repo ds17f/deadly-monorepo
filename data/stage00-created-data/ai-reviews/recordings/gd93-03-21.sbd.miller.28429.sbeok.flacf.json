@@ -1,0 +1,76 @@
+{
+  "summary": "Excellent soundboard capture of a solid Spring‑93 show highlighted by a smoking He's Gone, Baba O'Riley/Tomorrow Never Knows encore and tight Jerry/Vince interplay.",
+  "review": "The recording delivers clear, well‑balanced sound with only occasional pitch‑off moments in the first set, while the performance shines – Jerry’s solos are on fire, Vince gets a tasty spot, and the band rolls through He's Gone, Baba O'Riley into Tomorrow Never Knows. Fans also note the quirky wedding interruption during Samson & Delilah but overall rate the concert as one of the better ’93 outings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the musical performance and the sound quality; a few note minor pitch/distortion issues, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp, clear acoustics praised; a few comments about pitch being off and some distortion in the first set but nothing that detracts significantly from listenability."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Baba O'Riley",
+      "Tomorrow Never Knows",
+      "Broken Arrow",
+      "West L.A.",
+      "Stranger"
+    ],
+    "poor_songs": [
+      "Samson and Delilah"
+    ],
+    "setlist_flow": "The first quarter of the set is praised for strong selections (Stranger, West L.A., Candyman), a quirky wedding pause during Samson, then a high‑energy second half with classic jams and an unforgettable Baba O'Riley → Tomorrow Never Knows encore."
+  },
+  "band_member_comments": {
+    "Jerry": "His solos are highlighted as “throwing it down” and he expertly reins in Vince’s keyboard spot.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince gets a notable jam spot, especially during the Baba O'Riley/Tomorrow Never Knows sequence.",
+    "Drums": "One reviewer calls the drum segment “prolonged era of drumz,” noting solid playing throughout."
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Baba O'Riley": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tomorrow Never Knows": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Broken Arrow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "West L.A.": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson and Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T10:52:34.086436+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-21.sbd.miller.28429.sbeok.flacf"
+}

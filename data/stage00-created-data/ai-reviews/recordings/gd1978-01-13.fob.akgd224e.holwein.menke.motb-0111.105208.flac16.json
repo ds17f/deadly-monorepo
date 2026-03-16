@@ -1,0 +1,65 @@
+{
+  "summary": "Good‑sounding audience tape of an upbeat show highlighted by a strong Phil/Drums segment and inventive Space jam, despite occasional cracking on loud passages.",
+  "review": "The performance is described as energetic with a standout Phil/Drums + Space sequence that many reviewers cite as the high point. The recording is an audience tape that captures the room nicely, though some listeners note cracking noises when the music gets loud.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Reviews consistently praise the musical flow and improvisational highlights while noting only minor recording flaws; overall impression is strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear room capture with an excellent sounding audience tape, but occasional cracking noises on louder sections and a scaled‑down sound system."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Phil/Drums",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Upbeat and energetic overall; the Phil/Drums segment flows into an experimental Space jam that many consider the highlight, with several thematic teases adding interest."
+  },
+  "band_member_comments": {
+    "Jerry": "A hint of laryngitis is noted but not dominant; his voice sounds similar to later shows.",
+    "Phil": "His drum duet with Bill (Phil/Drums) is praised as a high point of the night.",
+    "Bob": "Drumming in the Phil/Drums segment receives positive remarks.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Phil/Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Close Encounters": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T08:08:37.686412+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-13.fob.akgd224e.holwein.menke.motb-0111.105208.flac16"
+}

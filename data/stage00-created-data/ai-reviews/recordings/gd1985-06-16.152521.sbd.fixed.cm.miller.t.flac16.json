@@ -1,0 +1,44 @@
+{
+  "summary": "Soundboard recording captures a moving reggae‑dub style Scarlet Begonias → Fire on the Mountain, praised as a one‑of‑a‑kind rendition.",
+  "review": "The sole fan review lauds this set for its emotionally powerful Scarlet Begonias into Fire on the Mountain segue, describing it as almost a reggae dub version that left a lasting impression. Although no explicit technical comments are made, the file’s SBD designation suggests a clear and well‑balanced soundboard source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one highly positive review (5 stars) highlighting an exceptional performance; recording quality is inferred as good from the SBD label but not directly confirmed."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific audio comments; assumed clear and balanced due to soundboard (SBD) source and fixed processing."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review focuses solely on the Scarlet Begonias → Fire on the Mountain segue as the highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T05:04:40.193028+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-16.152521.sbd.fixed.cm.miller.t.flac16"
+}

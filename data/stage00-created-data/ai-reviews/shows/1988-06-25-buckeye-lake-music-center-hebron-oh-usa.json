@@ -1,0 +1,77 @@
+{
+  "summary": "Strong first set, mixed second; Sugaree & Terrapin shine",
+  "blurb": "The first set delivers tight jams on Sugaree, Box of Rain and a fiery Cassidy. Jerry's tone shines while Bruce Hornsby adds memorable accordion textures. The second set loses steam but still offers highlights like Throwing Stones and The Other One.",
+  "review": "On June 25 1988 the Dead rolled into Buckeye Lake with a summer‑fueled energy that made the first half of the concert especially rewarding. Jerry Garcia’s guitar on Sugaree was praised for its warm tone, and his vocal phrasing added an extra layer of feeling. Bruce Hornsby’s surprise accordion cameo threaded through Sugaree, Stuck Inside… and Memphis Blues moments, giving the set a fresh texture that fans noted repeatedly. The band locked into Box of Rain and turned Cassidy into a scorching jam, while Brent Mydland provided solid keyboard support throughout.\n\nThe second set is more uneven. While The Other One and Throwing Stones showcase the group's improvisational muscle, reviewers point out a dip in energy after the three new ’88 songs opened the set. A weak Brent‑led moment and some fatigue from the heat are mentioned, but the encore’s Knockin’ On Heaven’s Door closes the night on a high note. Overall, the show is worth seeking out for its first‑set brilliance and memorable guest contributions, despite the second‑set quirks.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.3,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 42,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "Multiple recordings describe the show as excellent with standout performances (Sugaree, Box of Rain, Cassidy) and give high praise to Hornsby’s accordion and Jerry’s tone. However, several reviews note a mixed second‑set flow, heat‑related fatigue, and a weak Brent‑led song, leading to an overall slightly positive but not uniformly glowing sentiment.",
+      "final_calculation": "2.5 + 0.3 + 0.5 = 3.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd88-06-25.schoeps-fob.unknown.8478.sbeok.shnf",
+    "reason": "Decent audience tape with clear crowd mix, solid completeness and good representation of the performance despite lacking a soundboard source."
+  },
+  "key_highlights": [
+    "First‑set jams on Sugaree, Box of Rain and Cassidy stand out.",
+    "Jerry's guitar tone on Sugaree is highlighted by reviewers.",
+    "Bruce Hornsby’s accordion adds memorable texture throughout the set.",
+    "Second‑set energy wanes, but The Other One and Throwing Stones remain strong."
+  ],
+  "song_highlights": [
+    "Sugaree",
+    "Box of Rain",
+    "Stuck Inside of Mobile with the Memphis Blues Again*",
+    "Cassidy",
+    "Terrapin Station",
+    "The Other One",
+    "Throwing Stones",
+    "Knockin' On Heaven's Door"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers a warm, expressive tone on Sugaree and solid playing throughout; his vocal phrasing receives specific praise.",
+    "Phil": "Lesh provides nice bass lines during The Other One but is noted as occasionally out‑front or not fully locked in; overall steady foundation.",
+    "Bob": "Weir shows mixed sync with Jerry yet supplies strong leads on Deal and energizes the band during Throwing Stones.",
+    "Brent": "Mydland offers solid keyboard support, especially on Cassidy, though one reviewer calls a Brent‑led song weak, tempering his contribution.",
+    "Mickey": "Hart’s percussion adds depth, particularly in the drums/space segment, reinforcing the groove.",
+    "Billy": "Kreutzmann delivers a solid backbone throughout, praised for steady drumming that anchors the jam sections."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-16T10:15:54.036647+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Sugaree",
+      "Stuck Inside of Mobile with the Memphis Blues Again*"
+    ],
+    [
+      "Box of Rain"
+    ],
+    [
+      "Cassidy",
+      "Deal"
+    ],
+    [
+      "Blow Away",
+      "Foolish Heart",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Wharf Rat",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Knockin' On Heaven's Door"
+    ]
+  ]
+}

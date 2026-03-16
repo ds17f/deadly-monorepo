@@ -1,0 +1,39 @@
+{
+  "summary": "Positive review highlights a standout La De Da Day performance; recording quality not discussed.",
+  "review": "The sole reviewer gave the release four stars and raved about the La De Da Day track, even mentioning Rick Danko’s contribution. No details were provided regarding the source or sonic clarity of the recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one moderately detailed review exists; it praises the performance but offers no insight into audio quality, so rating reflects a good show with unknown recording fidelity."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on audio clarity or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "La De Da Day"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed commentary on set pacing was given."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "La De Da Day": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T16:03:06.862507+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-07-28.150454.SBD-AUD.composite.t-flac16"
+}

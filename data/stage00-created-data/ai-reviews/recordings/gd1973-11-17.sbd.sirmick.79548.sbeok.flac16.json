@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent sound‑board capture of a tight 1973 performance, highlighted by a soaring Playing In The Band → Uncle John’s Band → Morning Dew sequence.",
+  "review": "The recording is praised as a flawless sound‑board mix with crystal‑clear balance, while the show itself is described as “epic,” “tight,” and one of the band’s most magical nights. Reviewers single out the extended Playing In The Band–Uncle John’s Band–Morning Dew palindrome as a standout moment, and the overall vibe is uniformly enthusiastic.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All detailed reviews award five stars, lauding both musical performance and mix quality; no negative comments were found, indicating an exceptional show with excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers give the mix 5‑star ratings, calling it crisp, epic and a masterful SirMick transfer; no issues or dropouts mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Show described as tight and seamless, with fluid transitions especially during the extended Playing In The Band → Uncle John’s Band → Morning Dew sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised as a masterful player; reviewers refer to him as “the late master Jerry Garcia” and highlight his guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing In The Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T02:43:37.873973+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-11-17.sbd.sirmick.79548.sbeok.flac16"
+}

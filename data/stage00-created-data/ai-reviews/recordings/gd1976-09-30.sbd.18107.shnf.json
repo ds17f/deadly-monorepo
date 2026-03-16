@@ -1,0 +1,69 @@
+{
+  "summary": "Great soundboard recording of a 1976 show with a stellar Crazy Fingers and cozy Morning Dew, overall good audio despite occasional glitches.",
+  "review": "The performance is highlighted by an epic 15‑minute “Crazy Fingers” that many reviewers call trippy and exploratory, plus strong renditions of Scarlet Begonias, Peggy‑O and a rare, cozy encore of Morning Dew. The SBD source is generally clear and warm, though a few listeners note occasional drop‑outs or “iffy” spots.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ≈4.3/5, overwhelmingly positive comments about the music and a solid soundboard capture with only minor technical blemishes."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Warm, cozy board sound typical of mid‑70s SBDs; generally clear and well‑balanced but a few glitches/drop‑outs are mentioned in places."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Scarlet Begonias",
+      "Morning Dew",
+      "Peggy-O",
+      "Beginnings (Begonias)",
+      "Music Never Stopped"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers praise a strong first set built around the jam‑heavy Crazy Fingers and a well‑executed second set with smooth transitions, extended jams, and a rare Morning Dew encore. Minor sound glitches do not detract from the overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone on Crazy Fingers is praised and his vocals are noted as more clear/mournful than usual.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Off‑the‑wall keyboards add a Spanish‑jam flavor to Crazy Fingers; overall keyboard work is highlighted positively.",
+    "Drums": "Long drum solo in the second set receives mixed remarks (some skip it), but drumming is generally praised."
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:44:06.920412+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-09-30.sbd.18107.shnf"
+}

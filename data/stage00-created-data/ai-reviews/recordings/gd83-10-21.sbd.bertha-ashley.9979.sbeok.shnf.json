@@ -1,0 +1,31 @@
+{
+  "summary": "Recording is judged poor, with reviewers calling the sound unreal and preferring other Bertha versions.",
+  "review": "Both reviewers are dissatisfied with this version of the Bertha recording, describing it as sounding 'unreal' and inferior to alternate releases. No comments about the musical performance were offered, indicating that any show quality cannot outweigh the technical shortcomings.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "medium",
+    "rationale": "Both reviews gave a 1‑star rating and specifically criticized the sound quality; no positive aspects were mentioned."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Sound described as 'unreal', likely due to cassette generation artifacts; considered worse than other Bertha remasters."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided in the reviews."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T13:34:08.638672+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-10-21.sbd.bertha-ashley.9979.sbeok.shnf"
+}

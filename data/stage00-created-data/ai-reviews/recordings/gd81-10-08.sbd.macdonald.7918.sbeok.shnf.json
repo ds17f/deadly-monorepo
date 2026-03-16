@@ -1,0 +1,51 @@
+{
+  "summary": "Soundboard capture of a trippy 1981 show with a monster Scarlet > Fire jam; recording is decent but uneven, while the performance shines especially in the second set.",
+  "review": "The concert is renowned for its extended, psychedelic second‑set jams – a 30‑minute Scarlet > Fire stretch and a marathon Playin' Terrapin that many reviewers cite as highlights. The soundboard source is typical of the era: clear enough to enjoy the improvisations, but with noticeable mix fluctuations that bury vocals and bass at times. Overall the musical performance is praised by most listeners despite the occasional recording shortfall.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers highlight exceptional second‑set jams and strong playing, while acknowledging uneven soundboard mix; the weighted average of show (70%) and recording (30%) yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix is uneven – vocals, bass and rhythm guitar dip in places, especially during solos; however several listeners note acceptable separation and overall listenability for a typical early‑80s board tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Playing in the Band > Terrapin Station",
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is described as uneven, but the second set erupts into long, exploratory jams (notably a 30‑minute Scarlet > Fire and an extended Playin' Terrapin) that give the concert its trippy reputation."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's vocals are reported as buried or inaudible on several tracks, yet his guitar work – especially the Althea solo – receives high praise.",
+    "Phil": "Lesh's bass is highlighted for strong exploration and groove during the extended jams.",
+    "Bob": "Weir's rhythm guitar sometimes lacks presence in the mix; his vocals are noted as weak or lost, though his vocal effort is praised when audible.",
+    "Keys": "Brent Mydland gets credit for a distinct keyboard groove that cuts through the mix.",
+    "Drums": "The drummers (Bill Kreutzmann/Mickey Hart) are repeatedly described as powerful and driving."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playing in the Band > Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T15:32:36.612750+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-10-08.sbd.macdonald.7918.sbeok.shnf"
+}

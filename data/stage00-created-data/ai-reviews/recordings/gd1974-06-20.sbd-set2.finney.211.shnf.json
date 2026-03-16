@@ -1,0 +1,45 @@
+{
+  "summary": "Magical 1974 show with stellar jams and a standout Jack Straw/One More Saturday Night, but the Wall‑of‑Sound board mix is only fair and lacks an audience track.",
+  "review": "Fans rave about the energy of this night – the second set kicking off with a ripping Jack Straw and closing on a thunderous One More Saturday Night – making it a truly magical performance. The soundboard recording, however, suffers from muffled drums, noise‑cancelling mic artifacts and no audience feed, and Sugar Magnolia is missing entirely from the tape.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is praised highly while recording quality is noted as subpar; combined weighted score yields an overall ~4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Board mix described as average with noise‑cancelling mics that dull musicality, drums buried in the mix, no audience track, and Sugar Magnolia missing from the recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "One More Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set was short due to Wall of Sound technical issues; second set opened strong with Jack Straw and built to a climactic One More Saturday Night, delivering an overall magical night."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T21:01:42.417328+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-06-20.sbd-set2.finney.211.shnf"
+}

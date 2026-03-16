@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording marred by loud static during “Eyes of the World”, but listeners still love the performance.",
+  "review": "The show is praised by fans for its musical quality, yet the soundboard source suffers a major defect – about 40 seconds of loud static in the middle of “Eyes of the World”. This technical flaw drives the overall rating down despite the underlying strength of the concert.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "One detailed review gives a low (2‑star) rating due to serious recording problems, while also expressing love for the show; another provides no substantive feedback. The weighted combination of modest show appreciation and poor audio quality yields an overall low‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Loud static lasting ~40 seconds during “Eyes of the World” (around 8:30 into the track); otherwise no further comments on clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Eyes of the World"
+    ],
+    "setlist_flow": "No specific commentary on set pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T20:44:05.297884+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-11.sbd.valter-ladner.5158.shnf"
+}

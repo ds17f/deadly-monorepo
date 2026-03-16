@@ -1,0 +1,63 @@
+{
+  "summary": "A thunder‑charged 6/24/85 Riverbend show captured in a lively matrix mix, with Jerry’s guitar soaring and the storm adding drama.",
+  "review": "Fans rave about this super‑fun, trippy performance – highlighted by Samson, Smokestack Lightning and aggressive renditions of Wharf Rat and C.A.T. – all amplified by an unforgettable thunderstorm. The matrix recording is generally clear and vibrant, though a few note a high‑end bias that makes Phil’s bass sound thin.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Four out of five reviewers give 5‑star praise for both the show and sound, while one notes high‑end bias and a thin mix; overall the performance is rated very highly and the recording good, yielding a combined rating around 4.4."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall but biased toward high frequencies, sounding thin and with Phil's bass recessed; captures ambient thunder and rain well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson",
+      "Smokestack Lightning",
+      "Wharf Rat",
+      "C.A.T.",
+      "Cryptical"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set rode a perfect summer afternoon vibe, while the second set surged through a dramatic thunderstorm, giving the performance an intense, weather‑driven momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for great tone and aggressive playing; standout on Wharf Rat and C.A.T.",
+    "Phil": "Bass sounds distant and thin due to high‑end bias in mix.",
+    "Bob": "Aggressive rhythm guitar noted positively.",
+    "Keys": "",
+    "Drums": "Thunderous drumming echoed the real storm, described as frightening yet cohesive."
+  },
+  "song_mentions": {
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "C.A.T.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T05:37:32.761218+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-24.mtx.seamons.94663.sbeok.flac16"
+}

@@ -1,0 +1,67 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a high‑energy comeback show, highlighted by an ecstatic Touch of Grey opening and a crowd‑thrilling Candyman.",
+  "review": "The recording is a well‑mixed SBD source with excellent stereo imaging and instrument separation, though a few listeners miss the audience roar that would be louder on an AUD tape. Musically the concert shines as Jerry Garcia returns from his coma, delivering nervous yet inspiring guitar work and vocals; Touch of Grey and Candyman generate unforgettable crowd moments, while new songs Push Comes to Shove and Black Muddy River add historic weight. Overall the show is celebrated for its emotional intensity and tight playing despite a handful of mixed remarks about occasional weak spots.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The vast majority of 20+ reviews award 4‑5 stars, praising both the performance and the soundboard quality; only two lower scores exist and they are outliers. Weighted toward show quality (70%) with solid recording praise, the aggregate rating lands in the strong‑good range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Stereo imaging described as excellent; instrument separation is clear and crisp. Some reviewers note that audience roar isn’t fully captured, and a few mention slight tinniness in the mix, but overall the SBD is considered very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "Candyman",
+      "Push Comes to Shove",
+      "Black Muddy River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert opens with the obvious, crowd‑pleasing Touch of Grey and maintains a high‑energy flow throughout, punctuated by emotional moments (Candyman) and historic new‑song debuts that keep the momentum tight."
+  },
+  "band_member_comments": {
+    "Jerry": "His return is the focal point – many note his nervous but inspiring guitar tone and strong vocals, though a few mention occasional weakness on Black Muddy River.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Reviewers praise the new keyboard sound (Brent’s Rhodes) and celebrate the disappearance of the old toy‑piano tone, calling it an upgrade for the era.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Candyman": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Push Comes to Shove": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:36:58.056891+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-12-15.sbd.kpfa.19600.sbeok.shnf"
+}

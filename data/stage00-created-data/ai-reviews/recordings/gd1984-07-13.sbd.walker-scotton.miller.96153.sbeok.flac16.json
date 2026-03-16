@@ -1,0 +1,68 @@
+{
+  "summary": "Crisp soundboard capture of a magical 1984 Berkeley show, highlighted by an epic Dark Star and scorching Scarlet > Touch > Fire sequence.",
+  "review": "The recording is praised for its crystal‑clear soundboard quality that lets every instrument shine, especially Bob’s whammy‑bar guitar work. Musically the night is legendary – Jerry finally “shows up” in ’84, Dark Star stretches out for over 16 minutes and the Scarlet > Touch > Fire combo burns hot alongside standout renditions of Stella Blue, Sugar Magnolia and The Greatest Story Ever Told.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both performance (epic Dark Star, rare Jerry presence) and recording quality (crisp soundboard), with no substantive negatives across many detailed reviews."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers describe the audio as crisp, beautiful and beautifully recorded; no drop‑outs or balance issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Scarlet > Touch > Fire",
+      "Stella Blue",
+      "Sugar Magnolia",
+      "The Greatest Story Ever Told"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans rave about the seamless flow into a long, hypnotic second set with Dark Star as the centerpiece; the night is described as magical and perfectly aligned."
+  },
+  "band_member_comments": {
+    "Jerry": "His rare 1984 appearance was noted as a highlight; his guitar work described as raging on C.C. Rider and delivering great tone throughout.",
+    "Phil": "Mentioned for guiding the crowd into Dark Star and keeping the vibe relaxed, but no specific bass commentary.",
+    "Bob": "Praised for an audible, precise whammy‑bar style and a standout jam on The Greatest Story Ever Told.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Scarlet > Touch > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "C.C. Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T20:06:27.031012+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-13.sbd.walker-scotton.miller.96153.sbeok.flac16"
+}

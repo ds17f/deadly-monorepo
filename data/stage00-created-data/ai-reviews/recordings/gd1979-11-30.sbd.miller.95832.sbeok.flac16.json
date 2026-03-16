@@ -1,0 +1,88 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a stellar late‑1979 show, highlighted by a smoking Friend of the Devil and a uniquely stacked second set (Scarlet > Fire, Terrapin, Playing in the Band, Passenger).",
+  "review": "The recording is frequently praised as one of the cleanest tape‑master SBDs ever released – crisp, well‑separated and virtually boom‑free, with only a brief buzz on the opening Alabama. Musically the show shines with standout performances of Peggy O., a short‑form Cassidy, Friend of the Devil and an unforgettable second set that uniquely strings together Scarlet > Fire, Terrapin, Playing in the Band and Passenger, despite a minor vocal slip on El Paso.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews (6 out of 7) give 5‑star praise for both the soundboard quality and the musical performance; only one review is negative about setlist uniqueness, yielding an average rating around 4.1‑4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean, separated soundstage with great definition and little boominess; a brief buzz on the opening Alabama but otherwise crystal‑clear. Reviewers note the classic ‘clinky’ late‑70s board tone and an immersive Phil Zone."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy O.",
+      "Cassidy (short version)",
+      "Friend of the Devil",
+      "Alabama Getaway",
+      "Scarlet > Fire",
+      "Terrapin",
+      "Playing in the Band",
+      "Passenger"
+    ],
+    "poor_songs": [
+      "El Paso"
+    ],
+    "setlist_flow": "The first set builds energy with bright playing and a strong Alabama kickoff, loses a little steam after the drum break but regains momentum. The second set is uniquely historic – it’s the only known show to feature all five of Scarlet > Fire, Terrapin, Playing in the Band, Passenger plus the earlier songs together."
+  },
+  "band_member_comments": {
+    "Jerry": "No specific remarks, but the mix lets his guitar sit cleanly within the overall bright soundstage.",
+    "Phil": "Repeatedly praised; his bass is described as ‘the Phil Zone’ and as ‘attacking Alabama Getaway’, indicating a powerful, front‑and‑center performance.",
+    "Bob": "One reviewer notes Bob Weir missed vocals on El Paso, pointing to a brief vocal lapse.",
+    "Keys": "Brent Mydland’s early contributions are highlighted as bright, meandering and adding fresh texture to the set.",
+    "Drums": "The drums drive the early energy (‘sticks counting off’) though one comment mentions a slight loss of steam after the drum break."
+  },
+  "song_mentions": {
+    "Peggy O.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy (short version)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:22:12.136368+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-30.sbd.miller.95832.sbeok.flac16"
+}

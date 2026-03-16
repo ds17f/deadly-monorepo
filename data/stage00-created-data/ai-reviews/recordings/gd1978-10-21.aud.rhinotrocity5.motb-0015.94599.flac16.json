@@ -1,0 +1,56 @@
+{
+  "summary": "Excellent soundboard capture of an inspiring Winterland set featuring stellar versions of Sugaree, Stella Blue and Sugar Magnolia.",
+  "review": "The recording delivers a crystal‑clear soundboard feed with virtually no hiccups beyond faint digi‑noise, letting the band’s performance shine. Fans rave about a different‑but‑great take on Sugaree, soaring renditions of Stella Blue and a mellow Sugar Magnolia, while Bob Weir’s guitar work gets particular praise. Overall the show feels energetic and memorable, making it a standout entry for Winterland listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Multiple 4‑5 star reviews highlight both an excellent musical performance (standout songs, strong playing) and a high‑quality soundboard recording with only minor digi‑noise."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear as day soundboard; no noticeable dropouts or balance issues, only faint digital noise noted by one reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a fun, grooving first set with heavy Bob guitar and memorable jams, while the overall flow feels lively and cohesive throughout the show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir's rhythm guitar is highlighted as heavy and instructional, especially on the first set.",
+    "Keys": "",
+    "Drums": "The drums are noted for their presence, though at times they were overwhelmed by guest harmonica in the space jam."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:53:34.912375+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-10-21.aud.rhinotrocity5.motb-0015.94599.flac16"
+}

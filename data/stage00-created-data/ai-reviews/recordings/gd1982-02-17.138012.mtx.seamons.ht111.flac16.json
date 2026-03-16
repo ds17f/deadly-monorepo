@@ -1,0 +1,110 @@
+{
+  "summary": "A well‑mixed matrix of thin audience and crisp soundboard lifts an otherwise average three‑star show, with a rousing Minglewood/Sugaree opener and solid second‑set highlights.",
+  "review": "The matrix blend adds dramatic dynamics, letting the sparse audience tape complement the clean board feed and even smoothing crowd fades. Musically the concert is “average” – the first set opens strong with Minglewood > Sugaree and a nice Bird Song, while the second set delivers solid Scarlet Begonias, Fire on the Mountain, Estimated Prophet and Eyes of the World despite a few sloppy moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show is rated around average (3 ★) but the matrix recording improves listenability; combined weighted score yields ~3.4 ★."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Thin audience track with a crisp soundboard core; excellent fade‑in of board at the start, gentle crowd fades after each song, added reverb and bass to bolster a sterile board. Overall dynamics are dramatic but the AUD portion lacks depth."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood",
+      "Sugaree",
+      "Bird Song",
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Estimated Prophet",
+      "Eyes of the World",
+      "The Wheel",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Sugar Magnolia",
+      "Touch of Grey (Satisfaction)"
+    ],
+    "setlist_flow": "First set is solid but a bit short; second set feels stronger with tighter transitions and punchy numbers, though some moments (e.g., Sugar Magnolia) feel slightly sloppy."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "His vocal on 'On the Road Again' is described as slightly silly, and his enthusiastic 'Ha Ha Ha' in Estimated Prophet is called over‑the‑top.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "C.C. Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Women Are Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Touch of Grey (Satisfaction)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T18:21:54.469924+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-02-17.138012.mtx.seamons.ht111.flac16"
+}

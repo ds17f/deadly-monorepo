@@ -1,0 +1,78 @@
+{
+  "summary": "High‑energy set with smoking Playing In The Band and tight jams",
+  "blurb": "The show delivers a marathon Playing In The Band, standout Bird Song and Brokedown Palace, and a second‑set that never loses its drive. Jerry’s guitar is on fire while Keith adds jazzy color to the long jam.",
+  "review": "On November 15, 1972 at Oklahoma City Music Hall the Dead turned in a high‑octane two‑set that still feels fresh today. The first set kicks off with a crisp Bertha and builds through Bird Song, Candyman and an especially relaxed Box of Rain vocal from Phil. The real centerpiece arrives in the second set: a 30‑minute Playing In The Band where Jerry’s loopy, inventive solo work drifts into a jazzy groove laid down by Keith, while Billy and Bill form an A+ rhythm section that keeps the momentum relentless. Highlights continue with a soaring Brokedown Palace, a rollicking Mexicali Blues, and a heartfelt Me And Bobby McGee before the band wraps the night with Wharf Rat into Sugar Magnolia and a double Not Fade Away finish. The crystal‑clear Miller soundboard capture makes every nuance audible, from Jerry’s “notes simply drip” to Bob’s tight counter‑playing, cementing this show as one of ’72’s most thrilling performances.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 46,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All four recordings are marked positive, repeatedly praising the marathon Playing In The Band, high‑energy improvisation and superior sound quality. Consistent language such as “smoking Playin’ in the Band”, “crystal‑clear”, “fabulous guitar” indicates strong positive sentiment across multiple sources.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1972-11-15.sbd.miller.110631.flac16",
+    "reason": "Crystal‑clear Miller soundboard with excellent instrument separation and no dropouts, capturing the full energy of the show."
+  },
+  "key_highlights": [
+    "Marathon Playing In The Band jam that showcases Jerry’s inventive soloing and Keith’s jazzy keyboards.",
+    "Bird Song and Candyman deliver tight, upbeat first‑set momentum.",
+    "Brokedown Palace and Box of Rain provide emotional peaks in the second set.",
+    "High‑energy flow through Mexicali Blues, Me And Bobby McGee, Wharf Rat and Sugar Magnolia."
+  ],
+  "song_highlights": [
+    "Bird Song",
+    "Playing In The Band",
+    "Brokedown Palace",
+    "Candyman",
+    "Box of Rain",
+    "Sugar Magnolia",
+    "Mexicali Blues",
+    "Me And Bobby McGee",
+    "Wharf Rat"
+  ],
+  "band_performance": {
+    "Jerry": "Loopy, inventive solo work in Playing In The Band and superb guitar tone throughout; reviewers note he “smokes his Tiger” and that his notes “simply drip”.",
+    "Phil": "Relaxed vocal delivery on Box of Rain and solid bass foundation; praised for a beautiful harmonic improv that lifts the band’s improvisation.",
+    "Bob": "Inventive rhythm‑guitar interplay and strong counter‑playing, especially during the extended jams; described as sounding amazing alongside Billy.",
+    "Keith": "Adds a jazzy groove to the 30‑minute Playing In The Band, with exceptional keyboard work that fuels the marathon jam.",
+    "Mickey": "",
+    "Billy": "Part of an “A+ rhythm section”, driving high‑energy performances and delivering powerful drumming throughout both sets."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-22T01:36:40.493444+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bird Song"
+    ],
+    [
+      "Playing In The Band"
+    ],
+    [
+      "Brokedown Palace"
+    ],
+    [
+      "Candyman"
+    ],
+    [
+      "Box of Rain"
+    ],
+    [
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ],
+    [
+      "Mexicali Blues"
+    ],
+    [
+      "Me And Bobby McGee"
+    ]
+  ]
+}

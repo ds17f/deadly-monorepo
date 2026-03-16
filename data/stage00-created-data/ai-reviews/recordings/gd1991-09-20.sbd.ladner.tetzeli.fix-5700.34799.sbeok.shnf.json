@@ -1,0 +1,61 @@
+{
+  "summary": "Excellent soundboard transfer captures a stellar 1991 show highlighted by a seamless Help‑Slip‑Fire combo and an epic Bird Song.",
+  "review": "Fans rave about this recording as the best available copy, noting its clean transfer despite a minor drum glitch. The performance is praised for a powerful first set with a soaring Bird Song and a flawless Help > Slip > Fire transition, while the second set remains strong even after internal tensions. Overall the show is regarded as one of the high points of the 1991 summer tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer ratings (5, 5, 4) and strong praise for both musical performance and audio fidelity lead to a top‑tier rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp mix with a clean transfer; only a brief drum cut is noted but does not detract from overall listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Fire",
+      "Bird Song",
+      "Stagger Lee"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds strong momentum with an impressive Bird Song and a tight Stagger Lee; the Help‑Slip‑Fire sequence transitions flawlessly into the second set, maintaining energy despite a minor drum dropout."
+  },
+  "band_member_comments": {
+    "Jerry": "First‑set playing described as erratic, but his second‑set performance is praised as impressive.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby’s aggressive piano work (“banging away”) is highlighted throughout the show.",
+    "Drums": "A brief drum cut is mentioned, but overall drumming remains solid."
+  },
+  "song_mentions": {
+    "Help > Slip > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:25:35.437134+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-20.sbd.ladner.tetzeli.fix-5700.34799.sbeok.shnf"
+}

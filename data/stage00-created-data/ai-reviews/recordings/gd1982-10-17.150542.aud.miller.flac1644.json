@@ -1,0 +1,45 @@
+{
+  "summary": "Upgraded audience recording delivers an outstanding first set and a strong second set highlighted by GDTRFB, The Wheel and a Jerry ballad.",
+  "review": "The new high‑quality AUD source showcases an excellent first set and a long, well‑played second set, featuring rare 80s post‑drums moments like Going Down the Road Feeling Bad, The Wheel and a heartfelt Jerry Garcia ballad. Reviewers note that while no soundboard exists, the upgraded audience tape is a significant improvement over previous releases, making the show a credible top‑10 candidate for the year.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (outstanding first set and solid second set) combined with an upgraded audience recording that improves clarity, though only a single review limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Previously circulated as a good‑quality AUD; the recent upgrade provides clearer, more detailed sound, though it remains an audience source rather than a soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Going Down the Road Feeling Bad",
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Outstanding first set followed by a long, well‑played second set with classic late‑’80s material; rare combination of GDTRFB, The Wheel and a Jerry ballad in one show."
+  },
+  "band_member_comments": {
+    "Jerry": "Ballad presence highlighted positively.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Going Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T03:12:23.287348+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-10-17.150542.aud.miller.flac1644"
+}

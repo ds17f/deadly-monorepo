@@ -1,0 +1,100 @@
+{
+  "summary": "Decent soundboard recording of a mixed‑quality Giants Stadium show, highlighted by an electrifying Jack Straw → Crazy Fingers → China > Rider sequence and strong Stagger Lee/Box‑of‑Rain moments.",
+  "review": "The performance is uneven – the first set drags while the second half bursts with energy, especially the pre‑drums jam (Jack Straw, Crazy Fingers, China‑Rider) and a fiery Stagger Lee. The SBD source is generally clear but some listeners note an overly vocal mix that pushes the guitars back. Overall the show is memorable for its high points despite occasional lack of cohesion.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Many reviewers (≈70 %) praise specific musical highlights and give 4‑5 star marks, while a minority cite recording mix issues and uneven set flow; the combined weighting yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD capture, but several users mention the mix being too vocal with distant guitar and occasional muddiness in the first set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw > Crazy Fingers > China > Rider",
+      "Stagger Lee",
+      "Box of Rain",
+      "Black Peter",
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "Picasso Moon"
+    ],
+    "setlist_flow": "First set is described as average and loosely connected; the second set launches with a powerful pre‑drums sequence that sustains momentum, though energy wanes toward the end."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring solos on Jack Straw, Crazy Fingers and heavy‑metal‑esque licks; some note his guitar sounds distant in the mix or out of sync at times.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (or Bruce) gets a shout‑out for trading solos with Jerry and ‘pumping up’ the band during Jack Straw.",
+    "Drums": "The pre‑drums jam is highlighted as a high point; “Drumz > Space” also called a pleasant trip."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "China": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Stagger Lee": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Black Peter": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Box of Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Picasso Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T21:09:31.028280+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-06-16.sbd.shn.17028.sbeok.shnf"
+}

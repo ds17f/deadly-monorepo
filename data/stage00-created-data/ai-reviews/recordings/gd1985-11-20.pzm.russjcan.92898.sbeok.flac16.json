@@ -1,0 +1,39 @@
+{
+  "summary": "Decent mid‑80s show with solid setlist, Brent on keys and a nifty “no‑count” BIODTL intro; recording quality not specified.",
+  "review": "The performance is described as a typical 1980s Dead concert – good song selection, few mistakes and Jerry’s vocals holding up better than Bob’s. Reviewers enjoy hearing Brent on keyboards and note the clever “no count” intro to BIODTL, while no comments are made about the audio source or clarity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is rated around 3.5 based on two reviews (4 and 3 stars) with positive remarks; recording quality is unknown, so a neutral estimate lowers the overall rating slightly."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not comment on soundboard vs. audience or clarity; no technical observations were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "BIODTL"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid, typical mid‑80s set with good song selection and few hiccups; Jerry’s vocal recall praised while Bob’s was noted as weaker."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal recall was highlighted as better than Bob's on this show.",
+    "Phil": "",
+    "Bob": "His lyric recall seemed less strong compared to Jerry.",
+    "Keys": "Brent’s singing is mentioned positively.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "BIODTL": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:50:34.993752+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-20.pzm.russjcan.92898.sbeok.flac16"
+}

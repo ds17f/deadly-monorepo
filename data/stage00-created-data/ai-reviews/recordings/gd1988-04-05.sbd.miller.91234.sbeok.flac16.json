@@ -1,0 +1,56 @@
+{
+  "summary": "Rich soundboard capture of a late‑80s Hartford show, highlighted by a smoking Weir Smokestack, soaring Bird Song and a blistering Louie Louie → Samson jam.",
+  "review": "The performance shines with Jerry’s ferocious guitar work, an unforgettable Weir Smokestack, and a powerful Bird Song that many reviewers call the night’s pinnacle. The Charlie Miller‑sourced soundboard is generally warm and full, though several listeners note excessive audience bleed and uneven vocal levels. Overall the show delivers classic late‑80s Dead chemistry despite some mix quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4.4 stars; most comments praise the musical moments while noting only moderate recording issues, leading to a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Warm, rich and full sound; occasional audience bleed makes parts sound like an AUD mix, and vocals are uneven on some tracks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Smokestack",
+      "Louie Louie > Samson",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set fires with a smoking Weir Smokestack and solid Bird Song; second‑set momentum builds into an intense Louie Louie → Samson sequence, though vocal consistency varies."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar work described as ripping, amazing tone and a standout solo on Bird Song; vocals noted as weaker in places.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Smokestack": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Louie Louie > Samson": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T08:03:40.035408+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-05.sbd.miller.91234.sbeok.flac16"
+}

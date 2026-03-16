@@ -1,0 +1,85 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy show featuring standout renditions of I’m a Man, C.C. Rider, China Cat and stellar guest work from Bruce Hornsby.",
+  "review": "Fans rave about the electric atmosphere and tight playing, especially Jerry’s ripping guitar on I’m a Man, the extended China Cat jam and the powerful C.C. Rider/I'm a Man segue. Guest appearances by Spencer Davis and Bruce Hornsby add extra sparkle, while the soundboard source is praised as clear and well‑balanced.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.4 stars, all comments are enthusiastic about performance; no recording complaints, giving a strong combined show‑and‑recording score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "No specific audio complaints were noted; reviewers focus on the music, implying a clear, well‑balanced soundboard recording with good fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I'm a Man",
+      "C.C. Rider",
+      "China Cat Sunflower",
+      "Stella Blue",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Dark Star"
+    ],
+    "setlist_flow": "The concert flows smoothly with guest‑driven highlights, notably the seamless C.C. Rider → I’m a Man transition and an extended China Cat jam that keep the energy high throughout both sets."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s guitar work is repeatedly praised as energetic, ripping, and especially powerful on I’m a Man and during the jams.",
+    "Phil": "Phil’s bass intro on I’m a Man receives specific commendation (“Phil’s sick intro”).",
+    "Bob": "",
+    "Keys": "Bruce Hornsby’s piano/accordion contributions are highlighted as frantic yet fun, adding extra sparkle to Rider and overall jam sections.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "I'm a Man": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "C.C. Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Women Are Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T02:09:03.220032+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-12-10.sbd.ladner.5451.sbeok.shnf"
+}

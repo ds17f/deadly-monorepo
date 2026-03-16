@@ -1,0 +1,68 @@
+{
+  "summary": "Energetic first set, uneven second half with standout Attics and Baby Blue",
+  "blurb": "The first set builds strong momentum with aggressive playing and crisp vocals. Highlights include I Know You Rider, Walkin' Blues, Attics Of My Life and the poignant Baby Blue encore. The second set loses steam, slipping on Estimated Prophet and Alabama Getaway.",
+  "review": "On February 19, 1995 at Salt Lake City’s Delta Center the Dead delivered a show that swings between high‑octane brilliance and sleepy lag. Jerry Garcia’s voice wavers early – lyrical slips and a strained tone are noted – but his guitar cuts through with an aggressive front‑mix that shines on tracks like I Know You Rider and Walkin' Blues. Phil Lesh holds down a solid bass foundation, even stepping into the lead on one number, while Bob Weir propels the band forward, reshaping tempos and keeping the momentum alive. Vince Welnick’s keyboards are a mixed bag: his Alabama Getaway solo left some listeners “sad,” yet elsewhere his piano‑organ work is described as imaginative and top‑of‑his‑game, especially during the soaring Attics Of My Life. The dual‑drummer engine stays tight; Bill Kreutzmann earns praise for an extended pre‑drums section that fuels the second‑set energy, even as Mickey Hart sits more in the background. Standout moments include a fiery rendition of Attics Of My Life, a heartfelt “It’s All Over Now Baby Blue” encore, and the early‑set surge that makes this show worth hunting for fans who can overlook its occasional slumps.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.3,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 26,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "One recording is clearly positive, praising aggressive playing and clear vocals; the other is mixed, noting vocal slip‑ups and uneven pacing. The overall sentiment leans modestly positive, yielding a small +0.6 adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.6 = 3.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1995-02-19.schoeps.wklitz.95443.flac16",
+    "reason": "Clearer audience capture with good vocal presence and energetic performance; superior to the fair‑quality, acoustically challenged first recording."
+  },
+  "key_highlights": [
+    "Strong first‑set momentum with aggressive playing and front‑mix vocals",
+    "Long pre‑drums section that drives second‑set energy",
+    "Vince Welnick’s imaginative keyboard solos on Attics Of My Life",
+    "Emotional encore of It’s All Over Now Baby Blue despite overall uneven pacing"
+  ],
+  "song_highlights": [
+    "Attics Of My Life",
+    "It's All Over Now Baby Blue",
+    "I Know You Rider",
+    "Walkin' Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Vocal performance is uneven – early slip‑ups and strained tone give way to an aggressive, front‑mix guitar that cuts through on the high points.",
+    "Phil": "Solid bass work throughout; takes a brief lead role on one song, anchoring the band's groove.",
+    "Bob": "Keeps the band moving forward with inventive rhythm work and tempo reshaping, especially during the first set surge.",
+    "Brent": "Vince Welnick delivers imaginative piano/organ solos that sparkle on Attics Of My Life, though his Alabama Getaway segment falls flat for some listeners.",
+    "Mickey": "",
+    "Billy": "Drives the second‑set energy with an extended pre‑drums section and steady, propulsive drumming."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-19T04:55:45.607797+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "If The Shoe Fits",
+      "New Speedway Boogie",
+      "Estimated Prophet",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Attics Of My Life",
+      "Johnny B. Goode"
+    ],
+    [
+      "It's All Over Now Baby Blue"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Walkin' Blues"
+    ]
+  ]
+}

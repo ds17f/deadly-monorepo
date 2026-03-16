@@ -1,0 +1,67 @@
+{
+  "summary": "Historic Fillmore East late show featuring an iconic St Stephen; the audience tape is decent but vocal clarity and occasional distortion keep it from being pristine.",
+  "review": "The recording captures a landmark late‑night Fillmore East set with a legendary early version of St Stephen, plus strong moments from Alligator, Lovelight and Caution. The audio is an audience (AUD) source that has been EQ‑balanced, yet vocals remain fuzzy and some distortion persists, giving the tape an overall fair quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance (especially St Stephen) while noting consistent issues with vocal clarity and occasional distortion; weighting musical strength heavily yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Improved EQ and balance, but vocals are not crisp and some distortion remains (especially in the Caution segment). Overall listenable for a 1968 audience tape but not high‑fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Alligator",
+      "Lovelight",
+      "Caution"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "An experimental late‑show sequence (Dark Star → Feedback → The Eleven → St Stephen) that showcases the band’s transitional improvisation and historic first Fillmore East appearance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pig's harp work on the Caution reprise is noted as strong.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Alligator": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Caution": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "The Eleven": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    }
+  },
+  "processed_date": "2025-09-24T08:38:08.360003+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-06-14.140953.late.aud.dalton.miller.sirmick.flac1644"
+}

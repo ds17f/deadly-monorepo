@@ -1,0 +1,60 @@
+{
+  "summary": "Modest Winterland set with relaxed vibe, solid classics",
+  "blurb": "The show delivers a steady run through early Dead staples like Hard To Handle, Good Lovin' (played twice) and the China Cat Sunflower > I Know You Rider segue. Energy is subdued as the band appears tired after a long weekend, but banter between songs adds charm. Soundboard recording quality is excellent, capturing the nuances despite the low‑key performance.",
+  "review": "On October 26 1969 at Winterland Arena the Dead slipped into a laid‑back Sunday night set that felt a little off‑kilter after a marathon weekend of shows. Jerry’s remarks about “having to remember it’s Sunday night” set the tone – the playing is relaxed, even a bit sloppy, and the usual fire is muted. Still, the band plows through a solid repertoire: a bluesy opener with Hard To Handle, two exuberant runs of Good Lovin' that showcase their playful double‑take, and the ever‑reliable China Cat Sunflower into I Know You Rider segue that shines despite the overall low energy. Pigpen’s organ textures and the twin‑drum groove from Mickey and Billy keep things moving, while the banter between numbers provides a welcome human touch. The sole available recording is a soundboard capture praised for its fantastic clarity; it renders every subtle nuance of this modest performance, making it the best way to experience what is essentially a quiet, if not legendary, Winterland night.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 8,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.0,
+      "sentiment_rationale": "Recording analysis described the show as 'mixed' with low energy and tired playing, yielding no clear positive or negative consensus across multiple recordings.",
+      "final_calculation": "2.5 + 0.1 + 0.0 = 2.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-10-26.sbd.fink.9509.sbeok.shnf",
+    "reason": "Excellent soundboard clarity captures the nuanced, if subdued, performance and is the only complete source."
+  },
+  "key_highlights": [
+    "Excellent soundboard clarity captures every nuance of the performance.",
+    "Good Lovin' appears twice, showcasing the band's playful double‑take.",
+    "The China Cat Sunflower > I Know You Rider segue remains a highlight despite overall low energy."
+  ],
+  "song_highlights": [
+    "Hard To Handle",
+    "Good Lovin'",
+    "Good Lovin'",
+    "China Cat Sunflower",
+    "I Know You Rider"
+  ],
+  "band_performance": {
+    "Jerry": "Appears relaxed after a long weekend, playing less sharply as noted in his comment about the Sunday night vibe.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-24T17:40:58.254225+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Hard To Handle"
+    ],
+    [
+      "Good Lovin'",
+      "Drums",
+      "Good Lovin'"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ]
+  ]
+}

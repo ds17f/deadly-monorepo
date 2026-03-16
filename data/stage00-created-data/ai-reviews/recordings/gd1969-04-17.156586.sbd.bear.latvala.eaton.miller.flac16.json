@@ -1,0 +1,62 @@
+{
+  "summary": "Nice soundboard capture of a rare university show with strong Dark Star and unique Cryptical‑>Caution transition, though St Stephen’s falls flat for some listeners.",
+  "review": "The recording is a clean SBD that fans appreciate for its clarity, and the performance shines in spots like a solid Dark Star and an unprecedented Cryptical → Caution segue. While most of the show is praised, a few cuts such as St Stephen’s receive criticism, giving the overall impression a mixed‑positive tone.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is generally positive with standout moments, recording quality is good; however one review is notably critical, leading to a balanced overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the SBD as nice and not bad sounding; no major issues like drop‑outs or muddiness are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Cryptical Envelopment > Caution (Do Not Stop)"
+    ],
+    "poor_songs": [
+      "St Stephen"
+    ],
+    "setlist_flow": "The concert flows well overall, highlighted by a rare Cryptical‑>Caution transition and strong Dark Star, though the St Stephen segment drags for some listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil Lesh is noted for insisting on an unprecedented Cryptical > Caution transition.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Caution (Do Not Stop)": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "St Stephen": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eleven": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T13:21:53.974804+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-04-17.156586.sbd.bear.latvala.eaton.miller.flac16"
+}

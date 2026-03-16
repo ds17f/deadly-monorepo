@@ -1,0 +1,97 @@
+{
+  "summary": "High‑energy 11/24/78 FM broadcast captures a scorching Dead show (Jack Straw, Sugaree, Loser, Estimated) with solid audience sound despite a mixed mix and Jerry’s sick vocals.",
+  "review": "Even though Jerry Garcia was battling pneumonia and his voice sounded ragged, the band turned in one of ’78’s hottest performances – tight Jack Straw and Sugaree openings, an out‑of‑this‑world Loser, a must‑hear Estimated, and stellar Friend of the Devil/Friend of the Devil. The FM broadcast source is clear enough for most listeners (drums punchy, overall clarity good) though the mix can let drums overpower Jerry’s guitar at times.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews are 4‑5 stars, praising the musical performance while noting only modest recording quirks; weighted rating (70 % show + 30 % recording) lands in the strong‑good range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall FM broadcast sound with excellent drum presence and good instrument separation. Some listeners note a slightly off‑balance mix (drums sometimes dominate Jerry’s guitar) and occasional player UI issues, but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Sugaree",
+      "Loser",
+      "Estimated",
+      "Friend of the Devil",
+      "Sunshine Daydream"
+    ],
+    "poor_songs": [
+      "Fire on the Mountain (quick)",
+      "Shakedown Street"
+    ],
+    "setlist_flow": "First set launches with a smoking Jack Straw and Sugaree, setting a high bar. The second set builds momentum through Loser, Estimated, and a fiery Friend of the Devil, delivering a hot, cohesive arc despite Jerry’s vocal limitations."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice was croaky and nasal due to pneumonia, but his guitar work and solos were praised as anthemic and remarkable.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Donna Jean’s vocals noted as cohesive; keyboard texture generally supportive but not highlighted separately.",
+    "Drums": "Drums sound excellent and punchy; occasional mix dominance over guitar mentioned."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Sugaree": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Loser": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Shakedown Street": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T16:59:34.610153+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-11-24.fm.braverman.8364.sbeok.shnf"
+}

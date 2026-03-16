@@ -1,0 +1,85 @@
+{
+  "summary": "Soundboard recording of solid quality captures a landmark 1969 show that swings from laid‑back country (Slewfoot, Dire Wolf) into a soaring Dark Star > St Stephen > The Eleven sequence.",
+  "review": "The performance is praised for its rare early‑year material—especially the pedal‑steel‑laden Slewfoot and Bobby’s lead on Dire Wolf—and for an explosive second half highlighted by a monster Dark Star/St Stephen/The Eleven jam.  The soundboard source delivers generally clear, full‑bodied audio, though a few reviewers note occasional hiss or mix glitches on Slewfoot and a brief drum wobble at the start.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviews (20+) are 4‑5 stars, overwhelmingly praising the musical setlist and standout moments while noting only minor recording flaws; this yields a high combined rating with strong confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and full‑bodied sound, crisp on most tracks.  Some listeners mention hiss, occasional mixing issues on Slewfoot, and a brief drum imbalance in the opening tunes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > St. Stephen > The Eleven",
+      "Dire Wolf",
+      "Slewfoot",
+      "Casey Jones (early version)",
+      "Green Green Grass of Home"
+    ],
+    "poor_songs": [
+      "Dupree's Boat Ride"
+    ],
+    "setlist_flow": "The set opens relaxed with new‑song country numbers, then pivots into psychedelic intensity via the Dark Star/St Stephen/Eleven sequence before closing with a bittersweet Baby Blue encore.  Reviewers love the contrast of emerging country‑rock and classic ’69 psychedelia."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s pedal steel shines on Slewfoot, Dire Wolf, and early Casey Jones; his guitar tone is repeatedly praised.",
+    "Phil": "Phil’s bass work gets special mention during the Dark Star lovelight section and overall solid foundation.",
+    "Bob": "Bob Weir (credited as Bobby) takes lead vocals on Dire Wolf and delivers confident performances throughout.",
+    "Keys": "Organ/keyboard texture noted on Baby Blue (possible Tom Constanten), but no detailed commentary beyond that.",
+    "Drums": "Drumming described as flowing and fun; a brief early‑set imbalance is mentioned, plus Bill loses time on Dupree’s Boat Ride."
+  },
+  "song_mentions": {
+    "Slewfoot": {
+      "positive_mentions": 6,
+      "negative_mentions": 2,
+      "total_mentions": 8
+    },
+    "Dire Wolf": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Dark Star > St. Stephen > The Eleven": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Casey Jones": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Green Green Grass of Home": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Baby Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Dupree's Boat Ride": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Mama Tried": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T15:49:59.155825+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-06-27.sbd.samaritano.20547.sbeok.shnf"
+}

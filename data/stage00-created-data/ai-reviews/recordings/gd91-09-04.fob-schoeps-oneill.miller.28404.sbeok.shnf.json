@@ -1,0 +1,104 @@
+{
+  "summary": "Outstanding soundboard capture of a high‑energy 1991 show highlighted by a scorching Scarlet > Fire and tight, inspired performances throughout.",
+  "review": "Fans rave about the crystal‑clear, wide‑dynamic‑range recording that puts the bass up front and sounds better than many SBD releases. The concert itself is described as electric – a ten‑song first set packed with tour‑fresh energy, blistering Jerry Garcia leads, precise Bob Weir work, and a full‑sound piano contribution from Hornsby. Standout moments include Scarlet > Fire, Good Times, Jack Straw, Cold Rain → Promised Land and an exuberant second‑set sequence that keeps listeners “grooving hard.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviews (5 of 6) award 4–5 stars and praise both the performance and the superb soundboard recording; only one vague 3‑star review provides no negative detail, leading to a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear bass and high‑end, wide dynamic range, up‑front mix with virtually no chatter; described as better than many SBD transfers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Good Times",
+      "Jack Straw",
+      "Cold Rain",
+      "Promised Land",
+      "Black-Throated Wind",
+      "China Doll",
+      "The Wheel",
+      "The Weight",
+      "Estimated",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A ten‑song first set brimming with fresh tour energy, followed by a second set that weaves classic jams and tight transitions; the overall pacing is described as pumped, grooving hard, and emotionally resonant."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is praised for shredding, strong leads on many songs, and an engaged, high‑energy performance.",
+    "Phil": "",
+    "Bob": "Bob Weir’s guitar/vocals are noted as turned WAY up and remarkably precise throughout the show.",
+    "Keys": "Hornsby (Bruce Horn) on piano adds a big, full sound that enhances the band’s dynamics.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Good Times": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black-Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T23:47:09.975614+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-09-04.fob-schoeps-oneill.miller.28404.sbeok.shnf"
+}

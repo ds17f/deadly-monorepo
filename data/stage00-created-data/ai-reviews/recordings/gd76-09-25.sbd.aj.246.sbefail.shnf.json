@@ -1,0 +1,102 @@
+{
+  "summary": "Crisp soundboard capture (with a slight speed issue) of a 1976 show that shines on Sugaree, Cosmic Charlie and a stellar Lazy Lightnin’/Supplication‑filled second set.",
+  "review": "The recording is generally clear and powerful – reviewers note it stays crisp even at high volume – though several point out the tape runs slow and needs about +2 % pitch correction. Musically the show is praised for its energetic first set and a second set that bursts with highlights such as Sugaree, Cosmic Charlie, Lazy Lightnin’/Supplication, Half‑Step Mississippi and Scarlet Begonias, making it one of the more memorable ’76 performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of detailed reviews are 4‑5 stars and emphasize strong playing and great sound, with only a few outlier low scores tied to unrelated complaints or minor pitch issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear mix praised by many; however the tape runs slightly slow/off‑key and requires a ~+2 % pitch correction for true fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Cosmic Charlie",
+      "Lazy Lightnin' > Supplication",
+      "Half-Step Mississippi",
+      "Scarlet Begonias",
+      "Mama Tried",
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "All Over Now"
+    ],
+    "setlist_flow": "Solid first set with energetic classics; second set builds momentum and is highlighted as the show’s high point, especially the Lazy/Supplication sequence and the Cosmic Charlie climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly called flawless, inventive and at the top of his game – standout guitar on Sugaree, Minglewood Blues and overall solos.",
+    "Phil": "Described as “insane” on bass during Sugaree and praised for slide work on Scarlet Begonias; generally a strong low‑end showcase.",
+    "Bob": "",
+    "Keys": "Keith receives compliments for interplay on Cassidy and Ramble On, noted as a key part of the band’s texture.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Dancing in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Lazy Lightnin' > Supplication": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Half-Step Mississippi": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mama Tried": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:25:28.077714+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-09-25.sbd.aj.246.sbefail.shnf"
+}

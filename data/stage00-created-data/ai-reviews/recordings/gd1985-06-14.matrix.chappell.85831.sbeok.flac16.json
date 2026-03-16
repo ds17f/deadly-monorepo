@@ -1,0 +1,85 @@
+{
+  "summary": "Excellent matrix mix captures a classic mid‑80s show highlighted by a one‑of‑a‑kind Morning Dew, rare Keep On Growing, and stellar China Doll/Comes A Time performances.",
+  "review": "The recording offers a very nice matrix blend with only minor first‑set glitches, delivering crystal‑clear sound that lets the music shine. The performance is widely praised – fans cite the unforgettable Morning Dew, the seldom‑heard Keep On Growing, and powerful renditions of China Doll and Comes A Time as standouts, despite a few lackluster moments like Let It Grow. Overall the show is regarded as a classic, especially for its intense second set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show and recording highly; show quality averages around 4.3/5 while recording quality is consistently described as excellent, yielding an overall rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Very nice matrix mix; minor technical issues affect the first set slightly but overall crisp and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Keep On Growing",
+      "China Doll",
+      "Comes A Time",
+      "Sugar Mag"
+    ],
+    "poor_songs": [
+      "Let It Grow"
+    ],
+    "setlist_flow": "First set is solid with standard numbers and a rare Keep On Growing; the second set launches with an intense, one‑of‑a‑kind Morning Dew and builds through strong China Doll and Comes A Time performances, creating a memorable arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for pouring his heart into Morning Dew, delivering killer China Doll and a rare, powerful Comes A Time; vocal performance noted as '85 voice sinking well into the notes.'",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Keep On Growing": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Mag": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T04:31:53.326459+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-14.matrix.chappell.85831.sbeok.flac16"
+}

@@ -1,0 +1,76 @@
+{
+  "summary": "Excellent audience recording with crystal‑clear mix; the show is a high‑energy early‑90s performance highlighted by China Cat, Rider and an acoustic‑flavored Lightning Bolt guitar.",
+  "review": "The tape captures a remarkably clean audience feed that many reviewers liken to a matrix soundboard – Phil’s bass is pristine and the overall balance is superb. Musically the band is in top form for most of the night, delivering standout moments on China Cat, Rider, Terrapin‑related material and an almost acoustic Lightning Bolt guitar, though one reviewer notes a weaker second‑set performance by Garcia.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently praised as excellent; the musical performance receives mostly positive comments with only one notable negative, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, balanced mix that sounds almost like a matrix soundboard; high‑end mic chain (Schoeps MK4, Reutelhuber preamp, Sony TCD‑D10PROII) delivers clear instrument separation and strong bass definition."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat",
+      "Rider",
+      "Terrapin Station (TLEO)",
+      "Friend of the Devil",
+      "Stella Blue",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [
+      "Playing in the Band"
+    ],
+    "setlist_flow": "First set is described as upbeat and solid; most reviewers feel the energy stays high through much of the night, though one critic finds the second‑set less satisfying due to Garcia’s playing."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar is loud, front‑and‑center with an acoustic/electric tone (Lightning Bolt) that many fans love.",
+    "Phil": "Phil Lesh sounds perfect; his bass is clear and well‑defined in the mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station (TLEO)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T19:01:09.733199+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-12-18.aud.vernon.7277.sbeok.shnf"
+}

@@ -1,0 +1,76 @@
+{
+  "summary": "A solid soundboard capture of a high‑energy December ’88 second set, highlighted by scorching “Scarlet Begonias”, “Fire on the Mountain” and “High Time”, though some listeners note mild distortion and a few uneven moments.",
+  "review": "The recording is a pure SBD (second‑set only) that delivers clear band balance but shows a touch of tape‑age grit, especially in the cymbals and occasional distortion. Musically the show shines on “Scarlet Begonias”, “Fire on the Mountain”, “High Time” and the opening burst of “Let The Good Times Roll”, while “Estimated” and “Watchtower” feel less inspired. Overall the performance is energetic and memorable, but the limited set‑list coverage and minor sound flaws keep it from being a classic.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Eight reviews provide a balanced view: most praise the performance (average show rating ≈4) while several note recording flaws and uneven songs, yielding an overall weighted score just under 4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Generally clear SBD capture of the second set; cymbals described as dry/muffled, occasional tape‑distortion noted, and a slight overall grit that prevents an ‘excellent’ rating."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "High Time",
+      "Let The Good Times Roll",
+      "Jack-A-Roe"
+    ],
+    "poor_songs": [
+      "Estimated",
+      "Watchtower"
+    ],
+    "setlist_flow": "Only the second set is available, but reviewers praise strong transitions (e.g., into “Eyes” and “The Wheel”) while noting a few lagging moments; overall pacing is lively despite the missing first‑set context."
+  },
+  "band_member_comments": {
+    "Jerry": "Energetic guitar work highlighted by a dancing Fire solo and valiant attempts on Watchtower; generally praised for his excitement.",
+    "Phil": "Occasional “small Phil bombs” add punch to jams, noted as a positive bass contribution in the second set.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s synths receive high praise – searing tones, laser‑inducing boards and a growing menu of mind‑twisting sounds that drive many jams.",
+    "Drums": "Mickey Hart described as aggressive; electronic drums noted as cool; overall drum/space segment flows smoothly."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let The Good Times Roll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Watchtower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:30:16.398162+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-12-09.set2-sbd.leeds.16465.sbeok.shnf"
+}

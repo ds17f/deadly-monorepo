@@ -1,0 +1,69 @@
+{
+  "summary": "Audience tape of fair quality captures a mixed Oakland show where Visions of Johanna shines amid uneven guitar work and spotty set flow.",
+  "review": "The recording is an audience (AUD) capture with the usual venue coloration – decent enough to follow but lacking low‑end clarity. Musically the concert is uneven: early on Jerry’s playing is described as repetitive and tentative, while the second set lifts off with a strong Visions of Johanna and a solid Scarlet → Fire sequence. Fans note standout moments (Visions, Scarlet Fire, Help → Slipknot → Franklin's) but also criticize long, drawn‑out Space jams and weak transitions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show below average (≈2.5) while noting the audience recording is only fair (≈3.5); weighted combination yields a low‑mid overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Typical Oakland AUD tape – clear enough to hear instruments but muddy on the low end, occasional ambient noise; no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Visions of Johanna",
+      "Scarlet > Fire",
+      "Help > Slipknot > Franklin's Tower"
+    ],
+    "poor_songs": [
+      "Help > Slipknot > Franklin's Tower",
+      "Scarlet > Fire"
+    ],
+    "setlist_flow": "The first set is described as sluggish with long, drawn‑out Space and tentative guitar work; the second set gains momentum thanks to a powerful Visions of Johanna and tighter jams, though transitions remain uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – early songs show repetitive riffs and lack of soloing, but later moments (Visions, Scarlet Fire) earn praise for strong licks.",
+    "Phil": "A few reviewers note Phil’s vocal delivery was weak or off‑key on certain numbers.",
+    "Bob": "Drums receive positive remarks, especially during the Fire segment where they ‘rock’.",
+    "Keys": "Vince’s playing is highlighted as improving in 1995 with richer piano/organ tones, though some still criticize his early keyboard textures.",
+    "Drums": "Overall drum work is praised for energy and tightness, particularly on Fire."
+  },
+  "song_mentions": {
+    "Help > Slipknot > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Visions of Johanna": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T05:16:27.916804+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-02-24.AT.5493.sbeok.shnf"
+}

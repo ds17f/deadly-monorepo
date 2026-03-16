@@ -1,0 +1,39 @@
+{
+  "summary": "Recording quality unknown; the show is hampered by Bobby's off‑key J.B.G. that many listeners found unauthentic.",
+  "review": "The sole review focuses on Bob Weir’s vocal performance during J.B.G., describing it as screeching and stuttering, which detracted from the authenticity of the set despite audience enthusiasm. No comments were made about the audio source or mix, leaving the recording quality uncertain.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief, highly critical review (0 stars) mentioning a performance flaw and no information on sound quality results in a very low overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments regarding clarity, mix, or source; recording quality cannot be assessed from the available feedback."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "J.B.G."
+    ],
+    "setlist_flow": "No information on set pacing or flow was provided in the review."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Reviewer criticizes Bob's vocal screeching and stuttering during J.B.G., calling it unauthentic.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "J.B.G.": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:28:56.579606+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-21.124555.chasingwilma.flac24"
+}

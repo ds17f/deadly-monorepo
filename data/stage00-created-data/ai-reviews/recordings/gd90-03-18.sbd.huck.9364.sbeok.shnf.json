@@ -1,0 +1,79 @@
+{
+  "summary": "Good‑quality soundboard recording (with a few audience splice hiccups) of a spring‑90 Hartford show highlighted by an epic Morning Dew and strong Brent keyboard work.",
+  "review": "The performance shines, especially the second set where Phil’s bass solo on Morning Dew is described as “mind‑blowing” and Brent’s organ builds are called incredible.  The soundboard source is generally clean, though the early Shakedown segment suffers from a noticeable audience splice that some reviewers found unbearable.  Overall the show is praised as one of the best of the 1990 spring tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average star rating is 4.0, with most reviewers highlighting superb musical moments and only minor technical complaints about the Shakedown splice."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced soundboard mix; however a problematic audience splice in Shakedown (and some AUD patches) creates muddiness at the start and middle of that song."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Aiko",
+      "Uncle > Mexicali",
+      "Music Never Stopped"
+    ],
+    "poor_songs": [
+      "Shakedown"
+    ],
+    "setlist_flow": "First set is solid with a few rough spots, but the second set erupts – the Dew caps an unforgettable close and Brent’s keyboard solos drive the energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned for his psychedelic lead work that sometimes gets buried under Brent’s organ build‑up.",
+    "Phil": "His bass solo during Morning Dew is called “unreal” and a highlight of the night.",
+    "Bob": "",
+    "Keys": "Brent’s organ/keyboard performance is repeatedly praised as moaning, groaning, and tearing the shows up.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Aiko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle > Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T03:53:08.671519+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-03-18.sbd.huck.9364.sbeok.shnf"
+}

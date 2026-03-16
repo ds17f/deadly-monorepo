@@ -1,0 +1,45 @@
+{
+  "summary": "Mixed‑quality audio of a modest show that still delivers a beautiful Bird Song and a solid Victim Or The Crime",
+  "review": "Fans describe this performance as not a classic but still enjoyable, highlighting the nicely rendered \"Bird Song\" and an impressive \"Victim Or The Crime\". The available audio download is praised as better now, though earlier listeners complained about streaming‑only SBDs and subpar AUD quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is average with a few standout moments; recording quality is uneven, leading to an overall mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Early reviewers complained of \"shitty AUD\" and streaming‑only SBDs; later comment says the AUD is good now, but no specific details on soundboard vs. audience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Victim Or The Crime"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim Or The Crime": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T14:00:15.174550+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-10-22.beyer-fob.unknown.12833.sbefail.shnf"
+}

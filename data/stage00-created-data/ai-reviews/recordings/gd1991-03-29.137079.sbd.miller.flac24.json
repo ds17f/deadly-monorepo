@@ -1,0 +1,31 @@
+{
+  "summary": "No concrete details on the recording or performance; reviewer gave a zero‑star rating and provided only a brief personal note.",
+  "review": "The lone review offers no information about sound quality, source type, or musical highlights, merely noting that the reviewer sang for a short time before leaving. With a 0‑star rating and no substantive commentary, it is impossible to assess the technical fidelity of the tape or the strength of the show.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one extremely brief review with a zero‑star rating; no useful details on performance or recording quality, so the rating is based primarily on the reviewer’s negative star score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No specific comments about sound clarity, mix, or source; rating inferred from zero‑star review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about the set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T17:33:26.184349+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-03-29.137079.sbd.miller.flac24"
+}

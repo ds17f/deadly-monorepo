@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy show highlighted by a stellar Morning Dew and a smoking second set.",
+  "review": "The recording is a crisp soundboard mix with just enough audience ambience to convey the live vibe, making it an excellent listening experience. The concert itself bursts with energy – Jerry is on fire, Brent’s keyboards add depth, and the second set (especially Morning Dew) is repeatedly praised as one of the best of ’87.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (mostly 4‑5 stars), strong praise for both performance and soundboard quality, with many detailed positive comments."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear soundboard capture with a subtle audience blend; reviewers call it “fantastic”, “crisp” and “excellent”."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Space",
+      "Cumberland"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is described as pure, nonstop energy with a particularly tight second set; transitions are smooth and the band “was on” all night."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly called \"on fire\", his guitar tone and vocal were fresh, youthful and inspiring.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work is highlighted for injecting energy and vocal depth – “heart of steel”.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:02:22.322567+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-12.sbd.unk.4702.sbeok.shnf"
+}

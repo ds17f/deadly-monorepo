@@ -1,0 +1,31 @@
+{
+  "summary": "Recording lacks detailed information and receives a negative rating from the sole reviewer.",
+  "review": "The only available feedback is a brief comment that provides no insight into the audio source, clarity, or performance quality. With a zero‑star rating and no specifics on songs or band members, the recording cannot be confidently evaluated.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one review with a 0‑star rating and no substantive comments; insufficient data for a higher confidence assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No remarks about soundboard, audience mix, clarity, or any technical aspects were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information on set structure or pacing was mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T13:14:11.575367+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-08.136886.upg-sbd.tobin.flac16"
+}

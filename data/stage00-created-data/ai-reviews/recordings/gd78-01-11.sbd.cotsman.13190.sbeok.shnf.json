@@ -1,0 +1,63 @@
+{
+  "summary": "High‑quality soundboard capture of a classic ’78 show highlighted by blistering Let It Grow, Terrapin and an unforgettable St. Stephen.",
+  "review": "The recording is a clean SBD source that most reviewers rate as good to excellent, with clear instrument separation and a well‑defined mix (Keith’s keys stand out). Musically the concert is celebrated for its tight setlist, powerful Let It Grow, Terrapin Station, St. Stephen and They Love Each Other performances, and even with Jerry’s laryngitis his guitar work shines. Overall the show is described as one of the best early‑’78 tapes.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of reviews (13/15) are 4–5 stars praising both performance and sound; recording quality is consistently called good, while the musical execution is described as exceptional."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers note a clear, well‑balanced mix (\"Sound is great\", \"Keith well defined in the mix\"). A few mention it could be better than an audience tape, but overall the SBD is considered solid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Terrapin Station",
+      "St. Stephen",
+      "They Love Each Other",
+      "Big River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The setlist is described as attractive and well‑sequenced, with a particularly strong second set that many call \"perfect\"; transitions into jams are praised."
+  },
+  "band_member_comments": {
+    "Jerry": "Despite laryngitis his guitar work is described as blistering, inspired and \"ripping\", with a raspy but emotive voice.",
+    "Phil": "Bass lines receive high praise – “thunders”, “great” and “killing it”.",
+    "Bob": "Weir’s rhythm guitar and vocal contributions are noted positively, especially his backing vocals on El Paso and other songs.",
+    "Keys": "Keith's keyboards are clearly defined in the mix; occasional mention of well‑defined keys throughout the show.",
+    "Drums": "The drummers keep solid time, “beat the crap out of kits”, and drive the energy of jams."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 11,
+      "negative_mentions": 0,
+      "total_mentions": 11
+    },
+    "Terrapin Station": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "St. Stephen": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "They Love Each Other": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T07:58:47.604759+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-01-11.sbd.cotsman.13190.sbeok.shnf"
+}

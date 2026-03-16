@@ -1,0 +1,66 @@
+{
+  "summary": "Acoustic gems & epic Dark Star despite muffled audience tape",
+  "blurb": "The show features the debut live rendition of \"Box of Rain\" and a soaring \"Dark Star\" jam. The acoustic half, highlighted by Ripple and Brokedown Palace, is praised as one of 1970's best despite poor tape fidelity. Overall performance is strong, though recording quality limits clarity.",
+  "review": "On September 17, 1970 at the Fillmore East, the Dead delivered a historic set that would become legendary among early‑70 fans. The first half showcases an intimate acoustic block – \"Box of Rain\" (the very first live outing of the song), \"Ripple\", and \"Brokedown Palace\" – with Jerry slipping to piano and pedal‑steel while Phil and Bob add heartfelt vocals. That mood shifts into a blistering second set, where a monumental \"Dark Star\" erupts into an exploratory jam that segues into a fiery \"Saint Stephen\" before the dual‑drum climax and two bursts of \"Good Lovin'\". Pigpen’s piano (and occasional organ) adds texture throughout, and the twin drummers lock in with relentless drive. While every existing tape is audience‑sourced and suffers from muffled mids, hiss, and occasional dropouts, the musical moments shine through clearly enough to make this a must‑listen for anyone interested in the band's early acoustic experiments and the raw power of their psychedelic improvisations.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 35,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Multiple recordings consistently praise the acoustic set (Box of Rain, Ripple, Brokedown Palace) and the Dark Star jam while noting only recording‑quality issues; no recurring criticism of playing is present, yielding a modestly positive sentiment.",
+      "final_calculation": "2.5 + 0.3 + 0.6 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-09-17.aud.warner.16090.sbeok.shnf",
+    "reason": "Most complete audience tape that captures the full acoustic block and Dark Star despite muffled mids; it is the reference source for this show."
+  },
+  "key_highlights": [
+    "First ever live performance of \"Box of Rain\" captured on tape.",
+    "Intimate acoustic half featuring Box of Rain, Ripple, and Brokedown Palace shines despite poor fidelity.",
+    "Monumental Dark Star jam with soaring improvisation leads into Saint Stephen.",
+    "Pigpen's piano adds depth to the acoustic numbers and early‑70 set."
+  ],
+  "song_highlights": [
+    "Box of Rain",
+    "Dark Star",
+    "Ripple",
+    "Brokedown Palace",
+    "Saint Stephen"
+  ],
+  "band_performance": {
+    "Jerry": "Adds piano on Box of Rain with tasteful pedal‑steel touches and delivers a soaring guitar tone during Dark Star.",
+    "Phil": "Provides strong lead vocals on Box of Rain and acoustic numbers; his lyrical delivery is highlighted as especially effective.",
+    "Bob": "Supports the acoustic set with rhythm guitar and vocal harmonies, contributing positively to the intimate feel.",
+    "Brent": "Pigpen's piano (and occasional organ) adds texture throughout the show; keyboards are audible but not pristine due to tape quality.",
+    "Mickey": "Adds percussive color on several tracks, enhancing the rhythmic drive of both acoustic and electric sections.",
+    "Billy": "Drumming described as \"rocking\"; his steady pulse underpins the extended Dark Star jam."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-19T22:50:38.867179+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Box of Rain"
+    ],
+    [
+      "Dark Star",
+      "Saint Stephen",
+      "Drums",
+      "Good Lovin'",
+      "Drums",
+      "Good Lovin'"
+    ],
+    [
+      "Ripple"
+    ],
+    [
+      "Brokedown Palace"
+    ]
+  ]
+}

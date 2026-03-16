@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard recording with a dry, compressed mix that buries Bob’s parts, but includes standout West L.A. Fadeaway and Estimated Prophet performances.",
+  "review": "The show is solid overall, highlighted by phenomenal versions of West L.A. Fadeaway and Estimated Prophet, though the rest of the set is described as merely decent. The soundboard source suffers from a hot vocal mix, lack of low‑end presence and a thin, compressed feel that makes Bob Weir barely audible. Despite these technical shortcomings, fans still recommend the recording for its two standout songs.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Show quality is decent with a few exceptional songs (70% weight) while the recording mix issues lower overall enjoyment (30% weight), resulting in an average‑plus rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Vocals are too hot and dry; overall mix is compressed with little low‑end. Bob Weir's guitar/vocals are barely audible, making the sound feel thin."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "West L.A. Fadeaway",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Two highlighted songs stand out sharply against an otherwise decent set; reviewers note the performance is solid but not spectacular beyond those moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Barely audible in the mix, vocals and guitar lost in the dry, compressed sound.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "West L.A. Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T23:16:39.847887+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-09-30.sbd.8964.sbeok.shnf"
+}

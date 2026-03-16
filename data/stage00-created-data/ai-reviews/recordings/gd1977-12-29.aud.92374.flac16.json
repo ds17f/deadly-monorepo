@@ -1,0 +1,31 @@
+{
+  "summary": "A punchy audience cassette of an unknown 1977 show that sounds surprisingly good and is loved by fans.",
+  "review": "Listeners rave about the surprisingly clear, punch‑filled sound of this nth‑generation cassette recording, saying it even outshines some official releases. The performance itself is described in enthusiastic, generic terms – a beloved Dead show that gets repeated five‑star praise despite no specific song details being mentioned.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All six reviews are highly positive (4–5 stars) and consistently commend the recording’s clarity and the overall vibe of the show, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note a 'nice and punchy' sound that is impressive for an old cassette tape; no major drop‑outs or muffling are reported."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Fans comment on the general enjoyment of the concert rather than specific set details, indicating a consistently satisfying performance throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Positive mention – 'Garcia later' shows appreciation for Jerry's presence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Reference to Keith having problems but the show is still loved.",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T07:18:12.240576+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-12-29.aud.92374.flac16"
+}

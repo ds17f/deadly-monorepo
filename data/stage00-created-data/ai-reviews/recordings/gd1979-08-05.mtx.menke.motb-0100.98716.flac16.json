@@ -1,0 +1,65 @@
+{
+  "summary": "A stellar 1979 matrix captures a scorching set highlighted by Franklin's Tower and Johnny B. Goode, with clear bass and guitar despite occasional sonic artifacts.",
+  "review": "The performance is described as superb throughout – tight playing, strong setlist flow and memorable moments like a fiery jam between Scarlet Begonias and Fire on the Mountain, plus standout renditions of Johnny B. Goode and Franklin's Tower. The matrix mix is praised for bringing out the bass and improving Jerry’s guitar tone, though a few listeners note a mushy texture and a brief phasing glitch at the end of the first set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "7 reviews (6 × ≥4‑star) overwhelmingly praise both the musical performance and the matrix mix; only one review points out noticeable artifacts, resulting in a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Bass is clear and Jerry’s guitar tone shines; mix is generally well‑balanced. Some listeners describe the sound as slightly mushy with odd audio artifacts, and one notes a phasing/echo issue at the close of the first set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Johnny B. Goode",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, well‑sequenced setlist with a notable jam between Scarlet Begonias and Fire on the Mountain; early versions of Althea and Sailor are polished, contributing to an overall smooth flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Even with lingering laryngitis his voice is decent and the matrix highlights his guitar tone beautifully.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s synth and vocal contributions are praised for adding a nice texture to the ’79 sound.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:17:35.201230+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-08-05.mtx.menke.motb-0100.98716.flac16"
+}

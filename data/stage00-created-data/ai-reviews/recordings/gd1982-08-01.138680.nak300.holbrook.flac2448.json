@@ -1,0 +1,45 @@
+{
+  "summary": "Decent audience‑recorded tape captures a strong show highlighted by an extended Aiko and a lively Black Peter jam.",
+  "review": "The recording is fairly clear despite noticeable crowd noise in the first set, offering a good listening experience. Musically the concert shines with a long, slower‑paced Aiko that fans were eager to hear and an energetic Black Peter segment, while Bob Weir adds tasty scats and ad‑libs. Overall the performance feels solid and enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "One detailed review points to a good musical show with standout moments and an acceptable audience recording; limited data keeps confidence low."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crowd noise is prominent in the first set but recedes later; overall sound described as 'not bad' with acceptable clarity for an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Aiko",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set starts with noticeable crowd ambience that fades, allowing the long Aiko and the jam‑filled Black Peter to stand out; overall pacing is praised."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bobby was in good form on this summer tour with scats and adlibs.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Aiko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T22:46:56.172931+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-01.138680.nak300.holbrook.flac2448"
+}

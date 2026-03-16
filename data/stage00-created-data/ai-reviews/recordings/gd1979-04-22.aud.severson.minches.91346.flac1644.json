@@ -1,0 +1,57 @@
+{
+  "summary": "Clean audience recording of Brent’s first gig captures a fun Watsonville show with standout Tennessee Jed and rain‑soaked Looks Like Rain.",
+  "review": "The tape offers a clear, well‑balanced sound that benefits from being captured right in front of Dan Healy’s board, giving listeners a fresh take on a beloved 1979 concert.  Fans rave about the memorable setlist, Brent Mydland’s debut on keys, and moments like the vocal climax on Tennessee Jed and the rain‑enhanced Looks Like Rain, even though a few note a slower pacing between songs.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the performance (fun show, Brent’s debut) and the audio (clean, clear recording). Minor criticisms about pacing or song selection do not outweigh the overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clean, hiss‑free capture recorded near Dan Healy's soundboard; no major dropouts or balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tennessee Jed",
+      "Looks Like Rain"
+    ],
+    "poor_songs": [
+      "Mama Tried → Mexicali"
+    ],
+    "setlist_flow": "Generally praised for its fun, nostalgic vibe; a few note slower pacing between songs but overall the setlist feels strong and memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Weir’s vocal lead on Looks Like Rain is highlighted as a memorable moment.",
+    "Keys": "Brent Mydland's first show shines – reviewers note his voice and playing stand out, even if they miss his later vocal contributions.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T20:49:54.668606+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-04-22.aud.severson.minches.91346.flac1644"
+}

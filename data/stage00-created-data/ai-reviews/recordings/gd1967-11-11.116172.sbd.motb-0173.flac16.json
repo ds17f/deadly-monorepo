@@ -1,0 +1,69 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a raw, psychedelic 1968 show highlighted by standout performances of Caution and New Potato Caboose",
+  "review": "Fans rave about the extraordinary energy of this early‑Dead set, calling the improvisations on Caution, New Potato Caboose, Cryptical Reprise and The Lovelight “raw” and “psychedelic extravaganzas.”  The remastered soundboard tape sounds surprisingly clear and dynamic for its era, delivering pristine guitar solos and a vivid live atmosphere.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All eight reviews are strongly positive, praising both the musical performance (standout songs, soaring solos) and the surprisingly excellent recording quality; weighting yields a rating in the top tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, dynamic and pristine despite being an analog tape from the late‑60s; remastered with care, listeners note crispness and lack of noticeable noise or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Caution",
+      "New Potato Caboose",
+      "Cryptical Reprise",
+      "Alligator",
+      "The Lovelight",
+      "Death Don't Have No Mercy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy raw 1968 vibe with seamless transitions; the band rides a psychedelic wave that builds momentum throughout the set."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and solos are repeatedly praised – two favorite Lovelight solos, hammer‑on phrases and “machine‑gun” riffing are highlighted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Caution": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "New Potato Caboose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cryptical Reprise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alligator": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T06:52:04.478500+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1967-11-11.116172.sbd.motb-0173.flac16"
+}

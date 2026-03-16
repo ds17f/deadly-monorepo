@@ -1,0 +1,70 @@
+{
+  "summary": "A high‑quality matrix mix captures an electrifying second set with standout moments like Scarlet > Fire and a soaring Wolf, while the recording is praised for its clear mix despite some minor sterility.",
+  "review": "These reviews celebrate a thrilling show—particularly the second set—with memorable performances of songs such as Candyman, Scarlet > Fire, and Wolf. The Hunter‑mastered matrix source is widely lauded for its excellent balance and clarity, though a few listeners note a slightly sterile board feel and minor lyric flubs in Fire.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars, highlighting strong musical moments and a well‑executed mix; only one review mentions minor performance issues, keeping the overall rating solidly in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers praise the clear, balanced mix after Hunter's digital-era work (Healy SBDs) and note a previous boomy/bassy character that has been tamed. Some describe the boards as slightly sterile, but overall the sound is considered clean and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Scarlet>Fire",
+      "Wolf",
+      "Touch",
+      "Memphis Blues"
+    ],
+    "poor_songs": [
+      "Fire"
+    ],
+    "setlist_flow": "The concert opens a bit slowly (notably with Touch) but gains momentum, delivering an especially powerful second set that many reviewers call \"unbelievable\" despite the lingering anxiety from the Bay Area earthquake."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry's inspired playing—especially his happy, healthy performance of Wolf and the overall brilliance of the second set.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:01:18.230086+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-20.mtx.seamons.102200.sbeok.flac16"
+}

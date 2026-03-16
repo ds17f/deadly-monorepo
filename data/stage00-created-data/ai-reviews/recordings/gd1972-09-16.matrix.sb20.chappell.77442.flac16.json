@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent matrix mix captures a scorching 1972 show, highlighted by an unforgettable Dark Star.",
+  "review": "The matrix‑derived recording is praised for its balanced, “in the room” feel and crystal‑clear sound that outshines ordinary soundboard tapes. Musically the concert is hailed as hot from start to finish, with Dark Star (and a superb Brokedown Palace segue) standing out as peak moments of ensemble jamming. A lone complaint about audience noise doesn’t dent the overall enthusiasm.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of reviews (6/7) give 4‑5 stars, repeatedly cite superb performance and top‑notch matrix mixing; only one low‑star review mentions a personal dislike for audience noise."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Balanced soundboard/audience blend with an “in the room” ambience; reviewers call it crisp, beautiful and superior to pure soundboard recordings. A single reviewer notes audience noise can be distracting, but overall the mix is praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Consistently hot performance throughout; Dark Star serves as the centerpiece with a seamless transition into Brokedown Palace, delivering a flowing, high‑energy set typical of peak 1972 shows."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry Garcia's guitar – described as elegant, spacey, bouncy and even “growling” – making Dark Star a standout journey.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:32:36.865863+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-16.matrix.sb20.chappell.77442.flac16"
+}

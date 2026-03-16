@@ -1,0 +1,52 @@
+{
+  "summary": "Good‑quality recording of an Alpine Valley show where Jack Straw and Althea shine, with solid playing despite a few technical hiccups.",
+  "review": "The crowd‑sourced tape captures a lively Alpine Valley performance that many fans cite as a highlight of the three‑night run – especially the fiery Jack Straw and soaring Althea.  Jerry’s lead work is repeatedly praised, while the overall set feels tight even though a few moments (e.g., The Dew) fall flat, and the recording is generally clear with only minor quirks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers rate 3‑5 stars and repeatedly praise specific songs and Jerry’s playing, while a few note the show as the weakest of the run; recording quality is described as good overall."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers call it a \"good recording\" and note clear sound; no specific complaints about drop‑outs or muddiness were mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Althea"
+    ],
+    "poor_songs": [
+      "The Dew"
+    ],
+    "setlist_flow": "First set builds to a high‑energy Jack Straw finish; the second set includes solid numbers like Mississippi and Man Smart, but some transitions (e.g., The Dew) feel under‑whelming. Overall pacing is praised despite a few equipment hiccups."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solos are highlighted on Althea and throughout; fans note his tone (“Across the Rio Grande”) and describe him as \"on fire\".",
+    "Phil": "Mentioned only in passing during a backstage spat with Bob; no specific comments about his bass playing.",
+    "Bob": "Bobby’s equipment trouble is noted, along with a humorous mic intro to introduce himself.",
+    "Keys": "Brent (keyboardist) is referenced in the on‑stage incident but no musical commentary.",
+    "Drums": "One reviewer mentions being \"in the drummy mood\" during The Dew, indicating solid percussion work."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Althea": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T23:32:21.193400+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-06-28.bille.kerbel.8140.sbeok.shnf"
+}

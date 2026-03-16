@@ -1,0 +1,61 @@
+{
+  "summary": "A magical performance with Jerry on fire and a soaring Morning Dew, captured on a soundboard that sounds great but suffers from digi‑pops, static and a brutal cut on Eyes.",
+  "review": "Fans rave about the show’s energy – Jerry’s guitar was \"on fire,\" Phil’s Box of Rain came in like a cool breeze, and the second set (especially Morning Dew) is described as the best they’ve heard. The recording is generally praised for its clarity but multiple reviewers note noticeable glitches (pops, static and a cut on Eyes) that keep it from being flawless.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The performance is consistently praised across many reviews (average show rating ≈4.7), while the recording quality receives mixed feedback (≈3.2). Weighted combination yields a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and crisp, but suffers from digi‑pops, static hiss and a severe cut on the song \"Eyes\"; some reviewers call it a great soundboard with minor glitches."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Box of Rain",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as solid/standard, second set hailed as the best ever with a magical build‑up to Morning Dew; overall flow praised for its energy and seamless transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly called \"on fire\" with perfect tone; central to the show’s excitement.",
+    "Phil": "Highlighted for bursting out with Box of Rain, providing a cool‑breeze moment late in the set.",
+    "Bob": "",
+    "Keys": "Bruce Hornsby (guest keyboardist) noted as part of the front‑row experience, adding to the vibe.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T15:22:33.838766+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-12-13.sbd.unknown.4988.sbeok.shnf"
+}

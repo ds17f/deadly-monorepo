@@ -1,0 +1,39 @@
+{
+  "summary": "Clear audience recording captures a wild Bird Song jam with overall clean sound.",
+  "review": "Both reviewers praise the audience‑sourced tape for its clarity, noting that every instrument can be heard clearly despite a slightly boomy low end. The highlight of the performance is an explosive Bird Song jam that they describe as “crazy.” The recording delivers a vivid concert atmosphere while remaining easy to listen to.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two reviews, one strong 4‑star endorsement and another enthusiastic comment about the Bird Song jam; both indicate a good show and a clear audience recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clean overall sound with clear instrument separation; bass a bit boomy but can be corrected with EQ. No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The audience recording preserves the concert energy, and reviewers single out the Bird Song jam as a peak moment of the set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T10:33:16.553820+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-21.131538.cmc34.fob.katzeff.mattes.petty.flac16"
+}

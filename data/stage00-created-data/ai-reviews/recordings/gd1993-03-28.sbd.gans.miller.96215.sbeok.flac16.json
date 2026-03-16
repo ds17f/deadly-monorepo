@@ -1,0 +1,83 @@
+{
+  "summary": "Top‑notch soundboard capture of a solid 1993 show featuring standout Fire, Ship of Fools → Truckin', Heaven’s Door and Attics of My Mind",
+  "review": "Fans praise this March‑1993 recording for its clear, well‑balanced soundboard mix and a consistently strong performance. Highlights include a fiery Fire, a sweet Ship of Fools that segues into an all‑time‑great Truckin', an amazing Heaven’s Door, and memorable renditions of So Many Roads and Attics of My Mind, while the only noted hiccup is a rough transition into Truckin'.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are enthusiastic about both the musical performance and the sound quality; weighted scoring (70 % show, 30 % recording) yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Soundboard source noted as top‑notch by reviewers; clear and balanced with no reported dropouts or major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ship of Fools > Truckin'",
+      "Heaven's Door",
+      "Fire",
+      "So Many Roads",
+      "Attics of My Mind"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set opens strong with So Many Roads, High Time and Deal; second set builds momentum with Fire, a sweet Ship of Fools, and an outstanding Truckin' despite a brief rough transition, ending on a high note with Heaven's Door."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Post‑drum segment praised as very good"
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics of My Mind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T11:44:04.553014+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-28.sbd.gans.miller.96215.sbeok.flac16"
+}

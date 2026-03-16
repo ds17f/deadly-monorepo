@@ -1,0 +1,39 @@
+{
+  "summary": "Clear audience recording capturing a hot, high‑energy show highlighted by an excellent 'I Know You Rider', but with noticeable crowd noise.",
+  "review": "The tape offers clear sound quality for an audience source, preserving the band's great energy and especially the powerful delivery of 'I Know You Rider'. While the noisy crowd may bother listeners who prefer pure soundboard mixes, the performance shines throughout and is considered a hot show from 1973. Overall the recording is enjoyable despite the ambient audience presence.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Single detailed review rates the show 4 stars, praising performance and clarity but noting crowd noise; weighting yields a solid rating around 4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear sounding for an audience tape, though noisy crowd is present throughout the recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy performance with strong momentum; reviewer notes surprise at missing 'Sugaree' but overall flow is praised."
+  },
+  "band_member_comments": {
+    "Jerry": "General praise for the high energy and enjoyable performance, though no specific guitar/vocal comments.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T16:11:37.267386+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-07-31.133928.aud.moore.berger.flac24"
+}

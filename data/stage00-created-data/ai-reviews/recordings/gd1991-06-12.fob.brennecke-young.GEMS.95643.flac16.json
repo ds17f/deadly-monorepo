@@ -1,0 +1,45 @@
+{
+  "summary": "Unknown‑source recording of a middling 1991 show that shines on Althea (and a strong Morning Dew) with Jerry’s guitar tone highlighted.",
+  "review": "Both reviewers single out Althea as a highlight, praising Jerry Garcia’s hot, on‑point tone. One reviewer also calls Morning Dew great, while the overall impression of the concert is “average,” suggesting a solid but not spectacular performance. No specific comments about the recording fidelity were made, leaving its technical quality uncertain.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "low",
+    "rationale": "Two reviews give modest scores (4 and 3) with mixed praise – strong on specific songs but overall average show; no recording details to boost the rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not mention soundboard, audience bleed, clarity, or any audio problems, so the technical quality cannot be confidently assessed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as average overall, but the energy peaks during Althea (and Morning Dew), giving the concert its main highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry's guitar tone is praised as 'on' and hot.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T20:49:13.544190+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-12.fob.brennecke-young.GEMS.95643.flac16"
+}

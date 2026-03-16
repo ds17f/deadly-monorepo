@@ -1,0 +1,51 @@
+{
+  "summary": "Clear matrix recording captures a jam‑heavy show highlighted by Let It Grow → Drums and an extended Wang Dang Doodle.",
+  "review": "Both reviewers rave about the crystal‑clear matrix source that blends the original feeds into a very open sound. The performance shines with a jammy Let It Grow flowing into Drums and a long, improvisational Wang Dang Doodle, despite Bob’s vocal mic being out of commission. Overall it’s an excellent listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Both reviews give 5 stars and praise both the musical performance and the matrix sound quality; limited to two reviews, confidence is medium but rating remains high."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix blend described as very clear and open; combines multiple sources for best result. No major audio flaws noted, though Bob's vocal mic was down during the show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Drums",
+      "Wang Dang Doodle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Jam‑heavy flow with Let It Grow segued into Drums and a lengthy Wang Dang Doodle, giving the second set an especially improvisational feel."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob's vocal mic wasn't working during the performance.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:32:00.505139+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-11.152635.mtx.seamons.ht129.flac16"
+}

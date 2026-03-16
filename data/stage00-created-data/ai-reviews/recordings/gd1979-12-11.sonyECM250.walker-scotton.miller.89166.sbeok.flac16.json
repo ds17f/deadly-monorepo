@@ -1,0 +1,112 @@
+{
+  "summary": "Matrix source that needs pitch/EQ fixes yet delivers a solid 1979 show with standout Jack Straw, New Minglewood Blues and an inspired second set.",
+  "review": "The recording is a matrix tape (walker‑scotton_miller_89166) that suffers from slight speed errors, channel swaps and requires noticeable EQ/pitch correction, but once treated it sounds clear enough to enjoy the vocals. Musically the night shines – Jerry’s aggressive single‑note solos, Brent’s exploratory keys and a second set packed with Jack Straw, New Minglewood Blues, Shakedown, Samson and a soaring Saint jam make it a memorable performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Two detailed 4‑star reviews praise both the show and (after correction) the recording, while one zero‑star review is vague; overall the musical performance rates high and the technical quality is decent after fixes."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Requires +1–1.5% pitch correction, significant EQ, channels are swapped, occasional balance issues (BAL swims), some patter cuts; otherwise vocals and instruments are clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "New Minglewood Blues",
+      "Shakedown",
+      "Samson",
+      "Terrapin",
+      "Lost Sailor",
+      "Saint",
+      "Black Peter",
+      "Alabama",
+      "Promised Land"
+    ],
+    "poor_songs": [
+      "Althea",
+      "China Cat",
+      "Not Fade Away"
+    ],
+    "setlist_flow": "An added late‑show feels like the band wanted to play forever; the first set is solid with high‑energy openings, while the second set delivers extended jams and tight group interplay, ending on a high note."
+  },
+  "band_member_comments": {
+    "Jerry": "Aggressive tone and single‑note solos dominate; weird attack on Rider but pushes tempo forward on Black Peter.",
+    "Phil": "Inspired by the set, thanks the audience onstage, and briefly nudges Brent to play more during the first set.",
+    "Bob": "Clear vocals noted; adds humor with a \"welcome to the late show\" joke.",
+    "Keys": "Brent stretches his wings with extended keyboard solos and stays out for an elongated drum break.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T03:32:43.170751+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-11.sonyECM250.walker-scotton.miller.89166.sbeok.flac16"
+}

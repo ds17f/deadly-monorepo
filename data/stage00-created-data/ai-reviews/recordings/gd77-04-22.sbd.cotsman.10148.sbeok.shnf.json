@@ -1,0 +1,92 @@
+{
+  "summary": "High‑energy 1977 Philadelphia show on a solid soundboard source; Half Step, Playing and Scarlet>Fire shine despite some minor splice quirks.",
+  "review": "The concert is praised as a \"smoking hot\" performance with a thunderous first‑set climax (the epic Playing) and a second set packed with fire‑breathing transitions like Half Step and Scarlet>Fire.  The SBD capture isn’t flawless – a few splices and occasional audience chatter are noted – but the mix is clear enough to let Jerry’s soaring guitar, Keith’s harpsichord textures and the tight rhythm section shine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews (8‑plus) award 4–5 stars and rave about the musical performance, while recording comments note only minor issues; this yields a high combined rating with strong confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Splicing is a bit dodgy and occasional audience chatter shows through, but overall the board feed is clear and balanced; not a mint‑perfect capture but fully listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step",
+      "Playing",
+      "Scarlet>Fire",
+      "Peggy-O",
+      "Roses",
+      "Terrapin",
+      "Estimated",
+      "Ten Jed",
+      "Dancin' > Mojo > Dancin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A marathon first‑set closes with a 21‑minute Playing that builds to a crescendo, while the second set stays hot with tight transitions (Half Step → Terrapin, Scarlet→Fire, Dancin'→Mojo→Dancin') delivering constant momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work gets high marks – a scorching Fire jam, a soaring crescendo in Playing and sweet vocal delivery throughout.",
+    "Phil": "Phil is highlighted as prominent and solid, anchoring the band alongside Mickey with strong bass lines.",
+    "Bob": "Bob Weir is noted as \"no slouches\" and contributes reliably to the rhythm/vocal mix.",
+    "Keys": "Keith’s keyboard work shines – harpsichord/organ flourishes in Scarlet>Fire and subtle solo piano notes on Peggy‑O are praised.",
+    "Drums": "Mickey (the drummer) is praised for being at his best, driving the high‑energy grooves."
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Ten Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Roses": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancin' > Mojo > Dancin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T21:01:20.881432+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-04-22.sbd.cotsman.10148.sbeok.shnf"
+}

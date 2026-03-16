@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard recording with a few splice/hiss quirks but an outstanding performance highlighted by a soaring Peggy‑O and high‑energy UJB, The Wheel and Playing reprise.",
+  "review": "Fans rave about this show’s musical fire – Uncle John’s Band, The Wheel, the Playing in the Band reprise and especially a masterful Peggy‑O with Jerry’s solo called “the best ever.”  The soundboard source is generally good but contains noticeable splices, added hiss and a reel‑change hiccup that slightly disrupts flow.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews are 5‑star praising the performance; only one zero‑star points out splice issues, so the combined show (70%) and recording (30%) score lands in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Noticeable splice at the end of Playing in the Band (timing fast), another splice in Sugaree, added hiss and slightly low treble making it sound brighter; a reel‑change during LLR interrupts flow."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Uncle John's Band",
+      "The Wheel",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall set flows powerfully with high‑level jams, though splices and a reel change momentarily break continuity."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Peggy-O is described as visceral, heartfelt and possibly the best ever.",
+    "Phil": "",
+    "Bob": "Bob’s early licks in Peggy-O are praised as “kills those early licks” and he backs Jerry perfectly.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T01:46:46.211659+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-19.sbd.clugston.2461.sbefail.shnf"
+}

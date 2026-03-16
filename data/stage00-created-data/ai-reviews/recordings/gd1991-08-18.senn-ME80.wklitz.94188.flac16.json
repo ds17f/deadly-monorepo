@@ -1,0 +1,39 @@
+{
+  "summary": "Fair‑quality audience recording of an inspired August ’91 Shoreline show with a standout Built to Last performance",
+  "review": "The tape captures the August 1991 Shoreline run from an AUD source; reviewers note the soundboard feed sounds lifeless, giving the recording a fair technical quality. Musically the concert is praised for its creative setlists and an especially inspired second‑set featuring a memorable Built to Last moment, despite onstage tension between Bobby and Bruce.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "All four reviewers gave 4‑star ratings and highlighted an excellent show with strong second‑set moments; the recording is only mildly criticized for being lifeless, keeping the overall score in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audience (AUD) source captures crowd reaction well but the soundboard feed is described as lifeless and lacking clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Built to Last"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Creative setlists with only one repeat song during the run; a highly inspired second set that many reviewers cite as some of the best music of the Shoreline shows."
+  },
+  "band_member_comments": {
+    "Jerry": "Caught in the middle of Bobby and Bruce's onstage argument after Built to Last.",
+    "Phil": "",
+    "Bob": "Involved in a heated exchange with drummer Bruce following Built to Last, leading to crowd cheers.",
+    "Keys": "",
+    "Drums": "Bruce (drummer) continued playing past the song’s ending while being verbally challenged by Bobby."
+  },
+  "song_mentions": {
+    "Built to Last": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T23:34:06.834636+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-08-18.senn-ME80.wklitz.94188.flac16"
+}

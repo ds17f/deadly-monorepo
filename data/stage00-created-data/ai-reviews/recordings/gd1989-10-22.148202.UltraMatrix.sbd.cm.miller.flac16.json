@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent UltraMatrix matrix recording captures a solid 1989 show with Brent Mydland’s standout vocals on “Blown Away”.",
+  "review": "The UltraMatrix source delivers an excellent, clear mix that balances audience ambience with the soundboard without overwhelming it. The performance is described as solid overall, with particular praise for Brent Mydland’s vocal delivery on “Blown Away,” which even converts a skeptic into a fan. No major musical flaws are noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "High praise for recording quality (excellent) and a solid performance with a highlighted vocal moment; rating reflects strong show (≈4/5) weighted against perfect recording (5/5)."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience mix is subtle and adds energy without overwhelming the SBD; overall clarity and balance are praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Blown Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid, consistently energetic performance throughout the set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland's vocals on “Blown Away” hit a high note and win over listeners who usually struggle with his singing.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Blown Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:18:06.236116+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-22.148202.UltraMatrix.sbd.cm.miller.flac16"
+}

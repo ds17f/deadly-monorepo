@@ -1,0 +1,76 @@
+{
+  "summary": "High‑octane Jack Straw opener, epic Deal jam, tight first set",
+  "blurb": "The first set roars with a ripping Jack Straw and a soaring Deal, while Phil's bass lays down bombs on Deep Elem Blues. The second set offers solid jams, highlighted by Playing In The Band → Uncle John's Band and a vibrant Space‑drums segment.",
+  "review": "Seattle’s August ’83 show bursts open with a high‑octane Jack Straw that lets Jerry’s guitar tone roar and Phil’s bass hit “bombs” on the low end. That momentum carries through Deep Elem Blues and into an epic Deal where Brent’s keys add texture to the jam. The band stays tight all night, delivering solid vocal harmonies from Bob and a space‑filled drum‑drum interplay that lifts the second set. Highlights include the classic Playing In The Band → Uncle John's Band segue, a colorful Space segment with bird‑song effects, and a spirited Black Peter to close out the set. While Uncle John’s Band shows a few flubs and Saturday Night feels rushed, the overall energy, tight playing, and summer‑tour vibe make this a must‑listen performance.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 31,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Multiple recordings praise the show as high‑octane, tight, and epic, consistently highlighting Jack Straw, Deal, Deep Elem Blues, Playing In The Band → Uncle John's Band, and the Space/Drums segment. Positive language such as \"ripping\", \"crisp\", \"epic\" appears across five of six analyses; only one source offers mixed notes, with no widespread criticism of performance quality.",
+      "final_calculation": "2.5 + 0.3 + 1.4 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd83-08-27.aud.hinko.16439.sbeok.shnf",
+    "reason": "Good audience tape with clear, lively sound and minimal muddiness; captures the show’s energy best among available sources."
+  },
+  "key_highlights": [
+    "Jack Straw opener with high‑octane guitar tone",
+    "Deal jam that rolls nonstop through the first set",
+    "Tight Deep Elem Blues featuring \"bombs\" on Phil's bass",
+    "Playing In The Band → Uncle John's Band segue and vibrant Space/Drums segment"
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Deep Elem Blues",
+    "Deal",
+    "Touch of Grey",
+    "Brown Eyed Women",
+    "Black Peter",
+    "Playing In The Band",
+    "Uncle John's Band"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers a high‑octane guitar tone with solid solos on Jack Straw, Deal and other jams; settles early and \"gets off bigtime\" throughout, though a few flubs appear on Uncle John's Band.",
+    "Phil": "Lays down \"bombs\" on bass, especially during Jack Straw and Deep Elem Blues, keeping the low end on a very proper level.",
+    "Bob": "Provides steady rhythm guitar and strong backup vocals; no major criticisms noted.",
+    "Brent": "",
+    "Mickey": "Drums‑Space segment praised for bird‑song effects and energetic interplay, contributing to the concert’s spacey vibe.",
+    "Billy": "Works tightly with Mickey, delivering a driving dual‑drum foundation that fuels the high‑energy first set."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-14T09:06:19.735365+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw"
+    ],
+    [
+      "Deep Elem Blues"
+    ],
+    [
+      "Deal"
+    ],
+    [
+      "Touch of Grey"
+    ],
+    [
+      "Brown Eyed Women"
+    ],
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "Throwing Stones",
+      "Black Peter",
+      "One More Saturday Night"
+    ]
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "summary": "A strong soundboard capture (though occasionally bass‑heavy) of an electric show highlighted by a stellar second set featuring Let It Grow and the Help‑Slip‑Franklin's sequence.",
+  "review": "Fans rave about the second set’s energy, especially the soaring Let It Grow and the classic Help → Slipknot! → Franklin’s run, while the first set is viewed as uneven. The soundboard source is generally praised for its clarity, though a few listeners note bass‑heavy mix issues and occasional drop‑outs early in the show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers give high marks for the performance (especially the second set) and the soundboard source, but a minority cite mix problems and a weak first set, pulling the overall rating to around four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally excellent and an upgrade over audience tapes; however several listeners describe a bass‑heavy, washed‑out mix and occasional drop‑outs or in‑and‑out sound early in the concert."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Morning Dew",
+      "Might As Well"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is considered uneven or weak by multiple fans, but the second set lifts the concert with high‑energy jams and tight transitions, making the overall pacing feel like a classic late‑’80s peak."
+  },
+  "band_member_comments": {
+    "Jerry": "Almost ‘blacked out’ during Black Peter but recovered quickly; his guitar work is praised on the strong second‑set jams.",
+    "Phil": "His bass is described as booming and, in some mixes, overly heavy, contributing to a bass‑heavy sound perception.",
+    "Bob": "Provides solid vocals after Jerry’s momentary stumble; fans enjoy his singing on the second set.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:27:30.777665+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-09-11.sbd.dankseed.4995.sbeok.shnf"
+}

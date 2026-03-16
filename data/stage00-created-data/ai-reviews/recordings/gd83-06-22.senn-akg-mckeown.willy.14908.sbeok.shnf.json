@@ -1,0 +1,100 @@
+{
+  "summary": "Excellent audience recording with crisp vocals and rich bass, but a mixed‑bag show – scorching “Stranger” and “Deal” shine while the first‑set lull and weak “Bucket” drag it down.",
+  "review": "The AUD tape captures the 1983 performance with surprising clarity – punchy vocals, minimal crowd bleed and a full, tight low end. Musically the band delivers high points like a fiery “Stranger”, a blazing “Deal”, a soaring Spanish jam (Space) and a stellar China Cat, yet several listeners cite a sleepy first set and a sub‑par Hell in a Bucket that keep the overall show feeling uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently praised (near‑perfect AUD), but show assessments range from rave to disappointment, pulling the combined weighted score to a solid mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, punchy vocals with very little crowd noise; full, rich bass and balanced instruments. A few reviewers note a warbling/tape‑like artifact from the China Cat segment through the second half."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Deal",
+      "Space (Spanish Jam)",
+      "China Cat Sunflower",
+      "Playing in the Band",
+      "Miracle"
+    ],
+    "poor_songs": [
+      "Hell In A Bucket",
+      "Ramble On Rose",
+      "Friend Of The Devil",
+      "C.C. Rider",
+      "Brokedown Palace"
+    ],
+    "setlist_flow": "A short, tight first set opens hot with a funky “Stranger” but loses momentum after a few slower numbers before reviving on the blazing “Deal”. The second set is uneven – moments of brilliance (China Cat, intense Space jam) are interspersed with warbling tape issues and a lackluster Bucket."
+  },
+  "band_member_comments": {
+    "Jerry": "Scorching lead guitar, great tone and intense jamming; highlighted on “Deal” and the Spanish jam.",
+    "Phil": "Pre‑drums described as \"hot\"; his bass work shakes the rear‑view mirror and he even blew kisses to the crowd.",
+    "Bob": "",
+    "Keys": "Brent’s keyboards are noticeable, especially a shift toward his signature sound late in the set.",
+    "Drums": "Tight rhythm section with solid bass foundation; occasional low energy from the audience noted."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Deal": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Space (Spanish Jam)": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hell In A Bucket": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Friend Of The Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "C.C. Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T07:49:26.733415+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-06-22.senn-akg-mckeown.willy.14908.sbeok.shnf"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "High‑quality soundboard capture with solid Shakedown Street and Space jams, but an overall average Halloween show from ’84.",
+  "review": "The recording is a high‑quality SBD that presents the band clearly, though the reviewer doesn’t consider this performance a highlight of the October‑31, 1984 run. Shakedown Street and the Space segment are praised as standouts, while the rest of the show is described as merely tolerable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review; the show is viewed as average despite a good soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it a high‑quality SBD with no noted issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on flow; reviewer notes only a few highlights and otherwise finds the show unremarkable."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T23:47:10.668847+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-31.142494.sbd.patched.flac1648"
+}

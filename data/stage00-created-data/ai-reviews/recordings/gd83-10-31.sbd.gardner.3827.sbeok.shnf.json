@@ -1,0 +1,71 @@
+{
+  "summary": "Above‑average soundboard capture of a Halloween show that “smokes” with a killer Help > Slip > Franklin’s and a fiery St. Stephen, despite occasional speed/timing quirks.",
+  "review": "The 10‑31‑83 Gardner Hall recording is a solid soundboard source – clear overall but plagued by a noticeable speed/tempo discrepancy on “Wang Dang Doodle” and a splice in the opening of “Deal”. Musically the show is largely praised for its high‑energy second set, especially the Help > Slip > Franklin’s sequence and the space‑jam that leads into an intense St. Stephen, though a few listeners note Jerry’s vocal flub on Help and occasional sloppy moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and highlight strong performances; recording quality is generally good with only isolated timing issues, giving an overall rating in the low‑four range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and above‑average SBD sound, but a noticeable speed/timing error on Wang Dang Doodle and a splice/cut at the start of Deal; otherwise crisp with good instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Deal",
+      "Estimated Prophet",
+      "Eyes of the World"
+    ],
+    "poor_songs": [
+      "Help on the Way (flubbed vocal line)",
+      "Wang Dang Doodle (off‑time splice)"
+    ],
+    "setlist_flow": "Halloween vibe with a laid‑back first set that builds into a second‑set surge: Help > Slip > Franklin’s opens the set, followed by an extended percussion jam (Airto Moreira) that segues into a scorching St. Stephen, giving the show a strong narrative arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is praised on Deal and the St. Stephen jam; however several reviewers note he mumbles/flubs his vocal line on Help.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboards) gets a shout‑out for jamming out on Wang Dang Doodle.",
+    "Drums": "Airto Moreira’s guest percussion is highlighted as a standout element of the second‑set jam leading into St. Stephen."
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T13:58:46.703865+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-10-31.sbd.gardner.3827.sbeok.shnf"
+}

@@ -1,0 +1,94 @@
+{
+  "summary": "Good audience tape of a 1978 Giant Stadium show with a standout second set (Eyes, Scarlet) despite a rough first‑set mix.",
+  "review": "The recording is an unedited audience capture that starts out muddy but settles into clear, well‑balanced sound after the opening number. The band delivers a solid performance – the second half shines with “Eyes”, “Scarlet” and other classics, while the first set feels uneven and some listeners note flat vocals from Jerry. Overall the show is remembered fondly for its energy and jam moments, even if a few reviewers cite occasional vocal or mix flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the music (especially the second set) and consider the audience tape decent, but several note a weak first‑set mix and vocal issues, yielding an overall positive‑leaning yet mixed assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Unedited true audience tape; first song muffled/low‑gain, but levels improve quickly. Sony mics and taper’s skill give a clear picture after the opening, though some note occasional low‑gen hiss and lack of editing."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Scarlet Begonias",
+      "Jack Straw",
+      "Friend of the Devil",
+      "Stagger Lee",
+      "Good Lovin'",
+      "New Minglewood Blues",
+      "Fire on the Mountain",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Jack Straw"
+    ],
+    "setlist_flow": "First set described as run‑of‑the‑mill with long empty periods and a rough house mix; second set is praised for tight jams and highlights like “Eyes” and the “Scarlet” performance. A missing second encore (Shakedown Street) is noted by some listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – praised for inventive solos on Scarlet and Eyes, but several reviewers criticize flat or unemotional vocals and a ‘poker‑face’ delivery.",
+    "Phil": "Positive note about thoughtful bass lines framing the jams (e.g., in “Eyes”).",
+    "Bob": "Acknowledged for his “cowboy‑jazz” licks complementing Garcia’s solos.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T14:56:47.574572+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-09-02.rolfe.weiner.15822.sbeok.shnf"
+}

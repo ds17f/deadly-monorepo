@@ -1,0 +1,45 @@
+{
+  "summary": "Solid recording that captures a killer New Year's Eve show highlighted by an outstanding \"Shakedown\" and a sweet \"Baby Blue.\"",
+  "review": "Both reviewers praise the performance, especially noting the Shakedown as one of the best they've heard and calling Baby Blue “sooo sweet.” The recording is regarded positively (“nice job recording”), suggesting it faithfully presents the concert despite limited technical commentary. Overall the set is described as a killer show that rewards listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Strong musical praise (especially Shakedown and Baby Blue) combined with generally favorable remarks about the recording yields a high rating, though only two reviews limit certainty."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No detailed technical comments; reviewer calls it a \"nice job recording,\" implying clear and listenable sound despite missing the first set for the writer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the entire show as \"killer\" with a particularly strong second half, indicating a well‑paced set that keeps energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:36:01.709392+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-12-31.nak300.russjcan.96435.sbeok.flac16"
+}

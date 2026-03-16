@@ -1,0 +1,75 @@
+{
+  "summary": "Audience recording with crisp highs and good balance, capturing a solid late‑'80s show highlighted by a fiery Bertha, powerful Space and the debut of MIDI guitars.",
+  "review": "The AUD source is surprisingly clear – the highs are crisp, the mix well centered and the band’s dynamics come through, though the lows can be a bit muffled and the recorder’s frequent pause‑cuts make the first set feel choppy. Musically the concert is strong: Bertha, Space, Cold Rain & Snow, Samson & Delilah and the Knockin’ on Heaven’s Door encore all receive high praise, while the novelty of MIDI guitars divides opinion. Overall the performance is memorable despite some divisive synth experiments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise key performances; recording quality is generally good but marred by pause editing, yielding a solid combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp high frequencies and well‑balanced front‑of‑stage imaging; lows are slightly muffled. Major issue is aggressive pause editing that chops out audience reactions, creating jarring gaps in the first set. Crowd noise is prominent but adds atmosphere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Space",
+      "Cold Rain & Snow",
+      "Samson and Delilah",
+      "Knockin' on Heaven's Door",
+      "Built to Last",
+      "Iko Iko"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid, tightly‑packed set that opens with Cold Rain & Snow, builds through high‑energy numbers like Bertha and Space, and closes the night on a triumphant Knockin' on Heaven's Door. The first appearance of MIDI guitars adds a quirky diversion but doesn’t derail the overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "His classic tone is praised; some reviewers love his guitar work while others feel the new MIDI “horn” sounds detract from his usual sound.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboard playing shines on Bertha and Space, described as energetic and well‑balanced.",
+    "Drums": "Bill’s hi‑hats and splash cymbals are audible even in the audience mix; drumming is generally solid."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson and Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Built to Last": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T18:55:30.504452+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-04-17.aud.wiley.9207.sbeok.shnf"
+}

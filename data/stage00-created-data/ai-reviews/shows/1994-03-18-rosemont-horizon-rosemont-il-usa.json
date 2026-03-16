@@ -1,0 +1,60 @@
+{
+  "summary": "High‑energy set with standout Stranger, Ramble On Rose and soaring solos",
+  "blurb": "Feel Like A Stranger opens the show with punchy guitar work, followed by a tight Deal. The second set lifts off with Here Comes Sunshine into a soaring Ramble On Rose, while Jerry’s El Paso solo shines. Overall performance is strong despite a weaker U.S. Blues finale.",
+  "review": "On March 18, 1994 the Dead took the Rosemont Horizon by storm. From the first note of “Feel Like A Stranger” Jerry Garcia was in top form – fluid picking, soaring solos on both “Ramble On Rose” and “El Paso,” and a powerful vocal delivery that set an electrifying tone for the night. Phil Lesh’s bass thundered through the mix, dropping bombs that shook the audience, while Bob Weir’s harmonies added depth to classics like “Brown Eyed Women.” Vince Welnick proved his worth with Hornsby‑like piano chords and tasteful synth touches, and the twin drummers Mickey Hart and Bill Kreutzmann drove a locomotive rhythm section that kept the momentum rolling. The second set erupted with “Here Comes Sunshine,” seamlessly launching into an exuberant “Ramble On Rose.” Though the encore’s “U.S. Blues” suffered from a sub‑par audience source, the overall show remains a high‑energy showcase of late‑’90s Dead brilliance. For listeners seeking the clearest window into this performance, the Miller soundboard recording captures the band’s tightness and exuberance with excellent instrument separation.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 10,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "Mixed sentiment from the soundboard review (mostly positive) and a negative audience tape comment lead to a modest positive adjustment; the show is praised for standout songs and tight playing despite recording issues on U.S. Blues.",
+      "final_calculation": "2.5 + 0.1 + 0.5 = 3.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1994-03-18.sbd.miller.79117.sbeok.flac16",
+    "reason": "Crisp soundboard mix with excellent instrument separation; captures the high‑energy performance despite a weaker audience‑sourced U.S. Blues segment."
+  },
+  "key_highlights": [
+    "High‑energy opener with “Feel Like A Stranger” and tight “Deal.”",
+    "Stellar mid‑set momentum from “Here Comes Sunshine” into “Ramble On Rose.”",
+    "Jerry’s soaring solos on “El Paso” and Vince’s Hornsby‑style piano shine."
+  ],
+  "song_highlights": [
+    "Feel Like A Stranger",
+    "Ramble On Rose",
+    "Here Comes Sunshine",
+    "El Paso"
+  ],
+  "band_performance": {
+    "Jerry": "Fluid guitar work with soaring solos on Ramble On Rose and El Paso, precise picking on Deal, and a powerful vocal performance.",
+    "Phil": "Loud in the mix, dropping bass bombs that shook listeners' souls throughout the set.",
+    "Bob": "Emotive, strong vocals on Stranger, El Paso, Brown Eyed Women; harmonies praised across the show.",
+    "Brent": "",
+    "Vince": "Hornsby‑like piano with solid chording, proving his worth post‑Hornsby despite occasional synth textures.",
+    "Mickey": "Tight, locomotive‑like drive and perfect synchronization with Billy.",
+    "Billy": "Tight, locomotive‑like drive and perfect synchronization with Mickey."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-18T20:13:15.575437+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Feel Like A Stranger"
+    ],
+    [
+      "Ramble On Rose"
+    ],
+    [
+      "Here Comes Sunshine"
+    ],
+    [
+      "El Paso"
+    ]
+  ]
+}

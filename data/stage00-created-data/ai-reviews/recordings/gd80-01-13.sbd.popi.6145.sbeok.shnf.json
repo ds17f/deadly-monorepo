@@ -1,0 +1,69 @@
+{
+  "summary": "A high‑energy benefit show with stellar guest solos and a smoking Franklin’s, captured on a soundboard that suffers from drop‑outs and compression but remains listenable.",
+  "review": "The performance is praised for its nonstop drive, dueling guitar fireworks (Santana, Cipollina, Garcia) and standout moments like Jack Straw, Not Fade Away, Franklin’s and an extra‑sweet Playing in the Band.  The recording is a soundboard tape that shows noticeable clicks, crackle and a harsh high‑frequency kick drum EQ, yet most listeners find the mix clear enough after a little EQ work.  Overall the show outweighs its technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "25 reviews give an average of 4.28 stars; most comment on a great musical performance while noting mixed‑quality soundboard issues, leading to a weighted rating that favors the strong show."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Frequent drop‑outs (especially in Jack Straw), crackle/clicks, over‑compressed dynamics and a high‑frequency kick‑drum EQ that creates harsh pops.  Clarity and instrument definition are decent after minor EQ adjustments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Franklin's",
+      "Not Fade Away",
+      "Playing in the Band",
+      "Minglewood",
+      "Tennessee Jed"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A short benefit set that skips the usual two‑set structure, runs straight through with guest appearances (Cipollina, Santana, Errico) and maintains high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is repeatedly described as hot, with a squawky tone and dueling solos against Santana and Cipollina; his playing is a highlight.",
+    "Phil": "Bass work is generally solid; one reviewer attributes an early‑track dropout to Phil’s signal chain but otherwise notes a strong “Phil bomb” earlier in the set.",
+    "Bob": "",
+    "Keys": "Brent Mydland gets a few positive highlights, noted as mixed down on many early ’80 shows but standing out here.",
+    "Drums": "Billy's birthday is mentioned; kick drum EQ harshness is criticized, yet overall drumming (including “thumping away”) receives praise."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Franklin's": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Not Fade Away": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T21:39:23.655019+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-01-13.sbd.popi.6145.sbeok.shnf"
+}

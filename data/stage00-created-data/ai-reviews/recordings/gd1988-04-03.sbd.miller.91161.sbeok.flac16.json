@@ -1,0 +1,81 @@
+{
+  "summary": "Matrix mix gives a clear, well‑remastered sound despite some audience hiss, but Jerry’s sick vocals dampen the show – Black Peter and Lovelight shine.",
+  "review": "The C Miller‑remastered matrix recording blends soundboard clarity with ambient crowd noise, delivering an overall good listening experience. Musically the concert is hampered by Jerry Garcia’s clearly ill voice, which makes Althea, Crazy Fingers and several other numbers sound shaky, though the band still pulls strong jams – especially Black Peter and a standout Bob‑sung Lovelight.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Recording quality is solid (good matrix mix), but the performance suffers from vocal problems; reviewers are split between praise for jams and criticism of vocals, yielding a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Healy matrix (sbd/aud) mix with slight audible noise/hiss; C Miller remaster praised for clarity and balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Althea",
+      "Crazy Fingers",
+      "Don't Ease",
+      "Franklin's Tower",
+      "Baby Blue"
+    ],
+    "setlist_flow": "Set flows with solid jams despite vocal issues; pacing remains decent but many songs suffer from Jerry’s strained voice."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals clearly impaired by a cold/laryngitis – stuffy on Althea, shaky on Crazy Fingers, overall weak singing throughout.",
+    "Phil": "",
+    "Bob": "His vocal on Lovelight is highlighted as a favorite Bob version.",
+    "Keys": "Brent (keys) helped lift the show, especially during jams and when vocals faltered.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Don't Ease": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cold Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:47:03.899049+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-03.sbd.miller.91161.sbeok.flac16"
+}

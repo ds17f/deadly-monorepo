@@ -1,0 +1,69 @@
+{
+  "summary": "A solid soundboard capture of the 4/4/91 Omni show, highlighted by a smoking Help‑Slip‑Frank sequence and strong Garcia work.",
+  "review": "The recording is generally clear – a soundboard source that most listeners describe as terrific, with only one note about cassette‑copy hiss. Musically the concert shines, especially the second set where the Help > Slip > Frank medley, Memphis blues jam, and tight first‑set opener receive high praise; Garcia’s lead work is called \"strong\" throughout and Phil’s bass is notably forward on the highlight songs.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars, praising both performance (especially the second set) and recording quality; only a single low‑rating comment notes minor tape hiss, so overall rating is strong."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced soundboard mix; one reviewer mentions the source being a cassette‑to‑cassette copy with noticeable hiss, but overall listeners find it terrific."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Let The Good Times Roll / Good Times (Sam Cooke)",
+      "Stranger",
+      "They Love Each Other",
+      "High Time",
+      "Memphis Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as solid and fun, second set regarded as the highlight with seamless transitions and high energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is called strong throughout, with standout leads on the second‑set jams.",
+    "Phil": "Bass was turned up for the Help/Slip segment; one reviewer met Phil that night and highlighted his performance.",
+    "Bob": "",
+    "Keys": "Hornsby’s piano work is praised for adding richness to the mix, especially on the opener.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let The Good Times Roll / Good Times (Sam Cooke)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Memphis Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:15:29.832951+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-04.sbd.miller.99240.sbeok.flac16"
+}

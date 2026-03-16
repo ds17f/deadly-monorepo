@@ -1,0 +1,31 @@
+{
+  "summary": "Recording marred by static and poor audio quality; no performance details available",
+  "review": "The sole review reports that the tape suffers from pervasive static, making it difficult to enjoy any part of the concert. No comments are made about the band's playing, setlist flow, or standout moments, leaving the musical quality unknown.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one low‑star review mentioning static; recording is clearly poor and there is no information on show performance."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer notes pervasive static, indicating a very noisy or damaged source with little clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about the set or performance quality."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T20:35:28.831704+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-02-17.dts.mtx.tobin.105608.flac16"
+}

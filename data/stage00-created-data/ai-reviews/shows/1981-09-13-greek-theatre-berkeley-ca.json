@@ -1,0 +1,82 @@
+{
+  "summary": "Mellow first set erupts into fiery second‑set jams; Jack Straw>Bertha shines",
+  "blurb": "The concert opens with a tight Jack Straw → Bertha segue and solid mid‑set tunes. The second set delivers standout performances of Never Trust A Woman, Cold Rain / Samson, and a soaring To Lay Me Down solo. The band stays locked in despite occasional mix quirks.",
+  "review": "On September 13, 1981 at Berkeley’s Greek Theatre the Dead served up a quintessential early‑’80s set. A sun‑lit first set slipped into a relaxed groove, highlighted by an electrifying Jack Straw → Bertha opener that set the tone for the evening. Mid‑set gems like Me And My Uncle, Big River and the tender Little Red Rooster kept the momentum rolling into a beautifully sung To Lay Me Down – a solo that many reviewers called “soaring” and “rabbit‑out‑of‑the‑hat”. The second half ignited with Cold Rain / Samson, followed by Lost Sailor → Saint Of Circumstance, then a powerful Never Trust A Woman where Brent’s keyboards took charge. After the drum break the band rode a wave of joy through The Wheel, I Need A Miracle, Goin’ Down The Road Feeling Bad and a jubilant Sugar Magnolia, before closing with a rousing (I Can’t Get No) Satisfaction and the gentle Brokedown Palace encore. While some recordings note Garcia’s guitar occasionally buried in the mix and a lyrical stumble on Terrapin Station, the overall performance is praised as “solid”, “fiery” and “legendary” by multiple fans.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.7,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 28,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Four recordings are explicitly positive, highlighting killer jams (Jack Straw>Bertha, Never Trust A Woman, To Lay Me Down) and strong overall performance; seven are mixed but note only minor mix issues or isolated slip‑ups, not systemic musical flaws. The consistent praise across multiple sources warrants a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.0 = 3.7"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1981-09-13.sbd.miller.32576.sbeok.flac16",
+    "reason": "High‑quality soundboard capture with clear, balanced mix and the most complete set; it showcases the killer jams while minimizing the occasional low‑mix issues noted elsewhere."
+  },
+  "key_highlights": [
+    "Jack Straw → Bertha opener with fiery slide work",
+    "Never Trust A Woman featuring Brent’s vibrant keyboards",
+    "To Lay Me Down solo praised as soaring and unforgettable",
+    "Cold Rain / Samson pairing delivers classic second‑set energy"
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Bertha",
+    "To Lay Me Down",
+    "Never Trust A Woman",
+    "Cold Rain And Snow",
+    "Samson & Delilah",
+    "The Wheel",
+    "Sugar Magnolia",
+    "(I Can't Get No) Satisfaction",
+    "Brokedown Palace"
+  ],
+  "band_performance": {
+    "Jerry": "Fiery slide work and strong vocals shine, especially on Jack Straw>Bertha and To Lay Me Down; his guitar sometimes sits low in the mix and he slips a lyric during Terrapin Station.",
+    "Phil": "Briefly limps early but recovers to anchor Never Trust A Woman with solid bass; overall steady foundation despite occasional wash‑out in older mixes.",
+    "Bob": "Steps in to whisper Terrapin lyrics when needed, keeping the song moving; otherwise provides reliable rhythm guitar throughout.",
+    "Brent": "Takes charge after Terrapin, launching into vibrant keyboards on Never Trust A Woman and adding lush textures across the set.",
+    "Mickey": "Beam‑drum work highlighted during the atmospheric “Greek” segment; contributes to the dynamic percussion backbone.",
+    "Billy": "Delivers a solid drum performance, especially in the pre‑drums segment and the energetic second‑set flow."
+  },
+  "processed_recordings": 9,
+  "processed_date": "2025-09-13T14:42:04.244593+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw",
+      "Bertha"
+    ],
+    [
+      "To Lay Me Down",
+      "Little Red Rooster"
+    ],
+    [
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "Terrapin Station",
+      "Never Trust A Woman",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "I Need A Miracle",
+      "Goin' Down The Road Feeling Bad",
+      "Sugar Magnolia"
+    ],
+    [
+      "Cold Rain And Snow",
+      "Samson & Delilah"
+    ],
+    [
+      "(I Can't Get No) Satisfaction",
+      "Brokedown Palace"
+    ]
+  ]
+}

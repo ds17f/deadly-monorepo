@@ -1,0 +1,57 @@
+{
+  "summary": "Clean soundboard recording with a few cassette hiss artifacts; the show shines thanks to Hell In A Bucket, Estimated Prophet, Eyes of the World and a rare second‑set Sugaree.",
+  "review": "The source is a soundboard tape that sounds noticeably clean, though listeners can still detect a faint cassette‑generation hiss. Musically the concert is highlighted by strong performances of Hell In A Bucket, Estimated Prophet and Eyes of the World, plus the unusual appearance of Sugaree in the second set, which many fans celebrate as a rare treat.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers gave five‑star praise for both sound quality and performance; only one low rating was recorded, and the standout song mentions indicate a strong show despite minor cassette noise."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clean and crisp, with a slight cassette‑generation hiss noted by reviewers; no major dropouts or balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hell In A Bucket",
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows well, featuring tight jams and the rare inclusion of Sugaree in the second set, which adds extra excitement for listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "No specific guitar performance noted; reviewer references his health (diabetic coma) affecting perception of 1986 shows.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hell In A Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes Of The World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T15:50:18.164019+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-05-10.sbd.walker-scotton.miller.81625.flac16"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "A superb Seamons matrix delivers crystal‑clear sound to a classic ’71 Palladium set where Hard to Handle, Mr. Charlie and Casey Jones shine.",
+  "review": "The matrix created by Hunter Seamons blends pristine audience tapes with a crisp Miller SBD, resulting in an excellent‑quality recording that even outshines many official releases. The performance is a strong representation of the summer ’71 sound – the first set is solid with highlights like Cumberland Blues and Mr. Charlie, while the second set delivers unforgettable moments such as Hard to Handle, Casey Jones and a soaring Lovelight.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the matrix’s audio fidelity and the musical highlights; only a few low‑star comments are unrelated, leading to an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Combines pristine AUD with a crispy Miller SBD; described as full, crisp, and often better than official releases, with very little audience bleed on the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard to Handle",
+      "Mr. Charlie",
+      "Cumberland Blues",
+      "Casey Jones",
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid with a few average moments; second set consistent and typical of ’71, featuring several high‑energy peaks that make the show memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his blistering solo on Hard to Handle and call his improvisation \"instant invention\".",
+    "Phil": "His bass is described as manic and far more differentiated in this matrix than in pure AUD sources.",
+    "Bob": "Weir's vocal break in Casey Jones and a shouted \"Bobby!\" are highlighted, adding character to the performance.",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann’s intuitive, integrated drumming is praised for its clarity and presence in the matrix."
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Mr. Charlie": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T07:14:42.957353+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-08-06.mtx.seamons.96668.sbeok.flac16"
+}

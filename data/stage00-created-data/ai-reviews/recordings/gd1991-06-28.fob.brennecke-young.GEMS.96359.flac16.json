@@ -1,0 +1,60 @@
+{
+  "summary": "Fair front‑of‑house soundboard capture with mic chatter; the show offers an intriguing Wharf Rat jam hinting at Dark Star and a memorable Picasso Moon moment.",
+  "review": "The recording is usable but suffers from occasional stage talk that makes some passages hard to hear, typical of a front‑of‑house board source. Musically the concert is modest – a Wharf Rat jam that echoes Dark Star motifs and a standout launch into Picasso Moon are the high points, while overall the performance feels a bit lackluster compared with classic shows.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Five detailed reviews give an average user rating of ~3.4; show quality is moderate with a few highlights, and recording quality is fair due to mic chatter, leading to a slightly above‑average combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Stage talk close to the microphone makes parts difficult to hear; otherwise the board feed is clear enough for listening but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Picasso Moon"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical Dead set with a usual A‑jam out of Wharf Rat, an unexpected Dark Star‑like tease, and a vivid moment when the band launched into Picasso Moon under a full orange moon on the monitors."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar mirrors the Dark Star verse melody during the Wharf Rat jam, earning praise.",
+    "Phil": "Bass follows Jerry’s DS‑style line in the same jam, noted positively.",
+    "Bob": "Imitates a screaming fan during Estimated Prophet, highlighted by reviewers.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Picasso Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Wing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T22:47:20.999508+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-28.fob.brennecke-young.GEMS.96359.flac16"
+}

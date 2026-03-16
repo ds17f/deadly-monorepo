@@ -1,0 +1,85 @@
+{
+  "summary": "Clear soundboard capture of a solid 10‑21‑88 Dallas show with standout Jack Straw, Stella Blue and Believe It or Not, though Franklin’s Tower vocal slips dampen an otherwise rewarding performance.",
+  "review": "The SBD source is notably clear and well‑balanced, aside from a brief hiss on the opening trio of songs. Musically the concert delivers several high points—Jack Straw, Stella Blue, Believe It or Not, Victim and a heartfelt Brokedown Palace—while Franklin’s Tower suffers from vocal missteps. Overall it’s a rewarding late‑‘80s Dead show that shines despite occasional uneven moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈75 %) are 4–5 stars and praise both the performance and sound quality; only a few low‑star comments note minor flaws, yielding a strong positive consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, crisp mix with solid dynamics; a noticeable hiss on the first three tunes and occasional tape noise but overall well‑balanced and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Stella Blue",
+      "Believe It or Not",
+      "Victim",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Franklin's Tower"
+    ],
+    "setlist_flow": "Opener LTGTR → Stranger → Franklin’s sets a relaxed tone; first set builds nicely with strong mid‑set numbers. Second set is mixed—some jams (Victim, Stella) sparkle while others feel flat—but the encore (Brokedown Palace) provides an emotional close."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised for guitar work on Jack Straw and Stella Blue; however several reviewers note lyrical fumbles and a bored vibe on Franklin’s Tower.",
+    "Phil": "Bass described as tight and vital, keeping songs alive through slower moments.",
+    "Bob": "Vocal performance varies—strong on Walkin' Blues, but lyric slips noted on Franklin’s and occasional boredom.",
+    "Keys": "Brent’s birthday celebration highlighted; harpsichord/keyboard work praised, though some find his vocal contribution “good” rather than stellar.",
+    "Drums": "Bill’s drumming called gritty and solid (e.g., Walkin' Blues), providing a sturdy rhythmic foundation throughout."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stella Blue": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Believe It or Not": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Victim": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:24:37.774472+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-10-21.dsbd.miller.30814.sbeok.flacf"
+}

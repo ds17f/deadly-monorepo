@@ -1,0 +1,45 @@
+{
+  "summary": "Good‑quality recording of an enjoyable 1982 Tempe show, highlighted by a happy Jerry on “Half Step” and solid “Crazy Fingers” performance.",
+  "review": "The three reviews paint this as a strong representation of an ’82 Dead concert – the setlist is well chosen and the band plays with gusto, especially Jerry’s upbeat vocal on “Half Step.” The sound is described as fine to great and easy to listen to, making the tape pleasant even if the source type isn’t specified. Overall listeners find it a solid, enjoyable show worth revisiting.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Three reviews (3‑5 stars) consistently praise the musical performance and note good to great sound quality; weighted average leans toward a strong show with solid recording."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Sound described as fine to good, easy to listen to; one reviewer calls the sound \"great\" with no major issues noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Half Step"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Setlist is well‑selected and representative of a typical 1982 show; reviewers note the first set solid, second set enjoyable though not containing any \"top ten\" moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Happy vocal performance on “Half Step” noted; also praised for guitar work on “Crazy Fingers.”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T21:47:18.947654+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-07-25.fob.18481.sbeok.shnf"
+}

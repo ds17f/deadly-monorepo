@@ -1,0 +1,98 @@
+{
+  "summary": "Good audience recording of a solid but unspectacular show; Jerry’s voice improves while Louie Louie and a few others fall flat.",
+  "review": "The tape captures the warm, lively atmosphere of the Hartford venue with clear audience sound. Musically the performance is steady – highlights include Bird Song, All Over Now, Masterpiece, Samson and Smokestack – but several numbers (notably Louie Louie, Might As Well and Ship) are described as weak or over‑played.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Three moderate reviews point to a decent show with a few strong moments but no standout brilliance; the audience recording is praised as warm and listenable, yielding an overall rating just above average."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Warm crowd ambience, clear enough for enjoyment; no specific drop‑outs mentioned but the tape is described as a pleasant AUD capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "All Over Now",
+      "Masterpiece",
+      "Samson",
+      "Smokestack"
+    ],
+    "poor_songs": [
+      "Louie Louie",
+      "Might As Well",
+      "Ship",
+      "Miracle > Wharf Rat > Throw > Away"
+    ],
+    "setlist_flow": "Standard two‑set structure with solid pacing; the second set delivers a few high points but also drifts into predictable or dead‑ended moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice sounds better than previous night but still inconsistent, hot/cold on several numbers and struggling on \"Might As Well\".",
+    "Phil": "Gritty bass work praised, especially on the elevated \"Samson\" jam.",
+    "Bob": "Vocals criticized for lack of nuance, yet his delivery adds punch on \"Smokestack\" and he drives the \"Sampson\" jam.",
+    "Keys": "Brent's organ work highlighted as a lift on \"All Over Now\" and \"Louie Louie\".",
+    "Drums": "Percussionists provide furious energy on \"Samson\"; no major issues noted."
+  },
+  "song_mentions": {
+    "Louie Louie": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Might As Well": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Smokestack": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle > Wharf Rat > Throw > Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Knockin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T08:06:14.251601+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-04-05.aud.painoman.10073.sbeok.shnf"
+}

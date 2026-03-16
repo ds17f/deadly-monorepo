@@ -1,0 +1,62 @@
+{
+  "summary": "Soundboard recording of a solid 1991 show, highlighted by an unforgettable Crazy Fingers performance and crisp Miller remaster.",
+  "review": "The show is consistently praised for its tight playing, especially the legendary Crazy Fingers stretch that many reviewers call the best they've ever heard. The Miller‑remastered soundboard source delivers clear, well‑balanced audio with only a faint hum noted by one listener, making it an enjoyable listen from the Bird Song opener through the magical second‑set sequence.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Seven detailed reviews overwhelmingly rate the show 4–5 stars, lauding both performance and recording quality; only a minor hum is noted, so the combined rating is high."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced sound; Miller remaster praised. A slight, unidentifiable hum is mentioned but does not detract significantly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Terrapin Station",
+      "All Along the Watchtower",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong momentum from a Bird Song opener through a warm‑up jam into Victim, culminating in a magical second‑set Crazy Fingers → Terrapin Station sequence that keeps energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Locked‑in performance on Crazy Fingers described as a melodic masterpiece.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Hornsby highlighted for his grand piano/keyboard work, including an apparent Munsters‑theme jam during the warm‑up.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T23:59:18.251717+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-06.sbd.miller.95314.sbeok.flac16"
+}

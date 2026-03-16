@@ -1,0 +1,86 @@
+{
+  "summary": "Solid Miller soundboard recording (with minor speed/pitch quirks) that captures an average ’76 show, highlighted by a stellar Help > Slipknot! > Franklin's Tower sequence.",
+  "review": "The Miller SBD is praised as the go‑to source for this night, though listeners note it runs slightly slow and required patching with audience material, resulting in occasional crowd bleed. Musically the concert is a mixed bag – the first set drags before picking up, while the second set shines around Help > Slipknot! > Franklin's Tower but falls off toward the end.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is judged average with a few standout moments (≈3.5/5) while recording quality is good to excellent despite minor speed/pitch issues (≈4.0/5). Weighted combination yields ~3.8‑4.0 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Miller SBD patched with audience sources; runs about 1 % slow and needs pitch correction; occasional crowd bleed noted, but overall clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Brown Eyed Women",
+      "Promised Land"
+    ],
+    "poor_songs": [
+      "Sugaree",
+      "Samson",
+      "Wharf Rat",
+      "Around the Bad Thing"
+    ],
+    "setlist_flow": "First set takes a while to lock in before gaining momentum; second set opens strongly with Wheel and peaks at Help>Slip>Franklin's, then tapers off toward the encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone fluctuates – guitar drops on Sugaree and some sloppy moments on Samson, but he delivers a soaring solo in Franklin's Tower and shines during the Help>Slip>Franklin's sequence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Around the Bad Thing": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dancing in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T05:00:28.593813+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-21.sbd.miller.124828.flac16"
+}

@@ -1,0 +1,99 @@
+{
+  "summary": "Audience‑recorded May 12 1977 show shines with stellar Half‑Step/Mississippi, Dancin', and Samson jams, but suffers pitch glitches and missing Cassidy.",
+  "review": "The performance is a high‑water mark for the spring ’77 tour – Jerry’s soaring solo on Jack Straw, a monster Half‑Step > Mississippi sequence, a ripping Dancin’, and a ferocious Samson & Delilah keep fans raving.  The audience (AUD) source captures the venue vibe but is marred by speed/pitch problems in the second set, noticeable hiss, and the loss of “Cassidy”, which drags the technical rating down.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (≈4.5/5) while recording quality is mixed (≈3.0/5). Weighted combination (70 % show, 30 % recording) yields ~4.1 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audible high‑end presence and decent ambience, but suffers from pitch/speed issues (especially late NFA), hiss at low levels, drums a bit recessed, and the complete loss of “Cassidy”."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step > Mississippi",
+      "Dancin'",
+      "Samson & Delilah",
+      "Jack Straw (Jerry solo)",
+      "Tennessee Jed",
+      "Brown Eyed Women",
+      "Sunrise"
+    ],
+    "poor_songs": [
+      "Comes A Time (pitch problems)",
+      "Cassidy (missing)",
+      "Bertha (flat on some reviewers' ears)"
+    ],
+    "setlist_flow": "First set is solid and representative of the May ’77 vibe; second set builds into marathon jams (Half‑Step/Mississippi, Dancin', Samson) that many describe as “wild, wooly, and fun” despite the technical hiccups."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Jack Straw is repeatedly called transcendent and a highlight of the night.",
+    "Phil": "Described as sounding like “two angels”, with no complaints noted.",
+    "Bob": "",
+    "Keys": "Keith’s piano/organ work (and Donna’s vocal contributions) are praised, especially on Sunrise and Brown‑Eyed Women.",
+    "Drums": "Drum presence is debated – some note they’re a bit low or muffled, others say the rhythm section stays tight throughout."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Half Step": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mississippi": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 3,
+      "total_mentions": 5
+    },
+    "Comes A Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunrise": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T00:42:10.500951+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-05-12.aud.clugston.6484.sbeok.shnf"
+}

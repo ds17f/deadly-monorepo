@@ -1,0 +1,75 @@
+{
+  "summary": "Solid soundboard capture of a memorable Atlanta show, highlighted by Deal and Bird Song despite early PA/mix quirks.",
+  "review": "The April 1‑1994 Atlanta gig delivers several standout moments – a fiery Deal, an expansive Bird Song, and a beloved Wharf Rat – while the first set starts a bit sloppy (Picasso Moon) before tightening up. The Charlie Miller board tape is generally clear, though reviewers note Jerry’s guitar and vocals sit low in the mix early on. Overall the performance is enjoyable and worth listening to, especially for fans of the late‑’90s era.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 4‑star ratings and praise key songs; technical issues (low mix, early PA problems) keep the rating from being higher."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear board tape with decent balance, but early PA volume was low and Jerry’s guitar/vocals are turned down in the mix, requiring close listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Bird Song",
+      "Wharf Rat",
+      "Brokedown Palace",
+      "He's Gone"
+    ],
+    "poor_songs": [
+      "Picasso Moon"
+    ],
+    "setlist_flow": "First set opens a little sloppy (notably Picasso Moon) then tightens; second set features strong space jam, Bird Song and Wharf Rat, giving the show a solid arc."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work on Deal and Bird Song is praised, though his mix is low early in the show; voice sounds decent for ’94.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drums‑>space segment is highlighted as a trippy, well‑executed jam."
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "That Would Be Something": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Picasso Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T21:21:30.586479+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-04-01.sbd.miller.14834.sbeok.shnf"
+}

@@ -1,0 +1,66 @@
+{
+  "summary": "Solid set with standout The Other One, fresh Brent keyboards",
+  "blurb": "Shows a concise but strong second set highlighted by The Other One and a smoking Good Lovin'. Brent Mydland's early‑year keyboard work shines throughout, while the band delivers solid renditions of Jack Straw and I Need A Miracle.",
+  "review": "Portland International Speedway on June 30, 1979 captures the Dead in an early‑year phase where Brent Mydland’s fresh keyboard voice is already making its mark. The first set rolls through a tight selection of classics—Jack Straw, Candyman, Me And My Uncle into Big River—setting a mellow but steady groove. The second set delivers the real highlights: a powerful The Other One that several listeners called “exceptional,” an inspired Good Lovin' where Jerry’s solo work (especially during Little Light/Estimated Prophet) shines despite a low‑mix on some board recordings, and a solid I Need A Miracle that segues smoothly into Bertha. Brent’s harmonies are praised across the board, and Phil is noted boogying onstage, keeping the rhythm tight. Rainy weather and a few technical quirks (truncated audience tracks, subdued lead‑guitar level) give some recordings a muted feel, but the overall performance remains solid and enjoyable for fans tracking Brent’s early evolution.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 14,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Two recordings report positive sentiment (highlighting The Other One, Brent's keyboards and solid set flow) while the other two are mixed (noting low guitar mix and song truncations). No consistent negative comments about performance, so a moderate positive adjustment of +1.0 reflects overall favorable impressions.",
+      "final_calculation": "2.5 + 0.1 + 1.0 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd79-06-30.senn.munder.10346.sbeok.shnf",
+    "reason": "Front‑of‑board capture with good overall balance and minimal dropouts; despite a low lead‑guitar mix, it presents the full set without truncations and highlights The Other One, Good Lovin' and Brent's keyboards clearly."
+  },
+  "key_highlights": [
+    "The Other One delivers an exceptional, high‑energy performance.",
+    "Brent Mydland’s fresh keyboard work shines throughout the show.",
+    "Good Lovin' is a smoking rendition with strong vocal harmonies.",
+    "Rainy weather added a muted vibe but didn’t dampen the band's solid playing."
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "I Need A Miracle",
+    "Good Lovin'",
+    "The Other One",
+    "Estimated Prophet"
+  ],
+  "band_performance": {
+    "Jerry": "Solids solos, especially during Little Light/Estimated Prophet, though several recordings note his lead‑guitar is buried in the mix.",
+    "Phil": "Boogies onstage and provides a steady bass foundation; no specific performance issues noted.",
+    "Bob": "",
+    "Brent": "Fresh keyboards praised across multiple sources; harmonizing well and adding energy early in his tenure.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-25T22:02:22.305363+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw"
+    ],
+    [
+      "I Need A Miracle",
+      "Bertha",
+      "Good Lovin'"
+    ],
+    [
+      "Estimated Prophet",
+      "He's Gone",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ]
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "summary": "A solid soundboard recording of the legendary Telluride ’87 shows, highlighted by a scorching Fire, soaring Desolation Row and uplifting Scarlet.",
+  "review": "The August‑15/16 1987 Telluride concerts capture the band at a high point – Jerry’s impassioned vocals on Fire, Bob’s stellar Desolation Row and the joyous Scarlet are repeatedly praised.  The Healy mix provides a clear, full‑bodied soundboard source, though a few listeners note occasional fogginess.  Overall the performance is energetic and memorable despite a few weaker moments (e.g., a brief Franklin’s Tower and a lackluster Dew).",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers celebrate the musical peaks (Fire, Desolation Row, Scarlet) and rate the recording as good to excellent; only a few note minor flaws, yielding an overall strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Healy mix is praised for clarity and full‑bodied tone; some listeners describe the sound as slightly foggy or note that the source “lacks” a bit, but overall it is listenable with no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet",
+      "Fire",
+      "Desolation Row",
+      "Minglewood Blues",
+      "Deal",
+      "Big River"
+    ],
+    "poor_songs": [
+      "Franklin's Tower",
+      "Dew",
+      "Eyes"
+    ],
+    "setlist_flow": "The first set is described as mixed, with a few average moments, while the second set lifts the energy – Fire and Scarlet lead an uplifting finish.  Community percussion jams and spontaneous jam circles add to the unique Telluride vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal intensity on Fire and Scarlet is repeatedly highlighted as fierce and emotionally charged; his voice on 'Push comes to shove' (likely Uncle John’s Band) is called delightful.",
+    "Phil": "",
+    "Bob": "Desolation Row is praised as Bob at his best, though a few reviewers note occasional cheesy vocals or noisy moments from his instrument.",
+    "Keys": "Brent Mydland’s keyboard work is noted for adding fiddle‑like textures and providing low‑end bluesy support that compensates for other rough edges.",
+    "Drums": "Bill Kreutzmann receives commendation for solid drumming; Mickey Hart’s percussion processions after the first night are celebrated as a highlight of the Telluride experience."
+  },
+  "song_mentions": {
+    "Scarlet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Desolation Row": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T01:58:41.266614+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-08-15.prefm.leeds.17010.sbeok.shnf"
+}

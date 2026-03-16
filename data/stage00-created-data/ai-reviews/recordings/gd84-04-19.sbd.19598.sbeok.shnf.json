@@ -1,0 +1,68 @@
+{
+  "summary": "Soundboard capture of a high‑energy show highlighted by scorching China/Rider, Estimated and Wharf Rat performances.",
+  "review": "The concert is praised for its nonstop fire—Jerry’s guitar is described as ‘nuts’ and ‘on fire’, the first set roars while the second tightens up with blistering China→Rider, Estimated and Terrapin runs.  The soundboard recording is generally regarded as clear and powerful, giving listeners a vivid sense of the barn‑like venue’s atmosphere.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "All 12 reviews are 4–5 stars and extol both the musical performance and the sound quality; the show is consistently called hot, tight and full of standout moments, while the recording is noted as good to great."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers rave about the strong, clear sound and energy; one comment notes they can’t assess aural quality, but overall the mix is described as great and ‘super sound’."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Rider",
+      "Estimated",
+      "Wharf Rat",
+      "Terrapin",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑octane first set followed by an even tighter, ‘nuns‑ass’ second set; the show builds through a scorching China→Rider → Estimated → Terrapin sequence that fans cite as a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly called ‘nuts’, ‘on fire’, with great guitar tone and strong vocal performance.",
+    "Phil": "Bass heard clearly (e.g., during Bertha) and contributes solid low‑end foundation.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T16:03:44.210086+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-04-19.sbd.19598.sbeok.shnf"
+}

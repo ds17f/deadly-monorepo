@@ -1,0 +1,68 @@
+{
+  "summary": "A stellar 1972 show with scorching Playin'/Dark Star/Morning Dew jams captured on a good‑quality soundboard tape.",
+  "review": "The performance is consistently rated as top‑5 material – the epic Playin’→Drums→Dark Star→Morning Dew sequence, blistering Bird Song and a thunderous China>Rider are repeatedly highlighted.  The SBD source sounds clear enough for most listeners, though the mix is uneven (Bobby’s guitar is often too forward and Jerry’s vocals sit low), which some reviewers note but does not detract from the overall brilliance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly praise the musical performance (A‑level) while noting only moderate recording issues; weighted average yields a high rating with strong consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and crisp SBD, but mix balance is uneven – Bobby’s rhythm guitar is often too loud, Jerry’s vocals/guitar sit low, and Keith’s keys dip early in the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Dark Star",
+      "Morning Dew",
+      "China > Rider",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is a hot, straight‑ahead run of classics; the second set launches into an almost 70‑minute jam marathon (Playin' → Drums → Dark Star → Morning Dew → Playin') with seamless segues and a towering China>Rider climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are often buried and his guitar is low in the mix, yet his lead work on Playin' and Dark Star receives high praise.",
+    "Phil": "His bass solo is described as colossal, pounding and a highlight of the night.",
+    "Bob": "Bobby’s rhythm guitar sits unusually forward – many love the added presence while others find it overwhelming.",
+    "Keys": "Keith’s keyboards are occasionally low early on but later add memorable licks; overall appreciated.",
+    "Drums": "Billy’s drum solo and overall percussive drive are lauded, especially the short solo that feeds into Dark Star."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Dark Star": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Morning Dew": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "China > Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T00:25:47.755351+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-10-18.sbd.weir.7295.sbeok.shnf"
+}

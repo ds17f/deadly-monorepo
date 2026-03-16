@@ -1,0 +1,77 @@
+{
+  "summary": "Good soundboard capture of a solid ’72 show highlighted by a stellar Truckin' → Dark Star → Morning Dew jam and a standout Box of Rain.",
+  "review": "The recording is generally clear with only occasional hiss and minor glitches, making it quite listenable. Musically the concert shines in the second‑set improvisation—Truckin' into Dark Star and then Morning Dew is repeatedly praised—as well as strong renditions of Box of Rain, Playin', Candyman and Sugar Magnolia. Overall the performance feels like a bridge between the 1972 peak and the upcoming 1973 era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, highlighting exceptional jams while noting only modest recording flaws; the show quality outweighs minor technical issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well balanced; a few reviewers note hiss, occasional glitches or drop‑outs but nothing that seriously detracts from enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Truckin'",
+      "Dark Star",
+      "Morning Dew",
+      "Playin'",
+      "Candyman",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Dark Star"
+    ],
+    "setlist_flow": "The first set is solid but unremarkable; the second set delivers a deep, exploratory jam that foreshadows the 1973 sound, with smooth transitions especially through the Truckin'‑Dark Star‑Morning Dew sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's licks are described as tasty and his tone praised throughout the show.",
+    "Phil": "Phil's bass work gets special mention for ‘squeeks’ and cool, jazzy notes during the second‑set jams.",
+    "Bob": "",
+    "Keys": "Keith (or Brent) is noted for Miles‑Davis‑like atonal runs during the improvisations.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:42:23.634370+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-12-15.sbd.hollister.17186.sbeok.shnf"
+}

@@ -1,0 +1,92 @@
+{
+  "summary": "High‑energy Spring ’87 show with a soaring Wheel and stellar Let It Grow, captured on a solid audience tape.",
+  "review": "Fans rave about the blistering second set – especially the extended, melodic Wheel, a fiery Sugar Magnolia→Quinn finale and an unforgettable Let It Grow. The recording, a Braverman audience source, is generally clear and lively though a few listeners note it could benefit from EQ tweaks; overall it delivers the raw power of the 1987 tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (average ≈ 4.6) and enthusiastic comments about both performance and sound quality; minor recording quirks do not detract from an otherwise outstanding show."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear with strong energy capture; a few reviewers mention wanting a soundboard source or EQ help, but no major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wheel",
+      "Let It Grow",
+      "Sugar Magnolia → Quinn",
+      "Fire on the Mountain",
+      "Bertha",
+      "Playing in the Band",
+      "China Doll"
+    ],
+    "poor_songs": [
+      "Black Muddy River"
+    ],
+    "setlist_flow": "The concert builds from a roaring first set into a fast‑paced, high‑energy second set. Transitions are tight (e.g., Wheel into Sugar Magnolia), and the band maintains relentless momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone is described as soaring, his solos powerful, vocals strong, and he even jumps off the stage in excitement.",
+    "Phil": "Lesh is highlighted for leading a fearsome charge and delivering an active bass presence.",
+    "Bob": "",
+    "Keys": "Brent Mydland gets big shout‑outs for vocal contributions on Far From Me, Fire on the Mountain and Let It Grow, plus his keyboard work adding sparkle.",
+    "Drums": "The drum energy is praised (\"pedal to the metal\", \"hot GDTRFB\"), though no specific drummer critique appears."
+  },
+  "song_mentions": {
+    "Wheel": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Sugar Magnolia → Quinn": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Far From Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Muddy River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T20:03:46.906110+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-03-29.nak.braverman.7344.sbefixed.shnf"
+}

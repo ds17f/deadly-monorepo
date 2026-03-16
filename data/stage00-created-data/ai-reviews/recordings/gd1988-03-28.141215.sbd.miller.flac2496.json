@@ -1,0 +1,63 @@
+{
+  "summary": "Soundboard recording of a solid Spring ’88 show with standout Birdsong, Music Never Stopped, Ship of Fools and Truckin', though the second set feels a bit thin.",
+  "review": "The performance is generally praised for its first‑set highlights—especially the far‑out jams in Birdsong and Music Never Stopped—and the solid delivery of Ship of Fools and Truckin' in the second set. One reviewer notes no particular high points, giving the show an average rating, while another calls it a “solid” night despite a thinner second half. The SBD source is assumed to be clear, with no reported technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Two reviews provide moderate detail: one positive (4★) and one average (3★). Show quality is good with several praised songs; recording is a soundboard with no reported issues, leading to an overall ~4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments on audio fidelity; assumed clear typical of SBD recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong",
+      "Music Never Stopped",
+      "Ship Of Fools",
+      "Truckin'",
+      "Roses"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set offers varied moments with strong jams; second set is described as a little thin overall but still contains solid performances of Ship of Fools and Truckin'."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Mentioned a 'Phil tune', indicating Phil Lesh’s contribution was noticed.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship Of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:15:27.724809+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-28.141215.sbd.miller.flac2496"
+}

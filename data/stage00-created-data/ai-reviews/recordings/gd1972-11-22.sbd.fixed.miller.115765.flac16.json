@@ -1,0 +1,90 @@
+{
+  "summary": "Excellent soundboard mix captures a stellar 1972 performance with standout The Other One, He's Gone and a monster Bird Song.",
+  "review": "All four reviewers rave about this 1972 show, praising the strong playing, soaring jams on The Other One and He's Gone, and an epic ten‑minute Bird Song.  The Miller/Gans soundboard mix is described as a huge upgrade with crystal‑clear tones, though a few spots (e.g., El Paso) are noted as a bit uneven.  Overall the set flows beautifully from a punchy first set into a high‑ethanol second set loaded with tight drumming and Keith’s keyboard wizardry.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five‑star reviews highlight both an exceptional performance and a high‑quality soundboard mix; minor recording quirks do not detract from the overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mix praised as a huge upgrade with crisp tones and clear balance; occasional unevenness on El Paso and possible stage intro bleed, but generally very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "He's Gone",
+      "Bird Song",
+      "Playing in the Band",
+      "Casey Jones"
+    ],
+    "poor_songs": [
+      "El Paso"
+    ],
+    "setlist_flow": "First set strong and vocal‑focused; second set a high‑ethanol cocktail (He's Gone → Truckin' → Drums → The Other One → Stella) with seamless transitions and an expansive PITB jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone is described as \"perfect\" and his vocals on Stella Blue are called sweet and mesmerizing.",
+    "Phil": "Phil’s bass riffs are highlighted as great, leading the charge in The Other One with standout solo moments and backup vocal contributions.",
+    "Bob": "Weir is noted for ripping it up vocally and energetically throughout the show.",
+    "Keys": "Keith’s keyboard chops shine during the jam sections, especially on Playing in the Band and Bird Song.",
+    "Drums": "Bill's drumming is called clean; his drum solo after Truckin' receives special praise."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:12:30.134230+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-11-22.sbd.fixed.miller.115765.flac16"
+}

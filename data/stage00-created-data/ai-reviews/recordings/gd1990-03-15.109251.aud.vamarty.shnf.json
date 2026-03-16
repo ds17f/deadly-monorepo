@@ -1,0 +1,31 @@
+{
+  "summary": "Audience recording praised by some for crystal‑clear sound and full bass, called the worst AUD by another reviewer; the concert itself is described as an explosive, powerful show from start to finish.",
+  "review": "The performance is universally lauded as a five‑star, high‑energy gig that kept listeners on fire from opening through the finale. Recording quality opinions diverge – one reviewer hails it as “crystal‑clear” while another dubs it the worst‑sounding AUD and a third calls it merely listenable – indicating an overall mixed technical impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised (4–5 ★), but recording feedback ranges from excellent to poor, pulling the average rating toward the middle; four reviews give a moderate confidence level."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer describes the sound as crystal‑clear with full bass, another says it is the worst sounding AUD, and a third calls all AUDs “very listenable” but places this one at the bottom of the list. Overall comments indicate mixed clarity and balance."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The concert is repeatedly called explosive, powerful and a five‑star experience from start to finish, suggesting strong pacing and overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T03:36:09.565928+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-15.109251.aud.vamarty.shnf"
+}

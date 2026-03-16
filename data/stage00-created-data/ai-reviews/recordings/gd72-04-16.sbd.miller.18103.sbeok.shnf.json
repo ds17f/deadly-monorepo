@@ -1,0 +1,86 @@
+{
+  "summary": "Soundboard recording with noticeable hiss and first‑set cuts, but a stellar second set highlighted by a scorching Truckin' and inventive The Other One jams.",
+  "review": "The show shines in the second half where the band goes full‑tilt on Truckin', The Other One, Me & My Uncle and other classics; Jerry’s guitar is ripping, Phil’s bass percolates, and the jam flow is exceptional.  Recording quality is mixed – a hiss‑filled, cut‑ridden first set contrasts with a clean, well‑balanced second set that most reviewers rate as “excellent.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Strong musical performance (most reviewers give 4–5 stars) offset by noticeable first‑set recording flaws; weighted average yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Throughout the tape there is a persistent hiss and several cuts in the first set, likely due to the low‑ceiling cafeteria environment. The second set, however, is described as clean, crisp and well balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One",
+      "Me and My Uncle",
+      "Cumberland Blues",
+      "Good Lovin'",
+      "Not Fade Away",
+      "Tennessee Jed",
+      "Playin' in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is jam‑heavy and flows superbly, with standout improvisations on Truckin' and The Other One.  First set suffers from missing tracks and sound issues but still contains moments that “sizzle” for some listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "Ripping solos on Truckin', letting loose in the jams, unique melodic chords in The Other One; briefly absent during the final minutes of the TOO jam.",
+    "Phil": "Bass percolates brilliantly on Truckin' and provides an excellent duet with Jerry; locks into themes during The Other One jam.",
+    "Bob": "Weir adds aggressive lead lines during The Other One jam, but no major commentary elsewhere.",
+    "Keys": "Keith (keyboard) joins later in the TOO jam and contributes tasteful chimes; otherwise keyboards are solid.",
+    "Drums": "Bill Kreutzmann is missing for early passages of The Other One jam but returns for the latter part; overall drum work praised."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T14:00:07.062466+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-04-16.sbd.miller.18103.sbeok.shnf"
+}

@@ -1,0 +1,70 @@
+{
+  "summary": "Soundboard source with missing tracks and uneven mix, but strong drumming and a standout Scarlet Fire make this 1978 show a mixed bag.",
+  "review": "The SBD is the best available for this Chicago ’78 concert, yet it suffers from chopped sections and missing tracks that frustrate listening. Musically the band delivers solid drums/space work and an exciting close with Black Peter → Truckin' and U.S. Blues, while Scarlet Fire shines with a Weir slide solo; however Keith’s keyboards struggle and the Dancin' and Deal numbers feel confused. Overall the performance is uneven, making it worthwhile only for completists.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "One detailed review balances praise for certain songs and drumming with criticism of missing tracks and keyboard performance, leading to an average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Best available SBD but contains missing tracks, chopped sections and occasional confusion; overall clarity is decent but inconsistent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Fire",
+      "Black Peter",
+      "Truckin'",
+      "U.S. Blues"
+    ],
+    "poor_songs": [
+      "Dancin'",
+      "Deal"
+    ],
+    "setlist_flow": "The show hops around with missing portions, making archival navigation difficult, yet the second half builds momentum and closes strongly with spacey drumming and a solid encore."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Weir (Bob) delivers a notable slide solo during Scarlet Fire's second jam.",
+    "Keys": "Keith struggles throughout the performance, contributing to a confused feel on several numbers.",
+    "Drums": "Drumming and space sections are praised as an improvement over earlier spring Chicago shows."
+  },
+  "song_mentions": {
+    "Scarlet Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T16:14:03.366279+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-11-16.136718.sbd.partial.flac1644"
+}

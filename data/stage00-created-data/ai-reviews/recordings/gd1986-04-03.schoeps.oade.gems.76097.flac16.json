@@ -1,0 +1,69 @@
+{
+  "summary": "Rich audience‑sourced recording captures a solid 1986 Hartford show with standout Bird Song, Let It Grow and The Other One.",
+  "review": "The tape delivers a sweet‑sounding audience mix that often feels like a board capture, preserving the nuanced drums/space sections and Brent’s keyboard work.  Musically the concert is praised for a tight first set featuring Bird Song and Supplication into a hot Let It Grow, while the second set offers spacey jams highlighted by The Other One, despite a wobbling Don’t Need Love finale.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently positive comments on both performance and recording; strong show quality (≈4.5) combined with good‑to‑excellent audience sound (≈4.0) yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Rich, sweet‑sounding audience capture that at times feels like a board; clear mids, well‑defined drums/space and minimal distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Supplication",
+      "Let It Grow",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Don’t Need Love"
+    ],
+    "setlist_flow": "Solid first set with smooth transitions (Bird Song → Supplication → Let It Grow); second set delivers spacey jams and strong improvisation despite a few slips in the latter half."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is praised, especially on Don’t Need Love; his sober vocal presence after the jam is noted.",
+    "Phil": "Bass work described as “thumping” throughout and highlighted on The Other One.",
+    "Bob": "",
+    "Keys": "Brent Mydland gets kudos for an awesome performance of Don’t Need Love and overall sweet‑sounding keyboards.",
+    "Drums": "Drums/Space sections are called nuanced and nicely captured in the mix."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Don’t Need Love": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:38:23.426251+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-03.schoeps.oade.gems.76097.flac16"
+}

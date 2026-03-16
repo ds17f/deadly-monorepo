@@ -1,0 +1,45 @@
+{
+  "summary": "High‑quality soundboard capture of mellow, flowing sets highlighted by a standout Scarlet Begonias jam and a rare Fire on the Mountain moment.",
+  "review": "The recording delivers a clear, well‑balanced sound with only minute glitches, preserving the easy‑flowing, Caribbean‑vibe atmosphere of the night. Musically the band is in fine form – Jerry’s inventive solos and Phil’s supportive bass shine during an energetic Scarlet Begonias jam, and a memorable Fire on the Mountain adds a special touch.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Two detailed positive reviews (5★ and 4★) praise both performance and sound quality, yielding an overall rating in the upper‑mid range; limited number of reviews lowers confidence to medium."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Great overall clarity with a few minute glitches noted by one reviewer; another comment mentions the tape runs fast, suggesting a cassette‑master source transferred to reel."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Easy‑flowing, mellow sets with positive vibrations; the band moves smoothly between songs, creating a relaxed yet energetic atmosphere."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fluid soloing over chords and delivering emotional, melodic lines during the Scarlet jam.",
+    "Phil": "Noted for supporting the interplay and keeping the band in fine form throughout the performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T03:23:26.959325+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-11-26.sbd.fried-lai.1419.sbefail.shnf"
+}

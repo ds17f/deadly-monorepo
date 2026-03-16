@@ -1,0 +1,64 @@
+{
+  "summary": "A good audience recording captures the magical Oxford ’88 show, highlighted by a blistering Hey Pockey Way and an rousing Mr. Fantasy/Hey Jude suite despite a cheesy Little Girl Lost.",
+  "review": "This audience tape is considered the best available for Oxford 7‑3‑88 – clear enough to enjoy but not pristine – and it documents one of the most peaceful, groovy Dead scenes many fans recall. The performance shines with strong first‑set staples like Sugaree and Birdsong, a standout second‑set opener (Hey Pockey Way), and an electrifying Mr. Fantasy/Hey Jude medley, though the Little Girl Lost segment falls flat.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Reviews praise the musical performance strongly (70% weight) while noting the recording is good but not stellar (30% weight), leading to an overall solid rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as the best audience source for this date – satisfying and clear enough, though not a flawless or “stellar” recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hey Pockey Way",
+      "Mr. Fantasy/Hey Jude suite",
+      "Sugaree",
+      "Birdsong"
+    ],
+    "poor_songs": [
+      "Little Girl Lost"
+    ],
+    "setlist_flow": "Strong first set with Sugaree and Birdsong; second set launches with a blistering Hey Pockey Way but is cut short, then recovers with a lively post‑drums sequence and an outstanding Mr. Fantasy/Hey Jude medley."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's playing is highlighted as both a strength and a weakness, bringing out the best and worst of this very good show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Pockey Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Girl Lost": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mr. Fantasy/Hey Jude suite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T11:23:21.672688+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-07-03.beyer201.connor.3325.sbeok.shnf"
+}

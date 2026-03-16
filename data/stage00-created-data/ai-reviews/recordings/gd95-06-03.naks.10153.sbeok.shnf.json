@@ -1,0 +1,69 @@
+{
+  "summary": "Good audience‑sourced recording with solid sound and standout performances of Althea, Broken Arrow, Stella Blue and the classic China > I Know You Rider sequence.",
+  "review": "The fans rate this June‑1995 show largely positive, citing a reliable audience tape that “sounds good” and even “A‑quality AUD”.  The concert is praised for its strong second half – Althea, Broken Arrow (with Phil on vocals), Stella Blue and the China > I Know You Rider medley are highlighted as high points.  While Jerry’s guitar work is noted as uneven at times, his voice holds up and overall the performance is considered a safe bet for anyone digging ’95.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Average star rating ~3.7 across 13 reviews, but most comments are enthusiastic about both the music and the recording; weighting favors show quality, pushing the overall AI rating into the low‑four range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call it \"A‑quality AUD\" or simply \"excellent recording\"; no major complaints about dropouts or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Broken Arrow",
+      "Stella Blue",
+      "China > I Know You Rider",
+      "Uncle John's Band",
+      "Unbroken Chain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans note a consistently moving show with strong highlights in the second half; pacing is described as \"moving ahead the whole time\" and the last five tunes are especially memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar work described as “up and down” but vocals remain solid despite health concerns.",
+    "Phil": "Repeatedly praised for his heartfelt vocal delivery; several reviewers defend his voice as essential to the Dead sound.",
+    "Bob": "Mentioned briefly as having a smooth voice, though most focus is on Phil’s singing.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Broken Arrow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Unbroken Chain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T09:32:07.582448+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-06-03.naks.10153.sbeok.shnf"
+}

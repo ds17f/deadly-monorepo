@@ -1,0 +1,39 @@
+{
+  "summary": "Enthusiastic review highlights a great setlist and a standout 'Eyes of the World' with a Hendrix‑style riff; recording source not identified.",
+  "review": "The reviewer rates the show five stars, praising the overall setlist and especially noting a Hendrix‑like guitar riff during 'Eyes of the World'. No details are provided about the audio source or sound quality, so the technical aspect remains unclear. The performance is described as “great” throughout, suggesting a high‑energy Dead concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Only one review, but it is highly positive about the musical performance; no recording details are given, so rating leans on show quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer did not comment on soundboard vs. audience source or clarity; no specific audio issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer calls the setlist 'great' and describes the overall show as great, indicating strong pacing and flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Hendrix‑style riff during 'Eyes of the World' praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T20:05:18.001977+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-02.fob.thomson.motb.81855.sbeok.flac24"
+}

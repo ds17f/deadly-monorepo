@@ -1,0 +1,51 @@
+{
+  "summary": "A crystal‑clear LMPP audience recording captures a tight 1987‑style New Year’s Eve set highlighted by a seamless Uncle John’s Band → Ripple transition into Estimated Prophet and a powerful Touch of Grey opener.",
+  "review": "The three reviewers rave about the superb audience (LMPP) capture, calling it “rock‑solid” and far superior to many official releases. Musically the show is described as a tight, solid 1987 performance with smooth segues – especially the Uncle John’s Band → Ripple flow into Estimated Prophet – and a standout Touch of Grey opener that sets an energetic tone for the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviews are highly positive (average 4.7★), praising both the recording quality and the musical performance; weighting gives a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "LMPP audience capture described as crisp, clear, and exceptionally balanced – no dropout or muffling noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "Uncle John’s Band > Ripple",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight a tight, well‑structured set with especially smooth segues (UJB → Estimated) and a strong pre‑drums segment that keeps the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Pre‑drum section praised as solid; transition into the drum solo noted as smooth."
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John’s Band > Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:37:32.956660+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-12-27.nak300.holtz.lmpp.97960.flac16"
+}

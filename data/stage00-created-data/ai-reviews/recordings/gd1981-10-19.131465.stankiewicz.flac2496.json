@@ -1,0 +1,51 @@
+{
+  "summary": "Mixed reception – a room‑filled, satisfying performance from 1981 but plagued by mislabeling and missing tracks; recording is decent audience‑style tape.",
+  "review": "The show is praised for its energy and the way the mix captures the feel of the room, with one reviewer calling it a \"burning\" 1981 performance. However, other listeners note serious labeling errors (missing Franklin's Tower and Scarlet Begonias) and that the source is an old cassette audience‑style tape, which limits audio fidelity. The overall experience is enjoyable but marred by those technical shortcomings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Two reviewers are highly positive about the performance and overall mix, while two point out mislabeling, missing songs, and sub‑par cassette source quality; the blend of praise and criticism yields an average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Captures room ambience well but is a low‑fidelity cassette tape; some listeners note it as an older audience‑style recording rather than a clean soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Franklin's Tower",
+      "Scarlet Begonias",
+      "Passenger"
+    ],
+    "setlist_flow": "Performance is energetic and characteristic of a strong 1981 show, but mislabeling and missing tracks disrupt the perceived completeness of the set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:17:35.757140+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-19.131465.stankiewicz.flac2496"
+}

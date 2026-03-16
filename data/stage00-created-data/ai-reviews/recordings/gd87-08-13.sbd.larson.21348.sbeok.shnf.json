@@ -1,0 +1,92 @@
+{
+  "summary": "Good matrix recording of a high‑energy Red Rocks show – standout performances of Cassidy, Far From Me and He's Gone with Brent’s vocal shine.",
+  "review": "The concert captures the band in top form: an energetic first set highlighted by Cassidy and Far From Me, a second set that builds into a soaring He's Gone and a memorable double‑encore (Not Fade Away → Touch → Heaven's Door). The matrix source is generally clear with a few flat spots and occasional break‑ups, but it preserves the live atmosphere. Overall fans rave about Jerry’s solos and Brent’s vocals while noting a slower first half.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "15 reviews give an average of ~4.1 stars; the majority praise the performance and only a few note recording glitches, leading to a strong positive rating with high confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clear matrix mix with occasional flatness in the SBD and brief break‑ups that interrupt transitions; overall retains live ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Far From Me",
+      "He's Gone",
+      "Gimme Some Lovin'",
+      "Not Fade Away",
+      "Touch",
+      "Heaven's Door"
+    ],
+    "poor_songs": [
+      "Big Boss Man"
+    ],
+    "setlist_flow": "Fans appreciate a solid first set that builds into an even stronger second set, capped by a rare triple encore (NFA → Touch → Heaven's Door) that adds extra excitement."
+  },
+  "band_member_comments": {
+    "Jerry": "His solos—especially on He's Gone and Not Fade Away—are described as 'delicious', 'quintessential' and especially intense after the Kurt Littlewing incident.",
+    "Phil": "Praised for vocal work on Gimme Some Lovin' (\"Now I'm gonna kick ass\") and overall singing energy throughout the night.",
+    "Bob": "",
+    "Keys": "Brent’s voice gets high marks; reviewers call his singing 'beautiful', a 'shining light' and note he leads the band vocally on Far From Me and Gimme Some Lovin'.",
+    "Drums": "The drum segment is noted as active, loud, with a jungle‑timpani jam; pre‑drums are quick but effective."
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Boss Man": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T01:48:32.095526+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-08-13.sbd.larson.21348.sbeok.shnf"
+}

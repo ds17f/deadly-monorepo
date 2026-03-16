@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent 1974 audience tape delivers a solid set with long, flowing jams (Playing in the Band → Wharf Rat → Truckin'), though vocals are sometimes buried.",
+  "review": "The patched audience recording is remarkably clear for a 1974 cassette source, giving listeners a vivid sense of the Wall of Sound while still retaining crowd ambience. The band is in top form – the first set shines and the second set features an epic 45‑minute jam sequence that Deadheads rave about. Minor vocal muffling aside, the overall musical performance and the quality of this AUD tape are highly praised.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of nine reviews rate the show 4‑5 stars, praising both the performance and the unusually good audience recording; only a few note vocal muffling, keeping the overall rating strong."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Analog cassette tape from 1974, patched by Charlie Miller for missing sections. Reviewers describe it as very good/phenomenal and cleaner than other AUD sources, with clearer Phil bass and decent overall mix, though some vocals sound distant and crowd noise is noticeable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Wharf Rat",
+      "Truckin'",
+      "Nobody's Fault"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A strong first set with dance‑style numbers, followed by an average‑feeling second set that shines during a massive 45‑minute jam (Playing > Wharf Rat > Truckin' > Nobody's Fault > Playing). The flow is praised for its energy and the way the Wall of Sound translates through the audience tape."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil’s bass comes through clearly on this recording, noted as much more audible than other 1974 AUD tapes.",
+    "Bob": "",
+    "Keys": "Keith is highlighted as being in good form during the first set, contributing solid keyboard work.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Nobody's Fault": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T22:48:30.894229+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-07-21.fob-patched.miller.31436.sbeok.flacf"
+}

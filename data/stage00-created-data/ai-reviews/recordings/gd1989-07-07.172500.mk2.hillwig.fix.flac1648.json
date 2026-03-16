@@ -1,0 +1,39 @@
+{
+  "summary": "Recording quality unclear; show noted for a dramatic rendition of \"Blow Away\"",
+  "review": "The only review mentions a “pretty dramatic” performance of the song Blow Away, but offers no information about the source or clarity of the audio. With no details on the mix, audience ambience, or overall set flow, the technical quality of this recording remains uncertain.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "A single review with a 0‑star rating suggests dissatisfaction, yet the comment about Blow Away is mildly positive; limited data leads to a low confidence, modest rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on sound clarity, mix balance, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Blow Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Blow Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T20:40:05.245191+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-07.172500.mk2.hillwig.fix.flac1648"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "A crisp audience recording captures a scorching July 31 1973 show, highlighted by an epic Playing in the Band and a tight China‑>Riders jam.",
+  "review": "The four reviewers agree this is a hot ’73 performance – the first set ends with a monster 30‑minute Playing in the Band and the China Cat jam (the “Joy” sequence) is praised as classic.  While the tape is an audience recording, listeners note it sounds unusually crisp for a 1973 Aud source, though not audiophile‑grade.  Overall the show is deemed one of the era’s best despite a modest setlist and a short second set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high praise for musical performance (70% weight) and generally good‑to‑excellent audience sound quality (30% weight) across four detailed reviews."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crispy and listenable for a 1973 audience tape; some reviewers note it isn’t audiophile‑grade but captures the crowd ambience well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "China Cat > Riders",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set lacks secondary jams according to one reviewer, but ends with a massive Playing in the Band; second set appears short (no big jam) yet every tune is played at A‑list level."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia described as \"off the wall\" and highly animated, delivering top‑tier guitar work throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat > Riders": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T16:10:55.279916+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-07-31.fob-aud.willy.8909.sbeok.shnf"
+}

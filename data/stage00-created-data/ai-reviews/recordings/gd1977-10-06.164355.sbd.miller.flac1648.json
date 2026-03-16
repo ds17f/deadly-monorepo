@@ -1,0 +1,73 @@
+{
+  "summary": "Soundboard recording with occasional silent gaps, but a blistering second set highlighted by an epic Not Fade Away and powerful jams.",
+  "review": "The transfer is a solid sound‑board source, though listeners note long stretches of blank air after most first‑set songs. The show shines in the second set where the band delivers raw power – standout moments include a raging Not Fade Away, tight Estimated Prophet → Eyes of the World, and a soaring Black Peter. Overall fans are enthusiastic despite the first‑set’s quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the second set and overall performance, with only minor complaints about silent gaps and one low‑star comment; recording quality is good for a soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp transfer praised, but large chunks of silence after many first‑set tracks and occasional perception of slowed playback."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "Estimated Prophet",
+      "Eyes of the World",
+      "Black Peter",
+      "Music Never Stopped"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is marred by long silent gaps and is generally unremarkable; second set erupts with high‑energy jams and tight transitions, delivering one of the hottest Not Fade Away performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is propelled by Keith’s keyboards, especially during the explosive second‑set jams.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith’s keyboard work drives the band, providing the spark for the intense jams.",
+    "Drums": "Rare 1977 drum performance noted, adding power and intensity to the set."
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mind Left Body jam": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T04:29:13.652737+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-06.164355.sbd.miller.flac1648"
+}

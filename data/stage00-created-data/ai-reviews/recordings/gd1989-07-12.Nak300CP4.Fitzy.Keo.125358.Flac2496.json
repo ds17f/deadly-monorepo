@@ -1,0 +1,31 @@
+{
+  "summary": "Poor muffled audience recording with no notable performance details",
+  "review": "The sole reviewer notes a muffled, cloudy audience (AUD) source, indicating very low sound quality. No comments are made about the musical performance, leaving the show itself unassessed.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one review, rating of 0 stars and a complaint about recording quality; no positive information on the performance."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Muffled and cloudy sound; lacks clarity and detail."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T21:09:45.298904+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-12.Nak300CP4.Fitzy.Keo.125358.Flac2496"
+}

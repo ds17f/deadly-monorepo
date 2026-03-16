@@ -1,0 +1,31 @@
+{
+  "summary": "Negative feedback with no details on recording or performance quality",
+  "review": "The sole reviewer gave this tape a zero‑star rating and offered only a brief personal note, providing no information about the sound source, clarity, or musical highlights. With such minimal commentary, the consensus is that the recording did not meet expectations.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one review with a 0‑star rating and no substantive comments; insufficient data for a higher confidence assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No specific remarks about sound quality; reviewer’s zero stars imply dissatisfaction."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T06:29:27.193709+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-06.nak300.bleich-sirmick.111171.sbeok.flac16"
+}

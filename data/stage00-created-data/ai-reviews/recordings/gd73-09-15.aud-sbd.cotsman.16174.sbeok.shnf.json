@@ -1,0 +1,85 @@
+{
+  "summary": "Matrix recording with rough first‑set audience tape but crisp second‑set SBD; the show shines thanks to soaring horns, a monster Eyes of the World, Let It Grow jams and an unforgettable Weather Report Suite.",
+  "review": "The performance is a high‑water mark for the brief 1973 horn era – the second set bursts with tight playing, dazzling horn arrangements and standout renditions of Eyes of the World, Let It Grow and the Weather Report Suite.  Technically the recording is mixed: the first set suffers from typical 70’s audience‑tape muffiness, while the second half is a clean soundboard capture that lets Jerry’s guitar and the horns sparkle.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for the musical performance (especially the second set) outweighs the noted first‑set audio flaws, yielding a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "First set recorded from an audience composite – typical 70’s tape grit and occasional roughness. Second set captured on soundboard (SBD) – clear, crisp, with horns well balanced. Some reviewers note Phil’s bass a bit light in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Let It Grow",
+      "Weather Report Suite",
+      "Bird Song",
+      "Row Jimmy"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "The first set is musically solid but marred by audio quality; the second set kicks off with \"Mississippi Half‑Step\" and delivers a horn‑filled, high‑energy experience that many reviewers cite as the highlight of the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead guitar is repeatedly praised – ‘flaming’, ‘on fire’ on Bird Song, Big River, and the jam sections of Let It Grow.",
+    "Phil": "A few listeners note Phil’s bass sounds a little light in the mix but otherwise no performance criticism.",
+    "Bob": "",
+    "Keys": "Keith is mentioned as possibly taking lead vocals on “Let Me Sing Your Blues Away” and contributes nicely to the overall feel.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Row Jimmy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wake Up the Flood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let Me Sing Your Blues Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T17:27:05.059651+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-09-15.aud-sbd.cotsman.16174.sbeok.shnf"
+}

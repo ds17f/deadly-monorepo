@@ -1,0 +1,75 @@
+{
+  "summary": "Strong 1976 performance highlighted by an epic Scarlet Begonias and solid second‑set jams; audience tape is decent but a bit muddy at the start.",
+  "review": "Fans rave about this October 1976 show – the 13‑minute “Scarlet Begonias” riff, a groovy “Sugaree,” and a jam‑filled second set featuring “The Wheel,” “Comes A Time,” and “Dancin’ In The Streets” are repeatedly called out as standout moments.  The recording is an audience tape: it captures the hall ambience and overall band balance well after the first couple of songs, though the opening is described as muddy or low‑level.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "The majority of reviewers praise the musical performance (many 4–5 star comments) while noting consistent but not fatal recording flaws; weighted scoring yields a solid >4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Muddy/low clarity at the very start, improves after first two songs; room ambience captured nicely, low crowd noise, overall decent balance for an audience tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Sugaree",
+      "The Wheel",
+      "Comes A Time",
+      "Dancin' In The Streets",
+      "Playing in the Band",
+      "Loser"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid with a standout “Scarlet Begonias” and sweet “Loser”; second set launches into “Playing in the Band” and builds through jam‑heavy sequences, delivering an especially juicy, improvisational climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry’s riff work and guitar tone as amazing, especially on Scarlet.",
+    "Phil": "Phil’s bass lines are praised alongside Jerry’s riffs for blowing the audience away.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin' In The Streets": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T08:08:36.364655+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-10-03.aud.weiner.19415.sbeok.shnf"
+}

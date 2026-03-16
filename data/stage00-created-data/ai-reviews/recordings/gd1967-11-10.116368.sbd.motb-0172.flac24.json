@@ -1,0 +1,47 @@
+{
+  "summary": "Great‑sounding ’67 era show with classic song choices, though the track list is mis‑labelled.",
+  "review": "The recording captures a solid mid‑60’s set with clear, well‑balanced sound that fans of this era will appreciate. Reviewers note the classic material (Viola Lee, Hurts Me Too, Morning Dew) but point out that the track listing on this release is incorrect.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Single positive review (4 stars) praises both performance and sound quality; recording is clear, but limited data reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Good, clear sound typical of SBD sources; the only issue noted is an incorrect track listing, not audio fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Solid set of classic ’67 material with solid song choices; no specific pacing issues mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hurts Me Too": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Viola Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T06:48:14.835421+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1967-11-10.116368.sbd.motb-0172.flac24"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent matrix recording captures a massive, highlight‑filled show with a smoking China Doll, stellar Eyes of the World and a monster Playing in the Band.",
+  "review": "The performance is praised as massive and full of peaks, highlighted by an inspired China Doll, a soaring Eyes of the World solo from Phil, and a thunderous Playing in the Band jam. The matrix source is noted for its clear, high‑fidelity sound – described as the best‑sounding among comparable tapes – making the show both sonically and musically rewarding.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "All six reviewers give 4–5 stars, consistently praising both the musical performance and the recording quality; no major criticisms outweigh the positives."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Several reviewers call it a 'nice matrix' and note its clear, high‑fidelity sound, even calling it the best‑sounding of comparable recordings. No significant flaws are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Doll",
+      "Eyes of the World",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "Wharf Rat"
+    ],
+    "setlist_flow": "The set is described as a massive, journey‑like experience with peaks and valleys; most sections hold attention, though a few moments dip. Overall the pacing and song transitions are praised, especially the closing China Doll."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals on Wharf Rat noted as strained, but overall guitar work praised in jams (Deal, Playing in the Band).",
+    "Phil": "Phil’s solo in Eyes of the World receives specific praise.",
+    "Bob": "",
+    "Keys": "Keith is highlighted for hot playing early in the show, a standout solo in Playing in the Band, and an exciting jam on Deal.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T19:57:32.199107+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-05-21.mtx.seamons.109887.flac16"
+}

@@ -1,0 +1,93 @@
+{
+  "summary": "A high‑energy March ’71 Fox theater show captured on a soundboard with clean overall sound and the legendary ‘Caution’ as the centerpiece.",
+  "review": "The performance is praised for its fiery 1971 rock‑and‑roll vibe, highlighted by an unforgettable Caution, a soaring Other One, and strong vocal work from Jerry and Pig‑Pen. The SHN‑style soundboard source delivers clear mix and good instrument separation, though occasional tape flips, brief cuts (Casey Jones, Truckin’) and mild hiss are noted. Overall the musical excitement outweighs the minor technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, emphasizing strong show performance and generally good soundboard quality; only a few note tape glitches or sloppiness, keeping the weighted average in the “good” range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clean SHN‑style mix with clear instrument separation; occasional hiss, a few tape flips (Other One), and brief cut‑outs on Casey Jones/Truckin' are mentioned but do not dominate the listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Caution",
+      "The Other One",
+      "Wharf Rat",
+      "Bertha",
+      "Bobby McGee",
+      "Not Fade Away",
+      "NFA > GDTRFB"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "Casey Jones"
+    ],
+    "setlist_flow": "A solid first set with classic rockers and a few mid‑show tunings issues, followed by a second set that builds into powerful jams—especially the Other One → Wharf Rat sequence and the climactic NFA > GDTRFB leading into Caution."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as amazing and “excellent”; guitar tone praised though occasionally low in the mix; experimental playing noted.",
+    "Phil": "",
+    "Bob": "Bobby Weir’s lead vocal runs and rhythmic drive highlighted, especially on the NFA > GDTRFB stretch.",
+    "Keys": "Pig‑Pen’s organ is loud, creative, and a key part of the Wharf Rat and other jams; occasional pedal‑steel cameo mentioned.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Caution": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "The Other One": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Wharf Rat": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "China Cat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Bobby McGee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "NFA > GDTRFB": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T03:35:50.680952+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-03-18.sbd.yerys.1663.sbeok.shnf"
+}

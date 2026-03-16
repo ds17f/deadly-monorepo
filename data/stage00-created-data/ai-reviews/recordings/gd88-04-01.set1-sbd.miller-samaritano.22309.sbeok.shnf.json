@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard mix captures a solid show highlighted by the rare “Thin Man,” a stellar “To Lay Me Down,” and a killer “Deal.”",
+  "review": "Both reviewers rave about the recording, calling it the best‑sounding mix they’ve heard for this date. The performance is described as solid with a ripping first set featuring the seldom‑played Thin Man and a standout Deal, leading into an energetic second set. Overall the show is praised as enjoyable and well captured.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Both reviews are positive (4‑5 stars) and highlight a strong musical performance plus an outstanding soundboard mix; with only two detailed reviews confidence is medium."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Mix praised as the best heard for this date, clear and well‑balanced soundboard recording with no noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Thin Man",
+      "To Lay Me Down",
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as ripping and energetic; second set noted as great, giving the concert a strong overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Thin Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:41:35.587636+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-04-01.set1-sbd.miller-samaritano.22309.sbeok.shnf"
+}

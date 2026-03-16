@@ -1,0 +1,44 @@
+{
+  "summary": "Crisp Sennheiser capture of a uniquely curated set with standout Broken Down Palace, but the performance slips into sloppiness for some listeners.",
+  "review": "The recording offers a clear, front‑of‑house Sennheiser sound that highlights the show’s rare cover choices and a superb rendition of Broken Down Palace. While many fans praise the unique song selection and overall vibe, others note a decline into sloppy playing later in the concert, especially citing Garcia sounding out of breath.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Reviews are split – three positive (4‑5 stars) emphasize unique setlist and good crisp recording, while one strong negative (2 stars) decries sloppy performance; overall rating reflects decent show with solid audio but noticeable flaws."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Crisp Sennheiser front‑of‑house capture noted, though occasional feedback is mentioned; generally clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Broken Down Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert features an unusually eclectic mix of rare covers and a few strong first‑set moments, but many listeners feel it loses focus later as the band becomes sloppy."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as gasping for air and contributing to a sloppy feel in parts of the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Broken Down Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Revolution": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T03:42:05.239229+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-08.Sennheiser421FOB.33804.shnf"
+}

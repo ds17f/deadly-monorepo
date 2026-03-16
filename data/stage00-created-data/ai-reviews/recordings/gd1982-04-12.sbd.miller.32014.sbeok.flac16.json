@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent soundboard capture of a spell‑binding show highlighted by Peggy‑O, Estimated Prophet, Stella Blue and a scorching Sugar Magnolia.",
+  "review": "Listeners rave about the crystal‑clear board recording that finally replaces an old lo‑fi audience tape. The performance is described as experimental yet cohesive, with standout moments from Peggy‑O, a uniquely ending Estimated Prophet, haunting Stella Blue, a fiery Sugar Magnolia and a superb second set featuring Sugaree, Other One and Satisfaction.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All three reviews are enthusiastic (4‑5 stars), praising both the musical performance and the new soundboard source; no significant criticisms were noted, indicating an exceptional show with excellent recording quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, full‑frequency board tape that vastly improves over the old audience cassette; reviewers report no dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Estimated Prophet",
+      "Stella Blue",
+      "Sugar Magnolia",
+      "Sugaree",
+      "Uncle John's Band",
+      "The Other One",
+      "Satisfaction"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set flows from Peggy‑O into an unusual Estimated Prophet ending and Uncle John’s Band, while the second set builds with a hot Sugaree, a compelling Other One, haunting Stella Blue, rocking Sugar Magnolia and a satisfying close."
+  },
+  "band_member_comments": {
+    "Jerry": "Sounds a bit unsteady after the set break but settles nicely for the second‑set Sugaree.",
+    "Phil": "",
+    "Bob": "Delivers cool vocal utterances during The Other One.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:58:22.211652+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-12.sbd.miller.32014.sbeok.flac16"
+}

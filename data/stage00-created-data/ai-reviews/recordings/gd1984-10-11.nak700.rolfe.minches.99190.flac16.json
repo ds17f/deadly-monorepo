@@ -1,0 +1,31 @@
+{
+  "summary": "A terrific audience recording captures a chaotic yet legendary performance highlighted by Jerry’s wild on‑stage antics.",
+  "review": "Both reviewers rave about the audio, calling the audience (AUD) capture “terrific sounding” and praising the work of Rolfe and Minches.  The show itself is described as one of the greatest ever despite Jerry’s vocal flubs and visibly intoxicated state, giving the performance an unforgettable, high‑energy vibe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 5 stars and emphasized a great show and excellent recording; with limited sample size the rating reflects strong but not fully corroborated consensus."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Terrific sounding AUD capture; clear and well‑balanced despite typical crowd ambience, no reported dropouts or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Energetic and a bit chaotic; Jerry’s vocal flubs and on‑stage condition are noted but add to the show’s legendary feel rather than detract from it."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocal flubs, visibly wasted with yellow beard, swollen legs; band appeared angry but performance still hailed as one of the greatest.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T21:47:47.360753+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-11.nak700.rolfe.minches.99190.flac16"
+}

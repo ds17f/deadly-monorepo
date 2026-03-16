@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording captures a potent Phil Lesh performance highlighted by an exquisite Bird Song.",
+  "review": "The single fan review praises Phil Lesh’s bass work as especially powerful and intricately flowing, singling out the rendition of \"Bird Song\" as exquisite. While no explicit comments are made about the audio fidelity, the .sbd designation suggests a soundboard source that is at least listenable. Overall the impression is positive, with the show’s musical highlight centered on Phil’s playing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Only one 4‑star review; strong praise for Phil's performance but no concrete recording quality feedback, leading to a solid yet cautious rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments on clarity or mix; assumed clear soundboard capture based on file type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Described as particularly potent with intricate ebbs and flows.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:33:17.502484+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-05-15.140130.sbd.miller.flac2496"
+}

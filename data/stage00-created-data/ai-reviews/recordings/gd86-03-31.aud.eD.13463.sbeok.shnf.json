@@ -1,0 +1,79 @@
+{
+  "summary": "Good audience recording captures an energetic 1986 Providence show highlighted by a stellar Feel Like a Stranger and Comes A Time, though the bottle‑smashing incident cut the night short.",
+  "review": "The tape offers clear audience sound with excellent drum capture, letting listeners hear the wild energy of the second set – especially the monster Feel Like a Stranger opener and an emotional Comes A Time. While the first set contains some weaker choices (Roadrunner, Desolation Row, Hand Jive), the overall vibe is high‑octane, marred only by the infamous bottle‑hit on Billy’s kit that ended the concert early.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ≈4.1 with most comments praising the performance and drums; recording is generally regarded as good, giving a solid combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call it a good/ great audience recording; drum sound is especially clear despite the bottle smash noise. No major drop‑outs noted, though some say the overall mix feels average."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like a Stranger",
+      "Comes A Time"
+    ],
+    "poor_songs": [
+      "Roadrunner",
+      "Desolation Row",
+      "Hand Jive"
+    ],
+    "setlist_flow": "High‑energy first set with a few weaker selections, then an epic second set featuring a monster Stranger opener and powerful drumming. The show ended abruptly after a bottle struck Billy's drum head, giving the night a dramatic close."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for “popping notes” and overall great guitar work throughout the show.",
+    "Phil": "Described as “monster Phil” on the Stranger opener and noted for sparking a “fat heater” before lights went down.",
+    "Bob": "",
+    "Keys": "Brent’s B‑3 organ during Johnny B. Goode was described as electrifying, giving listeners a ‘jolt of electricity’.",
+    "Drums": "Billy’s kit was hit by a bottle, causing a broken drum head; despite that the drumming was called “UNREAL”, “great”, and a highlight of the recording."
+  },
+  "song_mentions": {
+    "Feel Like a Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Roadrunner": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Hand Jive": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Mississippi": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West LA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:18:31.657317+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-03-31.aud.eD.13463.sbeok.shnf"
+}

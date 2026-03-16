@@ -1,0 +1,72 @@
+{
+  "summary": "Epic Shakedown Street jam, soaring Terrapin, tight set flow",
+  "blurb": "The show shines with an extended Shakedown Street jam that segues into a soaring Terrapin Station and a tender Stella Blue. Jerry’s lead work is strong while Brent’s keyboards blaze, and the rhythm section drives an energetic second set. Highlights also include Let It Grow, Jack Straw and a rousing Sugar Magnolia.",
+  "review": "May 8 1981 at Nassau Coliseum captured one of the Dead’s most electrifying early‑‘80s outings. From the opening “Jack Straw” through a fiery “Peggy‑O,” the first set builds momentum that bursts open in the second with an epic, 14‑minute Shakedown Street jam – a showcase for Brent’s scorching organ and the dual‑drum onslaught of Mickey and Bill. That groove rolls straight into a soaring Terrapin Station, followed by a muscular “Playing In The Band” that feeds into a heavy drum/space excursion before easing into the heartfelt “Stella Blue.” The night closes with a bright Sugar Magnolia and a sing‑along U.S. Blues, leaving the audience buzzing. Across multiple recordings the band is praised for tight interplay: Jerry’s sustained arpeggios and soaring leads, Phil’s thumping bass that “bombs” through the groove, Bob’s drawl‑styled vocals, and Brent’s colorful keyboards – even if his vocal mix was faint on a few tapes. The overall pacing is relentless yet fluid, making this show a must‑listen for anyone chasing that classic Dead energy.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 36,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Strong positive sentiment across five of six recordings (all describing the performance as epic, fiery, and tightly locked in) with only one mixed review; no consistent negative comments about playing quality. This consensus yields a high positive adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1981-05-08.sbd.miller.95764.sbeok.flac16",
+    "reason": "Excellent soundboard capture with crystal‑clear, balanced mix that highlights the epic Shakedown Street jam and soaring Terrapin Station."
+  },
+  "key_highlights": [
+    "Extended 14‑minute Shakedown Street jam that flows into a soaring Terrapin Station.",
+    "Powerful Let It Grow and tender Stella Blue performances with Brent’s fiery keyboards.",
+    "Heavy, trippy drum segment delivering high energy throughout the second set.",
+    "Seamless transitions leading to a rousing Sugar Magnolia finale."
+  ],
+  "song_highlights": [
+    "Shakedown Street",
+    "Terrapin Station",
+    "Let It Grow",
+    "Stella Blue",
+    "Sugar Magnolia",
+    "Jack Straw",
+    "Samson & Delilah"
+  ],
+  "band_performance": {
+    "Jerry": "Delivered soaring lead lines and sustained arpeggios, especially during the Shakedown Street jam and Terrapin Station; a few reviewers noted a quieter presence on some jams, but overall his playing was strong.",
+    "Phil": "Provided a thumping, bomb‑like low end that drove the groove, particularly evident in Shakedown Street and Let It Grow; his backing vocals during U.S. Blues drew crowd excitement.",
+    "Bob": "Added his characteristic drawl‑styled vocals and rhythmic drive, contributing notably to the Not Fade Away coda and overall set energy.",
+    "Brent": "Lit up the band with fiery organ work on Shakedown Street and colorful textures during Space; his vocal presence was less audible on a few tapes but his keyboards remained a highlight.",
+    "Mickey": "Partnered with Bill in delivering scorching, big‑boy drumming, including an extended high‑energy drum segment that propelled the second set.",
+    "Billy": "Joined Mickey in a fiery rhythmic foundation, contributing to intense drum and space sections throughout the show."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-13T11:18:04.437816+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Shakedown Street",
+      "Samson & Delilah"
+    ],
+    [
+      "Terrapin Station",
+      "Playing In The Band",
+      "Drums*",
+      "Space",
+      "Not Fade Away",
+      "Nobody's Fault But Mine Jam",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    [
+      "Let It Grow",
+      "Don't Ease Me In"
+    ],
+    [
+      "Jack Straw"
+    ]
+  ]
+}

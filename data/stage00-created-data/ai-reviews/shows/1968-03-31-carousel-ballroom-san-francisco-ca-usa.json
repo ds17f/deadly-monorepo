@@ -1,0 +1,48 @@
+{
+  "summary": "Beautiful 'Feedback' shines in a tight three‑song set",
+  "blurb": "The performance delivers a standout version of \"Feedback\" within a concise three‑song set that flows smoothly as the final Anthem‑of‑the‑Sun concert. One recording offers unusually clear soundboard quality, while another captures the high‑octane party vibe despite early muddiness.",
+  "review": "March 31, 1968 at San Francisco’s Carousel Ballroom captured the Grateful Dead in a brief but memorable three‑song outing that doubled as the closing chapter of their Anthem‑of‑the‑Sun project. The set opened with the wry “Caution (Do Not Stop On Tracks)”, segued into a hauntingly beautiful rendition of “Feedback” that reviewers repeatedly praise, and closed with the gentle “And We Bid You Good Night”.  While the Cotsman soundboard tape is noted for its unusually clear mix—bringing out every nuance of the band’s interplay—the Miller capture, though initially muffled, recovers to convey the high‑octane party atmosphere that defined many late‑spring ’68 shows.  Together these sources give a well‑rounded picture: solid musicianship and an especially moving “Feedback”, even if the overall set isn’t hailed as an all‑time classic.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.0,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 12,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.4,
+      "sentiment_rationale": "One recording is clearly positive (highlighting the beautiful 'Feedback' and clear soundboard), while the other is mixed (energetic but muddy start). The mix yields a modest positive sentiment, granting a small boost.",
+      "final_calculation": "2.5 + 0.1 + 0.4 = 3.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd68-03-31.aud.cotsman.14913.sbeok.shnf",
+    "reason": "Soundboard source with unusually clear audio that showcases the standout 'Feedback' performance and overall set flow."
+  },
+  "key_highlights": [
+    "Beautiful, resonant version of \"Feedback\"",
+    "Solid three‑song flow as the final Anthem‑of‑the‑Sun concert",
+    "Clear soundboard capture contrasts with a high‑octane but initially muddy audience tape"
+  ],
+  "song_highlights": [
+    "Feedback"
+  ],
+  "band_performance": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-24T08:16:51.458615+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Caution (Do Not Stop On Tracks)",
+      "Feedback",
+      "And We Bid You Good Night"
+    ]
+  ]
+}

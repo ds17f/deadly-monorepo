@@ -1,0 +1,45 @@
+{
+  "summary": "Outstanding matrix recording of a magical 1984 Philadelphia show, highlighted by a flowing second set from Space into Sugar Magnolia.",
+  "review": "The concert captures an energetic spring‑84 performance with Jerry’s gritty vocals and inspired playing, especially the seamless second‑set journey from Space to Sugar Magnolia. The Hunter‑sourced matrix mix is clear and immersive, delivering a vivid listening experience that honors the show’s cosmic vibe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Both reviewers praise the musical performance and the recording quality; the matrix source is described as clear and immersive, leading to a high combined rating despite only two reviews."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, immersive audio from Hunter's matrix mix that faithfully captures the concert ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as a continuous, cosmic flow of beautiful songs; overall high‑energy performance with seamless transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice is rough but carries the energy; guitar playing is noted as 'as good as ever'.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T16:06:28.499916+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-19.166575.mtx.seamons.ht164.flac16"
+}

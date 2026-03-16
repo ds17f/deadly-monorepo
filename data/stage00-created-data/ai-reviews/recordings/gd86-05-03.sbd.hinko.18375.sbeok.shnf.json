@@ -1,0 +1,91 @@
+{
+  "summary": "Excellent soundboard recording of a high‑energy 1986 show with standout performances of Cold Rain, Race Is On, High Time and The Other One",
+  "review": "Fans rave about the crystal‑clear soundboard source and describe the concert as bubbling, joyous, and full of classic Dead magic. Highlights include Jerry’s soaring solo on “They Love Each Other,” a ripping first set featuring “Cold Rain” and “Race Is On,” and a second‑set flow that builds through “The Other One → Comes A Time” and a blistering Scarlet > Fire sequence. The only blemish was the show being cut short after an on‑stage incident, but reviewers agree it never hurt the music.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.6 / 5, with consistent praise for both performance and recording quality; many detailed positive comments give strong confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the sound \"great\", \"super\", \"A+\" and note crisp, clear mix with no noticeable drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain",
+      "Race Is On",
+      "High Time",
+      "They Love Each Other",
+      "The Other One",
+      "Comes A Time",
+      "Scarlet > Fire",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set bursts with energy (Cold Rain, Race Is On, High Time) and segues into a jam‑heavy second set that builds through The Other One → Comes A Time and ends with a fiery Scarlet > Fire/Sugar Magnolia climax. No encore due to an on‑stage incident but the momentum never falters."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his soaring solo on \"They Love Each Other\", loving every minute of \"Cold Rain\", and a noted guitar failure during Sugar Magnolia that added drama.",
+    "Phil": "Repeatedly described as having his “mind blown”, dropping bombs, and delivering true, solid bass throughout.",
+    "Bob": "Mentioned as high in the mix, strumming along, and contributing vocal fire on the first set.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Race Is On": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "High Time": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "They Love Each Other": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Comes A Time": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Goin Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "CC Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T15:33:49.846084+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-05-03.sbd.hinko.18375.sbeok.shnf"
+}

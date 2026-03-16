@@ -1,0 +1,63 @@
+{
+  "summary": "A solid 1995 Charlotte show highlighted by a soaring Foolish Heart and moving Attics of My Life, captured on an audience tape that’s warm but far from pristine.",
+  "review": "Fans repeatedly praise the performance—Jerry was in top form despite health issues, with standout jams on Foolish Heart, Jack Straw into Bertha, I Want To Tell You, Attics Of My Life and a rousing Mighty Quinn encore. The recording is an audience source; listeners note its warmth and occasional muddiness, as well as a brief post‑Space segment that some find underwhelming. Overall the music shines through the imperfect tape.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Most reviewers award high marks for the musical performance (average ~4.7 stars) while the audience recording receives mixed comments, pulling the overall weighted score to just over 4 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Warm but not crystal‑clear; some listeners call it 'good considering' while others note muffled mids, echo‑chamber arena ambience and a short post‑Space segment. No matrix or soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart",
+      "Attics of My Life",
+      "I Want To Tell You",
+      "Jack Straw",
+      "Mighty Quinn"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set drags a bit until the Music/Jack Straw momentum kicks in; second set lifts off with Foolish Heart, Attics of My Life and a tight encore. Post‑Space is notably short, which some listeners find disappointing."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as 'on' and delivering an amazing Foolish Heart jam despite health issues.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Only brief mention that the Drums/Space segment was short."
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Attics of My Life": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mighty Quinn": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Want To Tell You": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T06:15:28.564596+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-03-22.akg.12179.sbeok.shnf"
+}

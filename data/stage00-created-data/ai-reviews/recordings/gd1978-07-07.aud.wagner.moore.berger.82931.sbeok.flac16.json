@@ -1,0 +1,39 @@
+{
+  "summary": "Crystal‑clear audience tape of the 1978 Red Rocks show, highlighted by a blazing \"Scarlet Fire\" performance.",
+  "review": "The recording is praised as beautiful and exceptionally clear, with vocals and instruments standing out thanks to Jerry Moore’s well‑captured audience tape. Reviewers also single out the fiery rendition of “Scarlet Fire,” indicating a strong musical moment despite limited detail on the overall set flow.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "All three reviews are highly favorable (4‑5 stars). Recording quality is described as excellent, while show quality receives positive but sparse comments, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Vocals and instrumentals are reported as crystal‑clear; tape deck recorded by Jerry Moore provides a clean, vivid sound despite being an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific commentary on set pacing; reviewers focus on overall vibe and the highlighted \"Scarlet Fire\" moment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T14:02:43.216223+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-07-07.aud.wagner.moore.berger.82931.sbeok.flac16"
+}

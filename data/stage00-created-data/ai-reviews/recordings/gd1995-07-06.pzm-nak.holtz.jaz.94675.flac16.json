@@ -1,0 +1,39 @@
+{
+  "summary": "Amazing audience recording captures a monster 20‑minute \"Eyes of the World\" despite an uneven setlist.",
+  "review": "The three reviewers all agree that this audience tape sounds surprisingly clear and vivid, especially for a crowd source. The performance shines with an epic, twenty‑minute stretch of \"Eyes of the World,\" though one fan notes the setlist didn’t fully energize the crowd. Overall the show is enjoyable and the recording quality exceeds typical audience expectations.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Recording quality consistently praised as excellent; show quality is good but mixed, highlighted by a standout \"Eyes of the World\" and some setlist criticism."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners describe the sound as amazing and very clear for an audience source; no major flaws or drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Setlist felt uneven to at least one reviewer, with the crowd not getting fully excited, but the long \"Eyes of the World\" provided a high point."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer says Jerry 'just sounds OK'; otherwise no strong comments.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T12:09:32.037060+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-06.pzm-nak.holtz.jaz.94675.flac16"
+}

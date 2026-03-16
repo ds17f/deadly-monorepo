@@ -1,0 +1,75 @@
+{
+  "summary": "Audience‑sourced tape with decent clarity captures a country‑flavored show highlighted by Loose Lucy, Wharf Rat > Stella and a smoking Greatest Story Ever Told.",
+  "review": "The recording is an audience capture that, while not pristine, delivers enough presence to feel like you’re in the barn.  The performance leans heavily into the Dead’s country side with standout moments on Loose Lucy, Sugaree, and a fiery Greatest Story Ever Told, plus smooth segues such as Big River into Playing Reprise.  Overall the show is praised for its vibe and song selection despite modest audio fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average review rating is ~4.3 with multiple high‑star comments praising the performance; recording quality is acceptable but not exceptional, yielding a solid 4‑star overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Decent clarity for an audience tape; some reviewers note it isn’t the greatest sounding source but captures the live atmosphere and adds liveliness compared to a sterile soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Nobody's Fault",
+      "Loose Lucy",
+      "Wharf Rat > Stella",
+      "Big River",
+      "Playing Reprise",
+      "Greatest Story Ever Told",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as country‑heavy with rock touches; transitions such as Big River into Playing Reprise and Wharf Rat into Stella are highlighted for their smooth flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Emotive vocal and guitar work praised, especially on Sugaree.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith Godchaux’s piano described as ‘on fire’ during the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Nobody's Fault": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat > Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing Reprise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T16:44:24.482101+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-10-27.aud.boswell.motb-0141.107323.flac16"
+}

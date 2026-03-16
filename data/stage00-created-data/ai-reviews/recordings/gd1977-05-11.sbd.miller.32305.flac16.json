@@ -1,0 +1,73 @@
+{
+  "summary": "Excellent soundboard capture of a stellar May ’77 show, highlighted by a smoking Lazy Lightning > Supplication, superb Samson piano and a standout Brown Eyed Women.",
+  "review": "The recording is a pristine sound‑board source that many reviewers say sounds better than the official box set. Musically the concert shines with a groovy set list – Lazy Lightning into Supplication, Samson’s piano work, Scarlet Begonias, Brown Eyed Women and an inspired Rain – all delivered with the band in top form.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All four reviews are five‑star, praising both the performance (numerous standout songs) and the board quality as exceptional."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Board sound is described as crystal‑clear, better than the official release, with no noted flaws or dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightning > Supplication",
+      "Samson",
+      "Scarlet Begonias",
+      "Brown Eyed Women",
+      "Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the set as groovy and flowing from start to finish, with seamless transitions and a particularly strong second half."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's piano work on Samson is singled out as excellent.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lazy Lightning > Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T00:36:03.151352+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-11.sbd.miller.32305.flac16"
+}

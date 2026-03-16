@@ -1,0 +1,31 @@
+{
+  "summary": "Clean, good‑quality audio captures an awesome live trip.",
+  "review": "The reviewer, who attended the concert, praises the release for delivering a clean and high‑fidelity recording that replaces their deteriorating cassette tapes. The show is described as an \"awesome trip,\" indicating strong enjoyment of the performance, though no specific songs or moments are singled out.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "low",
+    "rationale": "A single 5‑star review highlights both excellent sound quality and an outstanding live experience; with only one data point confidence is limited but the sentiment is clearly very positive."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls the audio \"clean\" and of \"good quality,\" indicating clear sound without noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewer simply notes the overall experience was an awesome trip."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T15:18:48.900604+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-12.AKG451.Darby.120137.Flac1644"
+}

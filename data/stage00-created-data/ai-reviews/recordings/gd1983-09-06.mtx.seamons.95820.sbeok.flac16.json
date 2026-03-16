@@ -1,0 +1,51 @@
+{
+  "summary": "Matrix recording sounds awesome with crystal‑clear Phil and drums, capturing a monster Playing in the Band suite and stellar Uncle John’s Band and Brokedown Palace.",
+  "review": "Both reviewers rave about this September‑1983 show, praising the extended Playing in the Band jam that morphs into a beautiful Uncle John's Band and a poignant Brokedown Palace. The matrix source is described as “awesome,” giving exceptional clarity to Phil’s bass and the drum work, with Brent Mydland’s keyboards also highlighted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (monster PITB suite, standout songs) combined with an excellent‑sounding matrix recording; both reviewers gave 4 stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix mix is praised as awesome, providing great clarity for Phil's bass and very good drum presence; keyboards also sound top‑notch."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Uncle John's Band",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The highlight is an expansive Playing in the Band suite that ventures into tribal drumming, a melodic space, then flows seamlessly into Uncle John's Band and finishes with a heartfelt Brokedown Palace."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Described as a monster on this night; matrix gives him greater clarity.",
+    "Bob": "",
+    "Keys": "Brent Mydland is noted as playing at the top of his game.",
+    "Drums": "Drums sound quite good, with Billy & Mickey delivering tribal, tar‑like textures."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T09:59:49.194678+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-06.mtx.seamons.95820.sbeok.flac16"
+}

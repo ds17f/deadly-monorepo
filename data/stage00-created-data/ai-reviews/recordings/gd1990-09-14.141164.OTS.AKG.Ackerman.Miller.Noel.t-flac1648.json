@@ -1,0 +1,31 @@
+{
+  "summary": "Positive rating but no specific details on recording or performance",
+  "review": "The sole reviewer gave a 4‑star rating and simply thanked the archivist, offering no insight into the audio quality, setlist, or musicianship. With no descriptive comments, both the sound and show remain undefined.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Based on a single 4‑star review lacking any substantive commentary; rating reflects the reviewer’s overall positive impression but provides no concrete evidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T12:07:04.801305+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-14.141164.OTS.AKG.Ackerman.Miller.Noel.t-flac1648"
+}

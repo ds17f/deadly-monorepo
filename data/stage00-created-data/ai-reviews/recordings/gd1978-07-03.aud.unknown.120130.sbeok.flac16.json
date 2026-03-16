@@ -1,0 +1,96 @@
+{
+  "summary": "Crystal‑clear audience mix captures a high‑energy 1978 set highlighted by a soaring Peggy‑O and a fiery Deal > Terrapin Station, with excellent sound despite its unknown source.",
+  "review": "The show is widely praised for its ferocious playing – Jerry’s solo work, the tight first‑set flow and a standout second set featuring Peggy‑O, Deal > Terrapin Station and a smoking Music Never Stopped.  The audience recording (AUD) is described as crisp with a fuller high end than many other tapes, though early mix balance can be a bit unsettled and drums occasionally sound “shoes‑in‑dryer.”  Overall the performance outweighs the modest technical quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Eight detailed reviews give an average of 4.25 stars; most praise both the musical performance and the recording quality, with only a few moderate critiques."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Fuller high‑end response than other sources, crisp and captures hall ambience with limited crowd. Early mix not fully settled (Minglewood), drums can sound muffled or “shoes‑in‑dryer,” Phil often sits high in the mix, but overall a very clear and enjoyable AUD capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Deal > Terrapin Station",
+      "Scarlet Fire",
+      "Music Never Stopped",
+      "Cassidy"
+    ],
+    "poor_songs": [
+      "Mexicali",
+      "Werewolves"
+    ],
+    "setlist_flow": "A high‑energy first set builds momentum with aggressive Jerry work and tight transitions, while the second set is slightly shorter but jam‑heavy, ending on a brilliant Stella jam.  Overall the band stays ferocious throughout, despite a few missteps."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for aggressive fretwork, soaring solos (Loser, Peggy-O) and overall phrasing/soul front‑and‑center.",
+    "Phil": "Often noted as sitting high in the mix; his bass adds drive especially toward the end of the set.",
+    "Bob": "",
+    "Keys": "Keith’s Nashville‑style flourish on Mama Tried mentioned; Brent’s later influence referenced but not heard here.",
+    "Drums": "Drummers described as distinct and separate, though at times “shoes‑in‑dryer” or rushed to meet a curfew."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal > Terrapin Station": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mexicali": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Werewolves": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T13:41:04.930768+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-07-03.aud.unknown.120130.sbeok.flac16"
+}

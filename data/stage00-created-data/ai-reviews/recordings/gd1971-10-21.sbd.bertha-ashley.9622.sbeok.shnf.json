@@ -1,0 +1,102 @@
+{
+  "summary": "High‑quality soundboard capture of a late‑1971 show featuring Keith Godchaux’s debut on organ and several standout Jerry Garcia moments.",
+  "review": "The remastered soundboard source is clear and well balanced overall, though a few listeners note a slight loss of clarity compared with other mixes and some wow‑and‑flutter on Jack Straw. Musically the concert shines with Keith’s first organ work on Dark Star, a soaring Jerry solo on Me & Bobby McGee, and energetic renditions of Tennessee Jed and Johnny B. Goode, while a clunky Truckin' start and a trimmed Casey Jones intro keep it from being flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars praising the performance and the remastered soundboard, with only minor criticisms; ample detailed feedback provides strong confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Nice remaster by Jay; generally clear and balanced but a bit less crisp than other Bertha/Ashley mixes, some wow‑and‑flutter on Jack Straw and slight balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Tennessee Jed",
+      "Johnny B. Goode",
+      "Comes a Time"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "Jack Straw",
+      "St. Stephen",
+      "Casey Jones"
+    ],
+    "setlist_flow": "Two‑set show with a short (~1 hr) second set; house lights stayed on all night, adding an odd atmosphere. Overall pacing is energetic with strong early‑night jams and a few rough edges."
+  },
+  "band_member_comments": {
+    "Jerry": "Frequent praise for his biting Strat tone, soaring solos (Me & Bobby McGee), inventive fills and overall tight playing.",
+    "Phil": "Mentioned sweeping bass underneath the Big Railroad duel and generally solid foundation.",
+    "Bob": "Highlighted in vocal duels on Big Railroad and noted as a \"new man on keys\" reacting to Keith’s organ work.",
+    "Keys": "Keith Godchaux praised for his Hammond B‑3 organ debut, barrel‑housing style and rapid improvement over the next months.",
+    "Drums": "Bill Kreutzmann referenced as part of the rhythm section; no specific critique beyond standard support."
+  },
+  "song_mentions": {
+    "Me & Bobby McGee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T08:22:02.686102+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-10-21.sbd.bertha-ashley.9622.sbeok.shnf"
+}

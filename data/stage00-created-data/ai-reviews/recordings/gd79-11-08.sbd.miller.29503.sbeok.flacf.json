@@ -1,0 +1,63 @@
+{
+  "summary": "A mixed‑quality soundboard tape—pitch‑off and slow in places—but a solid Dead show highlighted by the scorching Scarlet > Fire on the Mountain sequence.",
+  "review": "The performance shines especially in the second set where the Scarlet > Fire transition, Looks Like Rain’s opening, and the Sailor > Saint jam are repeatedly praised. However, listeners must grapple with noticeable pitch‑correction issues across multiple tracks, which downgrade the overall listening experience despite a generally strong musical showing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is rated high (strong second‑set moments) while recording quality suffers from pitch and speed problems; the weighted average yields a mid‑range score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Multiple sources run slow and require +1%‑+2.75% pitch correction; some tracks are ill‑pitched (Road Trips vol. 1‑1). Mix is generally good, but the overall tape needs significant post‑processing to be listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire on the Mountain",
+      "Looks Like Rain (beginning)",
+      "Sailor > Saint"
+    ],
+    "poor_songs": [
+      "Stagger Lee"
+    ],
+    "setlist_flow": "First set is serviceable with a few drags, but the second set builds momentum, peaking at the Scarlet‑Fire transition and delivering an extended, jam‑rich Sailor‑Saint sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "His lead on the Scarlet > Fire stretch is praised as “more rooms” with a tighter mix; also noted for a wild jump into the Saint jam.",
+    "Phil": "Described as “the man” on Dew and lauded for his bass ‘fatties’ during the second set.",
+    "Bob": "Bobby’s slide practice on Minglewood is mentioned, highlighting his contribution to the early part of the show.",
+    "Keys": "Brent’s synth work at the start of Looks Like Rain gets a positive nod; overall keyboard play is described as smoking throughout.",
+    "Drums": "The drum segment leads into Not Fade/Dew with Mickey’s “Morning Dew” shout‑out, noted as a solid rhythmic foundation."
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T01:23:36.855702+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-11-08.sbd.miller.29503.sbeok.flacf"
+}

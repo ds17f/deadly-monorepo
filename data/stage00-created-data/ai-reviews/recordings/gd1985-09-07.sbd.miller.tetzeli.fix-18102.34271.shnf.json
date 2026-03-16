@@ -1,0 +1,39 @@
+{
+  "summary": "A mind‑blowing setlist hampered by early technical glitches; recording is uneven but the show still offers fun moments like Bobby’s \"The Frozen Logger\".",
+  "review": "Reviewers note that the concert featured an impressive and eclectic set list, yet its execution fell short for some listeners. Early technical problems are mentioned, which affect both performance flow and sound quality, though a laid‑back vibe and Bob Weir’s surprise rendition of \"The Frozen Logger\" provide highlights.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "low",
+    "rationale": "Only two reviews with divergent opinions; one very negative, one positive despite technical issues, leading to a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers mention early technical issues that likely affect sound clarity and consistency; no specific details on source type or mix balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Frozen Logger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set list praised as a \"mind‑blower,\" but execution described as less memorable, with early technical hiccups making the show feel laid back."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob (referred to as Bobby) performed an impromptu version of \"The Frozen Logger\" during the concert.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Frozen Logger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:57:37.420000+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-07.sbd.miller.tetzeli.fix-18102.34271.shnf"
+}

@@ -1,0 +1,76 @@
+{
+  "summary": "Decent audience recording with low volume but solid performance, highlighted by Uncle John's Band, Playing in the Band and a Box of Rain encore.",
+  "review": "Both reviewers note that the tape is an audience (AUD) source with slightly low volume and a modest low‑end EQ issue, yet it remains listenable. The show itself is praised as consistent and well‑played, with high points on Uncle John's Band, Playing in the Band, Miracle and a nice Box of Rain encore, while 1/2 Step, Candyman and MAMU are cited as weaker moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Two detailed 4‑star reviews describe a solid performance and an acceptable audience recording, leading to a good overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Overall low volume level and a slight low‑end EQ tweak noted; clarity is decent for an audience tape with no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band",
+      "Playing in the Band",
+      "Miracle",
+      "Box of Rain"
+    ],
+    "poor_songs": [
+      "1/2 Step",
+      "Candyman",
+      "MAMU"
+    ],
+    "setlist_flow": "The set is described as consistent and solid, with strong peaks around the highlighted songs and only a few weaker moments that don’t detract from the overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "1/2 Step": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "MAMU": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T15:44:52.734490+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-05-04.schoeps.eD.15234.sbeok.shnf"
+}

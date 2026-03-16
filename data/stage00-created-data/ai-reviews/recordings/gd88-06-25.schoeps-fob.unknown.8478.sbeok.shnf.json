@@ -1,0 +1,123 @@
+{
+  "summary": "Decent audience tape of an unusually hot Buckeye Lake show – solid playing with standout Sugaree, Terrapin and Hornsby’s accordion, but a mixed second‑set flow.",
+  "review": "The recording is an audience capture that most listeners find clear enough to enjoy, though it lacks the polish of a soundboard. The band delivers a respectable 1988 performance: Hornsby’s accordion on Sugaree and Memphis Blues is repeatedly praised, and classics like Terrapin Station, Box of Rain and The Other One shine, while the new 88 material feels uneven. Overall sentiment leans positive but tempered by the oppressive heat and occasional lackluster moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews provide a consistent picture: the musical performance is average‑good (≈3.5/5) and the audience recording is decent (≈4/5). Weighted combination yields ~3.6 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers note a clear enough crowd mix; several call it \"great sounding tape\" or \"very good for an AUD\". No major drop‑outs are reported, but the lack of a clean board is mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Terrapin Station",
+      "Box of Rain",
+      "The Other One",
+      "Throwing Stones",
+      "Knockin' on Heaven's Door"
+    ],
+    "poor_songs": [
+      "Victim",
+      "Foolish Heart (mixed)",
+      "Second‑set energy overall"
+    ],
+    "setlist_flow": "First set is generally praised for strong jams and Hornsby’s accordion cameo; the second set opens with three new 88 songs that feel embryonic, leading to a more conventional middle section and a solid encore. Heat and fatigue are noted as dampening factors."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone on Sugaree is highlighted; some note his vocal phrasing (e.g., comment about \"we don't just let anyone sit in on accordion\").",
+    "Phil": "Bass work gets a nod during The Other One (“nice bass parts”), but a few reviewers feel Phil was “out front” or not fully locked in.",
+    "Bob": "Mixed remarks – occasionally out of sync with Jerry, but praised for strong leads on Deal and energetic moments on Throwing Stones.",
+    "Keys": "Bruce Hornsby’s accordion on Sugaree, Memphis Blues, and occasional piano work are repeatedly praised; Brent (keyboard) is mentioned for solid jams on Cassidy and other spots.",
+    "Drums": "Bill’s drumming is generally described as solid, providing a good backbone especially during the drums/space segment."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Terrapin Station": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Box of Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Victim": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Blow Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Memphis Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "West LA": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T10:10:49.300506+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-06-25.schoeps-fob.unknown.8478.sbeok.shnf"
+}

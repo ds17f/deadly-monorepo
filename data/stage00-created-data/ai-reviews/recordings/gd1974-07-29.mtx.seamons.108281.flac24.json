@@ -1,0 +1,39 @@
+{
+  "summary": "Mixed reception for the show; Jack Straw gets high praise from one reviewer but others are unimpressed, and recording quality is not discussed.",
+  "review": "The only song repeatedly mentioned is Jack Straw, which one fan hails as the best version ever while two others feel it never really takes off. No comments address the source or clarity of the audio, leaving the technical side unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed – a strong positive note on Jack Straw contrasted with two negative critiques – and there is no information about recording fidelity, resulting in an overall low‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviews do not mention any aspects of sound quality, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Insufficient detail to evaluate overall set pacing or flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-22T23:15:40.765698+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-07-29.mtx.seamons.108281.flac24"
+}

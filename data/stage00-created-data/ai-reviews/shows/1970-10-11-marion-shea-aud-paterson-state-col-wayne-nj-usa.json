@@ -1,0 +1,72 @@
+{
+  "summary": "Epic Dark Star and classic early‑70s jams shine",
+  "blurb": "The set delivers a soaring Dark Star and tight St. Stephen, with standout moments in Dancing In The Street and Till The Morning Comes. Jerry’s guitar is on fire while Phil adds a memorable solo, and the Not Fade Away → Goin' Down The Road Feeling Bad → Not Fade Away outro wraps the night.",
+  "review": "On October 11, 1970 at Marion Shea Auditorium the Dead served up a quintessential early‑70s performance. After a rootsy first half that included Till The Morning Comes, Dancin’ In The Street and a bright Beat It On Down The Line, they launched into an epic Dark Star where Jerry Garcia’s soaring lead work set the tone for a night of high‑energy improvisation. Phil Lesh’s wah‑laden textures and a memorable solo in the Dancing In The Street jam added extra sparkle, while St. Stephen flowed seamlessly into a classic Not Fade Away → Goin’ Down The Road Feeling Bad → Not Fade Away sequence that closed the show on an uplifting note. Though the sole audience tape is muddy and thin‑sounding, the musical moments cut through the haze, making this a must‑listen for fans of the band’s formative jam era.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.9,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 13,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.3,
+      "sentiment_rationale": "Mixed sentiment overall, but multiple positive remarks highlight Dark Star, Jerry's lead work, and Phil's solo; recording quality concerns keep the boost modest.",
+      "final_calculation": "2.5 + 0.1 + 0.3 = 2.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-10-11.aud.cotsman.9500.sbeok.shnf",
+    "reason": "Only available source; despite muddy sound it captures the key moments (Dark Star, St. Stephen) clearly enough to represent the show."
+  },
+  "key_highlights": [
+    "Epic Dark Star with soaring Garcia lead",
+    "Tight St. Stephen segue into classic Not Fade Away → GDTRFB → Not Fade Away outro",
+    "Memorable Phil Lesh solo during Dancing In The Street jam"
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "Dancin' In The Street",
+    "Till The Morning Comes",
+    "Saint Stephen",
+    "Morning Dew",
+    "Sittin' On Top Of The World",
+    "Beat It On Down The Line"
+  ],
+  "band_performance": {
+    "Jerry": "Soaring lead work on Dark Star and an overall 'ass‑kickin’' guitar tone.",
+    "Phil": "Memorable solo during the Dancing In The Street jam and wah‑laden textures in Dark Star.",
+    "Bob": "",
+    "Pigpen": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-19T23:45:03.062536+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dark Star",
+      "Saint Stephen",
+      "Not Fade Away",
+      "Goin' Down The Road Feeling Bad",
+      "Not Fade Away"
+    ],
+    [
+      "Dancin' In The Street"
+    ],
+    [
+      "Till The Morning Comes"
+    ],
+    [
+      "Morning Dew"
+    ],
+    [
+      "Sittin' On Top Of The World"
+    ],
+    [
+      "Beat It On Down The Line"
+    ]
+  ]
+}

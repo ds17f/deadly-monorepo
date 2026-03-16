@@ -1,0 +1,75 @@
+{
+  "summary": "Hot July 4‑90 show with a legendary mid‑set Scarlet→Fire and solid audience recording that many call the best they’ve heard.",
+  "review": "Fans describe this concert as the kickoff of an epic summer – scorching heat, a surprise mid‑set Scarlet→Fire, and classic moments like Just A Little Light, The Wheel and Loser.  The audience tape is repeatedly praised for its clarity and vibrancy, with several reviewers calling it the best audience recording they’ve owned.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈80 %) are enthusiastic about both performance and tape quality, highlighting multiple standout songs and noting only one low‑star, tepid comment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners repeatedly mention crystal‑clear sound and call it possibly the best audience recording they own; no major dropouts or muffling are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet → Fire",
+      "Just a Little Light",
+      "The Wheel",
+      "Loser",
+      "Sugar Magnolia",
+      "Loose Lucy",
+      "Cold Rain and Snow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A blistering first set under 106 °F leads into a cooler‑weather second set where the surprise mid‑set Scarlet→Fire energizes the crowd.  The show maintains momentum with solid classics and ends on a high note, cementing its reputation as a summer‑kickoff classic."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his presence, tone and the joy he brings to the performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work gets special mention – wailing on Just a Little Light and providing midi‑rich jams throughout.",
+    "Drums": "Mickey’s drumming is noted for its powerful “i‑beam” rumble that vibrated the venue."
+  },
+  "song_mentions": {
+    "Just a Little Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet → Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Wheel": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T08:33:20.605802+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-07-04.akg.ladner.8573.sbeok.shnf"
+}

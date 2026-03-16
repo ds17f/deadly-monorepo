@@ -1,0 +1,31 @@
+{
+  "summary": "Good soundboard recording with clear audio, though streaming order is mis‑sequenced; the show features nice jams despite set‑order confusion.",
+  "review": "Both reviewers note that the sound quality is solid – “sounds great” and “sound is good” – indicating a clean soundboard source. The main complaint is an incorrect disk/track ordering in the streamed files, but the musical performance is praised for its enjoyable jams, with no specific song critiques.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Two reviews consistently praise the audio quality and the jam‑heavy performance, offset only by a technical issue with track order; limited data yields medium confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Audio described as clear and great; primary issue is mis‑ordered streaming files rather than sound problems."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers mention the set order appears wrong in the streamed files, but overall jams are enjoyable."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T02:29:44.264937+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-25.sbd.hamilton.1071.sbeok.shnf"
+}

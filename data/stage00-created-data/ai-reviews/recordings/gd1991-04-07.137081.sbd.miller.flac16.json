@@ -1,0 +1,76 @@
+{
+  "summary": "Solid 1991 Orlando show with standout jams (Jack Straw, Rubin & Cherise, Uncle John’s > Playing) captured on a soundboard that suffers from slight distortion and pitch issues.",
+  "review": "The performance is praised for its tight first‑set numbers and a second set that builds to a tour‑top psychedelic jam, highlighted by Jack Straw, Rubin & Cherise and the Uncle John’s Band → Playing in the Band sequence. The SBD source is usable but shows distortion on the opening half and some static later, requiring pitch correction. Overall listeners find the music excellent despite the modest recording flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is generally high (many positive song mentions and strong performance notes) while the recording has noticeable but not show‑stopping issues, leading to a weighted average around 3.7."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "First set exhibits distortion and runs fast; needs about -2% pitch correction. Second set has some static. Overall decent SBD but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Rubin & Cherise",
+      "Uncle John's Band > Playing in the Band",
+      "Wang Dang",
+      "Row Jimmy"
+    ],
+    "poor_songs": [
+      "Crazy Fingers",
+      "Drums > Space"
+    ],
+    "setlist_flow": "A slightly short, tight first set is balanced by a long, exploratory second set that builds through a solid sequence and peaks with a psychedelic jam; the drums/space segment feels monotonous for this era."
+  },
+  "band_member_comments": {
+    "Jerry": "Mostly absent early in the show; his MIDI‑enhanced solo on Row Jimmy is tight but lacks adventure.",
+    "Phil": "",
+    "Bob": "Bob Weir praised for riding the ‘bt wind’ vibe and delivering hot rhythm guitar/vocals, especially on Wang Dang and Row Jimmy.",
+    "Keys": "Brent (Hornsby) shares keyboard duties, shines during Goin' Down The Road; overall solid keys work.",
+    "Drums": "Drums > Space described as monotonous for a ’91 show."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rubin & Cherise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band > Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums > Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wang Dang": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:42:44.090963+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-07.137081.sbd.miller.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Crystal‑clear audience recording captures a solid winter show highlighted by a post‑drums 'Eyes of the World' and jazzy Weir moments.",
+  "review": "The AUD source is praised for its astonishing clarity – listeners even compare it to an SBD.  Musically the concert shines with a heavy dose of new material, especially the post‑drums ‘Eyes of the World’ that gives the set a fresh, soulful vibe, while Weir’s jazzy phrasing and Phil’s enthusiastic bass add extra flavor.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Four detailed reviews are uniformly positive about both performance (standout new tunes) and recording quality (crystal‑clear AUD), leading to a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear sound, near‑SBD fidelity; no reported dropouts or balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A winter‑eve set heavy on newer material; the post‑drums 'Eyes' provides a novel centerpiece and the overall pacing is relaxed yet engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as a bit lost trying to get his freak on during the soulful 'Eyes' section.",
+    "Phil": "Noted as really liking the new jazzy feel, playing with enthusiasm.",
+    "Bob": "Weir is praised for finding laid‑back, jazzy things to say in his vocals/guitar work.",
+    "Keys": "",
+    "Drums": "The drummers are said to be listening closely to each other, hanging onto the fresh feeling of the new material."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T16:44:00.800497+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-02-11.aud.bauer.20759.sbeok.shnf"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "Good audience recording captures a solid first set with standout Stranger and Slipknot sequences.",
+  "review": "The five reviewers all give the show four stars, praising its quiet intensity, tight interplay and consistently above‑average performances – especially the opening “Stranger” and the quintessential Help > Slipknot > Franklin’s Tower jam. The audience (aud) source is described as clear and well‑balanced, with crowd ambience intact. Overall the concert feels like a smooth, listening‑focused night that rewards both new listeners and seasoned Deadheads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently strong 4‑star reviews highlight solid musical performance and a clear audience recording; weighted average yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced aud capture with audible crowd; no major dropouts or muddiness mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Estimated Prophet",
+      "He's Gone",
+      "The Other One",
+      "Row Jimmy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as consistently solid and song‑for‑song strong, with smooth transitions and a quiet intensity that lets the band listen to each other."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T19:47:36.566377+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-04.nak304.suraci.dalessandro.78958.sbeok.flac16"
+}

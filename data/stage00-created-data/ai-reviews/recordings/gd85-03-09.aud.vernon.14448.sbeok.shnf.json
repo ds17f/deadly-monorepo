@@ -1,0 +1,87 @@
+{
+  "summary": "Warm audience recording of a solid ’85 show with a standout Bertha and creative China‑>Cumberland segue, though the sound can be muffled at times.",
+  "review": "The performance captures the post‑bust energy of early‑1985, featuring a fiery opener on “Bertha,” inventive transitions like “China > Cumberland Blues,” and a memorable post‑drums segment with Merl Saunders that fuels a soaring “The Other One” and an exquisite reading of “The Wheel.” The audience tape offers warmth but suffers from occasional distant, muffled sections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical setlist and specific moments, giving 4‑5 stars; recording quality is mixed but generally acceptable, leading to a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Warm AUD tape with good tonal character, but some listeners note distant, muffled sections and occasional lack of clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "China > Cumberland Blues",
+      "The Other One",
+      "The Wheel",
+      "Sugaree",
+      "Let It Grow",
+      "Space"
+    ],
+    "poor_songs": [
+      "Row Jimmy"
+    ],
+    "setlist_flow": "The show is praised for its inventive sequencing—especially the surprise jump from “China” into “Cumberland Blues”—and a strong post‑drums segment, though some feel the overall setlist is routine and the concert runs short."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is described as blistering and enthusiastic on several tunes; his vocals are noted as craggy but energetic, with a few moments (e.g., Row Jimmy) deemed lackluster.",
+    "Phil": "",
+    "Bob": "Bob Weir’s voice shows improvement over earlier ’85 dates; his vocal slip on “The Wheel” is mentioned but overall he contributes solid rhythm and harmonies.",
+    "Keys": "Guest keyboardist Merl Saunders adds a mesmerizing, experimental edge to the Space > Other One segment.",
+    "Drums": "Post‑drums improvisations are highlighted as a high point, indicating strong rhythmic support throughout."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T01:01:08.663272+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-03-09.aud.vernon.14448.sbeok.shnf"
+}

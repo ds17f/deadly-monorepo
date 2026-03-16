@@ -1,0 +1,39 @@
+{
+  "summary": "Outstanding audience recording of a phenomenal 1971 show, highlighted by a superb Me & Bobby McGee performance.",
+  "review": "Both reviewers rave about the musical firepower of this late‑1971 gig, calling it a “phenomenal” and “bounce‑filled” show with several standout versions, especially the Pigpen‑led rendition of Me & Bobby McGee.  The AUD source is praised as a “recording gem,” offering clear, authentic sound despite its age, making the performance shine even brighter.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "low",
+    "rationale": "Two detailed, highly positive reviews highlight an excellent performance and a very good audience recording; weighting favors the show (70%) giving a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note the AUD source sounds authentic and “goldilocks” balanced, with an older‑sounding but clear mix; one reviewer calls it a recording gem while another says it’s decent for its era."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Me & Bobby McGee"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as an awesome, high‑energy sequence where every song “bounces,” delivering multiple standout versions and a strong overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned for his solos – reviewers note differences in his playing compared to nearby shows.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Me & Bobby McGee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T07:33:10.716234+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-08-06.127690.aud.kaslow-wolfe-smith.flac24"
+}

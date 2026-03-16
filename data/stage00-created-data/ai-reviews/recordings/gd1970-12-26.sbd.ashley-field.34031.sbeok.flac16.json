@@ -1,0 +1,76 @@
+{
+  "summary": "Crisp, robust soundboard capture of a relaxed yet energetic 12/26/70 show, highlighted by stellar Easy Wind, Minglewood Blues and Good Lovin' performances, though some listeners note pitch quirks and an uneven second set.",
+  "review": "The recording is praised for its astonishing clarity and low‑frequency depth, delivering a vivid sense of the Legion Stadium hall. Musically the concert shines on tracks like Easy Wind, Minglewood Blues, Good Lovin' and Truckin', but a few reviewers point to slower tempos, occasional pitch inconsistencies and a weaker second‑set flow.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviews (8/10) are highly positive about both the performance and the sound, with only two notably critical reviews that lower the overall weighted score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Listeners describe the audio as crisp, robust and bass‑rich, capturing stage mics and hall reverberation. A few note occasional pitch/speed anomalies and splices that affect certain tracks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Easy Wind",
+      "Minglewood Blues",
+      "Good Lovin'",
+      "Truckin'",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Casey Jones",
+      "Till The Morning Comes"
+    ],
+    "setlist_flow": "The first set is described as leisurely with relaxed tempos, while the second set ramps up energy on songs like Easy Wind and Big Railroad Blues; however some listeners feel the second half loses momentum and contains flat moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's Gibson SG tone and nonstop improvisations (especially on Minglewood Blues) are repeatedly praised, though one reviewer hints he may have been dissatisfied with the first set.",
+    "Phil": "Bass work is mentioned only in passing (a timing call‑out) and not highlighted positively or negatively.",
+    "Bob": "Weir receives strong compliments for his vocal delivery and guitar work on Easy Wind and Friend of the Devil.",
+    "Keys": "",
+    "Drums": "A splice before a drum jam is noted; otherwise drums are not specifically commented on."
+  },
+  "song_mentions": {
+    "Easy Wind": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Till The Morning Comes": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T01:45:40.289201+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-12-26.sbd.ashley-field.34031.sbeok.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Reviewer gives a 5‑star rating but provides no comments on the music or sound quality, focusing instead on a personal gospel message; recording and show quality remain undetermined.",
+  "review": "The lone review is an extensive religious reflection rather than an assessment of the Grateful Dead performance. No details are offered about the source (soundboard, audience), clarity, mix, setlist flow, or any individual band member's playing, leaving both recording and show quality effectively unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "Only one review was provided and it contains no relevant musical or technical commentary; the high star rating cannot be interpreted as praise of the performance."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No technical information about sound quality, clarity, or mix was mentioned in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-21T13:54:29.654505+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-04-14.sbd.sacks.140.shnf"
+}

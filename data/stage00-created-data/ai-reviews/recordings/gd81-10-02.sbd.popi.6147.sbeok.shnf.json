@@ -1,0 +1,63 @@
+{
+  "summary": "Soundboard source with fair audio fidelity; the show delivers a solid second‑set jam (Playing > Shakedown > Bertha) and notable Playin’/Spanish jams, though listener opinions on its excitement are mixed.",
+  "review": "The recording is a soundboard tape that suffers from occasional dropouts and inconsistent levels – some listeners found it excellent while others reported corruption and poor transitions. Musically the concert shines in the second set with a rare Playing > Shakedown > Bertha sequence, a strong Playin’ jam and a Spanish‑style improvisation, but a few reviewers felt the overall energy was only average.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is moderate with several praised moments but also noted flaws; recording quality ranges from excellent to problematic, yielding an overall mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mixed reports: some describe the sound as crisp and excellent, others encounter corrupted lossless files, audible dropouts, low‑level patches, and poor front‑of‑house balance on parts of the first set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Shakedown Street",
+      "Bertha",
+      "Spanish Jam",
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is viewed as warm‑up material; the second set stands out with a rare Playing > Shakedown > Bertha flow and extended jams, though some note rough transitions and uneven energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for being 'on form', shredding, and delivering warm, excellent tone.",
+    "Phil": "One reviewer complained they couldn't hear Phil's bass until several minutes into Bertha due to sound issues.",
+    "Bob": "Described as blowing the audience away, earning lifelong fan admiration.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:11:47.739010+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-10-02.sbd.popi.6147.sbeok.shnf"
+}

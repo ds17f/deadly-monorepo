@@ -1,0 +1,39 @@
+{
+  "summary": "Fair-quality recording of a mixed show where an aggressive accordion player splits the audience.",
+  "review": "The performance is generally regarded as good, but the guest accordionist (referred to as BH/Horsnby) draws sharp criticism for his loud, staccato playing that some feel ruins what could have been a beautiful \"Broken Down Palace\". Reviewers are divided on his contribution, resulting in mixed overall sentiment, and no recording‑quality details were provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Two 4‑star reviews praising the show (despite guest issues) and one 3‑star review criticizing the guest give an average of ~3.7; limited data and no technical comments lower confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not discuss soundboard, audience mix, or clarity; recording quality cannot be assessed from the available comments."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Broken Down Palace"
+    ],
+    "setlist_flow": "No specific remarks on set structure or pacing were made."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Broken Down Palace": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T02:09:47.366994+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-26.aud.andrewf.84852.sbeok.flac16"
+}

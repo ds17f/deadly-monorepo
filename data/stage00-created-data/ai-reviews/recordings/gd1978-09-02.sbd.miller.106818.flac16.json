@@ -1,0 +1,100 @@
+{
+  "summary": "A decent soundboard capture that clears up after the first set, delivering a scorching Scarlet > Fire, stellar Eyes of the World and an overall hot second half.",
+  "review": "The Miller SBD source is plagued by early‑set TV broadcast bleed and some wow‑flutter, but the mix improves dramatically once the second set kicks in.  The band rides that cleaner sound into a blazing performance highlighted by Scarlet > Fire, Good Lovin', Estimated Prophet and an unforgettable Eyes of the World, earning rave praise despite occasional tuning slips and a middling first half.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "The majority of reviews (9 out of 13) are 4‑5 stars praising the music, especially the second set; technical complaints are noted but limited to the first half, resulting in an overall strong show with good‑ish recording quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Early songs suffer from TV broadcast bleed and some wow‑flutter/pitch issues; the mix becomes clearer on the second set, with occasional piano clatter noted. Overall listenable but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Eyes of the World",
+      "Good Lovin'",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [
+      "Sugar Magnolia",
+      "Miracle"
+    ],
+    "setlist_flow": "First set is described as average‑mid‑tier with a few gems (Jack Straw, Looks Like Rain, Lazy Lightning) while the second set shines – long jams, strong transitions and high energy that compensate for early‑set roughness."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocal highlights on Friend of the Devil and Jack Straw are praised; guitar tone noted as solid when the mix improves.",
+    "Phil": "",
+    "Bob": "Strong vocal lead on Good Lovin' and notable counterpoint work during Scarlet > Fire.",
+    "Keys": "Clanging piano in Good Lovin' is mentioned as a detractor, but keyboards otherwise hold up.",
+    "Drums": "Bill Kreutzmann was reportedly in a cast; drums are generally solid despite the early‑set sound issues."
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Eyes of the World": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T14:54:54.660358+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-09-02.sbd.miller.106818.flac16"
+}

@@ -1,0 +1,90 @@
+{
+  "summary": "Excellent audience recording captures a mellow, jazzy ’79 show with standout performances of He’s Gone, Jack‑a‑Roe, Bertha and a solid Deal.",
+  "review": "The tape, sourced from Charlie Miller’s famed audience recordings, is full‑bodied and clean, delivering every nuance of the band’s 1979 groove. Musically the concert is praised for its relaxed, jazzy feel and strong renditions of He’s Gone, Jack‑a‑Roe, Bertha, Friend of the Devil and Deal, even if a few listeners would have dropped “From the Heart of Me”. Overall it’s considered a solid, enjoyable Dead show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer stars (average 4.5), strong praise for both performance and sound quality with only minor criticisms."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Great, full‑bodied and clean sound as typical of Charlie Miller’s audience tapes; no major dropouts or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He’s Gone",
+      "Jack-a-Roe",
+      "Bertha",
+      "Friend of the Devil",
+      "Deal"
+    ],
+    "poor_songs": [
+      "From the Heart of Me"
+    ],
+    "setlist_flow": "A relaxed, jazzy vibe that builds slowly but stays solid throughout; both sets are described as mellow yet energetic, with a particularly strong second set."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is highlighted for shining on Mama Tried, Jack‑a‑Roe and Bertha, delivering superb guitar work and vocals.",
+    "Phil": "Phil’s booming bass lines are specifically praised for adding depth to the groove.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "One reviewer notes an odd lack of drums early in the show, but overall the rhythm section holds down the music well."
+  },
+  "song_mentions": {
+    "TLEO": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He’s Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "From the Heart of Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:37:45.007372+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-18.nak300.rolfe.miller.100209.sbeok.flac16"
+}

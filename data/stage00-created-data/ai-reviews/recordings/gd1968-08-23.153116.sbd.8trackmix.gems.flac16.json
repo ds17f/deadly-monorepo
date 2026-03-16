@@ -1,0 +1,31 @@
+{
+  "summary": "Reviewer asks if this 8‑track soundboard mix is the best source, providing no details on audio or performance.",
+  "review": "The only review is a question about whether this recording sounds better than another version, with a five‑star rating but no concrete comments on clarity, mix quality, or the concert itself.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "A single brief review that merely asks for comparison; stars suggest a positive bias but there is no substantive information on sound quality or show performance."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "unknown",
+    "technical_notes": "Reviewer only inquires about which source sounds best; no explicit remarks on clarity, balance, or technical issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-24T09:01:00.659944+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-08-23.153116.sbd.8trackmix.gems.flac16"
+}

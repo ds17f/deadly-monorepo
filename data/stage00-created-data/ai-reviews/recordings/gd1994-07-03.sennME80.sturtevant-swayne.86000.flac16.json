@@ -1,0 +1,45 @@
+{
+  "summary": "Immersive audience recording captures a top‑tier 1994 show, highlighted by an outstanding Eyes of the World → Fire on the Mountain sequence.",
+  "review": "The listener raves about this audience tape, saying it puts you right in the room and sounds far better than many soundboard sources. They rank the concert as one of the year’s best, calling out the Eyes of the World into Fire on the Mountain medley as a standout moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "A single 5‑star review praises both the musical performance and the recording quality, indicating an excellent show with an excellent audience tape, but confidence is low due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience recording praised for its immersive presence and clarity; no technical flaws mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the concert as one of the best shows of the year, emphasizing a strong flow especially around the Eyes of the World → Fire on the Mountain segment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T23:10:17.089284+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-03.sennME80.sturtevant-swayne.86000.flac16"
+}

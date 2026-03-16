@@ -1,0 +1,86 @@
+{
+  "summary": "Superb sound‑board capture of a 1991 tour opener highlighted by a monster Terrapin and an electrifying Bird Song jam.",
+  "review": "The recording is crystal‑clear, offering a balanced mix that lets Brent’s piano solo shine and the drums punch through without any noticeable drop‑outs. Musically the show delivers many Dead classics – a soaring Terrapin, a thunderous Bird Song jam, and solid performances of Bertha, All Over Now and The Stranger – though the setlist feels a bit uneven with the over‑used Victim > Crazy Fingers sequence. Overall fans rave about the energy and musicianship despite a few minor song‑choice complaints.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4–5 stars, praising both the superb soundboard quality and standout performances (Bird Song, Terrapin, Bertha). Minor criticisms about song selection do not outweigh the overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear mix with no drop‑outs; piano solo and drums are well defined; overall balance is superb, reflecting the .sbd source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Terrapin",
+      "Bertha",
+      "All Over Now",
+      "The Stranger"
+    ],
+    "poor_songs": [
+      "Victim > Crazy Fingers",
+      "Stella Blue"
+    ],
+    "setlist_flow": "Energetic first set that starts a bit shaky but tightens up with All Over Now and Bird Song; second set is strong despite a few over‑played pairings, delivering an extended Terrapin jam into drums."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for beautiful vocal delivery on Terrapin, perfect guitar tone, and nailing lyrics on Crazy Fingers.",
+    "Phil": "Highlighted by the classic \"We Want Phil\" chant before Tom Thumb's Blues.",
+    "Bob": "",
+    "Keys": "Brent’s piano work receives strong praise, especially his solo during the first set.",
+    "Drums": "The drum section is noted for its tightness and for driving the extended Terrapin jam."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Terrapin": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "All Over Now": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Victim > Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb's Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T00:01:50.311987+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-09-06.sbd.gardner.5560.sbeok.shnf"
+}

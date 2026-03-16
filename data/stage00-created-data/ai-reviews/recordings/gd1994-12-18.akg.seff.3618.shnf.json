@@ -1,0 +1,31 @@
+{
+  "summary": "Clear audience recording captures a tight, well‑played show with Jerry shining all night",
+  "review": "The audience source is praised as the best available for this concert, delivering clear and enjoyable sound. The performance itself is described as tight with a solid setlist and strong playing throughout, especially noting Jerry Garcia’s presence on every song.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "One enthusiastic 4‑star review highlights both good recording quality (audience source liked the most) and a strong musical performance, leading to an overall rating above average."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it the best audience source they’ve heard; no complaints about clarity or balance."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Show described as tight with a good setlist and well‑played material throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry is 'there' all night, indicating strong guitar/vocal presence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T04:42:45.691317+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-12-18.akg.seff.3618.shnf"
+}

@@ -1,0 +1,101 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a jam‑laden ’79 show, highlighted by a blazing He's Gone > Gloria Jam > C.C. Rider sequence and stellar Black Peter.",
+  "review": "The recording is an excellent soundboard source with crisp, imaging‑rich clarity despite a faint tape hiss that hardly detracts from the listening experience. Musically the concert shines in its second set – the He's Gone → Gloria Jam → C.C. Rider suite, thunderous Looks Like Rain intro and a soaring Black Peter are repeatedly praised, while the first set is noted as solid but less inspiring. Overall fans describe the performance as one of the standout 1979 shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer star ratings (average ~4.8), overwhelming praise for both sound quality and musical performance, with only minor comments about tape hiss or first‑set unevenness."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crispity‑crunchy, imaging‑rich mix; slight tape hiss and a hint of tin on some transfers but overall superb clarity and balance. No audience bleed – pure board feed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone > Gloria Jam > C.C. Rider",
+      "Black Peter",
+      "Looks Like Rain",
+      "Not Fade Away",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "China Cat Sunflower",
+      "Easy to Love"
+    ],
+    "setlist_flow": "Second set is a jam‑marathon that builds from the thunderous Looks Like Rain intro into He's Gone → Gloria Jam → C.C. Rider and then a fiery Black Peter, while the first set delivers solid work (Sugaree, etc.) but loses momentum after Easy to Love."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his searing guitar tone, “crazy finger‑playing” and lead vocal moments on Black Peter.",
+    "Phil": "Noted for powerful bass “bombs” that drive the jams.",
+    "Bob": "Highlighted for ripping Sugaree and sharing lead vocals on Black Peter.",
+    "Keys": "Brent’s 1979 keyboards described as “steely”, with a bright “tinkle‑tinkle” presence; not sounding like a rookie.",
+    "Drums": "Thunderous intro on Looks Like Rain, solid groove throughout the second‑set jams."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Gloria Jam": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "C.C. Rider": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Easy to Love": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:36:23.080035+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-12-01.sbd.set2.clugston.319.sbefail.shnf"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Good audience tape captures a hot, dance‑filled night with standout renditions of The Other One and Wharf Rat.",
+  "review": "Both reviewers praise the performance as a high‑energy show that kept the crowd on its feet, highlighting The Other One, Wharf Rat, Walking the Dog and several other favorites. The audience recording is described as clear and warm – the typical Kaiser/Uher sound – making the concert enjoyable to listen to despite being an audience source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Both reviews are positive (4‑star) and emphasize a strong performance with good sound quality, but only two reviews limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Typical Kaiser/Uher audience tape – clear enough with warm tone, captures bar ambience; no major drop‑outs noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Wharf Rat",
+      "Walking the Dog",
+      "She Belongs To Me"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy set that kept dancers moving; full \"Playing in the Band\" jam noted as a highlight, with a laid‑back crowd vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walking the Dog": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "She Belongs To Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T12:01:00.613380+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-21.uher.guch.anon.russjcan.98519.flac16"
+}

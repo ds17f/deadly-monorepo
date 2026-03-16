@@ -1,0 +1,75 @@
+{
+  "summary": "A solid audience recording captures a killer show – Bird Song rockets the first set and Shakedown Street, Terrapin Station, Rider and Black Peter blaze through the second.",
+  "review": "Listeners rave about this performance, highlighting an electrifying Bird Song opener and a scorching run through Shakedown Street, Easy Rider, Terrapin Station, Peggy‑O, Queen Jane and Black Peter. The audience source is praised for its clear, punchy mix even if a matrix or soundboard would be marginally cleaner, making it a go‑to download for fans of this era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews are highly positive (4–5 stars) and consistently praise both the musical performance and the audio quality, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear and punchy audience mix with solid balance; no major drop‑outs reported. Reviewers note it isn’t as pristine as matrix or soundboard recordings but is more than adequate for enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Shakedown Street",
+      "Easy Rider",
+      "Terrapin Station",
+      "Black Peter",
+      "Peggy-O",
+      "Queen Jane"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds momentum with a soaring Bird Song; the second set sustains the high energy with Shakedown Street, Rider, Terrapin and deep cuts like Black Peter, delivering an overall tight, jazzy‑infused flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers call his playing \"on fire,\" noting ripping solos on Shakedown Street and Rider.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Easy Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:44:57.323553+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-10-18.nak.rob_r.7551.sbefail.shnf"
+}

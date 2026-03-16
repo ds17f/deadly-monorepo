@@ -1,0 +1,31 @@
+{
+  "summary": "Recording appears incomplete with missing tracks and length discrepancy",
+  "review": "The sole reviewer notes that the download is shorter than expected and several tracks are absent, making it an incomplete representation of the concert. No comments on performance or sound quality are provided.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.5,
+    "confidence": "low",
+    "rationale": "Only one brief complaint about missing tracks; no positive aspects mentioned, leading to a low rating"
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Running length shorter than listed; tracks appear to be missing from the download"
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T17:12:11.275570+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-09.aud.131474.berger.flac24"
+}

@@ -1,0 +1,68 @@
+{
+  "summary": "Monster Shakedown Street, soaring Let It Grow and tight Spanish Jam",
+  "blurb": "The July 28 1982 Red Rocks show delivers a monster Shakedown Street, a scorching Let It Grow, and a rare Spanish Jam that rides the rain‑soaked energy. Jerry’s solos blaze while Brent’s keyboards add bright color, and the second set builds into an epic jam marathon.",
+  "review": "Red Rocks on July 28, 1982 is remembered as a rain‑driven powerhouse. The first set kicks off with a thunderous “Shakedown Street” that never lets up, moving through a tight run of classics before launching into a second set where “Althea” and the legendary “Let It Grow” showcase Jerry Garcia’s incendiary tone and Brent Mydland’s jangly piano. A standout Spanish Jam erupts out of Space, feeding into a joyous “Not Fade Away” → “Black Peter” → “Sugar Magnolia” sequence that feels both spontaneous and perfectly locked‑in. Despite occasional mix quirks—Jerry’s guitar sometimes buried in the SBD and a minute missing from the drum solo—the performance shines throughout, with Phil’s steady bass, Bob’s witty vocal twists, and the Rhythm Devils delivering log‑like power. The encore “It’s All Over Now Baby Blue” caps a night that still feels fresh and electric decades later.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 56,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.5,
+      "sentiment_rationale": "Four of six recordings are clearly positive, repeatedly praising the monster Shakedown Street, Let It Grow, Althea and Spanish Jam performances. Multiple sources highlight Jerry’s scorching solos and Brent’s bright keyboards, while mix issues are only noted in two mixed‑sentiment reviews, keeping overall sentiment strongly positive.",
+      "final_calculation": "2.5 + 0.4 + 1.5 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1982-07-28.sbd.browning-feinberg.32707.sbeok.flac16",
+    "reason": "Only soundboard source with overall good clarity, captures the full set and balances ambience despite minor mix imbalances; considered the most complete and reliable SBD of the night."
+  },
+  "key_highlights": [
+    "Monster Shakedown Street that drives the entire show",
+    "Scorching Let It Grow paired with a soaring Althea",
+    "Rare Spanish Jam emerging from Space, feeding into tight segues",
+    "Powerful Rhythm Devils percussion and post‑drum jam excitement"
+  ],
+  "song_highlights": [
+    "Shakedown Street",
+    "Althea",
+    "Let It Grow",
+    "Spanish Jam",
+    "Not Fade Away",
+    "Black Peter",
+    "Sugar Magnolia"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers scorching solos on Shakedown, Let It Grow and Althea; his tone is praised as ‘nimble’ and ‘perfect’, though the SBD mix sometimes buries his guitar.",
+    "Phil": "Provides a solid bass foundation that underpins the jams; occasionally low in the mix but highlighted for leading the Spanish Jam and keeping steady rhythm.",
+    "Bob": "Rhythm work shines throughout, with witty lyric twists on Truckin' and strong vocals on Not Fade Away/Black Peter; a minor vocal hiccup on Let It Grow is noted but doesn’t detract.",
+    "Brent": "Prominent, bright keyboards that add a jangly texture; key driver of the Spanish Jam and overall lush sound, though sometimes slightly high in the mix.",
+    "Mickey": "Delivers log‑like pounding with the Rhythm Devils, especially during the post‑drum jam that feeds into the St. Stephen tease.",
+    "Billy": "Provides powerful drumming that complements Mickey; a minute of the drum solo is missing on one SBD but overall percussion is captured strongly."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-13T22:11:30.527947+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Shakedown Street"
+    ],
+    [
+      "Althea"
+    ],
+    [
+      "Let It Grow",
+      "He's Gone",
+      "Truckin'",
+      "Drums",
+      "Space",
+      "Spanish Jam",
+      "Not Fade Away",
+      "Black Peter",
+      "Sugar Magnolia"
+    ]
+  ]
+}

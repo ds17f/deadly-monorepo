@@ -1,0 +1,91 @@
+{
+  "summary": "A scorching 1987 Hartford show with a smoking China‑Rider/Looks Like Rain stretch and stellar Bird Song, captured on a mixed AUD/SBD source that suffers from pitch‑speed problems in the first set.",
+  "review": "The performance is widely praised – the second set erupts with a blistering China Cat Sunflower → I Know You Rider, a soaring Looks Like Rain, and one of the era’s most incandescent Bird Songs.  The recording is an audience‑plus‑soundboard (matrix) mix; while the second half sounds clear enough, the first set runs fast and pitch‑high, with occasional level spikes and fuzz that can be distracting.  Overall the music outweighs the technical flaws, making it a must‑listen for fans of the spring ’87 tour.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4–5 stars praising the show’s energy and key songs; a smaller but consistent group notes serious recording issues (pitch, levels). The weighted average yields a strong positive rating despite technical drawbacks."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Mixed AUD/SBD blend. First‑set runs ~7 % fast with pitch/tempo issues, high‑level spikes and occasional fuzz; second set clearer but still contains audience bleed. Not a pure soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Looks Like Rain",
+      "Bird Song",
+      "Cold Rain / Snow",
+      "Midnight Hour",
+      "Desolation Row",
+      "I Need a Miracle",
+      "When Push Comes to Shove"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid but hampered by speed/pitch problems; the second set lifts the show with tight transitions, high‑energy jams and memorable crowd moments (especially the ‘headlight’ chant on Rider)."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for scorching solo tone, sustain, and an especially animated stage presence (arm/fist moment, post‑coma vigor).",
+    "Phil": "Not specifically mentioned beyond general tightness of the rhythm section.",
+    "Bob": "",
+    "Keys": "Brent’s piano is highlighted for jazzy fills, complementing Garcia and driving the Bird Song jam; overall keyboard work described as “rockin’”.",
+    "Drums": "Few direct comments; one reviewer notes powerful high‑end toms and a strong rhythm foundation."
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Bird Song": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Cold Rain / Snow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Midnight Hour": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Desolation Row": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "When Push Comes to Shove": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:44:59.974182+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-03-26.mixed.braverman.10923.sbeok.shnf"
+}

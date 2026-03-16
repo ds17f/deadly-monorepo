@@ -1,0 +1,50 @@
+{
+  "summary": "Stellar show with Jerry on fire and a crisp matrix mix (despite an early Crazy Fingers sync hiccup).",
+  "review": "Fans rave about this 1982 performance, calling it a stacked show and praising Jerry Garcia’s tone. The matrix recording is generally clear and well‑balanced, though one reviewer noted a brief out‑of‑sync segment of “Crazy Fingers” that was later fixed.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Multiple 5‑star reviews highlight excellent playing and a good matrix mix; only one technical complaint about sync, which has been corrected, keeping the overall rating high."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Nice matrix sound with clear mix; original source had a 45‑second out‑of‑sync segment of “Crazy Fingers” that was later spliced and fixed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Barn Burner",
+      "Forever Grateful > Forever Dead"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the set as stacked and flowing well, with strong energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as sounding great; his tone praised by reviewers.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Barn Burner": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Forever Grateful > Forever Dead": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T02:57:53.080698+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-10-10.mtx.seamons.fix.92058.sbeok.flac16"
+}

@@ -1,0 +1,84 @@
+{
+  "summary": "Decent audience recording that captures bright spots such as Let It Grow, yet the show suffers from sloppiness and a famously bad Stella.",
+  "review": "The tape is an audience (AUD) source with generally fair fidelity – clear enough to hear Jerry’s solo work but plagued by occasional feedback and uneven balance. Musically the concert is uneven: Let It Grow and Jed stand out, while Stella and the second‑set flow feel disjointed and poorly executed.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the performance low (1–3 stars) citing sloppy playing, while recording quality is described as merely fair; combined weighted score falls in the 2‑3 range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Generally clear enough for instrument detail, but suffers from feedback on Stella, occasional imbalance (Phil loud), and typical audience tape ambience. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Jed",
+      "I Will Take You Home"
+    ],
+    "poor_songs": [
+      "Stella",
+      "Scarlet"
+    ],
+    "setlist_flow": "The concert never fully clicks; the first set is solid but the second drifts, with weak transitions (the “Scarlet>nothing” vibe) and a disastrous Stella that highlights the night’s lack of cohesion."
+  },
+  "band_member_comments": {
+    "Jerry": "Frequently described as out of sync – lost chords on Stella, not crisp on Foolish Heart, but praised for a fierce solo on Let It Grow and later in Stella.",
+    "Phil": "Bass noted as a bit loud in one review; otherwise no strong comments.",
+    "Bob": "Criticized for being out of tune during Stella and providing noisy feedback, though his scream on Lovelight is mentioned positively.",
+    "Keys": "Brent (keys) receives several positive nods for lifting the mood, delivering new tunes, and contributing a solid Let It Grow.",
+    "Drums": "Mickey is noted to stop drumming during Stella and grin at Jerry; drum circle between sets described as “off the hook.”"
+  },
+  "song_mentions": {
+    "Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 4,
+      "total_mentions": 5
+    },
+    "I Will Take You Home": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:53:50.208165+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-06-22.akg.omalley.31633.sbeok.flacf"
+}

@@ -1,0 +1,74 @@
+{
+  "summary": "Solid soundboard capture of a unique 1985 show – crisp on the good moments, a bit rough in spots, with standout performances of Scarlet Begonias and She Belongs to Me.",
+  "review": "The recording is generally praised as one of the best sources for this concert, offering clear, energetic sound though a few reviewers note occasional muddiness that could benefit from EQ. Musically the show shines with memorable renditions of Scarlet Begonias, She Belongs to Me, Comes A Time and Brokedown Palace, and an unusually structured second set that many fans find unforgettable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 4‑5 stars and highlight strong playing and a unique setlist; a few note recording roughness and one gives a 0‑star rating, pulling the average down to around 4.1–4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear on most tracks; some reviewers mention tin‑canny or rough spots that could use slight EQ, but overall considered one of the best audio sources for this show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "She Belongs to Me",
+      "Comes A Time",
+      "Brokedown Palace",
+      "Deal",
+      "Satisfaction"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is noted for its unusual ordering – pre‑drums sequence of Scarlet Begonias > Fire On The Mountain > Samson And Delilah > She Belongs to Me, followed by a typical post‑drums block and then an encore‑style finish with U.S. Blues, Satisfaction and Brokedown Palace – creating a unique, memorable flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as being on top of a mellow, energetic vibe and “unleashing the beauty” throughout the show.",
+    "Phil": "Praised for “bass‑bombs” that wowed the crowd, especially during Satisfaction.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Highlighted as an intense, unpredictable part of the performance; drums/space segment noted as a surprise and a highlight."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "She Belongs to Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T09:26:44.173624+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-15.beyerM88.connor.76992.sbeok.flac16"
+}

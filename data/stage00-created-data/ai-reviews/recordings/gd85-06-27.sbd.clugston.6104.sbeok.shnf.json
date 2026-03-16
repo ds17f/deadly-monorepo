@@ -1,0 +1,82 @@
+{
+  "summary": "Fair‑quality soundboard capture of a legendary June 27 1985 SPAC show, highlighted by blistering Bertha, soaring High Time and a monster Crazy Fingers jam.",
+  "review": "The recording (a soundboard source) is usable but a few listeners describe it as “jarring” and not perfectly clear. Musically the concert is celebrated – fans rave about an unstoppable first set with High Time, Stagger Lee, Crazy Fingers and a massive Supplication jam, plus a lightning‑fast Bertha and soaring Eyes in the second set. Overall the performance outweighs the modest technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over 20 reviews give an average of ~4.0 stars; most praise the show’s energy and song selections while only a handful note recording issues, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "A few reviewers call the board “jarring & unpleasant,” but no major drop‑outs or distortion are reported; overall listenable for fans."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Time",
+      "Stagger Lee",
+      "Crazy Fingers",
+      "Supplication",
+      "Bertha",
+      "Eyes"
+    ],
+    "poor_songs": [
+      "Feel Like a Stranger (unfinished)",
+      "Bertha (final verse omitted)"
+    ],
+    "setlist_flow": "The concert is noted for its rapid‑fire, almost break‑less flow – especially the first set’s nonstop energy and a second set that kept the momentum high with few pauses."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his rocket‑fast lead on Bertha and overall strong playing; fans note his solid physical condition.",
+    "Phil": "Remembered for his balcony banter and jokes, often acting as the straight man to Bobby’s humor.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard strength and presence are highlighted throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T06:10:51.194333+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-06-27.sbd.clugston.6104.sbeok.shnf"
+}

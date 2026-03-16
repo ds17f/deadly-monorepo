@@ -1,0 +1,76 @@
+{
+  "summary": "Clear soundboard recording of a solid 1985 show with strong set flow and several standout jams despite mixed feelings about Jerry’s tone.",
+  "review": "The sbd source captures the concert with crisp vocals and an excellent drum mix, delivering a lively listening experience. The performance is generally praised for its tight sets and highlighted moments like “Big Railroad”, “China > Rider” and “Express Train,” though some listeners note a weak Terrapin and uneven Garcia guitar tone.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers commend the show and soundboard quality (average 4‑5 stars), but a few point out performance flaws (Jerry’s tone, Terrapin). Weighted average yields ~3.8/5."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Vocals are very clear, drum mix superb, overall sound alive with slight vocal flubs noted by one reviewer; no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Railroad Blues",
+      "China > Rider",
+      "Express Train",
+      "Minglewood",
+      "RxR Blues",
+      "Might as Well"
+    ],
+    "poor_songs": [
+      "Terrapin Station"
+    ],
+    "setlist_flow": "Both sets start strong, the first set tightens after early songs, and the second set builds momentum with extended jams and seamless transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – some praise for his guitar work and lead vocals, but one reviewer calls his tone terrible.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s keyboard work is praised as “slashing” and adds energy to the jams.",
+    "Drums": "Bill Kreutzmann (and Mickey Hart) receive high marks for a superb drum mix."
+  },
+  "song_mentions": {
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Express Train": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "RxR Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might as Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T10:42:28.153992+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-04.sbd.fix-shnid-7801.tetzeli.83072.flac16"
+}

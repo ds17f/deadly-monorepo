@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard partial with rustic but listenable sound captures a historic early‑psychedelic jam featuring the rare Caution > Feedback sequence and Mickey Hart’s first sit‑in.",
+  "review": "This fragment showcases an early Dead experiment – a swirling Caution into Feedback jam that many reviewers describe as an \"acid freakout\" moment. The tape has a noticeable splice at the start and a slightly rustic fidelity, but it remains quite listenable. Highlights include Mickey Hart’s debut on drums and the historic vibe noted in Phil Lesh’s recollections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance and its historical significance, while noting only modest recording imperfections; weighted rating reflects strong show quality and decent soundboard audio."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Tape splice audible at the start; overall rustic but clear enough for listening; occasional mild mud‑ness noted but generally listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Caution",
+      "Feedback"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fragmentary recording focuses on an early psychedelic jam; the Caution > Feedback sequence provides a vivid, acid‑laden snapshot of the band's evolution in late 1967."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned for warmly welcoming Mickey Hart after the show, calling it \"THIS is the Grateful Dead\".",
+    "Phil": "Recalled the gig in his book, noting its experimental nature and Mickey’s first appearance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey Hart sits in on drums toward the end – possibly his first performance with the band."
+  },
+  "song_mentions": {
+    "Caution": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Feedback": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T06:30:48.815541+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd67-09-04.sbd.partial.jools.19514.19526.sbeok.shnf"
+}

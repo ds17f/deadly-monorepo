@@ -1,0 +1,112 @@
+{
+  "summary": "Good‑quality soundboard capture of a high‑energy 1974 show highlighted by Jerry’s soaring solo, an incredible Loose Lucy, Urah Beard and a chilled Phil & Ned sequence.",
+  "review": "The recording delivers an immersive ‘being there’ experience despite some dual‑tracking quirks and a board that isn’t the cleanest. Musically the concert is a treat – Jerry’s guitar work shines, Loose Lucy soars, Urah Beard and the Caution Jam pop, and Phil & Ned provide a laid‑back highlight. Overall the performance feels tight in the first set and more adventurous in the second, with only a few slower moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Strong musical performance with many standout moments outweighs modest recording imperfections; consistent 4‑5 star reviews give high confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Board isn’t the cleanest – dual‑tracking creates an unreal feel and some muddiness, but overall listenable and captures a vivid ‘live’ atmosphere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loose Lucy",
+      "Uriah's Beard (UJB)",
+      "Caution Jam",
+      "Phil & Ned sequence",
+      "Big River",
+      "El Paso",
+      "Mexicali Blues",
+      "Sugar Magnolia",
+      "He's Gone",
+      "Truckin'",
+      "Sunshine Daydream"
+    ],
+    "poor_songs": [
+      "Scarlet",
+      "Dire Wolf"
+    ],
+    "setlist_flow": "First set is technically tight with limited risk‑taking; second set ramps up energy, delivering several high‑impact jams and a few slower spots that feel less engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Superb, soaring guitar work (especially around the 12:00 mark) with new approaches in intros; overall praised as a ‘killer’ performance.",
+    "Phil": "Featured in a chilled‑out Phil & Ned sequence and pushes strongly during UJB and Caution Jam.",
+    "Bob": "Provides solid rhythm support; noted as pushing it out there alongside the rest of the band.",
+    "Keys": "Keith’s organ absent on “It Must Have Been the Roses”; otherwise keyboards are functional but not highlighted.",
+    "Drums": "Bill (and anticipation of Mickey) drives high energy, especially in Caution Jam and drum breaks; percussion on Seastones adds texture."
+  },
+  "song_mentions": {
+    "Loose Lucy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uriah's Beard": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Caution Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Phil & Ned sequence": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T01:39:12.069713+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-10-19.sbd.boswell-smith.116341.flac24"
+}

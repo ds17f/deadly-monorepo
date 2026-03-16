@@ -1,0 +1,70 @@
+{
+  "summary": "Well‑balanced soundboard captures a solid 1991 show with standout Sugaree and Stranger, though PA hiccups cut the first set short.",
+  "review": "The recording is a clean, well‑balanced SBD that lets the band’s 1991 energy shine – especially on Sugaree, Stranger, New Speedway and Wharf Rat.  The concert was marred by a PA outage after Masterpiece that shortened the first set and caused some right‑channel distortion, and the second set was viewed as uneven, but overall fans remember a good vibe and strong playing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the soundboard quality and highlight several songs, while a few note serious PA/recording glitches and an uneven second set; the balance of positive vs. negative points yields an overall four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp, well‑balanced soundboard with excellent keyboard clarity; occasional right‑channel wince and short‑circuit noise from the PA outage during Masterpiece."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Stranger",
+      "New Speedway > Truckin'",
+      "Wharf Rat",
+      "Aiko"
+    ],
+    "poor_songs": [
+      "Althea"
+    ],
+    "setlist_flow": "First set was cut short after Masterpiece due to a PA failure, causing the band to shorten the set and miss Bird Song.  Rain‑related technical issues added noise at the end of the first set.  The second set received mixed reactions – some felt it was not well played, though individual moments (Stranger intro) were praised."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned after the show that the band \"had a little life to it\"; no specific guitar critique.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's early notes on Stranger were highlighted as crystal‑clear; post‑Brent keyboard work (Wharf Rat, Sugaree) praised.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "New Speedway > Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Aiko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T17:32:42.186269+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-03-29.sbd.wiley.8232.sbeok.shnf"
+}

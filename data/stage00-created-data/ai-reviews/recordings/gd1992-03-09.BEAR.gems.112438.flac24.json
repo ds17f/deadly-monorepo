@@ -1,0 +1,57 @@
+{
+  "summary": "Beautiful recording captures an inspiring 1992 show highlighted by a scorching Dark Star jam and standout Corrina performance.",
+  "review": "The concert is praised for its powerful second‑set improvisations – especially the long, hot Dark Star/drums/space sequence with a Shenandoah theme and a superb rendition of Corrina. Reviewers also note the quirky vocal moment on Victim and describe the overall playing as “very cool” for 1992. The audio quality is described as beautiful, making the performance easy to enjoy despite the lack of source details.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Reviews consistently highlight strong musical moments and a high‑quality recording, though only three reviews are available and star ratings are mixed, leading to a solid but not definitive rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls the audio \"beautiful\" with no complaints about muddiness or drop‑outs; source type (soundboard/audience) is not identified."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Victim",
+      "Corrina",
+      "Dark Star",
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is the highlight, featuring a big jam that builds into a Dark Star/drums/space excursion and an extended outro; the first half is solid but receives less specific commentary."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob's vocal slip on the \"dark sard\" line is noted humorously, and his singing on Corrina is praised.",
+    "Keys": "",
+    "Drums": "The Dark Star/drums/space jam is highlighted as a strong, hot performance."
+  },
+  "song_mentions": {
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T04:23:24.459649+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-09.BEAR.gems.112438.flac24"
+}

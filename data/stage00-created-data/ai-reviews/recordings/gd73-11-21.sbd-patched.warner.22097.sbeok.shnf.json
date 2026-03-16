@@ -1,0 +1,80 @@
+{
+  "summary": "Soundboard recording with mild hiss and occasional patches, but a strong late‑’73 show highlighted by an epic Playing in the Band/Truckin' sequence and a powerful One More Saturday Night.",
+  "review": "The performance is praised for its inventive set flow – moving Playing in the Band out of the first set opens up fresh jams, and the Truckin' > Nobody's Fault transition shines. While the soundboard source suffers from hiss and a few patchy moments (especially during the Grateful Dead tribute), the musical quality—particularly the second‑set highlights and the energetic One More Saturday Night—is overwhelmingly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Reviews are largely enthusiastic about the show (average 4.75 stars) with only modest criticism of recording hiss and patches, leading to a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Generally good sound but noticeable hiss and occasional nasty patches, especially during the Grateful Dead tribute segment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Truckin'",
+      "One More Saturday Night",
+      "Here Comes Sunshine"
+    ],
+    "poor_songs": [
+      "Uncle John's Band",
+      "Truckin' (ending flat)"
+    ],
+    "setlist_flow": "Moving Playing in the Band out of the first‑set slot creates fresh possibilities, and placing Uncle John's Band in the encore provides a balanced close despite mixed opinions on that version."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Nobody's Fault But Mine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T03:13:02.125365+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-11-21.sbd-patched.warner.22097.sbeok.shnf"
+}

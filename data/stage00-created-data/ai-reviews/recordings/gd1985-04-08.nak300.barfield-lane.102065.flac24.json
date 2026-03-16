@@ -1,0 +1,51 @@
+{
+  "summary": "Recording quality unknown; the show elicits mixed feelings but is praised for “Walkin’ the Dog”, “Bottom > Superstition” and a contentious “Revolution” performance.",
+  "review": "Fans are split on this concert – some denounce it as sloppy with Garcia “gasping for air,” while others celebrate standout moments like Walkin' the Dog, Bottom > Superstition and Revolution. No concrete comments about the tape’s source or clarity were provided, leaving the technical quality ambiguous.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Reviews vary widely (2‑5 stars) and focus mainly on performance; with no recording details, the rating reflects a moderate overall impression."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers do not discuss soundboard vs. audience sources or audio clarity; only performance and atmosphere are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Walkin' the Dog",
+      "Bottom > Superstition",
+      "Revolution"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opinions diverge – some feel the first set has nice moments before slipping into sloppiness, while others enjoy the entire night without noting specific flow problems."
+  },
+  "band_member_comments": {
+    "Jerry": "Criticized for “gasping for air” and being out of form; other reviewers dismiss this complaint.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Walkin' the Dog": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bottom > Superstition": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Revolution": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T03:41:15.661036+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-08.nak300.barfield-lane.102065.flac24"
+}

@@ -1,0 +1,72 @@
+{
+  "summary": "Debut of Gentlemen Start Your Engines; smoking Playin’/Hey Jude/Lovelight",
+  "blurb": "The show shines with the first performance of “Gentlemen, Start Your Engines” and a fiery second‑set sequence of Playing In The Band > Uncle John’s Band > Playing In The Band into Space, Hey Jude finale and Lovelight. Jerry’s guitar sparkles while Brent’s keyboards dominate, giving the indoor summer vibe a tight, high‑energy lift.",
+  "review": "June 26, 1988 at Pittsburgh’s Civic Arena delivered a solid indoor summer outing that many fans still cite for its debut of “Gentlemen, Start Your Engines.” The first set rides a Brent‑focused groove with standout moments like the organ solo on Little Red Rooster and a bright piano drive on When Push Comes To Shove, while the band rolls into a powerful Touch of Grey. \n\nThe second set is where the night truly “smokes”: a seamless Playin’ > Uncle John’s > Playin’ jam that erupts through Space into an exuberant Hey Jude finale and a jubilant Turn On Your Lovelight, complete with Bob’s classic “wait a minute” cue. Jerry’s tone is bright and sparkle‑tinkle, his vocals cut through especially on the Hey Jude riff, and Brent’s shimmering keys sit front‑and‑center. Mickey adds marching‑style drums and playful chimes during Space, while Phil holds down a solid bass foundation despite a slightly subdued low‑end in some mixes.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.7,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 24,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Multiple recordings (3) are clearly positive, praising the debut of Gentlemen Start Your Engines and a smoking second‑set jam; two recordings are mixed and one is negative about pitch, but no consistent performance criticism appears. The overall sentiment leans strongly positive, warranting a moderate +1.0 adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.0 = 3.7"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd88-06-26.sbd-matrix.nawrocki.5608.sbeok.shnf",
+    "reason": "Matrix source is clear and captures the indoor energy, includes the debut of Gentlemen Start Your Engines and the standout Playin’/Hey Jude/Lovelight sequence."
+  },
+  "key_highlights": [
+    "Debut of “Gentlemen, Start Your Engines”",
+    "Smoking Playin’ > Uncle John’s > Playin’ jam with Hey Jude finale and Lovelight climax",
+    "Touch of Grey solid showcase in the first set",
+    "Brent’s expressive organ solo on Little Red Rooster"
+  ],
+  "song_highlights": [
+    "Gentlemen, Start Your Engines",
+    "Touch of Grey",
+    "Playing In The Band",
+    "Uncle John's Band",
+    "Hey Jude Finale",
+    "Turn On Your Lovelight",
+    "Mississippi Half-Step Uptown Toodeloo"
+  ],
+  "band_performance": {
+    "Jerry": "Jerry delivers a bright, sparkle‑tinkle tone with his signature lead lines and strong vocal presence on the Hey Jude finale, though his vocals can get a bit muddy at times.",
+    "Phil": "Phil anchors the groove with solid bass work and occasional standout vocal phrasing, though the low‑end is slightly subdued on some recordings.",
+    "Bob": "Bob adds his trademark rhythmic drive and a memorable ‘wait a minute’ cue during Lovelight, bringing a nostalgic ’67 vibe to the set.",
+    "Brent": "Brent’s keyboards are front‑and‑center, from an expressive organ solo on Little Red Rooster to bright piano on When Push Comes To Shove and a shimmering backdrop throughout.",
+    "Mickey": "Mickey contributes a marching‑style drive and adds bells and chimes that color the Space segment.",
+    "Billy": ""
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-16T10:28:19.952539+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Gentlemen, Start Your Engines"
+    ],
+    [
+      "Touch of Grey"
+    ],
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "Dear Mr. Fantasy",
+      "Hey Jude Finale",
+      "Black Peter",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Mississippi Half-Step Uptown Toodeloo",
+      "Little Red Rooster"
+    ]
+  ]
+}

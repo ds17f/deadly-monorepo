@@ -1,0 +1,73 @@
+{
+  "summary": "A raw but surprisingly clear sound‑board capture of an incendiary 1970 MIT show, highlighted by a blistering “Dancing in the Streets” and soaring “Morning Dew”.",
+  "review": "The performance is consistently described as hot, intense and historically charged – with Jerry thrashing his SG, Lesh delivering devastating bass runs, and standout moments like Dancing in the Streets, Morning Dew and an angry‑edge Not Fade Away.  The mono sound‑board source shows some distortion and mic glitches, yet most listeners find it clear enough to enjoy the energy of the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive comments on the musical performance (70% weight) combined with generally good but imperfect recording quality (30% weight) yield a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mono feed recorded from the board; listeners note occasional distortion, mic problems and rawness, but the mix is generally clear, sharp and surprisingly listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancing in the Streets",
+      "Morning Dew",
+      "Not Fade Away",
+      "St. Stephen",
+      "China>Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as a high‑energy, anger‑charged response to the Kent State tragedy and cold weather, with tight transitions and an overall “in the zone” vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Thrashing his SG, delivering intense guitar work; often cited as \"in the zone\".",
+    "Phil": "Provides a devastating bass run on Dancing in the Streets that listeners highlight as legendary.",
+    "Bob": "His spoken announcement at the end is noted; vocals are generally solid despite occasional mic issues.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dancing in the Streets": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China>Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Next Time You See Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T18:56:36.756084+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-05-06.sbd.gans-hall.95.shnf"
+}

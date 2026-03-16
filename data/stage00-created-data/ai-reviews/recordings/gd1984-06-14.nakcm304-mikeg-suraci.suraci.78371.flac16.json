@@ -1,0 +1,66 @@
+{
+  "summary": "Crystal‑clear Dan Healey digital soundboard captures a vibrant second set highlighted by a premier Mr. Fantasy and a soulful Black Peter.",
+  "review": "The 1984 summer recording showcases the new digital soundboard’s exceptional clarity and depth, delivering a clean mix that lets Brent’s organ glow on Black Peter and Bobby’s jangly guitar shine through Throwing Stones. Reviewers rave about the second‑set flow—from space into Playin’ in the Band and onto a standout Mr. Fantasy—though the tape fade cuts off the final swirl of Mickey’s ethnic xylophone. Overall the performance is fun, energetic, and representative of that era.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two detailed positive reviews praise both musical performance and high‑quality digital soundboard recording; a brief negative comment notes an odd song choice, yielding an overall strong but not flawless impression."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Dan Healey's digital soundboard provides remarkable clarity and depth; the mix is clean with a balanced instrument spread. The only technical loss is the tape‑fade that omits the final burst of Mickey’s xylophone space segment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mr. Fantasy",
+      "Black Peter",
+      "Throwing Stones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set flows smoothly, with a memorable space/Playin' transition, a strong Mr. Fantasy performance, and an uplifting finish despite the missing tape tail."
+  },
+  "band_member_comments": {
+    "Jerry": "No specific musical comments; reviewer only notes his long hair and visual presence.",
+    "Phil": "",
+    "Bob": "Bobby's guitar has a cool 'jangly' tone during Throwing Stones, adding rock energy into the set.",
+    "Keys": "Brent shines on organ throughout Black Peter and other sections.",
+    "Drums": "Mickey’s ethnic xylophone‑like sounds in the space segment are highlighted; drum transition noted."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T18:22:06.829160+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-14.nakcm304-mikeg-suraci.suraci.78371.flac16"
+}

@@ -1,0 +1,98 @@
+{
+  "summary": "Good soundboard capture with a rough first set but an electric second set highlighted by Dark Star and China Cat Sunflower",
+  "review": "The UltraMatrix SBD provides decent clarity, though the mix is muddy on early songs like Touch of Grey and the band’s balance suffers from missing Phil in the first half. The second set shines – gritty Garcia leads a powerful Dark Star, while China Cat Sunflower, I Know You Rider, Stella Blue and Throwing Stones are standout moments that make this show worth hearing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Both reviewers rate the show around 4 ★ and praise the second set heavily, while noting mix problems in the first set; weighted average yields a solid 3.8 ★."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mix is shambolic on the first set (Touch of Grey, missing Phil in the mix), but clears up for the second half; overall the UltraMatrix SBD is listenable with decent fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "China Cat Sunflower",
+      "I Know You Rider",
+      "Stella Blue",
+      "Throwing Stones",
+      "Deal",
+      "Terrapin"
+    ],
+    "poor_songs": [
+      "Touch of Grey",
+      "Greatest Story"
+    ],
+    "setlist_flow": "First set feels pedestrian and suffers from mix issues, serving mostly as a warm‑up; the second set erupts with electric, dramatic playing that many fans consider one of the strongest of 1990."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers gritty licks on Dark Star and adds an inventive solo on Loose Lucy; his tone and improvisational fire are repeatedly praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince’s keyboards (and the Hornsby‑style synth work) dominate songs like Mexicali, Stella Blue and Throwing Stones, earning strong positive remarks.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Greatest Story": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T15:16:21.224004+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-12.149736.UltraMatrix.sbd.cm.miller.flac16"
+}

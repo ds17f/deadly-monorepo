@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard source with solid audio captures a mixed‑bag 1981 show where the band’s chemistry wavers but a standout Morning Dew shines.",
+  "review": "The recording is praised as an “awesome source,” indicating a clear soundboard capture. Performance-wise, reviewers are split – some note Jerry and Brent were heavily under the influence, while others highlight moments of brilliance, especially the beautiful rendition of Morning Dew. Overall the show feels uneven but still worth listening to for its high points.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Average rating (3.7 stars) with detailed comments about both performance highs and lows; recording quality is consistently praised, giving a solid overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the source as “awesome” and have no complaints about clarity or balance, suggesting a clear, well‑mixed soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing; reviewers focus on individual player performance rather than overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned as being heavily under the influence, with some moments of peak singing/guitar work but also noted decline.",
+    "Phil": "Credited (along with Bob) for carrying the show when others were “baked.”",
+    "Bob": "Took over many solo runs, helping sustain the performance.",
+    "Keys": "Brent is specifically called out as being “smacked out” alongside Jerry.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:09:39.396607+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-17.sbd.macdonald.tetzeli.fix-7915.86854.reflac.flac16"
+}

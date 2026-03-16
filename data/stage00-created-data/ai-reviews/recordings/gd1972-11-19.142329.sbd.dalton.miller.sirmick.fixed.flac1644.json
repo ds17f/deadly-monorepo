@@ -1,0 +1,56 @@
+{
+  "summary": "Solid performance featuring a Rolling Stones opener and strong Dead classics; recording quality not described",
+  "review": "The lone fan review praises the show’s setlist, highlighting the \"Gimme Shelter\" opener, a fiery \"Midnight Rambler\" with guest Jimmy Page, and an enthusiastic encore of \"Sugar Magnolia.\" No comments are made about the audio source or fidelity, so the recording quality remains unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one 4‑star review; positive remarks about the performance but no information on recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention soundboard, audience mix, clarity, or any audio issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Gimme Shelter",
+      "Midnight Rambler",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer lists songs in order and expresses enthusiasm for the opener, mid‑set highlight with Jimmy Page, and a high‑energy encore."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Gimme Shelter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sweet Virginia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Midnight Rambler": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:06:48.515003+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-11-19.142329.sbd.dalton.miller.sirmick.fixed.flac1644"
+}

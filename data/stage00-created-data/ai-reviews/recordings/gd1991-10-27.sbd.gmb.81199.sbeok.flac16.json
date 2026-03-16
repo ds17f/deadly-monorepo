@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard recording of an emotionally charged show just two days after Bill Graham's death, highlighted by a mind‑blowing performance of “Mona”.",
+  "review": "The tape captures the band playing with palpable feeling – reviewers repeatedly note how the boys gave their all and that the night felt special because it was the first concert after Bill Graham’s tragic helicopter crash. The soundboard source is praised for its clarity, easily outshining any audience tapes, and “Mona” is singled out as a standout moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All but one review are 4‑5 stars and focus on the emotional intensity of the performance and the clear soundboard source; no significant complaints were raised."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers comment that the soundboard capture is vivid and outshines audience recordings; no mentions of muddiness, drop‑outs or other issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mona"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A heartfelt, emotionally charged set that served as a tribute to Bill Graham, with the band playing at peak intensity throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mona": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T02:22:19.296080+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-10-27.sbd.gmb.81199.sbeok.flac16"
+}

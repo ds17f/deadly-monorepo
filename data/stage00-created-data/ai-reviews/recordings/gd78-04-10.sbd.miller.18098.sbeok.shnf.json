@@ -1,0 +1,81 @@
+{
+  "summary": "Crisp soundboard recording of the April 1978 Fox show shines on a monster 16‑minute Franklin’s Tower and hot licks, though some songs suffer from off‑beat playing.",
+  "review": "The tape delivers a clear, well‑balanced soundboard mix that lets listeners hear every laugh and lick, especially the epic 16‑minute Franklin’s Tower. While many fans rave about the energetic setlist, fiery solos and standout numbers like Candyman and All Over Now, several reviewers note sloppy moments—out‑of‑sync vocals, a weak Music Never Stopped turn, and occasional clipping in the audio.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈70%) are strongly positive about both performance and sound quality, but a significant minority highlight serious musical flaws and recording glitches; the weighted average yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers praise the crisp, clear mix; a few note background crackle, occasional clipping and volume issues but nothing that makes the tape unlistenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Candyman",
+      "All Over Now",
+      "Brown Eyed Women",
+      "Jack Straw",
+      "Cassidy"
+    ],
+    "poor_songs": [
+      "The Music Never Stopped"
+    ],
+    "setlist_flow": "A unique, high‑energy set with a long, soaring Franklin’s Tower centerpiece; early missteps (out‑of‑sync vocals and drumming) are offset by later fire‑filled jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia receives both praise for his soaring vocals and hot guitar licks and criticism for sounding ‘wounded’, out of sync, or even ‘stoned’ on this night.",
+    "Phil": "",
+    "Bob": "Bob’s jokes are a mixed bag—some fans love the goofy moments while others call them groan‑worthy; his vocal timing occasionally drifts.",
+    "Keys": "Keith often comes in ahead of the beat or out of sync, especially early in the show, but later provides solid fills during jams.",
+    "Drums": "Bill/Mickey’s drumming is described as both playful (fun lurch on Brown Eyed Women) and uneven, with long drum sections possibly affected by technical issues."
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T10:07:26.675168+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-04-10.sbd.miller.18098.sbeok.shnf"
+}

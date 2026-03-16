@@ -1,0 +1,72 @@
+{
+  "summary": "Upbeat set with standout Fadeaway and Bird Song",
+  "blurb": "The show delivers a hot, smoky vibe highlighted by West L.A. Fadeaway and soaring Bird Song. Drum work is prominent around the Iko Iko segue, and Brent Mydland shines on keyboards. Overall an average performance with a few bright moments.",
+  "review": "February 16, 1988 at the Henry J. Kaiser Convention Center captures the Dead in a lively, if uneven, mood. The first set rolls forward with a punchy West L.A. Fadeaway and Jerry’s upbeat vocal presence, while Bird Song soars over a smoky mix that some listeners note sounds a touch thin on bass. The second set kicks off with a pre‑drums tease into Iko Iko, delivering the percussive fireworks fans love, before slipping into a mixed‑bag of jams – Playing In The Band and Eyes Of The World feel a little muddy in the soundboard mix, yet Brent Mydland’s keyboards add color throughout, especially during the jam and the later Watchtower/ Dear Mr. Fantasy stretch. Highlights like Not Fade Away and the final U.S. Blues keep the energy high, but the overall show feels average, with strong moments punctuated by some lackluster transitions.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.1,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 16,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "Two recordings (matrix and unknown source) are clearly positive, while four are mixed with neither strong praise nor consistent criticism. The modest consensus leans slightly positive because standout songs like Fadeaway, Bird Song, Dear Mr. Fantasy and Brent’s keyboard work receive repeated commendation, outweighing the occasional muddy mix notes.",
+      "final_calculation": "2.5 + 0.1 + 0.5 = 3.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1988-02-16.sbd.walker-scotton.miller.103111.flac16",
+    "reason": "Balanced matrix capture with clear, listenable sound and the show’s highlights (Fadeaway, Bird Song, Iko Iko) presented without major mix issues."
+  },
+  "key_highlights": [
+    "Hot, upbeat vibe anchored by a stellar West L.A. Fadeaway",
+    "Strong drum segment leading into Iko Iko gives the second set its energy boost",
+    "Brent Mydland rises to the occasion on keyboards, adding color throughout",
+    "Dear Mr. Fantasy and Not Fade Away stand out as the show’s most memorable moments"
+  ],
+  "song_highlights": [
+    "West L.A. Fadeaway",
+    "Bird Song",
+    "Iko Iko",
+    "Dear Mr. Fantasy",
+    "Not Fade Away",
+    "All Along The Watchtower"
+  ],
+  "band_performance": {
+    "Jerry": "Vocals are less harsh and more listenable, with upbeat energy and strong riffs on Fantasy and Not Fade Away; his stage presence and smile are noted as a highlight.",
+    "Phil": "",
+    "Bob": "Feisty and energetic playing is mentioned, but his guitar often gets buried in the mix, especially on the muddy soundboard recording.",
+    "Brent": "Praised for rising to the occasion, providing vibrant keyboard coloring during Eyes Of The World and the jam; occasional volume issues are noted but overall his performance shines.",
+    "Mickey": "Drums are a focal point – pre‑drums before Iko Iko and the overall percussion presence add fire to the set, though some transitions feel messy.",
+    "Billy": "Strong percussion work highlighted throughout, with post‑drum sections cited as favorite moments."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-16T06:17:17.850814+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw",
+      "West L.A. Fadeaway"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "Drums*",
+      "Iko Iko"
+    ],
+    [
+      "Playing In The Band",
+      "Eyes Of The World",
+      "Jam",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "All Along The Watchtower",
+      "Dear Mr. Fantasy",
+      "Not Fade Away"
+    ]
+  ]
+}

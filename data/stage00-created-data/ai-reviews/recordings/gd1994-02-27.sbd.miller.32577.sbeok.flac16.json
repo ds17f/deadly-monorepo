@@ -1,0 +1,63 @@
+{
+  "summary": "High‑quality soundboard capture of a 1994 show famed for its polarizing Cosmic Charlie tease that turned into Wharf Rat.",
+  "review": "The recording is praised as an excellent‑sounding SBD with just enough audience bleed to add atmosphere without compromising clarity. Musically the concert starts a bit shaky, but picks up after the Mexicali set, delivering strong performances of Corrina, Uncle John's Band, Turn On Your Lovelight and Rain, while the Cosmic Charlie → Wharf Rat tease divided fans – some calling it a highlight, others a night‑ruiner.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently rated very high, but the show receives mixed reactions (average reviewer stars ~2.5). Weighted combination yields a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and well‑balanced SBD; reviewers note a subtle audience mix that adds realism but does not detract from clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Corrina",
+      "Uncle John's Band",
+      "Turn On Your Lovelight",
+      "Rain",
+      "Cosmic Charlie Tease > Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set one starts a little sloppy but gains momentum after the Mexicali set; second set offers surprising twists and strong finishes, though the Cosmic Charlie tease sparked controversy."
+  },
+  "band_member_comments": {
+    "Jerry": "The Cosmic Charlie tease that turned into Wharf Rat is heavily discussed – praised by some as an exciting twist, condemned by others as a cold‑hearted letdown.",
+    "Phil": "Powerful bass lines highlighted on Corrina.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cosmic Charlie Tease > Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T19:23:00.800408+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-02-27.sbd.miller.32577.sbeok.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent recording of a sweet Chapel Hill show featuring a standout Spanish Jam and an outstanding second set.",
+  "review": "Both reviewers rave about the performance, calling it one of the sweetest shows they've ever seen and highlighting an exceptional second set capped by a memorable Spanish Jam. The recording is praised as “nice work,” indicating clear and enjoyable sound quality despite no technical details being provided.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All reviews are 5‑star, uniformly enthusiastic about both the show and the recording; this consistency yields a high rating with strong confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers explicitly compliment the recording quality (“Nice work on the recording”), with no complaints about clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Spanish Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set singled out as exceptional; overall atmosphere described as sweet, energetic, and well‑balanced with a memorable jam segment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T11:20:37.940546+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-24.akg460.swayne.85794.flac16"
+}

@@ -1,0 +1,50 @@
+{
+  "summary": "Good matrix recording captures a high‑energy show highlighted by a blazing Hey Poc Ky/Playin’/Rider sequence and a monster Terrapin.",
+  "review": "The performance is tight and full of fire, especially the first half of the second set where Hey Pocky Way > Playin' > Rider roars and Terrapin Station shines. The source is a mixed board‑audience matrix with some hiss and uneven levels, but it remains listenable and lets the band’s energy come through.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars praising standout songs and band fire; recording is described as decent despite some hiss and level issues, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Mixed board/audience source with noticeable hiss at the start, crowd noise up front, occasional wow‑and‑flutter and uneven levels; still clear enough to enjoy the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hey Pocky Way > Playin' > Rider",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First half of the second set is tight and high‑energy, with seamless transitions that showcase the band at a prime moment."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry’s tone was perfect and he was \"on fire\" alongside Brent.",
+    "Phil": "Phil drops some things during the Northbound Train segment but overall his playing is solid.",
+    "Bob": "",
+    "Keys": "Brent (keys) receives repeated praise for being on fire and driving the high‑energy sound.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hey Pocky Way > Playin' > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Northbound Train": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T22:22:25.471392+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-08-05.sbd.18256.sbeok.shnf"
+}

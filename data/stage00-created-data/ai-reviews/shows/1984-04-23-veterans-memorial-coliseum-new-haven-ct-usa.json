@@ -1,0 +1,79 @@
+{
+  "summary": "Uncle John's Band jam and Only A Fool shine amid uneven set",
+  "blurb": "The show delivers a standout Uncle John's Band extended jam and the rare Only A Fool performance. Brent Mydland’s keyboards are a highlight throughout, while Jerry’s guitar is uneven with strong moments and occasional slips. The second set drifts into spacey improvisations, but the first set feels brief.",
+  "review": "On April 23, 1984 at Veterans Memorial Coliseum, the Dead slipped into an oddly short first set that still managed a few bright spots—Jerry’s gritty lead on Jack Straw and a solid Sugaree, plus Brent Mydland’s kaleidoscopic keyboards weaving through Cassidy and Might As Well. The real fireworks erupted in the second set: a sprawling Uncle John's Band that stretched beyond seventeen minutes, punctuated by the one‑off Only A Fool tape‑flip moment, and a languid Spanish Jam that let Mickey and Bill explore experimental textures. Phil Lesh was “monster” all night, laying down bass bombs and even delivering a massive Day Tripper tease before Sugaree on some tapes. Bob Weir kept things grounded, though his signature slide was notably missing. Overall the concert feels like a mixed bag—highlights that will make any Deadhead grin, tempered by occasional vocal drops, lyrical flubs, and a first set that leaves you wanting more.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 37,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Four recordings expressed clear positivity (notably the FOH mix, audience tapes with strong jams, and the clean SBD of the second set) while six were mixed, citing drop‑outs or uneven flow. The balance leans modestly positive, warranting a moderate +0.8 sentiment boost.",
+      "final_calculation": "2.5 + 0.3 + 0.8 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1984-04-23.sbd.walker-scotton.miller.105927.flac16",
+    "reason": "Good overall balance with Brent’s keyboards front‑and‑center; despite occasional drop‑outs and bright cymbals, it captures the first set energy best."
+  },
+  "key_highlights": [
+    "Extended Uncle John's Band jam (17+ minutes) that dominates the second set.",
+    "Rare Only A Fool tape‑flip moment highlighted by Brent’s organ work.",
+    "Spacey Spanish Jam offering experimental drumming and keyboard textures.",
+    "Strong first‑set moments like Jack Straw, Cassidy, and Might As Well."
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Sugaree",
+    "Cassidy",
+    "Might As Well",
+    "Lost Sailor",
+    "Saint Of Circumstance",
+    "Uncle John's Band",
+    "Only A Fool",
+    "Spanish Jam"
+  ],
+  "band_performance": {
+    "Jerry": "Jerry’s guitar swings between gritty, inspired leads on Uncle John's Band and occasional slips—flubbed Sugaree lyric and a rough Black Peter—but still delivers memorable runs.",
+    "Phil": "Phil is a powerhouse all night, dropping bass bombs, delivering the biggest Day Tripper tease, and anchoring the band with relentless energy.",
+    "Bob": "Bob stays steady but holds back his usual slide work, offering a more restrained rhythm foundation throughout.",
+    "Brent": "Brent shines with varied, trippy organ textures; he drives the Only A Fool segment and adds sparkle to every jam, especially in the second‑set improvisations.",
+    "Mickey": "Mickey contributes creative spacey drumming, though at times the dual‑drum lock‑up is loose, particularly on recordings with harsh treble hiss.",
+    "Billy": "Bill mirrors Mickey’s adventurous approach, providing experimental fills but occasionally struggling to sync during the free‑form sections."
+  },
+  "processed_recordings": 9,
+  "processed_date": "2025-09-14T16:49:16.860713+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw"
+    ],
+    [
+      "Sugaree"
+    ],
+    [
+      "Cassidy"
+    ],
+    [
+      "Hell In A Bucket",
+      "Might As Well"
+    ],
+    [
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "Uncle John's Band",
+      "Only A Fool",
+      "Drums",
+      "Space",
+      "Spanish Jam",
+      "Truckin'",
+      "Black Peter",
+      "Around & Around",
+      "Good Lovin'"
+    ]
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Fair audience recording of a lukewarm Boulder show, highlighted by a scorching Sailor/​Saint jam.",
+  "review": "The three fan reviews agree that the performance is overall mediocre – two call it sub‑standard while one recalls a fun, hot day in Boulder. The only musical high point mentioned is the “Sailor / Saint” jam, which several reviewers describe as \"real hot.\" The tape is an audience (AUD) source and, although considered the best of the available crowd recordings for this date, it still lacks the clarity of a soundboard.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "medium",
+    "rationale": "Show quality is rated around average to below‑average and recording is only fair; weighted average (70% show, 30% tape) yields a low‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audience tape; better than other AUD sources for this date but still missing the clarity and balance of a soundboard, with some muddiness noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sailor / Saint"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall set felt uneven; only the Sailor/​Saint jam stands out while the rest of the performance is described as sub‑standard."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sailor / Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:13:26.217858+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-07.128414.naks.mason.flac16"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent clean soundboard capture of a strong first set highlighted by Foolish Heart and Row Jimmy, with a solid but shorter second set.",
+  "review": "The recording is praised as a clean, clear sound‑board source that reproduces the band’s performance very well. Reviewers love the first set – especially Foolish Heart, Bertha, Row Jimmy, Dire Wolf and Loose Lucy – while noting the second set was shorter and more average in song choice but still well played. Overall the show is regarded as a memorable Knickerbocker night with Jerry’s playing getting particular kudos.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently positive comments on both performance and recording; strong first‑set highlights and clean soundboard give a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean, clear SBD with no reported dropouts or major issues; reviewers describe it as \"nice clean sbd\" and \"great sound quality.\""
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart",
+      "Row Jimmy",
+      "Bertha",
+      "Dire Wolf",
+      "Loose Lucy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set receives high praise for song choice and execution; second set is noted as shorter and more average in stock songs but still competently performed."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry’s guitar work and stage presence, noting he seemed especially inspired at this Knickerbocker show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T06:48:00.543819+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-11.sbd.ladner.8069.sbeok.shnf"
+}

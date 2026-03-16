@@ -1,0 +1,106 @@
+{
+  "summary": "Outstanding audience tape of a mellow 1979 show, highlighted by The Other One, Miracle and Sugar Magnolia with crystal‑clear instrument separation.",
+  "review": "The recording is an exceptionally clear audience capture by Mr. Moore (with Charlie Miller’s mastering), rivaling matrix releases in fidelity. Musically the night is relaxed yet punctuated by strong moments – Jerry shines on El Paso and Sugar Magnolia, Phil adds rare vocals on The Other One, and the band delivers powerful versions of Miracle and The Other One while Dark Star falls flat.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the superb audience recording and the musical performance, with only a few mild criticisms; the weighted average of show (70%) and recording (30%) yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Outstanding audience tape captured by Mr. Moore, rich instrument separation, very little crowd noise; described as comparable to matrix releases and ‘maybe the best audience recording I've heard.’"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Miracle",
+      "Sugar Magnolia",
+      "El Paso",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Dark Star",
+      "Minglewood"
+    ],
+    "setlist_flow": "A mellow, relaxed set that stays fresh with occasional aggressive bursts; the second jam stretches out beautifully and the overall pacing keeps the listener engaged."
+  },
+  "band_member_comments": {
+    "Jerry": "Wonderful playing on El Paso, delicate finger‑picking on Peggy‑O, and a near‑perfect solo to close Sugar Magnolia.",
+    "Phil": "Mostly absent vocally due to Donna’s missing; later steps in with backup vocals on The Other One.",
+    "Bob": "Rakes the Ibanez hard during the ‘It’s all over now’ jam, delivering strong lead work.",
+    "Keys": "Keith is barely audible – only a faint tinkle on Not Fade Away and generally absent from the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger-Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's all over now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:43:56.833460+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-20.fob.nak700.moore.miller.99385.sbeok.flac16"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard recording that shines in the early jams – a blistering Dark Star and a monumental The Other One – despite a drop‑off after New Potato.",
+  "review": "The tape captures one of the hottest early‑Dead performances, with Jerry Garcia’s guitar blazing through an epic Dark Star and a ferocious The Other One that many reviewers call “monumental.” Recording quality is sublime up until New Potato, where the sound noticeably falls off, and the track splits interrupt the flow. Overall the show is celebrated for its intensity and interplay, even if Bob’s rhythm work is often buried in the mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All six reviews are strongly positive (average 4.67★); the musical performance is praised as exceptional while the recording is mostly excellent with only a minor later‑show degradation."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Early sections are crisp and “sublime,” but the audio plummets after New Potato. Reviewers note track‑splitting interruptions that affect listening continuity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One",
+      "Cryptical Suite",
+      "Caution > Feedback"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Two‑segment show with a high‑energy first half dominated by expansive jams; later portion suffers from reduced sonic clarity but still contains the acclaimed Cryptical→The Other One sequence and a powerful Caution→Feedback outro."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as “awesome,” “on fire,” and a perfect blend of his ’69 baroque tone with raw surf‑style playing.",
+    "Phil": "Lesh’s interplay with Garcia on The Other One is called “off‑the‑charts brilliant” and “breathtaking.”",
+    "Bob": "Bobby’s rhythm guitar is often missing or buried in the mix; his brief vocal moment is highlighted as an exciting surprise.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cryptical Suite": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Caution > Feedback": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T09:43:07.044128+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-11-01.sbd.kaplan.17080.sbeok.shnf"
+}

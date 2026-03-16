@@ -1,0 +1,63 @@
+{
+  "summary": "Clean soundboard capture of an electrifying Oct 20 1984 show highlighted by a blistering Jack Straw and soaring Take a Step Back.",
+  "review": "The recording, though mono, is praised for its crystal‑clear soundboard quality that lets the band’s intensity shine through. Fans repeatedly cite the ferocious Jack Straw, the spacey Take a Step Back, and the high‑energy Bertha > Greatest Story as show‑highlights, while a few note uneven moments in the first set. Overall the performance is regarded as one of the strongest from the 1984 tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average user rating ≈ 3.8 with a strong skew toward 4–5 stars; most comments praise both the music and the surprisingly clear mono soundboard, outweighing isolated negative remarks."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mono mix noted as a limitation but described by many reviewers as crisp, crystalline and ‘cleanest’ of any Jack Straw; no major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Take a Step Back",
+      "Bertha > Greatest Story Ever Told",
+      "Bird Song",
+      "Shakedown > Samson"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy opener through to a powerful second set; the band stays tight and intense, though a few listeners felt the first set was uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for ripping solos, indescribable licks and an electrifying presence throughout the show.",
+    "Phil": "",
+    "Bob": "Mentioned as being slightly drunk and having a sore throat, which made his vocals a bit rough in places, but still contributed to the overall vibe.",
+    "Keys": "Brent’s organ work on Black Peter highlighted; keyboards generally supportive of the jams.",
+    "Drums": "Mickey's ‘spaciest’ Take a Step Back noted positively; one reviewer called the drumming sloppy in set 1."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Take a Step Back": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Bertha > Greatest Story Ever Told": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Shakedown > Samson": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-14T23:19:48.495961+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-20.sbd.miller.105445.flac16"
+}

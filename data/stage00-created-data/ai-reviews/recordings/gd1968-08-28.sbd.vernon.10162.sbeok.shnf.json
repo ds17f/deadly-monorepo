@@ -1,0 +1,64 @@
+{
+  "summary": "A strong August ’68 set with a soaring Dark Star and stellar Eleven, but the listenable yet low‑volume soundboard recording falls short of top‑tier quality.",
+  "review": "The performance shines – Dark Star is described as beautiful, St. Stephen rocks, and the Eleven is hailed as the high point with Jerry flying at mach speed alongside Phil. The only real musical blemish is a weak Death Don’t Have No Mercy, and the recording suffers from low volume and overall below‑par fidelity, making it merely listenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Show quality is praised strongly while recording quality is noted as sub‑par; combined weighted score yields a solid but not outstanding rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Listen­able but below par; notably low volume throughout, lacking the clarity of other August ’68 recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "St. Stephen",
+      "Eleven",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Death Don't Have No Mercy"
+    ],
+    "setlist_flow": "Starts with high energy, builds momentum through Dark Star and St. Stephen, peaks at the Eleven, then dips on a weak Death Don’t Have No Mercy before recovering with a solid Lovelight."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for beautiful Dark Star tone, flying through the Eleven, and tasteful soloing on Lovelight.",
+    "Phil": "Noted for staying close behind Jerry during the Eleven, providing strong bass support.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T09:04:32.840302+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-08-28.sbd.vernon.10162.sbeok.shnf"
+}

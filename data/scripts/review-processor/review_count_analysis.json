@@ -1,0 +1,6329 @@
+{
+  "distribution": {
+    "total_shows": 1960,
+    "min_reviews": 1,
+    "max_reviews": 784,
+    "mean_reviews": 37.099489795918366,
+    "median_reviews": 28.0,
+    "percentiles": {
+      "10th": 13,
+      "25th": 19,
+      "50th": 28,
+      "75th": 45,
+      "90th": 68,
+      "95th": 92,
+      "99th": 157
+    }
+  },
+  "rating_boost_tiers": {
+    "tier_1": {
+      "range": "5-19 reviews",
+      "boost": 0.1,
+      "description": "Above minimal threshold"
+    },
+    "tier_2": {
+      "range": "20-28 reviews",
+      "boost": 0.2,
+      "description": "Standard attention"
+    },
+    "tier_3": {
+      "range": "29-45 reviews",
+      "boost": 0.3,
+      "description": "Notable attention"
+    },
+    "tier_4": {
+      "range": "46-155 reviews",
+      "boost": 0.4,
+      "description": "High attention"
+    },
+    "tier_5": {
+      "range": "156+ reviews",
+      "boost": 0.5,
+      "description": "Exceptional attention"
+    }
+  },
+  "exceptional_shows": [
+    {
+      "show_id": "1977-05-08-barton-hall-cornell-u-ithaca-ny-usa",
+      "date": "1977-05-08",
+      "venue": "Barton Hall, Cornell University",
+      "total_reviews": 784,
+      "total_recordings": 23,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd77-05-08.sbd.hicks.4982.sbeok.shnf",
+          "review_count": 295
+        },
+        {
+          "recording_id": "gd1977-05-08.sbd.cantor.sacks.266.shnf",
+          "review_count": 36
+        },
+        {
+          "recording_id": "gd1977-05-08.111493.mtx.seamons.sbeok.flac16",
+          "review_count": 34
+        },
+        {
+          "recording_id": "gd1977-05-08.mtx.seamons.97274.sbeok.flac16",
+          "review_count": 18
+        },
+        {
+          "recording_id": "gd77-05-08.matrix.dan.26857.sbeok.flacf",
+          "review_count": 71
+        },
+        {
+          "recording_id": "gd77-05-08.maizner.hicks.5002.sbeok.shnf",
+          "review_count": 115
+        },
+        {
+          "recording_id": "gd77-05-08.dts.dan.26856.sbeok.flacf",
+          "review_count": 11
+        },
+        {
+          "recording_id": "gd1977-05-08.148737.SBD.Betty.Anon.Noel.t-flac2448",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1977-05-08.sbd.cube.87486.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1977-05-08.137570.mtx.dusborne.flac16",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd1977-05-08.mtx.dan.29511.flac16",
+          "review_count": 29
+        },
+        {
+          "recording_id": "gd1977-05-08.mtx.dan.35086.flac24",
+          "review_count": 19
+        },
+        {
+          "recording_id": "gd1977-05-08.mtx.dts.dan.30756.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1977-05-08.137569.mtx.dusborne.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-05-08.aud.moore.cribbs.28301.shnf",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1977-05-08.aud.moore.berger.28354.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1977-05-08.ecm33p.moore.berger.miller.117026.flac16",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd1977-05-08.ecm33p.moore.berger.miller.117027.flac24",
+          "review_count": 17
+        },
+        {
+          "recording_id": "gd1977-05-08.shure57.stevenson.29303.flac16",
+          "review_count": 107
+        },
+        {
+          "recording_id": "gd1977-05-08.152379.aud.petrunis.flac2448",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1977-05-08.137571.mtx-2aud.dusborne.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1977-05-08.134093.aud.cooper.berger.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-05-08.137572.mtx-2aud.dusborne.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1995-07-09-soldier-field-chicago-il-usa",
+      "date": "1995-07-09",
+      "venue": "Soldier Field",
+      "total_reviews": 460,
+      "total_recordings": 11,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1995-07-09.sbd.gardner.4091.shnf",
+          "review_count": 30
+        },
+        {
+          "recording_id": "gd1995-07-09.sbd.miller.114369.flac16",
+          "review_count": 21
+        },
+        {
+          "recording_id": "gd95-07-09.sbd.7233.sbeok.shnf",
+          "review_count": 361
+        },
+        {
+          "recording_id": "gd1995-07-09.aud.mahoney.86405.flac16",
+          "review_count": 18
+        },
+        {
+          "recording_id": "gd1995-07-09.aud.liberated-bootleg.larson.27977.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1995-07-09.schoeps.wklitz.95445.flac16",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd1995-07-09.127735.nick.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1995-07-09.schoeps.wklitz.95444.flac1648",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1995-07-09.134130.oade-micro-mics.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1995-07-09.147058.walsh.suraci.at835.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1995-07-09.147057.walsh.suraci.at835.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1977-02-26-swing-auditorium-san-bernardino-ca-usa",
+      "date": "1977-02-26",
+      "venue": "Swing Auditorium",
+      "total_reviews": 308,
+      "total_recordings": 11,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1977-02-26.sbd.cantor.deibert.83283.flac16",
+          "review_count": 22
+        },
+        {
+          "recording_id": "gd77-02-26.sbd.owen.23808.sbeok.shnf",
+          "review_count": 40
+        },
+        {
+          "recording_id": "gd77-02-26.sbd.alphadog.9752.sbeok.shnf",
+          "review_count": 176
+        },
+        {
+          "recording_id": "gd1977-02-26.sbd.hamilton.2519.shnf",
+          "review_count": 11
+        },
+        {
+          "recording_id": "gd1977-02-26.sbd.steve.253.shnf",
+          "review_count": 12
+        },
+        {
+          "recording_id": "gd1977-02-26.sbd.wizard.32009.sbefail.shnf",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1977-02-26.mtx.seamons-bertrando.110037.flac16",
+          "review_count": 20
+        },
+        {
+          "recording_id": "gd1977-02-26.151834.BettyBoardDeibertremasterAnonNoelpartialupgradet-flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1977-02-26.aud.bertrando.110231.flac16",
+          "review_count": 12
+        },
+        {
+          "recording_id": "gd1977-02-26.152023.remaster.partial.upgr.fixed.151834.Betty.Deibert.Anon.Noel.t-flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1977-02-26.170955.sony.ecm270.menke.miller.clugston.flac1648",
+          "review_count": 1
+        }
+      ]
+    },
+    {
+      "show_id": "1973-06-10-robert-f-kennedy-stadium-washington-dc-usa",
+      "date": "1973-06-10",
+      "venue": "RFK Stadium",
+      "total_reviews": 296,
+      "total_recordings": 14,
+      "ai_rating": 4.6,
+      "recording_details": [
+        {
+          "recording_id": "gd1973-06-10.sbd.miller.fix-89640.89730.flac16",
+          "review_count": 12
+        },
+        {
+          "recording_id": "gd1973-06-10.sbd.miller.89640.sbeok.flac16",
+          "review_count": 19
+        },
+        {
+          "recording_id": "gd73-06-10.sbd.hollister.174.sbeok.shnf",
+          "review_count": 217
+        },
+        {
+          "recording_id": "gd1973-06-10.sbd.miller.tobin.patched-89730.90979.flac16",
+          "review_count": 13
+        },
+        {
+          "recording_id": "gd1973-06-10.partial.fob.gadsden.89681.sbeok.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1973-06-10.mtx.tobin.90771.flac16",
+          "review_count": 11
+        },
+        {
+          "recording_id": "gd1973-06-10.131065.mtx.dusborne.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1973-06-10.fob.barry.90351.flac16",
+          "review_count": 12
+        },
+        {
+          "recording_id": "gd1973-06-10.aud.barry-gadsden.tobin.90796.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1973-06-10.136252.aud.cooper.berger.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1973-06-10.121031.barry.smith.AUD-fob.flac2496",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1973-06-10.121030.barry.smith.AUD-fob.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1973-06-10.136253.aud.cooper.berger.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1973-06-10.dts.tobin.90794.flac",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1971-08-06-hollywood-palladium-hollywood-ca-usa",
+      "date": "1971-08-06",
+      "venue": "Hollywood Palladium",
+      "total_reviews": 291,
+      "total_recordings": 14,
+      "ai_rating": 4.5,
+      "recording_details": [
+        {
+          "recording_id": "gd1971-08-06.mtx.seamons.96668.sbeok.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd71-08-06.aud.bertrando.yerys.129.sbeok.shnf",
+          "review_count": 200
+        },
+        {
+          "recording_id": "gd71-08-06.aud.sirmick.30224.sbeok.flacf",
+          "review_count": 16
+        },
+        {
+          "recording_id": "gd1971-08-06.fob-SonyECM22p.miller.88816.sbeok.flac16",
+          "review_count": 33
+        },
+        {
+          "recording_id": "gd1971-08-06.sbd.miller.96541.sbeok.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1971-08-06.110278.sbd.Bertha.dvda",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1971-08-06.mtx.chappell.97015.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1971-08-06.mtx.tobin.130793.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1971-08-06.GEMS.Smith.Kaslow-Todd.109430.flac24",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1971-08-06.aud.kaslow.smith.94261.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1971-08-06.fob.kaslow.kasper.sirmick.77457.flac16",
+          "review_count": 11
+        },
+        {
+          "recording_id": "gd1971-08-06.aud.wolfe.smith.114390.flac24",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1971-08-06.127690.aud.kaslow-wolfe-smith.flac24",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1971-08-06.dts.tobin.130794.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1973-02-15-dane-county-coliseum-madison-wi-usa",
+      "date": "1973-02-15",
+      "venue": "Dane County Coliseum",
+      "total_reviews": 239,
+      "total_recordings": 8,
+      "ai_rating": 4.5,
+      "recording_details": [
+        {
+          "recording_id": "gd1973-02-15.sbd.hall.1580.shnf",
+          "review_count": 21
+        },
+        {
+          "recording_id": "gd73-02-15.sbd.hall.1580.sbeok.shnf",
+          "review_count": 197
+        },
+        {
+          "recording_id": "gd1973-02-15.134028.sbd.menke-lee-smith.flac24",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1973-02-15.112812.sbd.arf.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1973-02-15.134029.sbd.menke-lee-smith.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1973-02-15.150175.sbd-fixed.miller.flac1648",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1973-02-15.124360.mtx.dusborne.flac16",
+          "review_count": 13
+        },
+        {
+          "recording_id": "gd1973-02-15.aud.partial.124195.flac",
+          "review_count": 2
+        }
+      ]
+    },
+    {
+      "show_id": "1977-05-07-boston-garden-boston-ma-usa",
+      "date": "1977-05-07",
+      "venue": "Boston Garden",
+      "total_reviews": 235,
+      "total_recordings": 9,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd77-05-07.sbd.bertha-ashley.26361.sbeok.shnf",
+          "review_count": 30
+        },
+        {
+          "recording_id": "gd77-05-07.sbd.unknown.262.sbefail.shnf",
+          "review_count": 53
+        },
+        {
+          "recording_id": "gd1977-05-07.sbd.miller.88525.flac16",
+          "review_count": 39
+        },
+        {
+          "recording_id": "gd77-05-07.sbd.eaton.wizard.26085.sbeok.shnf",
+          "review_count": 93
+        },
+        {
+          "recording_id": "gd77-05-07.rolfe.weiner.6021.sbeok.shnf",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd1977-05-07.148736.SBD.Betty.Anon.Noel.t-flac2448",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1977-05-07.148755.SBD.Betty.Anon.Noel.fix.t-flac2448",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-05-07.124619.mtx.dusborne.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1977-05-07.167736.ShureSM57.Sublette.noel.goldey.t-flac2496",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1977-05-09-community-war-memorial-auditorium-buffalo-ny-usa",
+      "date": "1977-05-09",
+      "venue": "War Memorial Auditorium",
+      "total_reviews": 217,
+      "total_recordings": 7,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1977-05-09.sbd.painoman.77462.shnf",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd1977-05-09.123480.sbd.miller.flac16",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd77-05-09.sbd.connor.8304.sbeok.shnf",
+          "review_count": 135
+        },
+        {
+          "recording_id": "gd1977-05-09.sbd.trick-jason.268.shnf",
+          "review_count": 13
+        },
+        {
+          "recording_id": "gd77-05-09.aud.maizner.vernon.8036.sbeok.shnf",
+          "review_count": 24
+        },
+        {
+          "recording_id": "gd1977-05-09.mtx.seamons.98168.flac16",
+          "review_count": 23
+        },
+        {
+          "recording_id": "gd1977-05-09.135189.mtx.dusborne.flac16",
+          "review_count": 3
+        }
+      ]
+    },
+    {
+      "show_id": "1972-08-27-old-renaissance-faire-grounds-veneta-or-usa",
+      "date": "1972-08-27",
+      "venue": "Old Renaissance Faire Grounds",
+      "total_reviews": 180,
+      "total_recordings": 7,
+      "ai_rating": 4.9,
+      "recording_details": [
+        {
+          "recording_id": "gd1972-08-27.sbd.hollister.2199.sbeok.shnf",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd72-08-27.sbd.orf.3328.sbeok.shnf",
+          "review_count": 80
+        },
+        {
+          "recording_id": "gd72-08-27.sbd.braverman.16582.sbefail.shnf",
+          "review_count": 56
+        },
+        {
+          "recording_id": "gd1972-08-27.sbd.latvala-eaton-lutch-dankseed.4682.shnf",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1972-08-27.sbd.serafin.8045.sbefail.shnf",
+          "review_count": 11
+        },
+        {
+          "recording_id": "gd72-08-27.sbd.bertha-ashley.21619.sbeok.shnf",
+          "review_count": 15
+        },
+        {
+          "recording_id": "gd1972-08-27.sbd.kaplan-hamilton.152.shnf",
+          "review_count": 4
+        }
+      ]
+    },
+    {
+      "show_id": "1973-02-09-roscoe-maples-pavilion-stanford-u-palo-alto-ca-usa",
+      "date": "1973-02-09",
+      "venue": "Roscoe Maples Pavilion, Stanford U.",
+      "total_reviews": 178,
+      "total_recordings": 8,
+      "ai_rating": 4.5,
+      "recording_details": [
+        {
+          "recording_id": "gd1973-02-09.sbd.ashley.12571.shnf",
+          "review_count": 32
+        },
+        {
+          "recording_id": "gd73-02-09.sbd.bertha-fink.14939.sbeok.shnf",
+          "review_count": 63
+        },
+        {
+          "recording_id": "gd73-02-09.sbd.allred.9888.sbeok.shnf",
+          "review_count": 67
+        },
+        {
+          "recording_id": "gd1973-02-09.sbd.finney.10361.shnf",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1973-02-09.141001.sbd.14939-spdcor.flac1644",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1973-02-09.150166.sbd.miller.flac1644",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1973-02-09.134398.sbd.menke-lee-smith.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1973-02-09.134399.sbd.menke-lee-smith.flac24",
+          "review_count": 2
+        }
+      ]
+    },
+    {
+      "show_id": "1983-10-17-olympic-center-lake-placid-ny-usa",
+      "date": "1983-10-17",
+      "venue": "Olympic Center",
+      "total_reviews": 172,
+      "total_recordings": 25,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd83-10-17.sbd.miller.27585.sbeok.flacf",
+          "review_count": 18
+        },
+        {
+          "recording_id": "gd1983-10-17.mtx.seamons.fix2.92424.sbeok.flac16",
+          "review_count": 63
+        },
+        {
+          "recording_id": "gd1983-10-17.mtx.seamons.fix-91192.91239.sbeok.shnf",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd83-10-17.set1-sbd.skankweed.26460.sbeok.shnf",
+          "review_count": 14
+        },
+        {
+          "recording_id": "gd1983-10-17.senn441-u87.eaton.miller.91126.sbeok.flac16",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd1983-10-17.senn441.jackson.gmb.88957.sbeok.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd83-10-17.sennheiser.skank-levy.347.sbeok.shnf",
+          "review_count": 45
+        },
+        {
+          "recording_id": "gd1983-10-17.mtx.seamons.91192.sbeok.shnf",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1983-10-17.111611.Sennheiser.daweez.d5scott.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1983-10-17.143306.mke2002.holbrook.flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1983-10-17.fob.beyer.dyche.105301.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1983-10-17.122384.chaisingwilma.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1983-10-17.137328.senn421.miller.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1983-10-17.fob.senn421.chasingwilma.102070.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1983-10-17.135187.Unk-Hill.Keo.Flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-17.135188.Unk-Hill.Keo.Flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-17.137305.senn421.miller.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-17.143304.beyerm201.holbrook.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-17.143305.beyerm201.holbrook.flac2448",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-17.143307.mke2002.holbrook.flac2448",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-17.148173.fob.akg.d330bt.senn421.hecht.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-17.148174.fob.akg.d330bt.senn421.hecht.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-17.164608.senn421.vita.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-17.164609.senn421.vita.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-17.166001.AudioTechnica.caffrey.flac1644",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1985-06-30-merriweather-post-pavilion-columbia-md-usa",
+      "date": "1985-06-30",
+      "venue": "Merriweather Post Pavilion",
+      "total_reviews": 170,
+      "total_recordings": 28,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1985-06-30.sbd.brame-hinko.23223.sbeok.shnf",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd1985-06-30.sbd.miller.89192.sbeok.flac16",
+          "review_count": 40
+        },
+        {
+          "recording_id": "gd85-06-30.sbd.miller.30158.sbeok.flacf",
+          "review_count": 17
+        },
+        {
+          "recording_id": "gd1985-06-30.mtx.seamons.94642.sbeok.flac16",
+          "review_count": 18
+        },
+        {
+          "recording_id": "gd85-06-30.sbd.georges.366.sbeok.shnf",
+          "review_count": 27
+        },
+        {
+          "recording_id": "gd85-06-30.oade-schoeps.sacks.25242.sbeok.flacf",
+          "review_count": 26
+        },
+        {
+          "recording_id": "gd1985-06-30.nak-beyer.tonys.79641.sbeok.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1985-06-30.165131.s2.sbd.pcm.latvala.miller.flac1644",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1985-06-30.akgC422.holbrook.burke.84267.sbeok.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1985-06-30.138280.senn441.mccue.meade.sbeok.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-30.151255.sbd.marcus.miller.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-30.171568.mtx.seamons.ht23.flac1644",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd85-06-30.aud.oade-sacks.set2.7833.sbefail.shnf",
+          "review_count": 19
+        },
+        {
+          "recording_id": "gd85-06-30.aud.set1.mckeown.7893.sbefail.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1985-06-30.akgC422.holbrook.burke.84246.flac24",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1985-06-30.126176.chasingwilma.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1985-06-30.141619.OTS.AT835b-AKGD12e-Blend.Ackerman.Miller.Noel.t-flac2496",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1985-06-30.138288.senn441.mccue.meade.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-30.144154.set2.nak304.guy.pailes.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-30.144155.set2.nak304.guy.pailes.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-30.145353.ots.at.835b.akg.d12e.blend.ackerman.miller.noel.t-flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-30.148522.fob.senn.me80.hessberg.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-30.148523.fob.senn.me80.hessberg.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-30.152701.akgc422.davis-murtha.holbrook.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-30.152702.akgc422.davis-murtha.holbrook.flac2448",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-30.at835-d12e.Ackerman-Taraszki.102134.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-30.cpb.2nd-retransfer.33702.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-30.nakcm304-beyerm101.suraci.89039.flac24",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1975-06-17-winterland-arena-san-francisco-ca-usa",
+      "date": "1975-06-17",
+      "venue": "Winterland Arena",
+      "total_reviews": 169,
+      "total_recordings": 15,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1975-06-17.sbd.GEMS.96125.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd75-06-17.bertrando.unknown.233.sbeok.shnf",
+          "review_count": 34
+        },
+        {
+          "recording_id": "gd1975-06-17.171166.set2.winterland.sbd.mr.miller.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd75-06-17.sbd.partial.backus.20084.sbeok.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1975-06-17.145779.sbd.pcm.dalton.miller.noel.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1975-06-17.171164.set2.sbd.mr.miller.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1975-06-17.mtx.tobin.96148.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1975-06-17.mtx.menke.gems.97079.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1975-06-17.mtx.chappell.SB7.29465.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1975-06-17.mtx.dts.tobin.96162.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1975-06-17.aud.unknown.87560.flac16",
+          "review_count": 102
+        },
+        {
+          "recording_id": "gd1975-06-17.fob.menke.motb.97077.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1975-06-17.fob.menke.motb.97078.flac24",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1975-06-17.143102.SonyECM-280.bertrando.dalton.sirmick.miller.fixed.flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1975-06-17.143100.SonyECM-280.bertrando.dalton.sirmick.miller.flac1644",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1975-09-28-lindley-meadows-golden-gate-park-san-francisco-ca-usa",
+      "date": "1975-09-28",
+      "venue": "Lindley Meadows, Golden Gate Park",
+      "total_reviews": 168,
+      "total_recordings": 8,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd75-09-28.sbd.bertha-ashley.22257.sbeok.shnf",
+          "review_count": 41
+        },
+        {
+          "recording_id": "gd75-09-28.sbd.fink.9392.sbeok.shnf",
+          "review_count": 63
+        },
+        {
+          "recording_id": "gd1975-09-28.mtx.seamons.102155.sbeok.flac16",
+          "review_count": 17
+        },
+        {
+          "recording_id": "gd1975-09-28.sbd.unknown.2562.sbefail.shnf",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1975-09-28.aud.gofob.86250.flac16",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd1975-09-28.fob.menke-falanga.motb-0069.91770.flac24",
+          "review_count": 16
+        },
+        {
+          "recording_id": "gd1975-09-28.fob.menke-falanga.motb-0069.91769.flac16",
+          "review_count": 14
+        },
+        {
+          "recording_id": "gd1975-09-28.unknown.beggs.236.shnf",
+          "review_count": 4
+        }
+      ]
+    },
+    {
+      "show_id": "1987-09-18-madison-square-garden-new-york-ny-usa",
+      "date": "1987-09-18",
+      "venue": "Madison Square Garden",
+      "total_reviews": 168,
+      "total_recordings": 24,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1987-09-18.sbd.finney.394.shnf",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd87-09-18.sbd.samaritano.20025.sbeok.shnf",
+          "review_count": 76
+        },
+        {
+          "recording_id": "gd1987-09-18.nak300.damico.90241.sbeok.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd87-09-18.sbd-remaster.cole.19002.sbeok.shnf",
+          "review_count": 46
+        },
+        {
+          "recording_id": "gd87-09-18.sbd-healy-ultra-box.samaritano.21241.sbeok.shnf",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1987-09-18.sbd.bobh.10536.sbeok.shnf",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1987-09-18.137535.sbd.miller.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1987-09-18.124840.sbd.sbeok.Eichorn.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1987-09-18.sbd.painoman.76470.sbeok.shnf",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1987-09-18.126165.mtx-redo.eichorn.sbeok.t-flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1987-09-18.nakcm304.suraci.82359.sbeok.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1987-09-18.126038.mtx.eichorn.sbeok.t-flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1987-09-18.137533.sbd.miller.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1987-09-18.134393.set1.sbd.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1987-09-18.sbd-pcm.lynn.34707.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1987-09-18.mtx.hansokolow.96139.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1987-09-18.134455.mtx.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1987-09-18.nak300.gidley.116004.flac2448",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1987-09-18.nak300.pasternak.mallick.105497.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1987-09-18.125735.AT835.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1987-09-18.134456.dts.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1987-09-18.134825.sur5-1.tobin.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1987-09-18.154309.senn.me80.hessberg.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1987-09-18.154310.senn.me80.hessberg.miller.clugston.flac2496",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1989-10-09-hampton-coliseum-hampton-va-usa",
+      "date": "1989-10-09",
+      "venue": "Hampton Coliseum",
+      "total_reviews": 167,
+      "total_recordings": 27,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd89-10-09.sbd.serafin.7721.sbeok.shnf",
+          "review_count": 83
+        },
+        {
+          "recording_id": "gd89-10-09.sbd.paino.2276.sbeok.shnf",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1989-10-09.sbd.miller.32902.sbeok.flac16",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd1989-10-09.sbd.miller.80840.sbeok.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1989-10-09.mtx.dan.26236.sbeok.shnf",
+          "review_count": 11
+        },
+        {
+          "recording_id": "gd1989-10-09.nak304.carpenter.89563.sbeok.flac16",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd89-10-09.schoeps.howland.443.sbeok.shnf",
+          "review_count": 14
+        },
+        {
+          "recording_id": "gd1989-10-09.aud.robr.31211.sbeok.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1989-10-09.aud.fishman.17704.sbeok.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1989-10-09.147611.ultramatrix.sbd.pearson.miller.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-10-09.147621.UltraMatrix.sbd.cm.miller.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-10-09.dts.dan.26235.sbeok.shnf",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-10-09.mtx.v2.haugh.92495.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1989-10-09.mtx.dts.haugh.92005.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1989-10-09.158308.mtx.seamons.ht144.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1989-10-09.154041.mtx.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-10-09.125738.mk4.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1989-10-09.131003.cmc521.fob.deal.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1989-10-09.099647",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1989-10-09.120403.Nak300sSenn441.AlabamaBob.Currier.Keo.Flac2496",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1989-10-09.120404.Nak300sSenn441.AlabamaBob.Currier.Keo.Flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-10-09.125737.mk4.48khz.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-10-09.142510.fob.schoeps.cmc4.mk4.mattes.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-10-09.154042.dts.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-10-09.154043.5-1.tobin.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-10-09.dts-dvdaudio.haugh.92553.dvdf",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-10-09.nak300.juteau.116646.flac",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1974-06-23-jai-alai-fronton-miami-fl-usa",
+      "date": "1974-06-23",
+      "venue": "Jai-Alai Fronton",
+      "total_reviews": 164,
+      "total_recordings": 18,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1974-06-23.sbd.matrix-sb21b.chappell.83489.flac16",
+          "review_count": 28
+        },
+        {
+          "recording_id": "gd74-06-23.sbd.cribbs.16780.sbeok.shnf",
+          "review_count": 62
+        },
+        {
+          "recording_id": "gd1974-06-23.sbd.OBV.30846.shnf",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd74-06-23.moore.weiner.gdADT.14265.sbeok.shnf",
+          "review_count": 14
+        },
+        {
+          "recording_id": "gd1974-06-23.aud.obv.96890.sbeok.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1974-06-23.122255.upg-sbd.smith-tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1974-06-23.sbd.sacks.213.shnf",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1974-06-23.mtx.seamons.105983.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1974-06-23.mtx.seamons.105867.flac24",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd1974-06-23.122269.mtx.tobin.flac24",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1974-06-23.122270.mtx.tobin.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1974-06-23.aud.moore.berger.84615.flac16",
+          "review_count": 14
+        },
+        {
+          "recording_id": "gd1974-06-23.akgd1000e.moore.berger.105755.flac24",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1974-06-23.aud-merin.weiner.7894.shnf",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1974-06-23.148679.Moore.acetboy.flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1974-06-23.sdb.smith.116312.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1974-06-23.122271.dts.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1974-06-23.145674.aud.akg-d1000e.moore.berger.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1974-05-19-portland-memorial-coliseum-portland-or-usa",
+      "date": "1974-05-19",
+      "venue": "Portland Memorial Coliseum",
+      "total_reviews": 163,
+      "total_recordings": 8,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1974-05-19.sbd.aj.203.sbeok.shnf",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1974-05-19.sbd.miller.116983.flac16",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd1974-05-19.sbd.fix.miller.107165.flac16",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd74-05-19.sbd.clugston.6957.sbeok.shnf",
+          "review_count": 114
+        },
+        {
+          "recording_id": "gd1974-05-19.sbd.miller.106716.flac16",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd1974-05-19.sbd.clugston.thir13en.remaster-6957.79781.sbeok.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1974-05-19.131464.mtx.dusborne.flac16",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd1974-05-19.115876.aud-patlee.cousinit.flac16",
+          "review_count": 4
+        }
+      ]
+    },
+    {
+      "show_id": "1990-03-29-nassau-coliseum-uniondale-ny-usa",
+      "date": "1990-03-29",
+      "venue": "Nassau Coliseum",
+      "total_reviews": 163,
+      "total_recordings": 29,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd90-03-29.sbd.hinko.24996.sbeok.shnf",
+          "review_count": 16
+        },
+        {
+          "recording_id": "gd90-03-29.sbd.nawrocki.3389.sbeok.shnf",
+          "review_count": 49
+        },
+        {
+          "recording_id": "gd90-03-29.sbd.miller.26341.sbeok.shnf",
+          "review_count": 29
+        },
+        {
+          "recording_id": "gd90-03-29.aud-fob.set2.unknown.1317.sbeok.shnf",
+          "review_count": 34
+        },
+        {
+          "recording_id": "gd1990-03-29.sbd.miller.tetzeli.fix-26341.33925.reflac.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1990-03-29.aud.nawrocki.29191.sbeok.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1990-03-29.149396.sbd.ultramatrix.miller.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-03-29.149419.UltraMatrix.sbd.cm.miller.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-03-29.sbd.unknown.4686.sbefail.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-03-29.senn-me80.litzenberger.91347.sbeok.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1990-03-29.mtx.hansokolow.97118.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1990-03-29.127385.mtx.eichorn.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1990-03-29.149591.mtx.tobin.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-29.149592.mtx.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-29.143171.FOB.Schoeps.Mattes.Miller.Noel.REMASTER.t-flac1648",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1990-03-29.nak300.andrewf.83612.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1990-03-29.149590.PandP-aud.tobin.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-03-29.149594.5-1.tobin.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-03-29.AKG451.Berger.Currier.Keo.121843.Flac1644",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1990-03-29.123924.mk4.48khz.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-03-29.123925.mk4.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-03-29.124324.fixed.mk4.48khz.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-29.124325.fixed.mk4.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-29.141955.FOB.Schoeps.Mattes.Miller.Noel.t-flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-29.149589.PandP-aud.tobin.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-29.149593.dts.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-29.AKG451.Berger.Currier.Keo.121842.Flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-29.Senn441.Fitzy.Keo.126846.Flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-29.Senn441.Fitzy.Keo.126847.Flac1644",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1977-06-09-winterland-arena-san-francisco-ca-usa",
+      "date": "1977-06-09",
+      "venue": "Winterland Arena",
+      "total_reviews": 157,
+      "total_recordings": 10,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1977-06-09.sbd.miller-day.125857.sbeok.flac16",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd1977-06-09.sbd.fishman.3869.sbeok.shnf",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd77-06-09.sbd.murphy.5597.sbefail.shnf",
+          "review_count": 27
+        },
+        {
+          "recording_id": "gd1977-06-09.28614.sbeok.flac16",
+          "review_count": 85
+        },
+        {
+          "recording_id": "gd77-06-09.akg-bertrando.winters.26450.sbeok.shnf",
+          "review_count": 25
+        },
+        {
+          "recording_id": "gd1977-06-09.mtx.seamons.98801.sbeok.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1977-06-09.sbd.dauria.3372.shnf",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-06-09.sbd.john-dauria.1409.shnf",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-06-09.141360.akg-d224.troy.miller.smith.sirmick.flac2496",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1977-06-09.144956.akg.d224.bertrando.troy.miller.smith.sirmick.flac1644",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1968-10-12-avalon-ballroom-san-francisco-ca-usa",
+      "date": "1968-10-12",
+      "venue": "Avalon Ballroom",
+      "total_reviews": 156,
+      "total_recordings": 6,
+      "ai_rating": 4.8,
+      "recording_details": [
+        {
+          "recording_id": "gd1968-10-12.139745.sbd.miller.Glassberg.flac1644",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd68-10-12.sbd.eD.10909.sbeok.shnf",
+          "review_count": 80
+        },
+        {
+          "recording_id": "gd1968-10-12.sbd.miller.115593.flac16",
+          "review_count": 12
+        },
+        {
+          "recording_id": "gd1968-10-12.sbd.miller.86759.sbeok.flac16",
+          "review_count": 49
+        },
+        {
+          "recording_id": "gd1968-10-12.sbd.gans.miller.owen.9385.shnf",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd1968-10-12.sbd.sorochty.125211.flac16",
+          "review_count": 2
+        }
+      ]
+    },
+    {
+      "show_id": "1984-10-12-augusta-civic-center-augusta-me-usa",
+      "date": "1984-10-12",
+      "venue": "Augusta Civic Center",
+      "total_reviews": 156,
+      "total_recordings": 33,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd84-10-12.sbd.clugston.5585.sbeok.shnf",
+          "review_count": 36
+        },
+        {
+          "recording_id": "gd84-10-12.aud.ladner.30192.sbeok.flacf",
+          "review_count": 17
+        },
+        {
+          "recording_id": "gd84-10-12.nak-rice.clugston.356.sbeok.shnf",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd84-10-12.beyer-ficca.ficca.20022.sbeok.shnf",
+          "review_count": 11
+        },
+        {
+          "recording_id": "gd1984-10-12.132814.sbd.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1984-10-12.fob.townshend.85219.sbeok.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-10-12.schoeps.oade.sacks.17412.sbeok.shnf",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-10-12.mtx.seamons.117573.flac16",
+          "review_count": 15
+        },
+        {
+          "recording_id": "gd1984-10-12.nak100.holtz.gems.101952.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd84-10-12-oade.sacks.8795.sbefail.shnf",
+          "review_count": 41
+        },
+        {
+          "recording_id": "gd1984-10-12.beyerm88.suraci.77979.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1984-10-12.139117.FOB.Neumann.U87.billydee.Sellers.Noel.t-flac24",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1984-10-12.143637.set2.nak.blend.guy.miller.clugston.flac1648",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1984-10-12.124399.chasingwilma.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1984-10-12.132822.fob-schoeps.oade.BCE.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1984-10-12.143086.schoeps.sterry.beckwith.miller.clugston.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1984-10-12.148413.fob.neumann.km84i.hecht.miller.clugston.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1984-10-12.nak300.morris.crazyfingers.106647.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1984-10-12.nak700.rolfe.minches.99198.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1984-10-12.132345.Nak100CP4.Hill.Keo.Flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1984-10-12.110040.beyer-senn-daweez.D5scott.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-10-12.132346.Nak100CP4.Hill.Keo.Flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-10-12.137579.aud.lamarre.berger.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-10-12.137580.aud.lamarre.berger.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-10-12.139563.FOB.Neumann.McSheffrey.Gastwirt.Miller.Noel.t-flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-10-12.143087.schoeps.sterry.beckwith.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-10-12.143638.set2.nak.blend.guy.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-10-12.148414.fob.neumann.km84i.hecht.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-10-12.165103.fob.nak100.photoleon.flac2448",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-10-12.168024.beyer.m160.vita.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-10-12.168025.beyer.m160.vita.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-10-12.nak300.morris.113966.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-10-12.schoeps.oade.sacks.nawrocki.fix-17412.18436.sbefail.shnf",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1977-05-25-the-mosque-richmond-va-usa",
+      "date": "1977-05-25",
+      "venue": "The Mosque",
+      "total_reviews": 152,
+      "total_recordings": 11,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1977-05-25.sbd.shannon.fix-13399.82048.sbeok.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1977-05-25.sbd.miller.87591.sbeok.flac16",
+          "review_count": 37
+        },
+        {
+          "recording_id": "gd1977-05-25.sbd.miller.87539.sbeok.flac16",
+          "review_count": 11
+        },
+        {
+          "recording_id": "gd77-05-25.sbd.shannon.13399.sbefail.shnf",
+          "review_count": 86
+        },
+        {
+          "recording_id": "gd1977-05-25.sbd.hamilton.1071.sbeok.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1977-05-25.mtx.tobin.123381.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-05-25.aud.lee.minches.107757.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1977-05-25.147785.fob.shure.sm57.sublette.miller.clugston.flac1648",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1977-05-25.upg-aud.tobin.123382.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1977-05-25.147786.fob.shure.sm57.sublette.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-05-25.dts.tobin.123385.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1971-02-18-capitol-theater-port-chester-ny-usa",
+      "date": "1971-02-18",
+      "venue": "Capitol Theater",
+      "total_reviews": 150,
+      "total_recordings": 12,
+      "ai_rating": 4.6,
+      "recording_details": [
+        {
+          "recording_id": "gd1971-02-18.sbd.cantor-crouch-diebert-gmb.85478.sbeok.flac16",
+          "review_count": 21
+        },
+        {
+          "recording_id": "gd71-02-18.sbd.stephens.6672.sbeok.shnf",
+          "review_count": 25
+        },
+        {
+          "recording_id": "gd71-02-18.sbd.orf.107.sbeok.shnf",
+          "review_count": 68
+        },
+        {
+          "recording_id": "gd1971-02-18.sbd.miller.111793.flac16",
+          "review_count": 29
+        },
+        {
+          "recording_id": "gd1971-02-18.143183.sbd.Dolphinsmile.flac1648",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1971-02-18.157425.sbd.cantor.martin.smith.sirmick.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1971-02-18.148238.aud.composite.davis..smith.miller.clugston.flac1648",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1971-02-18.132136.aud.wgtb.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1971-02-18.aud.cooper.123539.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1971-02-18.123881.aud.cooper.berger.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1971-02-18.132101.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1971-02-18.148239.aud.composite.davis..smith.miller.clugston.flac2496",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1970-11-08-capitol-theater-port-chester-ny-usa",
+      "date": "1970-11-08",
+      "venue": "Capitol Theater",
+      "total_reviews": 147,
+      "total_recordings": 10,
+      "ai_rating": 4.5,
+      "recording_details": [
+        {
+          "recording_id": "gd1970-11-08.aud.weiner.28609.sbeok.shnf",
+          "review_count": 81
+        },
+        {
+          "recording_id": "gd70-11-08.aud.owens.23474.sbeok.shnf",
+          "review_count": 19
+        },
+        {
+          "recording_id": "gd70-11-08.aud.warner.17184.sbeok.shnf",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1970-11-08.aud.lee.pcrp.26975.shnf",
+          "review_count": 22
+        },
+        {
+          "recording_id": "gd1970-11-08.aud.weinberg.moore-berger.119787.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1970-11-08.125659.bergercomposite.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1970-11-08.partial.aud.unknown.fix-28609.94500.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1970-11-08.aud.garrett-evans.3339.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1970-11-08.aud-weinberg.cousinit.18639.shnf",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1970-11-08.154243.partial.weinberg.martin.smith.sirmick.flac24",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1970-05-15-fillmore-east-new-york-ny-usa",
+      "date": "1970-05-15",
+      "venue": "Fillmore East",
+      "total_reviews": 143,
+      "total_recordings": 4,
+      "ai_rating": 4.7,
+      "recording_details": [
+        {
+          "recording_id": "gd70-05-15.early-late.sbd.97.sbeok.shnf",
+          "review_count": 97
+        },
+        {
+          "recording_id": "gd_nrps70-05-15.sbd.reynolds-kaplan.29473.shnf",
+          "review_count": 45
+        },
+        {
+          "recording_id": "gd1970-05-15.136575.late.aud.cooper.berger.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1970-05-15.136574.late.aud.cooper.berger.flac24",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1970-05-15-fillmore-east-new-york-ny-usa-early-show",
+      "date": "1970-05-15",
+      "venue": "Fillmore East",
+      "total_reviews": 142,
+      "total_recordings": 2,
+      "ai_rating": 4.5,
+      "recording_details": [
+        {
+          "recording_id": "gd70-05-15.early-late.sbd.97.sbeok.shnf",
+          "review_count": 97
+        },
+        {
+          "recording_id": "gd_nrps70-05-15.sbd.reynolds-kaplan.29473.shnf",
+          "review_count": 45
+        }
+      ]
+    },
+    {
+      "show_id": "1970-09-20-fillmore-east-new-york-ny-usa",
+      "date": "1970-09-20",
+      "venue": "Fillmore East",
+      "total_reviews": 140,
+      "total_recordings": 8,
+      "ai_rating": 4.6,
+      "recording_details": [
+        {
+          "recording_id": "gd1970-09-20.140664.sbd.boswell.smith.miller.clugston.flac1644",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd70-09-20.sbd.sacks.1190.sbefail.shnf",
+          "review_count": 23
+        },
+        {
+          "recording_id": "gd70-09-20.aud.remaster.sirmick.27583.sbeok.shnf",
+          "review_count": 97
+        },
+        {
+          "recording_id": "gd1970-09-20.136729.sbd.GEMS.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1970-09-20.135798.sbd.smith.droncit.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1970-09-20.sbd.smith.97364.sbeok.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1970-09-20.140665.sbd.boswell.smith.miller.clugston.flac2496",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1970-09-20.aud.weinberg.bunjes.81728.flac16",
+          "review_count": 3
+        }
+      ]
+    },
+    {
+      "show_id": "1978-07-08-red-rocks-amphitheatre-morrison-co-usa",
+      "date": "1978-07-08",
+      "venue": "Red Rocks Amphitheatre",
+      "total_reviews": 139,
+      "total_recordings": 12,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1978-07-08.sbd.miller.106070.flac16",
+          "review_count": 17
+        },
+        {
+          "recording_id": "gd78-07-08.sbd.unknown.294.sbeok.shnf",
+          "review_count": 72
+        },
+        {
+          "recording_id": "gd1978-07-08.125797.mtx.eichorn.sbeok.t-flac16",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd1978-07-08.sbd.carney.fix-88551.88656.sbeok.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1978-07-08.sbd.hoelter.tetzeli.fix-294.33818.shnf",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1978-07-08.126239.mtx-redo.eichorn.sbeok.t-flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1978-07-08.sbd.tobin.91871.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1978-07-08.sbd.liberatedboot.88551.sbeok.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1978-07-08.mtx.tobin.91777.flac16",
+          "review_count": 17
+        },
+        {
+          "recording_id": "gd1978-07-08.fob.knight.motb-0068.91766.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1978-07-08.dts.tobin.91875.flac",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1978-07-08.158405.aud.hicks-fong.flac2448",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1977-04-23-springfield-civic-center-springfield-ma-usa",
+      "date": "1977-04-23",
+      "venue": "Springfield Civic Center",
+      "total_reviews": 137,
+      "total_recordings": 13,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd77-04-23.sbd.jerugim.1827.sbefail.shnf",
+          "review_count": 53
+        },
+        {
+          "recording_id": "gd1977-04-23.sbd.miller.88401.sbeok.flac16",
+          "review_count": 18
+        },
+        {
+          "recording_id": "gd1977-04-23.mtx.seamons.97596.sbeok.flac16",
+          "review_count": 34
+        },
+        {
+          "recording_id": "gd77-04-23.hopkins.vernon.17178.sbeok.shnf",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd77-04-23.moore.minches.18438.sbeok.shnf",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd1977-04-23.sbd.aj.gardner.4334.shnf",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1977-04-23.sbd.unknown.27421.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1977-04-23.143220.weidner.akg-d200e.miller.flac1644",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1977-04-23.sonyECM99a.hopkins.minches.83685.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1977-04-23.143265.akgd200e.miller.fixed.flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1977-04-23.152693.ecm-99a.warburton.smith.sirmick.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1977-04-23.139535.fob.ecm.99a.hopkins.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-04-23.152692.ecm-99a.warburton.smith.sirmick.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1983-06-18-saratoga-performing-arts-center-saratoga-springs-ny-usa",
+      "date": "1983-06-18",
+      "venue": "Saratoga Performing Arts Center",
+      "total_reviews": 137,
+      "total_recordings": 18,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd83-06-18.aud.gardner.4605.sbeok.shnf",
+          "review_count": 14
+        },
+        {
+          "recording_id": "gd83-06-18.set2.aud-silberman.miller.21741.sbeok.shnf",
+          "review_count": 32
+        },
+        {
+          "recording_id": "gd83-06-18.senn421.nawrocki.14411.sbeok.shnf",
+          "review_count": 35
+        },
+        {
+          "recording_id": "gd1983-06-18.set2.senn441.silberman.miller.103293.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1983-06-18.beyer.huston.miller.105236.flac16",
+          "review_count": 16
+        },
+        {
+          "recording_id": "gd1983-06-18.senn421.wise.miller.103285.flac16",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd1983-06-18.beyer-m88.morrone.119438.flac1644",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd1983-06-18.Senn441.PCM.Keo.124473.Flac1644",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1983-06-18.138859.aud.lamarre.berger.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1983-06-18.143267.partial-set2.Beerengineer.flac1644",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1983-06-18.142271.beyer201.executive-crew.holbrook.flac2448",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1983-06-18.154660.S2.Senn441-FRB-PCM-DAT.Silberman-Ammons-Noel.t-flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1983-06-18.148044.akg.d330bt.senn421.hecht.miller.clugston.flac2496",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1983-06-18.beyer-m88.morrone.119437.flac2448",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1983-06-18.148043.akg.d330bt.senn421.hecht.miller.clugston.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1983-06-18.138860.aud.lamarre.berger.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-06-18.142270.beyer201.executive-crew.holbrook.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-06-18.Senn441.PCM.Keo.124469.Flac2496",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1985-06-28-hershey-park-stadium-hershey-pa-usa",
+      "date": "1985-06-28",
+      "venue": "Hershey Park Stadium",
+      "total_reviews": 133,
+      "total_recordings": 28,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd85-06-28.sbd.lemon2.5822.sbeok.shnf",
+          "review_count": 78
+        },
+        {
+          "recording_id": "gd1985-06-28.sbd.miller.107066.flac16",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd1985-06-28.sbd.braverman.26144.shnf",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd85-06-28.fob-senn441.lizzard.25985.sbeok.shnf",
+          "review_count": 22
+        },
+        {
+          "recording_id": "gd1985-06-28.137289.senn441.phase-fix.mccue.ford.sbeok.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1985-06-28.senn441.mccue.ford.33339.sbeok.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1985-06-28.sbd.sirmick.77931.sbeok.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1985-06-28.senn.hubbard.76159.sbeok.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1985-06-28.151254.sbd.eaton.dalton.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-28.169093.sbd1.pearson.marcus.miller.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-28.169157.Hershey.PA.sbd.pearson.marcus.miller.t-flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-28.170390.sbd.miller.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-28.170846.sbd.pearson-marcus-miller-repatch.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-28.nak300.morris.114680.sbeok.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-28.sbd.mattman.23593.shnf",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-28.132533.mtx.dusborne.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1985-06-28.nakcm304.suraci.89009.flac24",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1985-06-28.111343.BeyerM160.daweez.d5scott.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1985-06-28.126158.senn441.chasingwilma.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1985-06-28.126140.chasingwilma.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-28.141599.aud.bryant.miller.sirmick.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-28.145352.aud.bryant.miller.sirmick.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-28.151829.schoeps.cmc4.mk41.oade.miller.clugston.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-28.154537.senn.me80.hessberg.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-28.154538.senn.me80.hessberg.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-28.nak300.morris.114490.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-28.nakcm304.suraci.79609.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-28.senn441.lizard.22517.sbefail.shnf",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1979-10-27-cape-cod-coliseum-south-yarmouth-ma-usa",
+      "date": "1979-10-27",
+      "venue": "Cape Cod Coliseum",
+      "total_reviews": 131,
+      "total_recordings": 17,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1979-10-27.sbd.fix.miller.98561.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1979-10-27.sbd.miller.98950.sbeok.flac16",
+          "review_count": 14
+        },
+        {
+          "recording_id": "gd79-10-27.sbd.clugston.13980.sbeok.shnf",
+          "review_count": 46
+        },
+        {
+          "recording_id": "gd79-10-27.sbd.miller.29490.sbeok.flacf",
+          "review_count": 20
+        },
+        {
+          "recording_id": "gd1979-10-27.sbd.miller.29411.sbeok.flac16",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd79-10-27.aud-rolfe.warner.19416.sbeok.shnf",
+          "review_count": 15
+        },
+        {
+          "recording_id": "gd1979-10-27.sbd.abbdull.317.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1979-10-27.sbd-set2.kaplan.miller.repatch-28832.29002.sbeok.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1979-10-27.sbd-set2.kaplan.28832.sbeok.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1979-10-27.mtx.groves.sbeok.92049.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1979-10-27.aud.davew.120367.sbeok.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1979-10-27.mtx.seamons.105234.flac16",
+          "review_count": 13
+        },
+        {
+          "recording_id": "gd1979-10-27.127550.nak500.stankiewicz.flac2496",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1979-10-27.145461.fob.nak700.rolfe.miller.clugston.flac1648",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1979-10-27.145462.fob.nak700.rolfe.miller.clugston.flac2496",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1979-10-27.145664.akgD222e.stankiewicz.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1979-10-27.nak300.friend.109777.flac1644",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1981-03-09-madison-square-garden-new-york-ny-usa",
+      "date": "1981-03-09",
+      "venue": "Madison Square Garden",
+      "total_reviews": 131,
+      "total_recordings": 11,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1981-03-09.sbd.miller.74220.sbeok.flac16",
+          "review_count": 17
+        },
+        {
+          "recording_id": "gd81-03-09.sbd.clugston.4953.sbeok.shnf",
+          "review_count": 15
+        },
+        {
+          "recording_id": "gd81-03-09.glassberg.wise.7473.sbeok.shnf",
+          "review_count": 67
+        },
+        {
+          "recording_id": "gd1981-03-09.nak700.glassberg.motb.82372.sbeok.flac16",
+          "review_count": 15
+        },
+        {
+          "recording_id": "gd1981-03-09.nak700.glassberg.motb.82373.sbeok.flac24",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1981-03-09.mtx.seamons.101168.sbeok.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1981-03-09.nak700.rolfe.miller.95060.sbeok.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1981-03-09.mtx.seamons.101159.flac24",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1981-03-09.nak700.rolfe.miller.95179.flac24",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd1981-03-09.130233.senn421.wise.minches.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1981-03-09.nak700.glassberg.wise.328.shnf",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1989-07-07-john-f-kennedy-stadium-philadelphia-pa-usa",
+      "date": "1989-07-07",
+      "venue": "John F Kennedy Stadium",
+      "total_reviews": 131,
+      "total_recordings": 23,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd89-07-07.aud.wiley.7855.sbeok.shnf",
+          "review_count": 94
+        },
+        {
+          "recording_id": "gd1989-07-07.senn421.zaleski.89616.sbeok.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1989-07-07.fob.clugston.10925.sbeok.shnf",
+          "review_count": 16
+        },
+        {
+          "recording_id": "gd1989-07-07.140152.sbd.miller.flac2496",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1989-07-07.akg414.unknown.89653.sbeok.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1989-07-07.140262.UltraMatrix.sbd.cm.miller.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-07.aud.dave.4665.sbeok.shnf",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-07.153413.MTX.photoLeon.t-flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1989-07-07.142782.mtx.tobin.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-07.142783.mtx.tobin.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-07.aud.wiley.tetzeli.fix-7855.35410.reflac.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1989-07-07.nak300.andrewf.96993.flac24",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1989-07-07.142784.dts.tobin.flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1989-07-07.139283.mk2.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1989-07-07.172500.mk2.hillwig.fix.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1989-07-07.Nak300CP4.Baker.Keo.125119.Flac2496",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1989-07-07.133776.akg414btl-fob-dantepper.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-07.141727.FOB.AKG.Ackerman.Miller.Noel.t-flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-07.142464.fob.schoeps.cmc4.mk41.mattes.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-07.142785.5-1.tobin.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-07.145745.fob.akg460.ackerman.miller.noel.t-flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-07.Nak300CP4.Baker.Keo.125120.Flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-07.nak300.andrewf.96994.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1970-09-19-fillmore-east-new-york-ny-usa",
+      "date": "1970-09-19",
+      "venue": "Fillmore East",
+      "total_reviews": 130,
+      "total_recordings": 8,
+      "ai_rating": 4.6,
+      "recording_details": [
+        {
+          "recording_id": "gd70-09-19.sbd.kaplan.5217.sbeok.shnf",
+          "review_count": 58
+        },
+        {
+          "recording_id": "gd1970-09-19.sbd.reynolds.97906.flac16",
+          "review_count": 39
+        },
+        {
+          "recording_id": "gd1970-09-19.mtx.chappell.SB14.31510.sbeok.flac16",
+          "review_count": 24
+        },
+        {
+          "recording_id": "gd70-09-19.aud-toner-weinberg.warner.25473.sbeok.flacf",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1970-09-19.sbd.buller.102.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1970-09-19.119722.akg.weinberg.moore-berger.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1970-09-19.150347.acoustic.aud.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1970-09-19.152705.aud.fragment.flac1644",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1974-02-24-winterland-arena-san-francisco-ca-usa",
+      "date": "1974-02-24",
+      "venue": "Winterland Arena",
+      "total_reviews": 130,
+      "total_recordings": 13,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1974-02-24.sbd.miller.116902.flac16",
+          "review_count": 16
+        },
+        {
+          "recording_id": "gd74-02-24.sbd.windsor.199.sbefail.shnf",
+          "review_count": 77
+        },
+        {
+          "recording_id": "gd1974-02-24.sbd.sssb-sbe-fix.sirmick.21370.sbeok.shnf",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1974-02-24.136276.sbd-patched.miller.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1974-02-24.sbd.serafin.hollister.200.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1974-02-24.sbd.marmar.13961.sbeok.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1974-02-24.151723.sbd.miller.flac1644",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1974-02-24.136641.mtx.hseamons.ht110.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1974-02-24.136140.mtx.tobin.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd74-02-22.sndchk.serafin.8623.sbefail.shnf",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd1974-02-24.136142.5-1.tobin.flac1648",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1974-02-24.136266.aud.GEMS.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1974-02-24.136141.dts.tobin.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1976-06-03-paramount-theater-portland-or-usa",
+      "date": "1976-06-03",
+      "venue": "Paramount Theater",
+      "total_reviews": 130,
+      "total_recordings": 16,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd76-06-03.sbd.serafin.7719.sbeok.shnf",
+          "review_count": 28
+        },
+        {
+          "recording_id": "gd1976-06-03.sbd.seamons.fix-20004.86745.sbeok.shnf",
+          "review_count": 13
+        },
+        {
+          "recording_id": "gd76-06-03.sbd.bertha-ashley.20004.sbeok.shnf",
+          "review_count": 39
+        },
+        {
+          "recording_id": "gd1976-06-03.mtx.seamons.91912.sbeok.shnf",
+          "review_count": 19
+        },
+        {
+          "recording_id": "gd1976-06-03.123607.sbd.miller.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1976-06-03.139643.sbd.betty.pcm.kreider.miller.clugston.fixed.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd76-06-03.aud.vernon.7825.sbeok.shnf",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd76-06-03.lee.weiner.14263.sbeok.shnf",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1976-06-03.123608.sbd.miller.flac24",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1976-06-03.sbd.unknown.7555.sbefail.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1976-06-03.sbd.bertha.17266.shnf",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1976-06-03.mtx.seamons.ht06.123898.flac16",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd1976-06-03.123464.akgD224E.holwein.miller.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1976-06-03.148567.fob.sony.ecm18n.lee.smith.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1976-06-03.148568.fob.sony.ecm18n.lee.smith.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1976-06-03.aud.berger.99910.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1985-06-24-river-bend-music-center-cincinnati-oh-usa",
+      "date": "1985-06-24",
+      "venue": "River Bend Music Center",
+      "total_reviews": 128,
+      "total_recordings": 15,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd85-06-24.sbd.miller.25315.sbeok.shnf",
+          "review_count": 68
+        },
+        {
+          "recording_id": "gd85-06-24.sbd.murphy.2274.sbefail.shnf",
+          "review_count": 16
+        },
+        {
+          "recording_id": "gd1985-06-24.mtx.pytlik.32310.sbeok.flac16",
+          "review_count": 12
+        },
+        {
+          "recording_id": "gd1985-06-24.mtx.seamons.94663.sbeok.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd85-06-24.set2.oade-schoeps.sacks.24662.sbeok.flacf",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd85-06-24.nak300.lai.360.sbeok.shnf",
+          "review_count": 13
+        },
+        {
+          "recording_id": "gd1985-06-24.sbd.harrell.8198.shnf",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1985-06-24.118986.BeyerM160.daweez.d5scott.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-24.140890.s1.unkown.Bryant.Miller.Noel.t-flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-24.141240.s1.unknown.Bryant.Miller.Noel.t-flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-24.152622.akgc422-davis-murtha.holbrook.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-24.152623.akgc422-davis-murtha.holbrook.flac2448",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-24.154533.senn.me80.hessberg.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-24.154534.senn.me80.hessberg.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-06-24.169903.nak700.flac2448",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1970-02-11-fillmore-east-new-york-ny-usa",
+      "date": "1970-02-11",
+      "venue": "Fillmore East",
+      "total_reviews": 127,
+      "total_recordings": 9,
+      "ai_rating": 4.8,
+      "recording_details": [
+        {
+          "recording_id": "gd1970-02-11.partial.sbd.greenberg-evans.28402.sbeok.flac16",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd1970-02-11.late-partial.sbd.chester-mande.33335.sbefail.shnf",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd70-02-11.early-late.sbd.sacks.90.sbefail.shnf",
+          "review_count": 75
+        },
+        {
+          "recording_id": "gd1970-02-11.sbd.warner.patched.28292.sbeok.flac16",
+          "review_count": 13
+        },
+        {
+          "recording_id": "gd1970-02-11.sbd.smith.patched.99154.sbeok.flac16",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd1970-02-11.late-set2.aud.smith.99152.sbeok.flac16",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd1970-02-11.126251.sbd.wolfe-lee-smith.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1970-02-11.part.s2.127482.sbd.menke.lee.smith.flac24",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1970-02-11.partial-late.aud.reynolds.gadsden.99052.flac16",
+          "review_count": 3
+        }
+      ]
+    },
+    {
+      "show_id": "1982-10-10-frost-amphitheatre-palo-alto-ca-usa",
+      "date": "1982-10-10",
+      "venue": "Frost Amphitheatre",
+      "total_reviews": 124,
+      "total_recordings": 27,
+      "ai_rating": 4.6,
+      "recording_details": [
+        {
+          "recording_id": "gd1982-10-10.sbd.fixed.miller.110783.flac24",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd82-10-10.sbd.sacks.338.sbefail.shnf",
+          "review_count": 51
+        },
+        {
+          "recording_id": "gd1982-10-10.mtx.seamons.86784.sbeok.shnf",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16",
+          "review_count": 14
+        },
+        {
+          "recording_id": "gd1982-10-10.sonyecm220T.keshavan.miller.93733.sbeok.flac24",
+          "review_count": 12
+        },
+        {
+          "recording_id": "gd1982-10-10.mtx.seamons.fix.92058.sbeok.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1982-10-10.sony-ecm220.keshavan.tzuriel.29315.sbeok.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1982-10-10.sbd.tetzeli.ayers.79903.sbeok.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1982-10-10.sonyecm220T.keshavan.miller.93732.sbeok.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1982-10-10.141523.sbd.pcm.dalton.miller.clugston.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1982-10-10.sbd.fixed.miller.110784.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1982-10-10.sbd.miller.110626.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1982-10-10.sbd.miller.110628.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1982-10-10.mtx.seamons.110744.flac24",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1982-10-10.mtx.seamons.ht02.110970.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1982-10-10.beyers.stankiewicz.128808.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1982-10-10.111039.nak300.hoey.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1982-10-10.123624.senn421.gans.miller.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1982-10-10.123623.senn421.gans.miller.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1982-10-10.nak700.wagner.miller.109823.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1982-10-10.143391.FOB.ECM-150.Keeler.Miller.Noel.t-flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1982-10-10.145248.fob.sony.ecm150.keeler.miller.noel.t-flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1982-10-10.167623.nak700.severson.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1982-10-10.167624.nak700.severson.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1982-10-10.beyers.stankiewicz.128807.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1982-10-10.nak700.wagner.miller.109822.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1989-07-19-alpine-valley-music-theatre-east-troy-wi-usa",
+      "date": "1989-07-19",
+      "venue": "Alpine Valley Music Theatre",
+      "total_reviews": 124,
+      "total_recordings": 15,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd89-07-19.sbd.437.sbeok.shnf",
+          "review_count": 104
+        },
+        {
+          "recording_id": "gd1989-07-19.138808.sbd.miller.fixed.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1989-07-19.138818.UltraMatrix.sbd.miller.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1989-07-19.upg-sbd.tobin.125854.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1989-07-19.mtx.hansokolow.96232.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1989-07-19.senn441.coniff.gmb.92447.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1989-07-19.Nak300CP4.Baker.Keo.125505.Flac2496",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1989-07-19.mat.tobin.125861.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1989-07-19.fob.nak300.holtz.jaz.106492.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1989-07-19.141076.TSBeyerCM101.ebel.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-19.142299.Lawn.Schoeps.Mattes.Miller.Noel.t-flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-19.Nak300CP4.Baker.Keo.125506.Flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-19.dts.tobin.125862.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-19.fob.set2.seaweed.130697.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-19.upg-aud.tobin.125855.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1973-06-22-p-n-e-coliseum-vancouver-british-columbia-canada",
+      "date": "1973-06-22",
+      "venue": "P.N.E. Coliseum",
+      "total_reviews": 124,
+      "total_recordings": 10,
+      "ai_rating": 4.6,
+      "recording_details": [
+        {
+          "recording_id": "gd1973-06-22.sbd.miller.88526.sbeok.flac16",
+          "review_count": 28
+        },
+        {
+          "recording_id": "gd73-06-22.sbd.cribbs.17270.sbeok.shnf",
+          "review_count": 27
+        },
+        {
+          "recording_id": "gd1973-06-22.mtx.seamons.92375.sbeok.flac16",
+          "review_count": 29
+        },
+        {
+          "recording_id": "gd73-06-22.aud.weiner.gdADT19.16889.sbeok.shnf",
+          "review_count": 33
+        },
+        {
+          "recording_id": "gd1973-06-22.140897.sbd.pcm.composite.dalton.miller.clugston.fixv3.flac1644",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1973-06-22.sbd.clugston.5850.sbeok.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1973-06-22.140892.sbd.pcm.composite.dalton.miller.clugston.fixv2.flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1973-06-22.sbd.cribbs.88347.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1973-06-22.140868.sbd.pcm.composite.dalton.miller.clugston.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1973-06-22.sbd-monitor-mix.pantagruel.85957.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1977-09-03-raceway-park-englishtown-nj-usa",
+      "date": "1977-09-03",
+      "venue": "Raceway Park",
+      "total_reviews": 123,
+      "total_recordings": 6,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd77-09-03.sbd.unk.276.sbefixed.shnf",
+          "review_count": 53
+        },
+        {
+          "recording_id": "gd1977-09-03.aud.stiegler.91230.sbeok.flac16",
+          "review_count": 15
+        },
+        {
+          "recording_id": "gd1977-09-03.131317.mtx.dusborne.flac16",
+          "review_count": 13
+        },
+        {
+          "recording_id": "gd1977-09-03.aud.102409.flemming.berger.flac24",
+          "review_count": 22
+        },
+        {
+          "recording_id": "gd1977-09-03.aud.102410.flemming.berger.flac16",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd1977-09-03.aud.wagner.minches.91650.flac16",
+          "review_count": 14
+        }
+      ]
+    },
+    {
+      "show_id": "1973-05-26-kezar-stadium-san-francisco-ca-usa",
+      "date": "1973-05-26",
+      "venue": "Kezar Stadium",
+      "total_reviews": 123,
+      "total_recordings": 11,
+      "ai_rating": 4.6,
+      "recording_details": [
+        {
+          "recording_id": "gd1973-05-26.sbd.miller.patched.83535.flac16",
+          "review_count": 28
+        },
+        {
+          "recording_id": "gd73-05-26.sbd.cribbs.17076.sbeok.shnf",
+          "review_count": 73
+        },
+        {
+          "recording_id": "gd1973-05-26.150710.SBD.BettyBoard.Anon.Noel.fixed.t-flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1973-05-26.sbd.cantor.diebert.83438.sbeok.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1973-05-26.sbd.cribbs-ashley.81854.sbeok.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1973-05-26.sdb.datsit.7798.sbeok.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1973-05-26.150710.SBD.BettyBoard.Anon.Noel.t-flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1973-05-26.170209.mtx.dusborne.flac1644",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1973-05-26.154515.s2p-s3p.mtx.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1973-05-26.147312.aud.taback.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1973-05-26.154514.s2p-s3p.aud.flac1644",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1974-06-18-freedom-hall-louisville-ky-usa",
+      "date": "1974-06-18",
+      "venue": "Freedom Hall",
+      "total_reviews": 122,
+      "total_recordings": 4,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1974-06-18.sbd.pitch-fixed-sacks.32528.sbeok.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1974-06-18.sbd.miller.89690.sbeok.flac16",
+          "review_count": 22
+        },
+        {
+          "recording_id": "gd74-06-18.sbd.sacks.209.sbefail.shnf",
+          "review_count": 81
+        },
+        {
+          "recording_id": "gd1974-06-18.sbd.bertha-ashley.18150.sbeok.shnf",
+          "review_count": 11
+        }
+      ]
+    },
+    {
+      "show_id": "1974-08-06-roosevelt-stadium-jersey-city-nj-usa",
+      "date": "1974-08-06",
+      "venue": "Roosevelt Stadium",
+      "total_reviews": 122,
+      "total_recordings": 9,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd74-08-06.sbd.deadlists.1463.sbeok.shnf",
+          "review_count": 30
+        },
+        {
+          "recording_id": "gd1974-08-06.166779.sbd.anon.gems.flac1644",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1974-08-06.126356.mtx.dusborne.flac16",
+          "review_count": 15
+        },
+        {
+          "recording_id": "gd1974-08-06.135929.mtx.tobin.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd74-08-06.merin.weiner.gdADT.5914.sbefail.shnf",
+          "review_count": 65
+        },
+        {
+          "recording_id": "gd1974-08-06.135848.aud.cooper.berger.flac24",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1974-08-06.135934.5-1.tobin.flac1648",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1974-08-06.135930.dts.tobin.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1974-08-06.135847.aud.cooper.berger.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1974-07-19-selland-arena-fresno-ca-usa",
+      "date": "1974-07-19",
+      "venue": "Selland Arena",
+      "total_reviews": 121,
+      "total_recordings": 7,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1974-07-19.sbd.gans-finney.217.sbeok.shnf",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd74-07-19.sbd.symons.12381.sbeok.shnf",
+          "review_count": 57
+        },
+        {
+          "recording_id": "gd1974-07-19.sbd.miller.32634.sbeok.flac16",
+          "review_count": 35
+        },
+        {
+          "recording_id": "gd1974-07-19.sbd.pre-dankfix.4596.sbeok.shnf",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1974-07-19.mtx.sirmick.103132.sbeok.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1974-07-19.shure.unknown.fix-102766.102866.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1974-07-19.shure.unknown.102766.flac16",
+          "review_count": 3
+        }
+      ]
+    },
+    {
+      "show_id": "1980-06-21-west-high-auditorium-anchorage-ak-usa",
+      "date": "1980-06-21",
+      "venue": "West High Auditorium",
+      "total_reviews": 120,
+      "total_recordings": 15,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd80-06-21.sbd.clugston.8639.sbeok.shnf",
+          "review_count": 32
+        },
+        {
+          "recording_id": "gd1980-06-21.sbd.miller.113302.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1980-06-21.mtx.dan.28470.sbeok.flac16",
+          "review_count": 39
+        },
+        {
+          "recording_id": "gd1980-06-21.mtx.dan.28475.sbeok.flac24",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd80-06-21.akg.vernon.23531.sbeok.shnf",
+          "review_count": 16
+        },
+        {
+          "recording_id": "gd80-06-21.sbd.samaritano.27448.sbeok.flacf",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1980-06-21.sbd.wise.321.sbeok.shnf",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd80-06-21.sbd.bertha-ashley.27590.sbeok.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1980-06-21.sbd.clugston.tetzeli.fix-8639.74407.reflac.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1980-06-21.mtx.seamons.112150.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1980-06-21.156398.mtx.photoleon.t-flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1980-06-21.nak700.severson.minches.89214.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1980-06-21.144908.nak700.severson.miller.clugston.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1980-06-21.dts.dan.32228.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1980-06-21.144909.nak700.severson.miller.clugston.flac2496",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1970-06-24-capitol-theater-port-chester-ny-usa",
+      "date": "1970-06-24",
+      "venue": "Capitol Theater",
+      "total_reviews": 119,
+      "total_recordings": 9,
+      "ai_rating": 4.5,
+      "recording_details": [
+        {
+          "recording_id": "gd_nrps70-06-24.aud.pcrp5.23062.sbeok.flacf",
+          "review_count": 68
+        },
+        {
+          "recording_id": "gd1970-06-24.aud.lee.5339.sbeok.shnf",
+          "review_count": 18
+        },
+        {
+          "recording_id": "gd1970-06-24.late.aud.harlan.9330.sbefail.shnf",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd1970-06-24.aud.lai.7467.sbefail.shnf",
+          "review_count": 11
+        },
+        {
+          "recording_id": "gd1970-06-24.124175.cooper.berger.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1970-06-24.aud.cooper.coopernicus.32710.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1970-06-24.145261.late.SonyF95.lee.hance.sirmick.flac1644",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1970-06-24.aud.unknown.gadsden-reynolds.100223.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1970-06-24.late-partial.aud.moore.berger.98880.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1978-01-22-mcarthur-court-u-of-oregon-eugene-or-usa",
+      "date": "1978-01-22",
+      "venue": "McArthur Court, U. of Oregon",
+      "total_reviews": 119,
+      "total_recordings": 8,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1978-01-22.sbd.miller.110632.flac16",
+          "review_count": 17
+        },
+        {
+          "recording_id": "gd78-01-22.sbd.popi.4974.sbeok.shnf",
+          "review_count": 68
+        },
+        {
+          "recording_id": "gd1978-01-22.sbd.unknown.31940.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1978-01-22.sbd-partial.unknown.287.sbeok.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1978-01-22.mtx.chappell.sb4.28846.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1978-01-22.fob.akgd224e.holwein.motb-0086.101436.flac16",
+          "review_count": 11
+        },
+        {
+          "recording_id": "gd78-01-22.sony.dauria.2014.sbefail.shnf",
+          "review_count": 11
+        },
+        {
+          "recording_id": "gd1978-01-22.fob.akgd224e.holwein.motb-0086.101437.flac24",
+          "review_count": 1
+        }
+      ]
+    },
+    {
+      "show_id": "1990-03-22-copps-coliseum-hamilton-ontario-canada",
+      "date": "1990-03-22",
+      "venue": "Copps Coliseum",
+      "total_reviews": 119,
+      "total_recordings": 23,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1990-03-22.sbd.miller.107871.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd90-03-22.sbd.bertha-ashley.21433.sbeok.shnf",
+          "review_count": 50
+        },
+        {
+          "recording_id": "gd1990-03-22.mtx.dan.28040.sbeok.shnf",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd90-03-22.schoeps.dankseeds.7460.sbeok.shnf",
+          "review_count": 13
+        },
+        {
+          "recording_id": "gd90-03-22.sbd-matrix.aj.453.sbefail.shnf",
+          "review_count": 25
+        },
+        {
+          "recording_id": "gd1990-03-22.aud.gidley.91779.sbeok.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1990-03-22.139224.sbd.miller.truck-mix.flac",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-03-22.111464.unknown.sbd.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1990-03-22.156423.UltraMatrix.sbd.cm.miller.t.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-22.dts.dan.31772.sbeok.shnf",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-22.mtx.seamons.113144.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1990-03-22.mtx.tobin.126698.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1990-03-22.156195.ultramatrix.miller.flac2496",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-03-22.165885.mtx.seamons.ht090.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-22.143170.FOB.Schoeps.Mattes.Miller.Noel.REMASTER.t-flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-03-22.141931.FOB.Schoeps.Mattes.Miller.Noel.t-flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-03-22.125880.mk4.fixed.48khz.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-22.125881.mk4.fixed.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-22.141112.OTS.AKG.Akerman.Miller.Noel.t-flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-22.149413.FOB.Schoeps.Mattes.Miller.Noel.reMaster.t-flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-22.152792.3-Source-MTX.photoLeon.t-flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-22.157157.5-1.tobin.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-03-22.dts.tobin.126699.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1973-08-01-roosevelt-stadium-jersey-city-nj-usa",
+      "date": "1973-08-01",
+      "venue": "Roosevelt Stadium",
+      "total_reviews": 119,
+      "total_recordings": 17,
+      "ai_rating": 4.5,
+      "recording_details": [
+        {
+          "recording_id": "gd73-08-01.sbd.cotsman.12222.sbeok.shnf",
+          "review_count": 46
+        },
+        {
+          "recording_id": "gd1973-08-01.partial.sbd.gans-Jungeblut.182.sbeok.shnf",
+          "review_count": 14
+        },
+        {
+          "recording_id": "gd1973-08-01.sbd.sirmick.patch-12222.92478.sbeok.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd73-08-01.aud.weiner.gdADT08.9145.sbeok.shnf",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd73-08-xx.sbd-wotf.davef.2522.sbeok.shnf",
+          "review_count": 31
+        },
+        {
+          "recording_id": "gd1973-08-01.sbd.kaplan.11813.shnf",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1973-08-01.aud.weiner.8724.sbeok.shnf",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1973-08-01.140895.sbd.wotf-outtakes.dalton.miller.sirmick.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1973-08-01.148528.sbd.flac16.wake-of-the-flood-outtakes.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1973-08-01.123128.mtx.barry.flac",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1973-08-01.121129.barry.smith.AUD-fob.flac1644",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1973-08-01.112572.aud-moore.berger.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1973-08-01.113751.wotf.betty.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1973-08-01.121127.barry.smith.AUD-fob.flac2496",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1973-08-01.119371.aud.barry.flac",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1973-08-01.135886.aud.cooper.berger.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1973-08-01.135887.aud.cooper.berger.flac24",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1973-12-06-cleveland-public-auditorium-cleveland-oh-usa",
+      "date": "1973-12-06",
+      "venue": "Cleveland Public Auditorium",
+      "total_reviews": 117,
+      "total_recordings": 10,
+      "ai_rating": 4.5,
+      "recording_details": [
+        {
+          "recording_id": "gd73-12-06.sbd.kaplan-fink-hamilton.4452.sbeok.shnf",
+          "review_count": 58
+        },
+        {
+          "recording_id": "gd1973-12-06.sbd.remaster.102750.flac16",
+          "review_count": 11
+        },
+        {
+          "recording_id": "gd1973-12-06.sbd.miller.105560.flac16",
+          "review_count": 28
+        },
+        {
+          "recording_id": "gd1973-12-06.132361.sbd.miller.flac16",
+          "review_count": 12
+        },
+        {
+          "recording_id": "gd1973-12-06.147505.sbd.pc.miller.flac1644",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd73-12-06.sbd-part.nayfield.clevenger.fix-195.6703.shnf",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1973-12-06.partial.sbd.nayfield.195.sbeok.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1973-12-06.164390.s2.partial.164390.lamarre.vernon.sirmick.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1973-12-06.164391.s2.partial.164391.lamarre.vernon.sirmick.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1973-12-06.166462.aud.cubbedge.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1977-11-06-broome-county-arena-binghamton-ny-usa",
+      "date": "1977-11-06",
+      "venue": "Broome County Arena",
+      "total_reviews": 117,
+      "total_recordings": 8,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1977-11-06.139055.SBD.Miller.Noel.t-flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd77-11-06.sbd.nawrocki.283.sbeok.shnf",
+          "review_count": 78
+        },
+        {
+          "recording_id": "gd1977-11-06.mtx.seamons.92273.sbeok.flac16",
+          "review_count": 11
+        },
+        {
+          "recording_id": "gd77-11-06.moore.cribbs.16758.sbeok.shnf",
+          "review_count": 16
+        },
+        {
+          "recording_id": "gd1977-11-06.122296.sbd.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1977-11-06.148411.1st.set.fob.shure.sm57.sublette.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-11-06.148412.1st.set.fob.shure.sm57.sublette.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-11-06.171136.s1-s2p.aud.AndrewF.flac2448",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1980-09-06-state-fairgrounds-lewiston-me-usa",
+      "date": "1980-09-06",
+      "venue": "State Fairgrounds",
+      "total_reviews": 117,
+      "total_recordings": 22,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1980-09-04.fob.nak700.rolfe.miller.93783.sbeok.flac24",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd80-09-06.set1-sbd.samaritano.23371.sbeok.shnf",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd80-09-06.sbd_aud.miller.25560.sbeok.shnf",
+          "review_count": 41
+        },
+        {
+          "recording_id": "gd80-09-06.wise.unknown.322.sbeok.shnf",
+          "review_count": 28
+        },
+        {
+          "recording_id": "gd1980-09-06.fob.nak700.rolfe.miller.93782.sbeok.flac16",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd1980-09-06.aud.bass.16926.sbeok.shnf",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1980-09-06.aud.rolfe.wise-cribbs.25471.sbeok.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1980-09-06.fob.nak300.morris.102017.sbeok.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1980-09-06.150980.aud.gems.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1980-09-06.119726.fob.hance.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1980-09-06.nak300.friend.andrewf.101685.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1980-09-06.136807.fob-nak700.rolfe-wise.minches.t-flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1980-09-06.nak300.friend.andrewf.101684.flac24",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1980-09-06.127165.fob-nak700.rolfe-wise.minches.flac2496",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1980-09-06.142972.fob.nak700.wise.miller.clugston.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1980-09-06.147839.fob.shure.sm57.sublette.miller.clugston.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1980-09-06.147840.fob.shure.sm57.sublette.miller.clugston.flac2496",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1980-09-06.126441.commander.berger.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1980-09-06.126539.commander.berger.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1980-09-06.142971.fob.nak700.wise.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1980-09-06.150981.aud.gems.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1980-09-06.aud.morris.106620.flac24",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1971-04-29-fillmore-east-new-york-ny-usa",
+      "date": "1971-04-29",
+      "venue": "Fillmore East",
+      "total_reviews": 116,
+      "total_recordings": 12,
+      "ai_rating": 4.6,
+      "recording_details": [
+        {
+          "recording_id": "gd1971-04-29.sbd.multitracks.miller.114350.flac16",
+          "review_count": 23
+        },
+        {
+          "recording_id": "gd71-04-29.sbd.frisco.16782.sbeok.shnf",
+          "review_count": 53
+        },
+        {
+          "recording_id": "gd1971-04-29.sbd.miller.105926.flac16",
+          "review_count": 14
+        },
+        {
+          "recording_id": "gd71-04-29.weinberg.warner.26568.sbeok.flacf",
+          "review_count": 12
+        },
+        {
+          "recording_id": "gd1971-04-29.sbd.boswell.smith.114145.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1971-04-29.sbd.haugh.33565.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1971-04-29.sbd.unknown.4333.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1971-04-29.sbd.miller.105925.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1971-04-29.sbd.murphy.1858.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1971-04-29.sbd.serafin.19639.shnf",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1971-04-29.sbd.unknown.126.shnf",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1971-04-29.mtx.hansokolow.97660.flac16",
+          "review_count": 4
+        }
+      ]
+    },
+    {
+      "show_id": "1989-10-26-miami-arena-miami-fl-usa",
+      "date": "1989-10-26",
+      "venue": "Miami Arena",
+      "total_reviews": 116,
+      "total_recordings": 16,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1989-10-26.sbd.walker-scotton.miller.83428.sbeok.flac16",
+          "review_count": 17
+        },
+        {
+          "recording_id": "gd1989-10-26.sbd.cribbs.1829.shnf",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd89-10-26.set2.dsbd.miller.18664.shnf",
+          "review_count": 63
+        },
+        {
+          "recording_id": "gd89-10-26.set1-sbd.miller.20614.sbeok.shnf",
+          "review_count": 13
+        },
+        {
+          "recording_id": "gd1989-10-26.sbd-set2.lynch.19163.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1989-10-26.147766.UltraMatrix.sbd.cm.miller.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1989-10-26.sbd.miller.tetzeli.fix-18664-20614.34587.sbeok.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1989-10-26.147714.sbd.miller.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-10-26.125695.mtx.dusborne.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1989-10-26.147752.mtx.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-10-26.schoeps.unknown.fishman.107258.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1989-10-26.123832.mk4.mattes.hillwig-stubbe.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1989-10-26.142607.fob.schoeps.cmc4.mk4.mattes.miller.clugston.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1989-10-26.123831.mk4.mattes.hillwig-stubbe.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-10-26.147753.dts.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-10-26.147754.5-1.tobin.flac1648",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1991-06-17-giants-stadium-east-rutherford-nj-usa",
+      "date": "1991-06-17",
+      "venue": "Giants Stadium",
+      "total_reviews": 113,
+      "total_recordings": 22,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd91-06-17.sbd.gardner.3591.sbeok.shnf",
+          "review_count": 60
+        },
+        {
+          "recording_id": "gd91-06-17.sbd.miller.25608.sbeok.shnf",
+          "review_count": 16
+        },
+        {
+          "recording_id": "gd1991-06-17.mtx.dan.31606.sbeok.flac16",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd1991-06-17.aud.andrewf.86660.sbeok.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1991-06-17.137545.sbd.miller.flac24",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1991-06-17.484.sbd.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1991-06-17.150677.sbd.cm.miller.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1991-06-17.dts.dan.33670.sbeok.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1991-06-17.nak300.andrewf.86659.sbeok.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1991-06-17.137547.sbd.miller.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-06-17.150633.sbd.pearson-healy.miller.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-06-17.128692.mtx.dusborne.flac16",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd1991-06-17.135942.mtx.tobin.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1991-06-17.fob.brennecke-young.GEMS.95644.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1991-06-17.134054.akg414btl-fob-dantepper.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-06-17.135941.5-1.tobin.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-06-17.135943.dts.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-06-17.150371.FOB.Schoeps.Brotman.Metchick.Miller.Noel.t-flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-06-17.170672.me88.mc.rogosa.flac1644_202504",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-06-17.170673.me88.mc.rogosa.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-06-17.AKG451.Currier.Keo.122790.Flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-06-17.AKG451.Currier.Keo.122791.Flac1644",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1994-10-01-boston-garden-boston-ma-usa",
+      "date": "1994-10-01",
+      "venue": "Boston Garden",
+      "total_reviews": 113,
+      "total_recordings": 14,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd94-10-01.sbd.gorinsky.4671.sbeok.shnf",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1994-10-01.sbd.gorinsky-miller.31992.sbeok.shnf",
+          "review_count": 15
+        },
+        {
+          "recording_id": "gd94-10-01.sbd.ashley-bertha.14869.sbeok.shnf",
+          "review_count": 59
+        },
+        {
+          "recording_id": "gd1994-10-01.mtx.seamons.95066.sbeok.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd94-10-01.pmb.pujol.15079.sbeok.shnf",
+          "review_count": 16
+        },
+        {
+          "recording_id": "gd1994-10-01.sbd.nick.1025.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1994-10-01.150116.dsbd.miller.flac1644",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1994-10-01.akg460.flaschner.sobel.83671.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1994-10-01.132503.nak300.andrewf.flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1994-10-01.fob.schoeps.evans-gross.GEMS.77223.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1994-10-01.140242.FOB.Schoeps.Gastwirt.Miller.Noel.t-flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1994-10-01.141436.OTS.AKG.Ackerman.Miller.Noel.t-flac.1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1994-10-01.153204.senn-me88.rogosa.miller.sirmick.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1994-10-01.schoeps.GEMS.77224.flac1648",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1983-10-11-madison-square-garden-new-york-ny-usa",
+      "date": "1983-10-11",
+      "venue": "Madison Square Garden",
+      "total_reviews": 112,
+      "total_recordings": 32,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1983-10-11.sbd.harrell.14525.shnf",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd83-10-11.sbd.bertha-ashley.26459.sbeok.flacf",
+          "review_count": 11
+        },
+        {
+          "recording_id": "gd83-10-11.sbd.harrell.7339.sbeok.shnf",
+          "review_count": 40
+        },
+        {
+          "recording_id": "gd83-10-11.silberman.gustin.344.sbeok.shnf",
+          "review_count": 17
+        },
+        {
+          "recording_id": "gd1983-10-11.fob.atm11.chasingwilma.fix.102106.sbeok.flac16",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd83-10-11.sbd.braverman.7372.sbeok.shnf",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1983-10-11.fob.atm11.chasingwilma.101949.sbeok.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1983-10-11.beyerM160.wise.miller.32644.sbeok.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1983-10-11.senn441-u87.eaton.miller.91124.sbeok.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1983-10-11.120001.mtx.dusborne.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1983-10-11.135250.mtx.v2.dusborne.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1983-10-11.168941.mtx.seamons.ht170.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-11.118673.atm11.chasingwilma.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1983-10-11.143258.senn421-beyer-m201.holbrook.flac1644",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1983-10-11.143046.beyer.m160.wise.miller.clugston.flac1648",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1983-10-11.143610.fob.nak700.cohen.miller.clugston.flac1648",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1983-10-11.135285.Unk-Hill.Keo.Flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1983-10-11.135286.Unk-Hill.Keo.Flac2496",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1983-10-11.143259.senn421-beyer-m201.holbrook.flac2448",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1983-10-11.143611.fob.nak700.cohen.miller.clugston.flac2496",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1983-10-11.122215.audio-technia.chaisingwilma.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1983-10-11.137301.senn421.miller.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-11.137322.senn421.miller.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-11.143047.beyer.m160.wise.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-11.148171.2nd.set.fob.akg.d330bt.senn421.hecht.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-11.148172.2nd.set.fob.akg.d330bt.senn421.hecht.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-11.152504.Beyer-M160-unknown-onemoreshot.shnf",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-11.163828.beyer.m88.vita.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-11.163829.beyer.m88.vita.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-11.167345.senn441.neumann.u87.blend.eaton.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-11.167346.senn441.neumann.u87.blend.eaton.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1983-10-11.beyerm201.pinney.russjcan.103298.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1970-06-24-capitol-theater-port-chester-ny-usa-early-show",
+      "date": "1970-06-24",
+      "venue": "Capitol Theater",
+      "total_reviews": 111,
+      "total_recordings": 6,
+      "ai_rating": 4.6,
+      "recording_details": [
+        {
+          "recording_id": "gd_nrps70-06-24.aud.pcrp5.23062.sbeok.flacf",
+          "review_count": 68
+        },
+        {
+          "recording_id": "gd1970-06-24.aud.lee.5339.sbeok.shnf",
+          "review_count": 18
+        },
+        {
+          "recording_id": "gd1970-06-24.aud.lai.7467.sbefail.shnf",
+          "review_count": 11
+        },
+        {
+          "recording_id": "gd1970-06-24.124175.cooper.berger.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1970-06-24.aud.cooper.coopernicus.32710.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1970-06-24.aud.unknown.gadsden-reynolds.100223.flac16",
+          "review_count": 3
+        }
+      ]
+    },
+    {
+      "show_id": "1988-07-02-oxford-plains-speedway-oxford-me-usa",
+      "date": "1988-07-02",
+      "venue": "Oxford Plains Speedway",
+      "total_reviews": 111,
+      "total_recordings": 36,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1988-07-02.sbd.miller.86817.sbeok.flac",
+          "review_count": 12
+        },
+        {
+          "recording_id": "gd88-07-02.DTS.matrix.dan.21434.sbeok.shnf",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd88-07-02.sbd.jeffm.2328.sbeok.shnf",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd88-07-02.sbd-matrix.dan.21211.sbeok.shnf",
+          "review_count": 72
+        },
+        {
+          "recording_id": "gd1988-07-02.150701.UltraMatrix.sbd.cm.miller.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1988-07-02.150683.sbd.miller.flac2496",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1988-07-02.sbd.jeffm.tetzeli.fix-2328.74652.reflac.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1988-07-02.nak100.unknown.32636.sbeok.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.nakcm304.beyerm101.suraci.82762.sbeok.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.138737.set2.mtx.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.140674.FOB.Neumann.Silberman.Ammons.Noel.t-flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1988-07-02.Nak300CP4.Fitzy.Keo.124844.Flac2496",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1988-07-02.mtx-v2.haugh.92583.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1988-07-02.124766.AT835.laurentis.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1988-07-02.mtx-v2.dts.haugh.92582.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1988-07-02.156917.nak700.werner.flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1988-07-02.132393.Nak100CP4.Seremetcc.Keo.Flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.132394.Nak100CP4.Seremetcc.Keo.Flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.138736.set2.5-1.tobin.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.138738.set2.dts.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.140673.s1.FOB.Schoeps.Bryant.Gastwirt.Miller.Noel.t-flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.141757.FOB.AKG.Ackerman.Miller.Noel.t-flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.142977.Senn.Porter.Wescott.Noel.t-flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.145666.fob.akg460.ackerman.miller.noel.t-flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.147158.sennme80.porter.carbonetta.sirmick.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.150323.aud.CMC42s.FOB.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.158161.Nak300.carpenter.flac2448",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.159376.OTS-Nak300.pasterrnak.vernon.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.159377.OTS-Nak300.pasterrnak.vernon.flac2448",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.163569.senn.me80.hessberg.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.163570.senn.me80.hessberg.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.167977.beyerm201.holbrook.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.167978.beyerm201.holbrook.flac2448",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.Nak300CP4.Fitzy.Keo.124845.Flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.mlp.haugh.98645.dvda",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-02.nak300.morris.crazyfingers.106588.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1970-02-11-fillmore-east-new-york-ny-usa-early-show",
+      "date": "1970-02-11",
+      "venue": "Fillmore East",
+      "total_reviews": 110,
+      "total_recordings": 6,
+      "ai_rating": 4.6,
+      "recording_details": [
+        {
+          "recording_id": "gd1970-02-11.partial.sbd.greenberg-evans.28402.sbeok.flac16",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd70-02-11.early-late.sbd.sacks.90.sbefail.shnf",
+          "review_count": 75
+        },
+        {
+          "recording_id": "gd1970-02-11.sbd.warner.patched.28292.sbeok.flac16",
+          "review_count": 13
+        },
+        {
+          "recording_id": "gd1970-02-11.sbd.smith.patched.99154.sbeok.flac16",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd1970-02-11.126251.sbd.wolfe-lee-smith.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1970-02-11.part.s2.127482.sbd.menke.lee.smith.flac24",
+          "review_count": 3
+        }
+      ]
+    },
+    {
+      "show_id": "1984-07-13-greek-theatre-berkeley-ca",
+      "date": "1984-07-13",
+      "venue": "Greek Theatre",
+      "total_reviews": 109,
+      "total_recordings": 21,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1984-07-13.sbd.walker-scotton.miller.96153.sbeok.flac16",
+          "review_count": 12
+        },
+        {
+          "recording_id": "gd84-07-13.sbd.ferguson.353.sbeok.shnf",
+          "review_count": 60
+        },
+        {
+          "recording_id": "gd1984-07-13.sbd.ferguson.joshd.fix-353.90464.flac16",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd1984-07-13.beyerm160.quirk.perez.31989.sbeok.flac16",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd1984-07-13.136425.sbd.GEMS.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1984-07-13.150404.sbd.anon.gems.2444",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1984-07-13.139747.sbd.pcm.miller.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-07-13.151689.sbd.anon.gems.bandrofcheck.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-07-13.152162.sbd.miller.scotton.walker.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-07-13.152324.sbd.cm.miller.t.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-07-13.mtx.seamons.105570.flac16",
+          "review_count": 12
+        },
+        {
+          "recording_id": "gd1984-07-13.141156.FOB.s2.Schoeps.Oade.Bryant.Miller.Noel.t-flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1984-07-13.145333.fob.sony.ecm150.keeler.miller.noel.t-flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1984-07-13.140048.FOB.s2.Schoeps.Oade.Bryant.Miller.Noel.t-flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-07-13.143392.FOB.ECM-150.Keeler.Miller.Noel.t-flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-07-13.154195.nak700.severson.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-07-13.154196.nak700.severson.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-07-13.163361.nak700.wagner.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-07-13.163362.nak700.wagner.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-07-13.165038.senn421.vita.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1984-07-13.165039.senn421.vita.miller.clugston.flac2496",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1974-05-14-adams-field-house-u-of-montana-missoula-mt-usa",
+      "date": "1974-05-14",
+      "venue": "Adams Field House, U. of Montana",
+      "total_reviews": 108,
+      "total_recordings": 5,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd74-05-14.sbd.murphy.1823.sbeok.shnf",
+          "review_count": 69
+        },
+        {
+          "recording_id": "gd1974-05-14.sbd.miller.114462.flac16",
+          "review_count": 36
+        },
+        {
+          "recording_id": "gd1974-05-14.163764.sbd.miller.patched.sirmick.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1974-05-14.163755.aud.lamarre.vernon.sirmick.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1974-05-14.163756.aud.lamarre.vernon.sirmick.flac24",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1968-02-14-carousel-ballroom-san-francisco-ca-usa",
+      "date": "1968-02-14",
+      "venue": "Carousel Ballroom",
+      "total_reviews": 107,
+      "total_recordings": 8,
+      "ai_rating": 4.6,
+      "recording_details": [
+        {
+          "recording_id": "gd1968-02-14.167922.2nd.set.fm.smith.miller.clugston.flac1648",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1968-02-14.167923.2nd.set.fm.smith.miller.clugston.flac2496",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd68-02-14.sbd.kaplan.15640.sbeok.shnf",
+          "review_count": 72
+        },
+        {
+          "recording_id": "gd1968-02-14.sbd.miller.89676.sbeok.flac16",
+          "review_count": 21
+        },
+        {
+          "recording_id": "gd1968-02-14.sbd.bunjes.12939.shnf",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1968-02-14.sbd.douglas-cleef.2267.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1968-02-14.sbd.winters.89437.sbeok.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1968-02-14.167173.sbd.patched.miller.flac1644",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1985-04-08-the-spectrum-philadelphia-pa-usa",
+      "date": "1985-04-08",
+      "venue": "The Spectrum",
+      "total_reviews": 107,
+      "total_recordings": 28,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd85-04-08.sbd.gills.20010.sbeok.shnf",
+          "review_count": 29
+        },
+        {
+          "recording_id": "gd85-04-08.sbd.wiley.8755.sbeok.shnf",
+          "review_count": 34
+        },
+        {
+          "recording_id": "gd85-04-08.oade-schoeps.sacks.24227.sbeok.flacf",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd85-04-08.schoeps.yuda.3420.sbeok.shnf",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd1985-04-08.sbd.miller.118375.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1985-04-08.118481.sbd.healy.damico.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1985-04-08.shotgun.bandrofcheck.74161.sbeok.shnf",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1985-04-08.nak300.damico.87465.sbeok.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1985-04-08.169938.sbd.remaster.gills.miksis.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-04-08.aud.mccue.ford.117189.sbeok.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-04-08.169970.matrix.miksis.gills.hunt.mattes.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-04-08.nak300.barfield-lane.102065.flac24",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1985-04-08.Sennheiser421FOB.33804.shnf",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1985-04-08.beyerm160.d5scott.107045.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1985-04-08.aud.holtz.JAZ.96598.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1985-04-08.124854.chasingwilma.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-04-08.145497.aud.lamarre.berger.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-04-08.145498.aud.lamarre.berger.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-04-08.149321.senn441.hunt.mattes.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-04-08.149322.senn441.hunt.mattes.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-04-08.151430.3xnak701.barnum.miller.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-04-08.151431.3xnak701.barnum.miller.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-04-08.152173.beyerm88s.holbrook.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-04-08.152174.beyerm88s.holbrook.flac2448",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-04-08.170743.beyer.m160.vita.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-04-08.170744.beyer.m160.vita.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-04-08.aud.mccue.ford.117212.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-04-08.senn421.cohen.103445.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1977-05-05-veterans-memorial-coliseum-new-haven-ct-usa",
+      "date": "1977-05-05",
+      "venue": "Veterans Memorial Coliseum",
+      "total_reviews": 106,
+      "total_recordings": 10,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1977-05-05.sbd.cantor.7725.shnf",
+          "review_count": 13
+        },
+        {
+          "recording_id": "gd77-05-05.sbd.stephens.8832.sbeok.shnf",
+          "review_count": 77
+        },
+        {
+          "recording_id": "gd1977-05-05.123485.sbd.miller.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1977-05-05.sbd.unknown.261.shnf",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1977-05-05.148735.SBD.Betty.Anon.Noel.t-flac2448",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-05-05.171014.mtx.dusborne.flac1644",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1977-05-05.139355.unk-aud.ebel.flac1644",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1977-05-05.152100.aud.ebel.remaster.of.shnid.139355.clugston.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-05-05.152101.aud.lamarre.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-05-05.152102.aud.lamarre.miller.clugston.flac2496",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1991-09-10-madison-square-garden-new-york-ny-usa",
+      "date": "1991-09-10",
+      "venue": "Madison Square Garden",
+      "total_reviews": 106,
+      "total_recordings": 26,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd91-09-10.sbd.dan.30755.sbexx.flacf",
+          "review_count": 19
+        },
+        {
+          "recording_id": "gd91-09-10.sbd.sacks.511.sbeok.shnf",
+          "review_count": 66
+        },
+        {
+          "recording_id": "gd1991-09-10.sbd.waddell.89085.sbeok.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1991-09-10.sbd.sacks.tetzeli.fix-511.34678.reflac.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1991-09-10.149509.sbd.person-healy.miller.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-09-10.149650.sbd.cm.miller.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-09-10.157119.dsbd.miller.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-09-10.mtx.amdig.gems.98132.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1991-09-10.dts.mtx.haugh.gems.98655.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1991-09-10.dts.mtx.haugh.gems.98701.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1991-09-10.153418.mtx.photoleon.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-09-10.167379.mtx.tobin.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-09-10.167381.mtx.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-09-10.fob.brennecke-young.GEMS.96422.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1991-09-10.167383.5-1.tobin.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1991-09-10.Nak300CP4.JB.Keo.117024.Flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1991-09-10.138917.cmc34.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-09-10.150558.senn-me88.rogosa.miller.sirmick.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-09-10.151921.FOB.Schoeps.Master.DAT.ONeill.Mahoney.Noel.t-flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-09-10.167376.PandP-aud.tobin.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-09-10.167377.PandP-aud.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-09-10.167382.dts.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-09-10.167442.me88.mc.rogosa.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-09-10.167443.me88.mc.rogosa.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-09-10.Nak300CP4.JB.Keo.117023.Flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1991-09-10.nak300.gidley.122424.flac2448",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1995-03-19-the-spectrum-philadelphia-pa-usa",
+      "date": "1995-03-19",
+      "venue": "The Spectrum",
+      "total_reviews": 106,
+      "total_recordings": 9,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1995-03-19.136858.sbd.miller.flac1648",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd95-03-19.schoeps.15097.sbeok.shnf",
+          "review_count": 56
+        },
+        {
+          "recording_id": "gd1995-03-19.169647.mtx.davis.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1995-03-19.nak300.bleich.92062.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd95-03-19.schoeps.wiley.7479.shnf",
+          "review_count": 33
+        },
+        {
+          "recording_id": "gd1995-03-19.141180.FOB-cmc5-mk4.ebel.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1995-03-19.141507.OTS.AKG.Ackerman.Miller.Noel.t-flac.1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1995-03-19.141181.FOB-mk4v.ebel.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1995-03-19.143032.Boedicker.flac1644",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1976-06-09-boston-music-hall-boston-ma-usa",
+      "date": "1976-06-09",
+      "venue": "Boston Music Hall",
+      "total_reviews": 105,
+      "total_recordings": 10,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1976-06-09.sbd.miller.95399.sbeok.flac16",
+          "review_count": 21
+        },
+        {
+          "recording_id": "gd76-06-09.matrix.chappell.29323.sbeok.flac16",
+          "review_count": 20
+        },
+        {
+          "recording_id": "gd76-06-09.set2-sbd.gardner.5426.sbeok.shnf",
+          "review_count": 40
+        },
+        {
+          "recording_id": "gd76-06-09.hopkins.vernon.5982.sbeok.shnf",
+          "review_count": 13
+        },
+        {
+          "recording_id": "gd76-06-09.set1-sbd.cotsman.12382.sbeok.shnf",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1976-06-09.sbd-set2.cohen.12207.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1976-06-09.156991.mtx.seamons.ht141.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1976-06-09.aud.maizner.berger.99063.flac24",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1976-06-09.aud.maizner.berger.99064.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1976-06-09.152189.s1-s2p.aud.petrunis.flac2448",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1977-03-18-winterland-arena-san-francisco-ca-usa",
+      "date": "1977-03-18",
+      "venue": "Winterland Arena",
+      "total_reviews": 103,
+      "total_recordings": 10,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1977-03-18.sbd.clugston.254-patch.79098.shnf",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd77-03-18.sbd.unknown.254.sbeok.shnf",
+          "review_count": 66
+        },
+        {
+          "recording_id": "gd1977-03-18.123285.sbd.miller.flac16",
+          "review_count": 20
+        },
+        {
+          "recording_id": "gd1977-03-18.141388.mtx.seamons.ht114.141388.flac1644",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1977-03-18.145509.mtx.motb.0222.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-03-18.140942.fixed.ecm270.menke.sirmick.flac1644",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1977-03-18.145158.ecm270.menke.sirmick.flac1644",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1977-03-18.140916.ecm270.menke.sirmick.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-03-18.140918.ecm270.menke.sirmick.fixed.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-03-18.141163.ecm270.menke.sirmick.revised.flac2496",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1976-07-18-orpheum-theatre-san-francisco-ca-usa",
+      "date": "1976-07-18",
+      "venue": "Orpheum Theatre",
+      "total_reviews": 102,
+      "total_recordings": 7,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1976-07-18.150982.pre-fm.miller.flying-m-.flac1644",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1976-07-18.pre-fm.kbfh.berger.107833.flac24",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1976-07-18.pre-fm.kbfh.berger.107832.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1976-07-18.150187.pre-fm.miller.flac1644",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd76-07-18.sbd.ferguson.244.sbeok.shnf",
+          "review_count": 70
+        },
+        {
+          "recording_id": "gd76-07-18.sbd.bertha.14838.sbeok.shnf",
+          "review_count": 18
+        },
+        {
+          "recording_id": "gd1976-07-18.150770.remastered.miller.flac1644",
+          "review_count": 1
+        }
+      ]
+    },
+    {
+      "show_id": "1978-04-16-huntington-civic-center-huntington-wv-usa",
+      "date": "1978-04-16",
+      "venue": "Huntington Civic Center",
+      "total_reviews": 102,
+      "total_recordings": 17,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1978-04-16.sbd.cantor.motb.81457.sbeok.flac16",
+          "review_count": 43
+        },
+        {
+          "recording_id": "gd1978-04-16.sbd.miller.82273.sbeok.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd78-04-16.sbd.lai.292.sbeok.shnf",
+          "review_count": 39
+        },
+        {
+          "recording_id": "gd1978-04-16.sbd.lai.34971.sbeok.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1978-04-16.sbd.unknown.20085.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1978-04-16.139240.sbd.ForTheFaithful_KTS528-529.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1978-04-16.sbd.lai.16619.sbeok.shnf",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1978-04-16.mtx.seamons.98535.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1978-04-16.148386.betty.dalton.miller.sirmick.fixed.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1978-04-16.ecm54p.moore.berger.98510.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1978-04-16.sonyecm54p.berger.98509.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1978-04-16.147801.1st.set.fob.shure.sm57.sublette.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1978-04-16.147802.1st.set.fob.shure.sm57.sublette.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1978-04-16.148565.sony.54p.wagner.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1978-04-16.148566.sony.54p.wagner.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1978-04-16.149552.BettyBoard.Anon.Noel.t-flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1978-04-16.sonyecm54P.wagner.minches.98791.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1978-12-16-nashville-municipal-auditorium-nashville-tn-usa",
+      "date": "1978-12-16",
+      "venue": "Nashville Municipal Auditorium",
+      "total_reviews": 102,
+      "total_recordings": 4,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1978-12-16.sonyecm250-no-dolby.walker-scotton.miller.82212.sbeok.flac16",
+          "review_count": 94
+        },
+        {
+          "recording_id": "gd1978-12-16.sonyecm250-dolbyb.walker-scotton.miller.82211.sbeok.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd78-12-16.wagner.wiley.9482.sbeok.shnf",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1978-12-16.aud.stephens.8841.sbeok.shnf",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1982-08-10-fieldhouse-u-of-iowa-iowa-city-ia-usa",
+      "date": "1982-08-10",
+      "venue": "Fieldhouse, U. Of Iowa",
+      "total_reviews": 102,
+      "total_recordings": 14,
+      "ai_rating": 4.7,
+      "recording_details": [
+        {
+          "recording_id": "gd82-08-10.sbd.miller.12453.sbeok.shnf",
+          "review_count": 60
+        },
+        {
+          "recording_id": "gd1982-08-10.sbd.miller.102577.flac16",
+          "review_count": 12
+        },
+        {
+          "recording_id": "gd1982-08-10.mtx.seamons.86585.sbeok.shnf",
+          "review_count": 11
+        },
+        {
+          "recording_id": "gd1982-08-10.mtx.seamons.fix.92073.sbeok.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1982-08-10.akg-ce1.mance.cbass.82875.sbeok.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1982-08-10.sbd.kempa.334.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1982-08-10.137540.akg-ce1.mance.wise.sirmick.sbeok.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1982-08-10.140988.sbd.streeter.smith.miller.clugston.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1982-08-10.140989.sbd.streeter.smith.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1982-08-10.mtx.seamons.102902.flac16",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd1982-08-10.155680.ohr-sony-ecm23f-tcd5m.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1982-08-10.139779.FOB-BeyerM160.streeter.miller.sirmick.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1982-08-10.145223.fob.beyer.m160.streeter.miller.sirmick.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1982-08-10.152133.mouth.akg-ce1.mac.uherarchive.rogers.wise.flac2444",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1990-07-12-robert-f-kennedy-stadium-washington-dc-usa",
+      "date": "1990-07-12",
+      "venue": "RFK Stadium",
+      "total_reviews": 102,
+      "total_recordings": 16,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd90-07-12.sbd.mcatee.2582.sbeok.shnf",
+          "review_count": 66
+        },
+        {
+          "recording_id": "gd90-07-12.sbd.unknown.17688.sbeok.shnf",
+          "review_count": 13
+        },
+        {
+          "recording_id": "gd90-07-12.sbd.miller.21980.sbeok.shnf",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd1990-07-12.149730.UltraMatrix.sbd.cm.miller.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1990-07-12.149523.ultramatrix.sbd.pearson-healy.miller.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-07-12.128388.mtx.nicksmix.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1990-07-12.161266.mtx.seamons.ht154.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-07-12.AKG451.Currier.Keo.121537.Flac1644",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1990-07-12.fob.schoeps.unknown.ebel.97709.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1990-07-12.149329.DAK-OTS.boedicker.flac1644",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1990-07-12.141394.FOB.Schoeps.Katzeff.Ammons.Noel.t-flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-07-12.Nak100sSenn421.Hill.Keo.130619.Flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-07-12.133957.akg414btl-fob-dantepper.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-07-12.143602.FOB.Schoeps.Brotman.Miller.Noel.t-flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-07-12.AKG451.Currier.Keo.121536.Flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-07-12.Nak100sSenn421.Hill.Keo.130618.Flac2496",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1977-05-17-memorial-coliseum-u-of-alabama-tuscaloosa-al-usa",
+      "date": "1977-05-17",
+      "venue": "Memorial Coliseum, U. of Alabama",
+      "total_reviews": 100,
+      "total_recordings": 5,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1977-05-17.sbd.leonard.1107.sbeok.shnf",
+          "review_count": 12
+        },
+        {
+          "recording_id": "gd77-05-17.sbd.weiner.18554.sbeok.shnf",
+          "review_count": 77
+        },
+        {
+          "recording_id": "gd1977-05-17.sbd.stretch.5420.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1977-05-17.121485.mtx.dusborne.flac16",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd1977-05-17.aud.maizner.minches.88771.flac16",
+          "review_count": 3
+        }
+      ]
+    },
+    {
+      "show_id": "1979-12-28-oakland-auditorium-arena-oakland-ca-usa",
+      "date": "1979-12-28",
+      "venue": "Oakland Auditorium Arena",
+      "total_reviews": 100,
+      "total_recordings": 17,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1979-12-28.sbd.ladner.gmb.87394.sbeok.flac16",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd1979-12-28.134499.sbd.miller.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd79-12-28.sbd.lai.4145.sbefail.shnf",
+          "review_count": 56
+        },
+        {
+          "recording_id": "gd1979-12-28.mtx.seamons.94267.sbeok.flac16",
+          "review_count": 15
+        },
+        {
+          "recording_id": "gd79-12-28.rolfe.vernon.16117.sbeok.shnf",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1979-12-28.senn421.walker-scotton.miller.89273.sbeok.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1979-12-28.sbd-fried.lai.19918.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1979-12-28.140817.sbd.pcm.miller.clugston.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1979-12-28.140833.sbd.pcm.miller.clugston.fixed.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1979-12-28.senn421.walker-scotton.miller.pitch-corrected.103117.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1979-12-28.128624.naks.mason.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1979-12-28.144777.fob.akg.d1000e.severson.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1979-12-28.144778.fob.akg.d1000e.severson.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1979-12-28.154877.akg.se5.wiseman.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1979-12-28.154878.akg.se5.wiseman.miller.clugston.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1979-12-28.167365.nak700.biggar.smith.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1979-12-28.167366.nak700.biggar.smith.miller.clugston.flac2496",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1977-11-04-cotterrell-gym-colgate-u-hamilton-ny-usa",
+      "date": "1977-11-04",
+      "venue": "Cotterrell Gym, Colgate U.",
+      "total_reviews": 99,
+      "total_recordings": 11,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd77-11-04.sbd.unknown.2595.sbeok.shnf",
+          "review_count": 46
+        },
+        {
+          "recording_id": "gd77-11-04.moore.jupile-weiner.15208.sbeok.shnf",
+          "review_count": 25
+        },
+        {
+          "recording_id": "gd1977-11-04.sbd.matera.130927.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1977-11-04.aud.zimmerman.minches.81110.sbeok.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1977-11-04.sbd.braverman.3739.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1977-11-04.139656.sbd.flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1977-11-04.142304.sbd.eac.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-11-04.mtx.chappell.SB5.29091.flac16",
+          "review_count": 16
+        },
+        {
+          "recording_id": "gd1977-11-04.141005.aud.boswell.smith.sirmick.flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1977-11-04.141833.sony.ecm33p.moore.dalton.miller.clugston.flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1977-11-04.141004.aud.boswell.smith.sirmick.flac2496",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1989-07-17-alpine-valley-music-theatre-east-troy-wi-usa",
+      "date": "1989-07-17",
+      "venue": "Alpine Valley Music Theatre",
+      "total_reviews": 99,
+      "total_recordings": 17,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd89-07-17.sbd.unknown.17702.sbeok.shnf",
+          "review_count": 76
+        },
+        {
+          "recording_id": "gd1989-07-17.138355.UltraMatrixSBD.miller.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1989-07-17.sbd.stink-kind.433.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1989-07-17.138345.sbd.miller.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-17.mtx.hansokolow.96230.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1989-07-17.150008.mtx.tobin.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1989-07-17.150009.mtx.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-17.senn441.coniff.gmb.92457.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1989-07-17.nak300.holtz.jaz.106490.flac16",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd1989-07-17.142297.Lawn.Schoeps.Mattes.Miller.Noel.t-flac1648",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1989-07-17.150011.5-1.tobin.flac1648",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1989-07-17.Nak300CP4.Baker.Keo.125724.Flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1989-07-17.144302.Dak.boedicker.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-17.149270.beyerCM101.ebel.x.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-17.150010.dts.tobin.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-17.Nak300CP4.Baker.Keo.125723.Flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1989-07-17.nak.cohen-lee.106654.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1990-09-20-madison-square-garden-new-york-ny-usa",
+      "date": "1990-09-20",
+      "venue": "Madison Square Garden",
+      "total_reviews": 99,
+      "total_recordings": 21,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd90-09-20.sbd.miller.12111.sbeok.shnf",
+          "review_count": 18
+        },
+        {
+          "recording_id": "gd90-09-20.sbd.ashley.14855.sbeok.shnf",
+          "review_count": 48
+        },
+        {
+          "recording_id": "gd1990-09-20.bk4011.tdarian.french.88970.sbeok.flac16",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd1990-09-20.sbd.miller.28691.sbeok.shnf",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1990-09-20.schoepsmk4.bratman.9989.sbeok.shnf",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1990-09-20.sbd.miller.108849.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1990-09-20.sbd.eichinger.465.sbeok.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-09-20.sbd.miller.tetzeli.28691-fix.34629.sbeok.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-09-20.schoeps.wiley.11633.sbeok.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-09-20.mtx.dan.30868.sbeok.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1990-09-20.dts.dan.31773.sbeok.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-09-20.156488.UltraMatrix.sbd.cm.miller.t.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-09-20.138036.mtx.photoleon.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1990-09-20.152739.mtx.seamons.ht131.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-09-20.150546.remaster.149578.FOB.Schoeps.Brotman.Metchick.Miller.Noel.t.flac1648",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1990-09-20.AT835B.laurentus.96918.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1990-09-20.149578.FOB.Schoeps.Brotman.Metchick.Miller.Noel.t-flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-09-20.141168.OTS.AKG.Ackerman.Miller.Noel.t-flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1990-09-20.132709.cmc34.fob.katzeff.deal.petty.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-09-20.150669.nak300.boedicker.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1990-09-20.156442.ultramtrix.miller.flac2496",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1977-10-29-field-house-northern-illinois-u-de-kalb-il-usa",
+      "date": "1977-10-29",
+      "venue": "Field House, Northern Illinois U.",
+      "total_reviews": 98,
+      "total_recordings": 8,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd77-10-29.sbd.kempa.280.sbeok.shnf",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1977-10-29.sbd.miller.92085.sbeok.flac16",
+          "review_count": 42
+        },
+        {
+          "recording_id": "gd1977-10-29.sbd.cribbs.28613.sbeok.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd77-10-29.maizner.vernon.8035.sbeok.shnf",
+          "review_count": 16
+        },
+        {
+          "recording_id": "gd1977-10-29.mtx.hansokolow.98032.flac16",
+          "review_count": 14
+        },
+        {
+          "recording_id": "gd1977-10-29.137373.mtx.dusborne.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1977-10-29.ecm990.maizner.miller.108010.flac16",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd1977-10-29.148908.betty-board.anon.noel.t-flac16",
+          "review_count": 2
+        }
+      ]
+    },
+    {
+      "show_id": "1988-07-29-laguna-seca-recreation-area-monterey-ca-usa",
+      "date": "1988-07-29",
+      "venue": "Laguna Seca Recreation Area",
+      "total_reviews": 97,
+      "total_recordings": 8,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd88-07-29.sbd.hayum.5395.sbeok.shnf",
+          "review_count": 64
+        },
+        {
+          "recording_id": "gd1988-07-29.sbd.miller.106034.flac16",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd1988-07-29.pzm.russjcan.93970.sbeok.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1988-07-29.set2.sbd.russjcan.105341.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1988-07-29.167172.ultramatrix.patched.miller.flac1644",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1988-07-29.158384.mtx.photoleon.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1988-07-29.schoeps.litzenberger.watson.86255.sbefail.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1988-07-29.fob.nak100.holtz.jaz.102903.flac16",
+          "review_count": 8
+        }
+      ]
+    },
+    {
+      "show_id": "1995-07-02-deer-creek-music-center-noblesville-in-usa",
+      "date": "1995-07-02",
+      "venue": "Deer Creek Music Center",
+      "total_reviews": 97,
+      "total_recordings": 14,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1995-07-02.soundcheck.fm.gmb.91256.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd95-07-02.aud.unk.12578.sbeok.shnf",
+          "review_count": 36
+        },
+        {
+          "recording_id": "gd95-07-02.aud.ball.587.sbeok.shnf",
+          "review_count": 46
+        },
+        {
+          "recording_id": "gd1995-07-02.monitor-sbd.unknown.74201.sbeok.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1995-07-02.139737.cmc5-mk4.ebel-varnum.flac1644",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1995-07-02.schoeps.unknown.nawrocki.19592.shnf",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1995-07-02.aud.unknown.tetzeli.fix-12578.74417.reflac.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1995-07-02.147152.walsh.suraci.at835.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1995-07-02.nak300.holtz.jaz.92522.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1995-07-02.113283.BK4006.gotfob.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1995-07-02.124799.akg461.cage.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1995-07-02.147153.walsh.suraci.at835.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1995-07-02.172278.akgc460b.brothers.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1995-07-02.172645.senn.me88.greenberg.roeder.miller.clugston.flac1648",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1976-06-14-beacon-theatre-new-york-ny-usa",
+      "date": "1976-06-14",
+      "venue": "Beacon Theatre",
+      "total_reviews": 96,
+      "total_recordings": 8,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1976-06-14.sbd.bettycantor.gems.82308.flac16",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd76-06-14.sbd.hollister.22804.sbeok.shnf",
+          "review_count": 73
+        },
+        {
+          "recording_id": "gd1976-06-14.sbd.hollister.13966.sbeok.shnf",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd76-06-14.sony.vernon.10917.sbeok.shnf",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1976-06-14.143026.sbd.betty.composite.dalton.miller.clugston.flac1644",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1976-06-14.sbd.orf.240.shnf",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1976-06-14.set-2.sbd.sirmick.78433.sbeok.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1976-06-14.128772.mtx.dusborne.flac16",
+          "review_count": 3
+        }
+      ]
+    },
+    {
+      "show_id": "1980-11-29-alligator-alley-gym-u-of-florida-gainesville-fl-usa",
+      "date": "1980-11-29",
+      "venue": "Alligator Alley Gym, U. of Florida",
+      "total_reviews": 96,
+      "total_recordings": 16,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1980-11-29.beyer160.wise.gmb.89938.sbeok.flac16",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd80-11-29.wise.sacks.2409.sbeok.shnf",
+          "review_count": 59
+        },
+        {
+          "recording_id": "gd1980-11-29.nak700.wagner.miller.90104.sbeok.flac16",
+          "review_count": 14
+        },
+        {
+          "recording_id": "gd1980-11-29.139321.set2.sbd.miller.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1980-11-29.139322.set2.sbd.miller.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1980-11-29.beyerm160.wise.miller.101722.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1980-11-29.127229.beyer.stankiewicz.flac2496",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1980-11-29.145665.beyerM-88.stankiewicz.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1980-11-29.132456.aud.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1980-11-29.132457.wise.aud.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1980-11-29.134703.aud.schley.flac2448",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1980-11-29.134704.aud.schley.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1980-11-29.155787.ohr-sony-ecm23f-nak550-flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1980-11-29.157370.fob.nak700.wagner.miller.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1980-11-29.157406.fob.nak700.cm.wagner.miller.t.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1980-11-29.aud.barrick.325.shnf",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1980-11-30-fox-theater-atlanta-ga-usa",
+      "date": "1980-11-30",
+      "venue": "Fox Theater",
+      "total_reviews": 95,
+      "total_recordings": 9,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1980-11-30.nak700-set2.wagner.miller.90497.sbeok.flac16",
+          "review_count": 18
+        },
+        {
+          "recording_id": "gd1980-11-30.nak700-set2.wagner.miller.90530.sbeok.flac24",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd80-11-30.sbd-aud.sacks.2416.sbeok.shnf",
+          "review_count": 56
+        },
+        {
+          "recording_id": "gd1980-11-30.110936.mtx.chappell.sb31.flac16",
+          "review_count": 12
+        },
+        {
+          "recording_id": "gd1980-11-30.157922.aud.hicks-fong.flac2448",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1980-11-30.part.127319.aud.oade.stankiewicz.wise.minches.flac24",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1980-11-30.nak700-set1.wagner.chappell.110921.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1980-11-30.128440.naks.mason.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1980-11-30.123306.senn421.moore-berger.flac2496",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1973-03-24-the-spectrum-philadelphia-pa-usa",
+      "date": "1973-03-24",
+      "venue": "The Spectrum",
+      "total_reviews": 95,
+      "total_recordings": 5,
+      "ai_rating": 4.8,
+      "recording_details": [
+        {
+          "recording_id": "gd73-03-24.sbd.bertha-ashley.25508.sbeok.shnf",
+          "review_count": 60
+        },
+        {
+          "recording_id": "gd1973-03-24.sbd.cantor.deibert.83407.sbeok.flac16",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd73-03-24.sbd.hamilton.1216.sbeok.shnf",
+          "review_count": 20
+        },
+        {
+          "recording_id": "gd1973-03-24.139595.sbd.betty.composite.miller.clugston.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1973-03-24.170828.sbd.patched.001216.flegel.flac1644",
+          "review_count": 2
+        }
+      ]
+    },
+    {
+      "show_id": "1995-03-23-charlotte-coliseum-charlotte-nc-usa",
+      "date": "1995-03-23",
+      "venue": "Charlotte Coliseum",
+      "total_reviews": 94,
+      "total_recordings": 6,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd95-03-23.sbd.miller.25273.sbeok.flacf",
+          "review_count": 50
+        },
+        {
+          "recording_id": "gd95-03-23.sbd.1369.sbeok.shnf",
+          "review_count": 37
+        },
+        {
+          "recording_id": "gd1995-03-23.142397.dsbd.miller.flac1644",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd1995-03-23.aud.laporte.90975.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1995-03-23.141183.I-FOB-cmc5-mk4-IIFOB-mk4.ebel.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1995-03-23.168012.mk4.jbraveman.flac1648",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1978-09-02-giants-stadium-east-rutherford-nj-usa",
+      "date": "1978-09-02",
+      "venue": "Giants Stadium",
+      "total_reviews": 93,
+      "total_recordings": 10,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd78-09-02.sbd.jools.7925.sbeok.shnf",
+          "review_count": 54
+        },
+        {
+          "recording_id": "gd1978-09-02.sbd.miller.106818.flac16",
+          "review_count": 12
+        },
+        {
+          "recording_id": "gd78-09-02.rolfe.weiner.15822.sbeok.shnf",
+          "review_count": 18
+        },
+        {
+          "recording_id": "gd1978-09-02.142988.set2.sbd.dalton.miller.clugston.flac1648",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1978-09-02.aud-sbd.clugston.5986.sbefail.shnf",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1978-09-02.131868.mtx.dusborne.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1978-09-02.s2.sony54p.wagner.miller.124588.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1978-09-02.139367.s2.Sony54P.wagner.miller.sirmick.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1978-09-02.140476.s2.Sony54P.wagner.miller.sirmick.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1978-09-02.164506.fob.shure.sm57.gatto.mckenzie.miller.clugston.flac1644",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1981-02-27-uptown-theater-chicago-il-usa",
+      "date": "1981-02-27",
+      "venue": "Uptown Theater",
+      "total_reviews": 93,
+      "total_recordings": 8,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd81-02-27.sbd.lutch.4598.sbeok.shnf",
+          "review_count": 41
+        },
+        {
+          "recording_id": "gd1981-02-27.mtx.chappell.sb02b.28384.sbeok.flac16",
+          "review_count": 39
+        },
+        {
+          "recording_id": "gd81-02-27.glassberg.steinthal-cohen-vernon.20344.sbeok.shnf",
+          "review_count": 6
+        },
+        {
+          "recording_id": "gd1981-02-27.mtx.seamons.130386.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1981-02-27.127511.stankiewicz.2496",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1981-02-27.naks.mason.128712.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1981-02-27.139731.fob.beyer.m160.streeter.miller.clugston.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1981-02-27.139732.fob.beyer.m160.streeter.miller.clugston.flac2496",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1985-11-01-richmond-coliseum-richmond-va-usa",
+      "date": "1985-11-01",
+      "venue": "Richmond Coliseum",
+      "total_reviews": 93,
+      "total_recordings": 17,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd85-11-01.aud-oade.remaster.20416.sbeok.shnf",
+          "review_count": 22
+        },
+        {
+          "recording_id": "gd85-11-01.sbd.mccloskey.379.sbeok.shnf",
+          "review_count": 9
+        },
+        {
+          "recording_id": "gd85-11-01.oade.connor.9217.sbeok.shnf",
+          "review_count": 40
+        },
+        {
+          "recording_id": "gd1985-11-01.senn441.zaleski.ford.91179.sbeok.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1985-11-01.dts.haugh.34558.sbeok.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1985-11-01.cpb.retransfer.32709.sbeok.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1985-11-01.134977.mtx.tobin.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1985-11-01.beyerM88.berger.97646.flac24",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1985-11-01.fob.senn421.koucky.gmb.96195.flac24",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1985-11-01.151916.senn441.lamarre.miller.clugston.flac2496",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1985-11-01.168186.senn.me80.hessberg.miller.clugston.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1985-11-01.fob.senn421.koucky.gmb.96194.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1985-11-01.134978.dts.tobin.flac16",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1985-11-01.126321.chasingwilma.flac24",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-11-01.134979.sur5-1.tobin.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-11-01.151915.senn441.lamarre.miller.clugston.flac1648",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1985-11-01.168187.senn.me80.hessberg.miller.clugston.flac2496",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1995-07-08-soldier-field-chicago-il-usa",
+      "date": "1995-07-08",
+      "venue": "Soldier Field",
+      "total_reviews": 93,
+      "total_recordings": 10,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1995-07-08.sbd.miller.114363.flac16",
+          "review_count": 14
+        },
+        {
+          "recording_id": "gd1995-07-08.sbd.larson.35157.flac16",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd95-07-08.sbd.10071.sbeok.shnf",
+          "review_count": 44
+        },
+        {
+          "recording_id": "gd95-07-08.BK401s.4362.sbeok.shnf",
+          "review_count": 20
+        },
+        {
+          "recording_id": "gd1995-07-08.sbd.larson.tetzeli.fix-35157.98576.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1995-07-08.167438.matrix.davis.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1995-07-08.134129.oade-micro-mics.flac1648",
+          "review_count": 1
+        },
+        {
+          "recording_id": "gd1995-07-08.127736.nick.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1995-07-08.147113.walsh.suraci.at835.flac16",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1995-07-08.147114.walsh.suraci.at835.flac24",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1973-11-17-pauley-pavilion-ucla-los-angeles-ca-usa",
+      "date": "1973-11-17",
+      "venue": "Pauley Pavilion, UCLA",
+      "total_reviews": 93,
+      "total_recordings": 7,
+      "ai_rating": 4.8,
+      "recording_details": [
+        {
+          "recording_id": "gd1973-11-17.sbd.ashley.23472.sbefail.shnf",
+          "review_count": 22
+        },
+        {
+          "recording_id": "gd1973-11-17.sbd.sirmick.79548.sbeok.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd73-11-17.sbd.gardner.4749.sbeok.shnf",
+          "review_count": 50
+        },
+        {
+          "recording_id": "gd1973-11-17.sbd.ashley.fixed.23731.sbeok.shnf",
+          "review_count": 10
+        },
+        {
+          "recording_id": "gd1973-11-17.sbd.patched.bec.22799.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1973-11-17.166357.aud.Conner.gems.flac2496",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1973-11-17.166358.aud.Conner.gems.flac1648",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1977-05-15-st-louis-arena-st-louis-mo-usa",
+      "date": "1977-05-15",
+      "venue": "St. Louis Arena",
+      "total_reviews": 92,
+      "total_recordings": 9,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd1977-05-15.sbd.bertha.31605.sbeok.flac24",
+          "review_count": 8
+        },
+        {
+          "recording_id": "gd77-05-15.sbd.gorinsky.7008.sbeok.shnf",
+          "review_count": 19
+        },
+        {
+          "recording_id": "gd1977-05-15.28916.sbeok.flac16",
+          "review_count": 54
+        },
+        {
+          "recording_id": "gd1977-05-15.mtx.sirmick.91911.sbeok.flac16",
+          "review_count": 4
+        },
+        {
+          "recording_id": "gd1977-05-15.sbd.unknown.18333.shnf",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1977-05-15.aud.maizner.berger.99098.flac24",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1977-05-15.aud.maizner.berger.99099.flac16",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1977-05-15.164607.fob.sony.gatto.mckenzie.miller.clugston.flac1644",
+          "review_count": 0
+        },
+        {
+          "recording_id": "gd1977-05-15.aud.maizner.minches.84714.flac16",
+          "review_count": 0
+        }
+      ]
+    },
+    {
+      "show_id": "1995-06-30-three-rivers-stadium-pittsburgh-pa-usa",
+      "date": "1995-06-30",
+      "venue": "Three Rivers Stadium",
+      "total_reviews": 92,
+      "total_recordings": 8,
+      "ai_rating": null,
+      "recording_details": [
+        {
+          "recording_id": "gd95-06-30.schoeps.3376.sbeok.shnf",
+          "review_count": 71
+        },
+        {
+          "recording_id": "gd1995-06-30.fob.schoeps.evans.GEMS.83144.flac16",
+          "review_count": 7
+        },
+        {
+          "recording_id": "gd1995-06-30.fob.nak300.holtz.jaz.92491.flac16",
+          "review_count": 5
+        },
+        {
+          "recording_id": "gd1995-06-30.schoeps.jones.wklitz.95189.flac16",
+          "review_count": 3
+        },
+        {
+          "recording_id": "gd1995-06-30.schoeps.clemens.89393.flac1648",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1995-06-30.147146.walsh.suraci.at835.flac24",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1995-06-30.schoeps.jones.wklitz.95193.flac1648",
+          "review_count": 2
+        },
+        {
+          "recording_id": "gd1995-06-30.147145.walsh.suraci.at835.flac16",
+          "review_count": 0
+        }
+      ]
+    }
+  ],
+  "percentile_ranges": [
+    [
+      0,
+      5,
+      "Minimal (below threshold)"
+    ],
+    [
+      5,
+      19,
+      "Limited attention"
+    ],
+    [
+      19,
+      28,
+      "Standard attention"
+    ],
+    [
+      28,
+      45,
+      "Notable attention"
+    ],
+    [
+      45,
+      157,
+      "High attention"
+    ],
+    [
+      157,
+      Infinity,
+      "Exceptional attention"
+    ]
+  ],
+  "analysis_date": "2025-09-11",
+  "total_shows_analyzed": 1961
+}

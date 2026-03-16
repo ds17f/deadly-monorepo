@@ -1,0 +1,39 @@
+{
+  "summary": "Recording quality is not described, but reviewers rave about the nostalgic Boston Garden performance.",
+  "review": "The three fan reviews are overwhelmingly positive, recalling a chilly Boston night that left a lasting impression and even a chance encounter with the taper. The only criticism is aimed at a guest accordionist who “butchered” an otherwise beautiful rendition of \"Brokedown Palace,\" but overall the show is described as very good.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Strong positive sentiment about the performance (70% weight) combined with no concrete information on audio fidelity (30% weight) yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers do not comment on soundboard, audience mix, clarity or other technical aspects; only performance is discussed."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Brokedown Palace"
+    ],
+    "setlist_flow": "Reviews focus on the overall vibe of a cold Boston night rather than detailed set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T02:14:45.455402+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-26.sennME80.wklitz.94247.flac16"
+}

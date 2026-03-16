@@ -1,0 +1,62 @@
+{
+  "summary": "Delightful matrix recording captures a high‑energy second night with soaring Bird Song, The Wheel into Stella Blue, and an electrifying Drums → The Other One sequence.",
+  "review": "The show is praised for its intensity and tight interplay among Jerry, Phil and Bob, highlighted by a soaring Bird Song, the seamless transition from The Wheel into Stella Blue, and a spectacular Drums‑>‑Other One segment.  Recorded as a well‑balanced matrix mix by Dave Usborn, the audio conveys the concert’s “gestalt energy” without noticeable flaws.  Overall the performance and its capture are deemed outstanding by the reviewers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All three reviews are strongly positive (average 4.67★) and emphasize both superb musical moments and a high‑quality matrix recording, giving the show a clear edge."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Recorded as a matrix mix by Dave Usborn; reviewers describe it as ‘delightful’, ‘takes you to the place and time’, with no complaints about clarity or balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "The Wheel",
+      "Stella Blue",
+      "Drums > The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second night kept the intensity of the first, featuring point‑counterpoint improvisations that let the band soar, a rolling Wheel segment that built into a spacey drum‑themed interlude and culminated in a unique The Other One run."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for intertwining lines with Phil and Bob; his guitar work is highlighted as part of the soaring Bird Song and the climactic Wheel→Other One sequence.",
+    "Phil": "Noted for tight interplay with Jerry and Bob, especially during the point/counter‑point sections that lift the music.",
+    "Bob": "Mentioned alongside Jerry and Phil for weaving individual lines together throughout the show.",
+    "Keys": "",
+    "Drums": "Described as ‘amazing’, accentuated by guest percussion (Flora Purim, Airto) and forming a standout Drums→The Other One segment."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T07:07:05.169116+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-12-14.136726.mtx.dusborne.flac16"
+}

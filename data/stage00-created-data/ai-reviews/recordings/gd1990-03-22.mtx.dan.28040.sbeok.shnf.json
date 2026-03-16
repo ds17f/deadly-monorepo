@@ -1,0 +1,55 @@
+{
+  "summary": "Terrific matrix recording captures a blistering Scarlet Fire and an epic The Other One jam on a stellar 1990 Dead show.",
+  "review": "The Dan‑Haugh matrix delivers crystal‑clear soundboard detail plus the crowd’s excitement, making the audio feel live and immediate. Musically the concert is lauded as one of the best of the ’90s, with a scorching Scarlet Fire, an energetic Other One jam and strong performances throughout, despite a few minor hiccups on Hey Jude.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 5), enthusiastic praise for both performance and matrix sound, with only minor technical critiques."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note crisp soundboard clarity combined with lively audience ambience; one comment mentions a slight low‑end boost and missing high end in another transfer, but overall the mix is praised as superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Fire",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set one opens with high energy and tight playing; set two delivers the highlight Scarlet Fire and a powerful Other One jam, with a few less‑favored tunes toward the end but overall a flowing, exciting show."
+  },
+  "band_member_comments": {
+    "Jerry": "Superb vocal performance and blazing guitar runs, especially on Scarlet Fire.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland flubs the opening of Hey Jude but overall keyboard work is solid.",
+    "Drums": "Generally tight; one reviewer notes a slight excess of low‑end kick around 80 Hz."
+  },
+  "song_mentions": {
+    "Scarlet Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Easy to Love You": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T04:37:12.499296+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-22.mtx.dan.28040.sbeok.shnf"
+}

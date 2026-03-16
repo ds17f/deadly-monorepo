@@ -1,0 +1,85 @@
+{
+  "summary": "Crisp soundboard recording of a mixed‑quality 1973 show, highlighted by stellar Eyes and Help on the Way performances.",
+  "review": "The tape captures a clear, well‑balanced soundboard mix that most reviewers describe as crisp and great, though a few note odd track edits. Musically the concert is uneven – the first set is solid but unremarkable, while the second set delivers standout moments like Eyes, Help on the Way, Truckin' into The Other One, yet suffers from miscues and a sloppy Let It Grow. Overall it’s a worthwhile addition for collectors who value the strong jams despite the occasional slip.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the soundboard quality and several standout songs, balanced by repeated notes of miscues and weaker performances."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, focused mix with good instrument separation; some reviewers complain about unnecessary track splits/editing but overall the recording is praised as great."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Help on the Way",
+      "Truckin'",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Let It Grow",
+      "Big River"
+    ],
+    "setlist_flow": "First set solid but not spectacular; second set contains high‑energy peaks (Help → Truckin' → Other One → Eyes) yet is marred by miscues and a sloppy Let It Grow, giving the concert an uneven flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for jazzy, extra‑octane guitar work – especially on Eyes and the debut of his “wolf” tone.",
+    "Phil": "",
+    "Bob": "Criticized for botching Truckin' at a crucial point, causing a noticeable stumble in the set.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Weather Report Suite > Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T16:53:07.773349+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-09-07.sbd.goodbear.1126.sbeok.shnf"
+}

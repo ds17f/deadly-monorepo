@@ -1,0 +1,81 @@
+{
+  "summary": "Good‑sounding audience recording of a mixed‑quality 1994 Riverport show that still delivers several standout Dead moments.",
+  "review": "The audience (AUD) capture is praised for its clarity and surprisingly studio‑like presence, making the set easy to listen to. The performance itself draws split opinions – many fans recall an electric vibe with highlights like \"The Wheel,\" \"Friend of the Devil,\" \"Lazy River Road\" and a solid second‑set run, while others describe the show as sub‑par or “abysmal.” Overall the recording is enjoyable despite uneven musical execution.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Numerous reviews give clear, consistent feedback: the AUD source sounds good (recording quality high) but the show receives both strong praise and notable criticism, yielding a mid‑high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners repeatedly note the AUD is ‘great sounding’ and wonder if it’s a matrix; mic work (Shure BetaGreen) is mentioned, indicating clean capture with minimal muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Wheel",
+      "Friend of the Devil",
+      "Lazy River Road",
+      "Jack Straw",
+      "Rooster!",
+      "Queen Jane",
+      "Easy Answers",
+      "Fine Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as long and varied; first‑set energy was uneven (Jerry less engaged) while the second set is highlighted as stronger. Overall vibe swings between “electric” and “sub‑par,” reflecting the transitional period of the mid‑90s Dead."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for remembering lyrics to FOTD and Lazy River Road; also noted as disengaged on the first set.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "References to Brent Mydland’s passing (4‑year anniversary) but no performance comments.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rooster!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Answers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fine Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T00:18:05.792208+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-07-26.smith.ladner.10225.sbeok.shnf"
+}

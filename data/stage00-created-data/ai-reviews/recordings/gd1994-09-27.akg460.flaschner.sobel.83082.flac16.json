@@ -1,0 +1,92 @@
+{
+  "summary": "Decent 1994 show with strong vocal and guitar work, highlighted by Dark Star and Watchtower; recording quality unclear",
+  "review": "The concert is praised for several high‑energy moments – a moving So Many Roads, a powerful Dark Star, an inspired Watchtower and Jerry Garcia’s soaring vocals and soloing. The performance has a few rough spots (a short Deal and a slightly disjointed China Cat Sunflower), and the review offers no details on the recording source or fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "The reviewer highlights many strong musical moments but also notes several performance flaws; with no information on audio quality, the overall rating stays modestly above average."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix, or source type were provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads",
+      "Maggie's Farm > Cumberland",
+      "I Know You Rider",
+      "Uncle John's Band",
+      "Dark Star",
+      "Watchtower"
+    ],
+    "poor_songs": [
+      "Deal",
+      "China Cat Sunflower"
+    ],
+    "setlist_flow": "The first set builds with several strong moments, the mid‑set shines with emotional ballads and tight transitions, and the second half peaks with a superb Dark Star and Watchtower that carry the show to an inspired finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are described as strong throughout; his guitar solo on I Know You Rider lifts the energy and he 'rights the ship' after a shaky China Cat Sunflower.",
+    "Phil": "Noted as being in his element during an extended space that leads into Watchtower.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Pre‑drum section is called good, with Uncle John's Band ending strongly into the drums."
+  },
+  "song_mentions": {
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Maggie's Farm > Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Easy Answers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T01:39:35.801760+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-09-27.akg460.flaschner.sobel.83082.flac16"
+}

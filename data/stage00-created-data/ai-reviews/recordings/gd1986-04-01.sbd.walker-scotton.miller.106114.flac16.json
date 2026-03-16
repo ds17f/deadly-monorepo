@@ -1,0 +1,63 @@
+{
+  "summary": "Decent unknown‑source recording of a solid show that highlights Shakedown Street, Cassidy, The Music Never Stopped, Stagger Lee and Box of Rain.",
+  "review": "Reviewers praise the performance, calling it a \"very sick\" rendition of Shakedown Street with strong versions of Cassidy, The Music Never Stopped, Stagger Lee and Box of Rain. One reviewer notes the drums and space segment as highlights, while no specific recording flaws are mentioned, leaving the audio quality unconfirmed but apparently listenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Positive comments about many songs and overall show energy (70% weight) combined with a lack of recording‑quality feedback (30% weight) lead to an above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer commented on sound clarity, mix balance, or source type; thus recording quality cannot be confidently assessed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Cassidy",
+      "The Music Never Stopped",
+      "Stagger Lee",
+      "Box of Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note the music \"never stopped\" and appreciate continuous flow, indicating a well‑paced set with strong transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:28:26.522938+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-01.sbd.walker-scotton.miller.106114.flac16"
+}

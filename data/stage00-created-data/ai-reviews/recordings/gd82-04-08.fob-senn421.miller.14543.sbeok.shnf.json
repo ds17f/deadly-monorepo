@@ -1,0 +1,64 @@
+{
+  "summary": "Mixed‑quality audience recording of a show that’s a hidden gem for its Let It Grow and Eyes‑of‑the‑World moments but hampered by occasional bassy tone and aggressive Dolby.",
+  "review": "The performance has flashes of brilliance – a smoking Let It Grow, an energetic Eyes of the World and solid Playing‑in‑the‑Band/Uncle John’s transitions – yet several listeners felt the band struggled to flow and noted a weak closing with Stranger. The audience (AUD) source is generally clear but can be a bit bass‑heavy and some reviewers complained about overly aggressive Dolby that swallows detail, giving the recording an overall fair sound quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is uneven (strong moments vs. flow issues) and recording quality ranges from clear to problematic, resulting in an average‑plus rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Clear overall but slightly bassy on some systems; aggressive Dolby noted as swallowing sound; one reviewer gave it a B‑ quality rating, others called it good for the venue."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Eyes of the World",
+      "Playing in the Band",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [
+      "Stranger"
+    ],
+    "setlist_flow": "Several reviewers felt the band had trouble transitioning between songs and seemed eager to leave, though others praised specific high‑energy moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for being fully committed and delivering strong guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:35:46.752472+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-04-08.fob-senn421.miller.14543.sbeok.shnf"
+}

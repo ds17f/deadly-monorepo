@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive feedback on either recording or performance; unable to assess quality.",
+  "review": "The single review provides no details about the audio source, sound clarity, or musical execution, offering only a brief personal note. With no comments on songs, band members, or technical aspects, both the show's and recording's qualities remain indeterminate.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "Only one vague review with a zero-star rating and no concrete information about performance or recording quality, making any rating highly uncertain."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound quality provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T08:21:33.334088+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-12-02.132562.aud.dat.johnl.flac16"
+}

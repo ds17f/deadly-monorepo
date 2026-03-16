@@ -1,0 +1,113 @@
+{
+  "summary": "High‑quality soundboard capture of a celebratory late‑'90s show with stellar first‑set energy and a jam‑packed second set.",
+  "review": "The recording is praised for its crystal‑clear sound, though a few listeners note that Jerry’s lead guitar sits low in the mix. Musically the concert shines – fans repeatedly highlight an explosive first set (Truckin', Row Jimmy, Me & My Uncle > Big River) and a second‑set marathon of Samson, New Speedway Boogie, Spanish Jam and multiple tight vocal harmonies on songs like Loose Lucy and The Weight.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (8 of 10) give 4‑5 stars and extol both the performance and sound quality; only a few low or neutral scores are unrelated spam or isolated criticisms."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall crisp and balanced, but some listeners mention Jerry’s solo being buried in the mix and occasional monitor imbalances."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Row Jimmy",
+      "Me and My Uncle > Big River",
+      "Samson",
+      "New Speedway Boogie",
+      "Spanish Jam",
+      "Loose Lucy",
+      "He's Gone",
+      "Black Peter",
+      "The Weight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A fireworks first set that many call one of the best ever, followed by a second set heavy on improvisation and vocal harmonies – perfect for Jerry’s birthday atmosphere."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised for strong solos (Row Jimmy, Lazy River Road) but noted as too low in the mix by some listeners.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince Schmidt despises Vince's keyboards, calling them a drag; other reviewers love his energy and deem him a highlight of the night.",
+    "Drums": "The drum‑>space segment is repeatedly praised for its power and intensity."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle > Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Midnight Hour": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Last Time > Black Peter > Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T00:42:09.280964+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-07-31.sbd.runyon.2593.sbefail.shnf"
+}

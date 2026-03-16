@@ -1,0 +1,51 @@
+{
+  "summary": "Stunning FOB audience tape captures a powerful show with standout Playin', China Cat Sunflower, and He's Gone.",
+  "review": "Both reviewers rave about the performance, calling Playin', China Cat Sunflower and He's Gone amazing highlights. The recording is praised as an impressive first‑off‑the‑boat (FOB) capture by Jim Wise using Sennheiser 421 microphones, delivering surprisingly clear and detailed sound.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "High praise for both the musical set (standout songs) and the recording quality (FOB with excellent mics), though only two reviews limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "FOB audience tape recorded by Jim Wise with Sennheiser 421 microphones; reviewers note stunning clarity and detail for an off‑board source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin'",
+      "China Cat Sunflower",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight a tight, energetic performance with smooth transitions among the highlighted tunes."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T02:12:00.979349+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-21.119147.nak300.chasingwilma.flac16"
+}

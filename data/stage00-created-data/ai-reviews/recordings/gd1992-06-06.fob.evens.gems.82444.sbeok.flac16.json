@@ -1,0 +1,45 @@
+{
+  "summary": "Decent audience‑recorded tape with some board hiccups, highlighted by Vince‑sang covers of Baba O'Riley and Tomorrow Never Knows.",
+  "review": "The show is an average outing – the first set holds up well enough while the second set offers a few moments, most notably Vince Welnick’s takes on Baba O'Riley and Tomorrow Never Knows. Recording-wise the tape is mainly audience‑sourced with a problematic soundboard feed for part of set 2, making the overall sound fair but listenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is modestly praised (covers and decent first set) while recording quality is mixed with board issues, leading to an overall average rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Primarily audience recording; a soundboard source exists for set 2 but the first couple of songs on that feed have problems. No major distortion, but overall clarity is uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Baba O'Riley",
+      "Tomorrow Never Knows"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid enough; second set has its moments, especially the two cover songs, though overall the performance isn’t described as a standout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince Welnick’s vocals on Baba O'Riley and Tomorrow Never Knows are highlighted as strong contributions.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Baba O'Riley": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tomorrow Never Knows": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T06:28:56.037697+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-06.fob.evens.gems.82444.sbeok.flac16"
+}

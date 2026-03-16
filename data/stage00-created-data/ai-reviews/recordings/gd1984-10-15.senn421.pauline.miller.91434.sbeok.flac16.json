@@ -1,0 +1,75 @@
+{
+  "summary": "Exceptional audience recording captures a high‑energy 1984 show with standout Sugaree, Playing in the Band, Space and The Wheel.",
+  "review": "The tape delivers surprisingly crisp crowd‑sourced sound that lets listeners hear Jerry’s gusto on Playing in the Band, Bobby’s whammy‑bar fireworks and a soaring Bird Song.  Highlights include a superb Sugaree, a fire‑filled Playing > Space > The Wheel sequence, while the second set drifts a bit with Scarlet Fire.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the musical performance and the audio quality; only minor complaints about track labeling and a meandering second‑set song keep the rating just below “exceptional”."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Exceptional clarity for an audience tape – crisp, well‑balanced and free of noticeable dropouts.  No major mix issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Playing in the Band",
+      "Space",
+      "The Wheel",
+      "Bird Song"
+    ],
+    "poor_songs": [
+      "Scarlet Fire"
+    ],
+    "setlist_flow": "First set is strong and tightly executed; second set has a few meandering moments (notably Scarlet Fire) but overall maintains the tour’s high‑energy momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as ‘going for the gusto’ on Playing, cooking throughout, and being nicely led by Bobby’s rhythm.",
+    "Phil": "",
+    "Bob": "Praised for his new whammy bar work all tour, delivering crazy, awesome rhythm that drives the jams.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T22:47:23.256026+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-15.senn421.pauline.miller.91434.sbeok.flac16"
+}

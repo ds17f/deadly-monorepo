@@ -1,0 +1,116 @@
+{
+  "summary": "Excellent C‑Miller soundboard capture of a hot 1984 show with standout Samson/Delilah, Ship of Fools and an epic Playing in the Band → China Doll jam.",
+  "review": "All five reviewers rate the set four stars and rave about the crisp, well‑balanced Miller‑remastered soundboard tape. Musically the concert is described as a solid first set that blossoms into a spectacular second set highlighted by Samson & Delilah, Ship of Fools, a powerful Playing in the Band → China Doll sequence and superb improvisations throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high 4‑star scores, enthusiastic language about both performance and recording quality; no major complaints."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "C. Miller remaster praised as crisp, clear and well balanced; no drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson and Delilah",
+      "Ship of Fools",
+      "Playing in the Band > China Doll",
+      "Uncle John's Band",
+      "Truckin > Smokestack Lightning > Black Peter",
+      "Dupree's",
+      "Dire Wolf",
+      "Touch of Grey"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as good and focused; second set deemed even better with a relaxed, jam‑heavy vibe that builds to a long Space and a fiery finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's solos called \"peel the paint off your walls\", his vocals on Ship of Fools praised as stellar, and his guitar work described as high‑energy throughout.",
+    "Phil": "Phil's bass highlighted for \"whale songs\" and serious funk grooves in the second set.",
+    "Bob": "Bob noted for a more restrained rhythm part on Rooster; one reviewer mentions occasional tuning issues but no major criticism.",
+    "Keys": "Brent Mydland praised repeatedly – fine jazz keys, harpsichord texture on China Doll, solid B3 work and overall strong keyboard presence.",
+    "Drums": "Bill Kreutzmann's high cymbals noted; drummers (Bill & Mickey) credited with funk foundation and tight transitions into Space."
+  },
+  "song_mentions": {
+    "Samson and Delilah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T17:33:47.633658+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-05-06.sbd.walker-scotton.miller.77302.sbeok.flac16"
+}

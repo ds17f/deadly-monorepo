@@ -1,0 +1,75 @@
+{
+  "summary": "Matrix recording captures a wildly energetic 1987 Greek show with stellar Watchtower, Franklin's Tower and a blistering second set.",
+  "review": "Fans rave about the explosive performance – Jerry’s aggressive playing (even forgetting lyrics at the perfect moment), Brent’s soaring keyboards and Phil’s tight bass underpin a legendary Watchtower and an unforgettable second‑set jam. The matrix source is generally praised for being clear enough to enjoy, though several reviewers note that no tape can fully reproduce the crowd’s psychedelic high. Overall the show is described as one of the band’s peak moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive fan feedback (8‑plus 5‑star reviews) highlights exceptional musical performance; recording is a matrix source with no major technical complaints, just the usual limits of tape."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough for listening; reviewers note that the tape can’t capture the full vibration of the crowd but there are no drop‑outs or muffling issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Watchtower",
+      "Franklin's Tower",
+      "Bucket > Franklin's Tower",
+      "Looks Like Rain",
+      "Deal",
+      "Drums/Space",
+      "Iko Iko"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A very short, high‑energy first set leads into a massive second set that bursts open after Drums/Space with Watchtower and extended jams; the flow is described as relentless excitement."
+  },
+  "band_member_comments": {
+    "Jerry": "Aggressive, fired‑up guitar work; forgets lyrics at a perfect moment adding to the magic.",
+    "Phil": "Bass is solid and “all over” the show, providing a strong foundation.",
+    "Bob": "Vocals are invigorated and sometimes screeching; a few critics note a lack of his usual ‘bad‑boy glint’ but overall positive.",
+    "Keys": "Brent’s keyboards are creative and sparkle throughout, especially during Watchtower and the jam sections.",
+    "Drums": "Bill’s drumming (Drums/Space) is praised as inventive and powerful, driving the second‑set momentum."
+  },
+  "song_mentions": {
+    "Watchtower": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bucket > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums/Space": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T23:05:55.212302+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-06-20.matrix.ladner.11561.sbeok.shnf"
+}

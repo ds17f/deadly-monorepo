@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard capture of a developing 1967 show featuring a smoking Viola Lee Blues and a standout New Potato Caboose, recorded well despite occasional speed quirks.",
+  "review": "The two‑track set showcases the band in early improvisational mode – a 20‑minute Viola Lee>Feedback jam that many reviewers describe as intense and “awesome,” plus a tight New Potato Caboose that earns high marks. The soundboard source is generally clear, though one listener notes the tape runs slightly fast, which can be corrected with audio tools.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Seven detailed reviews are overwhelmingly positive about both performance and recording; only minor criticisms (inconsistent playing on Viola Lee and slight speed issues) keep the rating just below perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑balanced soundboard recording praised as “awesomely recorded”; one reviewer mentions a slightly fast tape speed that can be corrected."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Viola Lee Blues",
+      "New Potato Caboose"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A brief two‑song set with an extended Viola Lee>Feedback jam that captures the band’s early jamming evolution; the transition into New Potato is tight and energetic."
+  },
+  "band_member_comments": {
+    "Jerry": "Flashes of brilliance noted, though some feel he gets stuck at times during Viola Lee.",
+    "Phil": "Great bass performance highlighted by multiple reviewers.",
+    "Bob": "Nice vocal contribution on New Potato mentioned.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Viola Lee Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "New Potato Caboose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T06:13:35.199732+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1967-08-04.09110.sbd.vernon.shnf"
+}

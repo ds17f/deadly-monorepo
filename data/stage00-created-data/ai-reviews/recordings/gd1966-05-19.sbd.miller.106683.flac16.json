@@ -1,0 +1,94 @@
+{
+  "summary": "Excellent soundboard capture of a classic early‑'66 Dead set, highlighted by a scorching Cream Puff War, a soulful Come Back Baby and the mesmerizing Silver Threads.",
+  "review": "The Miller soundboard tape delivers crisp left/right separation and minimal mic bleed, letting the band's early free‑form energy shine through. Reviewers rave about standout performances of Cream Puff War, Viola Lee Blues, Mindbender, It Hurts Me Too and a uniquely frenetic take on Silver Threads, while noting only a few minor slip‑ups (Jerry on Baby Blue, Bob on Traditional Minglewood). Overall the show is celebrated as one of the most vibrant recordings from the 1966 era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and enthusiastic comments about both performance and soundboard quality indicate an exceptional show with excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Left‑channel vocals, right‑channel instruments; minimal miking gives clear separation and a crisp, uncolored sound. No dropout or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cream Puff War",
+      "Come Back Baby",
+      "Viola Lee Blues",
+      "Mindbender",
+      "It Hurts Me Too",
+      "Silver Threads",
+      "Good Lovin'",
+      "Sittin' On Top Of The World"
+    ],
+    "poor_songs": [
+      "Baby Blue",
+      "Traditional Minglewood"
+    ],
+    "setlist_flow": "Both sets flow naturally, delivering high‑energy early‑Dead material with the band sounding increasingly like the classic lineup while retaining a youthful, free‑spirited vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his classic ‘nervous’ tone and overall brilliance; only criticism was on Baby Blue where his playing fell flat.",
+    "Phil": "",
+    "Bob": "Criticized for a lackluster Traditional Minglewood performance.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cream Puff War": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Come Back Baby": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Viola Lee Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mindbender": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It Hurts Me Too": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Silver Threads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sittin' On Top Of The World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Traditional Minglewood": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T05:08:27.725527+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1966-05-19.sbd.miller.106683.flac16"
+}

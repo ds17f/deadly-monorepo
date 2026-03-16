@@ -1,0 +1,104 @@
+{
+  "summary": "A fair‑quality soundboard captures a mixed‑bag show, shining on a scorching Jack Straw and a brick‑solid Black Peter while the recording suffers from washed‑out mids.",
+  "review": "The performance is uneven – the first set feels sloppy but the second half delivers standout moments like an incendiary Jack Straw, a powerful Candyman, and a superb Black Peter that close out a wild Space sequence. The Walker‑Scotton SBD source is dynamic yet plagued by mic‑matrix quirks, muddy highs and occasional wash, making the listening experience only partly satisfying.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Reviewers note several high points (Jack Straw, Black Peter, Candyman) indicating a good show, but the recording is described as poor to fair with mix problems; averaged star scores hover around 2‑4, leading to a middle‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Healy mic‑matrix SBD is dynamic but inconsistent – highs are washed out, mids muddy on tracks like China Cat, occasional wavy artifacts. Some sources (walker‑scotton_miller_83751) sound better than others."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Candyman",
+      "Black Peter",
+      "Space",
+      "Bird Song",
+      "Rider",
+      "Far from Me",
+      "He's Gone",
+      "Drums",
+      "Miracle",
+      "Desolation Row"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as sloppy and average, but the band tightens on later numbers. The second set builds momentum with a strong Drum‑Space segment, leading into a high‑energy sequence of Miracle and Black Peter."
+  },
+  "band_member_comments": {
+    "Jerry": "Inconsistent – flashes of fire but also missed verses (headlight verse) making him feel like the weak link at times.",
+    "Phil": "Praised for scooping under the keys, solid individual work on Far from Me, and helping steer the second set.",
+    "Bob": "",
+    "Keys": "Brent’s playing is noted as needing more punch on a big river solo, yet he also helped steer the latter half of the show.",
+    "Drums": "Bill's drumming starts from a near‑stop and is called fantastic; drums are highlighted as a rare positive point."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far from Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:39:16.295822+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-06-12.sbd.walker-scotton.miller.83751.sbeok.flac16"
+}

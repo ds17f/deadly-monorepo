@@ -1,0 +1,39 @@
+{
+  "summary": "Awful audience‑recorded tape, but the Playin' > Uncle John’s > Playin' sequence is praised as a highlight.",
+  "review": "The consensus among reviewers is that this AUD source is virtually unlistenable – it’s crowd‑heavy, muffled and described as “horrid audience” recording. Aside from the technical disaster, one fan points out that the Playin'>Uncle John's>Playin' suite is a standout moment worth hearing if a better source surfaces.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.3,
+    "confidence": "high",
+    "rationale": "All four reviews are negative, focusing on poor audio quality; only one modest positive comment about a specific song segment, yielding an overall rating just above the lowest tier."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Extremely crowd‑heavy, muffled, and generally described as awful; listeners request a soundboard (SBD) source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' > Uncle John's > Playin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No comments on overall set pacing; only the aforementioned suite is mentioned positively."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin' > Uncle John's > Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T03:36:30.009213+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-12-01.aud.vernon.18094.sbeok.shnf"
+}

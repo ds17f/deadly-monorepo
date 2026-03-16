@@ -1,0 +1,31 @@
+{
+  "summary": "Poor recording plagued by constant audience chatter, with no performance details available",
+  "review": "The sole review highlights a severely compromised recording, noting that conversations are audible throughout the entire show and even some tracks were skipped. No comments on the musical performance are provided, and the reviewer gave it a one‑star rating.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one low‑rating review mentioning major recording problems; no information on show quality to boost the score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Constant audible conversations throughout, tracks skipped, overall muddied and distracting listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T17:08:10.956340+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-03-24.schoeps.oconnor.12093.sbeok.shnf"
+}

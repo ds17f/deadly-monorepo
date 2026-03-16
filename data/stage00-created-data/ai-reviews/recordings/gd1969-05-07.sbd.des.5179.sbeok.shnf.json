@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard capture featuring Jerry’s soaring Good Lovin vocal and a memorable Dark Star/Weather Report Suite moment.",
+  "review": "The recording is praised as the best‑sound many have ever heard, delivering crystal‑clear soundboard quality. Musically the show has highlights – Jerry’s vocal on “Good Lovin” and a late‑night Dark Star that segues into Bob’s brief Weather Report Suite intro – though one reviewer felt the overall playing was modest at the time.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical moments and excellent soundboard quality offset a few lukewarm comments about overall performance, yielding an above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call it the best sound they've heard; no complaints of muddiness or drop‑outs. Clear, crisp mix with full band balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin",
+      "Dark Star",
+      "Weather Report Suite"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "An impromptu, sunny Polo Fields show that felt modest at the time but now is appreciated for its historic vibe and the highlighted moments."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal on Good Lovin is singled out as exceptional.",
+    "Phil": "",
+    "Bob": "Noted for slipping a Weather Report Suite guitar intro into the final seconds of Dark Star.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T14:20:37.745250+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-05-07.sbd.des.5179.sbeok.shnf"
+}

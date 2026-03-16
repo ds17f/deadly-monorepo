@@ -1,0 +1,112 @@
+{
+  "summary": "Excellent soundboard capture of the 10‑17‑83 Lake Placid show, highlighted by a monster 17‑minute Sugaree and soaring Bird Song jams.",
+  "review": "The Miller SBD delivers crystal‑clear, well‑balanced audio that lets listeners hear every nuance of this early‑’80s performance.  The concert shines with an epic Sugaree opener, expansive Bird Song, and standout versions of Friend of the Devil, Samson and To Lay Me Down, while a few spots (Terrapin, Revolution) fall flat.  Overall it’s a must‑hear for fans who love long, exploratory first‑set jams.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the musical performance and the soundboard quality across >20 reviews; only a few isolated criticisms keep the rating just below perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean mix with well‑defined instrument separation.  Some reviewers note occasional audience bleed (matrix elements) but it adds ambience without detracting from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Bird Song",
+      "Friend of the Devil",
+      "Samson",
+      "To Lay Me Down"
+    ],
+    "poor_songs": [
+      "Terrapin",
+      "Revolution",
+      "Brother Esau"
+    ],
+    "setlist_flow": "The first set rockets off with a 17‑minute Sugaree and stays on fire through Bird Song and Deal, while the second set delivers solid touches (Touch, Samson) despite a few wobblier moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is repeatedly praised; his playing is energetic early on but a reviewer notes he loses some steam after the set break.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work gets a nod for a bright tinkle‑bell preset and solid support throughout the jams.",
+    "Drums": "Generally solid, though one review mentions the drummers “all over the place” during certain sections."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 11,
+      "negative_mentions": 0,
+      "total_mentions": 11
+    },
+    "Bird Song": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brother Esau": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Revolution": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T12:43:32.369556+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-10-17.sbd.miller.27585.sbeok.flacf"
+}

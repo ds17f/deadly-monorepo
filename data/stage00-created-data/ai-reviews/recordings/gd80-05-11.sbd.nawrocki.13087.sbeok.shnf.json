@@ -1,0 +1,63 @@
+{
+  "summary": "A scorching performance highlighted by a monster Fire on the Mountain and jazzy Bobby moments, but the tape is plagued by hiss and muddiness.",
+  "review": "Fans rave about this 1980 show – Jerry was \"on fire,\" the band delivered haunting versions of Cassidy and an all‑time‑great Music Never Stopped, and the Fire on the Mountain is unforgettable.  The recording is a soundboard source that unfortunately suffers from tape hiss, mud‑dy mids and occasional loss of guitar presence, making it only fair for critical listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "The musical performance is consistently praised (many 5‑star show comments) while the recording quality receives mixed but generally low marks, resulting in a weighted average around 4.1."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Noticeable tape hiss and overall muddiness; SBD mix pushes Garcia's guitar back at times; occasional sizzle and drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Music Never Stopped",
+      "Fire on the Mountain",
+      "Don't Ease Me In",
+      "Going Down the Road"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set packed with 11 strong songs; second set builds to a crushing Fire on the Mountain and extended post‑drum jams, maintaining high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"on fire\" with great rock‑n‑roll tone, though the mix sometimes buries his guitar.",
+    "Phil": "",
+    "Bob": "His bass chops are loud and assertive, delivering a metallic ribbon sound on songs like Don't Ease Me In, Music Never Stopped and Going Down the Road.",
+    "Keys": "",
+    "Drums": "Post‑drum segments (PITB > Drums > Space) are highlighted as amazing; drum work praised throughout."
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Going Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:16:53.694157+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-05-11.sbd.nawrocki.13087.sbeok.shnf"
+}

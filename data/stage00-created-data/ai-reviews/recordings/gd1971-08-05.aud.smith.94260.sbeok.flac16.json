@@ -1,0 +1,42 @@
+{
+  "summary": "Warm, deep‑sounding transfer that shines in its detail but is marred by missing Not Fade and Bird Song sections.",
+  "review": "The recording is praised for its warm, full‑bodied tone and generally superior transfer quality, though reviewers note it needs pitch correction and suffers from significant gaps – notably the absence of Not Fade and Bird Song on both audience and soundboard sources. Musical performance comments are sparse, but the “hot licks” hint at a solid show despite the incomplete material.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Reviews range from high praise for sound quality to strong criticism of missing tracks; overall average star rating is ~3, indicating an okay show hampered by recording gaps."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Transfer described as warm and deep with superior clarity, but requires pitch correction. Significant missing material (Not Fade, Bird Song) reported on both audience and soundboard copies."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Insufficient detail in reviews to assess set pacing or flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T07:08:21.235038+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-08-05.aud.smith.94260.sbeok.flac16"
+}

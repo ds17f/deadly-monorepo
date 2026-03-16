@@ -1,0 +1,69 @@
+{
+  "summary": "Soundboard recording of mixed‑quality show highlighted by a stellar Scarlet > Fire and top‑tier Iko Iko, with clear audio but occasional hum.",
+  "review": "The performance shines on the iconic Scarlet > Fire segue into Fire and a blazing Iko Iko, while the extended Drums and Terrapin Station moments receive strong praise. Recording quality is generally crisp and well‑balanced (soundboard), though a brief hum during Terrapin is noted. Overall opinions are mixed – many fans love the key jams, but some find the first set and a few songs underwhelming.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Show quality is mixed‑positive (many standout jams) while recording quality is consistently good to excellent; weighted average yields ~3.7."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, bell‑like soundboard capture praised by several reviewers; occasional hum on Terrapin and a brief mention of “interminably long” Drums do not detract from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Iko Iko",
+      "Terrapin Station"
+    ],
+    "poor_songs": [
+      "Good Lovin'",
+      "Sunrise"
+    ],
+    "setlist_flow": "The first set is described as pedestrian by some, but the second set lifts the show with a smooth Scarlet > Fire transition into Fire, an expansive Drums segment featuring steel‑pan work, and a high‑energy Iko Iko. Post‑Drums material was felt short by a few reviewers."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for bluesy picking, inventive solo on Fire, and reinvention during Iko Iko; vocals noted as strong.",
+    "Phil": "",
+    "Bob": "Vocals praised (Donna’s contribution mentioned positively); occasional guitar short‑out caused a hum in Terrapin.",
+    "Keys": "Keith's playing described as less distinctive and fading compared to earlier shows.",
+    "Drums": "The 20‑minute Drums segment is highlighted as a major highlight, with Mickey’s steel‑pan textures adding sparkle."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Iko Iko": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Drums": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sunrise": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:16:06.168815+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-04-11.sbd.miller.18099.sbeok.shnf"
+}

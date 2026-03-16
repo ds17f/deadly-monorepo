@@ -1,0 +1,61 @@
+{
+  "summary": "Scorching Let It Grow > China Cat segue and tight two‑set flow",
+  "blurb": "The show delivers a blistering Let It Grow → China Cat Sunflower transition that leads into an inspired I Know You Rider. Jerry’s talkative playing and beautiful slide work shine throughout, while Phil covers the brief string break with solid jams. The second set builds to a soaring Sugar Magnolia finale.",
+  "review": "Seattle Center Coliseum on June 13, 1980 captured one of those classic two‑set Dead nights where everything clicks. The first set rolls tight and flavorful, highlighted by Jerry’s chatty, expressive guitar work that never loses its spark. A broken string for Bob momentarily slows the momentum, but Phil steps in with a supportive bass line and the band rebounds into an incendiary Let It Grow → China Cat Sunflower segue, seamlessly rolling into a scorching I Know You Rider that feels like pure fire. The second set rides high on that energy, launching into a powerful Terrapin Station and a deep‑diving Other One before surfacing for a jubilant Wharf Rat and a triumphant Sugar Magnolia that caps the evening on an exuberant note. Across the audience recordings, listeners note vivid “you are there” ambience, clear highs, and only minor PA hiccups—making this tape the go‑to source for reliving a night where the Dead were unmistakably in top form.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 17,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.5,
+      "sentiment_rationale": "Three recordings are clearly positive, praising the Let It Grow > China Cat transition, Jerry’s talkative tone and beautiful slide work, and overall top‑form playing. One recording offers a mixed note about a slide squeal on New Minglewood Blues but does not detract from the overall upbeat sentiment. The consistency of praise across multiple sources warrants a strong positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 1.5 = 4.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd80-06-13.akg.clugston.7196.sbeok.shnf",
+    "reason": "Vivid audience tape with clear highs, balanced mix and captures the standout Let It Grow → China Cat Sunflower segue plus Jerry’s talkative guitar."
+  },
+  "key_highlights": [
+    "Scorching Let It Grow → China Cat Sunflower transition leading into an inspired I Know You Rider.",
+    "Jerry’s talkative fingers, excellent tone, and beautiful slide guitar throughout the night.",
+    "Tight first set and explosive second set despite a brief string break, culminating in a soaring Sugar Magnolia."
+  ],
+  "song_highlights": [
+    "Let It Grow",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Sugar Magnolia"
+  ],
+  "band_performance": {
+    "Jerry": "Talkative, expressive playing with an excellent tone and beautiful slide work; a highlight of the evening.",
+    "Phil": "Stepped in when Bob’s string broke, providing solid bass support and entertaining jams that kept the flow alive.",
+    "Bob": "Suffered a broken string early but repaired quickly and re‑joined for a scorching I Know You Rider; noted a rough slide squeal on New Minglewood Blues in one source.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-13T00:34:18.855359+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Let It Grow",
+      "China Cat Sunflower",
+      "I Know You Rider",
+      "C.C. Rider"
+    ],
+    [
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ]
+  ]
+}

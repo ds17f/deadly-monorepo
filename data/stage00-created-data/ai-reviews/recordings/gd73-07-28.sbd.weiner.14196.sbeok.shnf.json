@@ -1,0 +1,65 @@
+{
+  "summary": "Soundboard recording that’s generally good despite some static and mix quirks, capturing a historically massive show highlighted by a monster Mountain Jam and a famously soaring China Cat > I Know You Rider.",
+  "review": "The Watkins Glen 7‑28‑73 soundboard captures the historic energy of a half‑million‑strong crowd.  The performance is lauded for its epic Mountain Jam, fiery China Cat > Rider, and tight Eyes of the World, though a few reviewers note a thin mix, occasional drop‑outs and a sloppy Garcia on the China segment.  Overall the show feels legendary even if the tape isn’t flawless.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise the musical highlights, while a minority point out recording flaws; weighted average of show (≈4) and tape quality (≈3.5) yields ~4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced, but listeners report analog ‘crunch’, static, thin high end, occasional AUD drop‑outs, and a mix that sounds flat in the first half (drums recessed)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mountain Jam",
+      "China Cat > I Know You Rider",
+      "Eyes of the World",
+      "Stella Blue",
+      "Loose Lucy"
+    ],
+    "poor_songs": [
+      "China Cat > I Know You Rider"
+    ],
+    "setlist_flow": "The first set builds slowly with a few slower numbers (Loose Lucy, He's Gone) before exploding into the famed Mountain Jam encore; the second half rides high on China Cat > Rider and extended jams that keep the crowd’s momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is praised as ‘perfect’ and ‘soulful’, but a few note a sloppy, drug‑affected performance on the China segment.",
+    "Phil": "Phil’s bass work gets special mention for being prominent and powerful; one reviewer notes he opened 24 Heineken bottles during the show.",
+    "Bob": "",
+    "Keys": "Keith (or Brent) receives nods for strong keyboard presence, especially on Eyes of the World and Stella Blue.",
+    "Drums": "Early mix down‑plays drums; later in the set the percussion comes forward. Some reviewers call the drum balance ‘odd’ early on."
+  },
+  "song_mentions": {
+    "China Cat > I Know You Rider": {
+      "positive_mentions": 6,
+      "negative_mentions": 3,
+      "total_mentions": 9
+    },
+    "Mountain Jam": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T15:59:39.908006+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-07-28.sbd.weiner.14196.sbeok.shnf"
+}

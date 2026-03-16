@@ -1,0 +1,64 @@
+{
+  "summary": "Excellent soundboard capture of an early‑'69 set with standout Dark Star and solid Morning Dew, though the performance is mixed overall.",
+  "review": "The gd1969-05-23 recording delivers a clear, well‑separated soundboard mix that many fans describe as “amazing,” making it one of the better psychedelic-era tapes. Musically the show has high points – Dark Star, Morning Dew and a strong St. Stephen – but also some uneven moments such as a loose Hard to Handle and a shaky The Eleven, leading reviewers to rate the performance as average to good.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is judged mixed/average (≈3.5) while recording quality is praised as good‑to‑excellent (≈4.5). Weighted average yields about a 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers praise great sound, separation and clarity; one notes slight pitch correction needed (–1% to +4%) but overall the board mix is solid. Completeness is a bit lower than earlier archived versions."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Morning Dew",
+      "St. Stephen"
+    ],
+    "poor_songs": [
+      "Hard to Handle",
+      "The Eleven"
+    ],
+    "setlist_flow": "Early‑'69 set swings between solid psychedelic moments and a few loose stretches; the second half shines with Dark Star while some mid‑show numbers feel average."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hard to Handle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T14:41:10.200533+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-05-23.sbd.gmb.96631.flac16"
+}

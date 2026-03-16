@@ -1,0 +1,39 @@
+{
+  "summary": "Good‑sound recording of an amazing set, with everything after the Playing in the Band reprise described as pure gravy.",
+  "review": "The reviewer rates this show highly, calling the set list amazing and noting that the sound quality is good. They especially highlight the portion following the Playing in the Band (Reprise) as a standout jam‑filled stretch.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "A single positive 4‑star review praises both the performance and the sound, leading to a high combined rating but limited confidence due to only one source."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer mentions \"good sound\" with no complaints about clarity or mix issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band (Reprise)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set list is described as amazing, and everything after the Playing in the Band reprise is called \"gravy,\" indicating a strong second‑half flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band (Reprise)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T13:01:11.487928+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-07-10.137694.s2.nak700.schley.flac1644"
+}

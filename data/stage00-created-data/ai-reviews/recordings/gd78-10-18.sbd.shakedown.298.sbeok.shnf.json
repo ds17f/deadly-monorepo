@@ -1,0 +1,90 @@
+{
+  "summary": "Excellent soundboard recording of the 10‑18‑78 Winterland show with Garcia’s blazing solos on Sugaree and Truckin’, tight band playing, and standout tracks like Wharf Rat, Samson & Delilah, and Terrapin Station.",
+  "review": "The recording is a crystal‑clear soundboard capture that lets every instrument be heard, from Keith’s lush keyboards to Mickey’s deft drumming. The performance is high‑energy and tightly locked – Garcia shreds on Sugaree, Samson & Delilah and the closing Truckin’, while the second set delivers classic Wharf Rat, Terrapin Station (despite a brief lyrical slip) and an inspired Stagger Lee. Overall fans rave about the tightness, the superb song selection and the vibrant Winterland atmosphere.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly rate the show 4‑5 stars, praising both musical performance and sound quality; only a handful of mild criticisms appear, leading to a high combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with balanced instruments; no significant drop‑outs reported. Minor gripe about first‑song cut‑off in one review but overall superb fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Truckin'",
+      "Wharf Rat",
+      "Samson and Delilah",
+      "Terrapin Station",
+      "Big River",
+      "Stagger Lee",
+      "I Need a Miracle"
+    ],
+    "poor_songs": [
+      "Peggy-O (some find it plodding)",
+      "From the Heart of Me (mixed reception)",
+      "Terrapin Station (lyrical flub noted)"
+    ],
+    "setlist_flow": "First set builds with an upbeat Sugaree and strong early jams; second set ramps up with a powerful Wharf Rat → Stagger Lee → Truckin' sequence that serves as a unique concert‑closing climax. Overall pacing is described as tight, energetic and well‑balanced."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers fiery solos on Sugaree, Samson & Delilah, Truckin' and Stagger Lee; his fills are highlighted throughout, with only a brief lyrical slip in Terrapin Station.",
+    "Phil": "",
+    "Bob": "Bob Weir’s vocals praised on Looks Like Rain and other numbers; his rhythm work noted as solid.",
+    "Keys": "Keith (and occasional Donna) receive compliments for tight, melodic playing, especially on I Need a Miracle and the second‑set jams.",
+    "Drums": "Mickey’s drumming is described as “Egyptian slant” and hand‑drummed grooves; the drums/space segment with harmonica gets special praise."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Truckin'": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Wharf Rat": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Samson and Delilah": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Terrapin Station": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Big River": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stagger Lee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-25T15:37:32.913926+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-10-18.sbd.shakedown.298.sbeok.shnf"
+}

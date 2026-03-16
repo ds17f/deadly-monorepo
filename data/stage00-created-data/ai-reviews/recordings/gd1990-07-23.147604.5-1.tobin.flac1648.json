@@ -1,0 +1,31 @@
+{
+  "summary": "User unable to download the recording; negative sentiment with no details on audio or performance",
+  "review": "The lone review expresses frustration about downloading and burning the tape for car use, offering no insight into the concert’s musical merit or the recording's technical quality. With a single‑star rating, the overall impression is decidedly negative.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one brief, low‑rated review that provides no substantive information about show or recording quality; rating reflects the reviewer’s dissatisfaction."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No comments on sound clarity, mix, or source type; low star rating suggests perceived poor value or accessibility issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about the performance or set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T11:04:34.163969+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-23.147604.5-1.tobin.flac1648"
+}

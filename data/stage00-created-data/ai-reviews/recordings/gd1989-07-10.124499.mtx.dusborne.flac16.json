@@ -1,0 +1,51 @@
+{
+  "summary": "Good matrix recording captures a rain‑soaked Giants Stadium set with standout Tennessee Jed, Music Never Stopped and a fire‑filled Uncle John's Band.",
+  "review": "The show is remembered for the sudden stadium downpour that turned the night into a memorable ‘cloudburst’ experience, highlighted by tight performances of Tennessee Jed, Music Never Stopped and an especially fiery Uncle John’s Band. A rare Neville Brothers appearance on drums adds extra flavor, and the Hendrix‑style “Waterfall” sample during the drum break is a fan favorite. The matrix source provides clear enough sound to enjoy these moments without noticeable flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Consistently positive 4‑star reviews praise the musical performance and unique guest appearance; recording is described as a matrix mix with no complaints, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No specific sound issues mentioned; reviewers focus on performance, implying the matrix mix is clear enough for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tennessee Jed",
+      "Music Never Stopped",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows through a dramatic rain‑soaked atmosphere, with the Neville Brothers’ drum cameo and a powerful encore; overall pacing is praised despite a brief, abrupt lead‑in before Uncle John's Band."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Hendrix 'Waterfall' sample highlighted during drums; Neville Brothers guest adds rare percussive texture."
+  },
+  "song_mentions": {
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T21:03:40.143335+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-10.124499.mtx.dusborne.flac16"
+}

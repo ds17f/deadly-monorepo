@@ -1,0 +1,64 @@
+{
+  "summary": "Crisp soundboard recording of a solid 1993 Boston show highlighted by a superb Here Comes Sunshine and an epic Other One despite a thin Jerry vocal.",
+  "review": "The SBD mix delivers excellent clarity and energy, capturing one of the tighter ’93 Boston runs. Highlights include a bright, peppy Here Come Sunshine and a soaring post‑drums The Other One with a sick Garcia solo, while Easy Answers falls flat and Jerry’s voice sounds thin at times.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Five consistent 4‑star reviews praise both the musical performance (standout songs, strong band unity) and the recording quality (crisp, energetic soundboard), with only minor vocal/second‑set issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crispy, energetic SBD mix; clear instrument separation. No major dropouts or muddiness noted; the only vocal criticism pertains to performance, not recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine",
+      "The Other One",
+      "Wharf Rat",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Easy Answers"
+    ],
+    "setlist_flow": "First set described as tasty and tight; second set starts sloppy but is redeemed by a powerful post‑drums segment and a stellar Other One, maintaining overall momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work praised (sick solo on The Other One, clean acoustic‑like tone), but his voice is noted as thin or rough throughout. He also engages the audience with eye contact, dancing, and a playful NFA vocal.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince Welnick present, playing solidly without showboating; contributes well to the band’s unity.",
+    "Drums": "Post‑drums section highlighted as strong; Bill Kreutzmann (and Mickey Hart) keep a tight groove that fuels the Other One."
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Easy Answers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:10:16.134808+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-30.sbd.ladner.10064.sbeok.shnf"
+}

@@ -1,0 +1,79 @@
+{
+  "summary": "High‑quality audience tape captures a solid ’94 set with standouts like The Wheel, Cold Rain & Snow and Estimated Prophet.",
+  "review": "Listeners rave about the surprisingly clear audience recording, calling it “very high quality” and praising the overall performance.  Songs such as The Wheel, Cold Rain and Snow, Cassidy, Stagger Lee and Estimated Prophet are highlighted, though a few fans felt the energy dipped after “If The Shoe Fits.”  Overall the show is remembered fondly with personal highlights like the Liberty encore.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give high marks for both sound quality and musical performance, with only a few noting minor energy drops; weighted average yields a strong 4‑plus rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers describe the tape as very high‑quality for an audience source—clear, crisp and free of major dropouts. No serious mix issues are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Wheel",
+      "Cold Rain and Snow",
+      "Cassidy",
+      "Estimated Prophet",
+      "Stagger Lee",
+      "Liberty"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for high energy; some listeners felt the momentum waned after “If The Shoe Fits” in the second set, but overall the concert is remembered as a solid performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Briefly mentioned ('Jerry on') with no detailed assessment of his playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "If The Shoe Fits": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T01:20:23.940971+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-09-16.akg.seff.2642.sbeok.shnf"
+}

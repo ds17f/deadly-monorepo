@@ -15,6 +15,7 @@
 .PHONY: android-auto-dhu android-remote-auto-dhu
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
 .PHONY: infra-init infra-plan infra-apply infra-retry infra-destroy infra-output
+.PHONY: data-download data-generate data-package data-download-stage01 data-upload-stage01 data-collect data-release data-clean
 
 # =============================================================================
 # API & DOCKER COMPOSE
@@ -56,7 +57,8 @@ api-typecheck:
 # UI (Next.js)
 # =============================================================================
 
-DEAD_METADATA  ?= ../dead-metadata/stage02-generated-data
+DEAD_METADATA  ?= data/stage02-generated-data
+DATA_VERSION   ?= $(shell cat data/version)
 
 # Install UI dependencies
 ui-install:
@@ -203,13 +205,24 @@ help:
 	@echo "  ios-remote-test      - Sync + run tests on Mac simulator"
 	@echo "  ios-remote-resolve   - Sync + resolve SPM package dependencies"
 	@echo ""
-	@echo "INFRASTRUCTURE (OCI):"
+	@echo "INFRASTRUCTURE (default: digitalocean, override: INFRA_PROVIDER=oci):"
 	@echo "  infra-init       - Initialize Terraform providers"
 	@echo "  infra-plan       - Preview infrastructure changes"
 	@echo "  infra-apply      - Apply infrastructure changes"
-	@echo "  infra-retry      - Retry instance creation until capacity available (make infra-retry INTERVAL=5)"
+	@echo "  infra-retry      - Retry OCI instance creation until capacity available (make infra-retry INTERVAL=5)"
 	@echo "  infra-destroy    - Tear down all infrastructure"
 	@echo "  infra-output     - Show current Terraform outputs (instance IP, etc.)"
+	@echo "  setup-infra-secrets - Upload infra secrets (DO, B2, SSH) to GitHub"
+	@echo ""
+	@echo "DATA PIPELINE:"
+	@echo "  data-download VERSION=X    - Download released data.zip + populate ui/data/"
+	@echo "  data-generate              - Run stage02 generation (stage00+stage01 -> stage02)"
+	@echo "  data-package               - Build data.zip from stage02"
+	@echo "  data-download-stage01      - Fetch stage01 API cache from GitHub Release"
+	@echo "  data-upload-stage01        - Publish stage01 API cache as GitHub Release"
+	@echo "  data-collect               - Re-collect stage01 from APIs (rare, hours)"
+	@echo "  data-release VERSION=X     - Tag + push, CI builds and publishes data.zip"
+	@echo "  data-clean                 - Remove generated data artifacts"
 	@echo ""
 	@echo "DOCUMENTATION:"
 	@echo "  docs-help       - Show documentation-specific help"
@@ -365,6 +378,10 @@ ios-remote-sync:
 		--exclude='iosApp/**/.build' \
 		--exclude='node_modules' \
 		--exclude='.secrets' \
+		--exclude='data/stage01-collected-data' \
+		--exclude='data/stage02-generated-data' \
+		--exclude='data/data.zip' \
+		--exclude='data/scripts/.venv' \
 		./ $(REMOTE_HOST):$(REMOTE_PATH)/
 
 # Sync + build debug on Mac
@@ -424,6 +441,10 @@ android-remote-sync:
 		--exclude='iosApp/**/.build' \
 		--exclude='node_modules' \
 		--exclude='.secrets' \
+		--exclude='data/stage01-collected-data' \
+		--exclude='data/stage02-generated-data' \
+		--exclude='data/data.zip' \
+		--exclude='data/scripts/.venv' \
 		./ $(REMOTE_HOST):$(REMOTE_PATH)/
 
 android-remote-build:
@@ -635,3 +656,59 @@ infra-destroy:
 
 infra-output:
 	@cd $(INFRA_DIR) && $(TERRAFORM) output
+
+# =============================================================================
+# DATA PIPELINE (delegates to data/Makefile)
+# =============================================================================
+
+# Download released data.zip and populate ui/data/ for local dev
+data-download:
+	@if [ -z "$(VERSION)" ]; then \
+		echo "VERSION not specified. Usage: make data-download VERSION=2.3.0"; \
+		exit 1; \
+	fi
+	@$(MAKE) -C data download-data VERSION=$(VERSION)
+	@echo "Copying to ui/data/..."
+	@mkdir -p ui/data
+	@cp -r data/stage02-generated-data/shows ui/data/
+	@cp -r data/stage02-generated-data/recordings ui/data/
+	@if [ -f data/stage02-generated-data/collections.json ]; then cp data/stage02-generated-data/collections.json ui/data/; fi
+	@echo "Done. $$(ls ui/data/shows/ | wc -l) shows, $$(ls ui/data/recordings/ | wc -l) recordings."
+
+# Run generation scripts to build stage02 from stage00+stage01
+data-generate:
+	@$(MAKE) -C data stage02-generate-data
+
+# Build data.zip from stage02
+data-package:
+	@$(MAKE) -C data package-data
+
+# Download stage01 API cache from GitHub Release
+data-download-stage01:
+	@$(MAKE) -C data download-stage01
+
+# Upload stage01 API cache to GitHub Release
+data-upload-stage01:
+	@$(MAKE) -C data upload-stage01
+
+# Re-collect stage01 from APIs (rare, takes hours)
+data-collect:
+	@$(MAKE) -C data stage01-collect-data
+
+# Tag and push a data release — CI builds and publishes data.zip
+data-release:
+	@if [ -z "$(VERSION)" ]; then \
+		echo "VERSION not specified. Usage: make data-release VERSION=2.4.0"; \
+		exit 1; \
+	fi
+	@echo "Updating data/version to $(VERSION)..."
+	@echo "$(VERSION)" > data/version
+	@echo "Creating tag data-v$(VERSION)..."
+	git add data/version
+	git commit -m "chore(all/data): bump data version to $(VERSION)"
+	git tag "data-v$(VERSION)"
+	@echo "Push the tag to trigger CI: git push origin main data-v$(VERSION)"
+
+# Remove generated data artifacts
+data-clean:
+	@$(MAKE) -C data clean

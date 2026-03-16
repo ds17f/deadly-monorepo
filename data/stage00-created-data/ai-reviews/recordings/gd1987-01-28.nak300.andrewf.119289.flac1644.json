@@ -1,0 +1,31 @@
+{
+  "summary": "Recording unavailable due to streaming file issues; no musical details provided",
+  "review": "The sole review reports that the M3U files for this recording cannot be streamed, preventing any assessment of sound quality or performance. No comments on the show itself are available.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief, negative review mentioning a technical playback problem; no information about musical quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer unable to stream the M3U files; playback issue prevents evaluation of audio clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T18:35:05.057954+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-01-28.nak300.andrewf.119289.flac1644"
+}

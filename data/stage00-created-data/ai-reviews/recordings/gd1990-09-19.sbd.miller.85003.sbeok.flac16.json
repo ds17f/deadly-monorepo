@@ -1,0 +1,51 @@
+{
+  "summary": "Clean matrix source with a few mix quirks captures a strong late‑90 show highlighted by a smoking Help > Slipknot! > Franklin’s and the epic Let It Grow jam.",
+  "review": "The Miller SBD/Healy matrix capture is generally clear, though it runs slightly fast and has a high‑pitched organ mix that benefits from a –1% pitch correction. Musically the concert shines with a tight first set and a second‑set rescue featuring an outstanding Help > Slipknot! > Franklin’s, a unique Let It Grow jam, and a melty Drums segment, despite some rough edges from the newer keyboard player.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Three detailed reviews are largely favorable about both performance and recording; show quality is strong with standout jams, while the matrix source is clean but has minor speed/mix issues."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Miller_85003 is a clean Healy board‑matrix source; runs ~1% fast (needs pitch correction), Vince's organ sits high in the mix and Bobby's vocals dip low at points, but overall clarity is solid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Let It Grow",
+      "Drums"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set opens strong with Jack Straw and solid transitions; second set takes a slower start but rebuilds momentum, delivering an exceptional Let It Grow trio jam and a powerful closing stretch."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently great playing throughout; his guitar coloring is highlighted on the Help>Slip>Franklin’s and during the Let It Grow jam.",
+    "Phil": "Bass work described as amazing and driving, especially in the Let It Grow section.",
+    "Bob": "Provides solid backing behind the trio jam; no specific praise or criticism beyond standard rhythm support.",
+    "Keys": "Vince (keyboards) hasn't fully gelled yet; organ is too high in the mix on some songs.",
+    "Drums": "Classic arena‑melter, praised as a standout, frighteningly exploratory piece."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T12:56:46.569897+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-19.sbd.miller.85003.sbeok.flac16"
+}

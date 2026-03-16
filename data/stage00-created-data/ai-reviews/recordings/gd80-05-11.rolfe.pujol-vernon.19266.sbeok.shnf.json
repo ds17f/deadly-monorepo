@@ -1,0 +1,75 @@
+{
+  "summary": "High‑energy 1980 Portland show captured on a clear audience tape, highlighted by superb renditions of “Big Railroad Blues”, “Music Never Stopped”, “Scarlet Begonias/Fire on the Mountain” and a flawless Stranger → Terrapin transition.",
+  "review": "The concert is widely praised for its fiery second set, with Jerry Garcia’s guitar blazing through Fire on the Mountain and a standout “Big Railroad Blues”. Audience‑recorded sound is consistently described as clear, bell‑like and immersive, making this a go‑to example of the underrated 1980 era. Standout moments include the seamless Stranger‑to‑Terrapin transition and a gem‑like Black Peter.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All six reviews are strongly positive (four 5‑star, two 4‑star) and emphasize both a high‑quality performance and an excellent audience recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers note the tape is clear as a bell, well balanced, and captures the live ambience; one mentions a slightly fast‑tempo feel but no major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Railroad Blues",
+      "Music Never Stopped",
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Stranger",
+      "Terrapin Station",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set 1 is described as smooth and flowing, while Set 2 erupts with high energy; the transition from Stranger into Terrapin Station is highlighted as flawless and unique."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is repeatedly praised for being \"on fire\", delivering powerful solos and a rare feedback‑rich ending on Fire on the Mountain.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s era is singled out as a high point, with his contributions noted as part of the show’s strength.",
+    "Drums": "The drumming is called well‑played and standard, providing solid support throughout."
+  },
+  "song_mentions": {
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:18:16.819203+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-05-11.rolfe.pujol-vernon.19266.sbeok.shnf"
+}

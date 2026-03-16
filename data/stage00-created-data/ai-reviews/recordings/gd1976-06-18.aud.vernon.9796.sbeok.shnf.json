@@ -1,0 +1,100 @@
+{
+  "summary": "A highly praised audience recording that captures a stellar 'Eyes of the World' and other highlights, though the overall show receives mixed ratings.",
+  "review": "The audience tape is lauded for its spacious, crystal‑clear sound that lets Phil’s bass weave and Jerry’s guitar bloom, especially during the first six minutes of \"Eyes of the World.\" While fans rave about standout moments like \"Music Never Stopped,\" \"Brown Eyed Women,\" and a high‑energy U.S. Blues, the performance is uneven in places with off‑beat sections on songs such as \"Looks Like Rain\" and \"Sugar Magnolia.\"",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality averages around a B–/C+ rating (≈3.8) while the recording is considered excellent for an audience source (≈4.5). Weighted combination yields ~4.0 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Fans describe the tape as one of their favorites – clear, spacious and well‑mastered, with vintage acoustic depth; no major sound defects are noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Music Never Stopped",
+      "Brown Eyed Women",
+      "Cassidy",
+      "Mission in the Rain",
+      "Promised Land",
+      "U.S. Blues"
+    ],
+    "poor_songs": [
+      "Looks Like Rain",
+      "Row Jimmy",
+      "Samson",
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "First set is uneven (B‑) with a few shaky moments, while the second set improves (C+) thanks to a soaring 'Eyes' and an energetic U.S. Blues; overall the concert feels average but contains several high points."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solos are highlighted as magical and among the best heard, especially early in \"Eyes of the World\".",
+    "Phil": "Phil Lesh is praised for vintage weave and acoustic spacetime work throughout the show.",
+    "Bob": "",
+    "Keys": "Keith (keys) is noted for solid playing on 'Row Jimmy' despite that song’s tuning issues.",
+    "Drums": "The drummers are described as loose – \"in the laundry room\" during Samson and generally off‑beat in a few numbers."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_places": 1
+    },
+    "Mission in the Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T04:47:03.481290+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-18.aud.vernon.9796.sbeok.shnf"
+}

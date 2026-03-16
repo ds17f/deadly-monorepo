@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent audience recording with crystal‑clear sound, highlighted by a stellar Here Comes Sunshine from a solid ’93 show.",
+  "review": "The tape is praised as the best‑sounding source among those listed, offering clear and balanced audio that even outshines a flat Charlie Miller soundboard. Musically the concert isn’t deemed “incredible,” but the band delivers strong versions of all the tunes, with Here Comes Sunshine standing out and the debut of Lightning Bolt adding extra interest for ’93 fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "One detailed review gives a high mark to recording quality (excellent) but only moderate praise to the show itself, leading to a combined rating around 3.8."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as the best‑sounding source among those compared; clear, well‑balanced audio that surpasses a flat soundboard recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid mid‑'90s set with strong renditions throughout; not an “incredible” show but enjoyable for fans of the era."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:26:56.689564+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-09.schoeps-evans.waddell.91949.flac16"
+}

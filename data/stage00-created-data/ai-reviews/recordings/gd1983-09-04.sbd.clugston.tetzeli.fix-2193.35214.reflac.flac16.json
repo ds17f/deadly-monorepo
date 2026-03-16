@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a mountain gig with standout China > Rider, Spanish Jam and The Wheel.",
+  "review": "Fans rave about the crystal‑clear SB recording that transports listeners back to a sunny ski‑mountain day.  The show shines on the second set – especially the China > Rider sequence, the Spanish jam, and a bright‑ending Wheel – while Mickey’s drum work and Phil’s extra shirt add memorable moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Four out of five reviews are 5‑star praises of both the performance and recording; only one mixed review lowers the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the SB as high quality, clear and crisp with no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China",
+      "Rider",
+      "Spanish Theme",
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A breezy first set followed by a second‑set highlight that builds from the Spanish jam into a sunny, uplifting Wheel; overall pacing praised as classic Dead mountain‑venue magic."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil broke out an extra shirt during the drum segment and is noted for his presence on this tour.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey’s drum solo featured his signature brass‑bowl sounds, remembered as a standout moment."
+  },
+  "song_mentions": {
+    "China": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Theme": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T09:49:10.312165+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-04.sbd.clugston.tetzeli.fix-2193.35214.reflac.flac16"
+}

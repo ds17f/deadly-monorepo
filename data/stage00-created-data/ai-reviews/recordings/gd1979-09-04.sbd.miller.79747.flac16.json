@@ -1,0 +1,82 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a solid 1979 show highlighted by a monster Sugaree and early Lost / Saint, though crowd noise sometimes muddies the mix.",
+  "review": "The performance shines with Jerry’s soaring noodling on Jack Straw, a legendary 14‑minute Sugaree, and the early Lost Sailor → Saint of Circumstance → Deal sequence that fans love. The soundboard source is generally crisp, but several listeners note the venue crowd can be overwhelming, making it less than an ideal “go‑to” recording.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical moments and rate the show 4–5 stars, while a few flag crowd noise and a couple of low‑star outliers; recording quality is described as crystal clear for a soundboard, giving an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Many comment on the mix being \"crystal clear\" and superbly balanced; however, crowd noise is described as overpowering in a few reviews, and there are occasional mentions of minor sound issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Jack Straw",
+      "Lost Sailor",
+      "Saint of Circumstance",
+      "Deal",
+      "China Cat",
+      "Shakedown"
+    ],
+    "poor_songs": [
+      "Around & Around"
+    ],
+    "setlist_flow": "The set flows well, with an early‑era Lost/Saint pairing that shows the band experimenting, a strong second set through Drums, then a Space → Wharf Rat → Around & Around segment. Crowd ambience sometimes distracts but overall pacing is praised."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for supreme noodling on the Jack Straw opener and a perfect guitar tone on Sugaree; also subject of a humorous bindle‑theft anecdote.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent is mentioned as being “solidly implicated” in the show’s vibe, but no specific musical critique is given.",
+    "Drums": "Listeners note the band plays nicely up through the drum segment; drumming is highlighted as a strong point of the second set."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Lost Sailor": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around & Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T23:12:11.458219+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-09-04.sbd.miller.79747.flac16"
+}

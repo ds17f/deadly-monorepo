@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard capture of a classic ’72 show featuring Jerry’s white Strat tone, Phil’s Truckin’ bass solo and Bill Graham’s iconic introduction.",
+  "review": "The recording is praised for its crystal‑clear Betty Cantor‑Jackson soundboard mix, delivering the classic 1972 Dead vibe. The performance shines with Jerry’s rich Strat guitar work, a standout bass solo from Phil in “Truckin’”, and an unforgettable Bill Graham intro, while minor flubs are quickly smoothed over.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Reviews overwhelmingly highlight superb performance and excellent soundboard quality; weighted rating (70% show, 30% recording) yields a high score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Betty Cantor‑Jackson’s mix is described as crystal‑clear and superbly balanced; no significant audio flaws are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Classic ’72 set with tight transitions; after a brief flub the band tightened up, highlighted by Phil’s bass solo and Jerry’s added lick on “Bertha”."
+  },
+  "band_member_comments": {
+    "Jerry": "His white Strat is praised for its rich‑raunchy tone and he adds a tasteful lick to the end of “Bertha” after a flub.",
+    "Phil": "His bass solo out of “Truckin’” is highlighted as a must‑hear moment.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T16:32:27.555207+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-08-25.sbd.miller.bertha.94218.flac16"
+}

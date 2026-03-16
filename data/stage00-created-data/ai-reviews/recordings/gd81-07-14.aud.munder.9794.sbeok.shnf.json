@@ -1,0 +1,109 @@
+{
+  "summary": "Excellent arena‑like audience recording of a solid ’81 show highlighted by the rare Birdsong→Lost Sailor transition and a smoking Truckin’/Eyes stretch, but marred by occasional pitch problems and drum dropouts.",
+  "review": "The audience‑sourced tape captures the energy of an early‑80’s Dead concert with warm vocals and surprisingly clear mix, though it suffers from upward pitch glitches, a severe gash in the drums and a few muffed moments. Musically the show shines on Cold Rain, To Lay Me Down, the historic Birdsong > Lost Sailor > Saint > Don't Ease sequence, and an inspired second‑set climax of Truckin’ into Eyes, The Other One and Wharf Rat; High Time and Shakedown receive mixed reactions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance and rarity of key moments (average rating ≈4), while a handful note notable recording flaws; weighted blend yields a solid but not perfect score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Exceptionally clear arena‑like sound with warm vocals, but suffers from upward pitch problems on several songs, a severe gash/dropout during drums (and Eyes), and occasional muffled sections (High Time)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain",
+      "To Lay Me Down",
+      "Bird Song > Lost Sailor > Saint > Don't Ease",
+      "Truckin'",
+      "Eyes",
+      "The Other One",
+      "Wharf Rat",
+      "Saint Of Circumstance"
+    ],
+    "poor_songs": [
+      "High Time",
+      "Shakedown"
+    ],
+    "setlist_flow": "First set builds strong momentum with a rare Birdsong‑Sailor segue and tight transitions; second set starts slow but gains fire through Truckin’/Eyes stretch, though drum gaps and a few rough segues keep the flow imperfect."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for powerful solo between Truckin' and Eyes and overall decent night, though early in the show he slipped on lyrics before warming up.",
+    "Phil": "",
+    "Bob": "Vocals described as off‑key and overly shouted later in the set; occasional lyric changes noted as distracting.",
+    "Keys": "Brent's playing mentioned positively in first‑set jams but also noted for not fully driving the second‑set Shakedown.",
+    "Drums": "Severe gash/dropout during Drumz, muffed High Time, and overall drum section flagged for technical issues."
+  },
+  "song_mentions": {
+    "Cold Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song > Lost Sailor > Saint > Don't Ease": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Love": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint Of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T13:16:43.297626+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-07-14.aud.munder.9794.sbeok.shnf"
+}

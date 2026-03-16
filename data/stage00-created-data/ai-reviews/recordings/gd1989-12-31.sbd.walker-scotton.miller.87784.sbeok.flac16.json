@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard capture of a stellar New Year's‑89 show with near‑perfect playing and the long‑awaited West Coast Dark Star.",
+  "review": "Reviewers rave about this December‑31, 1989 performance – the setlist is praised as impressive, the band’s playing described as almost flawless and the concert builds steadily from a solid first set.  Although no one comments on recording flaws, the .sbd source suggests a clean soundboard mix, and the historic Dark Star appears to be a highlight for fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (four 5‑star reviews) and enthusiastic language about the music outweigh the lack of concrete recording comments; assumed good soundboard quality leads to a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific complaints; the .sbd designation implies a clear, balanced mix suitable for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Shows a steady build‑up with a strong first set that sets the tone for an energetic second half; reviewers note the concert’s pacing as solid and satisfying."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T02:45:02.713818+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-31.sbd.walker-scotton.miller.87784.sbeok.flac16"
+}

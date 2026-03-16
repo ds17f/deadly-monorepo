@@ -1,0 +1,71 @@
+{
+  "summary": "Excellent soundboard recording with crystal‑clear mix; early ’74 show shines thanks to a historic Slipknot! jam and classic U.S. Blues/Truckin' performances.",
+  "review": "The Miller‑engineered soundboard capture is praised for its crispness and instrument separation, making every nuance audible even through headphones. Musically the concert delivers three solid sets – a polished first set that smooths out early missteps, an historic early Slipknot! jam in Playing in the Band, and high‑energy renditions of U.S. Blues, Truckin' and Loose Lucy – despite a few lyrical slip‑ups from Garcia.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Six detailed reviews overwhelmingly rate the show 4–5 stars, highlighting superb recording quality and strong performances; only one outlier notes untuned guitars, so the combined weighted score is high."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with each instrument easily heard; no reported drop‑outs or muddiness. Reviewers note the sound benefits from Charlie Miller’s work and the Wall of Sound setup."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band > Slipknot!",
+      "U.S. Blues",
+      "Truckin'",
+      "Loose Lucy",
+      "Nobody's Fault but Mine",
+      "Donna Jean"
+    ],
+    "poor_songs": [
+      "U.S. Blues"
+    ],
+    "setlist_flow": "Three‑set show typical of early ’74; a slightly rough opening smooths into a polished first set, followed by jam‑heavy second and third sets that include the earliest known Slipknot! section and high‑octane classics."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for crystal‑clear guitar tone and seamless blending, though one reviewer cites occasional untuned guitars and lyric fumbles.",
+    "Phil": "Mentioned as ‘irate Phil’ with limited monitors but praised for inventive bass riffs during jams.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann noted for driving the groove (“Billy brings it home”) and supporting the jam intensity."
+  },
+  "song_mentions": {
+    "Playing in the Band > Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Nobody's Fault but Mine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Donna Jean": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T17:49:13.834647+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-02-22.114556.sbd.miller.flac16"
+}

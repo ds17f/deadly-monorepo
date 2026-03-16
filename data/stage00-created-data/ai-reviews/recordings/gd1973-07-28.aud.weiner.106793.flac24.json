@@ -1,0 +1,50 @@
+{
+  "summary": "Crisp yet slightly bass‑thin audience recording of a gem show featuring standout versions of China Cat Sunflower/Rider and Eyes of the World.",
+  "review": "Both reviewers rave about this performance, calling it a \"gem\" with smoking renditions of the China Cat Sunflower → I Know You Rider sequence and Eyes of the World. The recording is praised for its clarity but noted as bass‑light, needing some EQ, and plagued by wind noise and a whine on the He’s Gone → Truckin’ segue. Overall it offers an enjoyable listening experience despite those minor technical quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Strong show praise with multiple standout songs outweighs modest recording flaws (bass loss, wind noise). Weighted average of show (≈4.8) and recording (≈4.0) yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp overall sound but noticeably bass‑light, requiring EQ; wind noise present; a whine is heard during the He's Gone > Truckin' segue."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower / I Know You Rider",
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight smooth transitions, especially the China Cat Sunflower → I Know You Rider sequence and the flow into Eyes of the World."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower / I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone > Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T16:03:55.478317+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-07-28.aud.weiner.106793.flac24"
+}

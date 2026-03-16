@@ -1,0 +1,88 @@
+{
+  "summary": "Clear sound‑board recording of a strong Summer Solstice ’89 show with standout Minglewood Blues, Deal, Scarlet and Hell in a Bucket.",
+  "review": "The Walker‑Scotton‑Miller FLAC captures the June 21 1989 Shoreline performance with good clarity, revealing the band’s tight playing despite some early amp hiccups. Fans praise a second set that includes a scorching Scarlet → Hell in a Bucket and an A+ Drum segment, while noting weaker moments on Touch, Cassidy and Estimated. Overall the show feels like one of the better summer‑solstice outings of ’89.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Multiple detailed reviews rate the concert 4 / 5, highlight many strong songs and a solid soundboard source; recording quality is described as fine‑sounding, giving an overall rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Described as “fine‑sounding” and revealing the band’s nuances; clear mix with no major dropouts, though early amp problems are mentioned (performance issue, not recording artifact)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood Blues",
+      "Deal",
+      "Scarlet",
+      "Hell in a Bucket",
+      "Drums",
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Touch",
+      "Cassidy",
+      "Estimated"
+    ],
+    "setlist_flow": "Second set is highlighted as one of the best of ’89, driven by high energy and a memorable sax cameo; first set is solid overall with a few weaker spots."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for energetic presence, talking between songs, and a bright Strat tone on Space; overall guitar work well‑received.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboard) singled out as especially strong throughout the show.",
+    "Drums": "Bill Kreutzmann’s drum segment received an A+ rating, noted as one of the era’s best."
+  },
+  "song_mentions": {
+    "Minglewood Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T19:57:27.823519+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-06-21.sbd.walker-scotton.miller.83718.sbeok.flac16"
+}

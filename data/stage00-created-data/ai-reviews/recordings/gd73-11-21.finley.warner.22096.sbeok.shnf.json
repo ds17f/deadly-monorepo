@@ -1,0 +1,31 @@
+{
+  "summary": "Audience (AUD) source captures a fiery 1973 concert with an explosive second set, but the sound is notably cloudy.",
+  "review": "The show is widely praised for its high energy – especially the nonstop second set that many reviewers call “blasting off” and note Jerry, Bob and Phil were on top of their game. The recording is an audience tape; listeners love the atmosphere it conveys, yet several point out that the audio is far from pristine, describing it as cloudy or poor for road‑trip listening.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the musical performance highly (average ~4.7) while the audio quality receives mixed feedback (average ~3.0). Weighted combination (70% show, 30% recording) yields a overall rating around 4.1."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Atmospheric crowd ambience is captured well, but the tape is described as cloudy, muffled and not suitable for critical listening; no pristine SBD quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "First set solid, second set praised as nonstop high‑energy fire that carries the concert to a strong finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Several reviewers highlight Jerry’s playing as being “on top of it” throughout the show.",
+    "Phil": "Phil is noted for staying on point and contributing strongly to the performance.",
+    "Bob": "Bob receives positive mention, keeping the momentum alive through the second set.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-24T03:11:51.648557+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-11-21.finley.warner.22096.sbeok.shnf"
+}

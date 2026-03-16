@@ -1,0 +1,45 @@
+{
+  "summary": "Good soundboard recording featuring a standout Shakedown Street jam and an extended Corrina improvisation.",
+  "review": "The reviewers praise this show as a clear step up from the previous night, highlighting a tight Shakedown Street jam and a long, flowing jam off of Corrina. The source is a soundboard tape that listeners find listenable, though no specific audio quirks are noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Only one detailed review; it rates the show 4 stars and mentions strong jams, implying a good musical performance and acceptable soundboard quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific audio issues mentioned; reviewer notes this recording is noticeably better than the previous night, suggesting clear and balanced capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Corrina"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Jam sections are highlighted; reviewers note strong improvisational flow especially on Shakedown Street and Corrina."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:29:23.398012+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-01-25.142995.sbd.miller.flac2496"
+}

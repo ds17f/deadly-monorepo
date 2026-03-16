@@ -1,0 +1,81 @@
+{
+  "summary": "Good‑quality soundboard capture of a legendary Watkins Glen soundcheck, highlighted by an out‑of‑nowhere Space→Jam→Wharf Rat sequence and a soaring Bird Song.",
+  "review": "The recording is a soundboard source with generally clear mix but a few audible cuts (notably the half‑step lyric) that keep it from being pristine. Musically the show shines – fans rave about the spontaneous jam that erupts into Wharf Rat, the expansive Bird Song and strong renditions of Sugaree and Big River, making this soundcheck one of the most talked‑about moments in Dead history.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Show performance is repeatedly praised (≈4.5/5) while recording quality is mixed but acceptable (≈3.5/5); weighted average yields ~4.2 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mix is generally clear and balanced; a few cuts/omissions are noted (half‑step lyric, occasional drop‑outs), but overall listenable for a historic soundcheck."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jam",
+      "Wharf Rat",
+      "Bird Song",
+      "Space > Jam > Wharf Rat",
+      "Sugaree",
+      "Big River"
+    ],
+    "poor_songs": [
+      "Half‑Step (cut fragment)"
+    ],
+    "setlist_flow": "A rare, improvisational soundcheck that moves from a quiet space into an explosive jam and seamlessly lands on Wharf Rat; the flow is praised for its uniqueness and historic rarity."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar intertwines tightly with the drums during the jam (“joined at the hip”), delivering classic Dead improvisation.",
+    "Phil": "Starts the jam with a “monster chord” that launches the whole sequence; also noted for clever spoken bits during Bird Song.",
+    "Bob": "Provides strong rhythmic chords that help drive the jam forward.",
+    "Keys": "",
+    "Drums": "Billy (Bill) locks in with Jerry, creating a tight groove throughout the jam and into Wharf Rat."
+  },
+  "song_mentions": {
+    "Jam": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Wharf Rat": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space > Jam > Wharf Rat": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Half‑Step": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T15:43:29.813685+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-07-27.sbd.weiner.180.sbeok.shnf"
+}

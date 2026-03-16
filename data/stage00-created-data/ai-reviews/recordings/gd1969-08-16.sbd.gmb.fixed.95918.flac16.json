@@ -1,0 +1,39 @@
+{
+  "summary": "Average-quality recording of the Woodstock set, highlighted by Pigpen's marathon Turn On Your Lovelight.",
+  "review": "The reviewers find this show neither a disaster nor a classic, noting that it isn’t the worst Dead ever performed and pointing out Pigpen’s 45‑minute Turn On Your Lovelight as a standout moment. The audio needs EQ tweaks and there are no clear comments on source type, suggesting only fair listenability.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Both reviewers give low to neutral scores (3 stars and 0), with the main positive point being Pigpen’s long Love Light jam; recording quality is described only as needing EQ, indicating an average listening experience."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments on soundboard or audience source; reviewer suggests using EQ and Windows Media Player enhancements, implying the raw audio may be flat or lacking clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Turn On Your Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as a long, psychedelic jam with Pigpen leading an extended Turn On Your Lovelight; overall the reviewer feels it’s not the worst performance but offers no detailed pacing analysis."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Turn On Your Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T16:43:37.864612+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-08-16.sbd.gmb.fixed.95918.flac16"
+}

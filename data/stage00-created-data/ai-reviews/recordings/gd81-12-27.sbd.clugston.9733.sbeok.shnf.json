@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent soundboard capture of an electrifying 1981 New Year's run featuring standout Deep Elem, Samson & Delilah and Jerry’s fiery guitar work.",
+  "review": "The show is hailed as a high‑water mark of the late‑80s era – a solid first set, a second set that glows with Deep Elem Blues, Sugaree and an exquisite To Lay Me Down, and a third set many call “off the charts.”  The soundboard recording is praised for its clarity and balance, though listeners wish they could hear more of the audience ambience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise (mostly 4‑5 stars) for both performance and audio quality across ten reviews; strong weighting toward an exceptional show with excellent soundboard recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced mix; reviewers note great clarity and “killer sound,” only missing the ambient audience presence."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deep Elem Blues",
+      "Samson And Delilah",
+      "Sugaree",
+      "To Lay Me Down",
+      "Passenger",
+      "Playin' in the Band",
+      "Big Boss Man"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid first set, a second set that “glows” with deep jams and standout tracks, and a third set described as off‑the‑charts – overall a well‑paced marathon show."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for fiery, finest‑ever guitar work (Deep Elem, Captain on fire, top‑notch solos).",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deep Elem Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson And Delilah": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:35:19.649720+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-12-27.sbd.clugston.9733.sbeok.shnf"
+}

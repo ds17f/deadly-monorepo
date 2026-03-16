@@ -1,0 +1,45 @@
+{
+  "summary": "Crisp soundboard recording captures a vibrant 1982 show with standout performances of Black Peter and Althea.",
+  "review": "The concert is praised for its joyful energy, concise second set and excellent jams that keep the listener hooked. The Sony D‑5 sourced tape sounds full‑range and clear, with only minor low‑end distortion, making the performance—especially Black Peter and Althea—a true listening pleasure.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All five reviews are strongly positive about both the musical performance and the recording quality; show quality is rated high and the tape source is described as excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Sony D‑5 tape capture provides full‑spectrum clarity; reviewers note crisp sound with only minor low‑end distortion that does not detract from listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Short but never wasted second set, happy band vibe and tight jams give the concert a smooth, engaging flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum solo highlighted as strong and exciting."
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T20:56:04.203724+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-05-21.sbd.miller.96310.sbeok.flac16"
+}

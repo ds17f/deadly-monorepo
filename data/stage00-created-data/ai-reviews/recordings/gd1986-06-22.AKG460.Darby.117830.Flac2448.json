@@ -1,0 +1,31 @@
+{
+  "summary": "Source label disputed; recording quality and performance details are not discussed in the review",
+  "review": "The sole reviewer points out that the tape is incorrectly labeled as a KPFA broadcast, asserting it comes from the same source as the rest of the show. No comments are made about sound clarity, mix, or musical performance, leaving both recording and show quality indeterminate.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one brief review focusing on source labeling; no information on audio fidelity or performance to justify a higher rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer corrects a mislabeling of the source (not KPFA); provides no assessment of clarity, balance, or other audio characteristics."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T16:20:56.998859+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-06-22.AKG460.Darby.117830.Flac2448"
+}

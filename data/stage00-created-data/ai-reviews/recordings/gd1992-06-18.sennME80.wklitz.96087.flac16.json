@@ -1,0 +1,45 @@
+{
+  "summary": "A wildly exciting show with Jerry on fire, standout Let It Grow and a soaring Peggy‑O; recording quality not discussed.",
+  "review": "The reviewer raves about the first set’s excitement and Jerry Garcia’s incendiary playing, calling his tone “on” and highlighting a superb Peg­gy‑O solo and the Let It Grow performance. The second set is described as a jazz masterpiece with dramatic highs and lows, though no specifics on recording quality are given.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "The single detailed review gives the show a perfect 5‑star rating with glowing language; lacking any recording commentary forces a modest deduction and lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on sound source or clarity; unable to assess technical quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as packed with excitement and wide‑open playing; second set praised for its jazzy, free‑form dynamics."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"sooooo on\" with perfect tone – essentially 'on fire'.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mention of \"Tom thumbs is one of the best\" suggests strong drum work."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T07:16:24.069074+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-18.sennME80.wklitz.96087.flac16"
+}

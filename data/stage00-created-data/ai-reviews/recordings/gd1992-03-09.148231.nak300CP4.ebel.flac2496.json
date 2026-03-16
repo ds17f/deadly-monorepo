@@ -1,0 +1,31 @@
+{
+  "summary": "Recording is mislabeled; reviewers provide no details on sound or performance.",
+  "review": "The only comment about this release concerns an incorrect archive identifier, with the reviewer giving it a zero-star rating. No information is offered regarding the audio source, clarity, mix, or the musical quality of the show, leaving both recording and performance aspects unevaluated.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.5,
+    "confidence": "low",
+    "rationale": "A single brief review focuses solely on a labeling error and assigns zero stars; there is insufficient data to assess musical or technical quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "unknown",
+    "technical_notes": "Reviewer notes the file is mis‑identified but gives no comments about sound clarity, mix balance, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T04:24:11.128054+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-09.148231.nak300CP4.ebel.flac2496"
+}

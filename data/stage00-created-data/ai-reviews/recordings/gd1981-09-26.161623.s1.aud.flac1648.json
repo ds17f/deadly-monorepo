@@ -1,0 +1,31 @@
+{
+  "summary": "Nice indoor audience recording with solid sound, though only a single set is available.",
+  "review": "The audience (AUD) capture from the 1981 auditorium delivers surprisingly clear and pleasant audio for its era, earning a respectable four‑star rating. Reviewers note the lack of both sets on the stream as a drawback, but overall the performance sounds good enough to recommend.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review; it praises sound quality (positive) but mentions missing second set (negative). Combined impression yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Very nice indoor sound for an AUD recording from 1981; clear enough to be enjoyable despite typical audience ambience."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T15:00:37.035820+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-09-26.161623.s1.aud.flac1648"
+}

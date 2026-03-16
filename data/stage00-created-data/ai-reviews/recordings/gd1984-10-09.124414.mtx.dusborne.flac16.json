@@ -1,0 +1,45 @@
+{
+  "summary": "Matrix recording of an enjoyable 1984 show featuring a standout Slipknot! and the occasional Big Railroad Blues, though reviewers give little detail on audio fidelity.",
+  "review": "Both reviewers recall the concert fondly – one reminisces about the era and highlights any performance that includes \"Big Railroad Blues,\" while the other points out an interesting Jack Straw placement and calls Slipknot! a highlight. No specific comments were made about the sound quality, leaving the technical assessment uncertain beyond the matrix source indicated by the filename.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Average star rating (3‑4) and generally positive remarks about song highlights, but lack of concrete audio quality comments limits certainty."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not discuss clarity, balance, or any glitches; assessment is based solely on the matrix source indicated by the file name."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Slipknot!",
+      "Big Railroad Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed commentary on pacing or set structure was provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:37:53.280144+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-09.124414.mtx.dusborne.flac16"
+}

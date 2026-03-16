@@ -1,0 +1,82 @@
+{
+  "summary": "A crystal‑clear matrix recording captures a high‑energy Spectrum show with standout Sugaree and Corrina, but the second set splits listeners.",
+  "review": "The matrix source is praised for its clarity, upfront sound and just‑right audience blend, reminiscent of classic Healy mixes. Fans rave about the first‑set firepower – especially Sugaree, a rocking Corrina and a Matilda jam – while opinions on the second set range from “phoned‑in” to “nice Morning Dew close.” Overall the performance is lively but divisive.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently rated excellent, while show quality receives both strong praise and notable criticism, yielding a weighted average around 3.8‑4.0."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers highlight exceptional clarity, upfront sound and a balanced crowd presence; likened to classic Healy matrix mixes with no reported dropouts or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Corrina",
+      "Matilda (jam)",
+      "That Would Be Something",
+      "Morning Dew",
+      "The Stranger"
+    ],
+    "poor_songs": [
+      "Samba",
+      "Corrina"
+    ],
+    "setlist_flow": "First set is described as energetic and memorable; the second set is polarizing – some find it sluggish or phoned‑in, while a few note a solid closing with Morning Dew."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"hot\" and full of energy by several reviewers (even noted in shorts), though one critic called his second‑set playing \"phoned‑in.\"",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Matilda (jam)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "That Would Be Something": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Samba": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T02:44:04.849051+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-07.aud.bleich-sirmick.79019.sbeok.flac16"
+}

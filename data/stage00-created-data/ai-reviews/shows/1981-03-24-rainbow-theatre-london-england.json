@@ -1,0 +1,76 @@
+{
+  "summary": "Tight set with standout Shakedown Street and high‑energy jams",
+  "blurb": "The show delivers a hot first set highlighted by High Time and the classic China Cat Sunflower → I Know You Rider segue. The second set features an extended Shakedown Street, solid Space jam, and a playful encore with Brokedown Palace’s humorous false start.",
+  "review": "March 24, 1981 at London’s Rainbow Theatre captured the Dead in a hot, tightly‑played mood. The first set rolls through Mississippi Half‑Step Uptown Toodeloo into a crisp Franklin's Tower, then builds momentum with Beat It On Down The Line, Great… and a bright High Time that segues into a sparkling China Cat Sunflower → I Know You Rider transition. The second set is the centerpiece: an expansive Shakedown Street stretches out over the band’s groove, followed by a fluid Lost Sailor/​Saint Of Circumstance/​He's Gone sequence, a tight Drums‑Space combo that feeds into The Wheel and Truckin', before winding down with Wharf Rat, Around & Around, and a soulful Good Lovin'. The encore offers a quirky Brokedown Palace false start that turned into a memorable laugh‑filled moment. Across the recordings Jerry’s playing is generally praised for playful improvisations, though a few listeners note occasional fat‑fingered licks; Phil’s bass shines prominently in the mix, anchoring the band’s tight rhythm section.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Two recordings are clearly positive, praising the tight playing and standout songs; one recording is mixed, noting Garcia’s occasional fat‑fingered licks but still acknowledging solid jams. The overall consensus leans positive, warranting a moderate sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 0.8 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd81-03-24.aud.weiskircher-vernon.10308.sbeok.shnf",
+    "reason": "Warm audience tape with good mix, prominent Phil bass and clear crowd ambience; captures the hot, tightly‑played show and all highlighted songs."
+  },
+  "key_highlights": [
+    "Extended Shakedown Street jam that drives the second set.",
+    "Playful and tight China Cat Sunflower → I Know You Rider segue.",
+    "Humorous false start on Brokedown Palace that adds character.",
+    "Solid Space improvisation feeding into The Wheel."
+  ],
+  "song_highlights": [
+    "Shakedown Street",
+    "High Time",
+    "Brokedown Palace",
+    "Space",
+    "China Cat Sunflower",
+    "I Know You Rider"
+  ],
+  "band_performance": {
+    "Jerry": "Playful improvisations overall, though a few reviewers note occasional fat‑fingered licks that dull the jam flow.",
+    "Phil": "Bass is prominent and praised for its clean, driving presence throughout the set.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-13T10:16:33.574567+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Shakedown Street"
+    ],
+    [
+      "High Time",
+      "Little Red Rooster"
+    ],
+    [
+      "Brokedown Palace"
+    ],
+    [
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "He's Gone",
+      "Drums*",
+      "Space",
+      "The Wheel",
+      "Truckin'",
+      "Wharf Rat",
+      "Around & Around",
+      "Good Lovin'"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ]
+  ]
+}

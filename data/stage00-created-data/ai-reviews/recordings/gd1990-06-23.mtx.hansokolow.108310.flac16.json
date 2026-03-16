@@ -1,0 +1,130 @@
+{
+  "summary": "Near‑pristine matrix recording captures a landmark 1990 show dominated by Phil Lesh’s bass leadership and standout renditions of \"They Love Each Other\", \"Uncle John's Band\" and a monumental \"Morning Dew\".",
+  "review": "The Hansokolow matrix mix masterfully blends flawed soundboard and audience tapes into an almost flawless listening experience, preserving the band’s tightness and crystal‑clear vocals. Musically the concert is repeatedly praised as one of the best of 1990 – Phil Lesh drives the performance from start to finish, with highlights including \"They Love Each Other\", a soaring \"Uncle John's Band\", blistering \"Miracle\" and what many call the greatest ever version of \"Morning Dew\". Minor imperfections such as a brief soundboard dropout and a small flaw in the closing of \"Cassidy\" do not detract from the overall brilliance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviewers give 4‑5 stars and describe an exceptional performance with only minor technical hiccups; recording quality is lauded as near‑pristine, justifying a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Combines flawed soundboard (SBD) and audience (AUD) sources; Hansokolow’s mastering eliminates most drop‑outs, delivers clear vocals, tight instrument separation, with only a brief SBD dropout near the end of \"Uncle John's Band\"."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "They Love Each Other",
+      "Uncle John's Band",
+      "Miracle",
+      "Morning Dew",
+      "Playin' in the Band"
+    ],
+    "poor_songs": [
+      "Cassidy"
+    ],
+    "setlist_flow": "From \"West LA\" onward the band locks into a flawless groove, with seamless transitions (e.g., PITB → UJB → PITB reprise) and an aggressive, effect‑laden Drum/Space segment that propels the second set to a soaring climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for immaculate vocals (no lyric slips), monumental solos on \"Uncle John's Band\" and \"Morning Dew\", and overall tight lead work.",
+    "Phil": "Described as the driving force of the night – “the definition of a Phil Show”, leading rhythm, delivering precise bass lines and even front‑stage vocal moments.",
+    "Bob": "Highlighted for crisp, powerful vocals all night, sharp chorded leads in \"Playin' in the Band\", and stellar back‑lead work on \"Miracle\".",
+    "Keys": "Brent’s organ is noted for soaring B3 passages during Space and a Beethoven‑like flourish that complements Jerry’s improvisations.",
+    "Drums": "Bill and Mickey deliver an unusually aggressive Drum segment with distinctive yipping/dog‑howl effects, setting up a vivid Space."
+  },
+  "song_mentions": {
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "West LA": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T08:12:41.735709+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-06-23.mtx.hansokolow.108310.flac16"
+}

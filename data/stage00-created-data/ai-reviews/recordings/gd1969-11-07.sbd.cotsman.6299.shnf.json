@@ -1,0 +1,39 @@
+{
+  "summary": "Fair‑quality recording hampered by repeated pops, but it captures a fierce Dark Star performance.",
+  "review": "The two fan comments are split: one praises the intensity of the Dark Star, awarding four stars, while the other laments an incessant popping noise that makes listening difficult, giving only one star. No explicit information about the source (soundboard or audience) is provided, but the pop issue suggests a sub‑par capture. Overall the show seems musically strong at least for the highlighted Dark Star, yet the technical flaws limit enjoyment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "One reviewer rates the performance highly (4★) but another finds the recording unusable (1★); with only two contradictory reviews confidence is low and the average lands around a middle rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Repeated popping noises ('popopopopopop') are reported, making parts of the tape difficult to listen to. No other sound quality details provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure; only Dark Star is highlighted as a strong moment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T18:06:04.390650+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-11-07.sbd.cotsman.6299.shnf"
+}

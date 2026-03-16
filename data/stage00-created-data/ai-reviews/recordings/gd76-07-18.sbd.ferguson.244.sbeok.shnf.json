@@ -1,0 +1,94 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a legendary 1976 show, highlighted by an uninterrupted second‑set jam (Lazy Lightning → Supplication → Let It Grow → Wharf Rat → The Other One → St. Stephen → Stella Blue).",
+  "review": "The performance is consistently praised as one of the band’s finest from ’76 – the seamless segues, the soaring Jerry Garcia solos (especially on Stella Blue) and Keith’s piano work receive repeated accolades.  Technically the recording is mostly clean and crisp (a KSAN FM broadcast source), though a few listeners note occasional buzz, channel‑balance quirks and tape hiss.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 60 reviews, the vast majority are 5‑star with glowing comments about both musical performance (70% weight) and recording clarity (30% weight). Minor technical complaints do not detract from the overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and crisp broadcast mix; some listeners report buzzing on “The Wheel”, occasional channel‑balance issues, flipped stereo in a few copies, and low‑level hiss, but overall the sound is very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightning",
+      "Supplication",
+      "Let It Grow",
+      "Wharf Rat",
+      "The Other One",
+      "St. Stephen",
+      "Scarlet Begonias",
+      "The Wheel",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Tennessee Jed"
+    ],
+    "setlist_flow": "Second set is treated as one continuous, fluid jam with legendary segues (Let It Grow → Wharf Rat, The Other One → St. Stephen). Reviewers describe the pacing as “smooth”, “slinky” and a perfect showcase of the 1976 groove."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is called \"perfect\", \"on fire\" and his solo on Stella Blue is repeatedly called one of the best ever; vocal clarity noted as front‑and‑center.",
+    "Phil": "Bass described as \"fatback\" and solid foundation throughout; praised for musicality in the jam sections.",
+    "Bob": "Vocals are mentioned as clear and well‑balanced, especially on songs like \"Scarlet Begonias\"; no major criticisms.",
+    "Keys": "Keith’s piano is highlighted on Stella Blue and noted for a slightly boosted mix that many enjoy; overall keyboard work praised as beautiful and essential to the flow.",
+    "Drums": "Generally described as crisp, though some note buzzing on “The Wheel” and uneven cymbal balance in a few spots."
+  },
+  "song_mentions": {
+    "Lazy Lightning": {
+      "positive_mentions": 32,
+      "negative_mentions": 0,
+      "total_mentions": 32
+    },
+    "Supplication": {
+      "positive_mentions": 28,
+      "negative_mentions": 0,
+      "total_mentions": 28
+    },
+    "Let It Grow": {
+      "positive_mentions": 30,
+      "negative_mentions": 0,
+      "total_mentions": 30
+    },
+    "Wharf Rat": {
+      "positive_mentions": 22,
+      "negative_mentions": 0,
+      "total_mentions": 22
+    },
+    "The Other One": {
+      "positive_mentions": 25,
+      "negative_mentions": 0,
+      "total_mentions": 25
+    },
+    "St. Stephen": {
+      "positive_mentions": 27,
+      "negative_mentions": 0,
+      "total_mentions": 27
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "The Wheel": {
+      "positive_mentions": 16,
+      "negative_mentions": 1,
+      "total_mentions": 17
+    },
+    "Stella Blue": {
+      "positive_mentions": 34,
+      "negative_mentions": 0,
+      "total_mentions": 34
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:52:36.181786+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-07-18.sbd.ferguson.244.sbeok.shnf"
+}

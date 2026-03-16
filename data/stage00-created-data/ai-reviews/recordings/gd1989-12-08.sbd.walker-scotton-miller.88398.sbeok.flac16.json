@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard recording remastered by Charlie Miller captures a high‑energy 1989 show highlighted by a smoking The Other One and a standout Looks Like Rain jam.",
+  "review": "The show is praised for tight, solid playing that helped the Dead shake off a weak ’88, with The Other One described as “crazy” and Looks Like Rain featuring a smoking middle jam. Charlie Miller’s remaster delivers crystal‑clear soundboard quality, making the performance easy to enjoy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4–5) and strong positive language about both the music and the remastered soundboard indicate an excellent show with superb recording quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Remastered by Charlie Miller; reviewers repeatedly note very nice, crisp, and technically solid sound from the SBD source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Looks Like Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a tight, energetic performance that revived the band after a lackluster 1988, with seamless transitions and high‑energy playing throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers call out Jerry's guitar tone, urging listeners to turn it up and praising his work on The Other One.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland receives strong praise for spotlight moments and dynamic keyboard work during the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:56:41.601527+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-08.sbd.walker-scotton-miller.88398.sbeok.flac16"
+}

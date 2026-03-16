@@ -1,0 +1,71 @@
+{
+  "summary": "Bittersweet final show with moving Black Muddy River > Box of Rain",
+  "blurb": "The Soldier Field farewell builds to a poignant double encore featuring Black Muddy River and Box of Rain. So Many Roads shines in the second set, while the drumming peaks during the Drum/Space segment. Overall the performance is uneven, with Garcia’s voice showing fatigue but his guitar work still delivering moments of brilliance.",
+  "review": "July 9, 1995 at Soldier Field marked Jerry Garcia’s final Grateful Dead concert and carries a bittersweet weight that seeps through every note. The band delivers an emotionally charged set that peaks in the second half: So Many Roads erupts with heartfelt intensity, the Drum/Space sequence rolls into a rare Unbroken Chain, and the double encore of Black Muddy River into Box of Rain feels like a farewell prayer. Garcia’s voice is unmistakably tired—described as croaky or “dying”—yet his guitar still sings on When I Paint My Masterpiece and the tender Black Muddy River solo. Phil Lesh steps forward on Box of Rain, adding vocal depth, while Vince’s keyboards remain solid throughout. The drummers are repeatedly praised for “kicking ass,” with many fans calling this the tour’s best drum work. Yet the show is not without flaws: the first set drags, several songs stumble (Shakedown Street, Lazy River Road, Sugar Magnolia), and vocal slips pepper the performance. In sum, it’s a historically significant, emotionally resonant concert that rewards listeners who can look past its uneven moments.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 460,
+      "review_count_boost": 0.5,
+      "sentiment_adjustment": 0.4,
+      "sentiment_rationale": "Across eleven recordings the sentiment is mixed: multiple reviewers applaud the emotional double encore, So Many Roads, and the drum work, while a comparable number note Garcia’s fatigued vocals, uneven set pacing, and several flubbed songs. The balance of praise versus criticism yields a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.5 + 0.4 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1995-07-09.sbd.gardner.4091.shnf",
+    "reason": "Good‑sounding soundboard capture with no major dropouts; highlights the poignant Black Muddy River > Box of Rain encore while preserving overall band balance."
+  },
+  "key_highlights": [
+    "Emotional double encore – Black Muddy River into Box of Rain",
+    "So Many Roads delivers a standout vocal performance despite Garcia’s fatigue",
+    "Drum/Space segment peaks with powerful drumming and an Unbroken Chain jam",
+    "When I Paint My Masterpiece showcases strong acoustic guitar work from Bob"
+  ],
+  "song_highlights": [
+    "Black Muddy River",
+    "Box of Rain",
+    "So Many Roads",
+    "When I Paint My Masterpiece",
+    "Corinna",
+    "Little Red Rooster",
+    "Unbroken Chain"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s voice is noticeably tired and croaky, yet his guitar remains expressive on When I Paint My Masterpiece and he delivers a moving solo on Black Muddy River; his vocal lead on So Many Roads still carries emotional weight.",
+    "Phil": "Lesh steps up vocally on Box of Rain and adds a resonant Unbroken Chain solo; his bass foundation stays solid throughout the uneven set.",
+    "Bob": "Weir’s acoustic guitar shines on When I Paint My Masterpiece, earning top‑ten mentions from listeners; otherwise less spotlighted in reviews.",
+    "Brent": "",
+    "Mickey": "Both drummers are praised for ‘kicking ass’; Mickey’s contributions help drive the Drum/Space peak and overall rhythmic energy.",
+    "Billy": "Bill Kreutzmann’s drumming is highlighted as one of the tour’s best, especially during the high‑energy drum segment."
+  },
+  "processed_recordings": 9,
+  "processed_date": "2025-09-19T12:47:57.532649+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Black Muddy River",
+      "Box of Rain"
+    ],
+    [
+      "So Many Roads"
+    ],
+    [
+      "When I Paint My Masterpiece"
+    ],
+    [
+      "Corinna",
+      "Drums",
+      "Space",
+      "Unbroken Chain",
+      "Sugar Magnolia"
+    ],
+    [
+      "Little Red Rooster"
+    ]
+  ]
+}

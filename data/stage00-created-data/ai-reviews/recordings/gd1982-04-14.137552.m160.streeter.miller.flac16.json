@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent audience recording of a great show, praised for its awesome sound and solid performance.",
+  "review": "Both reviewers describe this tape as an outstanding audience (Aud) source with clear, vibrant sound. The concert itself is called a \"sick\" and \"pretty great\" performance, though no specific songs are highlighted. Overall the recording is highly listenable and captures the energy of the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Two very positive reviews (4‑ and 5‑star) praise both the performance and the audio quality, suggesting a high‑quality show with an excellent audience recording; limited sample size reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as \"awesome sounding\" and \"great Aud\" with no reported flaws; clear, vibrant capture of the live mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Performance described as \"pretty great\" and \"sick show\", indicating strong overall energy though reviewers did not single out specific moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T20:10:28.169346+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-14.137552.m160.streeter.miller.flac16"
+}

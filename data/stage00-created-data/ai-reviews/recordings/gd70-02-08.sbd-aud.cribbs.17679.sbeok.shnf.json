@@ -1,0 +1,51 @@
+{
+  "summary": "Fair‑quality matrix tape captures a scorching Smokestack Lightning and a solid Dark Star despite early audio hiccups, making for an overall enjoyable show.",
+  "review": "The recording is a mixed audience/soundboard (matrix) source that starts out rough but improves after the first 20 minutes, delivering clear sound for the latter half. Musically the night shines with Pigpen’s monster Smokestack Lightning, an adventurous Dark Star, and a strong St. Stephen, though a few moments (Bob’s vocal outburst) draw mild criticism.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Two detailed 4‑star reviews praise the performance and highlight standout songs, while one 3‑star review notes a quirky moment; recording quality is uneven but improves later, yielding an overall strong show."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Starts as low‑gen audience tape, switches to clean board around Dark Star, early sections sound horrible then become solid; overall listenable but inconsistent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Smokestack Lightning",
+      "Dark Star",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Show builds from a powerful Pigpen opener, moves through an exploratory Dark Star, and closes the first set strong with St. Stephen; overall pacing praised despite a brief quirky moment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "One reviewer notes Bob screaming during a return to St. Stephen, suggesting a vocal/out‑of‑sync moment.",
+    "Keys": "Pigpen’s keyboard/organ work on Smokestack Lightning highlighted as a high point.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Smokestack Lightning": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T15:47:36.741019+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-02-08.sbd-aud.cribbs.17679.sbeok.shnf"
+}

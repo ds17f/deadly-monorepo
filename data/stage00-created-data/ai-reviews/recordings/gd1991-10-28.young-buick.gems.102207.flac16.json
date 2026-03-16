@@ -1,0 +1,51 @@
+{
+  "summary": "Wonderful recording of a highly decent show, highlighted by captivating Bird Song, Crazy Fingers and Stella Blue.",
+  "review": "The reviewer praises the tape as a wonderful capture, noting clear and enjoyable sound throughout. Musically the concert is described as “highly decent,” with The Bird Song, Crazy Fingers and Stella Blue singled out as keepers, though the performance isn’t deemed five‑star material overall. Overall it’s an appealing listen for fans who enjoy those selections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "One enthusiastic 5‑star review notes a wonderful recording and several standout songs, but also qualifies the performance as merely decent, leading to a strong yet not perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls the recording \"wonderful,\" implying clear, well‑balanced sound with no noted defects."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Crazy Fingers",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as a highly decent show; flow appears smooth enough to keep the listener engaged."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T02:28:27.499803+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-10-28.young-buick.gems.102207.flac16"
+}

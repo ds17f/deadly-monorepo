@@ -1,0 +1,100 @@
+{
+  "summary": "Excellent soundboard capture of the Alpine Valley ’89 run, highlighted by a flawless Sugar Magnolia → Scarlet Begonias transition and superb band performance.",
+  "review": "The recording is crystal‑clear for a 1989 soundboard tape, with only minor mix quirks (a slightly high bass and one reviewer noting odd reverb).  Musically the night shines – the second set rides on an unforgettable Sugar Magnolia into Scarlet Begonias segue, tight jams on Bird Song, Sunshine Daydream and Eyes, and a fiery Touch‑of‑Grey opener that keeps the energy blazing.  Overall the show is celebrated as one of the band’s peak summer performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, almost all 4–5 stars, with consistent praise for both performance (standout transitions, tight playing) and recording quality (crisp soundboard)."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced mix; a few comments about bass being a touch high and one note of odd reverb, but generally superb clarity for an ’89 SBD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia",
+      "Scarlet Begonias",
+      "Eyes",
+      "Bird Song",
+      "Sunshine Daydream",
+      "Touch of Grey",
+      "Jack Straw",
+      "China Doll",
+      "Mr. Fantasy"
+    ],
+    "poor_songs": [
+      "Throwing Stones",
+      "Fantasy/Jude"
+    ],
+    "setlist_flow": "The set flows brilliantly, with a high‑energy opener (Touch of Grey → Jack Straw) and a second‑set bookended by Sugar Magnolia and Sunshine Daydream; transitions—especially Sugar→Scarlet—are repeatedly described as seamless."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised for his soaring lead work and “blazing” tone throughout the night.",
+    "Phil": "Praised for aggressive, melodic bass lines (though one reviewer noted the mix had the bass a bit high).",
+    "Bob": "Mentioned only in passing; one critique of a “whiney” Fantasy/Jude segue, otherwise no specific comments.",
+    "Keys": "Brent Mydland receives glowing accolades as the best keyboardist ever, with standout contributions on Memphis Blues, Mr. Fantasy and throughout the second set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 11,
+      "negative_mentions": 0,
+      "total_mentions": 11
+    },
+    "Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Touch of Grey": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hey Jude": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T21:48:47.364373+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-07-18.sbd.9854.sbeok.shnf"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Good‑quality soundboard capture of a late‑'73 jam heavy show, highlighted by Keith’s rare organ work on Truckin’, a soaring Other One and a hilariously chaotic Casey Jones.",
+  "review": "The recording is a soundboard source that delivers loud, full‑range drums and clear keyboards, though a few listeners note occasional clipping. Musically the concert is praised for its creative jams – Keith’s unexpected organ on Truckin’, an energetic Other One, a standout Weather Report Suite, and a memorable, humor‑filled Casey Jones that even sparked a security‑related encore interruption.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (4–5) and enthusiastic comments about both performance and recording quality; minor technical complaints are outweighed by strong musical praise."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Loud, full‑range drums and crisp keyboards; a few listeners report clipping and speaker cracking but no major dropouts or balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One",
+      "Casey Jones",
+      "Weather Report Suite"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A late‑'73, jazz‑inflected set with creative jams; the first encore was interrupted by security, adding a chaotic but memorable moment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "His reaction to the guard during Casey Jones is noted for humor, though no specific bass performance comments are given.",
+    "Bob": "",
+    "Keys": "Keith shines on organ – an unusual sound for this period that many reviewers highlight as a unique and exciting element.",
+    "Drums": "Bill’s drums are loud and showcase the full range of his 1973 jazzy work, praised as one of the best drum sounds captured."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T16:30:57.377826+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-10-23.sbd.partial.goetz.18899.sbeok.shnf"
+}

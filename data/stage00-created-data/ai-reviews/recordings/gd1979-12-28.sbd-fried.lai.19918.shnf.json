@@ -1,0 +1,39 @@
+{
+  "summary": "Decent soundboard capture of a divisive 1979 show featuring a standout Sugaree but marred by perceived sloppy playing.",
+  "review": "The recording is a decent‑quality soundboard that sounds clearer than the thin audience tapes many fans compare it to. While one reviewer hails the performance as great, especially praising the Sugaree, another calls the entire set riddled with slop and off‑playing, noting only a strong finish. Opinions on the show are clearly split, making this release a mixed bag for listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Two reviews with opposing views (5‑star praise vs 0‑star criticism) lead to an average rating around the middle of the scale; recording quality is generally considered decent, while performance quality is debated."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Decent clarity and balance; noted as better than thin audience recordings, with no major dropouts or muffling mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Mixed feedback: praised for a strong finish but overall described as sloppy and overrated by one reviewer, while another finds it great throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T04:02:16.699725+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-28.sbd-fried.lai.19918.shnf"
+}

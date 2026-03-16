@@ -1,0 +1,51 @@
+{
+  "summary": "Soundboard recording nearly flawless despite occasional drop‑outs, capturing a stellar 1972 performance highlighted by peak versions of Play In The Band, He's Gone and The Other One.",
+  "review": "The show is praised as an \"almost perfect\" representation of the band’s 1972 peak, with extended jams like Play In The Band, He’s Gone, and The Other One singled out as top‑ten material. Recording quality is described as soundboard‑derived and very sweet overall, though a few scattered drop‑outs keep it from being truly flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Review is highly enthusiastic (5 stars) about both performance and recording; minor drop‑outs lower the technical score slightly, resulting in a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Scattered drop‑outs noted, but generally crisp vocals and clear sound; overall sweet and almost perfect."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Play In The Band",
+      "He's Gone",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Extended jams are highlighted as peak 1972 material, with shorter tunes also noted as well‑played and crisp."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Play In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T04:28:55.000938+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-28.sbd.bertha.ashley.27584.sbefail.shnf"
+}

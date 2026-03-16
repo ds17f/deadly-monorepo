@@ -1,0 +1,67 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a laid‑back yet fiery show highlighted by Bird Song, China Cat Sunflower/I Know You Rider and He's Gone.",
+  "review": "The recording is a clean SBD with only a faint background hiss on the quieter moments, delivering a well‑balanced mix that lets Jerry’s scorching guitar shine. Musically the concert is praised for its superb interplay, especially the standout Bird Song, the flowing China Cat Sunflower/I Know You Rider sequence and an emotionally resonant He's Gone, making it a must‑listen from start to finish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (average ~4), strong praise for performance and good soundboard quality with only minor hiss noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crystal‑clear soundboard with a touch of background hiss on very quiet passages (e.g., Black Peter); overall balanced mix and clear instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "China Cat Sunflower / I Know You Rider",
+      "He's Gone",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set builds a relaxed groove that escalates into fiery guitar work, while the second set maintains momentum with seamless transitions and emotive jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as shredding and on fire throughout, especially on Bird Song, LRR>Deal and the Sampson solo.",
+    "Phil": "Phil’s bass work is noted as “on it,” contributing to superb band interplay.",
+    "Bob": "",
+    "Keys": "Brent's keyboard playing is praised as amazing, though a slight mismatch with Jerry is mentioned during Peggy‑O.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower / I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "LRR > Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T08:32:54.162540+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-03.123978.sbd.miller.flac16"
+}

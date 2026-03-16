@@ -1,0 +1,75 @@
+{
+  "summary": "Focused Spectrum show with killer Jack Straw and epic Midnight Hour>Blues",
+  "blurb": "The set is tight from start to finish, highlighted by a razor‑sharp Jack Straw and a blazing In The Midnight Hour → Cumberland Blues segue that fuels an intense second‑set arc. Jerry’s solos are on fire, the rhythm section locks in, and the U.J.B./Miracle → Standing On The Moon sequence is a standout moment.",
+  "review": "October 5, 1994 at The Spectrum captured one of the band’s most focused outings of the ’94 fall tour. Set 1 opens with an unmistakable “Jack Straw” that reviewers call the best they’ve ever heard – Jerry’s guitar is laser‑focused and his vocals unusually strong, while Bob adds tight harmonies and a tasteful rhythm‑guitar texture. The second set launches with a rare “In The Midnight Hour → Cumberland Blues” transition that ignites a high‑energy stretch through “Playing In The Band,” “Uncle John’s Band,” an explosive drum/space segment, and a seamless flow into “I Need A Miracle” and the soaring “Standing On The Moon.”  Multiple soundboard recordings are praised for crystal‑clear fidelity, capturing every nuance of Jerry’s scorching solos (especially on Midnight Hour, Deal, and Standing On The Moon) and the powerful drums/space interplay between Mickey and Bill. Vince’s piano shines during the Uncle John’s Band jam, adding a bright layer to the mix. Overall the show is praised as “on fire” and “exceptional,” with no substantive criticisms across the recordings.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 67,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Strong positive sentiment across three crystal‑clear soundboard recordings; reviewers repeatedly use terms like 'killer', 'blazing', 'stellar' and highlight the same standout songs and transitions. No consistent negative comments appear, only mixed remarks about recording source types, so a solid positive adjustment is applied.",
+      "final_calculation": "2.5 + 0.4 + 1.4 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd94-10-05.sbd.unknown.8030.sbeok.shnf",
+    "reason": "Crystal‑clear soundboard source with excellent mix, balanced levels and no drop‑outs; captures the full energy of the show and all highlighted moments."
+  },
+  "key_highlights": [
+    "Jack Straw – cited as one of Jerry’s best ever performances",
+    "In The Midnight Hour → Cumberland Blues segue that drives the second set",
+    "U.J.B./I Need A Miracle → Standing On The Moon sequence, a seamless jam marathon",
+    "High‑energy drum/space segment praised for intensity and interplay"
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "In The Midnight Hour",
+    "Cumberland Blues",
+    "Playing In The Band",
+    "Uncle John's Band",
+    "Drums",
+    "Space",
+    "I Need A Miracle",
+    "Standing On The Moon",
+    "Deal"
+  ],
+  "band_performance": {
+    "Jerry": "Laser‑focused guitar work, scorching solos on Jack Straw, Midnight Hour, Deal and Standing On The Moon; stays onstage through drums/space adding extra excitement.",
+    "Phil": "Solid bass foundation throughout; occasionally recessed in the mix but no performance issues noted.",
+    "Bob": "Strong vocal harmonies on Jack Straw and other numbers; rhythm‑guitar textures complement Jerry without overpowering.",
+    "Brent": "Vince delivers nice piano work, especially during Uncle John's Band jam; adds tasteful color to the set.",
+    "Mickey": "Tight interplay with Bill; drives the powerful drum/space segment after U.J.B., praised for intensity.",
+    "Billy": "Provides a tight, energetic backbone; his drumming shines in the post‑UJB space and overall second‑set flow."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-19T02:36:46.475986+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw"
+    ],
+    [
+      "In The Midnight Hour"
+    ],
+    [
+      "Cumberland Blues"
+    ],
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Standing On The Moon",
+      "Sugar Magnolia"
+    ],
+    [
+      "Deal"
+    ]
+  ]
+}

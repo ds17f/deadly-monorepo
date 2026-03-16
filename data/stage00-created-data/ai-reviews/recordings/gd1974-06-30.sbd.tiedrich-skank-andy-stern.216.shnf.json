@@ -1,0 +1,50 @@
+{
+  "summary": "Excellent soundboard recording capturing a laid‑back 1974 show with a standout Playing in the Band → Uncle John’s Band sequence and stellar Billy Kreutzmann drumming",
+  "review": "Both reviewers rave about this June 30 1974 performance, noting its relaxed, mellifluous vibe and the superb soundboard capture that sounds \"excellent.\" Highlights include a massive Playing in the Band > Uncle John's Band > Playing in the Band jam to close the first set and nonstop Billy Kreutzmann drum work that drives the whole show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Consistently high 5‑star reviews praise both musical performance and crystal‑clear soundboard quality, yielding a top‑tier rating despite only two reviews."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the audio as \"EXCELLENT\" with clear, balanced mix; no issues noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Laid‑back 1974 mellowness throughout, with a massive Playing in the Band > Uncle John's Band > Playing in the Band sequence closing set 1 and a smooth overall pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Billy Kreutzmann is praised as \"classically trained rock‑n‑roll drummer\" who provides relentless rhythm and beat throughout the show."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T22:18:54.909908+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-06-30.sbd.tiedrich-skank-andy-stern.216.shnf"
+}

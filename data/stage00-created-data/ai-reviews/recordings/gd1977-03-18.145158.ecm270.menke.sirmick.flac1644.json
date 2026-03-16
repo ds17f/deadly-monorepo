@@ -1,0 +1,42 @@
+{
+  "summary": "Recording source unknown with no audio comments; show identified as 3/18/1977 Winterland but reviewers give no performance feedback.",
+  "review": "The few reviews focus on clarifying that this is the March 18, 1977 Winterland concert rather than a 1973 tape and note the inclusion of Fire on the Mountain and Terrapin Station which were not yet in the 1973 setlist. There are no remarks about sound quality or musical execution, leaving both recording and show quality undefined.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "medium",
+    "rationale": "Multiple reviews exist but they only address dating and setlist issues, providing no insight into performance or audio quality; rating reflects the lack of positive information."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on sound clarity, mix balance, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers did not comment on the flow or quality of the performance; only the date and song selection were discussed."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire on the Mountain": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T20:42:16.543273+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-03-18.145158.ecm270.menke.sirmick.flac1644"
+}

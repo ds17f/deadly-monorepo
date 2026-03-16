@@ -1,0 +1,82 @@
+{
+  "summary": "High‑quality soundboard recording of a solid 1988 show, highlighted by a stellar China Cat Sunflower > I Know You Rider and a powerful Ballad of a Thin Man",
+  "review": "Fans rave about the availability and overall performance, especially the first‑set opener and the second‑set China Cat Sunflower > I Know You Rider, Eyes of the World, and a standout Ballad of a Thin Man. The Miller soundboard source is praised as clear and well‑balanced, though one detailed reviewer notes uneven moments (Push Comes to Shove, Estimated) that keep the show from being perfect.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star praise for both music and sound quality; only a few note minor performance dips, leading to an overall strong weighted rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Miller SBD source; listeners describe the audio as high‑quality, clear and well‑balanced with no reported dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Eyes of the World",
+      "Ballad of a Thin Man",
+      "Half Step Mississippi",
+      "Drums"
+    ],
+    "poor_songs": [
+      "Push Comes to Shove",
+      "Estimated",
+      "Encore (fluffed)"
+    ],
+    "setlist_flow": "First set opens with a playful April‑Fools joke but recovers thanks to Half Step Mississippi and a superb Ballad of a Thin Man; second set starts strong with China Cat Sunflower > I Know You Rider, delivers solid Eyes of the World and Drums, then tapers into average material before a fluffed encore."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboard work on 'The Other One' is highlighted as technically great.",
+    "Drums": "Bill's drumming is praised for continual improvement throughout the tour."
+  },
+  "song_mentions": {
+    "Ballad of a Thin Man": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step Mississippi": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Push Comes to Shove": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:36:54.543874+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-01.sbd.miller.91160.sbeok.flac16"
+}

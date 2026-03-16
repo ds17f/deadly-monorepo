@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent audience recording captures a breathtaking moment of Jerry’s voice on Stella Blue.",
+  "review": "The reviewer praises this AUD pull as superb, especially noting the crystal‑clear tail end of “Stella Blue” where only Jerry’s vocals cut through the PA. The recording quality is described as breathtaking, and while no broader performance commentary is given, the highlighted moment suggests a strong show highlight.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "5‑star review highlights exceptional audience recording quality and a standout vocal moment; limited data on overall show keeps confidence low."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Superb capture of Jerry’s voice during Stella Blue with minimal background noise; dynamic range and clarity are praised as breathtaking."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure; focus is on a highlight from the performance."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal clarity on Stella Blue’s closing lines is highlighted as breathtaking.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:11:27.815804+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-23.140379.senn-816.alabama-bob.flac2448"
+}

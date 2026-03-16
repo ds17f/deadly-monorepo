@@ -1,0 +1,103 @@
+{
+  "summary": "Clear soundboard recording of a sunny Ventura show with standout Fire on the Mountain and Tons of Steel, though some songs feel flat",
+  "review": "Fans who were at the June 14‑1987 Ventura Fairgrounds recall a magical beach vibe, strong first‑set energy and a memorable Tons of Steel request. The soundboard tape is generally clear with good instrument separation, but occasional wind‑affected mids and a slightly screechy high end are noted. Performance-wise the show shines on Fire on the Mountain, Terrapin, Stranger and an exceptional drum moment, while a few cuts (Fire, Scarlet>Fire, Playin', Quinn) feel uninspired.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars praising the setlist and atmosphere; a few lower scores note performance flat spots and minor recording quirks, yielding an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced soundboard tape; listeners mention ‘great sound’ and ‘nice clear sound’, with occasional wind‑hissed mids and a slightly screechy high‑frequency region."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire on the Mountain",
+      "Tons of Steel",
+      "Terrapin",
+      "Stranger",
+      "Drums"
+    ],
+    "poor_songs": [
+      "Scarlet>Fire",
+      "Playin'",
+      "Quinn",
+      "NFA"
+    ],
+    "setlist_flow": "A sunny, laid‑back West Coast vibe with a strong first set and a second set that some felt lacked danger; overall energy stays high thanks to the beach atmosphere and crowd enthusiasm."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar work praised as strong and central, though his voice was described as ‘sapped up’ in one review.",
+    "Phil": "",
+    "Bob": "Delivered energetic yelps on NFA; overall solid rhythm guitar and vocals.",
+    "Keys": "Interaction between Jerry and Brent noted; no specific critique of keyboard playing.",
+    "Drums": "A unique drum moment at 09:13 highlighted as a standout, drums generally praised throughout."
+  },
+  "song_mentions": {
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Tons of Steel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "NFA": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Quinn": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T22:54:15.768195+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-06-14.sbd.clugston.11896.sbefail.shnf"
+}

@@ -1,0 +1,56 @@
+{
+  "summary": "Excellent audience‑style audio captures a solid 1976 show with standout Scarlet Begonias and a smoking Help > Slipknot > Franklin’s sequence.",
+  "review": "The recording is praised for its clarity and listenability, despite occasional slight vocal distortion. The performance is generally strong, highlighted by Scarlet Begonias, the HOTW‑Slip‑Franklin's medley and Dancin', though a few transitions (e.g., Ship of Fools into Dancin') feel a bit forced.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Reviews consistently note good to excellent sound quality and a solid show with several standout moments, balanced by minor performance/transition critiques."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Crisp overall sound praised as one of the best for the date; slight vocal distortion noted in a few spots but still easy to listen to."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Dancin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generally strong set, though some transitions (Ship of Fools → Dancin') are described as forced and hokey."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:57:52.195857+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-10-01.aud.unknown.118467.flac2496"
+}

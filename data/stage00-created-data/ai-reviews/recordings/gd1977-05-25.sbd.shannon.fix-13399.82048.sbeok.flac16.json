@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent soundboard capture of a 1977 show highlighted by Jerry’s fluid guitar tone, soaring transitions from The Other One into Wharf Rat, and standout performances of Wheel, Around & Around, and Mississippi Half‑Step.",
+  "review": "The recording is a clean, well‑mastered soundboard source that fans say restores the missing .8‑second gap without any audible glitches. Musically the show shines with Jerry Garcia’s expressive guitar work, Phil Lesh’s commanding bass on The Other One, and seamless transitions into Wharf Rat, while late‑set Wheel and an explosive Around & Around close the night on a high note.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "All five reviewers gave 5 stars and praised both performance and audio; strong show with no recorded flaws yields an almost perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp mix with no reported drop‑outs; the .8 second gap was fixed in this release."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "The Other One",
+      "Wharf Rat",
+      "Wheel",
+      "Around & Around",
+      "Mississippi Half-Step",
+      "Cassidy",
+      "Scarlet Begonias"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers applaud the smooth, detail‑rich flow—especially the transition from The Other One into Wharf Rat and the late‑set Wheel—while noting a restrained but emotionally resonant performance rather than over‑the‑top improvisation."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fluid playing, superb tone (envelope filter/Travis Beam), and emotive solos throughout the set.",
+    "Phil": "Commended for commanding the bass line on The Other One and driving the band's dynamic peaks.",
+    "Bob": "Noted for sharing vocal duties and helping propel the band’s “roller‑coaster” energy during jams.",
+    "Keys": "",
+    "Drums": "Described as \"wild tribal\" with explosive power that fuels transitions, especially into The Other One."
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T02:16:22.813776+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-25.sbd.shannon.fix-13399.82048.sbeok.flac16"
+}

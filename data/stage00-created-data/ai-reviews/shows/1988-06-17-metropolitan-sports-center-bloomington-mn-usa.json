@@ -1,0 +1,71 @@
+{
+  "summary": "Solid summer‑tour opener with strong mid‑set jams",
+  "blurb": "The first set delivers a tight run featuring Victim Or The Crime and Black Muddy River, while the second set shines with a soaring China > Rider transition, an engaging Estimated Prophet, and a spirited Watchtower finale. Moments like Eyes Of The World and Space feel uneven, but overall the show holds its own.",
+  "review": "June 17, 1988 at Bloomington’s Metropolitan Sports Center kicked off the Dead’s summer trek with a performance that, despite some rough edges in the recordings, shows the band firing on all cylinders. Jerry’s gritty, expressive vocals and occasional snarling guitar work cut through the mix, especially on numbers like Victim Or The Crime and the First Victim Or The Crime medley. Brent’s keyboards are more discernible on the clearer audience tape, adding texture to the jams. The second set is where the magic really surfaces: a classic China Cat Sunflower → I Know You Rider segue rolls into an inspired Estimated Prophet, followed by a silky drum‑and‑space interlude that builds tension before the band launches into a powerful All Along The Watchtower and a heartfelt Black Peter. The encore’s Black Muddy River rounds out the night on a high note, reminding listeners why this era still resonates.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 11,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0,
+      "sentiment_rationale": "Recording analyses show mixed sentiment: one positive review praises several songs and overall performance, another mixed review notes strong moments alongside weak spots, and a third negative review focuses on poor audio quality rather than musical execution. No consistent praise or criticism across multiple recordings warrants an adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0 = 2.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1988-06-17.aud.holtz.nak100s.112317.flac16",
+    "reason": "Clear enough audience tape with no major dropouts, capturing the band's solid performance and highlighting standout songs like Black Peter, Black Muddy River, and First Victim Or The Crime."
+  },
+  "key_highlights": [
+    "China Cat Sunflower → I Know You Rider segue energizes the second set",
+    "Estimated Prophet delivers a tight, melodic groove",
+    "Black Peter shines with strong vocal banter from Bob",
+    "Clear audience recording preserves the overall flow and jams"
+  ],
+  "song_highlights": [
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Estimated Prophet",
+    "Black Peter",
+    "Black Muddy River",
+    "Victim Or The Crime"
+  ],
+  "band_performance": {
+    "Jerry": "Gritty, expressive vocals and snarling guitar work cut through the mix, especially on Victim Or The Crime and First Victim Or The Crime.",
+    "Phil": "Bass is largely lost in the poorest recording but remains solid and supportive in clearer sources.",
+    "Bob": "Delivers lively vocal banter and a standout performance on First Victim Or The Crime, adding character to the set.",
+    "Brent": "Keyboard parts are faint or missing on low‑quality tape yet come through clearly on the better audience source, enriching the jams.",
+    "Mickey": "Together with Billy, provides a silky drum segment that anchors the second‑set interlude despite overall muddy mix in some recordings.",
+    "Billy": "Works with Mickey to create a compelling rhythmic foundation, especially during the Drums and Space sections."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-16T09:38:03.940586+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "Gimme Some Lovin'",
+      "All Along The Watchtower",
+      "Black Peter",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Black Muddy River"
+    ],
+    [
+      "Victim Or The Crime"
+    ]
+  ]
+}

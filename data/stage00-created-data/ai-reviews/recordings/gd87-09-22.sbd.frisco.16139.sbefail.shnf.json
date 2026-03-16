@@ -1,0 +1,83 @@
+{
+  "summary": "Crisp soundboard recording captures a high‑energy 9/22/87 show highlighted by a stellar Two Soldiers Jam and fire‑filled China > Rider > Samson > Terrapin sequence.",
+  "review": "The September‑22‑1987 set is praised for its enthusiasm, tight first set and an incendiary second set that features the famed Two Soldiers Jam, Handsome Cabin Boy motif and a soaring China > Rider > Samson > Terrapin stretch.  The audience‑sourced board (sbd) tape is described as crisp and clear, with only minor mix quirks such as a low‑volume Bob Weir guitar on “China Cat.” Overall the performance is considered one of the stronger shows of that Philly run.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average user rating is ~4.2/5, with most reviewers highlighting strong musical moments and a clean soundboard source; only occasional minor performance or mix issues were noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear board tape praised by many reviewers; no major drop‑outs. Some comments about a low Bob Weir guitar level on “China Cat” but overall clean mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Two Soldiers Jam",
+      "Handsome Cabin Boy",
+      "China > Rider > Samson > Terrapin",
+      "Sugar Magnolia",
+      "Truckin'",
+      "Stella",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Rider (noted as below average by one reviewer)",
+      "China Cat (Bob Weir guitar low in mix)"
+    ],
+    "setlist_flow": "First set described as ripping with solid energy; second set builds to a fire‑filled jam stretch (China‑Rider‑Samson‑Terrapin) and strong closers. Minor sloppiness noted but overall tight and fun."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for adventurous plucking, dramatic full‑tone excursions and overall great playing; a few reviewers note thin vocals on “Baby Blue.”",
+    "Phil": "",
+    "Bob": "Generally positive (“hardly any lyrical errors”), but one reviewer cites his guitar being too low in the “China Cat” segment.",
+    "Keys": "Brent’s Hammond organ highlighted as bright, well‑timed and a key part of the sound; occasional “modicum” comment but overall favorable.",
+    "Drums": "Drums/Space section praised for its extended tease (Playin') and transition into The Wheel; regarded as solid rhythmic foundation."
+  },
+  "song_mentions": {
+    "Two Soldiers Jam": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Handsome Cabin Boy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Terrapin": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:13:45.855220+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-22.sbd.frisco.16139.sbefail.shnf"
+}

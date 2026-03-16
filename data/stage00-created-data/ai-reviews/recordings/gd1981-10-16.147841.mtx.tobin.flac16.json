@@ -1,0 +1,51 @@
+{
+  "summary": "Matrix‑sourced recording captures a superb, intimate club performance with Bob Weir’s birthday‑mode set featuring Hully Gully, Lovelight and Gloria.",
+  "review": "Both reviewers rave about the show’s energy – a birthday celebration for Bobby that delivers classic numbers like Hully Gully, Lovelight and Gloria, plus an acoustic segment and a heartfelt gratitude moment instead of a traditional encore. The matrix mix is described as crisp, clean and superb, preserving the club's intimate atmosphere.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Strong musical performance highlighted by multiple standout songs and a unique set flow, combined with an excellent matrix recording quality."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp & clean throughout; matrix mix praised as superb, capturing the intimate club ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lovelight",
+      "Hully Gully",
+      "Gloria"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Intimate club vibe with a birthday‑style Bob Weir set, an acoustic segment, and a gratitude moment replacing the usual encore, creating a unique and rewarding flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil's bass was noted as the only non‑borrowed gear, implying solid, reliable playing.",
+    "Bob": "Bob (Bobby) is in birthday mode, delivering energetic performances of classic favorites.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hully Gully": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gloria": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:05:11.945443+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-16.147841.mtx.tobin.flac16"
+}

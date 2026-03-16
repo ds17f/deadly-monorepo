@@ -1,0 +1,39 @@
+{
+  "summary": "Great‑sounding soundboard hampered by amplified crowd inserts and excessive tuning pauses, but a stellar Morning Dew shines through.",
+  "review": "The recording is taken from the soundboard but WNEW’s broadcast adds jarring crowd noise between tracks and fades that ruin the opening and closing seconds. The band spends 15‑20 minutes of Set 1 just tuning, which drags the flow, yet the performance of “Morning Dew” is highlighted as a standout moment.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "medium",
+    "rationale": "Only one review (2‑star) emphasizes serious recording flaws and disruptive tuning, outweighing the modest musical praise for Morning Dew."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Broadcast adds amplified crowd noise between songs with fade‑in/out artifacts; long tuning interludes (~15‑20 min) interrupt the music."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Flow disrupted by frequent, lengthy tuning breaks and intrusive crowd edits, making the set feel fragmented."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T21:44:49.145595+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-04-27.167535.fm.glassberg.smith.clugston.flac2496"
+}

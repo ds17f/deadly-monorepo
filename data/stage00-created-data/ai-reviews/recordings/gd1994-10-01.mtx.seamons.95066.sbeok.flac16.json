@@ -1,0 +1,93 @@
+{
+  "summary": "Crystal‑clear matrix recording of an outstanding 1994 show highlighted by a smoking Help>Slip>Franklin opener and soaring So Many Roads",
+  "review": "The matrix source captures every instrument with pristine clarity, delivering a crisp, three‑dimensional mix that lets the audience ambience shine through. Musically the concert is a high point of the Fall ’94 run – the opening Help>Slip>Franklin sequence, So Many Roads, Terrapin jam and a powerhouse second set featuring Scarlet>Fire, Saint of Circumstance and an expansive Drums‑Space segment are repeatedly praised, even if a few reviewers note Jerry’s occasional vocal dip in the first set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of reviews (5‑star) praise both the sound quality and musical performance, with only a few mixed comments; weighted average of show and recording quality yields an excellent rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, crystalline mix; all instruments loud and clear, pleasant audience ambience, no reported drop‑outs or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin",
+      "So Many Roads",
+      "Terrapin (jam/outro)",
+      "Scarlet > Fire",
+      "Saint of Circumstance",
+      "Drums > Space",
+      "Space > Last Time",
+      "Stella Blue",
+      "Tom Thumb's Blues",
+      "Liberty"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, well‑paced set – a fiery Help>Slip>Franklin opener sets the tone, first set stays tight with So Many Roads and Tom Thumb's Blues, while the second set builds through Scarlet>Fire into an epic Terrapin jam, extended Drums/Space, and a spirited close."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocals are repeatedly described as ‘possessed’ and emotionally resonant; guitar tone praised on many tracks, though one reviewer notes he was only partially present in the first set.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keyboards (Vince) and MIDI effects receive high marks – “dialed in nicely,” “heady MIDI work” on the Terrapin outro, and overall strong support when Garcia’s voice wanes.",
+    "Drums": "Bill Kreutzmann’s drumming and the ensuing Space segment are highlighted as a 30‑minute exploratory highlight; the Drums>Space transition is called wonderful."
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "So Many Roads": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin (jam/outro)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums > Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space > Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Tom Thumb's Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T02:04:32.178254+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-01.mtx.seamons.95066.sbeok.flac16"
+}

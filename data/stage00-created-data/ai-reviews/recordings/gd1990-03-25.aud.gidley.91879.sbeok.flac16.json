@@ -1,0 +1,51 @@
+{
+  "summary": "Clear audience recording with strong bass EQ captures a mixed Spring ’90 show where the pre‑drums Eyes > Samson sequence shines but overall the performance feels uneven.",
+  "review": "The tape is an audience (AUD) source praised for its clear sound and solid low‑end, making it one of the better recordings of this spring 1990 run. Musically the show has highlights – the pre‑drums Eyes > Samson segue, a fun Wang Dang Doodle with early MIDI use, and Brent’s vocal on Good Time Blues – but several listeners found the overall vibe dull and lacking the usual ’90 magic.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised (good to excellent), while show quality receives mixed feedback, pulling the overall rating into the middle range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Strong bass EQ and clear tape; easier to filter out audience/room noise. Reviewers note it as one of the best AUD sources for this show, though some prefer older Nakamichi mics."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes > Samson",
+      "Wang Dang Doodle",
+      "Good Time Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The pre‑drums sequence (Eyes > Samson) is highlighted as a high point, but the overall set is described by some as oddly boring and lacking the usual spring‑90 energy."
+  },
+  "band_member_comments": {
+    "Jerry": "His early‑1990 MIDI saxophone work on Wang Dang Doodle is noted, with praise for his willingness to experiment.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s vocal performance on Good Time Blues is highlighted positively.",
+    "Drums": "The pre‑drums segment (Eyes > Samson) receives specific commendation."
+  },
+  "song_mentions": {
+    "Eyes > Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Time Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T05:06:12.268219+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-25.aud.gidley.91879.sbeok.flac16"
+}

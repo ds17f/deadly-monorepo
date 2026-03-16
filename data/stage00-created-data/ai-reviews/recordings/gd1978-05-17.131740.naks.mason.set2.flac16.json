@@ -1,0 +1,31 @@
+{
+  "summary": "Very nice recording of an unknown show with good sound quality",
+  "review": "The reviewer gave the tape a solid four‑star rating and praised it as a very nice recording that was greatly appreciated. No specific comments were made about the musical performance, setlist flow, or individual band members.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only a single 4‑star review mentioning the recording positively; no information on show quality or performance to adjust rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the recording as \"very nice\" and appreciates it, indicating clear and listenable audio despite lack of detailed technical comments."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T13:09:36.269421+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-05-17.131740.naks.mason.set2.flac16"
+}

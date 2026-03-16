@@ -1,0 +1,50 @@
+{
+  "summary": "Great soundboard capture of an energetic show with a standout second‑set suite, though a few MP3‑sourced tracks and odd glitches mar the recording.",
+  "review": "The performance is praised for its bombastic energy from the opening \"Cold Rain and Snow\" through a masterful second‑set suite that many reviewers call a masterpiece. The soundboard source is generally lauded as crisp, but listeners note that the first six songs are MP3‑sourced and there’s an odd paper‑bag mic artifact on “Mexicali Blues”/“Big River,” which detracts from an otherwise excellent recording.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star praise for the show and soundboard quality, but several point out MP3 source issues and a specific audio glitch, pulling the overall rating down slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall crisp SBD sound, but first six tracks are MP3‑sourced (lower fidelity) and a paper‑bag mic artifact appears on Mexicali Blues and Big River, likely a transfer glitch."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain and Snow",
+      "Second Set Suite"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Shows strong momentum from an energetic first set that builds into a masterful second‑set suite, maintaining high intensity throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob loses the lyrics early in the show but the band stays on track.",
+    "Keys": "Keith delivers high‑intensity playing that many reviewers highlight.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T09:17:14.970531+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-02-03.139370.sbd.miller.flac1644"
+}

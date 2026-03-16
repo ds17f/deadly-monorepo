@@ -1,0 +1,69 @@
+{
+  "summary": "Great soundboard remaster with a killer Jack Straw, but the overall performance is uneven.",
+  "review": "The recording is praised for its crisp remaster and excellent mix, delivering a solid listening experience. Musically the show shines on Jack Straw and a few bright spots like Queen Jane and The Other One, yet several reviewers describe the set as flat and disorganized in places.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show and recording highly (5‑4 stars) citing great mix and standout Jack Straw, but a detailed negative review drags the average down with comments about flat performance and mix issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Remastered by C. Miller; praised as A+++ quality and great mix, though one reviewer notes Jerry low in the mix and a 1% speed slowdown."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Queen Jane",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Helena",
+      "Tennessee Jed"
+    ],
+    "setlist_flow": "Set is described as uneven – solid first‑set highlights (Jack Straw) and a decent Drums>Space>Other One sequence, but overall flatness and disorganization are noted."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer says his guitar is low in the mix; otherwise not specifically mentioned.",
+    "Phil": "His bass rumble is noted as changing during The Other One.",
+    "Bob": "",
+    "Keys": "Brent's minor dissonants are highlighted as a positive element in The Other One.",
+    "Drums": "Bobby and Mickey receive praise for an energetic Drums>Space sequence."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Helena": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums/Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:10:15.816830+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-12.sbd.walker-scotton.miller.83293.sbeok.flac16"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "Solid soundboard capture of a mid‑80s show with a standout Stranger → China Cat Sunflower → Rider sequence, but heat‑related venue issues and uneven drum mix give the performance a mixed feel.",
+  "review": "The Miller‑remastered soundboard delivers clear and well‑balanced audio that lets listeners enjoy the typical fast ’85 Dead vibe. Highlights include a smoking Stranger > China Cat Sunflower > Rider medley, Alabama Getaway opener and a magical Friend of the Devil, while tracks like He's Gone > Truckin' and Day Tripper suffer from sloppy playing and drum problems. Overall the show is solid but hampered by a scorching day and occasional mix glitches.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance and soundboard quality, noting several standout songs; a minority highlight serious flaws (drums, heat, venue), leading to an overall rating just below four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clean, balanced board capture with good clarity; some listeners note drum mix inconsistencies and occasional ambient noise but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger > China Cat Sunflower > I Know You Rider",
+      "Alabama Getaway",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [
+      "He's Gone > Truckin'",
+      "Day Tripper"
+    ],
+    "setlist_flow": "Typical fast 1985 set with a solid opener and strong middle, though the scorching heat and venue logistics made parts feel uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed remarks – some note slower playing while others praise his tone during the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Positive nod to Brent's keyboards; reviewers consider any Jerry‑Brent combo a win.",
+    "Drums": "Several complaints about drum mix and looping issues, especially on Day Tripper."
+  },
+  "song_mentions": {
+    "Stranger > China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone > Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Day Tripper": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:52:20.333373+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-08-24.sbd.walker-scotton.miller.106195.flac16"
+}

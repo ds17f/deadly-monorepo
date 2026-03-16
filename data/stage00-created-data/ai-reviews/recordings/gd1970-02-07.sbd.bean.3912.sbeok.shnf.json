@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent 1970 soundboard capture with a tasty early C&W set and standout Uncle John’s Band → Black Peter sequence, delivered in a crisp mix despite minor hiss.",
+  "review": "The recording is a superb 1970‑era soundboard tape that delivers clear, full‑bodied instrumentation and highlights Garcia’s rare pedal‑steel work on the opening country numbers.  Fans rave about the mellow flow from “Uncle John’s Band” into a soaring “Black Peter,” as well as strong renditions of “High Time,” “China Cat Sunflower/I Know You Rider,” and the haunting “Green Grass.”  While one reviewer finds the later half less inspired, the overall consensus is that both performance and audio quality are top‑notch.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (4/5) give five stars praising both the show and the soundboard mix; only one provides a mixed three‑star view, yielding an overall rating in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, balanced mix with rich guitar and vocal presence; minor hiss noted by one reviewer but not detrimental to listening enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band",
+      "Black Peter",
+      "High Time",
+      "China Cat Sunflower > I Know You Rider",
+      "Green Grass"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Starts with a three‑song country & western mini‑set featuring Garcia on pedal steel, then moves into classic mid‑tempo material that flows smoothly—especially the laid‑back transition from Uncle John’s Band into Black Peter."
+  },
+  "band_member_comments": {
+    "Jerry": "Pedal‑steel work on the opening trio; effortless leads throughout, especially during the UJB→Black Peter sequence.",
+    "Phil": "Vocals on Uncle John's Band noted as distinct and complementary to Pigpen's contributions.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Black Peter": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "High Time": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Green Grass": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T15:39:17.088897+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-02-07.sbd.bean.3912.sbeok.shnf"
+}

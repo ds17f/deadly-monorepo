@@ -1,0 +1,87 @@
+{
+  "summary": "Good‑quality audience tape of a high‑energy 1981 Rutgers show, highlighted by a scorching Scarlet > Fire sequence and a memorable Looks Like Rain.",
+  "review": "The recording is an audience (AUD) source that, while not pristine, is clear enough to enjoy the electric atmosphere of the night.  Fans rave about the second‑set firepower – especially the blistering Scarlet > Fire segue and the thunder‑lit performance of Looks Like Rain – and praise Jerry’s guitar tone and vocal work throughout.  Overall the show is considered a standout 1981 concert with great crowd energy and solid musicianship.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of 19 reviews are 4‑5 stars, repeatedly praising the performance while noting only minor audience‑recording blemishes; this yields a strong combined score for show and recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Typical AUD bleed – occasional crowd chatter (e.g., during Looks Like Rain) and modest hiss – but overall clear, listenable mix with enough instrument separation to enjoy the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Looks Like Rain",
+      "Fire on the Mountain",
+      "Mississippi Half Step",
+      "Franklin's Tower",
+      "Red Rooster",
+      "Eyes of the World",
+      "Not Fade Away",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert builds strong momentum, with a solid first set and an explosive second set where the Scarlet‑>Fire transition caps a rowdy crowd; stormy weather adds unique ambience, especially on Looks Like Rain."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised for hot, clear guitar tone and energetic vocals, particularly during Scarlet, Fire, Red Rooster and the climactic Looks Like Rain.",
+    "Phil": "",
+    "Bob": "Vocal performance highlighted as strong on Looks Like Rain; fans note his voice helped lift that moment.",
+    "Keys": "",
+    "Drums": "No specific praise; one reviewer notes drums are faint in this audience tape."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mississippi Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Red Rooster": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T11:55:14.960905+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-05-15.senn.munder.9008.sbeok.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Personal‑rich show with great vibes but marred by bad sound quality",
+  "review": "The concert holds special meaning for the reviewer – a birthday celebration and decades of fandom – and they recall “some classics” being played. However, the recording suffers from poor sound, likely due to stadium crowd noise, making it difficult to enjoy despite the emotional significance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Enthusiastic praise for the performance (70% weight) contrasted with clear complaints about bad sound quality (30% weight). Only two brief reviews limit certainty."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer notes \"bad sound\" and mentions stadium crowds, indicating noisy, low‑fidelity capture."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewer focuses on overall experience rather than song order."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Birthday celebration noted; \"still rocking\" suggests strong playing.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T03:27:00.619539+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-02-23.AKG451.Darby.119789.Flac2448"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Soundboard recording of a raw 1966 jam – standout Viola Lee Blues, You See A Broken Heart and Midnight Hour, but plagued by mis‑labeling and pitch issues.",
+  "review": "The three‑song segment captures the early Dead at their tightest, with Pigpen’s bluesy howl and Garcia’s spirited solos driving a powerful Viola Lee Blues, a crisp You See A Broken Heart, and an exuberant Midnight Hour. The SBD source is generally clear but suffers from speed/pitch problems and occasional mono folding, which some listeners note as flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance (average non‑zero rating ≈ 4.4) while noting consistent technical complaints about pitch and labeling; weighted blend yields a strong but not perfect score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix is generally clean (5‑star mix scores), but the tracks run fast/slow and need pitch correction (–4% to –1%). Two songs appear folded to mono; drums are faint on some cuts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Viola Lee Blues",
+      "You See A Broken Heart",
+      "Midnight Hour"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A brief, three‑song blues‑rock burst that feels raw and energetic; the band is tight despite occasional sloppy moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s leads are described as heavy‑handed yet fun; his first solo on Midnight Hour mimics a Martha & the Vandellas horn line and he engages in call‑and‑response with Pigpen.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums are noted as almost inaudible on some tracks."
+  },
+  "song_mentions": {
+    "Viola Lee Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "You See A Broken Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Midnight Hour": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-26T04:47:02.448833+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1966-03-12.sbd.bershaw.5412.shnf"
+}

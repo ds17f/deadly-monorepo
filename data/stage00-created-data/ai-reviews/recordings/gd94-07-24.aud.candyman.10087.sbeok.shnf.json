@@ -1,0 +1,92 @@
+{
+  "summary": "Decent audience recording that captures solid moments like Roses and Days out of Space, but the performance is a mixed‑bag with both highlights and lackluster stretches.",
+  "review": "The AUD tape sounds clear enough for a 1994 crowd recording, delivering good fidelity on most songs. Musically the show swings between standout jams – especially Roses, Eyes and a haunting Days out of Space – and weaker spots such as Easy Answers and Long Way, with Jerry’s playing described both as “on point” and “not all there.” Overall listeners feel the concert is enjoyable but uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Reviews are split between praise for specific songs and criticism of overall performance; recording quality is generally rated good, leading to a weighted average around 3.3‑3.5."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers call it a “good AUD” or “very good sounding AUD,” with no major dropouts or distortion noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Roses",
+      "Eyes",
+      "Days out of Space",
+      "He's Gone",
+      "Loose Lucy"
+    ],
+    "poor_songs": [
+      "Easy Answers",
+      "Long Way",
+      "Eternity"
+    ],
+    "setlist_flow": "The set is described as uneven – strong first‑set moments give way to a second set that some feel drags or feels rushed, though occasional high points keep the show engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – praised for “on‑point” guitar work and nice solos, but also noted as not fully present and forgetting lyrics.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Billy’s drumming gets both praise for intensity (throwing sticks) and criticism for stepping over delicate parts, especially in Roses."
+  },
+  "song_mentions": {
+    "Roses": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days out of Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Answers": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Long Way": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Way to Go Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T00:12:33.319971+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-07-24.aud.candyman.10087.sbeok.shnf"
+}

@@ -1,0 +1,86 @@
+{
+  "summary": "Crystal‑clear soundboard capture highlights a scorching Scarlet > Fire and a smoking Help‑Slip‑Franklin’s sequence, making this one of ’95’s most praised shows.",
+  "review": "The SBD source delivers an exceptionally clean mix with Jerry Garcia’s guitar front‑and‑center and very little keyboard clutter. Musically the concert shines on the second‑set highlights—Help > Slip > Franklin’s, Scarlet > Fire, Eternity and a lush Space jam—while the first set maintains solid flow despite a few mixed feelings about certain songs. Overall the performance is regarded as one of the strongest from the 1995 tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews (7/9) award 4‑5 stars and praise both the soundboard quality and several standout performances; only a few low‑star comments focus on personal taste or keyboard issues, so the combined show (70%) and recording (30%) rating is strong."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note a crisp, front‑heavy guitar mix and overall clean sound; occasional complaints about Vince’s keyboard tone do not detract from the generally superb SBD fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Scarlet > Fire",
+      "Eternity",
+      "Space",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Playing in the Band",
+      "Dark Star (absence noted as a disappointment)"
+    ],
+    "setlist_flow": "The concert is praised for its solid pacing, with an especially powerful second set; some reviewers wished for a different climax (Dark Star) but overall the flow from opening through UJB, Stella Blue and the extended jams feels cohesive."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is described as ‘on fire’, crisp, emotionally charged, with standout vocals on Fire and Stella.",
+    "Phil": "Only a brief mention of Phil hinting at Dark Star; otherwise no specific comments.",
+    "Bob": "Mixed – praised for vocal moments in Fire but criticized by one reviewer for steering the jam into Eternity instead of Dark Star.",
+    "Keys": "Keyboards receive the most criticism: Vince’s tone called ‘unlistenable’ and overly cheesy, though another reviewer notes limited MIDI/cheesy effects.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.J.B.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T09:00:27.168970+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-05-26.sbd.larson.35169.flac16"
+}

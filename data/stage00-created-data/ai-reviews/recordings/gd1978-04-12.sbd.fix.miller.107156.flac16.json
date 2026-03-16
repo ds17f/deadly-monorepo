@@ -1,0 +1,72 @@
+{
+  "summary": "Soundboard recording praised for its magic captures a solid 1978 show with standout Estimated Prophet → Eyes of the World sequence and a powerful Truckin' jam, despite some vocal dips and an over‑played encore.",
+  "review": "The two fans rave about the tape’s magical feel, noting a strong second set highlighted by an inspired Estimated Prophet > Eyes of the World transition and a hefty drum solo. While Jerry’s vocals dip on a few numbers and U.S. Blues feels over‑done in the encore, the overall performance is lively and well‑played.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Both reviewers rate the show highly (5 and 4 stars) and highlight many positives; minor vocal and song‑choice critiques keep the rating just below top‑tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific technical complaints; reviewers describe the recording as magical and enjoyable, suggesting a clear soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Eyes of the World",
+      "Truckin'",
+      "Wharf Rat",
+      "Around and Around"
+    ],
+    "poor_songs": [
+      "Truckin' (start)",
+      "Around and Around",
+      "U.S. Blues"
+    ],
+    "setlist_flow": "First set feels lively but a bit impatient crowd; second set shines with creative transitions, a massive drum section on Eyes of the World, and strong jams that keep momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are low on several early songs but become enthusiastic later, even delivering humorous asides during U.S. Blues.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Eyes of the World leads into a large‑scale drum solo that reviewers highlight as a high point."
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T10:28:53.763642+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-12.sbd.fix.miller.107156.flac16"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Crisp soundboard capture highlights stellar vocals and tasty acoustic moments, with standout Broken Arrow and Drums → Space despite a slightly low‑energy vibe.",
+  "review": "The recording sounds clear and well‑balanced – the guitars sit unplugged and the vocals shine through, thanks to excellent mic placement (likely an in‑ear monitor mix). Musically the show offers several high points such as Broken Arrow, China > Rider, a strong finish on Stella Blue and a soaring Drums → Space, though the band overall feels a bit lacking in pep.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show quality is solid with multiple praised songs but some energy concerns; recording quality is consistently described as crisp and clear, yielding an overall rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp mix with standout vocal presence and acoustic guitar detail; no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Broken Arrow",
+      "China > Rider",
+      "Stella Blue",
+      "Eternity",
+      "Drums > Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall set feels a bit low‑energy, but transitions like China > Rider and the Drums → Space segment keep momentum; vocal performance ties the show together."
+  },
+  "band_member_comments": {
+    "Jerry": "Shows occasional spark – notable finish on Stella Blue.",
+    "Phil": "Bass shines on Broken Arrow (the \"Phil Zone\" highlight).",
+    "Bob": "Tasty acoustic work praised by reviewers.",
+    "Keys": "",
+    "Drums": "Drums → Space identified as a major highlight."
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums > Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T19:37:59.049078+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-05.sbd.sailor_saint.33585.flac16"
+}

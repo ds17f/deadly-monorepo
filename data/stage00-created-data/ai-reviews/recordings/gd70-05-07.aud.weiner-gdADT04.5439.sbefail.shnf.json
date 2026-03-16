@@ -1,0 +1,123 @@
+{
+  "summary": "A lo‑fi audience tape of a three‑set 1970 show that still dazzles with a legendary 31‑minute Lovelight and scorching jams.",
+  "review": "Even though the recording suffers from hiss, muffled isolation and occasional drop‑outs – typical of many 1970 AUD tapes – the performance shines. Reviewers rave about an epic Lovelight, blistering Jerry Garcia solos (including steel‑guitar work with NRPS), a fiery Easy Wind, The Other One suite and high‑energy acoustic sets. The show is consistently described as a must‑listen despite its technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The musical performance receives overwhelmingly positive comments (many 4‑5 star reviews) while the recording is noted as poor to fair; weighted combination yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Most reviewers cite hiss, muffled instrument separation and occasional unlistenable sections. A few note that vocals remain clear enough and that EQ or different speakers can improve the experience, but overall the tape is considered typical of early‑70s audience recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lovelight",
+      "Easy Wind",
+      "The Other One",
+      "Good Lovin'",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Three‑set concert: acoustic opener, a brief NRPS set (highlighted by Jerry’s steel‑guitar), then an electric second set whose opening jams are praised and which culminates in the monumental Lovelight that closes the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise Garcia’s shredding solo work, his steel‑guitar performance with NRPS, and his leadership during the Lovelight jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain And Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Wind": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider (acoustic)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alligator": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Frozen Logger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T19:12:59.361615+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-05-07.aud.weiner-gdADT04.5439.sbefail.shnf"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Crisp audience recording of a solid ’83 Vegas show, highlighted by fiery Scarlet Begonias/Estimated Prophet and a standout Other One.",
+  "review": "The tape captures an audience‑recorded performance that most listeners describe as clear and well‑balanced, with the bass and drums coming through nicely despite occasional muddiness. Musically the concert is praised for strong playing – especially Brent Mydland’s keyboards on Scarlet Begonias/Estimated Prophet and a funk‑filled Other One – making it a memorable 1983 Vegas outing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "The majority of reviews rate the show 4–5 stars and praise both the performance and the audience recording; only a few note minor issues, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the sound crisp and well‑balanced with a pleasant amount of crowd noise. A couple mention occasional muddiness or bass/drum thump, but overall the tape is considered clear for an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Estimated Prophet",
+      "The Other One",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Listeners note a solid set list with smooth transitions; the Vegas vibe and strong song selection keep the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals and guitar described as strong, slightly raw (‘burned crisp’) but in fine voice.",
+    "Phil": "Bass comes through clearly and is praised for solid tone and presence.",
+    "Bob": "Brent Mydland’s keyboards are highlighted as ‘on fire’, delivering powerful solos on Scarlet Begonias/Estimated Prophet.",
+    "Keys": "Same as Bob – energetic, high‑impact playing that drives the highlights.",
+    "Drums": "Drums are noted for good presence and balance; no specific criticism beyond a vague comment about an unknown stand‑in."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T04:06:04.942431+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-03-26.neumann.dodd.11260.sbeok.shnf"
+}

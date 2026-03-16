@@ -1,0 +1,67 @@
+{
+  "summary": "A high‑energy Alpine Valley ’84 show captured on a lively audience tape – crystal‑clear Bird Song/Let It Grow and a scorching Dear Mr. Fantasy despite a slightly tinny midrange.",
+  "review": "The performance is consistently praised for its tight first set, the epic Birdsong → Let It Grow segue, and a monumental Dear Mr. Fantasy that many reviewers call “stupendous.”  The audience recording (AUD) is generally described as clear and well‑balanced, though a few note a tinny Sennheiser character and occasional mids loss.  Overall the show is regarded as one of the classic Alpine Valley nights of the mid‑80s.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, the vast majority are 4–5 stars and extol both the musical performance and the listening experience; only minor technical complaints appear, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and lively audience capture; praised for balance and presence. Some listeners mention a tinny Sennheiser sound and slightly muted low end compared to later board recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dear Mr. Fantasy",
+      "The Other One",
+      "Bird Song / Let It Grow",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as tight and fun; second set builds into a soaring epic with seamless transitions (e.g., Birdsong → Let It Grow, Fantasy → The Other One). Energy stays high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry’s soaring guitar work on Dear Mr. Fantasy and his powerful vocals early in the set.",
+    "Phil": "Bass is praised for its drive (e.g., “Phil bombs all over”) though one review notes a slight muting due to the recording.",
+    "Bob": "Bob Weir’s vocal on Do It In The Road receives positive nods; overall rhythm work considered solid.",
+    "Keys": "Brent Mydland’s trippy, psychedelic keyboards are celebrated; a few note early‑set squawky tones that were later corrected.",
+    "Drums": "Bill Kreutzmann’s drumming is described as dynamic – moving from rocking grooves to spacey passages and supporting the long jams."
+  },
+  "song_mentions": {
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Bird Song / Let It Grow": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Do It In The Road": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China-Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T19:53:48.726948+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-07-06.senn441.dodd.13898.sbeok.shnf"
+}

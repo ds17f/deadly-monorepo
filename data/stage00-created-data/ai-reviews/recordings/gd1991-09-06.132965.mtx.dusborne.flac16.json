@@ -1,0 +1,31 @@
+{
+  "summary": "Attendees hail this concert as one of their top three shows ever, but the review gives no information about the recording source or quality.",
+  "review": "The sole fan review is overwhelmingly positive, calling the performance one of the best they have seen in nearly a decade. No details are provided regarding the audio source, mix, or clarity, so the technical quality remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Only one review is available; it rates the show 5 stars and praises it highly, but offers no insight into recording quality, limiting confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention any aspects of sound quality, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the concert as one of their three favorite shows, indicating a consistently strong performance throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T00:03:31.160359+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-06.132965.mtx.dusborne.flac16"
+}

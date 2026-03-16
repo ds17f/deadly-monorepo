@@ -1,0 +1,39 @@
+{
+  "summary": "An energetic concert with a rocking second set and solid sound quality, highlighted by a killer Deal.",
+  "review": "Fans rave about the high energy of this show, especially the electrifying second set that “really rocked.” The recording is praised for its great sound despite the unknown source type, making it an enjoyable listen. Standout moments include a superb rendition of Deal and the overall enthusiastic crowd atmosphere.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All three reviews are strongly positive, noting great performance energy and good audio quality; no major complaints were recorded."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers mention \"great sound\" and no technical flaws, but do not specify whether it is a soundboard or audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is described as high‑energy with a particularly strong second set that kept the crowd excited throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T19:23:37.604750+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-30.senn421.unknown.31225.sbeok.flac16"
+}

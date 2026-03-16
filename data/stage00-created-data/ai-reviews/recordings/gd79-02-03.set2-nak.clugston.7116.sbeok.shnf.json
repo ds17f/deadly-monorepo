@@ -1,0 +1,74 @@
+{
+  "summary": "An astonishing audience recording that captures a blistering Scarlet > Fire sequence and a tightly‑grooving second set with standout Estimated Prophet, Eyes, The Other One and Wharf Rat.",
+  "review": "The show is universally praised for its incendiary Scarlet > Fire segue, tight rhythm section and soaring Jerry Garcia solos that lift the entire second set.  Even though it’s an audience (AUD) source, listeners repeatedly note the surprisingly clean, almost sound‑board‑like clarity that lets every jam and crowd reaction shine.  Overall the performance ranks among the best of the Keith/Donna era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, all but a few give 4‑5 stars and highlight exceptional musical performance plus unusually high recording fidelity for an audience tape; the weighted average (70 % show, 30 % recording) yields a near‑perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as very clean and crisp—almost like a soundboard—with minimal muddiness, good instrument separation, and audible crowd that adds to the live feel."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Estimated Prophet",
+      "Eyes",
+      "The Other One",
+      "Wharf Rat",
+      "Miracle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A nonstop second‑set surge; seamless transitions (Scarlet→Fire, Drums→Space→The Other One) keep the energy high and showcase a tight, propulsive rhythm section."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for scorching guitar solos, vocal intensity and overall front‑line dominance.",
+    "Phil": "Praised for “dropping bombs” during space jams and providing a solid low‑end foundation.",
+    "Bob": "Noted for crisp rhythm‑guitar work and steady vocal harmonies, especially early in the set.",
+    "Keys": "Donna’s keyboards described as great, adding texture and melodic depth throughout the performance.",
+    "Drums": "Bill Kreutzmann and Mickey Hart highlighted for powerful, driving drumming that lifts every transition."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 18,
+      "negative_mentions": 0,
+      "total_mentions": 18
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Wharf Rat": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Miracle": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:57:46.727049+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-02-03.set2-nak.clugston.7116.sbeok.shnf"
+}

@@ -1,0 +1,66 @@
+{
+  "summary": "High‑fidelity soundboard capture of the historic 3/19/66 Pico Acid Test with crisp blues‑heavy set and standout Heads Up and Midnight Hour performances.",
+  "review": "The recording is a clean, stereo soundboard dump that many listeners describe as “magnificent” and “superb”, despite a few mix quirks (Jerry sits a bit forward). Musically the show is valued more for its historical significance than for jaw‑dropping improvisation, but early‑Dead blues numbers like Heads Up and In The Midnight Hour receive strong praise. Overall the set offers a rare glimpse of the pre‑primal Dead sound in an easily listenable format.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the recording highly for fidelity and enjoy the historic performance; musical quality is solid but not spectacular, yielding a combined rating just under four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, upfront stereo soundboard with excellent separation; some listeners note Jerry is high in the mix and suggest mono conversion for smoother listening. Overall very listenable despite minor tonal imbalances."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Heads Up",
+      "In The Midnight Hour",
+      "Stormy Monday Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early‑'66 acid‑test set, mostly straight blues/R&B numbers. The performance is historically fascinating with basic arrangements; energy is modest but the band’s nascent chemistry shines through on a few highlighted tracks."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is prominent in the mix and receives high praise for blues‑heavy work on Heads Up, Stormy Monday Jam, and Midnight Hour, though some note he sits a bit forward.",
+    "Phil": "",
+    "Bob": "Weir's vocals are described as slightly off‑key on a couple of tracks (e.g., I Know You Rider).",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "You See a Broken Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down the Line": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Heads Up": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "In The Midnight Hour": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stormy Monday Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T04:52:28.161470+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd66-03-19.sbd.scotton.81951.sbeok.flac"
+}

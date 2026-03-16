@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording marred by four audible pops during “The Other One”, with no other commentary on performance",
+  "review": "The sole review flags a technical flaw: four noticeable pops between 1:30‑1:40 in the middle of “The Other One” that could not be removed. No musical observations are provided, so the show’s quality remains unknown.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one brief review focusing on a recording defect; no positive or neutral comments about performance to raise the rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Four audible pops between 1:30‑1:40 in “The Other One”; reviewer notes they could not be removed."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:42:46.113857+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-07-13.152473.sbd.walker-scotton.miller.flac2496"
+}

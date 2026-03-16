@@ -1,0 +1,31 @@
+{
+  "summary": "Brief positive comment on recording quality but no details about performance or source",
+  "review": "The lone review praises the recording with a short enthusiastic note, yet provides no specifics about sound source, clarity, or musical highlights. With only one vague comment, both the show and recording assessments remain uncertain.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "Only a single, very brief review is available; it expresses enthusiasm for the recording but gives no concrete information on performance or technical quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer says \"What a recording\" but offers no details about soundboard vs. audience, clarity, or mix issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T10:01:14.702444+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-08.150560.BettyBoard.Anon.Noel.t-flac16"
+}

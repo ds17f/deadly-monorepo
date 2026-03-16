@@ -1,0 +1,57 @@
+{
+  "summary": "Superb soundboard recording captures a tight, well‑played show highlighted by the double encore of Hard To Handle/Tell Mama and a sweet “He’s Gone” tambourine moment.",
+  "review": "The audience gets an excellent soundboard source with crystal‑clear audio that lets every nuance shine. The performance is solid throughout, with a particularly tight first set, a promising second‑set opener, and the standout double encore of Hard To Handle and Tell Mama. A memorable touch comes when Billy adds tambourine and dances behind Mickey during “He’s Gone.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Reviews consistently praise the superb sound quality and tight musicianship, noting several highlight moments; weighting of show (70%) and recording (30%) yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls the sound \"superb\" with no reported glitches—clear, balanced mix that captures both instruments and ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard To Handle",
+      "Tell Mama",
+      "Feel Like A Stranger",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as solid but unremarkable; second set opens with Touch and the new Throwing Stones, still finding their place. Overall the show feels tight and well‑played, capped by a double encore that elevates the night."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey's drum solo is highlighted by Billy adding tambourine and dancing behind him during “He’s Gone.”"
+  },
+  "song_mentions": {
+    "Tell Mama": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hard To Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like A Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T03:49:03.040486+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-12-30.sbd.walker-scotton.miller.105819.flac16"
+}

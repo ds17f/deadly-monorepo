@@ -1,0 +1,125 @@
+{
+  "summary": "A solid audience recording that captures a mind‑blowing set highlighted by scorching Candyman, Iko, Samson and a surprise Day Tripper.",
+  "review": "The Oade audience tape is clear and free of glitches, delivering the energy of a packed arena while keeping the music front‑and‑center. The performance shines with powerful first‑set work and an explosive second set featuring standout jams, space and a delightfully unexpected Day Tripper, though China Doll and “Don’t Ease Me In” fell flat for some listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the musical performance (multiple 4‑5 star reviews) and the audience recording quality, with only minor song criticisms."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Oade production; clear and balanced despite crowd ambience, no noticeable glitches or drop‑outs. Reviewers note it sounds crisp after a little EQ tweaking."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Loser",
+      "Iko Iko",
+      "Samson",
+      "He's Gone",
+      "Day Tripper",
+      "Space",
+      "The Wheel",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "China Doll",
+      "Don't Ease Me In"
+    ],
+    "setlist_flow": "A strong, tight first set followed by an explosive second set full of jams, space and a surprise Day Tripper that kept the crowd on fire."
+  },
+  "band_member_comments": {
+    "Jerry": "Shredding guitar work praised throughout; however his decision to play China Doll was questioned as a weak moment.",
+    "Phil": "Bass ‘bombs’ especially on Samson were highlighted positively.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum performances described as mind‑blowing, driving the jams and space sections."
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Day Tripper": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Beat It On Down the Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "CC Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Duprees": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:37:26.267971+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-03-31.oade-schoeps.sacks.23592.sbeok.flacf"
+}

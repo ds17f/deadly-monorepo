@@ -1,0 +1,44 @@
+{
+  "summary": "High‑quality soundboard recording with booming bass, strong drum solos and a musically solid three‑night run highlighted by the Valley Road closer.",
+  "review": "The consensus among reviewers is that this show shines both musically and technically. Charlie Miller’s mastering brings out a powerful low end while the performance features tight drum solos and a memorable finish to the first set with “Valley Road.” The only notable mix quirk is a thin presence of Phil’s bass in parts of the top sound‑board feed, but overall the recording is praised as fantastic.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Five enthusiastic 5‑star reviews (with one neutral 0‑star comment) highlight excellent musical performance and strong soundboard quality, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller’s mastering emphasizes bottom end; overall clear and powerful sound. Minor mix issue: top‑board feed lacks some of Phil's bass presence, but no major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Valley Road"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Three‑night run described as very good musically; first set closed strongly with the Hornsby‑written “Valley Road,” and drum solos are repeatedly praised."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Praised for his Aural Exciter bass tone and a cool ‘The Sorcerer's Apprentice’ riff during space; mixing emphasized low end.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum solos described as knockout, every note sounding like it’s graphed."
+  },
+  "song_mentions": {
+    "Valley Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Sorcerer's Apprentice": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T15:23:25.823155+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-13.sbd.miller.108981.flac16"
+}

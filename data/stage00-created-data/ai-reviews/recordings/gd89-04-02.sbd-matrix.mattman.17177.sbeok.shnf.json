@@ -1,0 +1,94 @@
+{
+  "summary": "Matrix recording with mixed‑quality sound captures a high‑energy show highlighted by a monster Shakedown Street and stellar second‑set jams.",
+  "review": "The performance shines, especially the ripping Shakedown Street, soaring Dear Mr Fantasy/Hey Jude reprise, tight Brown Eyed Women, and vibrant Lovelight. While the matrix tape is muddy at the start and some listeners describe it as “like a Victrola,” the sound clears up after the first couple of minutes, making the music enjoyable despite occasional drop‑outs.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (70% weight) and note standout jams; recording quality is uneven but improves, giving a decent overall listening experience."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Early portion heavy on audience bleed and muffled; mid‑set clears up with audible instruments. Some reviewers report drop‑outs or “sounds like shit,” while others say it gets better after the first two minutes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Dear Mr Fantasy / Hey Jude (reprise)",
+      "Lovelight",
+      "Brown Eyed Women",
+      "Iko Iko",
+      "Foolish Heart",
+      "Goin' Down the Road Feelin' Bad",
+      "Around & Around",
+      "Women Are Smarter"
+    ],
+    "poor_songs": [
+      "Hey Jude (sloppy version noted by a few reviewers)"
+    ],
+    "setlist_flow": "The first set is upbeat and sing‑along friendly, while the second set erupts into high‑octane jams; the show’s energy mirrors the chaotic “riot” atmosphere but the music stays tight and purposeful."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as energetic on guitar and vocals, flashing a grin during Women Are Smarter, delivering strong slide work and vocal grit on many songs.",
+    "Phil": "Bass is louder and driving, especially noted on Shakedown Street; described as “rambling and rumbling” but solidly supportive of the groove.",
+    "Bob": "Bobby (Weir) adds slide solos on Women Are Smarter and contributes vocal harmonies throughout; his presence is highlighted in several jams.",
+    "Keys": "Brent Mydland’s organ is warm, punchy, and full of “electric fills,” delivering memorable solos on Lovelight and other numbers.",
+    "Drums": "Bill & Mickey are aggressive yet cohesive, providing a steady bed for the band; drums/Space sections are praised as above‑average."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Dear Mr Fantasy / Hey Jude (reprise)": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lovelight": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Iko Iko": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Goin' Down the Road Feelin' Bad": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around & Around": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Women Are Smarter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hey Jude": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T17:29:48.691954+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-04-02.sbd-matrix.mattman.17177.sbeok.shnf"
+}

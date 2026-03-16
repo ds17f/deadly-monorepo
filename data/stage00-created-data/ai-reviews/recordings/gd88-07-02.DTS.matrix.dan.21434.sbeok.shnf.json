@@ -1,0 +1,99 @@
+{
+  "summary": "Spectacular 5.1 DTS matrix mix that shines on a solid 1988 East‑Coast show, highlighted by a killer Jack Straw and post‑space Terrapin.",
+  "review": "The DTS‑encoded matrix source delivers an expansive, crystal‑clear surround experience for anyone with a true 5.1 setup, though it will produce static or white‑noise on ordinary stereo gear. Musically the show is strong – the first set grooves well but the second set’s post‑space jam (Terrapin, Sugar Magnolia and Morning Dew) stands out as one of the era’s best, with Jerry digging deep and Phil leading the charge.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently praised as excellent for proper hardware; show quality is good with several standout performances, offset by a few middling jams, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Requires full‑range DTS/Dolby Digital 5.1 playback; works flawlessly on proper systems (crisp, immersive, heavy bass). Listeners without a center channel or sub often get static/white noise; vocals can sit slightly forward in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Terrapin Station",
+      "Sugar Magnolia",
+      "Morning Dew",
+      "Iko Iko",
+      "Blow Away",
+      "Victim",
+      "Foolish Heart"
+    ],
+    "poor_songs": [
+      "Crazy Fingers",
+      "Uncle John's Band"
+    ],
+    "setlist_flow": "First set delivers solid song choices and tight playing, but the second set elevates the concert with a powerful post‑space segment (Terrapin → drums → space) and two surprise additions that keep the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Digs deeper than usual, goes nuts on the fretboard during Terrapin and trades beautiful chops with Phil in Morning Dew.",
+    "Phil": "Leads the charge in jams, his bass is prominent (a bit loud for some), and he shines on GSL and in the subtle interplay on Morning Dew.",
+    "Bob": "Adds tasteful fills and chipping‑in nicely during jams (e.g., UJB, Terrapin).",
+    "Keys": "Brent Mydland’s piano animates Row Jimmy and provides strong support on Sugar Magnolia and GSL; heavy bass noted by a few listeners.",
+    "Drums": "Interesting drum work in the Terrapin jam, followed by a furious space section; overall solid."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blow Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T10:57:40.546496+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-07-02.DTS.matrix.dan.21434.sbeok.shnf"
+}

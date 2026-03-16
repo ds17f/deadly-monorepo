@@ -1,0 +1,39 @@
+{
+  "summary": "Great show with a barn‑burner second set kicked off by Shakedown Street, though recording details are unclear.",
+  "review": "The reviewer describes the concert as an amazing Saturday afternoon performance, highlighting a scorching second set that opened with Shakedown Street. No specific comments about the audio source or sound quality are provided, so the recording quality remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "A single enthusiastic 4‑star review praises the musical performance strongly but gives no information on recording quality, leading to a solid show rating tempered by uncertainty about the audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix, or source were provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is highlighted as a barn‑burner that opened with Shakedown Street, indicating strong momentum and pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:48:11.523383+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-06-13.senn421-nak300.alexander.tetzeli.77268.sbeok.flac24"
+}

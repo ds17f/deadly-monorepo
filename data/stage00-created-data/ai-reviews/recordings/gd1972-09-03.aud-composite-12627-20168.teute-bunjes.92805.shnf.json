@@ -1,0 +1,31 @@
+{
+  "summary": "Poor recording and unsatisfying show, described as 'weird' by the lone reviewer",
+  "review": "The sole review rates this release one star, calling it weird and implying disappointment with either the audio or performance. No specific details about sound quality, setlist, or musicians are provided, making it hard to pinpoint exact issues.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one low‑star review with no detail; rating reflects overall negative sentiment and presumed poor quality"
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer gave no specifics, only described the release as weird, suggesting dissatisfaction with audio"
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T17:04:20.768991+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-03.aud-composite-12627-20168.teute-bunjes.92805.shnf"
+}

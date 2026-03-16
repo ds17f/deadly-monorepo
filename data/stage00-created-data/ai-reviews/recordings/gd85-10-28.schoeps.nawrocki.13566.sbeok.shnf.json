@@ -1,0 +1,51 @@
+{
+  "summary": "High‑quality audience tape captures a vibrant Atlanta show highlighted by an electrifying Scarlet Begonias → Touch of Grey transition.",
+  "review": "The recording is an audience (AUD) capture that many listeners describe as balanced, spacious and even “phenomenal,” delivering a clear sense of the Fox Theatre’s atmosphere. Musically the concert shines with a scorching Scarlet Begonias > Touch of Grey segue, strong performances of Terrapin Station and Sugaree, and an overall energetic second set that left fans with goose‑bumps. While one reviewer noted a corrupted file download, the consensus is that both the show and its sound are highly enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance and describe the audience recording as clear and immersive; only a few minor criticisms appear, leading to an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Balanced and spacious soundstage with good clarity; several reviewers call it phenomenal or the best‑sounding AUD they’ve heard. No major audio flaws reported beyond one user’s download corruption."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Touch of Grey",
+      "Terrapin Station",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is especially praised for its high energy, glow‑stick spectacle and seamless transitions, making the concert feel like a classic 1985 Dead experience."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Touch of Grey": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T09:48:46.874481+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-10-28.schoeps.nawrocki.13566.sbeok.shnf"
+}

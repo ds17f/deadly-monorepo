@@ -1,0 +1,63 @@
+{
+  "summary": "High‑energy second set with Spanish Jam and tight Sugar Magnolia",
+  "blurb": "The show bursts to life in the second set, highlighted by a flowing Spanish Jam into The Wheel and a fiery Sugar Magnolia. Jerry’s lead on Black Peter is over‑the‑top, while Brent shines on keyboards throughout.",
+  "review": "October 13, 1981 at Walter Koebel Halle captures the Dead in full flight. The first set rolls along with solid staples, but it’s the second set that truly dazzles – a seamless segue from Drums into Space, then into a scorching Spanish Jam that rolls straight into The Wheel and a high‑octane Sugar Magnolia. Jerry Garcia is “over‑the‑top” on Black Peter and pushes the tempo on Sugar Magnolia, while his bluesy tone on the Spanish Jam still cuts through despite occasional mix quirks. Brent Mydland’s keyboard work is praised as evocative, especially on Lost Sailor, and sits perfectly in the crystal‑clear soundboard mix where the drums are described as “perfect”. The encore finishes with a punchy (I Can't Get No) Satisfaction, leaving the audience buzzing. Both the SBD from Jim and the audience tape showcase the show’s vitality – the board version offers pristine drum balance, while the audience recording puts Phil’s bass front and gives a raw, full‑room feel.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.8,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 16,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Two recordings are clearly positive, praising the high‑energy second set, standout jams and strong musicianship; a third is mixed but still notes good performance. No consistent negative feedback appears, so a moderate positive adjustment of +1.2 is applied.",
+      "final_calculation": "2.5 + 0.1 + 1.2 = 3.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd81-10-13.sbd.jim.13143.sbefail.shnf",
+    "reason": "Soundboard source with clear, well‑balanced mix; drums sit perfectly and Brent’s keyboards are highlighted, offering the most complete listening experience despite a few minor cuts."
+  },
+  "key_highlights": [
+    "Spanish Jam flowing into The Wheel and then Sugar Magnolia creates a high‑energy peak",
+    "Black Peter features an over‑the‑top Jerry performance",
+    "(I Can't Get No) Satisfaction encore delivers a punchy finish",
+    "Brent’s keyboard tone is consistently praised, especially on Lost Sailor"
+  ],
+  "song_highlights": [
+    "Spanish Jam",
+    "The Wheel",
+    "Sugar Magnolia",
+    "Black Peter",
+    "(I Can't Get No) Satisfaction"
+  ],
+  "band_performance": {
+    "Jerry": "Over‑the‑top on Black Peter, pushes tempo on Sugar Magnolia, and delivers a bluesy tone on Spanish Jam despite occasional mix burying.",
+    "Phil": "Provides a solid foundation; his bass is especially prominent in the audience recording, anchoring the groove throughout.",
+    "Bob": "Strong vocal delivery, notably on Satisfaction with Brent’s backing; sustains the jam energy when Jerry steps back during the Dark Star segment.",
+    "Brent": "Keyboard tone praised as great; evocative work on Lost Sailor and a key presence throughout the high‑energy second set.",
+    "Mickey": "Drums are described as perfect in the mix, driving the overall high‑energy feel of the show.",
+    "Billy": "Delivers solid drumming that locks in with Mickey, reinforcing the powerful rhythmic backbone."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-13T15:52:40.036647+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "Drums",
+      "Space",
+      "Spanish Jam",
+      "The Wheel",
+      "Sugar Magnolia",
+      "Black Peter",
+      "Sunshine Daydream"
+    ],
+    [
+      "(I Can't Get No) Satisfaction"
+    ]
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "summary": "Above‑average audience recording with solid low‑end and clear balance, capturing a warm‑up first set but a standout second set highlighted by Stranger→Franklin’s and He's Gone.",
+  "review": "The nak300.unknown cassette source delivers a clean, well‑balanced sound with good low‑frequency presence and minimal hiss, letting Jerry’s guitar sit front‑and‑center. Musically the show feels like a warm‑up—first set merely average—but the second set shines, especially the massive Stranger→Franklin’s transition, an inspired He's Gone ending, and a fun Dew jam.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Two reviewers rave about the performance and recording quality while one rates it only average; weighted averaging of show (≈3.8) and recording (≈4.2) yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Cassette source with Dolby B decoded, low‑end boost compared to Jim Wise tapes, no noticeable hiss, crowd present but not intrusive; Jerry’s guitar is especially prominent and overall balance is clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger > Franklin's",
+      "He's Gone",
+      "Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set feels like a warm‑up—mediocre overall—while the second set lifts the concert with big improvisational peaks, notably the massive Stranger→Franklin’s transition and an energetic He's Gone ending."
+  },
+  "band_member_comments": {
+    "Jerry": "Prominent in the mix; not as on‑point early but delivers a stunning improvisation in Franklin's outro and energizes the crowd during He's Gone.",
+    "Phil": "Barely noticed during the Space segment, with little contribution noted.",
+    "Bob": "Gets his moment when Weir is allowed to start the jam proper after Jerry’s lead.",
+    "Keys": "Brent adds ascending lines that intertwine with Jerry’s guitar in the Franklin's outro.",
+    "Drums": "Mickey Hart stays out for most of the Space and overall appears less active than usual."
+  },
+  "song_mentions": {
+    "Stranger > Franklin's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T14:12:48.497440+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-09-11.nak300.unknown.31791.sbeok.flac16"
+}

@@ -1,0 +1,68 @@
+{
+  "summary": "Excellent matrix recording with superb separation, capturing a powerhouse second set highlighted by Dark Star, Good Lovin' jam and a smoking Sugar Magnolia.",
+  "review": "The three five‑star reviews rave about the crisp, well‑balanced matrix mix that even outshines the official release, giving listeners clear insight into each musician’s interplay. The show itself is praised for its expansive second set, standout Dark Star, a monster Good Lovin' medley, and energetic performances from Jerry and Phil, making it a must‑hear snapshot of this era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All reviewers give 5‑star ratings, emphasizing both superb musical performance (especially the second set) and an excellent matrix recording; consistent praise across three detailed reviews yields a high confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers highlight great separation, clean mix and clarity—one even prefers it to the official soundboard release. No noticeable drop‑outs or pitch issues are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Good Lovin'",
+      "Sugar Magnolia",
+      "Philo Stomp",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is described as unusually large and flowing, with rare split‑transition jams that keep the energy high. Pigpen’s vocal rap sections add extra excitement, and the overall pacing keeps the crowd engaged."
+  },
+  "band_member_comments": {
+    "Jerry": "Highlighted as the driving force in Dark Star, with his guitar front‑and‑center throughout the performance.",
+    "Phil": "Praised for “running with that bass line” and delivering a memorable Philo Stomp groove.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Philo Stomp": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alligator": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T13:55:21.405450+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-04-14.136980.mtx.dusborne.flac16"
+}

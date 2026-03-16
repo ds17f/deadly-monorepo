@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent matrix recording with silky SBD‑to‑AUD patches captures a legendary Miami show featuring the one‑off Let It Rock, a soaring Dark Star and a haunting Black Throated Wind.",
+  "review": "The patched soundboard/audience source delivers crystal‑clear, well‑balanced audio that many reviewers call “the best possible sound” despite minor echo quirks in some transfers. Musically the show is repeatedly hailed as one of the greatest ever – a top‑20 performance highlighted by the unique Let It Rock, an epic Dark Star jam and a heavy, mysterious Black Throated Wind.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the performance (standout songs, historic rarity) and the recording quality (smooth matrix patches, excellent clarity) across most reviews."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Silky‑smooth transitions between soundboard and audience sources; overall crisp and balanced. Some reviewers note a faint echo/reverb in later remasters but it does not detract from the listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Rock",
+      "Dark Star",
+      "Black Throated Wind",
+      "Weather Report Suite"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers love the restored flow of the set, describing it as dreamy, mellow yet tight and jazzy with seamless song transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for inspired, heavy‑toned guitar work on Let It Rock and Black Throated Wind.",
+    "Phil": "",
+    "Bob": "Noted that Bob (referred to as \"Bobby\") delivers feeling‑filled vocals on Black Throated Wind.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Rock": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T21:32:57.006919+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-06-23.sbd.OBV.30846.shnf"
+}

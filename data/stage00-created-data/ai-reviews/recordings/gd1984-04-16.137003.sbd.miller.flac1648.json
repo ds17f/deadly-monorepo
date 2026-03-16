@@ -1,0 +1,39 @@
+{
+  "summary": "Unknown‑source recording of an average show with a notable The Other One performance.",
+  "review": "The two fans describe the concert as solid but unremarkable, highlighting only The Other One as a special moment. No details are given about the tape source or sound quality, leaving the technical side uncertain.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only two brief reviews; one mentions a standout The Other One while the other reports no highlights. No recording‑quality comments, so rating stays near average."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not comment on soundboard, audience mix, clarity, or any audio issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid but unremarkable; reviewers noted no particular highlights beyond The Other One."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T15:50:00.030828+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-16.137003.sbd.miller.flac1648"
+}

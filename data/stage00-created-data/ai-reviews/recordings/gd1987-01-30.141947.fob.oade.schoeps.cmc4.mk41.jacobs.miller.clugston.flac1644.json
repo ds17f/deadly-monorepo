@@ -1,0 +1,40 @@
+{
+  "summary": "Wonderful Oade front‑of‑house tape with excellent sound, but a middling show aside from a strong Estimated Prophet and post‑Space jam",
+  "review": "The recording captures the concert with crystal‑clear Oade front‑of‑house quality, earning top marks for audio fidelity. The performance itself is described as middling overall, though reviewers highlight a standout Estimated Prophet and an engaging post‑Space segment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Single detailed review gives separate scores (3.5 show, 5 sound); weighted average yields ~4.0 stars"
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Praised as a wonderful Oade front‑of‑house (FOB) tape with clear, high‑fidelity sound"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "post‑Space jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall middling performance except for the Estimated Prophet and the energy after Space, giving the show an uneven feel"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:47:57.530997+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-01-30.141947.fob.oade.schoeps.cmc4.mk41.jacobs.miller.clugston.flac1644"
+}

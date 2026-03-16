@@ -1,0 +1,88 @@
+{
+  "summary": "Pitch‑corrected SBD of the Red Rocks 8/31/78 show delivers strong Jerry work and a solid set, with minor tape pops and an audience patch for missing sections.",
+  "review": "The 2013 Charlie Miller upgrade offers a crisp soundboard source (with a few audible tape‑static clicks) that has been patched from the audience to fill in the last twenty‑plus minutes.  Musically the performance is praised – first appearances of “Heart Of Me” and “Shakedown,” a fiery “Samson,” and an expansive Terrapin/Playin’/NFA sequence – though some listeners note missing backup vocals on Shakedown and are less fond of the drum jam segment.  Overall the show is regarded as a high‑energy Red Rocks highlight despite the minor technical quirks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Strong musical praise (especially Jerry’s playing and setlist highlights) balanced against a few recording artifacts and mixed comments on vocals/drum jam yields an overall four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Pitch‑corrected, remastered SBD with occasional tape‑static pops (noted at specific timestamps). Missing ~25 min of the second set were patched from a high‑quality audience recording; overall clarity is solid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Heart Of Me",
+      "Shakedown Street",
+      "Half Step",
+      "El Paso",
+      "Terrapin",
+      "Playin'",
+      "NFA",
+      "Samson"
+    ],
+    "poor_songs": [
+      "Donna"
+    ],
+    "setlist_flow": "Second‑night Red Rocks set, featuring first performances of “Heart Of Me” and “Shakedown,” a tight mid‑set with Half Step > El Paso, and a sprawling Terrapin/Playin’/NFA suite that keeps the momentum high despite a brief vocal shortfall."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as strong and fast – “Samson, Playin and NFA” showcase his powerful guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The Ollin Arageed drum jam is mentioned but the reviewer dislikes it; overall drumming is solid within the Terrapin sequence."
+  },
+  "song_mentions": {
+    "Heart Of Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "NFA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Donna": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T14:40:52.485652+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-08-31.sbd.miller.125882.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Solid garden show with hot performances of \"The Last Time\" and \"Here Comes Sunshine\", recording quality not specified",
+  "review": "The concert is described as solid and entertaining, highlighted by strong renditions of \"The Last Time\" and \"Here Comes Sunshine.\" No details are given about the source or fidelity of the recording, so its technical quality remains unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Only one moderately rated review; positive comments about the performance but no information on recording quality, leading to an average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer commentary on sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Last Time",
+      "Here Comes Sunshine"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as a solid, entertaining garden show with no major flaws noted."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:21:28.553438+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-21.schoeps-byron-dnk.raras.8919.sbeok.shnf"
+}

@@ -1,0 +1,72 @@
+{
+  "summary": "Monster Bird Song/Dark Star combo fuels an inspired second set",
+  "blurb": "The night erupts with a monster Bird Song into Dark Star and a soaring The Other One that rolls into Wharf Rat. Jerry’s guitar stays powerful despite occasional vocal strain, while Bruce Hornsby’s piano adds fresh texture after Brent’s passing. The second‑set energy makes this New Year’s Eve a standout performance.",
+  "review": "December 31, 1990 at the Oakland Coliseum delivered one of the most memorable New Year's Eve shows in Dead history. Opening with a solid first set that included Jack‑A‑Roe and Wang Dang Doodle, the band truly ignited on the second half: Not Fade Away kicked off a blazing sequence that carried through an incandescent Bird Song into a monster Dark Star, followed by an extended drum segment, Space, and a soaring The Other One that surged into a triumphant Wharf Rat finale. Guest saxophonist Branford Marsalis added a bright, jazzy edge, while Bruce Hornsby’s piano/organ shone throughout, filling the void left by Brent Mydland. Jerry Garcia’s guitar work remained tight and inventive, even as his voice sounded “shot” on a few numbers; Phil Lesh kept a propulsive pulse especially during Dark Star, and both Mickey Hart and Bill Kreutzmann drove an energetic, tightly‑grooved rhythm section. The show’s magic is captured best by the FM broadcast recording, which presents the full set with respectable clarity and preserves the night’s electrifying vibe.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.8,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 32,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Two recordings are clearly positive, two are mixed (neutral), and one is negative; the overall tone leans positive with strong praise for Bird Song/Dark Star and the second‑set jams, offset by a single unusable recording. This yields a modest +1.0 sentiment boost.",
+      "final_calculation": "2.5 + 0.3 + 1.0 = 3.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1990-12-31.126823.FM.flac16",
+    "reason": "FM broadcast captures the complete show with decent clarity and preserves the energy of the night, making it the most reliable full‑set source."
+  },
+  "key_highlights": [
+    "Monster Bird Song/Dark Star combo that dominates the second set",
+    "Extended jam on The Other One leading into a triumphant Wharf Rat",
+    "Bruce Hornsby’s piano/organ adds fresh texture after Brent’s passing",
+    "Crisp soundboard capture of the second set (gd90-12-31.sbd-satellitefeed) highlights the band’s tight groove"
+  ],
+  "song_highlights": [
+    "Bird Song",
+    "Dark Star",
+    "Eyes Of The World",
+    "The Other One",
+    "Wharf Rat",
+    "Not Fade Away*",
+    "Jack-A-Roe",
+    "The Weight*"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar remains powerful and inventive throughout, with standout counting‑off B‑song; his voice sounds a bit shot on some tracks but does not detract from the overall strong performance.",
+    "Phil": "Lesh provides a solid pulse, especially during Dark Star and The Other One, adding bouncy arpeggios and smooth transitions that lock the band together.",
+    "Bob": "Weir digs into an uptempo Jack‑A‑Roe groove alongside Garcia, contributing steady rhythm work throughout the set.",
+    "Brent": "",
+    "Mickey": "Hart delivers high‑energy drumming with tight grooves; his interplay with Bill during the extended drum segment adds tribal flavor aided by guest Hamza al‑Din’s talking drum.",
+    "Billy": "Kreutzmann matches Hart’s intensity, driving the rhythm section forward and keeping the momentum especially in the second‑set jams."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-17T16:10:04.900251+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bird Song",
+      "The Promised Land*"
+    ],
+    [
+      "Not Fade Away*",
+      "Eyes Of The World",
+      "Dark Star",
+      "Drums**",
+      "Space*",
+      "The Other One",
+      "Wharf Rat",
+      "Not Fade Away*"
+    ],
+    [
+      "Jack-A-Roe"
+    ],
+    [
+      "The Weight*"
+    ]
+  ]
+}

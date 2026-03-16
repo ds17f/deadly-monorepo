@@ -1,0 +1,39 @@
+{
+  "summary": "Good-quality audio captures a pleasant show highlighted by a solid Morning Dew performance.",
+  "review": "All three reviewers praised the concert, noting that it was enjoyable enough to listen to from start to finish. The most frequently mentioned highlight is the rendition of \"Morning Dew,\" which they describe as a strong moment in an otherwise nice set. No specific technical issues were reported, suggesting the recording sounds satisfactory.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer stars (5, 4, 5) and enthusiastic comments indicate both a good performance and acceptable recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers did not comment on specific technical aspects; overall impression is that the audio was clear enough to enjoy the whole show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure; reviewers simply noted it was a nice, listenable show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T20:14:39.031278+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-04-15.nak700.glyde.11930.sbeok.shnf"
+}

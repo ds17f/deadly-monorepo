@@ -1,0 +1,51 @@
+{
+  "summary": "A rough‑sounding Volkerding soundboard records a stellar ’68 performance, highlighted by an epic Dark Star, St. Stephen and The Eleven.",
+  "review": "The show is consistently praised for its high energy and tight playing, with Dark Star, St. Stephen and a 69‑minute rendition of The Eleven singled out as standout moments. Recording quality is uneven – the mix drowns out Weir and Phil at times and exhibits buzz and clipping – but most listeners still consider it a solid capture of one of the great August‑era shows.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the performance very highly (average ~4.8) while noting notable but not debilitating recording flaws (average ~3.2). Weighted combination yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix is poor – Bob Weir and Phil Lesh are often buried; buzzing, clipping and rough spots noted, though some find it acceptable compared to other ’68 tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "St. Stephen",
+      "The Eleven"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as a continuation of the high‑energy August shows, with fast tempos and strong pacing throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Mix often drowns out Phil's bass; reviewers note he is low in the balance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T09:09:29.643951+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-09-02.sbd.volkerding.1979.sbeok.shnf"
+}

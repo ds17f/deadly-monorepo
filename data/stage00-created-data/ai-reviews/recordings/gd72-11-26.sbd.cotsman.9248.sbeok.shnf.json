@@ -1,0 +1,62 @@
+{
+  "summary": "Uneven soundboard quality early in the set, but the performance dazzles with a soaring Dark Star and a superb Feeling‑Groovy jam.",
+  "review": "The show is widely praised for its exceptional Dark Star, Feeling Groovy section, Jack Straw and Brokedown Palace, delivering a classic ’72 vibe that many listeners find worth repeated spins. Recording quality is inconsistent – the first half suffers from hiss, distortion and occasional drops, while the second half sounds much clearer and more balanced. Overall the musical strengths outweigh the technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the performance very highly (average ~5 stars) while noting significant but limited recording issues, leading to a weighted overall rating just above 4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Early tracks are hissy, distorted and uncomfortable; occasional splice at 20:08; later second‑set material sounds clearer with better levels. Overall uneven soundboard fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Feeling Groovy",
+      "Jack Straw",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is hampered by poor audio but the band remains in strong form; the second set lifts the whole concert with a powerful Dark Star, tight Jack Straw and an uplifting Brokedown Palace, making the show memorable despite early sound issues."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Multiple reviewers note Phil's bass is prominent and drives the performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Feeling Groovy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:22:09.208633+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-11-26.sbd.cotsman.9248.sbeok.shnf"
+}

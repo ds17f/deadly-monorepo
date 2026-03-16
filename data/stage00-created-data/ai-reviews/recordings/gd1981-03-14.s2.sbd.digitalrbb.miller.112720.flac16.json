@@ -1,0 +1,78 @@
+{
+  "summary": "Excellent soundboard capture of a stellar 1981 show, highlighted by Althea, Stella Blue and a fiery The Other One",
+  "review": "The recording is a pristine sound‑board source that fans describe as fantastic and ‘tasty’, preserving Brent Mydland’s newly‑found water‑splashy keyboard tone. Musically the second set shines with standout performances of Althea, Ship of Fools, Lost Sailor→Saint into drums and a scorching The Other One, all delivered with emotive depth from Jerry.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 5.0,
+    "confidence": "high",
+    "rationale": "All four reviewers gave five stars, praising both the musical performance and the high‑quality soundboard recording without any criticism."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear soundboard capture praised as fantastic; no dropouts or muddiness mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Stella Blue",
+      "Ship of Fools",
+      "Lost Sailor -> Saint",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set II is described as top‑notch from start to finish, with seamless transitions—especially the Lost Sailor→Saint → drums → fiery The Other One sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for a Green Sleeves tease out of The Other One and an emotive delivery on Stella Blue.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland's water‑splashy keyboard sound is highlighted as a breakthrough in the '81 era.",
+    "Drums": "The drum segment drives into a fiery The Other One, praised for its energy and intensity."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Green Sleeves": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T09:52:00.941245+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-14.s2.sbd.digitalrbb.miller.112720.flac16"
+}

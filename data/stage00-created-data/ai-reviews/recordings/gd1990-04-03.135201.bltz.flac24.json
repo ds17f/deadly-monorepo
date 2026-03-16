@@ -1,0 +1,31 @@
+{
+  "summary": "Recording sounds noticeably better than the previous FOH source, though no performance details are provided.",
+  "review": "The lone review focuses on the audio capture, noting that this FLAC24 file is a marked improvement over an earlier front‑of‑house recording that used Nak 300/CP4 microphones and a Sony mixer. No comments are made about the band's playing, setlist or any standout moments, so the musical quality of the show remains undocumented.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one brief review (3‑star) mentioning recording improvements; no insight into performance quality, so rating reflects a neutral middle ground."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Uses Sennheiser 441 mics, Sony mixer, Sony D10 Pro recorded and EAC'd; reviewer says it is much better than a previous FOH source."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T06:32:45.577770+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-04-03.135201.bltz.flac24"
+}

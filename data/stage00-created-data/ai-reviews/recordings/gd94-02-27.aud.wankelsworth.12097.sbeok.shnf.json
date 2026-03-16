@@ -1,0 +1,70 @@
+{
+  "summary": "Audience‑sourced recording that captures the odd vibe of a show dominated by a disappointing Cosmic Charlie tease, but still offers solid moments like Uncle John’s Band and Lovelight.",
+  "review": "The tape is an audience capture with no professional soundboard matrix, so it sounds rough around the edges yet manages to convey the strange stage production. Musically the concert is mixed – Jerry’s Uncle John’s Band and a lyrical Corrina shine, while the much‑talked‑about Cosmic Charlie tease that devolves into Wharf Rat left many fans bitter, and The Other One feels disjointed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers focus on the negative impact of the Cosmic Charlie tease and a non‑professional recording, but there are several positive song mentions that keep the overall impression from being wholly low."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer notes it is not a professional soundboard or matrix mix; captures ambience and stage effects but lacks clarity and balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band",
+      "Corrina",
+      "Lovelight",
+      "Rain"
+    ],
+    "poor_songs": [
+      "Wharf Rat",
+      "The Other One"
+    ],
+    "setlist_flow": "The concert swings between solid, lyrical moments and a controversial tease that derailed the crowd’s momentum; stage theatrics (dragons, dancers) are noted but do not compensate for the musical letdown."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for a strong Uncle John's Band performance; also mentioned spacing on mic during the Cosmic Charlie tease.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Jam into drums after Corrina highlighted as very good."
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T19:24:06.527231+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-02-27.aud.wankelsworth.12097.sbeok.shnf"
+}

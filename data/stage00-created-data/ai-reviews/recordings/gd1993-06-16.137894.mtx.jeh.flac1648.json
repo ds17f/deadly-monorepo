@@ -1,0 +1,63 @@
+{
+  "summary": "Solid summer‑93 performance with strong setlists, but the matrix sounds a bit sterile and MP3‑ish.",
+  "review": "The concert from June 1993 is praised for tight playing – highlights include a rehearsed ‘Eternity’, punchy ‘Brown Eyed Women’, a rocking jam at the end of ‘Corinna’ and a beautiful ‘Stella Blue’. Both sets are described as well played, though the matrix recording is considered sterile and almost MP3‑like, leaving listeners wishing for a better audience mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Reviewers love the musical performance (high show quality) but note mediocre matrix sound (average recording), yielding a weighted rating just over four stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Soundboard described as sterile and MP3‑ish; overall matrix decent but lacks the depth of a good audience mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eternity",
+      "Brown Eyed Women",
+      "Easy Answers",
+      "Corinna",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Both sets are noted as well played with strong transitions; the first set feels tight and rehearsed, while the second set maintains momentum with a solid jam on ‘Corinna’ and a standout ‘Stella Blue’."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Answers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corinna": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T14:24:40.936861+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-16.137894.mtx.jeh.flac1648"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "High‑energy show with standout St. Stephen and a killer second set, captured in a good‑quality matrix/audience recording.",
+  "review": "The concert is remembered as one of the hottest Dead nights, driven by raw stage energy and memorable moments like a breakout Wang Dang Doodle, soaring Jack Straw, Birdsong, Bertha and a rare Phil‑sung China Doll. Reviewers praise the entire pre‑drums run and note that while vocals were occasionally ragged, the performance more than makes up for it; the recording is considered solid enough (matrix or audience) to convey that excitement.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "The single 5‑star review emphasizes an exceptional performance with many standout songs and only minor, non‑technical complaints; recording quality is described as adequate for a matrix/audience source."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific audio flaws mentioned; reviewer recommends listening to a matrix or audience mix, implying the existing recording is at least clear enough to enjoy the high energy of the show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Wang Dang Doodle",
+      "Jack Straw",
+      "Birdsong",
+      "Bertha",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set packed with high‑energy highlights; second set builds even higher, especially the pre‑drums run and Bertha, delivering a nonstop rock‑filled momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil sang on China Doll (using his own mic), a rare occurrence at the time.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T11:52:21.244255+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-11.143611.fob.nak700.cohen.miller.clugston.flac2496"
+}

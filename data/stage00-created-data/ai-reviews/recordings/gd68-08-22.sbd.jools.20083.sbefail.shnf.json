@@ -1,0 +1,81 @@
+{
+  "summary": "Crystal‑clear soundboard capture of an amazing second half, highlighted by inventive Feedback and a stellar drum solo",
+  "review": "The Jools version of the August 22 1968 Fillmore West show delivers superb soundboard quality with crystal‑clear mix, though it only contains the second half of the concert. Reviewers rave about standout performances such as an inventive take on “Feedback,” a killer drum solo, and classic 68 gems like The Eleven, Dark Star, Death Don't Have No Mercy, St. Stephen and the Other One > New Potato.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer stars (average 4.5) and enthusiastic language about both performance and sound quality; minor deduction for the incomplete nature of the recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear, crisp mix praised by multiple reviewers. The recording is only the second half of the show and omits several key songs, but the audio fidelity is superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feedback",
+      "The Eleven",
+      "Dark Star",
+      "Death Don't Have No Mercy",
+      "St. Stephen",
+      "The Other One",
+      "New Potato",
+      "Drum Solo"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Only the second half is present, yet the flow remains strong with high‑energy jams and tight transitions; reviewers note it as part of a peak‑era run of shows."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum solo is repeatedly called the best to date, with crystal‑clear sound highlighting the performance."
+  },
+  "song_mentions": {
+    "Feedback": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drum Solo": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Potato": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T08:53:43.304668+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-08-22.sbd.jools.20083.sbefail.shnf"
+}

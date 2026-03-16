@@ -1,0 +1,45 @@
+{
+  "summary": "Partial soundboard with a splice restores the Truckin' → The Other One flow, but missing minutes keep overall audio quality fair.",
+  "review": "The reviewer appreciates that the splice fills a long gap and finally delivers a satisfying Truckin' into The Other One sequence. However, they note that a six‑to‑seven minute omission makes for an unsatisfactory listening experience overall, reflecting mixed feelings about the recording's completeness.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only one brief review; positive remarks about the song transition are offset by criticism of missing audio, leading to a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Partial soundboard with a splice; missing ~6‑7 minutes creates noticeable gaps despite the added segment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The splice restores a strong Truckin' → The Other One transition that was previously incomplete."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T04:05:12.997303+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-26.partial-sbd-patched.powell-ladner.25281.shnf"
+}

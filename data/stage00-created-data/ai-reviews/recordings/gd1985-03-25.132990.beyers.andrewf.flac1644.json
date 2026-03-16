@@ -1,0 +1,49 @@
+{
+  "summary": "Clear, punchy soundboard recording with a fluid Garcia opener (Jack Straw → Sugaree) after successful noise attenuation.",
+  "review": "The recording is praised for being punchy and clear once the pedal‑battery hum in Slipknot was attenuated. Garcia’s playing is highlighted as especially fluid during the Jack Straw into Sugaree opener, making this a standout musical moment despite the limited information on the rest of the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Single detailed 5‑star review emphasizes excellent sound quality and strong performance, but with only one source confidence is low."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Noise from a battery in Garcia's pedal (heard during Slipknot) was successfully attenuated; overall mix described as punchy and clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw > Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opener featuring Jack Straw into Sugaree flows smoothly; the clean recording lets Garcia’s fluid playing shine."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is noted for very fluid, punchy playing, especially on the opener.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Slipknot": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:59:13.686516+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-25.132990.beyers.andrewf.flac1644"
+}

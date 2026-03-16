@@ -1,0 +1,31 @@
+{
+  "summary": "A fan‑rated favorite show with five stars, though recording and performance specifics are not detailed.",
+  "review": "The reviewer gave this late‑show recording a perfect five‑star rating, calling it one of their favorites and wishing happy Valentine’s Day. No specific comments were made about the audio quality, song selection, or individual performances, so the praise is general rather than descriptive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Only a single brief review was provided; it is highly positive but offers no concrete details on sound or performance, limiting confidence in the rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No recording quality comments were given."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific feedback on set structure or song performance was provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T16:43:08.519083+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-02-14.141007.late.show.sbd.pcm.dalton.miller.clugston.flac1644"
+}

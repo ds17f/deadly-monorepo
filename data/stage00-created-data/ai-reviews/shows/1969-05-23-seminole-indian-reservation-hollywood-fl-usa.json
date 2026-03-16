@@ -1,0 +1,57 @@
+{
+  "summary": "Dark Star soars, Morning Dew haunts; tight set with The Eleven",
+  "blurb": "The show delivers a soaring Dark Star that segues into a fiery Saint Stephen and a haunting Morning Dew. Phil’s thumping bass on The Eleven and Bill’s whooshing cymbal crashes add extra punch. Overall the performance is praised as classic ’69 momentum with only a few middling cuts.",
+  "review": "On May 23, 1969 at the Seminole Indian Reservation the Dead unleashed one of their most memorable early‑’69 outings. The set opens with a gritty “Hard To Handle” before launching into a luminous “Morning Dew,” but it’s the marathon “Dark Star” that truly shines – Jerry’s voice is described as fine and his guitar tone perfect, while Phil’s bass drives the improvisation forward. The subsequent segue into “Saint Stephen” maintains the high‑energy, psychedelic flow that fans call “spazzy and feral.” A highlight for many listeners is the powerful rendition of “The Eleven,” where the rhythm section locks tight and Bill Kreutzmann’s cymbal crashes add a whooshing excitement. Closing with “Turn On Your Lovelight,” the band leaves the audience buzzing, making this show a standout example of the Dead’s 1969 momentum despite a few weaker moments like “Hard To Handle.”",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 29,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.5,
+      "sentiment_rationale": "Two of the three recordings are overwhelmingly positive, repeatedly praising Dark Star, Morning Dew, Saint Stephen and The Eleven with descriptors like “stellar,” “crystal‑clear,” and “spazzy and feral.” The third recording is mixed but does not contain strong negative language; it merely notes a few average cuts. This consensus yields a strong positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.5 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1969-05-23.sbd.phunk1.74.sbefail.shnf",
+    "reason": "Excellent soundboard quality – crystal‑clear tape, full band balance, and highlighted Dark Star and Morning Dew make it the most enjoyable listening experience."
+  },
+  "key_highlights": [
+    "Soaring Dark Star that showcases Jerry’s flawless guitar tone and vocal finesse.",
+    "Hauntingly beautiful Morning Dew with crystal‑clear separation of instruments.",
+    "High‑energy Saint Stephen segue and powerful The Eleven featuring thumping bass.",
+    "Bill Kreutzmann’s cymbal crashes add a whooshing excitement throughout."
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "Morning Dew",
+    "Saint Stephen",
+    "The Eleven"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s voice is fine and his guitar tone perfect and tasty, especially during the epic Dark Star.",
+    "Phil": "Lesh delivers thumping, powerful bass, driving The Eleven with extra low‑end punch.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": "Bill Kreutzmann’s cymbal crashes are highlighted as high points, adding whooshing excitement to the set."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-24T14:42:58.134721+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dark Star",
+      "Saint Stephen",
+      "The Eleven",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Morning Dew"
+    ]
+  ]
+}

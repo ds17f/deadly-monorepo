@@ -1,0 +1,44 @@
+{
+  "summary": "Decent recording with a solid first set highlighted by the heady Cassidy jam.",
+  "review": "The reviewer finds the first set of this 1994 show reasonably good, noting that things start to heat up during “Loser” and reach a peak with a pretty heady jam on “Cassidy.” No major stand‑out moments are mentioned, and there is no comment on the recording source or sound quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review; show quality described as average with a modest highlight, and no information on recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer did not comment on soundboard vs. audience source or any audio clarity issues; therefore the technical quality cannot be assessed beyond being assumed fair."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as reasonably good, gaining momentum through “Loser” and peaking with a heady jam on “Cassidy,” but lacking any major standout moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:35:26.863165+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-24.140154.OTS.s1.Schoeps.Gastwirt.Miller.Noel.t-flac1648"
+}

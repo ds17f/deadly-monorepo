@@ -1,0 +1,68 @@
+{
+  "summary": "Great outdoor Hershey show with solid sound‑board‑like FLAC quality and standout Bird Song, Comes a Time and Tom Thumb Blues performances",
+  "review": "The crowd‑filled Hershey stadium gig is remembered for its nonstop flow, a short but fiery first set featuring Bird Song and Comes a Time, and a second set that lifts off with a soaring Tom Thumb Blues and powerful Terrapin Station. The FLAC recording is praised as clear and well‑balanced, making the show enjoyable even without a perfect soundboard label.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (4–5) and enthusiastic comments point to a strong musical performance; recording is described as nice/high‑quality FLAC, yielding an overall rating in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note a \"nice\" 24‑bit FLAC source with clear sound and no major dropouts or muddiness; no specific soundboard/audience label provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Comes a Time",
+      "Tom Thumb Blues",
+      "Terrapin Station",
+      "Day Job"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Short first set kept the music moving nonstop; second set described as \"killer\" with strong transitions and high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland's sarcastic keyboard riffs are highlighted as a fun element of the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes a Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tom Thumb Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Day Job": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T06:37:13.385236+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-28.nakcm304.suraci.89009.flac24"
+}

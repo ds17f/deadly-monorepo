@@ -1,0 +1,97 @@
+{
+  "summary": "Solid audience recording of a cover‑heavy show with standout “Big Boss Man” and “Althea”, but an uneven second set leaves the performance mixed.",
+  "review": "The Oade audience tape captures a relaxed, cover‑laden first set that many reviewers describe as tight and enjoyable, highlighted by a stellar rendition of Big Boss Man and a solid Althea. While the sound quality is praised as clear and “top‑notch,” several listeners note that the second set drags and Jerry’s vocals become fatigued, giving the overall show a mixed feel.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers give high marks for the recording and first‑set performance (70% weight), but several low‑star reviews criticize the second set and vocal fatigue, pulling the overall rating down."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience (Oade) tape is praised for clarity and crisp capture of the many cover songs; no major drop‑outs reported, though some listeners note typical ambient crowd noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Boss Man",
+      "Althea",
+      "Shakedown",
+      "Dew",
+      "Smokestack Lightning",
+      "She Belongs to Me",
+      "Gimme Some Lovin'",
+      "Do It in the Road",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is energetic and cover‑heavy, described as ‘tight’ and ‘relaxing.’ The second set is seen by several reviewers as lagging, dragging the overall impression down."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals strong early (toast) but become fatigued/gasping later; mixed praise for his performance on Big Boss Man.",
+    "Phil": "Lesh’s vocal mic work noted as uneven (‘all over the place’) during the tour, especially on Mississippi Half‑Step.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Boss Man": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "She Belongs to Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Do It in the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Revolution": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T03:35:40.404910+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-08.oade-schoeps.sacks.24227.sbeok.flacf"
+}

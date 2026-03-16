@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent show praised for its vibe and seamless sequence, but recording details are unspecified",
+  "review": "The reviewer rates the concert as an excellent performance, highlighting the good vibe and preferring the Dead's uninterrupted sequences, though they note a disappointment with the saxophone guest. No comments were made about the audio source or sound quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "High praise for the musical performance (70% weight) combined with no negative recording feedback, but only a single review limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about soundboard, audience mix, clarity, or other technical aspects were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer appreciated the natural flow of the set and felt the Dead sounded best when played without interruptions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T17:34:26.396747+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-22.schoepsmk4.litzenberger.97122.flac16"
+}

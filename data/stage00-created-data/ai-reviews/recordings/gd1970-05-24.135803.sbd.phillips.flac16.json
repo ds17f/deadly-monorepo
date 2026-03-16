@@ -1,0 +1,82 @@
+{
+  "summary": "Excellent soundboard capture of a vibrant 1970 European set, highlighted by a soaring Dark Star and strong Hard to Handle.",
+  "review": "Both reviewers rave about the high‑quality soundboard source, noting its clarity despite occasional tuning bits between songs. The performance shines with a groove‑laden Dark Star, a fiery Hard to Handle, and solid contributions from Garcia, Weir and Phil, while a few mid‑set numbers are seen as merely passable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Strong positive comments on both the musical performance and the soundboard recording; two detailed reviews give a consistent picture, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Fabulous, crisp mix with only minor “extra tuning” bits between songs; no significant drop‑outs or balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Hard to Handle",
+      "Me and My Uncle",
+      "The Other One",
+      "Good Lovin'",
+      "Rain & Snow"
+    ],
+    "poor_songs": [
+      "Casey Jones",
+      "China Cat Sunflower > I Know You Rider"
+    ],
+    "setlist_flow": "A mellow first half gives way to jam‑heavy second set, culminating in a soaring Dark Star; transitions (e.g., Attics) are praised and the overall pacing feels deliberate but rewarding."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone grooves on Dark Star and he “picks up the pace” during Hard to Handle.",
+    "Phil": "Phil’s vocals receive special praise, described as loving and vulnerable.",
+    "Bob": "Weir delivers a nice Me and My Uncle and contributes solid rhythm work.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T20:22:05.887682+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-05-24.135803.sbd.phillips.flac16"
+}

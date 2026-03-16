@@ -1,0 +1,59 @@
+{
+  "summary": "Audience tape delivers a beefy, clear sound (though a bit low) while the summer‑84 show sizzles with scorching performances, highlighted by a fiery B.E. Women and high‑energy set.",
+  "review": "Reviewers rave about the hot, high‑energy playing from July 1984, especially praising Jerry’s guitar work and the standout B.E. Women jam, though a few note vocal strain on Tennessee Jed and a flub in the Bertha jam. The audience recording is described as surprisingly clean and “gorgeous” by some, but others complain about low volume and barn‑like acoustics that can muddy an audience tape.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Two reviewers give the show and recording top marks while two rate it zero, resulting in a split opinion; overall the performance is strong but the audience source divides listeners."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers call the tape beefy, clean and instrument‑clear (though volume is a bit low), while others say the barn‑like venue hurts audience recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "B.E. Women",
+      "Bertha"
+    ],
+    "poor_songs": [
+      "Bertha",
+      "Tennessee Jed",
+      "China Doll"
+    ],
+    "setlist_flow": "Standard summer‑84 setlist that burns from start to finish with high energy and tight playing, despite a few minor missteps."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as top‑notch and “goes off,” though his vocals on Tennessee Jed sound strained and he flubs chord changes during the Bertha jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Clear instrument representation noted, but no specific keyboard comments.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "B.E. Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T19:30:53.872128+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-07-01.aud.willy.14683.sbeok.shnf"
+}

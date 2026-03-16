@@ -1,0 +1,139 @@
+{
+  "summary": "Matrix source captures a high‑energy spring ’90 show with Brent Mydland’s soaring solos, an immaculate Estimated Prophet, and a vibrant first set despite some bass‑light recording quirks.",
+  "review": "The matrix blend of board and audience gives a lively feel even though the mix is a bit hollow and low on bass definition. Musically the concert ranks among the band’s top spring ’90 performances – Brent’s energy, Bob’s atmospheric contributions and standout moments like Estimated Prophet and Victim make it memorable, while a few songs (Crazy Fingers, It Must Have Been the Roses) fall short.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Reviews are generally positive about the performance with many standout moments, but note recording imperfections and a few weaker songs; weighting show quality higher yields an overall rating just under 4 stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Board is described as slightly hollow and audience mix crowd‑heavy with limited bass definition, but the combination provides a clear enough picture of the concert’s vibe."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Victim",
+      "Promised Land",
+      "Pocky Way",
+      "Wharf Rat",
+      "Throwin' Stones"
+    ],
+    "poor_songs": [
+      "It Must Have Been the Roses",
+      "Crazy Fingers",
+      "Lovelight",
+      "Heaven's Door"
+    ],
+    "setlist_flow": "An energetic first set builds strong momentum, while the second set oscillates between high‑octane jams (Estimated, Miracle) and a few slower or uneven moments, ending with a mixed‑feel encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals praised on SOTM, Promised Land, Estimated Prophet, He's Gone, Wharf Rat and Heaven's Door; occasional use of MIDI noted positively.",
+    "Phil": "",
+    "Bob": "His atmospheric contributions are highlighted throughout and his mix is described as finally audible and appropriate.",
+    "Keys": "Brent Mydland’s energy, solos (Minglewood, Far From Me, Throwin' Stones) and B3 work receive repeated acclaim.",
+    "Drums": "Both drummers are called \"totally in sync\" early on; a brief lull is noted later but overall rhythm section is solid."
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Without A Net": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It Must Have Been the Roses": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "SOTM": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Pocky Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwin' Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Heaven's Door": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T04:25:53.653652+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-21.mtx.hansokolow.96638.flac16"
+}

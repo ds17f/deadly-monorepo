@@ -1,0 +1,57 @@
+{
+  "summary": "A uniquely spacey 1985 show with standout performances of Sugaree, Terrapin Station and Good Lovin', captured in a recording that falls short of the best available sources.",
+  "review": "Fans rave about this rare ’85 gig, calling it “super” for its adventurous jams (Bob Jam) and highlighting Jerry’s soaring vocals on Sugaree as well as a fiery second set from Terrapin through Good Lovin'. The audio isn’t a pristine soundboard – listeners note the venue PA was poor and that this tape doesn’t match the quality of the Dave Cohen version – but the musical excitement outweighs the technical shortcomings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised (high 5‑star ratings) while recording quality receives mixed comments, pulling the overall rating slightly below a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit source type mentioned; reviewers note the venue sound system was poor and that this tape is not as good as the Dave Cohen copy, suggesting modest audio fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Terrapin Station",
+      "Good Lovin'",
+      "Bob Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its unique, space‑y first‑set jam (Bob Jam) and a scorching second set that runs from Terrapin through Good Lovin', closing with Keep Your Day Job as an encore."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocals and guitar on Sugaree are highlighted as some of the best ever heard.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bob Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T09:50:35.331924+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-10-28.senn421.koucky.gmb.88862.sbeok.flac16"
+}

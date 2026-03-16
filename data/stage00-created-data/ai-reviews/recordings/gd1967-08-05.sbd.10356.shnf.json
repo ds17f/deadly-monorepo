@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard capture of an early Dead show highlighted by a scorching Turn On The Lovelight and Alligator.",
+  "review": "This recording preserves a vibrant 1967 Toronto performance where the band’s newfound Lovelight opener and the fiery Alligator showcase the group’s raw energy. Reviewers rave about the musical excitement and note that the soundboard source is clear, though they recommend using EQ to bring out the best detail.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All seven reviews are overwhelmingly positive (4–5 stars), praising both the performance and the clarity of the soundboard source, with no significant criticisms."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "No major flaws mentioned; reviewers suggest applying EQ for optimal playback, implying a clean and detailed recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Turn On The Lovelight",
+      "Alligator",
+      "Airplane"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early‑summer set praised for its high energy, with the new Lovelight opener and a hot Alligator delivering an exciting, cohesive performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Turn On The Lovelight": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Alligator": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Airplane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T06:20:52.476545+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1967-08-05.sbd.10356.shnf"
+}

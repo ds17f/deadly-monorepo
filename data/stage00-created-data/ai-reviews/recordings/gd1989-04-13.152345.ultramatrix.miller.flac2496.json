@@ -1,0 +1,102 @@
+{
+  "summary": "Ultra‑matrix source gives pristine audio, and the 1989 show dazzles with a flawless first set and highlight performances of The Other One, Foolish Heart, Miracle and Baby Blue.",
+  "review": "The ultramatrix blend of Dan Healy’s soundboard feed and audience tapes yields an exceptionally clear recording that many reviewers rank above official releases. Musically the concert is praised for its tight first set, soaring second‑set moments (especially The Other One, Foolish Heart and a heartfelt Baby Blue), though a few listeners find the Mr. Fantasy/Hey Jude medley over‑used. Overall the performance is regarded as one of the stronger late‑80’s outings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two detailed 4–5 star reviews highlight superb playing and excellent matrix sound, while a single 0‑star review criticizes only one medley; the weighted average of show (70%) and recording (30%) quality yields a high‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Ultra‑matrix blend praised as crystal‑clear, far superior to many official releases; no reported dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Foolish Heart",
+      "Miracle",
+      "Dear Mr. Fantasy",
+      "Good Lovin'",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Eyes",
+      "Mr. Fantasy / Hey Jude (GDTRFB medley)"
+    ],
+    "setlist_flow": "First set described as perfectly tight; second set builds energy with strong mid‑set jams and a raucous finish, though the recurring Mr. Fantasy/Hey Jude segment is seen by some as fatigued."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently sweet tone, hot lead lines on Foolish Heart and Miracle, and a majestic delivery on Baby Blue.",
+    "Phil": "Outstanding bass work throughout the show.",
+    "Bob": "Perfect vocals and guitar; extra‑sweet on LL Rain and notable vocal presence on Good Lovin'.",
+    "Keys": "Brent (keys) shines, pushing Jerry with call‑and‑response sections and taking the lead on several songs.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LL Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T18:39:02.779338+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-13.152345.ultramatrix.miller.flac2496"
+}

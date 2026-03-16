@@ -1,0 +1,88 @@
+{
+  "summary": "Good matrix recording that captures a solid May 9 1987 show with standout moments like Tennessee Jed, Touch of Grey and a memorable Tons of Steel vocal, despite some sluggish numbers early on.",
+  "review": "The UltraMatrix‑style mix delivers clear sound with pleasant crowd ambience, giving the impression of being in the venue. Musically the concert is uneven – the first set stalls on Sugar Magnolia and Sugar, but the second half shines with a punchy Tennessee Jed, a strong Touch of Grey, and Brent’s striking vocal on Tons of Steel, while the drum/space segment adds extra flavor.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the recording quality (matrix with clear sound) and note several strong performances, but one detailed review points out unevenness in the first set, leading to an overall mixed but slightly above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "UltraMatrix mix combines soundboard feed with audience mics; crowd is audible and adds live feel. Reviewers describe the sound as crisp, great, and faithful to the event despite some debate over pure SBD status."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tennessee Jed",
+      "Touch of Grey",
+      "Let It Grow",
+      "Tons of Steel",
+      "Iko Iko"
+    ],
+    "poor_songs": [
+      "Sugar Magnolia",
+      "Sugar",
+      "Looks Like Rain",
+      "He's Gone"
+    ],
+    "setlist_flow": "The first set opens promisingly but loses momentum with sluggish renditions of Sugar Magnolia and Sugar. The second set picks up the energy, highlighted by a confident Tennessee Jed, a solid Touch of Grey (despite a few lyric slips), an engaging Tons of Steel vocal from Brent, and a dynamic drum/space segment that leads into concise jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Drops parts of the second verse of Touch of Grey but otherwise delivers solid playing.",
+    "Phil": "Alert and takes control of Tennessee Jed with a thumb flick, steering the song’s rhythm.",
+    "Bob": "His vocals on The Other One are filtered through a harmonizer throughout, giving a distinctive texture.",
+    "Keys": "Brent delivers an oddly topsy‑turvy, conviction‑filled vocal on Tons of Steel, adding memorable phrasing.",
+    "Drums": "Mickey moves to the back wall for big tom work while Bill provides a nimble kit foundation and tight roto‑tom accents."
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Tons of Steel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:23:37.016704+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-05-09.sbd.walker-scotton.miller.83749.sbeok.flac16"
+}

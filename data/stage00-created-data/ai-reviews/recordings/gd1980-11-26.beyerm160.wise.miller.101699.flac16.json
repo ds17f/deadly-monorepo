@@ -1,0 +1,78 @@
+{
+  "summary": "An excellent audience recording captures a blistering second set highlighted by Cold Rain And Snow, Estimated Prophet and Minglewood Blues.",
+  "review": "The show is praised for its high‑energy second set, with standout performances of Cold Rain And Snow, Estimated Prophet, Eyes of the World and an inspired Minglewood Blues.  Reviewers note that Jim Wise’s audience tape delivers deep‑ranging, clear sound that even outshines the available soundboard source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (4–5) and enthusiastic comments about both performance and audio quality yield a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Superb, deep‑ranging audience tape with clear presence; reviewers say it’s preferable to the soundboard version that suffers hiss and limited range."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain And Snow",
+      "Estimated Prophet",
+      "Eyes of the World",
+      "Minglewood Blues",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is described as fully committed and fire‑filled, flowing smoothly through jams and transitions with a palpable sense of excitement."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is repeatedly called \"on fire\" with great tone and creative odd‑but‑effective playing throughout the show.",
+    "Phil": "Phil’s space work is highlighted as interesting, especially during the second set.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s quick organ bursts and “bleats” add rhythmic complexity; keyboards are praised for their depth.",
+    "Drums": "The drum part is noted as funky, rhythmically complex with an abstract intro that drives the jams."
+  },
+  "song_mentions": {
+    "Cold Rain And Snow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T05:59:25.419549+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-11-26.beyerm160.wise.miller.101699.flac16"
+}

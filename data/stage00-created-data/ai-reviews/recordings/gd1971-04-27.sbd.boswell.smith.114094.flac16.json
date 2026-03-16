@@ -1,0 +1,77 @@
+{
+  "summary": "Clear Boswell‑Smith soundboard capture of a quirky show with Beach Boys guests, highlighted by a jazzy Truckin' and an outstanding Lovelight.",
+  "review": "The recording is a clean, slightly EQ‑heavy Boswell‑Smith soundboard that lets the band's interplay shine.  The concert swings between a mediocre first half (including some ill‑fated Beach Boys numbers) and a spectacular finish featuring one of the top‑five Lovelights ever recorded.  Reviewers are overwhelmingly enthusiastic despite a few indexing quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and praise both the performance (standout Lovelight, jazzy Truckin') and the clear soundboard source; only minor complaints about song ordering and a few weak Beach Boys cuts keep it from perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Boswell‑Smith tape sounds clearer than many other sources, though a touch over‑EQ'd; track‑list indexing errors noted but no major audio defects."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lovelight",
+      "Truckin'",
+      "Bobby McGee",
+      "China Cat Sunflower",
+      "Me & My Uncle",
+      "Dire Wolf"
+    ],
+    "poor_songs": [
+      "Beach Boys medley (mid‑set songs)",
+      "Johnny B. Goode"
+    ],
+    "setlist_flow": "First set is uneven with jazzy highlights and a misplaced Beach Boys interlude; second set recovers after the guests depart, ending on a high note with an exceptional Lovelight."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bobby McGee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T05:46:58.141208+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-27.sbd.boswell.smith.114094.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Recording plagued by a dropout with no musical highlights noted",
+  "review": "The sole reviewer reports a drop‑out in the audio, indicating a serious recording flaw. No comments were made about the band's performance, setlist flow, or individual musicians, leaving the show quality unknown.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one brief, zero‑star review mentioning a dropout; no positive information about performance or recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer notes a drop‑out ('dropped one here'), suggesting missing audio and overall poor listenability."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about the set or performance flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T20:15:36.762790+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-30.134853.bltz.flac2496"
+}

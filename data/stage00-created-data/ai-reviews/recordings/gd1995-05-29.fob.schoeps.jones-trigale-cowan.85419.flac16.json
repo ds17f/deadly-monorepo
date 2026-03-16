@@ -1,0 +1,39 @@
+{
+  "summary": "Good‑quality recording (source unclear) that captures a poignant Jerry Garcia moment during Days Between.",
+  "review": "The two reviewers note a solid technical capture – one even discusses the original Neumann/KM140 gear used – though the exact source remains uncertain. Musically, the highlight is an emotional rendition of “Days Between,” where Jerry Garcia was moved to tears, giving the show a memorable, if bittersweet, touch.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "low",
+    "rationale": "Only two reviews; one rates recording positively (4★) while the other gives a middling show rating (3★). Weighted blend of decent audio quality and an emotionally charged but otherwise unremarkable performance yields ~3.3 stars."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer discusses original Neumann KM140 microphones and Aerco preamps, suggesting a professional soundboard‑type capture, but admits uncertainty about the exact source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Days Between"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed setlist provided; reviewers focus on the emotional impact of Days Between rather than overall pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Shedding tears during Days Between, indicating a deeply felt performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T09:19:17.779918+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-05-29.fob.schoeps.jones-trigale-cowan.85419.flac16"
+}

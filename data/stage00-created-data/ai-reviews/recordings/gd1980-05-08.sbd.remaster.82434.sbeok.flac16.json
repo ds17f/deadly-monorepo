@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent soundboard capture of a funky 1980 show with standout Estimated Prophet and a stellar first‑set flow highlighted by Ramble on Rose and the Lazy Lightning > Supplication sequence.",
+  "review": "Both reviewers rave about the crystal‑clear soundboard recording, calling it the best‑sounding version of this 1980 concert and praising the energetic drum/space segment. Musically the show shines in the first set with Ramble on Rose sandwiched between Lazy Lightning > Supplication and a Lost Sailor > Saint of Circumstance run, while the second set is described as solid though less remarkable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Two detailed reviews consistently award 4–5 stars, highlighting both a high‑quality soundboard recording and strong first‑set performances; this yields a rating in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear mix with superb balance, especially strong drum/space section; no reported dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Ramble on Rose",
+      "Lazy Lightning",
+      "Supplication",
+      "Lost Sailor",
+      "Saint of Circumstance"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is the highlight, featuring tight transitions and high energy; second set is solid but less distinctive."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum/space segment is specifically praised for its power and clarity."
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:00:40.917811+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-08.sbd.remaster.82434.sbeok.flac16"
+}

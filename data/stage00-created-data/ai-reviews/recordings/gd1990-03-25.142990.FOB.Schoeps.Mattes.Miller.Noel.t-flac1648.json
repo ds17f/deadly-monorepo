@@ -1,0 +1,44 @@
+{
+  "summary": "No technical info on the tape, but the show opens with \"Greatest Story Ever Told\" rather than the expected \"Promised Land\".",
+  "review": "The single review gives no clues about the recording source or sound quality, leaving the audio characteristics unknown. The only musical note is that the opener is \"Greatest Story Ever Told,\" not \"The Promised Land,\" which suggests a setlist deviation but provides no further assessment of performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "Only one brief review with no star rating and minimal detail; unable to gauge show or recording quality, so a neutral middling score is assigned."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Greatest Story Ever Told"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on overall set structure; only the opening song is mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T05:11:41.135435+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-25.142990.FOB.Schoeps.Mattes.Miller.Noel.t-flac1648"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "Good soundboard tape of the July 4 1986 Rich Stadium show, highlighted by a smoldering Cold Rain→Fire sequence and solid Phil bass work.",
+  "review": "The recording captures a decent‑quality soundboard source with a meaty texture and strong low‑end that lets Phil’s bass really shine.  The performance is an early‑80s‑style fourth‑of‑July outing – a short first set followed by a second set featuring the standout Cold Rain→Fire, a solid Wheel/Space segment and a sweet Gimme Some Lovin', though Jerry’s health shows in some vocal flubs.  Overall the show is enjoyable for nostalgia seekers despite occasional mix quirks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical moments (especially Cold Rain→Fire and Phil’s bass) while noting only modest recording flaws; the weighted average of show (≈70%) and tape quality (≈30%) lands around a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Meaty texture with strong bass response (421s); clear enough to hear every note of Phil, though some reviewers mention occasional drop‑outs or that the tape isn’t “great.”"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain > Fire",
+      "The Wheel",
+      "Space",
+      "Gimme Some Lovin'"
+    ],
+    "poor_songs": [
+      "Gimme Some Lovin'"
+    ],
+    "setlist_flow": "First set short and punchy; second set feels like an early‑80s set with a pre‑space wheel transition, rain‑induced rainbow moment, and the classic Cold Rain→Fire climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Tone noted as good early on, but later reviewers cite lyric flubs and that he wasn’t at his personal best due to health.",
+    "Phil": "Repeated praise for strong bass presence – “lots of Phil,” “bass was the bomb.”",
+    "Bob": "Mentioned as not in top form and less energetic during this period.",
+    "Keys": "Keith and Brent are noted trying to boost energy; keyboards get occasional shout‑outs.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain > Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson and Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:05:48.487117+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-07-04.senn.eD.12930.sbeok.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Recording suffers from out‑of‑phase channels that need inversion, but reviewers consider it a good source once fixed; no performance details were provided.",
+  "review": "The sole reviewer notes a serious phase issue – the left and right channels are opposite polarity – which can be corrected by inverting one side. After this fix the recording is described as very nice, earning a solid four‑star rating. No comments on the musical performance or setlist were given.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review; it rates the show 4 stars despite a technical flaw, indicating overall satisfaction but limited data for a robust rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Channels are out of phase; one side needs inversion. Reviewers say the recording is very nice after this correction."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No performance or setlist comments were provided in the review."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T08:41:04.688556+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-05.senn441.mccue.ford.79778.sbeok.flac16"
+}

@@ -1,0 +1,68 @@
+{
+  "summary": "Raw soundboard capture with energetic performance; standout Dark Star, Stella Blue and Sugar Magnolia",
+  "review": "The recording is a raw, uncompressed sound‑board source that retains the “teeth” of a 1973 show, despite occasional vocal clipping and a mic‑cable wobble. Musically the concert is spirited and energized, with fans highlighting a smoking Dark Star into El Paso, a beautifully paced Eyes of the World, and emotive renditions of Stella Blue, Morning Dew and Sugar Magnolia.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Three consistent, mostly‑four‑plus star reviews praise the performance and note only minor recording quirks; weighted rating reflects strong show quality and decent soundboard capture."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Raw, uncompressed mix with plenty of “teeth”; occasional vocal clipping on Eyes of the World, mic‑cable noise, and a brief pause‑like glitch in Casey Jones, but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Dark Star",
+      "Eyes of the World",
+      "Morning Dew",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic and spirited set, with an unusual second‑set opener Around & Around; pacing praised especially on extended Dark Star > El Paso and the gently stretched Eyes of the World."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T16:46:58.798999+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-08-01.aud.weiner.8724.sbeok.shnf"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Exciting first set contrasted by a cluttered second set; recording source and quality are not specified.",
+  "review": "The reviewer rates the first set as very good and exciting, while criticizing the second set for aggressive Hornsby keyboards that overwhelm tunes like \"Saint\" and \"Comes A Time,\" and notes Garcia seeming to defer to the keyboards. No information about the recording source or sound quality is provided, leaving the technical side unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "Only a single moderate (3‑star) review; positive comments about set 1 but negative remarks on set 2 and no recording details, leading to an overall mixed assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments on soundboard, audience mix, clarity, or other technical aspects."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Saint",
+      "Comes A Time"
+    ],
+    "setlist_flow": "First set described as very good and exciting; second set considered messy due to overbearing keyboards and less cohesive playing."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is said to defer to Hornsby on the second set, implying weaker presence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Aggressive Hornsby keyboard playing described as overrunning tunes he doesn't fully know.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:08:49.050753+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-16.fob.brennecke-young.GEMS.97389.flac16"
+}

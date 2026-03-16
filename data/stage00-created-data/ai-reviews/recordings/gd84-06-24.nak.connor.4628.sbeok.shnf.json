@@ -1,0 +1,91 @@
+{
+  "summary": "Rain‑soaked audience recording captures a high‑energy Saratoga show with standout China Doll, Miracle and Dancin' in the Streets.",
+  "review": "The tape delivers an exciting, mud‑splattered performance where the second set erupts with China Doll, Miracle, Bertha and a ripping Dancin' in the Streets opener.  While the audience mic is a bit forward during quiet moments and bass definition suffers, the overall sound is clear enough to enjoy the band’s fierce playing and exuberant crowd interaction.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "22 reviews give an average of ~3.8 stars, with most praising the show’s energy and key songs; recording is generally deemed decent despite some bass muddiness, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience mic captures crowd ambience well but can be intrusive during quiet passages; bass lacks definition (described as a B‑grade), yet overall clarity is sufficient for streaming and listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Doll",
+      "Miracle",
+      "Dancin' in the Streets",
+      "Bertha",
+      "Minglewood",
+      "Satisfaction"
+    ],
+    "poor_songs": [
+      "Deal"
+    ],
+    "setlist_flow": "The show opens with a thunderous Dancin' in the Streets, builds through high‑octane first‑set material and explodes on an epic second set where jams flow seamlessly (Playin'/Samson into China Doll, Miracle into Bertha).  Mud and rain add extra electricity without derailing the momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Expressive, belting vocals; soulful on China Doll but voice shows signs of wear in some spots.",
+    "Phil": "Bass described as “cannon shots” that fire into the audience, though recording sometimes mutes low end.",
+    "Bob": "Occasional slide‑guitar misstep noted (Weir’s foray) but generally solid rhythm work.",
+    "Keys": "Brent Mydland on fire during Minglewood; keyboards supportive throughout.",
+    "Drums": "Bill (Mickey) praised for powerful, tight drumming and spacey jams (Playin' jam)."
+  },
+  "song_mentions": {
+    "China Doll": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Miracle": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin' in the Streets": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Satisfaction": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T18:51:57.688165+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-06-24.nak.connor.4628.sbeok.shnf"
+}

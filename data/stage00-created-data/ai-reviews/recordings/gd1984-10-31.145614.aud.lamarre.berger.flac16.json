@@ -1,0 +1,39 @@
+{
+  "summary": "Fair audience recording that misses most of the drums but still offers an interesting show with a smoother transition out of \"He’s Gone\".",
+  "review": "The tape is an audience source and, while overall decent sounding, suffers from the loss of almost all drum tracks, which dulls the impact of the performance. The reviewer does note that the exit from “He’s Gone” is less painful than on a well‑known Senn 441 version, making it a modest highlight despite the technical shortcomings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "low",
+    "rationale": "Only one brief review; the show receives little praise while the recording is hampered by missing drums, leading to a low‑average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Most of the drum mix is absent, resulting in an incomplete sound despite otherwise decent clarity. Transition out of \"He's Gone\" sounds better than on a comparable Senn 441 version."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He’s Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer only comments on the transition out of “He’s Gone,” noting it improves over another archival source; no broader set‑list assessment provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Most drum tracks are missing from this recording."
+  },
+  "song_mentions": {
+    "He’s Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T23:47:41.503057+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-31.145614.aud.lamarre.berger.flac16"
+}

@@ -1,0 +1,100 @@
+{
+  "summary": "A legendary 11/5/77 Rochester show with scorching Jack Straw and Half‑Step performances, but the SBD source suffers from bass mud, hum and pitch issues.",
+  "review": "Fans rave about this fall‑’77 Rochester concert – calling it a barn‑burner with killer versions of Jack Straw, The Other One, Sugar Magnolia, Mississippi Half‑Step and New Minglewood Blues.  The soundboard tape, however, is widely criticized for thin mids, excessive bass rumble, a hum on discs 2–3 and occasional pitch problems, making the audience recording a preferable listen for many.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (average 4.6/5) while recording quality is repeatedly called poor or fair (≈2.5/5). Weighted combination yields ~4.0 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers note a thin SBD with too much low‑end, material distortion rising from the bass range, a persistent humming noise on discs 2‑3 and occasional pitch/faster‑playback issues. EQ can improve it, but many prefer the audience (AUD) tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "The Other One",
+      "Sugar Magnolia",
+      "Mississippi Half-Step",
+      "New Minglewood Blues",
+      "Mama Tried > Big River",
+      "Dire Wolf",
+      "Eyes",
+      "Samson",
+      "Must Be Roses"
+    ],
+    "poor_songs": [
+      "Black Peter"
+    ],
+    "setlist_flow": "The first set is described as a golden, high‑energy opener with several “must‑hear” jams; the second set is viewed as solid but a bit ragged compared to the opening, yet still packed with memorable moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solos are repeatedly called lyrical, cascading and tornado‑like – especially on Half‑Step, Jack Straw and The Other One.",
+    "Phil": "Phil’s bass is praised for booming low end, lead‑bass intro on Eyes and tight interplay with Jerry throughout the set.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drums receive nods for a jazzy feel in the second‑set drum break; overall rhythm section is described as firing on all cylinders."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mama Tried > Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Must Be Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T06:41:43.104940+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-11-05.sbd.clugston.6934.sbeok.shnf"
+}

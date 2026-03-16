@@ -1,0 +1,70 @@
+{
+  "summary": "Crisp sound‑board tape captures a high‑energy ‘93 MSG show highlighted by a smoking Help>Slip>Knot>Franklin’s and a soaring Estimated/Dark Star, though the mix sometimes buries Bob’s guitar.",
+  "review": "The recording is a clean SBD that showcases the band at one of its late‑’90 peaks – an explosive opener with Help on the Way > Slipknot! > Franklin's Tower, a monster Estimated that flows into Dark Star, and standout Bird Song and Wharf Rat. While many praise the vibrant playing and guest saxophonist David Murray, several reviewers note Phil’s prominent bass, missing Bob in the first‑set mix, and occasional high‑end flatness, giving the tape an overall good but not flawless sound.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈70%) are highly positive about the performance and the sound‑board clarity, while a minority point out mix issues and guest‑player criticisms; weighting show quality (70 %) and recording quality (30 %) yields an overall rating in the 4.2–4.4 range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, rich SBD with clear instrument separation; some reviewers note a flat high end and that Bob Weir's guitar is often buried in the first set. A few mention occasional drop‑outs or muffling, but overall the mix is considered solid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Estimated",
+      "Dark Star",
+      "Bird Song",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Lazy River Road"
+    ],
+    "setlist_flow": "The show bursts open with a fiery Help>Slip>Knot>Franklin’s, rolls through an inspiring Estimated that segues into Dark Star and space, then eases into a relaxed second set featuring Lazy River Road and Easy Answers before winding down. Energy stays high for most of the night, though a few reviewers feel it tapers after the mid‑set Estimated."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for deep, saturated tones and creative leads; some note his acoustic‑like processing on certain songs and occasional tonal criticism later in the era.",
+    "Phil": "Described as a ‘beast’ in the mix with prominent, powerful bass throughout the performance.",
+    "Bob": "Frequently mentioned as missing or cut out of the first‑set mix, leading to disappointment among listeners.",
+    "Keys": "James Cotton’s “Superharp” on Throwin' > Lovelite is noted; keyboards otherwise not heavily commented upon.",
+    "Drums": "Generally praised for solid, energetic playing; no major complaints."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 14,
+      "negative_mentions": 0,
+      "total_mentions": 14
+    },
+    "Estimated": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bird Song": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy River Road": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-18T17:28:34.136375+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-22.sbd.yubah.565.sbeok.shnf"
+}

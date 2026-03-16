@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard source but a poor‑mixed recording; the show has low energy except for a touching Scarlet > Fire and the debut of Days Between.",
+  "review": "The performance is generally flat, with many reviewers noting muffled vocals, an unbalanced mix that pushes Jerry’s and Phil’s instruments forward and buries Garcia’s voice. Highlights include a moving Scarlet > Fire segment and the first live outing of “Days Between,” but the overall listening experience suffers from the unstable soundboard mix.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "high",
+    "rationale": "Most reviewers criticize the recording’s mix and describe a low‑energy show, pulling the rating down despite a few positive song highlights."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Mix is unstable: vocals muffled, Garcia's voice low, Jerry and Phil dominate the front end while Bob's guitar often disappears or jumps ahead. Drums surge forward after certain songs (e.g., SMR). Overall balance is bad, making the board sound less enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Days Between"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generally low‑energy and uneven; the show feels “off” with a thin vocal mix, but moments like the debut of Days Between and a touching Scarlet > Fire give brief spikes of interest."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar often too forward in the mix; his vocals are low and buried.",
+    "Phil": "Bass is prominent and sometimes over‑present in the mix; fans mention dancing in the \"Phil Zone\" as a positive vibe.",
+    "Bob": "Mix unstable on his guitar—sometimes out front without Garcia, other times almost absent. He was seen waving at the board to fix sound.",
+    "Keys": "",
+    "Drums": "Drums come forward after SMR, adding another imbalance."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-18T09:43:09.040207+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-02-22.dsbd.vernon.19238.sbeok.shnf"
+}

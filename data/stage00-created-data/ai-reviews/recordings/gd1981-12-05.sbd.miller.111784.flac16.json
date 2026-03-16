@@ -1,0 +1,121 @@
+{
+  "summary": "Stellar soundboard capture of a hot 1981 show with scorching Let It Grow, Cumberland Blues and a double‑time C.C. Rider, despite minor pitch quirks.",
+  "review": "The Miller SBD delivers clear, crisp audio that most listeners describe as pristine, though a few note slight speed/pitch anomalies and occasional muffed moments. Musically the concert shines – Garcia’s hot tone on Let It Grow and Cumberland, Brent’s wizardry on Shakedown, and a memorable double‑time C.C. Rider make this a standout early‑80s performance, with only minor slips such as a mangled Sugar Magnolia.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over two dozen reviews overwhelmingly rate the show 4–5 stars and praise both performance and recording; only a handful of mixed comments keep the rating just below top‑tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally described as crisp, stellar and pristine. A few reviewers mention slight pitch/speed errors and occasional muffed sections in the audience mix, but overall the SBD is very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Cumberland Blues",
+      "Shakedown Street",
+      "Bird Song",
+      "Big Railroad Blues",
+      "Playin' in the Band",
+      "The Wheel",
+      "Stella Blue",
+      "C.C. Rider (double‑time version)"
+    ],
+    "poor_songs": [
+      "Sugar Magnolia",
+      "Lost Sailor",
+      "Saint"
+    ],
+    "setlist_flow": "First set builds with strong openers (Cumberland, Let It Grow) and a surprise double‑time C.C. Rider that energizes the band. The second set delivers extended jams – Shakedown > Lost Sailor > Saint, a big Railroad Blues, and a Playin' sandwich capped by Space‑filled Wheel – keeping momentum high despite a few rough patches."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is repeatedly praised – hot tone on Let It Grow and Cumberland, superb solos on Shakedown; one reviewer notes his mix can sound low or overly bright.",
+    "Phil": "Lesh is highlighted for the spontaneous double‑time cue on C.C. Rider and provides solid bass throughout.",
+    "Bob": "Weir’s vocals are mentioned only in a negative context (mangled start of Sugar Magnolia); otherwise not a focus.",
+    "Keys": "Brent Mydland receives high marks for his work on Shakedown, the double‑time C.C. Rider, and overall keyboard texture, though one reviewer felt his mix was too forward/bright.",
+    "Drums": "Bill Kreutzmann (and occasionally Mickey Hart) receive generic praise (“drumz”) but no detailed commentary."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Shakedown Street": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Wheel": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "C.C. Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "See, See Rider Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:51:56.939698+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-05.sbd.miller.111784.flac16"
+}

@@ -1,0 +1,121 @@
+{
+  "summary": "The matrix source sounds decent despite mids-heavy tone, but the New Year's Eve show suffers from vocal flubs and uneven set quality, with a few bright spots like Alabama Getaway → Promised Land.",
+  "review": "Mind Wondrin notes that the tobin_126184 matrix recording is far superior to the SBDs and AUDs – pitch‑corrected but heavy on mids – making it listenable despite some cuts. The performance itself is uneven: Bobby Weir’s voice cracks on several numbers, Sugar Magnolia turns into a “trainwreck,” yet the Alabama Getaway/Promised Land pairing and a monster 15½‑minute Uncle John’s jam shine.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.1,
+    "confidence": "low",
+    "rationale": "Only one low‑star review; the reviewer rates the show 2⅓ stars, praising only a few moments while criticizing overall performance and vocal issues."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Matrix is pitch‑corrected and clearer than SBD/AUD sources, though mids are heavy; some video cuts noted but audio remains solid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama Getaway",
+      "Promised Land",
+      "Looks Like Rain",
+      "China Cat > Rider",
+      "Minglewood",
+      "Uncle John's",
+      "The Other One (UJB jam)",
+      "Not Fade"
+    ],
+    "poor_songs": [
+      "Sugar Magnolia",
+      "Saint",
+      "Althea",
+      "Stella"
+    ],
+    "setlist_flow": "A party‑focused NYE gig with a brief first set, an erratic second set (vocal issues and flubs), and a marathon third set dominated by a 15½‑minute Uncle John’s jam; overall pacing feels uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia trades wild solos with Brent on Alabama Getaway, leads the massive UJB jam, and is described as 'taking apart somebody else's kitchen' – high energy but occasionally unfocused.",
+    "Phil": "",
+    "Bob": "Weir’s vocals are a major weak point: he loses his voice on Sugar Magnolia and cracks on Saint; occasional lyrical ad‑libs noted.",
+    "Keys": "Brent contributes aggressive, mids‑heavy keyboard solos that trade with Garcia, especially on Alabama Getaway.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One (UJB jam)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T04:16:38.122423+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-31.mtx.tobin.126184.flac16"
+}

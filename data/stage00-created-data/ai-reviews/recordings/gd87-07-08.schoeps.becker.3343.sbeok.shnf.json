@@ -1,0 +1,80 @@
+{
+  "summary": "A high‑energy Roanoke show captured on a solid audience tape; the performance shines with a smoking Scarlet > Fire and soaring Crazy Fingers.",
+  "review": "The recording is an audience source that, while a bit boomy and lacking low end for some listeners, remains clear enough to convey the night’s electric vibe.  Musically the concert is lauded for its unstoppable second set – Scarlet > Fire, Crazy Fingers, Comes‑a‑Time and Let It Grow are repeatedly singled out as highlights – and reviewers note that Jerry’s guitar work was on fire throughout.  Overall the show is considered one of the strongest from the summer of ’87.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Over 20 reviews, most 4‑5 stars, praise for both performance and recording; show quality dominates (≈70%) with a strong second set, while recording is good but not flawless (≈30%)."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and listenable; some reviewers note boominess, lack of bass, and occasional distant sound, but overall the tape captures the crowd energy and band balance well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Crazy Fingers",
+      "Comes a Time",
+      "Let It Grow",
+      "Dupree's"
+    ],
+    "poor_songs": [
+      "All Over Now"
+    ],
+    "setlist_flow": "The first set builds momentum with solid grooves, but the second set explodes – tight transitions from Scarlet into Fire, followed by space‑driven jams that lead into a soaring Crazy Fingers and an emotional Comes‑a‑Time.  The pacing keeps the audience on a high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for flawless guitar tone, powerful solos on Scarlet, Fire and Crazy Fingers; described as ‘on fire’ and delivering classic “Jerry moments.”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work is noted (preacher talk, vocal harmonies) and his presence adds to the energy of the second set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Comes a Time": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dupree's": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "All Over Now": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-16T00:41:05.800812+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-07-08.schoeps.becker.3343.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Average recording of a solid October ’84 Berkeley Community Theater show, highlighted by an enthusiastic Dupree’s performance.",
+  "review": "The reviewer praises the October‑1984 Berkeley run and specifically calls out a ‘mighty’ 1984 rendition of Dupree’s Diamond Blues. No details are given about the tape source or sound quality, leaving the recording quality ambiguous while the musical impression is generally positive but tempered by an overall three‑star rating.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review; shows some enthusiasm for the performance but provides no recording details, leading to a neutral overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer did not comment on soundboard vs. audience source, clarity, or mix; therefore quality is assumed average."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dupree's Diamond Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Part of a six‑night Halloween‑ish run; reviewer notes the show as a solid representation of the ’84 tour without detailed set analysis."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T23:29:07.611151+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-27.145576.aud.lamarre.berger.flac24"
+}

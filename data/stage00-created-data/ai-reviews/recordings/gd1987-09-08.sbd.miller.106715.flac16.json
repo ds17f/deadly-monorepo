@@ -1,0 +1,51 @@
+{
+  "summary": "Clear soundboard capture of a hot late‑'87 show highlighted by a blistering Bucket > Fire, a powerful The Other One and an unexpected Terrapin surprise.",
+  "review": "The three fan reviews paint this September‑8‑1987 Providence show as solid and energetic – the first set was “very hot,” while the second delivered a scorching Bucket > Fire transition, a leaping The Other One and a well‑played Terrapin Station. No recording flaws are mentioned, suggesting a clean soundboard source that lets the band’s tight, zippy playing shine through.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Reviews consistently praise the performance (especially Bucket > Fire, The Other One and Terrapin) and note no audio problems; weighted average of show (70%) and recording (30%) yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No complaints about clarity, drop‑outs or mix balance were made, indicating a clear and listenable soundboard recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bucket > Fire",
+      "The Other One",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as very hot; second set featured a standout Bucket > Fire transition, an electrifying The Other One, a surprising Terrapin Station and a high‑energy Bobby closing rave-up."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned nostalgically (RIP Jer) but no specific comment on his playing.",
+    "Phil": "",
+    "Bob": "Bobby's closing rave‑up was highlighted as a happy, energetic finish.",
+    "Keys": "Brent referenced in tribute; no performance detail provided.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bucket > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T02:44:45.927666+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-08.sbd.miller.106715.flac16"
+}

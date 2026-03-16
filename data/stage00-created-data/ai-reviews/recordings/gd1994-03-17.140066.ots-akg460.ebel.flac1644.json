@@ -1,0 +1,94 @@
+{
+  "summary": "Decent, high‑energy show highlighted by a sparkling Morning Dew; recording quality not discussed",
+  "review": "The reviewer found the concert energetic and enjoyable, especially praising Jerry’s clear guitar on “Morning Dew,” as well as strong performances of Althea, Lazy River Road, Box of Rain, Iko Ika, Play‑in‑the‑Band and the Wheel→Watchtower sequence.  Recording fidelity isn’t mentioned, so the tape is assumed to be adequate but unremarkable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "One detailed review gives a clear positive impression of the musical performance with several standout moments; no concrete info on recording quality, so rating reflects strong show but unknown tape fidelity."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments about soundboard or audience source, clarity, or mix. Review only notes a good view of the stage and side‑stage speakers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Lazy River Road",
+      "Box of Rain",
+      "Iko Ika",
+      "Playin' in the Band",
+      "Truckin' (Wheel)",
+      "Watchtower",
+      "Morning Dew",
+      "Rain"
+    ],
+    "poor_songs": [
+      "Eternity"
+    ],
+    "setlist_flow": "The concert is described as high‑energy, with a solid first set (Althea, Lazy River Road) and an exciting second set that builds to a memorable Morning Dew; the encore “Rain” provides a pleasant close."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar on Morning Dew was clear and sparkling; vocals praised as great.",
+    "Phil": "Did well, especially noted on Box of Rain.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums and Space were not spectacular according to the reviewer."
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Ika": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin' (Wheel)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:07:07.535349+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-17.140066.ots-akg460.ebel.flac1644"
+}

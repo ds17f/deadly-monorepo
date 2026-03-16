@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive information on recording or performance; reviewers only ask for show identification.",
+  "review": "The sole review does not discuss the audio quality, musical performance, or any specific songs. It merely inquires about the date and venue of the recorded moment, leaving both recording and show quality unassessed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one vague review with no rating details; insufficient data to gauge quality, resulting in a conservative low rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No comments on sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T21:13:53.690581+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-16.AKG451.Currier.Keo.122648.Flac1644"
+}

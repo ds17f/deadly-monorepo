@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent audience recording of a hot 1977 show with a killer Sugaree opener, blistering Scarlet > Fire finish and a classic Help > Slipknot > Franklin's sequence.",
+  "review": "The tapes capture a high‑energy first set that rockets off with Sugaree and closes the set on an explosive Scarlet → Fire transition, while the second set delivers one of the era’s most celebrated Help → Slipknot → Franklin’s Towers.  Reviewers praise both the musical performance – especially Jerry’s fire‑brand guitar work and Keith’s daring organ/keyboard moments – and the surprisingly clear audience recording mastered by Charlie Miller.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviews are highly positive (4‑5 stars) and highlight both an outstanding performance and a top‑notch recording; the consistency across detailed comments yields a confident high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as the best‑sounding AUD of the night, crisp and masterfully mastered by Charlie Miller; occasional organ timbre quirks from Keith’s new electric organ noted but overall clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Help > Slipknot! > Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, upbeat opener with Sugaree, high‑octane first set closing on Scarlet → Fire, followed by a deep, “drippy” second set highlighted by the classic Help‑Slip‑Franklin’s sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry was \"really on it\" with powerful guitar work and great tone throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's keyboard work is highlighted – crazy organ/keyboard stuff in Slipknot, though his new electric organ occasionally sounded uneven.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T21:25:36.369861+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-04-23.143220.weidner.akg-d200e.miller.flac1644"
+}

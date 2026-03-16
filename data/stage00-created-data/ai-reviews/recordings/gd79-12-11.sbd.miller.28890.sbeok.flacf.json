@@ -1,0 +1,69 @@
+{
+  "summary": "Soundboard recording with mixed mix quality—Jerry’s guitar often buried—but the show shines thanks to Brent’s keyboard wizardry, a stellar Sailor / Saint two‑fer and an energetic Alabama Getaway > Promised Land encore.",
+  "review": "The performance is notable for Brent Mydland’s spirited keyboards (especially his Shakedown Street solo) and unique slowed‑down renditions of “Sailor” into “Saint,” while the rhythm section (Phil on bass, heavy toms) drives a solid groove. The SBD mix, however, muffles Jerry’s lead guitar and vocals for much of the night, leaving some listeners wishing for an audience tape. Overall the show offers several standout moments despite the uneven recording balance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Strong musical highlights (keyboards, Sailor/Saint, encore) offset by consistent complaints about missing lead guitar and a mix that favors toms, resulting in an overall moderate‑to‑good rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix heavily attenuates Jerry’s guitar and vocals; toms are prominent. Some reviewers note the sound is still decent and unique, but others prefer an audience tape for more balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama Getaway",
+      "Promised Land",
+      "Terrapin Station",
+      "Sailor",
+      "Saint",
+      "Shakedown Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set features several unique, slowed‑down renditions and an unexpected Space‑Odyssey style opening to the NFA segment, culminating in a high‑energy Alabama Getaway > Promised Land encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as hard to hear; lead guitar is greatly diminished or nearly absent in the mix.",
+    "Phil": "Dominates on bass, providing strong low‑end foundation.",
+    "Bob": "",
+    "Keys": "Brent Mydland, newly on stage, delivers spirited keyboard work and a standout solo on Shakedown Street.",
+    "Drums": "Prolific percussion noted; toms are unusually loud in the mix."
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T03:30:06.958146+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-12-11.sbd.miller.28890.sbeok.flacf"
+}

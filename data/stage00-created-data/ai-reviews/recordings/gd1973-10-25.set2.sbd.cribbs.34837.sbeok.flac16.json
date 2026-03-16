@@ -1,0 +1,31 @@
+{
+  "summary": "Average show with no specific recording details mentioned",
+  "review": "The lone review describes the concert simply as \"not a bad show\" and gives it a middling three‑star rating. With no commentary on sound quality or performance nuances, listeners can expect an average experience but lack concrete information about the recording source or standout moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one brief, neutral review (3 stars) provides minimal insight; rating reflects an average assessment of both show and recording."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No details on set structure or performance quality were mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T16:39:08.158839+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-10-25.set2.sbd.cribbs.34837.sbeok.flac16"
+}

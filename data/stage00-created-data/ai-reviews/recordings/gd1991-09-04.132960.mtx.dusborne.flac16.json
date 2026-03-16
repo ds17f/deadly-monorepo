@@ -1,0 +1,39 @@
+{
+  "summary": "Matrix recording delivers excellent sound and a killer Throwing Stones performance.",
+  "review": "Both reviewers rave about the show, singling out a \"killer\" rendition of Throwing Stones and calling the concert one of the best of its era. The matrix source is praised for its excellent sound quality with no noted flaws, making it an enjoyable listen from front‑row perspective.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Both reviews are highly positive (4 and 5 stars), highlighting a standout song performance and excellent recording quality; the consistent praise yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer notes \"Excellent sound\" with no reported issues; matrix mix provides clear, balanced audio."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Throwing Stones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers emphasize the high‑energy vibe and a killer Throwing Stones, indicating an overall strong set despite limited detail on pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T23:49:12.065361+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-04.132960.mtx.dusborne.flac16"
+}

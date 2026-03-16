@@ -1,0 +1,83 @@
+{
+  "summary": "Excellent soundboard recording of a tight, fire‑filled show highlighted by a smoking Playin' In The Band and a superb Deep Elem",
+  "review": "Fans rave about the crystal‑clear soundboard mix and note only a minor tracking slip‑up. Musically the concert is described as solid from start to finish – a short but sweet second set, tight drumming, brilliant Bobby Weir spoken jam during Playin', and standout performances of Deep Elem, Althea > Long Lonesome Rain > Deal, Passenger and Looks Like Rain.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both performance and audio quality across >15 reviews; only minor technical note (track order) does not detract from overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Nice sound, good mix throughout; reviewers call it a polished gem. One note about tracking being off by one after Deal, but no complaints about clarity or noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' In The Band",
+      "Deep Elem",
+      "Althea > Long Lonesome Rain > Deal",
+      "Passenger",
+      "Looks Like Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set strong with a hot Minglewood opener and smooth transitions; second set short, sweet and tight – drums/space/wheel jam shines. Overall solid flow with high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Fluid, satisfying playing for this stage of ’81, noted as one‑of‑a‑kind by several fans.",
+    "Phil": "",
+    "Bob": "Bobby’s spoken ad‑lib/wanderings at the start of Playin' are described as supremely entertaining and “one of a kind”.",
+    "Keys": "Brent Mydland’s Moog textures praised across the set; keyboards highlighted as great throughout.",
+    "Drums": "Tight, powerful drumming noted especially during the drums/space/wheel segment."
+  },
+  "song_mentions": {
+    "Playin' In The Band": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Deep Elem": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Althea > Long Lonesome Rain > Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:33:56.772910+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-27.sbd.gans.33568.sbeok.flac16"
+}

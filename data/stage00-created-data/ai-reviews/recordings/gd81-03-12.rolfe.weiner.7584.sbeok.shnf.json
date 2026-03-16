@@ -1,0 +1,63 @@
+{
+  "summary": "Crisp audience recording captures a high‑energy spring ’81 show highlighted by a soaring Let It Grow, vivid Bird Song and a massive Terrapin opening.",
+  "review": "The performance is praised for its tight, flowing set—especially the incandescent Let It Grow, the soaring Bird Song and an unforgettable Terrapin Station intro—while Jerry’s lead work is described as both spry and breathtaking. Steve Rolfe’s audience tape sounds astonishingly clean for a Boston Garden recording, with crisp detail on guitars, Brent’s tinkling keys and even the ride‑cymbal “ting‑ting.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (average 4.33) with enthusiastic comments on both the musical performance and the unusually clear audience recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean sound with minimal boom; distinct bass, drums and Brent's organ; excellent mix that lets ride‑cymbal detail shine. Some reviewers note a slightly Phil‑lite balance but overall the tape sounds like a near‑soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Bird Song",
+      "Terrapin Station",
+      "Playin in the Band",
+      "Franklin's"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as tight and high‑energy, with a strong first half featuring Let It Grow and an exuberant second set that builds from a massive Terrapin intro into extended jams like Playin in the Band."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as spry, quick and breathtaking on Let It Grow; some note a thin 'paint‑thinner' tone early but overall praised for his lead work.",
+    "Phil": "Mix noted as slightly Phil‑lite, no specific performance critique.",
+    "Bob": "Praised as part of the strong Jerry‑Bob guitar combo throughout the show.",
+    "Keys": "Brent's piano/organ described as tinkly and distinct, clearly heard in the mix.",
+    "Drums": "Ride cymbal 'ting‑ting' highlighted; bass and drums noted as clean and punchy."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T09:34:02.735087+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-03-12.rolfe.weiner.7584.sbeok.shnf"
+}

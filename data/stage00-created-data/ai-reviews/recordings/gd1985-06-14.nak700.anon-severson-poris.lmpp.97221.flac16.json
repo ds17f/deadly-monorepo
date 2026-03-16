@@ -1,0 +1,57 @@
+{
+  "summary": "Good‑quality (source unknown) recording of a memorable Greek Theatre show featuring the breakout “Keep On Growing” and a rare Morning Dew opener.",
+  "review": "Both reviewers rave about this Greek Theatre performance, highlighting the debut of “Keep On Growing,” the resurfacing of classics like “Stagger Lee” and “Comes A Time,” and an unexpected Morning Dew to start the second set. No recording‑specific issues were mentioned, suggesting the audio is at least listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Two consistent 4‑star reviews praise the musical performance; no technical complaints imply a decent recording, yielding an overall solid rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers did not comment on soundboard vs. audience or any audio flaws, indicating the recording is generally acceptable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Keep On Growing",
+      "Stagger Lee",
+      "Comes A Time",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its rare Morning Dew opener to the second set and a strong mix of newer and classic material, creating an especially memorable Greek run."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Keep On Growing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T04:39:20.066872+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-14.nak700.anon-severson-poris.lmpp.97221.flac16"
+}

@@ -1,0 +1,91 @@
+{
+  "summary": "Excellent soundboard recording that captures a high‑energy New Year’s Eve show with standout performances of Bertha, Cold Rain & Snow and Terrapin Station.",
+  "review": "Fans rave about the crystal‑clear, rich sound quality of this pre‑FM soundboard tape, calling it richer than any SBD they own. The performance is praised for its raw energy, especially the first‑set opener Bertha → Cold Rain & Snow, Brent’s lead on Rooster, and a scorching Terrapin Station jam; even the Neville Brothers’ cameo gets special mention. A lone reviewer finds Uncle John’s Band disappointing, but overall sentiment is overwhelmingly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (9 out of 11) are 4‑5 stars and highlight both superb sound quality and strong musical moments; only one modestly negative review tempers the average, yielding a solid 4.3 rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Rich, crisp, and clear sound – described as richer than any SBD, with excellent capture of band energy; no significant drop‑outs or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Cold Rain and Snow",
+      "Terrapin Station",
+      "Masterpiece",
+      "Banana Boat",
+      "Do You Wanna Dance"
+    ],
+    "poor_songs": [
+      "Uncle John's Band"
+    ],
+    "setlist_flow": "First set opens with high‑emotion Bertha → Cold Rain & Snow and stays tight through Brent’s Rooster lead; second set stays tight, building to a fiery Terrapin Station jam. The encore with the Neville Brothers adds extra excitement."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as animated, dancing, ripping through jams (Terrapin, overall energy).",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Neville Brothers on keyboards add warmth; Art Neville highlighted for his interaction with Jerry.",
+    "Drums": "Drum segment after Terrapin praised for its intensity."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Banana Boat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Do You Wanna Dance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:52:34.416735+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-12-31.sbd.patched.etter.23040.sbefail.shnf"
+}

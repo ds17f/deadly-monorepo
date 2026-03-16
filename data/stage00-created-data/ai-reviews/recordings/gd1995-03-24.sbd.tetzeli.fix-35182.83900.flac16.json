@@ -1,0 +1,31 @@
+{
+  "summary": "Recording suffers from speed issues and offers no insight into the performance.",
+  "review": "Both reviewers criticize this tape for playing back too fast, making it an inaccurate representation of the concert. No comments are provided about the musical performance, setlist flow, or individual players, leaving the show quality unknown.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "high",
+    "rationale": "Both reviews give zero stars and specifically call out a serious speed problem; no positive remarks are present."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Playback runs faster than the original performance, resulting in pitch/tempo distortion; reviewers consider this a major flaw."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No musical commentary provided in the reviews."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T06:44:04.824958+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-24.sbd.tetzeli.fix-35182.83900.flac16"
+}

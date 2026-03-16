@@ -1,0 +1,39 @@
+{
+  "summary": "A comforting performance highlighted by a powerful Bertha intro, captured in a well‑balanced matrix mix where crowd ambience adds character but sometimes masks the band.",
+  "review": "Both reviewers rave about the emotional impact of this 1973 show, especially the early Phil-driven intro to “Bertha” that sets a comforting tone. The recording is a matrix source that blends audience sounds nicely, though occasional crowd chatter can intrude on the mix. Overall the musical delivery feels youthful and sharp, making it one of the reviewers' favorite Dead concerts.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "High praise for the performance (70% weight) and a good‑quality matrix recording despite some crowd noise (30% weight) lead to an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Audience is mixed in well, giving atmosphere; however occasional conversations and shouting (“rolling papers”) can obscure the band at times."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a seamless build‑up from Phil's strong bass intro on “Bertha” into the full band, creating an overall comforting and engaging flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned as pre‑Wall Strat player, delivering a youthful, hungry guitar tone.",
+    "Phil": "His strong bass intro on “Bertha” is highlighted as a comforting anchor.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T17:02:51.548836+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-09-08.mtx.tobin.126079.flac16"
+}

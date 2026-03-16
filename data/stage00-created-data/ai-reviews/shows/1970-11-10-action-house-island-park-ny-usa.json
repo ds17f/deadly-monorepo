@@ -1,0 +1,49 @@
+{
+  "summary": "Sparse two‑song set marred by poor tape; only The Other One shines",
+  "blurb": "The set features Not Fade Away and The Other One. The audience recording is severely compromised—Not Fade Away is unlistenable, while a brief excerpt of The Other One from another date offers a glimpse of the band’s energy. The tape lacks cohesion and provides little of a true concert experience.",
+  "review": "On November 10, 1970 at Action House in Island Park, NY, the Dead took the stage for a very short set: Not Fade Away into The Other One. Unfortunately, the only surviving source is an audience‑sourced tape that stitches together material from unrelated dates (9/20/70 and 2/23/71), resulting in a confusing flow. The opening rocker Not Fade Away is described as “unlistenable” and “horrible,” while the lone highlight is a brief excerpt of The Other One—though it actually comes from another show, it at least captures some of the group’s improvisational spark. Given the poor fidelity, splicing, and lack of a cohesive concert feel, this recording offers little value to most Deadheads beyond a curiosity for completists.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 1.9,
+    "confidence": "low",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 4,
+      "review_count_boost": 0.0,
+      "sentiment_adjustment": -0.6,
+      "sentiment_rationale": "The sole analysis expresses negative sentiment about both recording and show quality, labeling Not Fade Away as unlistenable and the overall tape as confusing and non‑cohesive. This consistent criticism leads to a modest negative adjustment.",
+      "final_calculation": "2.5 + 0.0 - 0.6 = 1.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-11-10.aud.cotsman.17032.sbeok.shnf",
+    "reason": "Only available source despite poor audience quality and spliced content; no better alternative exists."
+  },
+  "key_highlights": [
+    "The Other One excerpt (though from a different date) provides the sole musical highlight.",
+    "Not Fade Away is effectively unlistenable due to terrible tape condition.",
+    "Tape stitches together songs from separate shows, creating a confusing flow."
+  ],
+  "song_highlights": [
+    "Not Fade Away",
+    "The Other One"
+  ],
+  "band_performance": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-20T01:13:16.973702+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Not Fade Away",
+      "The Other One"
+    ]
+  ]
+}

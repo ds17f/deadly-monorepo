@@ -1,0 +1,98 @@
+{
+  "summary": "A high‑quality audience recording of the April 29 1972 Hamburg show, praised for its crystal‑clear tape and a soaring Dark Star plus tight Good Lovin’ and Caution.",
+  "review": "This AUD capture is unusually clear and dynamic for a crowd source, benefitting from excellent venue acoustics. The performance is uniformly stellar – the first set kicks off strong and the second set erupts with an epic Dark Star, a blazing Good Lovin’, and a tight Caution that many reviewers cite as highlights. Jerry’s guitar work, Keith’s keyboards and Bob’s rhythm all receive glowing mentions.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviews rate the show 4‑5 stars and praise both the musical performance and the surprisingly good audience recording; weighted averaging of show (≈4.6) and recording (≈4.0) yields ~4.4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, dynamic tape with good balance and venue acoustics; a few notes about slight lack of brightness or occasional muddiness but overall very listenable for an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Good Lovin'",
+      "Caution",
+      "Playin' in the Band",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong opener and steady first set, then a second‑set firestorm featuring an extended Dark Star, tight Caution and a hot Sugar Magnolia; reviewers describe the concert as \"hot from start to finish\"."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry's guitar tone was perfect and that he was in the groove throughout.",
+    "Phil": "",
+    "Bob": "Bob is praised for staying solid in the rhythm section and keeping the band in the groove.",
+    "Keys": "Keith’s keyboard work shines, with several reviewers calling his playing some of his finest on this tour.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Next Time You See Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Caution": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T14:45:35.529253+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-04-29.aud.vernon.5250.sbeok.shnf"
+}

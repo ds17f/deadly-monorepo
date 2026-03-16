@@ -1,0 +1,69 @@
+{
+  "summary": "An excellent audience (aud) recording captures a killer 1984 show highlighted by scorching Jack Straw, Shakedown, Bird Song, Black Peter and The Other One.",
+  "review": "The tape is praised as one of the best audience recordings ever, with crystal‑clear crowd presence that almost feels like a matrix. Musically the concert shines on Jack Straw, Shakedown, Bird Song and an especially emotional Black Peter, while Jerry’s guitar work is repeatedly lauded. Overall the performance and sound quality earn unanimous five‑star enthusiasm.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All five reviews are highly positive (4–5 stars) and consistently praise both the show’s musical highlights and the superb audience recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners describe the sound as crisp, clear, with full crowd presence; some say it could be mistaken for a matrix. No drop‑outs or distortion are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Shakedown",
+      "Bird Song",
+      "Love Light",
+      "Black Peter",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a high‑energy set with the crowd getting loud early on; transitions are praised especially during the extended jams of Jack Straw and Shakedown."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is highlighted as perfect on Jack Straw and Black Peter, with emotive playing that even sounds like he’s about to cry.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Shakedown": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T23:23:20.391563+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-20.nak300.carpenter.108304.flac2496"
+}

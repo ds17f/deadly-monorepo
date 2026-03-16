@@ -1,0 +1,104 @@
+{
+  "summary": "A powerhouse ’78 show with scorching Big River, Peggy‑O, Let It Grow and a solid soundboard capture despite some tape roughness.",
+  "review": "The performance is widely praised – Jerry burns on Big River and Peggy‑O, the band rides high through Let It Grow, Deal, The Other One, Wharf Rat and Sugar Magnolia, and the Sunshine Daydream duet shines. Recording quality is described as “not great” but still listenable, typical of a vintage soundboard tape.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (4‑5) and enthusiastic language about the music outweigh modest complaints about audio fidelity, yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers note the tape isn’t pristine – ‘sound quality isn’t great’ and some hiss/rough edges – but the board mix is still usable and captures the band well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big River",
+      "Peggy-O",
+      "Let It Grow",
+      "Deal",
+      "The Other One",
+      "Wharf Rat",
+      "Sugar Magnolia",
+      "Sunshine Daydream"
+    ],
+    "poor_songs": [
+      "Bertha",
+      "Musta Been the Roses"
+    ],
+    "setlist_flow": "The concert rolls from a fiery first set into an energetic second, with tight jams and strong transitions; only a few bumps (Bertha, Musta Been) interrupt an otherwise seamless flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Hot on Big River, beautiful vocal/guitar on Peggy-O, gets lost in Bertha and sounds out of it on Musta Been the Roses but finishes strong.",
+    "Phil": "",
+    "Bob": "Hints at Lost Sailor chords during Estimated; leads the Sunshine Daydream duet with Donna.",
+    "Keys": "Keith shines on Bertha and tries to bail Jerry out, delivering a standout keyboard performance.",
+    "Drums": "The drum segment runs long, making it the longest song of the show."
+  },
+  "song_mentions": {
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Musta Been the Roses": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:35:42.396150+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-05-10.aud.fishman.18753.sbeok.shnf"
+}

@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent soundboard capture of a legendary ’69 show, highlighted by an epic ~30‑minute Dark Star that flows into St. Stephen, The Eleven and Death Don't Have No Mercy.",
+  "review": "The Charlie Miller‑remastered soundboard delivers crystal‑clear mix and remarkable bass definition, making the performance feel fresh even decades later.  Reviewers rave about a muscular Dark Star that morphs through “Feelin’ Groovy,” Chicago’s “Only The Beginning” riff, and a Tighten‑Up jam before soaring into St. Stephen, The Eleven and an emotionally charged Death Don’t Have No Mercy.  Overall the set is described as one of the most compelling late‑1969 concerts with flawless recording quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over twenty reviews, the vast majority 4–5 stars, praise both the musical performance (especially Dark Star and its segues) and the pristine soundboard quality; only a single outlier rating is negative."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with superb bass clarity; reviewers note no drop‑outs or muddiness and repeatedly call it the best‑ever 1969 sound quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "St. Stephen",
+      "The Eleven",
+      "Death Don't Have No Mercy",
+      "Good Lovin'",
+      "Big Boss Man",
+      "Mama Tried",
+      "Seasons"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight the seamless, high‑octane flow from Dark Star through multiple jams into St. Stephen, then The Eleven and Death Don't; the Good Lovin' → Drums → Good Lovin' segment is also singled out as a peak."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as having a powerful guitar tone, soulful blues solo on Death Don't, and an unforgettable vocal burst on St. Stephen.",
+    "Phil": "Bass clarity repeatedly praised; noted as “the BEST ever BASS clarity.”",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Good Lovin' → Drums → Good Lovin' transition called superlative."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 13,
+      "negative_mentions": 0,
+      "total_mentions": 13
+    },
+    "St. Stephen": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Eleven": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Seasons": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T17:51:15.636964+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-11-02.sbd.miller.32350.sbeok.flac16"
+}

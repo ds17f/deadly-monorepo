@@ -1,0 +1,31 @@
+{
+  "summary": "Poor‑quality Bertha remaster with frequent drop‑outs; performance details unavailable",
+  "review": "The sole reviewer criticizes the recording, calling it very incomplete and noting that audio drops in and out throughout. No comments are made about the musical performance, so the show quality cannot be assessed.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.9,
+    "confidence": "low",
+    "rationale": "Only one low‑star review focuses on serious recording problems; with no positive show commentary the overall rating is near the bottom of the scale."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer reports frequent drop‑outs and incomplete audio, indicating a problematic remaster."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T01:18:02.047578+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-06-21.sbd.bertha-ashley.27590.sbeok.shnf"
+}

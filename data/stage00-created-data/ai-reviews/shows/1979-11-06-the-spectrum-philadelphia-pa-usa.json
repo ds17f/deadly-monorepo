@@ -1,0 +1,73 @@
+{
+  "summary": "Epic Terrapin Station jam and blistering Jack Straw showcase.",
+  "blurb": "The show delivers a powerful first set highlighted by Candyman, Jack‑Straw > Deal and an inspired take on Alabama Getaway. The second set erupts with a 30‑minute Terrapin Station followed by an expansive Playing In The Band that flows into a dynamic drums/space and a passionate Black Peter. Jerry’s tone is near‑perfect and Brent’s keyboards drive the jams.",
+  "review": "The November 6, 1979 Spectrum performance is widely regarded as one of the band’s late‑’70s high points. Across six soundboard sources reviewers rave about a first set that swings from the bright energy of Alabama Getaway into a tight take on The Promised Land and a soaring Candyman, while the Jack‑Straw > Deal sequence showcases Jerry’s near‑perfect guitar tone and Bob’s commanding vocals. The second half is where the night truly shines: Terrapin Station blossoms into a 30‑minute odyssey that feels both “legendary” and “psychedelic perfection,” segueing seamlessly into an expansive Playing In The Band, a thunderous drums/space stretch, and a heartfelt Black Peter solo. Brent’s keyboards are described as “exceptional,” providing soulful comping and daring synth work that fuels the improvisations. Phil’s bass is praised for its deep “bombs” and thumping drive on Alabama Getaway, while Mickey and Billy deliver powerful dual drumming that pushes the jams forward. Even the mixed‑quality GEMS release, despite mastering quirks, confirms the show’s strength with a standout Jack‑a‑Roe and Terrapin Station, underscoring how consistently strong the performance is across recordings.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 40,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Multiple recordings (5 of 6) use overwhelmingly positive language – terms like \"legendary,\" \"epic,\" \"stellar,\" and \"psychedelic perfection\" appear repeatedly. Standout songs are consistently praised across sources, with no recurring negative performance comments, yielding a strong positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd79-11-06.sbd.miller.29735.flac16",
+    "reason": "Crystal‑clear soundboard mix with no flaws, capturing the full set in superb detail and highlighting all the show’s standout moments."
+  },
+  "key_highlights": [
+    "Extended Terrapin Station jam (~30 min) with soaring guitar and deep bass.",
+    "Blistering Jack Straw leading into Deal, showcasing Jerry’s flawless tone.",
+    "Epic Playing In The Band segues into a dynamic drums/space sequence and a passionate Black Peter.",
+    "First‑set energy driven by Candyman, Alabama Getaway and strong vocal performances."
+  ],
+  "song_highlights": [
+    "Alabama Getaway",
+    "The Promised Land",
+    "Candyman",
+    "Jack Straw",
+    "Deal",
+    "Terrapin Station",
+    "Playing In The Band",
+    "Drums",
+    "Space",
+    "Black Peter"
+  ],
+  "band_performance": {
+    "Jerry": "Near‑perfect guitar tone throughout; leads the jams on Jack Straw, Terrapin Station and The Promised Land with soaring solos.",
+    "Phil": "Deep bass \"bombs\" and thumping drive on Alabama Getaway; revitalized playing that locks in tightly with the rest of the band.",
+    "Bob": "Strong vocals on Good Lovin' and other numbers; solid rhythm guitar that supports the improvisations.",
+    "Brent": "Exceptional keyboard work – synth, B3, piano comping and solos are described as soulful and a catalyst for the band's renewed energy.",
+    "Mickey": "Powerful dual drumming with gongs and seamless transitions into Space, adding intensity to the second‑set flow.",
+    "Billy": "Intense, purposeful drumming that drives the jams forward and complements Mickey’s textures."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-26T01:19:40.046480+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Alabama Getaway",
+      "The Promised Land"
+    ],
+    [
+      "Candyman"
+    ],
+    [
+      "Jack Straw",
+      "Deal"
+    ],
+    [
+      "Terrapin Station",
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "Black Peter",
+      "Good Lovin'"
+    ]
+  ]
+}

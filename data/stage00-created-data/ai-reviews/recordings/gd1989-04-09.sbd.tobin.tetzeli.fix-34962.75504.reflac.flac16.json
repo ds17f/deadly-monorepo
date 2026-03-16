@@ -1,0 +1,51 @@
+{
+  "summary": "Clear soundboard recording captures a standout Brent solo on Walkin' Blues, a moving Stella Blue vocal, and a sublime Louie performance.",
+  "review": "The soundboard source is praised for its nice, clean tone, making the show easy to enjoy.  Highlights include Brent’s second‑round keyboard solo during Walkin' Blues that “turns it on,” Jerry’s intimate rendition of Stella Blue, and a surprisingly sublime take on Louie, Louie.  Overall the performance feels special and well‑balanced.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All four reviewers are largely enthusiastic; three give 5 or 4 stars praising both music and recording, while the lone 3‑star review still offers a positive song comment.  The show is described as exceptional and the soundboard quality as nice, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Described as a 'nice sounding board' with clear audio; no significant drop‑outs or muffling noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Walkin' Blues",
+      "Stella Blue",
+      "Louie, Louie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight a seamless flow that builds excitement after the first set, with Brent's solo acting as a turning point and intimate moments like Stella Blue enhancing the overall vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal on Stella Blue is called 'a moment unto itself' with the crowd hanging on each verse.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's second round of soloing during Walkin' Blues is singled out as a high point that makes the show 'ON!!!!'.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Louie, Louie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T18:18:36.070961+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-09.sbd.tobin.tetzeli.fix-34962.75504.reflac.flac16"
+}

@@ -1,0 +1,67 @@
+{
+  "summary": "Rare acoustic gems like Operator, St. Stephen and Not Fade Away shine despite uneven soundboard clarity and low vocals.",
+  "review": "The set features several standout moments – a barely‑heard but audible version of the seldom‑played Operator, an ultra‑rare acoustic Truckin' with Pigpen, plus stellar performances of St. Stephen and Not Fade Away. The recording is a soundboard source that is generally listenable, though vocals are low and the overall mix can be inconsistent, leading to mixed opinions on its fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is high with many rare/acoustic highlights, but recording quality receives both praise (organ in mix) and criticism (low vocals, overall muddiness), resulting in a moderate‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Audible but not pristine – vocals sit low, occasional muffled piano, but Pigpen's organ is unusually forward. Overall mix varies, with some listeners calling it unlistenable while others find it acceptable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Operator",
+      "Truckin'",
+      "St. Stephen",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The acoustic portion of the show is highlighted as impressive, delivering rare tracks and strong renditions that flow well, especially the mid‑70s peak of St. Stephen and a fiery Not Fade Away."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen's organ is unusually forward in the mix – a rarity for 1970/71 recordings.",
+    "Drums": "Bill Kreutzmann keeps a solid, steady beat that listeners note positively."
+  },
+  "song_mentions": {
+    "Operator": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Going Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T22:52:00.992260+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-09-18.sbd.reynolds.97525.flac16"
+}

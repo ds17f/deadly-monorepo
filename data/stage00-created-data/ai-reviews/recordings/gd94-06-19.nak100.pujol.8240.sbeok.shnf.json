@@ -1,0 +1,74 @@
+{
+  "summary": "Crisp, clean recording of a scorching June‑19‑1994 Eugene show highlighted by a monster Other One and fiery Scarlet > Fire second set.",
+  "review": "The performance is remembered for an epic second set – the Other One, Scarlet > Fire and Knockin' on Heaven's Door all get high marks – with most fans calling it one of the best shows of the year.  The source sounds remarkably clear and clean, though a few reviewers note a slightly “venue‑like” coloration; overall the audio is very listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Most reviews (7 of 9) are 4‑5 stars praising both the music and the recording; only a few note minor flaws, giving an overall strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers call the audio crisp, clean and very listenable; one mentions a slight venue‑like coloration but no major dropouts or balance issues are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Scarlet > Fire",
+      "Knockin' on Heaven's Door",
+      "Touch of Grey"
+    ],
+    "poor_songs": [
+      "Good Lovin'"
+    ],
+    "setlist_flow": "A thunder‑long second set that builds energy with the Other One and Scarlet > Fire, delivering a high‑octane climax; the first set is described as uneven by some listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for reverb‑drenched vocals on Dark Star and strong guitar leads; his final performance of Knockin' on Heaven's Door noted as emotionally significant.",
+    "Phil": "Bass described as “bouncing around” the room and full of fun, especially during the Other One; fans mention hanging out in the Phil Zone.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T22:35:19.390436+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-06-19.nak100.pujol.8240.sbeok.shnf"
+}

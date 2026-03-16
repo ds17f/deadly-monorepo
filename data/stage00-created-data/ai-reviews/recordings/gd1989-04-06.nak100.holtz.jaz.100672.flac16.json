@@ -1,0 +1,50 @@
+{
+  "summary": "Awesome sound with solid Brown Eyed Women and Space, overall a good but unexceptional show",
+  "review": "The recording is praised for its awesome sound quality, making it a pleasure to listen to. Musically the concert is decent, highlighted by strong performances of Brown Eyed Women and Space, though it lacks extraordinary improvisations. Fans of Built to Last will appreciate this well‑done rendition.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Reviewer gave 4 stars overall; sound quality is highlighted as excellent while the performance is described as merely good, leading to a solid but not outstanding rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Sound quality praised as awesome with no reported issues; clarity and mix appear very good."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brown Eyed Women",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall a solid set with decent flow, but lacking the wild licks or surprises that make a show legendary."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Built to Last": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:56:43.825482+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-06.nak100.holtz.jaz.100672.flac16"
+}

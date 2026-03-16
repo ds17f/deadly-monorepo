@@ -1,0 +1,39 @@
+{
+  "summary": "Matrix blend of audience and soundboard captures a remarkable Black Peter jam.",
+  "review": "The recording is praised for its consistent matrix mix of audience ambience and soundboard clarity, delivering a clean listening experience. Fans highlight the “remarkable jam at the end of Black Peter,” suggesting a strong musical moment despite limited commentary on the rest of the show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "One reviewer rates the recording highly (4 stars) and notes good matrix quality, while another gives a zero‑star rating and only mentions a single jam highlight. The mixed feedback yields an average rating weighted toward show performance."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Consistent blend of audience ambience and soundboard (SBD) provides clear, balanced audio according to reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on overall set flow; only a specific jam at the end of Black Peter is highlighted."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:56:41.067552+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-19.137405.sbd.miller.flac24"
+}

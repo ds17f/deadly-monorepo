@@ -1,0 +1,50 @@
+{
+  "summary": "Soundboard recording with clear vocals; a solid second set highlighted by a funky Fire On The Mountain and a strong Estimated Prophet despite an unremarkable first set.",
+  "review": "The SBD capture is clean and balances the band well, letting Jerry’s voice come through clearly. While reviewers found the first set lackluster, the second set shines with a fiery Fire On The Mountain and a tightly‑run Estimated Prophet. Overall the performance is mixed but leans positive thanks to those standout moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "One detailed review gives a balanced view (good board quality, strong second‑set songs, weaker first set) and a second generic positive note; combined weight yields a solid but not outstanding rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear mix with all instruments represented; Jerry's vocals are articulate and no major drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire On The Mountain",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as unremarkable; second set picks up energy with a funky Fire and a solid Estimated Prophet, making the overall show feel stronger in its latter half."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice clear and articulate; guitar playing described as fierce on Fire On The Mountain.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire On The Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:26:46.629394+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-12.141805.sbd.miller.flac1644"
+}

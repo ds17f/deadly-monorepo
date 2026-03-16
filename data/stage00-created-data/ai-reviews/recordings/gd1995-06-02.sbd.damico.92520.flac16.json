@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard‑sourced recording of a late‑1995 show that fans describe as energetically tight early on with standout moments like “Saint Of Circumstance” and the “Space” jam, though opinions on overall quality are mixed.",
+  "review": "The performance is remembered for solid playing—especially Jerry’s presence—and a few highlighted songs such as Saint Of Circumstance and Space. Reviewers are split: several rave about the energy and emotional significance of the show, while others criticize it as one of the weaker outings of that year. No specific audio flaws are noted, so the recording is presumed to be decent soundboard quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Average star rating across five reviews is 3.8; most reviewers praise the show’s energy and specific moments, while a minority are strongly negative. Recording quality is not discussed but the source appears to be soundboard, suggesting at least decent audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No reviewer commented on clarity, mix or drop‑outs; assumed acceptable soundboard capture with no major issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Saint Of Circumstance",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a tight, energetic start and an emotionally charged middle (Jerry’s entrance), with the overall flow described as solid but opinions differ on consistency across the set."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry's stage presence and playing—described as solid, emotional, and a key reason for the show's impact.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Saint Of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T09:27:44.147691+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-02.sbd.damico.92520.flac16"
+}

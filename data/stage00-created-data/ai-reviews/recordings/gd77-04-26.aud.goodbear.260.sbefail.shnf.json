@@ -1,0 +1,69 @@
+{
+  "summary": "Fair‑quality audience tape of a modest 1977 show – Dancin’ and Estimated Prophet shine despite the noisy recording.",
+  "review": "The recording is an audience (AUD) capture with noticeable chatter, occasional warble and limited clarity, but it retains enough ambience to be listenable. Musically the concert is solid if unspectacular; the first set is laid‑back while the second set delivers a standout Dancin’ that many reviewers cite as the high point, along with a strong Estimated Prophet and decent renditions of Bertha, Stella Blue and Half‑Step.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "high",
+    "rationale": "Most reviewers find the show average‑good (highlighted songs) but the recording is uneven; weighting the decent musical performance (≈3.5) against a fair‑to‑poor tape quality (≈2.5) yields an overall rating around 3.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audience tape with noticeable chatter, occasional warble and drop‑outs; not crystal clear but retains full band mix and crowd ambience. Some reviewers call it \"unbearable\" while others find it surprisingly listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancin'",
+      "Estimated Prophet",
+      "Bertha",
+      "Stella Blue",
+      "Half Step",
+      "Cassidy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as laid‑back and uneven, second set lifts the energy with a fiery Dancin' and strong Estimated Prophet; overall the show is competent but not a classic."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for hot solo work – slide work, fire on guitar and vocals especially during Dancin' and Estimated Prophet.",
+    "Phil": "Briefly noted as trying to get some air time; no strong performance comments.",
+    "Bob": "Mentioned with beard and vocal presence; generally positive but not highlighted.",
+    "Keys": "Keith is applauded for a solid Big River and Moog work on Estimated Prophet; overall keyboard contribution seen as good.",
+    "Drums": "Mickey (drummer) gets a nod in one review; no detailed critique."
+  },
+  "song_mentions": {
+    "Dancin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T21:39:42.035104+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-04-26.aud.goodbear.260.sbefail.shnf"
+}

@@ -1,0 +1,101 @@
+{
+  "summary": "Excellent soundboard capture of a spring‑'91 Shoreline show with smoking Truckin’ > New Speedway Boogie and stellar Jerry‑Bruce interplay.",
+  "review": "The recording is a pristine SBD mix that lets the band’s chemistry shine – Hornsby’s keyboards, Jerry’s soaring lead, and Bruce’s piano drive every jam.  Highlights include a blistering Truckin’ → New Speedway sequence, a seamless Foolish Heart → Saint of Circumstance transition and a killer Drums‑Space‑Wheel segment, while the first set builds nicely with Desolation Row and Jack Straw.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 enthusiastic reviews consistently give five stars, praising both performance and sound quality; the weighted average of show (≈4.7) and recording (≈4.8) yields a strong 4.6 rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, lush mix with very clear instrument separation; a few reviewers note minor post‑drums clipping but overall the SBD is described as superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin' > New Speedway Boogie",
+      "Foolish Heart → Saint of Circumstance",
+      "Crazy Fingers",
+      "Drums > Space > Wheel",
+      "Desolation Row",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Cold Rain & Snow (feedback issues on some tracks)"
+    ],
+    "setlist_flow": "First set builds nicely with strong storytelling songs (Desolation Row, Jack Straw) and solid jams; the second set is a high‑energy marathon with seamless transitions—pre‑drums combos flow into an explosive Truckin’/New Speedway sequence and a powerful drums‑space‑wheel climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring lead work, flawless tone, and vocal strength; his interplay with Bruce is highlighted as a peak of the night.",
+    "Phil": "Solid, melodic bass lines noted especially on Cold Rain & Snow and during the drums‑space segment.",
+    "Bob": "Energetic rhythm guitar and fired‑up vocals add extra drive; praised for enthusiasm throughout.",
+    "Keys": "Hornsby’s chemistry with Garcia is repeatedly lauded – sweet licks, tasteful fills and a mix that lets his keyboards shine; Vince also gets credit for tasteful accents.",
+    "Drums": "Bill (Mickey) delivers ferocious, extended drumming; the Drums‑Space‑Wheel segment is called “killer.”"
+  },
+  "song_mentions": {
+    "Desolation Row": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Foolish Heart": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Truckin'": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T19:31:01.275748+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-05-10.sbd.ladner.6257.sbeok.shnf"
+}

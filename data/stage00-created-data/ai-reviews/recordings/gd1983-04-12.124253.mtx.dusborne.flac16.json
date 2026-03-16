@@ -1,0 +1,45 @@
+{
+  "summary": "Good‑quality matrix recording of a strong 1983 show highlighted by a smoking second set and The Other One, though one reviewer finds Garcia’s vocals lacking.",
+  "review": "The concert is praised for its energetic performance, especially the continuous second set and a standout rendition of The Other One (and a crowd‑driven Not Fade Away encore). Most listeners love the matrix mix, describing it as clear and well‑balanced, while one critic notes an overly vocal‑heavy sound and a miserable Garcia voice. Overall the show is considered an “on” year for 1983 with solid playing from Phil and a generally enjoyable listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Four of five reviewers give 5‑star praise for performance and recording; only one gives a lukewarm 3‑star critique focused on vocal mix. Show quality is strong, recording is generally good, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers love the matrix sound – clear, balanced and well‑mixed. One reviewer finds it vocal‑heavy, emphasizing Garcia’s croaking voice, but no major dropouts or distortion are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is described as “on” from start to finish, with a smoking, continuous second set that kept the energy high. Minor set‑list confusion (Keep on Growing vs Greatest Story) is noted but does not affect overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocals are praised as sounding good by most listeners, though one reviewer calls Garcia’s voice miserable and self‑unaware.",
+    "Phil": "Several reviewers highlight Phil ripping it apart – a strong bass performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T04:59:27.193454+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-12.124253.mtx.dusborne.flac16"
+}

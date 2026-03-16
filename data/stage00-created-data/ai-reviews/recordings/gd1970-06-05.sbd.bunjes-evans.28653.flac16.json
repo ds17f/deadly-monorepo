@@ -1,0 +1,51 @@
+{
+  "summary": "Audience‑sourced recording of the June 5 1970 Fillmore West set captures a wild performance with standout Saint Stephen, Easy Wind and Man’s World, though occasional sound glitches and EQ needs keep the mix only fair.",
+  "review": "The show is remembered for its high energy – Saint Stephen rolls out fully jammed and the rare pairing of Easy Wind with Man’s World delights listeners. The recording is an audience capture that suffers from intermittent drop‑outs and requires some EQ work, but the performance shines through enough to make it a worthwhile addition to any 1970 Dead collection.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers gave 4‑5 stars and praised the music, while noting only moderate recording flaws; the weighted average of show (≈4) and sound quality (≈3.5) yields a near‑4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note occasional drop‑outs, audible patches at peak moments and recommend using EQ to smooth the sound; overall still listenable and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Saint Stephen",
+      "Easy Wind",
+      "Man's World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set blends electric intensity with acoustic moments, highlighted by a fully jammed Saint Stephen and the rare Easy Wind/Man’s World pairing; the energy stays high despite the occasional technical hiccup."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Easy Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Man's World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T20:33:52.351303+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-06-05.sbd.bunjes-evans.28653.flac16"
+}

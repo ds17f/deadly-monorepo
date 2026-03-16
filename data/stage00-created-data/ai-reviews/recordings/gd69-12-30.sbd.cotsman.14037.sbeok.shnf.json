@@ -1,0 +1,80 @@
+{
+  "summary": "Rough‑ish soundboard capture of a long, jam‑filled show highlighted by stellar Dark Star, New Speedway Boogie and an intense Black Peter.",
+  "review": "The performance is praised for its deep, winding jams in the latter half, with Dark Star, New Speedway Boogie, Black Peter and Mason’s Children getting special mentions.  The soundboard source is generally decent but suffers from a few bad cuts, rough EQ and occasional drop‑outs that keep it from being truly excellent.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong musical praise across multiple reviews (70% weight) combined with a decent but imperfect soundboard recording (30% weight) yields an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Pretty good overall but contains some bad cuts, rough EQ and occasional drop‑outs; listeners may need to tweak EQ for best results."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Speedway Boogie",
+      "Dark Star",
+      "Black Peter",
+      "Mason's Children",
+      "Alligator",
+      "Eleven",
+      "And We Bid You Goodnight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Long, solid first half followed by winding jams in the second; notable transitions such as Eleven → AWBYG → Alligator and an abbreviated Alligator → Caution → Feedback sequence keep the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "New Speedway Boogie": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mason's Children": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alligator": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "And We Bid You Goodnight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T19:31:51.308777+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-12-30.sbd.cotsman.14037.sbeok.shnf"
+}

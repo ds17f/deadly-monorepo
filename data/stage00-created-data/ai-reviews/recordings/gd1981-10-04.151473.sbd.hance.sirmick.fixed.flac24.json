@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard mix captures a powerful show highlighted by an incredible “Jack Straw” performance.",
+  "review": "Reviewers rave about the crystal‑clear soundboard recording and thank the mixers for their work, calling the mix “incredible.” The only specific musical highlight mentioned is a superb rendition of “Jack Straw,” indicating a strong performance despite limited detail on the rest of the set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Two enthusiastic 5‑star reviews praise both the mix quality and the show, while a third review (rating entered as 0) still compliments the sound mix. With three reviews total, confidence is medium."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners repeatedly thank the mixers and describe the mix as “incredible” and “powerful,” indicating a clear, well‑balanced soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure; only a single song is highlighted positively."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:20:34.315845+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-04.151473.sbd.hance.sirmick.fixed.flac24"
+}

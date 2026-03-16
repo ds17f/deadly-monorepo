@@ -1,0 +1,80 @@
+{
+  "summary": "Remastered audience tape delivers a high‑energy show with incendiary Dancing in the Street → The Other One sequence, stellar Peggy‑O and a fiery Jerry, despite occasional slide mishaps.",
+  "review": "The recording is an improved Jim Wise AUD master that sounds clear and lively after remastering, capturing the band's frenzied energy. Musically the concert shines with a scorching Dancing in the Street jam, powerful The Other One, standout Peggy‑O, and a fiery second‑set flow, though a few slide‑solo blips on GDTRFB and NFA are noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All four reviewers gave 4–5 stars and highlighted numerous standout performances; the recording, while audience‑sourced, is praised as clear after remastering."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Remastered AUD tape is crisp and lively; reviewers note it is a big improvement over the original and overall great sound, with no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancing in the Street",
+      "The Other One",
+      "Peggy-O",
+      "Going Down The Road Feeling Bad",
+      "Samson",
+      "Tennessee Jed",
+      "Passenger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑octane, all‑uptempo jam section with no ballads; the second set builds a powerful momentum through Dancin>DrumZ → The Other One → GDTRFB."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as 'on fire' and shredding throughout, especially on The Other One and in the jam sections.",
+    "Phil": "Praised for sounding great and providing a strong bass foundation, dropping \"bombs\" during the performance.",
+    "Bob": "A few reviewers mention a 'brutal slide' that detracts from GDTRFB and NFA, implying an off‑moment for Bob's playing.",
+    "Keys": "Keith and Donna are noted as fading toward the end of the show, offering less presence than earlier in the set.",
+    "Drums": "The Dancin>DrumZ jam is highlighted as a high point; however, the slide solo (attributed to Bobby) is criticized for disrupting GDTRFB."
+  },
+  "song_mentions": {
+    "Dancing in the Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Peggy-O": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Going Down The Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:10:03.269962+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-12.132217.aud.wise-claridge.fob.sony.ecm-280.flac16"
+}

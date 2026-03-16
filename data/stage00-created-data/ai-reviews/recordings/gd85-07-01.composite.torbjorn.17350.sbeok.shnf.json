@@ -1,0 +1,76 @@
+{
+  "summary": "Ultra‑clean soundboard captures a scorching Scarlet > Fire second set plus stellar Dancin', Let It Grow and Walking Blues.",
+  "review": "The board recording is praised as “crispy”, “ultra clean” and one of the best from the 1985 summer tour, delivering crystal‑clear guitars, tight drums and surprisingly full bass. Musically the show shines – the second set’s Scarlet > Fire is described as a “living breathing dragon of fire,” while Dancin', Let It Grow, Walking Blues and the adventurous Space segment are repeatedly highlighted as standouts.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, the vast majority 4‑5 stars, uniformly rave about both performance and board quality; only a single 3‑star note mentions occasional slow spots."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as ultra‑clean, crisp, and “one of the beast soundboards.” Minor criticism only on low‑end bass capture in one review; otherwise no dropouts or noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Dancin'",
+      "Let It Grow",
+      "Walking Blues",
+      "Space"
+    ],
+    "poor_songs": [
+      "Esau",
+      "Stagger Lee"
+    ],
+    "setlist_flow": "First set is solid but slightly underrated; second set erupts with a powerful Scarlet > Fire opener, seamless transitions into Space and a high‑energy finish that many reviewers call unforgettable."
+  },
+  "band_member_comments": {
+    "Jerry": "His solos on Scarlet > Fire are repeatedly called soaring, boundary‑stretching, and “the cat’s meow.”",
+    "Phil": "Bass noted as slightly less captured than audience tapes but overall the rhythm section is praised; no major complaints.",
+    "Bob": "Weir’s vocal/guitar work on Walking Blues gets special love (“Bob Weir is God”).",
+    "Keys": "",
+    "Drums": "Bill and Mickey are highlighted for tight, in‑sync playing and excellent stereo drum mix."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Dancin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Let It Grow": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Walking Blues": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Esau": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:18:15.469266+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-07-01.composite.torbjorn.17350.sbeok.shnf"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Crisp, dry audience tape that captures a fun show highlighted by a superb Eyes → Wharf Rat sequence.",
+  "review": "The three fans all rave about this 1974 audience recording, noting its clean yet slightly flat tone and the sweet warmth of Jerry’s guitar work. The performance shines especially on the tightly‑played Eyes > Wharf Rat medley, while a minor lyric slip in Beat It On Down adds a quirky charm. Overall the tape is considered very listenable and enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer stars (average 4.7) and enthusiastic comments about both the music and tape quality push the rating into the upper‑range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the audience recording as crisp, clean, dry and flat in tone with higher overtones slightly muted; overall pleasant but not pitch‑perfect."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Beat It On Down"
+    ],
+    "setlist_flow": "Fans note a lively, fun vibe with smooth transitions (e.g., Beat It On Down into Happy Home) and an especially strong second‑half featuring Eyes>Wharf Rat."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise Jerry's guitar tone on the audience tape, calling it sweet and warm; Tiger is singled out as a fan favorite.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T19:58:11.551659+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-05-21.sonyecm18n.lee.miller.98901.flac24"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Enthusiastic fan review with a perfect rating, though it offers no specifics about the audio quality or musical performance",
+  "review": "The reviewer gives the recording a five‑star rating and expresses gratitude for being able to attend the show, but provides no commentary on the sound source, mix clarity, or how the band played. Consequently, while sentiment is clearly positive, there are no concrete details to assess either the recording fidelity or the concert itself.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "A single five‑star review indicates strong enthusiasm, but the lack of any substantive comments about sound or performance limits confidence in assigning a precise rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No information provided regarding soundboard vs. audience source, clarity, or mix issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T10:01:11.092943+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-10-29.nak300.danscuk.dodd.8599.sbeok.shnf"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "A fire‑filled 1985 performance with a standout first set, but the SBD suffers from very poor sound quality.",
+  "review": "Fans rave about the high‑energy first set – “Getaway>Straw”, “She Belongs to Me” and the ripping opener Alabama→Jack Straw are repeatedly praised, and Jerry Garcia is described as being on top of his game.  Unfortunately the soundboard source is widely condemned as muddy, lacking high end and often worse than available audience recordings, which drags the overall listening experience down.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers love the musical performance (average show rating ~4.5) but the majority criticize the recording quality (average recording rating ~2).  Weighting show 70 % and recording 30 % yields a combined score around 3.6."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Multiple reviewers call the SBD \"horrible\", \"hideous\", \"zero high end\" and recommend using an audience (AUD) source instead.  Drop‑outs, muffled mids and lack of clarity are repeatedly mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw (Getaway>Straw)",
+      "She Belongs to Me",
+      "Sailor > Saint > Deal",
+      "Alabama Jam → Jack Straw",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is described as \"hard‑hitting\" and \"as good as it gets\", with an energetic opener and a quick‑paced version of She Belongs to Me.  The second set is called \"above average\"; overall the concert is praised for its rock‑driven momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly noted as being on top of his game, ripping riffs and delivering pure rock‑and‑roll mayhem.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw (Getaway>Straw)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "She Belongs to Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sailor > Saint > Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama Jam → Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:58:28.048819+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-04.sbd.willy.11704.sbeok.shnf"
+}

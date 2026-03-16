@@ -1,0 +1,39 @@
+{
+  "summary": "Warm audience recording captures a jammin' show highlighted by a sweet Row Jimmy.",
+  "review": "The audience tape delivers a warm, pleasant sound that lets the band's relaxed vibe shine through. Reviewers note a particularly sweet performance of \"Row Jimmy,\" underscoring an overall jam‑filled set. While not a high‑fidelity soundboard, the recording is enjoyable and well‑balanced for an AUD source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Single positive review (4 stars) praises both the jammy performance and the warm audience recording, indicating a good show with decent audio quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Warm and pleasant sound typical of audience tapes; no major clarity or dropout issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Row Jimmy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer mentions a jam‑filled vibe but provides no specific details on set pacing or structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T08:55:18.042149+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-06.nak700.taylor-radnor.gross.gems.83827.flac16"
+}

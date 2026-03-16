@@ -1,0 +1,39 @@
+{
+  "summary": "A wildly energetic early‑'68 set captured on a low‑fi audience tape that fluctuates in quality but still delivers classic jams like the Mountain Jam riff.",
+  "review": "The performance is praised for its raw, high‑energy jamming and Jerry Garcia’s “pure electricity” after the drum break, with highlights such as the recurring Mountain Jam riff. Recording-wise the audience tape is uneven – it clips, distorts and often drowns out Pigpen’s vocals – but listeners deem the musical essence worth the sonic flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All five substantive reviews award 5 stars for the show despite noting poor recording quality; the weighted average (70 % show + 30 % tape) yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Clipping and distortion are noted, Pigpen’s vocals often inaudible, and the sound quality fluctuates throughout the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mountain Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early‑'68 wild, hairy performance with nonstop high‑energy jams; the set builds to a climactic feedback finish after the drum break."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"pure electricity\" on the Alligator segment and generally praised for his intense playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mentioned in context of the drum break that leads into Jerry’s high‑energy section."
+  },
+  "song_mentions": {
+    "Mountain Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T08:20:09.744351+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-05-18.aud.goodbear.50.shnf"
+}

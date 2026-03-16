@@ -1,0 +1,44 @@
+{
+  "summary": "High‑fidelity soundboard capture with crystal‑clear instruments and a smoking Truckin' performance.",
+  "review": "The three reviewers rave about the superb instrument separation and overall tape quality, noting especially how the rhythm and lead guitars shine while the vocals sit a bit far back. The show itself is highlighted by an “amazing” Truckin’ that got the crowd roaring, and the recording is praised as a classic Scotton‑Walker‑Miller product.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (Truckin) and very good instrument clarity drive the rating up, while one low star rating and a minor vocal distance issue keep it from being higher."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Instruments are exceptionally clear with strong rhythm/lead separation; vocals sound distant but not hollow. No major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers focus on the high energy of Truckin and a bluesy J.B. Goode moment, indicating a lively second‑half vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "J.B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T03:23:19.800615+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-10.sonyecm-walker.walker-scotton-miller.89136.flac16"
+}

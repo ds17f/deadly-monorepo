@@ -1,0 +1,31 @@
+{
+  "summary": "Audience recording captures a fine fall‑tour show with pleasant sound.",
+  "review": "The concert is praised as one of the best shows from the 1982 fall tour, and reviewers note that the audience recording delivers nice, clear sound. While no specific songs are highlighted, the overall performance receives a solid four‑star rating.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Single 4‑star review cites strong show and decent audio; limited data yields low confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Nice sound noted; no significant issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Generally strong performance, considered one of the fall tour's best by the reviewer."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T00:57:58.454105+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-11.137379.nak300.flac1644"
+}

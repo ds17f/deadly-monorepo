@@ -1,0 +1,93 @@
+{
+  "summary": "Pristine soundboard capture of a 1994 show brimming with soaring Cassidy and Terrapin jams, though the marathon Space segment splits fans.",
+  "review": "The SBD source is crystal‑clear, delivering a vivid picture of one of ’94’s most adventurous nights.  Highlights include an epic Cassidy close, a majestic post‑Terrapin jam that flows into a long Drums/Space and The Other One, while the first set shines with Lazy River Road and Playing in the Band.  Opinions diverge on the second‑set pacing – some love the hypnotic space, others find it overlong or clunky.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both performance and soundboard quality; a few note second‑set weaknesses, yielding an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as crisp, pristine, and well‑balanced; no major dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Terrapin > Drums/Space > The Other One",
+      "Wharf Rat",
+      "Playing in the Band",
+      "Lazy River Road",
+      "Knockin' on Heaven's Door"
+    ],
+    "poor_songs": [
+      "Samba",
+      "Lucy in the Sky With Diamonds",
+      "Space (overly long for some listeners)"
+    ],
+    "setlist_flow": "First set rolls smoothly with tight jams and strong vocals; second set launches into a daring LSD opener, a brief Samba, then expands into an expansive Terrapin/Space/Other One suite that feels trance‑like to many but drags for others."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is repeatedly praised – darker, acoustic‑ish on Lazy River Road, soaring on Cassidy, and generally passionate; one reviewer calls his playing “clams casino,” but the majority view it as a high point.",
+    "Phil": "Bass described as rich and supportive, especially during the extended jam sections.",
+    "Bob": "Weir’s rhythm work and vocal delivery are noted as vigorous (e.g., on Spunky Brown Eyed Woman and Wharf Rat).",
+    "Keys": "Vince’s keyboards occasionally miss cues (Samba) but add surreal textures that keep the jams interesting; his “skeletal ’94 tone” is highlighted.",
+    "Drums": "Bill and Mickey are credited with a powerful, free‑jazz‑flavored space segment and a rocking drumming foundation throughout."
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lazy River Road": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samba": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Lucy in the Sky With Diamonds": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T00:03:53.666405+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-23.sbd.burns.14853.sbeok.flac16"
+}

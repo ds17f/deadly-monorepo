@@ -1,0 +1,76 @@
+{
+  "summary": "Warm Danish show with a monster 16‑minute Shakedown Street and solid jams, captured on a fair‑quality recording that suffers occasional vocal dropouts.",
+  "review": "The performance shines with Garcia’s strong vocals and guitar, tight band interplay, and standout moments like the extended Shakedown Street, C.C. Rider and Jet Lag. The tape is listenable but marred by a few mic drop‑outs on Garcia and Weir, especially on Terrapin and Cumberland Blues. Overall it’s an enjoyable glimpse of the 81‑82 era despite the technical quirks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Review praises the musical performance (high weight) while noting modest recording issues; with only one review the confidence is low."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Vocal dropouts on Garcia's mic (especially during Terrapin), occasional vocal mishaps from Weir, but overall warm and listenable sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "C.C. Rider",
+      "Jet Lag",
+      "Cassidy",
+      "Stranger"
+    ],
+    "poor_songs": [
+      "Terrapin (TLEO)",
+      "Cumberland Blues"
+    ],
+    "setlist_flow": "Opener noted as a nice ‘Stranger’, then the band builds into a freight‑train momentum, with a relentless second set that doesn’t let up until the encore break."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers strong guitar work and vocals, though his mic suffers occasional dropouts.",
+    "Phil": "",
+    "Bob": "Weir’s vocal on Cumberland Blues is described as ‘butchered’, but he stays in the mix during jams.",
+    "Keys": "Brent Mydland slashes away on keys, keeping Weir on the rails and adding energy to the jam sections.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin (TLEO)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "C.C. Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jet Lag": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:34:37.290007+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-08.151700.sbd.hance.sirmick.flac24"
+}

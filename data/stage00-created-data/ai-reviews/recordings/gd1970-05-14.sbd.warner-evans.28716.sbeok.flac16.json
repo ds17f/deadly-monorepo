@@ -1,0 +1,87 @@
+{
+  "summary": "Soundboard capture with a faint hiss yet generally clear, featuring standout performances of Schoolgirl, St. Stephen and an electric‑charged China Cat Sunflower > I Know You Rider.",
+  "review": "The show is widely praised for its energetic setlist and strong jams – especially the ripping Schoolgirl, soaring St. Stephen and a fiery China Cat Sunflower into I Know You Rider.  The soundboard source is mostly clean with only a slight hiss and occasional drop‑outs, though a few listeners note bass loss and tape cuts.  Overall it’s a high‑energy early‑’70 performance that outweighs the modest recording flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (9/13) are strongly positive about both the music and the sound, with only a few noting hiss or tape issues; this yields a solid 4‑plus rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Slight hiss noted but generally clear; some reviewers mention occasional cuts, bass drop‑outs and tuning oddities, yet overall the mix is balanced and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Schoolgirl",
+      "St. Stephen",
+      "China Cat Sunflower > I Know You Rider",
+      "Cumberland Blues",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "The Weight (cut short)",
+      "Attics of My Life",
+      "High Time"
+    ],
+    "setlist_flow": "Acoustic and electric sections are praised for their variety; the third set is highlighted as “out of this world,” and the overall pacing keeps energy high despite a few weaker moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s Sunburst Strat shines on Schoolgirl and his pedal‑steel work in the acoustic set receives special kudos; one reviewer notes vocal issues but most praise his guitar tone.",
+    "Phil": "Bass occasionally disappears in the recording, leading to a thin low end for some listeners.",
+    "Bob": "Weir provides classic banter that adds humor to the show; no major musical criticism noted.",
+    "Keys": "",
+    "Drums": "Bill’s monitor is mentioned in a light‑hearted anecdote; no specific drumming issues reported."
+  },
+  "song_mentions": {
+    "Schoolgirl": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Weight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics of My Life": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T19:32:32.120945+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-05-14.sbd.warner-evans.28716.sbeok.flac16"
+}

@@ -1,0 +1,83 @@
+{
+  "summary": "Excellent audience recording of a mixed‑quality 1990s show, highlighted by soaring Sugaree and a powerful The Other One.",
+  "review": "The tape captures an enthusiastic crowd and clear enough sound that listeners can enjoy Jerry’s soaring Sugaree solo and the epic The Other One, while other reviewers note uneven playing later in the tour. Recording quality is praised as good to excellent despite occasional loss of ambience compared with the soundboard source. Overall opinions on the performance swing from high praise to disappointment, yielding a mixed overall sentiment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is split between very positive and notably negative impressions; recording quality is consistently rated good/excellent, leading to an overall rating around the mid‑range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note the audience tape is clear and captures crowd energy; one reviewer compares it favorably to a soundboard source, mentioning slightly less ambience but no major distortion or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "So Many Roads",
+      "Eternity",
+      "Broken Arrow",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is praised for strong vocal and instrumental moments; the second set builds to a dramatic The Other One after an atmospheric drum/space segment, ending with high‑energy Throwing Stones, Not Fade Away and Liberty."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed remarks – some reviewers rave about his soaring solos on Sugaree, while others describe his playing as desultory later in the tour.",
+    "Phil": "Positive notes on his bass work on Broken Arrow and his launch into The Other One.",
+    "Bob": "Brief mention of vocal changes during verses (abducted‑by‑aliens comment) but no detailed critique.",
+    "Keys": "",
+    "Drums": "Strong praise for the drum segment leading into Space, described as soaring and primitive."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:17:47.163793+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-04-04.akg460.swayne.85860.flac1648"
+}

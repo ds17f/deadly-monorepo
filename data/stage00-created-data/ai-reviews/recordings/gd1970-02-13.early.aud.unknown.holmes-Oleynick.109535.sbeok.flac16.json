@@ -1,0 +1,39 @@
+{
+  "summary": "Harsh, cloudy and incomplete audience recording; Black Peter is the only track singled out.",
+  "review": "The two fan reviews agree that this tape suffers from a harsh and cloudy sound quality and is missing portions of the concert. While one reviewer notes they will spin Black Peter on their radio show, there are no other performance highlights mentioned, making the musical content hard to evaluate beyond that single song.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "low",
+    "rationale": "Only two brief reviews; one moderate (3★) and one very negative (1★). Recording quality is described as poor, with no strong positive comments about the performance beyond a single song."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Described as harsh, cloudy and not on par with better‑known recordings; also noted as incomplete."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Incomplete recording prevents assessment of set flow or overall performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T16:16:51.433725+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-02-13.early.aud.unknown.holmes-Oleynick.109535.sbeok.flac16"
+}

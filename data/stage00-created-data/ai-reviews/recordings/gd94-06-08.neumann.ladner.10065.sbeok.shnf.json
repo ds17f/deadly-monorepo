@@ -1,0 +1,57 @@
+{
+  "summary": "Fair audience recording of a sunny 1994 outdoor show with standout performances of Standing on the Moon, Easy to Love You, Wharf Rat and Space.",
+  "review": "The concert captures a hot, sun‑filled night at Cal Expo where fans remember a strong set highlighted by a spectacular “Standing on the Moon” and memorable moments like Brent’s “Easy to Love You,” Wharf Rat, and an expansive Space. The audience recording is noisy and far from pristine, but it conveys the joy of the crowd; opinions on the musical execution range from enthusiastic praise to disappointment with an overall uneven performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show positively (average 4‑star sentiment) while noting a noisy audience source; weighted blend of good musical moments and fair recording quality yields ~3.7 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Crowd noise is prominent, the tape is not crisp and described as \"far from perfect,\" but listeners find it acceptable for an outdoor audience capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Standing on the Moon",
+      "Easy to Love You",
+      "Wharf Rat",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A sunny summer outdoor gig that stretched into the night, featuring an extended second set and an encore with \"I Fought The Law.\" Emotional moments like Wharf Rat stood out, though some felt the overall performance was uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Often noted as being 'with it' for most of the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboard work on \"Easy to Love You\" highlighted as a classic moment.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Standing on the Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Easy to Love You": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T21:51:00.365268+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-06-08.neumann.ladner.10065.sbeok.shnf"
+}

@@ -1,0 +1,46 @@
+{
+  "summary": "Pitch‑off soundboard recording with mixed opinions on the show; Jack Straw shines while Slipknot feels shaky.",
+  "review": "The source is a Charlie Miller‑mastered soundboard that runs about a half‑step slow, making the audio feel off‑pitch and generally under‑cooked. Fans are split: one reviewer finds the concert depressing due to Jerry’s poor condition, especially during \"Slipknot,\" while another praises the overall performance, highlighting an explosive Jack Straw and moments where the band clicks despite Garcia’s struggles.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Show quality is praised by one reviewer (strong performance, standout Jack Straw) but marred by another's negative view of Jerry’s condition; recording quality is consistently noted as problematic (pitch‑slow, poor mastering), leading to a middling overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Half‑step slow pitch throughout; mastering described as subpar ('the s***'), making the audio feel off‑key and less clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Slipknot"
+    ],
+    "setlist_flow": "Divisive opinions: some feel the concert is depressed and uneven due to Garcia’s condition, while others note a strong opening and several highlights that make the show worthwhile despite occasional rough spots."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as 'in bad shape' and struggling during Slipknot; also noted when feeling good he could 'hook up as good as ever.'",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T07:16:52.704240+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-29.akg451.jensen.8835.shnf"
+}

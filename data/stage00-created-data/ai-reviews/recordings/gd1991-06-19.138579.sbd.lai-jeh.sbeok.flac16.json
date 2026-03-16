@@ -1,0 +1,78 @@
+{
+  "summary": "Soundboard source with a muddy, uneven mix and a few cuts, but the show shines on a loopy Ramble On Rose and a strong Scarlet Begonias → Fire on the Mountain stretch.",
+  "review": "The recording is a sound‑board capture that suffers from Healy’s lopsided mixing – Jerry’s guitar is buried, Bobby and Phil dominate the image, and there are noticeable gaps in Promised Land and the Drums. Musically the concert is mixed; first set is average with thin moments, while the second set offers highlights like Ramble On Rose and a 25‑minute Scarlet Begonias → Fire on the Mountain jam that rewards repeated listens.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "One detailed review gives an overall three‑star rating, noting both decent musical moments and significant recording mix problems; the weighted average of show (≈3) and recording quality (≈2.5) yields a mid‑range score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Healy’s mix heavily favors Bobby guitar and Phil bass, leaving Jerry buried; cuts in Promised Land and a missing 1:36 of Drums; overall sound is uneven and some sections feel thin."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramble On Rose",
+      "Scarlet Begonias > Fire on the Mountain"
+    ],
+    "poor_songs": [
+      "They Love Each Other",
+      "Queen Jane"
+    ],
+    "setlist_flow": "A short, average first set followed by an extended second set with a long Drums‑>Space segment; the pacing is uneven but includes several high points that make the show worthwhile for fans."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed too low in the front‑of‑house mix; still spurs the band and delivers pointed vocal lines.",
+    "Phil": "Features strong six‑string thunder chords and shines during the jam sections, especially in Scarlet>Fire.",
+    "Bob": "His guitar is given prominence in the mix and he “goes off” on his Motown‑flavored solo.",
+    "Keys": "Vince or Bruce are featured; Bruce adds accordion on Queen Jane but the track isn’t a favorite.",
+    "Drums": "Long Drums>Space sequence, though 1:36 is missing from the recording."
+  },
+  "song_mentions": {
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T21:46:03.291538+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-19.138579.sbd.lai-jeh.sbeok.flac16"
+}

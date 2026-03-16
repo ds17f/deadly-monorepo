@@ -1,0 +1,64 @@
+{
+  "summary": "A wildly enthusiastic performance hailed as one of the best shows ever, captured on an unclear source but with generally good sound.",
+  "review": "Reviewers rave about the sheer energy and overall greatness of this show, calling it \"one of the BEST FUCKIN' SHOWS ... EVER\" despite a few rough transitions. Recording quality isn’t discussed in detail, so its fidelity is uncertain, though no major flaws were noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 4‑star ratings and praised the show overall; limited technical detail keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on soundboard vs. audience or clarity; reviewers did not complain about audio fidelity, implying an acceptable listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bob Dylan Encore"
+    ],
+    "poor_songs": [
+      "Gimme Some Lovin'",
+      "Wharf Rat",
+      "Around and Around",
+      "Sunshine Daydream"
+    ],
+    "setlist_flow": "The set is praised for its overall power, but a few transitions (Gimme Some Lovin' → Wharf Rat and Around & Around → Sunshine Daydream) are described as stumbling."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s presence a month later is noted positively.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Gimme Some Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bob Dylan Encore": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T09:58:24.858861+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-16.AKG451.Currier.Keo.121580.Flac2496"
+}

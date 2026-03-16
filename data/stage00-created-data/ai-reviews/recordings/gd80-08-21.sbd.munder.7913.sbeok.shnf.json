@@ -1,0 +1,63 @@
+{
+  "summary": "Good‑quality soundboard capture of an inspired show – Wheel, UJB jam and a fiery Truckin’/Other One sequence shine despite occasional mix quirks.",
+  "review": "The performance is praised for its energetic first set and a second‑set monster featuring the Wheel intro, a breathtaking Uncle John’s Band reprise, and a soaring Truckin' → The Other One jam. The soundboard recording is generally solid and better than many audience tapes, though listeners note crackling, a subdued Jerry mix and drums/keys dominating at times.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (average ★4) and highlight several standout moments, while recording issues are noted but not severe enough to outweigh the musical strengths."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear; mix improves after first third. Some crackling and occasional balance problems – Jerry’s guitar can be subdued, keyboards/drums dominate, but overall better than most audience recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Wheel",
+      "Uncle John's Band",
+      "Truckin'",
+      "The Other One",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is described as hot, the second set uneven but contains a classic UJB jam and a high‑energy Wheel → UJB reprise. Overall the show is considered uneven yet very rewarding for its second‑set highlights."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work gets mixed praise – some miss his louder presence, others love his Mexican‑style improv and brilliant solo lines throughout the jam sections.",
+    "Phil": "Briefly noted for a solid ‘rumble’ on bass during the TOO intro; no major criticisms.",
+    "Bob": "Vocals described as rough and at times off‑key, detracting from harmonies.",
+    "Keys": "Keyboards are said to dominate the mix in parts, pushing back the guitar balance.",
+    "Drums": "Two drummers appear on this night, with drums sometimes overpowering the mix; a rose‑handed opening is mentioned as unusual."
+  },
+  "song_mentions": {
+    "The Wheel": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T01:57:33.843146+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-08-21.sbd.munder.7913.sbeok.shnf"
+}

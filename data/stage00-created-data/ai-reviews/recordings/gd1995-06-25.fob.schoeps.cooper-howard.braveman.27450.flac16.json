@@ -1,0 +1,31 @@
+{
+  "summary": "Recording source unknown with no reported audio issues; the concert elicits mixed feelings, praised by one reviewer as a personal milestone and dismissed by another as a band in decline.",
+  "review": "One reviewer (2 ★) bluntly calls the performance \"a band in decay\" without mentioning sound quality. Another reviewer (5 ★) passionately defends the show, sharing a personal story but offering no technical commentary. With no concrete details on recording or musical specifics, opinions are sharply divided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Reviews are contradictory (2 ★ vs 5 ★) and provide no concrete information on sound or performance details, leading to a neutral overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments about audio clarity, mix, or source; recording type cannot be determined from the reviews."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers did not discuss set structure, pacing, or specific song performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T11:06:24.396688+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-25.fob.schoeps.cooper-howard.braveman.27450.flac16"
+}

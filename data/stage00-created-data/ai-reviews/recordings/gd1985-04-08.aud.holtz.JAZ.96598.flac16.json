@@ -1,0 +1,39 @@
+{
+  "summary": "Unknown source recording of a sloppily executed show that many reviewers deem far below the Dead's usual standards",
+  "review": "The sole fan review condemns the performance as degenerate, citing sloppy playing, dragging tempos and Garcia \"gasping for air\" throughout much of the concert. No technical details about the tape are offered, leaving the recording quality ambiguous, but the overall impression is a disappointing show that fails to live up to hype.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.2,
+    "confidence": "low",
+    "rationale": "Only one negative review (2 stars) focusing on poor musical performance; no recording‑quality information, so rating reflects the strong dislike of the show."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention sound quality, mix, or source type; no specific audio issues noted."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Revolution"
+    ],
+    "setlist_flow": "Reviewer describes the first set as having a few nice moments but says the concert quickly devolves into sloppy, dragging playing for the remainder of the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar work described as \"gasping for air\" and generally sloppy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Revolution": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T03:43:03.346837+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-08.aud.holtz.JAZ.96598.flac16"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "A crusty audience recording that still captures a fiery show with a monster The Other One, tight Smokestack→Truckin' segue and soaring China Cat.",
+  "review": "The performance is widely praised – the second‑set The Other One stretches to a 25‑minute masterpiece, the transition from Smokestack Lightning into Truckin' is called “great,” and China Cat Sunflower “tears the roof off.”  Recording quality is noted as thin, organ‑light and sometimes crusty, but the energy of the band shines through.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers highlight exceptional playing (especially The Other One, Truckin' segue and China Cat) while repeatedly calling out sub‑par audience sound; the weighted average of show (70%) and recording (30%) yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Crusty PA mix with limited organ presence, occasional muffiness; overall the sound is thin but still conveys the concert’s vibe."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "China Cat Sunflower",
+      "Truckin'",
+      "Cosmic Charlie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong second‑set flow highlighted by a seamless Smokestack Lightning → Truckin' transition and an acclaimed segue into Cosmic Charlie; overall pacing energetic despite occasional rushed moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise Garcia's space‑guitar interplay on The Other One, calling it remarkable.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T02:09:36.246961+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-01-21.131517.aud.miller.flac16"
+}

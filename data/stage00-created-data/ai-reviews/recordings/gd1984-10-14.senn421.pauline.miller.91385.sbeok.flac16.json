@@ -1,0 +1,99 @@
+{
+  "summary": "High‑quality audience taping captures a strong fall‑84 show highlighted by stellar performances of Miracle, Estimated → Eyes, China Cat → Rider and a soaring Row Jimmy.",
+  "review": "The Miller audience recording is praised for its clarity and solid tape work, delivering a listenable sound despite occasional PA thinness. Musically the concert shines with standout moments – the rare first‑set Miracle, the expansive Estimated → Eyes jam, a flowing China Cat → Rider sequence, and an inspired Row Jimmy in the second set – while a few slips (drummer timing, a forgotten lyric in High Time) keep it from being perfect.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All six reviews rate the show 4‑5 stars, consistently praising both performance and tape quality; minor criticisms are limited to occasional musical slips, so the combined weighting yields a strong above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Miller taping praised as \"best sounding\" and \"tremendous job\", with overall clear balance; some listeners note PA thinness that limits full frequency range but does not detract significantly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Miracle",
+      "Estimated > Eyes",
+      "China Cat > Rider",
+      "Row Jimmy",
+      "High Time (after initial slip)",
+      "Dire Wolf"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds from Dupree's Diamond Blues and Miracle into a solid mid‑set, while the second set delivers a high‑energy arc through China Cat, Rider, Slipknot and an expansive Estimated → Eyes jam before closing with memorable Row Jimmy."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and soloing are praised; occasional slip-ups noted (forgot first line of High Time, cut off by drummer).",
+    "Phil": "Bass response highlighted as tremendous and well‑felt throughout the show.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s synth/phase‑shifter experiments get mixed mentions – interesting but sometimes annoying.",
+    "Drums": "Drummers generally strong (wonderful jam into drums), though a few timing misses are mentioned."
+  },
+  "song_mentions": {
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sampson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T22:31:23.299519+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-14.senn421.pauline.miller.91385.sbeok.flac16"
+}

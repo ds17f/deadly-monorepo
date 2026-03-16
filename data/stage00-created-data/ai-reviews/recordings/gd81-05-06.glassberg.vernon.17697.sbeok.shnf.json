@@ -1,0 +1,95 @@
+{
+  "summary": "Sparkling audience tape captures an incendiary 1981 show where He's Gone → Caution → Spanish Jam blaze, with Jerry's soaring guitar and a second‑set that rips.",
+  "review": "The fan‑recorded (AUD) source is generally praised for its clarity and sparkle, though a few listeners note a tinny mix and low drums. Musically the concert is lauded as one of the era’s finest – the post‑He’s Gone jam, High Time, Jack‑a‑Roe, Let It Grow and the legendary Caution/Spanish sequence are repeatedly highlighted. Overall the performance is described as hot, energetic, and a must‑listen for any serious Deadhead.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average star rating ≈4.2 across 30 reviews; overwhelmingly positive comments on the show (70% weight) and mostly favorable remarks about the audience recording quality (30% weight)."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers describe the AUD as sparkling, crisp and better than many official releases; a few note tinny highs, low drum/vocal mix and occasional reverb, but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Caution Jam",
+      "Spanish Jam",
+      "High Time",
+      "Jack-a-Roe",
+      "Let It Grow",
+      "Cassidy",
+      "The Other One",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Alabama",
+      "Greatest Story"
+    ],
+    "setlist_flow": "The first set builds nicely and segues into a monster second set; after He's Gone the band launches into an epic Caution‑Spanish jam that propels the night, making the set flow feel like a continuous, high‑energy journey."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for fire, soaring solos and inventive guitar tones (especially on He's Gone, High Time, Jack‑a‑Roe and the Spanish jam).",
+    "Phil": "",
+    "Bob": "Noted for vocal dedication of He's Gone to Bobby Sands; occasional comments about his vocals being buried in the mix.",
+    "Keys": "Brent's playing highlighted as coming into his own, with unique guitar‑like tones on Cassidy and other cuts.",
+    "Drums": "Several reviewers mention drums are low or muffled in the AUD mix, though the overall drum performance (especially during Space/Other One) is praised."
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Caution Jam": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Spanish Jam": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "High Time": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Let It Grow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cassidy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Alabama": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Greatest Story": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T11:03:35.083952+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-05-06.glassberg.vernon.17697.sbeok.shnf"
+}

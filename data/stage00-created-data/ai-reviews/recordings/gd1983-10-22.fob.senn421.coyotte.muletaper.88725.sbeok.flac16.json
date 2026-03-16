@@ -1,0 +1,57 @@
+{
+  "summary": "Outstanding audience recording captures a fiery 1983 upstate‑NY show with a Crazy Fingers tease, soaring Bird Song and an electrifying Drums→Space sequence.",
+  "review": "The tapes, recorded by Rick and Tom (often cited as “Coyotte”), deliver crystal‑clear audience sound that even preserves a rare 15‑second Space‑Odyssey tuning before Terrapin. Musically the concert is hailed as one of the best fall‑tour outings – Jerry’s worn‑out yet snarling guitar work, Bob’s graceful vocals, and highlight moments like Crazy Fingers into China Cat, Bird Song and an inspired Drum/Space jam make it a must‑listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All seven reviews are strongly positive, praising both the performance (standout songs, energetic playing) and the audio quality (crisp audience capture). The weighted average of show (≈4.5) and recording (≈4.3) yields a 4.4 rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Very clear, well‑balanced audience mix; occasional venue echo noted but overall crisp. Includes an unusual ~15 sec Space‑Odyssey tuning before Terrapin that most other versions omit."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Bird Song",
+      "Drums > Space",
+      "Wang Dang Doodle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong opener with a snarling Shake‑and‑Bake into Wang Dang Doodle, followed by a second set that builds to a soaring Bird Song and an intense Drum/Space climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as sounding worn out yet snarling and graceful; his Crazy Fingers tease is highlighted.",
+    "Phil": "",
+    "Bob": "Praised for graceful vocal work alongside Jerry’s guitar, especially on the opener and Bird Song.",
+    "Keys": "",
+    "Drums": "The Drum segment leading into Space receives specific praise."
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums > Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T13:50:49.445631+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-22.fob.senn421.coyotte.muletaper.88725.sbeok.flac16"
+}

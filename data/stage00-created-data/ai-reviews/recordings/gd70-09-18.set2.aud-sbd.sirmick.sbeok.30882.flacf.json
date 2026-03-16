@@ -1,0 +1,81 @@
+{
+  "summary": "Mixed matrix recording – rough audience‑only first set but excellent soundboard second half; the concert dazzles with a monster Other One, soaring St Stephen > Not Fade Away and a 21‑minute Good Lovin'.",
+  "review": "The performance is widely praised for its song selection and inspired playing, highlighted by an epic Other One, a blistering St Stephen into Not Fade Away, and a marathon Good Lovin' that keeps the energy high. Recording quality is uneven: the opening audience tape is described as crummy, while the later soundboard portion sounds crisp and full‑band. Fans recommend skipping the first set for pure audio fidelity but still value its historic crowd ambience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Show quality is rated very high (4‑5 stars) while recording quality averages lower due to the poor first‑set audience tape; weighted combination yields a solid 3.8."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "First set captured from the audience is muddy and noisy, but the soundboard portion (starting around Me & My Uncle) is clear, crisp, and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "St. Stephen > Not Fade Away",
+      "Good Lovin'",
+      "Me & My Uncle",
+      "Sugar Magnolia",
+      "Casey Jones",
+      "Operator",
+      "Cryptical Envelopment > Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set builds strong energy early, peaks with the lengthy Other One and Good Lovin', and maintains momentum through classic second‑set sequences."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is highlighted – a spectacular solo on St Stephen and a fierce, extended lead during the Other One.",
+    "Phil": "Phil Lesh’s bass comes through loud and clear, especially notable in the audience recording of the first set.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen > Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Operator": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment > Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T22:54:34.744624+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-09-18.set2.aud-sbd.sirmick.sbeok.30882.flacf"
+}

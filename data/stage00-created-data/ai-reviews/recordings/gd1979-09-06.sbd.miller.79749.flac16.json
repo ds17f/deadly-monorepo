@@ -1,0 +1,75 @@
+{
+  "summary": "Solid soundboard recording with a standout China > Rider jam and strong second‑set transitions, though some songs feel flat and the mix needs a touch of reverb.",
+  "review": "The three‑night run captured on this SBD tape delivers an exciting second set highlighted by a smoking China > Rider sequence, the Playin’ → Drums → Space → NFA → Stella Blue flow and a raucous Ramble On Rose. The soundboard is generally clear but a bit dry, with occasional amp‑blow glitches and listeners noting that added reverb would improve sustain. While most fans rave about the jams, a few criticize the lack of energy on certain numbers (Minglewood, Sailor > Saint) and note vocal strain from Garcia.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Ten detailed reviews give an average of 3.6 stars; the majority praise the musical performance while a few flag recording mix issues and weak song moments, leading to a solid but not stellar overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD capture with occasional amp‑blow glitch and a dry mix that could benefit from added reverb; no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Rider",
+      "Playin' > Drums > Space > NFA > Stella Blue",
+      "Ramble On Rose",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [
+      "Minglewood",
+      "Sailor > Saint"
+    ],
+    "setlist_flow": "First set solid but uneven; second set shines with creative transitions (China > Rider, Playin’ → Drums → Space → NFA → Stella) and high energy, though a few moments feel flat."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone and extended solo receive praise, but vocal performance is noted as strained in the later part of the show.",
+    "Phil": "Comments about house lights being on all night and a memorable turtle‑handing moment; no specific musical critique.",
+    "Bob": "Power amp blew during the China/Rider jam, leading to a quick fix onstage; odd phrasing on his Minglewood lyrics noted.",
+    "Keys": "Brent-era keyboards get credit for strong interplay in the China > Rider jam, with some reviewers preferring the fuller Keith‑era sound.",
+    "Drums": "Motorcycle revs and a Hell’s Angel chopper add theatrical flair during the drums segment; drum work itself is praised."
+  },
+  "song_mentions": {
+    "China > Rider": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' > Drums > Space > NFA > Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T23:26:52.964863+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-09-06.sbd.miller.79749.flac16"
+}

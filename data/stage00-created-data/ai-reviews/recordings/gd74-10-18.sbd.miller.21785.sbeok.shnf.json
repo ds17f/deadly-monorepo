@@ -1,0 +1,39 @@
+{
+  "summary": "Unknown-source recording captures a great show with a highlight‑worthy Morning Dew performance.",
+  "review": "The reviewer rates the concert four stars and calls it a \"great show all around,\" specifically praising the rendition of Morning Dew. While no technical details are given, the positive tone suggests an enjoyable listening experience, and the mention of video footage hints that the performance was notable enough to be filmed.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Single 4‑star review highlights a strong show with no noted recording flaws; rating reflects good musical performance and presumed adequate sound quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments on sound clarity or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the overall concert as great with no noted pacing issues."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T01:26:37.246313+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-10-18.sbd.miller.21785.sbeok.shnf"
+}

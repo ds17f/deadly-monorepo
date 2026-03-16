@@ -1,0 +1,73 @@
+{
+  "summary": "A solid sound‑board capture (with a noticeable left‑channel bass‑drum click) that delivers a scorching Help > Slip > Franklin’s and strong Attics highlights.",
+  "review": "The recording is a digital SBD that generally sounds good, though the left‑side bass drum clicks and occasional dropouts keep it from being pristine. Musically the show shines on the opening Help/Slip/Franklin sequence, the Eyes → Attics pairing and a few fiery moments from Jerry, while Let It Grow and some second‑set transitions feel uneven. Overall the performance is enjoyable for a 1994 run but marred by a few technical quirks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Large number of reviews (24) with consistent praise for the setlist and Jerry’s playing balanced against repeated complaints about bass‑drum clipping and occasional dropouts; weighting favors show quality, yielding a modestly positive overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Digital SBD with generally good balance, but left‑channel bass drum pops (“click”) throughout and several digital dropouts (notably during Let It Grow). Some listeners note a slightly flat overall tone."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower",
+      "Eyes",
+      "Attics"
+    ],
+    "poor_songs": [
+      "Let It Grow"
+    ],
+    "setlist_flow": "A fiery opener with Help/Slip/Franklin sets a high bar, the first set stays solid but loses momentum on Let It Grow; the second set delivers strong Eyes and Attics moments but overall feels uneven, typical of many 1994 shows."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for hot guitar tone, soaring solos (especially on Franklin's) and a loud, joyful presence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince is mentioned fondly (the “Stella” reference) and remembered for his keyboard work during this run.",
+    "Drums": "Bass drum on the left channel clicks loudly; several reviewers blame Mickey’s mix choices. Bill’s drumming otherwise not called out."
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Attics": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eyes": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Let It Grow": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Lazy River Road": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T19:45:28.938373+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-03-06.sbd.kidder.8332.sbeok.shnf"
+}

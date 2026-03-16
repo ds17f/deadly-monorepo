@@ -1,0 +1,90 @@
+{
+  "summary": "High‑energy New Year’s Eve 1971 show captured from a crisp FM broadcast; stellar performances (The Other One → Me & My Uncle → The Other One, NFA>GDTRFB>NFA) outweigh minor speed/DJ chatter issues.",
+  "review": "This December 31 1971 Winterland broadcast delivers an electrifying set – the opening Dancin’ and the space‑filled Other One sequence are legendary, and the Not Fade Away → Goin’ Down The Road sandwich is a highlight.  The FM source is surprisingly clear with good balance, though some listeners note slight pitch inconsistencies and occasional DJ banter.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, the vast majority are 5‑star praises of the musical performance; recording issues (speed/chatter) are noted but do not detract from overall enjoyment."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clear FM broadcast mix with good instrument separation; occasional DJ chatter and reported slight speed/pitch variations (\"chipmunk\" effect) on some tracks, but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One > Me & My Uncle > The Other One",
+      "Not Fade Away > Goin' Down the Road > Not Fade Away",
+      "Dancin'",
+      "Big River (first performance)",
+      "China Cat > Rider"
+    ],
+    "poor_songs": [
+      "Same Thing (mixed opinions)"
+    ],
+    "setlist_flow": "A high‑octane New Year's set that builds from a punchy Dancin’ opener through a jam‑heavy first half, then launches into an epic second set with seamless transitions (Space → Black Peter, NFA sandwich) and a strong finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring leads on Tennessee Jed, Loser, Dancin’, and the fluid solo in The Other One; occasional lyric slip‑ups noted but overall stellar.",
+    "Phil": "Recognized for crisp bass work early in the show and driving lines on China Cat; some reviewers miss his piano/keyboards in the mix.",
+    "Bob": "Bobby’s charismatic vocals (The Same Thing, rap intros) and guitar chops highlighted; praised for humor and energy throughout.",
+    "Keys": "Keith’s new piano adds depth and space‑filled fills; a few comments about it being buried in the FM mix but generally appreciated for enhancing the new 1971 sound.",
+    "Drums": "Bill (drummer) lauded for furious, rolling drumming on NFA sandwich, Truckin’, and overall high energy; described as “killing” the kit."
+  },
+  "song_mentions": {
+    "The Other One > Me & My Uncle > The Other One": {
+      "positive_mentions": 12,
+      "negative_mentions": 1,
+      "total_mentions": 13
+    },
+    "Not Fade Away > Goin' Down the Road > Not Fade Away": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Dancin'": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Big River": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Same Thing": {
+      "positive_mentions": 4,
+      "negative_mentions": 2,
+      "total_mentions": 6
+    },
+    "Casey Jones": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Jack Straw": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-20T11:35:57.336407+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-12-31.fm.lanum.135.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Highly praised show featuring a standout Scarlet Begonias → Fire on the Mountain combo; recording quality not detailed",
+  "review": "The reviewer gives the concert five stars, highlighting it as their first experience with a 'Scarlet Fire' and expressing strong gratitude for the copy. No technical details about the source or sound quality are mentioned, so the recording assessment remains uncertain.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic five‑star review; strong positive sentiment about the performance but no information on audio quality, leading to a solid yet cautious rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments regarding sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Not specified"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T04:17:03.019547+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-12-09.aud.vinson.81379.flac16"
+}

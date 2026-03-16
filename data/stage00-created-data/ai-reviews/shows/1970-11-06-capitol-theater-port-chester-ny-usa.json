@@ -1,0 +1,71 @@
+{
+  "summary": "Scorching Alligator jam, double‑Good Lovin’ and tight second set",
+  "blurb": "The Capitol Theatre show delivers a powerhouse electric second set highlighted by an explosive Alligator jam and a high‑octane Good Lovin' sandwich around The Main Ten. Jerry’s blues‑y guitar tone is on fire, while the Rhythm Devils drive the extended jams. Recommended for fans of the early‑70s Dead energy.",
+  "review": "On November 6, 1970 at the Capitol Theatre in Port Chester, the Grateful Dead turned up the heat with a second set that still feels fresh after five decades. The night erupts with “Alligator,” where Jerry Garcia’s razor‑sharp tone and snap‑crackle solo cut through the mix, feeding into an unrelenting jam that rolls straight into “Waggin’” territory before launching into a double‑dose of “Good Lovin'” bookended by a stellar Main Ten. Pigpen’s blues swagger shines on “I’m A King Bee,” and the dual drumming of Mickey Hart and Bill Kreutzmann propels the band forward, especially during the tight “Not Fade Away”/“Goin’ Down The Road Feeling Bad” medley that rolls into “Caution (Do Not Stop On Tracks).” While the audience recordings vary in fidelity—some sections are hissy or speed‑fluctuated—the overall performance is consistently praised for its energy, tightness, and the joyous vibe that radiates from the stage. For anyone wanting a taste of the Dead’s early‑70s electric surge, this show stands out as a must‑listen despite its imperfect tape source.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 45,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Multiple recordings highlight standout songs (Alligator, Good Lovin', Casey Jones, King Bee) and praise Jerry's guitar tone and the Rhythm Devils' drive, with no consistent negative comments about performance. Positive language appears across three of four sources, while mixed sentiments stem mainly from recording quality, not musical execution.",
+      "final_calculation": "2.5 + 0.3 + 1.4 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-11-06.aud.warner.17183.sbeok.shnf",
+    "reason": "Most complete audience tape covering the full set; despite fair quality it captures the energy and key moments clearly enough to serve as the definitive listening source."
+  },
+  "key_highlights": [
+    "Scorching Alligator jam that fuels an extended Waggin' segment.",
+    "High‑octane Good Lovin' sandwich around The Main Ten, showcasing peak band chemistry.",
+    "Pigpen’s bluesy King Bee and strong Rhythm Devils propulsion throughout the second set.",
+    "Overall electric surge with tight transitions despite the gritty audience tape."
+  ],
+  "song_highlights": [
+    "Alligator",
+    "Good Lovin'",
+    "Casey Jones",
+    "I'm A King Bee",
+    "The Main Ten",
+    "Not Fade Away"
+  ],
+  "band_performance": {
+    "Jerry": "Explosive guitar tone with snap‑crackle soloing on Alligator and wicked blues riffs throughout, especially on Good Lovin'.",
+    "Phil": "",
+    "Bob": "",
+    "Pigpen": "Adds gritty blues texture on King Bee and harmonica accents that drive the jams forward.",
+    "Mickey": "Provides propulsive rhythmic foundation; his interplay with Bill fuels the extended jams.",
+    "Billy": "Sharp, driving drumming that underpins the high‑energy second set, especially during Alligator and Not Fade Away."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-20T00:43:59.784695+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Alligator",
+      "Not Fade Away",
+      "Goin' Down The Road Feeling Bad",
+      "Not Fade Away",
+      "Caution (Do Not Stop On Tracks)",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Good Lovin'",
+      "Drums",
+      "The Main Ten",
+      "Drums",
+      "Good Lovin'"
+    ],
+    [
+      "Casey Jones"
+    ],
+    [
+      "I'm A King Bee"
+    ]
+  ]
+}

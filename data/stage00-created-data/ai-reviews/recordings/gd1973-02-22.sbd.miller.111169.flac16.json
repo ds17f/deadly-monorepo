@@ -1,0 +1,61 @@
+{
+  "summary": "Well‑mixed matrix feed with crystal‑clear vocals and a killer pit band; Dark Star, Eyes of the World and Bird Song shine.",
+  "review": "The recording is a stage‑mix (matrix) captured from the mains and cleaned up by Charlie Miller, delivering excellent clarity—especially on the vocals—and only occasional ambient chatter. Musically the show is praised for its strong first set, sweet second set and standout performances of Dark Star, Eyes of the World and Bird Song, though one reviewer felt it fell short of a nearby Dane County concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "12 out of 18 reviews are 4‑5 stars and highlight both superb musical moments and a high‑quality matrix recording; only a few low‑star comments note overall inferiority without specific faults."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Stage‑mix feed from the mains, not a true soundboard; cleaned up by Charlie Miller, resulting in crisp vocals and clear instrument separation. Minor ambient crowd chatter present; occasional odd instrument (singing saw) noted but does not detract."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Eyes of the World",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, well‑structured first set followed by a sweet second set; killer pit band adds drive. Some listeners compare it unfavorably to the 2‑15‑73 Dane County show, citing less forward momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is repeatedly praised for its intensity, tone and improvisational brilliance, especially during Dark Star.",
+    "Phil": "Lesh’s bass work receives positive nods, noted for adding depth and backing vocals in several songs.",
+    "Bob": "Weir’s rhythm guitar and vocal contributions are mentioned favorably, particularly on Bird Song and other ensemble moments.",
+    "Keys": "Keith (and later Brent) piano is highlighted for its counter‑point and underlying texture throughout the set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around & Around": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T05:34:58.574696+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-02-22.sbd.miller.111169.flac16"
+}

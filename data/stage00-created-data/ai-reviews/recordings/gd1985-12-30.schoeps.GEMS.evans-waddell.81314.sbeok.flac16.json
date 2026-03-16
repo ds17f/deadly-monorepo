@@ -1,0 +1,39 @@
+{
+  "summary": "A very good front‑of‑house capture that delivers a solid show, with the Mighty Quinn breakout as the standout moment.",
+  "review": "The recording is praised for its lively, concert‑like feel – a well‑executed FOB mix using Schoeps microphones that sounds much fuller than a typical board tape. The performance is described as solid and looser than usual pre‑NYE shows, with a happy Mighty Quinn breakout despite a few minor lulls.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All four reviewers give 4–5 stars and highlight both strong musical moments and good‑to‑very‑good recording quality, leading to a combined rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "FOB capture with Schoeps/PCM gives a live vibe; not as crystal clear as a pure soundboard but very listenable and captures room ambience. Reviewers note it sounds ‘very good’, ‘wonderful’, and an excellent example of 1985 technology."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Mighty Quinn"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall solid performance with a looser, pre‑NYE feel; a few minor derailments and lulls are mentioned but do not detract from the overall enjoyment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Mighty Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T12:12:31.748926+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-12-30.schoeps.GEMS.evans-waddell.81314.sbeok.flac16"
+}

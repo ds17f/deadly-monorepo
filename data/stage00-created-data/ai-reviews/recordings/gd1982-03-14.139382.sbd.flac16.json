@@ -1,0 +1,39 @@
+{
+  "summary": "Average soundboard capture of a modest show that includes a sweet Phil‑birthday tease but lacks the usual jam intensity; the audience mix is preferred.",
+  "review": "The recording is a complete soundboard source, though listeners note it isn’t especially clear and prefer the audience version for fidelity. Musically the concert offers a brief happy‑birthday moment in space and a decent‑looking second‑set setlist that never really goes wild, leaving the show feeling average overall.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Only one review provides limited detail; it rates the performance and recording around average (3‑star rating), leading to a modest combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer says the board isn’t the best, noting clarity issues and preferring the audience recording; however it is complete."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Happy Birthday (tease)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second‑set list looks good on paper but never gets very jam‑heavy; overall the concert feels restrained with limited improvisation."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Birthday tease in space noted as a nod to Phil’s March 15 birthday.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Happy Birthday": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T18:54:47.227587+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-03-14.139382.sbd.flac16"
+}

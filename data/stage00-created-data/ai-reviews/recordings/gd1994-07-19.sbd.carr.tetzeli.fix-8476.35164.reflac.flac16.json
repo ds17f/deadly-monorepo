@@ -1,0 +1,96 @@
+{
+  "summary": "Pristine digital soundboard captures a mid‑90s set highlighted by an epic Playin>Drumz>Wharf Rat jam and stellar Throwing Stones, though the first set is marred by weak Easy Answers and Broken Arrow.",
+  "review": "The recording is a crystal‑clear digital SBD that lets every guitar line, keyboard, and drum be heard distinctly. Musically the show shines in the second half – the Playin>Drumz>Wharf Rat sequence, Throwing Stones, Wharf Rat and the rare Rain cover are repeatedly praised – but the first set stalls with Easy Answers, Broken Arrow and a tired Jerry vocal on some Beatles numbers.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Recording quality is unanimously described as excellent (soundboard, crystal‑clear), which scores high. Show quality is generally strong with several standout jams, but recurring criticism of a few songs drags the overall musical rating down, yielding an overall 4‑star assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Digital SBD is described as crystal‑clear with all three guitars distinct; no dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin > Drumz > Wharf Rat",
+      "Throwing Stones",
+      "Wharf Rat",
+      "Rain",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Easy Answers",
+      "Broken Arrow"
+    ],
+    "setlist_flow": "First set opens strong with Shakedown but loses momentum in the middle and ends on weaker choices (Easy Answers, Broken Arrow). The second set builds dramatically to a massive Playin jam and closes powerfully, delivering several high points despite occasional vocal wear."
+  },
+  "band_member_comments": {
+    "Jerry": "His grizzled voice adds character to Wharf Rat but some reviewers note his vocals sounded tired on the Beatles numbers.",
+    "Phil": "",
+    "Bob": "Bobby (Bob Weir) is singled out for outstanding playing throughout the show.",
+    "Keys": "Keyboards are noted as clear and well‑balanced in the mix, contributing to the overall crisp sound.",
+    "Drums": "The Drumz segment receives high praise; reviewers love the precise, percussion‑heavy jam and even mention ambient insect sounds adding texture."
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "I Want to Tell You": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin > Drumz > Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Answers": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Broken Arrow": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T23:38:50.745826+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-19.sbd.carr.tetzeli.fix-8476.35164.reflac.flac16"
+}

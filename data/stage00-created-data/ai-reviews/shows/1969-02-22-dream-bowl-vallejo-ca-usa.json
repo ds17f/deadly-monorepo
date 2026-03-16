@@ -1,0 +1,66 @@
+{
+  "summary": "Soaring Dark Star, tight Eleven, seamless segues throughout",
+  "blurb": "The Dream Bowl show delivers a soaring Dark Star, a blistering The Eleven and a fluid Mountains Of The Moon transition. Jerry’s guitar tone is immaculate while the rhythm section locks in on the high‑energy second set. Recommended for anyone seeking a top‑ten ’69 performance.",
+  "review": "On February 22 1969 at Vallejo’s Dream Bowl, the Grateful Dead unleashed one of their most electrifying early‑’69 outings. The first set launches with Dupree’s Diamond Blues into a flawless Mountains Of The Moon → Dark Star sequence that builds into a cosmic crescendo, highlighted by Jerry Garcia’s “man possessed” lead work and a crystal‑clear guitar tone some fans swear sounds like a Gibson SG. After an inspired Cryptical Envelopment sandwich and The Other One, the band closes the set with a heartfelt Death Don’t Have No Mercy. The second set is pure kinetic energy: Doin’ That Rag → Saint Stephen segues straight into a driving Eleven where Mickey Hart’s precise percussion shines, culminating in a jubilant Turn On Your Lovelight. Across three soundboard sources the performance is consistently praised as “top‑ten 1969,” with no significant musical flaws – only minor edits or pitch‑correction quirks on some releases. This show stands out not just for its improvisational peaks but also for the tight, supportive rhythm section and a set flow that feels seamless from start to finish.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 65,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All three recordings are described with strongly positive language – \"top‑ten 1969 show,\" \"stellar,\" \"legendary\" – and each highlights the same peak moments (Dark Star, The Eleven, Mountains of the Moon). No negative comments about musical performance appear, so a robust +1.6 adjustment reflects consistent high praise across sources.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1969-02-22.sbd.miller.112691.flac16",
+    "reason": "Crystal‑clear, excellent soundboard with superb instrument separation; captures the full energy of a top‑ten ’69 performance without dropouts."
+  },
+  "key_highlights": [
+    "Soaring Dark Star with immaculate guitar tone and dynamic mix",
+    "The Eleven’s driving rhythm and Mickey Hart’s precise percussion finale",
+    "Seamless Mountains Of The Moon → Dark Star transition and Doin' That Rag > Saint Stephen > The Eleven sequence",
+    "High‑energy second set that ranks among the band’s best early ’69 outings"
+  ],
+  "song_highlights": [
+    "Mountains Of The Moon",
+    "Dark Star",
+    "The Other One",
+    "Doin' That Rag",
+    "Saint Stephen",
+    "The Eleven"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers a superb, fluid lead tone that many describe as ‘man possessed’; his phrasing is crystal‑clear and he even adds a spoken intermission announcement that heightens the cosmic vibe.",
+    "Phil": "Lesh’s bass is notably clearer on this remaster, providing solid support especially during The Eleven after removal of earlier distortion.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Hart’s percussion shines on The Eleven finale, noted for its precision and energetic drive throughout the second set.",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-24T11:44:09.152030+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dupree's Diamond Blues",
+      "Mountains Of The Moon",
+      "Dark Star",
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "Cryptical Envelopment",
+      "Death Don't Have No Mercy"
+    ],
+    [
+      "Doin' That Rag",
+      "Saint Stephen",
+      "The Eleven",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

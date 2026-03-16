@@ -1,0 +1,62 @@
+{
+  "summary": "Crisp soundboard capture of the long 1989 Frost Amphitheatre show with strong performances of “He’s Gone” and a hellacious “Space > The Other One”, but marred by a channel‑swap issue and a weak “Picasso Moon”.",
+  "review": "This SBD recording is generally clear and bright, delivering the power of Jerry’s lead on “He’s Gone” and an exciting “Space > The Other One” sequence. Reviewers praise the overall sound quality and the show’s length, though some note a left/right channel reversal and criticize the lackluster “Picasso Moon”. Overall it’s a solid but not flawless representation of the night.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑star marks and highlight strong musical moments, while a few point out recording quirks and a weak performance of Picasso Moon; the weighted average falls in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear vocals and instrument separation; slightly bright/high‑end tone. One reviewer notes a left/right channel reversal (keyboards on the wrong side) that can be distracting. Another mentions speaker imbalance in competing sources but favors this board for streaming."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Space > The Other One"
+    ],
+    "poor_songs": [
+      "Picasso Moon"
+    ],
+    "setlist_flow": "A very long, varied set that keeps the energy high; the second half builds into a powerful “Space > The Other One” jam. Some songs (e.g., Picasso Moon) are perceived as weaker, but overall pacing is engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as feeling the music deeply on \"He's Gone\" and delivering strong lead work throughout.",
+    "Phil": "Less prominent on this recording than usual; a reviewer noted he’s not as forward in the mix.",
+    "Bob": "",
+    "Keys": "Channel reversal puts keyboards on the opposite side, which some listeners find intolerable.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim or the Crime": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Space > The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T19:25:53.131548+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-05-07.sbd.gardner.3329.sbefail.shnf"
+}

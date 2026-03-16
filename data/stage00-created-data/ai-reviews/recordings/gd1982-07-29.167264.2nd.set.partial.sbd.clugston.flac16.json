@@ -1,0 +1,45 @@
+{
+  "summary": "Good soundboard capture of the long‑awaited second set featuring shredding Jerry solos on Cold Rain & Snow and Samson & Delilah.",
+  "review": "The partial second‑set recording finally completes the missing tracks, delivering a clear soundboard source that lets listeners hear Jerry Garcia’s soaring solos. Reviewers highlight the standout performances of “Cold Rain & Snow” and “Samson & Delilah,” and no technical flaws are reported.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Single positive review (4 stars) praises both the performance and the soundboard quality; limited data leads to a cautious rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear soundboard recording, no reported flaws or dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain & Snow",
+      "Samson & Delilah"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Partial second set now complete, providing a satisfying continuation of the concert flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solos are described as shredding and outstanding.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T22:15:52.830317+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-07-29.167264.2nd.set.partial.sbd.clugston.flac16"
+}

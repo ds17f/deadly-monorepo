@@ -1,0 +1,63 @@
+{
+  "summary": "Soundboard recording captures a high‑energy 1987 show with standout performances of Crazy Fingers, Saint of Circumstance and the Bucket → Scarlet → Fire sequence.",
+  "review": "Both reviewers rave about the youthful power of this late‑'80s era Dead, noting Jerry’s renewed vocal fire, Brent’s growing keyboard presence, and a tight rhythm section. The set delivers high‑octane renditions of Crazy Fingers, Saint of Circumstance, China Doll, Masterpiece and a ripping Bucket>Scarlet>Fire, while the soundboard source is described as clear and present with no notable flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Both reviews are strongly positive (4‑5 stars). The musical performance is described as energetic and featuring several standout songs, while the recording is praised as a solid soundboard capture with good clarity."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it a \"board\" that has been listened to regularly; mentions presence of band and audience, no drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Saint of Circumstance",
+      "China Doll",
+      "Masterpiece",
+      "Bucket > Scarlet > Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is praised for its youthful, powerful vibe and a solid 90‑minute second set that keeps the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Renewed voice and vocal alacrity; guitar work described as aggressive and energetic.",
+    "Phil": "Described as \"bubbly\" on bass.",
+    "Bob": "Aggressive rhythm‑guitar playing noted.",
+    "Keys": "Brent’s keyboard work is highlighted – backup vocals up a notch and coming into his own after years with the band.",
+    "Drums": "Bill and Mickey are said to be \"on point\"."
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bucket > Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T23:16:40.541449+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-06-21.set1aud-set2sbd.clugston.13567.sbeok.shnf"
+}

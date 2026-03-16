@@ -1,0 +1,83 @@
+{
+  "summary": "Solid soundboard capture with heavy drumming and Brent’s organ, highlighted by a fiery Samson & Delilah and trippy Wharf Rat despite a few audience‑only sections.",
+  "review": "The recording is essentially a clean board mix, though the reviewer suggests skipping the audience‑only portions of “Promised Land” and “Loser.” Musically the show shines – a mellow Terrapin intro, a dancing Scarlet>Fire, a slide‑laden Samson & Delilah, and an expansive Wharf Rat jam that showcases each member’s improvisational spark.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "The single detailed review praises the musical performance strongly while noting only minor recording hiccups, leading to a high show rating and a good‑but-not‑perfect recording score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall solid board sound with clear instrument separation; audience bleed on “Promised Land” and “Loser,” plus a brief dead‑air gap between first‑set songs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson & Delilah",
+      "Wharf Rat",
+      "Scarlet > Fire",
+      "Terrapin (intro)",
+      "Sailor > Saint"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set builds a high‑energy groove with heavy drumming, Brent’s organ swells and the band splitting into exploratory directions before reconvening on Wharf Rat."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is noted weaving his guitar alongside Phil during the extended jam.",
+    "Phil": "Phil’s bass lines drive the “Around” section and he’s described as heading one way in the improvisation.",
+    "Bob": "Weir is mentioned as splitting the difference, contributing to the balanced rhythm section.",
+    "Keys": "Brent’s organ work is highlighted, especially on the jam that leads into Wharf Rat.",
+    "Drums": "Heavy, funk‑laden drumming carries through the set and fuels the trippy space sections."
+  },
+  "song_mentions": {
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin (intro)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T23:36:59.949657+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-10-24.151424.sbd.gems.flac16"
+}

@@ -1,0 +1,80 @@
+{
+  "summary": "Good‑quality audience recording of a vibrant 1981 show with standout Scarlet Begonias/Fire on the Mountain and a strong first set, though the tape lacks bass and has thin keyboards.",
+  "review": "The tapes capture an energetic 1981 performance where fans rave about the tight first‑set selections—Friend of the Devil, El Paso, Cumberland Blues, Music Never Stopped—and a killer second half featuring Scarlet Begonias, Fire on the Mountain and Black Peter. The audience source is generally clear, but listeners note missing Phil’s bass and a tinny Brent keyboard tone, while drums sit low in the mix.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the show’s song selection and energy (70% weight) and describe the audience recording as decent to good despite missing bass and thin keyboards (30% weight), yielding an overall rating just under 4 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough for most of the jam, but lacks bass, drums are low, and keyboards sound tinny; a splice is noted on the companion SBD but not on this AUD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Friend of the Devil",
+      "El Paso",
+      "Cumberland Blues",
+      "Music Never Stopped",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Excellent tune selection with a vibrant first set and a second‑set that ramps up energy, highlighted by Scarlet/Fire and a strong Black Peter finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Hypnotic, extended guitar solo praised; described as exciting and melodic.",
+    "Phil": "Bass is largely absent in this audience recording; reviewers note the lack of Phil's low end.",
+    "Bob": "",
+    "Keys": "Brent's six‑note lick noted as tinny; keyboards present but thin.",
+    "Drums": "Some drum presence audible but generally low and under‑represented."
+  },
+  "song_mentions": {
+    "Lost Sailor": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T14:47:28.732348+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-09-25.aud.jim.13725.sbeok.shnf"
+}

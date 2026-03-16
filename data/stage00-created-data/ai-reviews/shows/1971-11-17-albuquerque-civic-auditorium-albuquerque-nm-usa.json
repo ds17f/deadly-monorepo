@@ -1,0 +1,58 @@
+{
+  "summary": "High‑energy ’71 set with soaring Other One and vibrant Keith piano",
+  "blurb": "The show bursts with nonstop drive, highlighted by a monumental The Other One and a bright Ramble On Rose. Jerry’s bluegrass‑style picking fuels the jams while Billy lays down an animal groove. Keith’s piano adds color throughout the three‑hour marathon.",
+  "review": "On November 17, 1971 at the Albuquerque Civic Auditorium the Dead delivered a blistering three‑hour performance that still feels fresh decades later. The first set rolls through classic rockers like Truckin’, Sugaree and a rousing Playing In The Band before segueing into a second set where the magic truly ignites. A soaring, improvisational trek through The Other One—bookended by an exuberant Ramble On Rose—showcases Jerry Garcia on a three‑hour roll, his animated bluegrass picking driving the band forward. Phil Lesh adds heat with his bass lines, while Billy Kreutzmann is described as “an animal” on drums, anchoring the wild excursions. Keith Godchaux’s piano shines, providing beautiful, piano‑led sections that lift the jams to new heights. Though captured only from an audience FM broadcast with fair fidelity, the recording still conveys the show’s kinetic energy and tight transitions.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 14,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "All available analysis (one audience FM capture) uses positive language—‘high‑energy’, ‘soaring Other One’, ‘vibrant Keith piano’—and highlights no weak spots, indicating a generally favorable impression of the performance.",
+      "final_calculation": "2.5 + 0.1 + 0.8 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd71-11-17.fm.cotsman.10285.sbeok.shnf",
+    "reason": "Despite being an audience FM capture, it reliably conveys the high‑energy set and includes the standout Other One and Keith’s piano moments."
+  },
+  "key_highlights": [
+    "Soaring, extended The Other One with powerful improvisation",
+    "Vibrant Keith Godchaux piano driving several jams",
+    "High‑energy three‑hour marathon with tight transitions",
+    "Billy Kreutzmann’s animal‑like drumming foundation"
+  ],
+  "song_highlights": [
+    "The Other One",
+    "Ramble On Rose"
+  ],
+  "band_performance": {
+    "Jerry": "On a roll for nearly three hours, animated bluegrass‑style picking and driving the jams.",
+    "Phil": "Active throughout; pushes riffs and adds heat to the improvisations.",
+    "Bob": "",
+    "Keith": "Beautiful piano work that instantly adapts, leading and coloring the improvisational sections.",
+    "Mickey": "",
+    "Billy": "Described as an animal on drums, providing a powerful rhythmic foundation."
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-20T09:51:56.341961+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Sugar Magnolia",
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "Me And My Uncle",
+      "The Other One",
+      "Wharf Rat"
+    ],
+    [
+      "Ramble On Rose"
+    ]
+  ]
+}

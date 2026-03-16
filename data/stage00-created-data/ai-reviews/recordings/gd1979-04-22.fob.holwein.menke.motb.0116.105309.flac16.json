@@ -1,0 +1,100 @@
+{
+  "summary": "Excellent audience recording of Brent Mydland’s debut show with standout jams on Bertha, Fire and The Other One",
+  "review": "The tape captures a surprisingly clear and immersive audience mix that lets listeners hear the energy of the stadium crowd while still delivering crisp instrument detail. Musically the show shines in the second set – Brent’s first‑night keys blend beautifully with Jerry’s soaring leads on Bertha, Fire and The Other One, and Phil’s bass drives the improvisations. While a few first‑set numbers feel routine and Miracle runs a bit lethargic, overall it’s an often‑recommended performance for fans of the late‑’70s era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Four detailed reviews consistently praise the show (average ~4.2) and rate the audience recording as excellent (~4.8). Weighted combination yields a strong 4.4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Trippy blend of crowd ambience and music; surprisingly clear for an AUD, especially Brent’s synth work and the drum section are well captured."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Good Lovin'",
+      "Scarlet",
+      "Fire",
+      "Prophet",
+      "The Other One",
+      "Shakedown Street"
+    ],
+    "poor_songs": [
+      "Miracle",
+      "Wharf Rat",
+      "R&R",
+      "US Blues"
+    ],
+    "setlist_flow": "First set is solid but unremarkable compared to earlier ’78 shows; the second set erupts with strong jams, especially after Scarlet where Jerry and Brent lock in, culminating in a soaring Fire and an expansive Other One."
+  },
+  "band_member_comments": {
+    "Jerry": "Starts a bit sleepy on Miracle but quickly regains fire on Bertha, Good Lovin' and launches into orbit on Fire and The Other One.",
+    "Phil": "Dominates the bass groove on The Other One and provides steady drive throughout the second‑set jams.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s debut shines – synth textures on Scarlet and tight interplay with Jerry add a fresh dimension.",
+    "Drums": "Fun, toe‑tapping drumming that benefits from the audience mix."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "R&R": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T20:51:12.638246+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-04-22.fob.holwein.menke.motb.0116.105309.flac16"
+}

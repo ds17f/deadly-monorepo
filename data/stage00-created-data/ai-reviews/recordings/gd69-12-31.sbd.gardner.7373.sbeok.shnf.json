@@ -1,0 +1,75 @@
+{
+  "summary": "High‑energy NYE ’69 show with standout jams and mostly good soundboard audio despite some cassette hiss",
+  "review": "The performance is praised for its electric New Year’s Eve vibe, smoking versions of High Time, Alligator, Mason's Children and other early‑’69 classics, plus a memorable Jerry‑Phil duel.  The recording is a third‑generation soundboard copy – most listeners find it clear and well‑balanced, though a few note cassette‑generation hiss and distant ambience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average user rating ~4.8 with consistent praise for the show; recording quality is generally good though a minority mention hiss, yielding a solid combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear mix and good vocals; several reviewers note crisp sound, but one points out multiple cassette generations causing audible hiss and a distant feel. One comment mentions Weir’s guitar being buried in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Time",
+      "Alligator",
+      "Mason's Children",
+      "Big Boy Pete",
+      "Slewfoot",
+      "Black Peter",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe a ‘light’ NYE set that blends the psychedelic 68 feel with the tighter 70‑era playing, delivering high‑octane energy and memorable jams throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Tone described as magnificent, badass and emotionally powerful; highlighted in several jam sections.",
+    "Phil": "Praised for a trading duel with Jerry that ranks among the best moments of the night.",
+    "Bob": "Noted for solid rhythm chording under the Alligator jam.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alligator": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Mason's Children": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Boy Pete": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Slewfoot": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T19:45:14.323310+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-12-31.sbd.gardner.7373.sbeok.shnf"
+}

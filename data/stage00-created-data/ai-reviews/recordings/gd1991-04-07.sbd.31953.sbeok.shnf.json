@@ -1,0 +1,85 @@
+{
+  "summary": "Stellar soundboard recording with a relaxed, tightly‑mixed performance highlighted by Reuben & Cherise, Playing in the Band > Uncle John’s Band > Playing and a magical Space sequence.",
+  "review": "The SBD capture is virtually flawless – crisp, balanced and studio‑like, with only a hint of static during the extended Space. Musically the show shines: Jerry’s vocals on Reuben & Cherise are immaculate, the band rolls through a superb Playing in the Band → Uncle John’s Band → Playing sandwich, delivers a fiery Crazy Fingers and a transcendent Space that feels like an improvised studio session, while Phil and Brent add standout moments on Box of Rain and Baby Blue.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All detailed reviews praise both the performance and the mix; only minor static is noted, giving an overall rating in the excellent range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Mix described as perfect and studio‑like, crisp guitar and vocals; tiny static blips only during Space sections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Reuben and Cherise",
+      "Playing in the Band > Uncle John's Band > Playing in the Band",
+      "Crazy Fingers",
+      "The Promised Land",
+      "Box of Rain",
+      "Baby Blue",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Relaxed, carefully played set that flows seamlessly from one jam into the next; the extended Space acts as a centerpiece tying the performance together."
+  },
+  "band_member_comments": {
+    "Jerry": "Nailed the tricky vocal on Reuben & Cherise, delivered scorching Crazy Fingers and layered subtle Close‑Encounters motifs throughout Space.",
+    "Phil": "Strong bass work, highlighted by a flawless Box of Rain and an engaging jam presence.",
+    "Bob": "Vocals described as smoother and more mellow than usual, with a slightly strained tone on the later “Touch‑of‑Grey”‑type moment but overall solid.",
+    "Keys": "Brent Mydland shines, especially on Baby Blue where his accordion adds dreamy texture; also contributes to the Space atmosphere.",
+    "Drums": "Bill Kreutzmann’s drumming weaves into the Space theme, providing rhythmic punctuation that enhances the improvisational flow."
+  },
+  "song_mentions": {
+    "Reuben and Cherise": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:36:58.258589+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-07.sbd.31953.sbeok.shnf"
+}

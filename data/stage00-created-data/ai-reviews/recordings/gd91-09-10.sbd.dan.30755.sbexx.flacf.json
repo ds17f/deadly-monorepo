@@ -1,0 +1,70 @@
+{
+  "summary": "Crystal‑clear soundboard capture of an all‑time great ’91 MSG show – soaring Shakedown and Help>Slip>Franklin's with stellar sax/keys, despite occasional keyboard mix clutter.",
+  "review": "The recording is a high‑quality SBD (FLAC) that many reviewers call crystal clear, though a few note Vince’s keyboards can dominate the mix. Musically the concert is consistently praised as a highlight of the early‑90s era – Shakedown opens the set with fire, Dark Star delivers an intense, jazzy journey, and the Help>Slip>Franklin's sequence is singled out as one of the band’s finest. Phil’s bass work shines on several numbers, Jerry’s guitar and vocals are strong, while the added horns (Branford Marsalis) and Hornsby add a big‑band flavor that most fans love.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews are 4–5 stars, highlighting exceptional performance and excellent soundboard quality; only a few minor criticisms (keyboard mix) temper the rating slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers describe the FLAC as crystal clear, crisp and superbly mixed. A handful note that Vince’s keyboards sit high in the mix and can clutter the sound at times."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Dark Star",
+      "It Takes a Lot to Laugh",
+      "Cassidy"
+    ],
+    "poor_songs": [
+      "Estimated"
+    ],
+    "setlist_flow": "First set is praised for inspired song choices and a powerful Shakedown opener; the second set expands into a jazzy, big‑band experience with extended improvisations (Help>Slip>Franklin's, Dark Star) that many consider one of the best early‑90s sequences."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised for strong guitar tone, inventive licks and solid vocals (especially on It Takes a Lot to Laugh). A few notes mention he steps back when the saxophone dominates.",
+    "Phil": "Highlighted as lighting up many tunes, particularly Shakedown and Help>Slip>Franklin's.",
+    "Bob": "",
+    "Keys": "Vince’s organ/keyboard is frequently described as too high in the mix, occasionally drowning out Jerry and creating clutter; Hornsby receives strong positive remarks for his playing throughout.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It Takes a Lot to Laugh": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T00:22:58.203815+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-09-10.sbd.dan.30755.sbexx.flacf"
+}

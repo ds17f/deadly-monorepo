@@ -1,0 +1,63 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a stellar late‑summer show highlighted by a soaring Terrapin Station → Playing in the Band segue and beautiful renditions of Stella Blue and Brent’s new “Easy to Love You.”",
+  "review": "The recording is praised as crystal‑clear, shimmering soundboard quality that lets every nuance shine. The performance itself is lauded for its intense jam between Terrapin Station and Playing in the Band, gorgeous vocals from Jerry, and standout versions of Stella Blue, Not Fade Away, and Brent’s debut “Easy to Love You.” Overall the show feels vibrant and well‑played despite a missing encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4.75/5, with consistent praise for both the performance (standout jams and song selections) and the pristine soundboard recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the audio \"crystal clear,\" \"shimmering\" and \"incredible,\" noting no noticeable drop‑outs or muddiness. The only omission mentioned is a missing second encore (Johnny B. Goode), not a technical flaw."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Playing in the Band",
+      "Stella Blue",
+      "Easy to Love You",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers love the seamless transition from Terrapin Station into Playing in the Band and highlight the mellow improvisation/Space segment, indicating a well‑paced and engaging set."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s vocals are described as beautiful, clear and “great,” with his guitar noodling praised during the jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Easy to Love You": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:37:28.839558+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-08-14.sbd.walker-scotton-miller.32500.flac16"
+}

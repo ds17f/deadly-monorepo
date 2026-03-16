@@ -1,0 +1,68 @@
+{
+  "summary": "A rocking Jack Straw show captured on a well‑balanced matrix (AUD+SBD) tape, with standout Space, Terrapin Station and The Other One performances.",
+  "review": "Both reviewers rave about the musical fire of this concert – Jerry tears into Jack Straw and the band swings through Space, Terrapin Station, The Other One and Feel Like a Stranger with gusto.  The recording is praised for its clean mix of audience ambience and soundboard clarity (a Surachi matrix tape), making it an enjoyable listen despite only two reviews.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Both reviewers highlight strong performances and a good‑quality matrix recording, but with only two reviews the confidence in the aggregate rating is limited."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Mix of audience (AUD) and soundboard (SBD) sources praised; clear fan reactions retained without sacrificing overall sound. Surachi tape noted as 'gooood', indicating a clean, balanced capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Space",
+      "Terrapin Station",
+      "The Other One",
+      "Feel Like a Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as sweet and dancing; second set delivers high‑energy rockers like Jack Straw, with smooth transitions and strong momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Tears it hard on Jack Straw and other jams; guitar work highlighted.",
+    "Phil": "Drops bombs on bass during the performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Joker": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T21:11:38.653201+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-04-06.nakcm304.suraci.81380.sbeok.flac16"
+}

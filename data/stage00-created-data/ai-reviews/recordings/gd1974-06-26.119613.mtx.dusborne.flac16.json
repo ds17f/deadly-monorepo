@@ -1,0 +1,93 @@
+{
+  "summary": "Crystal‑clear matrix captures a legendary 1974 show – wall‑of‑sound sound, stellar second set and classic jams like China Cat, Spanish Jam and Truckin'.",
+  "review": "The matrix of this June 26 1974 concert is praised by almost every reviewer as clean, crisp and balanced, delivering the Wall of Sound experience with only occasional sync or phase concerns. Musically the show is described as one of the band’s all‑time greats – a relaxed first set followed by a magical second set highlighted by China Cat → Spanish Jam, Truckin' → Wharf Rat, I Know You Rider and an unforgettable Eyes encore. Jerry Garcia’s guitar tone and vocals are repeatedly called “top form,” while the rhythm section and keyboards receive strong compliments as well.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Over a dozen 5‑star reviews extol both performance and matrix quality; only one outlier complains of sync issues, yielding an overall rating in the high‑4 range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Most listeners describe the sound as clean, crisp and well balanced with a full Wall‑of‑Sound feel. A few note occasional out‑of‑phase or sync artifacts, but many reviewers argue these are just natural arena reverb; overall mid‑high frequencies are clear and the matrix blends board clarity with audience ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "Spanish Jam",
+      "Truckin' > Wharf Rat",
+      "I Know You Rider",
+      "Eyes"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is described as relaxed and spontaneous, while the second set is “magical,” delivering seamless transitions (e.g., Beer Barrel → Truckin' → The Other One → Spanish Jam → Wharf Rat) and a powerful encore that leaves listeners smiling."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone is called ‘clean and crispy,’ his solo into China Cat is praised, and his vocals are described as top‑form throughout.",
+    "Phil": "Phil Lesh gets kudos for heavy, regular bass tones and a dark solo during the Truckin'/Spanish Jam sequence.",
+    "Bob": "Bob Weir’s rhythm work shines on El Paso and Spanish Jam; his tone is highlighted as a key part of the show’s groove.",
+    "Keys": "Keith Godchaux is noted as being ‘on’ throughout, adding lush texture to the Wall‑of‑Sound mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Spanish Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin' > Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Race Is On": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T22:00:02.526102+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-06-26.119613.mtx.dusborne.flac16"
+}

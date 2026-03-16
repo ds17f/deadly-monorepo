@@ -1,0 +1,51 @@
+{
+  "summary": "Average show with distant sound, but highlights include vocal ending on He's Gone, a Help on the Way segment, and a nice Stella Blue.",
+  "review": "The recording captures a somewhat distant mix that still conveys the rain ambience, making it feel like an audience capture. While the performance is described as average, reviewers point out standout moments such as the vocals at the end of He’s Gone, a Help on the Way segment, and a solid rendition of Stella Blue.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.7,
+    "confidence": "low",
+    "rationale": "Only one brief review; shows an average performance (≈2.5‑3) with fair but distant recording quality, resulting in a modest combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Sound described as kind of distant; rain ambience audible; overall clarity is limited."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Help on the Way",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall average pacing with a few highlighted moments; no major flow issues noted."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:07:35.296476+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-08-26.schoeps.wklitz.94327.flac16"
+}

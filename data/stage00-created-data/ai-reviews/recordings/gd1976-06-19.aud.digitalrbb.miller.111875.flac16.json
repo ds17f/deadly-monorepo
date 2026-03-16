@@ -1,0 +1,45 @@
+{
+  "summary": "Crystal‑clear audience tape captures an all‑out high‑energy show with a flawless “High Time” and a soaring “Cosmic Charlie.”",
+  "review": "The recording is praised as a crystalline, sonically accurate audience source from June 19 1976, despite not containing the full concert. Fans rave about the performance – “High Time” is described as note‑perfect with beautiful harmonies and “Cosmic Charlie” blew everyone away, leaving no low point in the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All three reviewers gave five stars, highlighting both an excellent performance and a high‑quality audience recording; minor note is that the tape is incomplete, keeping the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as crystalline and sonically accurate; clear mix with good instrument separation, though the recording does not capture the entire concert."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Time",
+      "Cosmic Charlie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note no low point; the set maintained high energy throughout with strong vocal harmonies and instrumental peaks."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T04:54:30.133521+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-19.aud.digitalrbb.miller.111875.flac16"
+}

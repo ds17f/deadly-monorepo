@@ -1,0 +1,85 @@
+{
+  "summary": "An almost‑perfect early‑80s audience tape that sounds like a soundboard, capturing a high‑energy set highlighted by scorching Althea, blazing Bertha and sublime Sugaree.",
+  "review": "Glassberg’s spring ’81 audience recording (MOTB) is praised as the gold standard for live Dead tapes – crystal clear, balanced and virtually free of hiss, giving it near‑soundboard fidelity. The performance itself is a quintessential Brent‑era show: Jerry tears through Althea, Bertha and a jaw‑dropping Other One → Stella Blue transition, while the band stays tight from Peggy‑O to Sailor>Saint. Reviewers overwhelmingly describe the night as electrifying and unforgettable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 70 reviews, almost all five‑star, consistently rave about both the exceptional audience recording quality and the high‑octane musical performance; only a handful of low‑rating outliers exist."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Glassberg + MOTB tape described as crystal‑clear, balanced and “soundboard quality”; minimal hiss, superb crowd ambience, no noticeable drop‑outs or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Althea",
+      "Bertha",
+      "Stella Blue",
+      "Peggy-O",
+      "The Other One > Stella Blue",
+      "China Cat > Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Tight early‑80s Brent era set with relentless energy, seamless transitions (e.g., The Other One into Stella Blue) and a powerful second‑set climax that keeps the crowd dancing from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for blistering speed, soaring tone on Althea, Bertha and Sugaree, plus an unexpected Bach‑style quote during The Other One → Stella Blue.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s organ work highlighted as a driving force; several reviewers note his “favoring the organ” and solid support throughout the show.",
+    "Drums": "Drummer (Bill) receives kudos for tight, propulsive playing that fuels The Other One and drives the high‑octane feel."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Althea": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Bertha": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Stella Blue": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Peggy-O": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One > Stella Blue": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sailor>Saint": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T09:50:38.679616+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-14.nak700.glassberg.motb.84826.sbeok.flac16"
+}

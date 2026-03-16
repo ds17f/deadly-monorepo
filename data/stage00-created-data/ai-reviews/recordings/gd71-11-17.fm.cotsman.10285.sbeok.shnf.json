@@ -1,0 +1,50 @@
+{
+  "summary": "Fair audience‑mic FM capture of a high‑energy ’71 show, highlighted by a soaring Other One and vibrant Keith piano work.",
+  "review": "The performance is praised for its nonstop energy, three‑hour marathon, and especially the blazing The Other One jam, with Jerry on fire and Keith’s piano driving the music forward. The recording itself comes from a microphone off an FM broadcast – mono, occasionally boomy, with splices and tape hiss – making it listenable but far from pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Strong musical performance (many 5‑star show praises) offset by sub‑par, audience‑mic recording quality; weighted average yields a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Microphone capture of FM broadcast; mono mix with occasional boomy bass, tape hiss, splices and minor dropouts. Sound is usable but lacks clarity and balance of a soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Ramble On Rose"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy, three‑hour set that rides fast‑driving jams; the band locks in tightly with dynamic transitions, especially during The Other One and Keith’s piano‑led sections."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as on a roll for nearly three hours, animated, bluegrass‑style picking, and driving the jams.",
+    "Phil": "Active throughout; pushes the Feelin' Groovy riff and adds heat to the jams.",
+    "Bob": "",
+    "Keys": "Keith’s piano is praised for beautiful playing and instantly adapting to drive the improvisations.",
+    "Drums": "Billy (drums) described as an animal, providing a powerful rhythmic foundation."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T09:50:18.171922+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-11-17.fm.cotsman.10285.sbeok.shnf"
+}

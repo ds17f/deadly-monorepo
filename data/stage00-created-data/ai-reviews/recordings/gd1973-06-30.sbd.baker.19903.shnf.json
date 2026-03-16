@@ -1,0 +1,45 @@
+{
+  "summary": "High‑quality soundboard recording captures a solid summer‑'73 show highlighted by a beautiful Bird Song and a sweet dark‑eyes jam.",
+  "review": "The retracked SBD source is praised as the best available version, with audience patches that even bring out the gorgeous Bird Song in the first set. Reviewers consistently call the performance very good, noting the sweet “dark eyes” jam as an extra treat.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All four reviewers gave 4‑5 stars and focused on positive aspects of both the performance and the soundboard recording, indicating a strong show with a clean, well‑patched source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Retracked SBD version with audience patches (e.g., Bird Song); matrix mixes are heavy on AUD side but this SBD cut is considered the best available."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Dark Eyes"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall solid set with a highlight Bird Song in set one and an enjoyable dark‑eyes jam, delivering a consistently good performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T15:23:07.323684+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-30.sbd.baker.19903.shnf"
+}

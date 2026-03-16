@@ -1,0 +1,45 @@
+{
+  "summary": "Crystal‑clear audience recording captures the high‑energy late‑summer ’89 Dead with a smoking Northbound Train and an effortlessly laid‑back River City vibe.",
+  "review": "The audience (AUD) source is exceptionally clear – vocals sit right in your ear, Brent’s keyboards shine, and Phil’s bass response to Jerry’s guitar on “Northbound Train” is beautifully captured.  The band was riding a wave of energy that night, delivering a relaxed yet powerful performance that many fans remember as the end of an era at Expo.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both musical performance and recording clarity across multiple detailed reviews."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp vocal detail, clear instrument separation, captures Phil’s bass response to Jerry’s guitar; no noted drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Northbound Train",
+      "RFK"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first half followed by a relaxed, river‑city feel in the second set; the band’s chemistry and crowd interaction are highlighted throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as “in your ear”; guitar work praised especially on Northbound Train.",
+    "Phil": "Bass response to Jerry highlighted as a standout moment.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard playing noted for its presence and warmth.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Northbound Train": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "RFK": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T22:24:47.387018+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-08-05.schoeps.3871.sbeok.shnf"
+}

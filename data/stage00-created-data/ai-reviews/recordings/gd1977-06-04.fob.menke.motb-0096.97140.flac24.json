@@ -1,0 +1,78 @@
+{
+  "summary": "Excellent audience tape that gets clearer as it goes, highlighted by an Estimated Prophet that thrills the crowd and a beautifully rendered China Doll.",
+  "review": "The recording is an audience capture – no soundboard exists – but the taper delivers surprisingly clear and intimate sound that improves after the first few songs. The show itself is praised for its high energy, patient transitions and standout performances of Estimated Prophet, China Doll, Brown Eyed Women, Jack Straw and Friend of the Devil.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews are highly favorable (4‑5 stars) and comment on both strong musical moments and a solid, if not perfect, audience recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "No soundboard source; early first set a bit thin but later sections are clear and intimate. Minor tape cuts noted, but overall the audience mix captures crowd ambience well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "China Doll",
+      "Brown Eyed Women",
+      "Jack Straw",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first set with classic barn‑burners, followed by a patient and open‑eared second set where transitions are given space to breathe."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Praised for \"laying waste\" on Inglewood and delivering powerful bass throughout.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Reviewer wanted a longer drum duel, but no major issues were reported."
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sampson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T03:00:39.456857+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-06-04.fob.menke.motb-0096.97140.flac24"
+}

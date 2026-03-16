@@ -1,0 +1,31 @@
+{
+  "summary": "Recording is pitched down a half‑step, with no details on performance quality",
+  "review": "The sole reviewer notes that the audio sounds pitched down about a half step, indicating a clear playback/recording issue. No comments are made about the musical performance, set flow, or individual players.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only one moderate‑rated review mentioning a pitch problem; no positive information on show or recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Pitch appears shifted down roughly half a step, affecting overall fidelity"
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T21:48:09.905992+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-04-08.139358.sbd.set2.ebel.flac1644"
+}

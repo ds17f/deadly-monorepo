@@ -1,0 +1,63 @@
+{
+  "summary": "Fair-quality recording captures a memorable 1980 show highlighted by a serene acoustic “To Lay Me Down” and an uplifting “Franklin’s Tower,” though some listeners note file‑burning glitches.",
+  "review": "Fans rave about the relaxed acoustic set – especially the peaceful “To Lay Me Down” – and the bright, upbeat rendition of “Franklin’s Tower,” which even made it onto Dead Set. The audio files are generally usable, but several reviewers reported SHN‑to‑WAV conversion or CD‑burning problems that affect the listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show performance is praised by most reviewers (4–5 stars) while recording issues are mentioned only in one review; weighted average yields a solid >4 rating with moderate confidence due to limited technical detail."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments on soundboard or audience clarity. Reviewers note SHN/WAV conversion and CD‑burning problems, but no audible quality complaints."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "To Lay Me Down",
+      "Franklin's Tower",
+      "China Doll",
+      "Jackeroo",
+      "Birdsong"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic set early in the show is described as unforgettable and peaceful, while the electric second half is considered a “monster” that some feel was sidetracked by the acoustic interludes."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "To Lay Me Down": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jackeroo": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T05:17:51.210429+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-25.aud.wiley.8726.sbefail.shnf"
+}

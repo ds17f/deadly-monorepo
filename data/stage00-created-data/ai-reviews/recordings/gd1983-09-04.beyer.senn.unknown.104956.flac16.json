@@ -1,0 +1,39 @@
+{
+  "summary": "A great 1983 show captured with a solid recording, highlighted by an unforgettable Spanish jam.",
+  "review": "Both reviewers rave about the performance, calling it a great show with excellent energy and noting a standout Spanish‑style jam. The recording is praised as high quality, making the listening experience enjoyable despite limited details on its source. Overall the concert is seen as a sweet, rare outing that lives up to fans' expectations.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Both reviews are highly positive (5 and 4 stars) and emphasize strong show and good recording quality, leading to a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the recording as great/excellent but give no technical details; overall impression is clear and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Spanish Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans note a relaxed, 'boys‑and‑no‑frills' vibe with dancing, sweet songs throughout and a rare location adding to the charm."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T09:50:59.429811+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-04.beyer.senn.unknown.104956.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Recording is plagued by static and essentially unlistenable; no useful information about the performance itself.",
+  "review": "Both reviewers give this recording a single star, describing it as nothing but static and junk. The audio quality is so poor that the show cannot be evaluated, and there are no comments on the musical performance or setlist.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only two brief reviews, both rating 1 star and complaining about static; no positive aspects to offset the severe recording issues."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Heavy static throughout makes the audio unlistenable; no usable mix or clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T23:28:57.808991+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-07-31.dts.tobin.121838.flac16"
+}

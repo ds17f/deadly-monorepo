@@ -1,0 +1,61 @@
+{
+  "summary": "High‑energy 1982 show with a monster Scarlet > Fire and Let It Grow, captured in a matrix that sounds good overall but has some echo/mix issues.",
+  "review": "Fans rave about this underrated 1982 performance, calling the Scarlet > Fire pairing one of the finest ever and praising the entire set from start to finish, especially Jerry’s vocal and guitar work. The matrix source is generally enjoyable, though a few listeners note noticeable echo and sync problems that keep the recording from being pristine.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Show quality is consistently rated very high (multiple 5‑star praises, standout songs highlighted), while recording quality receives mixed feedback (some echo/sync issues). Weighted average yields a solid 4.2‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Echo and slight sync problems noted by some reviewers; mix described as off, but other listeners find the matrix “incredible” and enjoyable overall."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Let It Grow",
+      "Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is described as strong from start to finish, with high energy throughout and seamless transitions; no weak points noted aside from personal taste in a couple of songs."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for flawless vocals and razor‑sharp guitar tone (especially on “Tiger”), with no blown lyrics during the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around & Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T00:56:44.085403+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-11.122988.mtx.rdenirojb87.flac16"
+}

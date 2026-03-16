@@ -1,0 +1,63 @@
+{
+  "summary": "A crisp sound‑board source that puts Jerry’s guitar up front, though some listeners note edit gaps; the show shines on Althea, Scarlet Begonias and Fire on the Mountain.",
+  "review": "The recording is praised for its clarity, strong low end and a forward‑mixed Jerry Garcia guitar, making it one of the best‑sounding tapes from this venue. The performance itself gets high marks for the Althea rendition and the extended Scarlet Begonias → Fire on the Mountain jam, even if a few reviewers criticize noticeable gaps and occasional repeat edits between songs.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Most reviews (7/9) are highly positive about the sound quality and highlight performances, but several low‑star reviews raise serious concerns about editing gaps and a few weak moments, leading to an overall rating just above average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, full‑range sound with Jerry’s guitar prominent and good bass response. Some listeners report audible gaps between tunes and duplicated sections from patch‑ups, which detract from an otherwise excellent mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Scarlet Begonias",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [
+      "Bucket"
+    ],
+    "setlist_flow": "Energetic '83 vibe with strong jams, but editing gaps between tunes interrupt the flow for some listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as louder, clearer and more up‑front than on other sources.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bucket": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T07:20:54.687296+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-18.beyer-m88.morrone.119438.flac1644"
+}

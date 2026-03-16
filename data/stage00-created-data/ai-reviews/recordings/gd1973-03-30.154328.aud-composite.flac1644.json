@@ -1,0 +1,31 @@
+{
+  "summary": "No audio or performance details provided; reviewer only notes an incorrect concert date.",
+  "review": "The single review flags a metadata mistake, correcting the show to March 30 1973 instead of September 30. It contains no commentary on sound quality, mix, or musical performance, so recording and show quality cannot be assessed from this feedback.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one review with a zero‑star rating that mentions a date error; no substantive information about the music or recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer only pointed out an incorrect date; no comments on sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T07:13:36.679957+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-03-30.154328.aud-composite.flac1644"
+}

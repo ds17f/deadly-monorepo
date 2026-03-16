@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent audience recording of a solid 1993 show with a standout Uncle John’s jam and soaring Space.",
+  "review": "The three reviewers agree this is an unusually high‑quality audience capture from the early ’90s, noting the Neumann KM140 mic, Aerco preamp and Sony DAT decks that give it a clear, dreamy sound. Musically the concert is described as solid throughout, with a first set that flies by and a second set that shines thanks to a majestic Uncle John’s Band jam, an ear‑candy Space, and strong performances of Way to Go Home and Easy Answers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "All three reviews give 4‑star ratings, consistently praise both the performance (especially the second set) and the audience recording quality, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Recorded with Neumann KM140 mic into an Aerco preamp; source likely Sony D‑10 Pro or SBM‑1 → D‑8 DAT deck. Reviewers describe the sound as clear, dreamy and one of the better post‑91 audience captures."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band > jam",
+      "Space",
+      "Way to Go Home",
+      "Easy Answers"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid first set that flies by, followed by an even stronger second set featuring a pre‑drums section and a majestic Uncle John’s Band jam, giving the concert a satisfying arc."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Uncle John's Band > jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Way to Go Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Answers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T19:03:20.754374+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-12-18.141525.FOB-km140.ebel.flac1648"
+}

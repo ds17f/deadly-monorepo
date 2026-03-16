@@ -1,0 +1,82 @@
+{
+  "summary": "A solid soundboard recording with some mix quirks and cuts, highlighted by a stellar Scarlet Begonias→Fire on the Mountain but overall an average two‑hour show.",
+  "review": "The dsbd.miller source captures a lengthy Boston run with decent clarity, though the reviewer notes a few missing sections, muffed verses and low levels on acoustic parts. Musically the night shines during the early second set – especially the Scarlet Begonias→Fire on the Mountain transition and a beautiful Slipknot! – but many other numbers are described as average or sloppy. Overall sentiment is mixed, reflecting both strong moments and noticeable flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is rated around average‑good with standout songs but several mediocre sections; recording is decent soundboard but has cuts and mix issues, yielding a combined rating in the low‑mid 3s."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Polished dsbd mix but suffers from missing intro of Scarlet Begonias→Fire, lowered acoustic levels on Me & My Uncle, muffed verses on So Many Roads, and occasional matrix‑style ambience. Overall clear enough for listening, though not flawless."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Slipknot!",
+      "Althea",
+      "Terrapin (end jam)",
+      "Tom Thumb's"
+    ],
+    "poor_songs": [
+      "Promised Land",
+      "Liberty",
+      "Way to Go Home, Saint"
+    ],
+    "setlist_flow": "First set is uptempo and uneven, opening with a Help → Slipknot! → Franklin’s sequence; the second set stretches to two hours, delivering an early high point with Scarlet Begonias→Fire before slipping into mixed material and a long, meandering Space."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Described as \"Lovecraftian\" on Tom Thumb's, suggesting an imaginative bass approach.",
+    "Bob": "Plays acoustic on Me & My Uncle, though his part is turned down in the mix.",
+    "Keys": "Vince (keyboardist) praised for great work on Slipknot! and overall contributions.",
+    "Drums": "Mixes drums differently on the OFF version; SBD provides a more accurate representation of the live drum sound."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T02:07:47.654111+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-01.150116.dsbd.miller.flac1644"
+}

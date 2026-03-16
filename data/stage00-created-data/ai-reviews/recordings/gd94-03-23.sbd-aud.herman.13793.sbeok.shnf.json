@@ -1,0 +1,80 @@
+{
+  "summary": "Matrix (soundboard + audience) recording with clear first‑set sound; despite Jerry’s lyric miscues the show shines thanks to a blistering Shakedown opener and a soaring Might As Well.",
+  "review": "The recording combines crisp soundboard audio on the first set with an audience‑sourced second half, yielding overall good fidelity. Musically the concert is praised for a high‑energy Shakedown Street opener, a standout Might As Well, and strong renditions of So Many Roads, China > Riders and SOTM, even though Jerry’s vocal lines slip occasionally. Fan sentiment is mixed but leans positive, reflecting both the occasional performance flaws and the many memorable moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers (8 of 11) rate the show 4‑5 stars and highlight several standout songs; recording quality is consistently described as good to excellent, giving a weighted average in the 4‑star range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "First set captured from the soundboard – clear and balanced. Second set is an audience mix that adds ambience but remains listenable. No major dropouts reported, though a few reviewers note typical crowd noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Might As Well",
+      "So Many Roads",
+      "China Cat Sunflower > I Know You Rider",
+      "SOTM"
+    ],
+    "poor_songs": [
+      "Good Lovin'"
+    ],
+    "setlist_flow": "The first set is shorter but praised for its tight playing and sound quality. The Shakedown Street opener sets a high‑energy tone, leading into a second set that builds to a powerful Might As Well closer, with several highlight jams in between."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals stumble on many lyrics but his guitar work is fiery and he sounds happy throughout the show.",
+    "Phil": "",
+    "Bob": "Weir’s presence lifts Shakedown Street; his rhythm/vocals are highlighted as a key element of the opener.",
+    "Keys": "Vince (and later Hornsby) receive praise for natural‑sounding tones and strong support throughout.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Might As Well": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "SOTM": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lil' Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:29:14.068030+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-03-23.sbd-aud.herman.13793.sbeok.shnf"
+}

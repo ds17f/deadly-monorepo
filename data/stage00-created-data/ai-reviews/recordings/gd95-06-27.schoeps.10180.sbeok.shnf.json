@@ -1,0 +1,93 @@
+{
+  "summary": "Decent audience recording of a mixed‑quality 1995 Detroit show, highlighted by a scorching Victim > Foolish Heart jam but marred by uneven set and occasional weak songs.",
+  "review": "The performance is an uneven slice of the Summer ’95 tour – the first half has solid moments like Bertha and Minglewood Blues, while the second set swings between cheesy Ramble On Rose and a monster Victim > Foolish Heart stretch that many reviewers call the night’s high point. The audience (AUD) source is decent but noisy, offering an authentic “live‑in‑the‑arena” feel without the clarity of a soundboard. Overall the show pleases fans who love the jam but leaves others wishing for tighter playing and better mix.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give 3‑4 stars, praising the Victim > Foolish jam while noting recording noise and several weak songs; weighting show quality (70%) and recording quality (30%) yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Decent audience capture with noticeable crowd chatter and occasional muffling; not crisp like a soundboard but preserves the arena atmosphere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Victim > Foolish Heart",
+      "All Too Much",
+      "Corrina",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Ramble On Rose",
+      "Queen Jane",
+      "Lazy",
+      "Eternity",
+      "Don't Ease Me In"
+    ],
+    "setlist_flow": "First set solid with classics (Bertha, Minglewood Blues) but a few limp numbers; second set uneven until the long Victim > Foolish jam lifts the show, followed by mixed‑quality finishes."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – some call his playing hopelessly lost and painful during the Victim > Foolish transition, while others hail his soaring improvisation on that very jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince (keyboard) gets praise for a strong All Too Much performance.",
+    "Drums": "Drumming and space sections are noted as solid and energetic."
+  },
+  "song_mentions": {
+    "Victim > Foolish Heart": {
+      "positive_mentions": 9,
+      "negative_mentions": 1,
+      "total_mentions": 10
+    },
+    "Foolish Heart": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Queen Jane": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lazy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "All Too Much": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T11:11:42.318695+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-06-27.schoeps.10180.sbeok.shnf"
+}

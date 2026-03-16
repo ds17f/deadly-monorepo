@@ -1,0 +1,76 @@
+{
+  "summary": "Jazzy first set, rock‑heavy second set with strong jams",
+  "blurb": "The show alternates a relaxed, jazzy vibe on the first set with a punchy, high‑energy second set. Highlights include a soaring \"Jack‑A‑Roe\", tight \"Cassidy\" and a standout \"Truckin'\"/\"The Other One\" stretch. Jerry’s vocal on \"Mama Tried\" and Phil’s booming bass anchor the performance.",
+  "review": "Providence Civic Center, Jan 18 1979 – The Dead delivered a two‑set evening that swings between mellow jazz‑inflected grooves and straight‑ahead rock power. The first set opens with a confident \"Mama Tried\" and drifts into a beautifully phrased \"Jack‑A‑Roe\", while the band lets the groove breathe on \"Friend Of The Devil\" and \"Deal\". The second set really fires up, launching from an urgent \"I Need A Miracle\" straight into a seamless \"Bertha\" → \"Good Lovin'\" flow, then soaring through a thunderous \"Truckin'\" that carries directly into an exploratory \"The Other One\" before winding down with the classic “Wharf Rat” and a rollicking \"Around & Around\". Across the tapes, Jerry’s guitar work shines on the country‑rock numbers and his vocal tone stays warm throughout; Phil’s bass adds depth and even takes a vocal lead on \"Truckin'\". Though some recordings note a thin drum mix early on, the rhythm section ultimately locks in and drives the set forward. The audience tape captured by Charlie Miller is exceptionally clear, making this show an enjoyable listen despite occasional uneven moments.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Two recordings are clearly positive (praising standout songs and overall vibe) while three are mixed, offering both highlights and criticisms. Consistent praise for \"He’s Gone\", \"Jack‑A‑Roe\", \"Bertha\" and the second‑set power gives a modest but solid positive sentiment.",
+      "final_calculation": "2.5 + 0.1 + 1.0 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1979-01-18.nak300.rolfe.miller.100209.sbeok.flac16",
+    "reason": "Excellent audience tape by Charlie Miller – full‑bodied, clean sound with no dropouts and captures the jazzy first set and strong second‑set highlights."
+  },
+  "key_highlights": [
+    "Mellow, jazzy first set that builds into a solid groove",
+    "\"Jack‑A‑Roe\" and \"Bertha\" showcase Jerry’s superb guitar and vocals",
+    "Second‑set power with \"Cassidy\", \"Truckin'\" and an outstanding \"The Other One\" run",
+    "Charlie Miller audience recording offers crystal‑clear sound despite being a crowd source"
+  ],
+  "song_highlights": [
+    "He’s Gone",
+    "Jack-A-Roe",
+    "Bertha",
+    "Friend Of The Devil",
+    "Deal",
+    "Cassidy",
+    "Truckin'",
+    "The Other One"
+  ],
+  "band_performance": {
+    "Jerry": "Shines on \"Mama Tried\", \"Jack‑A‑Roe\" and \"Bertha\" with superb guitar work and warm vocals; fast playing noted on several tracks.",
+    "Phil": "Booming bass adds depth throughout; vocal contribution on \"Truckin'\" highlighted as exceptional.",
+    "Bob": "Guitar prominent in the mix, delivering crisp chops and fills that help drive the jams.",
+    "Keith": "",
+    "Mickey": "Drum presence noted as thin early on but overall holds down the rhythm well with Billy.",
+    "Billy": "Provides solid back‑beat; together with Mickey keeps the groove steady despite occasional mix issues."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-25T19:42:13.649496+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack-A-Roe"
+    ],
+    [
+      "I Need A Miracle",
+      "Bertha",
+      "Good Lovin'"
+    ],
+    [
+      "Friend Of The Devil"
+    ],
+    [
+      "Deal"
+    ],
+    [
+      "Cassidy"
+    ],
+    [
+      "He's Gone",
+      "Truckin'",
+      "The Other One",
+      "Wharf Rat",
+      "Around & Around"
+    ]
+  ]
+}

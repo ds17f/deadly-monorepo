@@ -1,0 +1,77 @@
+{
+  "summary": "Solid Miller soundboard captures a mixed 1988 Greek run with standout Stuck Inside Mobile and I Will Take You Home, though the performance is uneven.",
+  "review": "The recording benefits from Charlie Miller’s clean soundboard source, delivering clear mix despite a few early balance quirks. Musically the show is average‑to‑below‑average, with a low‑energy first set but highlights like Stuck Inside Mobile, I Will Take You Home, Bird Song and a brilliant China>Rider solo; Jerry’s occasional lapses (Sugaree, start of China>Rider) keep it from being great.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "high",
+    "rationale": "Show quality is judged around average (≈2.8/5) while recording quality is good to excellent (≈4.0/5); weighted combination yields ~3.2 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Nice, clear sound thanks to Charlie Miller; early mix a bit off but overall crisp. No major dropouts, though some speaker blow‑outs affect the Terrapin segment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stuck Inside Mobile",
+      "I Will Take You Home",
+      "Bird Song",
+      "Looks Like Rain",
+      "China > Rider"
+    ],
+    "poor_songs": [
+      "Sugaree",
+      "Terrapin (rough due to speaker issues)",
+      "China > Rider (start)"
+    ],
+    "setlist_flow": "First set feels low‑energy and uneven, but the second set picks up with strong jams and notable highlights despite occasional lapses."
+  },
+  "band_member_comments": {
+    "Jerry": "Forgot lyrics on Sugaree and seemed out of it at the start of China>Rider, but delivered a brilliant solo on China>Rider and solid work on Looks Like Rain.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent added many keyboard textures and modulations; his contributions are noted especially in transitions.",
+    "Drums": "Mickey employed electronic pads/effects, which sound dated to some listeners; speaker issues affected drum presence during Terrapin."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Stuck Inside Mobile": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Will Take You Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T11:47:53.711676+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-07-16.sbd.miller.87751.sbeok.flac16"
+}

@@ -1,0 +1,95 @@
+{
+  "summary": "Excellent soundboard capture of a loose‑but‑magical 1987 Kaiser show, highlighted by Bird Song, The Stranger and a ripping Morning Dew.",
+  "review": "The recording is a clear, well‑balanced soundboard tape that lets the band’s improvisational energy shine through. Fans rave about the soaring Bird Song, an incendiary Stranger and a monster Morning Dew, while the second set drums‑jam‑into‑Truckin' sequence adds extra heat. Opinions on the performance are mixed – some note rough spots in the first set and a few sloppy moments, but overall the show is regarded as a standout 1987 Kaiser outing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the soundboard quality and key performances (Bird Song, Stranger, Dew), yielding a solid show rating; a few negative comments pull the average down, resulting in a moderate‑positive overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers call the tape \"very nice\" and \"crisp,\" though one notes it may be the only redeeming aspect of the show. No major drop‑outs are reported, but a few describe the mix as slightly uneven in places."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "The Stranger",
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "China Cat Sunflower",
+      "Rider"
+    ],
+    "setlist_flow": "First set has a few rough spots but contains strong moments (Bird Song, Althea). The second set is the high point – a hot drums‑jam‑into‑Truckin' sequence and an overall looser, more exploratory vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for ripping guitar on The Stranger, rocking back‑and‑forth, and delivering a powerful vocal performance (though one reviewer felt his Dew solo was less searing than usual).",
+    "Phil": "",
+    "Bob": "Noted for a solid slide on Althea; some reviewers found his vocals mixed—\"another story\"—but generally acceptable.",
+    "Keys": "",
+    "Drums": "The drum jam leading into Truckin' is highlighted as a major highlight; drumming segues are praised for their energy and flow."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Stranger": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Morning Dew": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Man Smart": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ship": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:00:18.010840+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-03-02.sbd.lai.1965.sbefail.shnf"
+}

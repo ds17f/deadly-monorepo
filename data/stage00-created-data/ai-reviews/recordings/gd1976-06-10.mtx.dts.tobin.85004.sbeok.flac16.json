@@ -1,0 +1,31 @@
+{
+  "summary": "Recording is essentially static, making the performance unhearable and offering no insight into the show.",
+  "review": "The sole reviewer reports that this tape consists entirely of static, rendering it unusable for listening. No musical details, setlist information, or performance observations are provided, so the quality of the actual concert cannot be assessed.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Based on a single 1‑star review that describes the audio as all static; there are no positive comments or additional data to suggest any redeeming qualities."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer notes only static, indicating a completely unusable recording with no discernible sound."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information about the set or performance was provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T03:45:07.807288+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-10.mtx.dts.tobin.85004.sbeok.flac16"
+}

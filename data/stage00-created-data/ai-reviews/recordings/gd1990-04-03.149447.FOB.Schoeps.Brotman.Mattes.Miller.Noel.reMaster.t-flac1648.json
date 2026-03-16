@@ -1,0 +1,31 @@
+{
+  "summary": "Audience tape of an apparently excellent Dead show, but the concert date and set are hotly disputed.",
+  "review": "One reviewer claims the file is mis‑dated and not from April 3 1990, calling it a post‑Brent/Vince era audience recording, while another insists the show really is from that night and praises both the performance and the sound quality. The recording is described as a nice audience capture with clear audio by the supportive reviewer, but no concrete details about song selection or set flow are provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Two conflicting reviews – one 0‑star complaint about metadata and another 4‑star praise of the show and recording – lead to an average rating around the middle of the scale with low confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as a nice audience tape with decent clarity; no specific mix issues noted, but the primary criticism concerns incorrect dating rather than sound quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure; reviewers focus solely on the disputed date and overall impression of the performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T06:31:41.711286+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-04-03.149447.FOB.Schoeps.Brotman.Mattes.Miller.Noel.reMaster.t-flac1648"
+}

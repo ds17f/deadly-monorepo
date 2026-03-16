@@ -1,0 +1,31 @@
+{
+  "summary": "Poor-quality audience taping with little musical merit, eclipsed by better recordings.",
+  "review": "Both reviewers rate this release at the lowest level, criticizing the recording as a low‑fidelity Walkman capture that offers no value compared to other available versions. No positive comments about the performance are made, indicating the show itself is not considered noteworthy.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "medium",
+    "rationale": "Two 1‑star reviews highlight terrible recording quality and lack of musical interest; rating reflects combined poor show and technical aspects."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Recorded on a Walkman, resulting in low fidelity, muffled sound with no clear mix; essentially an amateur personal tape."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-12T22:40:02.609010+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-05-06.unknown.popi.5075.sbeok.shnf"
+}

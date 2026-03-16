@@ -1,0 +1,37 @@
+{
+  "summary": "Soundboard capture with slightly over‑driven bass but an excellent all‑electric performance.",
+  "review": "The recording, a stereo soundboard (sbd) source, is generally clear and well balanced aside from a noticeably over‑driven bass that may require EQ adjustment. The show itself is praised as a solid electric set following two acoustic numbers, with Jerry Garcia’s guitar work highlighted as cutting through the mix. Overall fans are enthusiastic about the performance despite the minor mix issue.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show positively (4‑5 stars) and note strong playing, while one points out a bass mix problem; recording is good but not perfect, yielding an overall rating in the low‑to‑mid 4‑star range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Bass channel is heavily over‑driven and can be distracting; otherwise the mix is clear and guitar work shines. EQ tweak on bass flat recommended."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Two acoustic sets lead into a full electric set, providing a satisfying contrast and maintaining momentum throughout the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar \"cuts heads\" and carries the performance despite bass issues.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:55:17.083575+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-02.sbd.aud.miller.114364.flac16"
+}

@@ -1,0 +1,65 @@
+{
+  "summary": "Clear audience recording captures a strong late‑89 show highlighted by soaring Bird Song, Iko Iko and an unforgettable (if flawed) Morning Dew.",
+  "review": "The tape delivers a well‑balanced, mostly clear audience mix with only a faint hiss, letting the band's high energy shine through.  Highlights include a stellar Bird Song, jam‑heavy Iko Iko, Crazy Fingers into Uncle John’s Band, and a polarizing but passionate Morning Dew, while Brent’s piano work and Jerry’s solos keep the momentum rolling.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.2, most comments praise both performance and recording; only a single low‑star outlier exists, so the overall assessment is strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear and well‑balanced mix with a hint of hiss; captures full band sound. Minor cable issue affected Morning Dew but does not dominate the listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Iko Iko",
+      "Crazy Fingers",
+      "Uncle John's Band",
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "Morning Dew"
+    ],
+    "setlist_flow": "The concert flows smoothly from tight, melodic numbers into expansive jams that recall the ’74 vibe, with Brent’s piano fills adding psychedelic color.  The set builds toward a dramatic (if technically imperfect) Morning Dew finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Ripped a Dew for the ages, broke strings, delivered scorching solos despite amp issues; overall praised as a high‑energy guitarist.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s piano work described as on fire, psychedelic and in fine form throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-17T02:20:20.724307+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-12-27.schoeps.ladner.20785.sbeok.shnf"
+}

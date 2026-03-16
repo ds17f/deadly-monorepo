@@ -1,0 +1,94 @@
+{
+  "summary": "Clear soundboard recording with strong first‑set highlights (Truckin', Friend of the Devil solo) but an uneven second set marred by odd tape effects.",
+  "review": "The Miller SBD source is generally clean and enjoyable, though a few listeners note a brief backwards‑tape overlay after Terrapin Station and a source shift around Baby Blue. Musically the show shines early with tight jams on Truckin', Mama Tried, Big River, Cassidy and a sick Friend of the Devil solo, while the second set loses steam with lackluster performances of China Cat Sunflower, We Can Run, Estimated Prophet and a flat Terrapin jam.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Positive remarks about the soundboard source and first‑set performances balance against several negative comments on second‑set songs and odd tape artifacts, leading to a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced; noted backwards‑tape segment after Terrapin Station and a brief source change near Baby Blue, but overall enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Mama Tried",
+      "Big River",
+      "Friend of the Devil",
+      "Cassidy",
+      "One More Saturday Night"
+    ],
+    "poor_songs": [
+      "China Cat Sunflower",
+      "We Can Run",
+      "Estimated Prophet",
+      "Terrapin Station"
+    ],
+    "setlist_flow": "A classic Jekyll/Hyde arc – an energetic, above‑average first set followed by a weaker, uneven second set with some curious moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for a sick solo on 'Friend of the Devil' and an intriguing ostinato during the Terrapin jam.",
+    "Phil": "Absent until the Sugar Magnolia jam; no specific performance comments.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The 16‑minute drum segment within the Terrapin jam is highlighted as a notable improvisational stretch."
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "We Can Run": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T07:53:14.465763+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-06-16.sbd.miller.106145.flac16"
+}

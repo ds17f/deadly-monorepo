@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard recording of a high‑energy 1984 Philadelphia show featuring standout Bird Song and Wharf Rat performances",
+  "review": "Fans rave about the tight playing, especially Jerry Garcia’s strong vocals and the energized post‑drums section. The show shines on Bird Song, Wharf Rat, China Cat Sunflower > I Know You Rider and a jam‑heavy Estimated Prophet, while the first set is praised and the second set noted as a bit flat by one reviewer. The soundboard source is clear and well‑balanced, making it an enjoyable listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4–5) with strong praise for musical performance and no technical complaints; soundboard quality is assumed excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "No listeners reported drop‑outs or muddiness; the audience capture is described as superb, indicating a clean, well‑balanced mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Wharf Rat",
+      "China Cat Sunflower > I Know You Rider",
+      "Estimated Prophet",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as excellent and energetic; second set considered flatter by one reviewer but still contains high‑energy moments like Wharf Rat and strong post‑drums."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s voice is noted as especially strong this night, though one reviewer felt his tone sounded weary in the second set.",
+    "Phil": "Described as having a \"deepest Phil\" bass presence, adding depth to the performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Post‑drums section is highlighted as high‑energy and a key driver of the show’s excitement."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T16:04:48.657146+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-19.sbd.miller.118658.flac16"
+}

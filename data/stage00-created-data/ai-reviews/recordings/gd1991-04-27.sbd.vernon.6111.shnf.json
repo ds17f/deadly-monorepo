@@ -1,0 +1,42 @@
+{
+  "summary": "Patchy soundboard of an otherwise intense performance – strong playing with vocal and piano slip‑ups, and missing portions of Uncle John’s Band and The Weight.",
+  "review": "The show is marked by high energy and many stellar licks from the band, though Garcia forgets lyrics, Hornsby misses cues and Brent Welnick’s vocals are off‑key. Recording-wise it’s a flat, ragged soundboard with the guitar buried early and portions of Uncle John’s Band, the drum break and the ending of The Weight missing, making the listening experience uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "low",
+    "rationale": "Show quality is decent (good playing but noticeable mistakes) while recording quality is poor (flat soundboard, missing sections). Limited number of detailed reviews leads to low confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Flat, ragged soundboard; Garcia's guitar buried at start, improves later. Missing the end of Uncle John's Band, most of the drum break and the ending of The Weight."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Overall intense set with many impressive licks, but marred by vocal slip‑ups (Garcia, Welnick) and Hornsby missing piano cues; the flow is disrupted by missing audio at key moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Plays incredible licks but forgets lyrics and his guitar is buried early in the mix.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Hornsby frequently misses cues and changes on piano, affecting the overall tightness.",
+    "Drums": "Most of the drum break at the end of Uncle John's Band is missing from the recording."
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T19:03:30.827826+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-27.sbd.vernon.6111.shnf"
+}

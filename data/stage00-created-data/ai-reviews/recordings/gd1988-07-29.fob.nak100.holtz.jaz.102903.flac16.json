@@ -1,0 +1,51 @@
+{
+  "summary": "Hand‑held front‑of‑board audience tape captures a vivid atmosphere, highlighted by an electrifying China Cat Sunflower → I Know You Rider run and a soaring Playing in the Band.",
+  "review": "The audience recording, mastered by JAZ, is surprisingly clear and full of ambience despite occasional crowd chatter. Musically the show shines with a legendary China Cat Sunflower > I Know You Rider sequence, an inspiring Playing in the Band, and a beautiful rendition of Believe It Or Not. Overall the performance is praised as one of the standout shows of the 1988 summer tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (7/8) give 4‑5 stars and highlight exceptional musical moments; recording is described as very listenable with good mastering, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Hand‑held front‑of‑board (FOB) audience tape with some crowd talking; JAZ mastering provides clear balance and vivid ambience, making it very listenable despite the lack of a pure soundboard feed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Playing in the Band",
+      "Believe It Or Not"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "While a few reviewers note odd song choices, the high points—especially the China Cat Sunflower/Rider run and Playing in the Band—create an exhilarating arc that many consider one of the best from the 1988 summer tour."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Believe It Or Not": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T12:12:52.477696+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-07-29.fob.nak100.holtz.jaz.102903.flac16"
+}

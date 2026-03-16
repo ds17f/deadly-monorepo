@@ -1,0 +1,37 @@
+{
+  "summary": "Soundboard recording with a noticeable Sugaree glitch, but fans still love the 1978 performance overall.",
+  "review": "One reviewer flags a serious glitch at the end of \"Sugaree,\" calling it too bad and suggesting a problem with the tape. Another fan gushes about how great 1978 feels, giving the show a solid four‑star endorsement despite the technical hiccup. The mix is generally soundboard quality, but the isolated error keeps the recording from being fully enjoyable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Two reviews give opposing scores (0 and 4). The positive comment praises the era/show, while the negative points out a specific recording flaw; averaging yields a modest rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Glitch on the final \"know me\" of Sugaree noted as too bad; otherwise the soundboard source is acceptable."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T09:45:45.586956+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-07.150559.BettyBoard.Anon.Noel.t-flac16"
+}

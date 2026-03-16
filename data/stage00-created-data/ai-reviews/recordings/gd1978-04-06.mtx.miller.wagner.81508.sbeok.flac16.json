@@ -1,0 +1,31 @@
+{
+  "summary": "Positive fan impression with an 'Amazing' performance, though recording details are unclear",
+  "review": "The lone review praises the concert as amazing and gives it four stars, but provides no concrete information about the audio source, sound quality, or specific musical moments. No technical or set‑list details were mentioned, leaving both recording and show qualities undefined.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Rating is based on a single enthusiastic 4‑star review; the lack of detail about sound or performance limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound quality, source type, or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific feedback on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T09:40:22.369681+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-06.mtx.miller.wagner.81508.sbeok.flac16"
+}

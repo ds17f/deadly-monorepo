@@ -1,0 +1,39 @@
+{
+  "summary": "Audience recording of a famously wild Help > Slip > Franklin's show – the performance shines but the tape is marred by crowd noise and playback quirks.",
+  "review": "The concert is remembered for an especially spooky, blues‑y rendition of Help/Slip/Franklin’s that many fans cite as a highlight.  However, reviewers repeatedly note that the audience recording suffers from a loud heckler, occasional slowdown, and overall average fidelity, making the listening experience uneven despite the strong musical moment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the show (especially the Help/Slip/Franklin’s sequence) but criticize the audience‑recorded tape for noise, slowdown and poor clarity; the weighted average of star ratings (~3.1) reflects this split."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Average to poor audio – slowed‑down playback, a persistent howling heckler that drowns out instruments, and general tape hiss; no major dropouts but overall clarity is compromised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows well with a memorable, haunting Help/Slip/Franklin’s segment; the energy is high but the over‑enthusiastic crowd detracts from the listening experience."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil's onstage banter (“How does it feel to be louder than we are?”) is noted, highlighting his interaction with the rowdy audience.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's": {
+      "positive_mentions": 4,
+      "negative_mentions": 2,
+      "total_mentions": 6
+    }
+  },
+  "processed_date": "2025-09-23T07:10:38.404165+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-08-04.jones.vernon.12078.sbeok.shnf"
+}

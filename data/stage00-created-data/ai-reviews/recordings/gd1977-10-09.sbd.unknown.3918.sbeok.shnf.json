@@ -1,0 +1,81 @@
+{
+  "summary": "Fair soundboard recording of a strong ’77 show highlighted by stellar Lazy Lightnin' > Supplication and a near‑perfect Terrapin Station",
+  "review": "The performance is solid, with the first set generally on par with other classic ’77 shows and the second set improving in both mix and playing. Reviewers rave about Lazy Lightnin' > Supplication, Sugaree, Fire on the Mountain, Estimated Prophet and a near‑perfect Terrapin Station, while noting some cuts and a middling Cassidy. The soundboard source is usable but requires EQ work and suffers from missing instrument balance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Show quality is praised with many standout songs; recording quality is described as sub‑par and needing EQ, leading to a solid but not exceptional combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix is uneven – Keith and Mickey are low or missing in places, Bobby's guitar drops out; requires EQ (boost highs, roll lows). Overall not the best SBD, but listenable after cleaning."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightnin' > Supplication",
+      "Sugaree",
+      "Fire on the Mountain",
+      "Estimated Prophet",
+      "Terrapin Station"
+    ],
+    "poor_songs": [
+      "Cassidy",
+      "Brown Eyed Women"
+    ],
+    "setlist_flow": "First set solid despite a few cuts; second set mix improves starting with Samson and builds to strong performances, culminating in an excellent Terrapin Station. Encore is missing from the source."
+  },
+  "band_member_comments": {
+    "Jerry": "Snarly tone on Lazy Lightnin', pre‑Foolish Heart licks, prominent solar reverb; takes over second break.",
+    "Phil": "Super fine playing noted in second set.",
+    "Bob": "Big chordings on Estimated Prophet and clear arpeggio chording on Terrapin Station.",
+    "Keys": "Keith is low or left out of the mix at times.",
+    "Drums": "Mickey is low or omitted in places; occasional ‘drummer popcorn machine’ and ‘drummer soup’ descriptions."
+  },
+  "song_mentions": {
+    "Lazy Lightnin' > Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T04:45:21.909524+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-09.sbd.unknown.3918.sbeok.shnf"
+}

@@ -1,0 +1,53 @@
+{
+  "summary": "Explosive Dark Star and classic Holy Trinity despite muddy tape",
+  "blurb": "The early set features a blazing Dark Star followed by the Saint Stephen → The Eleven “Holy Trinity” sequence that fans rave about. Jerry’s lightning‑fast guitar work shines, but the overall flow is hampered by poor audience recording quality.",
+  "review": "On September 26 1969 at the Fillmore East, the Dead delivered a scorching early set that still resonates despite the sub‑par source material. The show opens with a ferocious Dark Star where Jerry Garcia’s guitar cuts like lightning, propelling into the legendary “Holy Trinity” – Saint Stephen bleeding straight into The Eleven. That three‑song stretch is repeatedly singled out as the highlight, showcasing the band’s telepathic tightness and improvisational daring.\n\nUnfortunately both known recordings suffer from serious fidelity problems: one audience tape is muddy with a VBR stream that makes details hard to follow, while the other suffers from obvious tape‑reuse artifacts on “King Bee” and “Death Don't Have No Mercy.” Even so, the performance itself remains compelling enough that listeners willing to wade through the hiss are rewarded with one of the era’s most thrilling early‑show moments.\n\nOverall, the show is a mixed bag: stellar musicianship marred by recording limitations. For Deadheads seeking the iconic Holy Trinity in its raw, unfiltered glory, this night is worth the effort.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 11,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.0,
+      "sentiment_rationale": "Both recordings are labeled 'mixed' – they praise the Dark Star and Holy Trinity while simultaneously noting poor tape quality. No consistent strong positive or negative sentiment across multiple sources, so no adjustment is applied.",
+      "final_calculation": "2.5 + 0.1 + 0.0 = 2.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd69-09-26.aud.hanno.14856.sbeok.shnf",
+    "reason": "Although the audio is muddy, this audience tape captures the full Holy Trinity sequence and is the most complete source available."
+  },
+  "key_highlights": [
+    "Fiery Dark Star with explosive, lightning‑fast guitar work.",
+    "\"Holy Trinity\" (Saint Stephen → The Eleven) stands out as a classic improvisational peak.",
+    "Recording quality issues (muddy audience tape, tape‑reuse artifacts) limit clarity."
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "Saint Stephen",
+    "The Eleven"
+  ],
+  "band_performance": {
+    "Jerry": "Explosive, lightning‑fast guitar work on Dark Star, driving the band's intensity.",
+    "Phil": "",
+    "Bob": "",
+    "Pigpen": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-24T17:18:33.092721+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dark Star",
+      "Saint Stephen",
+      "The Eleven",
+      "I'm A King Bee",
+      "Death Don't Have No Mercy"
+    ]
+  ]
+}

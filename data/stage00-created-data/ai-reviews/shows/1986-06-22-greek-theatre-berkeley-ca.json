@@ -1,0 +1,80 @@
+{
+  "summary": "Tight first set, fiery Fire>Samson jam, mellow second set with Box of Rain finale",
+  "blurb": "The concert opens with a solid first set highlighted by It Must Have Been The Roses and Might As Well. A rare Fire‑opening second set delivers the high‑energy Fire > Samson sequence and an expansive Space > Truckin' stretch. The encore caps off the night with a powerful Box of Rain and an uplifting U.S. Blues.",
+  "review": "June 22, 1986 at Berkeley’s Greek Theatre finds the Dead in good form, delivering a mix of tight rockers and exploratory jams that keep the audience hooked from start to finish. The first set rolls through classics like Jack Straw, Cassidy and a rollicking Might As Well before slipping into a mellow mood with the unexpected Fire On The Mountain opener for set two. From there the band launches into a fiery Fire > Samson & Delilah transition that many fans cite as a highlight, while the subsequent Ship Of Fools, Man Smart, Woman Smarter and the iconic Drums → Space → Truckin' sequence showcase the group’s improvisational chemistry. Though some reviewers note uneven moments in Jerry’s guitar work on Fire and later parts of the set, his vocals are consistently praised as “perfect” and his solo on Must Have Been The Roses is described as thoughtful and soaring. Phil anchors the night with solid bass lines, a memorable vocal moment on Box of Rain, and even a brief lyric slip that adds human charm. Bob’s playful “Sweet Sweet Summertime” rap during Lovelight injects humor, though his lead on Truckin' receives mixed feedback. Brent’s background vocals and rag‑time keyboard touches add texture, while Mickey’s delayed fills on Lovelight and the dual‑drum interplay with Bill drive the psychedelic peaks. The encore delivers a jubilant U.S. Blues followed by an emotionally resonant Box of Rain that leaves the crowd buzzing.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 25,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Multiple recordings praise standout moments (Fire>Samson, Space > Truckin', Box of Rain) while noting occasional uneven guitar and vocal slips; overall sentiment leans positive but is tempered by mixed remarks, yielding a moderate +0.8 adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.8 = 3.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd86-06-22.sbd.lai.388.sbefail.shnf",
+    "reason": "Good‑quality soundboard capture with clear, well‑balanced audio and minor fixable glitches; includes the full setlist and highlights the key moments praised across reviews."
+  },
+  "key_highlights": [
+    "Fire > Samson & Delilah transition delivers high energy early in set two",
+    "Space → Truckin' sequence provides a psychedelic climax",
+    "Box of Rain encore is emotionally resonant and widely praised",
+    "Might As Well kicks off the first set with driving momentum"
+  ],
+  "song_highlights": [
+    "Fire On The Mountain",
+    "Samson & Delilah",
+    "Ship Of Fools",
+    "Man Smart, Woman Smarter",
+    "Drums",
+    "Space",
+    "Truckin'",
+    "Goin' Down The Road Feeling Bad",
+    "Stella Blue",
+    "Turn On Your Lovelight",
+    "U.S. Blues",
+    "Box of Rain",
+    "It Must Have Been The Roses"
+  ],
+  "band_performance": {
+    "Jerry": "Vocals are consistently praised as perfect and goose‑bumps inducing; his solo on Fire and the nuanced phrasing on It Must Have Been The Roses stand out, though some listeners note sloppy guitar moments on Fire and ragged passages later in the set.",
+    "Phil": "Provides solid bass foundation throughout; nails the end verse of Box of Rain and delivers a memorable vocal moment that sparked a \"We Want Phil\" chant, despite a brief lyric slip early in the show.",
+    "Bob": "Adds humor with an improvised Sweet Sweet Summertime rap during Lovelight; his lead vocals on Truckin' receive mixed feedback, but overall contributes energetic rhythm guitar work.",
+    "Brent": "Delivers tasteful background vocals and rag‑time staccato keyboard lines that enhance the jams; a few reviewers missed signature Lovelight licks before Bob’s rap, but his contributions remain solid.",
+    "Mickey": "Highlights include \"killer delays\" on Lovelight and driving fills that propel the Drumz → Space → Truckin' segment, adding to the psychedelic texture of the second set.",
+    "Billy": "Provides steady, propulsive drumming that underpins the high‑energy moments, especially during the Fire > Samson transition and the climactic Truckin' jam."
+  },
+  "processed_recordings": 7,
+  "processed_date": "2025-09-15T16:23:28.758333+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Fire On The Mountain",
+      "Samson & Delilah"
+    ],
+    [
+      "Ship Of Fools",
+      "Man Smart, Woman Smarter",
+      "Drums",
+      "Space",
+      "Truckin'",
+      "Goin' Down The Road Feeling Bad",
+      "Stella Blue",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "U.S. Blues"
+    ],
+    [
+      "Box of Rain"
+    ],
+    [
+      "It Must Have Been The Roses"
+    ]
+  ]
+}

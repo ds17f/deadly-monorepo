@@ -1,0 +1,31 @@
+{
+  "summary": "Audience‑sourced tape with a strong guitar but buried drums and vocals; the show is judged average with no legendary moments.",
+  "review": "The recording comes from an audience feed taken on a modest recorder, resulting in a mix where Jerry’s guitar cuts through while the drums and other instruments are hard to hear. Reviewers describe the jams as fun but unremarkable, offering no standout performances beyond the general energy of the night.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Both reviewers note an average musical performance (≈3‑4★) and a fair but technically limited audience recording (≈3★). The mixed feedback and small sample size give moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Stage technical difficulties reported; guitar is clear, but drums, bass, keyboards and vocals are barely audible amid light crowd noise."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers found the jams enjoyable yet not particularly memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar noted as strong and clear despite overall mix issues.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums are barely hearable in this audience recording."
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T01:38:56.310212+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-08-17.aud.munder.12107.sbeok.shnf"
+}

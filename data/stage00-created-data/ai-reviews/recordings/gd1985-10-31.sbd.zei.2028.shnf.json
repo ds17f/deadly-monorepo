@@ -1,0 +1,68 @@
+{
+  "summary": "High‑quality soundboard capture of a Halloween ’85 show with an electrifying Playing in the Band → Ship of Fools transition, standout Mr. Fantasy and a killer Werewolves of London.",
+  "review": "The recording is a solid 1985 soundboard tape that, despite a few cracks, fade‑outs and a brief drum break, delivers clear vocals and impressive overall fidelity. Musically the show bursts with Halloween energy – the rare Playing in the Band morphing into Ship of Fools, a beautiful jam that lands on Mr. Fantasy, plus superb performances of West L.A. Fadeaway and Werewolves of London.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All three reviewers gave five stars and praised both the performance (unique transitions, high energy) and the sound quality (clear vocals, high‑quality tape), with only minor technical glitches noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Generally clear and crisp with strong vocal presence; a few cracks, a sudden fade‑out in \"Might as Well\", and a brief drum break are noted but considered fixable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Ship of Fools",
+      "Mr. Fantasy",
+      "West L.A. Fadeaway",
+      "Werewolves of London"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Halloween energy fuels a unique Playing in the Band → Ship of Fools transition, followed by an extended melodic jam that resolves into Mr. Fantasy; the set maintains high momentum with strong renditions of West L.A. Fadeaway and Werewolves of London."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewed as improvising around \"Hall of the Mountain King\" before Funiculi Funicula, showing his playful guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "A brief break in the middle of the drums is noted as a recording glitch."
+  },
+  "song_mentions": {
+    "West L.A. Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Werewolves of London": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Teddy Bear's Picnic": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T10:11:10.223067+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-10-31.sbd.zei.2028.shnf"
+}

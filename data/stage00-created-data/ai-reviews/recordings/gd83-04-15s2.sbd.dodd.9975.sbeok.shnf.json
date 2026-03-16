@@ -1,0 +1,99 @@
+{
+  "summary": "Crisp, clean soundboard captures a high‑energy April ’83 show with a killer second set highlighted by Shakedown Street, Bob Star and an unforgettable GDTRFB.",
+  "review": "The recording is a crystal‑clear SBD that lets every instrument shine – vocals sit up front, the bass breathes, and Brent’s experimental keyboards sparkle.  Musically the night bursts into hyperdrive after the opening Shakedown Street, with a standout second set featuring Bob Star, He's Gone → Little Star, Samson & Deliah and a soaring GDTRFB, while the first set is generally regarded as serviceable but less exciting.  Overall fans rave about the performance and the pristine tape quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Eleven detailed reviews overwhelmingly praise both the musical performance (especially the second set) and the soundboard recording; average star rating is ~4.27, yielding a strong positive score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, balanced mix with no hiss or grain; vocals front and clear, bass tight but not over‑blown, clean tight sound throughout.  Several reviewers call it “top‑notch,” “vibrant SBD,” and note the excellent balance of Phil and Brent in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Bob Star",
+      "He's Gone → Little Star",
+      "Samson and Deliah",
+      "Ship of Fools",
+      "Keep on Growing",
+      "Esau",
+      "GDTRFB",
+      "Around and Around"
+    ],
+    "poor_songs": [
+      "First set (overall) – described as nothing special by some reviewers"
+    ],
+    "setlist_flow": "The first set is solid but unremarkable; the show truly ignites after Shakedown Street, with a second‑set that builds into hyperdrive, delivering tight jams and memorable transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work praised for hot licks and driving the band forward, especially during the second set.",
+    "Phil": "Bass noted as clear, balanced and front‑center; Phil’s playing blends well in the mix.",
+    "Bob": "Bob’s vocals highlighted on Bob Star and He's Gone, with a notable vocal outro that transforms the song.",
+    "Keys": "Brent’s keyboards are celebrated for experimental, trippy effects and strong harmonic contributions throughout the night.",
+    "Drums": "The drums and space segment receive positive remarks for their energy and tightness."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bob Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Little Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson and Deliah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Keep on Growing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "GDTRFB": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like A Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:17:51.947049+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-15s2.sbd.dodd.9975.sbeok.shnf"
+}

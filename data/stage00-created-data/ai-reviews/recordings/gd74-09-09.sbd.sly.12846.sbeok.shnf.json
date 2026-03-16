@@ -1,0 +1,50 @@
+{
+  "summary": "Soundboard source with decent audio despite many cuts; the set features a magical Playin' and one of the best Truckin' jams of ’74, though overall the show is viewed as uneven.",
+  "review": "The recording is a sound‑board capture that generally sounds good, but several key songs (Scarlet>Fire, Help>Slip>Franklin's, etc.) are missing, which limits its completeness. Musically the performance shines on Playin' and an outstanding Truckin' jam, yet many listeners find the remainder of the show dull or uninteresting, leading to mixed opinions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Show quality is judged average‑to‑below average based on mixed reviewer comments, while the recording itself is decent; combined weighting yields a rating around 2.8."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced soundboard audio, but numerous song cuts (Scarlet>Fire, Help>Slip>Franklin's, etc.) reduce the listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin'",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show takes a while to warm up before delivering strong moments in the second set (notably Truckin'), but overall many listeners find it uneven and less engaging compared to other 1974 performances."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T00:01:14.000605+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-09-09.sbd.sly.12846.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent matrix recording captures a warm, vibrant full‑show experience with a standout performance of The Other One.",
+  "review": "All four reviewers rave about the show, calling it great from start to finish and highlighting an especially powerful rendition of The Other One with soaring guitar work. The Dusborne/Charlie Miller matrix is praised for its crisp, vivid sound despite minor tape hiss and occasional cracks, preserving the live‑concert feel. Jerry Garcia’s tireless playing across three sets and his slightly hoarse vocal tone are noted as memorable highlights.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Uniform 5‑star reviews, enthusiastic language about both performance and sound quality; minor tape hiss does not detract from an overall excellent experience."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Warm, vibrant and crisp sound with stellar clarity; a few instances of tape hiss and tiny cracks are mentioned but do not impair enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Consistently strong from the opening to the closing, maintaining high energy throughout the concert."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for tireless playing across three bands, a flurry of guitar wailings on The Other One, and a slightly hoarse but compelling vocal tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T07:42:44.628463+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-05-20.124567.mtx.dusborne.flac16"
+}

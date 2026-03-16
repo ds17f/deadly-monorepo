@@ -1,0 +1,68 @@
+{
+  "summary": "Good‑to‑great soundboard recording (audience a bit muddy) captures a hot 1983 show highlighted by scorching Sugaree, fiery Dupree's solos and a bouncy first set.",
+  "review": "The performance is consistently praised – Jerry’s fast‑fire leads on Sugaree, He’s Gone and Dupree’s Diamond Blues, plus Brent’s psychedelic keyboards make the spring ’83 tour feel electric. The soundboard source is clear while the audience mix adds some mud, but overall the tape remains very listenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show 4‑star and praise the musical moments; recording quality is described as good with minor muddiness, leading to an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Soundboard version is clear and crisp; the audience (AUD) mix is described as a bit muddy but still acceptable. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dupree's Diamond Blues",
+      "On The Road Again",
+      "Sugaree",
+      "He's Gone",
+      "Spanish Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a bouncy, country‑tinged first set and an overall hot spring ’83 vibe; the unusual song order is seen as fresh rather than disruptive."
+  },
+  "band_member_comments": {
+    "Jerry": "Fast, fire‑spinning solos on Sugaree, He's Gone and Dupree's are repeatedly highlighted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s psychedelic, carnival‑like keyboard work receives strong praise.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "On The Road Again": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:51:41.165374+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-19.wise.miller.21922.sbeok.shnf"
+}

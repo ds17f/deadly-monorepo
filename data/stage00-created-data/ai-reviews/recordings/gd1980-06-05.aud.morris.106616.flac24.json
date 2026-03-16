@@ -1,0 +1,31 @@
+{
+  "summary": "Audience tape from Morris with surprisingly clear sound, but reviewers are split on the show's quality.",
+  "review": "One reviewer calls this Morris audience recording a pleasant surprise and says it sounds good, while another finds the performance boring and substandard. No specific songs or band moments are mentioned, leaving the musical content largely uncharacterized.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Two reviews give a high (5) and moderate (3) rating; average suggests a solid show with decent recording, but limited commentary reduces certainty."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "One reviewer praises the sound as clear and pleasant; another calls it substandard, indicating mixed impressions of the audio quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or performance were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T00:08:20.188855+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-05.aud.morris.106616.flac24"
+}

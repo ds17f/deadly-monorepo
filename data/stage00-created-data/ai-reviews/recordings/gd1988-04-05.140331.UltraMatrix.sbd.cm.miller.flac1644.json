@@ -1,0 +1,88 @@
+{
+  "summary": "Good UltraMatrix matrix recording with some mud, but the show shines on Hell in a Bucket, All Over Now and a fiery Birdsong.",
+  "review": "The performance is praised for its psychedelic resurgence – Hell in a Bucket opens the set with liquid jams, All Over Now and Birdsong are described as outrageous, and Sampson, Ship of Fools and Masterpiece all receive strong compliments. The UltraMatrix recording is generally solid, though listeners note occasional mud and thin spots depending on venue location.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Show quality is rated high with many standout songs; recording is good but noted as a bit muddy, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear after the UltraMatrix upgrade, but some mud and thin sound in certain venue spots; occasional audience bleed noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hell in a Bucket",
+      "All Over Now",
+      "Birdsong",
+      "Masterpiece",
+      "Sampson",
+      "Ship of Fools",
+      "Walkin' Blues"
+    ],
+    "poor_songs": [
+      "Louie Louie",
+      "Sugaree"
+    ],
+    "setlist_flow": "Strong psychedelic opening with Hell in a Bucket, solid mid‑set jams (All Over Now, Birdsong) and a mixed third‑night feel; occasional unevenness around Louie Louie but overall cohesive."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals were noted as less than perfect on Sugaree, but his guitar work remained solid despite not being at 100%.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "A stand‑alone Smokestack Lightning into drums was criticized as feeling ripped off; otherwise drumming supported the jams."
+  },
+  "song_mentions": {
+    "Louie Louie": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "All Over Now": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sampson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T08:04:53.882965+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-05.140331.UltraMatrix.sbd.cm.miller.flac1644"
+}

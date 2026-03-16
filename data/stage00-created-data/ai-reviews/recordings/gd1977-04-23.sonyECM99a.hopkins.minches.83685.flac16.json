@@ -1,0 +1,81 @@
+{
+  "summary": "High‑energy show with a stellar setlist (Sugaree, Help‑Slip‑Franklin’s, GDTRFB) captured on a distant ECM‑99A audience mic that sounds good overall.",
+  "review": "Fans rave about the explosive first and second sets – highlights include an amazing Sugaree, a tight Help > Slip > Franklin's sequence and a top‑notch performance of GDTRFB. The tape was recorded with a distant stereo ECM‑99A mic (about 60 ft out), delivering a clear if ambient sound that most reviewers find very listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All four reviews are strongly positive, with average user stars of 4.5; the show is praised for its setlist and performance while the recording is noted as good despite being a distant audience mic."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Recorded with an ECM‑99A stereo microphone positioned ~60 ft from the stage; clear enough for most listeners, no major drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "GDTRFB"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows superbly – a strong first half (Sugaree, Cassidy, etc.) that could stand alone, followed by an even tighter second set highlighted by the short‑sweet Help‑Slip‑Franklin's and other classics."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet-Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "GDTRFB": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T21:26:28.327059+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-04-23.sonyECM99a.hopkins.minches.83685.flac16"
+}

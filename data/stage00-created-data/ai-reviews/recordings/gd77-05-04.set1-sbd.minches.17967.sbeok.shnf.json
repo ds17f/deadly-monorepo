@@ -1,0 +1,50 @@
+{
+  "summary": "High‑quality soundboard capture of the May 4 1977 show, highlighted by a soaring Half Step and flawless Cassidy vocals.",
+  "review": "The recording is a patched sound‑board source that fans describe as superior, with only a brief rough patch at the start of \"Half Step\". Musically the set shines – Donna’s harmonies on \"Cassidy\" and Jerry’s fretwork on every number receive glowing praise, making this run one of the year’s top performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer stars (average 4.5), strong positive comments on both performance and recording; enough detailed reviews to give a confident rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Patched sound‑board tape praised as a superior source; minor imperfection in the first two minutes of \"Half Step\" but overall clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step",
+      "Cassidy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans note that every song feels fresh, with seamless transitions throughout the Palladium run; repeats sound revitalized and the set maintains a summer‑day vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his fretwork and guitar tone throughout the set.",
+    "Phil": "",
+    "Bob": "Bob Weir’s vocal contributions are highlighted as great, especially alongside Donna's harmonies on \"Cassidy\".",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LLR": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T22:30:36.740428+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-05-04.set1-sbd.minches.17967.sbeok.shnf"
+}

@@ -1,0 +1,59 @@
+{
+  "summary": "Clear soundboard recording with pleasant guitar distortion and a strong 1972 set highlighted by China Cat > Riding, Playing in the Band and an adventurous Dark Star.",
+  "review": "The SBD capture offers good instrument separation, a nice Keith‑in‑the‑mix soundstage and even a pleasantly gritty Bob‑guitar channel. Musically the show shines with tight China Cat Sunflower → Riding on the Lizard, a psychedelic Playing in the Band sandwich and a wildly expressive Dark Star, though one reviewer found the Dark Star less compelling.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Four detailed reviews are mostly 4‑5 stars, praising both the performance (standout jams) and the recording quality (soundstage, instrument separation). Minor criticism of Dark Star does not outweigh overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Nice soundstage and instrument separation; slight distortion on Bob's guitar channel described as pleasant; Keith’s keyboards sit well in the mix; overall clear but with a characterful quirk."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > Riding on the Lizard",
+      "Playing in the Band",
+      "Dark Star",
+      "Donna Jean"
+    ],
+    "poor_songs": [
+      "Dark Star"
+    ],
+    "setlist_flow": "Second‑set sandwich (Playing in the Band) and an extended Dark Star provide a seamless, psychedelic flow; first set delivers tight bluesy moments and solid song transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Lead guitar described as melting down during Dark Star and delivering intense phrasing in Playing in the Band.",
+    "Phil": "Bass work praised (notable solo) and overall soundstage credited to his playing; described as 'nice' by reviewers.",
+    "Bob": "Guitar channel has a slight, pleasant distortion; vocals are prominent in the mix.",
+    "Keys": "Keith’s keyboard tone is highlighted as nicely placed in the mix.",
+    "Drums": "Bill's drumming called hard‑driving with a drum solo noted; drums>Dark Star transition mentioned."
+  },
+  "song_mentions": {
+    "China Cat Sunflower > Riding on the Lizard": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Donna Jean": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T00:28:43.959213+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-10-18.sbd.matera.123571.sbeok.flac16"
+}

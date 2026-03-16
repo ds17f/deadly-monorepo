@@ -1,0 +1,51 @@
+{
+  "summary": "Great audience‑tape recording with solid sound and a powerhouse set highlighted by an incendiary Scarlet Fire, epic Not Fade Away jam, and a marathon Black Peter.",
+  "review": "Fans rave about the energy of this make‑up show – Jerry’s shredding, a blistering Scarlet Fire and a soaring Not Fade Away jam are repeatedly singled out as classics. The audience recording is praised for its SBD‑like clarity despite a few glitches and SHN cut‑outs on Scarlet Fire, making it a solid listening experience overall.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "The majority of reviews (7 out of 9) are highly positive about both performance and recording; only two note serious problems, so the combined show (70%) and recording (30%) rating lands around a strong 4‑star level."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally praised as an excellent audience tape with SBD‑like mix; some reviewers note occasional glitches and SHN cut‑outs on the Scarlet Fire track."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Fire",
+      "Not Fade Away",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The make‑up show felt like a celebration, with tight transitions (e.g., drums into Not Fade Away) and a long, spacey second set that kept the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for shredding guitar work and extra solo passages; described as 'tearing his guitar to shreds' and delivering perfect tone.",
+    "Phil": "Bass noted as high‑end and well balanced, especially on the audience mix.",
+    "Bob": "Vocals highlighted as perfect and nicely vocalized throughout, particularly during Scarlet Fire.",
+    "Keys": "",
+    "Drums": "Strong drum work praised for launching jams such as the transition into Not Fade Away."
+  },
+  "song_mentions": {
+    "Scarlet Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:32:49.446487+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-01-17.rolfe.pujol-vernon.12200.sbeok.shnf"
+}

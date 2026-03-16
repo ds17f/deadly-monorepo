@@ -1,0 +1,63 @@
+{
+  "summary": "Matrix mix delivers a full, ambient sound that lets an epic 1973 show shine – standout Dark Star, Bird Song and tight third‑set jams with Dickey Betts.",
+  "review": "The matrix recording blends the dry soundboard with audience ambience to create surprising depth and clarity, though a few listeners note occasional muddiness or “cheesy” balance. Musically the concert is hailed as one of the band's best of ’73, featuring an epic Dark Star with a monster Phil jam, a soaring Bird Song, smoking Around‑and‑Around/Promised Land, and a tight third set highlighted by Dickey Betts.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the performance and the matrix mix; only a few note recording flaws, resulting in an overall high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Listeners love the added ambience and clarity; some complain of cheesy balance or muddy audience tape, and one track (Stella) suffers from intrusive crowd noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Bird Song",
+      "Around and Around",
+      "Promised Land",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A jazzy‑jammy first half that drifts into tight, mellow grooves, culminating in a high‑energy third set with Dickey Betts that many describe as exceptional."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his interplay with Dickey Betts and noted on the “sweetest of Jerry’s Stellas” (though crowd noise was a complaint).",
+    "Phil": "Described as a \"monster\" jam in Dark Star, called a rock‑and‑roll god by reviewers.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "One reviewer highlighted the clear echo of drums in the matrix mix, enhancing the sense of being there."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T14:35:11.897199+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-10.mtx.tobin.90771.flac16"
+}

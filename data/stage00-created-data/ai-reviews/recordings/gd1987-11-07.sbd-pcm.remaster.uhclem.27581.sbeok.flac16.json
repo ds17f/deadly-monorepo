@@ -1,0 +1,57 @@
+{
+  "summary": "Crisp soundboard recording of a tight 1987 show that shines on Hey Pocky Way, Row Jimmy and The Terrapin.",
+  "review": "All four reviewers rave about the inspired, high‑energy playing, especially Jerry Garcia’s flawless solo on Row Jimmy and the scorching renditions of Hey Pocky Way and Jack Straw.  The “Brent board” source is described as crystal‑clear and the best‑sounding version of this concert, making it a must‑listen for Deadheads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "Uniform 5‑star reviews highlight an exceptional performance and a pristine soundboard recording; both show and audio quality merit near‑perfect scores."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly call the tape \"crispy\" and a \"Brent board\", noting clear, clean sound with no dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hey Pocky Way",
+      "Jack Straw",
+      "Row Jimmy",
+      "The Terrapin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert opens tight and stays high‑energy throughout; reviewers describe it as magical, inspired and one of the band’s most consistent 1987 performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple mentions of a flawless, \"ultimate\" solo on Row Jimmy and overall fine form throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Noted as a classic Brent‑era performance, highlighting Brent Mydland's keyboard contribution.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hey Pocky Way": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:04:52.426995+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-11-07.sbd-pcm.remaster.uhclem.27581.sbeok.flac16"
+}

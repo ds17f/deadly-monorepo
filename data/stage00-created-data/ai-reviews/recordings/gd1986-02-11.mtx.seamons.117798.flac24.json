@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent matrix recording captures a fun, jam‑filled show highlighted by a standout China > Rider opener and a sweet second set.",
+  "review": "The three reviewers rave about the performance – describing it as jammy, full of genius moments and hot drum jams – with particular love for the opening China > The Rider sequence and an especially sweet second set. The matrix source is praised for its clear, well‑balanced sound, making this a highly enjoyable listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "All three reviews are strongly positive (5, 4, 5 stars) and comment on both high‑quality sound and a great musical performance; the weighted average of show (≈4.6) and recording (≈4.4) yields ~4.5."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced matrix mix with no reported dropouts or muddiness; reviewers describe the sound as \"nice\" and \"excellent.\""
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > The Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid first set kicked off by China > Rider, followed by a second set described as unusually sweet and jam‑heavy."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Hot drum jams praised for energy and creativity."
+  },
+  "song_mentions": {
+    "China > The Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T12:42:49.042522+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-02-11.mtx.seamons.117798.flac24"
+}

@@ -1,0 +1,52 @@
+{
+  "summary": "Crisp soundboard recording of a high‑energy 1981 show with standout “Stella Blue” moments, but uneven guitar balance and a few weaker songs.",
+  "review": "The Charlie Miller soundboard capture is generally clean and well‑separated, delivering a vivid listening experience despite occasional low‑level lead guitar. The performance shines on “Stella Blue” and maintains a high‑energy flow, though tracks like “Looks Like Rain” and “Satisfaction” receive criticism.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the recording’s clarity and several song performances, yielding an average show rating around 4.2; combined with strong soundboard quality the weighted score lands in the 4.3 range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp separation and definition noted by multiple reviewers; a few complaints about low lead‑guitar level and occasional board muddiness, but overall considered better than the venue PA."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Looks Like Rain",
+      "Satisfaction"
+    ],
+    "setlist_flow": "Generally high‑energy with a solid set list; some reviewers call it “whitebread” while others highlight the excitement and strong transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Lead guitar heard as unusually low or missing on certain songs, prompting questions about his presence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T17:16:40.972262+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-09.sbd.miller.87349.sbeok.flac16"
+}

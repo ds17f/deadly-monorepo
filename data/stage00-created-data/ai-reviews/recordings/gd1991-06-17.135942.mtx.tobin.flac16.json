@@ -1,0 +1,50 @@
+{
+  "summary": "An often‑cited “best ever” Dead show captured in a clean matrix mix, with only a slight tempo glitch on Playing in the Band.",
+  "review": "Fans rave that this performance may be the greatest Dead concert they've heard, highlighting Vince Welnick’s soaring backing vocals on Mighty Swell and Phil Lesh’s memorable vocal moments. The recording sounds clear overall, though one reviewer noted Playing in the Band sounded a bit accelerated, likely a mixing quirk.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All three reviewers gave 4‑5 stars and praised the musical performance; recording is generally good with only one minor technical comment, leading to a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall sound; one reviewer noted Playing in the Band sounded slightly accelerated, possibly a mix error."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mighty Swell",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly and is celebrated as one of the best ever, with only a minor tempo issue on Playing in the Band that didn’t detract from the overall excitement."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "His backing vocal on \"I Know U Ride-AHH\" was praised, sounding like Pavarotti.",
+    "Bob": "",
+    "Keys": "Vince Welnick’s backing vocals on Mighty Swell received high praise.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mighty Swell": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know U Ride-AHH": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T21:37:02.919547+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-17.135942.mtx.tobin.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Warm, audience‑recorded benefit show with a pleasant acoustic Joan Baez set and a short but energetic electric Dead half‑set; recording is decent though not pristine.",
+  "review": "The tapes capture an intimate benefit concert where the acoustic portion (including “Lady Di and I” and “The Boxer”) is praised for its emotional delivery, while the electric Dead set is brief yet “rocking” despite mixed opinions about its length. The audience‑recorded source provides a warm ambience that many reviewers enjoy, though the sound isn’t crystal‑clear and a soundboard exists but adds little value.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show 3‑5 stars, highlighting strong performances and unique atmosphere despite modest recording fidelity; the blend of positive musical comments and occasional criticism yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience mic captures warm ambience and room feel; soundboard exists but is low‑level, not pumped through the PA. Overall clarity is decent but not pristine—some muddiness noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lady Di and I",
+      "The Boxer"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic Joan Baez set opens the benefit, followed by a short, focused electric Dead half‑set that, while brief and jam‑light, delivers intensity and keeps the crowd engaged."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's Hammond work is described as ducking in and out with the tunes, giving a restrained but present texture.",
+    "Drums": "Mickey Hart is noted for tagging along during the acoustic portion and for his presence on drums; no specific praise or criticism beyond that."
+  },
+  "song_mentions": {
+    "Lady Di and I": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Boxer": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:21:50.716928+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-12-12.nak300.vernon.14011.sbeok.shnf"
+}

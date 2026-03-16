@@ -1,0 +1,31 @@
+{
+  "summary": "Recording lacks detailed feedback; no clear comments on sound quality or performance.",
+  "review": "The few available notes merely identify the show as Hampton and request a setlist, offering no insight into musical or recording quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only two vague reviews; one gives 0 stars (negative) but provides no substantive critique, the other is neutral with a 3‑star rating and asks for setlist information. Insufficient data to rate higher."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound source (soundboard/audience) or clarity were provided in the reviews."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers did not comment on set structure; one simply notes the venue and another asks for a setlist."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T19:17:40.760257+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-22.138632.mtx.tobin.flac16"
+}

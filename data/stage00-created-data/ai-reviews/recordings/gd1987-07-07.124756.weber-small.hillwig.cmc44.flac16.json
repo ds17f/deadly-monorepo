@@ -1,0 +1,100 @@
+{
+  "summary": "Fair audience recording of a Roanoke show with standout Mississippi Half‑Step and Candyman but hampered by echoey mix and uneven second set.",
+  "review": "The two‑night Roanoke dates capture an energetic first set highlighted by a blazing Mississippi Half‑Step, triumphant Candyman and cruising Bird Song. The audience recording is fairly thin and echo‑laden, especially on West L.A. and U.S. Blues, making the second set feel uneven despite peaks like The Wheel and Morning Dew.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 3‑star ratings; the show has several strong performances but the audience‑only source is subpar, leading to an overall average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "AUDs are thin and echo‑ey, venue sounded reverberant; poor live mix on West L.A., screwy mix on U.S. Blues, overall limited clarity especially in the low end."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step Uptown Toodeloo",
+      "Candyman",
+      "Bird Song",
+      "The Wheel",
+      "Cumberland",
+      "Morning Dew",
+      "Me & My Uncle > Mexicali"
+    ],
+    "poor_songs": [
+      "West L.A.",
+      "Looks Like Rain",
+      "Eyes",
+      "U.S. Blues"
+    ],
+    "setlist_flow": "First set is tight and energetic, while the second set is uneven due to venue acoustics and mix issues, though it peaks with The Wheel and a solid Morning Dew."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring on Candyman and delivering a sweet Bird Song; strong presence in first set.",
+    "Phil": "Can be sensed in the mix but not always clearly heard; limited comment on his performance.",
+    "Bob": "Works hard early, then hits a zone with lightning‑fast Me & My Uncle > Mexicali; solid second‑set contributions.",
+    "Keys": "",
+    "Drums": "Drums>Space described as tangled and unfocused, reflecting the mixed quality of the recording."
+  },
+  "song_mentions": {
+    "Mississippi Half-Step Uptown Toodeloo": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle > Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West L.A.": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T00:27:19.132073+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-07.124756.weber-small.hillwig.cmc44.flac16"
+}

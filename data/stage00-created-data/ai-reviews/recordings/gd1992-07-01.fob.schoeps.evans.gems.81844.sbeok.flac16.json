@@ -1,0 +1,77 @@
+{
+  "summary": "Audience‑sourced recording that captures a fun, high‑energy show – highlights include Truckin', Bird Song and a happy Jerry.",
+  "review": "The three reviewers all rave about the concert’s spontaneous vibe, massive crowd and memorable moments like the power‑out during Fly Like an Eagle. The tape is an audience recording (described as “cloudy” but enjoyable) that still conveys the excitement, with standout performances of Truckin', Bird Song, The Miracle and a happy Jerry Garcia.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All three reviewers give high star ratings (4‑5) and emphasize the show’s excitement; recording quality is only loosely described but no major flaws are noted, leading to a strong overall score with moderate confidence due to limited technical detail."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls the audio \"cloudy\" and notes it’s not a soundboard source, but still describes it as fun and listenable with no major drop‑outs or distortion mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Bird Song",
+      "The Miracle",
+      "Stagger Lee"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A loose, spontaneous set that kept the massive crowd engaged; highlights are scattered throughout and the energy stays high despite a brief power outage during Fly Like an Eagle."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as happy and delivering great tone; fans miss his presence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fly Like an Eagle": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T08:15:57.622942+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-07-01.fob.schoeps.evans.gems.81844.sbeok.flac16"
+}

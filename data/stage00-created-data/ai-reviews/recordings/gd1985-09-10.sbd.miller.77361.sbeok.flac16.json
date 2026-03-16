@@ -1,0 +1,51 @@
+{
+  "summary": "Good soundboard recording with a few tape‑flip cuts, highlighted by a soaring Sugar Magnolia and strong Jerry Garcia playing despite a stumble on Never Trust A Woman.",
+  "review": "The show captures the high‑energy confidence of the mid‑80s Dead, featuring an especially vivid Sugar Magnolia where Bob Weir even climbs the scaffolding. Jerry’s guitar work is repeatedly praised as “so damn great,” though the unexpected insertion of Brent’s Never Trust a Woman creates a jarring tug‑of‑war with the drummers. Recording-wise the source is a soundboard tape that suffers from multiple cuts and a tape‑flip gap in space, but otherwise remains clear and listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Reviews consistently rate the show 4 stars, praising performance (especially Jerry and Sugar Magnolia) while noting only minor recording issues (cuts). The balance of strong musical highlights with decent soundboard quality yields a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Multiple cuts noted across the source and a tape‑flip gap during Space; otherwise the mix is clear with no complaints about muddiness or balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Never Trust a Woman"
+    ],
+    "setlist_flow": "The concert flows with confidence, creativity and high energy, but the surprise inclusion of Never Trust a Woman creates a brief, jarring interruption before the show regains its stride."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for playing \"so damn great\" throughout; his guitar tone and improvisational confidence are highlighted.",
+    "Phil": "",
+    "Bob": "Weir’s on‑stage antics—climbing scaffolding during Sugar Magnolia—add visual excitement to his performance.",
+    "Keys": "Brent snuck in Never Trust a Woman, leading to a contentious start and tension with the drummers.",
+    "Drums": "The drummers (Bill & Mickey) resisted the early tempo of Never Trust a Woman, resulting in a tug‑of‑war feel before they settled into the song."
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Never Trust a Woman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T09:08:56.223642+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-10.sbd.miller.77361.sbeok.flac16"
+}

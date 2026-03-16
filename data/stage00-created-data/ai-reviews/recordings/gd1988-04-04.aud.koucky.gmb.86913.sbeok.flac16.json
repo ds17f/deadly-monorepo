@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent audience tape of an intense 1988 show featuring a soaring Stella Blue, epic The Other One and a standout Dear Mr. Fantasy.",
+  "review": "The recording is a well‑balanced audience capture that lets the raw energy of the night shine through.  Fans praise Jerry’s impassioned performance despite vocal strain, highlighting a transcendent Stella Blue, an adventurous Other One and an inspired Dear Mr. Fantasy.  Overall the show feels intense and memorable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "All three reviewers are highly positive; the show is described as intense with several standout moments, and the audience tape is called excellent and well‑balanced."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Well‑balanced audience mix with clear instrument separation; no reported dropouts or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "The Other One",
+      "Dear Mr. Fantasy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy flow with powerful peaks on The Other One and Stella Blue, culminating in an inspired Dear Mr. Fantasy; the intensity never wanes."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice was strained but he gave his all and delivered a passionate performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:59:33.452817+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-04.aud.koucky.gmb.86913.sbeok.flac16"
+}

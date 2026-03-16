@@ -1,0 +1,39 @@
+{
+  "summary": "Recording is marred by tape damage, leaving the performance details unclear.",
+  "review": "The sole review points out significant tape wear that cuts into the beginning of \"Rider,\" despite the recording equipment being top‑notch. No musical commentary is provided, so the show's quality cannot be assessed beyond the damaged audio.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one detailed review, which flags serious recording problems and offers no positive show commentary."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Tape wear causes dropouts, especially at the start of \"Rider\"; otherwise equipment is praised as high‑quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Rider"
+    ],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T23:01:29.936839+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-08-19.124775.akg-c460b.thompson-damico.flac16"
+}

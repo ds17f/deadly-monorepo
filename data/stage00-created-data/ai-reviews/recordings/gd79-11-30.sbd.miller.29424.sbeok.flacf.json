@@ -1,0 +1,51 @@
+{
+  "summary": "Crisp soundboard mix with excellent instrument separation and a stellar set highlighted by Scarlet Fire, Jed and Althea.",
+  "review": "The recording captures a clean, well‑balanced soundboard feed – Phil’s bass is punchy, the drums are clear and Brent’s keyboards sit front‑and‑center, despite a touch of static. The show itself is praised for its tight opening jam and standout first‑set songs like Scarlet Fire, Jed and Althea, making it an easy listen from start to finish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All six reviews are highly favorable, highlighting both superb musical performance and strong recording quality; the consistency across multiple detailed comments supports a near‑top rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑mixed sound with excellent instrument separation; Phil’s bass loud and clear, drums recorded cleanly, guitars distinct. Minor static noted but does not detract from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Fire",
+      "Jed",
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth flow with a tight, eight‑minute opening jam that sets the energy; first set and second set maintain momentum and are praised as easy to enjoy from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Still in good voice; guitars clear and well balanced.",
+    "Phil": "Bass loud, clear and special; featured prominently even during the long opening jam.",
+    "Bob": "",
+    "Keys": "Brent’s keyboards are front‑and‑center, passionate and beautifully mixed.",
+    "Drums": "Drums recorded cleanly with good presence."
+  },
+  "song_mentions": {
+    "Scarlet Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:23:12.597072+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-11-30.sbd.miller.29424.sbeok.flacf"
+}

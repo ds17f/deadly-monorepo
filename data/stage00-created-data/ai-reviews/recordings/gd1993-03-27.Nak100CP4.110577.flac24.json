@@ -1,0 +1,31 @@
+{
+  "summary": "Outstanding performance paired with an excellent recording",
+  "review": "The lone fan review rates this concert a perfect five stars, calling both the show and its capture “excellent.” While no specifics are given about song highlights or source type, the enthusiastic tone suggests a high‑quality listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "Only one brief review, but it gives a 5‑star rating and explicitly praises both the music and recording, leading to a high overall score despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the recording as excellent; no further technical details provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure; reviewer simply labels the show excellent."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T11:40:08.315254+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-27.Nak100CP4.110577.flac24"
+}

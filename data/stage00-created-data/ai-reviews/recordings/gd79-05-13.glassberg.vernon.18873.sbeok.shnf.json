@@ -1,0 +1,64 @@
+{
+  "summary": "A decent audience‑sourced recording captures a solid Maine 1979 show, highlighted by an epic Truck ‘n’ ‘Jimmy Row’ and mixed reactions to the Scarlet/Fire pairing.",
+  "review": "The performance shines on long, free‑form jams – especially Truckin' and the first‑set Jimmy Row – and many listeners note a refreshed band sound with Brent’s synth/organ work and Jerry’s new amp. Recording quality is generally good for an audience tape, though crowd bleed can obscure quieter improvisations and some reviewers felt Jack Straw lagged. Opinions on Scarlet>Fire are split, making the overall impression mixed but enjoyable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical moments (especially Truckin' and Jimmy Row) while noting decent but not pristine audience recording; a few strong negative comments keep the overall rating from higher tiers."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough to hear instruments, with minimal crowd presence most of the time; occasional loud audience bleed during improvisational sections and some listeners note a slightly muffled feel on slower numbers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Jimmy Row",
+      "Scarlet > Fire"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "Scarlet > Fire"
+    ],
+    "setlist_flow": "First set opens strong with a memorable Jimmy Row; the second set builds into extended jams, highlighted by an expansive Truckin' that showcases the drums and guitars. The pacing is generally energetic, though a few slower moments (e.g., Jack Straw) feel less engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for new amp tone and aggressive guitar work on Truckin'; criticized in one review for lyrical slips during Scarlet/Fire.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's organ‑synth‑electric piano work noted as a fresh, appealing texture compared to earlier keyboard eras.",
+    "Drums": "Long drum break in Truckin' described as awesome and free‑form, adding momentum to the jam."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jimmy Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T21:51:21.794510+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-05-13.glassberg.vernon.18873.sbeok.shnf"
+}

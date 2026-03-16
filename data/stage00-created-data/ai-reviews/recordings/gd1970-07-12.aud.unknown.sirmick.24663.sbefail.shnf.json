@@ -1,0 +1,63 @@
+{
+  "summary": "A rough audience tape of the July 12 1970 Fillmore East gig captures a spectacular, Pigpen‑heavy set with standout moments like “Attics of My Life,” “Turn On Your Lovelight” and an upbeat Tight Up jam.",
+  "review": "The recording is an audience capture that suffers from occasional muffiness, tape‑speed quirks and drop‑outs, but it still conveys the raw energy of a midnight‑to‑dawn show. Musically the concert shines – the acoustic Pigpen set, the New Riders interlude, and electric marathon are repeatedly praised, especially “Attics of My Life,” Pigpen’s vocal showcases and a lively Tight Up jam.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (10+) give five‑star ratings and highlight the show’s musical greatness; recording flaws are noted but not enough to outweigh the performance, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hand claps, occasional muffled sections and tape‑speed slowdown make parts hard to hear; overall listenable with EQ/headphone boost recommended."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Attics of My Life",
+      "Turn On Your Lovelight",
+      "It's a Man's World",
+      "Tight Up jam",
+      "Tell It To Me"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Midnight acoustic Pigpen set, followed by New Riders with Garcia on steel guitar, then the electric Dead taking over around 3 am; the marathon show builds to a joyous climax and ends at sunrise."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocals and his steel‑guitar work with the New Riders are praised; his overall presence is noted as “dosed” but energetic.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen’s organ/vocals receive glowing remarks, especially on “It's a Man's World” and “Turn On Your Lovelight”.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Attics of My Life": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's a Man's World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tight Up jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tell It To Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T21:56:55.994132+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-07-12.aud.unknown.sirmick.24663.sbefail.shnf"
+}

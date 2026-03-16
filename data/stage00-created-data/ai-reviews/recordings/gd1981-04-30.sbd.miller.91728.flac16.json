@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard capture of a spectacular early‑80s show packed with standout moments like China Rider, Shakedown Street and Casey Jones.",
+  "review": "The recording is a clean, almost all‑soundboard (sbd) source with Brent’s keyboards sitting nicely in the mix and virtually no audience patches, delivering crisp clarity.  Musically the concert is praised as a “spectacular” two‑set affair – the first set a greatest‑hits roundup and the second a jam‑fest highlighted by creative solos from Jerry and Brent and fan‑favorite numbers such as China Rider, Shakedown Street, Loser and Casey Jones.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) coupled with enthusiastic comments about both the performance and the clean soundboard recording push the rating into the excellent range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean, well‑balanced mix; Brent’s keys are prominent in the mix; virtually no audience patches (only a few seconds of crowd at song transitions); crisp clarity throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Rider",
+      "Shakedown Street",
+      "Loser",
+      "Casey Jones",
+      "Estimated Eyes"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set runs a greatest‑hits style list (Alabama, China Rider, etc.) while the second set turns into a jam‑fest with extended improvisations; pacing and song transitions are praised as tight and energetic."
+  },
+  "band_member_comments": {
+    "Jerry": "Creative solo improv noted, especially in the second set; his tone is highlighted as strong.",
+    "Phil": "",
+    "Bob": "Introduced the Casey Jones encore with a colorful spoken intro; vocal performance mentioned positively.",
+    "Keys": "Brent’s keyboard work is singled out for being ‘up nice in the mix’ and inventive during solos.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:24:16.354466+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-04-30.sbd.miller.91728.flac16"
+}

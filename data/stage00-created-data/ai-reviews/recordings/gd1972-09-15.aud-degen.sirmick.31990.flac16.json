@@ -1,0 +1,31 @@
+{
+  "summary": "Grainy audience tape of a high‑energy 1972 show, with the second set shining despite muddy sound.",
+  "review": "The concert is praised for its lively performance and an especially strong second set that many reviewers call a \"diamond in the rough.\" Recording quality is described as cruddy, grainy, or poor by most listeners, though one reviewer notes surprisingly good soundboard‑like clarity. Overall the music outweighs the technical flaws, but the tape’s fidelity remains inconsistent.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently rated high (4‑5 stars) while recording quality receives mixed to negative comments, resulting in a weighted average around the mid‑3s."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Multiple reviewers call the tape \"cruddy,\" \"grainy\" and of \"poor quality soundwise,\" though one mentions \"awesome sound quality\" suggesting occasional clarity. Overall the mix is muddy with limited fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Second set is highlighted as a standout, ripping and energetic; first set described as merely okay but still enjoyable."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T17:26:38.680552+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-15.aud-degen.sirmick.31990.flac16"
+}

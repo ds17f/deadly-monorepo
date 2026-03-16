@@ -1,0 +1,56 @@
+{
+  "summary": "Emotionally charged final show with standout Black Muddy River and Box of Rain, recording is uneven but generally listenable",
+  "review": "The July 9‑1995 concert is remembered as the Dead’s last performance, highlighted by a moving Black Muddy River, a heartfelt Box of Rain encore, and Jerry pulling out his “Tiger” guitar.  While a few reviewers note track‑order glitches and modest sound quality, most find the audio acceptable and the music transcendent.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Most comments praise the historic performance and specific songs, but technical complaints (track‑order errors, vague sound quality) keep the overall rating from reaching a higher level."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer mentions tracks getting out of order; another says \"Sounds great considering\". No clear indication of soundboard vs. audience, but the recording is generally usable despite glitches."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Muddy River",
+      "Box of Rain",
+      "Tiger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert feels like a proper farewell with a double encore, emotional pacing and a memorable final sequence that caps the summer tour."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his mellifluous playing; he brought out his \"Tiger\" guitar and delivered an emotive Black Muddy River.",
+    "Phil": "Mentioned for pulling the Unbroken Chain (spring ’95) and adding Box of Rain to close the show.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "One reviewer highlighted 90s drum solos as a high point, giving a solo a special mention."
+  },
+  "song_mentions": {
+    "Black Muddy River": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tiger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Unbroken Chain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T12:41:10.119892+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-09.aud.mahoney.86405.flac16"
+}

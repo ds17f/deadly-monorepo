@@ -1,0 +1,106 @@
+{
+  "summary": "Audience recording with poor sound captures a solid spring‑93 Rosemont show highlighted by fiery Loose Lucy, Sugar Maggs and a standout Black Peter.",
+  "review": "The concert was an energetic early‑1993 spring‑tour date that delivered several memorable moments – loose, funky “Loose Lucy”, a rollicking “Sugar Maggs”, and a powerful “Black Peter”.  The audience recording is classic Rosemont tape quality – muddy and uneven – which detracts from the listening experience, but fans still recommend it for the strong performances.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show is generally praised with many standout songs (≈4/5) while the audience recording is consistently described as poor (≈2/5); weighted combination yields ~3.4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Classic Rosemont audience tape – muffled, occasional drop‑outs and low clarity; reviewers call it mediocre or pretty poor."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Loose Lucy",
+      "Sugar Maggs",
+      "Sunshine",
+      "Row Jimmy",
+      "Liberty",
+      "Wheel > Watchtower",
+      "Knockin'",
+      "Ship of Fools"
+    ],
+    "poor_songs": [
+      "Mexicali",
+      "Broken Arrow",
+      "China Rider"
+    ],
+    "setlist_flow": "Fans note a solid, lengthy set with high energy despite heavy security and bad weather; the first set had some flubs (ball‑dropping) but the band recovered and closed strong."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for tighter playing and blistering solos on Loose Lucy, Sunshine and other jams.",
+    "Phil": "",
+    "Bob": "Recognized for redeeming himself with a great Sugar Maggs performance.",
+    "Keys": "",
+    "Drums": "One reviewer disliked moments when drums were cut out, feeling the missing space hurt the flow."
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Loose Lucy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Maggs": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Broken Arrow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wheel > Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:57:37.967290+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-09.akg.gardner.10084.sbeok.shnf"
+}

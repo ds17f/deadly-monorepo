@@ -1,0 +1,63 @@
+{
+  "summary": "Good-quality audience recording captures an exceptional show highlighted by blazing Jack Straw, soaring Terrapin, and a powerful Uncle John’s Band finale",
+  "review": "The performance is repeatedly praised as outstanding – Jack Straw “kicked ass,” Terrapin shines, Uncle John’s Band snaps listeners back, and the closing jam with Billy and Mickey energizes the crowd. While reviewers wish for an official soundboard source, they note the existing broadcast sounds fine enough to enjoy the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All six reviews are largely enthusiastic (average 4.3 stars) and focus on strong musical moments; recording is acceptable though not a soundboard, leading to a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners request a soundboard version but report no major audio flaws; the King Biscuit broadcast is clear enough for enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Uncle John's Band",
+      "Jack Straw",
+      "Good Lovin'",
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe a seamless, high‑energy set with favorite classics placed throughout; the show builds to a thrilling closing jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry snarls and snaps it to the close, delivering intense lead guitar at the end.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Billy (Kreutzmann) and Mickey (Hart) round everyone up in the final minutes with powerful drumming."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:41:49.163251+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-05-15.aud.schlissel.12790.sbeok.shnf"
+}

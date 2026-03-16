@@ -1,0 +1,31 @@
+{
+  "summary": "Fans rave about the rare \"miracle\" ticket, but provide no details on sound quality or musical performance.",
+  "review": "The sole review is an enthusiastic anecdote about obtaining a coveted ticket rather than an assessment of the music or recording. No information is given about the audio source, clarity, or any standout songs, leaving the technical and musical quality undefined.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "The review is highly positive (5 stars) but contains no concrete information about the show’s performance or recording quality, so the rating reflects enthusiasm without substantive evaluation."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on soundboard vs. audience, clarity, or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T14:27:23.552073+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-12-30.137665.aud.lamarre.berger.flac16"
+}

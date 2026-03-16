@@ -1,0 +1,73 @@
+{
+  "summary": "Good Lovin' shines; blues highlights amid mixed energy",
+  "blurb": "The show delivers a standout double‑run of Good Lovin' and strong Pigpen‑driven blues numbers like Hard To Handle, King Bee and Turn On Your Lovelight. Jerry’s guitar is uneven at times but he pushes forward on the closing jams. Overall the setlist has high points but the second half feels listless.",
+  "review": "On February 24, 1971 at the Capitol Theater the Dead gave fans a night of contrasting moments. The first set crackles with a double‑dose of Good Lovin', and Pigpen’s blues fury on Hard To Handle, I’m A King Bee and Turn On Your Lovelight keeps the energy high. Jerry’s lead work wavers – his Bird Song solo is described as choppy, yet he digs in on Minglewood Blues and Goin’ Down The Road. Phil’s bass sits low in the mix early but surfaces powerfully during the set‑closing “Pig” jam, earning praise for its impact. Bob Weir’s rhythm guitar cuts through clearly in the right channel, especially on the closing Good Lovin'. Drums from Bill (Billy) feel a bit listless without Mickey, only regaining momentum during the Not Fade Away/Truckin' transition. Highlights also include a nicely played Bird Song and a spirited Cumberland Blues. While the second set drifts at times, the high‑energy Pigpen moments and superb Good Lovin' performances make this show worth a listen.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 20,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Four recordings praise the show (Good Lovin', high‑energy Pigpen blues, excellent set closers) while two note mixed/low‑energy aspects; overall sentiment is clearly positive, warranting a moderate boost.",
+      "final_calculation": "2.5 + 0.2 + 1.2 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1971-02-24.121065.sbd.miller.digitalrbb.flac16",
+    "reason": "Excellent stereo imaging and crystal‑clear soundboard capture; retains full Good Lovin' run and set‑closing Pig jam without dropouts."
+  },
+  "key_highlights": [
+    "Double‑run of Good Lovin' that anchors the first set",
+    "Pigpen‑driven blues surge on Hard To Handle, I’m A King Bee and Turn On Your Lovelight",
+    "Strong closing “Pig” jam highlighting Phil’s bass and Bob’s guitar presence",
+    "Bird Song performed with notable right‑ear clarity"
+  ],
+  "song_highlights": [
+    "Good Lovin'",
+    "Hard To Handle",
+    "I'm A King Bee",
+    "Turn On Your Lovelight",
+    "Bird Song",
+    "Cumberland Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Guitar work is uneven – choppy on the Bird Song outro but pushes harder on Minglewood Blues and Goin' Down The Road, providing some of the show’s rare energy spikes.",
+    "Phil": "Bass sits recessed early in the mix yet steps up during key moments; especially praised for the “Pig” set‑closing jam where his lines shine.",
+    "Bob": "Rhythm guitar cuts through clearly (right‑ear presence noted) and adds solid texture throughout, particularly on Good Lovin'.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": "Drums feel listless without Mickey’s counterpoint; only regain momentum during the Not Fade Away/Truckin' segue."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-20T03:22:32.093023+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Good Lovin'",
+      "Drums",
+      "Good Lovin'"
+    ],
+    [
+      "Hard To Handle"
+    ],
+    [
+      "I'm A King Bee"
+    ],
+    [
+      "Not Fade Away",
+      "Goin' Down The Road Feeling Bad",
+      "Not Fade Away",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "Cumberland Blues"
+    ]
+  ]
+}

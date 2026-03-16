@@ -1,0 +1,63 @@
+{
+  "summary": "Stellar matrix recording of an underrated, hot show with excellent playing and seamless transitions",
+  "review": "The concert is praised for its blistering performance—especially the fluid segues from El Paso into Let It Grow, and from Dancing in the Street into Samson—capturing a ’77‑era vibe. Reviewers note that Jerry Garcia was ill and does not sing, but his guitar work remains strong, and the matrix source delivers crystal‑clear sound.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All three reviews are favorable (average 4.3★) and highlight superb playing and an excellent matrix recording, with only minor health‑related caveats."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the matrix as 'simply stellar' and note clear, balanced sound with no audible flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "El Paso",
+      "Let It Grow",
+      "Dancing in the Street",
+      "Samson",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is highlighted for beautiful transitions (e.g., El Paso → Let It Grow, Dancing → Samson) and a generally hot, high‑energy performance despite Garcia's illness."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia was sick and does not sing, but his guitar playing is still praised as excellent.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancing in the Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:45:36.532175+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-07.127345.mtx.dusborne.flac16"
+}

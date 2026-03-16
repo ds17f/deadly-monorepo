@@ -1,0 +1,39 @@
+{
+  "summary": "Rough yet authentic audience tape that captures the wild 1973 jams, with a standout performance of The Other One.",
+  "review": "The three reviewers agree that this 1973 audience recording has the raw, unpolished sound you expect from an AUD source – occasional splices and uneven levels make it less than pristine, but its vibe is unmistakably ’73. Musically the show shines, especially with an “outstanding” The Other One and generally inspired interplay among the band members.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (high‑scoring show comments) balanced against mixed technical quality (one poor, two good audience recordings) yields a solid overall rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Splices on a couple of songs and uneven levels noted; however reviewers also describe the tape as “wonderful” for an audience recording, capturing the authentic 1973 sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical 1973 jam‑heavy set with strong ensemble interplay; no specific criticisms of pacing or structure were mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T15:12:47.040893+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-06-26.aud.weiner.gdADT14.14673.sbeok.shnf"
+}

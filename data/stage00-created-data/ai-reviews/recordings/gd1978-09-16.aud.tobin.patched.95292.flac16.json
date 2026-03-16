@@ -1,0 +1,39 @@
+{
+  "summary": "Muddy audience recording with distracting crowd chatter and a sluggish performance, though the Space segment receives praise.",
+  "review": "The tape suffers from a thick, muddy mix and constant background conversation that makes it hard to enjoy, and the band’s playing is described as sluggish and lacking its usual magic. On the bright side, one reviewer highlights the Space jam as a standout moment worth four stars on its own. Overall the show is uneven, with technical flaws outweighing the few high points.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Two reviews give divergent scores (2 and 4). The negative review highlights poor recording quality and lackluster performance, while the positive review praises only the Space segment. Averaging these yields a moderate rating with medium confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Sound is muddy and thick; excessive crowd chatter and conversations are audible throughout, making the mix distracting."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Performance described as sluggish with missing 'magic', but the Space jam stands out for at least one listener."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:23:02.136636+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-09-16.aud.tobin.patched.95292.flac16"
+}

@@ -1,0 +1,80 @@
+{
+  "summary": "Excellent soundboard recording of the legendary 2‑18‑71 Port Chester show, highlighted by a stellar Dark Star→Wharf Rat→Dark Star jam and high‑energy Bertha.",
+  "review": "The Miller upgrade delivers crystal‑clear soundboard fidelity that lets listeners hear every nuance—from Jerry’s razor‑sharp guitar growl to the contentious keyboard battle between Pigpen and Ned Lagin. Musically the night shines with a breathtaking Dark Star/Wharf Rat sandwich, a smoking Bertha, and relentless Truckin', though a few first‑set flubs (Mama Tried, Casey Jones) keep it from being flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over twenty detailed reviews overwhelmingly praise the recording’s clarity and the show’s iconic jams; only a handful of critiques note minor performance slips, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners repeatedly cite crisp mix, superb fidelity, balanced instrument separation and minimal noise—often calling it the best‑sounding version of this run."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > Wharf Rat > Dark Star",
+      "Bertha",
+      "Truckin'",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Mama Tried",
+      "Casey Jones"
+    ],
+    "setlist_flow": "First set is high‑energy and compact with a few missteps; second set centers on the monumental Dark Star/Wharf Rat jam, delivering an unforgettable peak before winding down with solid finishes."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as gritty, fast‑paced and full of growl; his pedal work (Uni‑Vibe, Cry Baby) adds texture and occasional feedback moments.",
+    "Phil": "Phil Lesh is only mentioned in passing (helping Ned Lagin with Wharf Rat); no specific performance praise or criticism.",
+    "Bob": "",
+    "Keys": "Pigpen’s Hammond presence is noted on several tracks, though a spirited debate exists over whether Ned Lagin (clavichord/electric piano) or Pigpen played the keys during the Dark Star sandwich.",
+    "Drums": "Mickey Hart’s last show for a few years is highlighted as a historic moment."
+  },
+  "song_mentions": {
+    "Dark Star > Wharf Rat > Dark Star": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Bertha": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Mama Tried": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Uncle John's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T02:37:26.604693+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-02-18.sbd.miller.111793.flac16"
+}

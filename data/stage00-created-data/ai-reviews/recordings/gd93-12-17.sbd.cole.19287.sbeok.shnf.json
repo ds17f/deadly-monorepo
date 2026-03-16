@@ -1,0 +1,96 @@
+{
+  "summary": "Solid soundboard capture of a mixed‑bag 1993 show, highlighted by a fiery Help>Slip>Franklin's and strong second‑set moments.",
+  "review": "The audience‑sourced soundboard is clean and well balanced, giving each instrument its space despite occasional low bass. Musically the concert swings between sloppy first‑set playing – especially Jerry’s tunings and a botched Music Never Stopped bridge – and inspired second‑set highlights like Help>Slip>Franklin's, The Attics of My Life and a rousing Good Lovin'.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is average to good (mix of strong and weak moments) while the recording is consistently praised, leading to a mid‑range rating with moderate confidence from ten reviews."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Many reviewers note clear mix, nice guitar tone and overall balance; some mention low bass but no major dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slipknot! > Franklin's Tower",
+      "The Attics of My Life",
+      "Saint of Circumstance",
+      "Crazy Fingers",
+      "Good Lovin'"
+    ],
+    "poor_songs": [
+      "Walkin' Blues",
+      "Music Never Stopped"
+    ],
+    "setlist_flow": "First set is uneven with tunings and a few disjointed moments; second set settles into a more consistent groove, delivering the signature Help‑Slip‑Franklin's transition and strong closer material."
+  },
+  "band_member_comments": {
+    "Jerry": "His tone is praised as unique and nice, but he’s also criticized for sloppiness, mistuned guitars, and a noticeable mistake toward the end of Crazy Fingers.",
+    "Phil": "Missed in the mix (low bass) according to one reviewer; otherwise noted for an extra‑sweet Broken Arrow performance.",
+    "Bob": "Inspired playing highlighted on several tracks, especially Desolation Row and the overall energy of the show.",
+    "Keys": "Vince’s keyboards occasionally bothersome; Brent-era keys are referenced but not present here.",
+    "Drums": "Billy & Mickey deliver fun fills, strong Drumz>Space segment, and upbeat IFTL ending."
+  },
+  "song_mentions": {
+    "Help > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "The Attics of My Life": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Jack A Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:53:54.308928+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-12-17.sbd.cole.19287.sbeok.shnf"
+}

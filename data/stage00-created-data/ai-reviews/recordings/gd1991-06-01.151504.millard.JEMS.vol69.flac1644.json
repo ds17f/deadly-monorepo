@@ -1,0 +1,31 @@
+{
+  "summary": "Minimal feedback – reviewers expressed enthusiasm but gave no details on sound quality or performance.",
+  "review": "The lone review simply exclaims \"Bravissimo!\" indicating a positive impression, yet it provides no information about the recording source, audio clarity, setlist highlights, or any individual performances. With only one brief comment and an unassigned star rating, there is insufficient data to evaluate the show or its technical capture.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only a single, very short positive remark without any substantive detail; rating is therefore tentative."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound quality, clarity, or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T19:57:03.066957+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-01.151504.millard.JEMS.vol69.flac1644"
+}

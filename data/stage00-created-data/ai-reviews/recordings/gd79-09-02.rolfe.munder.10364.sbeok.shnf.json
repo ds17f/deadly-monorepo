@@ -1,0 +1,84 @@
+{
+  "summary": "A front‑row audience tape captures the fiery Augusta, ME 9/2/79 show highlighted by a legendary 22‑minute Let It Grow, soaring Around and Around and dreamy Space→Stella Blue.",
+  "review": "The performance is widely praised for its inspired jams – especially the marathon Let It Grow, the hot Around and Around that rolls out of Truckin', and the ethereal Space → Stella Blue sequence.  While the recording is an audience tape with C‑grade fidelity that sometimes buries Garcia’s guitar, listeners note a front‑row feel that brings the high‑energy crowd into the mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight exceptional musical moments, while noting only moderate recording quality; weighted average yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "C‑grade audience tape with front‑row ambience; occasional crowd bleed and muffled guitar, but overall listenable for die‑hards."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Around and Around",
+      "Space -> Stella Blue",
+      "Jack Straw",
+      "Terrapin Station",
+      "US Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set builds strong energy early with Jack Straw, peaks in the second‑set Terrapin → Let It Grow marathon, and rolls seamlessly into Truckin' > Around and Around before a memorable US Blues encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers razor‑sharp, ‘ravenous wolf’ solos during Let It Grow and stays longer with the drums; occasional mix issues make his lines hard to hear.",
+    "Phil": "Lesh’s bass shines on the US Blues encore where he joins the vocal chorus—a rare 70s moment noted by fans.",
+    "Bob": "",
+    "Keys": "Brent (and possibly Keith) provides a standout organ solo and an ELP‑like section within Let It Grow, earning high praise.",
+    "Drums": "Bill’s drumming locks in tightly; the crowd claps on beat during jams, and the drums stay prominent especially in the Let It Grow climax."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Space -> Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Nobody's Fault But Mine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T23:06:55.806749+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-09-02.rolfe.munder.10364.sbeok.shnf"
+}

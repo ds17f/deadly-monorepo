@@ -1,0 +1,72 @@
+{
+  "summary": "Intense Oakland set with stellar Ornette jam and fiery Johnny B. Goode",
+  "blurb": "The concert launches with a punchy Cold Rain & Snow and builds through a scorching Johnny B. Goode. A highlight is the Ornette Coleman free‑jazz segment that drives The Other One into a soaring climax, followed by a powerful Lovelight. Standout moments include the Broken Arrow debut and a heartfelt Brokedown Palace encore.",
+  "review": "On February 23, 1993 at the Oakland Coliseum the Dead delivered one of their most adventurous late‑career nights. Jerry Garcia wielded his Wolf guitar with clean, rich tone, launching into an incendiary solo on Johnny B. Goode that set the night’s high‑energy bar. Phil Lesh’s bouncy, resonant bass took charge during Cold Rain & Snow and surged forward on Broken Arrow, earning many fans the nickname “Phil save.” The second set turned experimental when Ornette Coleman and his primetime ensemble dove into a free‑jazz jam that morphed into a spacey interlude before exploding into The Other One. The band rode that momentum into a soaring Turn On Your Lovelight and closed the main set with soulful Stella Blue. An encore of Brokedown Palace provided a gentle, reflective finish to an otherwise intense evening.\n\nAcross the available recordings the show shines: soundboard sources capture crisp guitar work and balanced keyboards from Vince Welnick, while matrix captures highlight deep bass and audience ambience that bring out the improvisational depth. Minor mix quirks—occasional hiss on the SBD and a phase issue on one tape—don’t detract from the overall brilliance. This night stands out for its daring guest collaboration, powerful rock numbers, and a rare Broken Arrow debut, making it a must‑listen for any Deadhead.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 39,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Four of the five recordings are clearly positive, repeatedly praising Jerry’s Wolf tone, Ornette Coleman’s guest jam, Johnny B. Goode, Broken Arrow debut and overall band tightness. The single mixed review notes only minor issues and does not diminish the strong consensus of excellence.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd93-02-23.sbd.hall.1611.sbeok.shnf",
+    "reason": "Crisp soundboard capture with good overall balance; praised for super‑crispy mix and clear representation of the band’s intensity."
+  },
+  "key_highlights": [
+    "Ornette Coleman free‑jazz jam (Space/3 Wishes) that drives The Other One",
+    "Jerry’s fiery Johnny B. Goode solo on his Wolf guitar",
+    "Broken Arrow debut, highlighted by Phil’s booming bass",
+    "Brokedown Palace encore delivering a gentle close"
+  ],
+  "song_highlights": [
+    "Cold Rain And Snow",
+    "Johnny B. Goode",
+    "The Other One",
+    "Turn On Your Lovelight***",
+    "Broken Arrow",
+    "Brokedown Palace"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s Wolf guitar shines with a clean, rich tone; delivers an incendiary solo on Johnny B. Goode and matches Ornette’s free‑jazz challenges, marking one of his last consistently great performances.",
+    "Phil": "Lesh provides a bouncy, resonant bass that leads the band during Cold Rain & Snow and Broken Arrow, often described as the 'Phil save' despite occasional mix quietness.",
+    "Bob": "",
+    "Brent": "",
+    "Vince": "Welnick adds precise keyboard textures, especially in Playing In The Band, complementing the improvisational flow without overpowering the mix.",
+    "Mickey": "Hart contributes to the Mardi Gras drum parade and later percussive color during the Ornette segment, though some listeners note mixed balance on certain drum passages.",
+    "Billy": "Kreutzmann’s drumming anchors the grooves; his work in the Iko Iko section is noted as less compelling but he shines in the later didgeridoo‑enhanced percussion."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-18T09:53:46.204552+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Cold Rain And Snow"
+    ],
+    [
+      "Johnny B. Goode"
+    ],
+    [
+      "Lazy River Road",
+      "Playing In The Band",
+      "Drums**",
+      "Space**",
+      "The Other One",
+      "Stella Blue",
+      "Turn On Your Lovelight***"
+    ],
+    [
+      "Broken Arrow"
+    ],
+    [
+      "Brokedown Palace"
+    ]
+  ]
+}

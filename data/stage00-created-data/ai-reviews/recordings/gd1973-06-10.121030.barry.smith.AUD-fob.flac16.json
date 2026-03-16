@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive information provided in the review to assess either recording quality or show performance.",
+  "review": "The sole review offers a comment about display technology rather than the music or audio fidelity, and assigns a zero‑star rating. Consequently there is insufficient data to evaluate the concert or its recording.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one review exists, and it does not discuss musical or technical aspects; the zero‑star rating suggests dissatisfaction but provides no concrete criteria."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No specific comments on sound clarity, mix, or source type were given."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T14:38:58.823554+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-10.121030.barry.smith.AUD-fob.flac16"
+}

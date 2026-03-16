@@ -1,0 +1,87 @@
+{
+  "summary": "Solid matrix recording of the legendary Halloween show with clear sound and standout performances of Sage & Spirit, Little Sadie, Franklin's Tower and the Drums‑Space‑Fire sequence.",
+  "review": "The gd1980-10-31 matrix capture is a good‑quality source that balances the FM broadcast feed and audience tapes, delivering a relatively clean mix despite some muddy alternate AUDs. Musically the show is a classic three‑set Halloween marathon – highlights include Sage & Spirit, Little Sadie, Must've Been Roses, Cassidy, an uptempo Franklin's Tower and the must‑hear Drums > Space > Fire stretch, all bolstered by strong Jerry riffs on Rooster and solid Mickey drumming. Overall reviewers are enthusiastic, rating the performance 4–5 stars.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Two detailed reviews rate the show 4‑5 stars, praising both musical highlights and a decent matrix recording; minor criticisms about video edits keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Matrix (122543.dusborne) is described as the best compromise – patched and clearer than pre‑FM feeds. Other audience sources vary (some muddy, wow & flutter), but overall the mix is listenable with decent clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sage & Spirit",
+      "Little Sadie",
+      "Must've Been Roses",
+      "Cassidy",
+      "Franklin's Tower",
+      "Drums",
+      "Space",
+      "Fire",
+      "Rooster"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A three‑set Halloween marathon of 96 songs; the first set features an impromptu Sage & Spirit and a rare Little Sadie, the second set is solid ‘80‑era material, and the third set builds to a powerful Drums‑Space‑Fire climax. The flow is praised as classic despite many video edits."
+  },
+  "band_member_comments": {
+    "Jerry": "Bluesy Rooster riff highlighted; also noted for occasional Truckin' riff and overall strong guitar work.",
+    "Phil": "Equipment failure caused a bass gap early in the first set, mentioned without praise.",
+    "Bob": "Praised for rehearsed riffs (Sage & Spirit), lyrical delivery on Cassidy, and quoting \"Love Light\" in Good Lovin'.",
+    "Keys": "",
+    "Drums": "Mickey's drumming called a classic theater‑shaker that drives the Drums>Space>Fire sequence."
+  },
+  "song_mentions": {
+    "Sage & Spirit": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Sadie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Must've Been Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T05:52:09.161338+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-31.122543.mtx.dusborne.flac16"
+}

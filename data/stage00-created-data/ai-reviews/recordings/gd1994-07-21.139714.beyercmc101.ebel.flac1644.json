@@ -1,0 +1,39 @@
+{
+  "summary": "Nice recording that showcases Jerry Garcia’s expressive vocals, especially on a standout Franklin’s Tower.",
+  "review": "The fan notes a very nice sounding source and highlights Jerry’s unusual vocal phrasing, calling his voice clean and expressive while pointing out the crowd’s reaction to Franklin’s Tower. Although his guitar work was noted as beginning to falter, the overall performance is viewed positively thanks to the vocal nuance and solid recording quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "Only one review (4‑star) that praises the recording and vocals but mentions declining guitar work; weighting favors show quality, yielding a solid but not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the recording as \"very nice\" with no specific issues noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals were clean, expressive, and featured unusual phrasing; guitar playing was noted as beginning to falter.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T00:00:03.033276+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-21.139714.beyercmc101.ebel.flac1644"
+}

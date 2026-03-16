@@ -1,0 +1,39 @@
+{
+  "summary": "Audience recording captures the EPIC Let It Grow and a flying Garcia, though the soundboard feels flat.",
+  "review": "The show is remembered for an electrifying Let It Grow and Jerry Garcia “flying” on his guitar, giving fans a high‑energy experience that feels a bit rushed. The audience tape provides the vibe the flat‑sounding SBD lacks, making it a decent listen despite some sonic limitations.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "Single 4‑star review praises the performance and notes the audience tape’s better vibe, but mentions flat soundboard quality; overall rating leans high but limited data reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "SBD (soundboard) described as flat; audience recording captures the concert vibe better, though overall mix may feel a bit rushed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy set with a feeling of being slightly rushed, but key moments like Let It Grow stand out strongly."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia was \"flying\" on his guitar.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T06:33:10.586790+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-26.112583.Sennheiser.daweez.d5scott.flac16"
+}

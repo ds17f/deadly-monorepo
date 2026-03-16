@@ -1,0 +1,78 @@
+{
+  "summary": "Excellent matrix recording captures a high‑energy Berlin 1990 show highlighted by a funk‑laden Shakedown and soaring Scarlet > Fire.",
+  "review": "The Berlin 19‑Oct‑1990 performance is praised for its tight setlist, blistering “Shakedown” and an inspired “Scarlet > Fire”, with the intimate venue adding to the magic. The matrix mix is described as crisp, stereo‑rich and superbly balanced, though a few lyrical slips and occasional organ clashes are noted.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and extol both the show’s energy and the superb matrix mix; a few note performance quirks, yielding an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Digital soundboard clarity with true‑stereo drum mix, crisp instrument separation and very low noise; a handful of reviewers mention minor quirks but overall the recording is superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Scarlet > Fire",
+      "Brown Eyed Women",
+      "Terrapin Station",
+      "Let The Good Times Roll",
+      "Deal",
+      "Red Rooster"
+    ],
+    "poor_songs": [
+      "Scarlet > Fire (off in parts)",
+      "Terrapin Station (off in parts)"
+    ],
+    "setlist_flow": "The set is described as energetic and well‑paced, with a strong opening, a funk‑filled middle featuring Shakedown and LTGTR, and an uplifting second half. The intimate Berlin ICC venue contributed to a tight, almost party‑like atmosphere despite occasional lyrical slip‑ups."
+  },
+  "band_member_comments": {
+    "Jerry": "Occasional lyric flubs are noted, but his guitar work on “Shakedown” receives high praise for funkadelic interplay.",
+    "Phil": "Bass tone described as growly from the Aural‑Exciter phase, generally solid throughout.",
+    "Bob": "",
+    "Keys": "Vince Welnick’s organ shines on “Shakedown”, though some feel his sound clashes with Bruce Hornsby; Bruce is hailed as a great post‑Brent addition.",
+    "Drums": "The drum mix is called fantastic, offering true stereo depth and driving the show’s momentum."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let The Good Times Roll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Red Rooster": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T13:40:41.907826+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-10-19.dsbd-matrix.dieter.12892.sbeok.shnf"
+}

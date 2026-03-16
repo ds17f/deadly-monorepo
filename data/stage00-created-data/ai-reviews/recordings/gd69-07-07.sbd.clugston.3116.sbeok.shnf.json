@@ -1,0 +1,76 @@
+{
+  "summary": "Soundboard capture with decent clarity despite some hiss and feedback, delivering a legendary July‑7‑69 show highlighted by an epic Dark Star, soaring Lovelight and a powerful The Other One.",
+  "review": "The recording offers a raw but listenable soundboard feed—clear enough to enjoy the band’s chemistry even though occasional hiss and early‑set feedback are present. Musically the night shines with a monster Dark Star, a breathtaking Lovelight that showcases Jerry’s soaring lead work, and an inspired The Other One jam, while the first few songs feel a bit rough. Overall the performance is celebrated as one of ’69’s standout shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews are 4‑5 stars, praising the music and only noting modest recording flaws; weighted average yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Raw tape with noticeable hiss and occasional feedback in the first 15 minutes of Dark Star; overall clarity is solid, no major drop‑outs, but not an 'excellent' studio‑grade mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Lovelight",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Mama Tried",
+      "Casey Jones",
+      "High Time",
+      "Morning Dew"
+    ],
+    "setlist_flow": "The early portion is a little uneven, but the second half erupts into long improvisational peaks (Dark Star → The Other One → Lovelight) that give the concert its legendary arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is repeatedly praised – soaring bends in Lovelight, crisp tone on Dark Star, and strong backing vocals on Mama Tried.",
+    "Phil": "",
+    "Bob": "Only a passing visual reference (pen‑stripe suit) appears; no specific musical commentary.",
+    "Keys": "Tom Constanten’s organ adds depth to The Other One; Pigpen’s keyboards/harmonica are highlighted during Lovelight, energizing the crowd.",
+    "Drums": "Bill Kreutzmann’s groove is noted as “groovy” early in Lovelight and his dynamic changes throughout the jams receive praise."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Lovelight": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Mama Tried": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T16:13:28.348932+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-07-07.sbd.clugston.3116.sbeok.shnf"
+}

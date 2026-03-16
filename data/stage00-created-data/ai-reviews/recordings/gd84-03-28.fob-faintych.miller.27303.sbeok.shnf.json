@@ -1,0 +1,81 @@
+{
+  "summary": "Decent audience recording of a tight early‑'84 Marin show, highlighted by a fiery “Ain’t No Lie” and superb China → Rider sequence.",
+  "review": "The tape captures an intimate, small‑venue performance with good presence and room ambience, though it suffers from occasional cut‑outs and missing drum tracks. Musically the band is strong – Jerry’s hypnotic lead on “Ain’t No Lie,” a soaring China → Rider/Playin' stretch, and solid Truckin’ – but a few missteps (missing Bobby, a clumsy “Don’t Need Love”) keep it from being flawless.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance and key moments while noting only moderate recording flaws; weighting show quality (70%) over recording quality (30%) yields a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Decent audience tape with good spatial feel and presence. Some reviewers note cut‑outs between songs, missing drum mix in the second set, and wish for a crisper SBD version."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ain't No Lie",
+      "Hell In A Bucket",
+      "China > Rider",
+      "Playin'",
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Don't Need Love",
+      "Hell In A Bucket"
+    ],
+    "setlist_flow": "First set feels disjointed with audience gaps; second set is strong, opening with “Ain't No Lie,” then building through energetic transitions such as Wharf → Truckin' and the highlight China → Rider/Playin'."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for hypnotic guitar lines on “Ain't No Lie” and overall great tone, despite a brief comment about early‑set guitar trouble.",
+    "Phil": "Mentioned leaving the stage during \"Don't Need Love\"; one fan notes his B‑string bass quake during Truckin'.",
+    "Bob": "Equipment problems caused him to miss parts of “Ain't No Lie\" and other early songs, but he returned later in the set.",
+    "Keys": "Brent’s marblizing keyboards receive both admiration for weird textures (Candyman era) and criticism for being passive‑aggressive in jams.",
+    "Drums": "Several reviewers note that drum mix is largely absent in parts of the second set."
+  },
+  "song_mentions": {
+    "Ain't No Lie": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hell In A Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "China > Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Need Love": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf > Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:44:52.829041+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-03-28.fob-faintych.miller.27303.sbeok.shnf"
+}

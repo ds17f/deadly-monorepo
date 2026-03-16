@@ -1,0 +1,51 @@
+{
+  "summary": "Good audience recording captures an adventurous, jazz‑inflected set with standout Playing in the Band and Uncle John’s Band jams.",
+  "review": "The show leans into exploratory jamming, highlighted by a Playin’ Reprise intro that segues into a stretched Playing in the Band, a free‑fall space excursion leading to Uncle John’s Band, and an hinted‑at Dark Star ending. Jerry’s guitar sounds a bit tired later on, but the overall vibe is adventurous rather than over‑the‑top. The recording itself is clear enough for enjoyment despite no specific technical commentary.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "One detailed 4‑star review points to a solid performance with several standout moments and no major recording complaints, yielding a rating just below the top tier."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Review does not mention any audio problems; listeners seem satisfied with the sound quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Uncle John's Band",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as adventurous and slightly long‑winded, with extended jams that stretch toward the band's jazzier roots."
+  },
+  "band_member_comments": {
+    "Jerry": "Sounds particularly tired in the latter part of the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:11:41.437321+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-08-27.schoeps.wklitz.94275.flac16"
+}

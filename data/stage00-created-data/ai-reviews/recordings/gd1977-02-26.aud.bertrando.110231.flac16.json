@@ -1,0 +1,80 @@
+{
+  "summary": "Excellent audience recording of a legendary 2/26/77 show featuring a smoking Help > Slip > Franklin’s sequence and an epic Terrapin opener.",
+  "review": "The audience tape captures the raw energy of the February‑1977 performance with crystal‑clear ambience, making it one of the finest matrix/audience recordings in the Archive. Reviewers rave about the blistering second set—Help on the Way into Slipknot! and Franklin’s Tower, the powerful Blues for Allah suite, and a thunderous Around & Around—while noting only minor lyrical slips in Franklin’s Tower.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Consistently high 5‑star reviews praise both the musical performance and the audio quality; weighting yields an almost perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners describe the tape as crisp, clear, and one of the finest audience/matrix recordings. Some note streamed versions sound slightly crisper, but overall the ambience and instrument separation are superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Terrapin Station",
+      "Estimated Prophet",
+      "Blues for Allah",
+      "Around & Around"
+    ],
+    "poor_songs": [
+      "Franklin's Tower"
+    ],
+    "setlist_flow": "The show opens with a historic Terrapin Station and Estimated Prophet, builds momentum through the first set, then delivers an explosive second set highlighted by Help‑Slip‑Frank sequence and a ferocious Around & Around, keeping the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise Jerry's tone on Help > Slip > Franklin’s, calling it perfect and lilted.",
+    "Phil": "Phil's bass is highlighted as intense and a key driver of the show's power, especially during the Help sequence.",
+    "Bob": "Bob gets a shout‑out with \"Hey Bob\" and Mexicali Blues, but no detailed critique of his playing.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Slipknot!": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Terrapin Station": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Blues for Allah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T20:18:29.843483+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-02-26.aud.bertrando.110231.flac16"
+}

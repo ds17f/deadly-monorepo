@@ -1,0 +1,50 @@
+{
+  "summary": "A lively audience tape captures rambunctious versions of Samson & Delilah and Feel Like a Stranger with solid sound on the early songs.",
+  "review": "The recording is an audience source that delivers clear, energetic sound—especially on the first five numbers—and preserves the raw, coked‑up vibe of the band’s performance. Reviewers rave about the wild Samson & Delilah and a fiery Feel Like a Stranger, though one fan found the unusual sandwich of Uncle John’s leading into Samson odd. Overall the show shines despite the quirky setlist choice.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Two reviewers praise both performance and recording (4‑star each) while one gives a zero rating due to setlist oddity; the weighted average leans positive but the dissent lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note a lively, clear audience tape with especially good sound on the first five songs; no major drop‑outs or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson & Delilah",
+      "Feel Like a Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its high energy, though the placement of Samson & Delilah right after Uncle John's Band was described as an odd ‘sandwich’ by one reviewer."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T00:48:56.067934+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-09.123191.beyerm160.streeter-miller.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard capture with a smoking Shakedown Street opener and a revitalized Jerry Garcia performance.",
+  "review": "Both reviewers gave the recording five stars, praising its crystal‑clear audio that shines on a 5.1 surround system and highlighting the energetic opening with a \"smoking\" Shakedown Street. Jerry’s playing is noted as especially alive, giving the show a fresh vibe for the 1987 revival period.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Two enthusiastic 5‑star reviews emphasize both superb audio quality and strong musical performance, leading to a high combined rating despite the small sample size."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Praised for clarity and depth; sounds great in 5.1 surround with no reported issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic opening sets the tone for a lively show, keeping momentum through the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as having new life and “peeling away” on his Tiger guitar; standout performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T21:32:41.992179+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-04-10.146113.5-1.tobin.flac1648"
+}

@@ -1,0 +1,49 @@
+{
+  "summary": "Crisp matrix captures a great show with an exquisite High Times, but the Slipknot! → Franklin's Tower transition is marred by a brief silent gap.",
+  "review": "Fans rave about the overall performance – calling it a four‑star show and praising the superb rendition of High Times – and rate the matrix recording as crispy. However, one reviewer notes a jarring moment of silence between Slipknot! and Franklin's Tower that interrupts an otherwise seamless transition, a flaw that another listener says can be patched.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised (70% weight) while recording quality is mostly good but has a notable glitch, leading to an overall rating just under 4 stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and clear matrix sound; however there is a brief silence/gap between Slipknot! and Franklin's Tower that interrupts the flow."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Times"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall strong set with excellent transitions, especially the Slipknot! → Franklin's Tower segue—though the recording introduces an unwanted pause at that point."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "High Times": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-23T04:54:02.050324+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-19.mtx.seamons.121140.flac16"
+}

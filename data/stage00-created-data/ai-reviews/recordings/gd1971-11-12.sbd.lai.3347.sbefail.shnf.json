@@ -1,0 +1,39 @@
+{
+  "summary": "Fair recording with occasional clear mix but many drop‑outs, documenting a short era show that lacks Pigpen.",
+  "review": "The performance is noted as a brief set for the period and suffers from the absence of Pigpen, making it feel incomplete. When the audio works the mix sounds decent, yet frequent drop‑outs and track‑splitting issues keep the overall listening experience only average.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one review; it rates the show 3 stars, citing both modest musical value and technical shortcomings, leading to an overall average rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Mix is good when sound works, but many drop‑offs make the recording inconsistent; track splitting of \"The Other One\" into four parts noted as a problem."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": "Shorter than typical shows for this era, missing Pigpen, with an overall feel of an incomplete set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T09:26:48.489870+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-11-12.sbd.lai.3347.sbefail.shnf"
+}

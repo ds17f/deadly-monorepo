@@ -1,0 +1,67 @@
+{
+  "summary": "Mixed bag with strong Space/Johnny B., uneven Jerry, solid Drums",
+  "blurb": "First set flows smoothly with highlights like Johnny B. Goode and Lazy River Road. The second set lifts the night with a soaring Space and an inspired The Other One, though Jerry’s playing wanes on So Many Roads.",
+  "review": "On September 20, 1993 at Madison Square Garden the Dead delivered a show that swings between polished moments and uneven stretches. The opening set slides along nicely – Touch of Grey segues into a relaxed Greatest Story Ever Told, and the band shines on Johnny B. Goode, Lazy River Road and the Memphis‑laden Stuck Inside of Mobile. However, Jerry’s guitar drifts on So Many Roads and he sounds half‑awake at times, especially during The Race Is On. The second set redeems the night: a haunting Space featuring Edie Brickell’s chanting, Vince Welnick’s rare lead on Johnny B., and an inspired jam on The Other One that builds into a fiery Goin' Down The Road Feeling Bad before winding down with Morning Dew. Drums/Space receives particular praise for its energy, and the encore of Baba O’Riley into Tomorrow Never Knows adds a fitting psychedelic close.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 19,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Most recordings describe the show as mixed with both praise (standout Space, Johnny B., The Other One) and criticism (Jerry half‑awake, muddy vocals). Positive notes outweigh negatives but only modestly, yielding a small positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd93-09-20.sbd.wiley.8766.sbeok.shnf",
+    "reason": "Good‑quality soundboard capture that balances clarity with completeness, showcasing the strong first‑set flow and second‑set highlights while minimizing muddy vocal issues."
+  },
+  "key_highlights": [
+    "Space segment featuring Edie Brickell’s chanting adds drama to the second set.",
+    "The Other One delivers an inspired jam that lifts the overall energy of the night.",
+    "Vince Welnick provides rare, strong keyboard leads on Johnny B. Goode."
+  ],
+  "song_highlights": [
+    "Space*",
+    "Johnny B. Goode",
+    "The Other One",
+    "Goin' Down The Road Feeling Bad",
+    "Dire Wolf",
+    "Stuck Inside of Mobile with the Memphis Blues Again",
+    "Lazy River Road"
+  ],
+  "band_performance": {
+    "Jerry": "Jerry’s playing is inconsistent – his guitar drifts on So Many Roads and he sounds half‑awake early, yet he revives during the second‑set jams.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Vince delivers rare strong leads on Johnny B., adding a bright keyboard voice to the set.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-18T17:19:10.745549+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Truckin'",
+      "He's Gone",
+      "Drums",
+      "Space*",
+      "The Other One",
+      "Goin' Down The Road Feeling Bad",
+      "Morning Dew"
+    ],
+    [
+      "Stuck Inside of Mobile with the Memphis Blues Again",
+      "Lazy River Road",
+      "Johnny B. Goode"
+    ],
+    [
+      "Dire Wolf"
+    ]
+  ]
+}

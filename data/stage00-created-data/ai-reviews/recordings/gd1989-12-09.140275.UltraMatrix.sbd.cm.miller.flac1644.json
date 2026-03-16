@@ -1,0 +1,70 @@
+{
+  "summary": "Matrix source delivers clear audio of a mixed‑quality show – highlights include a ripping Brent solo and stellar Row Jimmy, while Foolish Heart feels ragged.",
+  "review": "The UltraMatrix recording is generally clean, letting the band's energy come through despite Jerry sounding tired. Reviewers praise the first‑set vigor and standout moments like Row Jimmy, Mexicali> Cumberland, Bird Song and Brent’s solo, but note that the second set is uneven with a sloppy Foolish Heart before recovering in the Playin> Crazy> Uncle John’s> Playin sequence. The encore Knockin is called excellent.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "One detailed review gives a balanced view: solid recording quality but an uneven performance, leading to a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No specific sound issues mentioned; reviewers imply the audio is clear enough to appreciate musical nuances."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Row Jimmy",
+      "Mexicali > Cumberland",
+      "Bird Song",
+      "Playin > Crazy > Uncle John's > Playin",
+      "Knockin"
+    ],
+    "poor_songs": [
+      "Foolish Heart"
+    ],
+    "setlist_flow": "First set carries good energy; second set is up‑and‑down, with a ragged Foolish Heart but recovers later, ending on an excellent Knockin encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Sounds tired throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's solo described as ripping.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali > Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playin > Crazy > Uncle John's > Playin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T02:03:02.119723+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-09.140275.UltraMatrix.sbd.cm.miller.flac1644"
+}

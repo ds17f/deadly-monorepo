@@ -1,0 +1,58 @@
+{
+  "summary": "Restored BettyBoard soundboard captures a scorching Around & Around and a killer Casey Jones, despite a wobble on Stella Blue.",
+  "review": "The recording is a lovingly‑restored BettyBoard tape that sounds crisp and balanced, with the usual high‑quality mix from C. Miller. Musically the show shines – Around & Around is called “one of the hottest ever,” and Bob’s work on Casey Jones is highlighted, while Jerry’s solo receives special praise; the only dip noted is a phrasing stumble on Stella Blue (and a less‑enthusiastic Sunrise).",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Both reviewers are highly positive (5 and 4 stars); the show is praised with only minor performance quirks, and the restored soundboard recording is described as excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Restored BettyBoard tape with crisp mix; a few rough patches but overall clear, balanced, and well‑preserved."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Around & Around",
+      "Casey Jones"
+    ],
+    "poor_songs": [
+      "Stella Blue",
+      "Sunrise"
+    ],
+    "setlist_flow": "The set flows strong overall, highlighted by a fiery second‑half sequence; only minor hiccups on Stella Blue and an underwhelming Sunrise break the momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Struggles with phrasing on Stella Blue but delivers a brilliant first solo with notable feedback/sustain.",
+    "Phil": "",
+    "Bob": "Makes Casey Jones shine; praised as “Bobby makes the song.”",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sunrise": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T05:27:09.905309+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-28.sbd.miller.96159.sbeok.flac16"
+}

@@ -1,0 +1,78 @@
+{
+  "summary": "Excellent Charlie‑Miller soundboard capture of an upbeat ’78 show with standout The Other One, Scarlet→Fire and vivid Jerry‑Billy banter",
+  "review": "The SBD transfer by Charlie Miller is crystal clear, delivering vivid stage banter and a punchy mix despite a brief dead‑air gap after “From the Heart of Me” and a slightly sloppy opening cut‑off. Musically the concert shines – long, melodic first‑set jams (Candyman, Sugaree, Stagger Lee) flow into a fiery Scarlet→Fire opener, a 13‑minute mind‑bending The Other One and a tight drum/Wharf Rat segment that many reviewers call the highlight.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers gave 4–5 stars and praised both performance and sound quality; a few low‑star outliers mention minor glitches, yielding an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Charlie Miller SBD transfer is crisp and loud with vivid banter; a ~45‑second dead‑air after “From the Heart of Me” and a slightly sloppy cut‑off opening are the only noticeable quirks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Scarlet → Fire",
+      "Wharf Rat",
+      "From the Heart of Me",
+      "Candyman"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set features long, melodic jams (Candyman, Sugaree, Stagger Lee); second set builds with a fiery Scarlet→Fire opener, an expansive The Other One and a tight drum/Wharf Rat segment – overall pacing is strong and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work gets special praise (astonishing squeal, “mind‑bending” solos) and his banter with Billy (“Dick‑Lips”, “Cum‑Gums”) is highlighted.",
+    "Phil": "",
+    "Bob": "Bobby’s slide in the mix is noted as a bit puzzling to some listeners.",
+    "Keys": "Keith’s playing shines, especially on Sugaree; this was his last Chicago show and reviewers commend his fill‑in of harmonic holes.",
+    "Drums": "Mickey (and Bill) are mentioned for their tight interplay; the Ollin Arageed drum segment is singled out as a highlight."
+  },
+  "song_mentions": {
+    "From the Heart of Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Scarlet → Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T16:26:53.157790+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-11-18.sbd.miller.81131.sbeok.flac16"
+}

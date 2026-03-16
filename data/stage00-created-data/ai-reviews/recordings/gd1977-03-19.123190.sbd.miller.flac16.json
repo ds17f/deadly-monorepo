@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy 1977 show highlighted by a blistering Terrapin>Playing in the Band sequence, Big River and an all‑out first‑set medley.",
+  "review": "The recording is a clean, crystal‑clear soundboard tape that lets every nuance of the band shine through. Fans rave about the explosive first‑set medley (Eyes → Dancin' → Wharf Rat → Franklin's → Sugar Magnolia) and a scorching Terrapin>Playing in the Band > Samson > Playing in the Band close, plus a standout Big River performance. Overall the show is praised as a “barn‑burner” with flawless playing throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews are 4–5 stars and overwhelmingly praise both the musical performance and the recording quality; no negative comments were noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean soundboard tape with no reported drop‑outs or muddiness; reviewers describe it as \"absolutely perfect\" and flawless."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin > Playing in the Band > Samson > Playing in the Band",
+      "Big River",
+      "Eyes of the World",
+      "Dancing in the Street",
+      "Wharf Rat",
+      "Franklin's Tower",
+      "Sugar Magnolia",
+      "TLEO"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds with a high‑octane medley that rolls into a powerful second set; reviewers note the energy and experimentation throughout, calling it a “barn burner” with superb pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith (Godchaux) is highlighted for his entrance around 2:00 and praised as part of the flawless playing.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin > Playing in the Band > Samson > Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancing in the Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "TLEO": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T20:47:59.080956+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-03-19.123190.sbd.miller.flac16"
+}

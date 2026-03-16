@@ -1,0 +1,31 @@
+{
+  "summary": "Fine soundboard recording but missing track numbers/labels, with mixed reviewer sentiment",
+  "review": "The tape is praised as a solid SBD by one reviewer, though another criticizes the lack of track numbers and gives it a low rating. No comments are made about the musical performance, so listeners get a decent‑quality audio source without detailed show insights.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "One reviewer rates it highly for sound quality while another gives a low rating due to missing track numbers; with no performance details, the overall score reflects good recording but limited show information."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note the recording is fine overall, but the release lacks track numbers/labels which detracts from usability."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T01:47:12.852340+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-26.sbd.miller.tetzeli.fix-18664-20614.34587.sbeok.shnf"
+}

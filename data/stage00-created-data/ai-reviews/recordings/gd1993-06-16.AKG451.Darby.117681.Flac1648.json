@@ -1,0 +1,31 @@
+{
+  "summary": "Recording quality unknown but features an awesome second set praised by reviewers",
+  "review": "Fans note that the show’s second set is outstanding, though no details about the audio source or mix are provided. The recording appears to be appreciated for its availability rather than its sonic fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "One enthusiastic five‑star review highlights a great second set; lack of technical comments limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific remarks on clarity, mix or source type"
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers specifically commend the second set as a highlight of the concert."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T14:25:10.695948+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-16.AKG451.Darby.117681.Flac1648"
+}

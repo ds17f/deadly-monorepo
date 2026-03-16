@@ -1,0 +1,99 @@
+{
+  "summary": "Excellent soundboard‑matrix recording of a rain‑soaked RFK show with a monster Victim > Foolish > Dark Star and stellar Jerry, Brent and Phil performances.",
+  "review": "The crowd‑filled RFK concert is remembered as one of the most iconic summer‑’90 shows – a torrential storm turned into extra energy, a first set that kept the party rolling and a second set highlighted by an epic Victim > Foolish > Dark Star sequence, Box of Rain and a soaring The Weight.  The source is a soundboard capture with just enough audience bleed to convey the atmosphere; most listeners describe it as crystal‑clear and “excellent,” despite one complaint about clipping.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 80 reviews, >90% five‑star, uniformly praising the performance and recording; only a single low‑rating comment about clipping.  Show quality is top‑tier (70 % weight) and recording quality is excellent (30 % weight), yielding an overall rating above 4.5."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced mix with just enough crowd bleed to feel the rain‑storm ambience; a few listeners note occasional clipping or slight matrix‑style audience chatter but overall no drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Victim > Foolish",
+      "Dark Star",
+      "Box of Rain",
+      "Music Never Stopped",
+      "Bertha",
+      "All Along the Watchtower",
+      "The Weight",
+      "Touch of Grey"
+    ],
+    "poor_songs": [
+      "Foolish (some reviewers found it bland)",
+      "Dark Star (one reviewer called it \"sucks\")"
+    ],
+    "setlist_flow": "Rain opened the first set, fueling a high‑octane start; after a brief rain pause the second set exploded with Victim > Foolish → Dark Star → Drums/Space, then a heartfelt Hey Jude reprise and a crowd‑pleasing Touch of Grey encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for strong vocals, soaring guitar leads and an especially intense solo during Dark Star.",
+    "Phil": "Noted for “tremendous” bass work and vocal moments; several reviewers singled out his interplay on the second set.",
+    "Bob": "",
+    "Keys": "Brent (keyboardist) receives glowing remarks – his final Dark Star, vocal on Mr. Fantasy and overall keyboard texture are highlighted as standout.",
+    "Drums": "Mickey’s drum sound gets mixed feedback; a few mention “drum mix” issues while others celebrate the powerful Drums/Space section."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 32,
+      "negative_mentions": 1,
+      "total_mentions": 33
+    },
+    "Victim > Foolish": {
+      "positive_mentions": 18,
+      "negative_mentions": 0,
+      "total_mentions": 18
+    },
+    "Box of Rain": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Bertha": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Weight": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Touch of Grey": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Hey Jude": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Mr. Fantasy": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Foolish": {
+      "positive_mentions": 6,
+      "negative_mentions": 2,
+      "total_mentions": 8
+    }
+  },
+  "processed_date": "2025-09-17T09:15:36.020352+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-07-12.sbd.mcatee.2582.sbeok.shnf"
+}

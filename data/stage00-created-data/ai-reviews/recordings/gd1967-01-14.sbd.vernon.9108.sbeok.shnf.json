@@ -1,0 +1,52 @@
+{
+  "summary": "Soundboard capture of an early‑1967 Vernon show with strong jams on Morning Dew and Viola Lee Blues, but the opening Schoolgirl vocals sound jarring.",
+  "review": "The recording (a soundboard source) delivers clear instrument separation – the flute really drives the third cut – yet the initial vocal on Good Morning Little Schoolgirl is noticeably harsh. Musically the set features serious, drum‑circle‑like improvisations on Morning Dew and Viola Lee Blues, though the exact opening song list remains a bit unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Reviews are split between very high (4‑5 stars) and very low (0 stars) ratings, with limited concrete commentary on performance quality; the average rating falls near the middle of the scale."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Clear instrument separation (flute prominent), but vocal track on Schoolgirl is harsh; no explicit comments about drop‑outs or muddiness, so overall listenable yet not exceptional."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Viola Lee Blues"
+    ],
+    "poor_songs": [
+      "Good Morning Little Schoolgirl"
+    ],
+    "setlist_flow": "Setlist is a bit uncertain – some reviewers expect Dancing in the Streets but only see Dew, Viola Lee Blues and Schoolgirl; overall the performance flows with extended jams despite the confusion."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Viola Lee Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Morning Little Schoolgirl": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-24T05:26:13.010593+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1967-01-14.sbd.vernon.9108.sbeok.shnf"
+}

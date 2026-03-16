@@ -1,0 +1,39 @@
+{
+  "summary": "Energetic Fox Theatre performance highlighted by a legendary Scarlet>Touch transition, captured on a solid soundboard recording.",
+  "review": "Fans rave about the band’s enthusiasm in Atlanta and especially the seamless Scarlet → Touch segue that gives many goosebumps. The recording is a sound‑board source with generally good clarity, though one reviewer hints at minor generational artifacts. Overall the show is regarded as a standout of 1985 despite mixed feelings on the transition.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Two glowing 5‑star reviews praise the musical performance, while one 3‑star review is critical of the same transition and notes vague recording quirks; averaged rating falls around a solid 4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No major sound issues are reported; one reviewer mentions possible generational artifacts but overall the board capture is clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Touch"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set’s Scarlet → Touch transition is repeatedly highlighted as a peak moment, contributing to an energetic and memorable flow throughout the concert."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet>Touch": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-15T09:49:26.549282+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-10-28.s2.sbd.bubba420.18250.sbeok.shnf"
+}

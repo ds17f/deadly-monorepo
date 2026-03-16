@@ -1,0 +1,56 @@
+{
+  "summary": "Good soundboard capture of a consistently entertaining show with standout Lazy > Supplication and sweet Cumberland Blues.",
+  "review": "The recording is a sound‑board source that sounds clear and sweet, though the keyboards are a bit front‑heavy in the mix. The performance is solid throughout – fans rave about the Lazy > Supplication sequence and a particularly nice take on Cumberland Blues, with Jerry’s guitar sounding close and lively.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Reviews average 3‑4 stars; show is praised for consistency and a few highlights while the mix (excessive keyboards) detracts slightly, leading to an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall sound but Brent's keyboard is too forward in the mix and some reverby oddities are noted; otherwise sweet and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy",
+      "Supplication",
+      "Cumberland Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Consistently entertaining with a solid first set and a standard second set; the flow feels tight and enjoyable despite no major surprises."
+  },
+  "band_member_comments": {
+    "Jerry": "Several reviewers note a sweet, close‑to‑Jerry sound and good guitar tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboards are described as overly prevalent and tinkly, sometimes overshooting the guitars.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lazy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:45:35.273405+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-12-30.sbd.munder.8211.sbeok.shnf"
+}

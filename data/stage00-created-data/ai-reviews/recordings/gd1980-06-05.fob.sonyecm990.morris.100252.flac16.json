@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent audience tape that captures a lively vocal switch between Jerry and Bob, though the performance itself gets only modest praise.",
+  "review": "The recording is praised as one of the best audience tapes available, offering clear sound despite its crowd source. Reviewers note a playful interchange where Jerry and Bob trade verses on a song with the lyric “headlight, cool Colorado rain,” but no other standout moments are highlighted.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "Recording quality is rated excellent by reviewers, while musical performance receives only a modest comment, resulting in an overall mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as one of the best audience recordings; clear balance with minimal muffling despite crowd ambience."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure; only a brief note about vocal swapping between Jerry and Bob."
+  },
+  "band_member_comments": {
+    "Jerry": "Engages in verse‑switching with Bob during the song featuring the lyric “headlight, cool Colorado rain.”",
+    "Phil": "",
+    "Bob": "Shares verses with Jerry on the same song, highlighting vocal interplay.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T00:08:51.296568+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-05.fob.sonyecm990.morris.100252.flac16"
+}

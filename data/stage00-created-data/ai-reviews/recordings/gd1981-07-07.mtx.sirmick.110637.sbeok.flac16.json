@@ -1,0 +1,58 @@
+{
+  "summary": "Excellent matrix capture of a killer 1981 performance, highlighted by a scorching Minglewood > Bertha > Dancin’ opener.",
+  "review": "The SirMick‑produced matrix delivers a natural, well‑balanced sound with a perfect 60/40 blend that lets the band’s energy shine through. The show is praised for its overall power and the opening Minglewood → Bertha → Dancin’ sequence, though one reviewer notes the band rushed “Eyes of the World.” Overall it’s considered a standout recording worth grabbing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Show is generally praised with only minor criticism, and the matrix recording is described as excellent; weighted average yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Balanced 60/40 SBD/AUD mix, minimal vocal saturation, natural soundstage with little separation; well‑produced and crisp throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood Blues",
+      "Bertha",
+      "Dancin'"
+    ],
+    "poor_songs": [
+      "Eyes of the World"
+    ],
+    "setlist_flow": "Strong opening sequence sets the tone; overall fine show with a slight rush on “Eyes of the World” noted by one reviewer."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:47:19.753014+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-07-07.mtx.sirmick.110637.sbeok.flac16"
+}

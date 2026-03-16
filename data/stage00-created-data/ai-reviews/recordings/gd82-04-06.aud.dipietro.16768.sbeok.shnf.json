@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent audience recording of the legendary 4/6/82 Philadelphia show, highlighted by a scorching Shakedown‑Lost Sailor‑Terrapin suite and sparkling Terrapin Station.",
+  "review": "The performance is widely praised as one of the great ’80s shows – the second set explodes with Shakedown into Lost Sailor, Saint of Circumstance and Terrapin Station, plus a rare Morning Dew and an electrifying The Other One.  Although it’s an audience (AUD) tape, listeners note surprisingly clear, full‑bodied sound despite occasional taper glitches.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, the vast majority are 4–5 stars and repeatedly highlight both stellar musical moments and a surprisingly good audience recording; only one low‑rating comment concerns sound quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Many reviewers describe the tape as ‘crystal clear’, ‘rich, full sound’ and better than some SBDs.  A few note low‑level distortion or uneven levels, but overall the AUD is listenable and captures the band’s energy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown > Lost Sailor > Saint of Circumstance > Terrapin Station",
+      "Terrapin Station",
+      "Morning Dew",
+      "The Other One",
+      "Truckin'",
+      "Cold Rain & Snow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy east‑coast show with a tight, classic first set opener (Cold Rain & Snow) and an unforgettable second‑set suite that builds from Shakedown through Terrapin Station, delivering rare moments like Morning Dew."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for ‘delicious lead guitar’, perfect tone, and tight interplay with Brent on the Shakedown suite.",
+    "Phil": "Described as ‘bombing’ and standing tall during The Other One; his bass work is highlighted as a key driver of the show’s power.",
+    "Bob": "",
+    "Keys": "Brent’s piano work receives strong accolades – “Love Brent in piano mode!” and noted for seamless dialogue with Jerry.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown > Lost Sailor > Saint of Circumstance > Terrapin Station": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Terrapin Station": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Morning Dew": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    }
+  },
+  "processed_date": "2025-09-13T19:25:17.410358+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-04-06.aud.dipietro.16768.sbeok.shnf"
+}

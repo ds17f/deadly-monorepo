@@ -1,0 +1,31 @@
+{
+  "summary": "A bleak show with Jerry largely absent and an unclear recording quality.",
+  "review": "Both reviewers describe this performance as a painful experience, noting that Jerry Garcia was essentially dormant on stage while drums and space filled the set. No concrete information about the source or fidelity of the audio is provided, leaving the technical quality ambiguous.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only two brief reviews, both extremely negative about the performance and offering no clear recording details; rating reflects a poor show with unknown audio quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers do not comment on clarity, mix or fidelity; only mention long drum/space sections, so the technical quality cannot be assessed definitively."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as dragging with excessive drum and space passages, apparently compensating for Jerry's lack of participation."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as not playing much, leaning on the mic and appearing 'comatose' throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T08:18:32.030183+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-05-19.aud.unknown.8600.shnf"
+}

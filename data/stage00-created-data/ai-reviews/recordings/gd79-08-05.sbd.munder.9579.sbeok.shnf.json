@@ -1,0 +1,83 @@
+{
+  "summary": "High‑quality soundboard capture of a strong 1979 show with standout Estimated Prophet/Eyes and Franklin’s Tower, though the recording has a few cuts (Ollin Arageed, Althea).",
+  "review": "The SBD source delivers clear, punchy audio that lets the band’s energy shine—Jerry is “feeling it,” Phil comes in strong, and Brent’s electric piano adds flavor. Highlights include an excellent Estimated Prophet → Eyes transition, a hot Franklin’s Tower, Fire, Scarlet and a tasty Lost Sailor → Althea link, but listeners note missing Ollin Arageed and an abrupt Althea cut.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Ten detailed reviews show a generally positive view of the performance (many 4‑5 star comments) with some consistent criticism about missing tracks, yielding an overall rating in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear soundboard mix praised by several reviewers; however there are noted glitches and missing sections (Ollin Arageed completely absent, Althea cut at the end)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Eyes",
+      "Franklin's Tower",
+      "Fire",
+      "Scarlet",
+      "Lost Sailor",
+      "Althea"
+    ],
+    "poor_songs": [
+      "Ollin Arrageed (missing)",
+      "Althea (cut at end)"
+    ],
+    "setlist_flow": "First set described as merely okay, but the show really ignites after Estimated Prophet → Eyes and builds momentum through NFA → Wharf Rat → Around the World, delivering a hot second‑set arc."
+  },
+  "band_member_comments": {
+    "Jerry": "‘Jerry is feeling it this night you can tell.’",
+    "Phil": "‘Phil comin' in strong too.’",
+    "Bob": "",
+    "Keys": "Love Brent's contributions; his electric piano (Captain and Tennille) adds a distinct flavor, though occasionally reminiscent of Muskrat Love.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Ollin Arrageed": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-25T22:16:23.288046+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-08-05.sbd.munder.9579.sbeok.shnf"
+}

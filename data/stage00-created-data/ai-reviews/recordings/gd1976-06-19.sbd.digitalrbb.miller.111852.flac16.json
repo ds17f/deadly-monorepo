@@ -1,0 +1,51 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a superb ’76 show highlighted by Cosmic Charlie, High Time and a smoking Slipknot! jam.",
+  "review": "The recording is an excellent soundboard source with pristine clarity that lets the band’s tight interplay shine. Reviewers rave about the balanced first and second sets, especially the standout performances of Cosmic Charlie, High Time and the energetic Slipknot! segment. Jerry’s Travis‑bean guitar work and Phil’s onstage chemistry receive special praise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All six detailed reviews are overwhelmingly positive, highlighting both an exceptional performance and a high‑quality soundboard recording; the consistency across >5 reviews yields a strong confidence level."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced mix with no reported dropouts or muffiness; video source confirms clear audio and good stage ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cosmic Charlie",
+      "High Time",
+      "Slipknot!"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Both sets are described as evenly balanced and flowing smoothly, delivering a consistent high‑energy experience throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "His Travis‑bean guitar tone is highlighted; reviewers note his stellar playing especially during Slipknot! and Cosmic Charlie.",
+    "Phil": "Praised for tight interaction with Jerry, particularly in the Slipknot! jam.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cosmic Charlie": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T04:51:49.830575+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-19.sbd.digitalrbb.miller.111852.flac16"
+}

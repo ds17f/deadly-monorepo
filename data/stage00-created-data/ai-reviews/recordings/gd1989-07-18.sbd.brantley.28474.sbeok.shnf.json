@@ -1,0 +1,82 @@
+{
+  "summary": "A solid matrix recording captures an energetic Alpine Valley show highlighted by stellar Jack Straw, Minglewood Blues and the Sugar Magnolia > Scarlet > Man Smart > Eyes sequence.",
+  "review": "The July‑18‑1989 Alpine Valley performance is widely praised for its tight first set and a second‑set that bookends with Sugar Magnolia and Sunshine Daydream, delivering standout moments like Jack Straw, Minglewood Blues, Friend of the Devil and a fiery Sugar Magnolia > Scarlet > Man Smart > Eyes medley. The Brantley‑28474 matrix source provides clear, well‑balanced audio with no notable dropouts, making the show both musically and technically enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Reviews are overwhelmingly positive about the performance and note a clean matrix recording; weighting the strong musical moments (70%) with good sound quality (30%) yields a rating in the low‑4‑star range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Brantley‑28474 matrix source is praised for clarity and balance; no significant dropouts or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Minglewood Blues",
+      "Friend of the Devil",
+      "Sugar Magnolia > Scarlet > Man Smart > Eyes"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds strong momentum with a solid Touch opener and powerful Jack‑related jams; second set is playful, bookended by Sugar Magnolia and Sunshine Daydream, featuring an inventive medley that keeps the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Guided the Space segue into China Doll, showcasing his improvisational instincts.",
+    "Phil": "His bass approach on the second set is highlighted as especially strong.",
+    "Bob": "Bob (Bobby) wanted to move into Terrapin after Space but was redirected; no explicit praise noted.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Man Smart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T21:51:44.560123+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-18.sbd.brantley.28474.sbeok.shnf"
+}

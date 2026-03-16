@@ -1,0 +1,79 @@
+{
+  "summary": "Good‑quality audience recording of a mellow 1995 Memphis show with standout Wharf Rat and jazzy mid‑tempo numbers.",
+  "review": "The performance is praised for its tight, mid‑tempo vibe – highlights include a beautiful Wharf Rat, solid Shakedown Street and Crazy Fingers, plus the jazzy feel of Eternity and Stuck Inside of Mobile. The audience recording (NAK‑300) is described as cavernous but clear enough to hear the solos, delivering an overall good mix despite some ambience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Three detailed reviews show generally positive comments about the music and decent sound quality; a single critical note on Jerry's Unbroken Chains solo tempers the rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Cavernous ambience but overall nice mix; solos are audible and sound quality is solid for an audience capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Shakedown Street",
+      "Crazy Fingers",
+      "Stuck Inside of Mobile",
+      "Tennessee Jed",
+      "Eternity"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second night focused on mid‑tempo, jazzy tunes; the second set kept a mellow, on‑point vibe that many reviewers felt was an 'on' night for 1995."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals and guitar praised on Shakedown Street and Crazy Fingers; his solo on Unbroken Chains was described as weak and hesitant.",
+    "Phil": "",
+    "Bob": "Mentioned as heading toward a new jazzy direction (referring to his evolving style).",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Unbroken Chains": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Stuck Inside of Mobile": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "That Same Thing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T07:50:04.904295+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-04-02.nak300.holtz.91056.flac16"
+}

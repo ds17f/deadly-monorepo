@@ -1,0 +1,106 @@
+{
+  "summary": "Stunning audience recording with 3‑D soundstage captures a standout 1980 show featuring a smoking Scarlet > Fire sequence and superb ensemble playing.",
+  "review": "The flying‑mic AUD tape delivers exceptional separation, brightness and crystal‑clear clarity that makes you feel right in the venue.  Musically the night is often cited as one of ’80’s best – tight ensemble work, Phil’s soaring bass, Brent’s swirling B3 and a blazing Scarlet Begonias → Fire on the Mountain highlight the second set, while the first set stays solid overall.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews are highly favorable (4‑5 stars); reviewers praise both the extraordinary sound quality and the strong musical performance, with only minor critiques of a few song choices."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Great separation and fidelity, 3‑D imaging, bright, crisp and clear soundstage; occasional minor “bumps and bruises” noted but overall outstanding for an audience tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Sugaree",
+      "Scarlet Begonias > Fire on the Mountain",
+      "Playing in the Band",
+      "Not Fade Away > Black Peter > Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Minglewood Blues",
+      "One More Saturday Night"
+    ],
+    "setlist_flow": "First set solid but average; second set erupts with high energy, featuring a powerful middle section and a classic closing trio (NFA → Black Peter → Sugar Magnolia). Overall pacing keeps the show engaging from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Lower in the mix than previous night but his playing remains stellar; vocals sit up‑front.",
+    "Phil": "Offers some of his best bass work early on, very prominent and expressive throughout most of the show.",
+    "Bob": "His vocal presence is upfront; occasional critique of his “Minglewood” choice and a seagull slide deemed over‑the‑top.",
+    "Keys": "Brent Mydland’s B3 organ swirls strongly, showing growing strength in the band.",
+    "Drums": "Bill Kreutzmann and Mickey Hart are clear, balanced and punchy; drive the rhythm with thunderous energy."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T07:00:04.224835+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-12-13.124551.aud.goldshine.sennheiser-mkh406.flyingm.flac16"
+}

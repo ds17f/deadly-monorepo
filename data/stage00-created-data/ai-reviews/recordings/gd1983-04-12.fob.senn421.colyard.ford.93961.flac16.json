@@ -1,0 +1,63 @@
+{
+  "summary": "Clear soundboard capture of a high‑energy show with standout performances of Peggy‑O, Loser, Terrapin, Baby Blue and Oh My!",
+  "review": "The recording is praised as clean and free of matrix bleed, delivering good clarity that lets the band’s energy shine through. Fans highlight an exciting setlist featuring Peggy‑O, Loser, Terrapin, Baby Blue and Oh My! with strong playing throughout both sets.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviews are positive (average 4.5 stars), noting excellent performance and a good‑quality, non‑matrix recording; the combined show and recording assessment merits a high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers call it a 'good' recording, specifically mention there is no matrix mix, indicating a clean soundboard source with clear instrument separation and no noticeable drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Loser",
+      "Terrapin",
+      "Baby Blue",
+      "Oh My!"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first set and a very good second set; reviewers note great pacing and a strong overall setlist."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Oh My!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:00:13.414443+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-12.fob.senn421.colyard.ford.93961.flac16"
+}

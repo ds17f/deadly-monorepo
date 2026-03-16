@@ -1,0 +1,51 @@
+{
+  "summary": "Stunning audience recording of an incredible Brent‑era show, highlighted by a monster Terrapin > Playing in the Band marathon and soaring Scarlet > Fire.",
+  "review": "The performance is described as jaw‑dropping, with Brent’s B‑3 organ weaving perfectly through Jerry’s Mutron‑laden solos and a blistering 40‑minute Terrapin > Playing in the Band sequence that includes Drums, Space and a Reprise. The audience tape captured by Barry is crystal clear enough to merit headphones, and while the first set is viewed as merely “okay,” the second set receives universal praise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "All three reviewers are enthusiastic; show quality is rated very high (multiple standout moments) and recording quality is praised as excellent, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Great audience capture with clear instrument separation; reviewer notes you’ll want headphones to fully absorb the detail. No major drop‑outs or muffling mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Terrapin Station > Playing in the Band (40‑minute version with Drums > Space > Reprise)",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is universally lauded as a high‑energy, non‑plodding marathon; first set has some moments but is not considered essential."
+  },
+  "band_member_comments": {
+    "Jerry": "His solos are described as interstellar and full of meaning, with Mutron tones that dominate the jam.",
+    "Phil": "Bass volume is occasionally low, though he still pierces through with a few bomb‑like lines.",
+    "Bob": "",
+    "Keys": "Brent is praised for gelling with the band, delivering rich B‑3 swells and weaving in and out of Jerry’s noodling.",
+    "Drums": "Mickey and Bill are hailed as playing like gods throughout the show."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station > Playing in the Band (40‑minute version with Drums > Space > Reprise)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T21:22:23.592424+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-05-08.nak700.glassberg.motb.87806.sbeok.flac24"
+}

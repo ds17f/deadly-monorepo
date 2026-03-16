@@ -1,0 +1,63 @@
+{
+  "summary": "Audience tape with fair but noisy sound; despite the rough audio the Bo Diddley blues, Wow Wow Hey Hey and a ten‑minute jam stand out.",
+  "review": "The recording is an audience source that suffers from muddiness, feedback and occasional drop‑outs, making it difficult to enjoy. Musically the show offers rare moments – a superb Bo Diddley set, a sublime Wow Wow Hey Hey and an extended ten‑minute jam that fans love. Content outweighs fidelity, resulting in mixed feelings about the overall release.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show contains notable rare performances but recording quality is poor; average star rating of reviews (≈3) and mixed commentary lead to a modest overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Muddy, feedback‑laden audio with low clarity; occasional problematic sections (e.g., Slow Blues) make listening difficult."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bo Diddley set",
+      "Wow Wow Hey Hey",
+      "Ten‑minute jam (Track 6)"
+    ],
+    "poor_songs": [
+      "Slow Blues"
+    ],
+    "setlist_flow": "No specific comments on pacing; reviewers focus on individual song highlights rather than overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bo Diddley set": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wow Wow Hey Hey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slow Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Pollution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sitting On Top Of The World": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T12:20:28.990783+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-03-25.aud.hanno.horner.22094.sbeok.shnf"
+}

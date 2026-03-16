@@ -1,0 +1,93 @@
+{
+  "summary": "Fair‑mix soundboard capture of a solid ’73 show with standout China Cat Sunflower > I Know You Rider, Eyes of the World and They Love Each Other.",
+  "review": "The performance is a respectable snapshot of September 1973, highlighted by an effortless China Cat > Rider jam, a soaring Eyes of the World, and strong renditions of They Love Each Other and Mississippi Half‑Step. The soundboard source suffers from a poor mix, volume/balance issues and occasional clipping, making parts of the set sound thin. Overall the music outweighs the technical flaws, earning a mixed but generally positive impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Review praises many songs and overall show quality while noting significant recording mix problems; weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix is uneven with volume/balance issues, early set sections sound thin, China Cat Sunflower intro clipped (4‑10 s), and matrix sources require pitch correction. Overall usable but not a high‑fidelity release."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "They Love Each Other",
+      "Mexicali Blues",
+      "Big River",
+      "China Cat Sunflower > I Know You Rider",
+      "Mississippi Half-Step",
+      "Eyes of the World"
+    ],
+    "poor_songs": [
+      "Ramble On Rose (cut, lackluster)",
+      "China Doll (dry/spare)",
+      "Weather Report Suite (underwhelming)"
+    ],
+    "setlist_flow": "First set serves as a warm‑up with a few flat moments but builds momentum; the second set lifts off with strong jams—especially Eyes of the World and the China Cat > Rider sequence—though it is hampered by mixed recording quality in places."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T14:56:59.600605+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-09-24.150275.sbd.remastered.miller.flac1644"
+}

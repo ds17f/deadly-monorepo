@@ -1,0 +1,69 @@
+{
+  "summary": "Well‑balanced soundboard recording with a bit of hiss, capturing an energetic 1980 show highlighted by a stellar Space/Drums sequence and strong Lost Sailor → Saint of Circumstance → Deal flow.",
+  "review": "The Miller‑upgraded SBD is generally clean and full – the mix is well balanced despite a faint analog hiss and occasional song‑order mislabeling.  The performance shines, especially the seamless Drums→Space transition, the tight Lost Sailor/​Saint of Circumstance/​Deal segment, and Garcia’s on‑point vocals on Fire on the Mountain.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (8 out of 9) are 4–5 stars and praise both the musical set and the sound quality; only one low‑star review notes mislabeled tracks, so overall rating is strong."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Well‑balanced mix with clean, full sound; slight analog hiss noted; song order mislabeled (OMSN follows Deal); reviewers suggest a matrix could improve it further."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "Drums > Space",
+      "Lost Sailor",
+      "Saint of Circumstance",
+      "Deal",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A concise, no‑nonsense second set that mirrors classic Vegas ’91 runs but with unique jams; transitions (especially Drums→Space) are praised and the Lost Sailor → Saint of Circumstance → Deal sequence is highlighted as a flow highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocals on Fire on the Mountain were spot‑on, and his transitions into Space received strong praise.",
+    "Phil": "His bass comes through clearly for the first time on an early ’80s SBD, noted as clean and full.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The Drums → Space segue is singled out as a favorite moment."
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums > Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T06:54:01.622471+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-12-13.sbd.miller.91939.sbeok.flac16"
+}

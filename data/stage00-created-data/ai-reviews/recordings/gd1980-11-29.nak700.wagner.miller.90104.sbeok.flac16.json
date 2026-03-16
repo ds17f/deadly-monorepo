@@ -1,0 +1,77 @@
+{
+  "summary": "Stellar audience recording captures a high‑energy Florida show highlighted by a smoking Shakedown → Franklin’s → Estimated sequence and a powerhouse second set.",
+  "review": "The 1980 Alligator Alley Gym audience tape is praised for its crystal‑clear mix, perfect mic placement and vivid instrument separation, making every jam come alive. Musically the concert shines especially in the second set, with an electrifying Shakedown‑Franklin’s‑Estimated segue, soaring “He’s Gone,” tender “Stella Blue” and a rousing “Casey Jones” encore. Brent Mydland’s debut on keys adds extra sparkle, and the crowd’s enthusiasm fuels the band throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive reviews (13/14 with 4‑5 stars) praise both the superb audience recording quality and the high‑energy performance, especially the second set; only minor criticism of the first set keeps the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear mix, sharp vocals and instruments, perfect mic placement noted by several reviewers; no reported dropouts or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown > Franklin's > Estimated",
+      "He's Gone",
+      "Stella Blue",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid but not spectacular; second set a powerhouse with nonstop energy, smooth transitions and strong crowd interaction."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone is repeatedly praised as tight and inspiring.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s first appearance on keyboards receives enthusiastic nods, adding fresh energy to the jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Franklin's": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T06:12:40.278056+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-11-29.nak700.wagner.miller.90104.sbeok.flac16"
+}

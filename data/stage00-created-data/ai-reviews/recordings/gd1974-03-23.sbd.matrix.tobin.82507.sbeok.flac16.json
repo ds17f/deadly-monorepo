@@ -1,0 +1,46 @@
+{
+  "summary": "Warm, well‑balanced matrix with added low end and a blazing Lesh on Morning Dew, though occasional flanging makes Ship of Fools sound off‑tune.",
+  "review": "The matrix source delivers one of the nicest, warmest sounds in recent years, giving the recording depth that the original audience tape lacked. Musically the show shines with Phil Lesh “on fire” during a monster middle jam in Morning Dew, but occasional flanging artifacts render Ship of Fools nearly unlistenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Both reviewers praise the performance and the warm matrix sound, noting only minor technical flaws; with limited (two) reviews confidence is moderate."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Warm, full‑bodied sound with excellent low‑end extension; occasional flanging causes pitch instability, especially noticeable on slower passages like Ship of Fools."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "Ship of Fools"
+    ],
+    "setlist_flow": "The concert builds strong momentum with a monster middle jam in Morning Dew driven by Lesh’s bass, though the flanging issue detracts from Ship of Fools."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil Lesh delivers a crushing, fire‑filled bass performance, particularly during the Middle Jam of Morning Dew.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T18:42:39.817533+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-03-23.sbd.matrix.tobin.82507.sbeok.flac16"
+}

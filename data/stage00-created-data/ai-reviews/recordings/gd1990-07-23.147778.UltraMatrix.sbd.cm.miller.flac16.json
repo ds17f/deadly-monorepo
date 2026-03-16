@@ -1,0 +1,50 @@
+{
+  "summary": "Matrix source delivers a decent capture of an average night highlighted by a standout encore of The Weight and strong Brent keyboard work.",
+  "review": "The show is described as a solid run with four consecutive Bob Weir numbers, a rare Truckin’ moment and a perfect encore of The Weight. Jerry’s guitar shines while his vocals sound wind‑blown, and Brent’s keyboards are praised for their strength. No specific recording issues are noted, but the UltraMatrix mix suggests a decent matrix capture.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review; comments focus on average musical performance with a few highlights and no clear recording quality assessment."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not comment on sound clarity or mix, so rating is based on lack of information."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Weight",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A good run with four consecutive Weir tunes; not as tight as Deer Creek nor as epic as Soldier Field, but the encore is highlighted."
+  },
+  "band_member_comments": {
+    "Jerry": "Good guitar work noted; vocals were winded at times.",
+    "Phil": "",
+    "Bob": "Four Bob‑Weir songs in a row; vocal strength mentioned indirectly.",
+    "Keys": "Brent’s keyboards are strong and drive the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T11:02:30.162808+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-23.147778.UltraMatrix.sbd.cm.miller.flac16"
+}

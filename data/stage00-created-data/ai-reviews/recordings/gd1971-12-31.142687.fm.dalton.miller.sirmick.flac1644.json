@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent FM broadcast of a New Year's show with crisp sound, wild Pigpen/Bob moments and a smoking Casey Jones, plus Jerry’s lightning‑bolt guitar work.",
+  "review": "Both reviewers rave about this 1971 NYE performance, highlighting Pigpen’s wild NFA reprise, Bob Weir’s storytelling, and an “incredible” Casey Jones. The FM broadcast (matrix) has been cleaned up – the buzz/hum is gone and the mix is clear, making the show fully enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "Two detailed 5‑star reviews praise both the musical performance (standout jams, strong Pigpen and Jerry playing) and the recording quality (no hum, clear FM mix), indicating an exceptional show with excellent audio."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "FM broadcast source cleaned of buzz/hum; crisp clarity, good instrument separation, brief DJ intro before encore adds ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Casey Jones",
+      "NFA reprise"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic set with a wild NFA>GDTRFB>NFA sequence, strong Pigpen contributions and Jerry’s explosive guitar; Bob Weir’s NYE story adds narrative flair."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as “throwing it down like Lightning bolts!” – high‑energy lead guitar.",
+    "Phil": "",
+    "Bob": "Pig & Bob go wild on the NFA reprise; Weir’s New Year’s Eve story noted by a reviewer.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "NFA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T11:26:35.989995+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-12-31.142687.fm.dalton.miller.sirmick.flac1644"
+}

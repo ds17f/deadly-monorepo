@@ -1,0 +1,64 @@
+{
+  "summary": "Solid 1991 soundboard capture with a good mix, highlighted by a soaring Wheel in the second set and a stellar Baby Blue, though the Watchtower falls flat.",
+  "review": "The show is generally praised as a well‑played, solid performance with generous five‑star moments, especially the second‑set Wheel and its Black Peter lead‑in, plus a standout Baby Blue from Jerry.  The recording is described as clean and superb overall, with only minor quirks that keep it from being pristine.  A few missteps—rushed Scarlet>Fire and a weak Watchtower—prevent it from reaching perfection.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show 4‑5 stars, noting strong musical moments and a good‑quality soundboard recording despite some minor flaws."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mix is described as pretty good/superb; clean and nice overall but with small quirks, not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Wheel",
+      "Black Peter",
+      "Scarlet > Fire",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Watchtower"
+    ],
+    "setlist_flow": "Second set shines with the Wheel and its Black Peter lead‑in; overall set is solid though some numbers (Scarlet>Fire) feel rushed."
+  },
+  "band_member_comments": {
+    "Jerry": "Great Baby Blue performance noted; however his vocal on Watchtower was called horrific.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T02:52:28.971814+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-12-27.sbd.hinko.25944.sbeok.shnf"
+}

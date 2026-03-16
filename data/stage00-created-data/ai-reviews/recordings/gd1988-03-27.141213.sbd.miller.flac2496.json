@@ -1,0 +1,69 @@
+{
+  "summary": "Soundboard capture with decent clarity; a solid mid‑tour ’88 show highlighted by a killer Me & My Uncle solo, scorching Scarlet > Fire and an energetic Goin' Down the Road → I Need a Miracle.",
+  "review": "The recording is sourced from the Healy ultra‑mix soundboard (SBD) and generally sounds clear, though it’s a mix of board and audience patches. Musically the concert sits above average for 1988 – the first set is tight and the second delivers a few fireworks, especially the Me & My Uncle solo, Scarlet > Fire climax and the upbeat Goin' Down the Road → I Need a Miracle sequence, offset by weaker moments like Sunshine Daydream and U.S. Blues.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "One detailed review gives an overall 3‑star rating with both positive highlights and noted flaws; the show is above average but recording quality, while good, isn’t flawless."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "First complete Healy ultra‑mix SBD in circulation; mixes board and limited audience patches, generally clear with no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Me & My Uncle",
+      "Scarlet > Fire",
+      "Goin' Down the Road > I Need a Miracle"
+    ],
+    "poor_songs": [
+      "Sunshine Daydream",
+      "U.S. Blues"
+    ],
+    "setlist_flow": "First set is solid with strong playing; second set builds momentum with a standout Scarlet > Fire sequence and an upbeat Goin' Down the Road → I Need a Miracle, though it’s marred by a flubbed Sunshine Daydream and a lackluster U.S. Blues ending."
+  },
+  "band_member_comments": {
+    "Jerry": "Great solo on Me & My Uncle; jumps the cliff during Scarlet > Fire.",
+    "Phil": "Massive We Want Phil intro and a strong Estimated set showcase his bass work.",
+    "Bob": "",
+    "Keys": "Brent delivers fireworks on Scarlet > Fire and slips in a brief Hey Jude quote.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road > I Need a Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:04:47.623571+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-27.141213.sbd.miller.flac2496"
+}

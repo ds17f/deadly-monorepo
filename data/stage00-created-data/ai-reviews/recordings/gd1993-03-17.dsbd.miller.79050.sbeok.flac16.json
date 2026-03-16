@@ -1,0 +1,114 @@
+{
+  "summary": "Clean soundboard capture of a stellar ’93 show highlighted by Shakedown, Lazy River Road and an epic Days Between.",
+  "review": "The recording is praised for its clean, fresh soundboard quality that lets the band’s late‑era tightness shine through.  The concert shines especially in the second set – Shakedown, Lazy River Road, Crazy Fingers → Playing In The Band → Dark Star → Space → The Other One → Days Between and a soaring LSD encore are repeatedly called out as standouts, while only Playing In The Band/Space receive mild criticism.  Jerry’s guitar work is described as strong, engaged and full of inventive phrasing throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive reviews (majority 4‑5 stars) praise both the performance—especially the second set—and the clean soundboard recording; only a few minor criticisms appear."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note a clean, fresh and well‑remastered sound; one comment mentions a tracking error but overall the mix is clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Lazy River Road",
+      "Days Between",
+      "Crazy Fingers",
+      "Dark Star",
+      "The Other One",
+      "Good Lovin'",
+      "Lucy in the Sky With Diamonds"
+    ],
+    "poor_songs": [
+      "Playing In The Band",
+      "Space"
+    ],
+    "setlist_flow": "First set solid and engaging, second set a high‑energy journey that many reviewers describe as mind‑blowing; only a few feel parts of the PITB/Space sequence meander."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised for strong, engaged playing, ripping scales, inventive phrasing and even witty lyric changes on the fly.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lazy River Road": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Days": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing In The Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lucy in the Sky With Diamonds": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Handsome Cabin Boy Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "LSD": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Days Between": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T10:38:33.728633+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-17.dsbd.miller.79050.sbeok.flac16"
+}

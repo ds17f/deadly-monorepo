@@ -1,0 +1,39 @@
+{
+  "summary": "Clear recording that shines even on weak speakers, with a standout Tennessee Jed from the MSG ’87 run.",
+  "review": "The reviewer praises the sound quality, noting it sounds like a winner even through modest computer speakers and highlights the performance of Tennessee Jed. The show is described as part of a great MSG 1987 run, suggesting an overall strong concert despite limited detail.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review provides positive comments about both the music and recording; rating reflects a good show with clear sound but confidence is low due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Clear and balanced enough to sound great even on weak computer speakers; no specific issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tennessee Jed"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer’s enthusiasm implies a well‑flowing set, though no detailed comments on pacing are given."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:17:59.115597+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-15.125699.AT835.flac16"
+}

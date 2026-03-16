@@ -1,0 +1,45 @@
+{
+  "summary": "Mellow, west‑coast‑vibe show with a solid soundboard recording that’s generally good despite some bass muddiness.",
+  "review": "The performance is praised for its relaxed, mellow vibe and standout combos like Stranger > Franklin's Tower and the opening China > Rider of set two. Recording quality is described as great overall, though a few reviewers note a bit too much bass muffle that makes the low end muddy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical performance with highlighted songs and generally good soundboard quality; minor bass‑mud issues keep the recording from being excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall great sound, but a noticeable amount of bass muffle/muddiness is mentioned by several reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger > Franklin's Tower",
+      "China > Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Relaxed, mellow flow with a West‑coast vibe; second set kicks off strongly with China > Rider and maintains a punchy yet sweet feel."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:05:28.769495+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-02-14.sbd.hinko.24995.sbeok.shnf"
+}

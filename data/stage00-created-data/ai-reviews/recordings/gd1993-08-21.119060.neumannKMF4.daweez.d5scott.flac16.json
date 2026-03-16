@@ -1,0 +1,31 @@
+{
+  "summary": "Great show despite mis‑indexed tracks, recording quality appears solid though unspecified",
+  "review": "The reviewer rates the performance a full five stars, calling it a great show and saying it’s worth listening to even though the track information is messed up. No specific comments about soundboard or audience sources are given, so the audio quality is assumed to be decent but unverified.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single 5‑star review indicates strong enthusiasm for the performance, but lack of detail on recording quality limits confidence in rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Track metadata/indexing is incorrect ('track info is messed up'), but no complaints about sound clarity or mix, implying acceptable audio quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T15:46:52.354134+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-08-21.119060.neumannKMF4.daweez.d5scott.flac16"
+}

@@ -1,0 +1,62 @@
+{
+  "summary": "Clean matrix recording of a tightly‑played 1986 show with standout second‑set segues and superb moments like Franklin’s Tower and Playin’ in the Band.",
+  "review": "The matrix mix is praised as clean, full and very listenable, capturing a surprisingly tight performance for the often‑underrated 1986 era. Reviewers highlight seamless transitions in the second set – especially the PITB → Franklin’s Tower → Miracle flow and a moving Wheel – while noting Jerry’s focused playing despite health concerns and Brent’s bright keyboard showcase.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (8/9) give 4‑5 stars, praising both the musical tightness and the clean matrix recording; only minor criticisms about the year’s overall vibe temper an otherwise strong rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Matrix (audience + soundboard) mix described as clean, full and not bad; no major drop‑outs or muffiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Playin' in the Band",
+      "Box of Rain",
+      "Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set flows flawlessly with masterful segues (PITB → Franklin’s Tower → Miracle → PITB, then into Wheel and Brent’s showcase), giving a sense of adventure and tightness throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Focused playing, good tone; reviewers note his health was not great but he still delivered.",
+    "Phil": "",
+    "Bob": "Described as doing “weird things” with his guitar this spring, yet praised for cueing up Miracle and solid rhythm work.",
+    "Keys": "Brent Mydland gets a highlighted second‑set showcase; his keyboard work is noted positively.",
+    "Drums": "The drummers provide rolling starts and strong support for transitions; segues are described as seamless."
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:08:50.520932+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-28.mtx.chappell.sb28.95598.flac16"
+}

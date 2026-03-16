@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive comments on the audio or performance; reviewers only note that the accompanying text file has an incorrect date.",
+  "review": "Both reviews focus solely on a documentation issue, stating that the setlist text file is from the wrong date. They do not provide any information about the sound quality, band performance, or song highlights for this recording.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only two brief reviews that address a metadata error; there is no insight into musical or technical quality to base a higher rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviews do not discuss the audio at all, mentioning only that the text file has the wrong date."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T13:53:01.612820+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-25.nak100.holtz.jaz.102169.flac16"
+}

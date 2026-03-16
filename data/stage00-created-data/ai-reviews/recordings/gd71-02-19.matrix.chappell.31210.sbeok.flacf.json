@@ -1,0 +1,63 @@
+{
+  "summary": "Clear matrix mix captures a high‑energy show with standout Bird Song, Good Lovin' and an epic Easy Wind, while the crowd’s vibe shines through.",
+  "review": "The Chappell matrix delivers surprisingly clean vocals and instrument separation for a hybrid source, preserving enough audience ambience to feel like you’re in the room.  Musically the performance is praised for its electric crowd feed, debut of Bird Song, a marathon Good Lovin', and memorable renditions of Truckin' and Easy Wind; reviewers consistently call it a classic, high‑energy Dead night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4.7/5, with uniformly positive comments about both the show and the matrix recording; the show quality is excellent and the recording is good but not flawless."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clear and crisp vocals/instruments, well‑balanced mix of crowd ambience. Reviewers note it isn’t perfect but far superior to the audience‑only version."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Good Lovin'",
+      "Easy Wind",
+      "Truckin'",
+      "China Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High energy throughout; the crowd feeds the band and the band returns the love, highlighted by a debut Bird Song, an extended Good Lovin' jam and strong early numbers like Truckin' and Easy Wind."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T02:50:47.708601+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-02-19.matrix.chappell.31210.sbeok.flacf"
+}

@@ -1,0 +1,65 @@
+{
+  "summary": "Good soundboard recording of a high‑energy show highlighted by a powerful Ripple encore and early versions of Foolish Heart and Victim.",
+  "review": "The performance is remembered for its excitement – a Beatles‑like vibe, a memorable Loose Lucy intro, and an inspiring Ripple finale that left many fans in awe. While the soundboard capture is generally clear, one reviewer complained about Garcia’s vocal on Ripple, but overall the show is praised as a turning point for several newer songs.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show receives mostly positive comments (standout songs, high energy) with only minor performance criticism; recording quality is unremarkable but acceptable, leading to a solid above‑average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit complaints about clarity or mix; reviewers focus on performance. One vocal issue noted but not a recording flaw."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ripple",
+      "Foolish Heart",
+      "Victim",
+      "One More Saturday Night",
+      "Loose Lucy"
+    ],
+    "poor_songs": [
+      "Ripple"
+    ],
+    "setlist_flow": "The set is described as high‑energy with a memorable second‑set opener (Loose Lucy) and an uplifting Ripple encore; early versions of Foolish Heart and Victim are highlighted as turning points."
+  },
+  "band_member_comments": {
+    "Jerry": "Recall of Jerry screaming ‘Loose Lucy’ with wind blowing his hair, showing stage excitement.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ripple": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T12:59:56.832956+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-03.sbd-encores.miller.31224.sbeok.flacf"
+}

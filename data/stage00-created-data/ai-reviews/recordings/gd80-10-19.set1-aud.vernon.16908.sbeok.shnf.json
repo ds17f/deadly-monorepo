@@ -1,0 +1,39 @@
+{
+  "summary": "Rough audience cassette captures a fiery New Orleans acoustic set with a standout Bird Song despite limited fidelity.",
+  "review": "The acoustic show is praised for its creative, jazz‑inflected instrumental breaks and an especially compelling rendition of \"Bird Song.\" Recording quality is described as rough and challenging – typical of an audience tape – but still listenable enough to showcase Jerry Garcia's exceptional acoustic guitar work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the performance highly (4‑star) while noting significant but not crippling recording limitations, yielding a solid overall score weighted toward show quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Rough cassette audience tape; limited clarity and some muffling, but the acoustic guitar is still audible. Reviewers note the sound is challenging yet listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic set has a relaxed, jazz‑like vibe with inventive instrumental breaks; overall flow is praised despite the recording's limitations."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's acoustic guitar work is highlighted as exceptional and \"all over it\" throughout the set.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T04:59:56.555996+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-19.set1-aud.vernon.16908.sbeok.shnf"
+}

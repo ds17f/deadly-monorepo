@@ -1,0 +1,90 @@
+{
+  "summary": "Solid soundboard recording with a smoking first set, but the second set feels uneven and downhill.",
+  "review": "The soundboard source is clear and pleasant, giving listeners a good picture of the show. Fans rave about the high‑energy first set – especially the Eyes, The Same Thing and a sweet Ramble On Rose jam – while the second set is seen as a mixed bag after an initial LSD opener. Overall the performance has strong moments but suffers from a few weaker songs like Broken Arrow.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (strong first set, uneven second), recording is praised as a nice soundboard; combined weighting yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Soundboard noted as clear and pleasant; no major audio flaws mentioned, though reviewers lament the lack of audience recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "The Same Thing",
+      "Easy Answers",
+      "Ramble On Rose jam",
+      "Stranger"
+    ],
+    "poor_songs": [
+      "Broken Arrow"
+    ],
+    "setlist_flow": "First set praised for its energy and song selection, while the second set was viewed as uneven – a cool LSD opener followed by a downhill stretch."
+  },
+  "band_member_comments": {
+    "Jerry": "Sweet MIDI‑fied Ramble On Rose jam and strong vocal presence early; later his lyrics on Days Between sound lost.",
+    "Phil": "",
+    "Bob": "Strong Stranger opener, gritty The Same Thing, and confident Easy Answers.",
+    "Keys": "",
+    "Drums": "Great drum segment in Eyes/Drumz; LSD opener noted as rhythmically solid."
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Same Thing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Answers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Arrow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "LSD": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:47:29.573563+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-12-13.139214.sbd.miller.flac16"
+}

@@ -1,0 +1,75 @@
+{
+  "summary": "Rough audience (AUD) tape but captures an exceptional 1973 show with a blistering Here Comes The Sunshine and several standout jams.",
+  "review": "The performance is widely praised – fans call it one of the top shows of ’73, highlighting a soaring Here Comes The Sunshine, a flawless Half Step, and a thrilling segue through Nobody’s Fault But Mine → Other One.  The audience recording is described as damaged and “listen‑able but rough,” yet listeners feel the musical payoff outweighs the technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star ratings, praising the music heavily; only a few note recording problems, so overall rating is high with strong consensus."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "AUD copy is described as damaged by heat/water and ‘stealth’ (crowd‑mic) with occasional muffled sections, but still listenable for the full show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes The Sunshine",
+      "Half Step",
+      "Nobody's Fault But Mine",
+      "The Other One",
+      "They Love Each Other"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "First set solid but a bit uneven (Playin’ noted as weaker); second set shines with seamless segues and extended jams, making the overall flow highly rewarding."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Here Comes The Sunshine": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Nobody's Fault But Mine": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T04:53:18.387503+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-12-19.aud.clugston.8602.sbeok.shnf"
+}

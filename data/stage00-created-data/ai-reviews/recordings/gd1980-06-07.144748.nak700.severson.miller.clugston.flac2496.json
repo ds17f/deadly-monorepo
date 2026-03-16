@@ -1,0 +1,31 @@
+{
+  "summary": "A wildly energetic performance praised by fans, though recording details remain unclear",
+  "review": "The lone review gushes that the concert is “one hell of a ride,” awarding it five stars and even noting the following night was also solid. No specifics about sound quality, song list, or individual playing are given, so the recording’s technical merits are unknown. Overall the sentiment is highly positive, suggesting a memorable show despite lacking detailed information.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "A single 5‑star review indicates strong enthusiasm for the performance, but absence of any recording or musical detail limits confidence in assigning a higher rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review provides no information about soundboard vs. audience source, clarity, or mix; quality cannot be assessed from available comments."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the show as a high‑energy ride, implying an exciting and engaging set despite no specific song mentions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T00:12:56.992510+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-07.144748.nak700.severson.miller.clugston.flac2496"
+}

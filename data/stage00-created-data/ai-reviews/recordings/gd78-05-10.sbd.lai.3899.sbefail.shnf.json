@@ -1,0 +1,102 @@
+{
+  "summary": "Decent soundboard capture of a lengthy May ’78 show with solid performances like “They Love Each Other” and “Wharf Rat”, though tracks such as “Bertha” fall flat.",
+  "review": "The recording is sourced from the lai.3899 sound‑board tape, generally clear but with the matrix mix sounding better on “Bertha”. Musically the show sits in the middle of the road – highlights include a fluid “Me & My Uncle”, an uptempo “It Must Have Been the Roses” and a jam‑filled “Wharf Rat”, while early second‑set numbers like “Bertha” and a sloppy “Sugar Magnolia” drag it down. Overall sentiment from reviewers is mixed, reflecting both strong moments and noticeable unevenness.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Reviewers note a few standout songs and an overall decent soundboard source, but also point out several weak spots; the average star rating (≈2) is lifted by detailed positive comments, yielding a modest 3‑star AI rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "The lai.3899 SBD is praised as the best source; however the matrix mix is preferred for “Bertha”. Overall clarity is good, with no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "They Love Each Other",
+      "Me & My Uncle",
+      "It Must Have Been the Roses",
+      "Estimated Prophet",
+      "Eyes of the World",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Bertha",
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "A lengthy May ’78 show with a nearly two‑hour second set; after a sluggish start on “Bertha” the band picks up momentum through “It Must Have Been the Roses”, the Estimated Prophet > Eyes of the World sequence, and culminates in a strong “Wharf Rat” jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Fluid lead on “Me & My Uncle”; scrumptious solo on “Big River”.",
+    "Phil": "Delivers chorded “bombs” during the “Wharf Rat” jam.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey’s drumming described as long and monotonous, especially during the extended “Space”."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "It Must Have Been the Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:36:57.319520+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-05-10.sbd.lai.3899.sbefail.shnf"
+}

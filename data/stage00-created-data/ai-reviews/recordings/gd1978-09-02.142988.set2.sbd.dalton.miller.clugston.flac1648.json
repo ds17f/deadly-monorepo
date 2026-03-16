@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality soundboard capture of a consistently uptempo show highlighted by a stellar 'Eyes of the World' performance.",
+  "review": "Both reviewers rave about this September 2 1978 gig, calling it an essential, top‑ten show with nonstop uptempo energy and a standout rendition of “Eyes of the World.” The recording is a soundboard source that listeners describe as clean and release‑worthy, though no specific technical details are given.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Two high‑rating reviews (5★ and 4★) praise the musical performance strongly; recording quality is inferred to be good from the soundboard source, leading to an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on audio issues; assumed clean soundboard capture suitable for release."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Consistently uptempo and tight from start to finish, making it an ideal introduction for new listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T14:57:15.472636+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-09-02.142988.set2.sbd.dalton.miller.clugston.flac1648"
+}

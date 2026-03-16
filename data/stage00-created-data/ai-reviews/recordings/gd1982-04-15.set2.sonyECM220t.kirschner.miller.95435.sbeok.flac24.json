@@ -1,0 +1,31 @@
+{
+  "summary": "Great‑sounding recording despite mixed feelings about the performance",
+  "review": "Reviewers compliment the audio quality, calling it a great recording that captures the band sounding right, though one reviewer notes the performance itself wasn’t stellar. A second comment laments taping legalities rather than the music. Overall the sound is praised while the show details remain vague.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only two reviews with opposing star ratings; recording quality is praised but no concrete information on the musical performance, leading to an average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "One reviewer describes the tape as a 'great recording' that makes the band sound right; no details on whether it is soundboard, audience, or matrix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T20:15:02.260828+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-15.set2.sonyECM220t.kirschner.miller.95435.sbeok.flac24"
+}

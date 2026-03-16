@@ -1,0 +1,63 @@
+{
+  "summary": "A rough‑around‑the‑edges soundboard captures a fiery early‑Dead show, highlighted by a wild Viola Lee Blues and an intense Other One suite.",
+  "review": "The performance bursts with manic intensity – Baby Blue, The Other One (including the cryptic finale), Death Don't Have No Mercy and a power‑cut ending to Viola Lee Blues are repeatedly praised as classic moments.  The recording is a soundboard tape that suffers from high‑frequency distortion, occasional balance issues and a two‑minute guitar dropout, but its raw energy still shines through.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (13/16) give 4‑5 stars and highlight standout jams; show quality is rated ~4.6 while recording quality averages around 3.5, yielding a weighted rating of about 4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "High‑frequency distortion and uneven balance; occasional drop‑out (Garcia’s guitar cuts out for ~2 min) and rough spots, but overall audible and captures the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Viola Lee Blues",
+      "The Other One",
+      "Death Don't Have No Mercy",
+      "Baby Blue",
+      "King Bee"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early‑Dead energy runs high throughout; the set builds to a chaotic Viola Lee Blues with a power‑out finale and sustains momentum with intense jams on The Other One and Death Don't."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is generally strong and in fine voice, though it drops out for about two minutes during the Viola Lee Blues instrumental break.",
+    "Phil": "",
+    "Bob": "Weir’s lead vocals are criticized by some as thin ('horse's feed bag') but others feel they fit the material; his vocal on 'Lovelight' (sic) and other songs is noted.",
+    "Keys": "Pigpen’s organ work shines, especially on Viola Lee Blues, described as sweet, hot and wildly expressive.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Viola Lee Blues": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "King Bee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T12:48:45.961437+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-04-06.sbd.fm.cotsman.9492.sbeok.shnf"
+}

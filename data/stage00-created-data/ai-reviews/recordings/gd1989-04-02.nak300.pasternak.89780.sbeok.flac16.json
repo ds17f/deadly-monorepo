@@ -1,0 +1,39 @@
+{
+  "summary": "A high‑energy 1989 show captured on a crisp audience (AUD) tape, with standout vocals and an exceptional “We Can Run” performance.",
+  "review": "The recording is a fine‑sounding taper‑section audience capture – vocals are clear and the mix lets Jerry, Bob and Brent come through like they’re speaking right across the room, even if Phil’s mic presence is modest. Musically the night shines with energetic playing, great song selection and a particularly memorable rendition of “We Can Run,” making it one of the better shows of the tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All five reviewers gave 4‑5 stars and praised both the musical performance and the tape’s clarity; the show is described as energetic with a clear highlight, while the recording is noted as crisp despite being an audience source."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear vocals, especially Jerry, Bob and Brent; minimal Phil on mic but still audible. No major drop‑outs or muffiness reported – a solid taper‑section tape with good bounce and energy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "We Can Run"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with high energy and strong song selection; the band shakes off the previous year's doldrums and delivers a consistently lively performance throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals crisp and clear, guitar presence described as speaking across the room.",
+    "Phil": "Very little Phil on the mic, but his presence is still noted.",
+    "Bob": "Vocals crisp and clear, comparable to Jerry’s in presence.",
+    "Keys": "Brent's keyboard work comes through clearly in the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "We Can Run": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:28:03.061943+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-02.nak300.pasternak.89780.sbeok.flac16"
+}

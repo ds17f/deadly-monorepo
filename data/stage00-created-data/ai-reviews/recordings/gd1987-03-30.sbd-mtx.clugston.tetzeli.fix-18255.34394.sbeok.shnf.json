@@ -1,0 +1,45 @@
+{
+  "summary": "Good matrix recording captures a solid 1987 performance highlighted by a bluesy He's Gone jam and a punchy The Other One.",
+  "review": "Both reviewers agree the show is a typical but well‑executed 1987 concert.  Highlights include a blues‑laden jam out of He’s Gone and an energetic, scary‑fun run through The Other One.  The recording is described as clean and good, likely a soundboard‑matrix mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Two reviews – one detailed positive about both performance and sound, the other neutral – lead to an overall good rating but limited data for high confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note a clean, decent‑sounding mix with no major issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical 1987 set; nothing extraordinary but consistently well performed throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T20:14:22.666069+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-30.sbd-mtx.clugston.tetzeli.fix-18255.34394.sbeok.shnf"
+}

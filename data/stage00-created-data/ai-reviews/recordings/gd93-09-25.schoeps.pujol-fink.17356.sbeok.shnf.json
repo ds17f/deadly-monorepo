@@ -1,0 +1,78 @@
+{
+  "summary": "A solid audience recording captures a punchy, upbeat show highlighted by standout Foolish Heart and Corrina performances.",
+  "review": "The set rolls from a tight first half with Loser, Cassidy and Deal into an especially memorable second set where Foolish Heart and Corrina shine.  The crowd‑sourced tape is clear enough to enjoy, though it isn’t audiophile‑grade and one reviewer notes heavy‑handed synth work that mars the keyboard texture.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the musical performance (especially Foolish Heart, Corrina and other classics) while noting a decent but not pristine audience recording; one strongly negative comment about Vince's synth pulls the overall rating down slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear for an audience tape, though not A+; a few reviewers call it \"very good\" while another mentions heavy‑handed synth and off‑pitch harmony that affect the listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart",
+      "Corrina",
+      "Cassidy",
+      "Loser",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong first set with tight, upbeat numbers; second set builds nicely with a standout Foolish Heart and varied Corrina jam, keeping the crowd fired‑up throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's synth playing is described as heavy‑handed and out of pitch, detracting from the overall keyboard/organ sound.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Corrina": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb's Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:47:47.414081+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-25.schoeps.pujol-fink.17356.sbeok.shnf"
+}

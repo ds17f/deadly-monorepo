@@ -1,0 +1,31 @@
+{
+  "summary": "A solid, potent Dead show hampered by a dreadful audience‑recorded tape.",
+  "review": "Fans agree the musical performance is strong – the set flows well and even features a brief Mind Left Body jam – but the recording quality is widely condemned as horrible, with many calling it an unusable audience copy that would need heavy EQ to be listenable. The overall experience is mixed: great playing lost in poor sound.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Show quality consistently praised (≈4‑star level) while recording quality is repeatedly described as terrible (≈2‑star level). Weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Multiple reviewers call the sound horrible, a bad audience copy recorded from a poor location in the coliseum; no soundboard source is available. One reviewer notes EQ can improve it, but overall clarity and balance are lacking."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Generally solid set with a brief Mind Left Body jam between Saint of Circumstance and Drums; second set described as rough around the edges but still potent."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T03:09:26.482133+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-12-30.b_ks.georges.6812.sbeok.shnf"
+}

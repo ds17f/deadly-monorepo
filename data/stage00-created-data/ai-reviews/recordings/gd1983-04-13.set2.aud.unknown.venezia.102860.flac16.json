@@ -1,0 +1,63 @@
+{
+  "summary": "Good audience tape that captures Jerry’s close‑up guitar and a strong Scarlet Begonias → Fire sequence, but several songs (Maybe You Know, Throwing Stones) are viewed as weak.",
+  "review": "The recording, an audience source that sounds solid when EQ'd, delivers a vivid sense of the band and fans being one, highlighted by Jerry Garcia’s front‑row guitar presence and a fiery Scarlet Begonias into Fire on the Mountain. However, reviewers criticize Brent Mydland’s “Maybe You Know” as a low point and find Throwing Stones sloppy, giving the show a mixed but generally enjoyable feel.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed with both standout and weak songs; recording quality is good when properly EQ'd, leading to an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Sound is clear and intimate, especially Jerry’s guitar, but benefits from proper EQ; no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain"
+    ],
+    "poor_songs": [
+      "Maybe You Know",
+      "Throwing Stones",
+      "Rushing Eyes"
+    ],
+    "setlist_flow": "Fans note a cohesive, one‑with‑the‑heads vibe, though some late‑set numbers feel sloppy or misplaced."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as being right on your face – very close and vivid guitar presence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s composition ‘Maybe You Know’ called a “crapvalanche” by reviewers.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rushing Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Maybe You Know": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:10:24.816533+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-13.set2.aud.unknown.venezia.102860.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Very good soundboard capture of a vibrant 1982 show with standout Space and Stella Blue moments despite an uneven second set.",
+  "review": "The recording is praised for its very good sound quality, likely a clean sound‑board source. Fans rave about the trippy space jams and a beautiful rendition of Stella Blue, though one reviewer finds the second set only average. Overall the performance is highly regarded with just minor mixed feelings about pacing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Three enthusiastic 5‑star reviews highlight excellent sound and standout moments, offset by a single 3‑star review noting an uneven second set; overall the show and recording are viewed favorably."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the sound as very good/clear with no major issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space (Raven)",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as mixed but partly awesome; second set considered rough‑to‑average by one reviewer, though overall the night is celebrated for its high energy and improvisational peaks."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space (Raven)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T20:47:05.984093+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-19.sbd.clugston.28291.sbeok.shnf"
+}

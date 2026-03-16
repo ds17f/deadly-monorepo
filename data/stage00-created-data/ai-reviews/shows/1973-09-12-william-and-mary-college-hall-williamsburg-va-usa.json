@@ -1,0 +1,74 @@
+{
+  "summary": "Jam‑focused set with standout Bird Song and Let It Grow",
+  "blurb": "The show delivers solid Bird Song, a relaxed Let It Grow jam and an energetic Eyes Of The World → Stella Blue transition. Jerry’s crystal‑tone guitar shines throughout while the band maintains a laid‑back groove. Overall the performance is enjoyable despite some recording quirks.",
+  "review": "September 12, 1973 at William & Mary captures the Dead in a mellow, jam‑heavy mood that many fans of the early‑fall ’73 run cherish. The first set rolls steadily through classics like Bird Song and Jack Straw before giving way to a second‑set that truly shines: Loose Lucy opens the side, followed by a Keith‑spiced Let It Grow that feels both relaxed and exploratory. The Weather Report Suite Prelude & Part 1 flow into a bright Let It Grow, leading into an upbeat Around & Around and the highlight of the night – an exuberant Eyes Of The World that segues flawlessly into a soulful Stella Blue. Jerry Garcia’s crystal‑clear lead work, highlighted by fresh slide figures after the Eyes jam, sits atop solid rhythm from Bob Weir (notably “crazed” on Let It Grow) and Keith’s Mingus‑like improvisational textures. Phil holds down the low end while Bill Kreutzmann provides steady propulsion throughout. The recording most fans should start with is the soundboard capture identified as gd73-09-12.sbd.sly.14010.sbeok.shnf; it presents a generally clear mix, only marred by occasional funky quirks that don’t distract from the musical flow. While other tapes suffer low‑volume mastering or audience splices, this SBD offers the cleanest window into a relaxed yet inspired evening of Dead music.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 20,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "All three recordings describe the performance as mixed but lean positive: multiple reviewers praise standout songs (Bird Song, Let It Grow, Eyes Of The World > Stella Blue) and Jerry's guitar work, while criticisms focus on recording issues rather than musical execution. No consistent negative comments about playing were found, so a modest positive adjustment is applied.",
+      "final_calculation": "2.5 + 0.2 + 0.6 = 3.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd73-09-12.sbd.sly.14010.sbeok.shnf",
+    "reason": "Good soundboard capture with generally clear mix; only minor funky audio moments versus lower volume or audience splice issues in other versions."
+  },
+  "key_highlights": [
+    "Jam‑heavy Let It Grow featuring Keith’s Mingus‑like textures and Bob’s “crazed” rhythm guitar.",
+    "Tight Bird Song showcasing crisp interplay between Jerry and the rhythm section.",
+    "High‑energy Eyes Of The World → Stella Blue transition that lifts the second set.",
+    "Weather Report Suite Prelude/Part 1 adds early‑fall improvisational spirit, despite occasional funky audio quirks in the recording."
+  ],
+  "song_highlights": [
+    "Bird Song",
+    "Loose Lucy",
+    "Let Me Sing Your Blues Away",
+    "Weather Report Suite Prelude",
+    "Weather Report Suite Part 1",
+    "Let It Grow",
+    "Eyes Of The World",
+    "Stella Blue",
+    "Casey Jones"
+  ],
+  "band_performance": {
+    "Jerry": "Crystal‑tone lead work praised throughout; flawless noodling, perfect guitar tone and fresh slide figures after the Eyes jam.",
+    "Phil": "",
+    "Bob": "Crazed rhythm guitar highlighted on Let It Grow, with strong interplay alongside Jerry's leads.",
+    "Keith": "Provides Mingus‑like improvisational texture during Let It Grow and adds depth to the Weather Report Suite sections.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-22T17:23:53.311492+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bird Song"
+    ],
+    [
+      "Loose Lucy"
+    ],
+    [
+      "Let Me Sing Your Blues Away"
+    ],
+    [
+      "Weather Report Suite Prelude",
+      "Weather Report Suite Part 1",
+      "Let It Grow"
+    ],
+    [
+      "Eyes Of The World",
+      "Stella Blue"
+    ],
+    [
+      "Casey Jones"
+    ]
+  ]
+}

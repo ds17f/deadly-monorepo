@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive details; reviewer gives a zero‑star rating and expresses confusion about the recording.",
+  "review": "The lone review provides no information on sound quality, performance, or setlist—only a cryptic comment and a zero‑star rating, indicating strong dissatisfaction. With no concrete observations, both the recording and show qualities remain indeterminate.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief, negative review with a zero‑star rating; insufficient data to assess quality beyond the reviewer’s apparent displeasure."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No technical comments were provided; the zero‑star rating suggests the reviewer found the recording unsatisfactory."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T16:08:21.772591+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-19.139331.fob.schoeps.mk41.oade.bryant.miller.clugston.flac1644"
+}

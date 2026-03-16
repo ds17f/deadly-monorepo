@@ -1,0 +1,40 @@
+{
+  "summary": "Very good audience recording of a strong first set and magical encores, highlighted by Jerry’s A‑game and a standout “Broken Arrow”.",
+  "review": "The tape captures an audience‑sourced performance that sounds clear and lively despite some chatter. The first set is praised as a “smoker” with Jerry in top form, the second set feels a bit labored to some listeners, but the encores are described as magical, especially the rendition of “Broken Arrow”. Overall the show shines and the recording quality is solid for an audience capture.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly (4‑5 stars) and note strong first‑set playing and fantastic encores, while recording comments are uniformly positive about clarity despite being audience sourced. The mixed comment on the second set lowers the rating slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Very good sounding for an audience tape; some chatter and occasional monaural‑sounding artifacts are mentioned, but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Broken Arrow",
+      "Encore"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as a “smoker” with Jerry at his best; second set feels a bit labored for some listeners, while the encores are highlighted as magical and uplifting."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised – A‑game guitar work and “candyman” tone noted.",
+    "Phil": "Positive nod to his performance on “Broken Arrow”.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T10:53:14.748322+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-21.ST250.georges.7470.sbeok.shnf"
+}

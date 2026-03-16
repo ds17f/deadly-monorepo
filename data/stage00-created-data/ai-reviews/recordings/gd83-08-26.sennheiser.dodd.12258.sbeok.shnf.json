@@ -1,0 +1,51 @@
+{
+  "summary": "Average audience recording of a solid show with a ripping “Let It Grow” and memorable Bertha, but distant and boomy sound.",
+  "review": "Fans rave about the performance – especially Jerry’s scorching guitar on Let It Grow, the explosive “Test Me Test Me” line in Bertha, and even a strong Fire from the second set – while noting that the audience‑sourced tape sounds a bit distant and boomy. The show is generally praised despite the modest recording quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised (≈4/5) while recording quality is described as average/distant (≈3/5). Weighted average yields ~3.7 stars; five reviews provide moderate detail."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Average audience mix, distant soundstage, deep but muffled bass, a bit boomy; no major drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Bertha",
+      "Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans felt the first set peaked early but were carried by an especially strong second‑set Let It Grow and a fiery Fire; overall flow described as fun and memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerome (Garcia) is praised for ripping it up on Let It Grow.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums (and back‑line amps) were noted for visually spelling out “Dead” and “Grateful,” a memorable moment."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:53:05.416169+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-08-26.sennheiser.dodd.12258.sbeok.shnf"
+}

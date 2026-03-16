@@ -1,0 +1,86 @@
+{
+  "summary": "Muddy, low‑treble audience recording that masks a solid late‑80s show with highlights like West LA, Mama Tried, Box of Rain and Iko Iko.",
+  "review": "The source is a remote, thin‑treble tape that sounds like listening behind a thick curtain, making many strong moments hard to hear. Still, reviewers note several high points – Jerry’s soaring solos on West LA, The Promised Land and Eyes of the World, plus energetic performances of Box of Rain, Iko Iko and Gimme Some Lovin'. Overall sentiment is mixed because the performance shines but the audio quality drags it down.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show contains several praised performances, but the recording is described as dirty and low‑treble, leading to a mixed overall impression."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Remote tape with low treble, muddy and thin sound; described as “thick curtain” listening, making solos hard to discern and adding a monotonous mood."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "West LA",
+      "Mama Tried",
+      "The Promised Land",
+      "Box of Rain",
+      "Iko Iko",
+      "Eyes Of The World",
+      "Gimme Some Lovin'",
+      "Throwing Stones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical late‑80s Dead set with a steady first set and a second set that segues from Box of Rain into Iko Iko, followed by the usual Space/Drums and a solid closing stretch."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise his soaring solos and tone on West LA, The Promised Land, Eyes Of The World and other jams.",
+    "Phil": "His presence is noted especially during Box of Rain, where listeners can “get their Phil”.",
+    "Bob": "",
+    "Keys": "Brent’s keyboards get extra oomph during Gimme Some Lovin'.",
+    "Drums": "Thunderous drumming noted in the first set; a quirky “Caddyshackesque” voice intro to the drum solo is mentioned."
+  },
+  "song_mentions": {
+    "West LA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes Of The World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T08:52:36.417213+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-04-14.aud.willy.15824.sbeok.shnf"
+}

@@ -1,0 +1,89 @@
+{
+  "summary": "Excellent soundboard capture of a classic 1982 show – first‑set fire and a second set stacked with smoking Looks Like Rain, Crazy Fingers and Lost Sailor > Saint.",
+  "review": "The recording is a high‑quality soundboard source that most listeners describe as crisp, well‑balanced and “perfectly mixed.”  Musically the concert is hailed as one of the era’s best – a killer first set and a second set where Looks Like Rain, Crazy Fingers, Lost Sailor > Saint, China Cat > Rider and The Wheel all soar.  Even though the tape omits Space (and an extended intro to The Wheel), fans overwhelmingly rate the performance and sound as outstanding.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 60 reviews, most giving 5‑star praise for both performance and sound quality; only a single low‑star comment concerns a missing track, not the audio itself."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with excellent instrument separation; occasional minor complaints about speed offset in one version and omission of Space, but overall regarded as a superb soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Lost Sailor > Saint",
+      "Crazy Fingers",
+      "The Wheel",
+      "China Cat > Rider",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe a tight, high‑energy first set that builds into an even stronger second set; seamless segues (e.g., Crazy Fingers → Lost Sailor > Saint) and powerful group dynamics are repeatedly highlighted."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for angelic tone, shredding solos, lucid leads on Playin' Jam and overall guitar brilliance.",
+    "Phil": "Described as booming, dropping bass bombs, providing “plenty of Phil” and driving the band's momentum.",
+    "Bob": "Vocals called emotional, ad‑libbing, heartfelt (especially on Looks Like Rain, Lost Sailor > Saint and Satisfaction).",
+    "Keys": "Brent is noted for raw, dirty B3 vocals on Little Red Rooster and superb keyboard work throughout; overall keyboards praised as solid.",
+    "Drums": "Drummers (Bill/Mickey) mentioned as high‑gear, keeping the groove tight during the second set."
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Lost Sailor > Saint": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "The Wheel": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Sugaree": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Loser": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Far From Me": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T02:52:23.952869+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-10-10.sbd.sacks.338.sbefail.shnf"
+}

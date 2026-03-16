@@ -1,0 +1,95 @@
+{
+  "summary": "A high‑energy 1978 show with stellar Deal, Dupree’s and Around & Around performances captured on a solid audience tape.",
+  "review": "The concert shines thanks to Jerry’s inspired guitar work (especially on Deal and Dupree’s), Keith Godchaux’s lush keyboards and a thunderous drum section.  Although the AUD source isn’t pristine – it runs a touch fast, mids are recessed and occasional mudiness appears – the tape is consistently listenable and lets every instrument be heard.  Fans repeatedly cite the soaring Black Peter, the marathon Samson & Delilah and the electrifying Sat Night as highlights.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong musical performance praised across most reviews (70% weight) with a consistently decent but not flawless audience recording (30% weight)."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Not top‑notch: runs slightly fast, mids need a boost and occasional mud, but overall clear enough to hear each player.  Many reviewers note it is “listenable” and among the better audience tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Dupree's",
+      "Around & Around",
+      "Black Peter",
+      "Sat Night",
+      "Samson and Delilah",
+      "Row Jimmy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with high energy; several reviewers mention songs segued without full endings, creating a seamless, almost nonstop rock momentum despite the slightly brisk tempo."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for inspired playing, great tone on Deal and Dupree's, and an improving vocal performance.",
+    "Phil": "Bass is highlighted as strong; some reviewers suggest boosting the mids to let his lines shine.",
+    "Bob": "",
+    "Keys": "Keith Godchaux’s keyboards are singled out as especially good; Donna Jean’s vocals also receive commendation.",
+    "Drums": "Post‑drum sections described as amazing, with drummers “ON” throughout."
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Dupree's": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Around & Around": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Sat Night": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samson and Delilah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Over Now": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T09:25:58.283088+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-02-04.aud.vernon.12199.sbeok.shnf"
+}

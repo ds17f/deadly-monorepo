@@ -1,0 +1,56 @@
+{
+  "summary": "Rich, warm audience recording captures an adventurous 1975 show with standout Crazy Fingers, Peggy‑O and a super jazzy Help/Slip/Frank sequence; Keith’s electric piano and Jerry’s crisp riffs shine.",
+  "review": "The front‑of‑house tape is praised for its clear, warm sound that lets the band’s energetic playing come through without needing a board source. Highlights include a spacey Slipknot, a rocking Bob Weir vocal, an elegant Peggy‑O, and a jazzy Help > Slip > Franklin’s Tower, all underscored by Keith’s electric‑piano touches and Jerry’s crisp guitar work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All five reviewers rate the release 4–5 stars, consistently praising both performance and sound quality; recording is described as excellent and the show features multiple standout moments."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Rich, warm, clear front‑of‑house capture; crisp ambience, minimal stage banter, only minor EQ tweak suggested by one reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Peggy-O",
+      "Help on the Way > Slipknot! > Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic and adventurous from start to finish, with a jazzy second‑set sequence (Help/Slip/Frank) that keeps momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar riffs are described as crisp, flowy and full of goodness.",
+    "Phil": "",
+    "Bob": "Bob’s vocal tunes are called very rocking.",
+    "Keys": "Keith's electric‑piano work is praised for amazing touches.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-23T02:21:30.610766+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1975-06-17.fob.menke.motb.97077.flac16"
+}

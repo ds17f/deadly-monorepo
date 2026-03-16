@@ -1,0 +1,56 @@
+{
+  "summary": "Excellent soundboard transfer of a killer ’73 show highlighted by a stellar Here Comes Sunshine and a thunderous Other One.",
+  "review": "The recording is a clean, well‑mastered soundboard capture (aside from a missing Phil solo patch) that lets the band’s energy shine through. Fans rave about the first‑set strength – especially “Here Comes Sunshine” and “Playin’ in the Band” – and the crushing second‑set “Other One”. Overall the performance is praised as one of the best of 1973.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Multiple enthusiastic reviews praise both the musical performance and the high‑quality transfer; only a minor omission (Phil solo) prevents a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean transfer praised by listeners; one note about missing Phil Lesh solo patch but no major audio flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine",
+      "The Other One",
+      "Playin' in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as one of the stronger ’73 sets, highlighted by HCS and PITB; second‑set powerfully driven by a monumental Other One."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Solo before The Other One is missing (not patched in).",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T04:52:22.457895+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-12-19.sbd.miller.97361.sbeok.flac16"
+}

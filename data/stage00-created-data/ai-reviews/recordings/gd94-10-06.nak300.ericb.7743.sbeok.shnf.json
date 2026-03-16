@@ -1,0 +1,107 @@
+{
+  "summary": "Great late‑period show with a smoking Half Step opener and stellar New Speedway/Truckin' jams, captured on a solid audience tape.",
+  "review": "The October 6 1994 Spectrum performance is widely praised for its energetic opening with “Half‑Step”, a standout New Speedway, powerful Truckin’ and The Other One jams, plus an enthusiastic Liberty encore.  Most listeners report the crowd recording to be clear enough to enjoy the band’s tight playing, though one reviewer notes occasional muddy sections.  Overall the music outweighs the minor audio flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "15 detailed reviews overwhelmingly praise the performance (many 4‑5 star ratings) while only a few cite sound issues; weighting show quality heavily yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers describe the tape as clear and well‑balanced for an audience source, noting good bass response on the NSB→Truckin' segment. One reviewer calls it “bad sound quality,” but that is isolated; overall the recording is considered listenable with occasional muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step",
+      "New Speedway",
+      "Truckin'",
+      "The Other One",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "If the Shoe Fits",
+      "Easy Answers",
+      "Way To Go Home"
+    ],
+    "setlist_flow": "A powerful opening with “Half‑Step” sets a high‑energy tone, the first set flows well into a jam‑rich second set highlighted by New Speedway, Truckin’, and The Other One.  The encore with Liberty feels celebratory; a few songs (e.g., China>Rider) are noted as slightly rushed, but overall pacing is tight."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal on “Half‑Step” and New Speedway receives glowing praise, described as full of gusto and an R&B flavor; guitar work is called tasty despite a flub at the start and occasional haggardness.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The post‑drum section and Wharf Rat solo are highlighted for “stellar runs” from the drummer, indicating solid rhythmic support throughout."
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Liberty": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Easy Answers": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "New Speedway": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Truckin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China>Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Way To Go Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "If the Shoe Fits": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T02:39:37.206549+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-10-06.nak300.ericb.7743.sbeok.shnf"
+}

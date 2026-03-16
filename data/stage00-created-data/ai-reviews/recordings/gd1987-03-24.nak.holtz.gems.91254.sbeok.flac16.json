@@ -1,0 +1,46 @@
+{
+  "summary": "Decent recording with Jerry blazing on Mr. Fantasy but a clunky transition into Wharf Rat.",
+  "review": "The fan who stumbled upon this set notes that Jerry Garcia was \"on fire\" during the rendition of Mr. Fantasy, giving the show its main high point. However, the same reviewer calls the segue into Wharf Rat awkward, and provides no details about the audio source or clarity, leaving the recording quality unclear. Overall it’s a mixed‑feel performance with moderate listener enthusiasm (3‑star rating).",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Only one review; shows both strong playing on Mr. Fantasy and a negative comment about the Wharf Rat transition, with no recording‑quality details, resulting in a modest rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on sound clarity or mix; reviewers did not address recording source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mr. Fantasy"
+    ],
+    "poor_songs": [
+      "Wharf Rat"
+    ],
+    "setlist_flow": "Transition into Wharf Rat described as awkward, affecting overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"on fire\" during Mr. Fantasy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:36:49.732706+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-24.nak.holtz.gems.91254.sbeok.flac16"
+}

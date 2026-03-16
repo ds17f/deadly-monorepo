@@ -1,0 +1,51 @@
+{
+  "summary": "Good audience‑mixed recording captures an energetic late‑80s show with standout Brent Mydland vocals and a fun Franklin's Tower → Stranger sequence.",
+  "review": "The tape is a solid audience recording where the crowd is nicely blended into the mix, giving a lively feel to this March‑28‑1989 performance. Reviewers praise Brent Mydland’s vocal power and the interesting “Franklin’s Tower → Stranger” segue, though the show is described as a bit low‑key being the tour opener.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Both reviewers note strong musical moments and an enjoyable audience mix, but only two brief reviews limit certainty; overall rating leans positive with a modest score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience sound is well‑balanced with the crowd mixed in; clear enough to convey the band's energy, no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Stranger",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First night of the tour; a bit more low‑key than later dates but features interesting twists like the Franklin's Tower → Stranger segue and a full “Playing in the Band” jam."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland delivers outstanding vocals and keyboard energy, highlighted as a high point of the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:07:49.166320+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-03-28.nak.rickers.111791.flac16"
+}

@@ -1,0 +1,49 @@
+{
+  "summary": "Excellent soundboard capture with a strong performance highlighted by the memorable Truckin' conversation and unexpected Playin! segue.",
+  "review": "The recording offers crystal‑clear soundboard quality that lets listeners enjoy a solid set, while the band delivers a vigorous performance. A standout moment is the onstage “conversation” at the end of Truckin', where Jerry’s suggestion to jump into Here Comes Sunshine is overruled and they swing into Playin!. Overall it’s an engaging show with great audio fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Single positive 4‑star review praises both the sound quality and strong performance, indicating a high‑quality show on an excellent soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, balanced audio with no reported dropouts or muffiness; reviewers describe the sound as great."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth set with an interesting onstage decision point after Truckin', leading into Playin! instead of Here Comes Sunshine."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted wanting to segue into \"Here Comes Sunshine\" but was overruled, showing his spontaneous ideas during the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin!": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T14:14:13.620720+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-09.sbd.patched.barry.93475.sbeok.shnf"
+}

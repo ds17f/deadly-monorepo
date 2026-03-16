@@ -1,0 +1,62 @@
+{
+  "summary": "The Dusborne matrix captures a solid June ’91 show with an engaging Slipknot! jam and strong Help>Slip>Franklin's, though the overall performance is average.",
+  "review": "Fans note that the June 14 1991 concert delivers a nice flow in the first set and a standout 25‑minute Help>Slip>Franklin's sequence highlighted by Bruce Hornsby’s leadership on Slipknot!. The Dusborne matrix source is praised for its engaging sound and ideal balance, even if some vocals (Bob on Estimated Prophet) feel unfocused and the rest of the show lands in the average range.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is judged as average to good (highlighted jams vs. unfocused moments) while the matrix recording is praised for clarity and excitement, yielding a weighted rating around 3.8."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the Dusborne matrix as more engaging than the SBD with ideal ratios; no dropout or distortion issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Slipknot!",
+      "Help>Slip>Franklin's"
+    ],
+    "poor_songs": [
+      "Estimated Prophet"
+    ],
+    "setlist_flow": "First set flows nicely with solid rock numbers; second set is long but peaks on the Slipknot! jam and Help>Slip>Franklin's, while some moments (e.g., Estimated Prophet) feel unfocused."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "His vocals were unfocused on Estimated Prophet, though he contributes energy elsewhere.",
+    "Keys": "Bruce Hornsby shines on Slipknot! and the Help>Slip>Franklin's sequence, adding accordion‑like textures and leading the jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Maggie's Farm": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help>Slip>Franklin's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T21:02:24.116500+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-14.128575.mtx.dusborne.flac16"
+}

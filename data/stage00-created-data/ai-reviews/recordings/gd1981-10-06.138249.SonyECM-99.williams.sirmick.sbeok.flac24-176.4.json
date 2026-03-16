@@ -1,0 +1,31 @@
+{
+  "summary": "Reviewer notes a date‑metadata correction but provides no details on sound or performance.",
+  "review": "The lone review points out that the concert should be dated 10/06/81 rather than 01/06/81 and thanks the uploader. No comments are made about the recording quality, musical performance, or specific songs, leaving those aspects unassessed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a neutral 3‑star rating and no substantive feedback on audio or show quality; rating defaults to midpoint."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T15:28:28.805749+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-06.138249.SonyECM-99.williams.sirmick.sbeok.flac24-176.4"
+}

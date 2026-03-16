@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent audience recording of a high‑energy 1979 show with standout versions of Stella Blue, Shakedown Street and The Other One",
+  "review": "Fans rave about the vibrant performance – Jerry’s voice is back, Mydland’s keyboards shine on Shakedown Street and Bertha, and the band delivers smoking renditions of Tennessee Jed, The Other One and a soaring Stella Blue.  The Bob Menke audience tape is praised as superb, sounding like a close‑up hand‑held capture with clear mix and careful crowd cross‑fades.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All four reviewers give 4–5 stars, consistently praising both the musical performance and the recording quality; the weighted average yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Hand‑held mics placed ~30 ft from stage give crisp, close‑up sound; crowd outros were cross‑faded for smooth ambience; reviewers note superb mastering and overall great audio fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Shakedown Street",
+      "Bertha",
+      "Tennessee Jed",
+      "The Other One",
+      "Loser",
+      "Big River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy throughout, with a tight first set and a flowing second set that keeps the momentum smoking from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice had fully recovered after ten months of vocal issues, delivering strong vocals and guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince Mydland’s keyboards are highlighted on Shakedown Street and the revolving accent in Bertha; Brent (early Mydland) is noted for a high falsetto vocal moment.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:12:07.051702+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-25.nak700.menke.motb.90636.sbeok.flac16"
+}

@@ -1,0 +1,78 @@
+{
+  "summary": "Clear soundboard recording with brief edits; the show is solid, highlighted by a stellar Cumberland Blues and on‑point King Bee but hampered by sluggish tempos on some numbers.",
+  "review": "The source captures a clean, well‑balanced mix despite a few short cuts, making it an enjoyable listen. Musically the night is decent – Cumberland Blues shines and Pigpen delivers a spot‑on King Bee, while The Other One suffers from feedback and Uncle John's Band feels overly slow. Overall the performance is respectable but not spectacular.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is moderate (average to good) while recording quality is good; weighted average yields ~3.3 stars. Only two reviews provide the data, giving medium confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall clear and crisp sound; brief edit cuts are present but unobtrusive. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland Blues",
+      "King Bee"
+    ],
+    "poor_songs": [
+      "The Other One",
+      "Uncle John's Band"
+    ],
+    "setlist_flow": "A generally mellow set tempered by feedback on The Other One and an experimental, slower Uncle John's Band that slows the momentum; high points keep the show engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "King Bee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Big Boy Pete": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peaches and Cream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Cotton": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T17:04:52.151981+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-03-01.132769.sbd.master-reel.kaplan.flac16"
+}

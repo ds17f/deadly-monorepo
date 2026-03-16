@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent audience recording captures a high‑energy 1986 show highlighted by a scorching Morning Dew and an unforgettable Lost Sailor.",
+  "review": "The tape is praised as one of the best audience recordings on the archive, delivering clear, well‑balanced sound that even rivals soundboard sources. Musically the concert shines with Jerry’s electric playing, a blazing Morning Dew, a superb Lost Sailor segue into Saint, and a powerful Midnight Hour encore, making it a standout night despite its relatively short set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Strong musical performance (standout second set, high Jerry energy) weighted at 70% and excellent audience recording quality weighted at 30% produce an overall rating in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced tape with minimal noise; reviewers call it “very good audience recording” and say it doesn’t get much better than this for crowd sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Lost Sailor",
+      "Saint",
+      "1/2 Step",
+      "Midnight Hour"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid first set (9 songs, closing with Box) followed by a gem of a second set featuring Jerry’s high‑energy jams and a strong encore that kept the audience on its feet."
+  },
+  "band_member_comments": {
+    "Jerry": "Lots of energy; leads powerful jams on 1/2 Step and drives the intense Morning Dew.",
+    "Phil": "",
+    "Bob": "Adds a notable rap at the end of Lost Sailor, enhancing the segue into Saint.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "1/2 Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:39:58.586870+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-24.fob.beyerm160.d5scott.107413.flac16"
+}

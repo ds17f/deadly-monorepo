@@ -1,0 +1,75 @@
+{
+  "summary": "Decent but not stellar sound captures a classic ’73 set featuring China>Rider, Bird Song, Playing in the Band and an expansive Dark Star jam.",
+  "review": "The recording is acceptable – clear enough to hear the crowd ambience but lacking the polish of a top‑tier soundboard. Musically the show shines with a strong opener (China Cat Sunflower → I Know You Rider), memorable Bird Song, a soaring Playing in the Band and a lengthy Dark Star → Truckin' → Dew sequence that many fans find essential from 1973.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Both reviewers praise the performance (5‑star and 3‑star ratings) while noting only modest recording quality; the weighted average yields a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Sound is okay, not great; crowd ambience is audible and adds atmosphere but there are no major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "I Know You Rider",
+      "Bird Song",
+      "Playing in the Band",
+      "Dark Star",
+      "Truckin'",
+      "Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show opens with a classic China>Rider pairing and maintains momentum through Bird Song, a powerful Playing in the Band, and culminates in an extended Dark Star jam that fans of ’73 consider a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T06:09:25.442931+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-03-16.aud.minor-vernon.33556.sbeok.flac16"
+}

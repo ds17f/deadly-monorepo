@@ -1,0 +1,45 @@
+{
+  "summary": "Audience‑sourced tape with noticeable crowd chatter but an energetic show highlighted by a memorable Space segment and Candyman",
+  "review": "The recording captures the lively atmosphere of the Omni, complete with background conversations that some listeners find distracting yet many feel add to the experience. Musically the concert is remembered fondly – especially the soaring Space jam and a spirited Candyman – and fans appreciate the nostalgic value despite the imperfect audio.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance and its nostalgia, giving 4‑5 stars, while several note crowd talkers that lower the listening experience; overall rating reflects strong show quality tempered by average recording clarity."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Prominent crowd noise and occasional talk‑overs (e.g., during Candyman) are noted; some call the tape decent, others say talkers pull the rating down. No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "Candyman"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is remembered for its high energy and memorable Space segment; audience chatter is interspersed but does not disrupt the overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Several reviewers reminisce about Jerry's presence, noting his loss but saying the music lives on.",
+    "Phil": "One reviewer humorously asks for Phil’s “haki‑saks” back, indicating a fond memory of his playing.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T03:53:05.986549+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-03-03.schoeps.gardner.9471.sbeok.shnf"
+}

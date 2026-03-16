@@ -1,0 +1,31 @@
+{
+  "summary": "Highly praised concert from a stellar tour; recording details unspecified",
+  "review": "The sole fan review rates this performance a perfect five stars, calling it another excellent show in a great tour. While the reviewer offers no specifics on the audio source or sound quality, the enthusiastic rating suggests an enjoyable musical experience. Recording quality cannot be assessed from the available comments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single 5‑star review highlights the show as excellent, but provides no technical details; rating reflects strong show quality with uncertainty due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix or source type were provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the concert as part of an excellent string of shows, implying a consistently strong set flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T14:42:22.439257+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-19.AKG451.Darby.119662.Flac1648"
+}

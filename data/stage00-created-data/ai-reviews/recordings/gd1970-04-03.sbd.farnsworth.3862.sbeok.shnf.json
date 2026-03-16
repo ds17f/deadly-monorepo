@@ -1,0 +1,74 @@
+{
+  "summary": "High‑quality soundboard capture of a solid 1970 show with a rare acoustic set, standout Black Peter and The Other One, marred only by slight pitch drift and occasional pops.",
+  "review": "The performance is praised for its intimate acoustic set, powerful Pigpen moments, and the intensity of The Other One into Lovelight, with Black Peter highlighted as a highlight. The soundboard source is generally good, though one reviewer notes a half‑step low tempo and another mentions some pops and static; track continuity has been improved in this release.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars, highlighting strong musical moments, while recording issues are minor (pitch drift, occasional pops) resulting in a solid overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Slight half‑step low/slow pitch on this version, some pops and stray static, but track splits are clean (China Cat/Sugar Mason, Good Lovin' drums) and The Other One presented as a single track."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "The Other One",
+      "Lovelight",
+      "Friend of the Devil (acoustic)",
+      "Katie Mae (acoustic)",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Shows a balanced flow with an early acoustic set that adds intimacy, followed by classic electric numbers; the second half builds intensity culminating in The Other One into Lovelight."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for lyric improvisation on Friend of the Devil and shining in the acoustic setting.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Noted that drums in Good Lovin' are presented without interruption, improving the listening experience."
+  },
+  "song_mentions": {
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Katie Mae": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T17:55:22.214905+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-04-03.sbd.farnsworth.3862.sbeok.shnf"
+}

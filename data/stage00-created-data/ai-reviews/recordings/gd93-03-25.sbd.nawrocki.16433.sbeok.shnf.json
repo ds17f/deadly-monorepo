@@ -1,0 +1,110 @@
+{
+  "summary": "A solid 1993 Chapel Hill soundboard capture with excellent band play—soaring So Many Roads, a fiery Terrapin and standout jams throughout.",
+  "review": "The recording (a sound‑board source) is generally clear and captures the new arena’s strong acoustics, despite occasional level quirks that some listeners note. Musically the show shines in the second set with a smoking Terrapin, The Other One → Morning Dew, and an especially powerful So Many Roads, while newer material like Wave to the Wind and Way to Go Home is less celebrated. Overall the performance is praised as tight and energetic, making this often‑overlooked night a must‑listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate 4–5 stars and highlight strong playing and good sound; only a few note minor recording oddities or song‑choice complaints, leading to an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear with arena’s excellent acoustics; some reviewers mention occasional analog generation in the first set and uneven levels on a few tracks, while one listener mistakenly thought it was an audience tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads",
+      "Terrapin",
+      "The Other One",
+      "Morning Dew",
+      "Greatest Show On Earth",
+      "The Weight",
+      "Mexicali",
+      "China",
+      "Long Way Out of Drums"
+    ],
+    "poor_songs": [
+      "Wave to the Wind",
+      "Way to Go Home"
+    ],
+    "setlist_flow": "Second set is praised for its flow and transitions, with strong jams (China‑Rider, Terrapin into drums) and high‑energy solos; the first set mixes classic favorites with newer 1993 material that some find a bit heavy."
+  },
+  "band_member_comments": {
+    "Jerry": "Great vocal performance throughout and superb guitar tone; described as being in excellent form.",
+    "Phil": "Bass work described as thundering and emotional, especially during the long drum jam.",
+    "Bob": "",
+    "Keys": "Vince’s piano work singled out as excellent; overall keyboard contribution solid.",
+    "Drums": "Bill’s drumming highlighted in a standout ‘Long Way Out of Drums’ and strong solo sections."
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Way to Go Home": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Weight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Greatest Show On Earth": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Long Way Out of Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T11:29:13.605659+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-25.sbd.nawrocki.16433.sbeok.shnf"
+}

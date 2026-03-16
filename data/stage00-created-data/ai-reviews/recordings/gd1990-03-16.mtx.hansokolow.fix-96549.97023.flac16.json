@@ -1,0 +1,90 @@
+{
+  "summary": "High‑quality matrix mix captures a solid 1990 show with standout Minglewood Blues, Scarlet Begonias and a melty Drums, though the performance runs average overall.",
+  "review": "The hansokolow_fix matrix recording (using the Miller_85201 mix) is clear and engaging, delivering an entertaining listening experience. Musically the concert offers several highlights – a superb new Minglewood Blues, the tour‑best Scarlet Begonias, a melty Drums, and a big stadium‑sized Stella Blue – but the set overall feels average with a few low points like Black‑Throated Wind.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show is rated around 3½/5 by the reviewer (average to above average) while the recording is praised as excellent; weighted combination yields ~3.8 stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Hansokolow‑fix matrix mix using Miller_85201 as primary source; reviewers describe it as the most entertaining and best of the available mixes, with no noted clarity issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood Blues",
+      "Scarlet Begonias",
+      "Drums",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Black-Throated Wind",
+      "Sugar Maggs"
+    ],
+    "setlist_flow": "First set starts strong with a great Touch of Grey and solid Minglewood Blues but dips on Black‑Throated Wind; second set builds momentum with a stellar Scarlet Begonias, inventive jams (Dewimmina), and high‑energy Drums/Space leading into a big Stella Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "Jer tries for 'Eyes' during the jam and overall playing is praised as great.",
+    "Phil": "Phil stays low and rumbling on Touch of Grey, providing a solid foundation.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums highlighted as one of the tour's white‑hot, melty performances."
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black-Throated Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dewimmina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Maggs": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T03:46:21.220765+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-16.mtx.hansokolow.fix-96549.97023.flac16"
+}

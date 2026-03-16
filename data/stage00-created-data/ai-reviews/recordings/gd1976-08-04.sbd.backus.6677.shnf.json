@@ -1,0 +1,31 @@
+{
+  "summary": "Awesome show captured from a soundboard source (video available), though reviewers give no specific audio quality details",
+  "review": "Both reviewers rave about the performance, calling the show awesome and noting that video of the entire first set is accessible online. No explicit comments on the recording’s fidelity are provided, but the .sbd tag suggests a soundboard source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Two enthusiastic reviews (4‑ and 5‑star) indicate a strong performance; lack of audio detail limits confidence, so rating reflects good show with unknown recording quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "unknown",
+    "technical_notes": "Reviewers did not mention clarity, mix, or any sound issues; only a video of the first set is referenced."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on pacing or set structure were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T07:10:55.231873+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-08-04.sbd.backus.6677.shnf"
+}

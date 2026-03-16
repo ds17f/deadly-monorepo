@@ -1,0 +1,39 @@
+{
+  "summary": "Clear‑sounding recording featuring a monster Morning Dew; audio quality is good despite unknown source.",
+  "review": "Reviewers rave about the performance, especially calling the Morning Dew the best they've heard, and note that the band “nailed it” with great sound. Recording quality is described as sounding great, though no one specifies whether it’s a soundboard or audience tape. Overall sentiment is upbeat, with only vague personal notes offering little criticism.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong positive comments about the show (standout Morning Dew, band playing great) and generally good sound quality lead to a high rating; limited detail on recording source keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "One reviewer says it “sounded great”; no specific complaints about hiss, drop‑outs or balance, but the exact source (soundboard vs. audience) isn’t identified."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on pacing; reviewers focus on overall energy and a single standout performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised indirectly – reviewers say the band “nailed it” and sounded great, implying solid guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:57:40.660053+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-11-06.sbd.miller.122166.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Audience-sourced recording with little detail; reviewers note a uniquely constructed second set but provide no specific performance praise or criticism.",
+  "review": "The two brief reviews give scant information about the audio quality, only noting that there is no soundboard (SBD) source, implying an audience recording of uncertain fidelity. One reviewer comments on the unusual construction of the second‑set list, while neither review mentions individual songs or band performance specifics.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "Only two minimal reviews with no star ratings and limited commentary; insufficient data to assess show or recording quality confidently."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "No soundboard (SBD) source mentioned; reviewers did not comment on clarity, mix, or other technical aspects."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "One reviewer notes a uniquely constructed second‑set list but provides no further evaluation of pacing or performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T23:11:44.893492+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-18.senn421.pauline.miller.91464.sbeok.flac16"
+}

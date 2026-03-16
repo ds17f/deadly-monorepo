@@ -1,0 +1,97 @@
+{
+  "summary": "A stellar audience recording that captures a scorching Rooster and a soaring Cassidy, with Let It Grow and other classics delivering an unforgettable 1984 performance.",
+  "review": "The Walker‑Scotton‑Miller tape is praised as one of the best ’84 audience recordings – full, crisp, and remarkably balanced. Musically the show shines with a fiery Rooster, a stunning Cassidy, and a powerful Let It Grow that many reviewers rank among the era’s finest, despite a few complaints about the ultra‑fast Eyes segment. Overall the performance is high‑energy and tight, making this a standout entry in the fall ’84 run.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (7/8) give 4–5 stars and highlight both superb audio quality and exceptional playing; only one outlier gives a zero rating, so the weighted average leans strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as a beautiful full‑sound Aud with crystal‑clear mix; praised as the best source for this show, complete and without drum dropouts. A few reviewers note occasional off‑rail feel (e.g., Eyes) but overall the tape is crisp and very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Let It Grow",
+      "Rooster",
+      "Dire Wolf",
+      "Estimated Prophet",
+      "The Other One",
+      "Tennessee Jed"
+    ],
+    "poor_songs": [
+      "Eyes"
+    ],
+    "setlist_flow": "High‑energy first set builds into a fiery second set; rare Far From Me appears, followed by classic jams and a soaring Let It Grow climax. Reviewers note strong transitions and sustained momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly called out for his best work of the year – flawless attack, nimble phrasing, and powerful vocals.",
+    "Phil": "Described as the MVP of the sextet, delivering standout bass performance.",
+    "Bob": "",
+    "Keys": "Brent (keyboardist) praised for playing at a peak level on this tape.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Rooster": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin' in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T23:42:16.621621+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-30.aud.walker-scotton.miller.106168.flac16"
+}

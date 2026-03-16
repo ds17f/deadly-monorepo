@@ -1,0 +1,31 @@
+{
+  "summary": "Decent recording quality but a lackluster performance, especially Jerry's uninspired solos.",
+  "review": "The tape captures the concert with acceptable clarity—enough to be considered a solid four‑out‑of‑five on sound alone—but the musical delivery falls short. Reviewers note that while the show opens well, Jerry Garcia’s guitar work is listless and drooling for most of the set, dragging the overall enjoyment down.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only a single 3‑star review was provided; it praises the recording (≈4/5) but criticizes the performance (≈2–3/5). Weighted combination yields an overall rating around 3.2."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Sound quality is described as decent, placing it in a \"4‑at‑best\" category—clear enough but not exceptional."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Starts strong but loses momentum as the show progresses due to uninspired solos."
+  },
+  "band_member_comments": {
+    "Jerry": "Solos described as listless and drooling, diminishing the show's impact.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-12T23:43:59.913314+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-15.126082.ecm280.wise.minches.flac2496"
+}

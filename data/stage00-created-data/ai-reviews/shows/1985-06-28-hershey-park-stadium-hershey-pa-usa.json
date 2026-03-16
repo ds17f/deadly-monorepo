@@ -1,0 +1,72 @@
+{
+  "summary": "Stellar Bird Song > Comes A Time > Deal; powerful Music Never Stopped & Morning Dew",
+  "blurb": "The show shines with a soaring Bird Song → Comes A Time → Deal sequence and a fiery Music Never Stopped jam. Jerry’s guitar soars despite vocal strain, while Phil delivers thunderous bass on Estimated Prophet and I Need A Miracle. Tom Thumb’s Blues, Terrapin Station and an emotional Morning Dew round out the highlights.",
+  "review": "June 28, 1985 at Hershey Park Stadium delivered a quintessential mid‑’80s Dead experience—rain‑slicked yet electrifying, with the band firing on all cylinders. The first set builds momentum through a tight trio of Jerry tunes, culminating in an unforgettable Bird Song → Comes A Time → Deal segue that reviewers call “soaring” and “epic.” The second set erupts with a powerful Music Never Stopped launch, slipping into space‑filled improvisations on Just Like Tom Thumb’s Blues, Estimated Prophet, and Terrapin Station before Phil’s bass roars through I Need A Miracle and an emotionally charged Morning Dew. The night closes tight‑knit with Throwing Stones, Not Fade Away and a cheeky Keep Your Day Job encore. Despite Jerry’s voice sounding thin from health issues, his guitar work remains inspired, and Brent’s keyboards add color without overwhelming the mix. Phil’s experimental low‑frequency bass drives much of the show’s intensity, while Mickey and Billy keep the rhythmic foundation groovy and solid throughout.\n\nAcross the many tapes—soundboard, matrix, and audience—the performance consistently earns praise for its energy, improvisational peaks, and standout songs. The excellent matrix recording (gd1985-06-28.132533.mtx.dusborne.flac16) captures the full low‑end punch of Phil’s bass while preserving clarity, making it the recommended source for both audiophiles and Deadheads seeking the most immersive experience.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 133,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Strong positive consensus across nine recordings (positive) versus three mixed; no negative sentiment about performance. Reviewers repeatedly laud the Bird Song > Comes A Time > Deal sequence, Music Never Stopped jam, and Phil’s bass on Estimated Prophet/I Need a Miracle, yielding a robust +1.6 adjustment.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1985-06-28.132533.mtx.dusborne.flac16",
+    "reason": "Excellent matrix with massive low‑end bass, crisp clarity and no dropouts; captures the show’s power better than other sources."
+  },
+  "key_highlights": [
+    "Bird Song → Comes A Time → Deal sequence is a career‑high moment.",
+    "Music Never Stopped launches a fireworks second set with spacey improvisations.",
+    "Phil Lesh’s bass on Estimated Prophet, I Need A Miracle and Morning Dew is thunderous.",
+    "Tom Thumb’s Blues and Terrapin Station deliver extra‑tight drumming and soaring keyboards."
+  ],
+  "song_highlights": [
+    "Bird Song",
+    "Comes A Time",
+    "Deal",
+    "The Music Never Stopped",
+    "Just Like Tom Thumb's Blues",
+    "Estimated Prophet",
+    "Terrapin Station",
+    "I Need A Miracle",
+    "Morning Dew"
+  ],
+  "band_performance": {
+    "Jerry": "Voice thin and occasionally strained, but his guitar solos remain inspired and he drives the Bird Song jam with soaring charisma.",
+    "Phil": "Tight, bomb‑dropping bass throughout; experimental low‑frequency tone shines on Estimated Prophet, I Need A Miracle and Morning Dew, though mic cuts out early in set two on some tapes.",
+    "Bob": "Gritty, powerful vocals keep momentum high; occasional vocal slip on Terrapin Station but overall solid rhythm guitar work.",
+    "Brent": "Keyboards sit forward in the mix, adding color and sarcastic riffs; solid throughout, especially during Tom Thumb's Blues and Miracle sections.",
+    "Mickey": "Provides a groovy, extra‑tight percussion backbone that locks in with Billy, highlighted on Tom Thumb's Blues and space segments.",
+    "Billy": "Drumming is tight and supportive; despite a 14‑second tape flip glitch on one SBD, his rhythm drives the high‑energy moments."
+  },
+  "processed_recordings": 11,
+  "processed_date": "2025-09-15T06:40:48.624419+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bird Song",
+      "Comes A Time",
+      "Deal"
+    ],
+    [
+      "The Music Never Stopped",
+      "Just Like Tom Thumb's Blues"
+    ],
+    [
+      "Estimated Prophet",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Morning Dew",
+      "Throwing Stones",
+      "Not Fade Away"
+    ]
+  ]
+}

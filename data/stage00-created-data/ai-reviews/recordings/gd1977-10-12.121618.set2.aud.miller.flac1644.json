@@ -1,0 +1,39 @@
+{
+  "summary": "A magical Black Peter performance captured on a clear audience recording.",
+  "review": "Both reviewers rave about the Black Peter rendition, calling it one of the best and “scary good.” The Miller audience tape is praised for faithfully conveying the vibe, with no noted technical flaws. While one reviewer notes slightly reduced dynamics compared to later eras, the overall impression is that the show shines.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Two reviews (5★ and 3★) both highlight a strong performance of Black Peter and an enjoyable recording; limited sample size keeps confidence low."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers feel the recording captures the magic of the show without noticeable flaws, though no detailed technical commentary is provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing; focus is on the highlighted Black Peter performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T04:58:40.580706+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-12.121618.set2.aud.miller.flac1644"
+}

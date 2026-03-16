@@ -1,0 +1,45 @@
+{
+  "summary": "Wide‑open audience recording captures an all‑night 1983 show highlighted by a killer 'Throwing Stones' and a flawless full‑length 'Good Lovin''.",
+  "review": "The tape delivers a roomy, almost cinematic soundstage with just enough edge to give it extra punch, though occasional distortion is audible. Musically the concert shines – Jerry’s three‑round solos fuel extended I Know You Rider jams and the set is anchored by standout performances of 'Throwing Stones' and a complete, uninterrupted 'Good Lovin''. The seamless patch work keeps the flow tight from start to finish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Both reviewers are enthusiastic (5★ and 4★) and praise both the performance and the recording, suggesting a strong show with good‑quality audience capture; limited to two reviews, confidence is low."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Wide, open soundscape with extra 'umph' that borders on distortion at times; patches are mostly seamless, providing a clear and immersive listen despite occasional muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Throwing Stones",
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set runs long and uninterrupted, delivering a continuous 'burrito' feel that maintains momentum throughout the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Three‑round solos for each solo spot, driving extended I Know You Rider jams.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T06:41:43.758664+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-05-13.147897.fob.akg.d330bt.senn421.hecht.miller.clugston.flac2496"
+}

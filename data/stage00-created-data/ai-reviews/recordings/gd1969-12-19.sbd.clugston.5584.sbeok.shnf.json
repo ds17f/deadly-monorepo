@@ -1,0 +1,56 @@
+{
+  "summary": "Soundboard capture of an incendiary late‑1969 gig where Cumberland Blues, Hard to Handle and Black Peter blaze, delivered with clear audio.",
+  "review": "Reviewers rave that the show ‘smokes’, highlighting blazing performances of “Cumberland Blues”, “Hard to Handle” and “Black Peter”. The recording is a soundboard source with no reported fidelity problems, though one fan objects to the way “The Other One” was split into multiple tracks. Overall the concert feels energetic and historic, making it a must‑listen for Deadheads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Strong positive comments on musical performance and high star ratings outweigh the limited technical commentary; soundboard source suggests good audio quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit complaints about clarity or mix; reviewers note only a dislike for splitting \"The Other One\" into separate tracks, implying the raw recording is solid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland Blues",
+      "Hard to Handle",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic late‑year performance with the band ‘on fire’, delivering a tight, high‑energy set that builds momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Mentioned as being 'stuck somewhere' in a story about the band's acoustic direction, but no direct comment on his playing.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T18:56:29.126598+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-12-19.sbd.clugston.5584.sbeok.shnf"
+}

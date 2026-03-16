@@ -1,0 +1,111 @@
+{
+  "summary": "Good‑quality audience recording of a solid New Year's Eve show with standout Let It Grow and Black Muddy River moments",
+  "review": "Fans describe this NYE performance as well played and full of favorite tunes – the second‑set Let It Grow, a moving Black Muddy River, and an energetic third set are repeatedly highlighted. The sound is praised as clear and “just like being there,” giving listeners a vivid concert feel despite no explicit source notes.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average user rating ≈3.9, but the majority of comments are positive about both playing and sound; only one outlier negative review lowers the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Great/above‑average sound quality, clear mix that feels like being in the venue; no reported dropouts or major issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Black Muddy River",
+      "Jack Straw",
+      "U.S. Blues",
+      "Touch",
+      "Samson",
+      "Terrapin",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Varied and unpredictable setlist with a strong second set (Let It Grow) and an especially lively third set; overall pacing keeps the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Having fun, playing with intensity despite a less warm vocal tone; slips in an Auld Lang Syne melody during a solo.",
+    "Phil": "",
+    "Bob": "Remembered all the words to Desolation Row and contributed solid vocals.",
+    "Keys": "Brent (keyboard) worked around the edges on the Samson intro, adding texture.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Muddy River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Auld Lang Syne": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "When Push Comes to Shove": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:19:45.129654+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-12-31.prefm.candyman.4637.sbeok.shnf"
+}

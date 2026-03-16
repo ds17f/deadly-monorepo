@@ -1,0 +1,50 @@
+{
+  "summary": "Well‑balanced audience recording captures a high‑energy show highlighted by a scorching Scarlet > Fire and soaring Let It Grow.",
+  "review": "The Miller/Streeter AUD tape is warm, clear and nicely balanced, delivering plenty of low end while keeping the instruments distinct. The performance is charged with energy – the Scarlet > Fire sequence erupts like a volcano and Let It Grow rolls seamlessly into Terrapin Station, making this a standout 1982 show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Multiple reviewers (4‑5 stars) praise both the musical performance and the recording quality; only one mentions modest recording flaws, so the combined show (70%) + recording (30%) rating lands in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Well‑balanced with warm tone and strong low end; clear instrument separation, though a few reviewers note Jerry's guitar sitting a bit forward and suggest a matrix would improve balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Let It Grow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with high energy, tight transitions (e.g., Let It Grow into Terrapin), and the band feeds off audience excitement, making it a cohesive and exciting performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone praised as clear and powerful; vocals described as crystal‑clear.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T00:57:36.387106+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-11.beyerM160.streeter.miller.122155.flac16"
+}

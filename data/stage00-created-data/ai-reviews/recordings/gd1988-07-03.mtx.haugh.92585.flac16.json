@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent matrix recording captures a top‑notch show highlighted by “I Will Take You Home,” “Drums” and the rare “Hey Pockey Way.”",
+  "review": "Reviewers rave about the crystal‑clear matrix mix and describe the performance as consistently great from start to encore. Standout moments include the powerful “I Will Take You Home → Drums” sequence and the seldom‑heard “Hey Pockey Way,” with the drumming receiving special praise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "All four reviews are highly positive (4–5 stars) and emphasize both superb sound quality and strong musical performance, yielding a rating in the low‑to‑mid 4‑star range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Great sound/mix noted as clear and well‑balanced; matrix source blends board clarity with audience ambience without noticeable flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I Will Take You Home",
+      "Drums",
+      "Hey Pockey Way"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly from the opening through the encore, keeping energy high and delivering a satisfying musical journey."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drumming described as fantastic; drums on “Pocky Way” receive particular praise."
+  },
+  "song_mentions": {
+    "I Will Take You Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hey Pockey Way": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T11:24:28.222284+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-07-03.mtx.haugh.92585.flac16"
+}

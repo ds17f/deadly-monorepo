@@ -1,0 +1,84 @@
+{
+  "summary": "Soundboard recording marred by hiss and occasional distortion, but the show shines with a fiery second set highlighted by Sugaree, Scarlet‑Fire and He's Gone.",
+  "review": "The performance captures a classic late‑'77 Dead vibe – tight, muscular playing with standout jams on Sugaree, Scarlet > Fire, He’s Gone into Truckin’ and an epic Music Never Stopped.  The sbd source is plagued by noticeable hiss and some guitar distortion, yet most listeners feel the musical payoff outweighs the technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the music (many 4‑5 stars) while a minority flag hiss and distortion; weighting show quality higher yields an overall rating just above four."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Noticeable tape hiss throughout, occasional over‑distorted Garcia guitar in the first set, and a brief dropout at the end of \"Brown‑Eyed Women\".  Aside from these issues the mix is generally balanced and the volume is strong."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Scarlet > Fire",
+      "He's Gone",
+      "Truckin'",
+      "Music Never Stopped",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical 1977 structure – a solid first set and a second‑set jam marathon.  Reviewers note the second set builds momentum with seamless transitions (He’s Gone → Truckin’) and high‑energy jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is praised on several songs (epic Sugaree, Scarlet‑Fire) but a few note excessive distortion in the first set, describing it as “over‑distorted” or “throttling a turkey”.",
+    "Phil": "One reviewer mentions Phil “bombs all throughout the show”, indicating strong bass presence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T04:43:46.366184+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-10-09.sbd.clugston.6954.sbeok.shnf"
+}

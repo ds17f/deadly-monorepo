@@ -1,0 +1,31 @@
+{
+  "summary": "Severe phase problems make the recording almost unintelligible, with no useful information about the performance.",
+  "review": "The lone review flags a critical technical flaw: the two channels are out of phase, giving the impression of a mono‑inverted mix that renders the audio virtually unusable. No comments on the band's playing or setlist are provided, so the musical quality cannot be assessed.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one brief review highlighting a major recording defect; no data on performance, leading to a very low overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Channels are out of phase with each other, sounding almost mono when one side is inverted; likely makes the mix muddy and confusing."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T14:46:25.550189+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-04.156238.akg-c422.davis-murtha-holbrook.flac2448"
+}

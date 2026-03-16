@@ -1,0 +1,94 @@
+{
+  "summary": "Pristine soundboard capture of the June‑28‑1976 Chicago show, highlighted by “Happiness Is Drumming”, a soaring “High Time” and an epic “Scarlet Begonias”.",
+  "review": "The Miller‑sourced SBD delivers surprisingly clear audio despite being transferred from a cassette, with a sparkling intro to High Time and crisp mids that let the band’s interplay shine. Musically the night is a classic ’76 Chicago outing – Jerry’s guitar sings, Mickey’s “Happiness Is Drumming” foreshadows Fire on the Mountain, and the second set rolls nonstop through Eyes, Scarlet Begonias, Lazy Lightnin’/Supplication and High Time.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars, praising both performance and recording; over a dozen reviewers comment positively on key songs and the soundboard quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Transferred from a cassette but surprisingly clear; crisp highs (intro to High Time), balanced mids, seamless audience patches noted by multiple reviewers. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Happiness Is Drumming",
+      "High Time",
+      "Scarlet Begonias",
+      "Looks Like Rain",
+      "Lazy Lightnin' > Supplication",
+      "Eyes",
+      "The Wheel",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Tennessee",
+      "They Love Each Other"
+    ],
+    "setlist_flow": "Lively Chicago ’76 vibe with a tight first set and a second‑set that never quits – jam‑heavy Eyes opening into a drum‑bass interlude, followed by a cascade of extended jams (Happiness Is Drumming → Wharf Rat → Dancin' → The Wheel → Around)."
+  },
+  "band_member_comments": {
+    "Jerry": "Articulate, melodic lead work; highlighted on High Time and throughout the second set. His “slow approach” and noodling receive strong praise.",
+    "Phil": "Bass‑drum jam in Eyes noted as a highlight; interplay with Jerry praised throughout the night.",
+    "Bob": "",
+    "Keys": "Keith’s intro to High Time described as ‘sparkling and eloquent’; keyboards generally praised for texture.",
+    "Drums": "Mickey’s “Happiness Is Drumming” cited as a proto‑Fire on the Mountain; drumming energy noted especially in the Eyes jam."
+  },
+  "song_mentions": {
+    "Happiness Is Drumming": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "High Time": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lazy Lightnin' > Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T05:37:32.894313+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-28.sbd.digitalrbb.miller.112296.flac16"
+}

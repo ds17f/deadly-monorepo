@@ -1,0 +1,134 @@
+{
+  "summary": "Stellar May‑77 soundboard capture with crisp mix; the show shines on a blistering Scarlet > Fire, soaring Sugaree and a legendary Wharf Rat solo.",
+  "review": "The recording is a well‑balanced SBD that most reviewers describe as clean, crisp and “soundboard splendor,” despite occasional cuts and a faint vocal echo. Musically the concert is lauded as one of the band’s peak performances – highlighted by an explosive Scarlet > Fire, a smoking Sugaree, a tight Lazy Lightning > Supplication, and Jerry Garcia’s unforgettable solo into Wharf Rat, with strong support from Bill Kreutzmann and Mickey Hart throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, the vast majority give 5‑star ratings and praise both performance and sound quality; only a few note minor cuts or EQ quirks, yielding an overall rating in the excellent range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean mix with good instrument separation. Minor issues: occasional vocal echo, a few audible cuts (Wharf Rat, Ramble On Rose) and brief flutter in ROR for headphones."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Sugaree",
+      "Lazy Lightning > Supplication",
+      "Wharf Rat",
+      "Urbane Jam (UJB)",
+      "Brokedown Palace",
+      "Estimated Prophet",
+      "Looks Like Rain"
+    ],
+    "poor_songs": [
+      "Ramble On Rose (cut)",
+      "Jack Straw (noted as sloppy by one reviewer)"
+    ],
+    "setlist_flow": "The first set builds with tight, high‑energy numbers and a powerful transition into Scarlet > Fire; the second set sustains momentum through UJB jam, Wharf Rat solo, and a soaring encore of Brokedown Palace, delivering a cohesive, peak‑May ’77 arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead guitar is repeatedly called “blazing,” with standout solos in Scarlet, Sugaree and the extended pre‑Wharf Rat intro; his vocals are praised as heartfelt though occasionally distant.",
+    "Phil": "",
+    "Bob": "Bob Weir gets credit for solid rhythm work and strong vocal harmonies on songs like Peggy‑O and Big River.",
+    "Keys": "Keith (and later Brent) receive kudos for tasteful playing on Looks Like Rain and overall supportive keyboards throughout the set.",
+    "Drums": "Bill Kreutzmann and Mickey Hart are highlighted as “rock solid,” delivering tight double‑time grooves in Jack Straw, Scarlet and other jams; a few reviewers note a temporary shift to a 2‑and‑4 feel that they found less appealing."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Sugaree": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Lazy Lightning > Supplication": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Wharf Rat": {
+      "positive_mentions": 6,
+      "negative_mentions": 2,
+      "total_mentions": 8
+    },
+    "Jack Straw": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Peggy-O": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "UJB": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Woman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T00:35:15.806414+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-05-11.sbd.barbella.8374.sbeok.shnf"
+}

@@ -1,0 +1,52 @@
+{
+  "summary": "Crisp soundboard capture of an early Touch of Grey show that starts slow but picks up after China Rider, though Bob’s guitar is buried in the mix.",
+  "review": "The recording is a clear and intimate sound‑board source that highlights one of the first performances of \"Touch of Grey\" and a strong turn at \"China Rider,\" despite a noticeable drop in Bob Weir's guitar presence. The concert itself warms up after a sleepy opening, delivering hot spring‑tour energy with an early rendition of \"My Brother Esau\" that divides opinion.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical set and early Touch of Grey, while noting a weak start and mix issues; recording is generally good but not perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and intimate sound with clear overall balance, though Bob Weir's guitar is unusually low in the mix for some listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "China Rider"
+    ],
+    "poor_songs": [
+      "My Brother Esau"
+    ],
+    "setlist_flow": "The set opens sluggishly, gaining momentum after \"China Rider\" and maintaining a hot spring‑tour vibe, but the repeated \"Esau\" attempt in the second set draws mixed reactions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Several listeners note that Bob's guitar is barely audible in this recording, reducing enjoyment.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "My Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T04:17:24.155295+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-03-30.sbd.miller.77081.sbeok.flac16"
+}

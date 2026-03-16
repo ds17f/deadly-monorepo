@@ -1,0 +1,51 @@
+{
+  "summary": "High‑quality Kevin Tobin matrix captures a solid 1990 show with standout renditions of The Last Time, Cassidy > Deal and an epic Wharf Rat.",
+  "review": "The recording is a well‑balanced matrix source that most reviewers find pleasant and professional, though one notes occasional glitchy midi‑synth artifacts. Musically the concert is praised for a strong opening, a dramatic shift into the Cassidy > Deal sequence and a monster second set highlighted by an epic Wharf Rat, making it a worthwhile addition despite not being a \"barn burner\".",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Three of four reviewers give 4‑5 stars and highlight excellent performance and good sound, with only one moderate criticism about the show’s focus and some synth glitches."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and professional matrix mix; reviewers call it pleasant and crisp. One reviewer mentions \"glitchy midi‑synths\" that pierce the audio, but overall sound is considered good."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Last Time",
+      "Cassidy > Deal",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong opening with The Last Time, a notable gear shift into the Cassidy > Deal sequence, and an epic second‑set climax featuring Wharf Rat. One reviewer called the overall show \"floppy\" but most describe it as well‑played."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy > Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T03:04:25.386192+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-02-25.mtx.tobin.82923.sbeok.flac16"
+}

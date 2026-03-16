@@ -1,0 +1,54 @@
+{
+  "summary": "Volcanic jams on Truckin', The Other One and Playin' In The Band",
+  "blurb": "The set bursts with volcanic jams, highlighted by a scorching Truckin' solo and soaring The Other One improvisation. Jerry’s guitar work is on fire while the band rides a tight first half into a powerhouse second half. Recording quality is fair but the performance shines through.",
+  "review": "April 21, 1972 – Beat Club, Bremen, Germany – This European broadcast captures one of the Grateful Dead’s most incendiary early‑’70 performances. The first half lays down a solid groove before the band detonates into a second‑half marathon featuring Truckin' > Drums > The Other One, with Jerry Garcia delivering an almost volcanic solo on Truckin' and a searing lead through The Other One. Playin' In The Band bookends the set with its trademark energy, while the occasional false start (Sugaree, PITB) adds quirky charm. Though the soundboard source suffers from hiss, pitch‑slowdown and muddy mids, the jams cut through clearly enough to make this a must‑listen for fans of the era’s raw power.\n\nWhile the SBD is only fair—showing hiss and occasional feedback during Loser (which isn’t on the setlist)—the musical chemistry is unmistakable. Keyboard textures are understated, with Black‑Throated Wind noted as slower yet unique, but it’s Garcia’s lead work that steals the show. The rhythm section drives the momentum without any notable missteps, making this broadcast a valuable snapshot of the Dead’s explosive Europe ’72 tour despite its technical flaws.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 20,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Multiple recordings praise the volcanic jams, intense Jerry solos and overall band energy (positive sentiment). One negative note refers to a soundcheck recording rather than performance quality, so it only slightly tempers enthusiasm. Net result is a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.2 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd72-04-21.fm.vernon.9380.sbeok.shnf",
+    "reason": "Full broadcast set with all highlight songs; despite fair SBD quality it captures the performance’s energy better than the incomplete soundcheck."
+  },
+  "key_highlights": [
+    "Volcanic jams on Truckin', The Other One and Playin' In The Band.",
+    "Jerry Garcia delivers wildfire solos that cut through the hissy SBD.",
+    "Full‑length TV broadcast set (~90 min) showcases a tight first half and a powerhouse second half.",
+    "Soundboard quality is fair with pitch slowdown, but the musical performance remains compelling."
+  ],
+  "song_highlights": [
+    "Truckin'",
+    "The Other One",
+    "Playing In The Band"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers intense, volcanic solos—wildfire on Truckin' and soaring leads on The Other One—keeping the jams ablaze despite the SBD’s pitch slowdown.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-21T14:23:10.149581+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Truckin'",
+      "The Other One"
+    ],
+    [
+      "Playing In The Band"
+    ]
+  ]
+}

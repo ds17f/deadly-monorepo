@@ -1,0 +1,39 @@
+{
+  "summary": "Poor hallway‑style audience recording of a solid, smoking show with a standout “Don’t Ease Me In” performance",
+  "review": "The concert itself is praised as a good, smokin’ set, with the highlight being the fiery rendition of “Don’t Ease Me In.” Unfortunately the tape was captured from far back in a noisy hallway‑like environment, resulting in echo, crowd chatter and muffled clarity that many reviewers found unlistenable. While the music shines, the technical flaws keep this release from being a reliable listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is generally positive (good performance, standout song) but recording quality is consistently reported as poor due to distance and hallway echo; weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Recorded from far back in a noisy hallway/near the hot‑dog vendor, heavy crowd noise, echo and muffled sound; some reviewers note occasional improvement with repeated listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Don't Ease Me In"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Performance described as solid and smoking despite the bad tape; no specific comments on set pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:51:11.901689+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-07-08.neumann.munder.13301.sbeok.shnf"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Great show highlighted by stellar Estimated Prophet, The Other One, Space, Drums and Dark Star, though the recording suffers from duplicated tracks and a sequencing mistake.",
+  "review": "Both reviewers rave about the musical flow – especially the blazing Estimated Prophet into The Other One, the expansive Space/Drums segment and a powerful Dark Star. The performance is rated five‑stars, but the source has a tracking error that duplicates some cuts, which detracts slightly from an otherwise excellent listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All reviews are 5‑star and praise the show’s musical highlights; only a minor technical issue (track duplication) is noted, so the overall rating remains very high."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers note duplicated tracks and an incorrect sequence, indicating a tracking/metadata error rather than audio fidelity problems."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "The Other One",
+      "Space",
+      "Drums",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight a classic second‑set arc—Estimated Prophet into The Other One, followed by Space/Drums and culminating in Dark Star—that showcases the band's improvisational peak."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:46:38.974456+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-20.aud.claridge.wise.312.sbeok.shnf"
+}

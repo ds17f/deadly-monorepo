@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent audience recording of a great show",
+  "review": "The reviewer praises both the performance and the audience‑tape capture, calling it an \"excellent\" representation of the concert.  As an audience source it delivers clear, lively sound that compensates for any typical board‑recording staleness.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review, but it rates the show highly (4 stars) and highlights a strong audience recording; limited data leads to low confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer notes the tape is a good audience recording, offering clear, lively sound that avoids typical board‑recording staleness."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T13:04:33.241623+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-05-16.128380.naks.mason.flac16"
+}

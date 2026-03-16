@@ -1,0 +1,39 @@
+{
+  "summary": "Phil peaks on Unbroken Chain; recording source and quality not mentioned.",
+  "review": "The lone review gushes over Phil Lesh’s vocal performance on “Unbroken Chain,” calling it a highlight of the night, and notes Jerry Garcia’s patient, sweet‑note guitar work. No information is provided about the tape source or sound clarity, so the recording quality remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single 5‑star review praises the musical performance strongly while offering no insight into recording quality; thus the rating leans heavily on the show’s perceived excellence but confidence is low due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention soundboard, audience, or any audio characteristics; recording quality cannot be assessed beyond being unremarked."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Unbroken Chain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer focuses on Phil’s vocals and Jerry’s relaxed soloing; no broader comments on set pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Takes his time down to the last sweet note, praised by reviewer.",
+    "Phil": "Sings the hell out of “Unbroken Chain,” highlighted as a peak performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Unbroken Chain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T09:37:41.455558+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-04.141554.cmc4-mk41.ebel.flac1644"
+}

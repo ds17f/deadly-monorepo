@@ -1,0 +1,74 @@
+{
+  "summary": "Soundboard recording with early mix hiccups but overall clear, capturing a solid 1993 Palace show highlighted by Birdsong, Althea and the rare \"That Would Be Something\".",
+  "review": "The performance is generally regarded as a strong showing from the summer‑'93 tour, with fans pointing out standout moments like Birdsong, Althea, Standing on the Moon and the surprise appearance of \"That Would Be Something.\"  The SBD has mixed technical feedback – the first few minutes suffer from people bleeding into the mix and Jerry’s guitar being pushed back, but the sound improves and becomes quite listenable for most of the set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (solid set, several SOTMs) while the recording quality receives both positive and negative remarks; weighted average yields a ~3.7‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Early in the set audience bleed‑in and a recessed Jerry guitar, with Bob’s rhythm guitar almost buried; volume spikes during Althea. Mix settles after the first few tunes and becomes clear enough for most listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong",
+      "Althea",
+      "Standing on the Moon",
+      "New Speedway Boogie",
+      "That Would Be Something",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall solid set; first‑set mix issues give way to a tight second set featuring rare material and strong transitions, making the concert feel like an underrated gem of ’93."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice praised on Standing on the Moon; guitar initially recessed but comes forward later; noted for eye contact during the song.",
+    "Phil": "",
+    "Bob": "Often described as loud, occasionally almost drowning out other instruments.",
+    "Keys": "",
+    "Drums": "Drums/Space segment called \"unbelievable\" and a highlight of the night."
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "That Would Be Something": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:41:04.074351+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-08.sbd.stephens.6673.sbeok.shnf"
+}

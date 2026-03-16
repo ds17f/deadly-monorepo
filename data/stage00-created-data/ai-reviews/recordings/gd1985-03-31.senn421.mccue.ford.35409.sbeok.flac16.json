@@ -1,0 +1,62 @@
+{
+  "summary": "Excellent front‑of‑house audience recording captures a scorching 1985 show highlighted by a blistering opener, haunting \"He's Gone > Miracle\" sequence and an unforgettable Day Tripper.",
+  "review": "The tape delivers a crystal‑clear audience source with Phil’s bass sitting prominently in the mix while retaining the live vibe. Musically the concert shines from the powerhouse opener through a standout second set featuring a haunting \"He's Gone > Miracle\" segue, a tight Jerry‑and‑drums jam and a wild Day Tripper, making it one of the year’s best performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviewers praise both the musical performance and the audience‑source recording; average star rating is 4.5 with consistent positive language."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Praised as the best audience (FOB) source, very clear and balanced with prominent Phil bass and minimal crowd bleed; captures live feel without excessive noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Music Never Stopped",
+      "Candyman",
+      "He's Gone > Miracle",
+      "Day Tripper"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, energetic opener sets the tone; first set solid though not uniformly exciting, while the second set picks up momentum with a haunting \"He's Gone > Miracle\" sequence, tight jam sections and an exuberant Day Tripper."
+  },
+  "band_member_comments": {
+    "Jerry": "His playing remains solid despite a cold he was battling; several reviewers note his tone and the memorable Jerry‑and‑drums jam.",
+    "Phil": "Bass is very prominent in the mix, giving Phil a standout presence throughout the show.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drummers (Bill & Mickey) are highlighted during the extended jam with Jerry, delivering a powerful rhythmic foundation."
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Day Tripper": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:38:31.774144+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-31.senn421.mccue.ford.35409.sbeok.flac16"
+}

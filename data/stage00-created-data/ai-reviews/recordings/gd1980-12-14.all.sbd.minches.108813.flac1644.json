@@ -1,0 +1,82 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a high‑energy 1980 show with standout jams on Estimated > Wheel > Drums > Space, The Other One and a stellar Bertha solo.",
+  "review": "The SBD source is praised as clear and crisp—far better than the audience tapes—making every instrument easy to hear. Musically the band is in top form: tight first‑set work, powerful second‑set improvisations, and memorable moments like Estimated > Wheel > Drums > Space, The Other One, a soaring Bertha solo, and an emotionally resonant Wharf Rat.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All six reviews are 4‑5 stars; reviewers consistently highlight excellent soundboard quality and a superb performance with multiple standout songs."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp SBD with minimal noise; repeatedly called better than any audience (AUD) recordings of the era."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated > The Wheel > Drums > Space",
+      "The Other One",
+      "Stella Blue",
+      "Bertha",
+      "Wharf Rat",
+      "Good Lovin'",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Stella Blue"
+    ],
+    "setlist_flow": "A diverse, tight first set followed by a second‑set that builds into expansive jams; energy stays high throughout and the encore closes with a smoky Good Lovin' and Brokedown Palace."
+  },
+  "band_member_comments": {
+    "Jerry": "His tone and improvisational spark are highlighted—he makes up for a botched Stella Blue with an extended jam and delivers a standout Bertha solo.",
+    "Phil": "Multiple reviewers credit Phil Lesh’s bass as a key factor in making the show great, noting his deep groove throughout.",
+    "Bob": "Inner interplay between Jerry and Bob (Weir) on Bertha > Greatest Story Told is praised for its tightness and musical conversation.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated > The Wheel > Drums > Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Greatest Story Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T07:03:38.481152+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-12-14.all.sbd.minches.108813.flac1644"
+}

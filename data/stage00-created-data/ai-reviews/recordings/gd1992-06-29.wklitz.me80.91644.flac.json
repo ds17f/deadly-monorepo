@@ -1,0 +1,50 @@
+{
+  "summary": "A crystal‑clear audience recording of a vibrant 1992 show, highlighted by Desolation Row and an energetic Corrina → Drums → Samson & Delilah tease.",
+  "review": "The AUD source captures the concert with unusually bright, almost brittle highs that many reviewers praised as ‘crisp’ and ‘perfect’, while still delivering a vivid sense of the crowd on the lawn. The performance itself is lauded as one of ’92’s best – Jerry’s understated lead, Phil’s articulate bass and Bob’s vocal turn on Desolation Row shine, though a long Drums/Space after the Corrina tease was seen by some as a momentum dip. Overall the recording is superb and the show remains a favorite for its energy and musicality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The overwhelming majority of reviews are 5‑star, praising both the audio fidelity (crisp audience mix) and the musical performance; only a few mixed comments lower the score slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience source with unusually clear high‑end that some describe as ‘brittle’ but overall crisp and well‑balanced; crowd is audible throughout, no drop‑outs or gating artifacts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Desolation Row",
+      "Corrina > Drums > Samson & Delilah tease"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High energy from a large lawn crowd fuels the band, creating an exciting first half; the transition from Corrina into a long Drums/Space segment is noted as a slight momentum dip by one reviewer."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is described as understated yet tasteful, making room for the keyboards.",
+    "Phil": "Lesh’s bass is highlighted as very articulate and clear in the mix.",
+    "Bob": "Bob (referred to as ‘Bobby’) delivers a memorable vocal on Desolation Row.",
+    "Keys": "Keyboard work receives praise – one reviewer calls it “another great piece from Keith”.",
+    "Drums": "The drum intro teasing Samson & Delilah and an extended 25‑minute Drums/Space are noted, with mixed feelings about its impact on momentum."
+  },
+  "song_mentions": {
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina > Drums > Samson & Delilah tease": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums/Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T08:10:20.820595+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-29.wklitz.me80.91644.flac"
+}

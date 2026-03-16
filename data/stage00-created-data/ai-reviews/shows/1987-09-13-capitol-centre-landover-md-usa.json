@@ -1,0 +1,85 @@
+{
+  "summary": "High‑energy Scarlet>Fire and epic second‑set jams",
+  "blurb": "The show bursts with a smoking Scarlet Begonias > Fire on the Mountain segue and solid performances of Brown Eyed Women, Fever, and Masterpiece. The second set launches into an extended jam chain from Playing In The Band through Space, The Other One and Good Lovin'.",
+  "review": "On September 13 1987 at the Capital Centre the Dead delivered a tightly‑knit two‑set marathon that still feels fresh. The first set builds nicely with fun openers before hitting a high point on Brown Eyed Women and Fever, while Jerry’s guitar lines stayed crisp and cutting all night long. The second set is where the show truly shines: Scarlet Begonias > Fire on the Mountain rolls out seamless and energetic, then the band rockets into a sprawling Playing In The Band → Drums → Space → The Other One → Stella Blue → Good Lovin' → La Bamba → Good Lovin' sequence that showcases Brent’s pounding piano, Bill’s propulsive drumming, and Phil’s deep, dynamic bass. Highlights also include the soaring rendition of When I Paint My Masterpiece and a satisfying encore with Knockin’ On Heaven’s Door. Though some audience recordings suffer from brief glitches or muddiness, the performance itself remains lively and engaging throughout.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 13,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Two recordings are clearly positive (praising Masterpiece, Brown Eyed Women, epic jam sequence) while the other two are mixed, noting both strong moments and minor flaws. The overall tone leans positive with consistent praise for key songs and band energy, justifying a moderate +1.0 sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 1.0 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd87-09-13.schoeps.dipietro.8908.sbeok.shnf",
+    "reason": "Soundboard‑quality clarity with strong crowd presence makes it the most complete representation despite a brief glitch."
+  },
+  "key_highlights": [
+    "Smoking Scarlet Begonias > Fire on the Mountain segue that drives the second set.",
+    "Strong performances of Brown Eyed Women and Fever in the first set.",
+    "Epic jam chain from Playing In The Band through Space, The Other One, Stella Blue, Good Lovin', La Bamba back to Good Lovin'.",
+    "Soaring rendition of When I Paint My Masterpiece."
+  ],
+  "song_highlights": [
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "Brown Eyed Women",
+    "Fever",
+    "Playing In The Band",
+    "Drums",
+    "Space",
+    "The Other One",
+    "Stella Blue",
+    "Good Lovin'",
+    "La Bamba",
+    "Knockin' On Heaven's Door",
+    "When I Paint My Masterpiece"
+  ],
+  "band_performance": {
+    "Jerry": "Jerry delivered crisp, cutting leads throughout; his tone remained pure and on point.",
+    "Phil": "Phil’s bass was full and clear, especially noted for its impressive dynamic range in the audience tape.",
+    "Bob": "Bob’s vocal delivery on The Other One was described as oddly strained, though his guitar work stayed solid overall.",
+    "Brent": "Brent supplied a pounding, energetic piano foundation in the second set, driving the jams forward.",
+    "Mickey": "",
+    "Billy": "Bill’s drumming was tight and propulsive, anchoring the long second‑set improvisations."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-16T03:12:54.065894+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain"
+    ],
+    [
+      "Brown Eyed Women"
+    ],
+    [
+      "Fever"
+    ],
+    [
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Stella Blue",
+      "Good Lovin'"
+    ],
+    [
+      "La Bamba",
+      "Good Lovin'"
+    ],
+    [
+      "Knockin' On Heaven's Door"
+    ],
+    [
+      "When I Paint My Masterpiece"
+    ]
+  ]
+}

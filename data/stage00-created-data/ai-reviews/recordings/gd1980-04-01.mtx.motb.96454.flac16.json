@@ -1,0 +1,31 @@
+{
+  "summary": "Matrix recording of mixed clarity; the show starts dull but the second set lifts the performance a bit.",
+  "review": "The matrix source captures the band with occasional clarity—Mickey’s drums are audible early on, Phil’s bass comes through reasonably, and Jerry’s guitar is described as delicate and intuitive. Reviewers find the first set boring and overall the show uneven, though a few note that the second set improves. Recording quality is considered rough by some listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Average star rating (2‑4) across four reviews, with mixed comments about both performance and recording; enough data for a moderate confidence assessment."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Rough overall sound; drums audible at the start but lead guitar (Phil’s \"lead\" part) is largely absent. Some listeners note decent bass presence, but clarity varies throughout."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "First set described as boring and hum‑drum; second set picks up with some awesome moments but still not considered a keeper."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar work praised as delicate, intricate, and intuitive.",
+    "Phil": "Bass is audible and decent, though his 'lead guitar' contribution is said to be absent.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey's drumming is audible at the beginning; no further comments."
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-12T21:57:50.591074+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-04-01.mtx.motb.96454.flac16"
+}

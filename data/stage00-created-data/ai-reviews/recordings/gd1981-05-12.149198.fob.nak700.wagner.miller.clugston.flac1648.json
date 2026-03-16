@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent audience field recording that captures a funky Shakedown Street set and fire‑filled Sugar Magnolia, with crystal‑clear sound for thunderous listening.",
+  "review": "The tape is praised as a very high‑quality audience recording that holds up under loud volumes, thanks to the skill of Wagner, Clugston, and Miller. Musically the show shines with a funky Shakedown Street, beautiful Ship of Fools, powerful Drums, an on‑fire Sugar Magnolia, and a heartfelt He’s Gone dedication to Bob Marley.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Single detailed review is overwhelmingly positive about both performance and recording; weighting gives a high combined score but limited data lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Field recording praised for clarity, balance, and ability to handle thunderous volume; no noted drop‑outs or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Ship of Fools",
+      "Drums",
+      "Sugar Magnolia",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Positive flow throughout both sets, highlighted by funky jams and strong second‑set energy."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Reviewer loves the Drums segment, noting its power."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T11:41:30.586061+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-12.149198.fob.nak700.wagner.miller.clugston.flac1648"
+}

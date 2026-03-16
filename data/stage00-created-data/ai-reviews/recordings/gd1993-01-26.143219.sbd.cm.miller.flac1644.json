@@ -1,0 +1,39 @@
+{
+  "summary": "High‑energy soundboard capture featuring a thrilling Stella Blue with Carlos’s duel‑lead, delivering an exciting listening experience.",
+  "review": "The reviewer raves about the third‑verse duel lead from Carlos, saying it “melted my face” and that they were playing air guitar. The performance of Stella Blue is highlighted as a standout moment, and the 5‑star rating suggests the recording sounds good enough to enjoy, though no specific technical details are given.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Only one detailed review, but it is overwhelmingly positive (5 stars) and praises a specific song performance; recording quality is inferred as solid from the soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on audio fidelity; assumed clear enough for enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Not described in the review."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Carlos's duel‑lead in the third verse is singled out as a highlight that energized the performance."
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:35:39.071815+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-01-26.143219.sbd.cm.miller.flac1644"
+}

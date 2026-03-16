@@ -1,0 +1,31 @@
+{
+  "summary": "A middling‑rated recording that reviewers say sounds like T.O.G, with no clear details on audio or performance quality.",
+  "review": "The single review gives the release a three‑star rating and notes that it \"sounds just like T.O.G!!\" but provides no concrete information about the soundboard source, clarity, or specific musical moments. With such limited commentary, both the recording and show are judged as average, leaving listeners uncertain what to expect.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a neutral three‑star rating; no substantive comments on performance or recording quality allow only a cautious mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer merely compares the sound to \"T.O.G\" without describing clarity, mix balance, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T18:00:31.394915+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-28.126746.mtx-redo2.eichorn.sbeok.t-flac16"
+}

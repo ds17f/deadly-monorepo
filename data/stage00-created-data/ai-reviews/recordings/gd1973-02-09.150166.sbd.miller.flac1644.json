@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording of good quality captures a standout 1973 performance highlighted by a soaring \"Eyes of the World\"",
+  "review": "The three fan reviews paint this show as one of the more memorable 1973 dates, with two reviewers calling it a “standout performance” and praising the energetic California vibe. While no explicit technical complaints are noted, the .sbd filename suggests a soundboard source that is at least clear enough for listeners to enjoy the music.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Two reviewers gave high praise (5 and 3 stars) for the musical performance, while one reviewer rated it poorly (0 stars). Recording quality is not discussed but the soundboard source implies decent fidelity, leading to an overall rating just above 4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific audio issues mentioned; assumed clear soundboard capture based on file naming (.sbd)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generally described as a classic early‑1973 set with strong energy and a “Cali feel,” though no detailed set‑by‑set analysis is provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T04:52:32.740242+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-02-09.150166.sbd.miller.flac1644"
+}

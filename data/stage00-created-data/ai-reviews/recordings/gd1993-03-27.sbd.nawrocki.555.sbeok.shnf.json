@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive information is given; the lone review provides no insight into the recording or performance.",
+  "review": "The single review offers only a brief personal comment and does not address sound quality, setlist, or individual playing. With a zero‑star rating, the sentiment leans strongly negative, but there are no concrete details to evaluate the show or recording.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one review with a zero‑star rating and no descriptive content; insufficient data for a higher rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No comments about sound quality or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No details on setlist or performance flow were mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T11:39:56.982527+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-27.sbd.nawrocki.555.sbeok.shnf"
+}

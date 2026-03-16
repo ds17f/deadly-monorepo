@@ -1,0 +1,70 @@
+{
+  "summary": "Juicy‑sounding soundboard capture of a solid ’89 show highlighted by a smoking Scarlet>Fire, an inspired Playin Reprise and strong Brent & Phil jams.",
+  "review": "The recording is a clean SBD with full‑bodied mix that lets the band’s tight playing shine.  The concert delivers several standouts – a driving Scarlet>Fire, a beautifully executed Playin Reprise and memorable Bird Song and Other One jams – while the Built‑to‑Last segment feels a bit flat.  Overall the performance is strong, though Jerry’s voice shows some wear and a few mix quirks (high Phil bass, Bob’s guitar) are noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑star ratings and praise both the musical set and the SBD sound; only one mixed 3‑star review tempers the average, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Juicy, full‑bodied SBD with crisp clarity; minor mix idiosyncrasies noted (Phil’s bass forward, Bob’s guitar a touch high)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Playin Reprise",
+      "Bird Song",
+      "Althea",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Built to Last"
+    ],
+    "setlist_flow": "Unusual but seamless transitions (Playin > Built, PITB > Built) add intrigue; the second set builds momentum despite a slightly flat Built segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice shows some strain yet his harmonizing and lead work are praised; occasional lack of power noted in later set.",
+    "Phil": "Bass sits high in the mix (which many like) and he shines during jams, especially with Brent.",
+    "Bob": "Guitar occasionally rides a bit high in the mix but overall contributes solid rhythm work.",
+    "Keys": "Brent (keyboards) is highlighted as being in top form, delivering haunting ballads and strong interplay with Phil.",
+    "Drums": "Percussion praised for its nuanced, prodding feel; drums are solid throughout."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin Reprise": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Built to Last": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:51:49.886181+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-04-06.sbd.unknown.5492.sbeok.shnf"
+}

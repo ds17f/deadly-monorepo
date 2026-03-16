@@ -1,0 +1,49 @@
+{
+  "summary": "A crisp, well‑EQ'd tape captures a great first set and an exhilarating Crazy Fingers suite despite some early second‑set roughness.",
+  "review": "The recording is sweet and clear with only a touch of hiss, making the show easy to enjoy. The first set shines, though three new 1989 tunes interrupt its flow, while the second set starts noisy before settling into a sublime Crazy Fingers suite that carries the performance to a high point.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Only one detailed review, but it is overwhelmingly positive about both the musical performance and the tape quality; limited data reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "EQed for loudness, crisp tape with minimal noise/mush; no major drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is strong, briefly interrupted by three new tunes that are still rough but enjoyable; second set starts noisy/sloppy then tightens up into an excellent Crazy Fingers suite."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "BTL": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T18:27:00.268474+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-11.AKG451.Darby.120302.Flac2448"
+}

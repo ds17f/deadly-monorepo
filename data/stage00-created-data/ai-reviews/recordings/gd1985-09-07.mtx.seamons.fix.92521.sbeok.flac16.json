@@ -1,0 +1,39 @@
+{
+  "summary": "Matrix source cleaned of clicks and level‑adjusted, delivering good sound; an energetic first set shines while the second set is merely okay and Jerry’s vocals sag on Comes a Time.",
+  "review": "The recording has been meticulously fixed – clicks and pops were reduced and the left channel was balanced for Diamond Blues and Saturday Night – resulting in a solid matrix sound. Musically the show bursts with energy, especially an excellent first set, though the second set lacks excitement and Jerry’s singing falters on Comes a Time.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Enthusiastic show review with minor vocal issues and a well‑fixed matrix recording give an overall strong but not flawless impression."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clicks and pops largely removed; left channel level for Diamond Blues and Saturday Night corrected (+5 dB). Some heavy artifacts remain but overall listening experience is clean."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Comes a Time"
+    ],
+    "setlist_flow": "First set maintains high energy without slowing down; second set is competent but unremarkable, with vocal decline on Comes a Time."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals deteriorate noticeably on Comes a Time.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Comes a Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:57:03.438956+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-07.mtx.seamons.fix.92521.sbeok.flac16"
+}

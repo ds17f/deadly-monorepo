@@ -1,0 +1,85 @@
+{
+  "summary": "Soundboard source with fair‑to‑good audio; the show shines with standout Jerry solos and a killer Estimated > He's Gone > Eyes sequence.",
+  "review": "Even though the SBD suffers from tape‑age distortion and occasional bass muddiness, the performance more than makes up for it. Reviewers rave about Jerry’s soaring solo on “Greatest Story,” the seamless China Cat Sunflower → I Know You Rider → Estimated Prophet run, and a superb Estimated > He's Gone > Eyes trio, while the overall vibe of the night is described as special and energetic.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers (8/9) give 4‑5 stars and praise the musical flow, while recording quality averages around a 3/5. Weighted 70 % show + 30 % recording yields an overall rating of ~4.0."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Bass‑end distortion and tape “corrosion” are noted, with occasional muddiness, but the mix remains clear enough to follow the performance; audience recordings are mentioned as superior."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Greatest Story",
+      "China Cat Sunflower > I Know You Rider > Estimated Prophet",
+      "He's Gone",
+      "Estimated Prophet > He's Gone > Eyes",
+      "Althea",
+      "Good Lovin'",
+      "Alabama Getaway"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds strong momentum with a fiery “Greatest Story” solo; the second set ignites with a seamless China Cat Sunflower → Rider → Estimated Prophet run and a highlight trio of Estimated > He's Gone > Eyes, keeping the energy high through an intense Althea jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers spotlight Jerry’s emotive solo on “Greatest Story” and his ability to match the night’s somber mood, describing his playing as “cooking” and a driving force throughout.",
+    "Phil": "Phil’s bass is praised for fueling the band’s fire in the second set, especially during the Estimated > He's Gone > Eyes sequence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Greatest Story": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T06:42:20.937081+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-12-12.sbd.miller.31509.sbeok.flacf"
+}

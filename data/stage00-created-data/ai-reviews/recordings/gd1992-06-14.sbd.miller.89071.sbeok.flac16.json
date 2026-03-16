@@ -1,0 +1,83 @@
+{
+  "summary": "Excellent soundboard capture of a jam‑heavy 1992 show highlighted by a monster Shakedown Street/Other One stretch and crystal‑clear mix",
+  "review": "The recording is a clean, crisp SBD that lets the band’s 1992 improvisations shine. Reviewers rave about the extended Shakedown Street jam, soaring solos on Spoonful, and powerhouse performances of The Other One, Morning Dew and Tomorrow Never Knows, while noting tight drum work and Phil Lesh’s explosive bass. Overall sentiment is strongly positive despite one lone complaint about the live venue sound.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star ratings and praise both the musical performance (long, inspired jams) and the flawless soundboard recording; only one outlier low rating concerns live venue hearing, not the tape."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp mix with no reported drop‑outs or balance problems; reviewers describe it as “great sound” and a “super copy.”"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Spoonful",
+      "The Other One",
+      "Morning Dew",
+      "Tomorrow Never Knows"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A long, improvisational second set that builds from a pounding Shakedown Street jam into tight drum passages (Corina) and culminates with explosive The Other One and a soaring encore."
+  },
+  "band_member_comments": {
+    "Jerry": "His high‑note vocal work is described as “spacey underwater” and his solo on Spoonful is praised.",
+    "Phil": "Explodes into The Other One, delivering powerful bass energy that reviewers highlight.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Pre‑drum tightness noted; drum jam after Corina described as “nice long train rambler drums” with progressive beat."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tomorrow Never Knows": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candy Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jackaroe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T06:59:02.897109+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-14.sbd.miller.89071.sbeok.flac16"
+}

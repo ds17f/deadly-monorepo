@@ -1,0 +1,60 @@
+{
+  "summary": "Excellent soundboard capture of a fun, upbeat ’89 party show featuring rare “Race Is On” and the beautiful “Black Muddy River.”",
+  "review": "Both reviewers praise this recording as an excellent sound‑board source that lets the lively, quirky setlist shine. The show is described as a “party show” with upbeat choices – Good Times, Pocky Way, Samson – and special highlights like the rare Race Is On and the gorgeous Black Muddy River, even if Jerry sounds a bit tired on the latter. The only criticism is a nit‑pick about unnecessary track splits, not the music or audio itself.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Show quality is consistently praised (upbeat set, standout rare tracks) while recording quality is called “excellent” by one reviewer and unremarked on by the other; weighted average yields ~4.3 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note an excellent sound‑board copy with crisp, clear audio; no sonic flaws mentioned. The only technical gripe concerns the editor’s decision to split a continuous jam into separate tracks."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Race Is On",
+      "Black Muddy River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A quirky, upbeat set that ends the first set unusually with “China Rider” and launches a second set with high‑energy numbers like Good Times, Pocky Way, and Samson, giving the concert a party atmosphere."
+  },
+  "band_member_comments": {
+    "Jerry": "Sounds a little tired on Black Muddy River, which oddly adds to the song’s feel.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Times": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Pocky Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Race Is On": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T19:21:49.954938+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-05-06.sbd.nawrocki.tetzeli.fix-14262.34769.sbeok.shnf"
+}

@@ -1,0 +1,80 @@
+{
+  "summary": "Excellent soundboard capture of a jam‑heavy 1991 Greensboro run – crystal‑clear Eyes of the World and Samson jams offset by occasional clipping and glitches.",
+  "review": "The performance is consistently praised as one of the band’s spring‑tour highlights, with an epic 23‑minute “Eyes of the World,” soaring “Samson,” a teasing Dark Star, and tight renditions of Around & Around, Johnny B. Goode and Playin’ in the Band. The soundboard source delivers generally good fidelity, though listeners note digital noise at the start of FOTD, occasional clipping, a brief skip on Queen Jane, and some over‑modulation later in the set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈30) are 4–5 stars and focus on stellar musical moments; recording issues are noted but not severe enough to detract from overall enjoyment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear board mix, but exhibits digital noise/clipping at the start of FOTD, a brief skip on Queen Jane, minor static during Samson, a right‑channel tick in Space, and occasional over‑modulation on late‑set numbers (Johnny B. Goode, Knockin’ On Heaven’s Door). Early mix buries Jerry's guitar while Bobby's rhythm and Vince's keyboards sit forward."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Samson",
+      "Dark Star (tease)",
+      "Around & Around",
+      "Johnny B. Goode",
+      "Playin' in the Band",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set builds into a marathon “Eyes” that showcases the band’s improvisational depth, while the second set delivers jazzy transitions (Eyes → Playing In The Band), a tight Around & Around, and a rousing Johnny B. Goode finale. Overall pacing is high‑energy with memorable segues."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his glowing “eyes” look, excited return of Bruce Hornsby, strong lead work throughout; early mix buries his guitar but he pulls strongly into the Dark Star tease.",
+    "Phil": "Only a visual note (a dancer near him); no specific musical comment.",
+    "Bob": "His rhythm guitar is prominent in the early mix; a quick lyrical skip on Queen Jane noted.",
+    "Keys": "Vince’s keyboards are forward in the mix early on; Bruce Hornsby’s first show back adds fresh energy and melodic texture.",
+    "Drums": "Generally solid, though reviewers mention drummers appearing to “doze off” later and note a tick in the right channel during Space."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 13,
+      "negative_mentions": 0,
+      "total_mentions": 13
+    },
+    "Samson": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Around & Around": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T17:46:32.877060+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-03-31.sbd.perkins.9451.sbeok.shnf"
+}

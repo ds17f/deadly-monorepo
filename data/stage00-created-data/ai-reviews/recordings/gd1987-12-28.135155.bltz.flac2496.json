@@ -1,0 +1,31 @@
+{
+  "summary": "Fun performance with a solid rating, though recording details are unclear",
+  "review": "The reviewer gave the show four stars and called it one of their most fun concerts, noting it was only their third Dead show. No specific comments were made about the audio source or sound quality, so the technical side remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Single brief positive review; shows enjoyment but lacks detail on recording quality"
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No information provided about soundboard, audience mix, or clarity"
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer described the concert as one of their most fun experiences"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T05:44:00.254869+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-12-28.135155.bltz.flac2496"
+}

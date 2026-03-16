@@ -1,0 +1,63 @@
+{
+  "summary": "Superb soundboard capture of a rare 1979 Morning Dew with crisp mix and a high‑energy second set.",
+  "review": "The recording is a clean SBD source that delivers clear, punchy guitars and a booming Phil bass, though a few early‑set verses are missing and there’s some digi‑noise. Musically the show shines thanks to the only 1979 performance of Morning Dew – delivered with a reggae lilt, fiery vocals and an unforgettable transition from NFA. The set also features solid China Cat Sunflower > I Know You Rider and a mixed‑feel Scarlet Begonias > Fire on the Mountain.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over two dozen reviews, most 4–5 stars, praise the rarity and power of the Dew and cite excellent soundboard quality; a few minor criticisms lower the average only slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, balanced mix with strong guitar and bass presence. Minor issues: missing first verses of Minglewood Blues/It's All Over Now, occasional digi‑noise at crowd applause, and a brief tape glitch on Scarlet."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "China Cat Sunflower > I Know You Rider",
+      "Scarlet Begonias > Fire on the Mountain"
+    ],
+    "poor_songs": [
+      "Scarlet Begonias (some reviewers found it weak)"
+    ],
+    "setlist_flow": "First set described as slower and a bit spotty, but the second set bursts with intensity – NFA into a thunderous Morning Dew, highlighted by tight transitions and an unusual reggae‑tinged ending."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for passionate vocals, fiery guitar work, reggae lilt on Dew, and the memorable \"I guess it doesn't matter\" ad‑libs.",
+    "Phil": "Repeatedly called “bombastic” with a booming presence; many note his bass as the driving force of the show.",
+    "Bob": "",
+    "Keys": "Brent’s early B3 work on the Dew noted as solid and later praised for strong contributions throughout the set.",
+    "Drums": "Mickey’s anvil effect highlighted; drums/space segment described as a controlled‑chaos transition into Dew."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 14,
+      "negative_mentions": 2,
+      "total_mentions": 16
+    },
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-26T01:22:33.939316+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-11-08.sbd.litfin.18126.sbeok.shnf"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Clear soundboard capture of a solid show with an unusually creepy second set highlighted by a psychedelic Dark Star and an expansive Drums jam.",
+  "review": "The recording is praised for its nice, clear sound, making the performance easy to enjoy. While the overall concert is described as good but not spectacular, the second‑set stands out for its eerie vibe and the long, spacey journey from Dark Star into Drums. Fans also note a strong contribution from Phil Lesh.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Consistently positive ratings (mostly 4‑5 stars) and comments about good sound and enjoyable set, offset by modest criticism of Dark Star keeping the rating just above a solid 'good' level."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Listeners describe the audio as \"nice\" and \"creepy\" in a pleasing way; no significant drop‑outs, muddiness, or other issues were reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Drums"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is noted as unusual and creepy, featuring a long psychedelic space jam that flows from Dark Star into Drums, giving the concert its most distinctive character."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Mentioned positively – \"nice phil\".",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Space‑out jam into Drums highlighted as a strong moment."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:45:34.069498+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-26.sbd-set2.lynch.19163.flac16"
+}

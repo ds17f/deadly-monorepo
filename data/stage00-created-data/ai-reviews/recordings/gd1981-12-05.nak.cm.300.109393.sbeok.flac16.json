@@ -1,0 +1,51 @@
+{
+  "summary": "A stellar 1981 performance with a scorching double‑time China Cat Sunflower → I Know You Rider and soaring Big Railroad, captured on a hand‑held audience tape that suffers from crowd chatter and occasional dropouts.",
+  "review": "The show is widely praised as the highlight of the tour – Garcia’s voice shines, Jerry delivers nonstop ripping leads, and Brent Mydland’s solos lift a rare second‑set Big Railroad. The recording, taken with a hand‑held audience mic, sounds good overall but is marred by loud talkers, brief cuts and fluxes that distract from the music.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Show quality is consistently rated very high (standout performances, strong reviews), while recording quality is mixed due to crowd noise and dropouts; weighted average yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hand‑held audience tape with loud talkers (especially during the closing Garcia ballad), occasional cuts/dropouts on Big Railroad and fluxes early in Alabama; overall sound is decent but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Big Railroad",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set closes with a powerful Bird Song transition; rare second‑set Big Railroad showcases Mydland solos, and the double‑time China Cat Sunflower → I Know You Rider is highlighted as a tour‑high point."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently ripping leads throughout, especially on the double‑time CC Rider.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Mydland solos during the second‑set Big Railroad are a major highlight.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Railroad": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:55:38.208549+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-05.nak.cm.300.109393.sbeok.flac16"
+}

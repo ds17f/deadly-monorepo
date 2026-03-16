@@ -1,0 +1,69 @@
+{
+  "summary": "Strong 1972 show with a half‑hour Dark Star and stellar Attics, but the Bertha soundboard mix is hot on drums and thin on Jerry’s guitar.",
+  "review": "Fans rave about the deep jams – a 30‑minute Dark Star, soaring Attics, Box of Rain and Jack Straw – making this a solid fall‑1972 performance. The Ashley‑Bertha soundboard source captures the energy but suffers from an over‑present kick drum and recessed guitar/bass that many listeners find distracting, though the remaster improves clarity for some.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈70%) praise the musical performance and highlight several standout songs; recording complaints are common but not fatal, leading to an overall strong rating with high reviewer consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Drums (kick & snare) are overly hot and dominate the mix; vocals are bright and forward; Jerry’s guitar and Phil’s bass are recessed, making the balance ragged. The Bertha remaster clears some muddiness but does not fully resolve the drum‑vocal clash."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Attics",
+      "Box of Rain",
+      "Jack Straw",
+      "Playing in the Band",
+      "Candyman"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows through classic ’72 material with two massive jams (Playing and Dark Star) that carry the show, while the shorter numbers provide solid support. Listeners note a slightly short overall runtime but feel the deep cuts compensate."
+  },
+  "band_member_comments": {
+    "Jerry": "Performance praised, but his guitar is often buried in the mix.",
+    "Phil": "Vocals and bass are hard to hear due to the hot drum mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Kick and snare are too loud, overwhelming other instruments."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T01:03:05.888993+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-10-28.sbd.ashley-bertha.20405.sbeok.shnf"
+}

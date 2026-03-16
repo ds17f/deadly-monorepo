@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard recording of a classic Winterland show, highlighted by a smoking St. Stephen and Jerry ripping through Big River into Peggy‑O.",
+  "review": "The Miller SBD capture delivers pristine, crystal‑clear audio that lets the energy of this 1977 Winterland night shine through. Fans rave about the overall performance, especially the epic St. Stephen and the fiery segue from Big River into Peggy‑O, making it a must‑listen for any Deadhead.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All six reviews are overwhelmingly positive about both the music and the sound quality; average user rating (excluding a placeholder zero) is 4.6, so the AI assigns a high combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the sound \"perfect\", \"great fidelity\" and note it as an excellent SBD source with no reported issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Big River",
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is praised for its overall flow and energy, with the second‑set highlight St. Stephen and a seamless, high‑energy transition from Big River into Peggy‑O."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"ripping\" through Big River and delivering great tone; fans love his playing on this night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:22:50.690213+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-12-30.132379.sbd.miller.flac16"
+}

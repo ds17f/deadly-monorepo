@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent matrix recording of a tightly‑paced show highlighted by a smoking Crazy Fingers and a fiery Playin’ in the Band jam.",
+  "review": "The three fan reviews rave about both the musical performance and the technical capture. Reviewers praise the superb matrix mix, calling it “excellent,” and highlight the band’s dynamic contrast—from the laid‑back first‑set numbers like Comes a Time to the high‑octane second set featuring Crazy Fingers, Playin’ in the Band and Eyes/Dancin’. Phil’s bass work even hints at the future Fire groove, and Donna’s vocals are singled out as a tour‑high point.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All three reviews are strongly positive (5 stars), emphasizing both an excellent matrix source and a well‑played set with multiple standout moments."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers specifically thank Seamons for the “excellent Matrix” and note it sounds clearer than comparable sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Playin' in the Band",
+      "Eyes/Dancin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show moves smoothly from a slow, Quaalude‑tempo first set (Comes a Time, Jed) to a fast, cocaine‑fuelled second set (Eyes/Dancin', Playin' in the Band), creating an engaging dynamic contrast."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Hints at the future Fire bass line during the Playin' jam.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes/Dancin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T05:08:08.609500+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-22.mtx.seamons.112900.flac16"
+}

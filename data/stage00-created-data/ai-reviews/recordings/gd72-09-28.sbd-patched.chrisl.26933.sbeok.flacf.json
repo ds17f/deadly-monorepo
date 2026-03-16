@@ -1,0 +1,115 @@
+{
+  "summary": "A stellar 1972 show highlighted by a monster Other One and soaring Playin', captured on an excellent sound‑board source that suffers only from the first two audience tracks.",
+  "review": "The performance is consistently praised – the band rolls through Tennessee Jed, Promised Land, a ripping China Cat Sunflower → Rider, a 20‑minute Playin' and a stratospheric Other One that many reviewers put in their top five.  The recording is a soundboard (SBD) with crystal‑clear mix after the opening audience cuts, though the first two tracks are noisy and Loser loses its vocal track; a few listeners note an overly‑Bob‑heavy balance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviewers give 4‑5 stars and extol the musical performance; recording issues are limited to early audience segments, so overall rating is strong."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Soundboard tracks are crisp and well‑balanced. Early AUD sections are described as “awful,” Loser lacks a vocal segment for ~5:40, and some feel the mix is too Bob‑heavy, but overall sound quality after the SBD kicks in is praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Playin' (Playing in the Band)",
+      "China Cat Sunflower > Rider",
+      "Sugar Magnolia",
+      "Saint Stephen"
+    ],
+    "poor_songs": [
+      "Loser"
+    ],
+    "setlist_flow": "Reviewers note a strong first set that builds into an epic second set; the transition from China/Rider into Playin' and the marathon Other One are highlighted as seamless high points."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly called “off the charts” on The Other One, his Strat described as mean and triumphant; many reviewers cite his guitar work as a major reason to love this show.",
+    "Phil": "Praised for tight bass playing (\"tight\" and \"Phil zone\" from El Paso to Wharf Rat).",
+    "Bob": "Generally praised for early‑70s rhythm guitar and vocal work on El Paso, but several note the mix is overly Bob‑heavy and that he misses a high B note on China Cat.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Playin' (Playing in the Band)": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bertha > Greatest Story Ever Told": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bobby McGee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-21T04:25:30.071778+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-09-28.sbd-patched.chrisl.26933.sbeok.flacf"
+}

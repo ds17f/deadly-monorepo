@@ -1,0 +1,84 @@
+{
+  "summary": "Soundboard recording of decent clarity captures a mixed‑but‑often brilliant show highlighted by a soaring Dark Star and a standout Victim intro.",
+  "review": "The gd90‑11‑01 soundboard capture is generally clear with only occasional cuts, making it an enjoyable listen. Musically the concert swings between off‑night moments – notably a shaky first set and a disastrous US Blues – and high points such as Dark Star, the Victim intro, the Standing‑on‑the‑Moon → Wharf Rat transition and Maggie’s Farm. Overall fans regard it as a solid late‑tour performance despite some vocal fatigue from Jerry.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise several standout songs; recording is consistently described as decent to great, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced (cassette copy praised as 'great quality'), with a few noted cuts or drops in the first set. No major distortion, but occasional muffled moments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Victim",
+      "Standing on the Moon > Wharf Rat",
+      "Maggie's Farm"
+    ],
+    "poor_songs": [
+      "US Blues"
+    ],
+    "setlist_flow": "First set uneven – strong early numbers but loses steam toward the end; second set shines with Dark Star, a vivid Space jam and inventive transitions (Standing → Wharf Rat). Overall pacing improves after the midway point."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice sounds tired/shot on several songs (Victim, Wharf Rat), occasional croaking; guitar work not specifically mentioned.",
+    "Phil": "Bass described as 'growly, gravely best' and a highlight of this era.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s piano/keyboard improvisations after Dark Star praised; his presence noted as emotionally significant by fans.",
+    "Drums": "Drum and Space sections receive positive nods; no specific complaints."
+  },
+  "song_mentions": {
+    "Victim": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Standing on the Moon > Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "US Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Maggie's Farm": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T14:40:47.549394+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-11-01.sbd.ladner.8068.sbeok.shnf"
+}

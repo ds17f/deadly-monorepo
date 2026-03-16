@@ -1,0 +1,73 @@
+{
+  "summary": "Epic Morning Dew, tight Jack Straw opener, soaring second‑set jams",
+  "blurb": "The show rides a punchy first set built around a crisp Jack Straw opening and stays on the upswing through Deal. The second set delivers a marathon Samson & Delilah into Iko Iko and culminates in an unforgettable Morning Dew. Overall performance is tight, energetic, and highlighted by strong vocal and instrumental work.",
+  "review": "On March 27, 1994 at Nassau Coliseum the Dead turned in one of their most exhilarating spring nights. A razor‑sharp Jack Straw segues straight into Jack‑A‑Roe, setting a confident tone that carries through Easy Answers and Deal. The second set is where the magic truly ignites – Samson & Delilah expands into an infectious Iko Iko, then flows into a seamless Playing In The Band → Uncle John’s Band transition before launching into a space‑filled drum duet and a soaring The Other One that erupts into one of the era’s most celebrated Morning Dew performances. Jerry’s guitar soars and his vocals blaze on Dew, Phil locks in with “bombs” that drive the jams, Bob provides steady rhythm and humor, Vince (listed under Brent) supplies atmospheric keys throughout, while Mickey and Billy weave a spellbinding drum/space tapestry. The soundboard recordings capture crystal‑clear instrument separation, and even the excellent audience tape showcases the band’s tight synchronicity. Only a brief tech hiccup and a few lyrical slips on Candyman dent an otherwise flawless set.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 46,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Three recordings praise the performance (epic Morning Dew, tight Jack Straw, superb The Other One) while one negative review concerns a mismatched first set in an unrelated source. The overwhelming positive language across multiple high‑quality sources warrants a strong positive adjustment.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd94-03-27.sbd.miller.20926.sbeok.shnf",
+    "reason": "Soundboard source with good‑to‑excellent fidelity, captures the epic Morning Dew and overall tight performance without major drop‑outs."
+  },
+  "key_highlights": [
+    "Epic Morning Dew with soaring vocals and guitar.",
+    "Marathon Samson & Delilah into Iko Iko and The Other One jam.",
+    "Tight Jack Straw opener that sets a high‑energy first set.",
+    "Crystal‑clear soundboard mix that highlights the band’s dynamics."
+  ],
+  "song_highlights": [
+    "Morning Dew",
+    "The Other One",
+    "Jack Straw",
+    "Samson & Delilah",
+    "Iko Iko",
+    "Uncle John's Band",
+    "Deal"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers scorching guitar tones and powerful, emotive vocals on Morning Dew, while maintaining strong presence throughout the set despite a brief tech glitch.",
+    "Phil": "Lesh sits in the driver’s seat with crystal‑clear bass “bombs” that propel Jack Straw, The Other One, and the Dew buildup, keeping the band tightly locked together.",
+    "Bob": "Weir provides solid rhythm work, occasional humor on Samson & Delilah, and dependable vocals on early numbers.",
+    "Brent": "Vince’s keyboard textures add ambience and musical depth, especially during the Iko Iko and space segments, with tasteful organ fills throughout.",
+    "Mickey": "Hart contributes spacious drumming and a dynamic “drums/space” segment that enriches the second‑set flow.",
+    "Billy": "Kreutzmann’s spellbinding drumming complements Hart, driving the jams on The Other One and Morning Dew."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-18T20:48:56.541269+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Morning Dew"
+    ],
+    [
+      "Jack Straw",
+      "Jack-A-Roe"
+    ],
+    [
+      "Samson & Delilah"
+    ],
+    [
+      "Iko Iko"
+    ],
+    [
+      "Easy Answers",
+      "Deal"
+    ]
+  ]
+}

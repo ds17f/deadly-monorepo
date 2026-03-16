@@ -1,0 +1,75 @@
+{
+  "summary": "Electric second‑set monster with rare New Orleans Truckin' and soaring jams",
+  "blurb": "The show shines on a monster third set that rolls from Scarlet > Fire into Terrapin Station, Truckin', Wharf Rat and a Sugar Magnolia → Good Lovin' finale. Highlights include an inspired acoustic Bird Song and the rare New Orleans version of Truckin'. Overall playing is tight and energetic throughout.",
+  "review": "On October 19 1980 at the Saenger Performing Arts Center in New Orleans, the Dead delivered a classic early‑‘80s performance that still feels fresh. Set 1 opens with a relaxed acoustic vibe – Jerry’s guitar on Bird Song is described as “all over it,” and the band rolls through folk‑rock numbers before segueing into Ripple. The second set builds momentum with solid roots rock, while the third set erupts into one of the night’s most memorable stretches: Scarlet Begonias > Fire On The Mountain flows seamlessly into a powerhouse Terrapin Station, followed by an electric truckin’ that carries the unmistakable New Orleans flavor fans love. Wharf Rat, Sugar Magnolia and Good Lovin' close the set with exuberant energy, leading into a heartfelt Brokedown Palace encore. Across multiple audience recordings the playing is praised as tight, energetic and “classic 1980s,” making this show a must‑listen for anyone chasing that era’s high‑octane vibe.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 26,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "All five recordings are marked positive; reviewers repeatedly call the performance \"energetic,\" \"tight,\" and \"classic 1980s\" while highlighting numerous standout songs (Truckin', Fire On The Mountain, Wharf Rat, Terrapin Station, Sugar Magnolia). Consistent praise across multiple sources warrants a strong positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.4 = 4.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd80-10-19.set2-3-aud.vernon.13469.sbeok.shnf",
+    "reason": "Good audience tape that captures the energetic second‑set highlights – rare New Orleans Truckin', Fire On The Mountain and a soaring Wharf Rat – with overall clear balance despite some taper talking."
+  },
+  "key_highlights": [
+    "Rare New Orleans version of \"Truckin'\" in the third set",
+    "Monster third set featuring Terrapin Station, Wharf Rat, Sugar Magnolia → Good Lovin'",
+    "Strong acoustic portion with standout Bird Song and Tennessee Jed",
+    "Tight, energetic playing that exemplifies classic 1980 Dead sound"
+  ],
+  "song_highlights": [
+    "Truckin'",
+    "Fire On The Mountain",
+    "Wharf Rat",
+    "Terrapin Station",
+    "Sugar Magnolia",
+    "Good Lovin'",
+    "Brokedown Palace",
+    "Bird Song",
+    "Tennessee Jed"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s acoustic work on Bird Song is praised as \"all over it,\" and his electric playing drives the high‑energy third set.",
+    "Phil": "Lesh provides a solid, locked‑in bass foundation that underpins the band’s tight groove throughout.",
+    "Bob": "Weir delivers dependable rhythm guitar, supporting the jams and keeping the flow steady.",
+    "Brent": "Mydland adds tasteful keyboards and synth textures that flesh out both acoustic and electric sections.",
+    "Mickey": "Hart’s percussion punctuates the set with dynamic fills, especially during the expansive third‑set jam.",
+    "Billy": "Kreutzmann locks in with Hart, delivering a driving beat that fuels the monster second and third sets."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-13T05:03:26.101493+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "Truckin'",
+      "Wharf Rat",
+      "Sugar Magnolia",
+      "Good Lovin'"
+    ],
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain"
+    ],
+    [
+      "Brokedown Palace"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "Tennessee Jed"
+    ]
+  ]
+}

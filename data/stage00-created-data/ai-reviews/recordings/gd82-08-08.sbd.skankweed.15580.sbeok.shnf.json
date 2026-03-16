@@ -1,0 +1,63 @@
+{
+  "summary": "A clean sound‑board transfer captures a scorching Scarlet Begonias → Fire on the Mountain transition, though the bass is missing.",
+  "review": "The show is hailed for Jerry Garcia’s incendiary guitar work and the legendary Scarlet Begonias into Fire on the Mountain segue, with highlights like Peggy‑O (fixed) and a moving Brokedown Palace closer. The recording itself is praised as crisp and well‑transferred, but reviewers note the absence of Phil Lesh’s bass which detracts from an otherwise stellar performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star ratings praising the music and sound quality; only one low rating notes missing bass, leading to an overall strong but slightly tempered score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, crisp transfer with excellent mix balance; however the bass channel is absent/muted, leaving a noticeable low‑end gap."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias → Fire on the Mountain",
+      "Peggy-O",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Loser"
+    ],
+    "setlist_flow": "Reviewers rave about the seamless transition from Scarlet Begonias into Fire on the Mountain and the overall energy of the set, describing the set‑list as one of the era’s best despite a truncated Loser."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for fiery guitar tone, extended solos and overall playing; voice noted as slightly tired in one review.",
+    "Phil": "Bass is missing from the recording, disappointing listeners who expect Phil Lesh's low‑end foundation.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T23:44:37.561929+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-08-08.sbd.skankweed.15580.sbeok.shnf"
+}

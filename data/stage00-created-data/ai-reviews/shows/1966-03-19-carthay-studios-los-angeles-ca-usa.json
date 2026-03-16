@@ -1,0 +1,56 @@
+{
+  "summary": "Blues‑heavy early set with standout Heads Up and Midnight Hour",
+  "blurb": "The show delivers a straightforward blues‑R&B set. Highlights include powerful renditions of Heads Up, Stormy Monday Jam, and Midnight Hour, while Bob’s vocals slip slightly on I Know You Rider. The soundboard capture is clear but Jerry sits forward in the mix.",
+  "review": "Recorded on March 19 1966 at Carthay Studios during the Pico Acid Test, this performance captures the Grateful Dead in their formative blues phase. The setlist leans heavily into R&B classics – Viola Lee Blues, One Kind Favor and a string of soulful numbers that showcase the band’s nascent chemistry. Standout moments arrive with Jerry’s blistering lead on Heads Up, a gritty Stormy Monday Jam, and a spirited take on Midnight Hour; these tracks illustrate the group’s deep‑rooted love for the blues. Bob’s vocal delivery is occasionally off‑key (notably on I Know You Rider), but Phil holds down a solid bass foundation while Bill provides steady drumming. The soundboard source offers crisp separation and an upfront guitar presence, making it the most listenable version despite minor tonal imbalances.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 12,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "One recording is clearly positive, highlighting blues‑heavy work and standout songs; the second recording offers a mixed but neutral view with no strong criticism of performance. The overall tone across analyses leans positive, justifying a modest sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 0.8 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd66-03-19.sbd.scotton.81951.sbeok.flac",
+    "reason": "Soundboard source with clear stereo separation and good capture of the standout blues performances."
+  },
+  "key_highlights": [
+    "Blues‑heavy set with strong Heads Up and Midnight Hour performances.",
+    "Stormy Monday Jam showcases early jam chemistry.",
+    "Bob’s vocals slip slightly on I Know You Rider.",
+    "Recording offers crisp separation but Jerry sits forward in the mix."
+  ],
+  "song_highlights": [
+    "Heads Up",
+    "Midnight Hour",
+    "Stormy Monday Jam"
+  ],
+  "band_performance": {
+    "Jerry": "Prominent, blues‑heavy guitar work praised on Heads Up, Stormy Monday Jam and Midnight Hour; sits a bit forward in the mix.",
+    "Phil": "",
+    "Bob": "Vocals are slightly off‑key on a couple of tracks, especially I Know You Rider.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-26T04:54:10.350102+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Heads Up"
+    ],
+    [
+      "Midnight Hour"
+    ],
+    [
+      "Stormy Monday Jam"
+    ]
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Crisp audience recording captures the energy of the night, but the band was off‑kilter – highlighted only by the legendary Jerry stare.",
+  "review": "The Schoeps audience tape is praised for its clarity, proper levels and just enough crowd ambience to feel the venue without overwhelming the music. While a few listeners felt the performance suffered – with “Shakedown Street” singled out as a low point – others cherish the moment of the infamous Jerry stare, making the show memorable despite its musical unevenness.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised (good to excellent), but performance opinions are split; averaging these factors yields a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear sound, well‑balanced levels, minimal distracting crowd noise – listeners note the recording captures the venue energy nicely."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Shakedown Street"
+    ],
+    "setlist_flow": "Set was perceived as uneven; band sounded off for much of the night, though audience enthusiasm remained high and a memorable Jerry stare occurred."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for an uncomfortable but iconic stare that became a hallmark moment; overall playing described as 'off' by some listeners.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T21:44:33.616987+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-04-07.schoeps.ladner.10313.sbeok.shnf"
+}

@@ -1,0 +1,85 @@
+{
+  "summary": "Fair‑quality soundboard with cassette hiss, but the show swings between tired, sloppy moments and standout performances of GDTRFB, Throwing Stones / Not Fade Away and a few bright spots.",
+  "review": "The recording is a soundboard capture that suffers from noticeable tape hiss and an audience‑sourced encore patch, making the overall fidelity only fair. Musically the concert is uneven – many reviewers note a tired Jerry and sloppy Playing in the Band, yet several highlight a crisp Going Down the Road Feelin' Bad into Throwing Stones → Not Fade Away and occasional high‑energy space/drums sections.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Reviews are split; a minority rave about specific songs while the majority criticize performance and note recording hiss, yielding an overall middling rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Cassette‑generation hiss audible between tracks; encore patched from audience source; overall mix is usable but not crisp."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Going Down the Road Feelin' Bad",
+      "Throwing Stones > Not Fade Away",
+      "Feel Like A Stranger"
+    ],
+    "poor_songs": [
+      "Playing In The Band",
+      "Crazy Fingers",
+      "Black Muddy River"
+    ],
+    "setlist_flow": "First set described as energetic by some but generally sluggish; second set contains a mixed bag with a strong post‑Space segment and several song transitions that rescue the performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Frequently called tired and out of sync, though a few reviewers note brief moments of energy after Space.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Praised for a ‘crazy drums>space’ vibe by some; otherwise described as part of an overall tired band."
+  },
+  "song_mentions": {
+    "Feel Like A Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Going Down the Road Feelin' Bad": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Throwing Stones > Not Fade Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Playing In The Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T11:59:08.714181+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-07-05.sbd.9370.sbeok.shnf"
+}

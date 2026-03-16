@@ -1,0 +1,51 @@
+{
+  "summary": "Good audience recording captures an iconic Dark Star and a mind‑bending Other One, delivering the full three‑set show with clear sound.",
+  "review": "The audience tape is praised for being complete and surprisingly clear, making it a worthwhile download. Reviewers highlight this concert as a landmark performance – Dark Star is called the greatest ever played and The Other One delivers surreal, backward‑like textures that still thrill listeners. The show closes with a moving Walking In Jordan version of We Bid You Goodnight, rounding out an unforgettable three‑set experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All four reviewers are enthusiastic; they praise both the musical performance (exceptional Dark Star and Other One) and the recording quality (complete, clear audience tape). Weighted rating reflects a near‑perfect show with good technical capture."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and complete; typical audience tape hiss but no major dropouts or balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One",
+      "We Bid You Goodnight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Three‑set marathon praised for its ebb and flow – a stellar second set highlighted by Dark Star, an experimental third set with The Other One, and a heartfelt closing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum section noted for creating a unique, almost other‑worldly texture during The Other One."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "We Bid You Goodnight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T16:27:56.261552+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-02-13.123814.aud.cooper.flac16"
+}

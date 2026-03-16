@@ -1,0 +1,39 @@
+{
+  "summary": "Unknown recording source and likely poor audio; reviewers only remark on a dubious Play‑in‑the‑Band fake‑out with no positive highlights.",
+  "review": "The few fan comments provide virtually no information about the sound quality, leaving the source type unknown and suggesting it may be subpar. The show itself is not praised; one reviewer calls out a \"Playin' in the Band\" fake‑out, implying a performance slip rather than a highlight.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.3,
+    "confidence": "low",
+    "rationale": "All three reviews are uninformative or critical and assign zero stars; with no clear praise for music or recording, the rating is low and confidence is limited due to scant data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No reviewer comments on clarity, mix, or source; absence of positive remarks suggests a likely unsatisfactory recording."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Playin' in the Band"
+    ],
+    "setlist_flow": "No information provided about set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin' in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:15:32.545505+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-22.134676.sbd.miller.flac16"
+}

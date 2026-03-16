@@ -1,0 +1,39 @@
+{
+  "summary": "Audience‑sourced recording of the 1980 New Orleans return captures a jazzy acoustic set and historic vibe; the sound is uneven but often clear enough to enjoy.",
+  "review": "The show is remembered for its laid‑back, jazz‑inflected acoustic sets and the excitement of the Dead’s first performance back in New Orleans after a decade, with highlights like a superb “Heaven Help the Fool.”  The audience tape delivers a realistic concert feel – you hear crowd cheers and occasional fan yells – but the audio swings between crisp instrument separation and muddy sections that can be hard to follow.  Overall it’s a treat for fans who value the historic moment more than pristine fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is generally praised (historic significance, jazzy acoustic set) while recording quality is described as uneven; weighting 70 % performance and 30 % audio gives a solid mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners note clear instrument definition and good bass in parts, but also frequent crowd noise, occasional muffled sections, and moments that are “difficult to enjoy” due to audience chatter."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Heaven Help the Fool"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic sets open with a jazzy, laid‑back feel followed by electric sets; reviewers appreciate the historic context and overall energy despite some unevenness in performance tightness."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Heaven Help the Fool": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T04:56:25.085156+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-18.neumann.vernon.13596.sbeok.shnf"
+}

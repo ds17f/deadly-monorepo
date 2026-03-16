@@ -1,0 +1,83 @@
+{
+  "summary": "Good audience recording of a show with mixed energy that shines on the emotional space‑into‑Days Between and a lively Iko Iko.",
+  "review": "The tape was captured from the front‑row taper section using high‑quality PMB mics, delivering clear and present sound despite being an audience source. Musically the concert is uneven – some listeners love the moving space leading into Days Between, the upbeat Iko Iko and Sampson & Delilah, while others find many tunes flat and lacking excitement.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Show quality is mixed (average‑to‑good) but recording quality is consistently praised as clear; the weighted average yields a solid 3.8‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Front‑row taper with shotgun capsules and pre‑amp provides clear, well‑balanced sound; no major dropouts or muffiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space into Days Between",
+      "Iko Iko",
+      "Sampson and Delilah",
+      "Truckin'",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set opens strong after a monster previous show, includes several high‑energy gems (Alabama/Row Jimmy, Broken Arrow, Tennessee Jed), but overall the energy wanes in the middle, leading to a flat feeling for some listeners before picking up again in the second half."
+  },
+  "band_member_comments": {
+    "Jerry": "Huge solo on Days Between praised; occasional comment that his space passages run longer than preferred.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space into Days Between": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Days Between": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sampson and Delilah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T02:12:19.785077+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-10-02.pmb.pujol.15111.sbeok.shnf"
+}

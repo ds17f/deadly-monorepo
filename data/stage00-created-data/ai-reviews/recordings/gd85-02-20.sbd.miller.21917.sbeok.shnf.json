@@ -1,0 +1,68 @@
+{
+  "summary": "Crisp sound‑board recording of a 1985 show where the second set shines (Scarlet > Fire, West L.A., Cold Rain) but ragged vocals and sluggish playing dampen the overall vibe.",
+  "review": "The SBD capture is praised for its clear, well‑balanced mix, making every nuance audible. Musically the concert is a mixed bag – the first set feels laid‑back and at times unfocused, while the second set delivers standout moments like Scarlet > Fire and an inspired West L.A., though many reviewers lament Jerry’s and Bob’s hoarse vocals and a sluggish rhythm section.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "high",
+    "rationale": "Consistent comments describe excellent sound‑board quality (recording ~4½/5) but the performance is viewed as average to below average due to vocal and playing issues (show ~2½/5). Weighted average yields a ~3.1 overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑balanced mix; reviewers repeatedly note top‑notch SBD sound with no major drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "West L.A.",
+      "Cold Rain and Snow"
+    ],
+    "poor_songs": [
+      "Day Tripper"
+    ],
+    "setlist_flow": "First set feels mellow and somewhat unfocused; the second set lifts the show with strong jams and tighter transitions, highlighted by Scarlet > Fire and a flowing West L.A. sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as ragged, \"drugged‑up\" or strained on many tracks, though occasional nice runs noted in Scarlet and West L.A.; overall vocal health is a concern.",
+    "Phil": "",
+    "Bob": "Weir’s voice called out as rusty, “frog gargle,” and generally weak; some reviewers note slight improvement during the Mama Tried > Big River duet.",
+    "Keys": "",
+    "Drums": "Comments about sluggish 80s drumming and an indifferent, thudding feel that slows the momentum."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "West L.A.": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Day Tripper": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:52:51.759108+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-02-20.sbd.miller.21917.sbeok.shnf"
+}

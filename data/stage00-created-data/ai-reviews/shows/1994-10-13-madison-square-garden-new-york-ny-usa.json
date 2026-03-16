@@ -1,0 +1,69 @@
+{
+  "summary": "Solid MSG show with strong Playing In The Band and Baby Blue",
+  "blurb": "The 1994 Madison Square Garden set delivers solid performances of Playing In The Band, Let It Grow and Wharf Rat, capped by a heartfelt It's All Over Now Baby Blue encore. Jerry’s guitar shines while Vince’s organ adds depth, though some synth noise and vocal mumbling are noted. Overall a reliable Dead outing with memorable jams.",
+  "review": "On October 13, 1994 the Grateful Dead took the stage at Madison Square Garden and gave fans a reliably solid show that still feels fresh after all these years. The first set opened tight with Touch of Grey and built momentum through Loser, Dupree’s Diamond Blues and a bright Let It Grow, while Jerry Garcia’s guitar wove melodic threads throughout. The second set is where the night truly blossoms – Foolish Heart rolls into an expansive Playing In The Band that segues into Uncle John’s Band and a generous jam leading to a five‑minute drum duet before Space. The Other One, despite mixed reactions to its synth textures, gives way to a soulful Wharf Rat and a rollicking Johnny B. Goode, ending with a poignant It's All Over Now Baby Blue that showcases Vince Welnick’s organ warmth and the band’s collective feel. Reviewers consistently praise the clear soundboard capture, noting the show’s energy and strong song selection even as they point out occasional vocal mumbling and synth‑MIDI quirks. For anyone looking to relive a late‑era Dead performance with both classic moments and unique 1994 flavor, this MSG concert is a must‑listen.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 24,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Two recordings are clearly positive and two are mixed (neutral). Positive comments dominate, highlighting strong performances of Playin', Let It Grow, Wharf Rat, Baby Blue and solid overall playing, while criticisms are limited to occasional vocal mumbling and synth noise. This yields a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.2 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1994-10-13.sbd.miller.tetzeli.fix-33299.33822.reflac.flac16",
+    "reason": "Clear soundboard source with good separation, captures the full set without drop‑outs and highlights the strongest moments of the show."
+  },
+  "key_highlights": [
+    "Strong Playing In The Band > Uncle John's Band sequence with a five‑minute drum jam.",
+    "Vince Welnick's organ adds depth on Wang Dang Doodle and throughout, despite occasional synth noise.",
+    "Jerry Garcia’s guitar work shines on Loser and Baby Blue; vocals are occasionally mumbled but overall solid."
+  ],
+  "song_highlights": [
+    "Playing In The Band",
+    "Let It Grow",
+    "Wharf Rat",
+    "It's All Over Now Baby Blue",
+    "Foolish Heart",
+    "Dupree's Diamond Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers wailing leads on Loser and strong guitar tones throughout, especially on Baby Blue and Foolish Heart, though his vocals are occasionally mumbled.",
+    "Phil": "Provides a steady, supportive bass foundation that underpins the band’s jams.",
+    "Bob": "Adds rhythm with heavy distortion and whammy‑bar effects; some reviewers felt it was overused but overall solid.",
+    "Vince": "Organ work is a major strength, highlighted on Wang Dang Doodle and throughout; occasional synth/MIDI noise detracts during The Other One.",
+    "Mickey": "Drums are tight, contributing to an extended five‑minute jam in the PITB > Uncle John's Band sequence.",
+    "Billy": "Locks in with Mickey, maintaining a solid groove that drives the second set’s improvisations."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-19T03:13:39.901645+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Foolish Heart",
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Jam",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Wharf Rat",
+      "Johnny B. Goode"
+    ],
+    [
+      "Let It Grow"
+    ],
+    [
+      "It's All Over Now Baby Blue"
+    ],
+    [
+      "Dupree's Diamond Blues"
+    ]
+  ]
+}

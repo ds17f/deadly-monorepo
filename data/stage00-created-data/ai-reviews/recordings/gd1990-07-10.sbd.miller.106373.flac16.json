@@ -1,0 +1,109 @@
+{
+  "summary": "Excellent soundboard recording captures a high‑energy 1990 show with a smoking second set – Promised Land power‑outage comeback, Uncle John’s Band and Masterpiece shine.",
+  "review": "The Miller soundboard source is described as perfect and crisp, delivering an excellent listening experience despite the brief power outage during Promised Land. Musically the concert is lauded for its fiery second set, standout performances of Promised Land, Uncle John’s Band, Masterpiece, Iko Iko and a tight Brent‑driven keyboard section, with Jerry’s guitar tone and lyrics praised throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Most reviewers (10 out of 13) award 4–5 stars and highlight both superb sound quality and memorable performances; the few low‑star entries are unrelated or off‑topic, leading to a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the audio \"perfect\" and \"crisp,\" with no complaints about muddiness or drop‑outs despite the brief power failure during Promised Land."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Promised Land",
+      "Uncle John's Band",
+      "Masterpiece",
+      "Iko Iko",
+      "Stella Blue",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The band warms up with a solid Jack Straw opener, then delivers an electrifying second set that keeps the crowd rolling; the brief power outage is seamlessly handled and actually adds to the show’s legend."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone is called \"perfect\" and his lyric delivery on Uncle John’s Band is noted as unusually spot‑on; he also leads the flawless post‑outage restart of Promised Land.",
+    "Phil": "",
+    "Bob": "Weir’s Dylan‑influenced nasal twang on Big River receives a positive shout‑out.",
+    "Keys": "Brent’s keyboard work shines, especially on \"We Can Run\"; Hornsby’s accordion is described as a new twist that some found intrusive but overall adds flavor to the second set.",
+    "Drums": "The drum jams are highlighted as crisp and energetic, with the rhythm section driving the powerful fourth‑quarter sequence."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "We Can Run": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "O1": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "NFA": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T09:01:30.070331+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-10.sbd.miller.106373.flac16"
+}

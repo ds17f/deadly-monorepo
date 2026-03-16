@@ -1,0 +1,124 @@
+{
+  "summary": "Good matrix recording with occasional mud and pitch quirks, but a fire‑filled show highlighted by an electrifying Deal, superb acoustic Iko Iko and Jerry’s soaring solos.",
+  "review": "The performance is a standout from the 25‑show run, featuring Jerry Garcia in top form – from a snarling solo on Minglewood to a slide‑glued Little Red Rooster and one of the year’s best Deals. The source is a patchwork matrix of audience and soundboard tapes; most of the show sounds clear, though the third set gets muddy, muffled and slightly off‑pitch, requiring pitch correction.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Reviews are overwhelmingly positive about the music (average 4.5 ★) while noting mixed recording quality; weighted average yields a solid 4.2 ★."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Patchwork of audience and Owsley soundboard tapes; early sets clear, but third set becomes muddy, muffled and slightly slow – pitch correction of -1% to -4% is needed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Iko Iko (acoustic)",
+      "Dark Hollow",
+      "Rosalie",
+      "Me & My Uncle",
+      "Little Red Rooster",
+      "Deal",
+      "Estimated Prophet",
+      "I Need a Miracle"
+    ],
+    "poor_songs": [
+      "Ripple",
+      "He's Gone"
+    ],
+    "setlist_flow": "Three‑set marathon; first set solid (B+), second set shines (A) with high energy and tight jams, third set more average (C+) but still contains highlights like Estimated Prophet and Miracle."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"out of control\" and \"raging on the ragged edge of chaos,\" with several standout solos and a glue‑like slide on Little Red Rooster.",
+    "Phil": "Mentioned briefly in praise of his playing during Let It Grow.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s 80s keyboard switch noted, plus strong work on Estimated Prophet.",
+    "Drums": "Mickey Hart stays out for most of Space; later drumming on Alabama described as \"Mickey Mouse\" (light) but still drives the groove."
+  },
+  "song_mentions": {
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Hollow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rosalie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let it Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ripple": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Alabama": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T04:17:13.824472+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-07.nak700.ellner.koucky.89189.sbeok.flac16"
+}

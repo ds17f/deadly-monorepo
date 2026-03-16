@@ -1,0 +1,39 @@
+{
+  "summary": "Decent audience recording captures a solid second‑half Dark Star from an underrated Dover Lake show.",
+  "review": "The reviewer remembers the concert as a \"pretty good stretch\" and highlights the second half of the Dark Star as a memorable moment. No specific comments are made about the audio, but the Sennheiser 441 source suggests a single‑mic audience tape of average clarity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "Only one 4‑star review; strong positive sentiment about the performance but no concrete data on recording quality, so rating leans toward a good show with an assumed fair audience recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments; Senn441 mic indicates likely a single‑mic audience capture with typical ambient noise and limited mix detail."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer recalls the concert as a solid stretch, especially noting the strength of the latter portion of Dark Star."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T06:39:56.412543+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-08.senn441.mahoney.81791.sbeok.flac16"
+}

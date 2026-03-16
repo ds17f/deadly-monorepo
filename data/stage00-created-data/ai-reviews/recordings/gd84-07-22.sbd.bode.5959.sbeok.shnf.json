@@ -1,0 +1,74 @@
+{
+  "summary": "Crisp PCM soundboard recording captures a stellar 1984 Ventura show with scorching Scarlet > Fire, Midnight Hour and an unforgettable second set.",
+  "review": "The tape delivers exceptionally clean, low‑hiss PCM audio (though a few listeners note occasional channel reversal and minor pitch/treble quirks). Musically the performance is praised as one of ’84’s highlights – especially the second‑set jams, tight transitions and standout moments like Scarlet > Fire, Midnight Hour, Morning Dew and “Loser.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show and recording highly; a few note minor technical glitches, giving an overall strong but not flawless impression."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Very clean PCM sound with virtually no hiss; some users report channel reversal and a half‑step pitch/treble anomaly on Midnight Hour/Brokedown Palace, plus occasional distortion in spots."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Midnight Hour",
+      "Brokedown Palace",
+      "Loser",
+      "Morning Dew",
+      "Dancin' in the Streets"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers rave about the seamless transitions and a second set that builds momentum, citing superb jams from Percussion → Improvisation → Morning Dew and tight segues like Scarlet > Fire."
+  },
+  "band_member_comments": {
+    "Jerry": "Playing is solid despite a slight cold; guitar work praised as 'fine' and energetic, with no major drop‑outs.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin' in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I just want to make Love to You": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T20:48:49.816047+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-07-22.sbd.bode.5959.sbeok.shnf"
+}

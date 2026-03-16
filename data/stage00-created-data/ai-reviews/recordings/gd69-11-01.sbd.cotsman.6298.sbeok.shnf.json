@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard tape capture with noticeable hiss but delivers a jam‑heavy 1969 set highlighted by Uncle John's Jam, Alligator, Good Lovin' and Pigpen‑filled classics.",
+  "review": "The recording is a vintage sound‑board digitized from analog tape, so the hiss and occasional muddiness are obvious, yet it remains listenable for a 1969 show. Musically the band is on fire – Pigpen dominates with his bluesy vocals, Jerry shines on an Alligator jam, and Uncle John's Jam stands out as a highlight. Overall the performance outweighs the technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong musical performance with several praised jams and Pigpen moments (70% weight) combined with a decent but hiss‑laden soundboard source (30% weight) yields an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Prominent tape hiss, some muddiness compared to other era recordings, a cut in the middle of \"Turn On Your Lovelight\", but generally clear enough for a 1969 analog capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Jam",
+      "Alligator",
+      "Good Lovin'",
+      "Turn On Your Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Jam‑centric set with Pigpen leading the blues numbers, Jerry taking a standout solo over percussion on Alligator, and solid transitions that keep the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Delivers an impressive Alligator jam soloing over percussion.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen (and possibly Tom Constanten) provide prominent organ/keyboard work, driving the bluesy feel of the show.",
+    "Drums": "Ludwig drum sound noted; solid rhythmic foundation throughout."
+  },
+  "song_mentions": {
+    "Uncle John's Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Alligator": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T17:44:50.796657+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-11-01.sbd.cotsman.6298.sbeok.shnf"
+}

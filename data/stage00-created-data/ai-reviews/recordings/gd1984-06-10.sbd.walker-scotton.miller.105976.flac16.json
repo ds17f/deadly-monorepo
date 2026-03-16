@@ -1,0 +1,86 @@
+{
+  "summary": "Pristine soundboard capture of a largely stellar 1984 performance with standout Bird Song, He's Gone and a hot Might As Well, though the odd ‘Don’t Need Love’ drags.",
+  "review": "The recording is an excellent SBD source with crystal‑clear mix that lets every instrument shine. Musically the band delivers high‑energy jams – Bird Song, The Other One, Mighty As Well and a superb rendition of He’s Gone are repeatedly praised – but the Brent‑led ‘Don’t Need Love’ and occasional sloppy moments keep the show from being flawless. Overall the concert is remembered as one of the better ’84 dates despite mixed opinions on a few spots.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Strong musical highlights and mostly excellent soundboard quality push the rating up, but several reviewers note sloppy playing and a disliked song, pulling the overall score to around four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the sound pristine, crisp and great; no significant drop‑outs or balance issues are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "The Other One",
+      "He's Gone",
+      "Might As Well",
+      "Truckin'",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Don't Need Love"
+    ],
+    "setlist_flow": "Most fans describe the set as synergistic and high‑energy, with a strong second half; a few note occasional sloppiness and an odd moment on ‘Don’t Need Love’, giving the show a mixed but overall positive flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for rare form, inventive note choices and spot‑on vocals on 'He's Gone', though one reviewer felt he was wasted.",
+    "Phil": "Bass described as big, loud and turned up, delivering a powerful low end throughout the show.",
+    "Bob": "No specific comments on his playing; only a drummer’s cue to start the song is mentioned.",
+    "Keys": "Brent's key‑clicking toy piano is highlighted, with 'Don't Need Love' called strange and out of place.",
+    "Drums": "Impatience noted, including a moment where the drummer yells at Bob to start; overall rhythm section considered solid."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "My Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might As Well": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Don't Need Love": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T18:05:26.785479+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-10.sbd.walker-scotton.miller.105976.flac16"
+}

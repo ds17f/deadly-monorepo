@@ -1,0 +1,67 @@
+{
+  "summary": "High‑quality soundboard capture of a classic ’69 outdoor set highlighted by an epic Easy Wind and soaring Dark Star",
+  "review": "The recording is a solid soundboard source that preserves the ambience of the 1969 festival with impressive clarity for its age. Musically the show shines – fans rave about a monster Easy Wind, a groovy Dark Star, powerful Morning Dew and a standout Casey Jones, while the overall pacing feels loose yet engaging.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (13/15) are 4‑5 stars praising both performance and sound quality; only one low rating and a single neutral comment dilute the average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Impressive for an old outdoor show – clear, balanced mix with a nice ambience from the organ (TC). A few reviewers note early‑show technical hiccups, but overall the sound is solid and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Easy Wind",
+      "Dark Star",
+      "Morning Dew",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows loosely yet purposefully, with a highlighted Dark Star → St. Stephen → Eleven sequence and a strong second‑half emphasis on Easy Wind and other improvisational peaks."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is described as “groovy” on Dark Star and listeners note a subtle Proud Mary hint in Casey Jones.",
+    "Phil": "",
+    "Bob": "Bob’s stage banter (e.g., the \"Godammit\" exchange) is highlighted for its humor and crowd interaction.",
+    "Keys": "Tom Constanten’s organ texture is credited on Dark Star; Pigpen likely on Easy Wind, adding a bluesy feel.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Easy Wind": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T17:07:36.207611+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-09-01.sbd.vernon.19963.sbeok.shnf"
+}

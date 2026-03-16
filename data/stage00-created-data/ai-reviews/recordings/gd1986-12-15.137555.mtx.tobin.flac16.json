@@ -1,0 +1,31 @@
+{
+  "summary": "Decent show captured from an unknown source; overall good performance but no recording details provided.",
+  "review": "The reviewer rates the concert a solid four stars, calling it a \"standard‑level good show\" and noting that it was clearly a special occasion. No specifics about sound quality or individual songs are mentioned, so while the musical impression is positive, the recording’s technical merits remain unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 4‑star rating; positive comments about the show but no information on recording quality, leading to a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments regarding soundboard, audience mix, clarity, or other technical aspects."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer calls the performance \"standard‑level good\" but provides no detail on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T17:41:38.858466+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-12-15.137555.mtx.tobin.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "A well‑received soundboard capture of the Dec 11 1972 show highlighted by a moving rendition of “Stella Blue”.",
+  "review": "The reviewer gives the recording four stars and praises the emotional impact of the December 11, 1972 performance, especially noting the beautiful delivery of “Stella Blue.” No specific technical comments are offered, but the positive tone suggests the soundboard source is at least listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one moderately detailed review; strong enthusiasm for the performance but no concrete recording quality data, so rating reflects a solid show with assumed decent soundboard capture."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on clarity, mix, or other technical aspects; cannot assess audio fidelity beyond the implication of a board recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific commentary on set pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T08:47:56.172708+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-12-11.schoeps.boardman.swayne.86009.sbeok.flac16"
+}

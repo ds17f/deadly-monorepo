@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording with decent clarity captures a mixed‑quality Spanish Jam that some fans find wild and intense while others call it average.",
+  "review": "The tape is a soundboard source that sounds generally clear, though listeners note occasional feedback, choppiness and an unusually high bass level. The only music present is the late‑show Spanish Jam – praised by several reviewers for its fiery guitar improvisation but dismissed by others as uninspired and merely average. Overall sentiment about the performance is mixed, reflecting the fragmentary nature of this recording.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "high",
+    "rationale": "Most reviewers find the recording technically adequate but are divided on the musical quality of the lone Spanish Jam; weighted average (70% show, 30% recording) yields a modest rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear sound with fine overall fidelity; occasional feedback and choppy sections noted, plus bass sits unusually high – likely due to 4‑track to 2‑track reduction."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Spanish Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Only the Spanish Jam is present; reviewers debate its date and placement, indicating the rest of the concert is missing."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work on the Spanish Jam is described as wild, intense and \"freaking wicked\" by several listeners.",
+    "Phil": "Bass is noted as unusually high and prominent in the mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Spanish Jam": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-24T07:14:28.474967+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-01-27.sbd.jools.14736.sbeok.shnf"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Soundboard partial with crystal‑clear audio captures a smoking Dark Star → El Paso → Eyes of the World → Morning Dew sequence, showcasing Jerry at his peak.",
+  "review": "This partial from August 1973 (Garcia’s birthday show) is celebrated for its soaring Dark Star that morphs into a ripping El Paso, an intense Eyes of the World and a heart‑rending Morning Dew. Reviewers repeatedly note the superb playing—Jerry’s slide work, Phil’s bass wizardry—and imply the recording is clean enough to enjoy every nuance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive reviews (13 of 14 with 4‑5 stars) praise both the musical performance and imply a high‑quality soundboard source; only one abusive outlier exists, giving strong confidence in a top‑tier rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "No specific audio complaints; reviewers focus on performance and seem to assume clear, balanced sound typical of a soundboard partial."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "El Paso",
+      "Eyes of the World",
+      "Morning Dew",
+      "Mind Left Body Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The partial presents a seamless, high‑energy arc from Dark Star through El Paso into Eyes of the World and culminating in an emotional Morning Dew, highlighted as one of ’73’s finest sequences."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers rave about his peak guitar tone, slide screaming on Dark Star, and a show‑stopping Morning Dew.",
+    "Phil": "Praised for being \"plain sick\" during the Mind Left Body Jam and overall bass work.",
+    "Bob": "Mentioned positively in one review (“I love Bob”) though not highlighted musically.",
+    "Keys": "One reviewer angrily insults the keyboards, implying a negative experience with the organ/keys on this recording.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "El Paso": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mind Left Body Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T16:39:20.814111+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-08-01.partial.sbd.gans-Jungeblut.182.sbeok.shnf"
+}

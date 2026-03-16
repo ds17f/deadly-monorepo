@@ -1,0 +1,39 @@
+{
+  "summary": "Decent clarity in a crowd‑heavy matrix recording, but only the opening songs shine while the rest of the show falls flat.",
+  "review": "The recording offers acceptable sound quality with a bit more audience bleed than ideal, delivering clear moments that hint at the venue’s legendary acoustics. However, the performance disappoints beyond the first song of each set, with even The Other One described as lukewarm, leading to an overall underwhelming experience.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "low",
+    "rationale": "One low‑star review emphasizes a weak performance despite okay sound; limited data reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Sound is acceptable and clear in parts, but there is noticeable crowd presence that detracts from the mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": "Only the first song of each set is praised; the remainder of the concert is considered lackluster."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:07:48.809573+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-20.schoeps.willy.15410.sbeok.shnf"
+}

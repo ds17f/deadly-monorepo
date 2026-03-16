@@ -1,0 +1,57 @@
+{
+  "summary": "Decent audience recording of a historic early‑'82 show, highlighted by a fiery Peggy‑O and the classic Playing in the Band sandwich.",
+  "review": "The performance is praised for its energy – fans love the Peggy‑O rendition and the “Playing in the Band” sandwich that anchors the set. Recording quality is mixed; while some enjoy the atmospheric audience tape despite Dolby‑B quirks, others find it muffled and pocket‑recording‑like. Overall the show is considered a solid snapshot of the first 1982 concert.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is generally positive (classic sandwich, strong songs) while recording quality ranges from decent to poor; weighted average yields a mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Dolby‑B encoded tape with slight \"choked off\" feeling; some listeners note hiss and pocket‑tape ambience, while others find the atmosphere enjoyable. No soundboard source available."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Playing in the Band",
+      "Terrapin Station",
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Classic early‑'80s flow with a strong first set and a Playing in the Band sandwich that keeps momentum; fans describe it as a \"smokin'\" year for the Dead."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T18:13:18.547553+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-02-16.111364.nak300.hoey.flac16"
+}

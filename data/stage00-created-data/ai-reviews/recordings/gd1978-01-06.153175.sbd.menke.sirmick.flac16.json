@@ -1,0 +1,58 @@
+{
+  "summary": "Excellent soundboard capture with reduced hiss and crystal‑clear mix, highlighted by Keith’s piano on Loser and a smoking Estimated Prophet in the second set.",
+  "review": "The Menke sbd source is praised as possibly the best‑sounding Grateful Dead recording, offering lower background hiss and very clear vocals and instruments despite some residual noise during pauses. Musically the show is solid – tight playing throughout, with Keith’s piano on Loser and an all‑Bobby second set that includes a blazing Estimated Prophet, though Jerry’s vocal delivery slips on Dire Wolf and Mama Tried.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "One detailed 4‑star review highlights excellent recording quality and a generally strong performance, with only minor vocal flaws, leading to a high combined rating but low confidence due to single source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Lower hiss than typical sbd releases, clearer vocals and instruments; some hiss remains when no one is playing. No major drop‑outs or balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [
+      "Dire Wolf",
+      "Mama Tried"
+    ],
+    "setlist_flow": "First set solid with tight playing; second set highlighted by an all‑Bobby performance and a particularly smoking Estimated Prophet, giving the show a quirky but enjoyable arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as \"pretty crappy\" and occasionally missing words on Dire Wolf and Mama Tried.",
+    "Phil": "",
+    "Bob": "Piano praised as awesome throughout, especially on Loser; second set all Bobby noted as strong.",
+    "Keys": "Keith’s piano/high early tone highlighted as awesome for the entire show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:39:35.307843+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-06.153175.sbd.menke.sirmick.flac16"
+}

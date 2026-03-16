@@ -1,0 +1,44 @@
+{
+  "summary": "Nice soundboard recording of a solid show highlighted by an excellent Estimated Prophet → Eyes of the World, though Jerry’s vocal mix is a bit thin and the Day‑Job encore falls short.",
+  "review": "The sbd capture is clean and well‑balanced, delivering a clear picture of a generally tight performance. Reviewers praise the second set—especially the Estimated Prophet → Eyes of the World sequence—but note that Jerry’s vocal level is low and the Day‑Job encore feels under‑whelming.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently good to great musical performance (70% weight) with a clean soundboard source (30% weight); reviewers give 4–5 stars and highlight few minor issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Boards are described as \"nice\" and clear; no major drop‑outs mentioned, though a slight vocal mix issue is noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet > Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall solid set with strong second‑set momentum; the show loses a bit of steam on the Day‑Job encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are low/under‑mixed, but his playing remains solid.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated Prophet > Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Day Job": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T14:50:43.214224+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-03-29.sbd.10559.sbeok.shnf"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Good recording quality with strong band performance highlighted by a standout \"What's Goin' On\" and solid Jerry Garcia playing despite vocal critiques",
+  "review": "The reviewers praise the overall musicianship, especially the band's work on \"What's Goin' On\" and note Jerry Garcia's expressive guitar even if his vocals are uneven. Recording quality is rated highly by one reviewer, though another points out mislabeled track titles, leading to a mixed overall impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Positive comments on performance and recording are balanced by a negative note about labeling; with limited reviews the rating reflects good show quality (≈4) and excellent recording quality (≈5)."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "One reviewer gives \"5 stars for the recording\" indicating clear, listenable sound; no specific source type mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "What's Goin' On",
+      "Knocking on Heaven's Door"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set pacing; reviewers focus on individual song strengths."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is uneven, but his guitar work is praised as expressive and emotionally impactful.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "What's Goin' On": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knocking on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T14:35:41.356724+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-24.fm.unknown.83073.sbeok.shnf"
+}

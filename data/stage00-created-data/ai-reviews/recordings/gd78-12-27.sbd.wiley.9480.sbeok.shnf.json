@@ -1,0 +1,51 @@
+{
+  "summary": "Soundboard recording plagued by extreme pitch‑speed distortion, yet the performance shines with an energetic Half Step jam and a standout Peggy‑O.",
+  "review": "The show is marked by high energy – Garcia’s excited solo on the Half Step and a memorable Peggy‑O earn praise – but the source suffers from serious technical flaws. Reviewers report a splice glitch, overly fast playback and obvious pitch correction that make the tape sound like it was run at ~20 RPM, relegating the recording quality to poor despite decent musicianship.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Performance notes are generally positive (energy, standout songs) while technical issues dominate the recording feedback, leading to a middling overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Splice glitch in the middle of the jam, extreme speed/pitch distortion (appears ~20 RPM fast), and noticeable pitch‑correction artifacts; overall clarity is compromised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step",
+      "Peggy-O",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with high‑energy jams, highlighted by an enthusiastic Half Step segment and a strong Peggy‑O; the ending of Franklin’s Tower receives special mention for its unique jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as thrilled during his second solo on the Half Step, though vocal pitch sounds unnatural due to recording speed issues.",
+    "Phil": "",
+    "Bob": "Weir unleashes great chords toward the end of Franklin’s Tower, adding a distinctive jam element.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T17:50:41.447037+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-12-27.sbd.wiley.9480.sbeok.shnf"
+}

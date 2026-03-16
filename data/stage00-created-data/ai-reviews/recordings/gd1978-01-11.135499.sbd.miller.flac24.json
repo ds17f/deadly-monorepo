@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard capture of a killer Terrapin Station set with a smoking St. Stephen jam, but tape hiss and a missing minute‑plus segment limit the listening experience.",
+  "review": "Fans rave about the high energy performance – calling it one of the best ‘Terrapins’ ever with a standout Drums > St. Stephen sequence – while noting the recording suffers from noticeable tape hiss and an unfortunate cut that omits over a minute of music between the Drum and Space sections. The source is a soundboard (SBD) recording, so the overall mix is solid when the noise is reduced, but the missing portion keeps it from being truly flawless.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Positive comments about the musical performance are tempered by technical shortcomings: tape hiss and a significant missing segment reduce overall enjoyment, leading to an average‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Tape hiss present; reviewer applied noise reduction. Missing ~1:24 of music at the flip between tracks 15 and 16 (Drums/Space) requires patching from alternate sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as a 'killer' and 'jammed out to perfection' performance with strong energy throughout, especially in the Drums > St. Stephen segment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T08:01:36.325973+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-11.135499.sbd.miller.flac24"
+}

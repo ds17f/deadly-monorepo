@@ -1,0 +1,81 @@
+{
+  "summary": "Soundboard recording with occasional clipping, yet delivers a classic 'That's It for the Other One' suite and standout Bird Song and Sugar Magnolia performances.",
+  "review": "The two detailed reviews note that this 1971 sound‑board tape suffers from some technical glitches – missing mics on the opening of “Bertha” and clipped beginnings on “Truckin’” and “Not Fade Away.”  Musically, however, the show shines with a legendary Other One suite, tight “Casey Jones,” a spry “Loser,” a perfect “Sugar Magnolia,” and what many call the best example of late‑71 “Bird Song.”",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Show is praised for several standout performances despite a few weak songs and noticeable recording glitches; overall rating falls in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Missing mics on the start of “Bertha,” clipped intros on “Truckin’” and “Not Fade Away,” occasional muddiness, but overall clear enough to enjoy the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "That's It for the Other One",
+      "Casey Jones",
+      "Loser",
+      "Sugar Magnolia",
+      "Bird Song",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Big Boss"
+    ],
+    "setlist_flow": "First set builds typical ’71 energy with solid mid‑tempo numbers; the second set delivers deep jams and strong transitions, highlighted by an expansive Other One suite and a spacious Bird Song."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocals on “Bertha” come in late because the mics weren’t up initially.",
+    "Phil": "Bass is described as \"on the button\" throughout, especially on Bird Song and Not Fade Away.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "That's It for the Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Boss": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T07:10:19.341460+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-08-05.137288.sbd.miller.flac16"
+}

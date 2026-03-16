@@ -1,0 +1,31 @@
+{
+  "summary": "Soundboard tape praised for its excellent capture, though reviewers give no detail on the musical performance.",
+  "review": "One reviewer gushes over the Healy tapes, giving the recording a perfect five‑star rating and expressing enthusiasm for having a copy. Another reviewer flags an error about the Steve Miller Band opening, but offers no insight into the music or sound quality. No specific songs or band member performances are mentioned.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Positive feedback on the tape’s existence and presumed soundboard source offsets a single negative, non‑musical comment; limited detail keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No complaints about clarity or mix; praised as a valuable tape capture."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T06:39:11.990226+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-08.150494.sbd.miller.flac2448"
+}

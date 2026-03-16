@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard transfer of a short but lively 1969 show with standout Pigpen vocals on Good Morning Little Schoolgirl, Hard to Handle and an epic Lovelight",
+  "review": "The Charlie Miller‑sourced soundboard capture is top‑shelf – clear, well‑balanced and praised as “excellent”. Musically the set is brief yet energetic, highlighted by Jerry’s slide on Hard to Handle, Pigpen’s fiery Schoolgirl performance, a jam‑heavy Doin’ That Rag, a soulful Morning Dew and a marathon 24‑minute Lovelight. The only real blemish noted is the infamous ugly yellow dog joke.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (4–5 stars) and praise the superb soundboard transfer; weighted average of strong show quality (≈4) and excellent recording quality (≈5) yields ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Transfer by Charlie Miller described as top‑shelf, crisp and clean; no issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard to Handle",
+      "Good Morning Little Schoolgirl",
+      "Doin' That Rag",
+      "Morning Dew",
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A short, roughly one‑hour set that feels incomplete (no second set present). Despite its brevity the performance is lively and well‑played, with Pigpen dominating vocals."
+  },
+  "band_member_comments": {
+    "Jerry": "Plays slide on Hard to Handle; emphasizes a dramatic G at the end of Doin' That Rag; praised throughout.",
+    "Phil": "Bass work noted as being at its very best during the jam sections.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Both drummers are highlighted as being at their very best."
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Good Morning Little Schoolgirl": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Doin' That Rag": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T13:59:38.774843+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-04-25.sbd.miller.97392.sbeok.flac16"
+}

@@ -1,0 +1,87 @@
+{
+  "summary": "Clear audience (AUD) recording of the 1993 Buffalo show delivers solid playing with standout Broken Arrow and haunting Days Between.",
+  "review": "The audience‑sourced tape is praised for its surprising clarity and balanced mix, making the band’s 1993 sound come through nicely.  While the performance is described as routine overall, several songs—especially Broken Arrow, Days Between, Looks Like Rain (acoustic) and Minglewood—are highlighted as exceptional moments that lift the show.  The set flows smoothly with a solid first set and an engaging second set, though Touch of Grey is noted as a downbeat point.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and praise both the sound quality and key performances; only a few low scores focus on blandness, so overall rating is strong."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Many reviewers call the AUD clear, crisp and well‑balanced (\"sizzling hot AUD\", \"clarity of all instruments is astounding\"); a few note it’s not spectacular but still very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Broken Arrow",
+      "Days Between",
+      "Looks Like Rain",
+      "Minglewood",
+      "Cassidy",
+      "The Other One",
+      "Loser"
+    ],
+    "poor_songs": [
+      "Touch of Grey"
+    ],
+    "setlist_flow": "Solid, routine set with a well‑structured first set (9 songs) and an engaging second set; overall tight playing despite occasional bland moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise Jerry’s licks and riffs—especially on Broken Arrow and during Looks Like Rain—and note his acoustic work adding extra punch.",
+    "Phil": "Phil is highlighted for a loud, crunchy bass tone and for stepping up as a leader in the summer ’93 shows.",
+    "Bob": "Bob (Bobby) gets credit for the acoustic rendition of Looks Like Rain and for strong vocal contributions; some note he cuts jams short too early.",
+    "Keys": "Vince’s keyboard work is called \"crazy good\" and a highlight of the era, with occasional Brent‑style tones noted.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Broken Arrow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Days Between": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T14:10:24.749430+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-13.schoeps.ladner.8584.sbeok.shnf"
+}

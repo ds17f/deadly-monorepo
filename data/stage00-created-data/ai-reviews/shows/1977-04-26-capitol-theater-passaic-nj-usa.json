@@ -1,0 +1,72 @@
+{
+  "summary": "Competent set with strong Dancin' & Estimated Prophet amid fair audience tape",
+  "blurb": "The show features a fiery Dancin' In The Street and an inspired Estimated Prophet, highlighted by Jerry's scorching solo work. The first set is uneven but the second half lifts the energy with solid contributions from Keith and the rhythm section. Recording quality is fair, with audience chatter and occasional drop‑outs.",
+  "review": "April 26, 1977 at the Capitol Theater captures a solid Grateful Dead performance that swings between laid‑back and high‑energy. Jerry Garcia delivers hot slide work and vocal fire on Dancin' In The Street and Estimated Prophet, while Keith Godchaux adds sturdy organ on Big River and tasteful Moog textures on the Prophet. The first set meanders a bit—Bertha, Cassidy and Friends of the Devil sit in the background—but the second half really kicks up, with Mississippi Half‑Step Uptown Toodeloo, Stella Blue and Sugar Magnolia keeping momentum alive. The only real drawback is the audience tape: noticeable chatter, warble and occasional drop‑outs keep it from being crystal clear, yet the full band mix still shines through for anyone looking to hear a competent late‑spring 1977 show.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.0,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.4,
+      "sentiment_rationale": "The single audience recording review is mixed but leans positive: reviewers praise Jerry's solos, Keith's organ/Moog work and the strong Dancin' and Estimated Prophet performances while noting only modest recording flaws. No consistent negative comments about playing were found, so a modest positive adjustment is applied.",
+      "final_calculation": "2.5 + 0.1 + 0.4 = 3.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd77-04-26.aud.goodbear.260.sbefail.shnf",
+    "reason": "Only available source; despite fair quality it captures the full set and highlights the standout Dancin' and Estimated Prophet moments."
+  },
+  "key_highlights": [
+    "Fire‑filled Dancin' In The Street showcases Jerry's scorching solo work.",
+    "Estimated Prophet features strong Moog textures from Keith and a soaring vocal delivery.",
+    "Second‑set energy lifts the show with Mississippi Half‑Step Uptown Toodeloo, Stella Blue and Sugar Magnolia.",
+    "Fair audience tape retains full band mix but suffers from chatter and occasional drop‑outs."
+  ],
+  "song_highlights": [
+    "Dancin' In The Street",
+    "Estimated Prophet",
+    "Bertha",
+    "Stella Blue",
+    "Mississippi Half-Step Uptown Toodeloo",
+    "Cassidy"
+  ],
+  "band_performance": {
+    "Jerry": "Hot slide work and fiery guitar/vocal performance, especially on Dancin' In The Street and Estimated Prophet.",
+    "Phil": "Bass is present but not a focal point; reviewers only note he tried to find space in the mix.",
+    "Bob": "Vocal presence noted with his trademark beard; generally positive but no specific highlights mentioned.",
+    "Brent": "Keith delivers solid organ on Big River and adds tasteful Moog textures during Estimated Prophet, keeping the keyboard work steady and engaging.",
+    "Mickey": "Gets a brief nod for steady percussion; no detailed critique provided.",
+    "Billy": ""
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-24T21:41:19.132360+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dancin' In The Street",
+      "Drums",
+      "Eyes Of The World",
+      "Samson & Delilah"
+    ],
+    [
+      "Estimated Prophet"
+    ],
+    [
+      "Bertha"
+    ],
+    [
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    [
+      "Mississippi Half-Step Uptown Toodeloo"
+    ],
+    [
+      "Cassidy"
+    ]
+  ]
+}

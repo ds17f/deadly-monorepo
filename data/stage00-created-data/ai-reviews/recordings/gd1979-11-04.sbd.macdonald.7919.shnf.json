@@ -1,0 +1,92 @@
+{
+  "summary": "A clean soundboard capture of a late‑1979 show that delivers blistering jams on He’s Gone, Estimated into Other One and an unforgettable Althea solo.",
+  "review": "The recording is praised for its crystal‑clear, well‑balanced soundboard quality, letting listeners fully enjoy the band’s tight playing. Highlights include a powerful second set with jam‑heavy transitions from Estimated into He’s Gone, a heavy The Other One, a rocking Wharf Rat and an Althea solo that showcases Jerry’s masterful guitar work. Overall the performance is described as great, with sweet keyboard textures from Brent and solid rhythm from Phil, Bob and the drums.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviewers gave 4–5 stars and highlighted strong musical moments while noting only minor (non‑critical) issues; recording is consistently described as clean, giving a high combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the tape \"lovely\" and \"clean\", noting crisp mix with no significant drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Estimated > He's Gone",
+      "The Other One",
+      "Wharf Rat",
+      "Althea",
+      "Alabama Getaway",
+      "Lost Sailor > Saint",
+      "Greatest Story Ever Told",
+      "Minglewood Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong opening with a surprise Minglewood Blues, smooth transition into Lost Sailor/Saint and Alabama Getaway, then a second set that builds momentum through jam‑heavy Estimated → He's Gone, heavy The Other One and finishes on high energy with Wharf Rat."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is highlighted in He’s Gone and especially the final Althea solo, described as tying the song together like a knot.",
+    "Phil": "Bass lines are praised for their sweet interplay with Brent’s keyboards before yielding to Jerry’s licks.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard solos are called melodic, sweet and far‑out, adding texture throughout the set.",
+    "Drums": "The drum riff leading into He’s Gone is noted as a memorable dirge‑like motif; overall drumming in the second set is praised."
+  },
+  "song_mentions": {
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lost Sailor > Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T00:59:47.615974+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-04.sbd.macdonald.7919.shnf"
+}

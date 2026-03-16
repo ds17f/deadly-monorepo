@@ -1,0 +1,58 @@
+{
+  "summary": "Mixed‑feel show with jazzy Other One and Heaven Help the Fool, but a noticeably out‑of‑tune Donna on Scarlet Begonias; soundboard source sounds decent.",
+  "review": "The performance shines in the first “Other One” and “Heaven Help the Fool,” which reviewers call jazzy and nice, but the vocal from Donna Jean on “Scarlet Begonias” is described as out of tune, dampening the overall vibe. The recording appears to be a soundboard capture with no major technical complaints, though only one review limits confidence in that assessment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "One review gives 4 stars and praises several songs while noting a vocal flaw; recording quality isn’t discussed, so the rating leans on mixed show feedback."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific audio‑quality comments; assumed clear since no issues were raised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Heaven Help the Fool"
+    ],
+    "poor_songs": [
+      "Scarlet Begonias"
+    ],
+    "setlist_flow": "Review mentions a jazzy first “Other One” and a solid “Heaven Help the Fool,” but highlights vocal problems on “Scarlet Begonias”; overall flow appears uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "",
+    "Donna": "Out of tune vocals on Scarlet Begonias"
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Heaven Help the Fool": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    }
+  },
+  "processed_date": "2025-09-23T01:16:57.475764+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-10-17.sbd.royer.10360.shnf"
+}

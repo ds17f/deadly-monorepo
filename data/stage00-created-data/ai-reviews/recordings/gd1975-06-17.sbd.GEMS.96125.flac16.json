@@ -1,0 +1,99 @@
+{
+  "summary": "A solid soundboard capture of a creative 1975 show – Slipknot! and Franklin’s Tower shine, but the mix is occasionally muddy and some jams feel uneven.",
+  "review": "The recording is a fairly complete SBD that sounds good overall, though listeners note occasional muddiness and a very Phil‑forward mix. Musically the concert is a work‑in‑progress from the “jazz‑suite” era with standout moments like Slipknot! → Franklin’s Tower, a strong Crazy Fingers debut, and the Blues for Allah suite, while tracks such as Peggy‑O and Sugar Mag fall short.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4–5 stars and praise several performances; recording quality is good but not pristine, yielding an overall strong yet imperfect rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD with some muddy sections and occasional roughness; Phil's bass sits high in the mix (a plus for some), and a few drop‑outs are mentioned on Crazy Fingers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Slipknot!",
+      "Franklin's Tower",
+      "Crazy Fingers",
+      "Beat it On Down the Line",
+      "Big River",
+      "Help on the Way (instrumental)",
+      "Blues for Allah > Sand Castles & Glass Camels",
+      "King Solomon's Marbles"
+    ],
+    "poor_songs": [
+      "Peggy-O",
+      "Sugar Mag"
+    ],
+    "setlist_flow": "The concert feels like a creative, work‑in‑progress set from the hiatus year – the first full Dead sets of ’75, relatively short overall, with a concise second set that still delivers strong jazz‑suite explorations."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for multiple solos (especially on Peggy-O and Crazy Fingers) and backing vocals with Donna; occasional lyric flubs noted.",
+    "Phil": "Often highlighted as very high in the mix (“Phil‑friendly”) and his bass work on King Solomon's Marbles is noted positively.",
+    "Bob": "Mentioned for blown lyrics alongside Jerry, but no specific musical praise.",
+    "Keys": "Keith’s original keyboard textures on Crazy Fingers are singled out as a highlight.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Slipknot!": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Beat it On Down the Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Help on the Way (instrumental)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blues for Allah > Sand Castles & Glass Camels": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "King Solomon's Marbles": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Unusual Occurrences": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Mag": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T02:05:32.955786+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1975-06-17.sbd.GEMS.96125.flac16"
+}

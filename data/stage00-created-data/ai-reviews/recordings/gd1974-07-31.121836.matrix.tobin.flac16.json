@@ -1,0 +1,31 @@
+{
+  "summary": "Clean, flangeless matrix recording that works well, though track titles are shifted by one.",
+  "review": "The release is a matrix mix of audience and soundboard sources that avoids the usual flanging problems, delivering clear and balanced audio. Reviewers praise the sound quality but note a labeling error where songs are offset starting with track 2. No specific comments on the musical performance were provided.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Only one detailed review, but it gives a perfect rating for sound quality and only minor complaints about track labeling; lack of show commentary limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear mix without flanging artifacts; however, song titles are mis‑aligned (off by one starting at track 2)."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No performance details provided in the review."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T23:26:22.090097+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-07-31.121836.matrix.tobin.flac16"
+}

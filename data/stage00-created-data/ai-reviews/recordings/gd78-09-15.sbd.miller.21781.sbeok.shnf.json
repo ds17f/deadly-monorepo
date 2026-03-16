@@ -1,0 +1,31 @@
+{
+  "summary": "Soundboard recording suffers from a bad mix despite being captured at a great venue; the performance itself is well‑regarded.",
+  "review": "The reviewer praises the location and overall vibe of the show, awarding it four stars, but laments that the mix is poor, suggesting an unbalanced or muddy sound. The setlist isn’t discussed, so the musical quality appears solid enough to outweigh the recording flaws for this listener.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only one review; positive rating (4 stars) indicates a good show, but the explicit complaint about a bad mix lowers the overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Mix described as bad—likely unbalanced, muddy, or lacking clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewer’s positive rating implies an enjoyable performance overall."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T15:10:46.214313+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-09-15.sbd.miller.21781.sbeok.shnf"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard recording captures a solid set highlighted by a soaring Terrapin Station and bright Sunshine performance.",
+  "review": "The digital sound‑board source is praised as high‑quality and well‑remastered, delivering crystal‑clear audio. Musically the show is decent with standout moments on Terrapin Station and Garcia’s lead on Sunshine, though some reviewers felt the latter part of the concert lost momentum after the drums/space segment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently rated excellent, while the musical performance is viewed as good but uneven, yielding an overall rating around four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "High‑quality dsbd (digital soundboard) remastered by C. Miller; no reported dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Sunshine"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early and mid‑set are praised for tight playing and harmonizing, but the energy wanes after the drums/space segment, leaving the latter part feeling less compelling."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar work on 'Sunshine' is highlighted as strong and his vocals on 'Terrapin Station' are praised.",
+    "Phil": "Phil's bass playing is described as really good throughout the concert.",
+    "Bob": "",
+    "Keys": "Reviewer prefers the Brent/Hornsby keyboard era over Vince, indicating mixed feelings about the post‑Brent keyboards.",
+    "Drums": "A comment notes a lack of excitement after the drums and space portion, but no direct criticism of the drummers themselves."
+  },
+  "song_mentions": {
+    "Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T17:20:18.169290+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-21.dsbd.miller.28765.sbeok.flacf"
+}

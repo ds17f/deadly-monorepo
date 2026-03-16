@@ -1,0 +1,80 @@
+{
+  "summary": "Excellent audience recording captures a high‑energy 1984 show highlighted by scorching Scarlet→Fire, soaring Let It Grow and a magical Jerry Garcia performance.",
+  "review": "The five reviewers rave about the show's fire‑filled set, especially the blistering Scarlet>Fire sequence, the ecstatic Let It Grow jam and Jerry’s spell‑binding guitar work that lifts even tired standards. The audience tape is praised for its classic 80s ambience, clear crowd presence and overall excellent sound despite a hint of vocal strain, making it a very listenable document.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All reviews are 4‑5 stars, consistently praising both the musical performance and the audio quality; weighting yields a rating in the high 4‑range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Classic 80s audience tape with clear crowd ambience, crisp instrument balance, slight vocal strain on Garcia but overall very listenable and well‑captured."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "Let It Grow",
+      "U.S. Blues",
+      "Tennessee Jed",
+      "Brown-eyed Women"
+    ],
+    "poor_songs": [
+      "Cassidy"
+    ],
+    "setlist_flow": "Reviewers note a varied set of delights with strong transitions, free‑flowing jams and high‑powered Jerry energy that keeps the momentum moving throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s gravelly, sometimes strained vocals add bluesy feel; his guitar solos are described as magical, fast‑paced and full of velocity.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s classic 80s keyboard work is highlighted as beautiful, driving and essential to the jams.",
+    "Drums": "The drumming is praised as perfect and awesome, especially during the Fire segment."
+  },
+  "song_mentions": {
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown-eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T23:39:19.170486+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-30.senn.vernon.17415.sbeok.shnf"
+}

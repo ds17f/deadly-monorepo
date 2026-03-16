@@ -1,0 +1,45 @@
+{
+  "summary": "A hot, nostalgia‑charged show with a few standout moments (Brokedown Palace, Saint of Circumstance) but mixed opinions on performance; recording quality is unknown and likely only average.",
+  "review": "Attendees remember an extremely hot July night in 1986 with Tom Petty and Bob Dylan opening before the Dead. While some fans rave about highlights like a powerful Brokedown Palace and a newfound love for Saint of Circumstance, others describe the concert as one of the weaker experiences and note that Jerry Garcia fell ill shortly after. No specific comments on sound quality were made, leaving the recording’s fidelity unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Reviews are split between enthusiastic (5‑star) recollections and a strongly negative 1‑star critique; average star rating is ~3.3, suggesting an overall average show with uncertain recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer commented on soundboard vs. audience or clarity; absence of remarks implies the audio is at least listenable but not noteworthy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace",
+      "Saint of Circumstance"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers give little detail on set pacing; the concert is remembered mainly for its heat, opening acts, and occasional high points rather than overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "No specific playing remarks; several notes that Jerry got sick shortly after the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:15:15.165874+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-07-06.fob-senn.adelman-koucky.86521.flac16"
+}

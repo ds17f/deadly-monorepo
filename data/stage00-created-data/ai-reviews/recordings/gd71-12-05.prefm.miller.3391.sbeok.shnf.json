@@ -1,0 +1,43 @@
+{
+  "summary": "High‑energy 12/5/71 New York concert with smoking Dark Star jams and tight playing, caught on a good‑but‑muddy pre‑FM broadcast mix.",
+  "review": "The Felt Forum show shines with remarkable transitions – the Dark Star Jam → Me & My Uncle → Dark Star Jam → Sittin' sequence and the NFA→GDTRFB→NFA flow are repeatedly praised, as are Jerry’s soaring guitar tones and Keith’s fresh piano work.  The recording is a pre‑FM broadcast (matrix) that isn’t as crisp as later soundboard tapes; it’s a bit compressed and occasionally muddy, but remains fully listenable and lets the band’s high‑octane performance shine through.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Over thirty reviews overwhelmingly rate the show 4–5 stars, highlighting superb musical moments despite some recording mud‑ness; weighted rating (70% show, 30% recording) yields ~4.4."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Pre‑FM broadcast mix with noticeable compression and occasional muddiness; not as crisp as later soundboard releases but clear enough to enjoy the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star Jam → Me & My Uncle → Dark Star Jam → Sittin'",
+      "NFA → GDTRFB → NFA",
+      "Comes a Time",
+      "Tennessee Jed",
+      "El Paso",
+      "Jack Straw",
+      "Mister Charlie",
+      "Sittin' on Top of the World",
+      "You Win Again"
+    ],
+    "poor_songs": [
+      "Muddy Water"
+    ],
+    "setlist_flow": "Three‑hour marathon with smooth early transitions that explode into high‑octane jams later; the set maintains a relentless, upbeat momentum throughout.",
+    "energy_level": "high"
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his screaming guitar tone, slide work on Hurts Me Too and overall fiery playing.",
+    "Phil": "Noted as 'driving the train' with a tasty bass performance especially on Comes a Time.",
+    "Bob": "",
+    "Keys": "Keith’s honky‑tonk piano is highlighted as fresh and cutting during jams.",
+    "Drums": ""
+  },
+  "processed_date": "2025-09-07T21:02:25.058922+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-12-05.prefm.miller.3391.sbeok.shnf"
+}

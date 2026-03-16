@@ -1,0 +1,45 @@
+{
+  "summary": "High‑energy show highlighted by a soaring Comes A Time and Stranger jam, captured on a surprisingly clear audience recording.",
+  "review": "Fans rave about the powerful Jerry ballads – especially the Stranger → Comes A Time sequence – and rate this audience tape as one of the best they’ve heard. The crowd was chaotic, but the performance shines through; the recording is praised for its clarity despite being an audience source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Four of five reviewers gave 4‑5 stars and highlighted outstanding musical moments, while one low‑rating review focused on crowd issues rather than the music itself. Recording quality is consistently praised, leading to a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call it \"best aud\" and note that this version sounds better than earlier copies, with no complaints about drop‑outs or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is remembered for its powerful Jerry ballads and a standout Stranger → Comes A Time jam; crowd chaos is noted but does not detract from the musical flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Several reviewers highlight his ballad work, especially on \"Comes A Time\" and the \"Stranger\" jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Comes A Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-12T23:08:11.864780+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-10.aud.wise.83063.sbeok.flac16"
+}

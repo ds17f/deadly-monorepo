@@ -1,0 +1,66 @@
+{
+  "summary": "Tight set with standout He's Gone → Smokestack and strong drums.",
+  "blurb": "The show delivers a solid flow highlighted by the He's Gone → Smokestack Lightning sequence and a punchy drum solo. Jerry’s presence varies but his guitar work remains effective, while Brent adds texture throughout. Overall a spirited performance with several memorable moments.",
+  "review": "On May 11, 1986 at Frost Amphitheatre, the Dead served up a tight, well‑sequenced set that still feels fresh for listeners today. The second set shines brightest: a soaring \"He's Gone\" segues into a slinky \"Smokestack Lightning,\" and the drum duo of Mickey and Bill launch an energetic solo that fuels the subsequent jams on \"The Other One\" and \"Comes A Time.\" While Jerry’s playing was noted as uneven—some reviewers felt he was only half‑present, others praised his sweet, full‑bodied solo—the guitarist still managed to engage the crowd with cool interaction and occasional fireworks. Brent’s keyboards sit nicely in the mix, supporting the band’s dynamics without overpowering them. The encore of \"I Need A Miracle\" into a rousing \"U.S. Blues\" caps an evening that, despite a few mixed moments, remains a solid representation of the mid‑80s Dead sound.\n\nAcross the available recordings the consensus is clear: this show offers strong rhythmic foundations, highlighted by Mickey’s intricate patterns and Bill’s driving beats, plus standout performances of \"Crazy Fingers,\" \"Comes A Time,\" and the ever‑crowd‑pleasing encore. For fans seeking a reliable listening experience, the Walker‑Scotton soundboard (gd1986-05-11.sbd.walker-scotton.miller.81626.flac16) captures the set with crisp clarity while preserving the live energy that defines this era.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 20,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Multiple recordings (3 positive, 3 mixed) consistently praise standout moments like He's Gone → Smokestack, Crazy Fingers, and the drum solo while offering only neutral or mixed comments about overall playing. The balance of positive remarks across several sources warrants a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.2 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1986-05-11.sbd.walker-scotton.miller.81626.flac16",
+    "reason": "Clear, crisp soundboard capture with strong overall balance; highlights the set flow and drum solo while minimizing typical mid‑80s artifacts."
+  },
+  "key_highlights": [
+    "\"He's Gone\" → \"Smokestack Lightning\" transition praised for its slinky energy.",
+    "Killer drum solo and intricate rhythms from Mickey and Bill energize the second set.",
+    "Strong renditions of \"Comes A Time\", \"I Need A Miracle\" / \"U.S. Blues\" encore, plus \"Crazy Fingers\"."
+  ],
+  "song_highlights": [
+    "He's Gone",
+    "Smokestack Lightning",
+    "Crazy Fingers",
+    "Comes A Time",
+    "I Need A Miracle",
+    "U.S. Blues",
+    "The Other One"
+  ],
+  "band_performance": {
+    "Jerry": "His playing fluctuates—at times half‑present—but he delivers a sweet, full‑bodied solo on He's Gone and engages the audience with cool interaction.",
+    "Phil": "Bass work shines, especially the powerful entry on The Other One; Phil enjoys stage jokes and draws crowd chants.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Intricate rhythms and post‑drum energy are singled out as major highlights, driving the set’s momentum.",
+    "Billy": "The drum solo (\"drumz\") is a favorite moment, praised for its energy and tight execution."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-15T16:00:00.423031+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Samson & Delilah",
+      "Crazy Fingers",
+      "He's Gone",
+      "Smokestack Lightning",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Comes A Time",
+      "Around & Around",
+      "Not Fade Away"
+    ],
+    [
+      "I Need A Miracle",
+      "U.S. Blues"
+    ]
+  ]
+}

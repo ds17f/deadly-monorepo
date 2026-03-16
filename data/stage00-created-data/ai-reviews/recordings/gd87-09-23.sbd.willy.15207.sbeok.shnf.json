@@ -1,0 +1,89 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy 1987 show with standout Bertha > Cumberland > Playin’ > U.B. Jesus and a scorching La Bamba, despite minor static.",
+  "review": "The concert is praised for its soaring second set, dancing Jerry Garcia, and memorable moments like the Bertha‑Cumberland‑Playin’‑U.B. Jesus sequence and an electrifying Good Lovin'/La Bamba. The soundboard recording is generally clear, though a few listeners note static on Bob’s mic and a glitch in the first track.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.2; most comments are enthusiastic about both performance and sound quality, with only minor technical complaints."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall clear and well‑balanced soundboard tape; occasional static on Bob Weir's mic in the first minute and a brief audio glitch on track one, but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Cumberland Blues",
+      "Playin' in the Band",
+      "U.B. Jesus",
+      "Good Lovin'",
+      "La Bamba",
+      "Desolation Row",
+      "Big Railroad Blues",
+      "Mr. Fantasy"
+    ],
+    "poor_songs": [
+      "U.B. Jesus"
+    ],
+    "setlist_flow": "The second set is highlighted as a high‑energy, beautifully flowing segment with seamless transitions (Bertha→Cumberland→Playin'→U.B. Jesus) and a rousing Good Lovin'/La Bamba finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia was visibly dancing, grinning during La Bamba, and delivered fun, energetic guitar work throughout.",
+    "Phil": "",
+    "Bob": "A brief static issue on his mic at the start; his impassioned vocals on Desolation Row were noted.",
+    "Keys": "Brent (keyboards) provided colorful Hammond flurries and well‑placed additions that lifted several songs.",
+    "Drums": "The drumming was solid, with a nice melding of guitar and drums during Space; no major criticisms."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "U.B. Jesus": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "La Bamba": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Desolation Row": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:23:03.774054+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-23.sbd.willy.15207.sbeok.shnf"
+}

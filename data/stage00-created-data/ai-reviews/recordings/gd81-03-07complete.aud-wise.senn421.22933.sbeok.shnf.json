@@ -1,0 +1,69 @@
+{
+  "summary": "Audience recording with a distant yet full sound captures an electrifying first set highlighted by an epic Bird Song, though the mix is uneven and the second set loses some momentum.",
+  "review": "The show shines on its first half – a high‑energy opener, a scorching Jerry on guitar, and a legendary Bird Song that many reviewers call “epic.” The audience tape is generally balanced but often sounds distant, with static, muted bass and occasional drop‑outs that make Phil’s playing hard to hear. The second set starts strong with Iko Iko but fades in cohesion, and the recording quality further declines, leaving listeners with a mixed listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers (30+) rate the performance 4‑5 stars and praise the first set and Bird Song; several note recording flaws, pulling the overall impression toward a solid but imperfect 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Often described as distant or “full” with minimal crowd noise; static and occasional drop‑outs reported. Phil’s bass is frequently inaudible, and the mix can sound muffled (especially on the board‑derived “FOB”). Overall balance is decent but lacks crispness of a true soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Iko Iko",
+      "Deal",
+      "Looks Like Rain",
+      "Alabama (Aiko)",
+      "The Eleven Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as hard‑driving, with a long, soaring Bird Song and tight jams; the second set opens with an enthusiastic Iko Iko but becomes uneven, with lighting interruptions and less cohesive transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for being “on fire,” delivering scorching guitar work on Bird Song and other jams; a few reviewers note he seemed ill or even sat down during the second set.",
+    "Phil": "Often noted as barely audible or completely missing in the mix; one comment mentions him checking equipment early on stage.",
+    "Bob": "",
+    "Keys": "Brent’s keyboards are heard faintly, with occasional comments that they’re present but low‑level.",
+    "Drums": "Drums are generally audible and keep the rhythm solid throughout."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Iko Iko": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Deal": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alabama": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "The Eleven Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T09:01:56.664302+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-03-07complete.aud-wise.senn421.22933.sbeok.shnf"
+}

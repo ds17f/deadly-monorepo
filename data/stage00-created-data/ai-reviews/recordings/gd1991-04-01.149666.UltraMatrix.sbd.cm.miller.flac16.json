@@ -1,0 +1,31 @@
+{
+  "summary": "Positive overall impression (4‑star rating) but no specific details about the performance or audio quality.",
+  "review": "The lone reviewer gave this recording a solid four‑star rating and offered a friendly thank‑you, suggesting general satisfaction. However, the review contains no information about the setlist, individual songs, band members, or the technical aspects of the recording, leaving those qualities undefined.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one brief 4‑star review; indicates a generally good impression but provides no concrete details to assess show or recording quality more precisely."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on sound quality, source type, or mix were provided by the reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The review does not mention any aspects of set pacing, song transitions, or overall performance flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T18:03:12.667337+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-01.149666.UltraMatrix.sbd.cm.miller.flac16"
+}

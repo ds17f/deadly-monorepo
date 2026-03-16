@@ -1,0 +1,87 @@
+{
+  "summary": "Fair soundboard capture of an average summer‑90 show, highlighted by a solid post‑He's Gone KY jam and a lively Sugaree but weighed down by several middling performances.",
+  "review": "The Fishman soundboard source provides a reasonably clear recording, though the release notes mention pitch issues with alternate sources. Musically the concert is described as an average first set with a few sparks (Sugaree) and a second half that only really lifts after the He's Gone jam, delivering a notable KY jam and a jazzy Phil moment in Around & Around. Overall listeners find the performance uneven, resulting in mixed feelings about the show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Reviews are split between average/low ratings for the overall show and modestly positive comments on specific jams; recording quality is judged decent, leading to an overall middle‑of‑the‑road rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Fishman soundboard capture is considered the best of the available sources; other versions suffer pitch problems, but no major clarity or drop‑out issues are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "He's Gone (post‑jam/KY Jam)",
+      "Around & Around",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Desolation Row",
+      "Picasso Moon",
+      "Truckin'",
+      "Standing on the Moon"
+    ],
+    "setlist_flow": "Average first set with few highlights; a lengthy (~2 hr) second set that only gains momentum after the He's Gone jam, ending with a solid KY jam and jazzy moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Noted for a nifty jazz sequence in Around & Around.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Picasso Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "KY Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T08:45:20.018363+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-06.sbd.fishman.9009.sbeok.shnf"
+}

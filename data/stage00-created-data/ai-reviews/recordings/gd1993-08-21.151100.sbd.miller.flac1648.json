@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard recording with crystal‑clear mix and flawless keyboards, highlighted by a powerful Here Comes Sunshine opener and strong performances of Way to Go Home, Standing on the Moon and Lazy River Road.",
+  "review": "The Miller‑taped soundboard delivers great, crisp audio that lets Vince’s keyboard work shine – every note sounds exactly right. Musically the show is upbeat, opening with the fan‑favorite Here Comes Sunshine and featuring memorable renditions of Way to Go Home, Standing on the Moon and Lazy River Road, while Huey Lewis’ harmonica lifts Bob’s Pigpen‑era stabs.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "The single detailed review is uniformly enthusiastic about both performance and sound quality, justifying a high rating despite limited sample size."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Great, crisp mix typical of Charlie Miller’s recordings; keyboards especially clear and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine",
+      "Way to Go Home",
+      "Standing on the Moon",
+      "Lazy River Road"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong opening with Here Comes Sunshine sets an upbeat tone; the set flows smoothly through energetic numbers and showcases solid musicianship throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Usually dislikes Bob's stabs at Pigpen classics, but Huey Lewis' harmonica makes them more than okay.",
+    "Keys": "Vince 'kicks butt' – all keyboard parts sound exactly perfect.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Way to Go Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T15:45:01.446570+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-08-21.151100.sbd.miller.flac1648"
+}

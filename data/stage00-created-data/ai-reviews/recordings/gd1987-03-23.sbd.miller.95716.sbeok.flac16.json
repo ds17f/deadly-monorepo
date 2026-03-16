@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard source with a distant, crowd‑heavy mix, yet the performance shines – especially the ripping Althea finale.",
+  "review": "Listeners are split on this 1987 recording: some praise the show’s energy and highlight a wild Althea ending, while others criticize the audio as sounding like a distant audience feed with excessive crowd bleed and missing track information. The source appears to be a soundboard capture, but its mix quality is uneven, making the listening experience mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Show performance receives strong praise (notably Althea), but recording quality is described as distant and poorly labeled, leading to an overall middle‑of‑the‑road rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Audio sounds distant like audience mic; crowd is very loud; some reviewers suspect a matrix blend. Missing track numbers/labels noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure; only the Althea ending is highlighted."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:23:05.264308+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-23.sbd.miller.95716.sbeok.flac16"
+}

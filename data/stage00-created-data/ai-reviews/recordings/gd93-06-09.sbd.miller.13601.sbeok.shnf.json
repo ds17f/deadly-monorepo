@@ -1,0 +1,82 @@
+{
+  "summary": "Clear Miller soundboard capture of a solid ’93 show highlighted by a smoking Help>Slip>Franklin's, stellar Bertha and an epic Wharf Rat.",
+  "review": "The recording is a clean SBD mix that lets the band’s strong 1993 playing shine. Reviewers repeatedly praise Jerry’s vocal fire and guitar licks, Vince’s piano work, and standout moments like Help>Slip>Franklin's, Bertha, China → Rider, Terrapin Station and an unforgettable Wharf Rat. A few songs (Easy Answers, Wave to the Wind, Fight The Law) are noted as weaker, but overall the performance is considered one of the better mid‑90s outings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both musical performance and recording quality across >5 detailed reviews; only minor song‑specific criticisms, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, balanced Miller SBD with no reported dropouts or distortion; reviewers describe the mix as fine and enjoyable throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Bertha",
+      "Wharf Rat",
+      "China > The Rider",
+      "Terrapin Station"
+    ],
+    "poor_songs": [
+      "Easy Answers",
+      "Wave to the Wind",
+      "Fought The Law"
+    ],
+    "setlist_flow": "First set gains momentum from Franklin's onward; second set flows tightly with strong transitions (China → Rider, jazzy jam into Drums) and a powerful closing Wharf Rat."
+  },
+  "band_member_comments": {
+    "Jerry": "Frequent praise for his vocal power, guitar tone and improvisational solos, noted as reminiscent of his pre‑coma era.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's piano work highlighted as great; mention of post‑Brent keyboard sound.",
+    "Drums": "Jazzy transition into Drums noted positively, but no specific drummer praise."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China > The Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Easy Answers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Fought The Law": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:44:19.814693+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-09.sbd.miller.13601.sbeok.shnf"
+}

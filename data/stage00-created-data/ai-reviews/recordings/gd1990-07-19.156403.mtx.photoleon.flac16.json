@@ -1,0 +1,31 @@
+{
+  "summary": "High‑energy 1990 show captured in a matrix recording, lauded for the band's peak performance despite no detailed sound quality notes.",
+  "review": "The reviewer hails the July 1990 concert as the zenith of the Dead’s later era, describing the band as being in “space overdrive” with everything running smoothly. While they don’t comment on specific songs or technical details, they imply the recording is acceptable, noting that earlier \"wall‑of‑sound\" years sounded better.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Strong positive appraisal of the performance (70% weight) and no reported recording issues (30% weight) lead to a high rating, but confidence is limited by having only one brief review."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on clarity or mix; reviewer only mentions that earlier \"wall of sound\" era had superior sound, implying this matrix source is acceptable but not exceptional."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer emphasizes overall peak energy and cohesion of the 1990 era rather than specific set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T10:24:19.076110+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-19.156403.mtx.photoleon.flac16"
+}

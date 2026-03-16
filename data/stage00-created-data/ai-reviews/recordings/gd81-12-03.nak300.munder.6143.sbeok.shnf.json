@@ -1,0 +1,82 @@
+{
+  "summary": "A clear ’81 audience tape that captures an energetic Madison show with a smoking Truckin’ and rare Deep Elem, though the bass is thin.",
+  "review": "The performance bursts to life after a tentative start, delivering top‑tier versions of Truckin’, Althea, Cassidy, Bertha and a standout Deep Elem electric. Brent’s keyboards roar on Crazy Crying Rider and the drums transition into Truckin’ like a Spanish bullfight, while Jerry’s guitar is full of fun. The audience recording is surprisingly clear for 1981 but suffers from weak bass and occasional hiss.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the show’s energy, song selection and memorable moments; recording quality is noted as clear but with thin bass, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear and crisp compared to other ’81 AUD tapes, but suffers from weak/very little bass, some hiss and a thin low‑end response."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Deep Elem",
+      "Althea",
+      "Cassidy",
+      "Bertha",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "Around"
+    ],
+    "setlist_flow": "Starts slow with a flubbed Jack Straw, then gains momentum; the second set builds into high‑energy jams and memorable transitions (drums → Truckin’). Overall pacing is upbeat and feels like a rollicking night despite a weak finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Strong, fun guitar work praised throughout; ‘strong Jerry’ noted.",
+    "Phil": "",
+    "Bob": "Weir occasionally cuts the jam short (Around), but his vocals contribute to the high energy.",
+    "Keys": "Brent’s keyboard solo on Crazy Crying Rider highlighted as a turning point that “rips it open.”",
+    "Drums": "Dynamic drumming, especially the Spanish‑bullfight‑style transition into Truckin’, is repeatedly praised."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deep Elem": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T16:42:57.230362+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-12-03.nak300.munder.6143.sbeok.shnf"
+}

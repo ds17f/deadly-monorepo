@@ -1,0 +1,66 @@
+{
+  "summary": "Rough but listenable matrix recording captures a powerful post‑Pigpen performance highlighted by an epic Other One and soaring Eyes of the World.",
+  "review": "The show is widely praised for its intense second‑set jams – especially The Other One, Playing in the Band, Eyes of the World and China Doll – with Jerry and Phil delivering standout improvisations.  Recording quality is mixed: the soundboard sections are usable but riddled with splice glitches, occasional channel drops and a very weak audience feed that many deem “only for completists.”",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the musical performance highly (average ~4.2) while consistently noting sub‑par recording quality (~3.0); weighted combination yields a solid 3.8‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Soundboard (SBD) portions are listenable but contain splice glitches (especially in Eyes), occasional mono sections and slight vocal distortion; audience (AUD) tracks are described as muddy, with channel drops and harsh patches that make them only tolerable for completists."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "The Other One",
+      "Eyes of the World",
+      "China Doll",
+      "Box of Rain"
+    ],
+    "poor_songs": [
+      "Playin' in the Band (over‑extended per one reviewer)",
+      "You Ain't Woman Enough (audio distortion)"
+    ],
+    "setlist_flow": "The first show after Pig Pen’s death feels a bit subdued early on, with the band playing in a circle and lacking focus, but the second set erupts into classic 1972‑74 jam energy, delivering long, cohesive improvisations that many fans consider among the year’s best."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for wild, spacey leads on The Other One and a ‘meltdown’ vibe in the jams; one reviewer notes his guitar is weak in the mix.",
+    "Phil": "Highlighted for heavy presence on The Other One and animated playing throughout the second‑set jams.",
+    "Bob": "",
+    "Keys": "Keith’s keyboard work noted as spacious and complementary to Jerry, with good interplay heard in the mix.",
+    "Drums": "Intense drumming praised, especially Bill Kreutzmann’s contributions during the jam sections."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Eyes of the World": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Doll": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T05:58:22.712631+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-03-15.sbd.cotsman.14035.sbeok.shnf"
+}

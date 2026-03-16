@@ -1,0 +1,39 @@
+{
+  "summary": "Clear audience recording with a beautifully tranquil first jam in \"Playin'\".",
+  "review": "Both reviewers praise this audience tape as the best‑sounding version they own, noting its clarity compared to other crowd recordings. The show shines especially during the opening jam of the rare song \"Playin',\" which is described as a peaceful, floating moment that stands out as a highlight.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Show quality is rated very high (standout Playin' jam) and recording quality is good (best‑sounding audience tape). Weighted combination yields a strong overall rating despite only two reviews."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Considered the best‑sounding audience source for this show; clear and balanced relative to other crowd recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set includes a gentle, peaceful opening jam on \"Playin',\" creating a tranquil atmosphere that reviewers highlighted as a peak moment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T19:56:02.861440+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-05-21.sonyecm18n.lee.miller.98822.sbeok.flac16"
+}

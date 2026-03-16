@@ -1,0 +1,63 @@
+{
+  "summary": "Fair‑quality recording captures a high‑energy 1989 show highlighted by a fiery Good Times Roll → I Know You Rider and standout first‑set performances.",
+  "review": "The performance is praised for its energetic first set, with highlights like Good Times Roll into I Know You Rider, a soaring Standing On The Moon closer, and strong contributions from Brent on Little Light and Row Jimmy. Reviewers note the recording is only decent to low in fidelity, but the musical excitement makes it worth listening despite the technical shortcomings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is generally praised (≈4/5) while recording quality receives mixed feedback (≈3/5); weighting yields a combined rating around 3.7."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer calls the sound quality low, another says it is decent; no specific source type mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Times Roll",
+      "I Know You Rider",
+      "Standing On The Moon",
+      "Little Light",
+      "Row Jimmy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as stronger than the second, ending powerfully with Standing On The Moon; overall flow praised for its energy and crowd engagement."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry nails the lyrics throughout; reviewers miss him and Brent.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboard work is highlighted as great, especially on Little Light.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Times Roll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing On The Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:25:13.728621+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-15.senn421.andrewf.89674.sbeok.flac16"
+}

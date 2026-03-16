@@ -1,0 +1,50 @@
+{
+  "summary": "A vibrant 1974‑era show highlighted by jazzy \"Playing in the Band\" jams and a solo Jack Straw, captured on an unspecified but listenable source.",
+  "review": "Both reviewers rave about the musical side of this performance – noting Keith’s jazz‑inflected playing on “Playing in the Band,” Brent’s bluesy organ feel, Donna’s Ella‑Fitzgerald style vocals, and a striking solo rendition of Jack Straw. No concrete details about the recording source are given, but the enthusiasm suggests the audio is at least adequate for enjoying these moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Both reviews give 5‑star ratings and praise the musical performance strongly; lack of recording‑quality comments keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers do not mention soundboard, audience bleed, or any audio flaws, implying an acceptable listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight jazzy improvisational spots typical of the ’74 era, with a notable solo moment on Jack Straw that adds variety to the set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith’s jazz‑jam contributions are specifically praised as a highlight of the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T01:53:10.402219+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-10-20.132113.sbd.boswell-smith.flac16"
+}

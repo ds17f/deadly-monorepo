@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard recording delivers a professional, crunchy‑guitar mix and captures a spirited show highlighted by an inspired Althea, despite occasional comments of fatigue.",
+  "review": "The performance is praised for its energy, tight playing and Jerry’s signature tone, with the standout Althea and a serendipitous guitar lead born from a missed lyric. The soundboard source provides a clear, professional mix, though a few listeners felt the overall vibe was a bit tired.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly (4‑5 stars) and note good soundboard quality, but two low ratings introduce doubt, yielding a solid but not exceptional overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and professional mix with crunchy guitar tones; some listeners describe the sound as tired or lacking energy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energy and enthusiasm are noted throughout, though one reviewer felt the overall vibe was a bit weary compared to nearby dates."
+  },
+  "band_member_comments": {
+    "Jerry": "Tone praised; vocals described as thin and he missed a lyric that turned into an improvised guitar lead.",
+    "Phil": "",
+    "Bob": "Vocals noted as thin; guitars (both his and Garcia's) described as crunchy.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T11:55:27.513524+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-31.sbd.miller.114456.flac16"
+}

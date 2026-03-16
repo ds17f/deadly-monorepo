@@ -1,0 +1,76 @@
+{
+  "summary": "High‑energy Spectrum show with soaring Wheel and fiery second set",
+  "blurb": "The band delivers a relentless second set highlighted by The Wheel, China Doll and a ripping Sugar Magnolia. Jerry’s guitar is on fire while Brent adds sparkling keys and vocal shouts. Overall the performance is tight, high‑energy and captures classic ’87 Dead spirit.",
+  "review": "On March 29, 1987 at Philadelphia’s Spectrum the Grateful Dead turned up the heat for a spring night that still feels fresh. The first set walks through solid roots—Hell In A Bucket into Bertha and a breezy Far From Me—but it’s the second set where they really let loose: Mississippi Half‑Step Uptown Toodeloo rolls straight into an expansive Playing In The Band, leading to a soaring Wheel that segues flawlessly into Goin’ Down The Road Feeling Bad and bursts back into another Playing In The Band before a blistering Black Muddy River and a triumphant Sugar Magnolia. Jerry Garcia’s “guitar windmills” and twangy riffs on Bertha and the Wheel are matched by Brent Mydland’s sparkling keyboards, vocal shouts on Let It Grow and Fire On The Mountain, and a thunder‑filled post‑drums segment that keeps the crowd buzzing despite the rainy night. Phil Lesh lays down an active, fearsome bass charge, while Mickey Hart and Bill Kreutzmann drive the rhythm with pedal‑to‑the‑metal intensity. In short, this show captures the classic ’87 Dead energy—tight transitions, high‑octane jams, and a setlist that swings from rockers to ballads without missing a beat.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 26,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Multiple recordings (five) praise the performance with strong language like 'top‑flight', 'soaring', 'stellar' and highlight numerous songs; only one recording notes dropouts, which concerns audio quality not playing. Consistent positive comments about Garcia’s guitar, Brent’s keyboards, and the high‑energy second set justify a robust +1.6 sentiment boost.",
+      "final_calculation": "2.5 + 0.2 + 1.6 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1987-03-29.nak300.andrewf.77977.sbeok.flac16",
+    "reason": "Pleasant, clear capture that’s praised as the top‑flight Spectrum recording; good audio quality without dropouts and solid representation of the show’s energy."
+  },
+  "key_highlights": [
+    "Relentless second set with tight transitions (Wheel → Sugar Magnolia) and a post‑drums burst of fire.",
+    "Jerry’s guitar windmills and soaring solos keep the band on the edge of chaos in a fun, high‑octane performance.",
+    "Brent Mydland’s sparkling keys and vocal shouts add extra excitement on Let It Grow, Fire On The Mountain and other numbers.",
+    "Despite rainy weather the crowd stays energized, driven by powerful drumming from Mickey Hart and Bill Kreutzmann."
+  ],
+  "song_highlights": [
+    "Wheel",
+    "Let It Grow",
+    "Sugar Magnolia",
+    "Fire on the Mountain",
+    "Bertha",
+    "Playing In The Band",
+    "China Doll",
+    "Mississippi Half-Step Uptown Toodeloo"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers soaring guitar windmills, twangy riffs on Bertha and The Wheel, and an overall off‑the‑rails energy that drives the show.",
+    "Phil": "Lesh provides a fearsome, active bass charge that underpins the high‑energy jams throughout the set.",
+    "Bob": "Weir contributes notable vocal moments, highlighted by a high note on the 'saw my baby down by the river' line in Sugar Magnolia.",
+    "Brent": "Mydland’s keyboards sparkle and his vocal shouts on Far From Me, Fire On The Mountain, and Let It Grow add extra excitement to the performance.",
+    "Mickey": "Hart’s drumming adds relentless power, especially during the post‑drums segment that fuels the crowd.",
+    "Billy": "Kreutzmann matches Hart with pedal‑to‑the‑metal intensity, helping keep the rhythm tight throughout the marathon second set."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-15T20:07:40.622711+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "When Push Comes To Shove",
+      "Let It Grow"
+    ],
+    [
+      "Space",
+      "The Wheel",
+      "Goin' Down The Road Feeling Bad",
+      "Playing In The Band",
+      "Black Muddy River",
+      "Sugar Magnolia"
+    ],
+    [
+      "Hell In A Bucket",
+      "Bertha",
+      "Little Red Rooster"
+    ],
+    [
+      "Mississippi Half-Step Uptown Toodeloo",
+      "Playing In The Band",
+      "China Doll",
+      "Man Smart, Woman Smarter",
+      "Drums"
+    ]
+  ]
+}

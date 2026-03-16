@@ -1,0 +1,82 @@
+{
+  "summary": "An excellent audience tape of the Baltimore show that captures a scorching set with standout Cumberland, Jack Straw, Raven Space and a crisp, warm mix.",
+  "review": "This recording delivers a vivid, audience‑sourced experience—clean, balanced and surprisingly detailed, often sounding like a soundboard. The performance itself is highly praised, with the first set kicking off strong on Jack Straw and the second set highlighted by a legendary Raven Space, soaring Cumberland and heartfelt renditions of Stella Blue and Peggy‑O. Overall the show is described as electrifying from start to finish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 20 detailed reviews overwhelmingly praise both the musical performance and the audio quality, with only a single minor critique of one song; this yields a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note a warm, life‑filled sound, crisp instrumental interplay, clean and balanced mix that can even be mistaken for an SBD. No significant dropouts or distortion mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland",
+      "Jack Straw",
+      "Stella Blue",
+      "Peggy-O",
+      "Raven Space",
+      "Estimated Prophet",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "The set is described as rocking from the opening Jack Straw through a first‑set that shines, followed by a second set punctuated by an unforgettable Raven Space and high‑energy jams; reviewers repeatedly mention the show’s momentum never waned."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his voice on Stella Blue, commanding rhythm on Franklin's Tower, and overall tight guitar work throughout.",
+    "Phil": "Described as booming in the background, wonderful on Raven Space, and providing a solid bass foundation.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard solos are highlighted as crisp, inventive and a key part of the interplay with Jerry.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cumberland": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Raven Space": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T20:46:12.962205+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-04-19.aud-martin.warner.19420.sbeok.shnf"
+}

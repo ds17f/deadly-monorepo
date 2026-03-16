@@ -1,0 +1,45 @@
+{
+  "summary": "A beautiful show highlighted by a tear‑jerking Peggy‑O and a rolling New Minglewood Blues, recorded with unknown source quality.",
+  "review": "The reviewer describes the concert as a pleasant surprise, noting that midway through New Minglewood Blues the band really got things rolling and that Peggy‑O brings an emotional lift. No specific comments on the tape’s sound are given, so the recording quality remains uncertain, but the musical performance is clearly praised.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "A single five‑star review emphasizes strong musical moments and overall enjoyment; lack of recording details keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention soundboard, audience mix, clarity, or any audio issues, so recording quality cannot be assessed beyond being adequate for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Minglewood Blues",
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show builds momentum around the middle of New Minglewood Blues, leading into an emotionally resonant Peggy‑O; overall flow is described as pleasant and uplifting."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "New Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T01:46:37.468514+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-10.152823.sbd.dalton.miller.clugston.flac16"
+}

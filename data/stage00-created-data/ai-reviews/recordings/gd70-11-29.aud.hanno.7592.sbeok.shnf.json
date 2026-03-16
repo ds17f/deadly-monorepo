@@ -1,0 +1,45 @@
+{
+  "summary": "Decent audience tape of a solid but uneven Columbus Agora show, highlighted by a fiery “The Other One” and an energetic “Good Lovin’”.",
+  "review": "The performance captures a typical early‑70s Dead night at the Columbus Agora – the band is fun and the crowd gets into classics like The Other One and Good Lovin’, though some listeners note tired playing on other numbers. The audience recording is only okay, with a lo‑fi mix that still conveys the room’s vibe but lacks the clarity of a soundboard source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Reviews are split between praise for standout songs and criticism of overall performance and tape quality; recording is only fair, giving an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners describe the sound as \"ok\" or \"decent for a '70 aud\", with some noting muddiness and limited fidelity, but the tape still conveys the live atmosphere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show appears to have been a single long Dead set (following New Riders), with mixed energy – some moments high (Other One, Good Lovin') and others described as tired or off‑form."
+  },
+  "band_member_comments": {
+    "Jerry": "His pedal steel is prominent and loud in the mix; otherwise no specific guitar commentary.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T01:34:36.858684+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-11-29.aud.hanno.7592.sbeok.shnf"
+}

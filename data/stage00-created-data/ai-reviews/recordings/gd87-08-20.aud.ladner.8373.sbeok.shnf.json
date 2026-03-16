@@ -1,0 +1,79 @@
+{
+  "summary": "Crisp audience tape of a mellow mountain‑side set that shines on Watchtower and a strong China > Rider, with solid sound despite occasional crowd noise.",
+  "review": "The recording captures an outdoor, laid‑back show with clear, wide‑spectrum audience sound; listeners repeatedly point out the superb Watchtower performance and a standout China > Rider. While most fans praise the vibe and Jerry’s guitar work, a few note weak moments such as the Big Boss Man opener and a lackluster Push, giving the concert an overall mixed but enjoyable feel.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 3‑4 stars and highlight several strong songs; recording quality is consistently described as good to excellent, yielding a weighted overall rating around 3.7‑3.9."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Super‑crisp, wide‑spectrum audience tape with occasional intrusive crowd noise and a slight ‘hollow’ outdoor ambience; overall clear mix with good instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Watchtower",
+      "China > Rider",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Big Boss Man (mixed reception)",
+      "Push (When Push Comes to Shove)"
+    ],
+    "setlist_flow": "A mellow, mountain‑side vibe that builds momentum after the first set; highlights emerge in the second half with strong transitions and memorable solos."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for ripping guitar riffs on Watchtower, Loser and Stella Blue; described as “the man” by several reviewers.",
+    "Phil": "Noted as present from tuning through the Zeppelin‑style riff into China Cat; no negative comments.",
+    "Bob": "Brief mention of his shorts during a chilly night; otherwise not specifically commented on.",
+    "Keys": "Brent (keyboardist) highlighted for twinkling work on Cassidy and occasional supportive parts; no criticism.",
+    "Drums": "One reviewer called the drum segment “sinister” but overall drumming was seen as adequate."
+  },
+  "song_mentions": {
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Watchtower": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China > Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Push (When Push Comes to Shove)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T02:16:07.941965+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-08-20.aud.ladner.8373.sbeok.shnf"
+}

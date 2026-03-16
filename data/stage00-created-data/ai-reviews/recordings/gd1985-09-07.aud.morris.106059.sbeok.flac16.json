@@ -1,0 +1,111 @@
+{
+  "summary": "Vivid audience recording with clear vocals captures a fan‑favorite 1985 show packed with standout Shakedown, Crazy Fingers, Samson, Uncle John’s Band and a magical Fantasy → Hey Jude transition.",
+  "review": "The reviewer raves about the performance – citing the funky Shakedown > Crazy Fingers pairing, the soaring Samson, an inspired Uncle John’s Band, the seamless Fantasy into Hey Jude, and heartfelt moments like Comes A Time and Baby Blue. The audience‑recorded tape is praised for its vocal clarity and surprisingly good separation from crowd noise, making it a highly enjoyable listen despite not being a soundboard source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "The single but very detailed 5‑star review praises both the musical performance and the audio quality, indicating an exceptional show with a good audience recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear vocal presence and enough separation from crowd ambience; no major distortion or drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown > Crazy Fingers",
+      "Samson",
+      "Uncle John's Band",
+      "Playing in the Band",
+      "Fantasy > Hey Jude",
+      "Truckin'",
+      "Comes A Time",
+      "Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Two‑set show with a high‑energy first set and a second set that builds momentum through Shakedown, Crazy Fingers, Samson, UJB → Playin', an extended Drums/Space, then the memorable Fantasy → Hey Jude segue before closing with Truckin', Comes A Time and Baby Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is praised throughout; highlighted for shredding on Hey Jude and telegraphing the Shakedown groove.",
+    "Phil": "",
+    "Bob": "Weir’s vocal work noted on Minglewood and a rap during Lovelight; also mentioned his lyrical contributions to Brother Esau.",
+    "Keys": "Brent Mydland is lauded as a creative genius, front‑man material, with strong vocals and musicianship (especially on Fantasy > Hey Jude).",
+    "Drums": "The Drums > Space segment is described as a perfect transition; no specific criticism of the drummers."
+  },
+  "song_mentions": {
+    "Shakedown > Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fantasy > Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shadowboxing the Apocalypse": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:59:02.145594+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-07.aud.morris.106059.sbeok.flac16"
+}

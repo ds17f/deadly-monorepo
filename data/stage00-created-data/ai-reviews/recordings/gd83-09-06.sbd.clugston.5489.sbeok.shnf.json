@@ -1,0 +1,90 @@
+{
+  "summary": "Excellent soundboard recording of the legendary 9‑6‑83 show, highlighted by a blistering Help > Slipknot > Franklin’s and superb Lazy Lightning > Supplication jams.",
+  "review": "The performance is consistently praised as one of the peak shows of the early ’80s – the second set flows seamlessly from an up‑tempo Help on the Way into a scorching Slipknot! → Franklin’s Tower, with Jerry Garcia’s guitar in top form and Brent Mydland’s trippy keys adding extra sparkle.  The SBD source is described as crisp and clear despite a few occasional AUD patches and mix quirks, making it a very listenable document of an iconic Red Rocks night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly rate the show 5‑stars, praising both musical performance and recording quality; minor technical blemishes are noted but do not detract from overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp SBD with excellent clarity on guitars and keys. Reviewers note occasional AUD patches, a brief EQ wobble early in the set, and a few mix drops (Jerry faint in first‑set), but overall the sound is very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Lazy Lightning > Supplication",
+      "Bird Song",
+      "Uncle John's Band",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "Dupree's Diamond Blues"
+    ],
+    "setlist_flow": "The first set builds nicely with Peggy‑O, Bird Song and a marathon Lazy Lightning > Supplication.  The second set is described as seamless and high‑energy – Help launches straight into Slipknot! → Franklin’s Tower, followed by expansive Playin', a long UJB jam and a heartfelt Brokedown Palace closer."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar is repeatedly called \"out of this world\", \"blazing\", with perfect tone on the Help/Slip/Franklin's sequence; occasional low mix noted but his playing remains a highlight.",
+    "Phil": "Lesh’s bass is praised as thumping, earthquake‑like and some of his best work of the year, especially during the second‑set jams.",
+    "Bob": "Bob Weir is highlighted for strong vocal harmonies (e.g., on UJB) and Celtic‑flavored rhythm guitar that adds texture to the Space/Uncle John’s sections.",
+    "Keys": "Brent Mydland receives glowing remarks – \"circus keys\", \"trippy\", \"crystal clear\" – and is noted for weaving synth lines throughout Slipknot! and the UJB jam.",
+    "Drums": "Bill Kreutzmann (and Mickey Hart where mentioned) are praised for driving the high‑energy jams; Mickey’s “spaces” get special mention, and the post‑drum Uncle John’s segment is called a highlight."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Lazy Lightning > Supplication": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Bird Song": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Playing in the Band": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Peggy-O": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Throwing Stones": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-14T09:56:57.570485+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-09-06.sbd.clugston.5489.sbeok.shnf"
+}

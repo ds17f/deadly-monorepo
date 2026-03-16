@@ -1,0 +1,69 @@
+{
+  "summary": "A high‑energy Dec 3 1981 show captured on a solid audience tape with a strong, bass‑rich mix and standout performances of Scarlet Fire, Around and Around/Johnny B. Goode segue and classic first‑set gems.",
+  "review": "The recording is an audience source that delivers a clear, well‑balanced sound with plenty of low end, only marred by a brief cut at the end of “Around and Around”. The concert itself is praised for its tight, playful band chemistry, memorable moments like the Scarlet Fire jam, and energetic renditions of “He’s Gone”, “Bertha” and the rare electric Deep Elem Blues. Overall listeners describe it as an electrifying experience worth downloading.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviewers gave 4‑5 stars, highlighting both the musical excellence and a generally good audience recording; only minor technical hiccups were noted."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Bass‑rich, even mix praised as clear and sweet; a cut/abrupt segue at the end of “Around and Around” is the only notable flaw."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Around and Around / Johnny B. Goode",
+      "He's Gone",
+      "Bertha",
+      "It's All Over Now Baby Blue",
+      "Deep Elem Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is described as a tightly‑grooving, high‑energy performance with a cozy venue vibe; the crowd stays engaged and the set builds smoothly through energetic first‑set numbers into memorable second‑set jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is repeatedly praised as playful, tightly connected and central to the standout Scarlet Fire/Scarlet Fire jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "One reviewer notes Bill Kreutzmann left the stage during drums, leaving Mickey Hart to carry the drum section solo."
+  },
+  "song_mentions": {
+    "Around and Around": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Over Now Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deep Elem Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T16:41:46.098795+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-12-03.nak700-mow.ford.28901.sbeok.flac"
+}

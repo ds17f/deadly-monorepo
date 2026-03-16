@@ -1,0 +1,84 @@
+{
+  "summary": "Tight first set and a blistering second set with standout blues and Johnny B. Goode, captured on a solid soundboard recording.",
+  "review": "The concert is praised for its tight playing, fire‑brand guitar work from Jerry (especially the Johnny B. Goode encore) and a rare, powerful Lil Red Rooster blues jam. Recording quality is generally good with clear soundboard detail, though vocals can be a bit loud at times.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores and enthusiastic comments indicate an excellent performance; recording is solid but not flawless, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear soundboard capture with crisp instrument separation; vocals are occasionally overly loud, but overall the mix is listenable and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Johnny B. Goode (encore)",
+      "Lil Red Rooster",
+      "Comes A Time > Lost > Saint > Casey Jones",
+      "Sugaree",
+      "Loser",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as tight and well‑played; second set praised for wild blues detours, extended jams and seamless transitions between songs."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as 'out of his mind', destroys the Johnny B. Goode encore and delivers a micro‑blues solo at the end.",
+    "Phil": "",
+    "Bob": "Two‑guitar front line praised on Lil Red Rooster; vocal delivery noted as strong and straightforward.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lil Red Rooster": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T02:08:41.542486+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-08-26.sbd.hinko.13815.sbeok.shnf"
+}

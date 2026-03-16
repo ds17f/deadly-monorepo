@@ -1,0 +1,63 @@
+{
+  "summary": "Clean soundboard capture of a mixed‑quality Charlotte show where Stagger Lee shines but High Time and Bird Song fall flat.",
+  "review": "The recording is a surprisingly clean soundboard from spring ’95, though a few listeners note it runs half‑step sharp. Musically the concert is uneven – Jerry’s vocals are described as raspy and his lyrics chopped on several numbers, especially High Time, while Stagger Lee and Black Throated Wind receive enthusiastic praise.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is judged below average due to vocal and energy issues, but recording quality is generally good; the weighted combination yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers praise a clean, clear soundboard capture. One reviewer complains of a half‑step sharp pitch and speed issues, but overall the mix is considered listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stagger Lee",
+      "Black Throated Wind"
+    ],
+    "poor_songs": [
+      "High Time",
+      "Bird Song"
+    ],
+    "setlist_flow": "The concert opens with a weak High Time that drags the energy down, but several mid‑set numbers (e.g., Stagger Lee) recover momentum. Overall pacing feels uneven, with vocal slippage and lyrical chops contrasted by moments of strong improvisation."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as raspy, weak, and lyric‑chopped on several songs; however his emotive lead on Stagger Lee is praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince Welnick’s keyboard presence is noted negatively by one reviewer who wishes to mute him.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "If the Shoe Fits": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T06:42:06.713423+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-24.sbd.hiroki.35182.sbeok.flac16"
+}

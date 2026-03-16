@@ -1,0 +1,81 @@
+{
+  "summary": "Stellar 1981 Greek Theater show with soaring Jerry solos and a legendary Other One → Dew, captured on a mixed‑quality recording that’s fair but occasionally muddy.",
+  "review": "Fans rave about the performance – especially Jerry Garcia’s incendiary leads on The Other One, Morning Dew, and his sweet tones on Candyman and Althea – and rank the second set among the top‑five of the ’80s. The audio is uneven; some listeners describe it as “so‑so” with a noticeable lack of bass, while others claim the recording sounds “killer,” leaving the overall sound quality at a fair level.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (majority 5‑star comments, standout jams), while recording quality receives mixed feedback (average around fair). Weighted combination yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers note the audio is only so‑so, with a lack of bass and Phil’s bass sometimes inaudible; others claim the recording sounds killer. Overall the sound is uneven, not clean enough for a premium release."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Morning Dew",
+      "He's Gone",
+      "Truckin'",
+      "Cumberland Blues",
+      "Althea",
+      "Candyman",
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid but not inspired; second set jam‑heavy and often ranked among the top five of the 1980s, featuring powerful transitions and emotional peaks."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for shredding leads, sweet tone on Candyman/Althea, and a climactic Other One → Dew jam that brought many to tears.",
+    "Phil": "Bass noted as lacking or inaudible in parts of the recording.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T14:11:30.618549+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-09-11.wise.munder.7090.sbeok.shnf"
+}

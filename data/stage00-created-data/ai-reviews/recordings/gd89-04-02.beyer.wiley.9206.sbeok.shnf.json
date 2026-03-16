@@ -1,0 +1,67 @@
+{
+  "summary": "A smoking Shakedown Street performance captured on a solid audience tape, delivering high‑energy playing despite modest recording fidelity.",
+  "review": "The show is widely praised for its powerful set – Jerry’s fire‑filled leads on Shakedown Street and Fantasy are repeatedly highlighted, and Brent’s keyboards receive top marks.  The source is an audience (AUD) recording that many describe as clear and punchy, though a few note it isn’t pristine, making the overall listening experience very enjoyable but not audiophile perfect.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high show ratings (mostly 4‑5 stars) and strong positive language outweigh mixed comments on recording quality, yielding a combined weighted score around 4.4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Clear guitars and high levels; a bit swirly but generally punchy. Some reviewers note it’s not a completely satisfactory representation and that none of the available versions are high‑fidelity, yet many call it a great job for an AUD tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Fantasy"
+    ],
+    "poor_songs": [
+      "Hey Jude"
+    ],
+    "setlist_flow": "The set is described as energetic and well‑balanced, with a particularly smoking second half; song transitions flow naturally and keep the momentum high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for being on fire all night, delivering scorching leads on Shakedown Street and laying Fantasy to waste.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent is highlighted as being at the top of his talents, providing strong keyboard work that drives the groove.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Foolish": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Jude": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:27:22.456843+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-04-02.beyer.wiley.9206.sbeok.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Reviewer provided no concrete details on the audio or performance and gave a zero‑star rating, indicating strong dissatisfaction.",
+  "review": "The lone review is an abstract poem with no mention of sound quality, song execution, or band members. The reviewer assigned a 0‑star rating, which suggests a negative overall impression despite the lack of specific criticism.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one review exists and it gives a zero‑star score without any descriptive feedback; rating is based solely on that low score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer gave a zero‑star rating but did not comment on audio clarity, source type, or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments about the setlist or performance were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T13:16:58.056275+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-20.dts.dan.31773.sbeok.flac16"
+}

@@ -1,0 +1,82 @@
+{
+  "summary": "Energetic hometown show with strong vocal moments and mixed song reception; recording source unclear.",
+  "review": "The performance is praised for its high energy, standout vocal moments from Garcia and solid contributions from Brent on keys, plus a punchy drum section. Reviewers highlight songs like Pocky, Candy Man, Bird Song, The Other One and Stella as highlights while noting disappointment with Little Light and some lyrical confusion in Terrapin Station. No concrete details about the recording quality were provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "One reviewer gave a solid 4‑star rating praising the show, while another rated it 0 stars and expressed many mixed opinions; with no recording details, the overall assessment balances these viewpoints to a moderate score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not comment on sound clarity, mix balance or source type, leaving the technical quality indeterminate."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Pocky",
+      "Candy Man",
+      "Bird Song",
+      "The Other One",
+      "Stella",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Little Light",
+      "Terrapin Station"
+    ],
+    "setlist_flow": "High‑energy hometown crowd with a brief, sometimes sparse first set that still works, followed by a second set of mixed reception—some songs shine while others feel dated or lyrically confusing."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s side‑by‑side vocals are singled out as a highlight of the night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard involvement is noted as limited after his solo in 'Minglewood'.",
+    "Drums": "The drum work is described as having \"some punch\"."
+  },
+  "song_mentions": {
+    "Pocky": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candy Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Light": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T04:47:03.877507+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-10-03.143833.mtx.tobin.flac1644"
+}

@@ -1,0 +1,70 @@
+{
+  "summary": "Clear sound‑board capture of a high‑energy ’78 UCSB show with a smoking Estimated Prophet → Eyes of the World and solid first set, though the second set (Not Fade Away) divides opinion.",
+  "review": "The recording is a decent sound‑board source that presents most of the concert with good clarity; occasional rough transitions are outweighed by the overall listenability. Musically the show shines on the Estimated Prophet → Eyes of the World sequence, Bertha, Jack Straw and the first‑set flow, while the second set’s Not Fade Away receives mixed reactions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ≈ 4.4 with many positive comments about performance and a generally good sound‑board source; a few strong negative remarks on the second set lower the overall impression slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mostly clear and balanced sound‑board mix; some reviewers note a rough transition between Estimated Prophet and Eyes of the World and occasional audience bleed, but overall the tape is listenable with good instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet > Eyes of the World",
+      "Bertha",
+      "Jack Straw",
+      "Looks Like Rain",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Not Fade Away"
+    ],
+    "setlist_flow": "First set is described as hot, energetic and tightly flowing with strong jams; the second set starts bright (Not Fade Away) but opinions split—some hear it as experimental and exciting, others as over‑the‑top screaming and a decline in tightness."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for being ‘dialed in’, delivering an amazing solo during Estimated/Eyes and overall great tone throughout the show.",
+    "Phil": "",
+    "Bob": "Criticized on several reviews for overly loud screaming on Not Fade Away and occasional out‑of‑tune moments.",
+    "Keys": "Piano work highlighted during the Estimated Prophet → Eyes of the World jam; otherwise no specific comments.",
+    "Drums": "Mickey Hart’s motorcycle sound effect in Space noted as funny by some, tedious by others; overall drumming described as energetic."
+  },
+  "song_mentions": {
+    "Estimated Prophet > Eyes of the World": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-25T13:17:38.618527+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-06-04.sbd.cotsman.10530.sbeok.shnf"
+}

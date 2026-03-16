@@ -1,0 +1,45 @@
+{
+  "summary": "Good matrix recording that starts out cloudy but settles into a strong second set highlighted by a fiery Truckin' → The Other One, despite early equipment hiccups.",
+  "review": "The show is generally praised for its high energy and especially the second‑set jam where Truckin' rolls straight into The Other One. Recording quality is mixed – a hazy start with static and equipment problems gives way to clear, well‑balanced sound that many reviewers call “real good” or even “best sound quality.”",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the performance 4–5 stars and note strong musical moments, while recording comments are mixed but trend toward good after an uneven start; weighted average yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Early part of the broadcast is described as cloudy, static‑filled and plagued by equipment problems; later sections are praised as clear, crisp and “real good,” with one reviewer calling it the best sound quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Show opens with a rough, equipment‑stressed first set but recovers quickly; the break between sets is highlighted as exciting and the second set shines with epic drums and the standout Truckin' → The Other One jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as solid and he jokes around, keeping the show lively.",
+    "Phil": "Praised for fantastic playing alongside Brent and the Rhythm Devils.",
+    "Bob": "Struggles with static from his amp early on but improves later in the set.",
+    "Keys": "Brent (keyboards) noted as playing fantastically.",
+    "Drums": "The Rhythm Devils' drumming is called epic, especially in the second set."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T19:55:59.820342+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-06-21.satellite-uplink.nawrocki.16888.sbeok.shnf"
+}

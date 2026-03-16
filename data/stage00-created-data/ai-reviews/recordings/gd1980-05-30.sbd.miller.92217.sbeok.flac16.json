@@ -1,0 +1,75 @@
+{
+  "summary": "Tight, energetic 1980 performance with standout vocals and solos, but a thin low‑end mix that leaves Phil Lesh’s bass barely audible.",
+  "review": "The show delivers a cohesive, business‑like set that many fans describe as locked in – Jerry’s sharp tone and vocal power shine, the Rhythm Devils are on fire, and classics like Franklin's Tower, Friend of the Devil and Scarlet > Fire sparkle. The recording is a soundboard capture with noticeable low‑frequency weakness and an almost missing bass mix, yet it remains listenable and conveys the band’s live vibe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (tight, energetic, strong vocals) while noting consistent recording flaws (thin lows, missing bass). Weighted average of show (≈4.0) and recording (≈3.0) yields ~3.8."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Low‑frequency response is weak; Phil Lesh’s bass is nearly inaudible, giving the mix a thin bottom. Overall clarity is decent but lacks depth."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Friend of the Devil",
+      "Althea",
+      "Me and My Uncle",
+      "The Music Never Stopped",
+      "Fire on the Mountain",
+      "Scarlet Begonias > Fire On The Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A tight, business‑like flow that feels cohesive and energetic; some note a slightly speedy pacing but it keeps the band locked in."
+  },
+  "band_member_comments": {
+    "Jerry": "Sharp, clear tone and strong vocals all night; solos appear everywhere and never sound phoned‑in.",
+    "Phil": "Virtually absent from the mix – bass is inaudible, removing a key bottom layer.",
+    "Bob": "Consistently solid rhythm guitar and vocal harmonies throughout the show.",
+    "Keys": "",
+    "Drums": "Bill (drums) is on point; Rhythm Devils segment highlighted as especially powerful."
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias > Fire On The Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:59:37.534805+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-30.sbd.miller.92217.sbeok.flac16"
+}

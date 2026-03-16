@@ -1,0 +1,39 @@
+{
+  "summary": "Dynamic audience‑board recording captures an epic Sugaree from one of the Dead’s greatest shows.",
+  "review": "Both reviewers rave about the show, calling it one of the band’s best ever and singling out a \"friggin' EPIC\" performance of Sugaree. The tape is praised for its wonderful dynamics and clarity despite being an audience‑recording taken near the board, though a few early songs are missing. Overall the musical energy and sound quality make this a highly recommended listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Both reviews give 5‑star ratings, highlighting an outstanding performance and excellent dynamic recording; limited to two detailed reviews, so confidence is medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as a wonderfully dynamic audience recording taken near the board (Dan Healy), with clear sound and good ambience; missing 'Iko Iko' through 'Alabama' tracks replaced by board feed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers emphasize the overall high energy and flow of the concert, noting it as one of the band’s best performances despite a few missing early songs."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T02:45:04.034356+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-09-02.aud.unknown.26094.sbeok.shnf"
+}

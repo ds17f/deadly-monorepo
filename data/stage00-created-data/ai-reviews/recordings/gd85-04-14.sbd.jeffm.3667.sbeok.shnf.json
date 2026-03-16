@@ -1,0 +1,109 @@
+{
+  "summary": "High‑energy 1985 show with standout Looks Like Rain, Touch of Grey and Sugaree; soundboard source is clear but not flawless.",
+  "review": "The performance bursts with the classic ’85 speed—Jerry’s guitar is described as flawless, Brent shines on Looks Like Rain, and the second set builds a fever‑ish groove that many fans call “hell‑yes.” The recording, inferred to be a soundboard, is generally crisp though one reviewer notes it could use a proper down‑sample, resulting in an overall good listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviews are 4–5 stars praising the musical flow and standout songs; recording quality is solid with only minor technical complaints, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, crisp mix praised by many; one comment about needing to re‑sample from 48 kHz and an isolated 1‑star complaint suggest a few imperfections but no major issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Touch of Grey",
+      "Hell In A Bucket",
+      "Sugaree",
+      "Dear Mr. Fantasy",
+      "Space",
+      "Gloria"
+    ],
+    "poor_songs": [
+      "Big RxR",
+      "Miracle",
+      "He's Gone"
+    ],
+    "setlist_flow": "First set is fast‑paced and sometimes rushed, but the energy carries into a second set that warms up gradually, delivering tight jams and memorable transitions (e.g., Sugar Mag → Bucket, China → Rider)."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is repeatedly called flawless, crisp, catastrophic (in a good way) and the highlight of many jams.",
+    "Phil": "Phil’s bass provides “waves” during Space and underpins the high‑energy performance.",
+    "Bob": "Weir is noted for strong vocal cues on Sugaree and other numbers; his rhythm work is appreciated.",
+    "Keys": "Brent gets special praise for his soaring parts on Looks Like Rain.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Touch of Grey": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hell In A Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Superstitious": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Gloria": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Big RxR": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Man Smart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T03:56:58.255777+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-14.sbd.jeffm.3667.sbeok.shnf"
+}

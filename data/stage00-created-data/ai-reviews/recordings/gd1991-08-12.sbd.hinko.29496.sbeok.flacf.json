@@ -1,0 +1,46 @@
+{
+  "summary": "Soundboard recording with a solid guitar mix and a standout Bird Song, but the overall performance is uneven and at times uninspired.",
+  "review": "The show captures a clean soundboard feed that highlights a pleasing guitar balance and an unusual Vince‑Bruce keyboard swap on “Miracle.” While reviewers rave about an exemplary Bird Song and tight band interplay in spots, they also criticize a generally lackluster second set and note Jerry’s missing solo during “Stella Blue,” leaving the performance feeling mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Recording quality is praised (good guitar mix, interesting keyboard swap) while show quality receives mixed feedback – strong Bird Song vs. overall uninspired feel and a low‑star review pulling the average down."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Guitar mix is highlighted as a positive; keyboards feature a unique Vince/Bruce swap on “Miracle.” No major clarity or balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song"
+    ],
+    "poor_songs": [
+      "Stella Blue"
+    ],
+    "setlist_flow": "Reviewers describe the concert as uneven – moments of tight improvisation contrast with an overall uninspired second set and a notable missed solo by Jerry."
+  },
+  "band_member_comments": {
+    "Jerry": "Skipped his solo slot in the middle of “Stella Blue,” which reviewers called out negatively, though he was noted to be determined to make up for it later.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince and Bruce swapped keyboards on “Miracle,” a unique moment highlighted by listeners.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T22:51:50.865659+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-08-12.sbd.hinko.29496.sbeok.flacf"
+}

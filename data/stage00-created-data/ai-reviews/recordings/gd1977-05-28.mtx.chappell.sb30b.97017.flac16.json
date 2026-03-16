@@ -1,0 +1,82 @@
+{
+  "summary": "An excellent matrix recording captures a superb 1977 show highlighted by a soaring Sugaree, epic Good Lovin', and a marathon Playing in the Band.",
+  "review": "The matrix blend of soundboard and audience creates an immersive, almost “human” listening experience with crystal‑clear highs and just enough studio‑like swish to add character. Musically the night is a high point for ’77 – Bertha, Good Lovin', Sugaree, Brown Eyed Women, Candyman and a one‑hour Playing in the Band are repeatedly praised, while only minor level hiccups on Samson are noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All five reviewers give 4–5 stars and consistently praise both the performance (standout songs, tight rhythm section) and the matrix recording quality despite a few minor quirks."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, immersive mix that blends SBD clarity with audience ambience; listeners note a pleasant “swishy” high‑frequency character from the matrix blend and occasional brief pauses between tracks, but overall the sound is clear and engaging."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Good Lovin'",
+      "Bertha",
+      "Brown Eyed Women",
+      "Candyman",
+      "Not Fade Away > Wharf Rat",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "Samson"
+    ],
+    "setlist_flow": "Set 2 starts a bit rocky (level issues on Samson) but quickly launches into a series of classic ’77 moments; transitions are tight—especially Good Lovin' into Sugaree—and the hour‑long Playing in the Band serves as an epic centerpiece."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers fine vocals and sweet, soaring guitar solos; a slight level issue is noted on Samson.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann and Mickey Hart lock in perfectly with a half‑time groove that drives the jams."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away > Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T02:52:52.157863+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-28.mtx.chappell.sb30b.97017.flac16"
+}

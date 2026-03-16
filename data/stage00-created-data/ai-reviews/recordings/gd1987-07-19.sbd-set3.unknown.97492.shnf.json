@@ -1,0 +1,45 @@
+{
+  "summary": "Clear, high‑end soundboard capture of a vibrant set highlighted by a stellar Rainy Day Women and an intact Queen Jane Approx.",
+  "review": "Both reviewers rave about the performance, noting the beautiful energy of the set and praising Jerry Garcia’s vigorous backing on Dylan’s Rainy Day Women. The SBD source is described as clearer and crisper than previous composites, though it carries a slight hiss and leans toward treble with modest bass. Overall the show shines despite these minor sonic quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Two enthusiastic 5‑star reviews highlight a strong musical performance and generally good soundboard quality, with only small recording imperfections."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clearer and crisper than earlier composites, better instrument separation, slight hiss present, mix leans high‑end with too much treble acoustic guitar and insufficient bass."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Rainy Day Women",
+      "Queen Jane Approx."
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the set’s energy as beautiful, indicating a cohesive and engaging performance throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for vigorously backing Dylan on Rainy Day Women; his playing noted as a highlight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Rainy Day Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane Approx.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T01:10:23.672153+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-19.sbd-set3.unknown.97492.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality soundboard capture featuring a powerful Picasso Moon drum solo.",
+  "review": "The recording, sourced from the soundboard, delivers a clear and spacious mix that lets the drums breathe – reviewers specifically note the “Picasso Moon” segment as huge and on point. While little is said about the rest of the set, the audio quality is praised and the drum work stands out as a highlight.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "One detailed 5‑star review praises both the performance (especially the drums) and the spacious sound, outweighing two unrelated low‑info entries."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear mix with strong drum presence; reviewers mention “huge sound that breathes” and good pan separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Picasso Moon"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; focus is on the drum segment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann’s drumming is highlighted as “on” with a huge, breathing sound during Picasso Moon."
+  },
+  "song_mentions": {
+    "Picasso Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T21:09:58.623510+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-16.sbd.gjf.tetzeli.fix-17028.34783.reflac.flac16"
+}

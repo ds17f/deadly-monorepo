@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent soundboard recording of a legendary Europe ’72 show, highlighted by an epic 36‑minute Other One and tight performances throughout.",
+  "review": "The crowd‑sourced soundboard is crisp and clear, delivering the band’s peak form on this European night. Reviewers rave about the second‑set jam suite – especially the monumental Other One, roaring Truckin’, fiery Lovelight and a soaring Sugar Magnolia – while noting only occasional track‑label glitches. Overall the musical performance is described as “stellar” and “all‑timer,” making it a must‑listen for Deadheads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Thirteen consistent 5‑star (plus one 4‑star) reviews praise both the performance and audio quality; recording is described as crisp/excellent and the show is highlighted as a top‑tier Europe ’72 performance."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with great sound quality; occasional track‑order/label errors but no audio dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Truckin'",
+      "Lovelight",
+      "Comes A Time",
+      "Sugar Magnolia",
+      "I Know You Rider",
+      "Bertha",
+      "Chinatown Shuffle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a seamless, high‑energy flow especially in the second‑set jam suite; minor mislabeling of tracks does not detract from the musical momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for shredding solos and weaving magical guitar work, especially during Tiger and the Other One.",
+    "Phil": "Highlighted for starting a great thematic jam reminiscent of the band's 1968 Clementine performances.",
+    "Bob": "Noted for rocking hard on Sugar Magnolia.",
+    "Keys": "",
+    "Drums": "Brief drum sections mentioned as tight; overall drumming praised."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Chinatown Shuffle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T14:32:38.590845+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-04-26.sbd.backus.12884.sbeok.shnf"
+}

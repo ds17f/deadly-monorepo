@@ -1,0 +1,31 @@
+{
+  "summary": "Highly praised as the best audio recording available, though no specific show details are provided",
+  "review": "The lone review rates this tape five stars and declares it the \"best aud\" among Dead recordings, indicating an exceptional listening experience. No comments on performance, setlist or individual songs were offered, so the musical quality of the concert itself remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "A single enthusiastic five‑star review praises the audio above all else; with no information on the performance, the rating leans heavily on recording quality but confidence is low due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls it \"best aud,\" implying crystal‑clear, well‑balanced sound that stands out among audience recordings."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T21:21:20.206454+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-05-23.nak300.unknown.101955.sbefail.flac16"
+}

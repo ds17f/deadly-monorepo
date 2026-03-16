@@ -1,0 +1,85 @@
+{
+  "summary": "Soundboard capture with good clarity showcases a pig‑filled Seattle night, highlighted by soaring Lovelight and an epic Good Lovin' stretch.",
+  "review": "The tape (a sound‑board mix) is generally clear but shows occasional distortion, over‑saturated vocals and a mono feel. Musically the show shines – Pigpen dominates with two fiery Lovelights, a marathon Good Lovin', hard‑hitting Hard to Handle and tight jams on China Cat and Cumberland Blues. Despite a few rough moments near the end, the energy and late‑night vibe make this a standout 1971 performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly praise the performance (70% weight) while noting only minor recording flaws (30% weight), yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced; occasional vocal over‑saturation, slight distortion, mono mix and brief flutter on the last reel. The cut in Good Lovin' is due to a curfew, not tape error."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lovelight",
+      "Good Lovin'",
+      "Hard to Handle",
+      "China Cat",
+      "Cumberland Blues"
+    ],
+    "poor_songs": [
+      "Good Lovin' (late‑night version – sloppy Garcia, over‑extended)"
+    ],
+    "setlist_flow": "A tight early set led by Pigpen segues into a marathon second half with back‑to‑back Lovelights, an extended Good Lovin', and seamless transitions into Uncle John's Band and drum duets."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for “curling fills”, blistering solos on Cumberland Blues and overall tight guitar work.",
+    "Phil": "Bass described as top‑form; segues smoothly into Uncle John's Band and drives the long Good Lovin'.",
+    "Bob": "Vocals a bit high early but harmonies ring; tinny first lead noted, later solid backing.",
+    "Keys": "Pigpen’s organ shines on Lovelight and Casey Jones; occasional comments about organ being faint in other tapes, but here it’s present and vibrant.",
+    "Drums": "Bill Kreutzmann highlighted for “foot pedal” power and a standout solo; Mickey Hart noted for cowbell and the rare drum duet with Bill."
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Good Lovin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Hard to Handle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T02:19:01.003972+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-01-24.sbd.lai.6247.sbefail.shnf"
+}

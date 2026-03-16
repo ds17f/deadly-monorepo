@@ -1,0 +1,93 @@
+{
+  "summary": "Charlie Miller’s audience tape captures the Rochester ’83 show with crystal‑clear ambience, featuring rare Brent tunes and standout moments while a few songs (Esau, Rooster) stumble.",
+  "review": "The recording is an audience capture that Charlie Miller positioned perfectly, delivering excellent clarity and a true‑to‑the‑room feel. Musically the concert shines with unique setlist gems like “Shakedown,” “Stranger,” “Samson & Delilah,” Brent’s rare “Maybe You Know” and “Bob Star,” though performances of “Esau,” “Rooster,” and “Supplication” are noted as weak spots.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Both reviewers gave 5‑star ratings and praised the tape’s sound quality and many rare/highlights, but the detailed review also calls out several sub‑par song performances, leading to a strong yet not flawless overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller found the sweet spot and set his mic close to where the reviewer danced; the tape is praised for its crisp, venue‑capturing ambience with no noted dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Stranger",
+      "Samson and Delilah",
+      "Deal",
+      "Maybe You Know",
+      "Bob Star"
+    ],
+    "poor_songs": [
+      "Esau",
+      "Rooster",
+      "Supplication"
+    ],
+    "setlist_flow": "A uniquely 80’s‑era set packed with rare Brent tunes and fresh arrangements, delivering high energy throughout despite a few rough transitions and vocal/mic hiccups."
+  },
+  "band_member_comments": {
+    "Jerry": "Shows frustration on several songs (mic failure on ‘Brown‑eyed Women’, slide feedback on ‘Rooster’) but still delivers strong solos; mood improves when he takes over lead guitar.",
+    "Phil": "Debuts his new six‑string bass, “dropping bombs” and providing funky interplay that fuels many standout moments.",
+    "Bob": "Frequently yells to get attention; his slide work causes feedback on ‘Rooster’ and contributes to the chaotic feel of a few numbers.",
+    "Keys": "Brent’s keyboards are highlighted on ‘Deal’ and ‘JBG’, with rare Brent‑authored tunes like ‘Maybe You Know’ adding special flavor.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson and Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Esau": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Rooster": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "JBG": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Maybe You Know": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bob Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:22:52.519748+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-15.fob.miller.94283.sbeok.flac24"
+}

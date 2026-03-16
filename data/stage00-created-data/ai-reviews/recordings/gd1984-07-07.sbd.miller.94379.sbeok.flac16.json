@@ -1,0 +1,87 @@
+{
+  "summary": "High‑energy 1984 show with killer second‑set highlights (Playing In The Band, Turn On Your Lovelight, Brokedown Palace) captured on a solid matrix recording that’s mostly clear despite occasional board‑audience bleed.",
+  "review": "The performance shines especially in the second set where the band stretches out on Playing In The Band, Turn On Your Lovelight and a soaring Terrapin jam, while Brent’s vocals add a fresh twist to Dear Mr. Fantasy.  Recording-wise the sbd/matrix mix is generally clean and enjoyable, though the board fades in and out of the audience at times.  Overall the show is praised for its raw energy and strong playing despite Garcia’s waning vocal condition.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers are enthusiastic, highlighting multiple standout songs and a generally good‑to‑excellent recording; only minor technical quirks and a few lukewarm comments keep the rating from being higher."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Board occasionally drops in/out of the audience mix, but overall clarity is solid and the sound remains enjoyable throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dear Mr. Fantasy",
+      "Playing In The Band",
+      "Turn On Your Lovelight",
+      "Brokedown Palace",
+      "Terrapin Station",
+      "Might As Well",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Black Peter"
+    ],
+    "setlist_flow": "The set builds a torpid yet relentless pace, culminating in a high‑energy second half that showcases extended jams and strong vocal performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is praised as crisp and melodic; his voice is noted as rough but he sings with full intensity on Might As Well.",
+    "Phil": "Phil’s bass licks are described as ‘juicy’ and a hint of the stronger playing that would emerge in ’85.",
+    "Bob": "Weir’s rhythm guitar/vocals get a fun nod, sounding like a victorious Doc Rivers after a Celtics win.",
+    "Keys": "Brent Mydland shares vocal duties on Dear Mr. Fantasy and adds melodic texture to the overall sound.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Why Don't We Do It In The Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T19:59:44.967329+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-07.sbd.miller.94379.sbeok.flac16"
+}

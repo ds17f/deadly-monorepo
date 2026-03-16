@@ -1,0 +1,100 @@
+{
+  "summary": "Fine‑sounding audience tape of a mellow late‑era show with standout moments (Half‑Step, The Roses, He's Gone, Days Between) but hampered by sluggish stretches like The Shoe Fits and post‑Space lethargy.",
+  "review": "The recording is an audience capture that most reviewers describe as clear and well balanced for a 1994 tape. Musically the concert delivers several high points – a beautiful Half‑Step opener, a penultimate version of The Roses, and emotive performances of He's Gone and Days Between – but the overall pacing feels laid back to the point of sluggish, especially after Space and during the Shoe Fits/Easy Answers sequence. Opinions are split, making this a solid but uneven late‑era show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Three reviews give mixed signals (4★, 2★, 3★). The show has notable highlights but also several low‑energy sections; the audience recording is praised as fine sounding, leading to an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as a fine‑sounding AUD (audience) tape with clear mix; no major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half-Step",
+      "The Roses",
+      "He's Gone",
+      "Days Between",
+      "Throwing Stones",
+      "Not Fade Away",
+      "Liberty"
+    ],
+    "poor_songs": [
+      "The Shoe Fits",
+      "Easy Answers",
+      "Don't Ease",
+      "Roses (drums section)"
+    ],
+    "setlist_flow": "A paced, mellow set that leans into slower, contemplative moments. The first half is solid but relaxed; the second set builds a beautiful sequence of Eyes → Eternity → He's Gone → Space → Days Between before petering out with less engaging material."
+  },
+  "band_member_comments": {
+    "Jerry": "His ballad work on Days Between is highlighted as a key reason to listen.",
+    "Phil": "Sounds good on the acoustic Bobby tune (El Paso).",
+    "Bob": "",
+    "Keys": "Vince (Brent Mydland) praised for his contributions on the acoustic numbers and Way To Go Vince segment.",
+    "Drums": "Both reviewers note the drummers ‘butchered’ The Roses, while another mentions a solid 30‑minute Drums/Space stretch."
+  },
+  "song_mentions": {
+    "The Shoe Fits": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eternity": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T00:14:42.800421+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-24.akgc391.cohen.lee.119591.flac16"
+}

@@ -1,0 +1,91 @@
+{
+  "summary": "Crystal‑clear soundboard capture of the Dec 26 1969 Dallas show, highlighted by a breathtaking acoustic set and a soaring Dark Star.",
+  "review": "The recording is an excellent sound‑board source – crisp, silky in the lows and crystal clear in the highs – that lets listeners hear every nuance of this transitional 1969 performance.  The first (acoustic) half dazzles with “All Around This World,” “Little Sadie,” “Long Black Limo” and a flawless “Uncle John’s Band,” while the electric set delivers a luminous Dark Star, perfect China>Rider flow and an inspired organ‑driven second half.  Overall both the music and the tape quality are consistently praised by fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Over a dozen five‑star reviews, all praising both performance and sound; only minor comments about EQ tweaks or a badly cut New Speedway Boogie keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the tape as crisp, silky‑smooth in the lows and crystal clear in the highs; some suggest EQ tweaks but overall the soundboard capture is superb with no noticeable distortion or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "All Around This World",
+      "Little Sadie",
+      "Long Black Limo",
+      "Uncle John's Band",
+      "Dark Star",
+      "China>Rider"
+    ],
+    "poor_songs": [
+      "New Speedway Boogie"
+    ],
+    "setlist_flow": "An intimate acoustic set transitions smoothly into the electric half via Uncle John’s Band; the second set builds momentum with a perfect China>Rider segue and culminates in an otherworldly Dark Star."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his bright Fender Strat tone, inventive ideas on Dark Star and overall stellar guitar work.",
+    "Phil": "Highlighted as especially strong this night; bass tone (Alembic‑modified Gibson EB‑0) noted positively.",
+    "Bob": "Vocal harmonies described as spot‑on throughout the show.",
+    "Keys": "Tom Constanten’s B‑3 organ work called inspired and a key driver of the second set energy.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "All Around This World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Sadie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Long Black Limo": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "China>Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "(Gathering Flowers For) The Master's Bouquet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T19:09:21.698312+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-12-26.sbd.warner-evans.28448.sbeok.flac16"
+}

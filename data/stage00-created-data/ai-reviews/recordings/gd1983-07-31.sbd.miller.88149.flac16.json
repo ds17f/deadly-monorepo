@@ -1,0 +1,50 @@
+{
+  "summary": "Crisp soundboard capture of a spirited Ventura show featuring an unforgettable Fire on the Mountain and a legendary second set.",
+  "review": "The July 31‑1983 Ventura performance is praised for its high energy, tight jams and a standout Fire on the Mountain that many fans call “incredible.”  The Miller SBD delivers crystal‑clear audio – vocals and instruments are superbly defined with only occasional wind‑related hiss – making this one of the most listenable audience recordings of the era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of reviews (9 out of 11) rate the show 4‑5 stars and highlight both excellent performance and superb soundboard quality; only one reviewer notes a negative performance issue."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear, crisp mix with super‑clear vocals and instruments; early part of the show has Jerry slightly low in the mix but balances out. Minor wind noise noted on an AUD comparison, but the SBD largely avoids it."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire on the Mountain",
+      "Second Set (unbelievable)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is described as up‑tempo and full of spirit, with a particularly strong second set that keeps the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised for his tone and clear presence; one reviewer notes he sounded a bit low early on, another claims he was 'stoned out' backstage.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire on the Mountain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "LLR": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bucket Intro": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:36:40.525972+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-07-31.sbd.miller.88149.flac16"
+}

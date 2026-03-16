@@ -1,0 +1,58 @@
+{
+  "summary": "Shaky Jerry, solid Bertha, but missing second set limits flow",
+  "blurb": "The Carbondale show captures a drowsy Jerry after taking valium, though he delivers articulate vocals on \"Don't Ease Me In\". Highlights include a strong \"Bertha\" and a tight drum break, but the incomplete recording skips the entire second set, making overall flow hard to assess.",
+  "review": "February 7, 1979 at SIU Arena (Carbondale) is one of those rare soundboard captures that feels like opening a time‑capsule with its quirks intact. Jerry Garcia was clearly under the influence of four valium pills before stepping onstage – reviewers note he looked drowsy and even nodded off at times – yet his guitar still cut through with surprising clarity on \"Don't Ease Me In\" and his vocal phrasing remained surprisingly articulate. Bob Weir’s vocals held steady, giving \"Bertha\" a solid punch, while the drum break between \"Drums\" and \"I Need A Miracle\" showcases the duo’s deft interplay. The set does deliver moments of joy – the revival of \"Don't Ease Me In,\" a nicely rendered \"Jack‑A‑Roe,\" and a heartfelt \"I Need A Miracle\" – but the tape cuts off before the second half, leaving the concert’s true arc unfinished and making it difficult to gauge the full night’s energy. Listeners get a glimpse of the band’s uneven state that evening: flashes of brilliance amid a generally shaky performance.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 13,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.0,
+      "sentiment_rationale": "The sole analysis labels the sentiment as mixed, reflecting both positive notes (standout songs, solid drum break) and negative aspects (Jerry's valium episode, incomplete recording). No consistent strong praise or criticism across multiple recordings, so a neutral adjustment is applied.",
+      "final_calculation": "2.5 + 0.1 + 0.0 = 2.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd79-02-07.sbd.cotsman.13879.sbeok.shnf",
+    "reason": "Provides a clear soundboard capture of the first set with decent audio quality, despite missing the second set; it’s the most complete and listenable source available."
+  },
+  "key_highlights": [
+    "Jerry's drowsy yet articulate performance on \"Don't Ease Me In\" after taking valium",
+    "\"Bertha\" stands out with strong vocals and tight band playing",
+    "Tight drum break between \"Drums\" and \"I Need A Miracle\" recaptures momentum",
+    "Incomplete tape omits the entire second set, making overall flow hard to judge"
+  ],
+  "song_highlights": [
+    "Don't Ease Me In",
+    "Bertha",
+    "Jack-A-Roe",
+    "I Need A Miracle"
+  ],
+  "band_performance": {
+    "Jerry": "Taken four valiums before the show, he sounded drowsy and even nodded off, but still managed fast, articulate guitar work and clear vocals on \"Don't Ease Me In\".",
+    "Phil": "",
+    "Bob": "Delivered solid vocals and sounded great throughout the captured set despite overall inconsistencies elsewhere.",
+    "Brent": "",
+    "Mickey": "Contributed to a deft drum break that helped refocus the band after a sluggish moment.",
+    "Billy": "Alongside Mickey, provided the tight percussion that highlighted the transition from \"Drums\" into \"I Need A Miracle\"."
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-25T20:14:55.615276+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Don't Ease Me In"
+    ],
+    [
+      "I Need A Miracle",
+      "Bertha"
+    ],
+    [
+      "Jack-A-Roe"
+    ]
+  ]
+}

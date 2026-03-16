@@ -1,0 +1,86 @@
+{
+  "summary": "Excellent soundboard capture of a classic ’85 show with a smoking second set highlighted by Scarlet > Fire and Dear Mr. Fantasy, backed by solid recording quality.",
+  "review": "The performance shines on the second half, where the band delivers a monster Scarlet Begonias → Fire jam, a searing Dear Mr. Fantasy sequence, and a raging Let‑It‑Grow, all supported by Jerry’s articulate solo work. The soundboard source is generally clear and balanced, though a few reviewers note video‑game‑like artifacts during the Space section and a rough first set. Overall the show is praised as one of the best ’85 outings with only minor hiccups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are highly positive about both the musical performance (standout second set, iconic jams) and the recording quality (soundboard praised as clear), with only a few mixed comments about the first set and minor sound glitches."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and balanced soundboard capture; occasional video‑game‑like artifacts in the Space segment and some first‑set roughness, but overall listenable and faithful to the live mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire",
+      "Dear Mr. Fantasy",
+      "Let It Grow",
+      "Walking Blues",
+      "Satisfaction",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Keep Your Day Job"
+    ],
+    "setlist_flow": "Solid first set with a few uneven moments, followed by an exceptionally flowing second set that builds energy and delivers multiple high‑point jams; encore includes fan‑favorite Satisfaction/Baby Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo in Scarlet Begonias is praised as long, articulate and a highlight of the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Keep Your Day Job": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Walking Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:15:36.001207+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-07-01.sbd.miller.96421.sbeok.shnf"
+}

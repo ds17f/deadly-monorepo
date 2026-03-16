@@ -1,0 +1,81 @@
+{
+  "summary": "Matrix recording captures a solid indoor summer ’88 show highlighted by the debut of “Gentlemen Start Your Engines” and a smoking second‑set Playin / Hey Jude / Lovelight sequence.",
+  "review": "The show is praised for its strong setlist – Brent’s new material, especially “Gentlemen Start Your Engines,” shines along with a superb second‑set jam that rolls from Playin’ into Uncle John’s and back, then bursts into an inspired Hey Jude reprise and a scorching Lovelight.  The SBD‑matrix mix is generally clear and balances the band well, though a few listeners note occasional roughness, making it a good‑to‑great listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over 20 reviews with an average of ~4 ★, most highlighting strong performance and decent sound; only a handful note minor flaws."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers comment that the SBD/AUD mix is clear and captures the indoor energy; some mention occasional roughness or average sound but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Gentlemen Start Your Engines",
+      "Touch of Grey",
+      "Playin' > Uncle John's > Playin'",
+      "Hey Jude Reprise",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Music Never Stopped",
+      "Big River"
+    ],
+    "setlist_flow": "A tight indoor summer set that builds nicely – a lively first set with Brent‑focused tunes, followed by a second set that ‘smoked,’ featuring seamless segues and a high‑energy climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone praised; vocals sometimes muddy but still powerful (especially on Hey Jude riff).",
+    "Phil": "Strong vocal moments (“Rio Grande”) and solid input in the Playin’ jam.",
+    "Bob": "Noted for his “wait a minute” cue on Lovelight and classic ’67‑era presence; hair comment adds nostalgia.",
+    "Keys": "Brent’s piano/organ work highlighted – organ solo on Little Red Rooster, piano on Push, overall prominent in the mix.",
+    "Drums": "Mickey’s drumming noted for marching feel and creative use of bells/chimes during Space."
+  },
+  "song_mentions": {
+    "Gentlemen Start Your Engines": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Touch of Grey": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' > Uncle John's > Playin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Hey Jude Reprise": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T10:23:49.357951+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-06-26.sbd-matrix.nawrocki.5608.sbeok.shnf"
+}

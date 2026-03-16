@@ -1,0 +1,28 @@
+# LLM API Integration
+requests>=2.31.0
+openai>=1.0.0
+anthropic>=0.7.0
+
+# JSON and Data Processing
+pydantic>=2.0.0
+
+# File and Path Handling
+pathlib>=1.0.0
+glob2>=0.7
+
+# Logging and Progress
+rich>=13.0.0
+click>=8.1.0
+
+# Date/Time Processing
+python-dateutil>=2.8.0
+
+# Configuration Management
+pyyaml>=6.0
+
+# Retry Logic and Rate Limiting
+tenacity>=8.2.0
+
+# Testing (development)
+pytest>=7.4.0
+pytest-asyncio>=0.21.0

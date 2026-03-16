@@ -1,0 +1,81 @@
+{
+  "summary": "Muffled yet airy recording of an early‑68 show captures a standout Dark Star, The Other One > Eleven sequence and the rare Born Cross‑Eyed/Spanish Jam combo.",
+  "review": "The performance is praised for its hot jamming – especially Dark Star, The Other One feeding into an excellent Eleven, plus the rarely heard Born Cross‑Eyed into Spanish Jam. The recording, while technically a soundboard (SBD) source, sounds muffled and distant with some keyboard muting, giving it an airy but imperfect quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "All three reviews are favorable (average 4.33 stars) and highlight both strong musical moments and a generally good, if slightly muffled, recording."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Muffled/distant sound with an airy quality; Pigpen's keyboard is noticeably muted in parts of the audience capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One > Eleven",
+      "Born Cross-Eyed > Spanish Jam",
+      "Morning Dew",
+      "China Cat"
+    ],
+    "poor_songs": [
+      "Lovelight",
+      "Spanish Jam"
+    ],
+    "setlist_flow": "Overall strong improvisational flow with rare song pairings, though the China Cat → Eleven transition and some later jams feel less smooth."
+  },
+  "band_member_comments": {
+    "Jerry": "His soloing style is noted as distinct from 1966 performances and praised for its quality.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen's keyboard is muted, reducing the typical 1968 organ presence.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Born Cross-Eyed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T08:12:33.456325+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-03-30.aud.unknown.9375.sbeok.shnf"
+}

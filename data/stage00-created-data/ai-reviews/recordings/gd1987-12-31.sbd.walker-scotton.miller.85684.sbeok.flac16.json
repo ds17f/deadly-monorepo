@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a dynamite 1987 show with a smoking Uncle John's Band > Terrapin sequence and standout Bird Song.",
+  "review": "Reviewers rave about the energy of this late‑year 1987 performance, calling the Uncle John's Band → Terrapin transition and the Bird Song especially smoky and fresh, while also praising Brent Mydland’s backing vocals. The recording is a clean FM broadcast soundboard mix with no reported audio flaws, though fans lament that the full show isn’t widely available.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two detailed 5‑star reviews highlight a stellar musical performance and an excellent soundboard source; a single low‑star comment adds minor uncertainty, leading to a weighted rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean FM broadcast mix, no noted dropouts or muddiness; reviewers did not mention any sound issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band",
+      "Terrapin Station",
+      "Bird Song",
+      "Iko Iko"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as 'smoked' and the overall show called 'dynamite', indicating strong pacing and energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's backing vocals are highlighted on Bird Song, adding extra flavor to the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:56:01.959477+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-12-31.sbd.walker-scotton.miller.85684.sbeok.flac16"
+}

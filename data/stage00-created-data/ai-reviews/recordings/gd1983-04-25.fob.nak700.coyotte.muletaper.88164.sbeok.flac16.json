@@ -1,0 +1,39 @@
+{
+  "summary": "Audience recording with occasional distortion captures a smoking Philly show highlighted by an outstanding 'Going Down the Road Feeling Bad'.",
+  "review": "The performance is praised as one of the band’s finest Philadelphia dates, “smoking from start to end” and featuring a standout post‑75 version of \"Going Down the Road Feeling Bad\". The audience tape is generally listenable but suffers from intermittent distortion that can be distracting.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Four out of five reviewers rate the show highly and highlight its musical strengths, while the recording quality is noted as mixed (distortion vs. listenable), leading to an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Distorted sections reported; occasional muddiness but overall tape remains listenable and captures concert atmosphere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Going Down the Road Feeling Bad"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the set as consistently high‑energy, “smoking from start to end,” indicating a well‑flowing performance that kept the crowd engaged throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Going Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T06:22:52.832111+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-25.fob.nak700.coyotte.muletaper.88164.sbeok.flac16"
+}

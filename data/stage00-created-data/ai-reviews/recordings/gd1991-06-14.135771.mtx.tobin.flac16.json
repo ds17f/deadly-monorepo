@@ -1,0 +1,39 @@
+{
+  "summary": "Recording source unknown; fans rave about an unforgettable Dark Star that opened what they call possibly the best live show they ever saw.",
+  "review": "The lone review is a vivid personal recollection, praising the concert as perhaps the best the reviewer has attended and highlighting the opening Dark Star. No details are provided about the audio source or sound quality, making it impossible to assess the recording technically, and the star rating of zero contrasts with the enthusiastic narrative.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Positive comments about the performance are offset by a zero‑star rating and lack of any recording‑quality information, leading to an average overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer commentary on sound clarity, mix, or source type; unable to evaluate technical quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Only the opening of Dark Star is mentioned; no further insight into set pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T21:02:52.098578+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-14.135771.mtx.tobin.flac16"
+}

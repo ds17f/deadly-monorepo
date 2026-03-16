@@ -1,0 +1,63 @@
+{
+  "summary": "An excellent matrix mix delivers a clean, mellow sound that showcases standout performances of Peggy‑O, Candyman and The Other One.",
+  "review": "The show is praised as a solid, fun performance with Jerry’s vocals and the band’s tight playing highlighted throughout; Peggy‑O, Candyman, Bertha > Good Lovin’ and The Other One receive special acclaim. Hunter’s matrix mix is described as crisp, natural and free of reverb while still preserving crowd ambience, making it a pleasure to listen to on headphones.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "All three reviews are strongly positive about both the musical performance and the matrix recording quality; the weighted average of show (≈5) and recording (≈5) yields a near‑perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean mix with no added reverb; natural balance between board clarity and subtle crowd ambience; soft, tasteful drums on slower numbers; overall very listen‑friendly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "The Other One",
+      "Candyman",
+      "Bertha > Good Lovin'",
+      "Werewolves of London"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Rousing start with a spectacular Bertha > Good Lovin' segue, mellow mid‑set vibes, and a fun first Werewolves of London; the band maintains high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals praised as strong alongside Donna; guitar work implied by overall instrumental tightness.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Soft, tasteful drumming noted especially on Peggy‑O; overall drum sound described as mellow."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha > Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Werewolves of London": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T11:27:49.220108+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-19.mtx.seamons.94522.sbeok.flac16"
+}

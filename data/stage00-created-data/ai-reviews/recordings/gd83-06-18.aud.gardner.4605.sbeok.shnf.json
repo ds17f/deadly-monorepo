@@ -1,0 +1,66 @@
+{
+  "summary": "Fair audience tape of an iconic Saratoga show, highlighted by a blistering Scarlet > Fire and soaring Morning Dew.",
+  "review": "The performance is widely praised as one of the band's peak ’80s outings, with Jerry’s incendiary solo on Scarlet > Fire, a thunder‑charged Wheel, and what many call the best Morning Dew ever.  The recording is an audience (AUD) capture that suffers from muddiness, echo and occasional level issues, but the energy and crowd ambience keep it listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show very highly (4‑5 stars) for its musical intensity, while recording quality is consistently described as fair to poor; the weighted combination yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Muddy and echo‑y with occasional level problems (D‑5 overload, high audience volume). Reviewers note the tape is not crisp, but crowd sounds add atmosphere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Morning Dew",
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds strong with Birdsong and Althea, while the second set erupts into an extended Scarlet > Fire jam that flows into The Wheel and a legendary Morning Dew; transitions are praised as seamless and energized by weather effects."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers hail Jerry’s soaring solo on Scarlet > Fire, calling it ‘Junkie Jerry’ and noting his tone was spectacular.",
+    "Phil": "Phil’s bass work is highlighted as a “monster” on Morning Dew with powerful bombs that drove the crowd wild.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann and Mickey Hart receive praise for an extraordinary drum break during Fire, described as ‘intimate relations with nature’s primordial forces.’"
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Birdsong": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T07:02:39.143101+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-06-18.aud.gardner.4605.sbeok.shnf"
+}

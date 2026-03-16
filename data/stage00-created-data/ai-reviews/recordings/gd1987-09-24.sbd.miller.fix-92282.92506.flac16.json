@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent soundboard recording of a 1987 show featuring a smoking Hell in a Bucket, Fire on the Mountain and a standout High Time, all captured in crisp C‑Miller remaster quality",
+  "review": "Fans rave about this September 24, 1987 performance – the band delivers a high‑energy set with highlights like Hell in a Bucket, Fire on the Mountain, My Brother Esau, High Time and an otherworldly The Other One. The C‑Miller soundboard remaster is praised as crystal‑clear and full of verve, making the show both musically and technically superb.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4–5) and enthusiastic comments about both performance and sound quality; strong show weight plus excellent recording yields a top‑tier rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "C‑Miller remaster described as crisp, high‑verve, great sounding glory; no reported dropouts or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire on the Mountain",
+      "Hell in a Bucket",
+      "My Brother Esau",
+      "High Time",
+      "The Other One",
+      "Box of Rain",
+      "Mexicali (intro)",
+      "Big River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds nicely with High Time and an Esau‑Birdsong‑Promised Land sequence; second set delivers a thrilling bucket performance, Mexicali tease and spacey The Other One, keeping the momentum high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry’s incendiary fills, leads and overall guitar fireworks.",
+    "Phil": "",
+    "Bob": "Bob is praised for taking the lead on Big River and going off on Hell in a Bucket.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "My Brother Esau": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:28:20.699568+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-24.sbd.miller.fix-92282.92506.flac16"
+}

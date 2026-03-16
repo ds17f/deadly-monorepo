@@ -1,0 +1,110 @@
+{
+  "summary": "A high‑energy 1985 Merriweather show with standout Scarlet and Let It Grow > Day Job performances captured on an excellent matrix, though a few listeners note some hollowness in the mix.",
+  "review": "Fans rave about this July 1 1985 set – the first set grooves on Dancin' and Dupree's while the second delivers a blistering Scarlet solo, soaring Let It Grow > Day Job, and an epic post‑space that many call one of ’85’s best. The Hunter matrix is praised as clear and full, giving life to Brent’s B3 wizardry and Jerry’s searing solos, even if a couple of listeners describe the sound as slightly hollow or “rotten spaghetti.” Overall the musical performance outweighs minor recording quirks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews are glowing about the show and its matrix source, with only isolated complaints about hollowness; weighting shows (70%) and recording (30%) yields a strong positive score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the Hunter matrix \"excellent\" and note clear instrument separation, though a few mention a hollow or muddy character in the drums/space segment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancin'",
+      "Dupree's Diamond Blues",
+      "Jack A Roe",
+      "Let It Grow > Day Job",
+      "Scarlet",
+      "Fire",
+      "U.S. Blues",
+      "Mr. Fantasy",
+      "Good Lovin'",
+      "Satisfaction",
+      "Baby Blue",
+      "The Walking Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a tight‑but‑loose first set that builds energy, followed by a second set packed with extended jams and an especially memorable post‑space leading into a double encore; the overall pacing is praised as one of the tour’s best."
+  },
+  "band_member_comments": {
+    "Jerry": "His intense solos (Scarlet, Let It Grow) and trippy licks on Dupree's are highlighted, plus strong vocal harmonies with Brent.",
+    "Phil": "",
+    "Bob": "Praised for a powerful Good Lovin' vocal delivery and high energy throughout the set.",
+    "Keys": "Brent’s B3 playing is called \"awesome\" all night, adding depth to many songs.",
+    "Drums": "The drum/space segment is lauded as some of the best ’85 spaces, though one reviewer calls it sounding like “rotten spaghetti.”"
+  },
+  "song_mentions": {
+    "Dancin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack A Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow > Day Job": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Walking Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-15T07:13:58.245664+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-07-01.mtx.seamons.94681.sbeok.flac16"
+}

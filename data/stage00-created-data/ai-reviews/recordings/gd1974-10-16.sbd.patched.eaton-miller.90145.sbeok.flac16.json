@@ -1,0 +1,103 @@
+{
+  "summary": "Solid soundboard capture (clear drums, but Bob’s guitar is buried) paired with a spectacular second set highlighted by Wharf Rat, Eyes of the World and an interlocking Truckin'.",
+  "review": "The show delivers a strong second‑set performance – Whale Rat flowing into a superb Eyes of the World, a busy Big River and a jumpy, Basie‑style Truckin' – while the first set is mostly average with a few bright spots like Mexicali Blues. The patched Eaton‑Miller soundboard sounds good overall, especially on the drums, but the mix mutes Bob Weir’s rhythm guitar and lacks the subsonic ambience of Seastones.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "The musical performance rates high (especially the second set), but recording issues (missing Bob’s guitar, lack of ambient detail) pull the overall enjoyment down slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear drum presence and well‑patched piano/keys; however Bob's rhythm guitar is often inaudible and the recording lacks the subsonic ambience of Seastones, making some moments feel less full."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Eyes of the World",
+      "Truckin'",
+      "Big River",
+      "Goin' Down the Road Feeling Bad",
+      "U.S. Blues",
+      "Mexicali Blues"
+    ],
+    "poor_songs": [
+      "Playin'",
+      "Scarlet"
+    ],
+    "setlist_flow": "First set is largely average with occasional highlights (Mexicali Blues, Scarlet), while the second set erupts into a vibrant sequence of jams and tight interplay, ending with an energetic encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Shows strong lead work – fills left & right on Mexicali Blues, solo under the next verse after Keith's solo, and generally tight interplay with keyboards.",
+    "Phil": "Hyper‑active on Mexicali Blues, playing off Jerry in a lively exchange.",
+    "Bob": "Rhythm guitar is largely inaudible in this mix, making his contribution hard to hear.",
+    "Keys": "Keith’s piano shines – Basie‑like swing on Truckin', solo duels with Lagin on Eyes of the World and solid accompaniment throughout.",
+    "Drums": "Bill's drumming comes through clearly and better than on audience recordings."
+  },
+  "song_mentions": {
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "Playin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Scarlet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Beat it on Down the Line": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "Seastones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T01:06:14.527150+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-10-16.sbd.patched.eaton-miller.90145.sbeok.flac16"
+}

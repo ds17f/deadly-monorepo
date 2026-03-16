@@ -1,0 +1,47 @@
+{
+  "summary": "Audience recording captures the excitement of a first‑time Dead show with a standout Cold Rain & Snow, but the post‑drum segment feels lackluster.",
+  "review": "The audience tape conveys the warm vibe of a first Grateful Dead concert, with clear crowd energy and a nicely reverberated keyboard texture. Highlights include an inspiring run through Cold Rain & Snow (and a fun Stranger), while the after‑drums playlist fails to sustain the momentum. Overall the sound is pleasant enough for a fan recording, though not studio‑grade.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "One moderate (3‑star) review notes a decent audience recording and enjoyable performance highlights, balanced by mild criticism of the post‑drum segment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Nice ambient feel with clear crowd presence; keyboard reverb is noticeable. No major dropouts reported, but typical audience tape limitations apply."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain & Snow",
+      "Stranger"
+    ],
+    "poor_songs": [
+      "After Drums Playlist"
+    ],
+    "setlist_flow": "Enthusiastic first‑time experience, crowd jazzed; strong early songs keep momentum, but the after‑drum segment feels weaker."
+  },
+  "band_member_comments": {
+    "Jerry": "Belts out the first chorus of Cold Rain & Snow with noticeable excitement.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Healey (keyboardist) lets loose with reverb during the playout, adding texture.",
+    "Drums": "Reviewer not crazy about the after‑drums playlist."
+  },
+  "song_mentions": {
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:34:25.945828+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-22.nak300.damico.87093.sbeok.flac16"
+}

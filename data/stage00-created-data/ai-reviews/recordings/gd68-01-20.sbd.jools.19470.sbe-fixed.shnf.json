@@ -1,0 +1,70 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a legendary early‑68 set highlighted by a soaring Clementine and blistering Spanish Jam.",
+  "review": "The recording is an exceptionally clean soundboard source for a rare 1968 performance, preserving the band’s raw energy while keeping analog hiss to a tasteful minimum.  Musically the show shines thanks to a jazzy, Coltrane‑inspired Clementine, a volcanic New Potato → Born Cross Eyed sequence and arguably the best Spanish Jam of that era, even if the Caution and Dark Star are truncated.  Overall fans rave about the tight interplay and historic rarity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 60 fan reviews uniformly rate the show 5‑star, praising both performance and sound quality; minor complaints are limited to short jams, so the combined show (70 %) + recording (30 %) score is very high."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced mix with vintage analog hiss that adds character; vocals are low but the instruments—especially Garcia’s lead tone and Pigpen’s organ—are front‑and‑center.  No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Clementine",
+      "Spanish Jam",
+      "New Potato > Born Cross Eyed",
+      "Caboose"
+    ],
+    "poor_songs": [
+      "Caution (truncated)",
+      "Dark Star (short fragment)"
+    ],
+    "setlist_flow": "The set flows like a jazz‑fusion suite: Clementine launches the magic, segues into New Potato → Born Cross Eyed, erupts into an explosive Spanish Jam that feeds straight into a brief Caution and a tantalizing glimpse of Dark Star."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solo tone is described as ‘tube‑glowing’, jazzy, and the driving force behind Clementine and Spanish Jam.",
+    "Phil": "Phil’s bass leads at the start of Caution receive special praise; his rhythmic foundation is noted throughout.",
+    "Bob": "",
+    "Keys": "Pigpen’s organ work is highlighted as “at his best” and a key ingredient in the Spanish Jam; some debate over whether TC was present, but Pig’s contribution is universally praised.",
+    "Drums": "Mickey and Bill’s drumming are called “some of the finest of the era”, delivering tight, propulsive rhythms."
+  },
+  "song_mentions": {
+    "Clementine": {
+      "positive_mentions": 30,
+      "negative_mentions": 0,
+      "total_mentions": 30
+    },
+    "Spanish Jam": {
+      "positive_mentions": 25,
+      "negative_mentions": 1,
+      "total_mentions": 26
+    },
+    "New Potato > Born Cross Eyed": {
+      "positive_mentions": 20,
+      "negative_mentions": 0,
+      "total_mentions": 20
+    },
+    "Caboose": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Dark Star": {
+      "positive_mentions": 6,
+      "negative_mentions": 5,
+      "total_mentions": 11
+    },
+    "Caution": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-24T07:09:33.488798+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-01-20.sbd.jools.19470.sbe-fixed.shnf"
+}

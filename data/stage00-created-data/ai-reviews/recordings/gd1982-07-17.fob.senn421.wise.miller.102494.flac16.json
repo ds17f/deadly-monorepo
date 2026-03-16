@@ -1,0 +1,51 @@
+{
+  "summary": "High‑energy ’82 show with a standout Baby Blue closer and rare China Cat Sunflower > I Know You Rider combo, captured on a soundboard mix that’s lively yet hampered by occasional amp and mic glitches.",
+  "review": "The concert delivers a vibrant performance highlighted by an inspired Truckin' jam, a blissful final five minutes and the rare China Cat Sunflower → I Know You Rider sequence, plus a Baby Blue encore that many fans cite as the night’s high point. The Charlie Miller/Jim Wise soundboard source is praised for its overall clarity but suffers from intermittent wind‑noise, amp short‑circuiting and instrument level imbalances that give parts of the recording a “fair” feel.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised (unique setlist moments, strong energy) while recording quality receives both high praise and notable technical complaints; the weighted average yields a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix praised as the best sounding source by some listeners, but suffers from amp short‑circuiting, wind‑affected microphones, and unbalanced levels (Bobby's guitar and Brent's keys louder than Jerry and Phil)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Baby Blue",
+      "China Cat Sunflower > I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy performance with a slightly abrupt transition between Althea and Rooster, but the second set flows well into a memorable Truckin' jam and an uplifting close."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are noted as being in fine form; his guitar sits lower in the mix due to amp issues.",
+    "Phil": "Bass is reported as quieter compared to Brent's keyboards, indicating a level imbalance.",
+    "Bob": "Bobby's guitar is louder than Jerry's throughout the recording.",
+    "Keys": "Brent's keyboards dominate the mix and are praised for their presence.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T21:33:46.197048+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-07-17.fob.senn421.wise.miller.102494.flac16"
+}

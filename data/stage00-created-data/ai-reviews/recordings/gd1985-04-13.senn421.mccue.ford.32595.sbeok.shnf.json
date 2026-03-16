@@ -1,0 +1,39 @@
+{
+  "summary": "A beloved second‑set and standout Terrapin Station, but the soundboard mix buries Brent’s keyboards; a front‑row Sennheiser 441 audience capture offers clearer audio.",
+  "review": "Fans rave about the show’s warm, psychedelic second set and cite Terrapin Station as a highlight, saying it feels like home. The official soundboard recording is criticized for a botched mix that drowns out Brent’s keys and low‑bit depth, while an audience tape recorded with Sennheiser 441s provides a cleaner listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show performance is praised highly (≈4.5/5) while recording quality is mixed (≈3.2/5); weighted average yields about 4.1 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Board mix heavily buries Brent’s keyboards, especially on the Terrapin outro; listeners complain of low‑bit depth (SBD) and request FLAC16. An audience tape using front‑row Sennheiser 441 microphones is noted as clean with no cuts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as a comforting psychedelic blanket that unfolds gently; overall vibe feels like home for long‑time listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboards are buried or missing in the board mix, though the audience tape captures them clearly.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T03:48:47.935049+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-13.senn421.mccue.ford.32595.sbeok.shnf"
+}

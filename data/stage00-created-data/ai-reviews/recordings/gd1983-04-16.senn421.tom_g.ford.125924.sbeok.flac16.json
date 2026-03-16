@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent show featuring Stephen Stills as a guest and a good-quality recording",
+  "review": "The reviewer rates the concert an outstanding performance, highlighting the addition of Stephen Stills as a great touch. The recording is described as good, though no technical details are provided. Overall, both the music and the capture are viewed positively.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Single 5‑star review praising both the show and recording; limited detail keeps confidence low but overall rating is high."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it a good recording but gives no specifics about soundboard, clarity, or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T05:31:52.725206+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-16.senn421.tom_g.ford.125924.sbeok.flac16"
+}

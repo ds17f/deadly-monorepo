@@ -1,0 +1,31 @@
+{
+  "summary": "Good audience recording of a show many love, but the performance feels playful and tentative to some listeners.",
+  "review": "The tape captures an engaging concert that reviewers describe as great from start to finish with “sweet AUD” quality. While one fan praises every song and the overall flow, another finds the band in a silly mood, especially noting Bob Weir’s tongue‑in‑cheek vocals and tentative new material.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Two reviews with opposing views; strong praise for the show and decent audience recording, offset by a middling critique of performance mood."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note the audio as “sweet AUD,” indicating clear enough audience capture with no major flaws mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Generally praised for its flow and interesting moments, though some feel the band was in a playful, tentative mode that reduced overall impact."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Weir sounds like he's making fun of himself; performance described as tentative.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T01:34:29.164036+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-17.aud.morris.111030.sbeok.flac24"
+}

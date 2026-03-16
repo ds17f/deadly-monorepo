@@ -1,0 +1,45 @@
+{
+  "summary": "Mixed reception – fans love the longer Bird Song and the first‑set L.S.D. ending, but recording details are unclear",
+  "review": "One reviewer gushes that this show is simply great (4 ★), while another gives it no stars and only notes a longer Bird Song and an LSD first‑set closer without strong enthusiasm. No specific comments about the source or sound quality were made, so the technical side remains unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Two reviews provide limited detail; one is clearly positive and the other low‑rating with neutral comments. Show quality gets modest credit for highlighted songs, while recording quality cannot be assessed."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentioned soundboard, audience bleed, clarity, or any mix issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "L.S.D."
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a longer Bird Song and that L.S.D. serves as the first‑set closer, suggesting a relaxed but memorable set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "L.S.D.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:29:26.281003+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-08.nak700.rolfe.miller.94303.sbeok.flac24"
+}

@@ -1,0 +1,75 @@
+{
+  "summary": "High‑quality UltraMatrix capture of a focused East Coast run with standout Built to Last → Blow Away segue and strong vocal work from Brent",
+  "review": "The reviewer raves about the band's tight performance during this Warlocks‑era show, singling out the rare Built to Last into Blow Away transition, Masterpiece, Cassidy and a superb second set. The UltraMatrix recording is described as “right on target,” delivering clear sound that lets Brent’s keyboard and vocal work shine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "The single, detailed review is overwhelmingly positive about both the musical performance (standout songs, tight playing) and the recording quality (clear UltraMatrix mix), warranting a high rating despite limited sample size."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes the sound is “right on target” and that the UltraMatrix mix brings the band to life with clear balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Built to Last",
+      "Blow Away",
+      "Masterpiece",
+      "Cassidy",
+      "Here Comes Sunshine",
+      "Cumberland Blues",
+      "Don’t Ease!"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its focus and inspired East‑Coast energy, with smooth transitions—especially the rare Built to Last → Blow Away jam—and strong backing vocal arrangements throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is highlighted (even jokingly called “MIDI the sax”), and his work with Weir is praised.",
+    "Phil": "Cumberland is described as a ‘Phil Zone’ moment, indicating standout bass/vocal contribution.",
+    "Bob": "Weir is mentioned alongside Garcia for TV‑style performance, implying solid rhythm guitar and vocals.",
+    "Keys": "Brent Mydland receives glowing remarks for both lead/backing vocals and mesmerizing keyboard work.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Built to Last": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blow Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don’t Ease!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:54:45.066299+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-19.147729.UltraMatrix.sbd.cm.miller.flac16"
+}

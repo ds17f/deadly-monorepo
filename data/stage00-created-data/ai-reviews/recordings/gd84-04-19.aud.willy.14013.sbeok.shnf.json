@@ -1,0 +1,63 @@
+{
+  "summary": "Decent 1984 show with strong classics (China > Rider, Estimated, Wharf Rat) captured on a tinny audience tape that suffers from venue acoustics and missing bass.",
+  "review": "The performance is generally solid – the first set is praised as extra‑strong and songs like China > Rider, Estimated, Birdsong, Terrapin and Wharf Rat get repeated shout‑outs. However the AUD recording is described as tinny, stadium‑like and lacking Phil’s bass in the mix, which drags the overall listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4–5 stars for musical content, but several note poor audience‑recording quality and missing bass, pulling the weighted rating down to the low‑mid 3 range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Tinny ‘stadium’ sound, strange venue acoustics, missing Phil’s bass in the mix, overall less warm than typical board recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Rider",
+      "Estimated",
+      "Birdsong",
+      "Terrapin",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as extra strong; the show is viewed as a solid, classic‑heavy outing with many fan‑favorite numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised – ‘rippin’ it up’ and great guitar tone.",
+    "Phil": "Noted as absent from the mix; bass barely audible.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s DX7 set to glockenspiel described as distracting and contributing to a tinny sound.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China > Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T16:06:03.109256+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-04-19.aud.willy.14013.sbeok.shnf"
+}

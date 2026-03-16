@@ -1,0 +1,76 @@
+{
+  "summary": "Fair audience recording captures an emotionally charged indoor show featuring a standout Black Peter jam, a magical Help‑Slip sequence and moving renditions of Morning Dew and Touch of Grey.",
+  "review": "The performance is remembered for its raw emotion – Jerry’s voice was raw, belting choruses and even shedding tears on songs like Morning Dew, So Many Roads and Touch of Grey. Reviewers highlight a powerful second set with Help‑Slip and an unforgettable Black Peter jam, while noting the lack of a soundboard source makes the audio only fair but still listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Most reviewers gave 5‑star praise for the show’s emotional intensity and standout songs, while the recording is noted as an audience capture with only fair fidelity; weighted average yields a solid 4.1."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "No soundboard source; listeners note lower fidelity and some missing detail, but overall the tape is usable for enjoying the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Morning Dew",
+      "Touch of Grey",
+      "Roses",
+      "So Many Roads"
+    ],
+    "poor_songs": [
+      "Franklin's Tower"
+    ],
+    "setlist_flow": "An indoor summer‑tour show that felt especially intimate; the first set was steady while the second set delivered a magical Help‑Slip sequence and an explosive Black Peter jam, ending with deeply emotional ballads."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as not feeling well but delivering heartfelt vocals, belting choruses and even shedding tears on several songs; his performance is called magical despite health concerns.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T10:40:06.339457+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-06-22.daud.wiley.8767.sbeok.shnf"
+}

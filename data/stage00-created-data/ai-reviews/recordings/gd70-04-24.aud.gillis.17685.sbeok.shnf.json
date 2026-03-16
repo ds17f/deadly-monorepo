@@ -1,0 +1,39 @@
+{
+  "summary": "Sub‑par recording with pitch and tracking flaws, but a standout Dark Star makes it worth a listen for completists.",
+  "review": "The two reviews agree that the audio quality is below standard – one calls it “sub par” and the other notes slowed‑down pitch, false starts and broken‑string glitches.  Musically, the only praised moment is the Dark Star, which one reviewer rates highly despite the technical shortcomings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality receives a modest boost from a strong Dark Star performance, but recording problems dominate both reviews, pulling the overall rating toward the lower‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Pitch appears slightly slower than usual; contains tracking flaws such as a false start and broken‑string interludes. Sound is described as sub‑par by one reviewer and merely “not great” by another."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Limited detail provided; the set moves from Dire Wolf into a broken‑string segment before Dark Star fades in. No major flow comments beyond that."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T18:31:25.916284+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-04-24.aud.gillis.17685.sbeok.shnf"
+}

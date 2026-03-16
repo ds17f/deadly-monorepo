@@ -1,0 +1,31 @@
+{
+  "summary": "Great‑sounding recording but mislabeled date, making the source uncertain",
+  "review": "The reviewer praises the audio quality, calling it a great‑sounding upload, yet points out that the concert is incorrectly dated – it’s actually the 12‑28‑78 San Diego show rather than the advertised 12‑30 UCLA performance. No musical details are given, so the assessment focuses on sound fidelity and metadata error.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "low",
+    "rationale": "Only one brief review; it rates the audio highly but flags a major labeling mistake, leaving overall confidence low."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the upload as 'great sounding' despite no specific details about soundboard or audience source."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T18:16:11.965848+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-12-30.145348.sony.ecm270.severson.miller.clugston.flac1648"
+}

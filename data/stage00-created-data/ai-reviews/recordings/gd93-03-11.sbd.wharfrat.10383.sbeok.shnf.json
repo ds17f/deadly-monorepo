@@ -1,0 +1,88 @@
+{
+  "summary": "A fair‑quality audience tape that still delivers a scorching show – Help>Slip>Franklin’s, The Other One and Days Between shine.",
+  "review": "Even though the recording is not a crisp soundboard (some sections are mono or thin), the performance on this night is consistently praised. Highlights include a smoking Help → Slip → Franklin’s Tower, an incendiary The Other One and one of the best Days Between ever captured, while Wave To The Wind drags down a few moments. Overall the music outweighs the technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers rave about the musical set (show quality ~4.5) but note inconsistent or sub‑par recording quality (~2.5). Weighted average yields a solid 3.9."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Not a true SBD; many describe it as the best‑sounding AUD with sections that are thin, flimsy or mono up through Music Never Stopped. Later tracks (e.g., Aiko) sound excellent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower",
+      "The Other One",
+      "Days Between",
+      "Althea",
+      "So Many Roads",
+      "Music Never Stopped",
+      "Liberty (Encore)",
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Wave To The Wind"
+    ],
+    "setlist_flow": "The first set is solid, but the second set really erupts with blues‑y Rooster, a tight Help>Slip>Franklin’s, a fiery Other One and an emotional Days Between. The encore Liberty caps a high‑energy night."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as smiling and in a good mood; uses MIDI on The Other One; guitar work generally praised though one reviewer found the show unfocused.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince’s piano shines on Franklin's Tower and adds sparkle throughout.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Days Between": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty (Encore)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wave To The Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T10:09:59.930217+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-11.sbd.wharfrat.10383.sbeok.shnf"
+}

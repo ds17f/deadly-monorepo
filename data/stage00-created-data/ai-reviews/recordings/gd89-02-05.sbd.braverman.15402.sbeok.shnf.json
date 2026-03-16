@@ -1,0 +1,118 @@
+{
+  "summary": "Good soundboard capture of a solid early‑1989 show featuring the debut of We Can Run and Standing on the Moon, with standout Playin', Women Are Smarter and He’s Gone performances.",
+  "review": "The recording is generally praised for its clear, well‑balanced soundboard quality, though a few listeners note occasional flatness in certain numbers. Musically the concert delivers several high points – the debut of We Can Run and Standing on the Moon, a fiery Playin' jam, strong renditions of Women Are Smarter, Althea and He’s Gone – while some songs such as Touch and We Can Run receive mixed feedback.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers highlight strong musical moments and good sound quality, but a handful of negative comments about specific songs and uneven drumming lower the overall rating to the mid‑range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Many reviewers describe the audio as clear, crisp and well‑balanced; a few note occasional flatness or unevenness but no serious dropouts or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin'",
+      "Women Are Smarter",
+      "He’s Gone",
+      "Althea",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [
+      "Touch",
+      "We Can Run",
+      "Stranger",
+      "Franklin's Tower"
+    ],
+    "setlist_flow": "The first set opens with new material (Touch, Stranger) that feels a bit flat, but the second set lifts the energy with Playin', He’s Gone and a solid encore. Unusual placement of He’s Gone and the debut of We Can Run/Standing on the Moon are noted as interesting structural choices."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s guitar work is praised on Althea and during the post‑space He’s Gone, though his tone on Touch was called flat by some listeners.",
+    "Phil": "Phil leads the Playin' jam and provides impressive interplay with Jerry on He’s Gone.",
+    "Bob": "",
+    "Keys": "Brent (keyboards) receives mixed feedback – lauded for energy on Women Are Smarter and I Will Take, but criticized as awkward or overly wordy on early songs like We Can Run.",
+    "Drums": "Billy (Bill) and Mickey are noted for a lack of sync during this period, reflecting uneven drumming."
+  },
+  "song_mentions": {
+    "Playin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Touch": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "We Can Run": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Man Smart (Woman)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He’s Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Women Are Smarter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Will Take": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T16:08:17.355641+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-02-05.sbd.braverman.15402.sbeok.shnf"
+}

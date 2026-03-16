@@ -1,0 +1,58 @@
+{
+  "summary": "Soundboard recording of a solid 1995 Birmingham show with standout “Matilda,” Row Jimmy and Stagger Lee, but mixed feelings on the mix and some song choices.",
+  "review": "The performance captures one of the stronger nights from the ’95 spring run – fans rave about Jerry’s presence on songs like Matilda, Row Jimmy and Stagger Lee, while a few complain about the drum sound and a sluggish Matilda. The source is a soundboard dump that most listeners find acceptable; no major audio flaws are reported, though there are no explicit praises of pristine fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Most reviewers highlight strong musical moments and a decent soundboard source, but several negative comments (low stars, criticism of drums and Matilda) pull the overall impression toward a mixed rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit complaints about clarity or drop‑outs; reviewers note “nice job with the patches,” suggesting an acceptable, well‑balanced board mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Matilda",
+      "Row Jimmy",
+      "Stagger Lee"
+    ],
+    "poor_songs": [
+      "Matilda"
+    ],
+    "setlist_flow": "Fans view this as a solid entry in the ’95 spring run – the second Birmingham night is praised for its energy and guest drummer Willie Green, though some feel the set drags early before hitting its stride with the highlighted numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised for making songs special despite noted decline in his chops; his presence lifts the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mixed – some listeners call the drums obnoxious, while others enjoy Willie Green’s guest spot."
+  },
+  "song_mentions": {
+    "Matilda": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T07:58:40.340775+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-04-05.sbd.hinko.tetzeli.fix-18097.35258.reflac.flac16"
+}

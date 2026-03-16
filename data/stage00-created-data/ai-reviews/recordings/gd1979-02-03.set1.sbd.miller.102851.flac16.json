@@ -1,0 +1,44 @@
+{
+  "summary": "Excellent soundboard capture, but the classic China Cat → I Know You Rider segue is absent, making the show feel incomplete.",
+  "review": "The recording quality is praised as clear and well‑captured, likely a soundboard source. However fans are disappointed that the expected China Cat Sunflower > I Know You Rider sequence is missing, leaving only two repetitions of I Know You Rider in its place.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "One review gives a moderate 3‑star rating; it praises the audio but criticizes the setlist omission, resulting in an average overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls it a great recording and notes no sound issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "China Cat Sunflower (missing)"
+    ],
+    "setlist_flow": "The set is marred by the absence of the classic China Cat > Rider transition, resulting in a less satisfying flow despite solid playing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T20:01:31.081251+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-02-03.set1.sbd.miller.102851.flac16"
+}

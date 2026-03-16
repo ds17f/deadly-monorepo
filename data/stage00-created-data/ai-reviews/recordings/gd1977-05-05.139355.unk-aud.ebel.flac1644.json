@@ -1,0 +1,31 @@
+{
+  "summary": "A great audience recording of a fantastic show, praised for its clear sound and an emotional nod to Jerry Garcia.",
+  "review": "Both reviewers are enthusiastic – one highlights that the audience (AUD) source sounds surprisingly clear and enjoyable, while the other simply calls the concert \"great\" and mentions missing Jerry. The recording quality is regarded as good for a crowd tape, and the performance itself leaves listeners smiling despite the unknown date.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Both reviews are positive (4‑ and 5‑star) with clear praise for sound quality and show enjoyment; limited number of reviews reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes the AUD source sounds great, indicating a surprisingly clear and pleasant crowd recording."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; overall impression is that the show was enjoyable and memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned with affection ('Dr. Jerry I miss you'), indicating emotional appreciation though no specific playing critique.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-24T22:44:56.245193+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-05.139355.unk-aud.ebel.flac1644"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Recording captured beautifully but modest show notes; highlight is the 'To Lay Me Down' moment",
+  "review": "The lone review praises the tape’s clarity, calling it “captured quite beautifully,” yet admits it may not be top‑tier. The only musical highlight mentioned is a standout rendition of ‘To Lay Me Down,’ with no further detail on performance or band members.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one vague review; positive remarks about recording quality but minimal show commentary and a zero‑star rating lead to an average overall assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer says the music is captured quite beautifully, though acknowledges it may not be the best possible source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "To Lay Me Down"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T04:07:21.087026+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-04.151266.sbd.betty.anon.noel.flac1644"
+}

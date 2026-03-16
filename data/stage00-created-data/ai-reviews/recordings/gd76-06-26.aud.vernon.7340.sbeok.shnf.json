@@ -1,0 +1,69 @@
+{
+  "summary": "Crisp audience tape of the historic June 1976 Chicago return show, highlighted by a soaring Crazy Fingers → Stella Blue suite and an inspiring St. Stephen.",
+  "review": "The recording captures the excitement of the Dead’s first post‑retirement Chicago gig with clear, though slightly hollow‑sounding, audience ambience. Musically the night shines on the Crazy Fingers/​Stella Blue pairing, a tight Tennessee Jed and a standout St. Stephen, while a few moments (Peggy‑O, missing Scarlet Begonia’s) fall short of the band’s peak.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and praise both performance and tape quality; recording is solid audience source, show is consistently praised with only minor criticisms."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and clear for an audience tape, with a slight hollow character in the mids; early mic‑feedback moment noted but not disruptive."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers → Stella Blue",
+      "St. Stephen",
+      "Tennessee Jed",
+      "The Promised Land"
+    ],
+    "poor_songs": [
+      "Peggy-O"
+    ],
+    "setlist_flow": "High energy from the historic return, with a strong second‑set suite (Crazy Fingers/​Stella Blue) and an extended St. Stephen that keeps the momentum; occasional pulling back prevents it from reaching classic‑level greatness."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s “crazy fingers” on the eponymous jam are repeatedly praised for their intensity and emotion.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith’s keyboards are described as “pounding” and exceptionally tight, especially during Tennessee Jed.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T05:25:45.544167+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-06-26.aud.vernon.7340.sbeok.shnf"
+}

@@ -1,0 +1,52 @@
+{
+  "summary": "Solid FOB audience recording of a mellow, slow show that shines thanks to an outstanding Bird Song.",
+  "review": "The tape captures a decent front‑of‑house audience mix that many reviewers consider the better source for this concert. Musically the performance is mixed – a generally relaxed set with Jerry tired and a sluggish vibe, but Phil’s driving middle on Bird Song (and a happy LSD encore) provide the high points.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (average ~3.7) while recording quality is rated good to excellent (~4.5); weighted combination yields a near‑4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Solid front‑of‑house audience capture; clearer and more balanced than the alternative source, though typical ambient crowd noise is present."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "LSD"
+    ],
+    "poor_songs": [
+      "Crazy Fingers"
+    ],
+    "setlist_flow": "A mellow first set that drifts slowly, with a few highlights (Bird Song, the LSD encore) and limited high‑energy jamming; second set contains only modest jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Appears tired; his Crazy Fingers solo is said to sap energy from the set.",
+    "Phil": "Delivers an outstanding middle section on Bird Song, rescuing a otherwise slow first set.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drumz are noted but not singled out for special praise."
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "LSD": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:34:16.257755+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-05-15.fob.schoeps.unknown.32091.flac16"
+}

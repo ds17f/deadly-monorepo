@@ -1,0 +1,31 @@
+{
+  "summary": "Fantastic show praised by the reviewer; recording source and quality are not specified",
+  "review": "The lone review rates the performance a perfect five stars, calling it \"Fantastic Show\" with a brief enthusiastic note. No details about the audio source or sound quality are provided, so the recording is assumed to be at least listenable but its technical merits remain unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Only one short review gives a five‑star rating and high praise for the performance, but offers no information on recording quality; thus the rating leans toward strong show quality with uncertain technical assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments about sound clarity, mix, or source type were made; presumed acceptable for listening."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No detailed feedback on set structure or pacing was provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T02:41:21.139044+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-30.158324.5-1.tobin.flac1648"
+}

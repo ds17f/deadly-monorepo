@@ -1,0 +1,108 @@
+{
+  "summary": "Fair‑quality soundboard capture of an early ’78 show that shines on The Other One, Eyes and a blazing second set despite occasional muddiness and piano distortion.",
+  "review": "The performance is solidly in the “late‑77/early‑78” sweet spot – reviewers rave about a monster The Other One, burning Eyes, and tight renditions of Jack Straw, Candyman, Loser, Deal, Let It Grow and more.  The soundboard source is usable but uneven; some note clear moments while others complain of muddy mids, a badly distorted Keith piano and occasional balance issues.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars for the musical performance while noting mixed technical quality; weighting show (70 %) and recording (30 %) yields a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Comments range from “good sound” to “muddy at times”, with specific complaints about a heavily distorted Keith piano and an uneven mix/balance in parts of the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Eyes",
+      "Jack Straw",
+      "Candyman",
+      "Loser",
+      "Let It Grow",
+      "Cassidy",
+      "Deal"
+    ],
+    "poor_songs": [
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "Early‑78 energy is evident; the first set flows well with strong transitions (e.g., Bertha > Good Lovin’).  The second set, though truncated and apparently rushed after a venue incident, builds to a fiery Eyes and an extended The Other One.  Some listeners note the show feels agitated toward the end."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone is praised early on but his vocals are described as ragged on Deal (and strained on Loser).",
+    "Phil": "Lesh’s bass is highlighted for its presence and a noticeable “pluck” before Estimated Prophet.",
+    "Bob": "",
+    "Keys": "Keith’s piano suffers from heavy distortion in sections, detracting from the overall mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson and Delilah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T08:12:32.785997+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-01-14.sbd.vernon.16114.sbeok.shnf"
+}

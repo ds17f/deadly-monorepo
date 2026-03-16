@@ -1,0 +1,120 @@
+{
+  "summary": "A clear FM broadcast captures a high‑energy NYE show with standout performances of Good Lovin', Samson & Delilah, Scarlet Begonias and Help on the Way, while the mix remains solid despite slight speed issues.",
+  "review": "The recording is an audience‑sourced FM capture that generally sounds good, though listeners note it runs fast and benefits from a -1% pitch correction for part of the set. Musically the show shines in the second set – highlighted by superb versions of Good Lovin', Samson & Delilah, Scarlet Begonias, Help on the Way and We Bid You Goodnight – while the first set is more average but still contains memorable moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Three detailed reviews are uniformly positive about the performance, with many standout songs and only minor recording quirks; this yields a strong combined show (≈4.5) and good recording (≈3.8) rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "FM broadcast capture with clear mix and well‑balanced instruments; runs slightly fast and needs about -1% pitch correction for the first half, but generally clearer than the official release."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'",
+      "Samson & Delilah",
+      "Scarlet Begonias",
+      "They Love Each Other",
+      "Playing in the Band",
+      "Eyes of the World",
+      "Help on the Way",
+      "We Bid You Goodnight"
+    ],
+    "poor_songs": [
+      "Around & Around",
+      "One More Saturday",
+      "Not Fade Away"
+    ],
+    "setlist_flow": "First set is average with a few bright spots; the second set stretches to 2½ hours and delivers exceptional jams and seamless transitions, making the overall flow strongly weighted toward the latter half."
+  },
+  "band_member_comments": {
+    "Jerry": "His tone is praised throughout, especially on Morning Dew.",
+    "Phil": "Phil's bass work receives strong compliments in Playing in the Band and various jam sections.",
+    "Bob": "",
+    "Keys": "Keith's keyboards are described as A‑game, complementing Jerry and driving songs like Good Lovin' and the extended jams.",
+    "Drums": "The drummers provide powerful vamping and drive the second‑set transitions, with notable moments of collective percussion."
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Mag": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "One More Saturday": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "We Bid You Goodnight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T08:42:52.525337+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-12-31.fm.hollister.15114.shnf"
+}

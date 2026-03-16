@@ -1,0 +1,51 @@
+{
+  "summary": "A stellar Dead show highlighted by a classic Candyman Jam, soaring Space and an unforgettable Don't Ease Me In, with no reported recording flaws.",
+  "review": "Both reviewers gush about the energy of this concert – noting Jerry’s legendary chain‑smoking solo through Space, Brent’s standout vocals on the Candyman Jam, and the crowd‑singing climax of Don’t Ease Me In. No specific technical complaints are mentioned, suggesting the tape is at least listenable if not pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Show quality is described as exceptional (5‑star praise, multiple standout moments) while recording quality is not discussed, implying it is adequate; combined weighting yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers do not comment on soundboard vs. audience or any audio issues, indicating the recording is at least acceptable for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "Candyman Jam",
+      "Don’t Ease Me In"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers reminisce about a seamless set that ended with a sing‑along Don’t Ease Me In, suggesting a well‑paced and emotionally resonant concert."
+  },
+  "band_member_comments": {
+    "Jerry": "Chain‑smoking solo through Space is vividly remembered; his performance is highlighted as iconic.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland delivers great BGD vocals on the Candyman Jam, noted as a classic moment.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don’t Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T22:40:35.698376+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-08-17.sbd.25432.sbeok.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Amazing show praised by the reviewer, but recording source and quality are unspecified",
+  "review": "The single review enthusiastically calls this concert an “amazing show” and even gives it a five‑star rating, but provides no details on the audio mix, specific songs, or individual performances. Consequently, while the sentiment toward the performance is clearly positive, the recording’s technical qualities remain unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Only one brief review; it rates the show highly but offers no concrete information on sound quality or musical specifics, so rating is based largely on the positive sentiment and limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about clarity, mix balance, or source; reviewer only asks how to download the show."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T07:33:14.168404+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-06-10.dts.haugh.29669.sbeok.shnf"
+}

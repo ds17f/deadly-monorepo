@@ -1,0 +1,111 @@
+{
+  "summary": "Mid‑80s arena audience tape with a hollow/boomy sound, solid playing and a standout performance of “The Dew”.",
+  "review": "The recording is an audience capture that suffers from a hollow, slightly boomy mids‑80s arena ambience, but it remains listenable. Musically the show is competent – nothing earth‑shattering – with highlights such as “The Dew”, a lively Wheel and a nice outro jam on Foolish, while songs like Terrapin and Mighty Quinn feel listless. Overall opinions are mixed, reflecting both the decent musicianship and the modest audio fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "high",
+    "rationale": "Reviews note an average‑to‑good performance (70% weight) but consistently describe a fair, hollow audience recording (30% weight), yielding a combined rating just above the midpoint."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hollow, boomy mid‑80s arena sound; some reviewers call it tinny or “concave”. Minor feedback issues on Victim and overall lack of nuance, but no severe dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Dew",
+      "The Wheel",
+      "Foolish (outro jam)"
+    ],
+    "poor_songs": [
+      "Terrapin (forgotten lyrics)",
+      "Mighty Quinn (tired performance)",
+      "Friend of the Devil (not memorable)",
+      "Memphis Blues (despondent version)"
+    ],
+    "setlist_flow": "The set is well‑spaced with patient pacing; songs transition smoothly though the hollow recording makes them blend together, resulting in a solid but not spectacular overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Forgets major chunks of lyrics during Terrapin, otherwise guitar work is competent.",
+    "Phil": "",
+    "Bob": "Birthday shout‑out noted; vocal inflections on The Dew praised.",
+    "Keys": "",
+    "Drums": "Drums receive strong praise; the Drum/Space segment described as erratic but overall energy is good."
+  },
+  "song_mentions": {
+    "Mississippi": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Never Trust": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Memphis Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ease": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Foolish": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums/Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mighty Quinn": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:08:06.949462+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-10-16.set2.aud.mattman.26381.sbeok.flacf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Great show marred by a garbled matrix recording that's hard to listen to",
+  "review": "Reviewers describe the performance as good to great, but the matrix (MTX) source is described as garbled and swirly, making it barely listenable. The consensus is that other audience recordings, such as Pasternak Aud., provide a far better listening experience.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "low",
+    "rationale": "Only one brief review; it rates the show positively but heavily criticizes the recording, leading to an overall moderate score (≈3.1) with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "poor",
+    "technical_notes": "Garbled, swirly nature; not very listenable; significant fidelity issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Show considered good/great overall but no specific song or flow comments were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T17:40:28.326227+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-03.mtx.tobin.125281.flac16"
+}

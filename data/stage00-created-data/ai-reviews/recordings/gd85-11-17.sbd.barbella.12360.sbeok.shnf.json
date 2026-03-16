@@ -1,0 +1,87 @@
+{
+  "summary": "Soundboard recording with a crisp, rock‑solid first set highlighted by Never Trust/Good Times and Throwing Stones/NFA, though the second set drifts on mis‑placed Brent tunes.",
+  "review": "The show shines in its opening half – reviewers rave about a tight, energetic first set featuring standout renditions of Never Trust into Good Times, Throwing Stones into Not Fade Away, and a fiery China Rider > Samson > He's Gone > Spoonful sequence. The soundboard source is generally described as clean and crisp, with only minor complaints about excess reverb on Brent’s vocals; the second set loses momentum amid pre‑drum Brent numbers and a lullaby‑like Baby Blue.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and praise the musical performance, especially the first set; recording is noted as clean and crisp, yielding a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Listeners describe the audio as clean and crisp; one comment notes excessive reverb on Brent’s vocals but no major drop‑outs or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Never Trust",
+      "Good Times",
+      "Throwing Stones",
+      "Not Fade Away",
+      "China Rider",
+      "Samson",
+      "He's Gone"
+    ],
+    "poor_songs": [
+      "Baby Blue"
+    ],
+    "setlist_flow": "First set is praised as rock‑solid and energetic; second set shows an energy dip with a series of Brent‑led pre‑drum tunes that feel disjointed, ending on a subdued Baby Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar was ‘halfway off’ during Spoonful but he stayed on stage and later delivered a lullaby‑like Baby Blue; overall tone not specifically praised.",
+    "Phil": "",
+    "Bob": "Nice vocal delivery on Spoonful, though some listeners note heavy reverb on Brent’s (keyboardist) vocals.",
+    "Keys": "Brent's pre‑drum tunes are described as misbegotten and overly reverberant, but his contributions were seen as giving him a chance to shine.",
+    "Drums": "Drums enter after Spoonful; no specific issues noted."
+  },
+  "song_mentions": {
+    "Never Trust": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Times": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:43:47.806078+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-11-17.sbd.barbella.12360.sbeok.shnf"
+}

@@ -1,0 +1,105 @@
+{
+  "summary": "A high‑quality patched SBD/Audience matrix captures the legendary May 21 1974 show, highlighted by an epic 47‑minute “Playing In The Band” and rare gems like “Money Money.”",
+  "review": "The recording combines the cleanest available soundboard tracks with audience ambience, delivering a generally clear and dynamic listening experience despite occasional minor noise and a few mix quirks. Musically the concert is revered for its marathon “Playing In The Band,” tight first‑set work and standout numbers such as “Brown Eyed Women,” “China Doll,” and “Around & Around.” Overall fans deem it one of the best 1974 performances available.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the performance (especially the 47‑minute Playing) and the patched SBD/Audience source; only a few note minor mix issues, yielding an overall strong weighted score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Patched SBD with audience tracks; generally clear and dynamic, though some listeners notice slight noise, occasional drop‑outs, and that the alternative pure SBD source may sound a touch cleaner on specific songs (Stella, Around)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing In The Band",
+      "Money Money",
+      "Brown Eyed Women",
+      "China Doll",
+      "Around & Around",
+      "Wharf Rat",
+      "Eyes of the World",
+      "Scarlet Begonias"
+    ],
+    "poor_songs": [
+      "Me & My Uncle",
+      "Sugar Magnolia (Sugar Mag)",
+      "Row Jimmy"
+    ],
+    "setlist_flow": "A tight first set builds momentum with solid blues and folk‑rock numbers, leading into a monumental second set anchored by the 46‑minute Playing; despite a few uneven moments, the overall pacing is praised as relaxed yet exhilarating."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as fluid, effortless and even “autoharp‑like” at times; his slide on Row Jimmy receives special mention.",
+    "Phil": "Phil’s bass work is highlighted for pushing the band forward on tracks like Johnny B. Goode and providing a solid foundation throughout the marathon Playing.",
+    "Bob": "",
+    "Keys": "Keith’s dynamic organ during the extended Playing earns high praise; occasional critique of Donna’s vocal mix but overall keyboard contribution is lauded.",
+    "Drums": "The drum groove is noted for its “definite funk” and driving energy, especially in the long jam sections."
+  },
+  "song_mentions": {
+    "Playing In The Band": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Money Money": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Around & Around": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T19:53:19.505949+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-05-21.sbd-patched.wier.22801.sbeok.shnf"
+}

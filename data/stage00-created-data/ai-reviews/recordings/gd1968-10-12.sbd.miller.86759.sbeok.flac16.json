@@ -1,0 +1,80 @@
+{
+  "summary": "Flawless soundboard capture of the Oct 12 1968 Avalon Ballroom show, highlighted by a legendary Dark Star and soaring Eleven/Other One jams.",
+  "review": "The Miller‑upgraded soundboard tape delivers crystal‑clear, spacious mix that makes every psychedelic turn feel present‑day.  Musically the night is a peak‑era performance – blistering Dark Star, thunderous The Eleven, ferocious The Other One and a hypnotic New Potato Caboose dominate, with the first set generally praised as tighter than the second.  Jerry’s lead work and vocals are repeatedly called sublime, Phil’s bass solo in New Potato is noted as “astonishing,” while the absence of Pigpen/organ is mentioned only as a minor loss.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "Over 40 reviews, virtually all five‑star, extol both the musical performance and the Miller soundboard upgrade; show quality (70 %) and recording excellence (30 %) combine to a near‑perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller “upgrade” yields crisp, spacious mix with superb instrument separation; reviewers repeatedly call it the best‑sounding version of this show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Eleven",
+      "The Other One",
+      "New Potato Caboose",
+      "St. Stephen",
+      "Cryptical Suite",
+      "Feedback"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Classic late‑summer 1968 set: tight, melodic first set followed by an expansive second set of deep jams; many note the first set feels slightly tighter but overall energy never wanes."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for blistering leads, soaring tone and captivating vocals (especially on Dark Star and Death Don't Have No Mercy).",
+    "Phil": "His bass work is highlighted – especially the “Thirteens‑style” solo during New Potato and his vocal cue before the jam.",
+    "Bob": "Complimented for strong rhythm guitar and occasional vocal moments; noted on Death Don't Have No Mercy.",
+    "Keys": "Pigpen’s organ absent – mentioned as a loss but not detrimental; TC’s keyboards also missing, yet reviewers feel space opened up for tighter playing.",
+    "Drums": "Generally solid; one reviewer calls the drum segment “somewhat rough,” but overall Bill Kreutzmann’s playing is accepted as part of the jam flow."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "The Eleven": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "New Potato Caboose": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "St. Stephen": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cryptical Suite": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Feedback": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T09:23:56.556118+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-10-12.sbd.miller.86759.sbeok.flac16"
+}

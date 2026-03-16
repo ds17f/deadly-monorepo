@@ -1,0 +1,70 @@
+{
+  "summary": "Good soundboard capture of a high‑energy New Year’s show highlighted by a scorching Dark Star and powerful Victim Or the Crime.",
+  "review": "The recording is a solid soundboard source with generally clear mix, though some listeners note Brent's keyboards slipping in the mix. Musically the concert delivers strong first‑set momentum and standout moments – especially Dark Star, Victim Or the Crime and Shakedown Street – but the second set shows signs of fatigue for some fans.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Average star rating ≈3.5 across >10 detailed reviews; show quality is praised with several standout songs, while recording is deemed good but not perfect, yielding an overall 4‑star assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well balanced; a few reviewers mention occasional mix issues (keyboards disappearing) and that it isn’t crystal‑clear, but overall the sound is solid for a live archive."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Victim Or the Crime",
+      "Shakedown Street",
+      "Big Boss Man",
+      "Memphis Blues"
+    ],
+    "poor_songs": [
+      "Dear Mr. Fantasy"
+    ],
+    "setlist_flow": "First set is described as high‑energy and tight, with strong closers like Memphis Blues and Shakedown Street. The second set has mixed reactions – some fans love the dark, spacey Victim > Dark Star stretch, while others note a dip in excitement and fatigue."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his soaring guitar tone on Dark Star and Big Boss; noted for “whining” leads.",
+    "Phil": "",
+    "Bob": "Mix makes his rhythm guitar hard to hear at times, but no major performance complaints.",
+    "Keys": "Brent’s keyboards fade during Victim and are sometimes buried in the mix, though synth textures on Dark Star receive praise.",
+    "Drums": "Mickey’s “weird echo metal slapper” beat noted; Bill (referred to as “Dad”) provides solid support throughout."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Victim Or the Crime": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Big Boss Man": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Memphis Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T02:47:20.589811+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-12-31.sbd.bertha-ashley.18674.sbeok.shnf"
+}

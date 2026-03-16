@@ -1,0 +1,31 @@
+{
+  "summary": "No accessible audio prevents assessment of recording quality or performance highlights",
+  "review": "The sole reviewer could not locate a streaming or download source for this show, so they were unable to evaluate either the soundboard/mix or the musical performance. While they suspect it might be a great concert, no concrete observations about songs, band playing, or audio fidelity are provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one review with no substantive comments on sound or performance; rating is based on lack of information rather than positive/negative cues."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on audio quality; reviewer could not access the recording."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about set structure or song performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T00:35:31.160318+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-10.dts.mtx.haugh.gems.98655.flac16"
+}

@@ -1,0 +1,101 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a high‑energy 1973 show with standout Truckin’, Let It Grow, The Other One and an unforgettable Keith‑fronted Wang Dang Doodle organ jam.",
+  "review": "The recording is a lovely‑sounding soundboard mix that stays clear even when the levels were being tweaked early in the set. Musically the band delivers a joyous performance – Jerry’s leads are extra‑inspired, Keith dominates the organ on Let It Grow and the early “Wang Dang Doodle” jam, and Truckin’ blows the doors off. A late‑night fight cuts the planned third set short, but the first two sets remain vibrant and memorable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews are 4–5 stars, praising both the musical performance and the soundboard quality; only a few notes about early level issues or the fight, yielding an overall strong positive rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with front‑heavy Keith organ and slightly high Bobby/Billy vocals that many reviewers found added excitement; early set levels were being adjusted but improve quickly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Let It Grow",
+      "The Other One",
+      "Weather Report Suite",
+      "China > Rider",
+      "Brown Eyed Women",
+      "Wang Dang Doodle (organ jam)",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First two sets were tight, creative and joyful; a fight during the planned third set halted momentum, leaving the final set subdued but still featuring strong jams."
+  },
+  "band_member_comments": {
+    "Jerry": "His leads are described as extra‑inspired with great tone throughout the night.",
+    "Phil": "Gets visibly upset during Casey Jones, showing emotional intensity; also noted for his bass drive.",
+    "Bob": "Bobby is pumped up on Mexicali Blues and his vocals (and Billy) sit a bit high in the mix but add excitement.",
+    "Keys": "Keith’s organ/electric piano sits front‑and‑center, especially on Let It Grow and the early Wang Dang Doodle jam; he even shines with jazz‑like solos.",
+    "Drums": "Bill’s drumming is praised; he even jumped off stage to help break up a fight."
+  },
+  "song_mentions": {
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Nobody's Fault But Mine Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bloomington Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    }
+  },
+  "processed_date": "2025-09-23T16:30:06.757825+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-10-23.sbd.miller.92792.sbeok.flac16"
+}

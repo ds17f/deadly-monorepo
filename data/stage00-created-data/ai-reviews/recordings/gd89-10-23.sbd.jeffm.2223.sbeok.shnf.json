@@ -1,0 +1,79 @@
+{
+  "summary": "Crisp soundboard capture of a 1989 show highlighted by a killer California Earthquake and one of the best Bertha performances.",
+  "review": "The recording is a solid sound‑board mix – crisp overall with only a faint hiss – that lets the band’s 1989 energy shine through.  Fans rave about the standout California Earthquake opener and an exceptional Bertha, while the second set flows with strong jams like The Stranger and Looks Like Rain.  A few reviewers note occasional tiredness or average moments (e.g., Let It Grow), but the consensus is that the show is a memorable high‑point of the era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average star rating across 24 reviews is ~4.1; most comments praise both performance and recording, with only a handful of low‑star critiques."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mix is solid and well balanced; most listeners describe it as crisp. A minor hiss (likely FM pickup) is noted but does not detract from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "California Earthquake",
+      "Bertha",
+      "The Stranger",
+      "Looks Like Rain"
+    ],
+    "poor_songs": [
+      "Let It Grow"
+    ],
+    "setlist_flow": "First set is described as tame until the Bertha, after which the band picks up. The second set is praised for its flowing, oozing energy and strong jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for exceptional licks, \"Jerrycizing,\" and overall guitar brilliance.",
+    "Phil": "Noted as \"driving the bus\" on this night in one enthusiastic review.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey & Bill receive praise for tight, poly‑rhythmic interplay and a powerful groove."
+  },
+  "song_mentions": {
+    "California Earthquake": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Bertha": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "We Can Run": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Walking Blues (Brent on Walkin’ Blues)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing On The Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:23:18.245018+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-10-23.sbd.jeffm.2223.sbeok.shnf"
+}

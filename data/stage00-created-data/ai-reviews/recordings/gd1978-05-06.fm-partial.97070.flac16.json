@@ -1,0 +1,31 @@
+{
+  "summary": "Audience recording of a little‑documented Vermont show; sound quality is poor and reviewers give no musical praise.",
+  "review": "Both reviewers note that this tape is not a soundboard source but an audience capture, resulting in low‑fidelity audio. No specific performance details or standout songs are mentioned, leaving the musical quality largely unknown.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Both reviews are 0–1 stars and focus on poor recording quality with no positive show commentary."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Listeners identify the source as audience‑recorded; sound is likely noisy, lacking clarity or balanced mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information on set structure or performance quality provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T12:07:37.984268+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-05-06.fm-partial.97070.flac16"
+}

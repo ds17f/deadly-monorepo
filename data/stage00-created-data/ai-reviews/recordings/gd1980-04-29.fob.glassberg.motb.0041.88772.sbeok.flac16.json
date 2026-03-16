@@ -1,0 +1,94 @@
+{
+  "summary": "Clear audience tape of the 1980 Fox Theater show delivers a fun performance and a killer closing run (Miracle > Bertha > Good Lovin' > U.S. Blues) despite some hall boom and mixed mid‑set songs.",
+  "review": "The recording is an audience capture that most reviewers describe as clear, well‑balanced and “sweet‑spot” sounding, though a few note acoustic boom from the venue. The concert itself is lively with Jerry Garcia’s guitar praised even when he slips on lyrics, and the second half shines thanks to an explosive Miracle > Bertha > Good Lovin' sequence plus a U.S. Blues encore; however, several mid‑set numbers (Minglewood Blues, Sailor / Saint of Circumstance, Passenger, Brown Eyed Women, Far From Me) are viewed as weaker.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong musical highlights and generally good recording quality offset by noted acoustic issues and a handful of less‑inspired songs."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers praise the tape’s clarity, pleasant reverb and balanced mix (\"sweet spot\"), but some mention hall boom and acoustic challenges that slightly color the sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Miracle",
+      "Bertha",
+      "Good Lovin'",
+      "U.S. Blues"
+    ],
+    "poor_songs": [
+      "Minglewood Blues",
+      "Sailor",
+      "Saint of Circumstance",
+      "Passenger",
+      "Brown Eyed Women",
+      "Far From Me"
+    ],
+    "setlist_flow": "The first set is solid but includes a few lyrical slips and songs that some listeners prefer to edit out. The second half builds momentum, delivering an electrifying closing sequence that lifts the entire show."
+  },
+  "band_member_comments": {
+    "Jerry": "Forgets lyrics in a few songs but his playing is described as \"kick‑ass\" throughout.",
+    "Phil": "",
+    "Bob": "His performance on Minglewood Blues and Sailor > Saint of Circumstance is criticized for being off‑key, off‑tempo and lacking energy.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Passenger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sailor": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T22:12:21.600368+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-04-29.fob.glassberg.motb.0041.88772.sbeok.flac16"
+}

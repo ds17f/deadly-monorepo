@@ -1,0 +1,63 @@
+{
+  "summary": "Muffled audience recording captures a strong second‑half comeback highlighted by Iko‑Iko, Way to Go Home and an adventurous Space.",
+  "review": "The show starts solidly with “Stranger” but loses steam until the intermission, after which the band revives the energy with a rolling Iko‑Iko, Vince’s on‑point keyboards on “Way to Go Home,” and a far‑out extended Space. Recording quality is only so‑so – a muffled metallic sheen on vocals and a ghostly stadium echo give it a lo‑fi feel, but the performance shines through.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Reviewers rate the show 4–5 stars for its musical resurgence despite noting only average (so‑so) sound quality, leading to a weighted rating that reflects strong performance but modest recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Muffled metallic sheen on vocals, ghostly stadium echo, overall so‑so clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Iko Iko",
+      "Way to Go Home",
+      "Space",
+      "Liberty",
+      "Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First half felt plodding despite a strong start, but the second half after intermission surged with energy and memorable jams."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir’s raspy vocal tone is noted during the performance.",
+    "Keys": "Vince’s keyboard work on “Way to Go Home” is praised, including his in‑tune singing.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Way to Go Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T15:36:22.689549+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-26.ams.keyser.26279.sbefail.flac16"
+}

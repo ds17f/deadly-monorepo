@@ -1,0 +1,97 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy 1985 show, highlighted by scorching One More Saturday Night, Fire on the Mountain and a stellar Other One.",
+  "review": "The Walker/Scotton/Miller SBD delivers crisp cymbals, full bass and a deep, rich Jerry Garcia tone that lets the band’s 1985 energy shine through. Fans rave about the blazing first‑set opener (One More Saturday Night → Fire) and the magical second‑set moments, while noting a few rough spots in Cryptical Envelopes and Comes A Time. Overall the performance is praised as powerful and the recording as superb.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviewers (6 out of 8) gave 4‑5 stars and highlighted both an outstanding soundboard capture and a high‑energy performance, with only minor criticisms of specific songs."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp cymbals, full bass presence, no swishy keys, deep rich guitar tone; reviewers describe the board as 'awesome' and free of muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "One More Saturday Night",
+      "Fire on the Mountain",
+      "The Other One",
+      "Terrapin Station",
+      "Bird Song",
+      "Big River"
+    ],
+    "poor_songs": [
+      "Cryptical Envelopes",
+      "Comes A Time"
+    ],
+    "setlist_flow": "First set launches with a blistering One More Saturday Night → Fire sequence and solid Walkin' and Big River, while the second set builds to a magical transition into The Other One; overall pacing is high‑energy despite a few uneven moments."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is described as deep, rich and 'awesome', with standout tones throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keyboards are noted as being less prominent than typical eighties boards, but still present.",
+    "Drums": "Cymbals sound great; drum presence contributes to the high‑energy feel."
+  },
+  "song_mentions": {
+    "One More Saturday Night": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Walkin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cryptical Envelopes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "MNS": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:41:03.745718+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-07-13.sbd.walker-scotton.miller.106193.flac16"
+}

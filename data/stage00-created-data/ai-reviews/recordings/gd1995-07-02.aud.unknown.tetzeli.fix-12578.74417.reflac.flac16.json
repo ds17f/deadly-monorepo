@@ -1,0 +1,37 @@
+{
+  "summary": "Low‑fidelity monitor feed captures a disappointing, over‑commercialized show that lost its original magic.",
+  "review": "The recording is taken from the stage monitor feed and suffers from poor clarity and excessive crowd noise. Reviewers lament a shortened set filled with generic classic‑rock covers and deem the performance a sad end to what once was beautiful, citing Jerry's MIDI gimmick and uninspired keyboards as low points.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one highly negative review (1 star) describing both a weak performance and sub‑par recording quality, leading to an overall rating near the bottom of the scale."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Taken from a monitor feed; muffled, low‑fidelity sound with noticeable stage chatter and limited instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Review notes a shortened set that drifted into long classic‑rock covers, losing the improvisational spirit; overall pacing described as dull and overly commercial."
+  },
+  "band_member_comments": {
+    "Jerry": "Criticized for using MIDI and sounding gimmicky.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Described as \"corny keyboards\" that detracted from the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T11:53:08.512314+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-02.aud.unknown.tetzeli.fix-12578.74417.reflac.flac16"
+}

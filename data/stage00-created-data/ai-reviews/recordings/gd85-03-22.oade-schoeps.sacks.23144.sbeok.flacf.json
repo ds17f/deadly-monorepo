@@ -1,0 +1,87 @@
+{
+  "summary": "Good‑quality audience (Oade) recording with crisp sound and a high‑energy 1985 show highlighted by a rowdy Scarlet > Hell in a Bucket and strong second‑set jams.",
+  "review": "The Oade audience capture is generally clear and punchy, though a few listeners note occasional peaking on the loudest passages. Musically the concert is a mixed bag: the second set delivers standout moments—especially the ferocious Scarlet into Hell in a Bucket, an inspired Terrapin jam and a memorable Ship of Fools solo break—while Jerry’s vocals are sometimes thin and he forgets lyrics at times.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "The majority of reviewers praise the recording quality and several high‑energy songs, but comments about uneven vocals and occasional performance lapses pull the overall score down to a solid mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Oade audience source described as crisp, crispy and stable; a few notes of peaky loud passages and occasional muddiness but overall listenable and better than typical cassette‑tape recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Hell in a Bucket",
+      "Terrapin (jam)",
+      "Ship of Fools",
+      "Stranger",
+      "Space / Spanish Jam",
+      "Truckin'",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Terrapin (vocals/lyric slip)"
+    ],
+    "setlist_flow": "Long, energetic second set with a strong jam flow; some reviewers felt the first set lacked cohesion but overall the concert maintains high crowd energy and memorable segues."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as sub‑par, low in mix, and occasionally forgetting lyrics (Terrapin), yet his guitar work is praised for fast licks and an enthusiastic solo break on Ship of Fools.",
+    "Phil": "",
+    "Bob": "Bob‑heavy post‑drums section of set II highlighted; noted for solid bluesy playing.",
+    "Keys": "Brent Mydland (referred to as Bobby) receives praise for strong solos, especially during the Space/Spanish Jam and other bluesy moments.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Hell in a Bucket": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Terrapin": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space / Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "C.C. Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:33:17.535373+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-03-22.oade-schoeps.sacks.23144.sbeok.flacf"
+}

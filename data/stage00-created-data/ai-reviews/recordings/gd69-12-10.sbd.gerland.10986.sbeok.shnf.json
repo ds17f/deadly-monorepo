@@ -1,0 +1,45 @@
+{
+  "summary": "Solid soundboard capture with a rough first half but a standout second half featuring Black Peter and an epic Morning Dew with Stephen Stills.",
+  "review": "The recording is a decent‑to‑good soundboard source that sounds clear in the latter portion, though the early set feels a bit muddy and uneven. Musically the show shines after the midway point – Jerry Garcia and guest Stephen Stills trade jug‑band style riffs on Black Peter and deliver a three‑dimensional Morning Dew that many reviewers cite as the highlight.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All five reviews are 4‑5 stars, praising the performance and noting only minor recording roughness; the strong second half outweighs early imperfections."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally nice and clear sound, especially in the latter part; early tracks described as rough/ugly with some intrusive elements but no major drop‑outs or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early half feels uneven and vocal‑heavy, but the band gels in the second half – Stephen Stills adds a wild edge and the group delivers a memorable Morning Dew."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for jamming with Stephen Stills in a jug‑band style; his guitar work is highlighted as snarling and stinging.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T18:35:10.225903+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-12-10.sbd.gerland.10986.sbeok.shnf"
+}

@@ -1,0 +1,82 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a high‑energy 1979 show with standout Shakedown > Samson, Terrapin Station and the rare Estimated Jam, though the Saint jam is imperfect.",
+  "review": "The recording shines with crisp, well‑balanced sound that even puts Jerry’s guitar up front, giving listeners an almost studio‑like experience. Musically the second set lifts off – Shakedown > Samson bursts with energy, the Estimated Jam rolls beautifully, and Terrapin Station is a spectacular highlight – while the Saint jam suffers from a noticeable edit. Overall it’s a strong performance from the new Brent‑era lineup despite some vocal slippage.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The show receives high praise for instrumental execution and several standout songs, while the recording is described as crystal‑clear and excellent; weighted averaging of show (≈4.2) and recording (≈4.8) yields ~4.4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Very clear, crystal‑clear mix with each instrument well defined; Jerry’s guitar is higher in the mix (a welcomed change). No major distortion or dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown > Samson",
+      "Estimated Jam",
+      "Alabama -> Promised Encore",
+      "Terrapin Station",
+      "Loser",
+      "Wharf Rat",
+      "Lost Sailor"
+    ],
+    "poor_songs": [
+      "Saint Jam"
+    ],
+    "setlist_flow": "First set is described as ordinary, but the second set picks up momentum with high‑energy jams and experimental improvisations, showcasing a developmental period for the new lineup."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is prominently mixed and praised for creativity, energy, and strong vocal delivery on Terrapin Station.",
+    "Phil": "",
+    "Bob": "Group singing/lyric delivery is criticized as weak and after‑thought on this night.",
+    "Keys": "Brent’s keyboard work is highlighted as perfectly integrated and a major positive element.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown > Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint Jam": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Estimated Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alabama -> Promised Encore": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T03:29:03.448820+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-11.sbd.miller.103092.flac16"
+}

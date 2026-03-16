@@ -1,0 +1,57 @@
+{
+  "summary": "Audience‑sourced recording with thin, noisy sound captures a mixed‑quality Buffalo show featuring standout moments on Masterpiece, Ramble On Rose and Let It Grow.",
+  "review": "The performance is an uneven snapshot of a Buffalo concert – the first set delivers solid highlights like “Masterpiece,” “Ramble On Rose,” and “Let It Grow,” while the second set feels tepid despite an intriguing Spanish‑jam intro to “The Other One.”  The audio, likely an audience tape rather than a soundboard, is thin, wavy and crowd‑heavy, making the listening experience uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "high",
+    "rationale": "Multiple detailed reviews agree the show is average with a few high points, while the recording quality is consistently described as poor; weighted combination yields a modest rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Thin and wavy sound, heavy crowd noise, not a soundboard (sounds like an old 8‑track); clarity varies and overall listening is difficult."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Masterpiece",
+      "Ramble On Rose",
+      "Let It Grow",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid with clear highlights; second set considered tepid despite an interesting “Other One” segment. Overall the band’s playing matched the setlist but lacked inspiration for many listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Nice job, we can really hear Phil on this one.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T06:26:46.468521+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-06.aud.8242.sbeok.shnf"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Mixed‑quality recording – a crisp first set with standout Candyman and Esau, but a second set so muddy it drowns out the performance.",
+  "review": "The release contains two very different sources. Set 1 sounds clean and full‑range (thanks to a Nagra‑300 style capture), delivering strong versions of Candyman, Esau and Don't Ease Me In with Garcia’s playful nuances and solid bass rumble from Phil. Set 2 is plagued by heavy mud and muffling, making even the hot China>Rider performance hard to enjoy. Overall the show is decent musically but the recording inconsistency limits its appeal.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show performance scores are around 3.9/5 while recording quality averages about 2.3/5; weighted combination yields ~3.4 stars. Two detailed reviews give a moderate confidence level."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Set 1 is clear with slight high‑end boost; Set 2 is extremely muddy and muffled, sounding as if recorded through a towel over the mics."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "Esau",
+      "Don't Ease Me In",
+      "China Cat Sunflower",
+      "The Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is tight and varied with strong song choices; second set is more basic and its impact is marred by poor audio, though the China>Rider transition is noted as a hot performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia adds playful vocal nuances on Candyman and delivers solid lead work throughout.",
+    "Phil": "Bass rumblings are captured nicely in the first set thanks to the high‑quality source.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T16:53:37.924038+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-04-24.aud.willy.14564.sbeok.shnf"
+}

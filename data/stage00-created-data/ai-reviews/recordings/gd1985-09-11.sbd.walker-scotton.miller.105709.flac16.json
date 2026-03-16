@@ -1,0 +1,64 @@
+{
+  "summary": "Decent soundboard recording with a smoking Let It Grow and strong Hell‑in‑a‑Bucket → Terrapin segment, though the Touch of Grey start drags.",
+  "review": "The SBD captures a solid performance – the sound is clear but not as pristine as many other 1985 recordings. Musically the show shines with an incendiary Let It Grow and a rescuing Hell in a Bucket into Terrapin Station that leads smoothly into U.S. Blues, while the Touch of Grey at the start of the second set feels like a weak spot for this reviewer.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "One detailed 4‑star review praises most of the show and notes decent but not top‑tier recording quality; weighted average yields a strong rating despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Nice overall sound, though not on par with the best 1985 SBDs – some slight lack of clarity compared to top recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Hell in a Bucket",
+      "Terrapin Station",
+      "U.S. Blues"
+    ],
+    "poor_songs": [
+      "Touch of Grey"
+    ],
+    "setlist_flow": "Second set starts shakily with Touch of Grey, but the Hell in a Bucket → Terrapin transition lifts the momentum and carries smoothly into U.S. Blues."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T09:13:59.645603+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-11.sbd.walker-scotton.miller.105709.flac16"
+}

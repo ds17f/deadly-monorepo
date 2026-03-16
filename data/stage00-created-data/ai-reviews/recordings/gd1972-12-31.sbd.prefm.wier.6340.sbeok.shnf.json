@@ -1,0 +1,52 @@
+{
+  "summary": "Excellent soundboard capture of the 1972 New Year's show, highlighted by a monster Truckin > The Other One jam.",
+  "review": "Fans rave about this recording’s clear soundboard source (with a solid pre‑FM backup) and describe the performance as a nostalgic blast that leans into the heavier ’68‑’69 vibe. The long, soaring jams of “The Other One” – especially the Truckin > The Other One segment – are repeatedly called out as top‑tier, while “Morning Dew” is noted as less inspired than earlier versions. Overall the show feels both historically significant and sonically enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently enthusiastic fan comments about both the musical performance (standout jams) and the clear soundboard recording give a strong combined impression of a high‑quality show with excellent audio."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note that the SBD source sounds better than FM or pre‑FM reels, but all are praised as great; clarity and balance are highlighted with no reported dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Morning Dew"
+    ],
+    "setlist_flow": "The concert blends early‑era heaviness with the evolving 1972 sound, delivering especially long, exploratory jams on The Other One that drive the second set’s momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Truckin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:50:35.775148+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-12-31.sbd.prefm.wier.6340.sbeok.shnf"
+}

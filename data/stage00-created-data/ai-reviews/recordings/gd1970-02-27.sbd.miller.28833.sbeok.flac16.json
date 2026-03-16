@@ -1,0 +1,80 @@
+{
+  "summary": "High‑quality soundboard capture of a stellar early‑1970 Family Dog show, highlighted by an explosive Not Fade Away → Turn on Your Lovelight and soaring Easy Wind.",
+  "review": "The February 27, 1970 Family Dog recording is praised for its crisp mix and Charlie Miller’s superb transfer, despite the tape running out a few seconds early and some early‑night monitor quirks. Musically the band is in top form – Jerry’s playing is described as his finest, Weir delivers melodic vocals on “Me and My Uncle,” and Pigpen’s raps and backing vocals on “Lovelight” are called peak performances. Standout moments include the NFA→Lovelight sequence, a fiery Easy Wind, and an inspired China‑Rider‑High Time jam.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (10 out of 13) rate the show 4–5 stars and praise both performance and sound quality; only a few note technical hiccups, giving an overall strong positive impression."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mix is described as crisp and the Charlie Miller transfer as impeccable; tape runs out at the very end, and early‑night monitor issues are mentioned, but overall the sound is clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away > Turn on Your Lovelight",
+      "Easy Wind",
+      "China > Rider > High Time",
+      "Cold Rain and Snow (unique intro)",
+      "Me and My Uncle"
+    ],
+    "poor_songs": [
+      "Cumberland Blues"
+    ],
+    "setlist_flow": "Reviewers note seamless transitions, strong jams and a consistently high energy flow, with the NFA→Lovelight segue often highlighted as a highlight of the set."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his finest playing ever and perfect guitar tone.",
+    "Phil": "",
+    "Bob": "Weir’s melodic vocal on “Me and My Uncle” is singled out, and his backing vocals with Pigpen on “Lovelight” are highlighted.",
+    "Keys": "Pigpen’s vocal raps and backing harmonies on “Lovelight” are called peak Pigpen moments.",
+    "Drums": "A separate drum track is noted as unnecessary; no specific performance critique beyond early‑night monitor issues."
+  },
+  "song_mentions": {
+    "Not Fade Away > Turn on Your Lovelight": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Easy Wind": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China > Rider > High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T16:52:40.127102+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-02-27.sbd.miller.28833.sbeok.flac16"
+}

@@ -1,0 +1,106 @@
+{
+  "summary": "Soundboard recording of a mixed‑quality 1993 show, rescued by standout Queen Jane Approximately, fiery Fire on the Mountain and an epic Days Between despite Jerry’s hoarse vocals.",
+  "review": "The performance is uneven – the first set suffers from weak vocal delivery and some lackluster playing, while the second set shines with a joyous Scarlet Begonias → Fire on the Mountain sequence, a soaring Queen Jane Approximately, and a marathon Days Between that many fans will remember. The digital soundboard source is clean enough to enjoy the nuances, especially Jerry’s unusually acoustic‑sounding guitar tone.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (many positive moments but notable vocal issues), while recording quality is solid soundboard; the combination yields an overall average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific complaints – digital SBD capture appears clear and balanced, with no reported drop‑outs or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Queen Jane Approximately",
+      "Scarlet Begonias > Fire on the Mountain",
+      "Estimated Prophet",
+      "Days Between",
+      "Space",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": "First set is uneven with vocal roughness, but the second set builds a strong arc, peaking with high‑energy jams and a lengthy Days Between that offsets earlier shortcomings."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are hoarse and occasionally off‑key; however his guitar tone is unusually acoustic/naked and he delivers some joyous licks in the second set.",
+    "Phil": "Bass work is solid and strong, especially during the extended jams.",
+    "Bob": "Rhythm guitar tone noted as good; no major issues mentioned.",
+    "Keys": "Vince’s keyboards have found their place; Bob Bralove’s digital textures add a unique, almost industrial flavor to the sound.",
+    "Drums": "Both Bill Kreutzmann and Mickey Hart are praised as excellent, driving an \"industrial pinball machine\" feel in the improvisational sections."
+  },
+  "song_mentions": {
+    "Queen Jane Approximately": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Days Between": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T19:07:06.852144+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-12-19.sbd.miller.91963.sbeok.flac16"
+}

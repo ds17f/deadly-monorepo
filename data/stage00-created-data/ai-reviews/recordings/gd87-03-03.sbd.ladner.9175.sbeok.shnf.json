@@ -1,0 +1,69 @@
+{
+  "summary": "Great‑energy show highlighted by Mighty Quinn and Iko Iko, captured on a clear soundboard recording with a slightly forward vocal mix.",
+  "review": "Fans rave about the opening Mighty Quinn and the raucous Iko Iko, calling the performance a rare treasure that “rips.” The soundboard source is generally praised for its clarity, though a few note the vocals sit a bit too high in the mix. A handful of reviewers were critical of certain later numbers (Loser, Touch, Terrapin), but the overwhelming tone is positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars and focus on strong performance and good sound quality; only a few low‑star critiques temper the rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall with nice instrument separation. Several reviewers mention vocals being unusually forward, suggesting a matrix‑like mix, but no major dropouts or muddiness are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mighty Quinn",
+      "Iko Iko",
+      "Cassidy"
+    ],
+    "poor_songs": [
+      "Touch",
+      "Terrapin"
+    ],
+    "setlist_flow": "The show opens with high‑energy numbers (Quinn, Iko Iko) that set a festive tone. Mid‑set energy wanes for some listeners, especially on later songs like Touch and Terrapin, but the overall pacing remains lively."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocals are described as both powerful (belting on Mississippi) and occasionally over‑present or croaky; his guitar work isn’t specifically mentioned.",
+    "Phil": "",
+    "Bob": "Weir’s vocal on “Greatest” is called a \"squealed chicken\" by one reviewer, but he also gets praise for the overall cheerfulness of the set.",
+    "Keys": "",
+    "Drums": "Billy & Mickey are noted as “far too active” during Loser and generally very busy throughout."
+  },
+  "song_mentions": {
+    "Mighty Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Touch": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:08:14.327940+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-03-03.sbd.ladner.9175.sbeok.shnf"
+}

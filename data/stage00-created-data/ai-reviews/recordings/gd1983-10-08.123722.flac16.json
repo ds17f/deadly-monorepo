@@ -1,0 +1,63 @@
+{
+  "summary": "Audience‑sourced recording captures an energetic Richmond show with standout Hell in a Bucket, Truckin', Good Lovin' and a smoking Crazy Fingers jam.",
+  "review": "Both reviewers rave about the performance – a quick‑pacing first set that rolls into powerful jams, highlighted by Hell in a Bucket, Truckin', Good Lovin' and an especially fiery Playing > Crazy Fingers sequence. The audience recording is praised as clean and well balanced, letting the drums, space and guitar work shine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical praise (70% weight) and a consistently good audience recording (30% weight) from two enthusiastic reviews yield an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners describe the audio as \"very nice\" with clear drum and space echoes; no major drop‑outs or muddiness are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hell in a Bucket",
+      "Truckin'",
+      "Good Lovin'",
+      "U.S. Blues",
+      "Crazy Fingers"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as quick and sharp, second half builds into strong jams (Playing > Crazy Fingers, drums > space) with good crowd interaction."
+  },
+  "band_member_comments": {
+    "Jerry": "Liquid guitar on the Playing > Crazy Fingers sequence praised.",
+    "Phil": "\"I know the lie I've been living's no good\" line highlighted; noted cooking with drummers.",
+    "Bob": "Whammy‑bar work on Crazy Fingers and vocal quote \"Ya gotta punch back the night!\" appreciated.",
+    "Keys": "",
+    "Drums": "Drum and space sections receive special praise for echo, power and overall groove."
+  },
+  "song_mentions": {
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T11:03:48.686550+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-08.123722.flac16"
+}

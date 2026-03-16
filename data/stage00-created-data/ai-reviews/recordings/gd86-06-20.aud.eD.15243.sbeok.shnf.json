@@ -1,0 +1,52 @@
+{
+  "summary": "Good‑quality capture of a Greek summer show highlighted by an inspired “Comes A Time” and lively “Good Lovin’”, though the opening “Midnight Hour” shows Jerry’s struggling playing.",
+  "review": "The recording sounds clear enough to convey the crowd energy at the Greek Amphitheatre, with most listeners praising the passionate performance of “Comes A Time” and the fun roll‑call during “Good Lovin’”.  However, several reviewers note that Jerry Garcia’s solo on the opening “Midnight Hour” is sloppy and his tone uneven, and Bob Weir’s vocals sound off in places.  Overall the show feels memorable for its venue vibe but is musically uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviews are positive about the venue and standout songs, while a few note noticeable performance flaws; recording quality is generally described as decent."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Listeners comment that the sound captures crowd energy and is pleasant overall, with no major drop‑outs mentioned, though some note vocal imbalances."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "Good Lovin'"
+    ],
+    "poor_songs": [
+      "Midnight Hour"
+    ],
+    "setlist_flow": "The Greek shows are remembered for a relaxed outdoor atmosphere with strong energy between sets; the set builds nicely around the highlighted songs but is weakened by a shaky opening tune."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for an soaring solo on “Comes A Time”, but criticized for a sloppy, out‑of‑tune solo on the opening “Midnight Hour”.",
+    "Phil": "Fans shouted \"Phil! How do you do?!?\" showing enthusiasm for his presence.",
+    "Bob": "His vocal performance is described as sounding off in this recording.",
+    "Keys": "Briefly mentioned as \"that keyboard guy\" without specific performance detail.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Comes A Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Midnight Hour": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:02:29.051695+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-06-20.aud.eD.15243.sbeok.shnf"
+}

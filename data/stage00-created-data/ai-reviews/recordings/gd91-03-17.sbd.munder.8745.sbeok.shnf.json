@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard source with poor bass and harsh highs, but the concert shines thanks to the rare debut of “Reuben & Cherise” and solid performances throughout.",
+  "review": "Fans agree this show is a memorable one – highlighted by the first‑ever Dead rendition of “Reuben & Cherise,” plus tight versions of “Let It Grow,” the CC→IKYR segue, and “The Wheel.”  The recording, however, suffers from severe high‑frequency emphasis, missing low end, hiss and click noise, making it a marginal soundboard copy despite the venue’s excellent on‑stage mix.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "The performance is widely praised (≈4 / 5) while the audio quality is consistently rated poorly (≈2 / 5); weighted combination yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "High‑end strident, almost no bass, noticeable hiss, occasional clicks and possible azimuth/noise‑reduction errors. Multiple reviewers note the tape sounds marginal compared to other known copies."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Reuben & Cherise",
+      "Let It Grow",
+      "China Cat Sunflower > I Know You Rider",
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Unusual set list featuring the rare debut of “Reuben & Cherise” and a relaxed, enjoyable vibe.  Even with Phil’s bass disappearing for parts, the band sounds like they’re having fun."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his songwriting; reviewers call “Reuben & Cherise” a beautiful ballad and highlight his vocal/guitar work.",
+    "Phil": "Noted as completely missing in the mix during parts of the first set, making the bass inaudible.",
+    "Bob": "His guitar is mentioned as having issues in this particular recording (clicks/feedback).",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Reuben & Cherise": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:28:52.999351+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-03-17.sbd.munder.8745.sbeok.shnf"
+}

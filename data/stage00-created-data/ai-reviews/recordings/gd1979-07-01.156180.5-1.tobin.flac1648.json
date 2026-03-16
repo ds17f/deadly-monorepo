@@ -1,0 +1,39 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a superb Seattle Coliseum show highlighted by an immaculate Sugaree opening.",
+  "review": "Both reviewers rave about the performance, calling it a true gem and noting that the band was on fire throughout. The recording stands out for its astonishing clarity—especially in the opening minutes of “Sugaree”—and manages crowd noise despite the notoriously echo‑ey Seattle Coliseum, making it one of the best documents of this 1979 concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Both reviews award five stars and praise both the musical performance and the exceptional clarity of the recording, indicating an almost flawless show with excellent sound quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Exceptionally clear mix throughout; crowd noise is present but well‑balanced, and the venue’s echo does not muddy the instruments—especially evident in the pristine opening of Sugaree."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the concert as a superb, flowing performance that overcame the challenging acoustics of the Seattle Coliseum."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:07:44.938267+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-07-01.156180.5-1.tobin.flac1648"
+}

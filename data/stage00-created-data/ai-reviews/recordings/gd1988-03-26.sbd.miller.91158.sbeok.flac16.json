@@ -1,0 +1,64 @@
+{
+  "summary": "Excellent soundboard recording of a spirited late‑80s show with a standout Playin' jam and solid second set, despite an odd Stir It Up",
+  "review": "The Charlie Miller‑treated soundboard captures the energy of this spring ’88 Hampton run – crisp board mix with lively audience ambience that never intrudes. Musically the concert is fun and tight; Playin' in the Band delivers a spacey jam, Minglewood Blues shines, while the one‑verse Stir It Up feels off‑cuff but still memorable. Overall reviewers rave about the performance and recording quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "8 detailed reviews, most rating 4–5 stars; show described as spirited with several standout moments and a high‑quality soundboard mix."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp board sound with pleasant audience blend, no noticeable dropouts or muddiness; Charlie Miller treatment praised as sweet‑sounding."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood Blues",
+      "Playin' in the Band",
+      "Stuck Inside of Mobile"
+    ],
+    "poor_songs": [
+      "Stir It Up",
+      "China Cat Sunflower"
+    ],
+    "setlist_flow": "The set feels lively and well‑paced; a spirited first half leads into a top‑notch second set highlighted by an expansive Playin' jam, with the crowd’s rise and fall adding to the flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals sound stronger than other ’88 shows, pumped but with occasional lyric flubs; overall good for this period.",
+    "Phil": "",
+    "Bob": "Weir is louder and more forward in the mix; Bob Weir’s guitar on China Cat Sunflower described as a bit cheesy.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stir It Up": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stuck Inside of Mobile": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:49:23.720117+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-26.sbd.miller.91158.sbeok.flac16"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "A crystal‑clear matrix mix that captures a fire‑packed show, highlighted by a scorching Scarlet→Fire sequence and an inspired Comes A Time in the second set.",
+  "review": "The matrix recording is praised for its perfect balance, clarity and beautiful blend of board and audience sources, making it one of the best‑sounding 1977 tapes. Musically the concert shines with a passionate acoustic opening, a first set that “knocks every track out of the park,” and a second set that delivers a standout Scarlet→Fire run and an emotionally charged Comes A Time, despite a few minor quibbles about song lengths and a brief tonal hiccup in Dancing. Overall listeners are enthusiastic, calling it a must‑listen for Deadheads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (7 out of 8) are 4–5 stars and focus on the superb musical performance and excellent matrix mix; only one review notes minor track‑time errors, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers describe the mix as balanced, clear and “perfect,” with board vocals nicely restrained and audience ambience retained; one reviewer notes incorrect track times for Mississippi and Fire."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "Scarlet > Fire",
+      "Terrapin Station",
+      "First Set (overall)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A passionate acoustic opening leads into a first set that many call ‘excellent,’ followed by an aggressive audience vibe and a second set that is described as “about as good as it gets,” featuring the celebrated Scarlet→Fire run and an emotionally resonant Comes A Time."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as vulnerable on Comes A Time; guitar playing called ferocious and flawless throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's fiddling at the end of Dancing in the Street is highlighted; minor tonal issues noted but overall solid keyboard work.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Comes A Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancing in the Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T22:31:51.699007+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-04.mtx.seamons.ht09.99106.flac16"
+}

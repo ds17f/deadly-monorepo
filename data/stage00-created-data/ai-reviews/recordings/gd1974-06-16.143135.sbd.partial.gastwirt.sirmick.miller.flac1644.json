@@ -1,0 +1,31 @@
+{
+  "summary": "Recording appears mislabeled; no information on audio or performance quality",
+  "review": "The sole review flags the file as likely misidentified, stating it does not correspond to the 1974‑06‑16 show. No comments are provided about the soundboard source, mix clarity, or musical execution, so both recording and show quality cannot be evaluated from this feedback.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a zero‑star rating, offering no positive details; thus the overall assessment defaults to very low."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer did not discuss sound quality, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T20:30:55.989488+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-06-16.143135.sbd.partial.gastwirt.sirmick.miller.flac1644"
+}

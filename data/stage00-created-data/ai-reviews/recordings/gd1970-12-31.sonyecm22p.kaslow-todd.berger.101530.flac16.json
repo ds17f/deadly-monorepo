@@ -1,0 +1,44 @@
+{
+  "summary": "High‑quality 1970 audience tape with a standout Cold Rain and Snow, though occasional cuts (e.g., Easy Wind) affect the listening experience.",
+  "review": "The recording is praised for its surprisingly clear 1970 audience capture, featuring an outstanding performance of “Cold Rain and Snow.” While the overall band energy is high and the show earns a permanent spot in some listeners’ rotations, a few audible cuts—most notably on “Easy Wind”—prevent it from being flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Three detailed reviews show strong appreciation for both the performance and the rare high‑quality AUD source, with only minor criticisms about missing sections."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note a sweet, clear setup for its era; however, there are some cuts in the tape (e.g., Easy Wind) that detract from an otherwise excellent 1970 audience recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain and Snow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert flows energetically with the band “ripping it up,” despite a few missing fragments that slightly interrupt continuity."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T02:06:34.794201+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-12-31.sonyecm22p.kaslow-todd.berger.101530.flac16"
+}

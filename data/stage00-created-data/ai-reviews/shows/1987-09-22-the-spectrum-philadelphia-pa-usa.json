@@ -1,0 +1,73 @@
+{
+  "summary": "Fiery Deal, blazing Two Soldiers jam, tight rhythm & bright organ",
+  "blurb": "The show erupts with a scorching Deal and an expansive Two Soldiers Jam that rolls into Handsome Cabin Boy territory. China Cat > Rider > Samson > Terrapin delivers fire‑filled improvisation, while the rhythm section stays rock‑solid throughout.",
+  "review": "On September 22, 1987 at The Spectrum, the Dead turned in a high‑energy performance that still feels fresh. Jerry Garcia was on fire, ripping the Deal with wild intensity and driving the Two Soldiers Jam into soaring heights; his solos were adventurous even if a few verses later in the set sounded a bit muffed. Brent Mydland’s Hammond organ shone bright, adding fiery riffs and occasional harmonics that lifted the jams, especially during the China Cat > Rider > Samson > Terrapin sequence. The rhythm section—Mickey Hart, Bill Kreutzmann and Phil Lesh—kept a solid pulse, with the post‑drums space feeding into the standout Two Soldiers segment. Bob Weir’s guitar generally held steady but sat low in the mix on China Cat Sunflower and cut off the ending of Sugar Magnolia. Overall, despite minor mix quirks on some audience recordings, the soundboard sources capture a tight, fun set that showcases the band at its improvisational best.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 28,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Five of the eight analyzed recordings are strongly positive, highlighting Deal, Two Soldiers Jam, and the China Cat > Rider > Samson > Terrapin stretch; mixed/negative reviews come from low‑quality or unknown sources and note only minor performance slips that do not outweigh the overall enthusiasm.",
+      "final_calculation": "2.5 + 0.2 + 1.4 = 4.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd87-09-22.sbd.frisco.16139.sbefail.shnf",
+    "reason": "Crisp, clear soundboard tape that captures the band's high‑energy playing and key jams without drop‑outs."
+  },
+  "key_highlights": [
+    "Two Soldiers Jam and Handsome Cabin Boy improvisation",
+    "Fire‑filled China Cat > Rider > Samson > Terrapin sequence",
+    "Scorching Deal with Jerry’s intense lead work",
+    "Bright, on‑fire organ from Brent that drives the jams"
+  ],
+  "song_highlights": [
+    "Deal",
+    "Two Soldiers Jam",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Samson & Delilah",
+    "Terrapin Station",
+    "Gimme Some Lovin'*",
+    "Sugar Magnolia"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers fiery leads—ripping the Deal and soaring through Two Soldiers Jam—though a few verses later (e.g., Terrapin) are muffed and his high register is less present at times.",
+    "Phil": "",
+    "Bob": "Provides solid rhythm work, but his guitar sits low in the mix during China Cat Sunflower and he trims the ending of Sugar Magnolia.",
+    "Brent": "Bright Hammond organ backbone, cutting through with fiery riffs and occasional harmonic textures that lift the jams.",
+    "Mickey": "Lays down a steady pulse alongside Bill, driving the post‑drums space into the Two Soldiers jam.",
+    "Billy": "Keeps solid time and fuels the rhythmic drive that propels the extended improvisations."
+  },
+  "processed_recordings": 7,
+  "processed_date": "2025-09-16T04:20:19.505857+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Cassidy",
+      "Deal"
+    ],
+    [
+      "Two Soldiers Jam",
+      "The Wheel",
+      "Truckin'",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider",
+      "Samson & Delilah",
+      "Terrapin Station",
+      "Drums"
+    ],
+    [
+      "Gimme Some Lovin'*"
+    ]
+  ]
+}

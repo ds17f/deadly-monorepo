@@ -1,0 +1,86 @@
+{
+  "summary": "Solid late‑'88 performance captured on a surprisingly clear audience tape, with standout China → Rider and Playin’ → U.J.B. sequences.",
+  "review": "The show is consistently described as solid and well‑played, highlighted by Jerry’s strong vocals, the seamless China > Rider transition and an energetic Playin’ > U.J.B. > Playin’ stretch.  The audience recording (AUD) is praised for its crispness and overall balance, making it a very listenable document of this Labor‑Day run.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the music 4–5 stars and commend the audience recording as clear; the show is solid with several praised moments, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear sound for an AUD tape; occasional comments about slightly fast‑playing feel but no major dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Rider",
+      "Playin' in the Band > U.J.B. > Playin'",
+      "Lovelight",
+      "Walkin' Blues",
+      "Ramble",
+      "Memphis Blues",
+      "Space",
+      "US Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a smooth, flowing second set and an overall consistent energy throughout the concert."
+  },
+  "band_member_comments": {
+    "Jerry": "Strong vocals and creative guitar work; highlighted on Lovelight backup vocals and rippin transitions into China.",
+    "Phil": "Solid bass foundation, especially guiding the Playin' sequence; no major criticisms.",
+    "Bob": "",
+    "Keys": "Brent (keys) praised for laying out Walkin' Blues and adding texture throughout.",
+    "Drums": "Excitable, hot drumming noted on Memphis Blues and Space sections."
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China > Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin' in the Band > U.J.B. > Playin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Memphis Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "US Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T13:04:07.703322+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-05.nakamichi.leeds.16440.sbeok.shnf"
+}

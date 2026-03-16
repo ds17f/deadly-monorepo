@@ -1,0 +1,31 @@
+{
+  "summary": "Excellent audience recording praised for its quality, though no specific show details are mentioned",
+  "review": "The reviewer gave the tape a perfect rating, highlighting the high‑quality audience sound and expressing enthusiasm for the overall listening experience. No comments were made about the musical performance or setlist.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Only a single, highly positive review focused on the recording quality; no information on show performance, leading to limited confidence in overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the tapes as 'great' and loves the audience sound, indicating a clear and well‑captured recording."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on setlist or performance flow were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T02:47:25.530626+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-01.nak300.barfield-lane.103296.flac24"
+}

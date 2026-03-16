@@ -1,0 +1,70 @@
+{
+  "summary": "Soundboard recording with generally good clarity (though occasional raspy spots) captures a fiery Jerry‑led performance highlighted by soaring The Other One > Wharf Rat, powerful Two Souls and Ramble On Rose.",
+  "review": "The show is praised for its energetic playing, especially Jerry Garcia’s incendiary guitar work and memorable sequences like The Other One into Wharf Rat, as well as standout renditions of Two Souls, Ramble On Rose and Me & My Uncle. The soundboard source sounds good overall but suffers from some raspy spots that prevent it from being pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight strong musical moments; recording quality is rated good with minor issues, leading to a solid overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced, but some raspy spots are noted in the audio."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One > Wharf Rat",
+      "Two Souls",
+      "Ramble On Rose",
+      "Me & My Uncle",
+      "Sunshine Daydream"
+    ],
+    "poor_songs": [
+      "Big Railroad Blues"
+    ],
+    "setlist_flow": "Reviewers note a continuous, interesting flow with strong transitions—especially the extended The Other One intro and its segue into Wharf Rat, plus recurring Me & My Uncle teases that keep momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as 'on fire', animated on lyrics, and delivering great guitar tone throughout.",
+    "Phil": "Provides strong backup vocals, particularly on Ramble On Rose.",
+    "Bob": "",
+    "Keys": "Keith Godchaux is mentioned sizing up the band and adding texture; occasional harmonica‑like sound noted.",
+    "Drums": "Noted for an interesting, long intro to The Other One and overall solid playing."
+  },
+  "song_mentions": {
+    "The Other One > Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Two Souls": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T11:58:47.869489+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-03-21.sbd.vernon.9331.sbeok.shnf"
+}

@@ -1,0 +1,87 @@
+{
+  "summary": "High‑energy 1976 show with surprising setlist and solid audience recording that’s a bit distant but still enjoyable",
+  "review": "The performance is described as tight, inspired and full of rare surprises – highlights include Let It Grow, Eyes, Wharf Rat, The Other One and an immaculate transition into The Music Never Stopped.  The audience (AUD) source is praised by some as excellent yet noted by others as a little too distant and hissy in places, making it best heard on larger speakers.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Reviewers rave about the musical flow and rare song choices (strong show quality) while opinions on the AUD recording range from excellent to too distant, pulling the overall score toward a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and lively with moments of hiss and distance; some listeners find it hard to hear on headphones, but the excitement of the band comes through."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Eyes",
+      "Wharf Rat",
+      "The Other One",
+      "The Music Never Stopped",
+      "Playin' > Drums > The Wheel > Meltdown Space > Playin'",
+      "Scarlet",
+      "Ship of Fools",
+      "B-E Women > Samson"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A wildly surprising setlist with unexpected song placements and seamless transitions that keep the momentum high throughout both sets."
+  },
+  "band_member_comments": {
+    "Jerry": "Volume swell on the main riff during the Playin' reprise is highlighted as a pure Garcia moment.",
+    "Phil": "",
+    "Bob": "Weir’s (and Donna's) chuckling at a lyric mistake in Let It Grow is noted and appreciated.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' > Drums > The Wheel > Meltdown Space > Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "B-E Women > Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:22:01.352758+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-07-14.123476.ecm270.menke.miller.flac16"
+}

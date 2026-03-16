@@ -1,0 +1,69 @@
+{
+  "summary": "High‑energy NYC show captured on an UltraMatrix source, featuring standout renditions of Louie Louie, Terrapin Station, Truckin’ and Morning Dew.",
+  "review": "The reviewer describes a wildly energetic performance in New York City that builds intensity through the first set and delivers a second‑set climax with a single ballad followed by scorching versions of Bertha, Cumberland Blues, Terrapin Station, Truckin' and Morning Dew. The UltraMatrix recording is praised implicitly for its ability to convey the concert’s power, though no specific technical flaws are noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong positive comments about the musical performance and no reported recording problems give a high show rating; UltraMatrix source suggests decent sound quality, yielding an overall solid rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on clarity or mix; UltraMatrix (soundboard + audience) generally provides a balanced, listenable recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Louie Louie",
+      "Bertha",
+      "Cumberland Blues",
+      "Terrapin Station",
+      "Truckin'",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds in intensity, culminating with a high‑octane Louie Louie; second set features a lone ballad before a seamless flow into Bertha → Cumberland Blues → LLR → Terrapin Station and a climactic Truckin'/Morning Dew sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboard work is highlighted as \"shifting gears\" during the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Louie Louie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T14:11:29.426441+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-20.152581.UltraMatrix.sbd.cm.miller.t.flac16"
+}

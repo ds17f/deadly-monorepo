@@ -1,0 +1,56 @@
+{
+  "summary": "Muddy audience recording captures an above‑average show highlighted by a thrilling Werewolves finale, though keyboards are barely audible.",
+  "review": "The performance is generally rated a notch above average with Jerry in good form and strong moments like the Werewolves finale and a lively Lazy Lightning/Eyes of the World stretch. The tape, recorded with a handheld microphone (likely a hat‑mic bootleg), suffers from muddy acoustics and very faint keyboards, especially on the first set. Overall fans enjoy the memories despite the technical shortcomings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is praised (above‑average performance, standout songs) while recording quality is only fair due to muddy sound and missing keyboards; weighted average yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hand‑held/hat microphone capture with typical 1978 mix; acoustics are muddy and Keith's keyboards are barely audible, especially in the first set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Werewolves",
+      "Lazy Lightning",
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set features standard‑year material; second set sounds better acoustically and ends with an awesome Werewolves finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Good form; voice and guitar sounded fine.",
+    "Phil": "Bass was prominent in the mix, especially on 'Eyes of the World'.",
+    "Bob": "",
+    "Keys": "Keyboard (Keith) was barely audible or missing entirely in parts of the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lazy Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Werewolves": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Donna": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:04:50.457004+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-05-05.rolfe.vernon.6149.sbeok.shnf"
+}

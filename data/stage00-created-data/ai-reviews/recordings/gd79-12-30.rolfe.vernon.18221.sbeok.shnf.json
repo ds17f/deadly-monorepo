@@ -1,0 +1,64 @@
+{
+  "summary": "Fair soundboard recording of a solid 1979 show with strong Weir and Phil moments, but mix imbalances and a weak ending to Deal.",
+  "review": "The performance is generally good, highlighted by Bob Weir’s solo on Minglewood, Phil Lesh’s shine on Lazy Lightnin', and a powerful Let It Grow after Fire. Recording quality suffers from Garcia being low in the mix and a noticeable drop‑off during the latter part of Deal, making the overall listening experience mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only one moderate‑rated review; show is praised but has noted low moments and recording mix issues, leading to an average combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Garcia often buried in the mix while Weir is prominent; sound quality degrades toward the end of Deal."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood",
+      "Lazy Lightnin'",
+      "Let It Grow",
+      "Around and Around"
+    ],
+    "poor_songs": [
+      "Deal"
+    ],
+    "setlist_flow": "The set flows well with bluesy jams moving from Around and Around into JBG, but the energy dips toward the end of Deal where the recording quality suffers."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia seems a bit low in the mix at times.",
+    "Phil": "Shines especially during Lazy Lightnin'.",
+    "Bob": "Great solo on Minglewood and solid rhythm work on Supplication and Scarlet.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightnin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T04:10:42.427407+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-12-30.rolfe.vernon.18221.sbeok.shnf"
+}

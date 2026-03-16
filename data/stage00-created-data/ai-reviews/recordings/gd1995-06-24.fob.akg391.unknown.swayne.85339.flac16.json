@@ -1,0 +1,70 @@
+{
+  "summary": "Good‑quality front‑of‑house audience tape that captures a mixed show – standout Days Between solo and Speedway Boogie amid uneven performances.",
+  "review": "The recording is an FOB (audience) capture using high‑grade AKG mics and a TEAC DAP20, delivering clear and fairly balanced sound for a crowd source. Musically the concert swings between highs like a soaring Days Between solo, a surprise Speedway Boogie, and So Many Roads, and lows such as a weak Stella Blue, Morning Dew and an under‑whelming Liberty encore.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Show quality is judged average to below average based on several low‑star reviews, while the recording quality is rated good thanks to technical praise; weighted combination yields ~3 ★."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "FOB tape recorded with AKG SE300b, CK91, Aerco cable and TEAC DAP20; hand‑held mics for encore. Clear for an audience source with some ambient crowd noise but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Days Between",
+      "Speedway Boogie",
+      "So Many Roads"
+    ],
+    "poor_songs": [
+      "Stella Blue",
+      "Morning Dew",
+      "Liberty"
+    ],
+    "setlist_flow": "The set is uneven – a few high‑energy moments are offset by several lackluster numbers, giving the concert a disjointed feel despite flashes of brilliance."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for an epic Days Between solo and strong Speedway Boogie work; also criticized on weak Stella Blue and Morning Dew performances.",
+    "Phil": "",
+    "Bob": "Mentioned as sounding good in the first review.",
+    "Keys": "",
+    "Drums": "Drummers noted for tight sync with Jerry’s solo during Days Between."
+  },
+  "song_mentions": {
+    "Days Between": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Speedway Boogie": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T10:54:04.034291+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-24.fob.akg391.unknown.swayne.85339.flac16"
+}

@@ -1,0 +1,56 @@
+{
+  "summary": "High‑energy 10/14/89 show with a smoking Help‑Slip‑Frank sequence and powerful China Doll, recorded from the sound board with mostly good quality but occasional hiss and drum‑space cuts.",
+  "review": "The October 14 1989 Meadowlands concert is remembered for its soaring opening Help > Slipknot! > Franklin’s tower and a haunting China Doll, with Scarlet and other jams adding to the excitement. Most listeners praise the performance and describe the soundboard source as above‑average, though several note hiss, occasional drop‑outs and edits that remove portions of drums/space. Overall the show is regarded as a standout Dead experience despite the technical quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "The majority of 23 reviews are enthusiastic about the music (Help‑Slip‑Frank, China Doll, Scarlet) and rate the show 4–5 stars; recording comments are mixed but lean toward good soundboard quality. Weighted combination of strong show (≈4.2) and decent recording (≈3.5) yields an overall rating around 4."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard mix praised as above‑average, but several listeners describe it as \"hissy\" and note cuts that remove much of the drums/space sections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "China Doll",
+      "Scarlet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert opens with a high‑energy Help‑Slip‑Frank sequence that sets a soaring tone; the second set maintains momentum with strong jams, though some feel it lacks an extra peak (e.g., Fire on the Mountain). Overall pacing is praised despite the later editing of drums/space."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s voice and guitar tone are highlighted as emotive and “hauntingly beautiful,” especially during China Doll.",
+    "Phil": "Brief mention of Phil chatting with his wife onstage and waving back, noted as a memorable moment.",
+    "Bob": "",
+    "Keys": "Brent’s organ work is praised on China Doll (though one reviewer wished it was turned down slightly); keyboards add texture throughout.",
+    "Drums": "Multiple complaints about edited‑out drums/space sections; otherwise the drumming is appreciated when present."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Scarlet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:16:57.515864+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-10-14.sbd.koehler.5926.sbeok.shnf"
+}

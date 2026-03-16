@@ -1,0 +1,63 @@
+{
+  "summary": "Good‑quality audience recording that captures high points like Peggy‑O and a stellar The Other One → Dark Star, but suffers from weaker moments such as Promised Land and Minglewood.",
+  "review": "The audience tape is praised for its overall wonderful sound, delivering standout performances of Peggy‑O and an inspired run through The Other One into Dark Star. However, the show’s flow dips on tracks like Promised Land and a messy Minglewood, leaving it solid but not exceptional.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (strong highs, weak lows) while the recording itself is considered good; weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as a wonderful sounding AUD with clear capture of high points; no major technical flaws noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "The Other One → Dark Star"
+    ],
+    "poor_songs": [
+      "Promised Land",
+      "Minglewood"
+    ],
+    "setlist_flow": "Inconsistent – the concert swings between brilliant moments and disjointed, distracted sections."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:47:09.178877+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-20.nak700.moore.miller.19413.sbeok.shnf"
+}

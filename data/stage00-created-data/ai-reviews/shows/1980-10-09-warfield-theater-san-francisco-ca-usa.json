@@ -1,0 +1,77 @@
+{
+  "summary": "Acoustic first set dazzles; Jerry's Greatest Story solo shines",
+  "blurb": "The acoustic set delivers pristine versions of Bird Song, Ripple and Peggy‑O, highlighted by a stellar solo on The Greatest Story Ever Told. The electric second set feels flat, but the third set recovers with a strong Terrapin Station performance. Overall the show is notable for its clean acoustic sound and standout Jerry Garcia moments.",
+  "review": "On October 9, 1980 at the Warfield, the Dead presented one of those rare three‑set runs where the first act feels like a secret acoustic concert. From Dire Wolf through Ripple the band rolls out beautifully intimate renditions—Bird Song glides, Ripple shimmers, and Peggy‑O is rendered with heartfelt vocal nuance. The real high point arrives in Set 3 when Jerry launches into what many fans call his best solo ever on The Greatest Story Ever Told, followed by a soaring High Time and a powerful Terrapin Station that pulls the show back from the slightly uninspired electric second set. While the second set never quite catches fire, the overall performance is anchored by the crystal‑clear acoustic mix captured on the top soundboard source, making this night a must‑listen for anyone chasing those golden Warfield moments.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 14,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Two recordings label the show as positive, praising the acoustic set and Jerry's solo on The Greatest Story Ever Told; a third recording is mixed but offers no strong negative criticism. Consistent acclaim for specific songs outweighs minor complaints about the electric second set, yielding a moderate positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.1 + 1.0 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd80-10-09.sbd.unknown.11042.sbeok.shnf",
+    "reason": "Crisp acoustic mix, good overall soundboard quality, and the only source that captures Jerry's legendary Greatest Story solo despite minor splice glitches."
+  },
+  "key_highlights": [
+    "Acoustic first set shines with Bird Song, Ripple, Peggy‑O and pristine sound.",
+    "Jerry's final solo on The Greatest Story Ever Told is hailed as possibly his best ever.",
+    "Terrapin Station in the third set lifts the show after a flat electric second set.",
+    "Recording offers clean acoustic mix; minor splice glitches are the only drawback."
+  ],
+  "song_highlights": [
+    "Bird Song",
+    "Ripple",
+    "Peggy-O",
+    "High Time",
+    "Greatest Story Ever Told",
+    "Terrapin Station"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers a landmark solo on The Greatest Story Ever Told and strong vocal work on Peggy‑O and High Time, anchoring the acoustic brilliance of the night.",
+    "Phil": "",
+    "Bob": "His microphone is overly hot/up‑front, muddying the electric mix, but his playful banter with Otis the dog adds charm to the acoustic set.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-13T04:24:20.679715+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bird Song"
+    ],
+    [
+      "Oh Babe, It Ain't No Lie",
+      "Ripple"
+    ],
+    [
+      "Peggy-O"
+    ],
+    [
+      "High Time"
+    ],
+    [
+      "Alabama Getaway",
+      "Greatest Story Ever Told"
+    ],
+    [
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "Not Fade Away",
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ]
+  ]
+}

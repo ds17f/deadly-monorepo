@@ -1,0 +1,50 @@
+{
+  "summary": "Excellent soundboard capture of a vibrant show highlighted by acoustic Aiko and China Doll, though one listener finds the Althea unusually slow.",
+  "review": "The recording, mastered by Charlie Miller, delivers a well‑balanced, crystal‑clear mix that lets the band‑and‑audience interaction shine. Fans rave about the acoustic Aiko and China Doll performances, calling the show virtually flawless, while a lone reviewer notes an odd slowdown on Althea due to speed correction. Overall the music is top‑notch and the tape quality is superb.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "One glowing 5‑star review praises both performance and recording, while a single 0‑star review criticizes the speed‑correction on Althea; with limited but conflicting feedback the rating settles in the high‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced mix typical of Charlie Miller productions; a few listeners note speed‑correction artifacts that make Althea sound slower than usual."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Acoustic Aiko",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth and engaging set with strong band‑audience interplay; acoustic numbers flow naturally into the electric portion."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Acoustic Aiko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T05:23:31.967125+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-26.nak700.rolfe.miller.94269.sbeok.flac16"
+}

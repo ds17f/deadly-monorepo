@@ -1,0 +1,69 @@
+{
+  "summary": "Stellar Caution → Uncle John’s Band jam, solid mid‑set flow",
+  "blurb": "The show features a soaring Caution → Uncle John’s Band sequence and tight mid‑set jams like Sugar Magnolia into Caution and the Jam. Jerry’s guitar shines on Mr. Charlie while Keith adds rich organ texture. Overall performance is strong despite early mix hiccups.",
+  "review": "March 22, 1972 at New York’s Academy of Music captured a Dead show that swings hard after a rocky start. The first set stumbles through some vocal‑mic and drum‑mix issues, but the band recovers with highlights such as Mr. Charlie, a fiery China Cat Sunflower → I Know You Rider, and a gorgeous Looks Like Rain. The second set is where the night truly lifts: Sugar Magnolia segues into Caution (Do Not Stop On Tracks) and a loose Jam before launching into an unforgettable Uncle John’s Band—one of the most soaring transitions of the era. Keith Godchaux’s organ adds depth to the jams, and Bill Kreutzmann’s swing on Mr. Charlie and China Cat → Rider propels the music forward. While early songs suffer from monitor flatness, the second‑set momentum more than compensates, making this a solid representation of the spring ’72 sound.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.8,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 16,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Two recordings (soundboard and unknown source) are clearly positive about the performance, praising the Caution → Uncle John’s Band jam, Sugar Magnolia > Caution > Jam flow, and strong mid‑set jams. One audience recording is mixed but only critiques sound quality, not playing. Consistent praise across multiple sources warrants a solid positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 1.2 = 3.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1972-03-22.132726.sbd.miller.flac16",
+    "reason": "Complete soundboard capture; Miller’s mastering cleans tape hiss and drop‑outs, making it the most reliable listening source despite a few mix quirks."
+  },
+  "key_highlights": [
+    "Soaring Caution → Uncle John’s Band jam that lifts the second set.",
+    "Smooth Sugar Magnolia > Caution > Jam transition into Uncle John’s Band.",
+    "Brokedown Palace shines as a heartfelt mid‑set moment."
+  ],
+  "song_highlights": [
+    "Looks Like Rain",
+    "Mr. Charlie",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Caution (Do Not Stop On Tracks)",
+    "Uncle John's Band",
+    "Sugar Magnolia",
+    "Brokedown Palace"
+  ],
+  "band_performance": {
+    "Jerry": "Uses a volume pedal on Rider; guitar work praised especially on Mr. Charlie and the Caution jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keith": "Adds organ/piano texture that enriches the mid‑set jams.",
+    "Bill": "Swinging drumming shines on Mr. Charlie and China Cat → Rider, though the drum mix is a bit loud."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-20T12:09:32.413942+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Looks Like Rain"
+    ],
+    [
+      "Mr. Charlie"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Sugar Magnolia",
+      "Caution (Do Not Stop On Tracks)",
+      "Jam",
+      "Uncle John's Band"
+    ],
+    [
+      "Brokedown Palace"
+    ]
+  ]
+}

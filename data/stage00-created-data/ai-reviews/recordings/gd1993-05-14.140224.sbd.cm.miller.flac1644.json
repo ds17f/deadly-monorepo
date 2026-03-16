@@ -1,0 +1,64 @@
+{
+  "summary": "Soundboard transfer captures a solid 1993 Vegas show with standout moments like “Standing on the Moon” and a strong “Liberty”, though the encore “I Fought The Law” falls flat.",
+  "review": "The recording is a sound‑board transfer that listeners describe as clear and well‑balanced, making the performance easy to enjoy. Musically the night shines with an inspired “Standing on the Moon”, a powerful rendition of “Liberty”, and an extended Scarlet Begonias → Fire on the Mountain sequence, while the encore “I Fought The Law” is noted as weak. Overall the show is regarded as good for ’93 Vegas dates, even if memories are mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is generally praised with several standout songs, and the soundboard source is regarded as clear; however one reviewer mentions a weak encore and overall memories are mixed, leading to a solid but not exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Board transfer noted by reviewers; no major drop‑outs or muddiness mentioned, sound described as clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Liberty",
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Standing on the Moon"
+    ],
+    "poor_songs": [
+      "I Fought The Law"
+    ],
+    "setlist_flow": "Second set highlighted by an extended Scarlet Begonias → Fire on the Mountain stretch; encore was a brief, less‑enthusiastic “I Fought The Law”. Overall pacing is viewed as solid for a mid‑summer Vegas gig."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for launching an exhilarating ‘Standing on the Moon’ during the second set.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Fought The Law": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:27:56.429213+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-05-14.140224.sbd.cm.miller.flac1644"
+}

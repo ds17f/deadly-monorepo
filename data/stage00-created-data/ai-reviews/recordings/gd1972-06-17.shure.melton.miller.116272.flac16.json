@@ -1,0 +1,109 @@
+{
+  "summary": "Clear front‑row audience recording captures a historic show highlighted by the debut of Stella Blue and strong organ work, with standout jams like The Other One and Ramble On Rose.",
+  "review": "The tape is an audience (front‑row box) recording that sounds surprisingly clear—Garcia’s amp feeds straight into the mix and Pigpen’s organ sits front‑and‑center. Musically the concert shines with the first performance of Stella Blue, a fiery The Other One, crisp Truckin' and a sweet Ramble On Rose, making it one of the better 1972 shows despite minor drop‑outs that have been fixed. Overall fans praise both the historical significance and the listenability of this release.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (15+) give 4‑5 stars, highlighting strong performance and a surprisingly good audience recording; only minor technical quirks are noted."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Front‑row box mic placement gives clear organ and Garcia guitar; occasional drop‑out in The Other One was spliced; overall balanced, low crowd noise, some pitch‑correction needed but generally listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "The Other One",
+      "Playin' (Playing in the Band)",
+      "Truckin'",
+      "Ramble On Rose",
+      "China Cat Sunflower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical Europe ’72 set shortened—first set warms up with solid rhythm and early Pigpen organ, second set short but sweet with strong jams; the flow feels natural and keeps momentum despite a few missing Pigpen songs."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar is captured directly from his amp, praised for tone and presence throughout.",
+    "Phil": "Phil opens with a bronchitis joke; his bass work is noted as fine and supportive.",
+    "Bob": "Weir’s vocals and stage antics (hat incident) are mentioned; occasional mic knock on El Paso noted.",
+    "Keys": "Keith's organ is prominent, especially on Stella Blue; Pigpen also contributes clear organ parts throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin' (Playing in the Band)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down The Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T14:57:41.435456+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-06-17.shure.melton.miller.116272.flac16"
+}

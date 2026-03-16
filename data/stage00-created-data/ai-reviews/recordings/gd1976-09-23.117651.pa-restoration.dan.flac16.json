@@ -1,0 +1,76 @@
+{
+  "summary": "A mostly solid soundboard capture of a fiery 1976 show, highlighted by an inspired second set with soaring \"Eyes\", hot Help‑Slip, and the best \"High Time\" ever heard despite a few patchy audience inserts.",
+  "review": "The performance shines especially in the second set – \"Eyes\" prefigures Englishtown, the Help>Slip jam is on fire, and Jerry delivers a pure vocal on an outstanding \"High Time.\" The recording is primarily soundboard quality with clear guitar tone and a notable quadraphonic bass effect, though it suffers from brief audience patches on \"The Other One\" and a one‑minute audio glitch at the end of \"Eyes,\" as well as subdued vocals.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance and highlight several standout songs; recording quality is generally good with only isolated issues, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear soundboard mix with sweet guitar tone and a quadraphonic bass effect. Minor flaws include a 1‑minute audio patch at the end of \"Eyes,\" audience patches on \"The Other One\" (and possibly \"Dew\"), and vocals that suffer slightly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Help > Slip",
+      "High Time",
+      "Cassidy",
+      "Warfrat"
+    ],
+    "poor_songs": [
+      "The Other One",
+      "Dew"
+    ],
+    "setlist_flow": "The first set is solid but unremarkable; the second set is highly inspired, with seamless transitions and powerful jams that make this show a 1976 gem."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s neck‑pickup on his Travis Bean gives a sweet tone; vocals are pure, especially on \"High Time\".",
+    "Phil": "A fantastic quadraphonic effect on the bass is noted by listeners.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help > Slip": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Warfrat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:17:25.044270+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-09-23.117651.pa-restoration.dan.flac16"
+}

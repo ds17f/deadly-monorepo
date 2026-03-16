@@ -1,0 +1,73 @@
+{
+  "summary": "A strong ’87 Hampton show with a smoking Sugar Magnolia→Scarlet→Fire opener, captured on a matrix tape that leans heavy on audience ambience.",
+  "review": "The concert is widely praised for its high‑energy first night of the spring‑’87 run – Jerry’s return was felt in every note, the pre‑drums “Sugar Magnolia > Scarlet > Fire” sequence is called legendary, and songs like Cassidy, The Wheel and Black Peter get special shout‑outs.  The recording is a matrix source that favors audience ambience; listeners note it isn’t a pristine soundboard but still conveys the excitement of the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers highlight an outstanding performance (≈4‑star show quality) while noting a mixed‑quality matrix recording (≈3‑star). Weighted 70/30 the combined score lands around 3.8."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Heavy audience ambience due to Healy’s matrix mix; some say it’s just above a high‑quality audience recording, others call the ambience excessive. No major dropouts reported, but the sound isn’t as clear as a pure SBD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia > Scarlet > Fire",
+      "Cassidy",
+      "The Wheel",
+      "Black Peter",
+      "Estimated"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opening night of the spring ’87 run, tight and upbeat.  The pre‑drums “Sugar Magnolia > Scarlet > Fire” sequence set a high bar, maintaining momentum through strong mid‑set numbers and an uplifting second‑set finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for being ‘alive’, energetic guitar work and infectious vibe; several reviewers note his tone and excitement.",
+    "Phil": "",
+    "Bob": "Highlighted for excellent rhythm/lead guitar on The Wheel and overall solid playing.",
+    "Keys": "Brent’s keyboards are mentioned positively as part of the renewed energy of the band in ’87.",
+    "Drums": "Bill Kreutzmann’s drumming described as fine; the pre‑drums sequence is noted for its excitement."
+  },
+  "song_mentions": {
+    "Sugar Magnolia > Scarlet > Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Push": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:15:09.252543+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-03-22.sbd.clugston.9734.sbefail.shnf"
+}

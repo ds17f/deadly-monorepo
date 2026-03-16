@@ -1,0 +1,93 @@
+{
+  "summary": "Stunning audience recording of an October ’83 Lake Placid show – crystal‑clear sound and a fireworks‑like set highlighted by a legendary Sugaree and soaring To Lay Me Down.",
+  "review": "The tape captures the high‑energy, late‑summer 1983 Dead in Lake Placid with remarkable clarity; reviewers repeatedly call it one of the best audience recordings ever made. Musically the night is dominated by an incendiary Sugaree, a monster To Lay Me Down, and a terrapin‑station that many cite as unforgettable, while the second set delivers solid Good Lovin’, Deal and Bird Song despite a few mixed feelings about Touch of Grey.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 70 reviews, the vast majority are 4‑5 stars and praise both performance and tape quality; show quality (≈70% weight) is consistently called “great” or “exceptional,” recording quality (≈30% weight) is described as crisp, audience‑balanced and often superior to board tapes."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners note a clear, balanced mix with enough crowd ambience; many say it sounds better than a board tape. A few mention an aggressive, slightly “tough” tone but no significant drop‑outs or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "To Lay Me Down",
+      "Terrapin Station",
+      "Deal",
+      "Good Lovin'",
+      "Bird Song",
+      "Wheel",
+      "Miracle"
+    ],
+    "poor_songs": [
+      "Touch of Grey"
+    ],
+    "setlist_flow": "First set is described as a nonstop surge (Sugaree → Rooster → etc.) that many consider the show’s high point; second set keeps the momentum with strong segues (Touch→Samson→To Lay Me Down) though a few listeners feel it loses a bit of energy after the intermission."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for scorching guitar tone, soaring vocals and ‘on‑point’ playing; several reviewers call his Sugaree “the best ever.”",
+    "Phil": "",
+    "Bob": "Noted for solid rhythm work and “supportive” playing that lifts the band, especially on Terrapin Station.",
+    "Keys": "Brent (or Keith) described as “always right on” with keyboards; no major complaints.",
+    "Drums": "Bill and Mickey receive kudos for driving the groove, particularly on Deal, Good Lovin’ and the extended jam sections."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 30,
+      "negative_mentions": 1,
+      "total_mentions": 31
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Terrapin Station": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Deal": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Good Lovin'": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Bird Song": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Wheel": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Miracle": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Touch of Grey": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T12:58:42.666570+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-10-17.sennheiser.skank-levy.347.sbeok.shnf"
+}

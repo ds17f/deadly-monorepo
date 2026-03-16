@@ -1,0 +1,82 @@
+{
+  "summary": "Soundboard tape with a strong mix once the first two songs settle; the show shines on Peggy‑O, Wharf Rat and Row Jimmy despite a shaky Jack Straw start.",
+  "review": "The recording is a soundboard source that sounds clear after an early vocal problem – the mix becomes phenomenal from song three onward. Musically the concert delivers several highlights such as Peggy‑O, Wharf Rat, Row Jimmy, Good Lovin' and a surprisingly lively Jack Straw, though the opening numbers are noted as sub‑par for Garcia’s vocals and guitar.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the mix and several standout performances, outweighing a few criticisms of the early songs; recording quality is generally good."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Early vocal drop‑out on the first two tracks but mix resolves to a crisp, balanced sound for the remainder of the show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Wharf Rat",
+      "Row Jimmy",
+      "Good Lovin'",
+      "Bertha",
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "L.L. Supplication"
+    ],
+    "setlist_flow": "The concert starts weak with tentative playing and missing vocals, but picks up dramatically after the first two songs, delivering a solid second half that many reviewers find memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals missing on the first two numbers; later praised for lively Jack Straw performance, vocal improvisations on Row Jimmy and energetic guitar work on Good Lovin'.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The rhythm section (drummers) is noted as supportive, helping pull the early songs forward."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "L.L. Supplication": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:27:31.453919+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-04-12.sbd.henry.11476.sbeok.shnf"
+}

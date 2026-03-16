@@ -1,0 +1,73 @@
+{
+  "summary": "High‑energy first set with scorching Loser solo; second set loses steam",
+  "blurb": "Feel Like A Stranger and Loser launch a tight, high‑octane first set that stays loose through Lazy River Road. The second half stalls – Box of Rain and He's Gone feel tired while Wharf Rat provides the only real lift.",
+  "review": "March 29, 1993 at Albany’s Knickerbocker Arena delivered a quintessential early‑'90s Dead experience: the band burst out of the gate with a blistering Feel Like A Stranger and an incendiary Loser solo that reviewers called “the best solos of the era.” Jerry’s lead guitar was on fire, and Bill Kreutzmann supplied what many fans described as “amazing” drumming throughout. The momentum stayed high through Lazy River Road and even a rollicking Johnny B. Goode, keeping the first set tight and exhilarating.\n\nWhen the second set rolled in, the energy dipped. A rain‑soaked atmosphere surrounded Box of Rain and He's Gone, but both were noted as under‑performed, with Jerry’s vocals sagging and Bob sounding tired, especially on Throwing Stones. The Drum/Space segment was solid, yet the subsequent songs never recaptured the first‑set spark, only salvaged by a soulful Wharf Rat before closing with Not Fade Away and an encore Liberty.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.1,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 24,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.4,
+      "sentiment_rationale": "Two recordings label the show as mixed while one is positive; consistent praise for the first set and drumming yields a modest positive adjustment, but the widespread criticism of the second‑set performance keeps the boost limited.",
+      "final_calculation": "2.5 + 0.2 + 0.4 = 3.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd93-03-29.sbd.wiley.13512.sbeok.shnf",
+    "reason": "Clean soundboard capture that faithfully renders the high‑energy first set and showcases Bill Kreutzmann’s amazing drumming, with no major dropouts."
+  },
+  "key_highlights": [
+    "Scorching Loser solo and tight Feel Like A Stranger opener",
+    "Bill Kreutzmann’s standout drumming throughout the show",
+    "First set maintains high energy; second set feels tired and less inspiring",
+    "Rain‑soaked ambience adds a unique flavor to Box of Rain and He's Gone"
+  ],
+  "song_highlights": [
+    "Feel Like A Stranger",
+    "Loser",
+    "Lazy River Road",
+    "Box of Rain",
+    "He's Gone",
+    "Wharf Rat",
+    "Here Comes Sunshine"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers scorching leads on Loser and Feel Like A Stranger, though his vocals sag in the later part of the show.",
+    "Phil": "",
+    "Bob": "Sounds tired in the second set; vocal delivery drags, especially on Throwing Stones.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": "Drumming is praised as amazing and one of his best performances of the era."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-18T11:54:41.767332+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Feel Like A Stranger"
+    ],
+    [
+      "Loser"
+    ],
+    [
+      "Lazy River Road"
+    ],
+    [
+      "Box of Rain",
+      "He's Gone",
+      "Drums",
+      "Space",
+      "The Last Time",
+      "Wharf Rat",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Here Comes Sunshine"
+    ]
+  ]
+}

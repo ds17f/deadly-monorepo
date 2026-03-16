@@ -1,0 +1,39 @@
+{
+  "summary": "Great audience recording with seamless flow; standout intro to St. Stephen.",
+  "review": "Both reviewers praise the tape for its smooth, uninterrupted listening experience and note that the opening of St. Stephen is among the best they've heard, highlighting Garcia's tone and spacey effects. The audience source captures crowd energy well, making it an enjoyable listen despite the unknown show date.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Both reviews are 4‑star and focus on strong musical moments and a pleasant listening experience; limited to two reviews, confidence is moderate."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Seamless tape with clear guitar tone and good crowd ambience; no major flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong opening highlighted by an exceptional St. Stephen intro; overall flow described as seamless and enjoyable."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar tone and spacey effects at the start of St. Stephen are praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T05:27:10.724704+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-26.s2.aud.digitalrbb.miller.112790.flac16"
+}

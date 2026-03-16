@@ -1,0 +1,101 @@
+{
+  "summary": "An excellent audience recording captures a powerhouse Shrine show highlighted by The Other One, Comes A Time and New Minglewood.",
+  "review": "Rob Bertrando’s balcony‑mic audience tape is crisp, clean and surprisingly full‑bodied – a rare gem for a mid‑70s Dead concert.  The performance itself is top‑tier: the band rides massive jams on The Other One, Comes A Time and New Minglewood, while Jerry’s lead work “floats like a bird” and Phil drops bass bombs that drive the set.  Even with a few mixed moments (a sluggish Bertha), the overall flow from an energetic first set to a soaring second‑set finale makes this one of the Shrine’s standout nights.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "The majority of reviews (13/15) are 4–5 stars, praising both the musical performance and the recording clarity; only one low‑score comment notes sound issues, so the combined show (≈4.8) and recording (≈4.5) yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Balcony‑mic capture is clear and crisp; reviewers note a slight low‑end boost may be needed but the mix is clean, balanced and better than many contemporary soundboard tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Comes A Time",
+      "New Minglewood",
+      "Music Never Stopped",
+      "Eyes of the World",
+      "Loser"
+    ],
+    "poor_songs": [
+      "Bertha"
+    ],
+    "setlist_flow": "First set is high‑energy and jam‑heavy, leading into a second set that builds beautifully with Eyes of the World into The Music Never Stopped and culminates in a monster closing jam; the Shrine’s acoustics add extra “kick” to every number."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for soaring lead guitar (“floats like a bird”), relentless wawa riffs, and an overall inspired tone.",
+    "Phil": "Noted for “dropping bombs” on The Other One and delivering a powerful bass foundation throughout the show.",
+    "Bob": "Described as grinning and prowling the stage during key moments (e.g., Eyes of the World), adding vocal energy.",
+    "Keys": "Keith’s piano work is highlighted positively on Row Jimmy but called “unchanging” and overbearing on Bertha.",
+    "Drums": "The drumming crescendos in the second‑set transitions are praised for their intensity and tightness."
+  },
+  "song_mentions": {
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "New Minglewood": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T08:35:57.752879+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-10-15.bertrando.vernon.11655.sbeok.shnf"
+}

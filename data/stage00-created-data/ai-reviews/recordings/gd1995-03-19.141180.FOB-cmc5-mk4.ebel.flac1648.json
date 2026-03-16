@@ -1,0 +1,39 @@
+{
+  "summary": "Beautifully toned Stella Blue highlighted, but recording source and quality are not described",
+  "review": "The lone review gushes over Jerry Garcia's extraordinary tone on \"Stella Blue,\" suggesting he may have been using his Rosebud guitar. No information is given about the recording itself, so its technical quality remains unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Strong positive comment on performance (high show weight) but no data on recording quality and only a single review, resulting in limited confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention sound clarity, mix, or source; unable to assess technical quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Insufficient detail in the review to comment on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewer notes an unusually beautiful guitar tone, possibly from his Rosebud instrument.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T06:10:14.007952+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-19.141180.FOB-cmc5-mk4.ebel.flac1648"
+}

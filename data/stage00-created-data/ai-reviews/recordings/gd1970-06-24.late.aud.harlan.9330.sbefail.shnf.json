@@ -1,0 +1,57 @@
+{
+  "summary": "A solid audience recording of a 1970 show that delivers a smoking Dark Star, St. Stephen and Easy Wind, with surprisingly clear sound for the era.",
+  "review": "Fans rave about the performance – Dark Star, St. Stephen and Easy Wind are highlighted as standout moments, and Phil Lesh’s bass work gets special praise. The tape is an audience source but is considered a good‑quality capture given the scarcity of soundboard recordings from this period.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All six reviews are highly favorable (average 4.67 stars) and consistently mention exceptional musical moments; recording quality is praised as good for an audience tape."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note the recording is \"good\" despite being an audience tap, and comment on the historic lack of soundboard tapes for this era; overall clarity is acceptable for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "St. Stephen",
+      "Easy Wind",
+      "NFA"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Listeners describe the set as a classic early‑summer 1970 flow with strong, energetic numbers and seamless transitions that make it a favorite among fans."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil is \"banging away\" – his bass work on NFA receives explicit praise.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Easy Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "NFA": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T21:39:36.831045+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-06-24.late.aud.harlan.9330.sbefail.shnf"
+}

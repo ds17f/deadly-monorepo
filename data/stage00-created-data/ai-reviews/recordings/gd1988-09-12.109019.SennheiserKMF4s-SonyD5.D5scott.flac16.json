@@ -1,0 +1,39 @@
+{
+  "summary": "Mixed audience recording quality, yet the concert dazzles with a standout Jack Straw opener.",
+  "review": "The performance is praised as an \"amazing show\" with a superb opening of Jack Straw, earning high marks for musical enjoyment. However, listeners are split on the audio: one celebrates the crisp Sennheiser mix while another condemns the audience capture as unusable, making the overall listening experience uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is rated very high (≈4.5) but recording quality ranges from excellent to terrible; combined weighted score yields ~3.8 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer praises a clear, \"right there\" Sennheiser mix, while another calls the audience capture poor and advises skipping it; overall audio is inconsistent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure beyond noting a strong opening with Jack Straw."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T13:36:22.535027+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-12.109019.SennheiserKMF4s-SonyD5.D5scott.flac16"
+}

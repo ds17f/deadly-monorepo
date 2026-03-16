@@ -1,0 +1,76 @@
+{
+  "summary": "Monster The Other One suite and solid classics throughout",
+  "blurb": "The show delivers a towering 21‑minute The Other One sandwich and tight second‑set jams, with Keith’s piano cutting through a muffled mix. Jerry’s guitar soars while Phil locks in the groove, making it a must‑listen for ’71 fans.",
+  "review": "October 29, 1971 at the Allan Theater captures the Dead in a classic early‑’70 swing. The first set rolls through familiar terrain – Truckin', Sugaree, El Paso and a punchy Playing In The Band – but it’s the second set that really shines. A monster 21‑minute The Other One sandwich bookended by Cryptical Envelopment → Deal showcases Jerry ripping his guitar tones and Phil holding down a rock‑solid bass line. Keith Godchaux is front‑of‑mix, “playing like a demon,” and his piano adds extra fire despite the occasional muffled character of the soundboard tape. While one FM recording suffers from muddy first‑set audio, the overall performance feels upbeat and adventurous, with Sugar Magnolia and Tennessee Jed rounding out a memorable night.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 21,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Two recordings described the show positively (monster The Other One, strong second‑set jams, Keith’s piano) and one mixed (muddy first set). Consistent praise for key moments yields a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.2 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd71-10-29.sbd.miller.24999.sbeok.shnf",
+    "reason": "Fair‑quality soundboard that captures the full show, especially the legendary The Other One suite; most complete and listenable of the three sources."
+  },
+  "key_highlights": [
+    "21‑minute The Other One sandwich with tight interplay between Jerry and Phil",
+    "Cryptical Envelopment → Deal sequence adds a soaring second‑set climax",
+    "Keith Godchaux’s piano/keys cut through despite being forward in the mix",
+    "Solid first‑set classics like Truckin' and El Paso keep the energy high"
+  ],
+  "song_highlights": [
+    "The Other One",
+    "Sugar Magnolia",
+    "Tennessee Jed",
+    "El Paso",
+    "Playing In The Band",
+    "Cryptical Envelopment",
+    "Deal",
+    "Truckin'"
+  ],
+  "band_performance": {
+    "Jerry": "Ripping guitar tones and enthusiastic vocals, especially on the opening of The Other One, with strong interplay with Phil.",
+    "Phil": "Solid bass work that locks in tightly with Jerry throughout the set, providing a sturdy foundation for the jams.",
+    "Bob": "Mixed feedback – some reviewers were critical, others appreciated his rhythm vocal contributions; overall not a focal point of the performance.",
+    "Brent": "Keith Godchaux dominates the mix, playing like a demon on piano/keys and adding high energy despite being overly forward in the early‑’70 sound.",
+    "Mickey": "",
+    "Billy": "Steady drumming that underpins both the first‑set grooves and the extended second‑set improvisations."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-20T08:56:27.485185+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "Me And My Uncle",
+      "The Other One",
+      "Cryptical Envelopment",
+      "Deal"
+    ],
+    [
+      "Sugar Magnolia"
+    ],
+    [
+      "Tennessee Jed"
+    ],
+    [
+      "El Paso"
+    ],
+    [
+      "Playing In The Band"
+    ],
+    [
+      "Truckin'"
+    ]
+  ]
+}

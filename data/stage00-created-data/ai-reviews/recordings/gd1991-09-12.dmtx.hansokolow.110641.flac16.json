@@ -1,0 +1,71 @@
+{
+  "summary": "Matrix source with a fairly expansive sound but occasional audio distractions, featuring standout moments like Tom Thumb Blues and Walkin' Blues amid an uneven set.",
+  "review": "The hansokolow matrix capture is generally good—more spacious than a typical soundboard—but suffers from a few audible glitches, especially during the drum segment. Musically the show swings between high points (Tom Thumb Blues, Walkin' Blues, a powerful Playing in the Band > Terrapin > Drums) and stretches that feel average or oddly arranged, leaving the overall impression mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Two reviewers praised the performance while one gave a low rating citing uneven playing and recording quirks; weighting show quality (70%) and recording quality (30%) yields an overall mid‑range score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "More expansive than a standard soundboard, but with audible distractions in the Drums section and occasional mix blemishes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tom Thumb Blues",
+      "Walkin' Blues",
+      "Playing in the Band > Terrapin > Drums"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as average with a few sketchy moments; second set contains odd transitions (e.g., Sugar Magnolia into Foolish Heart) but also high‑energy peaks like Playing in the Band and a mind‑bending drum jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Abrupt transition from Sugar Magnolia into Foolish Heart noted as weird yet solid.",
+    "Phil": "Fans chanted for Phil throughout; his Tom Thumb Blues received enthusiastic praise.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums segment praised for its power but marred by some audio distractions."
+  },
+  "song_mentions": {
+    "Tom Thumb Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T00:43:20.284176+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-12.dmtx.hansokolow.110641.flac16"
+}

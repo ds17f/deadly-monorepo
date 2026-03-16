@@ -1,0 +1,71 @@
+{
+  "summary": "Tight acoustic set, Jerry’s tone shines, solid drums",
+  "blurb": "The July 14‑1970 show delivers a standout acoustic half with How Long Blues and Cosmic Charlie, then launches into an electric second set highlighted by China Cat Sunflower → I Know You Rider and The Other One. Jerry Garcia’s full‑bodied guitar tone and the twin‑drum attack keep the momentum high despite some mix glitches.",
+  "review": "On July 14, 1970 at San Rafael’s Euphoria Ballroom the Dead offered a two‑set marathon that still feels fresh for listeners today. The first set rolls through folk‑rock staples—Don’t Ease Me In, Friend Of The Devil and Dire Wolf—before diving into a superb acoustic showcase highlighted by a soaring How Long Blues, deep bluesy vibes on Cosmic Charlie, and a ripping New Speedway Boogie where Garcia’s tone is described as \"full‑bodied and classic.\"  The second set picks up the electric energy with a seamless China Cat Sunflower → I Know You Rider transition that showcases “smoking” drums from Mickey and Bill, while Phil Lesh carves out a long, high‑in‑the‑mix solo during Good Lovin’.  Though the mix on the electric half suffers occasional buzzing and a few dropouts (notably the missing Frozen Logger), the band’s interplay—especially Jerry’s lead work on New Speedway and Cumberland Blues—remains compelling.  Bob Weir’s laid‑back vocal on El Paso adds a unique flavor, and the encore’s Uncle John’s Band caps the night with an uplifting sing‑along.  Overall, the show is a solid snapshot of the early ’70 Dead: acoustic intimacy paired with electric fire, anchored by stellar drumming and Garcia’s unmistakable guitar voice.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 17,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.7,
+      "sentiment_rationale": "Multiple recordings praise the acoustic set, Jerry's tone, and strong drum work (positive sentiment), but one source notes mixed electric mix issues and missing songs, tempering enthusiasm to a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.7 = 3.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1970-07-14.sbd.unknown.96628.sbeok.shnf",
+    "reason": "Soundboard source with generally crisp and clean capture, especially on acoustic tracks; most complete version despite minor dropouts and a cut in Good Lovin'."
+  },
+  "key_highlights": [
+    "Exceptional acoustic half featuring How Long Blues and Cosmic Charlie",
+    "High‑energy China Cat Sunflower → I Know You Rider transition with smoky drum work",
+    "Jerry Garcia’s full‑bodied guitar tone throughout the set",
+    "Solid drumming from Mickey Hart and Bill Kreutzmann despite mix quirks"
+  ],
+  "song_highlights": [
+    "How Long Blues",
+    "New Speedway Boogie",
+    "Cosmic Charlie",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "The Other One",
+    "Uncle John's Band"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s tone is repeatedly praised as full‑bodied and classic; he leads electric work on New Speedway Boogie and Cumberland Blues.",
+    "Phil": "Lesh delivers a long, high‑in‑the‑mix solo in Good Lovin' and provides a solid foundational bass line throughout.",
+    "Bob": "Weir’s vocal delivery on El Paso is noted for its relaxed, lyric‑focused take, adding a unique touch to the performance.",
+    "Brent": "",
+    "Mickey": "The twin‑drum attack is described as \"smoking\" and high in the mix, delivering funky percussion especially during the China Cat Sunflower → I Know You Rider segue.",
+    "Billy": "Bill’s drumming complements Mickey with thick 1970‑era rhythms; overall drum work remains solid despite occasional electric mix issues."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-19T22:06:43.750784+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "How Long Blues"
+    ],
+    [
+      "New Speedway Boogie"
+    ],
+    [
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "Cryptical Envelopment",
+      "Cosmic Charlie"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Uncle John's Band"
+    ]
+  ]
+}

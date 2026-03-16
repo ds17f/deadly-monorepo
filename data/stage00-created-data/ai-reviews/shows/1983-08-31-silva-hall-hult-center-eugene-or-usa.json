@@ -1,0 +1,68 @@
+{
+  "summary": "Raw tribal space jams, strong Althea and high‑energy encore",
+  "blurb": "The concert delivers powerful Space improvisations and a memorable Althea performance. Standout moments include solid renditions of Cassidy, Stella Blue, and an energetic double encore featuring Satisfaction.",
+  "review": "On August 31, 1983 at Silva Hall in Eugene, the Dead served up a raw, tribal‑groove set that still feels fresh today. The first set crackles with Jerry’s robust tone on tracks like Alabama Getaway and Althea, while Brent’s keyboards sit tight behind the band. The second set is where the magic expands – a soaring Space jam, a double‑drum tease into Truckin’, and a soulful Stella Blue that many reviewers called “outstanding.” The night closes with a high‑energy encore, highlighted by a raucous rendition of (I Can’t Get No) Satisfaction. Across the available tapes the show shines for its tight rhythm section, especially Phil’s solid bass foundation and the dual percussion drive from Mickey and Bill, making this a solid entry in the 1983 summer run.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.8,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 14,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Four out of six recordings express clear positive sentiment, highlighting standout songs (Althea, Cassidy, Stella Blue, Space, Satisfaction) and noting no poor performances. The two mixed reviews still praise the show while mentioning only minor audio quirks, so overall sentiment is strongly positive.",
+      "final_calculation": "2.5 + 0.1 + 1.2 = 3.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1983-08-31.111598.Sennheiser.daweez.d5scott.flac16",
+    "reason": "Excellent balcony audience tape with crystal‑clear, opera‑house sound and tight bass; captures the Althea highlight beautifully and offers the most listenable audio of the night."
+  },
+  "key_highlights": [
+    "Raw tribal space jams featuring a standout Space improvisation",
+    "Althea receives special love with a solid performance and tight rhythm section",
+    "Strong renditions of Cassidy, Stella Blue, and an energetic double encore with Satisfaction"
+  ],
+  "song_highlights": [
+    "Althea",
+    "Cassidy",
+    "Stella Blue",
+    "Space",
+    "(I Can't Get No) Satisfaction"
+  ],
+  "band_performance": {
+    "Jerry": "Strong tone in the first set, a little less pronounced in the second.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-14T09:24:56.357843+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Althea"
+    ],
+    [
+      "Cassidy"
+    ],
+    [
+      "Playing In The Band",
+      "China Doll",
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "Truckin'",
+      "Stella Blue",
+      "Around & Around",
+      "Good Lovin'"
+    ],
+    [
+      "(I Can't Get No) Satisfaction"
+    ]
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent audience recording of a high‑energy spring ’89 show featuring a fresh Foolish Heart, tight Louie Louie and a scorching Walkin’ Blues solo.",
+  "review": "The audience (AUD) capture is crystal clear and balances the band’s chemistry beautifully, making this a must‑have for fans of the Spring ’89 tour. Reviewers rave about the fresh arrangement of Foolish Heart, the solid Louie Louie rendition, and Brent’s soaring keyboard/MIDI solo during Walkin’ Blues, while noting only a few new songs were still being worked out.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical performance highlighted by several standout songs and an excellent audience recording; the lone average‑rating review slightly lowers the overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp AUD capture with good instrument separation, minimal hiss and no noticeable drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart",
+      "Louie Louie",
+      "Walkin' Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show builds momentum early and hits a high point during Brent's second keyboard solo on Walkin' Blues, after which the band rides an unmistakable groove that keeps the energy soaring."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal phrasing on Foolish Heart is noted as slightly different and fresh.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboard work shines, especially his MIDI textures and a sax‑like solo during Walkin' Blues.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Louie Louie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T18:20:12.073451+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-09.aud.bleich.sirmick.84036.sbeok.flac16"
+}

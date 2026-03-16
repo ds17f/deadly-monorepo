@@ -1,0 +1,88 @@
+{
+  "summary": "Excellent soundboard transfer with a mellow, well‑played show highlighted by a stellar Cryptical/Other One suite and an electric Ripple.",
+  "review": "The recording is a high‑quality Betty Cantor soundboard transfer that sounds lively despite a few brief dropouts. Musically the concert is solid – the first set shines with tight jams, a standout Cryptical/Other One suite and superb performances of Me and My Uncle, Hard to Handle, Bird Song, Wharf Rat and an electrified Ripple; the second set is enjoyable but not as strong, with Loser’s vocals falling short.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Reviewers consistently praise the performance and note many standout songs while acknowledging only minor recording glitches; weighting favors the strong show quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, lively mix from a great source; a few annoying dropouts are mentioned but overall the transfer is praised as brilliant."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cryptical/Other One suite",
+      "Me and My Uncle",
+      "Hard to Handle",
+      "Bird Song",
+      "Wharf Rat",
+      "Ripple (electric)",
+      "NFA/GDTRFB suite",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Loser"
+    ],
+    "setlist_flow": "First set is tight and jam‑rich, especially the Cryptical/Other One suite; second set is decent but less cohesive, with a beautiful Ripple as its high point."
+  },
+  "band_member_comments": {
+    "Jerry": "Jangly leads praised throughout (Me and My Uncle, Bird Song) and his tone described as “Duane Allman‑like”; vocal repeats noted.",
+    "Phil": "Laser‑focused attack on the Other One intro and a brooding movement later in the suite are highlighted.",
+    "Bob": "Weir’s jangly rhythm guitar praised on Wharf Rat and Hard to Handle; strong lead work noted second set.",
+    "Keys": "Pigpen’s eerie organ fills on Loser and his rap on Lovelight receive special mention.",
+    "Drums": "Bill Kreutzmann adapts well after Mickey’s departure, delivering a solid drum break before the Other One and overall tight drumming."
+  },
+  "song_mentions": {
+    "Cryptical/Other One suite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ripple (electric)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "NFA/GDTRFB suite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T02:59:19.410251+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-02-20.sbd.cantor-crouch-diebert-gmb.85912.sbeok.flac16"
+}

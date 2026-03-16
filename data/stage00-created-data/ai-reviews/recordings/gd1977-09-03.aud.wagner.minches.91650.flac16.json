@@ -1,0 +1,62 @@
+{
+  "summary": "High‑quality audience tape that captures a historic 1977 show with scorching Half Step, soaring Eyes of the World and a monster Terrapin encore.",
+  "review": "The Wagner & Minches AUD delivers clear, well‑balanced sound (aside from a slight left‑channel bias) that lets listeners hear Jerry’s blistering Half‑Step solo and Keith’s piano weave beautifully. The performance is consistently praised – the set flows smoothly, highlights include Half Step, Eyes of the World, He's Gone > No Faith In America and an unforgettable Terrapin Station encore – making this one of the standout 1977 concerts.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (12/14) are 4‑5 stars and highlight both excellent musical moments and a generally good recording, with only minor technical complaints."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clear AUD with superior fidelity to other outdoor tapes; occasional left‑channel bias noted by one reviewer and a few comments about high‑frequency harshness, but overall considered the best audience source for this show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step",
+      "Eyes of the World",
+      "He's Gone > No Faith In America",
+      "Terrapin Station (encore)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers rave about the setlist’s natural arc – a tight first half, a soaring second set with seamless transitions, and a satisfying Terrapin encore that caps off an ‘epic’ night."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise his guitar tone, especially on Half‑Step where they joke he needed the strings hosed down afterward.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith’s piano is highlighted for melding with Jerry’s lead lines during the Half‑Step/Eyes sequence.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mississippi Half-Step": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone > No Faith In America": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station (encore)": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T03:58:08.169948+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-09-03.aud.wagner.minches.91650.flac16"
+}

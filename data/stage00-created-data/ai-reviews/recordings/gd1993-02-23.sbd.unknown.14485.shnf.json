@@ -1,0 +1,91 @@
+{
+  "summary": "Solid soundboard capture (with an out‑of‑phase quirk) of a memorable 1993 show featuring Ornette Coleman, a scorching Johnny B. Goode, The Other One and a hall‑stomping Lovelight.",
+  "review": "The recording is a generally clear DAT‑SBD source, though the encore drops to a lower‑grade SBD and one channel is out of phase, which can be fixed by inverting it. Musically the night shines thanks to Ornette’s guest spot, Jerry’s fiery Wolf/Johnny B. Goode work and a powerful second set that builds from a slow start into an explosive Other One and a standout Lovelight, while some moments (Mardi Gras Drums>Iko, Corrina) fall flat.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Reviews praise several highlight performances and a good‑quality soundboard source but note recording phase issues and uneven set moments, leading to an overall above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp DAT‑SBD capture; encore sourced from a lower‑grade SBD. One reviewer notes the mix is out of phase (invert one channel fixes it). No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Johnny B. Goode",
+      "The Other One",
+      "Lovelight",
+      "Broken Arrow"
+    ],
+    "poor_songs": [
+      "Iko (Mardi Gras Drums)",
+      "Corrina",
+      "Stella Blue"
+    ],
+    "setlist_flow": "First set rolls smoothly and ‘smokes’ from start to finish. The second set begins slowly, gains momentum with Ornette’s free‑jazz challenge, erupts into a spacey Playin' that leads into an intense Other One, and closes on a high‑energy Lovelight."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia rides the night hard – Wolf all night, a killer Johnny B. Goode, and pushes harder when Ornette challenges him; some note his health may be limiting his usual magic.",
+    "Phil": "Lesh’s lead‑bass tone is loud, bouncy and takes charge during Playin' and Broken Arrow, earning praise as the ‘Phil save’ of the show.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mardi Gras Drums>Iko described as boring/plodding, but the later drum segment with a didgeridoo and Ornette’s contribution is highlighted as cool."
+  },
+  "song_mentions": {
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Broken Arrow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko (Mardi Gras Drums)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:50:00.575721+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-02-23.sbd.unknown.14485.shnf"
+}

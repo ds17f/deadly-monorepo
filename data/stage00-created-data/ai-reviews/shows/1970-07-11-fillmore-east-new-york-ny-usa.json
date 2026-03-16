@@ -1,0 +1,62 @@
+{
+  "summary": "Acoustic gems and thunderous Morning Dew drive this high‑energy Fillmore set",
+  "blurb": "The concert opens with a mostly acoustic half that includes rare covers and gospel numbers before shifting into a blistering electric second set. Jerry’s pedal‑steel work and the explosive Morning Dew are standouts, while Bob adds vocal fire on Good Lovin'. The performance is vibrant despite the audience cassette’s left‑channel quirks.",
+  "review": "On July 11, 1970 at the Fillmore East the Dead delivered a show that still feels fresh in its raw intensity. Set 1 is an acoustic showcase – from the Everly Brothers’ “Monkey And The Engineer” through gospel-tinged numbers and Pigpen’s brave keyboard solo despite his laryngitis – giving the night a warm, intimate feel. When the electric set kicks in the band ratchets up the energy: Jerry Garcia piles on pedal‑steel flourishes and possibly an early wah‑wah bite, while the New Riders of the Purple Sage add extra sparkle. The climax arrives with a ferocious “Morning Dew,” followed by spirited renditions of “Good Lovin’” (Bob’s vocal punch shines) and a gritty “Viola Lee Blues.” The only real drawback is the audience cassette source: the left channel drops out for the first nine tracks, the right side is mostly hiss, and tape‑generation noise creeps in. Still, the recording captures enough of the band’s fire to make it a worthwhile listen for anyone interested in this transitional era.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "All available analysis is positive – reviewers praise the acoustic set, Jerry’s pedal‑steel work, and a \"thundering\" Morning Dew despite crude audio. Consistent enthusiastic language warrants a modest positive boost.",
+      "final_calculation": "2.5 + 0.1 + 0.5 = 3.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-07-11.aud.cotsman.9379.sbefail.shnf",
+    "reason": "Only existing source; despite fair quality it captures the full set, acoustic half and explosive Morning Dew, making it the most complete listening option."
+  },
+  "key_highlights": [
+    "Acoustic half opens with rare covers and gospel numbers, showcasing Pigpen’s solo despite laryngitis",
+    "\"Morning Dew\" delivers a thunderous climax with Jerry’s pedal‑steel accents",
+    "Bob’s vocal power shines on \"Good Lovin'\" and the chorus moments",
+    "Recording is audience cassette – left channel drops early, right side hisses, but overall usable for historical listening"
+  ],
+  "song_highlights": [
+    "So Sad (To Watch Good Love Go Bad)",
+    "Morning Dew",
+    "Good Lovin'",
+    "Viola Lee Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Abundant guitar and pedal‑steel work, high‑energy solos, possible early wah‑wah use.",
+    "Phil": "",
+    "Bob": "Provides strong vocals on \"Good Lovin'\" and joins the chorus on the line \"out where the horses were tied\".",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-19T21:55:35.404474+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "So Sad (To Watch Good Love Go Bad)"
+    ],
+    [
+      "Morning Dew"
+    ],
+    [
+      "Good Lovin'",
+      "Drums",
+      "Good Lovin'"
+    ],
+    [
+      "Viola Lee Blues"
+    ]
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "High‑energy show with standout Shakedown Street, Estimated Prophet and Eyes of the World, captured on a surprisingly good 1978 audience tape.",
+  "review": "Reviewers rave about the band’s electric performance – Jerry’s solos are on fire, Donna adds vocal variety, and songs like Shakedown Street, Estimated Prophet, Stagger Lee and Eyes of the World are highlighted as peaks. The AUD recording, made with a Neumann SM69 into a Nagra, is praised for its clarity and richness despite occasional glitches (a cut in Eyes) that prevent it from being a true soundboard.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for both performance and audio quality across 8 reviews; minor recording flaws noted but do not outweigh the overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, warm stereo capture with high‑grade mic/Nagra setup; a few listeners wish for an SBD and one notes a cut in the middle of \"Eyes of the World\"."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Estimated Prophet",
+      "Stagger Lee",
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is described as consistently energetic with seamless transitions, especially in the second set where the highlighted jams occur."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers point out his soaring solos and a special “one‑note” climax at the end of Shakedown Street.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-25T18:01:46.376141+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-12-28.aud-schug.warner.19506.sbeok.shnf"
+}

@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent soundboard capture of a tight first set highlighted by Shakedown Street, plus a compact but well‑sequenced second set featuring Uncle John’s sandwich and The Wheel.",
+  "review": "The SBD from Charlie Miller delivers crystal‑clear mix with Jerry’s guitar and vocals front‑and‑center and good instrument separation (though the bass sits a little low).  Fans rave about the first‑set flow and standout moments – Shakedown Street, High Time and a superb Uncle John’s sandwich that rolls into The Wheel – while opinions on the short second set are mixed but generally positive.  Overall the recording is praised as one of the best from this run.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (8 out of 10) rate the show 4‑5 stars, highlighting superb soundboard quality and strong performances; only a few note minor mix issues or second‑set fatigue, leading to an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp remaster by Charlie Miller, good separation and clarity; Jerry is prominent in the mix. Some reviewers note a slightly low bass and suggest a matrix could improve depth."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Uncle John’s Band",
+      "The Wheel",
+      "High Time",
+      "Promised Land",
+      "Truckin'",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for tight song list and energy; second set is shorter than usual but cleverly sequenced with a drums‑UJB sandwich, The Wheel in the middle, and a satisfying jam flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for perfect tone, prominent mix, and strong vocals.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Two drums sets highlighted as a highlight of the performance."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John’s Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T01:56:15.329945+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-08-21.sbd.miller.99034.sbeok.flac16"
+}

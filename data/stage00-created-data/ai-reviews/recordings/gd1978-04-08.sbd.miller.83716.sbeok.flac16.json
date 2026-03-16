@@ -1,0 +1,62 @@
+{
+  "summary": "Pristine soundboard capture of an underrated 1978 show highlighted by a powerhouse Samson and a soaring Scarlet > Fire transition.",
+  "review": "The Charlie Miller SBD restoration delivers crystal‑clear audio with excellent instrument separation, making this April ’78 performance a joy to hear.  The concert shines on the second‑set Samson jam and the seamless Scarlet > Fire transition, while the first set stays tight and energetic.  Although a few reviewers gripe about Donna Jean’s vocals, the overall musical quality and the superb recording earn high marks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently strong 4‑5 star reviews praise both the performance (standout jams, tight playing) and the pristine soundboard restoration; weighting of show (70%) and recording (30%) yields a rating above four."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Pristine SBD restoration by Charlie Miller – crystal‑clear mix, strong bass separation, and overall clarity; original venue acoustics add some reverb but do not detract from the listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samson",
+      "Scarlet > Fire",
+      "Estimated Prophet",
+      "Half Step"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is tight and energetic; the second set builds to a highlight with Samson followed by a seamless Scarlet > Fire transition, with The Estimated Prophet providing a nice mid‑set treat."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is described as fat, powerful and transcendent, especially on the Fire solo.",
+    "Phil": "One reviewer notes a flat upper string on Phil’s bass during Scarlet, suggesting a slight tuning issue.",
+    "Bob": "Bob Weir earns praise for a clever fake‑out into Samson; his vocal/shrieks receive mixed opinions.",
+    "Keys": "Keith Godchaux shines in the transition into Fire and adds beautiful, mellow stretches.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Samson": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T09:49:12.873709+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-08.sbd.miller.83716.sbeok.flac16"
+}

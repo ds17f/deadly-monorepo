@@ -1,0 +1,70 @@
+{
+  "summary": "Good matrix recording of a mixed‑quality show with a killer Scarlet>Victim>Fire jam and strong second‑set moments like Deal and West L.A.",
+  "review": "The two fan reviews describe a solid 1991 performance that shines on the first‑set Scarlet>Victim>Fire sequence and an engaging second set featuring Deal, Samson, Stranger and a punchy West L.A. rendition. Recording quality isn’t discussed in detail but is presumed decent (matrix source), while the show suffers from occasional false starts and missed cues.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed‑to‑positive with several standout moments, and recording quality appears adequate; together they average to a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on audio clarity or mix; reviewers did not note any major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Victim>Fire",
+      "Deal",
+      "Samson",
+      "Stranger",
+      "West L.A."
+    ],
+    "poor_songs": [
+      "Half-Step"
+    ],
+    "setlist_flow": "The setlist is praised for its creativity, especially the second‑set sequence, though reviewers note hit‑or‑miss energy, occasional false starts and missed cues that affect overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Occasional missed cues and false starts noted on his part.",
+    "Phil": "",
+    "Bob": "Having fun and at times getting ahead of himself in classic \"Bobby\" style.",
+    "Keys": "Bruce's enthusiastic keyboard work highlighted, especially on Deal and West L.A.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet>Victim>Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half-Step": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West L.A.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T23:33:18.521704+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-08-18.mtx.hansokolow.107883.flac16"
+}

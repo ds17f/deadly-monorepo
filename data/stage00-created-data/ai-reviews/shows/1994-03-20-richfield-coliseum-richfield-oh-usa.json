@@ -1,0 +1,68 @@
+{
+  "summary": "Tight first set, strong Estimated Prophet and Let It Grow",
+  "blurb": "First set shines with Cold Rain And Snow and a fiery It's All Over Now. Second set delivers an inspired Estimated Prophet followed by solid drumming and a powerful Let It Grow finale.",
+  "review": "The March 20, 1994 Richfield show opens with the crisp, rolling energy of “Cold Rain And Snow” and a surprisingly gritty take on “It's All Over Now,” where Bob Weir’s gnarly rhythm guitar drives the momentum. Jerry Garcia’s voice is repeatedly praised as one of his best that night, soaring over a tight first set that also includes “Let It Grow,” which closes with an uplifting vibe. The second set builds into a standout “Estimated Prophet”—the band locks in on the groove, and the dual drummers lay down a propulsive beat that carries through to “Black Peter” and “Throwing Stones.” Though audience recordings vary in fidelity (some suffer from left‑channel chatter), the musical performance remains compelling, making this a solid entry for fans seeking classic mid‑90s Dead magic.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 16,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Two recordings are clearly positive (highlighting All Over Now, Let It Grow) while the other two are mixed but still note strong moments like Estimated Prophet and Jerry's vocals. Consistent praise across multiple sources warrants a modest positive boost.",
+      "final_calculation": "2.5 + 0.1 + 0.8 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1994-03-20.nak300.wankelsworth.10539.sbeok.shnf",
+    "reason": "Good‑quality audience tape with clear instrument separation and praised for reduced crowd noise, capturing the band's vibrant performance."
+  },
+  "key_highlights": [
+    "Jerry's vocals described as his best ever heard that night.",
+    "\"Estimated Prophet\" delivers a tight groove and strong drum interplay.",
+    "\"Let It Grow\" closes the show on an uplifting high note.",
+    "Bob Weir’s gritty, gnarly rhythm guitar drives key moments."
+  ],
+  "song_highlights": [
+    "Cold Rain And Snow",
+    "It's All Over Now",
+    "Let It Grow",
+    "Estimated Prophet"
+  ],
+  "band_performance": {
+    "Jerry": "His voice was a standout, hailed as the best of the tour; guitar work solid and supportive throughout.",
+    "Phil": "",
+    "Bob": "Weir’s rhythm guitar is described as dirty and gnarly, providing a driving edge especially on the opening songs.",
+    "Brent": "",
+    "Mickey": "The drum duo delivers an intense pre‑drum energy that fuels \"Estimated Prophet\" and carries strong momentum through the second set.",
+    "Billy": "Kreutzmann pairs tightly with Hart, laying down a powerful rhythmic foundation that underpins the show's high points."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-18T20:18:32.821721+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Cold Rain And Snow"
+    ],
+    [
+      "It's All Over Now"
+    ],
+    [
+      "Let It Grow",
+      "Don't Ease Me In"
+    ],
+    [
+      "Crazy Fingers",
+      "Estimated Prophet",
+      "Drums",
+      "Space",
+      "The Last Time",
+      "Black Peter",
+      "Throwing Stones",
+      "Not Fade Away"
+    ]
+  ]
+}

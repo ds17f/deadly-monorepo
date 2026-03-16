@@ -1,0 +1,39 @@
+{
+  "summary": "Clear soundboard recording that sounds better than remembered, with a solid set highlighted by a beautiful “Friend of the Devil.”",
+  "review": "The sbd capture is noticeably clearer than fans recalled, delivering good overall fidelity despite some venue‑related quirks. The show itself is regarded as decent – not legendary – but it shines on moments like an especially moving “Friend of the Devil” and a drum section that reminded listeners of a Harley engine roar.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the recording highly (5‑star) and praise its clarity, while the musical performance is described as average to good with a standout song; weighting show (70%) and recording (30%) yields an overall rating around 3.8."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note the audio sounds much better than their memory, indicating clear mix; no major drop‑outs mentioned but venue and weather caused some technical “demons.”"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall an okay show with solid camaraderie; the ski‑resort setting made for a quirky atmosphere and the drums segment was especially memorable, though weather and venue issues kept it from being stellar."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum sound likened to a Harley factory by bikers hanging out during the jam."
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:00:01.336457+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-08-24.sbd.walker-scotton.miller.106196.flac24"
+}

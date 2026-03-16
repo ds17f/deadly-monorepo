@@ -1,0 +1,77 @@
+{
+  "summary": "Audience‑recorded tape with crystal‑clear Jerry guitar but overwhelming crowd screaming, yet the second set dazzles with a Terrapin > Playing > Wharf Rat run and a priceless Space jam.",
+  "review": "The recording is an audience capture that delivers very clear Jerry Garcia lead tones and decent vocal presence, but suffers from nonstop screaming, thin bass and a trebly tilt that makes the first set hard to enjoy. Musically the show shines in the second half – the Terrapin‑Playing‑Wharf Rat sequence and the ensuing Space jam are repeatedly praised as highlights, while first‑set material is generally dismissed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is moderately strong (standout second‑set jams) but recording quality is hampered by crowd noise and bass loss, resulting in an overall mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Clear Jerry guitar and decent vocals; however heavy audience screaming pierces every intro, little to no bass, treble‑heavy tone, occasional electronic keyboard noise and overall noisy ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin",
+      "Playing in the Band",
+      "Wharf Rat",
+      "Space (jam)",
+      "Ship of Fools",
+      "Estimated",
+      "Dark Star"
+    ],
+    "poor_songs": [
+      "First set material"
+    ],
+    "setlist_flow": "Second set is praised for its flow and improvisational peaks, while the first set is marred by crowd interference and weak bass, making it less enjoyable."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone described as very clear and one of the recording's strong points.",
+    "Phil": "Bass noted as thin or almost absent; no specific praise for Phil's playing.",
+    "Bob": "",
+    "Keys": "Mention of an electronic keyboard presence that adds odd texture to the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space (jam)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T21:34:37.354054+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-04-25.aud.goodbear.259.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent new-era performance featuring Bruce Hornsby's debut and the final Gimme Some Lovin', though recording source is unspecified",
+  "review": "Reviewers rave about this show as a historic moment – it marks Bruce Hornsby’s first appearance with the Dead and includes the last-ever rendition of \"Gimme Some Lovin'\" (the only one without Brent). While no details are given about the audio source, the five‑star rating implies listeners found the recording enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "Only a single review, but it gives a perfect 5‑star rating and highlights unique musical moments; lack of technical detail keeps confidence low."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments on sound clarity, mix, or source type were provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Gimme Some Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure or pacing was given."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby's debut noted as a fresh new sound for the band",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T12:15:06.147486+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-15.dsbd-patched.sirmick.77205.sbeok.flac16"
+}

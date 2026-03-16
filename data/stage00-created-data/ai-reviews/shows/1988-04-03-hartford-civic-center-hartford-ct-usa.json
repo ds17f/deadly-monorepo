@@ -1,0 +1,71 @@
+{
+  "summary": "Garcia's laryngitis dulls vocals but Brent shines; mixed set",
+  "blurb": "The show opens with a driving Promised Land and features strong moments on Little Red Rooster, Cold Rain & Snow, Black Peter and Turn On Your Lovelight. Jerry's voice is hampered by laryngitis throughout, but Brent Mydland’s keyboards and vocal contributions keep the energy up. Overall the performance is uneven, with highlights offset by vocal struggles.",
+  "review": "On April 3 1988 at the Hartford Civic Center the Dead delivered a night of contrasts. The first set kicked off with a punchy \"The Promised Land\" and rolled through classics like \"Little Red Rooster\" and \"Cold Rain And Snow,\" which many reviewers cite as bright spots despite Garcia’s strained voice. Brent Mydland stepped into the spotlight, delivering a memorable Little Red Rooster solo and adding Hammond color that helped lift the set when Jerry’s vocals were thin on songs such as \"Althea\" and \"Crazy Fingers.\"  The second set was a mixed bag: a fiery \"Playing In The Band\" segued into \"Crazy Fingers\" and \"Franklin's Tower,\" but Garcia’s laryngitis turned his singing into a raspy, near‑mute whisper, even leading to a dramatic mic slam during \"Black Peter.\"  Still, the band kept the momentum with a soaring \"Turn On Your Lovelight\" and an uplifting encore of \"It's All Over Now Baby Blue.\"  Among the available sources the Miller matrix mix (gd1988-04-03.sbd.miller.91161.sbeok.flac16) offers the clearest, most balanced sound, making it the recommended listening choice despite the vocal shortcomings.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 30,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": -0.2,
+      "sentiment_rationale": "Mixed sentiment across recordings: one positive, two mixed and one negative. While a few songs are praised, the dominant theme is Garcia's vocal impairment, leading to a slight negative adjustment.",
+      "final_calculation": "2.5 + 0.3 - 0.2 = 2.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1988-04-03.sbd.miller.91161.sbeok.flac16",
+    "reason": "Clear, well‑remastered matrix mix with good balance; captures the show’s energy despite vocal issues and is the most complete high‑quality source."
+  },
+  "key_highlights": [
+    "Jerry Garcia battles laryngitis, resulting in weak vocals on several songs.",
+    "Brent Mydland lifts the performance with strong keyboards and a standout Little Red Rooster solo.",
+    "Highlights include The Promised Land opener, Black Peter drama, Turn On Your Lovelight and Little Red Rooster.",
+    "Recording quality varies: Miller matrix mix offers clear sound; Pasternak matrix is excellent but suffers from the same vocal problems."
+  ],
+  "song_highlights": [
+    "The Promised Land",
+    "Little Red Rooster",
+    "Cold Rain And Snow",
+    "Black Peter",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Vocals are severely impaired by a cold/laryngitis—raspy, near‑mute and often strained—though his guitar work remains solid.",
+    "Phil": "Provides steady, supportive bass that helps keep the momentum when vocals falter.",
+    "Bob": "Delivers a strong vocal on \"Turn On Your Lovelight,\" standing out as a highlight.",
+    "Brent": "Keyboards are a saving grace; offers vibrant Hammond tones and an excellent Little Red Rooster solo, plus vocal backup that brightens the set.",
+    "Mickey": "Lays down a reliable rhythmic foundation throughout both sets.",
+    "Billy": "Solid drumming with occasional louder moments, maintaining the groove."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-16T07:52:44.140963+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "The Promised Land",
+      "Greatest Story Ever Told",
+      "Althea"
+    ],
+    [
+      "Little Red Rooster"
+    ],
+    [
+      "Cold Rain And Snow"
+    ],
+    [
+      "Playing In The Band",
+      "Crazy Fingers",
+      "Franklin's Tower",
+      "Man Smart, Woman Smarter",
+      "Drums",
+      "Space",
+      "Gimme Some Lovin'",
+      "Black Peter",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

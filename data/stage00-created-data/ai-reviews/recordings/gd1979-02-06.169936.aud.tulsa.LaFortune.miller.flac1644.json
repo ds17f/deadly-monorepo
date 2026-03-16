@@ -1,0 +1,39 @@
+{
+  "summary": "Audience tape with noticeable hiss but captures a solid Tulsa show highlighted by a nice Peggy‑O performance.",
+  "review": "The recording is an audience (AUD) capture – the mayor of Tulsa’s mic picked up some hiss and makes Donna’s vocals hard to hear, yet fans appreciate the raw crowd ambience. Musically the band delivers a pretty solid set, with reviewers especially calling out a enjoyable rendition of Peggy‑O. Overall the show shines despite the lo‑fi tape quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Reviews consistently praise the performance while noting hiss and heavy audience noise; weighted average of strong show (≈4) and fair recording (≈3) yields ~4 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Noticeable tape hiss, Donna's vocals often buried, heavy layer of audience chatter; not a clean soundboard but captures the live atmosphere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Solid, upbeat set with strong crowd interaction; the heavy audience presence adds to the vibe rather than detracting from the music."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T20:10:04.920293+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-02-06.169936.aud.tulsa.LaFortune.miller.flac1644"
+}

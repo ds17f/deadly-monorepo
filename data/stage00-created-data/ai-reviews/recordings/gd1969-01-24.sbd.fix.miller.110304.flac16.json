@@ -1,0 +1,68 @@
+{
+  "summary": "Excellent soundboard recording of a classic early‑1969 show, highlighted by a soaring New Potato Caboose bass solo and a monster Dark Star.",
+  "review": "The Miller‑remastered soundboard captures the band with a spacious, clear stage feel; occasional vocal mix quirks at the very start are outweighed by overall superb clarity. Musically the night shines – Phil Lesh’s extended New Potato Caboose solo, an intense The Other One, a textbook Dark Star and tight renditions of Dupree’s Diamond Blues and Doin’ That Rag make this one of the most memorable 1969 performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star praise, highlighting standout songs and a high‑quality soundboard; only minor mix issues are noted, resulting in an overall rating well above average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Miller’s remaster provides excellent soundstage and clarity. A brief vocal‑mix dip around 1:11 and some volume shifts are mentioned, but overall the instruments and ambience are crisp and well balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Potato Caboose",
+      "The Other One",
+      "Dark Star",
+      "Dupree's Diamond Blues",
+      "Doin' That Rag"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set opens with an unusually long tuning intro, then rolls through Cryptical Envelopment into The Other One and a fiery New Potato Caboose. The second set kicks off with a focused 20‑minute Dark Star followed by classic mid‑tempo numbers, delivering a balanced mix of exploratory jams and tight songcraft."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s Les Paul tone is praised; his vocals are low in the early mix but come forward later. Strong playing on Dark Star, Dupree’s Diamond Blues and Doin’ That Rag, with a brief missed vocal cue noted.",
+    "Phil": "Lesh’s extended New Potato Caboose solo is described as “fabulous” and uniquely prominent; his bass is clear and leads the band through The Other One and other jams.",
+    "Bob": "Bob Weir’s vocals are initially undermixed but improve later; he joyously launches into Dupree’s Diamond Blues and adds harmony on several tracks.",
+    "Keys": "Tom Constanten’s delicate, nuanced keyboards are highlighted as a perfect complement throughout the set, especially during The Other One and Dark Star.",
+    "Drums": "Mickey Hart is noted for using maracas on Dark Star; both Mickey and Bill (referred to as “Billy”) receive praise for exceptional drumming, particularly in the drum segment."
+  },
+  "song_mentions": {
+    "New Potato Caboose": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Doin' That Rag": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T10:27:14.444449+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-01-24.sbd.fix.miller.110304.flac16"
+}

@@ -1,0 +1,56 @@
+{
+  "summary": "Crystal‑clear audience recording captures an all‑time show highlighted by a spine‑tingling Dark Star tease in Foolish Heart and a soaring Touch of Grey.",
+  "review": "The tape, sourced from the front of house board despite rain, delivers spectacular, crystal‑clear sound that lets listeners feel the crowd’s anticipation as Foolish Heart gives way to a Dark Star groove. The performance is praised for an uplifting Touch of Grey and a heartfelt rendition of The Weight, making it an all‑timer even if some find the start of Touch of Grey gritty.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Reviews are uniformly enthusiastic (5, 4, 5 stars) and highlight both outstanding musical moments and excellent sound quality; weighted average yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as front‑of‑board in the rain, crystal clear, spectacular for an audience tape with no noticeable dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "Foolish Heart (Dark Star tease)",
+      "The Weight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A gritty, down‑and‑dirty vibe that builds into a powerful second half; the crowd’s anticipation during Foolish Heart leads into an unforgettable Dark Star tease and lifts with Touch of Grey."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T09:22:35.626501+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-12.fob.schoeps.unknown.ebel.97709.flac16"
+}

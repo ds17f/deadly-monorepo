@@ -1,0 +1,96 @@
+{
+  "summary": "Clear soundboard capture of a loose 1994 Shoreline show with standout “I Want To Tell You” and Foolish Heart, but mixed performance and mix quirks.",
+  "review": "The recording is a crisp sound‑board source that even picks up a bit of Shoreline ambience, though several listeners note excessive reverb on the keyboards and a slightly distant stereo image. Musically the show is typical of the mid‑90s California era – loose, sometimes mushy, but with high points like Foolish Heart, I Want To Tell You, Attics of My Life, Sugar Magnolia, Black‑Throated Wind and Ship Of Fools; the Beatles cover draws the few negative remarks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Reviews are split – many praise specific songs and the clear soundboard, while others criticize mix balance and label parts of the performance as weak; overall the show is decent but not exceptional."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, crispy soundboard with noticeable Shoreline ambience on drums. Some reviewers complain about too much reverb on Vince’s keyboards and a ‘airplane‑hangar’ stereo spread that makes instruments feel distant."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "I Want To Tell You",
+      "Foolish Heart",
+      "Attics of My Life",
+      "Sugar Magnolia",
+      "Black-Throated Wind",
+      "Ship Of Fools"
+    ],
+    "poor_songs": [
+      "All Too Much (Beatles cover)"
+    ],
+    "setlist_flow": "A nine‑song first set that leans on slower material before the band picks up momentum with Bertha and a jammy Foolish Heart. The second set stays loose, delivering strong moments but also occasional rehearsal‑level wobble typical of 1994 Shoreline gigs."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – praised for his solo on “I Want To Tell You” by some, yet others describe his playing as struggling and the mix as too far apart.",
+    "Phil": "",
+    "Bob": "Vince’s keyboards get criticism for excess reverb and vocal balance; a few reviewers call the keyboard parts ‘horrible’. One positive note simply mentions Vince being on tonight.",
+    "Keys": "Same comments as Bob – excessive reverb, uneven mix; no specific praise beyond presence.",
+    "Drums": "Generally positive – Shoreline ambience shines through drums, Kreutzmann’s energy lifts during Bertha and the Drums‑>Space segment."
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "I Want To Tell You": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Attics of My Life": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black-Throated Wind": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stagger Lee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship Of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums>Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Too Much (Beatles cover)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T22:56:44.408972+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-07-01.sbd.ladner.9369.sbeok.shnf"
+}

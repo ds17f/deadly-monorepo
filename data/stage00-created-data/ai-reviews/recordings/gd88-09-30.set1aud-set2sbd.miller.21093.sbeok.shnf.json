@@ -1,0 +1,104 @@
+{
+  "summary": "A muffled matrix recording of a largely mellow, under‑energized show with a few bright moments (Terrapin Station, Black Peter, Let It Grow).",
+  "review": "The tape combines an audience‑sourced first set and a soundboard second set, but the overall mix is thin and remote, making details hard to hear. Musically the concert drifts toward listlessness – many songs are described as meek or lacking bounce – though a handful of numbers (Terrapin Station, Black Peter, Let It Grow, Walking Blues) shine thanks to Jerry’s occasional inspired phrasing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "high",
+    "rationale": "Most reviewers criticize both performance and sound quality, with only a few highlighting strong moments; the weighted average of show (≈2.5) and recording (≈1.5) yields a low‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "poor",
+    "technical_notes": "First set captured from the audience sounds remote and thin; second set is soundboard but overall mix feels shoddy with limited clarity and occasional muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Black Peter",
+      "Let It Grow",
+      "Walking Blues",
+      "Big River"
+    ],
+    "poor_songs": [
+      "Iko",
+      "Stagger Lee",
+      "Push Comes to Shove",
+      "Playing in the Band",
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "The first set is described as overly mellow and lacking bounce, while the second set is easy‑going but never truly exciting; overall the concert feels listless with few peaks."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed remarks – praised for blues phrasing on Black Peter and a soaring Terrapin Station, but also noted as off‑key, struggling with lyrics, and using fiddly MIDI effects that sounded thin.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums segment deemed fine but unexciting; no standout moments."
+  },
+  "song_mentions": {
+    "Iko": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Push Comes to Shove": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Walking Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T14:40:44.529527+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-30.set1aud-set2sbd.miller.21093.sbeok.shnf"
+}

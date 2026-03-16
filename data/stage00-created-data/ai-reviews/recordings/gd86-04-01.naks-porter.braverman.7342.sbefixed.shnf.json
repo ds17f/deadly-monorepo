@@ -1,0 +1,90 @@
+{
+  "summary": "Good‑quality recording of a high‑energy 1986 Providence show with standout Sugar Magnolia, Looks Like Rain and Monster Shakedown performances.",
+  "review": "The consensus among fans is that this 1986 Providence concert bursts with raw energy – Phil’s bass roars, Bob’s vocal quirks sparkle on Looks Like Rain, and the band launches a monster Shakedown. While most listeners praise the sound as clear and “beautiful,” one reviewer condemned the entire tour, calling the Miracle/Black‑Peter segment a let‑down, giving the overall sentiment a mixed flavor.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average star rating is 4.1; most reviews are positive about performance and sound, with only one strongly negative outlier. Recording quality appears solid, leading to a confident overall rating in the low‑4‑star range."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers note \"beautiful sound\" and clear audio; no complaints about dropouts or muddiness, but source (soundboard/audience) is not identified."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia",
+      "Looks Like Rain",
+      "Music Never Stopped",
+      "Shakedown",
+      "Railroad Blues"
+    ],
+    "poor_songs": [
+      "Miracle > Black Peter"
+    ],
+    "setlist_flow": "Fans describe a high‑octane first set that feeds into a monster Shakedown and other fire‑starter numbers in the second set, though the Miracle/Black Peter sequence is viewed as a dip by some."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised for his energy, though one reviewer mentions he was \"baked\" and not fully locked in musically.",
+    "Phil": "Multiple fans highlight Phil’s blazing bass lines and note that hearing him “almost never” on a show made this performance special.",
+    "Bob": "Bob’s vocal delay/sampling on Looks Like Rain and his iconic bended‑knee strum on Sugar Magnolia are singled out as highlights.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-15T14:30:51.010678+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-04-01.naks-porter.braverman.7342.sbefixed.shnf"
+}

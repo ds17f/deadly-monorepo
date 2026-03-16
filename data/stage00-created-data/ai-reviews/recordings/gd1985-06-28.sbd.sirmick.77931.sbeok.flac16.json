@@ -1,0 +1,45 @@
+{
+  "summary": "A high‑quality soundboard captures an unforgettable rainy Hershey show highlighted by a soulful Tom Thumb Blues and a rousing Not Fade Away.",
+  "review": "The recording (soundboard) delivers clear, listenable audio of a night that fans still reminisce about – rain‑soaked, Bill’s surprise stage entrance, Phil’s moving lead on Tom Thumb Blues and Bobby’s iconic “Everybody ready?” shout during Not Fade Away. The atmosphere is captured with enthusiasm, making it a must‑listen for anyone who wants to relive that magical evening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Enthusiastic 5‑star review with vivid praise of the performance and no noted recording flaws; rating reflects a stellar show plus an assumed good soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific technical complaints were mentioned; the soundboard source is presumed clear and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tom Thumb Blues",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Rainy weather set a moody backdrop, Bill’s early stage cameo energized the crowd, and Healy’s pre‑show Dark Side of the Moon playlist created an ideal “set and setting” for the night."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil's vocal lead on Tom Thumb Blues is highlighted as a heavy, moving moment.",
+    "Bob": "Bob (Bobby) shouted \"Everybody ready?\" during Not Fade Away, a memorable interaction noted by the reviewer.",
+    "Keys": "",
+    "Drums": "Bill’s early appearance and drumming presence were praised for adding character to the show."
+  },
+  "song_mentions": {
+    "Tom Thumb Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T06:35:24.644504+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-28.sbd.sirmick.77931.sbeok.flac16"
+}

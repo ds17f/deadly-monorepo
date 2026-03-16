@@ -1,0 +1,31 @@
+{
+  "summary": "Good audience recording praised as the best AUD for this unknown show",
+  "review": "The sole reviewer rates this tape four stars and calls it the \"Best AUD\" for the show, indicating a solid audience‑recorded source that stands out among other crowd recordings. No specific musical details are given, so the performance itself is assumed to be at least satisfactory.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "low",
+    "rationale": "Only one brief review; reviewer gave 4 stars and highlighted the recording as the best audience source, but provides no detail on performance or sound quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer labels it the \"Best AUD\" implying a clear, well‑balanced crowd recording, though no explicit comments on clarity or mix are provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific commentary on set structure or song performance was given."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T00:49:12.986921+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-09.149747.beyer.tompkins.flac2448"
+}

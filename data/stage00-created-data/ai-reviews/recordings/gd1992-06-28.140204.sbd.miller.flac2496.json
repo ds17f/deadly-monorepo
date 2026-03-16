@@ -1,0 +1,39 @@
+{
+  "summary": "Fans recall a memorable Smokestack Lightning moment, though the recording’s technical details are not discussed.",
+  "review": "The lone review is a nostalgic recollection of a powerful \"SMOKESTACK!!!!!\" reaction from the audience, indicating that the performance of Smokestack Lightning was a highlight. No information about the source or clarity of the audio is provided, so listeners cannot assess the recording quality from this comment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic review (5 stars) mentions a standout song but gives no data on audio quality, leading to a moderate rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "The reviewer does not comment on soundboard vs. audience source, clarity, or mix; therefore the technical quality cannot be evaluated."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Smokestack Lightning"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T08:05:00.854893+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-28.140204.sbd.miller.flac2496"
+}

@@ -1,0 +1,55 @@
+{
+  "summary": "An excellent audience recording that immerses you in a solid late‑'79 show, highlighted by a fiery Jack Straw and a memorable Franklin’s Tower, though the third set feels a bit odd.",
+  "review": "The Rolfe audience tape is praised for its crisp balance of crowd energy and instrument clarity, making listeners feel as if they’re on the arena floor. Musically the band delivers strong performances—Jerry’s aggressive guitar on “Jack Straw” and a soaring “Franklin’s Tower”—but several reviewers note a less‑inspired third set with an odd Althea/Minglewood sequence. Overall the show is enjoyable, with only minor vocal flubs and occasional uneven moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the recording and performance highly (4‑5 stars) and cite vivid, positive details; a few lower‑rated comments note lack of inspiration, yielding an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers describe the tape as crisp, well‑balanced and immersive, with crowd noise adding energy but no noted dropouts or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its dynamic first two sets; the third set feels “weird” to several listeners, beginning with Althea and an unexpected Minglewood Blues, which some feel disrupts the flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Aggressive, hot guitar attack on \"Jack Straw\" and vivid lead on \"Franklin's Tower\", though a few vocal flubs are noted.",
+    "Phil": "",
+    "Bob": "Strong vocal presence; Bobby (Bob Weir) saves the day on \"Jack Straw\" with his singing.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T04:14:45.170955+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-12-31.rolfe.vernon.18589.sbeok.shnf"
+}

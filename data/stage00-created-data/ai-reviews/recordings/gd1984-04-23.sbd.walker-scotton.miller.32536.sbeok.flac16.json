@@ -1,0 +1,31 @@
+{
+  "summary": "Decent soundboard recording with some tape hiss, but the show receives mixed reactions from listeners.",
+  "review": "The SBD source provides a generally good‑quality audio track—clearer than many other board recordings—but it is not free of tape hiss. Fans are divided on the performance: several praise the concert as enjoyable and classic ’84 material, while others were underwhelmed or note that a better show followed the next night.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Reviews are split on the musical performance (average rating ~2.7) while the recording quality is viewed as good (~4). Weighted combination yields a modest overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Tape hiss is audible and may bother some listeners, but reviewers note it sounds better than other board tapes and consider the upgrade worthwhile."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; opinions on the overall performance are mixed."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T16:33:59.057385+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-23.sbd.walker-scotton.miller.32536.sbeok.flac16"
+}

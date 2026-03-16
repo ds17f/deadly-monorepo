@@ -1,0 +1,56 @@
+{
+  "summary": "Good‑quality soundboard capture of a solid 1981 Scottish show with standout Let It Grow, The Other One and Estimated Prophet performances despite missing the encore and “Eyes”.",
+  "review": "The recording is a decent‑to‑good soundboard (sbd) source that reproduces the band clearly, though it’s incomplete – the encore and the second‑set “Eyes” are missing. Musically the concert delivers a classic early‑'80 setlist with strong renditions of Let It Grow, The Other One and Estimated Prophet, a lively drum solo and the usual Scottish‑night atmosphere.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4–5 stars and praise the performance; recording is described as decent/good soundboard though incomplete, leading to a solid overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, decent sounding board capture; missing encore and “Eyes” track make it incomplete, first set noted as slightly rusty for a tour opener."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "The Other One",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical 1981 European tour setlist, solid from start to finish; first set a bit rusty as expected for an opener but overall cohesive."
+  },
+  "band_member_comments": {
+    "Jerry": "Interviewed on Radio Forth before the show and noted for his entertaining banter.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Long drum solo was a highlight that energized the crowd."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:08:36.009711+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-09-30.sbd.jim.12229.sbeok.shnf"
+}

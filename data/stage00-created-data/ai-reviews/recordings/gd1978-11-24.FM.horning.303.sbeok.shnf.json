@@ -1,0 +1,31 @@
+{
+  "summary": "High‑quality FM radio capture of a great Grateful Dead performance.",
+  "review": "The show is praised as a \"great\" concert with high‑fidelity sound, coming from an FM radio broadcast source that delivers clear and well‑balanced audio. Reviewers note the recording quality is excellent, making the music enjoyable despite the unknown concert date.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Single 4‑star review highlights both strong performance and high‑quality recording; rating reflects solid show and excellent audio but limited data."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Recorded off an FM radio broadcast, resulting in crisp, clear sound with good balance across instruments."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the overall concert as great, with no specific issues noted about pacing or song transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T17:02:09.848418+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-11-24.FM.horning.303.sbeok.shnf"
+}

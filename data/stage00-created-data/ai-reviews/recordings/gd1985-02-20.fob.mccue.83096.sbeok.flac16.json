@@ -1,0 +1,39 @@
+{
+  "summary": "Decent performance highlighted by a haunting Black Peter and generally solid playing, captured in an unknown‑source recording of good quality.",
+  "review": "The show is praised for its fiery playing and especially the out‑there vibe on Black Peter, where Brent’s keyboards and Jerry’s guitar create a creepy atmosphere. Reviewers note rough vocal moments from Garcia and Weir and some dropped lyrics, calling the set scrappy but still full of great musical moments. No specific recording flaws are mentioned, suggesting an adequately clear source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Two reviews give mixed feedback: one average (3 stars) and one very low (0 stars) but both acknowledge strong playing. Recording quality is not discussed, so it defaults to good/unknown, leading to an overall rating slightly above average."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments on sound clarity or mix; reviewers did not note any audio defects."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall solid set with a scrappy edge; vocals were rough at times but the band kept the energy high and delivered several fiery moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Rough vocal moments noted, but his guitar contributes to the creepy vibe on Black Peter.",
+    "Phil": "",
+    "Bob": "Voice described as rough yet still effective; overall playing praised.",
+    "Keys": "Brent's keyboards help create the eerie atmosphere on Black Peter.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:53:26.231395+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-02-20.fob.mccue.83096.sbeok.flac16"
+}

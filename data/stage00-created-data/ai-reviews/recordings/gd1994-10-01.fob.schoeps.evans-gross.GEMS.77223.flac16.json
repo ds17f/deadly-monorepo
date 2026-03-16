@@ -1,0 +1,45 @@
+{
+  "summary": "Good front-of-house recording captures the standout Scarlet Begonias → Fire On The Mountain pairing.",
+  "review": "The show is praised for its exceptional versions of Scarlet Begonias and Fire On the Mountain, which reviewers consider among their favorites. The FOH (front‑of‑house) capture is generally clear but contains minor glitches that only require a small amount of Audacity cleanup. Overall the performance shines and the recording is listenable with minimal fixing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "One positive 4‑star review highlights a strong musical performance and only minor recording imperfections, leading to an overall rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Front‑of‑house mix is clear but has small errors that need slight Audacity tweaking; no major dropouts or muffiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire On The Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review focuses on the strong Scarlet Begonias → Fire On the Mountain pairing; no comments on overall set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire On The Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T02:08:54.711032+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-01.fob.schoeps.evans-gross.GEMS.77223.flac16"
+}

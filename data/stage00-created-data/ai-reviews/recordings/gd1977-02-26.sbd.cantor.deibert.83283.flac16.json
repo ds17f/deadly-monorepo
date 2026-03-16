@@ -1,0 +1,83 @@
+{
+  "summary": "Crystal‑clear Betty Board capture of a legendary ’77 show with a smoking Help>Slip>Franklin's sequence and tight playing from the whole band.",
+  "review": "The recording is an excellent soundboard (Betty Board) source – crisp, well‑balanced and free of noticeable flaws. Musically the concert shines: the second set is described as “epic,” highlighted by a blistering Help > Slip > Franklin’s Tower, tight Terrapin Station, a standout Eyes of the World bass solo and one of the best Playin’ in the Band jams of ’77.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Over two dozen detailed, mostly five‑star reviews praise both the audio fidelity and the performance; only a single outlier gives a low star rating without criticism of the music."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Betty Board (BBB) mix praised as crisp, great balance and “great mix”; occasional listener confusion about matrix but no audible issues. No hiss, drop‑outs or balance problems reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower",
+      "Terrapin Station",
+      "Estimated Prophet",
+      "Eyes of the World",
+      "Playin' in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers rave about a seamless, high‑energy second set that flows from Blues of Allah into Terrapin Station and then launches into the legendary Help>Slip>Franklin's sequence; overall pacing is described as “epic” and “tight throughout.”"
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone and solos repeatedly called “well‑formed,” “blazing,” and “from his heart”; noted for plugging into a Moog synthesizer early in the set.",
+    "Phil": "Bass praised for its flat‑picked Alembic punch; distinct solo on Eyes of the World highlighted as a rare moment.",
+    "Bob": "Vocals and rhythm chime noted, especially on Sugaree where his vocal hits are singled out.",
+    "Keys": "Keith’s piano described as “slamming,” “beautifully constructed phrasing,” and a key driver of the show’s energy.",
+    "Drums": "Mickey Hart and Bill Kreutzmann described as tight, crisp, and driving the groove throughout."
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "Terrapin Station": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T19:51:31.589040+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-02-26.sbd.cantor.deibert.83283.flac16"
+}

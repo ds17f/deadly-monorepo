@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard capture of an underrated ’82 show with a smoking Lazy Lightning → Supplication sequence and crisp overall sound.",
+  "review": "The three reviews praise the performance as frantic, high‑energy and jam‑heavy – especially the second set and the Lazy Lightning > Supplication pairing. Recording quality is reported as clear and “5‑star” despite the first three songs being missing from the stream, indicating a solid soundboard source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All reviewers gave 4–5 stars and highlighted strong musical moments and good‑to‑excellent audio quality; the weighting favours the show (70%) which is described as a top ’82 performance."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp mix with very good balance; minor issue that the first three songs are missing from the stream, but no complaints about muddiness or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightning",
+      "Supplication",
+      "Saint"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Frantic first set that feels like the band is playing for a hyped crowd, followed by a second‑set that delivers sweet, underrated jamming and a memorable Lazy Lightning → Supplication sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Nice jam after the drums; drum break is highlighted as a strong moment."
+  },
+  "song_mentions": {
+    "Lazy Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T23:24:17.141813+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-08-06.sbd-patched.hinko.16043.sbeok.shnf"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "A superb soundboard recording of a groovy 1984 Marin show, highlighted by an incendiary Scarlet>Fire and soaring Fire on the Mountain.",
+  "review": "The board‑tape captured by Charlie Miller is crystal‑clear and lovingly remastered, letting the band’s relaxed yet tight playing shine through. Reviewers rave about the blistering Scarlet>Fire, the powerful Fire on the Mountain and He's Gone, plus rare moments like Alabama Getaway into Feel Like a Stranger. The performance feels loose and fun with Brent Mydland’s synth‑rich keyboards driving many of the jams.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both musical performance (standout songs, tight groove) and technical quality (excellent soundboard), with only minor criticisms."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Remastered board tape is crisp, balanced and free of noticeable drop‑outs; reviewers call it \"A‑1\" and note the excellent acoustics of the venue."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "Fire on the Mountain",
+      "He's Gone",
+      "Alabama Getaway",
+      "Feel Like a Stranger",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A relaxed, groove‑heavy first set with tight transitions; the second set builds into an ecstatic Scarlet>Fire and finishes with a solid The Other One/T‑Stones combo."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are surprisingly strong (Tom Waits‑ish) and his lead on Fire is fiery; guitar work holds together well.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s synth/vibe work dominates the Scarlet>Fire, adding island‑rhythmed riffs and a playful feel throughout.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:54:25.118409+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-03-31.sbd.walker-scotton.miller.32516.sbeok.flac16"
+}

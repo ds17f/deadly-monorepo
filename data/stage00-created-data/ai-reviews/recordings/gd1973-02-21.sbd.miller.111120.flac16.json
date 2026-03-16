@@ -1,0 +1,63 @@
+{
+  "summary": "High‑quality soundboard capture of an average‑to‑good ’73 show with standout Brown Eyed Woman, Stella Blue, Wharf Rat and a strong Eyes of the World jam.",
+  "review": "The Miller mix appears to be a true SBD that sounds clear for most of the set, though a few listeners note occasional blips and drop‑outs. Musically the concert is solid if unspectacular, highlighted by Brown Eyed Woman, Stella Blue, Wharf Rat and an engaging Eyes of the World sequence, while the overall flow feels typical of 1973 – good song selection but not as expansive as neighboring shows.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the soundboard source and several songs, but a few note audio glitches and average playing; weighting 70% show (≈4) + 30% recording (≈3) yields ~3.8."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Generally clear SBD with high‑quality tone, but some reviewers report blips, drop‑outs and occasional muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brown Eyed Woman",
+      "Stella Blue",
+      "Wharf Rat",
+      "Eyes of the World",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical 1973 pacing – solid first set with notable vocal moments, a shorter second set that still delivers strong jams like Eyes of the World; overall an average but enjoyable show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "His bass work is noted, though some listeners mention drop‑out issues affecting the low end.",
+    "Bob": "Donna's vocals in set one and Bob’s onstage comment about “Rockin your socks off” are highlighted.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brown Eyed Woman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T05:30:48.805153+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-02-21.sbd.miller.111120.flac16"
+}

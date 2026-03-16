@@ -1,0 +1,57 @@
+{
+  "summary": "Good audience recording captures a fiery first set (Bertha, Aiko solo, Stagger Lee, Minglewood Blues) while the second set loses a bit of steam.",
+  "review": "The show shines in the early half, with Jerry Garcia delivering an adventurous solo on “Aiko,” tight double‑stops, and blazing runs that lift Bertha, Stagger Lee and Minglewood Blues. Phil’s supportive bass cues and Bob’s thundering rhythm add to the momentum, but the second set never quite sustains the energy. The audience (AUD) source is clear and a little “bright,” reflecting the typical 1985 mix, making it an enjoyable listen overall.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two solid 4‑star reviews praise both performance and recording; the show is strong in the first set with standout guitar work, while the audience tape is described as good but slightly bright."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough for a typical 1985 AUD capture; reviewers note a pleasant \"bright\" tonal balance without major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Aiko (solo)",
+      "Stagger Lee",
+      "Minglewood Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is tight and energetic, highlighted by Jerry’s adventurous solo work; second set feels a bit flat and loses momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for an adventurous solo on Aiko with key changes, double stops, and blistering runs; controls tempo alongside Bob.",
+    "Phil": "Noted for adding his approval at the start of the second round, supporting the band’s flow.",
+    "Bob": "Described as thundering behind Jerry, keeping strong rhythmic drive.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Aiko (solo)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:20:06.574784+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-02.aud.steinkamp.2373.sbeok.shnf"
+}

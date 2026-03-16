@@ -1,0 +1,39 @@
+{
+  "summary": "Poor‑quality audience recording but features a monster, 28‑minute Dark Star that makes the show worth hearing for completists.",
+  "review": "The tape suffers from very muddy, low‑fidelity sound typical of early ’72 AUDs, making it hard to separate instruments. Musically the highlight is an expansive Dark Star that many reviewers deem essential listening, and the intimate, talk‑heavy atmosphere adds a unique flavor despite the sonic flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Show performance is praised (especially Dark Star) while recording quality is consistently criticized; weighted average yields a solid‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Very muddy sound, little instrument separation, frequent fades and overall difficult to listen to; some describe it as 'ghostly' but generally not worth downloading."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Long, intimate performance with extensive audience interaction; the marathon Dark Star dominates the middle of the show and is highlighted as a deep exploration."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-22T00:40:55.215885+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-10-23.aud.cotsman.10914.sbeok.shnf"
+}

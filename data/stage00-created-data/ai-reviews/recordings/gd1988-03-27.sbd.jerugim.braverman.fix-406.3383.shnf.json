@@ -1,0 +1,41 @@
+{
+  "summary": "Soundboard capture of a jam‑heavy spring ’88 show with strong set one and a Miles‑Davis‑style improvisation, though the mix has bass and instrument balance issues.",
+  "review": "The concert is praised for its spacey, jam‑laden Spring ’88 vibe and a spectacular first set that many fans cite as a highlight of the post‑In‑the‑Dark era. The recording is a soundboard source that is generally clean enough to enjoy, but listeners note washed‑out bass and occasional speaker mis‑routing of keyboards and Weir's guitar, making it less pristine than other releases.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight strong musical moments; recording flaws are noted but not severe enough to outweigh the performance quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clean SB capture, but bass is washed out and keyboards/Weir's guitar sometimes come from the wrong speaker, leading to occasional balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Miles Davis odyssey (improvisational jam)"
+    ],
+    "poor_songs": [
+      "Fantasy"
+    ],
+    "setlist_flow": "Spring ’88 show is described as increasingly jam‑heavy and spacey, with a spectacular first set after modest opening acts; overall pacing is praised despite a few less inspired moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Bass (Phil's) sounds washed out in the mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fantasy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T07:00:21.452434+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-27.sbd.jerugim.braverman.fix-406.3383.shnf"
+}

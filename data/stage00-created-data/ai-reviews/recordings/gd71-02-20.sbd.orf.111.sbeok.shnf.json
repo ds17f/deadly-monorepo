@@ -1,0 +1,92 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a tight early‑'71 Port Chester run, highlighted by stellar Ripple and Lovelight performances.",
+  "review": "The Betty Cantor/Leigh Orf soundboard source is praised for its clarity and liveliness, with only occasional dropouts. Musically the show is regarded as a turning point – the band is tight, Phil’s funky bass sits up front, Jerry delivers jangly leads, and the set shines on Ripple, Lovelight and several inspired jams, even if the second set falls a bit short of the first.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.27; most comments praise both performance and recording, with only a few low‑scoring critiques."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, crisp mix praised as “Betty Cantor sourced” and “reminiscent of Skull & Roses”. A handful of reviewers note occasional dropouts but the overall balance and guitar/jam presence are lively."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ripple",
+      "Lovelight",
+      "Me & My Uncle",
+      "Hard to Handle",
+      "Bird Song",
+      "Wharf Rat",
+      "GDTRFB coda"
+    ],
+    "poor_songs": [
+      "Loser"
+    ],
+    "setlist_flow": "The first set is described as tight and creatively jammed with strong arrangements; the second set is a bit weaker (vocals on Loser falter) but still delivers memorable moments like Ripple and the GDTRFB coda."
+  },
+  "band_member_comments": {
+    "Jerry": "Jangly, Allman‑like leads praised on Me & My Uncle and Bird Song; overall guitar tone described as “perfect” and “jazzy”.",
+    "Phil": "Funky bass notes highlighted; laser‑focused attack on The Other One intro; sits prominently in the mix.",
+    "Bob": "Weir’s lead work noted on Hard to Handle, Wharf Rat and GDTRFB coda; instrumental breaks praised.",
+    "Keys": "Pigpen’s organ fills described as eerie and inspiring during the second set.",
+    "Drums": "Bill Kreutzmann’s adaptability after Mickey’s departure commended; solid drum break leading into The Other One."
+  },
+  "song_mentions": {
+    "Ripple": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lovelight": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "GDTRFB coda": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T02:57:09.380724+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-02-20.sbd.orf.111.sbeok.shnf"
+}

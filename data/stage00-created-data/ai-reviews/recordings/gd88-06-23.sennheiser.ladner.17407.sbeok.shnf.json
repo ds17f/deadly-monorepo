@@ -1,0 +1,99 @@
+{
+  "summary": "A solid Alpine Valley night with Jerry’s soaring vocals and standout Believe It, Blackbird and Pocky Way, captured on a decent audience tape that suffers occasional phase/pitch quirks.",
+  "review": "The show is widely praised for its emotional highs – Jerry’s voice shines on Morning Dew, the band delivers a fiery Believe It/Or Not and an unforgettable Blackbird>Brokedown, while Brent’s Pocky Way scat steals the spotlight.  The recording is an audience capture that generally sounds good but has noticeable phase‑flip and speed issues, plus a bit of flange on the first set.  Overall the performance outweighs the technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (20+) give 4‑5 stars and highlight strong musical moments; a few note sync or recording glitches, pulling the overall rating slightly below perfect."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear enough to enjoy, but suffers from occasional phase‑flip, pitch being off (needs speed correction), and a noticeable flange effect on vocals in the first set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Believe It Or Not",
+      "Morning Dew",
+      "Blackbird > Brokedown",
+      "Hey Pockey Way",
+      "Roses",
+      "Gooney Birds",
+      "He's Gone",
+      "Miracle > GSL > Watchtower",
+      "Women R Smarter"
+    ],
+    "poor_songs": [
+      "Gimme Some Lovin"
+    ],
+    "setlist_flow": "The setlist is praised for its tight song blocks (Masterpiece>Bird Song>Promised Land, Miracle>GSL>Watchtower) and emotional peaks; the first set has a slightly rough edge due to vocal flange, while the second set settles into a smoother, more uplifting groove."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for powerful vocals and soaring guitar licks; some note his timing slips in one review but overall his voice is described as strong, clear and emotionally resonant.",
+    "Phil": "Mentioned positively for big chord work on Dew and occasional rhythmic hiccups; generally regarded as solid.",
+    "Bob": "Only a brief query about his role (“What was Weir on?!”); no substantive praise or criticism.",
+    "Keys": "Brent receives abundant acclaim – “the bomb” vocals, standout scat on Pocky Way, and overall key contributions are highlighted throughout.",
+    "Drums": "Bill’s drumming noted for interesting sounds and instrumentation; a few comments about rhythm being slightly out of sync in one negative review."
+  },
+  "song_mentions": {
+    "Believe It Or Not": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Blackbird > Brokedown": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Hey Pockey Way": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Roses": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Gooney Birds": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle > GSL > Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Women R Smarter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Masterpiece > Bird Song > Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T10:01:27.805351+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-06-23.sennheiser.ladner.17407.sbeok.shnf"
+}

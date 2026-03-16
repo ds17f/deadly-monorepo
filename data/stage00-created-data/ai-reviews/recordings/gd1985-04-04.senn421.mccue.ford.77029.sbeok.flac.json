@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent audience recording captures a high‑energy 1985 show with standout performances of Alabama Getaway, Crazy Fingers, Black Peter and more.",
+  "review": "The tape is an audience (AUD) capture that reviewers describe as crisp, well‑balanced and even recorded through a Nakamichi microphone, delivering excellent fidelity. The concert itself is praised for its smoky, high‑energy vibe with highlights like Alabama Getaway, Crazy Fingers, Black Peter, He's Gone, She Belongs to Me and Lovelight driving the crowd into a dancing second set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high review scores (mostly 5‑star) and unanimous praise for both performance and audio quality indicate an outstanding show with excellent audience recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Pitch‑balanced, clear mix; many note a crisp soundboard‑like clarity despite being an AUD, with a Nakamichi mic delivering high fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama Getaway",
+      "Crazy Fingers",
+      "Black Peter",
+      "He's Gone",
+      "She Belongs to Me",
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical 1985 high‑energy set that builds into a fun, dance‑filled second half; the band’s chemistry and audience interaction keep the momentum strong throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry's vocals are highlighted during the 'She Belongs to Me' breakout, noted for catching the crowd’s attention.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "She Belongs to Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T03:01:12.142579+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-04-04.senn421.mccue.ford.77029.sbeok.flac"
+}

@@ -1,0 +1,73 @@
+{
+  "summary": "Crystal‑clear audience recording captures the high‑energy ’87 Hampton Coliseum show with standout performances of Touch, Truckin', Stella Blue and The Other One.",
+  "review": "This audience tape is praised for its vivid wall‑of‑sound ambience and surprisingly clean mix, letting Jerry’s soaring guitar runs and the band’s electric chemistry shine through.  The concert is remembered as a peak moment of the 1987 comeback tour – high‑octane set‑lists highlighted by Touch, Iko, Truckin’, Stella Blue and an ecstatic Other One – though a few listeners note the vocals sound slightly tinny in places.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Overwhelmingly enthusiastic 5‑star reviews highlight an exceptional performance and very good audience recording; only minor complaints about vocal tinness keep the rating from being perfect."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners repeatedly describe the tape as crisp, with a strong wall‑of‑sound and well‑placed mics; one reviewer notes the vocals are a bit tinny, likely due to PA issues, but overall the mix is clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch",
+      "Truckin'",
+      "Stella Blue",
+      "The Other One",
+      "Iko"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set builds excitement with a thunderous Touch and tight jams, while the second set delivers a crescendo of energy – highlighted by an ecstatic Truckin', soaring Other One and a legendary Stella Blue.  Crowd interaction (booing over a light‑stick incident) adds drama but never detracts from the overall forward momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his blistering guitar tone, daring runs (especially post‑Truckin'), and an almost ‘god‑like’ stage presence.",
+    "Phil": "Noted for grounding the band on Feel Like a Stranger and creating a “sonic boom” with Jerry during the early second set.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Only minor mention that drums “come and go,” but overall rhythm section is regarded as tight."
+  },
+  "song_mentions": {
+    "Touch": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Iko": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:29:03.258535+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-03-23.schoeps.weber-small.dnk.3870.sbefail.shnf"
+}

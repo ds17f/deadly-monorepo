@@ -1,0 +1,61 @@
+{
+  "summary": "Solid 1986 show with standout Truckin', Fire On the Mountain and a rare Cold Rain & Snow, captured on a mostly soundboard matrix that sounds good despite some audience‑sourced tracks.",
+  "review": "The performance is remembered as a highlight of the ’86 tour – fans rave about the driving Truckin' jam, the thunderous Fire on the Mountain (with an audible storm effect) and the only known Cold Rain & Snow → Fire sequence.  The recording is primarily a soundboard source mixed with a few audience‑only cuts, delivering generally good clarity though the patchwork nature makes it uneven in places.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the show and note decent sound quality, but a few call out mixed audio sources and give low star ratings, leading to an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Nice board sound noted by several reviewers; however four tracks are audience recordings causing occasional variance in clarity. Overall the mix is listenable and captures the ambience of the festival setting."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Fire on the Mountain",
+      "Cold Rain and Snow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opened as a warm‑up for Dylan & Petty, the second set built momentum with a thunderstorm effect during Fire; the concert is remembered for its energetic flow and rare song pairings."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir delivered spoken poetry during The Wheel.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:03:37.896833+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-07-04.sbd.miller.118659.flac16"
+}

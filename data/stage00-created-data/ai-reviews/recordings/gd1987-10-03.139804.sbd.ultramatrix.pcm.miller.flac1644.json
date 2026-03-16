@@ -1,0 +1,39 @@
+{
+  "summary": "Highly praised show with a memorable Terrapin Station moment; matrix source appears listenable though recording details are sparse",
+  "review": "The lone review is ecstatic, recalling a surreal night that culminated in a powerful Terrapin Station performance which rescued a hazy first half. No concrete comments on the audio fidelity were given, but the 5‑star rating suggests the ultramatrix mix is at least satisfactory for listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic 5‑star review; strong positive sentiment about the show but no technical details, so rating leans on overall enthusiasm while acknowledging limited data."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Review does not mention sound clarity, balance or issues; absence of criticism implies the ultramatrix recording is generally acceptable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes a hazy first half that improves dramatically when Terrapin Station kicks in, indicating a notable lift in energy mid‑show."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:45:19.810961+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-10-03.139804.sbd.ultramatrix.pcm.miller.flac1644"
+}

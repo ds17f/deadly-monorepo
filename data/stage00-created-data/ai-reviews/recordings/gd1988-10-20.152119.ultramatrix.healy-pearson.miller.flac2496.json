@@ -1,0 +1,45 @@
+{
+  "summary": "Well‑balanced ultramatrix capture of a thrilling show, highlighted by the debut of \"Built to Last\" and a solid performance of \"Playing in the Band\".",
+  "review": "The ultramatrix recording blends soundboard clarity with just enough audience ambience to convey the concert’s excitement without distracting from the music. Fans especially note the historic first live rendition of “Built to Last” and a strong take on “Playing in the Band,” while the mix handles occasional audience patches smoothly.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "One detailed 4‑star review praises both the musical performance and the balanced matrix mix, indicating a good show with solid recording quality."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Crisp soundboard core with well‑balanced audience noise; small audience patches at the start of “Queen Jane” and “Miracle” are mixed in nicely."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Built to Last",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as exciting with a seamless blend of soundboard and audience, emphasizing the historic debut of “Built to Last” and maintaining energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Built to Last": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:18:03.831103+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-10-20.152119.ultramatrix.healy-pearson.miller.flac2496"
+}

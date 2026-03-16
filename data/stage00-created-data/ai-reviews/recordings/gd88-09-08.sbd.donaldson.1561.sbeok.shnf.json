@@ -1,0 +1,94 @@
+{
+  "summary": "Soundboard capture that’s generally clear, showcasing a scorching first set (Shakedown, Let It Grow, Loser) and a solid second half despite some early‑set muddiness.",
+  "review": "The recording is a soundboard source with good overall clarity, though the opening of the first set sounds low‑mid and a few seconds of the Wheel intro are missing due to tracking glitches. Musically the show shines on the first‑set highlights – Shakedown, Let It Grow and Loser – while the second set stays strong but includes some over‑played moments (Fantasy/Hey Jude) and a lyrically‑challenged Bertha. Opinions vary, with many fans calling it a “hot” show and others finding it dull, giving the performance a mixed but generally positive vibe.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "high",
+    "rationale": "Average reviewer star rating is ~3.4; recording quality is good (≈4) while show quality leans toward average‑good (≈3.3). Weighted combination yields a 3.5‑star overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp soundboard mix, but the early first‑set is low and slightly muddy; tracking issues cause a few seconds missing from The Wheel intro and occasional drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Shakedown",
+      "Loser"
+    ],
+    "poor_songs": [
+      "Bertha (lyrically challenged)",
+      "Fantasy > Hey Jude (overplayed)"
+    ],
+    "setlist_flow": "First set burns hot with strong early songs and a memorable Let It Grow jam; second set is competent, delivering solid jams but lacking the same fire, ending with a warm Fantasy/Hey Jude/Lovelight sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for ripping on Shakedown and cutting loose, yet several reviewers note his tone sounds dull or ‘struggling’ during this night.",
+    "Phil": "Turned up nicely on the Let It Grow jam and contributed strong bass lines throughout; highlighted as a bright spot in an otherwise uneven show.",
+    "Bob": "Generally in good form; mentioned positively by Mooch and Antonjo for steady rhythm work.",
+    "Keys": "Brent (keyboard) shines on Fantasy/Hey Jude and adds texture to the Let It Grow jam, though his synth can become a bit intrusive according to some listeners.",
+    "Drums": "Drums/Space sections are described as favorable but not especially distinctive; drum intro leading into Truckin' is noted as standard."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 3,
+      "total_mentions": 5
+    },
+    "Loser": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Greatest Story": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fantasy > Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Black Muddy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "It's All Over Now": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Love Light": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T13:13:54.377001+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-08.sbd.donaldson.1561.sbeok.shnf"
+}

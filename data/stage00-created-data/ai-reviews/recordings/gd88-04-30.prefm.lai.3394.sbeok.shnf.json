@@ -1,0 +1,91 @@
+{
+  "summary": "A solid 1988 Frost show captured on a sound‑board tape with good clarity, highlighted by Let the Good Times Roll, a stellar Shakedown Street jam and an unforgettable China Cat Sunflower → Rider encore.",
+  "review": "The performance is praised for its strong setlist flow—opening with Let the Good Times Roll, delivering a fiery Shakedown Street, and closing with a moving China Cat Sunflower → Rider. Recording quality is generally clear and balanced, though a few listeners note an early‑set imbalance and Jerry’s guitar hiccup on Sugar Magnolia. Overall the show is regarded as a standout entry from the 1988 era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviews are 4‑5 stars and emphasize strong musical moments; recording quality is consistently described as good to fantastic, giving a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp overall sound with occasional early‑set unbalance; no major dropouts. Jerry’s guitar malfunction on Sugar Magnolia is audible but does not detract from the rest of the tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let the Good Times Roll",
+      "Shakedown Street",
+      "China Cat Sunflower → Rider",
+      "Let it Grow",
+      "Space"
+    ],
+    "poor_songs": [
+      "Sugar Magnolia",
+      "Black Peter (omitted)"
+    ],
+    "setlist_flow": "The show opens with the upbeat Let the Good Times Roll, moves through a sweet first set, builds into a dynamic second set centered on Shakedown Street, and finishes with a heartfelt China Cat Sunflower → Rider encore, delivering strong momentum despite a brief glitch on Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is praised (blazing Let it Grow) but his guitar malfunctioned during Sugar Magnolia, causing a quick cut.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Multiple reviewers single out Brent Mydland for sounding great on this tape.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let the Good Times Roll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Let it Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Pocky Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:23:14.151475+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-04-30.prefm.lai.3394.sbeok.shnf"
+}

@@ -1,0 +1,106 @@
+{
+  "summary": "Matrix‑sourced UltraMatrix SBD (needs slight pitch correction) captures an above‑average July ’89 show highlighted by a stellar Jack‑a‑Roe, Just a Little Light and a monumental Morning Dew.",
+  "review": "The recording is a mic‑matrix (UltraMatrix SBD) that runs a bit fast and requires a -1 % pitch tweak, but it faithfully captures the rain‑soaked ambience of the night. Musically the show is solid – strong moments include Feel Like a Stranger, an astonishing Jack‑a‑Roe, a recommended Just a Little Light and a cathartic Morning Dew, though Iko Iko feels over‑crowded and Sugar Magnolia comes off monotone. Overall the performance is above average with some quirks, reflected in the mixed but generally positive fan sentiment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "One detailed review shows a solid musical performance (rated ~4) offset by recording quirks (≈3.5); weighted average yields about 3.9 stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "UltraMatrix SBD runs slightly fast and needs -1 % pitch correction; mix is mic‑matrix with rain noise captured, guitar low in the AUD mix but clearer on the 24‑track. Overall clear but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like a Stranger",
+      "Jack-a-Roe",
+      "Just a Little Light",
+      "Morning Dew",
+      "Foolish Heart"
+    ],
+    "poor_songs": [
+      "Iko Iko",
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "First set is varied and a bit uneven, while the second set builds to a peak with Morning Dew; overall the concert feels 'all over the map' but remains above average for July ’89."
+  },
+  "band_member_comments": {
+    "Jerry": "Mic‑effects missing from the matrix, guitar sits low in the AUD mix but sounds strong on the 24‑track; his balladeering shines on Knockin' on Heaven's Door.",
+    "Phil": "",
+    "Bob": "Monotone delivery on Sugar Magnolia; otherwise strong vocal presence, especially on Knockin' on Heaven's Door.",
+    "Keys": "",
+    "Drums": "Stadium‑sized Drums with a quirky start and decompressing transition before Space; Neville Brothers guest appears at the end."
+  },
+  "song_mentions": {
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Just a Little Light": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T21:02:48.389183+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-10.138792.UltraMatrixSBD.miller.flac16"
+}

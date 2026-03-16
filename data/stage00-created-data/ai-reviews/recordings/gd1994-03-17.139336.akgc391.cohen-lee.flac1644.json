@@ -1,0 +1,33 @@
+{
+  "summary": "Mismatched first set and unclear recording source make this release problematic",
+  "review": "The sole review notes that the venue is Nassau Coliseum but the first set appears to come from a different show, indicating an editing or sourcing error. No comments are made about sound quality, performance level, or individual musicians, leaving the overall listening experience uncertain and likely disappointing for fans.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.6,
+    "confidence": "low",
+    "rationale": "Only one low‑star review points out a major issue (first set mismatch) with no positive remarks; recording quality and performance cannot be judged positively."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer notes that the first set seems to be from another show, suggesting possible splicing or mislabeling; no explicit comments on clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "First set (mismatched)"
+    ],
+    "setlist_flow": "Inconsistent – first set does not match the venue, indicating a problematic setlist presentation."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T20:46:57.351734+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-17.139336.akgc391.cohen-lee.flac1644"
+}

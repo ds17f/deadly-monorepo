@@ -1,0 +1,101 @@
+{
+  "summary": "Excellent soundboard capture of a classic Winterland show, highlighted by a stellar Terrapin Station and monster Not Fade Away jam.",
+  "review": "The Miller‑remastered soundboard delivers crystal‑clear audio that lets the band’s 1977 magic shine through.  Highlights include an epic Terrapin Station, a ripping Around & Around, and a monster Not Fade Away, while the first set shows some lyrical slips and a few rough spots.  Overall it’s a must‑listen for fans who want both great performance and top‑notch sound.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Show is strong with several standout performances; recording quality is consistently praised as excellent, outweighing the occasional performance flaws."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly note crystal‑clear, fantastic soundboard audio with no audience bleed; a few mention pitch‑slow issues and an NFA cut, but overall the mix is balanced and very clean."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Not Fade Away",
+      "Around & Around",
+      "Scarlet > Fire",
+      "Brown Eyed Women",
+      "Estimated Prophet",
+      "Samson & Delilah",
+      "Peggy-O"
+    ],
+    "poor_songs": [
+      "Mississippi Half-Step (lyrical slip)",
+      "Promised Land (wrong key start)",
+      "Uncle John's (lost place)",
+      "Half Step Mississippi (trainwreck feel)"
+    ],
+    "setlist_flow": "The first set is described as uneven – a few lyrical mishaps and a shaky start – but the second set tightens up, delivering strong jams and smoother transitions that lift the overall momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is praised (strong lines, monster NFA jam) though several reviewers note lyric slip‑ups on Mississippi Half-Step and other songs.",
+    "Phil": "Phil’s bass is mentioned as solid during the chaotic half‑step jam; no major criticisms.",
+    "Bob": "Bob Weir is called out for starting Promised Land in the wrong key and for occasional chord slips on Scarlet > Fire, but also noted for good vibes and head‑bobbing energy.",
+    "Keys": "Keith (or the keyboards) receives kudos for leading the way back during Miss Half-Step and delivering great textures on Terrapin Station and Estimated Prophet.",
+    "Drums": "The drum work is highlighted as consistent and a key driver of the strong second‑set jams, especially on Not Fade Away."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Uncle John's": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T20:39:35.993471+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-03-18.123285.sbd.miller.flac16"
+}

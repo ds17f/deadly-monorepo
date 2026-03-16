@@ -1,0 +1,85 @@
+{
+  "summary": "Front‑of‑board tape captures an all‑time great Nassau show with a monster Dark Star, scorching Shakedown Street and stellar St. Stephen, all in superb sonic detail.",
+  "review": "The recording is a front‑of‑board capture using two Sony 54P microphones plus a Sennheiser 441, blended on a Nakamichi and recorded to cassette – the result is crystal‑clear and richly detailed. Musically the show is hailed as one of the band’s finest of the era, highlighted by an epic second set featuring a soaring Dark Star, fiery Shakedown Street, a powerful Miracle > Bertha > Good Lovin' run and a spectacular St. Stephen/Wharf Rat finish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "All ten reviews are five‑star, praising both the performance (standout Dark Star, Shakedown Street, Miracle trio) and the high‑quality front‑of‑board recording; the weighted average yields an almost perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Front‑of‑board tape recorded with two Sony 54P mics and a Sennheiser 441, blended on a Nakamichi 550 and captured to a Sony TC‑158SD cassette deck – reviewers note crisp, clear sound with no reported flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Shakedown Street",
+      "Miracle",
+      "Bertha",
+      "Good Lovin'",
+      "St. Stephen",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid and relaxed; the second set explodes with a scorching Shakedown Street opener, a high‑energy Miracle > Bertha > Good Lovin' trilogy, a massive Dark Star, and a seamless transition through Drums/Space into Wharf Rat, St. Stephen and an uplifting finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Fantastic guitar work throughout; highlighted on Dark Star and described as being \"on a mission\".",
+    "Phil": "Bass praised for adding the perfect vibe to Shakedown Street and driving the rhythm section.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums after Dark Star were especially engaging, with the rhythm devils keeping the crowd locked in."
+  },
+  "song_mentions": {
+    "Sweet Sue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "St. Stephen": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Shakedown Street": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Miracle": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Bertha": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Good Lovin'": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Wharf Rat": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T18:50:00.898771+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-10.sony-senn.wagner.miller.113114.flac16"
+}

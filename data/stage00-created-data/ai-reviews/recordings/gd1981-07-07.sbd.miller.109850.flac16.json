@@ -1,0 +1,86 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a high‑energy July ’81 show with standout performances of “To Lay Me Down,” “Bird Song,” and an upbeat “Eyes of the World.”",
+  "review": "The recording is praised as one of the cleanest soundboard sources from July 1981, delivering crisp instrument separation and a punchy guitar tone. Musically the concert shines with a rare Minglewood opener, scorching “Bertha,” a ripping first‑set guitar break, and an especially upbeat “Eyes of the World” jam that many reviewers call a highlight. Overall the setlist flows well, mixing familiar favorites with uncommon choices and keeping the energy high throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (7 of 9) give 4‑star or higher ratings and highlight both excellent soundboard quality and strong musical moments; the few zero‑star entries are statistical notes rather than negative critiques."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers describe the audio as ‘fantastic,’ ‘clear,’ and ‘clean boards’ with no reported drop‑outs or muddiness; the guitar tone is noted as especially crisp."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "To Lay Me Down",
+      "Bird Song",
+      "Eyes of the World",
+      "Bertha",
+      "Minglewood Blues",
+      "Candyman",
+      "Miracle",
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The setlist is noted as interesting and unique, opening with a rare Minglewood Blues, placing “Music” and “RxR blues” in unexpected spots, and delivering an upbeat second‑set that keeps the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for ripping guitar work, a standout break on track 22, and ‘tearing it up’ in the first set.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dancing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:43:37.307529+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-07-07.sbd.miller.109850.flac16"
+}

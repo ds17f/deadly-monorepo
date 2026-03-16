@@ -1,0 +1,99 @@
+{
+  "summary": "Great audience recording of a hot, humid night with standout Sugaree and Space despite an uneven set",
+  "review": "The audience‑sourced tape captures a lively July 1987 show that improves as it goes, delivering solid renditions of Jack Straw, Sugaree and a soaring Space jam. While the performance is occasionally uneven – with Minglewood/Brother Esau sounding distracted and the second set feeling rushed – the overall vibe is upbeat and the recording quality is consistently good.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "One reviewer rates the show/recording 4 stars praising sound and performance; a second gives a moderate 3‑star rating focusing on atmosphere only. The limited sample (2 reviews) leads to low confidence, but overall impression is slightly above average."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the tape as a great audience recording that becomes clearer as the show progresses; sound is dialed in by Jack Straw, though Jerry's guitar sits low early on."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Jack Straw",
+      "Space",
+      "Good Push Comes to Shove",
+      "Touch of Grey",
+      "Gotta Serve Somebody",
+      "Watchtower"
+    ],
+    "poor_songs": [
+      "Minglewood",
+      "Brother Esau",
+      "Take a Step Backs"
+    ],
+    "setlist_flow": "The set feels uneven, with an early‑night groove that tightens into the second half; the second set is a bit rushed but still solid, and the post‑drums jam delivers a classic 1987 energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar sits low on early songs, struggles for fills in some sections, but later steers the band into an incredible Gotta Serve Somebody.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Post‑drums jam is rocking and captures a strong 1987 feel."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brother Esau": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Take a Step Backs": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Good Push Comes to Shove": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tangled Up in Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gotta Serve Somebody": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T00:53:03.406633+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-10.149827.ultra.sbd.miller.flac2496"
+}

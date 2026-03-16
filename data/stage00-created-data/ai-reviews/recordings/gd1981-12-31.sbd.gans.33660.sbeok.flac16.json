@@ -1,0 +1,120 @@
+{
+  "summary": "Crystal‑clear soundboard capture of the legendary New Year's 1981 four‑set marathon, highlighted by a smoking Shakedown, epic Dark Star and flawless Morning Dew.",
+  "review": "The recording is an excellent soundboard source – crisp, hiss‑free and free of glitches – that lets every nuance of the band shine. The show itself is often described as a “mind‑blower” with standout performances of Shakedown, Cold Rain, Playin’, Aiko, Terrapin, Dark Star and Dew, while only the Joan Baez acoustic set and a few vocal overdubs draw mild criticism. Overall the concert is celebrated as one of the quintessential Dead New Year’s shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 5‑star, praising both the musical performance and the pristine soundboard recording; only minor criticisms appear, leading to an exceptionally high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear mix with no hiss or \"Zits\", perfect balance of instruments, and a flawless capture that preserves the band's dynamics."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Cold Rain",
+      "Playin'",
+      "Aiko",
+      "Terrapin",
+      "Dark Star",
+      "Dew",
+      "Bertha"
+    ],
+    "poor_songs": [
+      "Acoustic Set (Joan Baez)",
+      "Roses",
+      "Baby Blue"
+    ],
+    "setlist_flow": "Four‑set extravaganza with a guest acoustic opening, followed by three jam‑heavy sets that build in intensity; the third and fourth sets feature extended improvisations (Playin' → Terrapin → Playin', Other One → NFA → Goin Down the Road) culminating in a soaring Dark Star and a rapturous Dew."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for flawless tone, crisp solos and leading the band’s improvisational peaks.",
+    "Phil": "Highlighted for his tight intro to Dark Star and overall solid interplay with Jerry.",
+    "Bob": "",
+    "Keys": "Brent Mydland noted for tasteful licks in Dark Star, adding melodic color.",
+    "Drums": "Mickey Hart’s Tar drum cameo and the drummers’ dynamic lift after Playin' were specifically lauded."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Aiko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Acoustic Set": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:51:37.985941+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-31.sbd.gans.33660.sbeok.flac16"
+}

@@ -1,0 +1,98 @@
+{
+  "summary": "Excellent audience recording captures a high‑energy 3/27/86 show with standout Jack Straw, Supplication → Promised Land and the rare Hamstrung Blues duet, despite a few out‑of‑tune moments on Eyes.",
+  "review": "The tape is praised for its warm, full‑range sound that brings the hall’s natural echo to life, and the performance shines with a tight first set (Jack Straw, Peggy‑O, Bertha, Wang Dang Doodle) and a fire‑filled second set highlighted by Supplication → Promised Land and a one‑off Mydland/Lesh duet on Hamstrung Blues.  While Bob’s guitar on Eyes and his vocal theatrics on Estimated Prophet draw criticism, the overall vibe is exuberant and the audience capture adds an authentic live feel.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (average ~4.2), strong praise for both musical performance and audio quality, with only minor negative remarks about a few songs."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience tape praised for rich low end, dynamic range, warm hall sound, clear mids; U87 mics noted; occasional comment that playback is slightly fast/sharp but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Peggy-O",
+      "Bertha",
+      "Wang Dang Doodle",
+      "Supplication > Promised Land",
+      "Big Railroad",
+      "Hamstrung Blues"
+    ],
+    "poor_songs": [
+      "Eyes",
+      "Estimated Prophet"
+    ],
+    "setlist_flow": "First set described as solid and energetic with tight transitions; second set a bit faster but still powerful, featuring memorable jams and the unique Hamstrung Blues duet."
+  },
+  "band_member_comments": {
+    "Jerry": "His solos are highlighted (notable jam after Eyes, dynamic effect changes on Peggy‑O) and he even jumps into the drum segment for an improvisational burst.",
+    "Phil": "Featured in the rare Mydland/Lesh duet on 'Hamstrung Blues', with his bass work receiving specific praise.",
+    "Bob": "Out‑of‑tune guitar on 'Eyes' criticized; vocal theatrics on 'Estimated Prophet' deemed over‑dramatic; otherwise noted for high energy and stage presence.",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann’s drumming is praised for kicking in stronger, driving the set, and sharing a solo moment with Jerry (and Brent) during the drum break."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Peggy-O": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Supplication > Promised Land": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Big Railroad": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hamstrung Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:59:14.418271+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-03-27.neumann-hogan.fixed.24029.sbeok.shnf"
+}

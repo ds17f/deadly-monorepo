@@ -1,0 +1,66 @@
+{
+  "summary": "Rare Rosemary, fiery Dark Star → Saint Stephen, tight New Potato jam",
+  "blurb": "The show delivers a standout Rosemary and an expansive Dark Star → Saint Stephen sequence, plus a high‑energy New Potato Caboose suite. Jerry’s guitar is blistering while Phil provides thunderous bass throughout. Recording quality varies but the musical peaks make it essential listening.",
+  "review": "On December 7, 1968 at Bellarmine College in Louisville, Kentucky, the Dead served up a raw, experimental set that still manages to feel cohesive despite some tape‑hiss and editing cuts. The first set launches with a soaring Dark Star that morphs into Saint Stephen and then into Death Don't Have No Mercy, giving early‑'68 fans a taste of the band’s improvisational daring. A thunderous bass foundation from Phil underpins the sprawling Other One suite, while Jerry’s volume‑knob swells and blistering leads dominate the rare Rosemary and the New Potato Caboose jam that closes the set. The second half continues the magic with acoustic touches on He Was A Friend Of Mine, a soulful rendition of It Hurts Me Too, and a poignant Morning Dew that, while noted as a weaker moment, still contributes to the evening’s emotional arc. Though the soundboard captures are marred by hiss and occasional cuts, the musical highlights—especially Rosemary, Dark Star, and New Potato—shine through, making this concert a noteworthy snapshot of the Dead’s evolution in late‑'68.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 44,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Strong positive sentiment across three recordings: two are clearly positive and one mixed, all praising rare Rosemary, expansive Dark Star > Saint Stephen sequences, and the New Potato jam. No consistent negative comments about performance quality were found, so a robust +1.6 adjustment is applied.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd68-12-07.sbd.naines.16944.sbeok.shnf",
+    "reason": "Despite some tape hiss and cuts, this SBD offers the clearest overall balance of sound and includes the rare Rosemary performance."
+  },
+  "key_highlights": [
+    "Rare Rosemary performance adds historic value",
+    "Blazing Dark Star → Saint Stephen → Death Don't Have No Mercy improvisation",
+    "Tight New Potato Caboose jam showcases Garcia’s volume‑knob swells and Phil’s thunder bass",
+    "The Other One suite features classical‑tinged keyboard textures within a strong dual‑drum foundation"
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "Saint Stephen",
+    "Death Don't Have No Mercy",
+    "New Potato Caboose",
+    "Rosemary",
+    "The Other One"
+  ],
+  "band_performance": {
+    "Jerry": "Blazing, volume‑knob swells and blistering leads shine on Rosemary, Dark Star and New Potato Caboose.",
+    "Phil": "Thunderous bass anchors the set with a classical‑tinged run in The Other One suite and a nasty jam during New Potato.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-24T10:00:11.723428+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dark Star",
+      "Saint Stephen"
+    ],
+    [
+      "Death Don't Have No Mercy"
+    ],
+    [
+      "Cryptical Envelopment",
+      "The Other One",
+      "Cryptical Envelopment",
+      "New Potato Caboose"
+    ],
+    [
+      "Rosemary"
+    ]
+  ]
+}

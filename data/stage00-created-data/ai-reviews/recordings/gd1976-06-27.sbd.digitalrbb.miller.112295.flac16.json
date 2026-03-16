@@ -1,0 +1,99 @@
+{
+  "summary": "Soundboard recording with occasional drop‑outs but a strong, mellow 1976 show highlighted by Let It Grow and a smoking Help > Slip > Franklin’s.",
+  "review": "The June‑27‑1976 performance is praised for its relaxed, “mood‑music” vibe, tight playing on tracks like Cold Rain & Snow, Cassidy, Let It Grow and the H/S/F sequence, and a solid first set. The Miller SBD source delivers good sound from Brown‑Eyed Women onward, though early songs suffer from non‑SBD patches, static attacks and occasional drop‑outs that keep the overall recording quality at best fair.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers enjoy the musical performance (high marks for several songs) while noting consistent technical flaws in the early part of the recording; the weighted average lands between good show and fair recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "SBD feed only starts at Brown‑Eyed Women; earlier tracks are non‑SBD with muffed verses. Static attack on Big River, drop‑outs around 3:26, and a dry, slightly static sound on some sections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Help > Slipknot! > Franklin's Tower",
+      "Cold Rain & Snow",
+      "Cassidy",
+      "Friend of the Devil",
+      "Samson",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "Ship (draggy)",
+      "U.S. Blues (repetitive feel)",
+      "Sugar Magnolia (vampy, average)"
+    ],
+    "setlist_flow": "First set is solid and tightly played; second set opens strong with Let It Grow but loses a bit of spark compared to the opener, still delivering highlights like H/S/F and a powerful jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s shredding factor is repeatedly praised – wild, reverse‑like guitar lines on Friend of the Devil and tight leads throughout.",
+    "Phil": "Lays down cooler jams after Let It Grow; noted to drop out briefly during the long Slipknot section.",
+    "Bob": "",
+    "Keys": "Keith's interplay with Garcia gets strong mentions (good work on Ship, overall solid keyboards).",
+    "Drums": "Mickey Hart’s return is highlighted; longer drums break in Let It Grow and generally solid drumming, though some describe a “drummer soup” in later moments."
+  },
+  "song_mentions": {
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ship": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T05:30:50.136238+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-27.sbd.digitalrbb.miller.112295.flac16"
+}

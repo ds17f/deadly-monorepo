@@ -1,0 +1,52 @@
+{
+  "summary": "Muddy but listenable sound captures a tentative set with a solid Wah‑Wah moment on “Dancin’ in the Streets”.",
+  "review": "The four‑song excerpt shows a band still finding its footing in the early Brent era – Sugaree never quite rolls, while “Friend of the Devil” feels sweet and familiar. The highlight is Jerry’s Wah‑Wah burst during “Dancin’ in the Streets”, which lifts an otherwise tentative performance. Recording quality is acceptable despite some muddiness.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "low",
+    "rationale": "Only one moderate‑scoring review; the show is judged average with a few positives, and the recording is described as okay but muddy."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Some muddiness noted; overall listenable but not crisp or well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dancin' in the Streets",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [
+      "Sugaree"
+    ],
+    "setlist_flow": "Four songs only; performance is tentative as the band transitions into the Brent era, with a modest stretch on “Dancin’ in the Streets” that includes a praised Wah‑Wah solo."
+  },
+  "band_member_comments": {
+    "Jerry": "Breaks out a Wah‑Wah solo on “Dancin' in the Streets”, which reviewers liked.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Band is evolving into the Brent era, indicating the keyboard transition.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin' in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T21:08:22.184375+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-05-05.psbd.jools.12377.sbeok.shnf"
+}

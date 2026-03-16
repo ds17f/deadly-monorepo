@@ -1,0 +1,39 @@
+{
+  "summary": "Good tape with a solid Bob Weir performance on Jack Straw",
+  "review": "The reviewer gives the recording a respectable four‑star rating and thanks the tapers, indicating an overall positive listening experience despite no specific sound comments. The highlight mentioned is Bob Weir’s “slicing‑and‑dicing” guitar work during Jack Straw, suggesting a lively moment in the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one moderately positive review (4 stars) that mentions a strong Weir performance but provides no detail on recording quality, leading to a cautious rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments about clarity or mix; reviewer’s positive star rating implies acceptable audio."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Weir’s guitar work described as “slicing‑and‑dicing” during Jack Straw, indicating a strong performance.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:10:27.234295+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-25.Tascam.Darby.118005.Flac1644"
+}

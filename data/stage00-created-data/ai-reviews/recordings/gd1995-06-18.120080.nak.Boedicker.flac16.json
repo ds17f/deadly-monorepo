@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent recording captures a strong ’95 show with Garcia firing on all cylinders and an inspired Spanish jam through Lucy in the Sky.",
+  "review": "Reviewers rave about the performance, noting that Jerry Garcia is in rare top form for 1995, the second set holds its own, and the Spanish‑space jam leading into “Lucy in the Sky” is a highlight. The preservation work is praised as beautiful and clear, with no significant technical flaws reported.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently positive comments about both the musical performance (Garcia’s playing, standout jams) and the recording quality (beautiful, well‑preserved), offset only by a single non‑informative low‑star review."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners describe the audio as beautiful and well‑preserved; no issues with clarity, dropouts, or balance are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Lucy in the Sky with Diamonds"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is viewed as strong and comparable to the first; overall flow praised, especially the Spanish‑space jam leading into Lucy."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is noted as playing better than most shows from this year.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lucy in the Sky with Diamonds": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T10:04:59.846085+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-18.120080.nak.Boedicker.flac16"
+}

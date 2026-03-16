@@ -1,0 +1,31 @@
+{
+  "summary": "Solid performance with a standout Brent Mydland moment, but the soundboard was sped up causing half‑step pitch shift and thin, “chipmunky” audio.",
+  "review": "The show itself is regarded as good, especially for fans who enjoy Brent Mydland’s keyboard interplay that even cuts in on other parts. However, the recording suffers from being run fast – all tunes are transposed up a half‑step and sound thin, which detracts from the listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Both reviewers liked the musical performance (average show rating ~4.5) but one flagged serious recording issues (rating ~2). Weighted blend of show (70%) and recording (30%) yields a mid‑range score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Recording is sped up, raising pitch by a half‑step and giving a thin, “chipmunky” sound that many find annoying."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing; reviewers focus on overall show quality rather than sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Praised for cutting in and providing a lively moment (Mydland’s keyboard work).",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T23:22:10.436027+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-01.sbd-set1.field.26989.sbeok.flac16"
+}

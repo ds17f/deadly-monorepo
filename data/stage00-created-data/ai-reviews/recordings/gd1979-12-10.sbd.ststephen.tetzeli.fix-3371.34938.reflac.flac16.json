@@ -1,0 +1,31 @@
+{
+  "summary": "Soundboard recording suffers from drop‑outs and volume fluctuations that make the first set difficult to follow; musical performance not evaluated.",
+  "review": "The sole review notes significant technical problems – audible drop‑outs and abrupt volume changes – especially in the first set, preventing the listener from getting past it. No comments are made about the band's playing or specific songs, so the show quality remains indeterminate.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only one moderate (3‑star) review focused on recording flaws; no musical praise or criticism to boost the rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Drop‑outs and volume changes in the first set make listening difficult; otherwise typical soundboard clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Not assessable – reviewer did not reach the second set and gave no musical feedback."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-26T03:20:49.125716+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-10.sbd.ststephen.tetzeli.fix-3371.34938.reflac.flac16"
+}

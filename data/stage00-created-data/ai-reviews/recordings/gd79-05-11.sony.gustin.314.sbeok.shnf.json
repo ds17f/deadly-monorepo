@@ -1,0 +1,63 @@
+{
+  "summary": "A solid audience recording that captures a chill ’79 show with standout jams on Franklin’s Tower, Shakedown and Passenger.",
+  "review": "The tape is an audience (FOB) source that sounds surprisingly clear for the venue, though vocals sit low and a few moments are a bit muddy. Musically the concert shines – Brent’s debut keyboards blend in nicely, Jerry nails his solos on Shakedown and Passenger, and the band stretches out on a hot seven‑minute Franklin’s Tower. Overall it’s a beloved gem of the archive despite some occasional mix quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight strong performances; recording is generally good with only minor technical complaints, leading to a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough for an audience (FOB) tape; vocals sit low in the mix, occasional echo and a brief microphone feedback at ~4:50, but overall crisp with usable balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Shakedown",
+      "Passenger",
+      "Eyes of the World",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert feels relaxed and jam‑focused, with long, flowing sequences (notably a seven‑minute Franklin’s Tower) that keep the momentum despite the small venue’s echoey acoustics."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for nailing his solos on Shakedown and Passenger; one reviewer notes his first solo was tentative.",
+    "Phil": "His bass lines are audible early then fade; another mentions a quirky “submarine oscillator” rig he used.",
+    "Bob": "",
+    "Keys": "Brent’s debut is welcomed – even when sick he sounds solid and blends well with the band.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T21:41:55.709680+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-05-11.sony.gustin.314.sbeok.shnf"
+}

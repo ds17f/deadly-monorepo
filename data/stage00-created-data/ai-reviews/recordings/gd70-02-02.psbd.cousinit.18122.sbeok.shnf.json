@@ -1,0 +1,39 @@
+{
+  "summary": "A mixed‑quality soundboard recording that’s redeemed by an unforgettable, transcendent Dark Star performance.",
+  "review": "Fans rave about the 28‑minute Dark Star, calling it “utterly transcendent” and praising Jerry Garcia’s tone and group interplay. The recording itself divides opinion – some describe a unique, crystal‑clear acoustic signature while others label it the worst sounding board in the archive, leaving the overall listening experience at a fair level.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised (especially Dark Star) while recording quality splits between very positive and very negative, yielding an overall rating just above average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners note a distinctly different acoustic character – some find it crisp and perfectly in‑tune, others describe it as the worst sounding board ever (muddy, distorted). The mix is stable but the tonal balance varies widely between reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set features an unusually long Dark Star and a quirky ordering (Lovelight after Mason's Children), but overall the performance is described as powerful and intuitively linked."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is highlighted as perfect and his playing on Dark Star is called transcendent.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-19T15:17:36.863956+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-02-02.psbd.cousinit.18122.sbeok.shnf"
+}

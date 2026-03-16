@@ -1,0 +1,101 @@
+{
+  "summary": "Fair‑quality matrix recording captures a spirited Winterland benefit with standout Good Lovin' and the first Mind Left Body jam, though the sound is uneven and occasionally distorted.",
+  "review": "The show bursts with energy – early versions of Tennessee Jed, You Win Again and a smoking Good Lovin' that introduces the inaugural Mind Left Body jam make it memorable.  The source is a patchwork of soundboard and audience material, riddled with hiss, occasional wow‑and‑flutter and some audible crowd bleed, which keeps the listening experience uneven.  Overall the performance shines despite the technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical moments and give 4‑5 stars, while several note significant recording problems; weighting yields a solid above‑average score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Composite of soundboard and audience tapes with splices; suppressed hissy texture, occasional wow‑and‑flutter, distortion in places, and noticeable crowd screaming on the mic.  Clarity varies – some sections are crisp, others muddy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'",
+      "Mind Left Body jam",
+      "Not Fade Away > Goin' Down the Road Feeling Bad",
+      "Tennessee Jed"
+    ],
+    "poor_songs": [
+      "Mr. Charlie",
+      "Sugaree",
+      "Casey Jones"
+    ],
+    "setlist_flow": "The first set is uneven – moments of brilliance mixed with sloppy passages – while the short second set builds momentum, delivering a strong Good Lovin' start and a sweet Not Fade Away → Goin' Down the Road sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith Godchaux’s keyboards are praised; Pigpen’s organ (Ron) is highlighted as a highlight on several songs.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mind Left Body": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "You Win Again": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mr. Charlie": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T11:51:04.068336+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-03-05.sbd.miller.103282.flac16"
+}

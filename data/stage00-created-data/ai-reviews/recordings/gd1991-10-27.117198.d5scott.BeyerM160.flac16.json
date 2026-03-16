@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality source useful for patching the Sugar Magnolia segment, with clear sound and a very positive rating",
+  "review": "The reviewer rates this recording five stars and suggests it would make an excellent source for patching the Sugar Magnolia portion of a soundboard tape, indicating that the audio is clean enough for such use. No musical performance details are given, but the enthusiasm implies both a solid recording and a decent rendition of the song.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Only one review, but it is highly positive (5 stars) and praises the tape as a good source for patching, suggesting good recording quality despite no explicit show details."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes it as a suitable source for patching Sugar Magnolia, implying clear and usable audio; no complaints about noise or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T02:23:32.553487+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-10-27.117198.d5scott.BeyerM160.flac16"
+}

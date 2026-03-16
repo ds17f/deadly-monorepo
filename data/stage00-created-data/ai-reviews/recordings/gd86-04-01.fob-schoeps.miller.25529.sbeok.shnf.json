@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent front‑of‑house recording with solid highlights (Shakedown Street, Space) but a modest show and mislabeled second‑set tracks.",
+  "review": "The recording is praised for its clarity—many note it sounds better than the recent SBD release—and captures strong moments like a super Shakedown Street and an inspiring Space. The performance itself isn’t described as stellar, though the reviewer calls it a personal favorite, and there’s a recurring complaint about mislabeled second‑set tracks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Reviewers consistently commend the high‑quality recording (average rating ~4.3) while the show receives mixed remarks (average rating ~3). Weighted blend yields a mid‑range overall score."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear front‑of‑house mix noted as better than recent SBD; however, second‑set track labeling is incorrect in the upload."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Show isn’t described as stellar overall but includes memorable moments; set pacing not specifically discussed."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:27:45.991152+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-04-01.fob-schoeps.miller.25529.sbeok.shnf"
+}

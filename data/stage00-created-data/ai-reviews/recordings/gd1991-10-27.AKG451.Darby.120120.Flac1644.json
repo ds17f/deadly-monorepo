@@ -1,0 +1,31 @@
+{
+  "summary": "Recording source unknown; reviewers note a fun Oakland show with special guests but give no details on audio quality.",
+  "review": "The three reviews are mixed: one gives a modest 3‑star comment about the vibe of the concert, another awards 5 stars and highlights guest appearances by Gary Duncan and Carlos Santana, while a third rates it zero stars without explanation. No reviewer mentions soundboard or audience clarity, so the technical quality remains unclear, but the overall impression is that the performance was enjoyable for some listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Ratings range from 0 to 5 stars across three reviews; limited commentary on both performance and recording leads to a moderate overall score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not discuss sound clarity, mix balance, or source type, leaving the technical quality indeterminate."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; only location and guest appearances are mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T02:24:03.636408+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-10-27.AKG451.Darby.120120.Flac1644"
+}

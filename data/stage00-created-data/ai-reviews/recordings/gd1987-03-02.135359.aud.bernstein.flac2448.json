@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent audience recording that captures the warm Kaiser‑era vibe, highlighted by a standout jam right before Truckin'.",
+  "review": "The three reviewers overwhelmingly praise the audio – it’s described as clean, full‑bodied and almost soundboard quality while retaining the natural warmth of an Aud capture. Musically the show is celebrated for its Kaiser‑tour feel and a memorable pre‑Truckin’ jam that makes the performance feel like a friendly gathering of locals.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Two strong 5‑star reviews highlight superb sound quality and an enjoyable performance; the lone 1‑star review is about a setlist typo, not the music or recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean vocals and guitars, full‑bodied sound, cymbals audible; feels almost like a soundboard but warmer. Crowd singing is on a separate track – normal for Aud recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show evokes the Kaiser‑era atmosphere, with a relaxed party vibe and a notable jam leading into Truckin', giving the set a smooth, communal flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone noted as clean and full, contributing to the warm sound.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:02:30.970467+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-02.135359.aud.bernstein.flac2448"
+}

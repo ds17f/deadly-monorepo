@@ -1,0 +1,95 @@
+{
+  "summary": "Crystal‑clear soundboard captures a magical “St. on the Mountain” and a smoking “The Other One”, with Bruce Hornsby’s piano adding extra sparkle.",
+  "review": "The recording is a pristine soundboard capture that lets listeners hear every nuance of the 1990 Europe run – from the epic “St. on the Mountain” to the fiery “Victim” jam and the soaring “Eyes”.  Reviewers rave about the tight playing, Bruce Hornsby’s piano, Phil’s bass thumps and creative effects, while a few note a messy UJB and some muddy vocals.  Overall the show is hailed as one of the standout performances of that tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average star rating ~4.1 across 26 reviews, with overwhelming praise for both performance and sound quality; only a handful of low‑star outliers."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the audio as crisp, clear and “SICK”, highlighting an excellent soundboard mix. No major dropouts or distortion were reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. on the Mountain",
+      "The Other One",
+      "Victim",
+      "Eyes",
+      "Estimated"
+    ],
+    "poor_songs": [
+      "UJB"
+    ],
+    "setlist_flow": "Set one builds tightly with strong openings (Touch, Walkin', Candyman) and a soaring “St. on the Mountain”.  The second set delivers a spectacular Victim jam, fluid transitions into Eyes/Estimated, and finishes with an emotional “The Other One\".  A few reviewers note a slightly messy UJB but overall pacing is praised."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for crisp guitar tone, strong vocals and leading the band through intense jams (e.g., The Other One).",
+    "Phil": "Noted for “thumping” bass, creative frog effects on Victim, and overall solid rhythmic foundation.",
+    "Bob": "",
+    "Keys": "Bruce Hornsby’s piano receives abundant praise – described as adding polish, energy, and memorable moments (especially on Victim and St. on the Mountain).",
+    "Drums": "Drummers are lauded for tightness, inventive “bovine” samples and powerful support throughout the set."
+  },
+  "song_mentions": {
+    "St. on the Mountain": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Victim": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Walkin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "UJB": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T14:20:28.842693+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-10-28.sbd.jamphan.3264.sbeok.shnf"
+}

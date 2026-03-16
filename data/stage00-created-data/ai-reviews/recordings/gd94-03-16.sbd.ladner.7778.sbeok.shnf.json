@@ -1,0 +1,97 @@
+{
+  "summary": "A solid ’94 Rosemont soundboard capture that delivers a high‑energy set highlighted by High Time, Scarlet>Fire and a soaring Dark Star.",
+  "review": "The recording is a clean soundboard source with only occasional static and a slightly thin low end, but it reproduces the band’s 1994 energy very well.  The show shines on High Time, Jack Straw, Scarlet>Fire, Looks Like Rain and an expansive Dark Star, though Easy Answers and a few late‑set moments feel flat.  Overall fans regard this as one of the stronger Rosemont performances of the era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance and key songs while noting only minor recording glitches; a strong show weight (70%) plus good soundboard quality yields an overall rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and well‑balanced for most of the set; a few listeners note static on tracks 4–5 and a slight lack of bass depth, but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Time",
+      "Scarlet>Fire",
+      "Jack Straw",
+      "Dark Star",
+      "Looks Like Rain",
+      "So Many Roads"
+    ],
+    "poor_songs": [
+      "Easy Answers",
+      "Friend of the Devil"
+    ],
+    "setlist_flow": "First set opens strong with Jack Straw and rides a wave of high‑energy numbers (High Time, SMR, Sugar Magnolia) before tapering a bit at Easy Answers.  The second set erupts with Scarlet>Fire, a lengthy Dark Star and a heartfelt Miracle, delivering the classic ’94 Rosemont arc that fans love."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fiery solos on High Time and Dark Star; several reviewers note his vocal tone was nasal in the spring‑’94 tour but his guitar work remains a highlight.",
+    "Phil": "Mentioned as having a ‘spiritual experience’ during the Scarlet>Fire segue; bass generally solid though a few listeners wished for more low‑end presence.",
+    "Bob": "Noted for lyrical “spray” on Dark Star and an acoustic contribution on Looks Like Rain.",
+    "Keys": "References to the new keyboardist era (Vince’s replacement) and Brent Mydland’s recent passing, with no specific complaints about the playing itself.",
+    "Drums": "Drums/Space segment praised as an integral extension of the Dark Star; overall percussion described as powerful."
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 8,
+      "negative_mentions": 1,
+      "total_mentions": 9
+    },
+    "Jack Straw": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Dark Star": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "So Many Roads": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Answers": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T19:57:00.574885+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-03-16.sbd.ladner.7778.sbeok.shnf"
+}

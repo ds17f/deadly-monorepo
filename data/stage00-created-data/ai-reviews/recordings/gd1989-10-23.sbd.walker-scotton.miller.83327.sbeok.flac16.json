@@ -1,0 +1,111 @@
+{
+  "summary": "Soundboard recording of decent to great performance with standout Crazy Fingers > Terrapin and a mellow, well‑played set featuring strong Jerry midi‑horn lines and Brent’s vocal fire.",
+  "review": "The show is consistently solid, highlighted by an “amazing” Crazy Fingers > Terrapin transition, tight interplay on Tennessee Jed, and memorable moments like Jerry’s midi‑horn riff in Let It Grow and Brent’s soaring vocals (even when he forgets a lyric). The second set stays smooth and controlled rather than explosive, delivering strong renditions of Standing on the Moon, Attics, and an especially praised IWTYH. Recording quality is not explicitly discussed but the .sbd tag suggests a clean soundboard source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Reviews note many musical highlights and generally positive performance notes, offset by mixed enthusiasm and lack of concrete recording‑quality feedback."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on sound quality; .sbd suffix implies a typical clean soundboard mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers > Terrapin",
+      "Stranger",
+      "Bertha",
+      "Masterpiece",
+      "L.L.Rain",
+      "GDTRFB",
+      "Tennessee Jed",
+      "Let It Grow",
+      "We Can Run",
+      "IWTYH",
+      "Standing on the Moon",
+      "Attics",
+      "Walkin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall mellow and controlled, with a smooth first set that builds into tighter interplay on Tennessee Jed and a second set that stays consistent without dramatic spikes."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for his midi‑horn riffing during Let It Grow and strong interplay with Bob on Tennessee Jed.",
+    "Phil": "",
+    "Bob": "Praised for tight jam interaction with Jerry on Tennessee Jed.",
+    "Keys": "Brent’s vocal delivery highlighted as consistently on; praised solo on “walkin” that ‘shreds’ and his passionate performance on We Can Run despite a lyric slip.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers > Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "L.L.Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "GDTRFB": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "We Can Run": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "IWTYH": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:24:35.293958+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-23.sbd.walker-scotton.miller.83327.sbeok.flac16"
+}

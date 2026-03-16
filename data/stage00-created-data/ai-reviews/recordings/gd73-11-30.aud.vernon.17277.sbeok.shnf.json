@@ -1,0 +1,93 @@
+{
+  "summary": "Audience recording with noticeable hiss and harshness but captures a stellar show highlighted by a soaring Morning Dew and an epic Eyes of the World.",
+  "review": "The performance shines with several standout moments – a long, powerful Morning Dew, a killer Black Throated Wind, a near‑ten‑minute Dark Star, Weather Report and one of the best Eyes of the World from 1973.  The audience tape is rough around the edges (hiss, occasional drop‑outs, bass‑light mix) yet still conveys the high energy and tight vibes of this Boston run.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Strong musical performance with many praised songs outweighs the sub‑par audience recording; consistent positive comments across ten reviews give high confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hiss and harsh, jangly crowd‑heavy mix; occasional drop‑outs (e.g., Sugar Magnolia) and bass‑light sound.  Despite these flaws the tape remains listenable and captures the show’s energy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Black Throated Wind",
+      "Eyes of the World",
+      "Dark Star",
+      "Weather Report"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A high‑energy first set that builds into a tight, jam‑filled second set; the band stays loose and vibrant throughout, delivering several classic sequences (Bertha > Promised Land, Help on the Way > Slipknot! > Franklin's Tower) and a memorable extended Dark Star."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Weather Report": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T03:30:59.288168+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-11-30.aud.vernon.17277.sbeok.shnf"
+}

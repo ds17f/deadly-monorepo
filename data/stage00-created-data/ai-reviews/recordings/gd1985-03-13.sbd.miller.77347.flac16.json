@@ -1,0 +1,57 @@
+{
+  "summary": "Decent audience recording with solid jams, highlighted by a well‑played Franklin’s Tower and a lively Black Peter featuring Matt Kelly on harp.",
+  "review": "The show is praised for its good jams and strong interplay, especially the Franklin’s Tower performance and the addition of Matt Kelly’s harp on Black Peter. The recording is described as decent but not pristine – an audience cassette that makes it hard to separate the harp from Brent Mydland’s organ at times.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Reviewers note a solid musical performance with several standout moments, while the recording is only average, leading to an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Decent cassette‑sourced audio; generally listenable but instrument bleed (harp vs. organ) reduces clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Man Smart (Woman Smarter)",
+      "Black Peter",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set captured on a 45‑minute cassette, second set flows well with strong jams and an especially lively Franklin’s Tower; the addition of Matt Kelly adds a unique texture."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Harpsichord/organ blend makes Brent Mydland's organ hard to separate from Matt Kelly's harp.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Man Smart (Woman Smarter)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:16:57.378310+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-13.sbd.miller.77347.flac16"
+}

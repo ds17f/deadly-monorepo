@@ -1,0 +1,58 @@
+{
+  "summary": "Excellent sound‑board recording of a mixed‑quality show – crystal‑clear audio but an uneven set with only a few bright moments.",
+  "review": "The tape sounds like a top‑notch digital soundboard (DSBD) capture – listeners rave about its clarity and power. Musically the night was inconsistent; Jerry had an off‑night aside from strong Bird Song, Black Peter and Look Like Rain performances, while the closing Throwing Stones fell flat for some fans.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Recording quality is repeatedly praised as excellent (soundboard), but show performance receives mixed feedback with several negative comments; the weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, powerful mix that “knocks your socks off”; multiple reviewers call it unbeatable and note the DSBD source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Black Peter",
+      "Look Like Rain"
+    ],
+    "poor_songs": [
+      "Throwing Stones"
+    ],
+    "setlist_flow": "The set swings between decent jams but overall lacks inspiration; the show feels uneven with a weak closing."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer calls it an off‑night for Jerry, though Bird Song and Black Peter are highlighted as strong moments.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Look Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T19:32:00.381774+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-03-04.sbd.kidder.8330.sbeok.shnf"
+}

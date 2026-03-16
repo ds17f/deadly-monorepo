@@ -1,0 +1,39 @@
+{
+  "summary": "High‑energy performance (notably a killer Jack Straw) hampered by poor recording quality.",
+  "review": "The show is remembered as a hot, high‑energy set with Jerry’s guitar work on “Jack Straw” getting special praise. Unfortunately the available tape sounds muddy and fails to capture that excitement, prompting reviewers to recommend seeking a better soundboard or audience source.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "high",
+    "rationale": "All four reviews focus on the recording’s deficiencies while only modestly praising the performance; consistent low star ratings (1‑2) lead to a clear negative overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Multiple reviewers say the sound quality does not do the show justice, describing it as sub‑par and recommending other recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as hot and high‑energy; no detailed criticism of song order beyond the general performance vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "His playing on ‘Jack Straw’ is highlighted as shiveringly good.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T02:26:27.689369+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-08-30.wise.vernon.16039.sbeok.shnf"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent audience recording captures a stellar Jerry vocal performance on Mississippi Half‑Step, Brown Eyed Women, and Loose Lucy.",
+  "review": "The reviewer raves about Jerry’s voice being “ON” from the first line of Mississippi Half Step and calls his renditions of Brown Eyed Women and Loose Lucy possibly the best he’s ever sung. The audience recording is described as great, delivering clear vocals and a vivid sense of the MSG crowd during this six‑night run.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "A single detailed 5‑star review praises both the musical performance (especially Jerry’s vocals) and the audience recording, indicating an outstanding show with excellent sound quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, well‑balanced audience capture with strong vocal presence; no reported dropouts or excessive crowd noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half Step",
+      "Brown Eyed Women",
+      "Loose Lucy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review focuses on vocal highlights in the early part of the set; no specific comments on pacing or overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as \"ON\" from the first line; praised as possibly his best performance of these songs.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mississippi Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:10:17.333076+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-18.ST250s.brennecke-young.5079.sbeok.shnf"
+}

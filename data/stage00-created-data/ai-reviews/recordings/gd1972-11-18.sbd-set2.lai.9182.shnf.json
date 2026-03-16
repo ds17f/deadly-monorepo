@@ -1,0 +1,51 @@
+{
+  "summary": "Soundboard recording with minor distortion and mix quirks captures a powerful second‑set highlight featuring a monster Playin' in the Band and standout moments from Sugar Magnolia and Greatest Story Ever Told.",
+  "review": "The set‑2 soundboard capture is generally clear but suffers from occasional blown‑speaker distortion and some sonic balance issues, especially toward the end where filler tracks with pitch problems were inserted. Musically the show shines – reviewers rave about a 26‑minute Playin' in the Band, Phil’s entrance on Sugar Magnolia, and Garcia’s wah‑wah on Greatest Story Ever Told, making it one of the tighter Fall‑1972 performances despite being an incomplete partial.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Strong musical performance (especially Playin' in the Band) yields a high show score, while the recording’s minor distortion and missing tracks lower the overall rating slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard source; intermittent blown‑speaker distortion noted as very minor, plus mix/sonic balance issues on the partial and filler tracks at the end."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' in the Band",
+      "Sugar Magnolia",
+      "Greatest Story Ever Told"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Partial second‑set only; last four tracks were replaced with filler from another show, causing a slightly disjointed ending but the core performance flows strongly with extended jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia uses his Wah‑Wah pedal on Greatest Story Ever Told and is praised for attractive playing in late‑1972.",
+    "Phil": "One reviewer thought Phil was too loud, another called his entrance at the start of Sugar Magnolia \"PURE GOLD.\"",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin' in the Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T01:57:08.951619+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-11-18.sbd-set2.lai.9182.shnf"
+}

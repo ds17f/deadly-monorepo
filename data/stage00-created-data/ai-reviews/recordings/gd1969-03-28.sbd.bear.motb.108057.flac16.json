@@ -1,0 +1,63 @@
+{
+  "summary": "Smooth, rich soundboard recording that captures a vivid show highlighted by School Girl, a soaring Dark Star → St Stephen sequence and powerful performances of The Other One and Eleven.",
+  "review": "The audience is treated to an exceptionally clear, well‑tuned soundboard capture that lets Jerry’s edgy, sharply‑attacked guitar shine throughout. Musically the set flows with original Fillmore‑West‑era energy, featuring a standout School Girl opener, a luminous Dark Star into St Stephen, and memorable renditions of The Other One and Eleven.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All detailed reviews praise both the performance and the audio quality, awarding five‑star ratings; no substantive criticism was offered."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Smooth, rich and crisp sound with well‑handled azimuth tuning; reviewers describe it as an excellent reproduction of the original Bear recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Morning Little Schoolgirl",
+      "Dark Star",
+      "St. Stephen",
+      "The Other One",
+      "Eleven"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a natural, original flow reminiscent of the Fillmore West shows, with strong transitions and an engaging overall pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is described as smooth yet edgy, with a sharp attack; vocals are laid‑back, and he even ‘lets loose’ in a Black Sabbath‑like intensity.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "A brief 18‑second drum segment on The Other One was called a buzzkill, but otherwise no negative comments."
+  },
+  "song_mentions": {
+    "Good Morning Little Schoolgirl": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T12:28:30.008128+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-03-28.sbd.bear.motb.108057.flac16"
+}

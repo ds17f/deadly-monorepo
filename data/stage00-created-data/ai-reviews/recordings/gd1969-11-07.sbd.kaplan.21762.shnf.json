@@ -1,0 +1,52 @@
+{
+  "summary": "Solid November ’69 performance with a cosmic Dark Star/U‑J‑B jam and a soaring Lovelight ending, captured on a decent soundboard recording.",
+  "review": "Fans rave about the November ’69 show, highlighting a cosmic Dark Star with an U‑J‑B jam and a soaring Lovelight that closes the set. The soundboard source is described as clear and generally solid, though one listener could not assess the tape directly. While most praise the performance’s energy, a lone comment points out a more routinized feel on “Mama Tried,” giving the overall reception a mixed tone.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Show quality is praised by most reviewers (standout jams, high enthusiasm) while recording quality is noted as decent but not extensively detailed; one negative comment moderates the overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and listenable; described as 'not a bad recording' with no major issues reported. One reviewer could not evaluate the tape, but no complaints about dropouts or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Mama Tried"
+    ],
+    "setlist_flow": "The concert balances exploratory jams like Dark Star with tighter songcraft, ending on a high note with Lovelight; overall flow is praised though some feel the band sounds more routinized in places."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Criticized Bob Weir for spacing the second verse of 'Mama Tried', suggesting a more routinized feel.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T18:05:39.450999+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-11-07.sbd.kaplan.21762.shnf"
+}

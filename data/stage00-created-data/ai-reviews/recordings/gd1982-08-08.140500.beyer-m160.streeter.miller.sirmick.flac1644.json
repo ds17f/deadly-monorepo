@@ -1,0 +1,39 @@
+{
+  "summary": "Recording plagued by tape warp/electrical issues during \"Loser\", making the set largely unlistenable.",
+  "review": "The sole review highlights a serious technical fault—tape warping or power problems—that corrupts the sound during the performance of \"Loser.\" No musical strengths are noted, and the recording is deemed essentially unusable. With no positive comments on playing or mix, the overall impression is strongly negative.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one brief 1‑star review focusing on severe recording defects; no information about performance quality to boost the rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Tape warp/electrical power problem noted during \"Loser\"; audio likely distorted and unreliable."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Loser"
+    ],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T23:57:34.481850+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-08.140500.beyer-m160.streeter.miller.sirmick.flac1644"
+}

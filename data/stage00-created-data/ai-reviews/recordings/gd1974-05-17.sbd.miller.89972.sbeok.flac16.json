@@ -1,0 +1,85 @@
+{
+  "summary": "Crystal‑clear Charlie Miller soundboard captures a scorching 1974 show highlighted by blazing “Eyes of the World”, a transcendent “Row Jimmy” and an unforgettable China Cat > I Know You Rider transition.",
+  "review": "The May 17 1974 recording is praised for its pristine, well‑balanced board mix that only gets richer after the opening song, delivering Jerry Garcia’s guitar in immaculate detail. Musically the show shines with soaring solos on “Eyes of the World”, a heartfelt “Row Jimmy”, a monster “Playing in the Band” and arguably the best China Cat > Rider of the era, while the second‑set flow is cited as flawless despite minor first‑set mix quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Over 20 reviews overwhelmingly rate the show 4–5 stars, highlighting both stellar performance and excellent soundboard quality; only a few minor criticisms appear."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean, crisp mix with superb instrument separation; early‑song balance a bit rough and high‑end can be sharp typical of ’74 SBDs, occasional mic dropout on Truckin'."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Row Jimmy",
+      "China Cat Sunflower > I Know You Rider",
+      "Playing in the Band",
+      "Big River"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "First set starts a little thin but quickly gains momentum; second set is highlighted by seamless transitions (especially China Cat > Rider) and sustained high‑energy jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone described as clean, scorching and ‘playing his eyes out’; standout solos on Eyes, US Blues, Playing in the Band.",
+    "Phil": "Bass praised for far‑out lines and thunder‑chords into China; solid rhythmic foundation throughout.",
+    "Bob": "Generally strong rhythm/vocals; a minor lyrical slip noted on Truckin' but overall tight contribution.",
+    "Keys": "Keith’s Rhodes work shines on Row Jimmy; keyboards noted as excellent across the show.",
+    "Drums": "Bill Kreutzmann’s 1974 drumming called ‘over‑the‑top’ and fantastic, especially in jazzy PITB sections."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Big River": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "US Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T19:20:36.006425+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-05-17.sbd.miller.89972.sbeok.flac16"
+}

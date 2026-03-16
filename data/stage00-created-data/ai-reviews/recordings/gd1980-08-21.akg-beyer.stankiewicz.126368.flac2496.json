@@ -1,0 +1,56 @@
+{
+  "summary": "A solid audience recording with clear spatial depth and audible Phil, capturing a high‑energy set highlighted by Shakedown Street, The Promised Land and an epic 13‑minute Uncle John’s Band.",
+  "review": "The FOB audience tape offers surprisingly good spatial imaging and lets Phil’s bass shine through, though hand‑held mic chatter adds some distraction. Musically the show is praised for its powerful first‑set finish (Shakedown Street → The Promised Land) and a monster second set that opens with drums and features a 13‑minute plus Uncle John’s Band with a Wheel reprise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 4‑star scores, highlighting strong performance and decent recording quality; limited to two detailed reviews, giving moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Nice spatial characteristics and Phil audible; hand‑held mic picking up clapping adds annoyance. Reviewers note potential for a strong matrix when paired with the CM soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "The Promised Land",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set ends powerfully with Shakedown Street → The Promised Land; second set kicks off with drums and includes a 13‑minute Uncle John’s Band featuring a Wheel reprise, delivering high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Board mix makes Jerry overly hot; audience tape does not emphasize his guitar.",
+    "Phil": "Audible and clear in the audience recording.",
+    "Bob": "Bobby's mic noted as too hot on the soundboard reference.",
+    "Keys": "",
+    "Drums": "Drums start the second set, providing a strong launch."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T01:58:24.986840+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-08-21.akg-beyer.stankiewicz.126368.flac2496"
+}

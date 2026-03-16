@@ -1,0 +1,39 @@
+{
+  "summary": "Highly regarded tape with clear, well‑separated instruments and a standout 'Saint of Circumstance' performance.",
+  "review": "The reviewer praises this tape for its less‑tinny sound and superior instrument separation compared to another audience recording, noting only a slight right‑channel bias. The show itself receives high marks, especially the rendition of \"Saint of Circumstance,\" which the reviewer rates five stars.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Single detailed review gives a 4/5 rating for the tape and a perfect score for the highlighted song, indicating strong recording quality and an excellent performance of that track."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Less tinny than comparable source, instruments more separated; slight right‑channel bias noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Saint of Circumstance"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T03:43:48.923889+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-01.nak300.rickers.davis.105618.flac16"
+}

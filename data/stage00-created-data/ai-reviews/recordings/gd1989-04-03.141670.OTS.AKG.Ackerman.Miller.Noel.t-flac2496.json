@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent masterful show with textbook new-song renditions and a very nice recording",
+  "review": "The performance is praised as masterful, delivering near‑textbook versions of the newer material – especially highlighted by an enthusiastic “What a Stella!” comment. The recording itself is described as \"very nice,\" though no technical details are given.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "A single 5‑star review emphasizes a superb show and a pleasant recording, leading to a high rating despite the lack of detailed technical information."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls the recording \"very nice\" but offers no specifics about clarity, mix balance, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure; reviewers focus solely on overall performance quality."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:40:48.529383+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-03.141670.OTS.AKG.Ackerman.Miller.Noel.t-flac2496"
+}

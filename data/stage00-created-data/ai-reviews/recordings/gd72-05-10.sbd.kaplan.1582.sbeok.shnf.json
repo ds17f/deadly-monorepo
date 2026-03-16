@@ -1,0 +1,79 @@
+{
+  "summary": "A superb soundboard capture of the Amsterdam 5/10/72 show with crystal‑clear mix and a legendary, fire‑breathing rendition of “The Other One”.",
+  "review": "This recording delivers an excellent soundboard experience – crisp, well‑balanced and only faint tape hiss in the quiet moments. Musically the concert is highlighted by an explosive second set (Truckin' → The Other One → Me & Bobby McGee → Wharf Rat) and a powerhouse “The Other One” that many reviewers call one of the best ever. While the first set has a few rough edges, the overall performance is energetic, tight, and unmistakably one of Europe ’72’s top shows.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive reviews praise both the musical performance (especially The Other One) and the high‑quality soundboard mix; minor tape or first‑set quirks keep it just short of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with excellent instrument separation; slight tape hiss on quiet passages and occasional minor speed/tape‑speed questions noted by a few reviewers, but overall superb fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Truckin'",
+      "Bertha",
+      "Loser",
+      "He's Gone",
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Bertha (slight SQ issues)",
+      "China Cat (shaky)",
+      "Ramble On Rose (not tight)"
+    ],
+    "setlist_flow": "The first set is solid but uneven, while the second set shines with a seamless Truckin' → The Other One → Me & Bobby McGee → Wharf Rat sequence; overall pacing keeps the energy high throughout the marathon 4¼‑hour concert."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solos are repeatedly praised – emotive on El Paso, fiery throughout The Other One, and generally “perfect” or “highly expressive”.",
+    "Phil": "Phil’s bass work is called “amazing” and a key driver of the expansive jams, especially during The Other One.",
+    "Bob": "Weir receives few specific notes; occasional vocal lead on Jack Straw mentioned but otherwise not highlighted.",
+    "Keys": "Keith’s keyboards earn compliments for superb separation and contribution to the jam sections (He’s Gone, The Other One).",
+    "Drums": "The drum work is lauded for propelling the long improvisations, with particular shout‑outs during The Other One and the second‑set sequence."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Truckin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T13:42:23.062878+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-05-10.sbd.kaplan.1582.sbeok.shnf"
+}

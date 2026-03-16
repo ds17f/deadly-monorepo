@@ -1,0 +1,81 @@
+{
+  "summary": "High‑quality soundboard recording of a standout early‑1978 show, highlighted by a smoking Estimated Prophet and an epic Other One.",
+  "review": "The performance shines with a soaring Estimated Prophet, a flowing Estimated→He's Gone→Drums→Other One sequence, and strong renditions of Black Peter, Looks Like Rain and Bertha. The soundboard source is generally clear and crisp, though a few listeners note occasional static or minor glitches.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the musical performance (70% weight) combined with mostly excellent soundboard quality despite isolated glitch reports (30% weight)."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the audio near‑the‑best they’ve downloaded, crisp and clear; a handful mention slight static or minor drop‑outs but nothing that detracts significantly."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "The Other One",
+      "Black Peter",
+      "Looks Like Rain",
+      "Bertha",
+      "Cassidy"
+    ],
+    "poor_songs": [
+      "Black Peter (some find it rough)"
+    ],
+    "setlist_flow": "Reviewers note the set flows uniquely for 1978, with seamless transitions—especially Estimated→He's Gone→Drums→Other One—and a well‑balanced mix of uptempo rockers and heartfelt ballads."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is raspy from laryngitis but still fits; guitar solos on Estimated Prophet and Minglewood are described as 'smoking' and 'amped up.'",
+    "Phil": "Bass work praised – “Thunder Phil‑bombs,” picking up the pace, solid foundation throughout.",
+    "Bob": "Weir’s harmonies and backing vocals are highlighted as strong; great on Bertha and other numbers.",
+    "Keys": "Keith (or Brent) steps out a bit; keyboards are solid though not a focal point in most comments.",
+    "Drums": "The drum segment after He’s Gone is noted for its energy and tightness."
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T08:22:18.274142+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-01-17.sbd.cotsman.14555.sbeok.shnf"
+}

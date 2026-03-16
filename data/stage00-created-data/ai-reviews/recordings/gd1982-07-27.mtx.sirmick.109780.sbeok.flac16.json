@@ -1,0 +1,39 @@
+{
+  "summary": "Great matrix mix captures a smoking show, highlighted by an impressive nine‑minute Other One.",
+  "review": "Fans rave about the soaring energy of this performance, especially the extended, impressive Other One that runs over nine minutes. The matrix recording, mastered by Charlie Miller, delivers a well‑balanced sound with Jerry’s guitar prominent, though the audience can be a bit loud at times. Overall it’s a highly recommended listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (4‑5) and enthusiastic comments about both the performance (standout Other One) and the matrix recording indicate a strong show with good technical quality."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Matrix source praised for capturing the venue’s feel; mastering by Charlie Miller improves balance, Jerry is louder in mix, audience level a bit high but overall well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the show as \"smoking\" and full of energy, with no specific criticisms about pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted as louder in the mix and appreciated after mastering; his tone is praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-13T21:52:00.775027+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-07-27.mtx.sirmick.109780.sbeok.flac16"
+}

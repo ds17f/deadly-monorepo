@@ -1,0 +1,51 @@
+{
+  "summary": "Good soundboard capture featuring a unique Spoonful outro and a sweet jam between Throwing Stones and Playing in the Band.",
+  "review": "The recording is generally praised as an interesting piece of audio history, with the soundboard source delivering clear detail on Jerry Garcia’s inventive Spoonful outro. The show itself shines thanks to that improvisational moment and the flowing jam that bridges Throwing Stones into Playing in the Band.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "One reviewer rates it highly for musical moments while another gives a zero rating, leaving overall sentiment mixed; however the positive comments focus on standout jams and no technical flaws are reported, supporting a solid 4‑star assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific complaints; reviewers note it as a nice piece of audio history with clear capture of the highlighted improvisational sections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Spoonful",
+      "Throwing Stones",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its seamless jam between Throwing Stones and Playing in the Band, with the Spoonful outro standing out as a unique Garcia improvisation."
+  },
+  "band_member_comments": {
+    "Jerry": "His improvised outro after Spoonful is highlighted as an interesting and unique piece of guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T17:14:08.822390+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-03-25.sbd.miller.87731.sbeok.flac16"
+}

@@ -1,0 +1,89 @@
+{
+  "summary": "Decent audience recording captures a quirky setlist with standout Bird Song, Wharf Rat and The Weight despite uneven Truckin' energy.",
+  "review": "The show offers an unpredictable mix of songs that many fans love – the jazzy Bird Song, a rocking Wharf Rat, and a powerful encore of The Weight stand out.  While the performance is uneven (notably a lackluster Truckin'), Garcia’s octave blasts and Bruce Hornsby’s keyboard work shine through.  The audience‑recorded tape is decent, with some venue boominess but overall clear enough to enjoy the music.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Most reviewers note a solid setlist and several highlight performances, while recording quality is described as decent but not pristine; weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Decent audience tape with occasional boominess; The Weight praised for clarity, overall listenable though not high‑fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Wharf Rat",
+      "The Weight",
+      "New Speedway Boogie"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "Fans highlight an unpredictable, song‑selection‑driven flow – strong openers and a memorable encore make the set feel fresh despite some uneven energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivered thrilling octave blasts, though one reviewer lamented his poor condition on stage.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby is praised for being \"in his element\" on keyboards and vocals.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Weight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Last Time Out of Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Maggie's Farm": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T04:06:10.094619+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-03-06.nak700.gardner.9472.sbeok.shnf"
+}

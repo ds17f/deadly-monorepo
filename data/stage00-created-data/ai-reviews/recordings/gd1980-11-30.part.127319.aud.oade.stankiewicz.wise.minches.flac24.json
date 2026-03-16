@@ -1,0 +1,51 @@
+{
+  "summary": "Nice‑sounding recording of a fan‑favorite night featuring killer Scarlet Begonias, Fire on the Mountain and Jerry’s soaring guitar work.",
+  "review": "The reviewer rates this show five stars, calling it one of their favorites and praising the “nice sounding” audio. Highlights include a powerful Lost Sailor segue into a killer Scarlet Begonias and an inspired Fire on the Mountain where Jerry Garcia “kicks ass”. No technical complaints are noted, suggesting the recording is clean enough for download.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Single enthusiastic 5‑star review emphasizes strong performance and pleasant sound; limited data leads to low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the audio as ‘nice sounding’ with no specific issues such as muddiness or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Lost Sailor"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer notes a smooth progression from Lost Sailor into a killer Scarlet Begonias and then Fire on the Mountain, indicating an engaging set flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for ‘kicking ass’ on Fire on the Mountain; guitar work highlighted as stellar.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T06:31:55.820242+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-11-30.part.127319.aud.oade.stankiewicz.wise.minches.flac24"
+}

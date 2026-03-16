@@ -1,0 +1,44 @@
+{
+  "summary": "Excellent soundboard capture of a magical ’79 show with tight vocals, soaring jams and an unforgettable Uncle John > Estimated Prophet segue.",
+  "review": "Both reviewers rave about the recording’s clarity and the band’s energy, calling the performance “magical” and praising the tighter vocals and insane jams. The Mason‑Joani soundboard tape delivers a clean, immersive listening experience that lets listeners feel the excitement of the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Both reviews give 4 stars and focus on strong musical performance and good sound quality; limited number of reviews keeps confidence low."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the audio as magical, clear and wonderful, indicating a well‑balanced, clean capture despite no detailed technical commentary."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band > Estimated Prophet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is praised for its excitement and tight vocal delivery, with a particularly noted segue from Uncle John’s into the Prophet that highlights the band’s chemistry."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T03:42:30.726766+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-26.128505.naks.mason.set2.flac16"
+}

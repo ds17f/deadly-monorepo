@@ -1,0 +1,31 @@
+{
+  "summary": "Mix is nicely balanced according to reviewers, though the concert’s date and set details remain unclear.",
+  "review": "The two fans give a mixed picture: one reviewer is puzzled by the recording’s provenance (ice‑cream reference) while giving it a solid four‑star rating, and another praises the well‑balanced mix despite joking that “the Bear” might object. No specific comments on the performance or songs are provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Positive note on mixing quality offsets lack of any musical commentary; limited data (2 reviews) leads to a moderate confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Mix balance praised; no complaints about clarity, noise, or drop‑outs. No explicit source information supplied."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-26T04:52:49.707869+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1966-03-19.153760.scotton.sirmick.remaster.flac16"
+}

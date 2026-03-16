@@ -1,0 +1,65 @@
+{
+  "summary": "High‑energy Dark Star captured on a decent soundboard recording with only a faint hiss.",
+  "review": "The disc shines thanks to an extraordinary Dark Star that many reviewers call “king‑sized” and “spectacular,” backed by strong performances of Two Souls, Truckin' and BBM.  The source is a soundboard (SBD) with a slight buzz/hiss but overall clear and enjoyable listening.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, praising the Dark Star and overall playing while noting only minor hiss/buzz in the soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "A faint buzz/hiss is noted but does not detract from the clarity; overall the mix is crisp and well‑balanced for a partial SBD recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Two Souls In Communion",
+      "Truckin'",
+      "BBM"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "Not Fade Away"
+    ],
+    "setlist_flow": "Partial Set II (no Sugar Mag encore) still flows strongly; the centerpiece Dark Star leads into a tight Two Souls and solid Truckin'/BBM sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for driving the Dark Star with stellar guitar work.",
+    "Phil": "Highlighted for “going berzerk” on bass during the Dark Star, described as essential to the performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 11,
+      "negative_mentions": 0,
+      "total_mentions": 11
+    },
+    "Two Souls In Communion": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "BBM": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T12:14:18.492859+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-03-23.sbd.goodbear.137.sbefail.shnf"
+}

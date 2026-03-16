@@ -1,0 +1,60 @@
+{
+  "summary": "Solid second set with fiery China Cat and strong Believe It Or Not",
+  "blurb": "The show shines in the second set, highlighted by a scorching China Cat Sunflower solo and an inspired Believe It Or Not performance. Jerry's guitar work is front‑and‑center while Brent’s synth textures add depth. Recording quality is good overall, though low‑end response is a touch flat.",
+  "review": "On September 9 1988 at The Spectrum in Philadelphia the Dead delivered a respectable night that leans heavily on its second‑set momentum. After a decent first set, the band launches into a bright China Cat Sunflower > I Know You Rider transition, with Garcia launching a fiery solo that reviewers called \"fiery\" and \"stellar.\" The energy rolls straight through a tight Playing In The Band → Terrapin Station → Drums/Space sequence into an emphatic Believe It Or Not before closing the set with Sugar Magnolia. Brent’s synth‑laden keyboards provide extra color on China Cat, and Phil’s bass cuts through the mix more crisply than typical ’88 recordings. While the soundboard source is praised for its crisp separation, a few tracking hiccups and a slightly flat low end keep it from being flawless. Overall the performance feels solid with standout moments that make this show worth a listen, especially for fans of late‑80s Dead energy.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.9,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 17,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.3,
+      "sentiment_rationale": "Both recordings are described as 'mixed' – the soundboard version offers clear praise for China Cat and Believe It Or Not but also notes a weak Sugaree and tracking issues, while the audience tape adds no strong positives or negatives. The net sentiment is slightly positive, yielding a modest +0.3 adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.3 = 2.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd88-09-09.sbd.unknown.14840.sbeok.shnf",
+    "reason": "Good soundboard capture with crisp mix and clear highlight of China Cat Sunflower and Believe It Or Not, despite minor tracking dropouts."
+  },
+  "key_highlights": [
+    "Second set energy peaks with a scorching China Cat Sunflower solo and tight Believe It Or Not.",
+    "Jerry delivers a fiery guitar performance throughout, especially on China Cat.",
+    "Brent's synth layers add depth to the texture of the show.",
+    "Recording is clear and well‑balanced, though low‑end response is slightly flat."
+  ],
+  "song_highlights": [
+    "China Cat Sunflower",
+    "Believe It Or Not"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar work and vocals are front‑and‑center, highlighted by a fiery China Cat solo and strong presence across the set.",
+    "Phil": "Lesh’s bass cuts through with unusual crispness for ’88, providing a solid foundation especially in the second set jams.",
+    "Bob": "Weir’s rhythm playing on New Minglewood Blues and other numbers is steady and positively noted.",
+    "Brent": "Mydland’s keyboards add texture and synth depth to songs like China Cat Sunflower, enhancing the overall sound.",
+    "Mickey": "Hart helps drive the rhythmic flow, particularly during the Drums segment, keeping the groove tight.",
+    "Billy": "Kreutzmann locks in with Hart, delivering a solid backbeat throughout, especially in the high‑energy second set."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-16T13:23:42.916451+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Playing In The Band",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "I Will Take You Home",
+      "All Along The Watchtower",
+      "Believe It Or Not",
+      "Sugar Magnolia"
+    ]
+  ]
+}

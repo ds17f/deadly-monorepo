@@ -1,0 +1,84 @@
+{
+  "summary": "Great‑sounding Miller soundboard records an uneven 1971 concert with a standout Hard to Handle and Morning Dew, but a weaker first set and shaky encores.",
+  "review": "The 24‑bit Miller soundboard source is praised for its pitch‑accurate, full‑range clarity, though the older 16‑bit cut has a noticeable edit. Musically the show sits just above average for the era – the second set shines with Hard to Handle and Morning Dew while the first set feels only B‑ level and the triple encore runs thin.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is around average (≈3/5) with a few high points; recording quality is good to excellent (≈4/5). Weighted combination yields ~3.3 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "24‑bit Miller source described as great‑sounding and pitch‑accurate; 16‑bit version has a cut and misses a post‑Playin' shout, but overall clarity and completeness are high."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Me & My Uncle",
+      "Hard to Handle",
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "Alligator",
+      "Bid You Goodnight"
+    ],
+    "setlist_flow": "A long, 2+‑hour second set with a triple encore; the first set is solid but uneven (B‑), while the second set (C+) lifts the show despite weaker encores."
+  },
+  "band_member_comments": {
+    "Jerry": "Snarly tone on his first Alembic custom guitar noted on Bertha and possibly steel‑sitting on Dark Hollow; overall guitar work praised on Hard to Handle.",
+    "Phil": "Mentioned wanting a different bass approach during Sugar Magnolia; no specific performance praise or criticism.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Jam between Drums and GDtRFB described as ahead of its time, sounding like ’73 and briefly becoming Stephen."
+  },
+  "song_mentions": {
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ripple": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Alligator": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Second That Emotion": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bid You Goodnight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T06:21:51.604491+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-29.sbd.miller.105925.flac24"
+}

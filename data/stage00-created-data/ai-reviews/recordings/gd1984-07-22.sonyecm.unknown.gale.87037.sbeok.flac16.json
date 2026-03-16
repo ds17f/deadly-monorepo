@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent audience‑sourced recording of a stellar Ventura show, highlighted by a blazing second set with Morning Dew, Dancing in the Street, Midnight Hour and a rare Brent cover.",
+  "review": "The four five‑star reviews rave about this 1984 Ventura performance, calling it possibly the best of the venue’s shows and singling out the second set’s percussion/improvisation segue into Morning Dew, plus standout numbers like Dancing in the Street, Midnight Hour and a one‑off Brent rendition of I Just Want to Make Love to You. The recording sounds front‑and‑center with great clarity, though a slight bass boost would improve it further.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All reviewers gave 5 stars and praised both the musical performance (especially the second set) and the audio quality; minor bass‑boost suggestion keeps the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, front‑and‑center sound that captures the band well; reviewers note a slight need for a bass bump but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Dancing in the Street",
+      "Midnight Hour",
+      "I Just Want to Make Love to You",
+      "Not Fade Away",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set praised for seamless percussion → improvisation → Morning Dew transition and overall high energy; Garcia never left the stage between Not Fade Away and Brokedown Palace, adding to the flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s growl and guitar tone are highlighted; he stayed onstage through the Not Fade Away → Brokedown Palace transition.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent delivered a rare cover of 'I Just Want to Make Love to You', noted as a special moment.",
+    "Drums": "Percussion and improvisation segment received strong praise, indicating standout drumming."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancing in the Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Just Want to Make Love to You": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T20:58:32.396040+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-22.sonyecm.unknown.gale.87037.sbeok.flac16"
+}

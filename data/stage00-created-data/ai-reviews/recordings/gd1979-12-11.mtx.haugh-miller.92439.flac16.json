@@ -1,0 +1,39 @@
+{
+  "summary": "A near‑perfect matrix capture of an early Brent-era show, with crystal‑clear sound and nuanced playing that outweighs a merely solid performance.",
+  "review": "Both reviewers award five stars, praising the recording as an exemplary matrix source—crisp, immersive, and full of just enough crowd ambience to convey the concert vibe. While they note the show isn’t a career‑high for the Dead, they highlight the nuanced Brent-era playing, especially Bob’s fills, Phil’s booming bass, and Jerry’s extra guitar crunch and vocal squeak, with Black Peter singled out as a standout track.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong positive feedback on recording quality (excellent matrix) and solid but not legendary performance; weighted average yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the sound as crystal‑clear, balanced, with just enough crowd noise to add atmosphere; no mention of dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid early Brent-era set that showcases nuanced interplay and strong individual moments despite not being a top‑tier performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Extra crunch in his guitar tone and a noticeable squeak in his voice are highlighted.",
+    "Phil": "Massive bass 'bombs' are praised for their impact.",
+    "Bob": "His fills are called out as a highlight of the performance.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T03:34:02.953673+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-11.mtx.haugh-miller.92439.flac16"
+}

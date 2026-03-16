@@ -1,0 +1,68 @@
+{
+  "summary": "Excellent matrix recording with balanced sound and a high‑energy set featuring standout classics like Althea, Bird Song, Scarlet Begonias, Fire on the Mountain and Playing in the Band",
+  "review": "The matrix source blends audience ambience and soundboard clarity beautifully, delivering an excellent listening experience. The show is praised for its enthusiastic performances of many classic tunes, though the transitions into and out of Built to Last are noted as a bit clunky.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "The single detailed 5‑star review highlights an outstanding performance and superb matrix sound, warranting a high rating despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Well‑balanced blend of audience and soundboard; clear, present mix with no notable audio flaws mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Bird Song",
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall high energy and enthusiasm; transitions into/out of Built to Last are described as clunky but still bold, not detracting from the overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Built to Last": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T17:55:53.728028+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-06.158252.MTX.photoLeon.t-flac16"
+}

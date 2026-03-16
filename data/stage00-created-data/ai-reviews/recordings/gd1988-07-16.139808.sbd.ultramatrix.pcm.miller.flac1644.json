@@ -1,0 +1,39 @@
+{
+  "summary": "Ultra‑Matrix recording sounds nice overall but suffers left‑ear distortion during Terrapin Station.",
+  "review": "The ultra‑matrix source delivers the usual clear and balanced Dead sound, making the seed pleasant to listen to. However listeners should beware of a noticeable left‑channel distortion from about 8:20–9:00 during Terrapin Station, especially when using headphones. Aside from that issue the recording is solid.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only a single 4‑star review; reviewer praises overall sound but flags a specific distortion problem, leading to a moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear ultra‑matrix feed, but left‑ear distortion around Terrapin Station (8:20–9:00) can be harsh on headphones."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Terrapin Station"
+    ],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T11:50:06.720287+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-07-16.139808.sbd.ultramatrix.pcm.miller.flac1644"
+}

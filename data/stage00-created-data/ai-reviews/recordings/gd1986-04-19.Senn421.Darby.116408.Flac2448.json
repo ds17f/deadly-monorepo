@@ -1,0 +1,39 @@
+{
+  "summary": "Fantastic audience tape with front‑center Garcia and a soaring Egyptian‑style jam, captured in surprisingly clear sound.",
+  "review": "All three reviewers rave about the musical fire of this 1986 show – hot Garcia licks, a ten‑minute liquid climax, an exotic mid‑set jam and a standout China Doll, plus an exceptional drum segment. The audience recording, while a bit nasal, puts Jerry’s guitar up front and is praised as sounding better than many soundboard mixes.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Three consistent 5‑star reviews highlight an outstanding performance and a surprisingly good audience recording; weighting shows (70%) and recording quality (30%) yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "A bit nasal/tape‑colored but very clear on guitar and drums; reviewers note it beats many soundboard mixes and captures the venue’s size well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Long, flowing set with a liquid climax around the ten‑minute mark, followed by an Egyptian‑flavored jam deep into the second half and a superb drum segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is front‑and‑center, delivering hot licks and clear tone throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Exceptionally good drum performance highlighted by reviewers."
+  },
+  "song_mentions": {
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T15:07:42.831093+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-19.Senn421.Darby.116408.Flac2448"
+}

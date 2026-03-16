@@ -1,0 +1,87 @@
+{
+  "summary": "Crisp audience (AUD) recording of a high‑energy show highlighted by a blazing Alabama Getaway and a monster Scarlet → Fire → Samson sequence.",
+  "review": "The performance is consistently praised for its driving first set (Alabama Getaway, CC Rider) and an explosive second‑set opening that strings together Scarlet, Fire, Samson and a soaring Ship of Fools.  The audience tape is described as “crisp” and “exceptional” in sound quality, with only occasional comments about Jerry’s guitar being buried.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over two dozen reviews overwhelmingly positive about both the musical performance and the audio fidelity; minor complaints are isolated, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners note crystal‑clear, crispy sound with very little noise; one comment mentions Jerry’s guitar occasionally buried, but overall the mix is balanced and loud enough for hearing‑impaired listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama Getaway",
+      "Scarlet",
+      "Fire",
+      "Samson",
+      "Ship of Fools",
+      "Peggy-O",
+      "Cassidy",
+      "CC Rider",
+      "US Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set maintains a fast‑paced, jam‑heavy groove that carries into a second‑set opener featuring Scarlet → Fire → Samson, followed by seamless transitions into Ship of Fools and other classics, keeping the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fiery playing on Alabama Getaway and early set; one reviewer notes his guitar can be buried in the mix.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboards are highlighted as part of the jammable chemistry on Alabama Getaway.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "CC Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T07:12:35.005684+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-12-26.nak300.walker-scotton.miller.89260.sbeok.flac16"
+}

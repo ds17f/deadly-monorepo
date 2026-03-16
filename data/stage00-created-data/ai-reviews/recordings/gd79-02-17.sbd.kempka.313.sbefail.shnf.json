@@ -1,0 +1,76 @@
+{
+  "summary": "Soundboard source with fair fidelity captures a historically charged show – hot Jerry, standout Lazy Lightnin' → Supplication and a powerful first set, but the tape shows noticeable generational loss.",
+  "review": "The performance is remembered as a high‑energy send‑off for Keith and Donna, highlighted by an incendiary Lazy Lightnin' → Supplication, a soaring Greatest Story Ever Told and tight first‑set transitions.  The soundboard recording suffers from cassette‑generation hiss, occasional drop‑outs and a need for EQ/pitch correction, leaving the listening experience uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical moments (especially first‑set songs and Jerry’s guitar) while repeatedly noting poor tape quality; the blend of strong show content with a fair recording yields an overall rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Cassette‑generation source, hiss and occasional drop‑outs; several reviewers call for pitch correction/EQ.  Sound is usable but lacks the clarity of a clean soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightnin' > Supplication",
+      "Greatest Story Ever Told",
+      "Bertha > Good Lovin'",
+      "Shakedown Street",
+      "The Wheel > Shakedown Street"
+    ],
+    "poor_songs": [
+      "From the Heart of Me (Donna vocal off‑key)",
+      "Passenger (flubs)"
+    ],
+    "setlist_flow": "First set launches with high momentum and tight segues; many note a loss of steam in the second set, though some appreciate its improvisational moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly described as \"on fire\", \"hot\", \"dreamy\" and delivering scorching solos throughout the show.",
+    "Phil": "",
+    "Bob": "One reviewer mentions off‑key singing on a few tracks; otherwise not highlighted.",
+    "Keys": "Mixed – some call Keith’s piano listless or out of it, others note solid playing early in the set.  Overall consensus is lukewarm.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lazy Lightnin' > Supplication": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Bertha > Good Lovin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Wheel > Shakedown Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "From the Heart of Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-25T20:32:36.934181+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-02-17.sbd.kempka.313.sbefail.shnf"
+}

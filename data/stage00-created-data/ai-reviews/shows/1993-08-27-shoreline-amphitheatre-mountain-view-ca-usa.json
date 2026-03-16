@@ -1,0 +1,70 @@
+{
+  "summary": "Uneven Shoreline set with bright Broken Arrow and jazzy second half",
+  "blurb": "The first set drags early but picks up after Johnny B. Goode, delivering highlights like Lazy River Road, Wave To The Wind and a spirited Playing In The Band jam. Phil Lesh shines on Broken Arrow while the drums craft an adventurous Drum/Space segment. Overall energy is mixed, making the show a hit‑or‑miss listening experience.",
+  "review": "Shoreline Amphitheatre on August 27 1993 offered a night of uneven inspiration from the Dead. The early songs – Mississippi Half‑Step Uptown Toodeloo and New Minglewood Blues – never quite found their groove, and Jerry’s voice sounded strained with his guitar low in the mix. A rescue came with Lazy River Road and Broken Arrow, where Phil Lesh delivered a moving bass line that lifted the mood. The second set turned more adventurous: Wave To The Wind unfurled into an inspired Playing In The Band segue, followed by a jazzy stretch through Uncle John’s Band, Corinna and an extended Drum‑Space excursion that reviewers called “awesome”. The jam continued through I Need A Miracle, Days Between and Throwing Stones before winding down with Turn On Your Lovelight. Though the performance feels uneven overall – some songs feel sluggish while others soar – the show captures a fleeting glimpse of the band’s improvisational spirit in ’93.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.7,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 9,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.1,
+      "sentiment_rationale": "All three recordings describe the show as mixed – noting bright moments (Broken Arrow, Drum/Space, jazzy jams) alongside low energy and strained vocals. The balance of positive and negative language results in a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.1 = 2.7"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd93-08-27.sbd.wiley.9486.sbeok.shnf",
+    "reason": "Complete show despite fair tape quality; captures the full setlist and most of the highlighted moments."
+  },
+  "key_highlights": [
+    "Bright Broken Arrow performance with Phil Lesh’s moving bass line.",
+    "Adventurous Drum/Space segment praised as a high point.",
+    "Jazz‑inflected jams on Playing In The Band, Uncle John's Band, and Dark Star.",
+    "Mixed energy – early set sluggish, second set picks up momentum."
+  ],
+  "song_highlights": [
+    "Lazy River Road",
+    "Broken Arrow",
+    "Wave To The Wind",
+    "Corinna",
+    "Playing In The Band",
+    "Uncle John's Band",
+    "Dark Star"
+  ],
+  "band_performance": {
+    "Jerry": "Voice sounds strained and guitar sits low; overall playing feels off, especially later when he sounds tired.",
+    "Phil": "Delivers a moving rendition of Broken Arrow that stands out as a bright spot.",
+    "Bob": "",
+    "Vince": "Keyboard transition into Playing In The Band comes across as odd, almost like an unintended reprise.",
+    "Mickey": "Drums (with Billy) create an adventurous Drum/Space segment praised for its energy and improvisational flair.",
+    "Billy": "Shares in the strong rhythmic drive during the extended drum and space sections."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-18T16:13:40.884376+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Lazy River Road"
+    ],
+    [
+      "Broken Arrow"
+    ],
+    [
+      "Wave To The Wind",
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Corinna",
+      "Drums",
+      "Space",
+      "Jam",
+      "I Need A Miracle",
+      "Days Between",
+      "Throwing Stones",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "summary": "Mixed show with a standout Hell in a Bucket but missing Fire on the Mountain; recording quality not discussed.",
+  "review": "One reviewer notes Bob Weir’s gritty delivery during “Hell In A Bucket,” giving the performance an energetic edge, while another bemoans that this Scarlet show is the first in years without a “Fire on the Mountain.” No comments were made about the source or clarity of the recording, leaving its technical quality unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only two brief reviews: one neutral (3★) and one very negative (0★). The show is praised for a single song but criticized for the omission of a classic, and there’s no information on recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not mention sound clarity, mix balance, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hell In A Bucket"
+    ],
+    "poor_songs": [
+      "Fire on the Mountain"
+    ],
+    "setlist_flow": "No specific comments on pacing; the main critique is the absence of “Fire on the Mountain” from an otherwise typical Scarlet set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Mentioned for his gritty vocal delivery (“spitting”) during Hell In A Bucket.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hell In A Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:36:13.036542+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-22.117821.Sennheiser421.daweez.d5scott.flac16"
+}

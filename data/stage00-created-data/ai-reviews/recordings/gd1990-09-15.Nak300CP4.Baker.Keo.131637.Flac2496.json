@@ -1,0 +1,51 @@
+{
+  "summary": "High‑energy NYC show with a triumphant set featuring So Glad You Made It, Touch of Grey and a historic Bruce Hornsby debut; recording quality unspecified but listening‑friendly.",
+  "review": "Both reviewers rave about the electric atmosphere of this New York City performance, highlighting the opening Touch of Grey, the heartfelt So Glad You Made It, and the final Gimme Some Lovin' as standout moments. The show is also notable for Bruce Hornsby's first appearance with the Dead, adding a fresh keyboard texture, though no specific recording‑quality details are provided.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Enthusiastic 5‑star reviews focus on strong musical moments and historic lineup change; lack of technical commentary limits confidence, but the show merits a high rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewers mentioned sound quality, mix, or source type; assume listenable but unverified."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Glad You Made It",
+      "Touch of Grey",
+      "Gimme Some Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opening with Touch of Grey set a welcoming tone for newer fans, the energy stayed high throughout, and the show closed on an uplifting Gimme Some Lovin', reflecting NYC's knack for drawing out the band's best."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby's debut adds a fresh sound to the band.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "So Glad You Made It": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T12:17:28.290396+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-15.Nak300CP4.Baker.Keo.131637.Flac2496"
+}

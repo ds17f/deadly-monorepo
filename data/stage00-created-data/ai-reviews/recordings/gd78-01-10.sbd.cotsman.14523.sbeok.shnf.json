@@ -1,0 +1,88 @@
+{
+  "summary": "A solid soundboard capture of Jerry’s first night back from laryngitis, highlighted by a bouncy first set and a sizzling “Other One” in the second.",
+  "review": "The recording is a fairly clean sound‑board source with good instrument separation, though occasional microphone feedback squawks and a brief cut on “Around & A” remind you it isn’t flawless. Musically the band delivers an energetic show – the first set rolls strong with “Friend of the Devil,” “Cassidy,” “Music” and a rocking “Passenger,” while the second set shines on a hot “The Other One” and a lively “Franklin’s Tower.” Overall the performance is upbeat despite Jerry’s still‑recovering vocals.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers gave 4‑star ratings, praising both the musical flow and the soundboard quality; minor recording glitches keep it just shy of a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear instrument separation and strong mix; occasional mic‑feedback squawks, a brief drop‑out on “Around & A,” and overall sound not as polished as the very best SBD releases."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil",
+      "Cassidy",
+      "Music",
+      "The Other One",
+      "Franklin's Tower",
+      "Passenger",
+      "Wharf Rat",
+      "Deal"
+    ],
+    "poor_songs": [
+      "Franklin's Tower"
+    ],
+    "setlist_flow": "First set builds a buoyant momentum that peaks with “Music,” while the second set starts a bit hesitant but gains fire through “The Other One” and closes strong on “Franklin’s Tower.”"
+  },
+  "band_member_comments": {
+    "Jerry": "Back from laryngitis – vocals tentative but energetic; guitar work remains powerful.",
+    "Phil": "Bass ‘bombs’ are highlighted as a key strength of the performance.",
+    "Bob": "Adds his signature China Cat lick during the “Franklin’s” jam and contributes solid rhythm playing.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Passenger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:53:46.902777+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-01-10.sbd.cotsman.14523.sbeok.shnf"
+}

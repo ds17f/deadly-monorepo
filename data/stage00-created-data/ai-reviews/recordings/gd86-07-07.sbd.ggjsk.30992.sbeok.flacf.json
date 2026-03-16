@@ -1,0 +1,81 @@
+{
+  "summary": "Fair soundboard capture of a scorching July show with standout Box of Rain and Baby Blue > Desolation Row, but hampered by missing drum tracks and Jerry’s health issues.",
+  "review": "The recording is a decent‑quality soundboard source though listeners note occasional muffled sections and a missing drum mix for The Other One. Musically the night shines on the second set with an incendiary Baby Blue → Desolation Row sequence, a superb Box of Rain, and soaring performances of Satisfaction and Terrapin, but the overall experience is clouded by heat, crowd density and Jerry Garcia’s repeated stage exits.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "high",
+    "rationale": "Show quality averages around a solid 3‑4 (highlighted second set vs. many health/heat complaints) and recording quality is fair; weighted combination yields ~3.1 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Generally clear but with inaudible sections (Bob Dylan), missing drum track for The Other One, and overall acoustic challenges due to venue size and heat."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Baby Blue > Desolation Row",
+      "Satisfaction",
+      "Terrapin"
+    ],
+    "poor_songs": [
+      "Ramble On Rose",
+      "The Other One",
+      "Wharf Rat"
+    ],
+    "setlist_flow": "A very short, uneven first set followed by a powerful second‑set intro and an extended, high‑energy run that many fans describe as ‘hot’, though the extreme heat and Jerry’s health issues disrupted the flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly left the stage due to illness (diabetic coma) and vomited, which detracted from the performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum mix is missing for The Other One; however, guest percussionist Dillon received praise."
+  },
+  "song_mentions": {
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Satisfaction": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:27:38.320732+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-07-07.sbd.ggjsk.30992.sbeok.flacf"
+}

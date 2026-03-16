@@ -1,0 +1,96 @@
+{
+  "summary": "Clear soundboard capture of a solid early‑70s run with standout Loser, Good Lovin' and Easy Wind performances",
+  "review": "The recording is a crisp soundboard transfer that most listeners describe as clear and punchy, despite an occasional mix slip on Easy Wind. Musically the show sits in the upper‑mid tier of the run – the band is tight on rhythm guitar, the new material is coming together, and songs like Loser, Good Lovin', Easy Wind, China/Rider and Bird Song get genuine enthusiasm, while Ripple and a scrappy Truckin' are noted as weaker moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Nine detailed reviews consistently praise the recording’s clarity and the overall performance, with only minor criticisms of a few songs and a brief mix issue."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Very clear, crisp and punchy sound; occasional mix slip on Easy Wind but no major drop‑outs or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Good Lovin'",
+      "Easy Wind",
+      "China/Rider",
+      "Bird Song"
+    ],
+    "poor_songs": [
+      "Ripple",
+      "Truckin'"
+    ],
+    "setlist_flow": "First set opens strong (especially through Easy Wind) then tapers before a high‑energy close with Good Lovin'. The second set mirrors this pattern – solid China/Rider and Bird Song start, middles are average, and the show finishes on an exciting, tight Good Lovin' that lifts the whole performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tones described as gorgeous and punchy; leads especially strong on Cumberland Blues and Truckin'.",
+    "Phil": "",
+    "Bob": "Weir is front‑and‑center in the mix, delivering terrific rhythm work on Loser and Easy Wind; his playing is highlighted throughout the run.",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann settling into sole‑drummer role, “slamming” the drums; Mickey Hart’s absence noted but does not detract from the show."
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ripple": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China/Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharfrat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "King Bee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Easy Wind": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T03:02:57.770015+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-02-21.sbd.cantor-crouch-diebert-gmb.87134.sbeok.flac16"
+}

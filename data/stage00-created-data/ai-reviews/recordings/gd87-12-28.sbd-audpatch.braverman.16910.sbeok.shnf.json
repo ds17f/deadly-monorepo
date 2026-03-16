@@ -1,0 +1,128 @@
+{
+  "summary": "Good soundboard‑matrix recording with a tinny patched intro, but a strong two‑set show highlighted by Stranger, Franklin’s and a ripping Minglewood",
+  "review": "The source is essentially an SBD that uses audience patches for the first two numbers; those patches are described as thin and high‑pitched, while the rest of the board feed sounds smooth and clear. Musically the concert is praised as solid from start to finish – a fun Stranger opener, fiery Franklin’s, a ripping Minglewood, energetic China>Rider and a lively Truckin → Smokestack sequence, with many other songs noted as well‑played. Overall reviewers are enthusiastic despite the minor recording hiccup.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most detailed reviews rate the show 4–5 stars and call it a very good performance; the recording is mostly high‑quality SBD with only a short, tinny patch, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "First two tracks are audience‑patched and sound thin/high‑pitched; the remainder is clean SBD with smooth balance. No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Franklin's Tower",
+      "Minglewood",
+      "China > The Rider",
+      "Truckin' > Smokestack"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong opening with Stranger, followed by a tight first set that builds energy; second set maintains momentum with China>Rider, space improvisation and a high‑energy Truckin’ sequence, ending on solid finishes."
+  },
+  "band_member_comments": {
+    "Jerry": "Distortion pedal rips on Minglewood, slide licks trade off with Brent, nice guitar work on Sugaree and strong harmonies.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard solo on Women R praised; Brent also adds slide guitar on Masterpiece.",
+    "Drums": "Drums come in a little early during the space jam, but overall solid."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tame": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "Far From Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 0
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Women R": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:43:14.270824+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-12-28.sbd-audpatch.braverman.16910.sbeok.shnf"
+}

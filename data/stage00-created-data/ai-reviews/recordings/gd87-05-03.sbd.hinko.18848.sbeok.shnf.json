@@ -1,0 +1,98 @@
+{
+  "summary": "Fair soundboard recording of a lukewarm show – the only real highlight is a lively Little Bunny Foo Foo, while most other moments fall flat.",
+  "review": "The performance is generally unremarkable, with a short first set and a second set that never quite reaches excitement. Reviewers note a few bright spots – Brent’s vocal on Bunny Foo Foo and a decent rendition of Cassidy – but criticize sloppy playing, out‑of‑tune vocals and a patchy tape mix. The soundboard source is usable yet uneven, leaving the overall listening experience only mildly enjoyable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show low (2‑3 stars) and call out recording problems; a few positive comments about specific songs keep the rating from dropping lower."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Patchy tape, uneven mix and occasional drop‑outs. Reviewers describe it as poorly recorded, with some instruments (e.g., Bobby's guitar) too loud and overall lacking clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Little Bunny Foo Foo",
+      "Cassidy",
+      "Iko"
+    ],
+    "poor_songs": [
+      "Stranger",
+      "Loser",
+      "Truckin'",
+      "Black Peter",
+      "Throwing Stones",
+      "Quinn"
+    ],
+    "setlist_flow": "First set is short and uneventful; the second set runs longer but never builds real momentum, delivering a few decent moments amid generally flat performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Enunciates enough for a couple of funny lines but provides no memorable guitar moments.",
+    "Phil": "Largely quiet throughout the concert.",
+    "Bob": "Often out of tune and inconsistent on mic, which distracts from the music.",
+    "Keys": "Brent Mydland leads the vocal on Little Bunny Foo Foo and shines on Cassidy; otherwise his contributions are viewed as mixed.",
+    "Drums": "Drummers hit stones and are described as \"super stock\"; drums/space receive no notable commentary."
+  },
+  "song_mentions": {
+    "Little Bunny Foo Foo": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Good Times/Never Trust": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Quinn": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:16:47.781751+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-05-03.sbd.hinko.18848.sbeok.shnf"
+}

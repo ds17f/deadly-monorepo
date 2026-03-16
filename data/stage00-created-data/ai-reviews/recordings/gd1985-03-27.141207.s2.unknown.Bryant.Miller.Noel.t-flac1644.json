@@ -1,0 +1,45 @@
+{
+  "summary": "Atmospheric audience recording captures an electrifying Shakedown Street opener and a standout Uncle John’s Band, delivering a good‑quality listening experience.",
+  "review": "The audience tape conveys the raw energy of the show, with the band locking in within the first five minutes and the Long Island crowd reacting wildly. Reviewers highlight Jerry Garcia’s deft playing in the end jam and praise “Uncle John’s Band” as a high point, making this recording a solid representation of the night despite being an audience source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "One detailed 4‑star review emphasizes strong performance and enjoyable atmosphere; recording is audience‑sourced but described as atmospheric, leading to an overall good rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Atmospheric audience capture praised for its immersive feel; no specific complaints about clarity or dropouts, suggesting a listenable but typical audience‑mic quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set bursts open with an intense Shakedown Street, the band syncing quickly and the crowd responding loudly, leading into a strong mid‑set climax highlighted by Uncle John’s Band and a deft Jerry Garcia jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Deft playing noted in the end jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:09:31.253230+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-27.141207.s2.unknown.Bryant.Miller.Noel.t-flac1644"
+}

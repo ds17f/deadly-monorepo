@@ -1,0 +1,51 @@
+{
+  "summary": "High‑energy 1985 show captured on a crisp soundboard recording (a bit fast), highlighted by a rocking Alabama Getaway opener and strong organ, drums and Jerry vocals.",
+  "review": "The concert bursts with the kind of kinetic energy fans expect from ’85, featuring an upbeat Alabama Getaway starter, standout Brent organ work, solid Mickey drumming and a vocal performance where Jerry’s voice is in good shape. The soundboard source is clear and lively, though several listeners note the tape runs slightly fast, which can be corrected with pitch/tempo adjustment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate 4‑5 stars and praise both performance and sound quality; only minor complaints about speed keep the rating just below top‑tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally excellent clarity and balance, but playback appears a bit fast/high‑pitched for some listeners; minor speed correction recommended."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alabama Getaway",
+      "Minglewood Blues",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set opens with a dance‑inducing Alabama Getaway and maintains high energy throughout; some feel the band seems to be in a hurry, but overall pacing is strong."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice in good shape; a memorable cool riff at the start of an unnamed tune.",
+    "Phil": "Phil Zone vibe noted; bass work appreciated.",
+    "Bob": "",
+    "Keys": "Brent's organ playing praised as hot and excellent.",
+    "Drums": "Mickey's drumming described as excellent and energetic."
+  },
+  "song_mentions": {
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T10:41:13.787709+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-11-04.sbd.braverman.7801.sbeok.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Great recording that sounds excellent on headphones despite no specific show details",
+  "review": "The sole reviewer rates this tape five stars and calls the recording \"great,\" noting it shines when listened to with a good set of headphones. No particular songs or performance moments are mentioned, so the musical quality remains unqualified, but the technical impression is clearly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "A single 5‑star review gives a strong positive signal for the recording, but lack of detail about performance or source limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the recording as \"great\" and recommends listening on headphones, implying clear and enjoyable sound."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T07:55:50.179116+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-10.aud.Rhinotrocity7.motb-0026.95069.flac24"
+}

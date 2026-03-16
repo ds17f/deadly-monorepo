@@ -1,0 +1,69 @@
+{
+  "summary": "Crisp sound‑board capture of a spring ’77 show that shines with a monster Eyes jam, soaring Stella Blue and a benchmark Estimated→Eyes sequence.",
+  "review": "The Miller‑taped recording is exceptionally clean and bright – the kind of soundboard source that makes every guitar lick and bass thump feel present. Musically the concert is a highlight of the May‑77 run: a blistering Eyes of the World, an expansive Stella Blue, a killer Estimated→Eyes jam and stellar renditions of The Other One and Jack‑A‑Roe. Reviewers overwhelmingly praise both the performance and the audio fidelity, noting only occasional mix quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews are 5‑star, lauding both the musical performance (standout jams, tight set flow) and the technical quality (crisp soundboard source). Weighted average of show (≈4.9) and recording (≈4.7) yields ~4.8."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Super‑crispy, clean mix with excellent instrument separation; a few listeners note thin bass on small speakers and a brief drop in the mix around 2:30 of Deal, but overall superb fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Estimated > Eyes",
+      "Stella Blue",
+      "The Other One",
+      "Jack‑A‑Roe",
+      "High Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set dominates with seamless transitions (Estimated→Eyes, Eyes→Stella) and a long, hypnotic Stella Blue; overall pacing is tight and the band rides an energetic spring ’77 groove."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for incendiary guitar tone, \"mission\" vibe on Eyes, and superb soloing throughout.",
+    "Phil": "Bass tone described as beautiful and beefy; a few reviewers note his mix drops early in Deal but overall solid foundation.",
+    "Bob": "",
+    "Keys": "Keith often called “on autopilot” while Donna’s vocals are criticized as off‑pitch by several listeners; opinions on Brent vs. Keith/Donna era are split.",
+    "Drums": "Bill Kreutzmann’s interplay with Jerry highlighted as a perfect rhythmic match; Mickey’s contributions noted positively in multiple reviews."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Stella Blue": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack‑A‑Roe": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "High Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-25T01:39:15.151693+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-18.sbd.miller.79012.flac16"
+}

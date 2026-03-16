@@ -1,0 +1,58 @@
+{
+  "summary": "A vivid audience recording that captures a soaring Dark Star and an electric second‑set, with solid sound quality and a memorable show.",
+  "review": "The set‑2 bootleg delivers the excitement of the 1989 fall tour – a monster Dark Star, a tasty Attics/Playing‑in‑the‑Band sandwich and a charged crowd that still talks about it.  The audience source is clear enough to feel like you were there, and while a few critics found the performance uneven, most fans rate the show as one of the era’s highlights.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (7/9) gave 4‑5 stars and praised both the performance and the audio; recording is consistently described as good, and show highlights (Dark Star, Attics sandwich) are repeatedly lauded."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough to convey the live vibe; reviewers call it a solid AUD with no major drop‑outs or muffiness, though it isn’t described as pristine soundboard quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Attics (Playing in the Band sandwich)",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "I Will Take You Home"
+    ],
+    "setlist_flow": "The second set is the centerpiece – a long, uninterrupted Dark Star followed by a sweet Playing‑in‑the‑Band/Attics sandwich that kept the audience electrified.  The show feels like a re‑hash of the famed 10‑9‑89 set but with its own unique energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his guitar tone on Dark Star; some note vocal strain and an off‑key voice later in the tour.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Criticized for heavy midi/keyboard textures that sounded over‑processed to a few listeners.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Attics": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Will Take You Home": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:31:47.172746+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-16.fob-set2.unknown.gems.34658.sbeok.flac16"
+}

@@ -1,0 +1,97 @@
+{
+  "summary": "Good‑soundboard recording with a pleasant hiss, capturing a vibrant show highlighted by Crazy Fingers→Let It Grow and a soaring St. Stephen.",
+  "review": "The source is a soundboard tape that still carries some tape hiss and an occasional skip on St. Stephen, but it sounds fuller and clearer than the other two copies circulating. Musically the concert shines – Jerry’s lead work is spot‑on, Bob and Donna lock in tight, the drums get spacey during Let It Grow, and songs like Crazy Fingers→Let It Grow, High Time, Big River and St. Stephen are repeatedly praised by listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All seven reviewers rate the show 4‑5 stars, praising both performance and overall sound despite minor hiss and a skip; the consensus points to a strong musical showing with a good (if not pristine) recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Noticeable tape hiss typical of older SBD tapes, but clearer and fuller than other copies; one reviewer mentions a track‑damage skip late in St. Stephen."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers → Let It Grow",
+      "High Time",
+      "St. Stephen",
+      "Big River",
+      "The Music Never Stopped",
+      "Samson & Delilah",
+      "Sugar Magnolia",
+      "Stella Blue",
+      "Sunshine Daydream"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Two‑set show with a rousing first set (Big River, Crazy Fingers) and an expansive second set that strings together St. Stephen → Not Fade Away → Sugar Magnolia → Stella Blue → Sunshine Daydream, showcasing tight transitions and extended jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry’s string‑bending and “spot on” lead guitar throughout the show.",
+    "Phil": "",
+    "Bob": "Bob (and Donna) are praised for sounding tight together in the mix.",
+    "Keys": "",
+    "Drums": "The drums receive special mention for spacey, swell‑filled playing inside Let It Grow and overall strong presence."
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin' In The Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:10:39.561034+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-07-13.sbd.vernon.18480.sbeok.shnf"
+}

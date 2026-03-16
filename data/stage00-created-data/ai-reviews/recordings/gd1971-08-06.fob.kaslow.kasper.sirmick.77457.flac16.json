@@ -1,0 +1,67 @@
+{
+  "summary": "Excellent audience tape of a high‑energy 1971 show, highlighted by a scorching Hard to Handle and seamless Truckin’ → St Stephen transition.",
+  "review": "Fans rave about the electrifying performance – especially the blistering Hard to Handle, killer Truckin' segue into St. Stephen and the psychedelic Other One stretches – all captured on an surprisingly clear audience recording. The tape’s vintage lo‑fi charm adds to the excitement, and even though Jerry’s guitar was a touch out of tune at times, his playing still shines.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All reviews are 4‑5 stars with consistent praise for both the show’s energy and the surprisingly good recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners repeatedly note how “sick” and clear the tape sounds despite being a 1971 audience recording; no major complaints about drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard to Handle",
+      "Truckin'",
+      "St. Stephen",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High energy throughout with seamless transitions (e.g., Truckin' → St. Stephen, Other One → M&MU → Other One) that keep the momentum rolling."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar was noted as slightly out of tune in one spot but still delivered an incredible tone and drive.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T07:32:12.278848+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-08-06.fob.kaslow.kasper.sirmick.77457.flac16"
+}

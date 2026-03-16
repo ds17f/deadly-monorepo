@@ -1,0 +1,82 @@
+{
+  "summary": "Stellar soundboard capture of a Fall‑72 show with standout China Cat Sunflower, Playin' in the Band and a seamless Truckin’ > Other One > Sugar Magnolia sequence, despite early mix hiccups and two audience‑sourced closing tracks.",
+  "review": "The performance shines with an eclectic setlist that hits all the heavy hitters – China Cat Sunflower, Rider (sic), Playin' in the Band, He's Gone, Bird Song and a flawless Truckin’ > Other One > Sugar Magnolia medley. The Charlie Miller remaster delivers generally clear soundboard audio, though reviewers note low keyboard levels early on, monitor problems that threw the band off in the first third, and tape‑warble on the final two audience tracks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 5 stars and praise both performance and sound; only one review is strongly negative about early mix and performance issues, so overall rating stays in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall stellar sound with crisp clarity; early portion has low keyboard level and monitor problems that affect band tightness; both sets fade in on the first track; final two songs come from an audience source with noticeable tape warble."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "Playin' in the Band",
+      "He's Gone",
+      "Bird Song",
+      "Truckin'",
+      "The Other One",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "China Cat Sunflower"
+    ],
+    "setlist_flow": "Eclectic, heavy‑hitter‑filled set that builds momentum; early third suffers from monitor glitches but the second half delivers seamless segues, especially the Truckin’ > Other One > Sugar Magnolia sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Tempo on the China Cat Sunflower intro was off early in the show.",
+    "Phil": "",
+    "Bob": "Guitar tone sounded off on the China Cat Sunflower track.",
+    "Keys": "Keith's keyboards sit very low in the mix until later in the first set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:24:44.755733+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-15.133998.sbd.miller.flac16"
+}

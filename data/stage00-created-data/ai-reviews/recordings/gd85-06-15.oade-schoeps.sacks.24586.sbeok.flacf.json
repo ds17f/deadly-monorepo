@@ -1,0 +1,69 @@
+{
+  "summary": "An excellent audience recording of the 1985 Greek Theatre run captures high‑energy performances, with standout moments like a soulful “She Belongs To Me” and rocking U.S. Blues.",
+  "review": "The show is praised for its vibrant energy, tight transitions, and memorable double encore featuring Jerry’s lyrical guitar on “She Belongs To Me” followed by an impassioned “U.S. Blues.” Reviewers also highlight Phil’s thunderous bass on “I Know You Rider,” a powerful Terrapin Station, and overall superb band interplay, all captured in a surprisingly clear audience tape.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All ten reviews are strongly positive about both the performance and the audio; the show is described as high‑energy with multiple standout songs, while the audience recording is repeatedly called great, crisp, or perfect."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note crystal‑clear capture for an audience tape, with no significant dropouts; a few mention that analog tape sounds richer than digital copies, but overall the recording is praised as “perfect” and “great sound quality.”"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "She Belongs To Me",
+      "U.S. Blues",
+      "Terrapin Station",
+      "I Know You Rider",
+      "The Wheel",
+      "Gimme Some Lovin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Both sets are described as high‑energy with smooth transitions (e.g., a rock‑inspired wheel into “Gimme Some Lovin”), strong pre‑drum and post‑drum sections, and an especially effective double encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soulful guitar phrasing on “She Belongs To Me,” powerful vocal delivery on “U.S. Blues,” and consistently strong playing throughout.",
+    "Phil": "Bass highlighted as intense and low‑end on “I Know You Rider,” with comments about him testing the limits of his drivers.",
+    "Bob": "",
+    "Keys": "Keyboard solos noted as tight, inspirational and well‑meshed with other instruments.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "She Belongs To Me": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T04:48:42.321465+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-06-15.oade-schoeps.sacks.24586.sbeok.flacf"
+}

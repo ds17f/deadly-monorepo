@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent Seamons matrix capture of a stellar 1982 show featuring standout performances of Scarlet Begonias, Terrapin Station, Dupree's Diamond Blues and Stella Blue.",
+  "review": "Fans rave about the rich, well‑balanced Seamons matrix mix – crisp like a soundboard with just enough audience ambience. The concert itself is praised as one of the best of 1982, highlighted by superb Jerry vocals and guitar on Scarlet Begonias and tight playing on Terrapin Station, Dupree's Diamond Blues and Stella Blue.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All five reviews are enthusiastic; both the musical performance and the matrix recording are described as top‑notch, yielding a rating in the high‑range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, rich sound with a perfect blend of audience ambience; no reported dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Terrapin Station",
+      "Dupree's Diamond Blues",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as well‑played and tightly sequenced, delivering many personal favorites and maintaining high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals and guitar on Scarlet Begonias praised as excellent.",
+    "Phil": "",
+    "Bob": "Vocals are called awesome.",
+    "Keys": "Brent's keyboards stand out in the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T00:55:48.394247+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-11.146916.mtx.seamons.ht116.flac16"
+}

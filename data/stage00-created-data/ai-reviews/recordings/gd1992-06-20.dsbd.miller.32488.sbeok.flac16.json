@@ -1,0 +1,51 @@
+{
+  "summary": "Crystal‑clear DSBD soundboard capture of a 1992 show highlighted by an unforgettable train‑horn‑driven “Casey Jones” and solid 90s setlist.",
+  "review": "The recording delivers crisp, balanced audio that lets listeners relive the legendary train‑horn moment during Casey Jones, while the performance itself is praised for strong playing, a tight second set and memorable jams like Uncle John’s Band. Most fans rate the show highly, noting only minor personal “off” feelings but no serious musical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over ten detailed reviews overwhelmingly give 4‑5 stars, praising both the pristine soundboard recording and the energetic performance; only one 0‑star entry is non‑descriptive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners repeatedly mention a crisp, clear mix that captures the train horn and overall band sound without noticeable dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Casey Jones",
+      "Uncle John's Band",
+      "Space (A Shenandoah Lullaby ending)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is remembered for its classic early‑90s vibe, a high‑energy first set and an especially exciting second set where the train‑horn moment during Casey Jones electrified the stadium."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned briefly as “jerr would sing it”; no specific critique of his guitar work.",
+    "Phil": "",
+    "Bob": "Weir’s solo around the 13:30 mark of the post‑UJB jam is highlighted as beautiful.",
+    "Keys": "“Great sound w/mr hornsby” praises the keyboard/organ contribution (likely Vince/Welnick).",
+    "Drums": "The drum player (Mickey or Bill) generated the iconic train horn that became a focal point of the night."
+  },
+  "song_mentions": {
+    "Casey Jones": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T07:19:08.144189+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-20.dsbd.miller.32488.sbeok.flac16"
+}

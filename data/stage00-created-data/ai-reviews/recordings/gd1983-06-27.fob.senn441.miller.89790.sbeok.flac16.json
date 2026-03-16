@@ -1,0 +1,92 @@
+{
+  "summary": "Crystal‑clear audience recording captures a blistering Chicago ’83 show with a scorching Bertha opener, rippin’ Sugaree and a legendary Help‑Slip‑Franklin’s sequence.",
+  "review": "The tape is praised as one of the cleanest audience (AUD) recordings ever posted – crisp, well‑balanced and expertly transferred by Charlie Miller. Musically the concert is described as “smoking” from start to finish, with a tight first set highlighted by Bertha, Cold Rain & Snow, Sugaree and Scarlet > Fire, and an explosive second set featuring a standout Help‑Slip‑Franklin’s and extended Bird Song jams. Overall the performance is rated as exceptional despite one outlier note about occasional lyrical flubs.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Eight of nine detailed reviews give 5‑star praise for both the show and recording; only one low rating is an outlier, so the weighted average yields a near‑perfect score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean sound with a high‑quality Charlie Miller transfer; occasional minor lyrical flubs on Dupree's but overall clear mix and good balance between instruments and vocals."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Cold Rain & Snow",
+      "Sugaree",
+      "Scarlet>Fire",
+      "Help>Slip>Franklin's Tower",
+      "The Other One",
+      "Bird Song"
+    ],
+    "poor_songs": [
+      "Duprees"
+    ],
+    "setlist_flow": "First set described as refined and tight, second set rock‑filled and high‑energy; transitions (e.g., Scarlet > Fire) are praised and the Help‑Slip‑Franklin’s sequence caps a superb second half."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his blazing solos, ability to cover lyrical slips (Sugaree, Fire), and an overall stellar vocal/guitar performance.",
+    "Phil": "His bass is highlighted as loud and powerful (‘Phil Bombs’, ‘louder than loud’), driving the groove throughout.",
+    "Bob": "Praised for energetic vocals on Estimated and a strong presence after a long break; no major criticisms.",
+    "Keys": "Unique keyboard textures noted (Mutron in Duprees) and overall solid support, though no specific complaints.",
+    "Drums": "Percussion described as nice and propulsive; Bird Song’s extended jam showcases the drums well."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help>Slip>Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Duprees": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:19:09.250732+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-27.fob.senn441.miller.89790.sbeok.flac16"
+}

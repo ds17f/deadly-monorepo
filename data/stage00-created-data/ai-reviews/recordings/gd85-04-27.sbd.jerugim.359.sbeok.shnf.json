@@ -1,0 +1,77 @@
+{
+  "summary": "An excellent sound‑board capture of a 1985 show brimming with high‑energy jams – think soaring Jerry tones, flawless vocals and standout Tom Thumb > Cold Rain > Music and the classic Scarlet→Eyes transition.",
+  "review": "The performance is consistently praised for its tight playing, inspired solos and an especially electrifying second set. Reviewers rave about the pristine soundboard mix, noting crisp highs, punchy mids and a clean low‑end that lets every instrument shine. Standout moments include the Tom Thumb > Cold Rain > Music suite, Scarlet→Eyes, Wheel→Truckin' and a fiery The Other One, while only minor gripes (a sloppy slide solo in Rooster) are mentioned.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews rate the show 4‑5 stars and describe both the performance and recording as superb; weighting favors the high‑quality musical execution, yielding a rating near the top of the scale."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the mix crisp, punchy and pristine; no significant drop‑outs or muffling reported. The SBD source is described as “glinting,” “sparkling diamond” and “impeccable.”"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tom Thumb > Cold Rain > Music",
+      "Scarlet > Eyes",
+      "Wheel > Truckin'",
+      "The Other One",
+      "Dancing in the Streets",
+      "Bertha",
+      "Rooster"
+    ],
+    "poor_songs": [
+      "Rooster (Bob's slide solo considered passable)"
+    ],
+    "setlist_flow": "Reviewers note a strong, focused first set that builds into an adventurous second set with seamless transitions – especially the surprise‑filled move from Scarlet into Eyes and the high‑octane jam flow through Wheel, Truckin' and The Other One."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for “flawless” playing, rich guitar tone, fire‑like solos and a surprisingly strong vocal performance despite his later reputation.",
+    "Phil": "Described as delivering “great bass bombs,” solid improvisation and an overall tight low‑end foundation; several reviewers note his Modulus bass work.",
+    "Bob": "Mentioned for a slide solo in Rooster that was deemed only passable, but also credited with growling vocal texture on the same song.",
+    "Keys": "Brent’s keyboards receive compliments for “nice touch,” trippy bells and lingering buzzers that enhance the jams; Vince is mentioned negatively by one reviewer but not directly tied to this show.",
+    "Drums": "Bill (Mickey) are lauded for honed chops, tight interplay and an excellent Drums/Space segment that adds intensity."
+  },
+  "song_mentions": {
+    "Tom Thumb > Cold Rain > Music": {
+      "positive_mentions": 11,
+      "negative_mentions": 0,
+      "total_mentions": 11
+    },
+    "Scarlet > Eyes": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Wheel > Truckin'": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Dancing in the Streets": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rooster": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-15T04:02:38.441926+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-27.sbd.jerugim.359.sbeok.shnf"
+}

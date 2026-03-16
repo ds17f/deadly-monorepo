@@ -1,0 +1,77 @@
+{
+  "summary": "A surprisingly clear audience tape of the Summer ’95 show captures an emotional set highlighted by a soaring Visions of Johanna and strong Terrapin Station, though Jerry’s late‑night performance makes the night feel uneven.",
+  "review": "The GD‑95‑07‑08 recording is an audience (AUD) source that many listeners praise for its natural, transparent sound and full low end despite the inherent diffuseness of omnidirectional mics.  Musically the show shines on Visions of Johanna, Terrapin Station, Sugaree and a sweet Saint of Circumstance, but several reviewers note Jerry’s faltering vocals and occasional lack of focus, giving the performance an overall bittersweet feel.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "20+ reviews give a balanced picture: strong emotional highlights and decent audience recording quality offset by mixed opinions on Jerry’s late‑show form, yielding an overall rating just below the midpoint of the 5‑star scale."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Omnidirectional mics produce a natural, transparent sound with surprisingly low crowd chatter; some note a diffuse attack compared to soundboard tapes but overall the tape is praised for its full low end and enjoyable ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Visions of Johanna",
+      "Terrapin Station",
+      "Sugaree",
+      "Saint of Circumstance"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set rides a wave of nostalgia, building to an emotional peak with Visions and Terrapin.  Interspersed classics like Sugaree keep the momentum, but Jerry’s waning vocal strength in later numbers adds an uneven edge to an otherwise heartfelt performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for a moving delivery on Visions of Johanna by some listeners; others describe him as nodding, out‑of‑form and struggling with lyrics late in the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboard) noted for adding needed energy and creativity despite the show's unevenness.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Visions of Johanna": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T12:23:09.089032+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-07-08.BK401s.4362.sbeok.shnf"
+}

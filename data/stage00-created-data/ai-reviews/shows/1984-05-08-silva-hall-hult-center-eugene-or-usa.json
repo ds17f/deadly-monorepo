@@ -1,0 +1,82 @@
+{
+  "summary": "Energetic 1984 set with stellar Jack Straw, Looks Like Rain, and fiery Scarlet Begonias‑Touch",
+  "blurb": "The first set kicks off with a crisp Jack Straw and tight New Minglewood Blues, while the second set delivers a hot drums/space segment and a searing transition from Scarlet Begonias into Touch of Grey. Highlights include Looks Like Rain, Wharf Rat, The Other One and an emotional Brokedown Palace finale.",
+  "review": "May 8‑1984 finds the Dead firing on all cylinders in Eugene. The show opens with a punchy Jack Straw that showcases Jerry’s early‑night spark and Phil’s deep, pounding bass, then rolls through a tight New Minglewood Blues and a breezy Looks Like Rain. The second set is where the night truly shines: a blistering Scarlet Begonias → Touch of Grey segue ignites the crowd, the drums/space excursion builds into an intense The Other One, and Wharf Rat rides that momentum before the band bows out with a moving Brokedown Palace tribute to Ken Kesey. While some soundboard sources suffer from static and a low‑level guitar mix, the crisp matrix recording captures every nuance – from Brent’s classic ’84 keyboard textures (even if occasionally a bit loud) to Mickey and Billy’s wild percussion – making this a solid, high‑energy performance worth revisiting.\n\nOverall, the concert balances standout moments with a few rough edges in the mix. Fans who want the clearest picture of the night should gravitate toward the excellent matrix capture, but even the fair‑quality soundboard tapes convey why this show remains a memorable entry in the 1984 tour.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 34,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Six of eight recordings are explicitly positive, praising standout songs (Jack Straw, Looks Like Rain, Scarlet Begonias > Touch of Grey, The Other One) and overall band energy; two mixed reviews note occasional static but still commend the performance. Consistent praise across multiple sources warrants a strong positive adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.4 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1984-05-08.134627.mtx.seamons.ht109.flac16",
+    "reason": "Crisp matrix source with excellent balance and no drop‑outs, capturing the full set and key highlights like Looks Like Rain and the fiery Scarlet Begonias → Touch of Grey transition."
+  },
+  "key_highlights": [
+    "Jack Straw opens the night with punchy guitar and deep bass.",
+    "Scarlet Begonias flows seamlessly into Touch of Grey, delivering a fiery jam.",
+    "The second‑set drums/space segment builds into an intense The Other One and culminates with a heartfelt Brokedown Palace tribute."
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Cold Rain And Snow",
+    "New Minglewood Blues",
+    "Terrapin Station",
+    "Wharf Rat",
+    "Touch of Grey",
+    "Looks Like Rain",
+    "Scarlet Begonias",
+    "The Other One",
+    "Brokedown Palace"
+  ],
+  "band_performance": {
+    "Jerry": "Starts strong with a punchy Jack Straw solo, but his guitar sits low in the mix later; still delivers an intense, unrelenting lead during The Other One.",
+    "Phil": "Provides deep, pounding bass that drives Jack Straw and early jams; moments of less inspiration noted later in the set.",
+    "Bob": "Locks into the band’s tight groove throughout, contributing solid rhythm work without notable criticism.",
+    "Brent": "Delivers classic ’84 keyboard textures and inventive effects, though several recordings note his volume is overly high, occasionally drowning other parts.",
+    "Mickey": "Drums/space segment is described as hot and wild, a highlight of the second set.",
+    "Billy": "Shares the high‑energy percussion driving the space jam and The Other One, reinforcing the rhythmic intensity."
+  },
+  "processed_recordings": 8,
+  "processed_date": "2025-09-14T17:56:51.229743+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw"
+    ],
+    [
+      "Cold Rain And Snow"
+    ],
+    [
+      "New Minglewood Blues"
+    ],
+    [
+      "Terrapin Station",
+      "Drums*",
+      "Space",
+      "The Other One",
+      "Wharf Rat",
+      "I Need A Miracle",
+      "Morning Dew"
+    ],
+    [
+      "Scarlet Begonias",
+      "Touch of Grey"
+    ],
+    [
+      "Looks Like Rain"
+    ],
+    [
+      "Sugar Magnolia",
+      "Brokedown Palace"
+    ]
+  ]
+}

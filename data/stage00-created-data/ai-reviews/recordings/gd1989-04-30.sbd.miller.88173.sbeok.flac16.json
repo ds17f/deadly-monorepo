@@ -1,0 +1,33 @@
+{
+  "summary": "Soundboard recording of fair quality; Set 1 is solid while Set 2 collapses into a careless mess.",
+  "review": "The show captures an uneven performance – the first set is generally praised as very good, but listeners report that the second set quickly falls apart and feels like a sloppy effort. The source is a sound‑board tape, but reviewers give no specific praise for clarity, suggesting only an average listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "medium",
+    "rationale": "Mixed reviewer opinions (average 2–3 stars) and lack of positive comments about audio lead to a low‑mid rating; the show has some good moments but is marred by a weak second set."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit remarks on sound clarity; one reviewer hints at wanting a clearer SBD elsewhere, implying this tape is only average."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Second set (multiple songs)"
+    ],
+    "setlist_flow": "First set is described as very good, but the momentum breaks down early in the second set, which is called a careless mess."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T19:13:19.643830+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-30.sbd.miller.88173.sbeok.flac16"
+}

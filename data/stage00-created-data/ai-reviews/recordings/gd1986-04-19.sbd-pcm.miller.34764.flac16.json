@@ -1,0 +1,79 @@
+{
+  "summary": "Good‑enough recording captures a psychedelic 1986 gem – Crazy Fingers opens the set and feeds into a monster jam sandwich of Playing In The Band, drums, space, The Other One and China Doll.",
+  "review": "Fans rave about this April 19 1986 show as one of the band’s most trippy moments, highlighting an opening Crazy Fingers that launches a 22‑minute jam featuring Playing In The Band, intense drums/space, a soaring The Other One and an eerie China Doll.  No technical complaints are noted, suggesting the sound is clear enough to enjoy the psychedelic mood.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All four reviews are 4‑5 stars and praise the performance; no recording issues are reported, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers do not mention any sound problems, implying the audio is listenable and without major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Playing In The Band",
+      "The Other One",
+      "China Doll",
+      "Sugar Magnolia",
+      "The Mighty Quinn"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A concise 22‑minute sequence that rolls from Crazy Fingers into a jam sandwich (Playing In The Band → Drums → Space) and culminates in an intense The Other One leading to China Doll, keeping the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as being in a psychedelic mood with strong playing; his guitar work helps drive the jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum/space segment is highlighted as an intense, “jam sandwich” centerpiece."
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing In The Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Mighty Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T15:07:06.653286+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-19.sbd-pcm.miller.34764.flac16"
+}

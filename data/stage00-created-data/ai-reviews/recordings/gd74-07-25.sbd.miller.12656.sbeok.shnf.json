@@ -1,0 +1,74 @@
+{
+  "summary": "Clean soundboard capture of a solid 1974 Chicago show highlighted by a wordless Dark Star → Slipknot! jam and soaring Stella Blue.",
+  "review": "The recording is a crisp, well‑balanced soundboard (with only a faint hiss noted by a couple of reviewers) that showcases the band’s jazzy second set.  Highlights include an unusual wordless Dark Star that morphs into a fiery Slipknot! segment and a heartfelt Stella Blue, with Let It Grow and Scarlet Begonias also getting strong mentions.  Overall the performance is solid – not a classic of ’74 but definitely worth a listen for the extended jams.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show around 3‑4 stars, praising the Dark Star/Slipknot! jam and clean soundboard while noting a few minor issues (hiss, missing Me & My Uncle).  The consensus is that it’s a solid but not essential 1974 performance."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Super‑clean instrument separation and presence; a few reviewers mention slight hiss, but overall the mix is crisp and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Slipknot!",
+      "Stella Blue",
+      "Let It Grow",
+      "Scarlet Begonias",
+      "Weather Report Suite"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is solid but unremarkable; the second set shines with jazzy, wordless Dark Star that drifts into Slipknot! and melts into Stella Blue.  An unusual Ship of Fools encore gives the show a slightly down‑beat vibe, but overall the pacing feels tight."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is praised (especially on Slipknot!) and his vocal delivery on Stella Blue is described as front‑and‑center and emotionally resonant.",
+    "Phil": "Noted for sitting down during much of the second set and providing interesting, jazzy drumming interplay.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann’s drumming in Dark Star is highlighted as jazzy and engaging."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Slipknot!": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Stella Blue": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T22:58:25.072175+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-07-25.sbd.miller.12656.sbeok.shnf"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard recording of a solid 1995 show with standout performances of Loose Lucy, Visions of Johanna and Lucy in the Sky.",
+  "review": "The recording captures a well‑mixed soundboard feed with a punchy drum sound and clear overall balance. Musically the concert is praised for its tight playing and memorable moments – especially Loose Lucy, Visions of Johanna, Lucy in the Sky with Diamonds and the rare Alabama Getaway – though a few reviewers note Jerry’s vocals were a bit weary late in the set. Overall fans feel this is an enjoyable snapshot of the band’s spring‑1995 run.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight both strong musical moments and high‑quality soundboard audio; only minor vocal fatigue is mentioned, keeping the overall rating in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Well recorded with a tighter, tougher drum mix; clear and balanced throughout with no major dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loose Lucy",
+      "Visions of Johanna",
+      "Lucy In The Sky With Diamonds",
+      "Alabama Getaway",
+      "Good Morning Little School Girl"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A long, solid set that revives several classics (Alabama Getaway, Visions) and keeps the energy high early on; later in the show Jerry’s vocals show some wear but the overall flow remains engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Solid guitar work and classic vocal moments, though his voice sounds a bit tired toward the end and he steps out of the mix during the drum break.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Tougher, punchy drum sound praised; drummers interact well with Jerry during the outro."
+  },
+  "song_mentions": {
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Visions of Johanna": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lucy In The Sky With Diamonds": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Morning Little School Girl": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T07:21:13.919339+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-30.sbd.miller.119786.flac16"
+}

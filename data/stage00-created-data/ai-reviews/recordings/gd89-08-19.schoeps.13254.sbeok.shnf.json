@@ -1,0 +1,51 @@
+{
+  "summary": "Superb audience tape of a summer ’89 show with a smoking The Other One, stellar China>Rider and beautiful Uncle John’s Band solos.",
+  "review": "The recording is an outstanding audience capture – crisp stereo, wide dynamic range and a palpable sense of being in the venue. Musically the concert shines with a killer second‑set featuring a blazing The Other One and a gorgeous China Cat Sunflower → I Know You Rider, while Jerry, Brent, Phil and Bobby all deliver top‑flight performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "The majority of reviews (8 out of 9) give 4–5 stars and praise both the performance and recording; comments are consistent and detailed, indicating an exceptional show with excellent audience‑recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Great stereo image and dynamic range praised by multiple reviewers; a few note the levels could be a touch higher, but overall the tape is clear, crisp and immersive."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "China Cat Sunflower > I Know You Rider",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A classic second set with a greatest‑hits feel; the first set offers a solid mix, and the energy stays high throughout the summer ’89 tour."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as having fun, delivering beautiful, poignant solos and strong stage presence.",
+    "Phil": "Praised for stepping up with backing vocals and solid bass work.",
+    "Bob": "Bobby is noted as \"pretty much on\" throughout the performance.",
+    "Keys": "Brent receives high marks for great keyboard playing and full integration into the band.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T22:58:42.348912+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-08-19.schoeps.13254.sbeok.shnf"
+}

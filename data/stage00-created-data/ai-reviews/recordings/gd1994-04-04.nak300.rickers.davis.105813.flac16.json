@@ -1,0 +1,31 @@
+{
+  "summary": "Good performance with surprisingly clear sound despite limited review detail",
+  "review": "Both reviewers rate the show highly, noting a well‑played set and unexpectedly good audio quality. While no specific songs or band member highlights are mentioned, the recording is praised for its clarity and the performance for its minimal mistakes.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Both reviews are positive (4‑ and 5‑star) and comment on good playing and sound quality, leading to a high overall rating despite the small sample size."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer mentions 'surprisingly good sound' with no specific issues; no details on source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "First set described as solid and well‑played, with minimal mistakes noted halfway through."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T21:32:48.266529+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-04-04.nak300.rickers.davis.105813.flac16"
+}

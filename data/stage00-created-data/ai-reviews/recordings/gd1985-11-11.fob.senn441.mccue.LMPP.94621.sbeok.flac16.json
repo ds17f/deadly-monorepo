@@ -1,0 +1,80 @@
+{
+  "summary": "Snappy front‑of‑house soundboard capture of a high‑energy 1985 Meadowlands show with standout performances of Walking the Dog, Throwing Stones, Scarlet > Fire and Althea.",
+  "review": "The recording is crisp and “in‑your‑face,” delivering a solid front‑of‑house mix that lets the band’s 1985 energy shine through. Reviewers rave about the lively set—especially Walking the Dog, Throwing Stones, Scarlet > Fire, Estimated > Eyes and Althea—while noting Jerry’s strong vocals, Phil’s booming bass, and Bill rescuing a wayward tempo from Mickey.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All six reviews are 4‑5 stars and uniformly praise both the musical performance and recording quality; the show is described as a classic ’85 set with many standout moments, and the audio is called snappy and solid."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Snappy, in‑your‑face front‑of‑house mix; a few minor blips noted but overall clear and balanced. Phil’s bass “bombs” are audible; one reviewer mentions Mickey slightly off‑tempo on the intro, but Bill corrects it."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Walking the Dog",
+      "Throwing Stones",
+      "Scarlet > Fire",
+      "Estimated > Eyes",
+      "Althea",
+      "Bird Song",
+      "L.L. Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical 1985 setlist with a strong first set and an even more exciting second half; the show closed the East Coast leg of the Fall ’85 tour, feeling like a celebratory finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice is strong for ’85 and guitar playing is very good.",
+    "Phil": "Bass bombs are prominent and add power to the mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey appears slightly off‑tempo on an intro, but Bill Kreutzmann saves the groove."
+  },
+  "song_mentions": {
+    "Walking the Dog": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "L.L. Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:34:32.323685+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-11.fob.senn441.mccue.LMPP.94621.sbeok.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Soundboard master‑tape source from Steve Maizner, but no performance details are given",
+  "review": "This release is sourced from Steve Maizner’s original master tape and comes from a reel copy of that tape, indicating a soundboard‑type recording with generally good fidelity. The lone review provides no commentary on the musical performance, setlist or individual players.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "Only one brief, non‑evaluative review; recording appears to be a decent soundboard source but there is no information on show quality, so the overall rating is modest with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "From a reel copy of Maizner's master tape; likely clear but no specific comments on clarity or issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information about the performance or setlist was provided in the review."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T05:28:55.190980+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-28.sonyECM990.minches.96569.flac16"
+}

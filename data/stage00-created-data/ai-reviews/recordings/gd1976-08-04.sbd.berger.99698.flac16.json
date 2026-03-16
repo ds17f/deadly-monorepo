@@ -1,0 +1,31 @@
+{
+  "summary": "High‑quality soundboard recording of a beloved show with enthusiastic fan praise",
+  "review": "Both reviewers express strong affection for this concert, awarding four and five stars respectively. While no specific audio details are given, the .sbd designation suggests a clean soundboard source that satisfies listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Both reviews are positive and rate the show highly; lacking detailed technical feedback, we infer good soundboard quality, yielding an overall rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on audio clarity or issues; the .sbd tag implies a clean mix that listeners found satisfactory."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Not described in reviews"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T07:11:10.796526+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-08-04.sbd.berger.99698.flac16"
+}

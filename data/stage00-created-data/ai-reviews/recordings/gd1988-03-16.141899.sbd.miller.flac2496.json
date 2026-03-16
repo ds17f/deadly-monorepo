@@ -1,0 +1,51 @@
+{
+  "summary": "Soundboard recording captures a killer second set highlighted by a scorching Playin' in the Band jam, soaring Space and solid Morning Dew.",
+  "review": "The show is praised for an explosive second set where Garcia shines, especially during the massive Playin' in the Band jam that segues into Space. Morning Dew also receives kudos, and despite a few missed lyric moments the overall performance is deemed \"killer\". The recording sounds clean enough to let the musical fireworks shine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "One detailed positive review rates the show 4 stars, noting strong performance and a good‑quality soundboard source; limited sample size keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific audio complaints; reviewer focuses on performance, implying the soundboard capture is clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' in the Band",
+      "Space",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set praised for its high energy, seamless transition from Playin' in the Band into Space, and a strong finish with Morning Dew."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as 'on point' with a killer jam after Playin' in the Band.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:26:42.368908+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-16.141899.sbd.miller.flac2496"
+}

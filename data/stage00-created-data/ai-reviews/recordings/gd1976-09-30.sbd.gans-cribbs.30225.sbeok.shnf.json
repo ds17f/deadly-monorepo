@@ -1,0 +1,91 @@
+{
+  "summary": "Good‑quality soundboard capture of a solid ’76 show with standout Crazy Fingers/All Over Now and a heartfelt Morning Dew encore.",
+  "review": "The performance is widely praised for its energetic first set (Music Never Stopped, Lazy Lightening) and a laid‑back second set highlighted by Crazy Fingers → All Over Now and a soaring Morning Dew. The SBD source has noticeable level swings early on but settles into clearer mix later, especially on the ballads and the closing jam. Overall the show is considered a strong example of the 1976 era despite some recording hiccups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and cite multiple standout performances; recording issues are noted but not severe enough to outweigh the musical strengths."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Early part of set suffers from level imbalances (vocals and bass drop out, drum prominence), but later tracks are clearer with decent instrument separation; reviewers suggest a matrix would smooth remaining inconsistencies."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Music Never Stopped",
+      "Crazy Fingers",
+      "All Over Now",
+      "Lazy Lightening",
+      "St. Stephen",
+      "Morning Dew",
+      "El Paso",
+      "Peggy O'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is brisk and tight, while the second set settles into a relaxed groove that builds to an emotional Morning Dew encore; overall pacing is praised despite some early‑set sonic hiccups."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as hot and guitar work noted for strong licks (Chuck Berry style); generally positive.",
+    "Phil": "Bass percolates later in the show after initial level drops; mixed comment.",
+    "Bob": "Weir’s vocal crooning on El Paso praised; overall neutral‑positive.",
+    "Keys": "Keith's organ is prominent and well‑balanced in the mix, especially later in the set.",
+    "Drums": "Drummers are audible early on but become less distinct later; mixed remarks."
+  },
+  "song_mentions": {
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightening": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy O'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:45:58.269978+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-09-30.sbd.gans-cribbs.30225.sbeok.shnf"
+}

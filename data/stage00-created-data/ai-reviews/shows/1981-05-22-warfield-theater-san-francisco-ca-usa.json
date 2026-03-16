@@ -1,0 +1,64 @@
+{
+  "summary": "Intimate all‑acoustic set shines with Cassidy and To Lay Me Down",
+  "blurb": "The acoustic Warfield set delivers strong renditions of Cassidy, To Lay Me Down and Oh Boy. Jerry’s guitar is front‑and‑center while Brent’s piano adds sparkle; Bill and Mickey provide lively percussion. The performance feels intimate and energetic despite Phil’s absence on bass.",
+  "review": "On May 22, 1981 the Grateful Dead slipped into an all‑acoustic set at San Francisco’s Warfield Theater that feels like a private jam session. With John Kahn handling acoustic bass, Brent Mydland’s piano runs sparkle over Jerry Garcia’s bright, on‑point guitar tone, and Bill Kreutzmann and Mickey Hart lock in with crisp, “cripple”‑style percussion. Reviewers consistently point to the soaring delivery of Cassidy, the heartfelt To Lay Me Down, and an exuberant Oh Boy as the night’s highlights, while Deep Elem Blues and Bird Song also receive strong praise. Though Phil Lesh is absent, the intimate flow and energetic interplay make this acoustic detour a memorable moment in the ’81 spring tour.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 15,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "Two recordings use overtly positive language (\"shines\", \"exuberant\", \"standout\") and highlight multiple songs, while the other two are mixed but do not contain strong negative criticism. The consensus leans modestly positive, warranting a +0.5 sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 0.5 = 3.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1981-05-22.nak300.walker.scotton.miller.95938.sbeok.flac16",
+    "reason": "Despite being an audience source, it captures the full acoustic set with decent mix and clear drum/piano presence, and reviewers praise its overall balance."
+  },
+  "key_highlights": [
+    "All‑acoustic benefit set creates an intimate atmosphere.",
+    "Standout performances of Cassidy, To Lay Me Down, and Oh Boy.",
+    "Brent’s sparkling piano runs support Jerry’s bright guitar tone.",
+    "Bill Kreutzmann and Mickey Hart deliver lively, “cripple” percussion."
+  ],
+  "song_highlights": [
+    "Deep Elem Blues",
+    "Cassidy",
+    "To Lay Me Down",
+    "Bird Song",
+    "Oh Boy"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia is praised for being \"on\" with a great guitar tone and prominent mix throughout the acoustic set.",
+    "Phil": "Absent; John Kahn fills in on acoustic bass, noted as less obtrusive than Phil’s electric presence.",
+    "Bob": "",
+    "Brent": "Mydland's acoustic piano runs are highlighted as sparkling and supportive of Jerry’s playing.",
+    "Mickey": "Hart receives strong compliments for lively percussion work during the set.",
+    "Billy": "Kreutzmann is praised alongside Hart for \"great\" drum work that drives the acoustic vibe."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-13T12:19:59.051730+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Deep Elem Blues"
+    ],
+    [
+      "Cassidy"
+    ],
+    [
+      "To Lay Me Down"
+    ],
+    [
+      "Bird Song",
+      "Ripple",
+      "Drums",
+      "Oh Boy"
+    ]
+  ]
+}

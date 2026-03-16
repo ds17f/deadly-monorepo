@@ -1,0 +1,31 @@
+{
+  "summary": "Very limited feedback – reviewers give mixed impressions but provide no concrete details on sound or performance.",
+  "review": "One reviewer gave a brief, upbeat comment and a four‑star rating, while another left a zero‑star note with only a short personal remark. Neither review mentions the source type, audio clarity, setlist flow, or individual band members, leaving the recording’s technical and musical quality largely unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only two reviews with contradictory star ratings (4 and 0) and no substantive commentary; rating reflects the average of the scores and the lack of detail."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about soundboard, audience mix, clarity, or any audio issues were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information on set structure or performance quality was given."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T16:23:57.735823+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-02-21.sbd.dauria.1469.sbeok.shnf"
+}

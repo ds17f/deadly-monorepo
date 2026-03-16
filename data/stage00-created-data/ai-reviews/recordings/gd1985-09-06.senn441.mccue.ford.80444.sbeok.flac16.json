@@ -1,0 +1,39 @@
+{
+  "summary": "Phase‑flawed recording of a middling show that still delivers a nice Dark Star segment.",
+  "review": "The source suffers from a serious phase problem – the two stereo channels are 180° out of sync and one side must be inverted – but otherwise is listenable. Musically the concert is viewed as uneven, with a short first set and a second set that drifts into “mellow mediocrity,” though reviewers do single out a solid Dark Star performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is judged below average by several reviewers, while the recording is usable but marred by a phase issue; combined score lands in the low‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Channels are out of phase (180°); one side needs inversion. No other specific soundboard or audience comments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as short but well‑played; second set settles into a mellow, somewhat mediocre flow with a notable Dark Star highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Belch/intro (the \"burp\") is repeatedly attributed to Phil.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:46:01.529018+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-06.senn441.mccue.ford.80444.sbeok.flac16"
+}

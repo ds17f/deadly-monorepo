@@ -1,0 +1,45 @@
+{
+  "summary": "An outstanding audience recording of a high‑energy, fun‑fest show highlighted by a lethal Stranger > Franklin’s and a smoking Deal throughout.",
+  "review": "The tapers delivered an exceptional AUD source that sounds crystal clear, capturing every nuance of this electrifying performance. Reviewers rave about the nonstop energy, the killer Stranger > Franklin’s sequence and the classic Deal, with even the drum solo getting special mention. Overall, it’s a flawless listening experience for both Deal junkies and Deadheads alike.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All five reviews are 5‑star, praising both the musical performance (70% weight) and the superb audience recording quality (30% weight), leading to an almost perfect combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear AUD capture with exceptional clarity, no noticeable dropouts or muffiness; described as one of the best audience recordings ever."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger > Franklin's",
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy, nonstop fun‑fest with virtually no low points; the set rides a steady wave of excitement from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum solo praised as a highlight, underscoring strong percussion throughout the show."
+  },
+  "song_mentions": {
+    "Stranger > Franklin's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:35:59.470548+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-01.fob.wagner.motb-0074.92416.flac24"
+}

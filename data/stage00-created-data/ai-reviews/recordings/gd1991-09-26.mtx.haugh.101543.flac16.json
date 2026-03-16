@@ -1,0 +1,41 @@
+{
+  "summary": "Crisp matrix transfer captures a spirited 1991 show with an energetic setlist and a memorable (if debated) rendition of Brokedown Palace, though a few reviewers note uneven playing.",
+  "review": "The recording is praised for its clean, crisp sound – often called the best transfer of this concert – suggesting a high‑quality matrix source. The performance elicits mixed feelings: many fans love the energy and setlist (especially Mexicali Blues, Cumberland Blues and the much‑discussed Brokedown Palace), while others criticize certain playing (Garcia sounding “on the nod” and Hornsby’s aggressive accordion‑like piano on Brokedown). Overall the show is regarded as good to great despite some uneven moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers give high marks for sound quality and overall enjoyment, but a few note poor playing and technical file issues; the weighted average of star ratings (≈3.4) combined with strong recording praise yields a rating in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the transfer crisp, clean and superb; one complaint notes a missing VBR file for streaming, but the audio that does play is praised as high‑fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace",
+      "Mexicali Blues",
+      "Cumberland Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans highlight the excitement of the setlist and overall energy, though some feel certain moments (e.g., Garcia’s vocal) were lackluster."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia sounds a bit “on the nod” according to one reviewer; otherwise no specific comment.",
+    "Phil": "One reviewer feels Phil & Bob sound counterfeit compared with a new guitar player, indicating disappointment.",
+    "Bob": "Same as Phil – perceived lack of authenticity by a fan.",
+    "Keys": "Hornsby’s piano/accordion style on Brokedown Palace is divisive: praised as brilliant by some and called aggressive and over‑bearing by others.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T02:14:14.041138+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-26.mtx.haugh.101543.flac16"
+}

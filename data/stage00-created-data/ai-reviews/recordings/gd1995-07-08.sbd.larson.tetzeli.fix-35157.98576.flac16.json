@@ -1,0 +1,45 @@
+{
+  "summary": "A high‑energy show highlighted by a monster \"The Other One\" and a soaring Dark Star, with listeners enjoying the recording despite no detailed technical notes.",
+  "review": "Reviewers rave about the performance, especially calling out an incendiary \"The Other One\" and a powerful Dark Star. Although none of the comments address sound‑board specifics, the overall listening experience is described as enjoyable and memorable. The rainy stadium atmosphere and The Band’s opening add to the concert’s vivid vibe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All three reviews are five‑star, praising the musical performance heavily while offering no criticism of recording quality; with limited technical detail confidence is set to medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on soundboard or audience source; reviewers found the recording pleasant and worth listening to."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Enthusiastic remarks about a rain‑soaked stadium, an opening by The Band, and strong jam flow throughout the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his life, music, and emotive playing; highlighted in multiple reviews.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T12:23:50.555857+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-08.sbd.larson.tetzeli.fix-35157.98576.flac16"
+}

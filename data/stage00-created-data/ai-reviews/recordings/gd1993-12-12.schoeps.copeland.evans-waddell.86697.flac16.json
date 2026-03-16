@@ -1,0 +1,45 @@
+{
+  "summary": "Good audience‑side tape that captures the rare performances of “Nobody's Fault but Mine” and “That would be something,” recorded by Chip Copeland.",
+  "review": "The recording, made by noted taper Chip Copeland from a position in front of the board, is praised for its solid sound quality despite being an audience source. Reviewers highlight the rarity of the vocal version of “Nobody's Fault but Mine” and the unique inclusion of “That would be something,” making the show worth seeking out.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it rates the set positively (4 stars) and praises the recording quality, leading to an overall 4‑star rating but with limited data for high confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes Chip Copeland’s skillful taping in front of the board, resulting in a clear and enjoyable capture despite not being a direct soundboard feed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Nobody's Fault but Mine",
+      "That would be something"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on pacing; reviewer emphasizes the rarity and excitement of the highlighted songs."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Nobody's Fault but Mine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "That would be something": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:40:59.986294+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-12-12.schoeps.copeland.evans-waddell.86697.flac16"
+}

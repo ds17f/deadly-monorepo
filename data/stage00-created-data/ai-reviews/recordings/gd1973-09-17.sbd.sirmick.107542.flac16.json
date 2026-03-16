@@ -1,0 +1,100 @@
+{
+  "summary": "High‑quality soundboard capture of a 1973 show brimming with horn‑driven funk, standout Looks Like Rain and Weather Report Suite, and solid overall performance.",
+  "review": "Fans rave about the crystal‑clear soundboard source, noting only occasional level hiccups and missing song intros. Musically the concert shines thanks to a vibrant horn section, Keith’s Theremin on “Looks Like Rain,” a scorching Weather Report Suite, and powerful renditions of Loose Lucy, Truckin’, and Stella Blue. The overall vibe is that of a classic ’73 performance with a jazzy, funky edge.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The show receives overwhelmingly positive comments (many 5‑star reviews) and the soundboard recording is praised as clear; minor technical glitches do not outweigh the strong musical performance."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and clear with excellent balance; a few reviewers note occasional level issues, missing song beginnings, and brief “diced & sliced” artifacts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Weather Report Suite",
+      "Loose Lucy",
+      "Truckin'",
+      "Stella Blue",
+      "Sugar Magnolia",
+      "Eyes of the World",
+      "You Ain't Woman Enough",
+      "Casey Jones"
+    ],
+    "poor_songs": [
+      "Loser",
+      "Jack Straw"
+    ],
+    "setlist_flow": "The first set grooves with funk‑laden Weather Report and tight horn arrangements, while the second set leans into jazzy improvisations (e.g., Horns on Truckin' → Stella) and a memorable Theremin‑enhanced Looks Like Rain. Horns add a distinctive R&B/jazz flavor throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his vocal lead on Sugar Magnolia and strong guitar leads in the Weather Report Suite; one reviewer calls his playing “evil carnival” but overall positive.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith’s Theremin work on Looks Like Rain highlighted; occasional remarks about his stage presence (e.g., bathroom incident) but no performance criticism.",
+    "Drums": "Bill’s drumming not specifically critiqued, only mentioned in passing."
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loose Lucy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "You Ain't Woman Enough": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T17:30:41.864432+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-09-17.sbd.sirmick.107542.flac16"
+}

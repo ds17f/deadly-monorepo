@@ -1,0 +1,81 @@
+{
+  "summary": "Soundboard capture with occasional level quirks, highlighted by a smoking Dark Star → Morning Dew stretch and a superb Morning Dew performance.",
+  "review": "The show shines with space‑y jams – Dark Star flowing into an unforgettable Morning Dew, plus strong deliveries of Sugar Magnolia, Wharf Rat and a beautiful China Cat Sunflower → I Know You Rider. The soundboard source is generally clear but suffers from uneven levels (drums overpowering on Mexicali and some vocal tuning issues), which doesn’t detract much from the overall enjoyment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (4‑5 stars) and praise key performances, while recording issues are noted but not severe, leading to a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Levels uneven – drums dominate on 'Mexicali' and Donna's vocals sometimes out of tune; otherwise the soundboard mix is clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Morning Dew",
+      "Sugar Magnolia",
+      "Wharf Rat",
+      "China Cat Sunflower → I Know You Rider"
+    ],
+    "poor_songs": [
+      "China Cat Sunflower",
+      "Baby Blue"
+    ],
+    "setlist_flow": "Starts a bit slow, then gains momentum with creative jams; the second half kicks into high gear featuring spacey Dark Star, an epic Morning Dew, and energetic finishes."
+  },
+  "band_member_comments": {
+    "Jerry": "His playing on Morning Dew is described as almost too intense, driving the band to a powerful climax.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums are sometimes over‑leveled (especially on 'Mexicali'), but overall provide solid rhythmic foundation."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Mexicali": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T18:26:55.413820+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-02-24.sbd.sssb-sbe-fix.sirmick.21370.sbeok.shnf"
+}

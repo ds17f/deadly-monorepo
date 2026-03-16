@@ -1,0 +1,51 @@
+{
+  "summary": "Mixed‑quality recording of a raunchy show featuring rare electric Oh Boy and Hog for You Baby, but the sound is less than desirable.",
+  "review": "The performance is praised for its raw energy and unique moments like the only electric version of \"Oh Boy\" and the seldom‑heard \"Hog For You Baby,\" with \"Good Lovin'\" highlighted as a treat. However, reviewers note that the recording suffers from cuts, an incomplete second set, and overall sub‑par sound quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "Only one review; it rates the show as decent but the recording as poor, leading to a mid‑range overall score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Songs are slightly cut, second set incomplete, and overall sound described as less than desirable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'",
+      "Oh Boy",
+      "Hog For You Baby"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set includes rare electric Oh Boy and the only post‑1966 performance of Hog for You Baby; second set is incomplete but retains the band's raunchy energy."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Oh Boy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hog For You Baby": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T04:12:51.225211+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-06.aud.berger.100040.flac16"
+}

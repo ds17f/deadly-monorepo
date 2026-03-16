@@ -1,0 +1,98 @@
+{
+  "summary": "A clean Betty Board soundboard captures a tight Feb 19‑71 show highlighted by superb Easy Wind, Smokestack Lightning and a soaring China>Rider.",
+  "review": "The recording is praised as one of the cleanest Betty Board sources – virtually no degradation and crisp mix, with only minor pitch‑correction quirks. Musically the concert is strong despite being the first without Mickey; fans rave about Easy Wind, Smokestack Lightning, Dark Hollow and a smoking China Cat→Rider, while newer songs like Bird Song and Deal are noted as solid debuts though a few new cuts wobble.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Most reviewers award 4‑5 stars, highlighting excellent recording fidelity and strong performances; a few note minor flaws, yielding an overall high but not perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Betty Board soundboard tape is very clean with minimal degradation; reviewers mention crisp mix, slight pitch‑speed issues on some tracks and a brief cut in Bird Song, but overall the audio is clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Easy Wind",
+      "Smokestack Lightning",
+      "Dark Hollow",
+      "China Cat Sunflower > I Know You Rider",
+      "Good Lovin'",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Cumberland (wobbly)",
+      "Loser (wobbly)",
+      "Bird Song (cut in middle)"
+    ],
+    "setlist_flow": "First set sparkles with strong openings and a smoking China>Rider; second set kicks off with high energy, debuting Bird Song and Deal, then rolls through Easy Wind, Smokestack, The Other One and Wharf Rat. New material feels tentative at times, but the overall pacing is tight and the band stays cohesive despite Mickey's recent departure."
+  },
+  "band_member_comments": {
+    "Jerry": "His solos receive high praise – “beautiful” Dark Star‑era bends, soaring leads on Easy Wind and a standout solo on Know You Rider; reviewers say he outdoes himself.",
+    "Phil": "Described as melodic and solid, providing strong bass foundation throughout the show.",
+    "Bob": "Noted for funky, slashing fills that push the band forward, especially on Good Lovin' and interplay with Jerry.",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann’s drumming is called “thunder” and a driving force; Mickey’s absence is mentioned but Bill carries the rhythm well."
+  },
+  "song_mentions": {
+    "Easy Wind": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Dark Hollow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T02:49:26.935369+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-02-19.sbd.orf.1029.sbeok.shnf"
+}

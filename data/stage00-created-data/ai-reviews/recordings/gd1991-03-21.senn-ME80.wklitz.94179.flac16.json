@@ -1,0 +1,39 @@
+{
+  "summary": "Unknown source recording of fair quality capturing a memorable Stir It Up jam that still thrills listeners.",
+  "review": "The lone review is enthusiastic about the \"Stir It Up\" jam, noting how the performance feels fresh even after many years. No specifics are given about the audio source or fidelity, so the technical side remains unclear, but the positive 4‑star rating suggests a generally enjoyable listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review; reviewer gave 4 stars and highlighted a strong jam, but provides no details on recording quality, leading to moderate confidence in the rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer did not comment on soundboard vs. audience source, clarity, or mix; no technical issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stir It Up"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Review mentions a loud crowd that quieted for the jam, implying good dynamic flow around the highlighted moment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stir It Up": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:54:31.836454+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-03-21.senn-ME80.wklitz.94179.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Reviews flag incorrect date metadata; no comments on audio quality or performance",
+  "review": "Both reviewers point out that the recording’s main date and identifier are wrong, indicating a need for metadata correction. No information is provided about the soundboard source, mix clarity, setlist flow, or individual performances.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only metadata issues are mentioned; there is no substantive feedback on musical or technical quality, limiting the ability to assign a higher rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound quality, clarity, or mix; reviewers only note date/identifier errors."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about the performance or set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T09:51:54.384315+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-15.146064.schoepscmc4-mk4.gastiwirt.miller.sirmick.flac1648"
+}

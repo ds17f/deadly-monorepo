@@ -1,0 +1,84 @@
+{
+  "summary": "Crystal‑clear soundboard capture of an energetic April ’71 Pittsburgh show, highlighted by a scorching Other One, epic Lovelight segue and tight Pigpen‑driven jams.",
+  "review": "The recording is a very crisp SBD source that lets every instrument shine, though occasional tape drops and missing sections keep it from being flawless. Musically the concert is a high‑water mark for spring ’71 – Pigpen’s bluesy grit, Phil’s booming bass, and tight group interplay make the second set especially memorable with a monster Other One, a seamless New Futures > Good Times Bad Times > Lovelight sequence and fiery Truckin’/Sugar Magnolia. Overall listeners rave about the performance despite a few glitches.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and praise both the performance (standout jams, strong Pigpen, Phil, and tight group play) while noting only occasional recording glitches; the weighted average of show (70%) and recording (30%) quality lands in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Exceptionally clear, crisp SBD with vocals and instruments up close; audience barely audible. Several reviewers note tape glitches, missing sections (e.g., half of H2H, Hard to Handle) and occasional drop‑outs that prevent an 'excellent' rating."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "New Futures > Good Times Bad Times > Lovelight",
+      "Lovelight",
+      "Truckin'",
+      "Sugar Magnolia",
+      "Casey Jones",
+      "Hard to Handle (when intact)",
+      "Pigpen solo moments"
+    ],
+    "poor_songs": [
+      "Hard to Handle (cut early)",
+      "Wharf Rat (work in progress)"
+    ],
+    "setlist_flow": "First set starts a bit shaky but tightens by the second song; second set launches with Truckin' and builds into an intense Other One, seamless jams through NFA>GDTRFB>Lovellight, and finishes on high energy. The show feels like a solid, rock‑forward 1971 performance despite curfew constraints."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as fired up, crisp, and driving especially on Hard to Handle, Loser, and the Other One; vocal moments noted as occasionally loose but energetic.",
+    "Phil": "Phil’s bass is repeatedly praised – ‘in charge’, prominent in the mix, high‑gear playing that anchors the set.",
+    "Bob": "Bob Weir’s rhythm guitar gets strong kudos for tightening up, driving Hard to Handle and Johnny B. Goode; his chord work noted as a highlight.",
+    "Keys": "Keyboards are mentioned only sparsely – some reviewers note little or no keyboards audible, while others simply accept the mix without comment.",
+    "Drums": "Bill Kreutzmann’s drumming is highlighted on the Other One and Lovelight with ‘white‑hot’ intensity; overall drum work described as solid."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "New Futures > Good Times Bad Times > Lovelight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lovelight": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T04:37:57.312281+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-04-12.sbd.miller.31960.sbeok.flacf"
+}

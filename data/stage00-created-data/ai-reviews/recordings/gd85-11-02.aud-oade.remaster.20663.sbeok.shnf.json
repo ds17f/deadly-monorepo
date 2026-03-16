@@ -1,0 +1,89 @@
+{
+  "summary": "Crystal‑clear audience recording captures a soaring ’85 show highlighted by a transcendent China Doll and an out‑of‑space Morning Dew",
+  "review": "The AUD source is praised for its crisp, warm, omni‑mic ambience that really puts you on the floor of the Coliseum. Musically the concert is lauded as one of the band’s mid‑80s peaks – a snappy first set leading into a space‑laden second set where Estimated Prophet → Uncle John’s Band → China Doll and a blistering Morning Dew out of Space steal the show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive reviews (average 4.5★) praise both performance and recording; the few minor sound‑quality complaints do not outweigh the consensus."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as crisp, clear, warm and spacious with an omni‑mic that captures room vibe; a few reviewers note occasional mids/hi‑frequency harshness or minor dropouts, but overall the AUD is considered one of the best audience sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Doll",
+      "Morning Dew (Out of Space)",
+      "Estimated Prophet > Uncle John's Band > China Doll",
+      "Iko Ika",
+      "Throwing Stone",
+      "All Over Now Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as snappy and fun (Bertha, Dupree’s, etc.), while the second set builds a powerful arc with space jams, an explosive Morning Dew, and seamless transitions into the epic Estimated‑UJB‑China Doll sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone praised as perfect/screaming; vocals described as soulful despite not being his strongest period.",
+    "Phil": "Going nuts on bass with a massive “bomb” during Morning Dew that blew speakers.",
+    "Bob": "Chastised fireworks in the audience, delivered a powerful Throwing Stones and strong vocal presence.",
+    "Keys": "Brent (and earlier Keith) receive high marks – Brent’s playing on Big River is singled out as ‘ass‑off’.",
+    "Drums": "Mickey’s drums reverberated through the Coliseum; drum work into Morning Dew called “unreal”."
+  },
+  "song_mentions": {
+    "China Doll": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Morning Dew": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Ika": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Over Now Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T10:31:43.620582+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-11-02.aud-oade.remaster.20663.sbeok.shnf"
+}

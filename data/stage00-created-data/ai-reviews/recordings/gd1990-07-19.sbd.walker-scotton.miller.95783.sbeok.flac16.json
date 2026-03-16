@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a nostalgic 1990 Dead show highlighted by an all‑time great Desolation Row and standout Jack Straw/Althea performances.",
+  "review": "The recording is a clean soundboard source that presents the band in good form despite the aging noted on Jerry and Bob. Reviewers rave about this version of Desolation Row, calling it unbeatable, and also point to Jack Straw and Althea as personal highlights, making the show a fan‑favorite from the late‑80s/early‑90s era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Strong positive comments about key songs and overall performance combined with an assumed high‑quality soundboard source yield a rating well above average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "No reviewer mentioned technical flaws; the .sbd designation implies a clear, balanced mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Desolation Row",
+      "Jack Straw",
+      "Althea",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe the show as nostalgic and enjoyable, with strong moments early (Jack Straw) and a memorable closing sequence (Desolation Row, Not Fade Away)."
+  },
+  "band_member_comments": {
+    "Jerry": "Age shows on him; not his best but still enjoyable.",
+    "Phil": "",
+    "Bob": "Age shows on him as well; performance feels a bit worn.",
+    "Keys": "Brent's playing reflects the fragility of his final months.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Desolation Row": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T10:20:54.882194+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-19.sbd.walker-scotton.miller.95783.sbeok.flac16"
+}

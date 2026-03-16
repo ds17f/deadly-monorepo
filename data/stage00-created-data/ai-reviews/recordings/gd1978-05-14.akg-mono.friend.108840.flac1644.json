@@ -1,0 +1,57 @@
+{
+  "summary": "High‑energy 1978 show with a monster Half‑Step opener, deep \"Eyes\", and solid Not Fade Away; audience recording is clean and listenable though slightly distant.",
+  "review": "Reviewers rave about the performance – the killer first set highlighted by “Eyes” and “Let It Grow”, a thunderous Half‑Step opener, and an inspired second set with Not Fade Away and deep improvisations. The audience (AUD) recording is praised as cleaner than other tapes, with Phil’s bass prominent and drums having a pleasant echo, making the show very enjoyable despite a modest sense of distance from the stage.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All six reviews are enthusiastic (4‑5 stars) and cite numerous standout songs and strong playing; recording is described as clean and better than comparable audience tapes, yielding a combined high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Cleaner than other available AUD tapes; Phil’s bass sits forward in the mix, drums have a pleasant echo‑y character but feel slightly farther from the stage, overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step",
+      "Eyes",
+      "Let It Grow",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as killer with tight, energetic playing; second set flows smoothly with deep improvisations on Eyes and a powerful Not Fade Away, maintaining high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is highlighted as exceptional, compensating for a ragged voice and delivering playful, exploratory solos.",
+    "Phil": "Phil Lesh’s bass is noted as heavy/present in the mix and contributes strong rhythmic foundation.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums have a nice echo‑y quality; overall drum sound is praised despite being slightly farther from the stage."
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T12:56:46.663229+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-05-14.akg-mono.friend.108840.flac1644"
+}

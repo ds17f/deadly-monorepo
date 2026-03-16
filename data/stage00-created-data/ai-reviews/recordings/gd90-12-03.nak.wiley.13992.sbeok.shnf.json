@@ -1,0 +1,57 @@
+{
+  "summary": "Good audience recording captures a solid 1990 show with standout Estimated Prophet, Terrapin Station and an emotional Touch of Grey.",
+  "review": "The audience tape is praised as clear and surprisingly high‑quality for a coliseum AUD, letting the grand piano work of Brent/Hornsby shine through. The performance is generally solid – fans highlight powerful versions of Estimated Prophet, Terrapin Station and a heartfelt Touch of Grey, though one reviewer calls it one of the weaker 1990 shows overall.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "high",
+    "rationale": "Average star rating (≈3) combined with consistently positive comments on recording quality and several standout song performances, tempered by a few negative remarks about overall show strength."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape noted as very good/ great; clear enough to hear piano, drums and space jams despite typical coliseum ambience. No major drop‑outs or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Terrapin Station",
+      "Touch of Grey",
+      "Stander"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Setlist described as classic for the era with solid song selection; emotional high point on Touch of Grey and a notable final version of Stander, though overall performance considered uneven by at least one reviewer."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Grand piano effect praised; Bruce Hornsby’s keyboards noted as a huge addition that lifted the band.",
+    "Drums": "Sikiru Adepoju adds percussion on a drum segment; overall drumming described as solid."
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stander": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T14:48:44.693511+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-12-03.nak.wiley.13992.sbeok.shnf"
+}

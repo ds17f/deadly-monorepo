@@ -1,0 +1,31 @@
+{
+  "summary": "Average audience‑sourced recording captured with a Sennheiser 441 mic; reviewers give no specific praise for the performance.",
+  "review": "The single review notes that this tape was taken with a Sennheiser 441 microphone positioned just right of the soundboard on the aisle near Jerry’s side, indicating an audience source. No comments are made about the musical set, so the show quality cannot be judged, and the three‑star rating suggests a middling listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a neutral three‑star rating; no detailed comments on performance or sound quality, so the rating reflects an average overall impression."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Recorded with a Sennheiser 441 mic placed just right of the soundboard on the aisle; reviewer gave no explicit remarks about clarity or balance, and the overall rating is moderate."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T22:37:55.585246+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-14.164809.aud.sen441.flac2448"
+}

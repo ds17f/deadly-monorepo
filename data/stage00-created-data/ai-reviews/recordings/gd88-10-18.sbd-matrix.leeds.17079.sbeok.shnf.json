@@ -1,0 +1,82 @@
+{
+  "summary": "Fair matrix with noticeable audience bleed and clipping, but a memorable New Orleans set highlighted by Scarlet>Fire, Estimated Prophet and a soaring Other One.",
+  "review": "The recording is a mixed‑quality matrix – the audience is front‑and‑center, vocals echo and occasional clipping make it muddy at times.  The show itself captures the wild New Orleans vibe with standout moments like Scarlet into Fire, an inspired Estimated Prophet suite and a magnificent Other One, though some fans note missing Truckin' and a misplaced I Will Take You Home.  Overall the performance is energetic and unique, even if the tape isn’t pristine.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars for its energy and standout songs, while recording comments drag the technical score toward fair; weighted average yields a solid 3.7."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Too much audience in the mix, echo on vocals and organ, occasional clipping/loudness peaks, overall a bit muddy but audible."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet",
+      "Fire",
+      "Estimated Prophet",
+      "The Other One",
+      "Iko Iko",
+      "Knockin'"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "I Will Take You Home"
+    ],
+    "setlist_flow": "A quintessential New Orleans evening with the Dead jamming through a fiery Scarlet>Fire sequence, a soaring Estimated Prophet suite and an epic Other One, spiced by surprise guests (the Bangles/Nevilles) on the encores; the set feels eclectic and energetic despite a few uneven moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as mesmerizing with incisive solos, though some felt his playing wasn’t always inspirational.",
+    "Phil": "",
+    "Bob": "Vocals praised for steadying the mix but also called too heavy in places.",
+    "Keys": "Brent’s Hammond organ was noted as low in the mix and vocal/organ echo was distracting.",
+    "Drums": "General drum work mentioned positively; no specific criticism."
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Will Take You Home": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:12:47.338947+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-10-18.sbd-matrix.leeds.17079.sbeok.shnf"
+}

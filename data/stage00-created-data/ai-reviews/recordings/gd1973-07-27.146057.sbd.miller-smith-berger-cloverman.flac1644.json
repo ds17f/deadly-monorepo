@@ -1,0 +1,51 @@
+{
+  "summary": "Clear soundboard recording with pristine clarity, but the set feels more like a loose 1973 sound‑check jam than a full concert.",
+  "review": "The tape captures a bright, well‑balanced soundboard source that many listeners describe as having “pristine clarity.” However, the performance appears to be a rehearsal‑style sound check with fragmented jams and occasional pitch quirks, leaving the musical flow less defined than a typical show. Overall the recording is listenable but the concert itself feels incomplete.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "One reviewer praises the clear soundboard quality while another points to pitch distortions and a non‑concert feel; limited data (only two reviews) leads to a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and clear with “pristine” detail per the positive review, but another reviewer notes pitch distortions in Bird Song and suggests the tape may be a sound‑check rather than a full mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Big River",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set seems to consist of loose jam fragments and song snippets typical of a rehearsal or sound‑check, lacking the structured pacing of a standard concert."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir's vocal delivery is highlighted as energetic (“Weir just blazes the lyrics”).",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T15:46:54.558386+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-07-27.146057.sbd.miller-smith-berger-cloverman.flac1644"
+}

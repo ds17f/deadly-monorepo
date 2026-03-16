@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard remaster captures a superb 1987 show highlighted by an epic Desolation Row and raucous Devil With The Blue Dress On.",
+  "review": "The recording is praised for its lovely, excellent remaster quality, delivering clear soundboard audio. Fans rave about the performance, especially the soaring Desolation Row and the high‑energy Devil With The Blue Dress On/Good Golly Miss Molly medley, despite some complaints that the second set is mislabeled in the track list.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and enthusiastic comments about both the music and the remastered soundboard indicate a strong show with excellent recording quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Remaster by Charlie Miller described as 'lovely' and 'excellent'; no complaints about clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Desolation Row",
+      "Devil With The Blue Dress On",
+      "Miss Molly"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall great performance, though multiple reviewers note the second set is mislabeled, causing some confusion in navigation."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Devil With The Blue Dress On": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miss Molly": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:50:40.654035+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-10-04.sbd.walker-scotton.miller.83907.sbeok.flac16"
+}

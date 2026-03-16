@@ -1,0 +1,45 @@
+{
+  "summary": "Mixed‑quality recording of a celebrated Madison Square Garden show where Jerry’s crisp guitar and vocals shine, but the audio is poor and the Touch of Grey encore is missing.",
+  "review": "The performance is praised for an inspired setlist and Jerry Garcia’s sharp playing and strong voice, especially on Fire. Reviewers note that the recording itself is a “travesty,” with unclear source quality and audible flaws, and the Touch of Grey encore is absent from this release.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality receives high marks for setlist and Jerry’s performance (≈4.5/5), while recording quality is criticized as poor (≈2/5). Weighted combination yields ~3.4 stars."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers describe the recordings as a travesty, with inconsistent clarity and overall bad fidelity; no specific source (soundboard/audience) is identified."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans consider the setlist a dream‑wish list for early ’80s MSG shows, though the missing Touch of Grey encore disrupts the flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for crisp, sharp guitar work and fantastic vocal tone; slight crack noted during Fire.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Fire": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:57:05.531084+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-09-20.senn-wise.sacks.3151.sbeok.shnf"
+}

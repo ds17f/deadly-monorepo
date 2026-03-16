@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent front‑of‑house matrix recording captures a high‑energy Philly show highlighted by a powerful Morning Dew and classic first‑set gems like Box of Rain, Dire Wolf and Brother Esau.",
+  "review": "The concert is remembered for its electric atmosphere – a short but memorable set that peaked with an intense Morning Dew after drums and space. Reviewers rave about the crystal‑clear front‑of‑house recording and praise the strong first‑set selections, while noting the chaotic crowd incident that cut the show short.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "All five reviewers give 3–5 stars and focus on positive aspects of both performance and recording; no significant criticisms were raised."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "No technical complaints; multiple reviewers describe the recording as excellent, clear and well‑balanced (front‑of‑house Schoeps mics)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Box of Rain",
+      "Dire Wolf",
+      "Brother Esau",
+      "Lost Sailor"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set is praised as strong and fun; the show was abruptly ended after Morning Dew due to crowd violence, making it a short but memorable performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill (Mickey) was struck by a bottle, became angry and left the stage after Morning Dew."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:41:03.516342+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-24.fob.schoeps.lochner.gems.103442.flac16"
+}

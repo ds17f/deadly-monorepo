@@ -1,0 +1,68 @@
+{
+  "summary": "A rough, unbalanced sound‑board recording that still delivers a hot 10/24/70 show with standout Attics, Lovelight and high‑energy Good Lovin' performances.",
+  "review": "The SBD source is plagued by muffled, mono‑like audio and noticeable EQ problems, making the listening experience uneven.  Musically the concert shines – early‑Dead raw energy, a rare live Attics, a scorching Lovelight/Turn On Your Lovelight finale and several punchy Good Lovin' renditions keep fans enthusiastic despite the technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance (average show rating ~4.5) while consistently criticizing the recording quality (average ~2). Weighted 70 % show + 30 % recording yields a mid‑high overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Unbalanced, muffled and almost mono; needs EQ. Reviewers describe listening \"through a wall\" and note severe clarity issues despite being an SBD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Attics",
+      "Turn On Your Lovelight",
+      "Good Lovin'",
+      "Dark Star",
+      "Dancing in the Streets"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set moves from early‑Dead raw power into a strong second half anchored by Lovelight and high‑energy jams; despite some dated song choices, the band stays locked in the pocket."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Praised for engaging the crowd – confronting a heckler and giving a candid explanation of the band's fatigue at show’s end.",
+    "Bob": "",
+    "Keys": "Pigpen’s organ work and vocals were highlighted as hot, especially on Lovelight and Good Lovin'.",
+    "Drums": "Mickey Hart’s unusual cymbal/gong flourish at the end of Lovelight drew notable attention."
+  },
+  "song_mentions": {
+    "Attics": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dancing in the Streets": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T23:55:53.533855+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-10-24.sbd.hollister.103.sbeok.shnf"
+}

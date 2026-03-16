@@ -1,0 +1,85 @@
+{
+  "summary": "Audience recording of a mixed‑quality 1993 Chinese New Year show with standout Space jam and smoky Eyes→Estimated→Terrapin, but uneven sound and vocal issues.",
+  "review": "The performance features a memorable second set highlighted by the Eyes > Estimated > Terrapin sequence and a thrilling Carlos Santana‑joined Space, while the first set is described as mellow and slower. Recording quality is contested – one reviewer calls it an excellent AUD capture, another finds it low‑volume and poorly mixed, leaving the overall listening experience uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is praised for several jams and guest appearance (70% weight) but detracted by vocal problems and inconsistent energy; recording quality splits between excellent and poor (30% weight), yielding a mid‑range overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer hails it as one of the best AUD recordings, while another reports low volume, muffled mix and barely audible bass; separation between instruments is limited."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes > Estimated > Terrapin",
+      "Space (with Carlos Santana)",
+      "The Other One",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Gloria",
+      "Eyes"
+    ],
+    "setlist_flow": "Opening act of Chinese acrobats set a festive tone, the first set is described as mellow and slow, the second set builds momentum with strong Drums and a guest‑filled Space, but vocal fatigue and uneven pacing leave parts of the show feeling under‑cooked."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised by some for his tone and energy; others feel his playing meanders without direction.",
+    "Phil": "",
+    "Bob": "Multiple reviewers note a hoarse, weak vocal performance during this period.",
+    "Keys": "",
+    "Drums": "Consistently praised – the Drums segment is called strong and a highlight of the show."
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Gloria": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Drums": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:35:14.145138+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-01-26.aud.ladner.21493.sbeok.shnf"
+}

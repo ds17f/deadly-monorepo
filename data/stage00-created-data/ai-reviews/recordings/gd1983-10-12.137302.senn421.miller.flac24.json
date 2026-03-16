@@ -1,0 +1,57 @@
+{
+  "summary": "Outstanding sound captures an inspired 1983 performance highlighted by Jerry’s growls on Ramble On Rose, a surprise Steven Stills Black Queen cameo, and lively vocal moments from Bob and Brent.",
+  "review": "Both reviewers rave about the show’s high energy and inspired playing, noting standout moments such as Jerry’s gritty phrasing on “Ramble On Rose,” Bob’s relaxed banter before “U.S. Blues,” and a surprise cover of Black Queen by Steven Stills. The recording is described as outstanding with clear, excellent sound quality, making the concert enjoyable from start to finish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Reviews are uniformly positive about both performance and audio; however only two reviews are available, limiting confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer describes the sound as outstanding with no noted issues; clarity and balance appear very good."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramble On Rose",
+      "U.S. Blues",
+      "Strangers",
+      "Black Queen (Steven Stills cover)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is praised for its inspired, high‑energy playing throughout, with seamless transitions and memorable vocal moments that kept the momentum flowing."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for his little growls during “Ramble On Rose.”",
+    "Phil": "",
+    "Bob": "Sings relaxed intro before “U.S. Blues” and contributes vocals on “Strangers.”",
+    "Keys": "Brent Mydland provides vocal highlights on “Strangers.”",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Strangers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Queen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T12:07:09.169417+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-12.137302.senn421.miller.flac24"
+}

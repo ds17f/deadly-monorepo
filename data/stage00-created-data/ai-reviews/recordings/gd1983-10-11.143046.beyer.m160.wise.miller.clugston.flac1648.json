@@ -1,0 +1,68 @@
+{
+  "summary": "Crisp audience recording captures a high‑energy show highlighted by St. Stephen, Jack Straw, Birdsong and a rocking Bertha run.",
+  "review": "Both reviewers rave about the electric atmosphere of this concert, citing standout performances of St. Stephen, Jack Straw, Birdsong, Bertha and China Doll, with the second set especially “rockin.” The audience tape is praised for its surprisingly clear and full sound, making the show easy to enjoy despite being a non‑soundboard source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Two detailed, high‑scoring reviews emphasize an exceptional performance and a surprisingly clear audience recording, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the tape as amazingly crisp and full with great energy from both band and crowd; no major flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Jack Straw",
+      "Birdsong",
+      "Bertha",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set highlighted by Jack Straw and Birdsong; second set stepped up with a powerful pre‑drums run (especially Bertha) and high‑energy renditions throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil sang lead on China Doll, an unusual occurrence at the time.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Pre‑drums run described as rocking, indicating strong drum work."
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "WangDang": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T11:47:53.762201+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-11.143046.beyer.m160.wise.miller.clugston.flac1648"
+}

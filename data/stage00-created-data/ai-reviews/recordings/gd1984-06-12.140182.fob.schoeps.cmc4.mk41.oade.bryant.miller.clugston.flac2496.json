@@ -1,0 +1,51 @@
+{
+  "summary": "Exquisite audience recording that captures a dark‑and‑dynamic 1984 Red Rocks show highlighted by a soaring The Other One and a blistering Touch of Grey.",
+  "review": "The performance is praised for its heavy, fast attack—Jerry’s lead cuts sharp, Phil’s bass booms, and the drums pound with separation. Standout moments include an intense Touch of Grey out of Scarlet and a brilliant, richly textured The Other One. The Bryant audience source, transferred by Miller, delivers boundless sonic resonance that makes the show feel both raw and crystal‑clear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Both reviewers highlight a strong musical performance with multiple standout songs, and one notes an exquisite audience recording; the only lower rating is a modest 3‑star note that does not detract from overall positivity."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Bryant AUD captured and Miller transfer described as 'exquisite' and 'boundless in sonic resonance,' with clear drum separation and overall crispness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Touch of Grey",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set hits hard with energetic momentum; second set ramps up intensity, delivering a double‑parked feel that still drives the show forward."
+  },
+  "band_member_comments": {
+    "Jerry": "Fast on the attack, guitar tone highlighted as sharp and aggressive.",
+    "Phil": "Booming bass presence noted throughout the performance.",
+    "Bob": "Provides typical jangly twirling melody alongside Brent.",
+    "Keys": "Brent (keyboardist) contributes jangly melodic texture.",
+    "Drums": "Pounding drums with distinct separation, delivering a powerful rhythmic drive."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T18:11:00.698403+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-12.140182.fob.schoeps.cmc4.mk41.oade.bryant.miller.clugston.flac2496"
+}

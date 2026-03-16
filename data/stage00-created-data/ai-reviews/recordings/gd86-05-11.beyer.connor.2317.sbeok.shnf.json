@@ -1,0 +1,63 @@
+{
+  "summary": "Inspired performance highlighted by a soaring 'He's Gone' and solid setlist, but the recording source and quality are not documented.",
+  "review": "Fans describe this show as an inspired, haggard‑yet‑soulful outing with standout moments like a powerful 'He's Gone', heartfelt renditions of 'Roses', 'Comes a Time', and a fun second encore featuring 'US Blues'. Crowd chants for Phil and Brent added to the lively atmosphere. No details about the recording source or sound quality are provided in the reviews.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "The majority of reviewers praise the musical performance (average star ~4) while offering no information on recording fidelity, resulting in a solid but not exceptional overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments about sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Roses",
+      "Comes a Time",
+      "Good Times",
+      "US Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show featured enthusiastic crowd chants ('we want Phil', 'we want Brent'), a lively opener, and even a second encore, creating an upbeat and engaging flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Fans chanted 'We want Phil', highlighting his presence and bass contributions.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Times": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T15:56:09.327839+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-05-11.beyer.connor.2317.sbeok.shnf"
+}

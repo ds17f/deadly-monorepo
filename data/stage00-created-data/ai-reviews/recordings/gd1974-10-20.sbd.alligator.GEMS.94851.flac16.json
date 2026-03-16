@@ -1,0 +1,98 @@
+{
+  "summary": "Soundboard recording that’s generally clear (though bass‑drum heavy) captures a high‑energy ’74 show highlighted by China > Rider, Wharf Rat and Mississippi Half‑Step.",
+  "review": "The SBD source delivers an overall listenable and lively picture of the October‑1974 Winterland run – most listeners note crisp instrument separation but complain that the bass drum is overly forward. Musically the concert shines on the second set with a soaring China > Rider, a near‑perfect Wharf Rat and a thunderous Mississippi Half‑Step, while a few first‑set numbers (Mama Tried, Beat It On Down The Line, Brokedown) fall flat. Overall fans consider it one of the more fun ’74 shows despite occasional recording roughness.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviews are glowing about both performance and sound; only a handful mention specific flaws (bass‑drum level, some sloppy songs). The strong praise for the second set outweighs minor technical complaints."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and listenable with good instrument separation; bass drum is too loud, occasional muffiness and slight loss of sharpness noted by a few reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Rider",
+      "Wharf Rat",
+      "Mississippi Half-Step",
+      "Around & Around",
+      "Cold Rain & Snow"
+    ],
+    "poor_songs": [
+      "Mama Tried",
+      "Beat It On Down The Line",
+      "Brokedown",
+      "Johnny B. Goode"
+    ],
+    "setlist_flow": "The first set is uneven, with a few sloppy moments but recovers mid‑way; the second set is widely praised as an ecstatic, almost transcendent jam that carries the show; the third set continues the high energy though drummers lose sync toward the end."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his “eloquence,” dynamic guitar work and moments when he “perks up” the crowd.",
+    "Phil": "",
+    "Bob": "Noted singing a goofy “Gen‑e‑see, Gen‑e‑see” line during Tennessee Jed.",
+    "Keys": "Keith’s Rhodes/keyboard playing on Cold Rain & Snow is highlighted as a strong performance.",
+    "Drums": "Mickey’s guest appearance described as under‑rehearsed and slightly out of sync; bass drum level is criticized for being too loud."
+  },
+  "song_mentions": {
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Beat It On Down The Line": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Feelin' Groovy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T01:47:34.567812+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-10-20.sbd.alligator.GEMS.94851.flac16"
+}

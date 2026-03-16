@@ -1,0 +1,62 @@
+{
+  "summary": "Clear audience recording with a few track‑label glitches, highlighted by a stellar Peggy‑O and a scorching Big Railroad Blues.",
+  "review": "The tape captures an engaging fall‑’83 show – the band rolls through a rare first‑set Samson & Delilah, delivers a smoking Eyes > Women transition, and treats listeners to a standout Peggy‑O and one of the tour’s best Big Railroad Blues.  Sound quality is solid and listenable for an audience source, though combined tracks throw off later labeling.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance (Peggy‑O, Big Railroad, Eyes > Women) and find the audience recording listenable; only one review is strongly negative, leading to an overall mixed‑positive assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear and listenable overall, but several tracks are combined or mislabeled (Shakedown/Samson, Eyes/Women) causing confusion in the track list."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy O",
+      "Big Railroad Blues",
+      "Eyes > Women",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Rare first‑set Samson & Delilah and a hurried finish with a very short post‑drums section; overall flow energetic but the ending feels rushed."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for heavy guitar work on Big Railroad Blues, playing both songs in the Eyes > Women transition, and generally dominating the fall ’83 tour.",
+    "Phil": "",
+    "Bob": "Dedicates a botched Baby Blue to the Dodgers; no specific performance comments.",
+    "Keys": "",
+    "Drums": "Post‑drums section noted as unusually short, suggesting the band was in a hurry."
+  },
+  "song_mentions": {
+    "Big Railroad Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes > Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T11:14:38.145090+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-09.fob.atm11.chasingwilma.101937.sbeok.flac16"
+}

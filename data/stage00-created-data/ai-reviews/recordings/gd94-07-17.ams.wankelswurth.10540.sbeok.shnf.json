@@ -1,0 +1,88 @@
+{
+  "summary": "A fair‑quality audience tape of a mid‑90s Dead show that delivers magical moments (So Many Roads, Hell In A Bucket, Drums→Space) despite uneven playing and occasional audio hiccups.",
+  "review": "The performance is an average slice of the 1994 era – first set solid, second set a bit ragged with the Victim‑>Eyes segment noted as especially out‑of‑tune – but the crowd energy and several standout tunes (So Many Roads, Hell In A Bucket, Drums→Space, Brokedown Palace) give it lasting charm.  The recording sounds like an audience capture; it is clear enough to enjoy the highlights but suffers from muddiness and rain‑induced noise in places.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show around average (3 ★) with a few strong positives (5 ★) and negatives (2 ★).  The mix of performance praise and audio complaints leads to a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners report occasional muddiness, rain‑affected sections, and an unlistenable second‑set segment, but also note crisp details on songs like So Many Roads."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hell In A Bucket",
+      "Drums > Space",
+      "Lovelight",
+      "Brokedown Palace",
+      "So Many Roads",
+      "Just Like Tom Thumb's Blues",
+      "Black-Throated Wind",
+      "He's Gone"
+    ],
+    "poor_songs": [
+      "Victim > Eyes"
+    ],
+    "setlist_flow": "First set generally solid; second set uneven with a weak Victim‑>Eyes stretch, but the overall vibe was high thanks to crowd energy and several memorable jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as both magical (singing directly to the reviewer) and distant/tired in parts; some feel he preferred Grisman that night.",
+    "Phil": "",
+    "Bob": "Mentioned as bringing upbeat momentum while Jerry drifted slower, creating a perceived ‘battle’ between them.",
+    "Keys": "",
+    "Drums": "Drums→Space segment praised as a highlight of the show."
+  },
+  "song_mentions": {
+    "Hell In A Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums > Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "So Many Roads": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Just Like Tom Thumb's Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black-Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim > Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T23:28:07.085642+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-07-17.ams.wankelswurth.10540.sbeok.shnf"
+}

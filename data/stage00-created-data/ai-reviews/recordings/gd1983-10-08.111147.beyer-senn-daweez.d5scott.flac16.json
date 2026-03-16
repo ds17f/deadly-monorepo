@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent soundboard mix with heavy, clear bass and a killer 1983 show highlighted by Spoonful‑Wharf Rat transitions and a surprise Sugar Mag > Good Lovin' tease.",
+  "review": "The recording delivers a crisp, well‑balanced soundboard capture—especially the punchy Phil Zone‑style bass—while preserving crowd energy. The performance is praised for its expansive jams, standout moments like Spoonful into Wharf Rat and the unexpected Sugar Magnolia tease into Good Lovin', making it one of the top ’83 shows despite an odd DJ opener in set two.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "All three reviewers rate the show highly (4‑5 stars) and highlight both superb musical moments and a very clean, well‑mixed recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Very nice mix with crystal‑clear balance; bass is heavy yet undistorted (Phil Zone vibe); crowd ambience audible without muddying the instruments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Spoonful",
+      "Wharf Rat",
+      "Sugar Mag > Good Lovin'",
+      "US Blues",
+      "Playin' in the Band",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as great; second set opens with a quirky DJ bit but quickly launches into soaring jams, smooth transitions (e.g., Spoonful → Wharf Rat) and a memorable Sugar Mag tease, keeping the momentum high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's extended jam work is praised, though one reviewer notes his vocals were only halfway decent this year.",
+    "Phil": "Bass is highlighted as extremely heavy yet clean—classic Phil Zone sound.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Post‑drums segment receives a thumbs‑up for its energy."
+  },
+  "song_mentions": {
+    "Spoonful": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Mag > Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T11:02:12.809346+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-08.111147.beyer-senn-daweez.d5scott.flac16"
+}

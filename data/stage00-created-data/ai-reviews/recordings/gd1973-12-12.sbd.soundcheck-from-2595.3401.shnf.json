@@ -1,0 +1,64 @@
+{
+  "summary": "Well‑mixed soundboard capture of a rare 1973 soundcheck with stellar Jerry/Keith jams and standout Heart & Soul/Rip It Up, Peggy‑O and Blue Suede Shoes, though Jack Straw is missing.",
+  "review": "The recording offers clear, well‑balanced soundboard audio with only a faint background hiss, letting the crystal‑clear vocals shine. Musically the soundcheck shines thanks to an inspired Jerry/K​​eith noodling intro, a soaring Heart & Soul jam inside Rip It Up, and tight performances of Peggy‑O and Blue Suede Shoes, even if the expected Jack Straw tune is absent.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two enthusiastic 5‑star reviews highlight excellent performance and good sound quality; one 2‑star review notes a missing song, pulling the average down but overall the show/recording is strong."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Well‑mixed with crystal‑clear vocals and minimal background hiss; overall clear and balanced soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Heart & Soul",
+      "Rip It Up",
+      "Peggy-O",
+      "Blue Suede Shoes"
+    ],
+    "poor_songs": [
+      "Jack Straw"
+    ],
+    "setlist_flow": "A concise soundcheck that flows smoothly, opening with a festive Keith/Jerry jam and moving through rare jams and classic numbers, keeping energy high despite the missing Jack Straw."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is described as incredible, with soaring, mixolydian‑flavored runs and tight interplay with Keith.",
+    "Phil": "",
+    "Bob": "Provides strong harmony vocals (referred to as Bobby's harmony).",
+    "Keys": "Keith's percussive organ sounds are praised; his early Christmas‑tune riff with Jerry is highlighted.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Heart & Soul": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rip It Up": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blue Suede Shoes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T04:31:29.236068+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-12-12.sbd.soundcheck-from-2595.3401.shnf"
+}

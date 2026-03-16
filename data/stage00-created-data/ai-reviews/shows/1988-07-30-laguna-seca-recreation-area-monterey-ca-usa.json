@@ -1,0 +1,70 @@
+{
+  "summary": "Vibrant Laguna Seca set with strong mid‑show jams",
+  "blurb": "The show delivers a high‑energy first set that builds into an emotive second set highlighted by Victim Or The Crime and Knockin' On Heaven's Door. Jerry’s tone shines, Brent’s keyboards lock the band in, and the audience tape captures the campsite vibe.",
+  "review": "July 30, 1988 at Laguna Seca was a sun‑baked night of pure Dead magic. The first set rolls off with tight grooves on Let The Good Times Roll and Feel Like A Stranger before Jerry lights up the crowd on Victim Or The Crime, his smile audible in every note. The second set is where the band really spreads its wings – Estimated Prophet segues into a soaring Eyes Of The World that morphs through Drums and Space into an incendiary Smokestack Lightning, then rolls straight into a heartfelt Wharf Rat and a raucous encore of U.S. Blues and Knockin' On Heaven's Door. Brent’s early keyboard fills keep everything locked in, while Mickey and Bill drive the rhythm with a mix of steady pulse and occasional “cacophony of slots” that some listeners found choppy but many felt added to the live energy. The best available recording is an audience tape (gd88-07-30.nak700-reutelhuber.miller.21092.sbeok.shnf) that, despite a few drop‑outs, captures the front‑of‑house balance and the ecstatic crowd vibe better than any of the poor‑quality soundboard sources.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.5,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 28,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Two recordings praise the performance (vibrant audience tape, inspired Wharf Rat) while two criticize only recording quality. No consistent negative comments about playing, so overall sentiment is modestly positive, earning a moderate +0.8 adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.8 = 3.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd88-07-30.nak700-reutelhuber.miller.21092.sbeok.shnf",
+    "reason": "Good audience tape with crisp front‑of‑house balance, captures the heat of the campsite and highlights the standout songs despite minor drop‑outs."
+  },
+  "key_highlights": [
+    "High‑energy first set that builds into an emotive second set featuring Victim Or The Crime and Knockin' On Heaven's Door.",
+    "Estimated Prophet flows into a soaring Eyes Of The World jam before a fiery Smokestack Lightning.",
+    "Audience recording captures the Laguna Seca camping atmosphere, making the encore feel especially celebratory."
+  ],
+  "song_highlights": [
+    "Victim Or The Crime",
+    "Knockin' On Heaven's Door",
+    "Estimated Prophet",
+    "Touch of Grey",
+    "Smokestack Lightning",
+    "Wharf Rat"
+  ],
+  "band_performance": {
+    "Jerry": "Smiling and inspired, Jerry delivers standout tone on Knockin' On Heaven's Door and Victim Or The Crime, keeping the band’s energy high throughout.",
+    "Phil": "Provides a steady bass foundation; occasional playful shout‑out (“We Want Phil”) noted by fans.",
+    "Bob": "",
+    "Brent": "Early keyboard fills help lock the group in, adding texture that many listeners appreciated.",
+    "Mickey": "Drums add drive and momentum; some describe moments as choppy, but overall his playing fuels the groove.",
+    "Billy": "Shares the rhythmic backbone with Mickey, contributing to the solid, if occasionally uneven, percussive pulse."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-16T12:20:05.833953+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Victim Or The Crime"
+    ],
+    [
+      "U.S. Blues",
+      "Knockin' On Heaven's Door"
+    ],
+    [
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "Smokestack Lightning",
+      "Goin' Down The Road Feeling Bad",
+      "Wharf Rat",
+      "Throwing Stones",
+      "One More Saturday Night"
+    ],
+    [
+      "Touch of Grey"
+    ]
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Crystal‑clear FM source that outshines earlier tapes, highlighted by a blistering Playing in the Band jam, killer Slipknot tease and a fascinating Blues for Allah.",
+  "review": "The recording is praised for its clarity – reviewers note it sounds better than other pre‑FM sources with no tinny edge. Musically the show is described as “the SHIT,” featuring an explosive Playing in the Band > Drums > Playing in the Band sequence, a memorable Slipknot tease and an intriguing Blues for Allah, all driven by Garcia’s searing guitar tone.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Three detailed 5‑star reviews applaud both the performance and sound quality; one ambiguous low rating lowers confidence but does not outweigh overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear FM broadcast capture, noted as sounding better than earlier pre‑FM tapes and free of the usual tinny coloration."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Slipknot!",
+      "Blues for Allah"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy first set segues into a monster second jam; reviewers highlight powerful drumming and relentless jamming throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar tone is described as ‘bugging you out’ and a major driver of the show's intensity.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drums are lauded for being loud, clear and driving the jam forward."
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blues for Allah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T02:01:22.337314+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1975-03-23.fm.lee-smith.94026.sbeok.flac16"
+}

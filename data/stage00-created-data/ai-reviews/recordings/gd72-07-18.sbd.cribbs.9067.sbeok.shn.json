@@ -1,0 +1,89 @@
+{
+  "summary": "Soundboard recording with a few static glitches, but an unforgettable three‑set Jersey City show highlighted by a blazing Truckin' → Dark Star → Comes a Time sequence and stellar Garcia work.",
+  "review": "The performance is widely praised – the massive July ’72 stadium crowd got one of the band’s most potent jams, especially the Truckin’/Dark Star/Comes a Time suite, plus classic China Cat Sunflower, Know Your Rider and Not Fade Away into GDTRFB. The soundboard source is generally clear, though listeners note static on Truckin’, warbly tape artifacts and missing encore material that require EQ tweaks. Overall the musical payoff far outweighs the modest recording flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of reviews (15) give 4‑5 stars and rave about the show’s jams, while noting only minor audio issues; weighted scoring yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard mix, but static on Truckin', occasional warbly tape/glitchy sections (especially during Comes a Time), audible EQ adjustments needed, and the encore is missing."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin' > Dark Star > Comes a Time",
+      "China Cat Sunflower",
+      "Know Your Rider",
+      "Playing In The Band",
+      "Not Fade Away > Good Times Bad Times",
+      "Going Down"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Three‑set marathon with seamless transitions; the first set builds energy, the second delivers the epic Truckin'/Dark Star jam, and the third closes strong with Not Fade Away into GDTRFB."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is repeatedly called unstoppable, a highlight of the Dark Star and Truckin' jams; some reviewers claim it may be his finest work.",
+    "Phil": "Phil's bass is heard complaining about static in one review, but no direct performance critique.",
+    "Bob": "Bobby's vocals are praised as sublime alongside Garcia’s playing.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Know Your Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Times Bad Times": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Going Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sing Me Back Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T15:19:30.167879+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-07-18.sbd.cribbs.9067.sbeok.shn"
+}

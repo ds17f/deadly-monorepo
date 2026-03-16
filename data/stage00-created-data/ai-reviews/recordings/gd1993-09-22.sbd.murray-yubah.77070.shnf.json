@@ -1,0 +1,80 @@
+{
+  "summary": "Crystal‑clear soundboard captures a stellar ’93 show highlighted by a soaring Help>Slip>Franklin, juicy Wharf Rat and the only Dark Star of the tour.",
+  "review": "The recording is an excellent soundboard capture – balanced, crystal clear and far superior to earlier tapes. Musically the concert shines with standout moments such as Help → Slipknot → Franklin’s Tower, a long jazzy Estimated that morphs into a tasteful Dark Star, plus tight Easy Answers, Lazy River Road, Birdsong and an inspired Wharf Rat. Jerry Garcia’s playing is crisp and surprisingly strong for 1993, while Vince’s keyboards echo Keith’s vibe and the sax adds extra flavor.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All three reviews are 5‑star, praising both the musical performance and the recording quality; the show is described as outstanding with multiple highlight songs, and the soundboard is called crystal clear."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear, balanced mix; reviewers note it improves on earlier versions and only a matrix could be marginally better."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Dark Star",
+      "Estimated",
+      "Wharf Rat",
+      "Easy Answers",
+      "Lazy River Road",
+      "Birdsong"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set opens with a relaxed yet focused groove (Easy Answers, Lazy River Road) that builds into a jazzy middle (Estimated, Birdsong) and finishes energetically with Wharf Rat."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is crisp and his playing surprisingly strong for ’93, even surpassing some late‑80s shows.",
+    "Phil": "",
+    "Bob": "Vocals are restrained; Bobby avoids over‑theatrical delivery, which the reviewer appreciates.",
+    "Keys": "Vince’s keyboards echo Keith's style, adding a subtle but notable texture.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Easy Answers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:30:22.478542+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-22.sbd.murray-yubah.77070.shnf"
+}

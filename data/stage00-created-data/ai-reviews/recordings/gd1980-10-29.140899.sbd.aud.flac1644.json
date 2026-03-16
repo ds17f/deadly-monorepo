@@ -1,0 +1,146 @@
+{
+  "summary": "Fair‑quality soundboard recording of a mixed show – solid third set with China Cat Sunflower, Estimated Prophet and Terrapin highlights despite pitch/hiss issues.",
+  "review": "The composite SBD source is usable but suffers from pitch errors, hiss and a sped‑up third set, making the audio only fair. Musically the concert is uneven: an average acoustic first set and middling second set give way to a thrilling third set featuring China Cat Sunflower → I Know You Rider → Estimated Prophet → Terrapin Station.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is strong in the third set but weak overall; recording issues lower enjoyment, yielding a rating just above average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Most sources have pitch errors and hiss; best composite (140899_sbd_aud) is re‑pitched for sets 1–2 but the third set runs at a sped tempo. Several edits cut verses and solos, and some crowd chatter remains."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ripple",
+      "China Cat Sunflower",
+      "I Know You Rider",
+      "Estimated Prophet",
+      "Terrapin Station"
+    ],
+    "poor_songs": [
+      "Race Is On",
+      "Black Peter"
+    ],
+    "setlist_flow": "Three‑set show: an average acoustic first set, a middling second set with decent but unremarkable material, and a high‑energy third set that builds a memorable sequence from China Cat Sunflower through Terrapin Station."
+  },
+  "band_member_comments": {
+    "Jerry": "Provides humorous banter (teasing Bobby’s mistake, Peggy O), but no specific praise of his guitar work.",
+    "Phil": "Praised for a great performance on Estimated Prophet and solid playing throughout the third set.",
+    "Bob": "Noted for good contributions – Bobby leads Spring Song, delivers strong solo in Estimated Prophet, and adds slide practice flair.",
+    "Keys": "Brent Mydland’s solos are highlighted as strong; his keyboard work receives positive remarks.",
+    "Drums": "Bill’s shoe‑changing anecdote noted; both drummers stay out for Space, no performance critique."
+  },
+  "song_mentions": {
+    "Must've Been Roses": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Race Is On": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spring Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Heaven Help the Fool": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T05:37:51.154997+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-29.140899.sbd.aud.flac1644"
+}

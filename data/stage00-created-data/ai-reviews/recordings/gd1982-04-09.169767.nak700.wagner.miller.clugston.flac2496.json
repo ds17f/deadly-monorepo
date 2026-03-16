@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent front‑of‑house style recording capturing a hot second‑set opener and a phenomenal Space > The Other One",
+  "review": "The reviewer, who attended the concert, raves that the tape sounds like you’re standing right at the front of house – clear and immersive. They highlight an unusually fiery MSWS opening set 2 and a space‑to‑Other One sequence that was “truly phenomenal for the ’80s.” The overall vibe is overwhelmingly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "Single five‑star review praises both performance and recording; high marks on show quality and excellent‑sounding source, but limited data lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as sounding like standing front of house – clear, immersive, no noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "MSWS",
+      "Space > The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set opened with a surprisingly hot MSWS and flowed into an outstanding Space > The Other One, noted as a highlight of the night."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "MSWS": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space > The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T19:43:32.174628+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-09.169767.nak700.wagner.miller.clugston.flac2496"
+}

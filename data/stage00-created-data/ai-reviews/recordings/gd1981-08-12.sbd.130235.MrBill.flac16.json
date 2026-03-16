@@ -1,0 +1,87 @@
+{
+  "summary": "Clear soundboard capture of a solid set with standout Althea, Saint of Circumstance, Morning Dew and a fiery Scarlet > Fire.",
+  "review": "The recording is praised for its crystal‑clear soundboard quality – Jerry’s voice comes through crisp and every instrument is audible. Musically the show delivers several high points (Althea, Saint of Circumstance, Morning Dew, Scarlet > Fire) though a few moments like Man Smart/Woman Smarter wear out after a while and the encore choice draws mixed feelings.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers highlight excellent soundboard quality and several standout performances, but a few negative comments (low‑star reviews) keep the overall rating from reaching the top tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Very good clarity; listeners can hear everything, vocals are crisp, no dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Saint of Circumstance",
+      "Morning Dew",
+      "Scarlet > Fire",
+      "Spanish Jam",
+      "Might as Well"
+    ],
+    "poor_songs": [
+      "Man Smart, Woman Smarter",
+      "Baby Blue (encore)"
+    ],
+    "setlist_flow": "The set flows well with a notable Spanish Jam that segues into Truckin' and an early Might as Well that energizes the crowd; later in the show some slower numbers lose momentum for a few listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is described as crisp and clearly audible.",
+    "Phil": "",
+    "Bob": "Vocal inflection is praised for being restrained, keeping the performance peppy.",
+    "Keys": "The Brent era keyboards are mentioned positively in relation to the Might as Well energy.",
+    "Drums": "The drum segment receives a specific highlight."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Might as Well": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Man Smart, Woman Smarter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T13:25:26.472143+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-08-12.sbd.130235.MrBill.flac16"
+}

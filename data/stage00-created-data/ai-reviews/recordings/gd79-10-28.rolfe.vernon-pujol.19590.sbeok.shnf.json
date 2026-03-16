@@ -1,0 +1,62 @@
+{
+  "summary": "Fair audience‑sourced tape of an electrifying tiny‑venue gig, highlighted by a mesmerizing Half‑Step/Franklin’s opener and standout Sampson & Delilah, I Know You Rider, and U.S. Blues.",
+  "review": "The show captures the Dead at their most high‑energy in a cramped hockey rink, with Jerry beaming, Brent’s synth textures adding flavor, and several songs – especially the long Half‑Step/Franklin’s opener, Sampson & Delilah, I Know You Rider and U.S. Blues – receiving enthusiastic praise. The recording suffers from hiss and extraction problems that keep it from being pristine, but most listeners find it listenable enough to enjoy the historic performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Strong musical performance with many standout moments outweighs modest recording flaws; weighted rating reflects 70% show quality and 30% technical quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hiss and extraction problems noted; overall not crisp but acceptable for an audience tape from a small venue."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step > Franklin's",
+      "Sampson & Delilah",
+      "I Know You Rider",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy performance in a tiny hockey rink, with an unusually long, mesmerizing opener and a lively second set; the band kept momentum despite venue constraints."
+  },
+  "band_member_comments": {
+    "Jerry": "Big grins and high energy noted by multiple reviewers.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's synthesizer effects during space were highlighted as a special touch.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half Step > Franklin's": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sampson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T00:22:08.913566+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-10-28.rolfe.vernon-pujol.19590.sbeok.shnf"
+}

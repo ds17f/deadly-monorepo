@@ -1,0 +1,76 @@
+{
+  "summary": "Excellent audience recording of a high‑energy show with a legendary Peggy‑O and standout Estimated→Eyes jam, though the sound is occasionally cavernous.",
+  "review": "The performance shines especially in the second set – Peggy‑O, Foolish Heart, an electrifying Estimated→Eyes transition, Sugar Magnolia, Black Peter and The Weight are repeatedly praised.  Listeners note a warm hall ambience that captures crowd energy, but some report muffled or “cave‑like” sections that detract from an otherwise solid audience tape.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Average star rating is 4.0; reviewers overwhelmingly praise the show’s musical highlights while split on recording fidelity, yielding a strong‑plus overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Warm hall sound with good crowd capture; several listeners describe parts as muffled or “cave‑like,” but most find the ambience pleasant and well balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Foolish Heart",
+      "Estimated → Eyes",
+      "Sugar Magnolia",
+      "Black Peter",
+      "The Weight"
+    ],
+    "poor_songs": [
+      "Foolish Heart"
+    ],
+    "setlist_flow": "First set deemed average by a few, but the second set ignites – tight transitions, high energy and multiple fan‑favorite jams make the night memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solo on Peggy‑O is repeatedly called “smoking” and his tone praised; a few note a weaker Foolish Heart solo but overall his playing is highlighted as a show‑stopper.",
+    "Phil": "Phil’s bass work gets a shout‑out for a “blow‑out” in the second set and is mentioned during the Sugar Mag clapping moment.",
+    "Bob": "Weir (Bobby) noted for classic stage lunges during Sugar Magnolia and contributing to Black Peter.",
+    "Keys": "Vince’s keyboards receive strong praise, even being called superior to Keith on piano; Vince shines throughout the set.",
+    "Drums": "The “Eyes into drums” segue is highlighted as a rare and exciting moment; drum‑driven energy noted especially in the second set."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 10,
+      "negative_mentions": 2,
+      "total_mentions": 12
+    },
+    "Foolish Heart": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Estimated → Eyes": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Weight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:18:32.730519+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-08.akg.ladner.16754.sbeok.shnf"
+}

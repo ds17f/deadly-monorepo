@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard recording (with a reversed stereo image) delivers a solid early‑90s Dead show highlighted by soaring vocals, a stellar Space jam and the rare performance of The Weight.",
+  "review": "The mix is surprisingly clear for an audience tape – despite the left/right channels being swapped it captures the rich orchestral feel of the Hornsby/Vince era with crisp piano chords and tight vocal harmonies.  Fans rave about the extended Space improvisation, the unexpected rendition of The Weight and strong vocal blend, while a few note that the show isn’t a “barn‑burner” and some were disappointed by the crowd atmosphere.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance and vocal harmonies, and several call the sound “amazing” or a “great mix”; technical quirks (reversed stereo) are noted but don’t detract significantly, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and well‑balanced mix; left/right channels appear reversed compared to typical stage layout; no major dropouts or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "The Weight",
+      "Corinna",
+      "New Speedway"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early‑90s set with strong vocal harmonies, a notable Space jam in the second set and a rare placement of The Weight; overall flow is solid though not an all‑out high‑energy barn‑burner."
+  },
+  "band_member_comments": {
+    "Jerry": "Picking/guitar work described as good; tone noted positively.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby and Vince Welnick both featured; praised for big piano chords, organ/accordion interplay, and vocal blending.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corinna": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:21:23.008882+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-24.sbd.unknown.17024.shnf"
+}

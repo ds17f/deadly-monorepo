@@ -1,0 +1,50 @@
+{
+  "summary": "High‑energy 1974 performance with a standout Not Fade Away → Goin' Down the Road Feeling Bad transition; soundboard transfer is crisp but marred by occasional vocal drop‑outs and heavy compression.",
+  "review": "Reviewers rave about this show as one of the best of ’74, highlighting the electric energy between band and crowd and a funky NFA→GDRFB segue. The Charlie Miller SBD transfer sounds clear and balanced overall, though a few note vocal drop‑outs, minor pitch quirks and an overly compressed drum sound.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the musical performance (majority 5‑star) combined with mostly positive remarks on recording quality, offset only by minor technical complaints."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced SBD transfer; vocal drop‑outs and slight pitch issues persist, and drums sound overly compressed/pumped for some listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "Goin' Down The Road Feeling Bad"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, high‑energy flow with a particularly funky transition from Not Fade Away into Goin' Down the Road Feeling Bad; crowd interaction keeps momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his presence and even saying goodnight at the end of the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Several listeners note the drums are overly compressed, making them sound too pumped."
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down The Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T19:42:04.302770+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-05-19.sbd.miller.106716.flac16"
+}

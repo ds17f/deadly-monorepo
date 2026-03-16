@@ -1,0 +1,80 @@
+{
+  "summary": "Excellent front‑of‑house soundboard captures a fast‑paced 1983 New Mexico show with standout Cold Rain vocals, smoking China >Doll > Rider and tight second‑set energy.",
+  "review": "The recording is praised for its immediacy and crystal‑clear front‑of‑house mix, making the high‑energy performance a joy to hear.  Highlights include Phil Garcia’s rare lead on “Cold Rain,” Jerry’s scorching guitar on the rapid “China >Doll > Rider” sequence, and a second set that burns through “Woman Smarter,” “Cumberland,” and a jam‑filled “Playing In The Band.”  While Bob Weir’s slide on “Minglewood” divides opinion, the overall show is regarded as one of the best from 1983.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of reviewers (7/9) give strong praise for both performance and recording; detailed comments highlight exceptional playing, especially on the second set, while the soundboard mix is described as clear and powerful."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Front‑of‑house board provides a crisp, immediate sound with good instrument separation; no complaints of muffiness or dropouts were noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain",
+      "China Doll > Rider",
+      "Woman Smarter",
+      "Cumberland",
+      "Playing In The Band"
+    ],
+    "poor_songs": [
+      "Minglewood"
+    ],
+    "setlist_flow": "Fast‑paced opener and encore bookend a tight, high‑energy show; the second set is especially praised for its seamless transitions and sustained momentum despite an unusually long intermission."
+  },
+  "band_member_comments": {
+    "Jerry": "Shines throughout, particularly on the hot TLEO segment and the rapid “China >Doll > Rider”; his vocals and guitar work receive consistent accolades.",
+    "Phil": "Rarely takes lead vocals; his performance on “Cold Rain” is highlighted as a special moment by multiple reviewers.",
+    "Bob": "Mixed feedback – some praise his energetic slide on “Minglewood,” while others criticize its execution as overly abrasive.",
+    "Keys": "Brent (keyboards) is noted for being present the entire show and engaging in extended jams, especially after Jerry’s temporary exit during “China >Doll.”",
+    "Drums": "Both drummers are praised for solid, driving work that underpins the fast‑paced set."
+  },
+  "song_mentions": {
+    "Cold Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Woman Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:19:38.179460+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-10.fob.senn441.silberman.miller.84487.sbeok.flac16"
+}

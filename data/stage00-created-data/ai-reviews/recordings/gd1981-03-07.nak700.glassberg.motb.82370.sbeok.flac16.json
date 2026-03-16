@@ -1,0 +1,91 @@
+{
+  "summary": "Crystal‑clear audience recording captures a first‑set masterpiece with Bird Song, Deal and Big River blazing, while the second set falls flat.",
+  "review": "The Glassberg front‑of‑house tape is superb – warm, crystal‑clear and surprisingly free of typical audience bleed.  The band shines on the first set, delivering legendary versions of Bird Song, Little Light of the Road, Deal and Big River; the second set, however, disappoints many listeners.  Overall it’s a highly enjoyable show thanks to Jerry’s inspired playing and top‑notch recording quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars, praising the first‑set performance and the excellent FOB audience sound; only a few note a weak second set, keeping the overall rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Front‑of‑house (FOB) tape captured with Glassberg's Nak 700 mics; reviewers call it crystal‑clear, warm and superbly mixed with no noticeable dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Deal",
+      "Little Light of the Road",
+      "Big River",
+      "Alabama",
+      "Looks Like Rain",
+      "Jack‑A‑Roe",
+      "Silor > Saint > Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is described as phenomenal and high‑energy, featuring several classic peaks; the second set is generally regarded as a letdown that drags the overall momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for soaring solos (LLR, Bird Song) and a powerful tone on Deal; one reviewer notes he was “physically ill around drums” but still phenomenal.",
+    "Phil": "",
+    "Bob": "Mentioned briefly for a Dire Wolf intro that hinted at an old‑era song; otherwise not highlighted.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Little Light of the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Big River": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Alabama": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack‑A‑Roe": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Silor > Saint > Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T08:59:59.238315+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-07.nak700.glassberg.motb.82370.sbeok.flac16"
+}

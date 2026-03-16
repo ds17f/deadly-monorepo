@@ -1,0 +1,44 @@
+{
+  "summary": "Audience tape captures a wildly psychedelic Springfield show with a scorching Mr. Fantasy and trippy Drum solo, while the second‑set soundboard excerpt shines.",
+  "review": "The concert is described as “crazy good,” with Garcia shaking off an early looseness before the band clicks into gear for one of the most jam‑heavy nights of its era. Reviewers single out the entire second set – especially a hot Mr. Fantasy and an otherworldly Drum segment – as dynamite, and note that the soundboard portion of the second set sounds excellent. The audience recording is clear enough to enjoy, preserving the live energy without major flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviews are enthusiastic (4‑5 stars) and highlight both strong musical performance and decent audio quality, giving a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Recorded with a Sony ECM‑220T microphone; clear enough to enjoy the show. Reviewers praise the soundboard excerpt of the second set and note no major dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mr Fantasy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set starts a bit loose but quickly locks in, leading into an explosive second set that reviewers cite as one of the jam‑heavy highlights of the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Starts out loose then clicks into gear; noted for his grin and charismatic stage presence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Tripped‑out Drum segment praised for its intensity."
+  },
+  "song_mentions": {
+    "Mr Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:42:17.243155+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-24.sonyecm220t.keshavan.miller.106779.flac16"
+}

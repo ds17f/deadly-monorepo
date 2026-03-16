@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard mix captures a magical Pigpen‑Keith Winterland set highlighted by an epic Good Lovin' performance.",
+  "review": "The recording offers a crisp, well‑balanced soundboard that lets the standout Pigpen and Keith moments shine—especially the 16‑minute “Good Lovin’” where Pigpen’s vocal phrasing is described as incredible.  The show flows smoothly despite a playlist ordering glitch, with Billy Kreutzmann’s effortless drumming and Keith's piano/organ adding extra sparkle.  Overall reviewers are enthusiastic, rating both the performance and the mix highly.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (4‑5 stars) praise both musical performance and sound quality; weighted average yields ~4.5."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with high star ratings for both mix (4.75) and recording (4.50); reviewers suggest using an equalizer but note no major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'",
+      "You Win Again",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, cohesive set featuring Pigpen and Keith front‑and‑center; minor playlist order issue in the download but otherwise a smooth flow with an energetic encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Delivers nice riffs and supports solo sections; noted as solid though not the primary focus.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's piano/organ work on “You Win Again” and “Casey Jones” receives high praise (“Wow!”).",
+    "Drums": "Billy Kreutzmann is described as hot, relaxed, and effortlessly flying 16th‑note runs."
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "You Win Again": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T11:52:51.633304+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-03-05.sbd.jools.12152.sbeok.shnf"
+}

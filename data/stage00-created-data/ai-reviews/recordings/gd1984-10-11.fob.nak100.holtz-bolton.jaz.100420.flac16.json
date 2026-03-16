@@ -1,0 +1,45 @@
+{
+  "summary": "Crystal‑clear audience tape captures a high‑energy show with standout Peggy‑O and an intense Playing in the Band, delivering an excellent listening experience.",
+  "review": "The recording is praised for its extraordinary clarity, full bass response and bright, “fuller” sound that many reviewers say beats even soundboard sources.  Musically the concert is regarded as a strong performance – first‑time Peggy‑O after Phil’s marriage and a fiery Playing in the Band jam are highlighted, with only minor, vague flaws noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All substantive reviews (6) rate the show 4‑5 stars and uniformly praise both performance and audio quality; weighted average yields a rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp, full‑bass sound; described as ‘extraordinary’, ‘fuller and brighter’ than other sources; no major dropouts or noise reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans love the setlist and note a particularly intense second‑set jam (Playing in the Band); overall performance is energetic with only vague, minor flaws."
+  },
+  "band_member_comments": {
+    "Jerry": "Thanks Jerry noted; his playing contributes to the happy moment listeners describe.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T21:46:43.791528+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-11.fob.nak100.holtz-bolton.jaz.100420.flac16"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Fair‑quality unknown‑source recording of an uneven show that shines on the Space → The Last Time → A.M. Dew sequence.",
+  "review": "The concert is generally considered unremarkable, with the first set described as well‑played but lacking any standout moments. Reviewers do praise the second‑set flow, especially the space jam and the strong delivery of “The Last Time” and “A.M. Dew.” Recording quality isn’t discussed in detail, and low star ratings suggest a subpar listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.4,
+    "confidence": "medium",
+    "rationale": "One moderate (3‑star) review highlights a few strong songs while two zero‑star reviews indicate poor overall impression; recording quality is unknown but likely only fair, yielding an average rating in the low‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments on sound clarity or mix; low star ratings imply the audio may be below optimal quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "The Last Time",
+      "A.M. Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid but uneventful; second set stands out thanks to a strong Space → The Last Time → … → A.M. Dew sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is noted as present and in a good mood, chatting with the crowd.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "A.M. Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T08:24:19.263677+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-05-20.aud.unknown.8875.shnf"
+}

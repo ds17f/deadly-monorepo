@@ -1,0 +1,99 @@
+{
+  "summary": "Handheld audience recording captures a stellar 1982 show highlighted by an unforgettable Shakedown Street and the epic Spanish Jam > Space > Uncle John’s Band sequence.",
+  "review": "The performance shines with Jerry’s crisp guitar work, Brent’s soaring piano on the Spanish jam, and a second‑set that deadheads hail as one of the best Shakedown Streets ever. The audience FOB recording is punchy and generally clear, though Phil’s bass sits low in the mix for part of the set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All six reviews are strongly positive (four 5‑star, two 4‑star) and praise both the musical performance and the recording quality; only minor mix issues are noted."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Hand‑held FOB with strong punch and clear overall balance; a few reviewers note Phil’s bass is low in the mix, but no major drop‑outs or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Spanish Jam",
+      "Space",
+      "Uncle John's Band",
+      "Not Fade Away",
+      "Wharf Rat",
+      "Baby Blue",
+      "Bird Song",
+      "Women Smarter"
+    ],
+    "poor_songs": [
+      "Sailor > Saint"
+    ],
+    "setlist_flow": "First set is described as middle‑of‑the‑road but builds momentum; the second set erupts with a fire‑filled Shakedown Street and a post‑space sequence (Spanish Jam > Space > UJB > NFA) that flows smoothly into an uplifting encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for clean tone, strong plucking/plunking, and memorable melodic lines throughout the show.",
+    "Phil": "Noted as low in the mix during parts of the set; otherwise his bass provides solid foundation.",
+    "Bob": "Vocals described as great and expressive, especially on the Sailor > Saint and Baby Blue moments.",
+    "Keys": "Brent’s piano shines – hot Spanish‑jam lead, strong piano sound on Uncle John’s Band, and tasteful fills throughout.",
+    "Drums": "Drummers keep a solid groove; no specific critiques beyond maintaining the drive."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Spanish Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Women Smarter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "St. of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T20:22:28.051079+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-17.fob.nak700.glassberg.78747.sbeok.flac16"
+}

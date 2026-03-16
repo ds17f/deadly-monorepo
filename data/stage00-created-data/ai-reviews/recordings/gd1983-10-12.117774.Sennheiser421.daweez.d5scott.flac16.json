@@ -1,0 +1,31 @@
+{
+  "summary": "Wonderful show with an excellent recording.",
+  "review": "The single fan review describes this performance as a wonderful show and praises the recording as excellent. While no specific songs or set details are mentioned, the enthusiastic five‑star rating suggests both the musical and technical aspects are highly regarded.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "Only one review is available, but it gives a full 5‑star rating and positively comments on both the show and recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls the recording excellent; no further technical details provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or pacing were given."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T12:08:57.744201+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-12.117774.Sennheiser421.daweez.d5scott.flac16"
+}

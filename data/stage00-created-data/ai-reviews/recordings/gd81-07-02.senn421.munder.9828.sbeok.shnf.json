@@ -1,0 +1,56 @@
+{
+  "summary": "Spotty recording captures a solid early‑80s Texas show with crisp Scarlet Begonias and strong second‑set moments, though Garcia’s guitar can be buried.",
+  "review": "The performance starts a bit shaky but soon lifts with a nicely played Sailor into Saint and a sharp, crisp Scarlet Begonias that drive the second set. Reviewers praise the band's tightness and the drum work, yet note that the sound quality is spotty with drop‑outs and heavy background noise, making Garcia’s guitar hard to hear at times.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show positively (4–5 stars) while noting recording issues; weighting show quality higher yields an overall rating around 3.5‑4."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Spotty sound with occasional drop‑outs and heavy background noise; likely audience or mixed source rather than a clean soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Sailor",
+      "Saint"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set starts unevenly but gains momentum, ending strong with Sailor and Saint; second set opens sharply with Scarlet Begonias and maintains intensity throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer felt Garcia's guitar was hard to hear in the mix.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums were highlighted as the most interesting part of the performance."
+  },
+  "song_mentions": {
+    "C.C. Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:20:56.349005+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-07-02.senn421.munder.9828.sbeok.shnf"
+}

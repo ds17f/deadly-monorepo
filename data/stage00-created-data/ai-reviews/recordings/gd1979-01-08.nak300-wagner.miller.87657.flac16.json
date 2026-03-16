@@ -1,0 +1,75 @@
+{
+  "summary": "A crowd‑heavy audience tape that still delivers a scorching second set highlighted by Mississippi Half‑Step, Scarlet > Fire and Samson.",
+  "review": "The recording is an audience (AUD) source with decent separation but noticeable crowd noise that can mask detail; nevertheless the music shines through. The show is praised for its fiery second set – especially the explosive Mississippi Half‑Step, the blazing Scarlet > Fire transition, a hot Samson & Delilah and strong performances from Jerry, Phil and Bob. While the first set is described as solid but unremarkable, the overall vibe is energetic and memorable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "20 reviews give an average of 4.25 stars; most highlight a strong performance despite consistent criticism of crowd‑heavy audience sound, leading to a high but slightly reduced rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Improved separation and image over earlier versions, but the mic was far back in the crowd resulting in heavy audience noise that sometimes drowns out detail. Overall listenable with a clear drum presence and natural reverb on Jerry."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step",
+      "Scarlet > Fire",
+      "Samson & Delilah",
+      "The Other One",
+      "U.S. Blues",
+      "Wharf Rat",
+      "Supplication"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid but not spectacular; the second set erupts with high energy, tight transitions and several highlight moments that make it a fan favorite."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar work described as explosive and full of emotion; voice noted as rough or weak in places but his solos (especially on U.S. Blues) are praised.",
+    "Phil": "Bass is called \"strong\" and \"nimble\", providing a solid foundation throughout the show.",
+    "Bob": "Mentioned for snappy counter‑point rhythms that add excitement to the jam sections.",
+    "Keys": "Mixed remarks – some reviewers say Keith’s playing isn’t a focus, while others note his contribution in the Scarlet transition and overall keyboard support.",
+    "Drums": "Big drums are highlighted as a strength of the audience recording; drummers described as lock‑step and driving."
+  },
+  "song_mentions": {
+    "Mississippi Half-Step": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T18:41:55.289014+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-08.nak300-wagner.miller.87657.flac16"
+}

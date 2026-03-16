@@ -1,0 +1,76 @@
+{
+  "summary": "Stunning soundboard capture of an Atlanta night featuring Jerry’s peak guitar work and marathon jams on Sugaree, Let It Grow, Playin’ in the Band, Uncle John’s, Days Between and a 23‑minute UJB outro.",
+  "review": "The recording is a crisp SBD that lets listeners hear every nuance of what reviewers call Jerry’s best playing of the ’95 tour, complete with rare whammy pedal textures and razor‑sharp guitar mini‑shreds. The show itself is highlighted by extended, exploratory jams—especially the massive Playin’ in the Band/Uncle John’s sequence and a soaring Days Between—that make this two‑night Atlanta run a strong contender for best performance of the year, despite a weak encore of I Fought the Law.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "One detailed 5‑star review praises both the musical performance and the soundboard quality, indicating an exceptional show and excellent recording; limited review count reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix that captures all instruments; a few isolated licks are noted as slightly out of key or mixed up but do not detract from overall fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Let It Grow",
+      "Playin' in the Band",
+      "Uncle John's Band",
+      "Days Between",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "I Fought the Law"
+    ],
+    "setlist_flow": "Two‑night Atlanta set feels like a continuous, high‑energy journey with extended jams that build and release dramatically; second set especially praised for its seamless transitions and marathon UJB/Space segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised as delivering his best guitar work of the tour—whammy pedal use, rapid sextuplet mini‑shreds, sublime moments that even stopped the band.",
+    "Phil": "",
+    "Bob": "Mentioned in jam freakouts with Jerry during Uncle John’s; contributes to the “meltdown” energy.",
+    "Keys": "Vince’s thoughtful piano parts are highlighted as grounding the spacey sections and preventing chaos.",
+    "Drums": "Described as better than ever, with an extended drumming/space segment that could merit its own release."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Fought the Law": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T07:04:27.150266+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-27.155199.sbd.rem.spacebandit.flac16"
+}

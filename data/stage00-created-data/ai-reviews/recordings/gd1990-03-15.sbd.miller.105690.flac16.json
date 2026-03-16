@@ -1,0 +1,100 @@
+{
+  "summary": "Crisp Miller soundboard captures an energetic 1990 Capital Centre show highlighted by a soaring Terrapin Limited and stellar first‑set classics.",
+  "review": "The Miller SBD recording is praised for its crystal‑clear, sweet sound that preserves the band’s high‑energy performance. Fans repeatedly cite the powerhouse first set (Easy to Love You, Althea, Tennessee Jed) and the monumental Terrapin jam in the second set as show‑stopping moments, with Brent’s haunting keys and Phil’s tight Tom Thumb’s adding extra sparkle.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All six reviews are strongly positive (average ★4.7), highlighting both excellent soundboard quality and a high‑energy, memorable performance."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, sweet Miller SBD (Healy mic‑matrix) with clear instrument separation; no dropout or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin",
+      "Easy to Love You",
+      "Althea",
+      "Tennessee Jed",
+      "Tom Thumb's",
+      "Wharf Rat",
+      "Take You Home"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A tight, fire‑filled first set that builds into an epic second set centered around a soaring Terrapin jam; seamless transitions (Space → I Will Take You Home → Wharf Rat → Stones) keep the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "No specific remarks, but overall guitar work is described as solid and energetic throughout.",
+    "Phil": "Shines on Tom Thumb's and delivers a rare solid performance; highlighted for his vocal and bass interplay.",
+    "Bob": "Praised for standout slide work on Althea and strong rhythm contributions on Tennessee Jed.",
+    "Keys": "Brent’s haunting, soaring keyboards are repeatedly lauded, especially on Terrapin and Take You Home.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Easy to Love You": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Tom Thumb's": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Take You Home": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Revolution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T03:29:44.838968+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-15.sbd.miller.105690.flac16"
+}

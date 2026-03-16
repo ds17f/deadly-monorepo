@@ -1,0 +1,81 @@
+{
+  "summary": "Good soundboard recording of a varied 1989 show with strong Built To Last tunes and standout jams like Bertha, Bird Song and Crazy Fingers",
+  "review": "The audience notes a solid sound‑board capture that’s free of major flaws and praises the band’s performance – especially the four‑song Built To Last suite, a well‑spaced Bird Song, a soaring Bob Weir on Picasso’s Dream and a fiery Crazy Fingers. While most songs are highlighted positively, Foolish receives a lukewarm nod compared to Victim.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Only one detailed review but it rates the show 4 stars and mentions no serious recording issues, suggesting a good performance and decent soundboard quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific audio complaints; assumed clear soundboard mix typical of the era."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Built to Last",
+      "Bird Song",
+      "Victim",
+      "Crazy Fingers",
+      "He's Gone!"
+    ],
+    "poor_songs": [
+      "Foolish"
+    ],
+    "setlist_flow": "A mixed set that blends newer, challenging material (the Built‑to‑Last suite) with classic jams and deep cuts, keeping the energy high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Weir pushes his vocal range on Picasso's Dream, hitting high notes.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Built to Last": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso's Dream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T19:28:31.993472+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-05-07.sbd.af.3864.shnf"
+}

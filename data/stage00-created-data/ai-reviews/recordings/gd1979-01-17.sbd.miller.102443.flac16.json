@@ -1,0 +1,102 @@
+{
+  "summary": "Soundboard recording of decent clarity with occasional tape hiccups captures a solid 1979 show highlighted by a stellar Black Peter, tight Scarlet > Fire transition and an unforgettable drum jam.",
+  "review": "The SBD source provides generally clear audio, though listeners note some odd moments and a mid‑Black Peter drop‑out. Musically the concert is strong – fans rave about Black Peter, the seamless Scarlet → Fire flow, the Estimated Prophet → Eyes of the World sequence and a remarkable Egyptian‑beat drum jam, while a few songs (Peggy‑O, Not Fade Away) feel lackluster. Overall sentiment is upbeat despite some criticism of the setlist’s predictability and Keith's piano work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise key performances; recording is described as good with only occasional flaws, yielding a combined weighted score around 4.1."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp SBD sound, but tape has weird moments and a noticeable dip in the middle of Black Peter; Jerry's vocal strain adds slight muddiness on vocals."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Scarlet > Fire",
+      "Estimated Prophet > Eyes of the World",
+      "Shakedown",
+      "Beat It On Down The Line",
+      "Casey Jones"
+    ],
+    "poor_songs": [
+      "Peggy-O",
+      "Not Fade Away"
+    ],
+    "setlist_flow": "Typical late‑70s setlist (Shakedown, BEW, Scarlet > Fire, Estimated Prophet → Eyes, NFA, Black Peter, Around & Around) that many find predictable, yet the band’s tight transitions and improvisational peaks keep the performance engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice ragged/under‑the‑weather but guitar solo wails; overall tone praised on several tracks.",
+    "Phil": "Dominates pre‑second‑vocal jam, initiates groove in the celebrated drum jam.",
+    "Bob": "",
+    "Keys": "Keith's piano criticized as out of touch by some reviewers, while others defend his playing; Brent’s early electric piano tones described as inferior to later B3 work.",
+    "Drums": "Egyptian‑beat drum jam highlighted as a unique and powerful moment."
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down The Line": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around & Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T19:31:01.935824+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-17.sbd.miller.102443.flac16"
+}

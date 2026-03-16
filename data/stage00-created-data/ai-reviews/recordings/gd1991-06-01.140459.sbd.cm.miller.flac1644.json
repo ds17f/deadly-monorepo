@@ -1,0 +1,51 @@
+{
+  "summary": "Good soundboard recording that captures an average ’91 show with a strong opener of Shakedown Street, The Greatest Story Ever Told and Bertha.",
+  "review": "The Miller‑engineered soundboard tape delivers solid bass presence and clear guitar mix, making the audio pleasant to listen to. Musically the concert is described as an average 1991 outing, but the opening trio – Shakedown Street, The Greatest Story Ever Told and Bertha – stand out along with good onstage interaction between Garcia and Hornsby.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave modestly positive scores (3‑4 stars) and praised the recording quality while calling the show only average, leading to a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Big bass presence and clear guitar in the mix; Miller’s engineering noted as helping the tape sound pretty good overall."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "The Greatest Story Ever Told",
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "An average ’91 performance with a solid opening trio and decent second‑set energy; described as an off‑tour adventure in LA."
+  },
+  "band_member_comments": {
+    "Jerry": "Interaction with Garcia noted positively, though no specific guitar comments.",
+    "Phil": "",
+    "Bob": "Bob's rhythm guitar sounds great in the mix.",
+    "Keys": "Hornsby’s presence mentioned as a positive interaction.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T19:54:46.401194+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-01.140459.sbd.cm.miller.flac1644"
+}

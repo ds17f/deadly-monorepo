@@ -1,0 +1,95 @@
+{
+  "summary": "Mixed‑quality audience recording of a spirited 1994 Richfield show – great moments like “He’s Gone” and “Estimated” but plagued by left‑channel chatter for some listeners.",
+  "review": "The performance is generally praised for its energy, with highlights such as Jerry Garcia’s vocal peak, Bobby Weir’s gritty guitar on “He’s Gone,” and a powerful second set featuring “Let It Grow.” Recording quality is uneven: many listeners describe the audience capture as clear and pristine, while others complain of overwhelming left‑channel conversation and overall muffiness.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "high",
+    "rationale": "Show quality averages around 4 / 5 based on multiple enthusiastic reviews, while recording quality averages near 3 / 5 due to split opinions; weighted combination yields ~3.5 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Digital‑era audience tape with generally clear sound, but left‑channel chatter dominates the mix for many listeners; occasional crowd noise noted, some describe it as pristine while others call it terrible."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He’s Gone",
+      "Estimated",
+      "Let It Grow",
+      "All Over Now",
+      "Cold Rain & Snow"
+    ],
+    "poor_songs": [
+      "All Over Now"
+    ],
+    "setlist_flow": "The show opens with unpredictable energy (Cold Rain & Snow, All Over Now), builds momentum through a gritty Bobby Weir‑driven second set featuring pre‑drums sequences (Picasso Moon → New Speedway → Victim or the Crime), and closes strong with Let It Grow and classic closers."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as the best ever heard on this night.",
+    "Phil": "",
+    "Bob": "Bobby Weir’s guitar is called dirty, gnarly and a key driver of “He’s Gone.”",
+    "Keys": "",
+    "Drums": "Pre‑drum sequence praised for its intensity (Picasso Moon → New Speedway → Victim or the Crime)."
+  },
+  "song_mentions": {
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He’s Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Picasso Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim or the Crime": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Fought the Law": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:15:31.548125+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-03-20.schoeps.ladner.15464.sbeok.shnf"
+}

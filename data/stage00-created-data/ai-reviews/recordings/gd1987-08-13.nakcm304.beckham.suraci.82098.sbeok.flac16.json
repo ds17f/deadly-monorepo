@@ -1,0 +1,87 @@
+{
+  "summary": "Clear yet slightly dampened recording captures a solid Red Rocks show with standout versions of Big Boss Man, Box, and an energetic Gimme Some Lovin' second set.",
+  "review": "The performance is praised for strong song choices and an especially powerful second set, highlighted by a fiery Gimme Some Lovin' and tight renditions of classics like Big Boss Man and Box. The audio is generally clear, though rain‑induced dampening and some tape static keep it from being pristine. Overall the show shines despite modest recording quirks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is consistently praised with many standout songs, while recording quality receives mixed comments (clear but dampened and some static). Weighted averaging yields a rating around 3.8."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Audio is clear overall but has a slightly dampened character due to rain and noticeable tape/static noise; not a major distraction but prevents it from being pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Boss Man",
+      "Jack Straw",
+      "The Loser",
+      "Cassidy",
+      "Box",
+      "Uncle John's Band",
+      "He's Gone",
+      "Gimme Some Lovin'",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set delivers solid, energetic rockers and heartfelt ballads; second set builds an intimate, high‑energy vibe highlighted by Gimme Some Lovin' and a concise encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry's vocal 'ooos' and falsetto are noted as fun highlights, adding texture to several songs.",
+    "Phil": "Phil’s bass work on Gimme Some Lovin' is described as 'holy Phil' and a 'Kick Some Ass' performance.",
+    "Bob": "",
+    "Keys": "Keyboards are praised for being clear and well‑balanced throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T01:51:32.020466+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-08-13.nakcm304.beckham.suraci.82098.sbeok.flac16"
+}

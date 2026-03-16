@@ -1,0 +1,82 @@
+{
+  "summary": "Audience capture with decent clarity; a rain‑soaked Buckeye Lake show that shines on Mighty Quinn and the second‑set jams despite mixed first‑set performance.",
+  "review": "The recording is an audience (FOB) tape that many listeners describe as surprisingly clear, though some note rain‑induced muddiness and occasional monitor bleed. Musically the concert is a love‑it‑or‑hate‑it affair – the band’s second set (Stranger > Bertha, Uncle John’s Jam, Foolish Heart, Love Light) and the Mighty Quinn encore are repeatedly praised, while the first set and Jerry Garcia’s playing receive criticism for being sluggish or strained. Overall the show is remembered fondly because of the weather‑themed setlist and the communal vibe.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Over a dozen detailed reviews give an average rating around 3.5–4.0; strong positive comments on the second set and recording quality are offset by numerous low‑star critiques of Garcia’s playing and first‑set sluggishness, yielding a solid but not outstanding overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the capture ‘superb’ or ‘crisp,’ especially when positioned near the soundboard, but rain and monitor bleed cause occasional muddiness; a few note missing drum‑to‑Space segment and general mix issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mighty Quinn",
+      "Rain",
+      "Stranger > Bertha",
+      "Uncle John's Jam",
+      "Foolish Heart",
+      "Love Light"
+    ],
+    "poor_songs": [
+      "Deal",
+      "First set (overall)"
+    ],
+    "setlist_flow": "The rain‑themed opener and long, jam‑heavy second set created a compelling arc despite a slow first half; the encore Mighty Quinn capped an emotionally charged night."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring moments on Mighty Quinn and some jams, but many note he sounded off, ghostly, or with weak tone especially early in the show.",
+    "Phil": "Mentioned walking out with a big wave; reviewers say he tries hard and holds down the low end when Garcia falters.",
+    "Bob": "Briefly noted as ‘trying’ alongside Phil; no specific praise or criticism beyond that.",
+    "Keys": "Vince’s keyboards are called “blazin” on Samba, act up early in the show, but overall provide solid support for the jams.",
+    "Drums": "Bill (and Mickey) are said to be “punching it” when possible; no major complaints other than occasional monitor bleed."
+  },
+  "song_mentions": {
+    "Mighty Quinn": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Rain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Stranger > Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Love Light": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Want to Tell You": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T00:37:39.304694+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-07-29.schoeps.dipietro.4078.sbeok.shnf"
+}

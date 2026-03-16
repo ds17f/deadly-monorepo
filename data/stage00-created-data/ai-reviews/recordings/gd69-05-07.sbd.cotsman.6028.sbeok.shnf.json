@@ -1,0 +1,77 @@
+{
+  "summary": "Good‑quality soundboard capture of the legendary May 7 1969 Golden Gate Park free show, highlighted by a smoking Dark Star and Jerry’s lead on Good Lovin' with wild jams.",
+  "review": "The recording is a decent soundboard source from ’69 – not crystal‑clear but respectable for its era and in need of a little EQ. Musically the concert is praised for its adventurous jams (Uncle, The Other One, Smokestack Lightning) and standout performances of Dark Star, Good Lovin' (with Jerry on lead vocals) and an excellent Lovelight/Drums transition. A few listeners note a looser, slightly “blitzed” vibe later in the set, but overall the show is regarded as an underrated gem.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ~4.2/5 across >10 detailed reviews; strong positive comments on musical performance outweigh minor recording complaints."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Sound is not as sharp as later recordings, some EQ needed and a brief cut in a funky instrumental, but overall clear enough for the era; occasional drop‑outs noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Good Lovin'",
+      "The Other One",
+      "Uncle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Breaks from the usual DS>SS>11>LL pattern, featuring long free‑form jams and surprising song choices that keep the set fresh and adventurous."
+  },
+  "band_member_comments": {
+    "Jerry": "Leads on Good Lovin', plays petal steel, acoustic and electric; classic SG tone praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums segment flows into an excellent Lovelight transition."
+  },
+  "song_mentions": {
+    "Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Turn On Your Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rocky Raccoon": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T14:20:03.914992+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-05-07.sbd.cotsman.6028.sbeok.shnf"
+}

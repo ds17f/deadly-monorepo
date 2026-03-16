@@ -1,0 +1,113 @@
+{
+  "summary": "Excellent soundboard transfer of a legendary 6/10/73 show – smoking Dark Star, epic Bird Song and a magical Morning Dew open.",
+  "review": "Fans rave about the crystal‑clear Charlie Miller soundboard capture and describe the performance as one of ’73’s finest, highlighted by a soaring Dark Star, an unforgettable Bird Song, and a breathtaking opening with Morning Dew. The set flows effortlessly through long improvisational jams, with standout moments on Box of Rain, Wharf Rat and a restrained Not Fade Away solo, while only a few older‑era numbers receive mild criticism.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Over a dozen enthusiastic reviews praise both the musical performance and the soundboard quality; recording is described as pristine and the show is repeatedly called legendary with multiple standout songs."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean capture praised as a \"Charlie Miller\" transfer; no dropout or muffling reported. Listeners note the recording is exceptionally listenable and faithful to the live sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Dark Star",
+      "Bird Song",
+      "Box of Rain",
+      "Wharf Rat",
+      "Not Fade Away",
+      "Eyes of the World"
+    ],
+    "poor_songs": [
+      "The Race Is On",
+      "Round and Round"
+    ],
+    "setlist_flow": "The concert opens with a soaring Morning Dew, rolls through extended jams (notably Dark Star and Bird Song), and maintains high energy into the second set. Fans highlight the seamless transitions and the surprise fireworks during Playin' in the Band, making the overall pacing feel both epic and cohesive."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his Chuck‑Berry‑style guitar tone and a patient, restrained Not Fade Away solo; described as \"on fire\" throughout.",
+    "Phil": "Mixed feedback – lauded for his beautiful vocal blend with Donna on Box of Rain, but a reviewer notes an awkward, out‑of‑place cue during Dark Star.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Take a Train to Cry": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Race Is On": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Round and Round": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T14:21:17.857829+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-10.sbd.miller.fix-89640.89730.flac16"
+}

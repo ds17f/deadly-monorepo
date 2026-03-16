@@ -1,0 +1,39 @@
+{
+  "summary": "Legendary soundboard capture with an all‑time great second set and a masterful Alligator performance.",
+  "review": "Reviewers hail this recording as one of the dead’s top ten shows – the first set is called excellent, while the second set is described as “one of the greatest of all time” and even supplied material for Anthem of the Sun. The soundboard source is praised for its pristine clarity, and Alligator receives special acclaim as a masterpiece.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "A single detailed five‑star review praises both the musical performance (exceptional first and second sets, standout Alligator) and the recording quality (legendary, crystal‑clear), leading to a high rating despite limited sample size."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "No technical complaints; reviewers call it a legendary, crystal‑clear soundboard recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alligator"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised as excellent; second set hailed as one of the greatest ever, delivering a seamless and high‑energy flow that even fed into Anthem of the Sun."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewer recalls staring at Jerry’s guitar work and describing it as “wow fucking cool,” highlighting his presence on stage.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alligator": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T07:44:09.699601+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-02-14.sbd.winters.89437.sbeok.flac16"
+}

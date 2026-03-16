@@ -1,0 +1,56 @@
+{
+  "summary": "Tinny, off‑kilter recording but a memorable show highlighted by Black Peter and an unexpected La Bamba",
+  "review": "The reviewer recalls a hazy night in Boston where the sound came across as tinny and “off,” suggesting modest recording fidelity. Musically the performance left an impression – Black Peter was praised despite its usual reputation, La Bamba brought smiles, and the mysterious “St of Circumstance” (and Iko) helped lift the vibe. Overall the show is remembered fondly but the audio quality limits its appeal.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one moderate‑rated review; positive remarks about a few songs offset by clear complaints about tinny sound, leading to an average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer describes the sound as \"tinny\" and \"off,\" indicating limited clarity and a less than ideal mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "La Bamba",
+      "St of Circumstance"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set noted for its dimmed lights and a mood‑lifting sequence, though overall set details are vague."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "La Bamba": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T02:39:13.879496+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-07.nakcm304.suraci.82277.sbeok.flac16"
+}

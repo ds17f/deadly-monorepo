@@ -1,0 +1,80 @@
+{
+  "summary": "Excellent soundboard capture of a classic Madison show, highlighted by scorching Scarlet>Fire, deep‑blues “Deep Elem Blues”, and a stellar Bertha sequence.",
+  "review": "The Miller SBD delivers crystal‑clear fidelity with perfect pitch and well‑balanced patches, though a few reviewers note Phil’s bass is a bit recessed. Musically the concert shines – the first set recovers from early PA hiccups into a soaring “Deep Elem Blues”/“Bertha” stretch, while the second set offers a monster Scarlet>Fire, an inspired Space‑to‑Spanish jam and standout renditions of He’s Gone and Black Peter.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of detailed reviews praise both the performance and the recording, yielding an average user rating of 4.0 with many 5‑star endorsements; strong show highlights and excellent soundboard quality push the AI rating into the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners repeatedly cite clarity, correct pitch, perfect patches, and overall crispness. A few note early PA problems in the first set and that Phil’s bass is slightly recessed in the mix, but no major drop‑outs or distortion are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "Deep Elem Blues",
+      "Bertha",
+      "He's Gone",
+      "Black Peter",
+      "It's All Over Now Baby Blue",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set starts rough with PA glitches and a few flubs but builds steadily to a high‑energy “Deep Elem Blues”/“Bertha” sequence. The second set lifts the vibe further, highlighted by a monster Scarlet>Fire, an inspired Space→Spanish jam through Truckin', and strong closers."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for blistering leads – especially on Bertha, Big River and Deep Elem Blues – with many reviewers calling his playing 'exquisite' and 'classic'.",
+    "Phil": "One reviewer wishes Phil’s bass was more present in the mix; otherwise no specific criticism.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Deep Elem Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "It's All Over Now Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:40:12.399284+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-03.sbd.miller.108335.flac16"
+}

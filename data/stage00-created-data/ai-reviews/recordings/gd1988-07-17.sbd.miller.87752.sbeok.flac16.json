@@ -1,0 +1,51 @@
+{
+  "summary": "Soundboard recording with clear vocals and a soaring second set that shines on Big River, Blackbird and the trippy jam flow.",
+  "review": "Fans rave about the crystal‑clear vocal mix and Jerry Garcia’s “wicked pissa” guitar work, especially during the second set where the band lifts into a trippy ether. The soundboard source captures a unique, slightly strange ambience but remains clean enough to enjoy the standout moments like Big River and Blackbird. Aside from one very brief negative note, the consensus is that this Greek Theatre show delivers a high‑energy performance with excellent audio fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 4–5 stars and praise both the musical performance (especially the second set) and vocal/guitar clarity; a single low‑star outlier lowers the average but does not outweigh the overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear vocal mix, distinct (somewhat 'strange') ambience noted by fans; no major drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big River",
+      "Blackbird",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is highlighted as a killer, trippy jam that elevates the whole concert; first set solid but less specifically praised."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar described as soaring and ‘wicked pissa’; vocals also praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blackbird": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T11:56:16.983835+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-07-17.sbd.miller.87752.sbeok.flac16"
+}

@@ -1,0 +1,81 @@
+{
+  "summary": "Crisp soundboard capture of a scorching Frost 1985 set featuring a ripping Gimme Some Loving, triple Playing in the Band and soaring She Belongs to Me.",
+  "review": "The recording is praised for its crystal‑clear digital soundboard mix, delivering every nuance of what many reviewers call an “hot” show. Highlights include an explosive opening with Gimme Some Loving, a marathon Playing in the Band in the second set, and a double encore of U.S. Blues and She Belongs to Me, all performed with Jerry’s fierce guitar authority and a mesmerizing play‑in‑the‑space jam.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All six reviews are strongly positive, emphasizing both superb soundboard quality and an exceptional performance with multiple standout songs; the consistency across >5 detailed comments warrants a top‑tier rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners repeatedly note the crisp, clear SBD (digital soundboard) feed with no reported dropouts; the mix is balanced and captures the band's dynamics beautifully."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Gimme Some Loving",
+      "Playing in the Band",
+      "Bird Song",
+      "Crazy Fingers",
+      "China Doll",
+      "Wharf Rat",
+      "U.S. Blues",
+      "She Belongs to Me"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert opens with high‑energy Gimme Some Loving, builds through a powerful first set highlighted by Bird Song, then delivers an epic second set dominated by an extended Playing in the Band and a series of inspired jams, closing with a double encore that leaves the audience buzzing."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fiery, authoritative guitar work throughout; a few notes mention his vocals were uneven but his playing more than compensates.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Gimme Some Loving": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "She Belongs to Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T04:15:10.183546+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-28.sbd.new.miller.28357.sbeok.flacf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "A solid audience recording that captures a good night where the band is playing strong.",
+  "review": "Both reviewers praise this tape, noting it sounds much clearer than the comparable soundboard source and that the band delivers a solid performance. The audience‑recorded (AUD) capture is described as sweet and enjoyable, earning a four‑star rating for the recording while the show itself receives five stars.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Both reviewers give high marks to the performance (5/5) and a good rating to the recording (4/5); weighted average yields ~4.3 stars, but only two reviews limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as clearer and sweeter than the SNDBD source; no major flaws mentioned, just praised for its fidelity compared to typical audience tapes."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers simply note the band is playing well overall."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T14:02:49.028034+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-18.nak300.damico.90920.sbeok.flac16"
+}

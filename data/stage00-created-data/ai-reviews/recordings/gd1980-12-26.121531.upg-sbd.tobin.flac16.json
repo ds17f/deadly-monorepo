@@ -1,0 +1,51 @@
+{
+  "summary": "Good-quality unknown source captures a solid set with standout Scarlet>Fire, Samson and a crisp Jerry on Ship of Fools.",
+  "review": "Both reviewers rate the show highly, highlighting the fiery Scarlet>Fire transition, a strong rendition of Samson, and Jerry Garcia’s crisp guitar tone on Ship of Fools. No recording flaws are noted, suggesting the audio is at least clear enough for enjoyment despite the source being unspecified.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Two consistent 4‑star reviews praise the performance and mention no audio problems; limited sample size keeps confidence low."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments on sound quality; reviewers did not note any issues, implying acceptable clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire",
+      "Samson",
+      "Ship of Fools"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Positive remarks without detail suggest a well‑flowing set that pleased the listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "Crisp guitar tone on Ship of Fools noted.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T07:13:34.025660+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-12-26.121531.upg-sbd.tobin.flac16"
+}

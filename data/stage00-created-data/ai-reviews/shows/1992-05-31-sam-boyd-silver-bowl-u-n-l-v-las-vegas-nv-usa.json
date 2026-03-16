@@ -1,0 +1,82 @@
+{
+  "summary": "Stellar Help → Slip → Franklin's Tower opener and epic Spoonful‑Other‑Dew jam",
+  "blurb": "The set kicks off with a dazzling Help → Slipknot → Franklin's Tower that locks the band in high gear. Highlights include So Many Roads, an extended Spoonful‑> The Other One‑> Morning Dew marathon and psychedelic drumming that tops the second set. Jerry’s soaring solos shine despite occasional mix dips.",
+  "review": "May 31, 1992 at the Sam Boyd Silver Bowl captured one of the most exhilarating Vegas nights of the early ’90s. The first set bursts open with a flawless Help → Slipknot → Franklin's Tower, setting a joyous tone that carries through New Minglewood Blues and a beautifully rendered It Must Have Been The Roses. Bob Weir’s vocal on Queen Jane Approximately and the soaring Bird Song keep the momentum rolling into Picasso Moon, where mixed monitoring briefly mutes Garcia’s guitar but doesn’t dampen the overall vibe.\n\nThe second set is where the night truly shines: Scarlet Begonias segues straight into Fire On The Mountain before diving into a soulful So Many Roads. A “crazy” bass run from Phil on The Other One fuels an unforgettable Spoonful → The Other One → Morning Dew sequence, while Vince Welnick’s inventive keys add color to the expansive Attics Of My Life. Mickey Hart and Bill Kreutzmann deliver what several reviewers called the most psychedelic drumming ever heard, pushing the band into a transcendent space that culminates in an electrifying encore of Baba O'RileyNotes → Tomorrow Never KnowsNotes. Despite occasional mix hiccups—most notably an early‑Slipknot guitar dip—the performance is consistently tight, adventurous, and quintessentially Dead.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 55,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Three recordings are explicitly positive, three are mixed but none negative; multiple sources praise the Help>Slip>Frank sequence, Spoonful‑Other‑Dew marathon and psychedelic drumming, providing consistent high‑positive sentiment across the set.",
+      "final_calculation": "2.5 + 0.4 + 1.2 = 4.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd92-05-31.sbd.paino.544.sbefail.shnf",
+    "reason": "Good soundboard source with clear instrument separation and only minor mix hiccups; captures the key moments (Help>Slip>Frank, So Many Roads, Attics) most cleanly."
+  },
+  "key_highlights": [
+    "Dazzling Help → Slipknot → Franklin's Tower opener",
+    "Epic Spoonful → The Other One → Morning Dew marathon in the second set",
+    "So Many Roads and Attics Of My Life showcase Jerry’s soaring solos",
+    "Mickey Hart & Bill Kreutzmann deliver what reviewers call the most psychedelic drumming ever"
+  ],
+  "song_highlights": [
+    "Help On The Way",
+    "Slipknot",
+    "Franklin's Tower",
+    "So Many Roads",
+    "Attics Of My Life",
+    "Spoonful*",
+    "The Other One",
+    "Morning Dew*",
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "Baba O'RileyNotes",
+    "Tomorrow Never KnowsNotes"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers soaring solos on So Many Roads, Attics Of My Life and the opening Help → Slip → Franklin's Tower; occasional mix issues mute his guitar early in Slipknot and thin out parts of Picasso Moon.",
+    "Phil": "Lesh provides a ‘crazy’ bass run on The Other One and solid low‑end throughout, even shushing Steve Miller during the Morning Dew jam to keep focus.",
+    "Bob": "Weir’s vocal on Queen Jane Approximately is strong; his rhythm work adds drive and he throws in occasional Pete Townshend‑style wind‑mill gestures that fans love.",
+    "Brent": "",
+    "Mickey": "Hart’s drumming is described as high‑tek, energetic and the most psychedelic of any recent show, pushing the band into deep space during the second set.",
+    "Billy": "Kreutzmann lays down steady, propulsive beats that lock with Mickey to create a tight, adventurous rhythmic foundation."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-18T06:24:16.241861+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Help On The Way",
+      "Slipknot",
+      "Franklin's Tower"
+    ],
+    [
+      "So Many Roads"
+    ],
+    [
+      "Saint Of Circumstance",
+      "He's Gone",
+      "Drums",
+      "Space",
+      "Attics Of My Life",
+      "Spoonful*",
+      "The Other One",
+      "Morning Dew*"
+    ],
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain"
+    ],
+    [
+      "Baba O'RileyNotes",
+      "Tomorrow Never KnowsNotes"
+    ]
+  ]
+}

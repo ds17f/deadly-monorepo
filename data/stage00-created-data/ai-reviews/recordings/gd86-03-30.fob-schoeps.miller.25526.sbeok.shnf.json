@@ -1,0 +1,63 @@
+{
+  "summary": "Intense Easter‑Sunday performance with a roaring crowd and standout renditions of Stella Blue, Throwing Stones and The Mighty Quinn, captured on a fair‑quality tape.",
+  "review": "Fans who were there describe the show as one of the most electric ever – Jerry’s pre‑coma shred on Stella Blue, Bobby driving Throwing Stones, and an endless chant of Not Fade Away after a Mighty Quinn encore kept the audience buzzing long after lights came up. The recording is generally considered only fair, with mixed comments about tape clarity, but it still conveys the raw energy of that night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (high energy, standout songs) while recording quality is viewed as only fair; weighted average yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers note the sound is just fine or mediocre (one rates it a 2/5), indicating tape‑level limitations but no catastrophic dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Throwing Stones",
+      "The Mighty Quinn",
+      "Why Don't We Do It In the Road",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A long, high‑energy Easter Sunday set that built to a massive Mighty Quinn encore and an extended Not Fade Away chant, leaving the crowd unwilling to leave even after lights came up."
+  },
+  "band_member_comments": {
+    "Jerry": "Pre‑coma shredding on Stella Blue and noted wearing red during the show.",
+    "Phil": "",
+    "Bob": "Bobby (Weir) led the band through Throwing Stones with gusto.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Mighty Quinn": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Why Don't We Do It In the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T14:13:56.141848+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-03-30.fob-schoeps.miller.25526.sbeok.shnf"
+}

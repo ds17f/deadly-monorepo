@@ -1,0 +1,70 @@
+{
+  "summary": "Soundboard capture with solid clarity showcases a brilliant performance highlighted by an epic 30‑minute Lovelight and strong early renditions of Easy Wind and High Time.",
+  "review": "The recording is a clean soundboard source that delivers good clarity throughout, with no major technical flaws reported. Musically the show shines thanks to a monster 30‑minute Lovelight, lively early versions of Easy Wind and High Time, and the occasional quirky inclusion of New Orleans/Searchin'. The only blemish mentioned is a slightly forced vocal on Dire Wolf.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Reviewers consistently give high star ratings (average ≈ 4.7) and praise both the performance (standout songs, strong playing) and the recording quality (good sound)."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Good sound quality reported; no drop‑outs or major mix issues noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lovelight",
+      "Easy Wind",
+      "High Time",
+      "New Orleans",
+      "Searchin'"
+    ],
+    "poor_songs": [
+      "Dire Wolf"
+    ],
+    "setlist_flow": "Overall brilliant set despite some tentative early Working Man's Dead era tunes; the long Lovelight serves as a high point, and the unusual song choices add extra interest."
+  },
+  "band_member_comments": {
+    "Jerry": "Shows strong blues chops on Easy Wind; vocal performance noted as slightly forced on Dire Wolf.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Organ vibrato on High Time praised.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Easy Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "New Orleans": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Searchin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T16:57:06.713936+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-08-29.123101.sbd-fixed.miller.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent audience recording that captures a thunder‑charged Wharf Rat and an epic Sugar Magnolia jam, despite occasional sloppy moments.",
+  "review": "The Silberman AUD tape delivers a vivid snapshot of the infamous June 20 1983 rain‑soaked show, with the weather becoming part of the performance—lightning striking during Wharf Rat and Phil’s bass bomb are repeatedly highlighted. The sound is surprisingly clear for an audience source, letting listeners hear both the chaos of the storm and the brilliance of a soaring Sugar Magnolia jam.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Reviews consistently praise the unique performance and overall good audio quality; weighted average gives ~4.3 out of 5."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough for an audience tape, captures rain, thunder and crowd ambience; no major drop‑outs mentioned but inherent ambient noise is present."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A chaotic, weather‑driven set that swings from sloppy verses to explosive jams; the thunder‑timed moments give the concert a surreal, high‑energy arc."
+  },
+  "band_member_comments": {
+    "Jerry": "His playing is framed by the lightning moment in Wharf Rat and described as almost divine (“god talking to Jerry”).",
+    "Phil": "Praised for reacting to the thunder with a massive bass bomb on Wharf Rat, delivering one of his most memorable moments.",
+    "Bob": "Weir’s attempt to smash his guitar during Sugar Magnolia is noted as over‑the‑top and poorly executed.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-14T07:35:44.037463+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-20.aud-set2.silberman.3926.sbeok.shnf"
+}

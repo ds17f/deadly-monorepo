@@ -1,0 +1,46 @@
+{
+  "summary": "Poor audience‑sourced tape with unlistenable Not Fade Away but a decent Other One excerpt from a different show.",
+  "review": "The recording is an audience compilation that mixes a badly recorded Not Fade Away (9/20/70) with a clearer Other One taken from Portchester 2/23/71. While the Other One shines, the overall sound quality is so low on the first segment that it detracts from any enjoyment, and the mismatched sources make the set feel disjointed.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.1,
+    "confidence": "medium",
+    "rationale": "Reviewers consistently criticize the recording quality (especially Not Fade Away) and note that the tape is a mismatched compilation; only a few positive remarks about The Other One keep the rating from being lower."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "NFA segment described as 'unlistenable' and 'horrible'; overall tape is a compilation of unrelated sources with inconsistent fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Not Fade Away"
+    ],
+    "setlist_flow": "The tape stitches together songs from different dates (9/20/70 and 2/23/71), resulting in a confusing, non‑cohesive flow rather than a true concert experience."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-20T01:12:13.453541+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-11-10.aud.cotsman.17032.sbeok.shnf"
+}

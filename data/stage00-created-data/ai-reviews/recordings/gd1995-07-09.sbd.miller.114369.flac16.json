@@ -1,0 +1,94 @@
+{
+  "summary": "Clear soundboard recording of Jerry’s final show captures poignant moments like “So Many Roads” and “Box of Rain,” though the performance is uneven.",
+  "review": "The Miller SBD source delivers a generally polished, clear capture of the July 9‑1995 concert, with standout emotional highlights such as So Many Roads, Box of Rain, When I Paint My Masterpiece, Corrina and a peaking Drum segment.  The set runs patchy at times—flubs in the Chain, Lazy River Road and Sugar Magnolia—and suffers occasional squelches in the second half, but the historic weight and several superb songs keep it compelling.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise key songs and the soundboard quality, yet many note uneven playing and technical glitches; weighting show (70%) vs recording (30%) yields a solid‑above‑average score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and polished SBD capture, but reviewers note occasional squelches/drop‑outs in the second set and some patching of the source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads",
+      "Box of Rain",
+      "When I Paint My Masterpiece",
+      "Corrina",
+      "Drums"
+    ],
+    "poor_songs": [
+      "The Chain",
+      "Lazy River Road",
+      "Sugar Magnolia",
+      "Unbroken Chain",
+      "Childhood's End"
+    ],
+    "setlist_flow": "First set described as patchy but improves; second half contains the emotional high points while also featuring several flubs.  The show ends with a double encore and fireworks, underscoring its historic significance."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is noted as croaky and ‘dying,’ yet his guitar work shines on Masterpiece and fills are praised; occasional lyric slips mentioned.",
+    "Phil": "Highlighted for vocal work on Box of Rain and a notable jam in the Space/Unbroken Chain section.",
+    "Bob": "Acoustic guitar on When I Paint My Masterpiece receives strong praise as a top‑ten moment.",
+    "Keys": "Vince (keys) is called good; overall keyboard presence is generally solid with occasional standout moments.",
+    "Drums": "The Drum segment is described as peaking and one of the tour’s best."
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Box of Rain": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "When I Paint My Masterpiece": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Corrina": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Unbroken Chain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Chain": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Childhood's End": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T12:30:49.886054+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-09.sbd.miller.114369.flac16"
+}

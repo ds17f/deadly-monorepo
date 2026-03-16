@@ -1,0 +1,31 @@
+{
+  "summary": "Reviewer only notes a set‑list correction; no comments on sound or performance are provided.",
+  "review": "The lone review simply corrects the second song to “Greatest Story Ever Told” and offers no evaluation of the music or the recording. With no rating or descriptive feedback, both the show quality and audio fidelity remain unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "Only one brief review that contains a factual set‑list correction and no assessment of performance or recording; insufficient data to assign a higher rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound quality, clarity, or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T01:29:19.736047+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-21.140837.Bryant.Miller.Noel.t-flac2496"
+}

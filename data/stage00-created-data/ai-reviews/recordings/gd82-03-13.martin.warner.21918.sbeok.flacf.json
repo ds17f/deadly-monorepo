@@ -1,0 +1,45 @@
+{
+  "summary": "Audience tape with bright highs but thin lows captures a wildly energetic Reno ’82 show highlighted by a blistering Stranger > Franklin’s Tower jam.",
+  "review": "The recording is an audience source that delivers plenty of sparkle in the treble, though the low end can feel thin and overall fidelity is only fair. Musically the concert bursts with high‑octane energy—Jerry’s solos are unusually fast, especially on the Stranger > Franklin’s Tower sequence, and the rare Dear Prudence jam stands out as a historic moment. The show starts strong and maintains momentum through mid‑set before the energy tapers off later in the night.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Reviews praise the performance (especially Jerry’s fast solos and unique jams) giving a high show rating, while noting only fair audio quality; weighted average yields ~3.7 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Bright, sparkly highs with noticeable thinness in the low end; overall not pristine but listenable for an early‑'80s audience tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger > Franklin's Tower",
+      "Dear Prudence"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert opens with high energy that sustains through the first set and peaks at the Stranger > Franklin’s Tower jam; momentum wanes after the Franklins, giving the latter part a slightly flatter feel."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his unusually fast, almost manic solos—especially on the Stranger > Franklin’s sequence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's presence is mentioned (e.g., his knees), but no specific comments on playing.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dear Prudence": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T18:48:49.221317+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-03-13.martin.warner.21918.sbeok.flacf"
+}

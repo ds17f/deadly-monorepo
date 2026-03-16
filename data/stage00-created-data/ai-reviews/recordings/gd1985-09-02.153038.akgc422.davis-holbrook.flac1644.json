@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent audience recording captures an intense 1985 show highlighted by a soaring Stagger Lee → Aiko, fiery Minglewood and a vibrant Miracle, with superb crowd ambience.",
+  "review": "The reviewer is effusive about the performance, praising the high‑energy jams on Stagger Lee > Aiko, Minglewood, Miracle and several other cuts, and noting that the band’s intensity was captured beautifully by an excellent audience recording.  The sound quality is described as “EXCELLENT” with great crowd ambience, making this a memorable snapshot of the Dead in ’85.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "One enthusiastic review gives strong positive feedback on both musical performance and audio quality; limited data reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls the sound \"EXCELLENT\" and highlights clear capture of intensity, great crowd ambience and no reported distortion or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stagger Lee > Aiko",
+      "Minglewood",
+      "Miracle",
+      "China Doll",
+      "Good Lovin'",
+      "Ramble On Rose",
+      "Bucket"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as high‑intensity with tight transitions, a quick‑tempo closer (Bucket) and extended jam spaces that keep the momentum flowing."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s backing vocals and humming are noted; his playing adds to the overall intensity.",
+    "Phil": "Phil’s bass is repeatedly praised for thunder‑clap / lightning‑bolt sounds, adding a dangerous edge to the music.",
+    "Bob": "",
+    "Keys": "Brent (keyboards) receives multiple accolades – scatting, organ notes and “good work in the nooks and crannies.”",
+    "Drums": "The drummers are highlighted for powerful, rapid throws, electronica‑style big drum moments and overall space‑creating rhythm."
+  },
+  "song_mentions": {
+    "Stagger Lee > Aiko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:22:47.780090+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-02.153038.akgc422.davis-holbrook.flac1644"
+}

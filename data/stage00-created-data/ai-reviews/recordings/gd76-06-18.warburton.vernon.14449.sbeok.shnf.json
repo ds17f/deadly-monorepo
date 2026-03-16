@@ -1,0 +1,109 @@
+{
+  "summary": "Fair‑quality soundboard capture of a mixed 1976 show with standout St. Stephen, Sugar Magnolia and Eyes of the World but inconsistent performance.",
+  "review": "The recording is a soundboard source that suffers from noticeable hiss, distortion and occasional muffling – listeners describe it as having a “split personality.” The concert itself is uneven: the first set drags before picking up with strong moments like St. Stephen, Sugar Magnolia and a great Eyes of the World, while several songs feel lackluster or poorly executed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Reviews are split – some praise specific performances while many note serious recording flaws and inconsistent playing, leading to a mid‑range overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Constant hiss and distortion, occasional muffled sections, drums sound recessed (\"bathroom\" quality) while vocals and Jerry's guitar are clearer; overall listenable but far from pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "The Other One",
+      "Eyes of the World",
+      "Sugar Magnolia",
+      "U.S. Blues"
+    ],
+    "poor_songs": [
+      "Promised Land",
+      "Samson",
+      "Crazy Fingers",
+      "Row Jimmy",
+      "Mission In the Rain"
+    ],
+    "setlist_flow": "The first set is uneven and slow to engage, but the second set picks up energy with strong jams; overall pacing feels inconsistent, leaving the show feeling mixed."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice and guitar cut through the muddy mix, and his teasing on St. Stephen is praised, but several reviewers note a laid‑back, less lead‑filled performance.",
+    "Phil": "",
+    "Bob": "Bob's vocals are fine, yet his rhythm guitar often disappears in the mix; he’s described as “cooking cowboy songs” during the first set.",
+    "Keys": "Keyboards are reported as virtually nonexistent or buried beneath the noise.",
+    "Drums": "The drum sound is described as recorded in a bathroom (poor on the tape), though live energy from the drummers is highlighted as a high point of the second set."
+  },
+  "song_mentions": {
+    "Brown Eyed Women": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mission In the Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T04:45:27.499035+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-06-18.warburton.vernon.14449.sbeok.shnf"
+}

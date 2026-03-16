@@ -1,0 +1,56 @@
+{
+  "summary": "Excellent soundboard transfer captures a stellar Oct 31 1971 show highlighted by a transcendent Dark Star, soaring Jack Straw and a standout El Paso.",
+  "review": "The Charlie Miller‑sourced soundboard transfer is praised for its crisp piano, superb instrument separation and overall clarity, despite occasional mix quirks (Keith’s volume in “Bertha” and channel swapping). Musically the concert is lauded as one of the band’s peak fall‑71 performances – Dark Star is called “the greatest tripped‑out” version, Jack Straw “awesome”, and El Paso receives special acclaim for Garcia’s soaring riffs. The consensus across reviews is overwhelmingly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All 12 reviews are 4‑5 stars, consistently praising both the performance (standout Dark Star, Jack Straw, El Paso) and the high‑quality soundboard transfer; only minor mix issues are noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Charlie Miller’s edit delivers crisp piano, excellent instrument separation and overall clarity. Some reviewers note occasional anomalies – Keith Godchaux is overly high in the mix on “Bertha” and a brief channel swap for Bob and Jerry early in the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Jack Straw",
+      "El Paso"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A classic late‑1971 fall setlist that moves briskly through tight, well‑played tunes; the band’s deliberate pacing (e.g., slower “Casey Jones”) adds a fresh dynamic while keeping the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is highlighted – soaring riffs on El Paso, a deliberate slowdown on Jack Straw and a superb Dark Star solo.",
+    "Phil": "Phil’s bass blends well with Jerry’s harmonies, especially noted on the closing chorus of Jack Straw.",
+    "Bob": "Bob’s placement in the stereo field shifts early in the show (left channel) but no specific performance critique is offered.",
+    "Keys": "Keith Godchaux’s piano is described as crisp and present, though occasionally too high in the mix on “Bertha”.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T09:03:47.226043+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-10-31.sbd.miller.79011.sbeok.flac16"
+}

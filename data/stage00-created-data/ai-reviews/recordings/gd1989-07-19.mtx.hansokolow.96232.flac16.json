@@ -1,0 +1,69 @@
+{
+  "summary": "High‑quality matrix recording of a monster summer ’89 show with standout Desolation Row, Box of Rain and The Other One",
+  "review": "The performance is widely praised as a “monster” set, especially the first‑set gems like Desolation Row, Sugaree and an inspired Box of Rain, while the jams and segues flow smoothly. The matrix source delivers generally excellent sound, though a brief board glitch in the Dew finale dulls Jerry’s tone for a moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (average ≈4.6) and strong positive comments on both the music and recording quality, with only minor technical complaints."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced matrix mix; one reviewer notes a brief loss of Jerry’s tone in the final minute of Dew due to a board glitch, but overall sound is praised as high‑quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Desolation Row",
+      "Box of Rain",
+      "Sugaree",
+      "The Other One",
+      "Dew",
+      "Mexicali Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as excellent and “cooking,” second set solid but less spectacular; jams and segues are smooth, giving the show a natural flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is highlighted as monster‑level with high moments throughout, though his tone briefly fades in the Dew finale.",
+    "Phil": "Phil’s vocal contribution on Box of Rain is praised (“Let Phil sing!”).",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drums and space are called “mind‑roasting,” indicating a powerful rhythmic performance."
+  },
+  "song_mentions": {
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T22:07:35.008580+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-19.mtx.hansokolow.96232.flac16"
+}

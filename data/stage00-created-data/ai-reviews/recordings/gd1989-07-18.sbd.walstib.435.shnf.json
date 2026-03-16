@@ -1,0 +1,89 @@
+{
+  "summary": "A solid July 18, 1989 soundboard recording that captures a kick‑ass show with standout runs of Scarlet Begonias→Man Smart (Woman Smarter) and a beautiful China Doll.",
+  "review": "The concert is praised by most reviewers as a consistently strong performance from start to finish, highlighted by tight transitions through Sugar Magnolia, Scarlet Begonias into Man Smart, Eyes of the World and an especially moving China Doll. The DSBD soundboard source provides clear, well‑balanced audio with no notable flaws, making it enjoyable both for listening and video viewing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4–5 stars praising the musical setlist and noting good soundboard quality; a few dissenting opinions do not outweigh the overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "DSBD soundboard capture described as crisp, clear and well‑balanced; no dropout or major mix issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia",
+      "Scarlet Begonias → Man Smart (Woman Smarter)",
+      "Eyes of the World",
+      "China Doll",
+      "Jack Straw",
+      "Sunshine Daydream"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a solid, fluid set from start to finish with smooth segues—especially the second‑set flow that feels effortless and energetic."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his soaring guitar tone and “Jerry Lives!” energy; described as moving, shaking listeners.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Man Smart (Woman Smarter)": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T21:50:16.154532+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-18.sbd.walstib.435.shnf"
+}

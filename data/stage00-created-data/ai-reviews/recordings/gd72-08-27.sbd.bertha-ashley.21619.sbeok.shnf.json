@@ -1,0 +1,69 @@
+{
+  "summary": "Remastered soundboard of the legendary Aug 27 1972 show delivers powerful Phil bass, soaring Birdsong and a cosmic Dark Star, though heavy reverb/processing splits opinion on the recording.",
+  "review": "The performance is widely praised – Jerry’s guitar, Keith’s keys and Phil’s thunderous bass drive a tight, bouncy set highlighted by Dark Star > El Paso, Birdsong, Jack Straw, Promised Land and Playin’ In The Band. The Bertha remaster offers excellent clarity on instruments but its heavy EQ, compression and added reverb give some listeners a synthetic vocal feel and a “studio‑processed” ambience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers award 5‑star ratings and rave about the show’s energy and standout songs; recording quality is generally good but a minority criticize heavy reverb, pulling the overall score slightly below perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Remaster features strong instrument clarity and solid bass levels, but includes extensive EQ/compression and added reverb that many describe as overly processed or synthetic, especially on vocals."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Birdsong",
+      "Jack Straw",
+      "Promised Land",
+      "Greatest Story Ever Told",
+      "Playin' In The Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as tight and bouncy, with seamless transitions that keep the band’s momentum high throughout; fans note excellent pacing and energy from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for flawless guitar work, “painting fractals” on Birdsong and almost never flubbing a note.",
+    "Phil": "Repeatedly highlighted for powerful, thunderous bass that drives the show.",
+    "Bob": "Vocals described as synthetic or fuzzy in this mix; however his banter and occasional vocal moments receive positive mentions.",
+    "Keys": "Keith’s keyboard playing is noted as especially into it, adding depth to the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Birdsong": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' In The Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T16:55:17.897750+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-08-27.sbd.bertha-ashley.21619.sbeok.shnf"
+}

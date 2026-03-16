@@ -1,0 +1,94 @@
+{
+  "summary": "Crystal‑clear 1977 soundboard capture of a rollicking show featuring a smoking Lazy Lightnin' > Supplication jam, stellar Wharf Rat and a fluid Playing‑in‑the‑Band sandwich.",
+  "review": "The Miller tape delivers killer sound – crisp, well‑balanced board mix that lets every instrument shine. Musically the night is a high‑energy affair with a trippy Lazy Lightnin'→Supplication sequence, a fiery Wharf Rat, a beautifully executed Playing‑in‑the‑Band sandwich and standout moments from Peggy‑O, Samson and the first‑set classics. Overall reviewers rave about both the performance and the audio quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Six detailed reviews are uniformly enthusiastic (average 4.7★), praising both the superb soundboard recording and the exceptional playing, with only minor mixed comments."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the audio \"killer\" and \"amazing\", noting clear instrument separation and no significant drop‑outs in this particular file."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lazy Lightnin'",
+      "Supplication",
+      "Wharf Rat",
+      "Playing in the Band",
+      "Peggy-O",
+      "Samson",
+      "Minglewood Blues",
+      "Me & My Uncle",
+      "Tennessee Jed"
+    ],
+    "poor_songs": [
+      "Johnny B. Goode"
+    ],
+    "setlist_flow": "High‑octane first set with a driving Deal closer, followed by an explosive second set highlighted by the Lazy Lightnin'→Supplication jam and a seamless Playing‑in‑the‑Band sandwich; encore (Johnny B. Goode) is generally liked despite one reviewer’s critique."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his fiery solo work on Supplication and Me & My Uncle, with reviewers noting his “diffident” start that erupts into a full‑blown tear.",
+    "Phil": "Mentioned in passing as part of the tight rhythm section; no specific performance critique beyond general praise.",
+    "Bob": "Highlighted for his vocal leads (e.g., Me & My Uncle) and quirky stage banter, with reviewers noting his direction on tempo choices.",
+    "Keys": "Keith is noted for adding a harpsichord texture on Peggy‑O and generally contributing solid keyboard work throughout the show.",
+    "Drums": "Mickey’s call‑outs (e.g., asking for Bertha) are mentioned; no explicit criticism, implying steady drumming."
+  },
+  "song_mentions": {
+    "Lazy Lightnin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T05:51:22.942511+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-30.sbd.miller.99765.sbeok.flac16"
+}

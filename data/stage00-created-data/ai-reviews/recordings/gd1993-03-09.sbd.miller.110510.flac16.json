@@ -1,0 +1,89 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a solid 1993 Spring show with standout performances of Broken Arrow, Row Jimmy and Knockin’ on Heaven’s Door.",
+  "review": "The SBD from the March 9 1993 Rosemont run is praised for its exceptional clarity despite the venue’s notorious acoustics. Musically the band is in good form – Phil’s Broken Arrow, Jerry’s soaring solos on Row Jimmy and The Last Time, and a tight second‑set flow highlighted by China>Rider, Ship of Fools and a memorable Knockin’ on Heaven’s Door encore. A few moments (early Broken Arrow, Victim) are noted as weaker, but overall the concert is considered one of the stronger shows of that spring tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (9/13) give 4‑5 stars and highlight both excellent soundboard quality and strong musical moments; only a handful of low‑star or joke reviews dilute the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix that overcomes Rosemont’s poor acoustics; balanced levels for guitars, keys and drums with minimal noise or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Broken Arrow",
+      "Row Jimmy",
+      "Knockin' on Heaven's Door",
+      "China>Rider",
+      "Ship of Fools",
+      "Playin'",
+      "The Last Time",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Victim",
+      "Early Broken Arrow (some reviewers found it weak)"
+    ],
+    "setlist_flow": "First set packs new material and tight song‑to‑song transitions; the energy lifts dramatically in the second set, culminating in a powerful jam sequence and an uplifting Heaven’s Door encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for energetic, soaring solos (Row Jimmy, The Last Time, Broken Arrow) though a few reviewers note early‑set MIDI sloppiness.",
+    "Phil": "Broken Arrow highlighted as a favorite Phil tune; generally solid bass work mentioned.",
+    "Bob": "",
+    "Keys": "Vince’s keyboard harmonies and flute solo on Row Jimmy are praised; overall keys work described as polished.",
+    "Drums": "Bill Kreutzmann’s drumming is called solid, especially during Playin' and the jam that follows."
+  },
+  "song_mentions": {
+    "Broken Arrow": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Row Jimmy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China>Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T09:55:24.126598+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-03-09.sbd.miller.110510.flac16"
+}

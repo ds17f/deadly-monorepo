@@ -1,0 +1,81 @@
+{
+  "summary": "Excellent soundboard recording captures a mixed‑quality 1990 show – crisp audio shines despite a first set that many found listless, while highlights like High Time, Uncle John’s Band and the Foolish jam stand out.",
+  "review": "The recording is praised for its crystal‑clear, easy‑on‑the‑ears sound quality, typical of a well‑mastered Miller/Tetzeli soundboard capture. Musically the performance is uneven – the first set is described as disjointed and listless by some listeners, yet songs such as High Time, Uncle John’s Band, Estimated Prophet and especially a brief but brilliant Foolish jam receive strong positive notes. Overall the show feels like a typical 1990 warm‑up: solid but not spectacular.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised (≈4.5), while show quality varies from negative to positive (average ≈3.5); weighted average yields ~3.8."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, easy‑on‑the‑ears sound; audience recordings noted as crisp too; no major dropouts or distortion mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Time",
+      "Uncle John's Band",
+      "Estimated Prophet",
+      "Foolish"
+    ],
+    "poor_songs": [
+      "Easy To Love You",
+      "Bird Song (jam)",
+      "Promised Land"
+    ],
+    "setlist_flow": "First set described as disjointed and listless, second set typical 1990 style; overall feels like a warm‑up show with occasional cosmic moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's restless invention is highlighted in the Foolish jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums are noted as tidy and supportive, especially after Foolish."
+  },
+  "song_mentions": {
+    "Easy To Love You": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T07:09:49.407092+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-06-08.sbd.miller.tetzeli.fix-6935.34397.sbeok.shnf"
+}

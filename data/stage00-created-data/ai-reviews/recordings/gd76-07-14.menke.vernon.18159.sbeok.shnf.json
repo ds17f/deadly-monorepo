@@ -1,0 +1,50 @@
+{
+  "summary": "Audience‑sourced recording with decent crowd sound, showcasing a fluid Garcia and standout renditions of Minglewood and The Other One.",
+  "review": "The performance is praised as one of the most fluid Garcia shows of ’76, with fans highlighting a superb take on “Minglewood” and an insanely good “The Other One.”  Recording-wise it’s clearly an audience tape (with occasional sound‑board patches) that sounds distant but still captures the enthusiastic crowd, making it listenable for Deadheads who value the music over pristine fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show very highly (5‑star) and note exceptional playing, while recording quality is mixed (audience source, distant sound), pulling the overall weighted rating down slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audience tape with noticeable distance and crowd noise; some reviewers note Menke's audience recording is decent, but it lacks crisp soundboard clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A quintessential 1976 set that flows smoothly, featuring a long, trippy jam sequence (grow > Eyes of the World > Wharf Rat > The Other One) and showcasing Garcia’s fluid playing throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his fluid, syrupy lead‑guitar work; one reviewer mentions ‘jer busts out the wawa.’",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:19:18.802832+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-07-14.menke.vernon.18159.sbeok.shnf"
+}

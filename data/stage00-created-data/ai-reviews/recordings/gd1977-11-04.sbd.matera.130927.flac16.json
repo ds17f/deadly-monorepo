@@ -1,0 +1,127 @@
+{
+  "summary": "Legendary Colgate University show with killer playing and crisp sound‑board recording, though a few brief cuts in the drum and Iko Iko tracks.",
+  "review": "Fans rave about this performance – the first set is described as an A+ burst of tight jams from “Bertha” through “Let It Grow,” and the second set delivers standout moments like the fast‑paced “Eyes of the World > Estimated Prophet” and a superb “Johnny B. Goode” encore. The updated SBD (soundboard) source sounds clean and modern, but listeners note short drop‑outs in the drum break and the Iko Iko segment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviews are highly enthusiastic about both the musical performance and the sound‑board quality; minor recording cuts keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Remastered SBD sounds clear and modern, praised as “crisp” and “nice sounding,” but contains short edits (58 s in Drums, 23 s in Iko Iko) that some listeners note."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Good Lovin'",
+      "Brown Eyed Women",
+      "Eyes of the World > Estimated Prophet",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [
+      "Dupree's",
+      "Stella",
+      "Iko Iko"
+    ],
+    "setlist_flow": "First set flows tightly with high‑energy jams and strong transitions, earning an A+ grade; the second set is solid but slightly uneven (B‑), highlighted by a fast “Eyes of the World” sequence and ending on a fiery “Johnny B. Goode.”"
+  },
+  "band_member_comments": {
+    "Jerry": "Stella is noted as the roughest part for Jerry, but overall his guitar work is praised throughout the show.",
+    "Phil": "Phil’s long funny during tech difficulties and his bass action around the six‑minute mark of “Eyes of the World” are highlighted; he adds capital on “Let It Grow.”",
+    "Bob": "",
+    "Keys": "Keith shines on the “Estimated Prophet” transition and delivers a great solo on the “Johnny B. Goode” encore.",
+    "Drums": "The drum break has a 58‑second edit, but Bill’s playing is otherwise solid; Phil’s action around 6 min in the second set is noted."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Must Have Been Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunrise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T06:32:43.013571+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-11-04.sbd.matera.130927.flac16"
+}

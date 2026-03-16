@@ -1,0 +1,44 @@
+{
+  "summary": "Strong, well‑played Providence show with surprisingly Garcia‑like lead guitar and solid crowd energy, but recording details remain vague.",
+  "review": "Reviewers rave about the high‑energy performance in Providence – many note that the lead‑guitar work sounds just like Jerry’s even though it was actually Bob “Dog” Trough filling in. The audience vibe is praised (the iconic \"Window Pane\" intro and a palpable Feel Like A Stranger reaction), while no concrete information on the recording source or fidelity is given.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 4‑5 stars and describe an excellent live performance, but they provide little concrete information about the audio source or sound quality, leading to a moderate confidence level."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentions soundboard clarity or audience bleed; one comment notes it sounds better now than on the night, suggesting some remastering but overall technical quality is unclear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Window Pane"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is remembered for its tight playing and enthusiastic New England audience; reviewers highlight the opening \"Window Pane\" moment and a strong Feel Like A Stranger crowd response, indicating a well‑flowing set."
+  },
+  "band_member_comments": {
+    "Jerry": "Lead guitar sounded remarkably like Garcia even though it was Bob Trough filling in.",
+    "Phil": "Phil Lesh was spotted off‑stage at a local store and described as friendly; no specific musical comments.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Window Pane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feel Like A Stranger": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T02:39:53.325629+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-07.ecm220t.keshavan.miller.106821.flac16"
+}

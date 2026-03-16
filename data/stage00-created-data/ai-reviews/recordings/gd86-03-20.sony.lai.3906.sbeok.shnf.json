@@ -1,0 +1,56 @@
+{
+  "summary": "Audience‑recorded tape with muddy sound but a legendary Box of Rain moment makes this Hampton show unforgettable",
+  "review": "Fans rave about the rare and emotional Box of Rain performance that turned an otherwise ordinary March 1986 Hampton show into a treasured memory, even though the recording is plagued by distant, crowd‑overwhelming audio. The first set is described as mediocre with a flubbed Althea, while the second set lifts the vibe, but listeners should expect muddy, low‑clarity sound typical of an audience tape.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show quality is rated high because of the standout Box of Rain and overall fan excitement; recording quality is consistently described as poor, pulling the weighted average down to a solid but not stellar rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Very loud crowd dominates the mix; sound is muddy and distant, with low clarity and limited instrument separation. Listeners report it feels like a crowd recording with faint music in the background."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain"
+    ],
+    "poor_songs": [
+      "Althea"
+    ],
+    "setlist_flow": "First set described as mediocre and even featured a lyrical flub on Althea; second set ignited the audience, highlighted by Box of Rain and upbeat dancing, giving the night its lasting emotional impact despite the sound issues."
+  },
+  "band_member_comments": {
+    "Jerry": "Flubbed lyrics on Althea; some reviewers note his performance was off that night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated > Eyes into drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:06:26.542900+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-03-20.sony.lai.3906.sbeok.shnf"
+}

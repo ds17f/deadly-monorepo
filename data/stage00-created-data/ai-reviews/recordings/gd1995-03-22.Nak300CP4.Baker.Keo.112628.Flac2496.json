@@ -1,0 +1,45 @@
+{
+  "summary": "Decent recording of a middling show highlighted by a great St. Stephen tease and an awesome Unchained.",
+  "review": "The reviewer rates the performance as neither the best nor the worst, giving it four stars. They point out that the Stephen tease was “great” and that Unchained made the set “awesome,” but provide no details on the audio source or sound quality. Overall the show is viewed as solid but unremarkable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review, offering mixed‑but‑leaning‑positive comments about the performance and no information on recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about soundboard, audience mix, clarity, or other technical aspects were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Unchained"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the show as average overall—“not the greatest but not the worst”—with a few high points."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Unchained": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T06:16:37.801297+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-22.Nak300CP4.Baker.Keo.112628.Flac2496"
+}

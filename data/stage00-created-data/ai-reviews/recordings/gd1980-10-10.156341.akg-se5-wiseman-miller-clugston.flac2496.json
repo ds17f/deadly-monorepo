@@ -1,0 +1,31 @@
+{
+  "summary": "Review flags incorrect concert date metadata, offering no insight into audio or performance quality",
+  "review": "The sole reviewer points out that the recording is mislabeled as a 1989 show when it should be dated 10/10/80. No comments are made about the soundboard source, mix clarity, or the musical performance, leaving both recording and show quality indeterminate.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.5,
+    "confidence": "low",
+    "rationale": "Only one review focused on metadata error; no information on music or sound quality, resulting in a low confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No audio quality comments provided; only date discrepancy mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T04:31:31.343715+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-10.156341.akg-se5-wiseman-miller-clugston.flac2496"
+}

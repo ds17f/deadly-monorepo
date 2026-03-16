@@ -1,0 +1,64 @@
+{
+  "summary": "Energetic first set with strong Sugaree; uneven second set",
+  "blurb": "The show opens with a punchy Feel Like A Stranger and a standout Sugaree, while Corinna shines in the mid‑set. Jerry is hot on guitar early but his playing drifts in the second set, which many listeners find sluggish despite a solid Morning Dew finish. Overall the first half dazzles, the latter half divides opinion.",
+  "review": "On October 7 1994 at The Spectrum, the Dead delivered a high‑energy first set that still holds up for fans looking for classic mid‑’90s fireworks. A scorching Feel Like A Stranger kicks things off, leading into a beautifully voiced Sugaree and a tight run through The Same Thing, Brown Eyed Women, El Paso, Tennessee Jed and The Music Never Stopped. Jerry’s guitar is described as “hot” and full of verve, and Corinna (spelled Corrina in the reviews) adds a soulful lift that many listeners cite as a highlight.\n\nThe second set is where opinions split. Victim Or The Crime and Samba In The Rain sit uneasily before a meandering Foolish Heart into Corinna segue. Drums‑Space‑The Last Time‑That Would Be Something‑Morning Dew stretches the night, but several reviewers note that Jerry’s playing feels “phoned‑in” and the pacing drags, even though Morning Dew closes on a high note. The encore Johnny B. Goode caps the evening with a familiar burst of excitement, yet the overall impression is an uneven night: first‑set brilliance tempered by a second‑set that left the audience divided.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.8,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 14,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.2,
+      "sentiment_rationale": "All three analyses label the sentiment as mixed, with clear praise for first‑set songs (Sugaree, Corinna, Feel Like A Stranger) but consistent criticism of the second set’s energy and pacing. The balance of positive vs negative comments yields a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.2 = 2.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1994-10-07.aud.bleich-sirmick.79019.sbeok.flac16",
+    "reason": "Crystal‑clear matrix source with excellent clarity and balanced crowd presence; captures the high‑energy first set while preserving the show’s nuances."
+  },
+  "key_highlights": [
+    "Standout Sugaree and Corinna performances in the first set",
+    "Jerry’s hot guitar work early on, contrasted with a sluggish second half",
+    "Strong closing with Morning Dew despite overall second‑set criticism",
+    "High‑quality matrix recording that preserves the concert’s dynamics"
+  ],
+  "song_highlights": [
+    "Feel Like A Stranger",
+    "Sugaree",
+    "Corinna",
+    "That Would Be Something",
+    "Morning Dew"
+  ],
+  "band_performance": {
+    "Jerry": "Hot and energetic on guitar in the first set, but his playing feels phoned‑in during parts of the second set.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-19T02:46:49.823006+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Feel Like A Stranger"
+    ],
+    [
+      "Sugaree"
+    ],
+    [
+      "Foolish Heart",
+      "Corinna",
+      "Drums",
+      "Space",
+      "The Last Time",
+      "That Would Be Something",
+      "Morning Dew"
+    ]
+  ]
+}

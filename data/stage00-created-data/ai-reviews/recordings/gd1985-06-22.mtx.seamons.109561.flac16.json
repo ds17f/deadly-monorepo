@@ -1,0 +1,93 @@
+{
+  "summary": "A crystal‑clear matrix capture that lets the band’s bright guitar work and high‑energy drums shine, with standout moments like Sailor > Saint and Throwing Stones despite a few uneven sections.",
+  "review": "The recording is an excellent matrix blend – polished, balanced and sparkling – making every nuance audible from Jerry’s vocal delay on Stella to the crisp solos on Sugaree. Musically the show delivers strong highlights (Sailor‑Saint, Throwing Stones, Althea) but suffers from under‑played first‑set moments and a rushed second set where Jerry is noticeably subdued.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the high‑quality matrix recording and many highlight strong performances; only a few note uneven playing, resulting in an overall good‑to‑great rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Balanced, polished and bright sound; well‑executed matrix that lets the board dominate while retaining crowd ambience. No major dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sailor",
+      "Saint of Circumstance",
+      "Stella Blue",
+      "Throwing Stones",
+      "Sugaree",
+      "It's All Over Now",
+      "Althea"
+    ],
+    "poor_songs": [
+      "Dear Mr. Fantasy",
+      "Keep On Growin'"
+    ],
+    "setlist_flow": "First set described as a bit under‑played and uneven, while the second set carries high energy (drums) but feels rushed in places; overall flow is rescued by strong song selections and the matrix’s atmospheric crowd presence."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for sparkling guitar tone, bright sound and subtle vocal delay on Stella; however noted as missing or subdued during parts of the second set and ‘Keep On Growin’’.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboardist) mentioned for mis‑sung lyrics on Dear Mr. Fantasy.",
+    "Drums": "High‑energy drumming highlighted, with crowd excitement clearly captured."
+  },
+  "song_mentions": {
+    "Sailor": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Keep On Growin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Walking Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T05:25:06.365739+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-22.mtx.seamons.109561.flac16"
+}

@@ -1,0 +1,72 @@
+{
+  "summary": "Sound‑board recording with a muddied mix but a strong show highlighted by a smoking Passenger, epic Playin’ in the Band and the debut of Garcia’s “Tiger” guitar.",
+  "review": "The performance shines on the second set – Jerry smokes through Passenger, Brent’s keys dominate Shakedown Street, and Playin’ in the Band erupts into an epic jam.  The mix is uneven (vocals buried, a bit of hiss) and the first song comes from an audience source, but the overall energy and historic first‑time songs (Althea, Lost Sailor, Tiger debut) make it worthwhile.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars for performance and historic moments; recording quality draws mixed comments, lowering the combined weighted score to ~3.7."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix is odd – vocals often buried, slight hiss and a one‑second glitch on an MP3; first track appears to be audience tape, rest are SBD.  Some listeners note crispness early on but overall balance is uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Passenger",
+      "Playin' in the Band",
+      "Shakedown Street",
+      "Althea",
+      "Lost Sailor"
+    ],
+    "poor_songs": [
+      "Stella Blue (Garcia solo weak)",
+      "Lost Sailor (Bob off key)"
+    ],
+    "setlist_flow": "First set suffers from a muddy mix but contains solid new material; second set is the highlight with a smoking Passenger and an expansive Playin' in the Band that lifts the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – his solo on Stella Blue sounds tentative, but he ‘smokes’ on Passenger and debuts the Tiger guitar with great tone.",
+    "Phil": "",
+    "Bob": "Struggles on Lost Sailor (off‑key), otherwise fine.",
+    "Keys": "Brent is prominently in the mix, praised for Shakedown Street and overall keyboard work.",
+    "Drums": "Generally described as solid/fine."
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T22:11:19.802943+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-08-04.sbd.munder.9578.sbeok.shnf"
+}

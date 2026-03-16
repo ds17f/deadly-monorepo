@@ -1,0 +1,101 @@
+{
+  "summary": "High‑quality soundboard capture of a solid ’93 Spring show, highlighted by a scorching Bertha opener and a soaring Eyes of the World.",
+  "review": "The recording is widely praised for its clarity and faithful mix, with only a minor note about Jerry’s wah tone being low in the blend. Musically the concert delivers several standouts – Bertha, Eyes of the World, Space, Lazy River Road and Queen Jane – while a few numbers (Wang‑Dang‑Doodle, Loose Lucy) are seen as average. Overall fans describe the performance as an above‑average set that ebbs and flows in classic Dead fashion.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars, lauding both the show’s musical peaks and the clean soundboard source; only a handful of minor criticisms keep it from the top tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear mix praised by many reviewers; one comment notes Jerry’s wah on \"Greatest Story\" sits low in the blend but does not detract from overall fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Eyes of the World",
+      "Space",
+      "Lazy River Road",
+      "Queen Jane"
+    ],
+    "poor_songs": [
+      "Wang Dang Doodle",
+      "Loose Lucy"
+    ],
+    "setlist_flow": "The set flows with a strong opening (Bertha) and a second‑set that many describe as above average, though the performance ebbs and flows—peaking on extended jams and dipping on a few pedestrian numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "His wah tone on \"Greatest Story\" is noted as low in the mix but his overall playing is praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Greatest Story": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Warf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:04:14.252714+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-05-25.dsbd.vernon.19224.sbeok.shnf"
+}

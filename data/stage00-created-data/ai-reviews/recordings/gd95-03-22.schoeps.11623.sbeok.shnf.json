@@ -1,0 +1,39 @@
+{
+  "summary": "A modest audience recording from Charlotte that captures a beloved Foolish Heart jam, but falls short of Healy‑matrix fidelity.",
+  "review": "The show is remembered chiefly for the soaring tail‑end jam on “Foolish Heart,” which several fans cite as the highlight. The source sounds more like a concourse audience tape – not a polished matrix – so clarity is uneven, though the energy of the drums and overall vibe come through. Opinions range from two to four stars, leaving the overall impression mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "high",
+    "rationale": "Average star rating (≈3) across four reviews; a standout song boosts the show rating while the non‑Healy audience source limits recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Not a Healy matrix – sounds like a concourse tape with limited clarity and some ambient noise, but the jam on Foolish Heart remains audible."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans focus on the emotional impact of the second‑half jam; no detailed commentary on set pacing, but the overall memory is positive despite an uneven performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Referred to by his white hair and presence onstage, but no specific guitar commentary.",
+    "Phil": "",
+    "Bob": "Mentioned as “Bobby” standing beside Jerry; no direct comment on playing.",
+    "Keys": "",
+    "Drums": "Described as \"pounding resounding echoes\" that drove the show."
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T06:16:10.234742+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-03-22.schoeps.11623.sbeok.shnf"
+}

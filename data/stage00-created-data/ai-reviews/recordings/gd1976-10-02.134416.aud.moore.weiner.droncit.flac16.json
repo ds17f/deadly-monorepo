@@ -1,0 +1,113 @@
+{
+  "summary": "Good‑quality audience tape of a fall‑'76 show, highlighted by an iconic Stella Blue and strong first‑set gems despite some source quirks.",
+  "review": "The recording captures a solid late‑1976 performance with standout renditions of Stella Blue, Brown Eyed Women, Let It Grow, Tennessee Jed and the opening of Music Never Stopped. While the AUD source is uneven – missing the start of Promised Land, requiring slight pitch correction and showing an odd harmonizer effect on bass, drums and Jerry’s guitar – the band’s playing shines through, earning most reviewers a four‑star rating.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviews praise the musical performance and highlight several songs as exceptional; technical flaws are noted but do not dominate, leading to a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "AUD source is uneven – missing the start of Promised Land, requires +1‑2% pitch adjustment after Samson, balance is off and an added harmonizer/Octave divider introduces odd vocal/bass artifacts. The processing adds definition to bass/kick but can sound unnatural."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Brown Eyed Women",
+      "Let It Grow",
+      "Might As Well",
+      "Tennessee Jed",
+      "Minglewood Blues",
+      "Music Never Stopped",
+      "Samson & Delilah",
+      "Must Have Been Roses",
+      "Big River"
+    ],
+    "poor_songs": [
+      "Friend of the Devil",
+      "The Other One",
+      "Sugar Mag",
+      "Stella Blue (as noted by one reviewer)"
+    ],
+    "setlist_flow": "First set builds nicely with strong mid‑set peaks; second‑set opener Music Never Stopped is flawless, but momentum wanes later with a weaker Friend of the Devil and dragged-out Sugar Mag."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone is occasionally colored by the added harmonizer processing, though no specific performance complaints were noted.",
+    "Phil": "",
+    "Bob": "A vocal octave‑divider artifact was heard on his MC announcements, giving a ‘fat’ vocal effect.",
+    "Keys": "",
+    "Drums": "The harmonizer adds definition to the kick drum, but the effect can feel artificial at times."
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Might As Well": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Must Have Been Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Mag": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T08:03:40.446393+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-10-02.134416.aud.moore.weiner.droncit.flac16"
+}

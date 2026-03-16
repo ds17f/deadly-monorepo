@@ -1,0 +1,63 @@
+{
+  "summary": "Rough audience tape that improves mid‑set, highlighted by a scorching Scarlet>Fire and a superb China > Rider.",
+  "review": "The performance is widely praised – Jerry’s guitar is on fire, the Scarlet>Fire sequence and the rare late‑70s China > Rider are called “unreal,” and the second set flows with high energy. The recording is an audience (AUD) source; the first few tracks are noisy and muffled, but sound quality clears up after the early songs and becomes quite listenable for most of the set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is generally high (many reviewers rate 4‑5 stars for performance), but recording quality is uneven with many low‑star complaints about the early audio, pulling the overall average down."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Very noisy and muffled start (first ~1–2 tracks), PA hiss and cassette‑generation artifacts; sound clears up around “Candyman”/mid‑set and remains decent through the second half."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "China > Rider",
+      "Music Never Stopped",
+      "Estimated Prophet > Eyes of the World",
+      "Stagger Lee"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is present but suffers from poor audio; second set is praised for its energy, seamless transitions (e.g., Estimated Prophet → Eyes of the World) and standout jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for a “smoking” lead‑guitar performance throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Mentioned only in passing (Keith’s final days) – no specific playing comments.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "China > Rider": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Estimated Prophet > Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:59:33.488439+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-02-03.aud.set1.warner.19414.sbeok.shnf"
+}

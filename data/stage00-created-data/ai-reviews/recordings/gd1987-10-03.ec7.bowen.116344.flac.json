@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent audience recording captures the first Shoreline ’87 show with a smoking Throwing Stones and superb Stella Blue.",
+  "review": "Both reviewers rave about this historic 1987 Shoreline gig, highlighting the excitement of the band’s first appearance there and memorable moments like Bobby Weir “going off” on Throwing Stones and an excellent rendition of Stella Blue. The EC‑7 mic capture aimed at the delay‑tower repeaters delivers clear, vibrant sound that many describe as awesome, making the recording as enjoyable as the performance itself.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Both reviews are five‑star and praise both the musical performance and the audio capture; the show is described as historic and fun, while the EC‑7 audience recording is called awesome with no noted flaws."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "EC‑7 microphones aimed at delay‑tower repeaters produced clear, well‑balanced sound; reviewers note the higher‑up placement gave better fidelity and no major issues were mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Throwing Stones",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe the concert as a fun, high‑energy debut at Shoreline with strong set pacing and memorable moments throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bobby (Bob Weir) went off during Throwing Stones.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:47:37.848959+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-10-03.ec7.bowen.116344.flac"
+}

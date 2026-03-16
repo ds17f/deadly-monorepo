@@ -1,0 +1,63 @@
+{
+  "summary": "Soundboard capture of a vibrant 1994 concert with stellar Jerry guitar work, a standout Help‑Slip‑Frank sequence and a must‑listen drums‑space jam.",
+  "review": "The show is remembered as one of the best of the summer’s three‑day run, highlighted by Jerry's inspired playing, a superb Help > Slip > Franklin's stretch, and an unforgettable Drum‑Space section that leads into a beautiful Stella Blue outro. Reviewers praise the overall performance and note no major recording flaws, making this a highly enjoyable listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show 4–5 stars and highlight multiple musical high points while noting no recording problems; one mixed review lowers the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No complaints about clarity or mix; reviewers specifically praise the Drum‑Space segment, implying a clear and well‑balanced capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Shoe Fits",
+      "Smokestack Lightning",
+      "Space",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as fun and energetic; second set respectable with strong transitions, highlighted by the Help‑Slip‑Frank sequence and a powerful Drum‑Space jam leading into a beautiful Stella Blue outro."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his “wandering licks” and for showing up strongly throughout the show.",
+    "Phil": "",
+    "Bob": "Positive remarks on his contributions (“Bobby songs”) and overall presence in the jam sections.",
+    "Keys": "",
+    "Drums": "Drum‑Space section called a must‑listen, indicating standout drumming performance."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shoe Fits": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T23:03:08.582222+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-02.sbd.ladner.3988.shnf"
+}

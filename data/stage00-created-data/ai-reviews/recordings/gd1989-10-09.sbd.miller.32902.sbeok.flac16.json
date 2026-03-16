@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard capture of a psychedelic 1989 performance, highlighted by a soaring Dark Star and magical Attics encore.",
+  "review": "The show is lauded as one of the best late‑era Dead concerts, with a second set that drips in psychedelia and a 20‑minute Dark Star that many reviewers call amazing. The SBD recording is clear enough to hear crowd reactions, though a few note missing track numbers and a cassette patch issue, but overall it delivers an excellent listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently five‑star praise for the musical performance with only minor technical complaints; strong consensus on show excellence and good soundboard quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD capture with audible crowd, occasional cassette patch note and missing track numbers, but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Attics",
+      "Playing in the Band > Uncle John's Band > Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set praised for its psychedelic flow and powerful encore, creating a magical night that many reviewers describe as unmatched."
+  },
+  "band_member_comments": {
+    "Jerry": "Great vocals and tone highlighted; several reviewers note his vocal performance.",
+    "Phil": "",
+    "Bob": "Vocal contributions praised alongside Jerry's.",
+    "Keys": "Brent’s keyboard work singled out on Dark Star and Attics.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Attics": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band > Uncle John's Band > Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T23:46:43.056057+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-09.sbd.miller.32902.sbeok.flac16"
+}

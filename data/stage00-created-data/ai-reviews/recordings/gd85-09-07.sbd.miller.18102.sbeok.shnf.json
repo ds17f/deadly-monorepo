@@ -1,0 +1,75 @@
+{
+  "summary": "Crisp sound‑board capture of a legendary Red Rocks ’85 show – frozen logger antics, soaring Shakedown Street and a sparkling second set.",
+  "review": "The SBD source is generally clean and vivid, delivering the band’s loose‑as‑hell vibe with clear instrument separation despite occasional crackle and a slight pitch‑speed quirk.  Fans rave about the wild Frozen Logger intro, the “bouncy‑steppin’” Shakedown Street, Crazy Fingers that glimmers like early ’70s Dead, plus standout moments from New Minglewood Blues, Loser and an impromptu Brent‑led Hey Jude.  Overall the performance is rated as one of the top Red Rocks outings of the mid‑80s.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over two dozen reviews, most 5‑star, praise both the musical performance and the soundboard quality; only minor technical complaints (crackle, speed) keep it from a perfect score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp, clean SBD with excellent instrument balance.  A few listeners note digital crackling on disc 1 track 1 and a slight fast‑pitch offset in some versions; no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Frozen Logger",
+      "Shakedown Street",
+      "Crazy Fingers",
+      "New Minglewood Blues",
+      "Loser",
+      "Hey Jude",
+      "Drums > Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set flows like pure Dead goodness, with the goofy frozen‑logger opener leading into a high‑energy Shakedown Street and a jam‑heavy second half that keeps momentum alive."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone described as “beautiful” and “Spanishy”; vocals praised even when a string broke during The Frozen Logger.",
+    "Phil": "Noted playing kazoo/horn off‑stage during The Frozen Logger, adding to the fun atmosphere.",
+    "Bob": "",
+    "Keys": "Brent's spontaneous Hey Jude highlighted; keyboards overall solid throughout the show.",
+    "Drums": "Mickey’s beam work and drum/space segment lauded as “great” and a highlight of the night."
+  },
+  "song_mentions": {
+    "The Frozen Logger": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Shakedown Street": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Loser": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Hey Jude": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Drums > Space": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-15T08:50:13.229183+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-09-07.sbd.miller.18102.sbeok.shnf"
+}

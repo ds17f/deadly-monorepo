@@ -1,0 +1,53 @@
+{
+  "summary": "High‑energy second set with standout Around & Around, but uneven Garcia.",
+  "blurb": "The show delivers a punchy second set highlighted by an enthusiastic Around & Around. Jerry’s playing swings between confident solos and occasional lyric lapses, giving the night an uneven feel. The first set is noted as unusually short and unsatisfying.",
+  "review": "December 8, 1994 at the Oakland‑Alameda County Coliseum captures a Grateful Dead that was firing on all cylinders in the second half but struggling to find its footing early on. The audience tape (gd94-12-08.neumann.seff.5611.sbeok.shnf) manages to convey the high‑energy vibe, though mic placement adds chatter and some muffling. Highlights include a rollicking “Around & Around” that closes the set, and a spirited segue from “China Cat Sunflower” into “I Know You Rider.” Jerry’s guitar work is a mixed bag – moments of confident tone are punctuated by lyric slips and a sleep‑walking feel that leaves the performance uneven. Phil, Bob, Vince, Mickey and Bill stay solid but receive no particular mention in the available reviews. The first set feels truncated, leaving many fans wishing for a longer opener. Overall, the show is worth a listen for its second‑set fireworks and rare audience ambience, but listeners should temper expectations about overall consistency.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.1,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 8,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": -0.5,
+      "sentiment_rationale": "The two recordings show mixed to negative sentiment: one notes high energy but uneven Garcia performance, the other condemns a short first set as a bust. No consistent positive language across recordings outweighs these criticisms, so a modest negative adjustment is applied.",
+      "final_calculation": "2.5 + 0.1 - 0.5 = 2.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd94-12-08.neumann.seff.5611.sbeok.shnf",
+    "reason": "Decent audience tape with clear moments, captures the standout Around & Around and overall high‑energy vibe despite some crowd noise."
+  },
+  "key_highlights": [
+    "Standout “Around & Around” closing the second set.",
+    "High‑energy second half with strong segues (China Cat Sunflower → I Know You Rider).",
+    "Jerry’s playing swings between confident solos and lyric lapses, giving an uneven feel.",
+    "First set is unusually short, leaving listeners wanting more."
+  ],
+  "song_highlights": [
+    "Around & Around"
+  ],
+  "band_performance": {
+    "Jerry": "Inconsistent – moments of confident tone and strong solos are marred by lyric forgetfulness and a sleep‑walking feel.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-19T04:14:42.468784+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Corinna",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Lucy In The Sky With Diamonds",
+      "Around & Around"
+    ]
+  ]
+}

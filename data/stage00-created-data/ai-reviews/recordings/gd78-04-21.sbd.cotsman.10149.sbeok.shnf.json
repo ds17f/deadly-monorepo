@@ -1,0 +1,76 @@
+{
+  "summary": "Soundboard recording with good but occasionally muddy sound, showcasing an energetic second set highlighted by the Playin'/Stayin' Alive jam, stellar Werewolves of London and Stella Blue performances.",
+  "review": "The show is widely praised for its high‑energy playing, especially the second‑set jams that blend a floating \"Playin'\" into a funky Stayin' Alive vibe, plus standout renditions of Werewolves of London, Stella Blue and Truckin'. While most listeners find the soundboard source clear enough to enjoy, several note occasional muddiness or cassette‑like hiss that prevents it from being truly crisp.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the performance highly (4‑5 stars) and describe the playing as exceptional, while recording quality is generally good with some muddy or cassette‑like issues; weighted average yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard capture praised as \"great\" and \"crisp\" by several reviewers, but others describe it as muddy, cassette‑like, or with uneven levels."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin'",
+      "Stayin' Alive (jam)",
+      "Werewolves of London",
+      "Stella Blue",
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Samba in the Rain",
+      "U.S. Blues (missing encore)"
+    ],
+    "setlist_flow": "The second set is described as a fire‑starter, with an extended percussion jam that propelled the band into a funky post‑drums sequence; audience excitement and on‑stage antics added to a seamless, high‑energy flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is highlighted for jazzy/Bach‑organ tones, energetic phrasing and a standout post‑drums jam.",
+    "Phil": "Only noted for inviting fans onto the floor; no specific musical commentary.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum segment and ensuing percussion jam are praised as a show‑stealer, described as funky and intense."
+  },
+  "song_mentions": {
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stayin' Alive": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Werewolves of London": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stella Blue": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samba in the Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T11:35:22.555820+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-04-21.sbd.cotsman.10149.sbeok.shnf"
+}

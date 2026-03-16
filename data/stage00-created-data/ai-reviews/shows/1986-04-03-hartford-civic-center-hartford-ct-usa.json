@@ -1,0 +1,76 @@
+{
+  "summary": "Tight Bird Song, soaring Supplication→Let It Grow jam, solid set flow",
+  "blurb": "The show delivers a crisp soundboard capture with standout Bird Song and an uninterrupted Supplication → Let It Grow stretch. Jerry’s guitar tone shines while Brent adds quirky keys; the second set builds a cosmic arc from Uncle John’s Band through spacey improvisations. Overall performance is solid despite occasional low‑energy moments.",
+  "review": "On April 3, 1986 at the Hartford Civic Center the Dead put on a late‑tour show that feels both tight and exploratory. The soundboard sources are remarkably clean – especially the Jeff Miller feed – letting you hear Jerry’s “scrolling” guitar work on Bird Song and his clear, punchy vocals throughout. Brent Mydland’s keyboards are sweet, highlighted by an oddball Don’t Need Love segment that some fans describe as “drunk‑fun,” while Bill Kreutzmann’s drumming steps forward after a brief Brent solo to drive the post‑drums climax. \n\nSet 1 swings from New Minglewood Blues and Peggy‑O into a superb Bird Song → Supplication Jam → Let It Grow sequence that many reviewers call “cosmic.” The second set opens unusually with Uncle John’s Band, then rolls through Playing In The Band, Don’t Need Love and an expansive Space/Other One journey before the band closes with tight renditions of Wharf Rat, Around & Around and a warm encore. Though a few listeners note a “coked‑up” vibe toward the end of the tour, the overall energy stays high and the jams remain memorable.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 27,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Four recordings are clearly positive, praising Bird Song, the Supplication→Let It Grow stretch, Uncle John's Band and Brent's keyboard work; two recordings are mixed but do not outweigh the overall enthusiasm. Consistent language like \"soaring\", \"solid\", and \"inspired\" across multiple sources justifies a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.2 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1986-04-03.sbd.jeffm.2789.sbeok.shnf",
+    "reason": "Excellent, crispy soundboard capture with no hiss or distortion; showcases the band’s tight playing and Jerry’s clear vocals."
+  },
+  "key_highlights": [
+    "Bird Song leading into a seamless Supplication → Let It Grow jam",
+    "Uncle John's Band opening the second set with strong vocal energy",
+    "Brent Mydland’s quirky keyboard moment on Don’t Need Love",
+    "The Other One spacey improvisation and nuanced drums/space section"
+  ],
+  "song_highlights": [
+    "Bird Song",
+    "Supplication Jam",
+    "Let It Grow",
+    "Uncle John's Band",
+    "New Minglewood Blues",
+    "Peggy-O",
+    "The Other One"
+  ],
+  "band_performance": {
+    "Jerry": "Sweet, soaring guitar tone and clear, punchy vocals; especially luminous on Bird Song with a ‘scrolling’ lead feel.",
+    "Phil": "",
+    "Bob": "Adds extra vocal oomph on Aiko (not in setlist) and strong backing on Uncle John's Band; his rhythm guitar can be forward‑mixed but injects energy.",
+    "Brent": "Solid keyboard work overall, delivering a sweet sound with an oddball, slightly sloppy Don’t Need Love segment that adds character.",
+    "Mickey": "",
+    "Billy": "Drums are nuanced and drive the post‑drums climax; provides strong support during spacey passages and the extended Other One."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-15T14:40:58.514968+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bird Song"
+    ],
+    [
+      "Supplication Jam",
+      "Let It Grow",
+      "Don't Ease Me In"
+    ],
+    [
+      "Uncle John's Band",
+      "Playing In The Band",
+      "Don't Need Love",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Wharf Rat",
+      "Around & Around",
+      "Not Fade Away"
+    ],
+    [
+      "New Minglewood Blues"
+    ],
+    [
+      "Peggy-O"
+    ]
+  ]
+}

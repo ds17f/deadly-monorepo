@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent matrix recording captures a strong set with standout Miracle > Shakedown, Terrapin and Jack Straw performances.",
+  "review": "The matrix source is praised for its vivid presence, delivering crystal‑clear sound that lets the band’s interplay shine.  Highlights include an epic early‑Miracle jam that flows into Shakedown Street, a powerful Terrapin, and a second‑solo‑laden Jack Straw, while the whole show feels solid despite not being the Dead at their absolute peak.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All five reviews are favorable (4‑5 stars).  Show quality is described as strong with several standout songs, and the matrix recording is repeatedly called “great” and “alive,” justifying a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note the matrix mix brings the performance to life; no complaints about drop‑outs, muddiness, or imbalance.  Sound is described as crisp and vivid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Miracle > Shakedown Street",
+      "Terrapin",
+      "Jack Straw",
+      "Row Jimmy",
+      "Shakedown Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows well, with early Miracle jams leading into Shakedown Street and a powerful Terrapin later; reviewers appreciate the new‑progression feel even if Keith’s playing is less interactive than usual."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned as part of the group channeling new progressions in old standards.",
+    "Phil": "His onstage banter is called “hilarious,” adding extra flavor to the show.",
+    "Bob": "Cited alongside Jerry, Phil, Bill and Mickey for pushing forward fresh ideas within familiar songs.",
+    "Keys": "Keith’s keyboard work is noted as less interactive than his best moments but still supportive of the evolving sound.",
+    "Drums": "Bill and Mickey are praised for channeling new progressions with their drumming."
+  },
+  "song_mentions": {
+    "Miracle > Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T19:22:47.529055+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-15.111592.mtx.chappell.sb32.flac16"
+}

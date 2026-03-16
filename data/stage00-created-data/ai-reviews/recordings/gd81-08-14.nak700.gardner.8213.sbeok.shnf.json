@@ -1,0 +1,75 @@
+{
+  "summary": "Audience recording with pronounced bass captures a high‑energy Seattle show highlighted by soaring Sugaree and fiery Baby Blue.",
+  "review": "The performance is praised for its relentless energy, with Jerry’s lead on Sugaree and an especially incendiary Baby Blue that many reviewers call the highlight of the night. Although the audience tape starts out a bit distant and bass‑heavy, listeners note it improves as the show progresses, delivering a solid listening experience overall.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently strong musical praise (standout songs, high energy) combined with generally good but not perfect audience recording quality results in a rating in the upper‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Heavy bass and initially distant sound, but improves later; overall clear enough to enjoy the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Peggy-O",
+      "Baby Blue",
+      "On the Road Again",
+      "Know You Rider",
+      "Going Down the Road Feeling Bad",
+      "Minglewood Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy, travel‑themed second set with strong dynamics; solid throughout and especially powerful in the encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly highlighted for his soaring lead on Sugaree and a pumped, fire‑filled Baby Blue that ends with a brutal bang.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "On the Road Again": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Going Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T13:29:05.402731+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-08-14.nak700.gardner.8213.sbeok.shnf"
+}

@@ -1,0 +1,85 @@
+{
+  "summary": "Fair audience recording of a 1979 Spectrum show with strong guitar work and standout songs like \"It's All Over Now\" and \"Brown Eyed Women\", but hampered by vocal mic problems and PA issues.",
+  "review": "The performance shines thanks to Jerry Garcia’s noodling solos, solid rhythm from Bob Weir (despite an out‑of‑tune slide on Sugaree) and memorable moments such as \"It's All Over Now\" and \"Brown Eyed Women.\" The audience tape captures the energy but suffers from PA glitches, mic cut‑outs and a generally muffled mix that makes it only fair to listen to.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Fourteen reviews give an average of ~3.6 stars; most praise the musical set while noting recording flaws, leading to a rating just below four."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Frequent PA problems, mic cut‑outs on vocals, occasional treble harshness and pause‑button glitches; overall the tape is usable but not crisp."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "It's All Over Now",
+      "Brown Eyed Women",
+      "Nobody's Fault",
+      "Black Peter",
+      "Bertha"
+    ],
+    "poor_songs": [
+      "Sugaree"
+    ],
+    "setlist_flow": "Early set hampered by PA and vocal issues, but the band recovers after Sugaree; a strong second set with good transitions from drums into space and high‑energy guitar work despite Jerry’s strained voice."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice was cracked/straining throughout, but his guitar noodling and solos were consistently praised.",
+    "Phil": "",
+    "Bob": "Slide playing on Sugaree was out of tune and described as painful; also noted learning a slide mode later in the set.",
+    "Keys": "",
+    "Drums": "Solid drumming with nice transitions from drums into space; overall rhythm section held up the show."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Nobody's Fault": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "It's All Over Now": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "It Must Have Been The Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T18:28:40.991419+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-01-05.naks.wiley.17342.sbeok.shnf"
+}

@@ -1,0 +1,111 @@
+{
+  "summary": "Good‑quality soundboard recording of a celebratory late‑90 show with standout Stagger Lee, Victim Or The Crime and a soaring Dark Star",
+  "review": "The UltraMatrix SBD capture is generally clear but suffers from an overly bright Vince mix that can mask details early in the set; it improves after the drums come in. Musically the concert is one of the high points of the 1990 run, highlighted by a superb Stagger Lee, a sterling To Lay Me Down, a powerful Victim Or The Crime and a memorable Dark Star that thrilled first‑time listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "The reviewer praises the performance heavily (standout songs, high overall rating) while noting some mix issues; weighting show quality higher yields a strong but not perfect score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Updated UltraMatrix SBD is patched and pitched; Vince's keyboard was mixed too high FOH early on, making the first set a bit harsh. The drums become listenable later, and overall the sound is clear enough for enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stagger Lee",
+      "To Lay Me Down",
+      "Victim Or The Crime",
+      "Dewiminna",
+      "He's Gone",
+      "Dark Star",
+      "I Need a Miracle",
+      "Wharf Rat",
+      "Knockin' on Heaven's Door",
+      "Man Smart (Woman Smarter)"
+    ],
+    "poor_songs": [
+      "Foolish Heart",
+      "Picasso"
+    ],
+    "setlist_flow": "First set solid but hampered by a bright keyboard mix; second set builds excitement with Victim, Dark Star and Miracle before a sweet Knockin' on Heaven's Door encore, delivering an overall celebratory arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Adds minimal but effective guitar on Lovelight; his playing contributes to the electric charge of the night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince’s keyboard was mixed too high early, yet his playing shines on Dark Star, Man Smart (Woman Smarter) and other numbers.",
+    "Drums": "Drums become audible and listenable later in the set, improving the overall mix."
+  },
+  "song_mentions": {
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim Or The Crime": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dewiminna": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Man Smart (Woman Smarter)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T15:39:21.531109+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-14.149757.UltraMatrix.sbd.cm.miller.flac16"
+}

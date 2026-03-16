@@ -1,0 +1,85 @@
+{
+  "summary": "Soundboard recording with clear mix captures a legendary Terrapin Station jam and high‑energy post‑song improvisations.",
+  "review": "The tape delivers solid soundboard quality—generally clean with only a slight pitch‑sharpness on the Terrapin that most listeners overlook. Musically the show shines thanks to an epic Terrapin Station performance, extended Wheel/Dark Star excursions and a wildly praised Wave to the Wind jam, even if the first set and Easy Answers are viewed as weaker spots.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 4‑5 stars and highlight exceptional Terrapin Station and post‑song jams; a few note pitch issues and a sub‑par first set, yielding an overall strong but not flawless impression."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced soundboard capture. Reviewers mention the mix is good, though one notes Terrapin Station runs slightly sharp in pitch. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Wave to the Wind",
+      "The Wheel",
+      "Dark Star",
+      "LSD"
+    ],
+    "poor_songs": [
+      "Easy Answers"
+    ],
+    "setlist_flow": "The first set is described as slow or uneven, but the second half erupts with a monster Terrapin Station jam that feeds into extended improvisations (Wheel, Dark Star, Wave). The post‑Terrapin segment is repeatedly called one of the best jams of the ’90s."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is highlighted as shredding and a key driver of the Terrapin jam.",
+    "Phil": "Bass is noted as part of a tight, locked‑in rhythm section during the improvisations.",
+    "Bob": "",
+    "Keys": "Vince (keyboard) receives praise for fiery synth work on Easy Answers and the deep Terrapin jam; midi effects are called perfect for this era.",
+    "Drums": "The drums/percussion are repeatedly lauded, especially in the post‑Terrapin space where they provide a chunky, rhythmic backbone."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "The Wheel": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Easy Answers": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Long Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LSD": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T15:10:26.027120+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-23.sbd.braverman.14123.sbeok.shnf"
+}

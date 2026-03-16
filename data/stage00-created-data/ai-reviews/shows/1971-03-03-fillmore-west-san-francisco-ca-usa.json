@@ -1,0 +1,64 @@
+{
+  "summary": "Powerful early‑71 set with soaring Pigpen organ and a monster The Other One",
+  "blurb": "The show delivers a strong second‑set jam, highlighted by an expansive The Other One and tight Truckin' featuring Pigpen’s organ front‑and‑center. Early set shines with Hard To Handle and Loser, showcasing Garcia’s evolving tone.",
+  "review": "On March 3 1971 the Dead closed out their Fillmore West run with a benefit set that captures the band on the cusp of their heavy‑jam era. The first set rolls through tight barroom rockers – a gritty Hard To Handle and the plaintive Loser – while Jerry’s tone is already hinting at the soaring leads to come. The second set is where the magic erupts: a thunderous drum break into a mammoth The Other One, pig‑pen organ soaring over Truckin' and a crisp Wharf Rat that shows Phil’s solid bass foundation even when a tape glitch hides its opening line. Pigpen dominates the mix, sometimes a bit too forward, but his B‑3 work on The Other One, Truckin', and Bertha adds an unforgettable gospel‑blues edge. Bill Kreutzmann drives the rhythmic flow with crisp, propulsive fills, and the band wraps it all up with a jubilant Good Lovin' encore. Though the recording quality varies across sources, the performance itself is a vivid snapshot of the Dead transitioning into their early‑‘70s peak.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 17,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Two of three recordings are described as positive, highlighting strong organ moments, standout jams and solid set flow; the remaining recording is mixed but notes no serious performance flaws. Consistent praise for The Other One, Hard To Handle, and Pigpen’s organ yields a moderate positive sentiment.",
+      "final_calculation": "2.5 + 0.1 + 1.0 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1971-03-03.149880.sbd.latvala.lee.smith.miller.clugston.flac2496",
+    "reason": "Clear soundboard capture with good overall fidelity; despite an overly loud organ mix, it offers the most complete and listenable version of the performance."
+  },
+  "key_highlights": [
+    "Mammoth The Other One jam that drives the second set",
+    "Pigpen’s soaring B‑3 on Truckin' and The Other One",
+    "Early‑71 energy on Hard To Handle and Loser",
+    "Historically significant as the band’s last Fillmore West benefit performance"
+  ],
+  "song_highlights": [
+    "The Other One",
+    "Good Lovin'",
+    "Truckin'",
+    "Hard To Handle",
+    "Loser"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s tone is evolving, with expressive whammy‑pedal work and a solid Les Paul foundation that adds grit to the early set and lifts the jam sections.",
+    "Phil": "Phil’s bass underpins the band tightly; while one tape glitch omits the opening line of The Other One, his playing remains steady throughout.",
+    "Bob": "",
+    "Pigpen": "Pigpen’s organ is a dominant force – sometimes mixed too forward but delivering soaring moments on Truckin', The Other One and Bertha that define the show’s character.",
+    "Mickey": "",
+    "Billy": "Bill Kreutzmann shines, especially with a crisp drum break leading into The Other One, driving the second‑set energy."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-20T03:27:22.722579+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Truckin'",
+      "Drums",
+      "The Other One",
+      "Wharf Rat"
+    ],
+    [
+      "Good Lovin'"
+    ],
+    [
+      "Hard To Handle"
+    ],
+    [
+      "Loser"
+    ]
+  ]
+}

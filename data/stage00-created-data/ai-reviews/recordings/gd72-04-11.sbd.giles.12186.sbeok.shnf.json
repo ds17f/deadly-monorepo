@@ -1,0 +1,105 @@
+{
+  "summary": "A solid sound‑board capture with occasional muddiness, but the band delivers a smoking Other One, fiery Truckin’ and stellar Looks Like Rain.",
+  "review": "The Giles SBD of this early‑April ’72 European show is generally clear and listenable, though a few reviewers note a slight mud‑dy quality and out‑of‑order tracks in the download. Musically the performance shines – The Other One (with a hidden Feelin’ Groovy jam), Truckin’, Good Lovin’ and Looks Like Rain are repeatedly praised, while Jack Straw suffers from weak vocals.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over 20 detailed reviews give an average of ~4.2 stars; the majority highlight strong playing and only minor recording flaws, yielding a high‑confidence positive rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Sound quality described as very good/clear overall, though some note muddiness, occasional drop‑outs and tracks out of order in the MP3 download."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Truckin'",
+      "Looks Like Rain",
+      "Good Lovin'",
+      "Deal"
+    ],
+    "poor_songs": [
+      "Jack Straw"
+    ],
+    "setlist_flow": "First set described as tight and psychedelic; second set builds intensity with a soaring Other One, extended Truckin' and a soulful Looks Like Rain, delivering a classic early‑’72 arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Slide on Looks Like Rain praised; guitar work lauded during Truckin' and The Other One; vocal performance noted as weak on Jack Straw.",
+    "Phil": "Beautiful harmonies on Looks Like Rain; bass lines quoted Miles Davis in the latter part of Truckin'; overall solid playing.",
+    "Bob": "Pedal steel adds sweet texture on Looks Like Rain; takes lead vocals on Jack Straw; strong rhythm guitar throughout.",
+    "Keys": "",
+    "Drums": "Energetic drumming, especially during The Other One and Truckin' jams; one reviewer calls the drummer’s work “the best” of the tour."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Brokedown": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Deal": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China>Rider>Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Chinatown Shuffle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T13:41:42.108486+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-04-11.sbd.giles.12186.sbeok.shnf"
+}

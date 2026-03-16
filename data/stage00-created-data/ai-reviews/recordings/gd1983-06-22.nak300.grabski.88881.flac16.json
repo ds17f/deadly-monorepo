@@ -1,0 +1,45 @@
+{
+  "summary": "Audience‑sourced recording captures a solid 1983 Dead show highlighted by Jerry’s epic closing solo and quirky China Cat > Rider/Spanish Jam jams; most fans praise the sound and vibe despite one reviewer calling it a bummer.",
+  "review": "The tape is an audience recording praised for its clear, lively capture of the band, especially Jerry Garcia’s extended final solo and the off‑the‑cuff China Cat Sunflower > I Know You Rider segue plus a Spanish Jam. Most reviewers describe the performance as solid and enjoyable, though one fan found the show disappointing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Average star rating is ~3.5; strong positive comments on both music and audio push it toward a solid 4‑star range, but the single very negative review lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call it a great/ excellent sounding audience recording; no major dropouts or muffling noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Spanish Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall a solid, jam‑heavy set with an especially long closing solo from Jerry; the flow is described as good and the jams get “weird” in an enjoyable way."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for going WAY long on the closing solo – praised as a highlight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T07:52:06.464937+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-22.nak300.grabski.88881.flac16"
+}

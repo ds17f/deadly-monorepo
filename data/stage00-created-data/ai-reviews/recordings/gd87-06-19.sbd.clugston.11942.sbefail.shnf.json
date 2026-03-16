@@ -1,0 +1,82 @@
+{
+  "summary": "Good soundboard recording with a strong second set highlighted by Terrapin and Stella, but an uneven first set keeps the overall vibe mixed.",
+  "review": "The recording captures a solid soundboard mix that most listeners find clear and enjoyable, though the first set is noted as a bit quiet. Musically the show shines in its second half – Jerry’s lead work on “Stella” and “Terrapin” earns high praise while several other cuts like “Brown”, “Desolation” and “Going Down the Road Feeling Bad” are singled out as standout moments. The first set, however, feels tentative and some songs receive lukewarm reactions, giving the concert a mixed overall impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Reviewers praise the soundboard quality and several second‑set performances, but note an uneven first set and average moments, resulting in a mixed‑positive overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally great sound quality; the first set is described as a bit quiet/confusing but overall clear and crisp."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin",
+      "Stella Blue",
+      "Brown Eyed Women",
+      "Desolation Row",
+      "Samson & Delilah",
+      "Going Down the Road Feeling Bad"
+    ],
+    "poor_songs": [
+      "Cold Rain and Snow",
+      "Push Like a Jerk"
+    ],
+    "setlist_flow": "First set feels tentative and a little low‑energy, while the second set builds momentum with strong vocal harmonies and energetic jams; overall pacing improves after the opening half."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised – ‘absolutely nails it’, ‘gets to get out his C. Berry Jones’, and leads standout moments on Stella and Terrapin.",
+    "Phil": "",
+    "Bob": "Noted for adding cheesy vocal flourishes on Desolation Row.",
+    "Keys": "Brent Mydland’s playing is mentioned with a brief comment about his attitude (‘exhausts his anger’).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Going Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Push Like a Jerk": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:58:15.025423+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-06-19.sbd.clugston.11942.sbefail.shnf"
+}

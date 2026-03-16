@@ -1,0 +1,62 @@
+{
+  "summary": "Good‑quality soundboard recording of a uneven 1986 show – Bird Song and the Supplication jam shine while Let It Grow feels shaky.",
+  "review": "The GD86‑04‑03 sbd capture is generally praised for its crisp, gorgeous soundboard mix, though a few listeners note Bob Weir’s guitar sitting too high in the balance. Musically the concert is hit‑or‑miss: highlights include a beautiful Bird Song and an inspired Supplication jam, but the Let It Grow segment drags with halting tempos that some describe as a train‑wreck. Overall the performance feels tired and “coked‑up,” giving the show a mixed but still enjoyable character for fans who appreciate its rare moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Recording quality is repeatedly called excellent/gorgeous, pushing the technical score high; show quality is mixed with both strong and weak parts, yielding a mid‑range overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, gorgeous soundboard capture praised by several reviewers. Minor complaints about the mix – Bob Weir’s guitar is sometimes too prominent – and one listener suggested a matrix blend would be ideal."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Supplication jam"
+    ],
+    "poor_songs": [
+      "Let It Grow"
+    ],
+    "setlist_flow": "The set feels uneven and low‑energy, with a tired, “coked‑up” vibe that swings between creative jams (Bird Song, Supplication) and sluggish moments (Let It Grow). Some listeners note the band sounded wiped out toward the end of the tour."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed remarks – some hear a dragging vocal and a “deepening gloom” possibly linked to his health, while others enjoy a break‑neck Let It Grow and a spacier, more experimental approach.",
+    "Phil": "",
+    "Bob": "Weir’s rhythm guitar is described as mixed too high over Garcia and often playing behind the beat, adding strange broken chords that some find creatively interesting.",
+    "Keys": "Keyboard work gets a nod for a rare Brent‑era tune and an “interesting” Don’t Need Love segment; overall keyboards are mentioned as part of the ‘coked‑up’ band vibe.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Supplication jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rare Brent tune": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Need Love": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:36:05.456825+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-04-03.sbd.samaritano.18509.sbeok.shnf"
+}

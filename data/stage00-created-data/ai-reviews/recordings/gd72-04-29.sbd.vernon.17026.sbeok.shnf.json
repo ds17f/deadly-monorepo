@@ -1,0 +1,63 @@
+{
+  "summary": "Fair soundboard recording with a standout 30‑minute Dark Star and strong Keith piano work despite tape degradation.",
+  "review": "The show shines with an epic Dark Star that stretches nearly half an hour, backed by hot versions of Good Lovin', Caution and a fine piano performance from Keith. Recording quality is only average – a degraded SBD tape that sounds subdued and even needs a slight speed correction – but the musical payoff makes it worth the listen for Deadheads.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Reviewers consistently rate the set at 3 stars, praising the performance (especially Dark Star) while noting poor to fair sound quality and technical issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Degraded SBD tape gives a B‑ grade sound; subdued mids, some EQ needed, and a reported 2.8–2.85% speed issue despite pitch correction."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Good Lovin'",
+      "Caution",
+      "Sugar Magnolia",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A long, exploratory jam heavy second set with Dark Star flowing into Sugar Magnolia and a sizzling Caution; overall the band plays off each other with strong improvisational energy."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's piano work is highlighted as fine and musically satisfying.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Caution": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T14:46:17.468225+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-04-29.sbd.vernon.17026.sbeok.shnf"
+}

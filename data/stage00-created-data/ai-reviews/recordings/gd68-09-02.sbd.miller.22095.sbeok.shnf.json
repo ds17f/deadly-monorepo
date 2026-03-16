@@ -1,0 +1,74 @@
+{
+  "summary": "Super‑clean soundboard capture of a fiery ’68 show packed with Dark Star, St Stephen, The Eleven and Alligator‑Caution jams",
+  "review": "The Miller‑sourced soundboard delivers crisp, present audio with excellent balance, though occasional vocal‑low/drum‑high mix quirks and a few track‑listing glitches appear. Musically the performance is a highlight of the 1968 era – three big jam suites (Dark Star→St Stephen→The Eleven→Death medley, The Other One, Alligator→Caution) are praised as top‑notch, energetic and tightly connected.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star ratings and extol the show’s high energy and big jams; recording is described as crisp and clean despite minor mix issues, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear presence with excellent balance; occasional emphasis on lead guitar/drums, vocals sometimes low, and sporadic glitches or cut‑offs (e.g., missing Death Don't Have No Mercy). Track‑list metadata is a mess, but the audio itself is solid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "St. Stephen",
+      "The Eleven",
+      "Alligator",
+      "Caution",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fast, high‑energy pacing reminiscent of the August ’68 shows; three major jam suites flow naturally, with strong transitions and a fiery second set."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring guitar tone, flying through extended jams and an engaging solo section.",
+    "Phil": "Noted for shifting rhythm/key during The Eleven, providing solid bass foundation.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums are powerful and often emphasized in the mix; praised for driving energy throughout."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "St. Stephen": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Eleven": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Alligator": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Caution": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T09:08:42.145116+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-09-02.sbd.miller.22095.sbeok.shnf"
+}

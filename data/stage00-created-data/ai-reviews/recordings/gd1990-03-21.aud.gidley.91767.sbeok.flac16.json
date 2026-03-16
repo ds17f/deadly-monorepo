@@ -1,0 +1,31 @@
+{
+  "summary": "Highly praised show with enthusiastic fan reaction, but no details on recording or performance specifics",
+  "review": "The lone five‑star review describes the concert as “awesome” and a great tour stop, expressing strong positive sentiment. No specific comments are provided about the audio source, sound quality, song selections, or individual band members.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 5‑star rating; enthusiasm is clear but lacks detail to assess recording or musical nuances."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": ""
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T04:23:34.931237+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-21.aud.gidley.91767.sbeok.flac16"
+}

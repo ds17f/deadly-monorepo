@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality audience recording captures a solid 1981 show with a tight first set and a jam‑filled second set, though no standout songs and an early loss of Lost Sailor.",
+  "review": "The audience tape, transferred to FLAC16 by Doug Mow and mastered by Alex Ford, is praised as clear and well‑captured. Musically the concert delivers a consistently good performance – Jerry’s sharp lead work and Brent’s fully present keyboards are highlighted – but reviewers note there are no truly standout moments and that Lost Sailor was dropped early in the set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show and recording positively (4‑5 stars) citing good sound and solid playing, but a zero‑star review and comments about missing highlights pull the average down to a mixed overall impression."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Excellent audience capture with clear FLAC16 transfer; no specific dropouts or muffling mentioned, but not described as pristine soundboard quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Lost Sailor"
+    ],
+    "setlist_flow": "First set of 13 songs is tight and well‑structured; second set is genuinely jammed with strong group interaction, though no particular song stands out."
+  },
+  "band_member_comments": {
+    "Jerry": "Sharp playing noted by an attendee who was present at the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboards are described as fully present and energetic throughout the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lost Sailor": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:12:19.436302+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-17.nak300.mow.ford.27974.sbeok.flac16"
+}

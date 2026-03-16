@@ -1,0 +1,111 @@
+{
+  "summary": "Mixed‑quality soundboard with vocal balance issues but a strong June 20 1980 performance highlighted by Jack Straw → Franklin’s Tower, Estimated Prophet → The Other One and a superb Black Peter.",
+  "review": "The show is generally praised for its energetic first set and a hot second set that keeps the momentum, featuring standout renditions of Jack Straw into Franklin’s Tower, Alabama, Estimated Prophet → The Other One, Ship of Fools and an especially powerful Black Peter. Recording-wise the SBD suffers from overly‑forward vocals, missing early keyboard balance and a lack of warmth, making it only fair despite clear instrumentation.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the musical performance highly (average ~4.2/5) while the recording quality is split between decent clarity and serious mix problems, pulling the overall weighted score to around 3.5."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Vocals are far too loud, drowning out instruments; early tracks lack Brent's keyboard (no Bobby guitar); clarity is present but warmth and balance are missing. Listeners are advised to switch to an audience or matrix source for a better experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Franklin's Tower",
+      "Alabama",
+      "Estimated Prophet",
+      "The Other One",
+      "Black Peter",
+      "Ship of Fools",
+      "Let it Grow",
+      "Mama Tried",
+      "Mexicali Blues",
+      "Johnny B. Goode",
+      "Don't Ease Me In",
+      "Dough Knees"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid and nicely paced; the second set launches hot and stays energetic, with only minor befuddlement early on (Alabama, Greatest Story) before returning to peak performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Great guitar tone and strong solos noted, especially on Ship of Fools.",
+    "Phil": "",
+    "Bob": "Vocals are mixed too loudly, obscuring the instruments.",
+    "Keys": "Brent's harmonies praised later in the show; early tracks suffer from missing keyboard due to mix problems.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alabama": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let it Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dough Knees": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:52:06.495317+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-20.sbd.miller.113301.flac16"
+}

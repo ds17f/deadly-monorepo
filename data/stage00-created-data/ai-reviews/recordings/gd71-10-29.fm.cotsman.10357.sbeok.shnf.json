@@ -1,0 +1,46 @@
+{
+  "summary": "Mixed‑quality FM (soundboard) recording of a typical ’71 show – the second set sounds clearer while the first set is muddy, but the performance is upbeat with strong Keith piano.",
+  "review": "The show captures an energetic ’71 setlist with lively playing and a nice piano touch from Keith, especially during the cryptic suite. Technically the recording is uneven: the first set is muted and low‑fidelity (likely off‑air FM), while the second set improves but still suffers from reduced high frequencies and a truncated Truckin'.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Two reviews give 3 and 4 stars; performance is decent (70% weight) but recording quality is uneven (30% weight), resulting in an overall rating just above average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "First set very muddy and low‑fidelity, likely recorded off FM broadcast; highs are muted throughout, Truckin' is cut short. Second set sounds clearer but still lacks full high‑end sparkle."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Wharf Rat"
+    ],
+    "setlist_flow": "Typical ’71 show with an upbeat first set hampered by poor recording, followed by a stronger‑sounding second set; overall flow is solid despite missing Wharf Rat."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Nice piano work from Keith noted as a highlight.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T08:54:18.932609+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-10-29.fm.cotsman.10357.sbeok.shnf"
+}

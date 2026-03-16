@@ -1,0 +1,82 @@
+{
+  "summary": "Audience tape of the Giants Stadium gig captures a high‑energy show with standout Bird Song, Terrapin and So Many Roads, despite some mix quirks.",
+  "review": "The performance is remembered for its powerful second set, a soaring Bird Song, an epic Terrapin, and a belted rendition of So Many Roads, plus memorable drum moments with train and air‑horn effects. The audience recording is generally clear and listenable, though a few reviewers note Jerry’s guitar being low in the mix and occasional crowd chatter. Overall the show is praised for its vibe and song highlights.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers (4‑5 stars) praise the musical performance and highlight several songs, while recording quality is described as good but not pristine; mixed low‑star comments are few."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear audience tape with audible crowd ambience; some note Jerry’s guitar a bit low in the mix and occasional muddiness, but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Terrapin",
+      "So Many Roads",
+      "Box of Rain",
+      "Masterpiece",
+      "Sugaree",
+      "Saint"
+    ],
+    "poor_songs": [
+      "Unbroken Chain"
+    ],
+    "setlist_flow": "Strong second set with a long, soaring Bird Song and dramatic drum segment (train & air‑horn). First set described as short by some but compensated by the extended jams later."
+  },
+  "band_member_comments": {
+    "Jerry": "Often praised for belting out So Many Roads and looking at the full moon; a few note his guitar is low in the mix.",
+    "Phil": "His deep bass thump is noted as prominent.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Notable train horns and air‑horn effects during drums; post‑drum guest Steve Miller highlighted."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Unbroken Chain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T07:07:51.275416+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-15.schoeps.eD.9972.sbeok.shnf"
+}

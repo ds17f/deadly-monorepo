@@ -1,0 +1,111 @@
+{
+  "summary": "Great 1993 Deer Creek show with stellar Help‑on‑the‑Way/Slipknot! sequence and superb recording via the AMS audience mic.",
+  "review": "Both reviewers rave about the tight playing and high energy of this three‑night run, highlighting a flawless Help > Slipknot > Franklin’s Tower stretch, gorgeous Looks Like Rain, and an expansive He's Gone. The AMS audience microphone delivers crystal‑clear stereo imaging with upfront crowd presence, earning a solid 4‑star sound quality rating despite a slight dip after the drums come in.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Two detailed 4‑star reviews consistently praise the performance and recording, with minor mixed comments that keep the overall rating just above four."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "AMS audience mic captures excellent stereo image and upfront crowd noise; sound quality rated 4/5, pre‑drums clearer than post‑drums."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way",
+      "Slipknot!",
+      "Franklin's Tower",
+      "Looks Like Rain",
+      "He's Gone",
+      "High Time",
+      "Tom Thumb",
+      "Tennessee Jed",
+      "Crazy Fingers",
+      "Days Between"
+    ],
+    "poor_songs": [
+      "Victim",
+      "Miracle"
+    ],
+    "setlist_flow": "First set builds tension with a killer Help‑on‑the‑Way/Slipknot! groove, second set rolls through jam‑heavy highlights (Looks Like Rain, He's Gone) before tapering off slightly after the drums re‑enter."
+  },
+  "band_member_comments": {
+    "Jerry": "Shows an all‑out guitar showcase—fingerpicking on Help, shredding on Slipknot!, sweet solo on Looks Like Rain and dominant presence on He's Gone; a minor misstep on the final verse of Days Between.",
+    "Phil": "Confident vocal contributions (All Over Now) that lift the band's energy.",
+    "Bob": "Vince delivers barrel‑house piano licks and playful “falling down the stairs” solo; Bobby adds strong vocal theatrics but drops the ball briefly on All Over Now and goes over‑the‑top on Johnny B. Goode.",
+    "Keys": "Keith (Vince) provides notable piano moments, especially before Franklin's Tower.",
+    "Drums": "Solid groove early in the show; reviewers note a weaker post‑drum segment."
+  },
+  "song_mentions": {
+    "Help on the Way": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Slipknot!": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T15:05:23.106186+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-22.ams-young.evans-hughey.34752.flac1648"
+}

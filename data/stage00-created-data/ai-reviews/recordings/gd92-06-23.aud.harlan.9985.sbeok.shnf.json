@@ -1,0 +1,80 @@
+{
+  "summary": "Fair audience tape of a shaky 1992 show where Help‑Slip‑Franklin’s shines but the overall performance feels uneven.",
+  "review": "The recording is an audience cassette that suffers from hiss and occasional muddiness, making some parts sound sloppy. Musically the night had flashes of brilliance – a smoking Help>Slip>Franklin's, strong moments from Last Time, Sugar Magnolia and Jerry’s fiery lead – but the first set was marred by missed cues (HoTW) and the second set dragged with low energy. Opinions are split, leaving the show in a mixed‑bag territory.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "medium",
+    "rationale": "Eleven reviews give an average of ~2.9 stars; many point to recording hiss and uneven playing, while a few highlight standout moments. The weight of negative feedback on both sound and performance pulls the rating below average."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hissy audience cassette; some reviewers note it sounds sloppy, muffled or with drop‑outs, but overall still listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help>Slip>Franklin's",
+      "Last Time",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "How High the (HoTW)",
+      "Help>Slip>Franklin's (messy start)",
+      "Truckin' (second‑set slump)"
+    ],
+    "setlist_flow": "First set starts strong with energetic choices, but missed cues and thin keyboards hurt momentum; second set loses energy and feels like a different band, though isolated peaks like Last Time and Sugar Magnolia emerge."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as exploding, on fire, beautiful playing, but also missing cues and jumping into lyrics without intro.",
+    "Phil": "Praised as the backbone of the show and “killed on and on”.",
+    "Bob": "Noted for being high in the mix during Last Time and spitting vocally.",
+    "Keys": "Vince’s keyboards called thin, inappropriate, and generally sucked.",
+    "Drums": "Post‑drums>space sequence singled out as spectacular by one reviewer."
+  },
+  "song_mentions": {
+    "Help>Slip>Franklin's": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Standing On The Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "How High the (HoTW)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "New Speedways": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T07:41:23.077801+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-23.aud.harlan.9985.sbeok.shnf"
+}

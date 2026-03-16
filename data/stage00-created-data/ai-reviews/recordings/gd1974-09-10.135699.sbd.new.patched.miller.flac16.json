@@ -1,0 +1,102 @@
+{
+  "summary": "Fair soundboard with a few pitch glitches, yet the September ’74 London show dazzles thanks to a soaring Weather Report Suite and a stellar Dark Star→Morning Dew.",
+  "review": "The recording is an upgraded SBD source patched with audience material that runs fast and needs pitch correction, with a noticeable glitch at the start of “Not Fade Away.” Musically the performance shines – two complete sets feature highlights like the epic Weather Report Suite, a powerful Dark Star→Morning Dew, and standout renditions of China Cat Sunflower > I Know You Rider, Me & My Uncle, and Big River. Despite some uneven moments (e.g., a sloppy Dire Wolf), the overall vibe is jubilant and memorable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and praise the musical performance, while noting only moderate technical issues with the recording; thus a strong show outweighs the fair‑quality source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Upgraded SBD patched with audience (AUD) segments; runs fast, requires -1% to -4% pitch correction on many tracks; glitch near the start of “Not Fade Away”; occasional drop‑outs and speed inconsistencies."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Weather Report Suite",
+      "Dark Star → Morning Dew",
+      "China Cat Sunflower > I Know You Rider",
+      "Me & My Uncle",
+      "Big River",
+      "U.S. Blues"
+    ],
+    "poor_songs": [
+      "Dire Wolf",
+      "Black Throated Wind"
+    ],
+    "setlist_flow": "Two complete sets with a strong, exploratory second set; the first set builds nicely and ends with a lengthy Weather Report Suite, while the second set delivers high energy peaks (Dark Star, Morning Dew) despite occasional uneven moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Shows a unique mood on China Cat Sunflower, superb bent‑note tones, and drives the Dark Star improvisation.",
+    "Phil": "Great on Weather Report Suite (key change), solid bass lines throughout; highlighted on Loser and Morning Dew.",
+    "Bob": "Brilliant rhythm guitar and vocal work, especially on China Cat Sunflower > I Know You Rider.",
+    "Keys": "Keith’s playing shines on Big River and U.S. Blues; overall keyboard contributions are strong.",
+    "Drums": "Billy (Mick) is crisp, articulate, and drives the high‑energy jams; drum work praised throughout."
+  },
+  "song_mentions": {
+    "Black Throated Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mississippi Half Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Mag": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T00:09:05.305989+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-09-10.135699.sbd.new.patched.miller.flac16"
+}

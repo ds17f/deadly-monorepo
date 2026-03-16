@@ -1,0 +1,76 @@
+{
+  "summary": "Excellent soundboard capture of a quirky 1982 show with a standout Althea and a killer Uncle John’s Band → Samson sequence.",
+  "review": "The tape is praised for its crystal‑clear soundboard quality, only marred by occasional audience patches and a missing encore segment. Musically the concert shines despite an abrupt first set—Bob forgets the words to “The Other One”—with the second set delivering a superb Althea, a tight Uncle John’s Band → Samson → Uncle John’s flow, and memorable moments like “Eyes” and “Wharf Rat.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and highlight an excellent soundboard recording; a few note missing songs, but overall performance and audio are strong."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, balanced board recording praised for crispness; occasional audience‑patch inserts and the original board lacks the encores, but overall sound is superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Uncle John's Band",
+      "Samson",
+      "Eyes",
+      "Wharf Rat",
+      "Good Lovin'"
+    ],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": "First set cut short when Weir left the stage, creating a chaotic start, but the second set launched instantly with an unusual Uncle John’s Band → Samson → Uncle John’s sandwich that lifted the concert into a strong, flowing performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his sweet guitar tone and for carrying the band through the rough first set.",
+    "Phil": "Highlighted as “the beast” on one recording; other reviewers note he is less audible in this show.",
+    "Bob": "Forgot the lyrics to \"The Other One\" but otherwise delivers eloquent vocals, especially on Good Lovin'.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Samson": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T00:46:54.046446+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-09-09.sbd.willy.11735.sbeok.shnf"
+}

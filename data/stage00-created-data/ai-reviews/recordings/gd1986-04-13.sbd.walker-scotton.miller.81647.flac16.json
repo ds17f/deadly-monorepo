@@ -1,0 +1,64 @@
+{
+  "summary": "Soundboard recording of decent clarity, but the show is marred by Jerry’s abrupt Terrapin walk‑off – China Cat▶Rider shines while the rest feels average to poor.",
+  "review": "The Walker/Miller SBD capture is generally clear and well‑balanced, though a few listeners note slight bias issues. Musically the concert is most remembered for an excellent China Cat▶Rider and a beautiful Desolation Row solo, but Jerry’s sudden exit during Terrapin Station leaves the second set uneven and many fans consider the overall performance only average.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently praised (≈4 ★) while show quality ranges from neutral to negative (≈2.8 ★). Weighted combination yields ~3.2 ★."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Walker's Miller SBD is praised as one of the cleanest uploads; listeners note crispness but a few mention bias/volume quirks in some copies."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat > Rider",
+      "Desolation Row (solo)",
+      "Minglewood"
+    ],
+    "poor_songs": [
+      "Looks Like Rain",
+      "Terrapin Station (unfinished)"
+    ],
+    "setlist_flow": "First set is average with a few highlights; the second set peaks with China Cat▶Rider but collapses after Jerry abruptly walks off during Terrapin, leaving the band scrambling and the momentum lost."
+  },
+  "band_member_comments": {
+    "Jerry": "Abruptly walked off mid‑Terrapin (possible health issue); his solo on Desolation Row is praised; playing turns to rapid scales before exit.",
+    "Phil": "",
+    "Bob": "Brent Mydland tries to keep the show moving after the walk‑off, adding synth lines in Peggy‑O and later I Don't Need Love.",
+    "Keys": "Brent’s synth work noted on Peggy‑O and Supplication; generally solid but unable to rescue the set after Jerry leaves.",
+    "Drums": "Bill/Mickey (drummers) did not successfully take over Terrapin, contributing to the feeling of a stalled second half."
+  },
+  "song_mentions": {
+    "China Cat > Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 5,
+      "total_mentions": 5
+    },
+    "Desolation Row": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:53:24.260946+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-13.sbd.walker-scotton.miller.81647.flac16"
+}

@@ -1,0 +1,58 @@
+{
+  "summary": "Excellent audience recording of an electric show with a fiery \"The Other One\" and standout \"Nobody's Fault But Mine\", though the \"Cryptical\" attempt divides opinion.",
+  "review": "The tape captures a high‑energy performance that many fans remember as electrifying, highlighted by Jerry’s intense drive on \"The Other One\" and a moving rendition of \"Nobody's Fault But Mine\". While several listeners hail it as one of the best audience recordings despite a slight boxy character, the rare inclusion of \"Cryptical\" draws mixed reactions, with some calling it weak while others love its wildness.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong musical moments and very positive recording feedback outweigh a few criticisms of specific songs; weighted average yields ~4.2 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear AUD with slight boxiness; praised by several reviewers as possibly the best audience recording of its era."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Nobody's Fault But Mine",
+      "Comes a Time"
+    ],
+    "poor_songs": [
+      "Cryptical"
+    ],
+    "setlist_flow": "Energetic and frenzied, especially in the second half; drums segment noted as consistently exciting throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for high intensity on \"The Other One\" and overall electric vibe, but criticized for anemic playing on the rare \"Cryptical\" rendition.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s attempt at a new song is described as a downer by one reviewer.",
+    "Drums": "Consistently highlighted as cool and exciting during this period."
+  },
+  "song_mentions": {
+    "Cryptical": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Nobody's Fault But Mine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:31:35.123806+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-09-03.oade-schoeps.sacks.27250.sbeok.flacf"
+}

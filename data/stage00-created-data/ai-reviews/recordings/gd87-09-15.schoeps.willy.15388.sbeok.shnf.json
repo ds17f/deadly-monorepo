@@ -1,0 +1,46 @@
+{
+  "summary": "Echo‑laden audience recording that captures the vibe of MSG, highlighted by an energetic Pocky Way opening but hampered by a weak “Music Never Stopped.”",
+  "review": "The tape offers a decent, crowd‑filled sound with noticeable echoes and ambient noise that some listeners find charming while others see as a flaw. Musically the show kicks off strong with the “Pocky Way” jam, yet the later “Music Never Stopped” falls flat for at least one reviewer, making the overall experience mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Two reviews give divergent scores (2 and 4). Show quality is mixed (one standout jam, one weak song) and recording quality is fair with echo issues, leading to a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Echoy sound with audible crowd noise throughout; not crisp like a soundboard but captures live atmosphere. Some listeners note the recording feels less satisfying than the actual MSG performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Pocky Way"
+    ],
+    "poor_songs": [
+      "Music Never Stopped"
+    ],
+    "setlist_flow": "The first set launches with a lively Pocky Way jam, but momentum drops later when “Music Never Stopped” feels missing without Donna Jean."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Pocky Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:17:13.965826+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-15.schoeps.willy.15388.sbeok.shnf"
+}

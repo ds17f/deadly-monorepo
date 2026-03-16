@@ -1,0 +1,107 @@
+{
+  "summary": "Fair‑quality soundboard capture of a hot desert show with standout Unbroken Chain, Spanish Jam/Other One and So Many Roads, but mixed performance due to Jerry’s health and occasional hissy mix.",
+  "review": "The recording is a soundboard tape that suffers from noticeable hiss and low vocals, yet remains listenable. Musically the concert shines in its second‑set flow – Unbroken Chain, Eyes of the World, Spanish Jam into The Other One, Days Between and So Many Roads are repeatedly praised – while the first set feels uneven and songs like Liberty draw criticism. Overall fans are divided, celebrating the memorable jams but lamenting Jerry’s waning stamina and the hot venue conditions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Over two dozen reviews give an average of ~3.3 stars; many highlight superb jams and classic songs (show strength) while noting hissy board and Jerry’s declining performance (recording/show weaknesses). The balance yields a solid mid‑range rating with high confidence due to volume of consistent feedback."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Board is hissy like a snake; vocals are low, guitars sometimes buried, drums and Phil’s bass are prominent. Overall clarity is acceptable but the mix is not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Unbroken Chain",
+      "Spanish Jam / The Other One",
+      "So Many Roads",
+      "Days Between",
+      "Eyes of the World",
+      "Corrina"
+    ],
+    "poor_songs": [
+      "Liberty",
+      "Eyes (rough version)"
+    ],
+    "setlist_flow": "First set described as uneven and sometimes a “dud,” but the second set is repeatedly called a gift, with a strong Unbroken Chain → Eyes transition leading into a superb Spanish Jam/Other One sequence and a soaring Days Between to close."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed remarks – some note his guitar tone sounded great while others point out weak vocals, health‑related fatigue and moments where he seemed ready to collapse.",
+    "Phil": "His bass is audible even when the mix is poor; a few reviewers mention low vocal levels affecting his presence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Consistently praised for tight grooves (Kreutzmann/Hart) and the “drum circle” vibe; Carter Beauford’s guest spot was criticized as out of sync."
+  },
+  "song_mentions": {
+    "Unbroken Chain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "So Many Roads": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Spanish Jam / The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Days Between": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Corrina": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Liberty": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "West LA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb's Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T08:34:04.498658+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-05-21.sbd.ladner.19419.sbeok.shnf"
+}

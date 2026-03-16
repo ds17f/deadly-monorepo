@@ -1,0 +1,110 @@
+{
+  "summary": "Soundboard capture of a lively 1980 Capitol Theatre show – crisp guitars and booming bass with standout April‑Fools Promised Land, China > Rider and a fiery Shakedown encore.",
+  "review": "The recording is a sound‑board source that most listeners describe as clear, full‑bodied and “sweet,” though a minority note heavy noise‑reduction artifacts. Musically the concert shines with the prank opening, tight Candyman, soaring Looks Like Rain, an inspired China > Rider jam and a rousing Shakedown encore, while a few cuts (Stella Blue, Rain) are seen as weaker. Overall fans regard it as one of the better Capitol shows despite occasional uneven moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly rate the show 4‑5 stars and praise key performances; technical complaints are limited to processing artifacts, giving a strong net positive rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and full‑low‑end soundboard mix; some listeners report excessive noise‑reduction creating a slightly “vocoder‑like” tone, but most find it listenable and well balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Promised Land (April Fool's version)",
+      "Candyman",
+      "China > Rider",
+      "Shakedown",
+      "Looks Like Rain",
+      "Feel Like a Stranger",
+      "Estimated Prophet",
+      "He's Gone",
+      "Other One"
+    ],
+    "poor_songs": [
+      "Stella Blue",
+      "Rain"
+    ],
+    "setlist_flow": "The first set builds momentum with the prank opening and solid mid‑set jams, while the second set lifts the energy dramatically through a powerful China > Rider sequence, an expansive Estimated Prophet jam, and a high‑octane Shakedown encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring guitar work, exploratory solos (especially on Stranger) and strong vocal presence; also noted on drums during the April Fool's gag.",
+    "Phil": "Mentioned only briefly (mis‑identified as lead guitarist in one review); otherwise not highlighted.",
+    "Bob": "Highlighted for taking over organ duties during the prank opening and adding keyboard texture later in the show.",
+    "Keys": "Brent’s unusual role on drums is a focal point; several reviewers love his keyboard/organ contributions despite occasional criticism of his sound.",
+    "Drums": "Both Jerry and Brent share drum duties for the April Fool's joke, with Mickey also noted on rhythm guitar/vocals."
+  },
+  "song_mentions": {
+    "Promised Land": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "China > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Shakedown": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T21:53:53.100684+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-04-01.sbd.bertha-ashley.26178.sbeok.shnf"
+}

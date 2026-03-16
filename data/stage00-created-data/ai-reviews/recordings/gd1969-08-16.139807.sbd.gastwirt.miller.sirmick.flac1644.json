@@ -1,0 +1,57 @@
+{
+  "summary": "Clean soundboard capture of a rare five‑song Woodstock set highlighted by a soaring Dark Star and strong Mama Tried/High Time performances.",
+  "review": "The recording is a well‑balanced soundboard source with only brief dropouts and the occasional radio‑interference artifact, making it listenable despite some vintage quirks. Musically the show shines on Dark Star – praised for its intensity and Jerry’s blistering tone – and the concise renditions of Mama Tried, High Time and an extended Lovelight that, while uneven, add historic flavor. Overall reviewers are enthusiastic about the performance and consider this a valuable snapshot of the Dead’s Woodstock appearance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Three detailed reviews lean strongly positive (4‑5 stars) with only one moderate rating; both show quality and recording quality are judged good to excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Cleanest SBD mix available, clear instrument separation, but includes a two‑second drop at ~24:10 and the infamous radio interference on High Time; overall crisp with minor glitches."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Mama Tried",
+      "High Time",
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A concise five‑song festival set (St. Stephen → Mama Tried → Dark Star → High Time → Lovelight) with long tunings and a truncated St. Stephen; the flow is praised for its historic intensity despite the brief runtime."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for blistering guitar tone on Dark Star and solid vocal delivery on High Time.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Tom Constanten noted for creating strange auras during Dark Star.",
+    "Drums": "Mickey's cannon moment is mentioned, but no specific performance critique."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T16:42:30.511242+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-08-16.139807.sbd.gastwirt.miller.sirmick.flac1644"
+}

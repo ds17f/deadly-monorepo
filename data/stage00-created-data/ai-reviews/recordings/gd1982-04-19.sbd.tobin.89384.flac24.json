@@ -1,0 +1,39 @@
+{
+  "summary": "Audience tape of the famed Raven Space show suffers a mid‑song cutout and Phil Lesh’s absence limits the performance.",
+  "review": "This recording captures the historic Raven Space concert from an audience source, complete with tapers chatting about their ideal setlist. The tape cuts out during \"Good Lovin'\", detracting from listenability, and Phil Lesh missed the night before, leaving a noticeable gap in the band’s sound.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "medium",
+    "rationale": "Only one detailed review points out major recording faults (cut‑out, audience source) and a key member's absence, leading to an overall low enjoyment rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Audience tape with audible tapers discussing setlist; cuts out in the middle of \"Good Lovin'\", resulting in loss of that portion of music."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Good Lovin'"
+    ],
+    "setlist_flow": "Reviewer notes that tapers were discussing an ideal second‑set list, implying the actual set may not have met expectations; no specific praise for flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Absent – missed the night before, affecting band dynamics",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T20:51:32.707742+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-19.sbd.tobin.89384.flac24"
+}

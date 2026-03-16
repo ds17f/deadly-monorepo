@@ -1,0 +1,57 @@
+{
+  "summary": "Outstanding matrix capture of a high‑energy show featuring a fiery first‑set segue and a standout Althea performance.",
+  "review": "The Seamons matrix delivers crystal‑clear, full‑bodied sound that lets the concert’s energy shine through. Reviewers rave about the electric first set—Jack Straw → Tower → Mama → Mexicali—and highlight Althea, Deal, and Johnny B. Goode as peak moments, while noting a relaxed second half that still recovers its momentum.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews are strongly positive (4‑5 stars), praising both the musical performance and the matrix recording quality; no significant criticisms were noted."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the matrix \"outstanding\", \"great sound\" and say it brings out the full power of the night with crisp, clean mix; no drop‑outs or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Jack Straw -> Tower -> Mama -> Mexicali",
+      "Deal",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for its high energy and an interesting segue (Jack Straw → Tower → Mama → Mexicali); second set slows on Not Fade Away/Black Peter but picks up with Johnny B. Goode, ending with a surprise encore of Don't Ease Me In."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw -> Tower -> Mama -> Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:50:14.877983+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-20.mtx.seamons.92783.sbeok.flac16"
+}

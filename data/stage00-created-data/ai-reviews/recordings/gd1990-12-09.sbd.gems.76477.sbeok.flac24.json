@@ -1,0 +1,31 @@
+{
+  "summary": "No specific details on recording or performance; reviewer gave a zero‑star rating",
+  "review": "The lone review provides virtually no information about the audio source, sound quality, or musical highlights of this concert. The reviewer’s brief comment and a zero‑star rating suggest they were not satisfied with the experience, but without further detail it is impossible to pinpoint whether the issue was performance‑related or technical.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one review with a zero rating and no substantive commentary; insufficient data for a higher confidence assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No technical comments provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T15:01:56.694692+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-09.sbd.gems.76477.sbeok.flac24"
+}

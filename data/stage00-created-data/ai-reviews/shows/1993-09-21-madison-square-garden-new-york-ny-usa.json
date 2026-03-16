@@ -1,0 +1,60 @@
+{
+  "summary": "Terrapin Station shines, solid set with bright Sunshine",
+  "blurb": "The Garden show delivers a soaring Terrapin Station and a bright Here Comes Sunshine. Jerry’s guitar work is tight, Phil lays down a strong bass groove, and Bill adds a memorable drum‑stick moment. Overall the performance is solid though the second‑set energy dips after the drums/space segment.",
+  "review": "On September 21, 1993 the Grateful Dead took over Madison Square Garden for a birthday celebration that’s remembered more for its strong set than any historic firsts. The first set rolls through classics like Hell In A Bucket and The Music Never Stopped with tight ensemble playing, but the real high points arrive in the second set: Here Comes Sunshine opens the side with Jerry Garcia’s bright guitar phrasing, followed by a powerful Terrapin Station that launches into an expansive jam before the drums‑and‑space segment. While the drum/space duo loses a bit of momentum, the band rebounds with The Last Time and a heartfelt Stella Blue, closing the night on Sugar Magnolia and The Weight. Bill Kreutzmann’s playful stick‑pointing at fans adds a fun audience‑interaction highlight, and Phil Lesh’s bass is consistently praised throughout. Keyboardist Vince Welnick sits in the background – reviewers note mixed feelings compared to earlier eras, but his playing doesn’t detract from the overall flow.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 8,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Two recordings are clearly positive, highlighting Terrapin Station, Here Comes Sunshine and The Last Time, while the other two are mixed – noting strong early/mid‑set playing but a dip in energy after drums/space. The consistent praise for specific songs and overall solid performance yields a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd93-09-21.dsbd.miller.28765.sbeok.flacf",
+    "reason": "Excellent digital soundboard capture with clear mix and no dropouts, highlighting Terrapin Station and Here Comes Sunshine."
+  },
+  "key_highlights": [
+    "Soaring Terrapin Station leading into a jam before drums/space.",
+    "Bright Here Comes Sunshine performance early in Set 2.",
+    "Memorable Bill Kreutzmann drum‑stick moment captured on audience tape.",
+    "Phil Lesh’s consistently strong bass foundation throughout."
+  ],
+  "song_highlights": [
+    "Here Comes Sunshine",
+    "Terrapin Station",
+    "The Last Time"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers strong guitar work on Here Comes Sunshine and a soaring vocal performance on Terrapin Station, keeping the band’s momentum high in the early second set.",
+    "Phil": "Lesh’s bass is described as really good throughout the concert, providing a solid foundation for both the tight numbers and the extended jams.",
+    "Bob": "",
+    "Vince": "Keyboard work receives mixed remarks; while not a focal point, Vince’s playing does not hinder the overall flow of the show.",
+    "Mickey": "No specific criticism, though the energy dip after drums/space suggests the percussion segment didn’t sustain momentum.",
+    "Billy": "Creates a memorable audience moment by smiling and pointing his drum stick at standing fans during the set."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-18T17:23:12.377133+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Here Comes Sunshine"
+    ],
+    [
+      "Playing In The Band",
+      "Terrapin Station",
+      "Jam",
+      "Drums",
+      "Space",
+      "The Last Time",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ]
+  ]
+}

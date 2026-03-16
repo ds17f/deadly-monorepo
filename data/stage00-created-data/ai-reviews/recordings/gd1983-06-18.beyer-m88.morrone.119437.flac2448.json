@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent audience recording of a stellar 1983 show highlighted by an insane Scarlet Begonias→Fire on the Mountain, epic Morning Dew and a marathon Playing in the Band.",
+  "review": "Both reviewers rate this performance highly, praising the band's inspired playing—especially Jerry’s soaring Scarlet solo, Phil’s bass bombs, and a monster Morning Dew. The tape is praised as the best of the audience recordings despite lacking a soundboard source, delivering clear enough sound to enjoy the long PITB jam.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Two detailed 4‑star reviews consistently praise both the musical performance and the audience recording quality, indicating a strong show with a top‑tier tape."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience source; reviewers call it the best of the audience recordings, noting clear capture of instruments and ambience despite the absence of a soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Morning Dew",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows powerfully with a fiery Scarlet>Fire sequence, an emotional Morning Dew, and an extended 18‑minute Playing in the Band that showcases the band's improvisational peak."
+  },
+  "band_member_comments": {
+    "Jerry": "Outstanding solo on Scarlet Begonias→Fire; voice noted as croaky but still solid for the era.",
+    "Phil": "Drops bombs during the jams, especially in the Scarlet>Fire and PITB sections.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T07:25:40.033483+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-18.beyer-m88.morrone.119437.flac2448"
+}

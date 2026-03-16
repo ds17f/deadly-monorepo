@@ -1,0 +1,51 @@
+{
+  "summary": "High‑fidelity soundboard capture with a fantastic acoustic set and sweet renditions of China Doll, Babe It Ain't No Lie → Ripple.",
+  "review": "The recording is praised for its crystal‑clear sound, especially on the acoustic portion of the 1980 show. Reviewers highlight standout performances of “China Doll” and the “Babe It Ain’t No Lie > Ripple” transition, while noting that the electric sets sound a bit off‑balance, likely due to source issues.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong positive comments on recording quality and acoustic performance outweigh minor complaints about the electric sets, yielding a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, sweet sound praised by multiple reviewers; some comments suggest the electric portions may suffer from original source limitations."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Doll",
+      "Babe It Ain't No Lie",
+      "Ripple"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic set described as fantastic; electric sets noted as less impressive, possibly due to recording source rather than performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Babe It Ain't No Lie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:50:13.297587+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-09-30.132375.sbd.miller.flac16"
+}

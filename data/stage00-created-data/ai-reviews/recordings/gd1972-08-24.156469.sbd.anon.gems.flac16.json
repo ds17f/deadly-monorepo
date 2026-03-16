@@ -1,0 +1,111 @@
+{
+  "summary": "Good‑quality soundboard capture of a solid summer ’72 show, highlighted by tight Truckin', soaring Tennessee Jed and a wild Morning Dew.",
+  "review": "The recording is a dynamic soundboard upgrade that fixes many level issues but still suffers from a crackly left channel on One More Saturday and tape glitches in Sing Me Back Home. Musically the second set shines with Mississippi Half‑Step, Truckin' and an intense Morning Dew, while the first set delivers strong Tennessee Jed and solid staples despite a few flubs.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "low",
+    "rationale": "Only one detailed review; shows a good performance with notable highlights but mentions several recording flaws, leading to an average‑to‑good overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Dynamic and more balanced than earlier sources; fixes switched channels and level issues. Left channel crackly on One More Saturday, tape glitches in Sing Me Back Home, occasional flubs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tennessee Jed",
+      "Mississippi Half-Step",
+      "Truckin'",
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "Playing in the Band",
+      "Sing Me Back Home",
+      "One More Saturday"
+    ],
+    "setlist_flow": "First set runs standard run‑throughs with a few weak spots (Jack Straw solo, Playing in the Band). The second set delivers the '72 quasar shine—tight jams and inspired interplay leading to a memorable climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Still on Strat; noted for a sparky but faltered solo on Jack Straw.",
+    "Phil": "Bass shows early Elastic Jazz riff at 5:45, inventive interplay throughout the second set.",
+    "Bob": "Playing an ES‑335; strong tonal presence on Mississippi Half-Step and Brown Eyed Women.",
+    "Keys": "Keith adds texture with Down by the Riverside/Bushel tuning after Beat It on Down the Line-13.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sing Me Back Home": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "One More Saturday": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Uncle John's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T16:29:55.126591+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-08-24.156469.sbd.anon.gems.flac16"
+}

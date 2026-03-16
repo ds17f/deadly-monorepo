@@ -1,0 +1,58 @@
+{
+  "summary": "A hissy, distorted sound‑board capture of an early‑70 set that still shines thanks to a smoking Hard to Handle and a standout China Rider jam.",
+  "review": "The performance is solid – fans highlight the fiery Hard to Handle, the exploratory China Rider, and a lively post‑Midnight jam with strong Lesh bass and Jerry’s tribal‑funk soloing.  The soundboard source is marred by noticeable hiss, distortion and occasional drop‑outs, which many reviewers note as typical of 1970 recordings but still detract from the listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical moments (70% weight) while consistently calling out hissy, garbled or distorted audio (30% weight), leading to an overall rating in the good‑to‑fair range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Frequent comments about hiss, distortion, cuts and buzzing; some describe it as acceptable for the era but still a limiting factor."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard to Handle",
+      "China Rider",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Midnight Hour"
+    ],
+    "setlist_flow": "The set moves from a tight Hard to Handle opener through solid mid‑set numbers, culminating in an adventurous jam after Midnight that showcases Lesh’s percussion‑style bass and Jerry’s funk‑infused soloing."
+  },
+  "band_member_comments": {
+    "Jerry": "His post‑Midnight solo is described as \"gliding over a tribal funk\" and generally praised.",
+    "Phil": "Lesh is noted for laying down a Santana‑like percussion groove during the jam.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T15:23:25.484005+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-02-04.sbd.kaplan.14188.sbeok.shnf"
+}

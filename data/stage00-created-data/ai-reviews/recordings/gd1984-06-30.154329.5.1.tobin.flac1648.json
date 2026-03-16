@@ -1,0 +1,31 @@
+{
+  "summary": "A 5‑star show praised for Jerry’s smoking guitar work; recording source and quality are not specified.",
+  "review": "The lone review is overwhelmingly positive, calling the concert “great” and highlighting Jerry Garcia’s playing as “smoking.” No details about the recording method or sound quality were provided, so the technical assessment remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "low",
+    "rationale": "Only one brief, enthusiastic review (5 stars) mentions a standout Jerry performance but gives no recording information; rating leans heavily on the high show praise."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about soundboard, audience mix, clarity, or any technical aspects were given."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"smoking\" – indicates a particularly strong guitar performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T19:25:24.624856+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-30.154329.5.1.tobin.flac1648"
+}

@@ -1,0 +1,75 @@
+{
+  "summary": "Soundboard capture with some static and high‑pitched noise, but the show shines thanks to a soaring Sugaree and crisp Goin' Down the Road Feeling Bad.",
+  "review": "The performance is highlighted by Jerry Garcia’s soaring guitar on Sugaree and a tight, speedway rendition of Goin' Down the Road Feeling Bad, with several other bright spots like Help>Slip>Franklin's. The SBD source sounds decent overall but suffers from noticeable static and a high‑pitched hum that can be tamed with digital filtering. Reviewers are split between praising the musical peaks and critiquing the recording’s imperfections.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Show quality is generally good with multiple standout songs, while recording quality is fair due to static and noise issues; weighted average yields a solid mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Marred by static and a high‑pitched noise that detracts from clarity; EQ/BAL needed. Some other source mixes run fast, but the updated SBD (150966) is usable after digital filtering."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Goin' Down the Road Feeling Bad",
+      "Keep Your Day Job",
+      "Help > Slip > Franklin's Tower",
+      "Bird Song"
+    ],
+    "poor_songs": [
+      "Jack Straw"
+    ],
+    "setlist_flow": "First set starts sloppy with tech issues on Jack Straw, then peaks with Sugaree and Bird Song. Second set is mixed – bright moments in Help>Slip>Franklin's and Goin' Down the Road, but interrupted by occasional sloppiness and noise."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar soars on Sugaree (4:25 mark) and he quickly picks up Brent’s melody during Bird Song.",
+    "Phil": "Bass noted as low on Keep Your Day Job.",
+    "Bob": "",
+    "Keys": "Brent adds a melodic line early in Bird Song; keyboards are otherwise solid.",
+    "Drums": "The back‑line drives an uptempo Eyes of the World, providing respectable momentum."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Keep Your Day Job": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:55:03.119038+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-25.150966.sbd.latvala.eaton.dalton.miller.clugston.flac1648"
+}

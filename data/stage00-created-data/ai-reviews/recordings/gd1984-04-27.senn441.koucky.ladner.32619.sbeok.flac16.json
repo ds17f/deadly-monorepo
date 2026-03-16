@@ -1,0 +1,51 @@
+{
+  "summary": "A lovely recording captures a tight second set highlighted by an inspired Playing‑China Doll‑High Time sequence and a standout performance of The Music Never Stopped.",
+  "review": "Reviewers rave about the second‑set energy, especially the seamless Playing > China Doll > High Time stretch and Jerry’s extended lead on The Music Never Stopped. The sound is described as clear and pleasant, though a few note that the overall show feels a bit patchy. Overall the performance and recording combine to make this a memorable 1984 spring concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Four of five reviewers give high marks (3‑5 stars) and emphasize strong musical moments; recording quality is praised as clear and lovely, yielding a rating above average."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note the sound is \"pretty good\" and \"lovely,\" with no major flaws mentioned; no specific source (soundboard/audience) identified."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Music Never Stopped",
+      "Althea",
+      "Playing > China Doll > High Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is repeatedly called \"tight\" and \"beautifully played,\" while the overall concert is described as a bit patchy by one reviewer."
+  },
+  "band_member_comments": {
+    "Jerry": "Played longer than usual on The Music Never Stopped; appeared somber in parts.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Jam section created a sense of timelessness for listeners; the Playing‑China Doll‑High Time segment from behind the drums was especially impressive."
+  },
+  "song_mentions": {
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing > China Doll > High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T17:17:45.950196+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-27.senn441.koucky.ladner.32619.sbeok.flac16"
+}

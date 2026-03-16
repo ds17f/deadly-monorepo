@@ -1,0 +1,93 @@
+{
+  "summary": "Clear‑enough audience tape that captures an early‑80 show with standout moments like Feel Like a Stranger and Samson & Delilah.",
+  "review": "The AUD is reasonably clear, though a bit thin on the lows and riddled with occasional pauses and missing tracks. Musically the band is still warming up for 1980, delivering solid, subdued playing with several highlights – the first “Feel Like a Stranger”, a punchy Samson & Delilah, and an inspired Playing in the Band – while some numbers (Terrapin) feel loose and a few songs are incomplete.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance and find the audience recording decent, though notes about missing tracks, occasional tape glitches, and early‑year unevenness keep the overall score just below four stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear and clean sound with a slight low‑end roll‑off; occasional tape pauses, brief cuts (drums), and missing songs (Lost Sailor/Saint). Ambient crowd noise is minimal."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like a Stranger",
+      "They Love Each Other",
+      "Brown Eyed Women",
+      "Samson & Delilah",
+      "Playing in the Band",
+      "Wharf Rat",
+      "Good Lovin'",
+      "Space"
+    ],
+    "poor_songs": [
+      "Terrapin"
+    ],
+    "setlist_flow": "Early‑80 set feels subdued but competent; second set picks up energy with explosive jams, though occasional missing pieces and a few loose moments keep the flow from being uniformly tight."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo work is praised (amazing Mexicali blues solo, strong Samson) but reviewers note his jam on ‘Feel Like a Stranger’ was still developing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard and backing vocals are highlighted (acapella FLAS chorus), generally positive.",
+    "Drums": "Mickey’s drumming gets a nod for testing the stacks; a brief cut in the drum segment is noted."
+  },
+  "song_mentions": {
+    "Feel Like a Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T21:50:02.823799+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-03-31.senn.barbella.4741.sbeok.shnf"
+}

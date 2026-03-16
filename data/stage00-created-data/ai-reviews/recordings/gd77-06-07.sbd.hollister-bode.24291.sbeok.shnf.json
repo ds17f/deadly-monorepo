@@ -1,0 +1,85 @@
+{
+  "summary": "Soundboard recording of a Winterland 1977 show with excellent performance – stellar Terrapin Station → Morning Dew and many flawless transitions – overall good audio despite minor glitches.",
+  "review": "Fans rave about this overlooked Winterland 1977 concert, highlighting the transcendent Terrapin Station into Morning Dew, the seamless Scarlet→Fire→Good Lovin segue, and a funky, jazzy take on He's Gone. The soundboard source is generally clear with only occasional drops or vocal haziness, so the musical brilliance shines through.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "15 reviews, average 4.73 stars; overwhelming praise for the performance and only minor audio complaints, yielding a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard mix; reviewers note a few audio hiccups (brief drop toward end of Peggy‑O, slightly muddy vocals on Scarlet, hi‑hat prominence), but overall the recording is listenable and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station → Morning Dew",
+      "Scarlet > Fire > Good Lovin'",
+      "Estimated Prophet → He's Gone",
+      "Little Red Rooster",
+      "Peggy-O",
+      "Samson → Terrapin Station",
+      "Drums > Samson"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is repeatedly called the highlight, with flawless transitions and a soaring jam flow; first set receives mixed remarks (some find it sleepy) but still contains strong moments like The Music Never Stopped."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for funky, jazzy phrasing on He's Gone, uncanny phrasing at the end of Music Never Stopped, and overall “noodling” that adds sparkle.",
+    "Phil": "A few reviewers note his bass slightly off in the mix on some tunes, but generally his playing is described as imaginative and solid.",
+    "Bob": "",
+    "Keys": "Keith (or Brent) noted for nice piano work; keyboards are considered solid throughout.",
+    "Drums": "Drummers receive high marks – especially the Drums > Samson transition and tight work on El Paso."
+  },
+  "song_mentions": {
+    "Terrapin Station → Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Scarlet > Fire > Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated Prophet → He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson → Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Drums > Samson": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T03:04:29.750394+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-06-07.sbd.hollister-bode.24291.sbeok.shnf"
+}

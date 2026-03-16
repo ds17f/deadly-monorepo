@@ -1,0 +1,63 @@
+{
+  "summary": "Mixed‑quality soundboard recording plagued by audience patches and pitch problems, but the show shines with a strong Box of Rain and early‑tour energy.",
+  "review": "The performance captures an exciting early‑tour vibe – Jerry is praised for his hot playing, Phil’s vocal on “Box of Rain” is highlighted, and the second set builds momentum despite a tense Lost Sailor/​Saint transition. Technically the tape suffers: many sections are audience patches, the speed/pitch is off, and several reviewers note mud‑dy or thin sound, making the listening experience uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is generally praised (strong vocals, good setlist) while recording quality is frequently criticized (patches, speed/pitch issues). The weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Extensive audience patches on El Paso, Drums and The Dew; playback runs half‑step sharp and fast; occasional clarity praised but overall muddy/thin sound makes the tape uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "The Dew",
+      "Midnight Hour"
+    ],
+    "poor_songs": [
+      "Lost Sailor"
+    ],
+    "setlist_flow": "Shows a hot opening with Jerry on fire, a solid first set highlighted by Box of Rain, a tense Lost Sailor→Saint transition that derailed the band briefly, then a smoother second set that regained momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – early in the tour he’s described as playing better than previous shows, but several reviewers call his tone terrible and note he seemed frustrated during the Lost Sailor/​Saint mishap.",
+    "Phil": "Praised for delivering a strong vocal on “Box of Rain,” with one reviewer saying he sang it better here than in later years.",
+    "Bob": "Described as having trite vocal delivery on Lost Sailor and animated hand gestures; his spoken interlude (“Wiss Swatch”) is noted during the tense moment.",
+    "Keys": "",
+    "Drums": "All drum sections are audience‑patched, indicating missing soundboard coverage."
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:34:49.720272+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-03-24.sbd.miller.22783.sbeok.shnf"
+}

@@ -1,0 +1,71 @@
+{
+  "summary": "Peak Garcia guitar, marathon jams, standout Sugaree & Uncle John's",
+  "blurb": "The show bursts open with a soaring 'Sugaree' and a tight 'Let It Grow', then builds into an epic second‑set marathon that weaves 'Playing In The Band' straight into a 23‑minute 'Uncle John's Band/Space' excursion. Jerry Garcia delivers his tour‑high guitar work while Vince Welnick’s piano anchors the cosmic jams, and both Mickey Hart and Bill Kreutzmann launch an intergalactic drum duel. Overall the performance is a high‑energy showcase of the mid‑90s Dead.",
+  "review": "March 27, 1995 – The Omni, Atlanta. From the opening notes of 'Picasso Moon' through a blistering 'Sugaree', the first set establishes a bright, melodic momentum that only grows tighter on 'Let It Grow'. By the time the band launches into 'Playing In The Band' the energy is unmistakable, and the seamless segue into an expansive 'Uncle John's Band' sets up one of the night’s most memorable passages – a 23‑minute odyssey through jam, drums, space, and the hauntingly beautiful 'Days Between', finally resolving on a joyous 'Sugar Magnolia'. Jerry Garcia is in peak form, his whammy‑pedal sweeps and rapid sextuplet runs described by listeners as “the best guitar work of the tour”. Vince Welnick’s piano and B‑3 organ provide a grounding counterpoint to the spacey improvisations, while Phil Lesh locks in with a muscular bass line that pushes the jams forward. The twin drummers, Mickey Hart and Bill Kreutzmann, deliver an intergalactic duel that fuels the second set’s cosmic arc. Even the brief misstep on 'I Fought The Law' can’t dent the overall brilliance – this show stands as a high‑energy snapshot of the Dead’s mid‑90s resurgence.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 59,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All three recordings are marked positive, repeatedly praising Jerry’s guitar work, the marathon second‑set jams, and the intergalactic drum duel. Multiple sources highlight the same standout songs (Sugaree, Let It Grow, Playing In The Band, Uncle John's Band, Days Between) and describe the performance as ‘electric’, ‘flawless tone’ and ‘epic’. No negative sentiment appears, just a single weak encore track, so a strong positive adjustment of +1.6 is applied.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1995-03-27.152190.sbd.psykies.flac16",
+    "reason": "Excellent soundboard source described as the best‑sounding of its period, capturing the full show with crystal‑clear mix and minimal flaws."
+  },
+  "key_highlights": [
+    "Jerry Garcia delivers his tour‑high guitar work, especially on 'Sugaree' and the marathon UJB/Space stretch.",
+    "The second set’s seamless transition from 'Playing In The Band' into a 23‑minute 'Uncle John's Band/Space' creates an epic improvisational peak.",
+    "Vince Welnick’s piano and B‑3 organ ground the spacey sections, while Mickey Hart and Bill Kreutzmann unleash an intergalactic drum duel."
+  ],
+  "song_highlights": [
+    "Picasso Moon",
+    "Sugaree",
+    "So Many Roads",
+    "Let It Grow",
+    "Playing In The Band",
+    "Uncle John's Band",
+    "Days Between",
+    "Sugar Magnolia"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia is on fire all night, delivering his best tour‑high guitar work with whammy‑pedal sweeps, rapid sextuplet shreds and flawless tone that drives the jams.",
+    "Phil": "Lesh steps forward in the mix, locking tightly with Jerry and providing strong counter‑points throughout the improvisations.",
+    "Bob": "Weir contributes powerful rhythm and vocal intensity; his interplay with Garcia during the UJB/Space segment adds to the ‘meltdown’ energy despite a minor tone quirk at a song’s end.",
+    "Vince": "His thoughtful piano anchors the spacey sections, while electric‑piano and B‑3 organ shine on the jams, keeping the cosmic flights from descending into chaos.",
+    "Mickey": "Hart delivers an inspired performance, part of the intergalactic drum duel that propels the second set’s momentum and adds a stellar percussive texture.",
+    "Billy": "Kreutzmann matches Hart in intensity, his fast‑paced drumming duel fuels the extended UJB/Space outro and showcases the drums at their best."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-19T07:08:36.760602+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Picasso Moon"
+    ],
+    [
+      "Sugaree"
+    ],
+    [
+      "So Many Roads"
+    ],
+    [
+      "Let It Grow"
+    ],
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Drums",
+      "Space",
+      "Days Between",
+      "Sugar Magnolia"
+    ]
+  ]
+}

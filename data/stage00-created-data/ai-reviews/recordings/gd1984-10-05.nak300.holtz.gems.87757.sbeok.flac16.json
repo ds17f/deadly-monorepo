@@ -1,0 +1,58 @@
+{
+  "summary": "Solid 1984 show with standout China Cat Sunflower, Estimated Prophet and Black Peter, captured in a generally good recording that suffers occasional noise glitches.",
+  "review": "The concert is praised for its high‑energy first set and a second half highlighted by a fiery China Cat Sunflower → Estimated Prophet → Black Peter sequence. While most listeners find the tape clear and enjoyable, a few note strange noises during Estimated Prophet and a rushed feel on Eyes of the World, giving the performance a mixed but overall positive vibe.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and commend the performance and recording; only a couple of low ratings point to specific flaws, leading to an overall strong rating with high confidence from six detailed reviews."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and enjoyable sound; several reviewers call it great, though one mentions weird/horrible noises during Estimated Prophet."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "Estimated Prophet",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Eyes of the World"
+    ],
+    "setlist_flow": "The first set is described as solid and energetic, while opinions on the second set diverge—some call it great and top‑notch, others find it sloppy or rushed."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his all‑out energy despite the 'junky' era vibe; fans love his relentless playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:07:32.163215+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-05.nak300.holtz.gems.87757.sbeok.flac16"
+}

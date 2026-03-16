@@ -1,0 +1,92 @@
+{
+  "summary": "Excellent soundboard capture of a solid 1989 Chicago show, highlighted by a soaring To Lay Me Down and tight Foolish Heart‑Looks Like Rain stretch.",
+  "review": "The recording is clean, crisp and relaxed, offering an excellent listening experience that lets the band’s 1989 revival shine. Musically the concert delivers strong performances – a stellar TLMD, fiery Cassidy, a long‑running Foolish Heart into Looks Like Rain/Eyes, and a memorable Dear Mr. Fantasy/Good Lovin' finale – with only Hey Jude falling a bit flat.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Four detailed, mostly 4‑star reviews praise both the performance and the sound quality; the show is consistently described as solid with several standout moments, while the recording is called clean and crisp."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean, crisp, relaxed mix with no reported drop‑outs; reviewers repeatedly note the high fidelity of the soundboard source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "To Lay Me Down",
+      "Cassidy",
+      "Foolish Heart",
+      "Looks Like Rain",
+      "Dear Mr. Fantasy",
+      "Good Lovin'",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Hey Jude"
+    ],
+    "setlist_flow": "First set opens with a fun Iko Iko and moves quickly through solid jams, while the second set launches with an explosive Foolish Heart and features a 30‑minute third quarter weaving Looks Like Rain into Eyes before closing with a classic Good Lovin' → Baby Blue encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for immaculate guitar tone on TLMD and strong vocal presence, especially alongside Brent on Dear Mr. Fantasy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's B‑3 work is highlighted as a major driver of the show’s energy – “going nuts” and free‑styling vocals add excitement.",
+    "Drums": "Drum & space segment noted as solid, with a strong later‑era Wheel jam."
+  },
+  "song_mentions": {
+    "To Lay Me Down": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T18:37:07.007895+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-13.sbd.walker-scotton.miller.83769.sbeok.flac16"
+}

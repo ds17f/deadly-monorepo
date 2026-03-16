@@ -1,0 +1,66 @@
+{
+  "summary": "Fierce 'The Other One' amid solid electric set, but tape is rough",
+  "blurb": "The show delivers a powerful The Other One and strong performances of Deep Elem Blues, Hard To Handle, Sugar Magnolia and Candyman. Jerry’s guitar shines while the rhythm section stays solid. An upgraded audience recording makes it listenable despite typical 1970 tape limitations.",
+  "review": "On October 10, 1970 at Colden Auditorium the Dead rolled out a one‑set electric marathon that’s remembered most for a ferocious The Other One. Jerry Garcia launches into a snarling solo that many listeners describe as “fierce” and “rewarding,” while his earlier dip into Deep Elem Blues feels tentative but still compelling. The middle of the set builds with Hard To Handle, Sugar Magnolia and Candyman delivering upbeat momentum before the cryptic segue through Cryptical Envelopment into a drum break and the soaring other‑worldly jam of The Other One that segues straight into Not Fade Away. The second half, though missing some closing numbers on the tapes, still offers solid staples like Good Lovin' and Uncle John’s Band with a rhythm section that holds down the groove without any standout fireworks.\n\nTwo audience recordings exist: a muddy, hiss‑filled capture that barely registers the band’s nuances, and a later upgraded version that clears up much of the fog, making the show genuinely listenable. For anyone wanting to experience this early‑70s electric set—especially the iconic The Other One—the upgraded tape is the recommended source despite its audience origins.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 14,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "One recording is positive, the other mixed but leans positive; both praise The Other One and several electric numbers, with no consistent negative commentary across recordings.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1970-10-10.144636.sony-f95.lee.hance.sirmick.flac1648",
+    "reason": "Upgraded audience tape offers clear, listenable sound that captures the fierce The Other One and solid electric set better than the muddy original"
+  },
+  "key_highlights": [
+    "Fierce, rewarding performance of The Other One with a standout Jerry solo",
+    "Solid electric set featuring Deep Elem Blues (electric), Hard To Handle, Sugar Magnolia and Candyman",
+    "Upgraded audience recording provides decent clarity despite typical 1970 tape limitations"
+  ],
+  "song_highlights": [
+    "Deep Elem Blues",
+    "Hard To Handle",
+    "Sugar Magnolia",
+    "Candyman",
+    "The Other One"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers a fierce, rewarding solo on The Other One and strong lead throughout; early Deep Elem vocals are tentative but the overall guitar work is compelling.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Percussion solid and steady; drum work unremarkable but keeps the groove alive.",
+    "Billy": "Provides reliable backbeat; no standout moments but maintains tight rhythm."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-19T23:41:42.240198+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Deep Elem Blues"
+    ],
+    [
+      "Hard To Handle"
+    ],
+    [
+      "Sugar Magnolia"
+    ],
+    [
+      "Candyman"
+    ],
+    [
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "Not Fade Away"
+    ]
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "summary": "Excellent soundboard recording of the legendary 6‑9‑73 Hollister show, highlighted by soaring Eyes, juicy Loose Lucy and stellar jams on Playing and Truckin'",
+  "review": "Fans rave about this June 9, 1973 performance – a “must‑listen” with standout second‑set improvisations, tight transitions and memorable renditions of Eyes, Loose Lucy, China Doll and more. The SBD source is praised for its crisp mix and the famed Wall‑of‑Sound ambience, making the show both sonically impressive and emotionally resonant.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly positive about both performance and sound quality; weighted average (70 % show, 30 % recording) yields a strong 4.4 rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Consistently described as clear, crisp and well‑mixed; some early‑track flatness noted but overall praised for capturing the Wall‑of‑Sound ambience with good instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Loose Lucy",
+      "Playing",
+      "Truckin'",
+      "China Doll",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set receives special praise for seamless jams and transitions (e.g., Truckin' → Playing); first set deemed solid but less remarkable."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and vocal smoothness are highlighted, though one reviewer notes a lyric “flub” lasting about a minute.",
+    "Phil": "Phil’s bass work is praised (especially on Eyes) and his vocal harmonies on He's Gone get special mention; also noted for wearing an Eat‑A‑Peach T‑shirt.",
+    "Bob": "Bob’s occasional lyrical improvisation in Me & My Uncle noted; one reviewer jokes about a slip in Truckin' but overall no major criticism.",
+    "Keys": "",
+    "Drums": "Mix praised for overhead mic capture that adds life to the drums and overall rhythm section."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loose Lucy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T14:12:11.473051+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-06-09.sbd.hollister.172.sbeok.shnf"
+}

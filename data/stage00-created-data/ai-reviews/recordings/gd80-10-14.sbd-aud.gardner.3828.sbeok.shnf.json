@@ -1,0 +1,102 @@
+{
+  "summary": "Crisp sound‑board recording of the Warfield 10/14/80 run captures a marathon show highlighted by a scorching Scarlet > Fire, a monster U.S. Blues and the Let‑It‑Grow → Wheel → Music Never Stopped sequence.",
+  "review": "The Gardner SBD source is clean and dynamic for the electric sets (the acoustic portion is only available from an AUD feed), delivering excellent clarity despite a tiny disc‑gap between “Let It Grow” and “The Wheel”.  Musically the show is a high‑water mark of the 1980 Warfield residency – the setlist is massive, the second set rolls with Scarlet > Fire, US Blues and an epic Let‑It‑Grow/​Wheel/​Music Never Stopped jam, while the first electric set is seen by some as autopilot.  Overall fans rate the performance very highly, noting superb Garcia tone and a solid rhythm section.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars and praise both the musical performance (standout jams, strong setlist) and the technical quality (crisp SBD).  Minor complaints about the acoustic AUD source and a few lukewarm comments keep the rating just below “exceptional”."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "SBD for all electric sets is crisp, well‑balanced and low‑hiss; acoustic set comes from an AUD feed (tinny).  One reviewer notes a tiny gap between the end of “Let It Grow” and the start of “The Wheel” due to disc‑splitting – annoying but not detrimental."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire On The Mountain",
+      "U.S. Blues",
+      "Let It Grow > The Wheel > Music Never Stopped",
+      "Estimated Prophet",
+      "Playin' in the Band",
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "First electric set (autopilot feel)",
+      "\"The Wheel\" (lethargic tempo for some listeners)"
+    ],
+    "setlist_flow": "A 35‑song marathon that builds from a modest first set into an explosive second set, highlighted by the Scarlet > Fire burst and the Let‑It‑Grow/​Wheel/​Music jam; the third set continues the momentum with strong jams (Terrapin, PITB) before a double encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his “perfect” tone, envelope‑filter work on Terrapin, and overall guitar brilliance; a few reviewers note his vocals were subdued.",
+    "Phil": "Mentioned only in passing (rumbling bass pickup during PITB) – no strong praise or criticism.",
+    "Bob": "Not specifically highlighted musically; one reviewer notes the band’s “birthday cake” moment for Bob, but no performance critique.",
+    "Keys": "Brent Mydland’s keyboard sound is noted as a new era sound; reviewers cite his tone as solid and part of the ‘new‑keyboard’ vibe of 1980.",
+    "Drums": "Bill Kreutzmann’s drumming is generally praised as “wonderful” in the jam sections; no specific complaints."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire On The Mountain": {
+      "positive_mentions": 9,
+      "negative_mentions": 1,
+      "total_mentions": 10
+    },
+    "U.S. Blues": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Let It Grow > The Wheel > Music Never Stopped": {
+      "positive_mentions": 8,
+      "negative_mentions": 1,
+      "total_mentions": 9
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Terrapin": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Hollow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T04:51:03.148636+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-10-14.sbd-aud.gardner.3828.sbeok.shnf"
+}

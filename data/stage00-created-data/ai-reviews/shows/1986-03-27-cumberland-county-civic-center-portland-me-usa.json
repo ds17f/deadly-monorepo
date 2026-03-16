@@ -1,0 +1,85 @@
+{
+  "summary": "Solid first set, mixed second half; highlights Jack Straw and Hamstrung Blues",
+  "blurb": "The show opens strong with a crisp Jack Straw, Peggy‑O and Bertha, while the second set runs fast and includes the rare Revolutionary Hamstrung Blues duet. Jerry delivers fiery solos on Bertha and Eyes of the World, though tuning drift mars parts of the later material. The recording is a solid soundboard capture that preserves the energy despite some sharpness in the latter half.",
+  "review": "Portland’s March‑27‑86 concert kicks off with a tight first set – Jack Straw rolls into a spirited Peggy‑O, and Brent’s keyboards lay down a solid groove for New Minglewood Blues before the band dives into the one‑off Revolutionary Hamstrung Blues duet. Bertha erupts with Jerry ripping solos, and Wang Dang Doodle and Big Railroad Blues keep the momentum rolling. The second set, however, feels hurried; Eyes of the World drifts sharp, Estimated Prophet sounds over‑theatrical, and the transition from Supplication Jam into The Promised Land is rough. Still, there are high points: a wild China Cat Sunflower → I Know You Rider pairing, a powerful drum break that fuels the Hamstrung Blues duet, and an exuberant Sugar Magnolia to close the night. Across the various tapes the soundboard capture (gd86-03‑27.sbd.miller.26347.sbeok.shnf) offers the clearest picture of these moments, making it the go‑to source despite its second‑set quirks.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 42,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Across ten recordings, three are clearly positive (highlighting rare Hamstrung Blues and strong first‑set energy), one is negative (overly fast/pitch‑sharp), and the rest are mixed with both praise for specific songs and criticism of tuning and rushed second‑set pacing. The net sentiment leans modestly positive, warranting a +0.6 adjustment.",
+      "final_calculation": "2.5 + 0.3 + 0.6 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd86-03-27.sbd.miller.26347.sbeok.shnf",
+    "reason": "Excellent soundboard capture with clear first‑set detail and the most complete, balanced audio of the show despite minor second‑set sharpness."
+  },
+  "key_highlights": [
+    "Rare Revolutionary Hamstrung Blues duet between Brent and Phil",
+    "Strong opening trio: Jack Straw, Peggy‑O, and Bertha",
+    "Wang Dang Doodle and Big Railroad Blues showcase tight ensemble jamming",
+    "Energetic Eyes of the World jam highlighted by both drummers"
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Peggy-O",
+    "Bertha",
+    "Wang Dang Doodle",
+    "Big Railroad Blues",
+    "Supplication Jam",
+    "The Promised Land",
+    "Revolutionary Hamstrung Blues",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Sugar Magnolia"
+  ],
+  "band_performance": {
+    "Jerry": "Rips scorching leads on Bertha and delivers a vibrant jam after Eyes of the World, though his guitar drifts sharp on Eyes and feels a bit overstimulated later in the set.",
+    "Phil": "Provides a solid low‑end throughout and shines during the rare Hamstrung Blues duet with Brent, anchoring the rhythm section.",
+    "Bob": "Brings high energy and stage presence; his rhythm work is lively but guitar slips on Eyes of the World and vocals on Estimated Prophet feel over‑theatrical, while he adds fun with a laugh during Sugar Magnolia.",
+    "Brent": "Keyboard work is serviceable overall, though his playing on Peggy‑O is described as phoned‑in and he experiments between ’86‑’89 styles, occasionally sounding lackluster.",
+    "Mickey": "Anchors the rhythmic drive alongside Bill, especially evident in the extended Eyes jam and the drum break that feeds into the Hamstrung Blues duet.",
+    "Billy": "Delivers a powerful beat on Supplication Jam and drives the second set with forceful drumming, complementing Mickey’s groove."
+  },
+  "processed_recordings": 9,
+  "processed_date": "2025-09-15T14:06:15.980060+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw",
+      "Peggy-O"
+    ],
+    [
+      "Revolutionary Hamstrung Blues",
+      "Bertha",
+      "Wang Dang Doodle"
+    ],
+    [
+      "Big Railroad Blues"
+    ],
+    [
+      "Supplication Jam",
+      "The Promised Land"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "Spanish Jam",
+      "Truckin'",
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ]
+  ]
+}

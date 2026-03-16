@@ -1,0 +1,68 @@
+{
+  "summary": "Good sound quality captures an energetic, well‑played set with standout transitions and Jerry’s ripping guitar work.",
+  "review": "The show is praised for its high energy and tight playing, highlighted by a superb China Cat Sunflower > I Know You Rider jam and a seamless Crazy Fingers into Samson segue.  Jerry Garcia’s lead work is described as “ripping” behind Bob Weir’s vocals, and the move from space to The Other One keeps the momentum despite a predictable Not Fade Away stretch.  Recording quality is noted as rather good, with no major flaws mentioned.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Single detailed review gives a 4‑star rating, noting strong musical performance and decent recording quality; limited data lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer says sound quality is rather good; no specific issues with clarity or mix are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Crazy Fingers > Samson",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Not Fade Away"
+    ],
+    "setlist_flow": "A fairly typical setlist for the era but delivered with high energy; smooth transitions (China/Rider, Crazy Fingers/Samson) and a nice move from space into The Other One keep the flow lively despite a predictable Not Fade Away segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as ripping it up behind Bob's vocals, strong lead guitar throughout.",
+    "Phil": "",
+    "Bob": "His vocal performance is highlighted, especially in the last verse of the jammed songs.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers > Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T20:56:54.833370+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-04-03.set2.senn421.eD.11631.sbeok.shnf"
+}

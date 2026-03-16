@@ -1,0 +1,45 @@
+{
+  "summary": "Positive fan impression with standout Spencer Davis cover and a rescuing CC Rider, though no clear details on recording source or quality",
+  "review": "The lone reviewer rates this show highly, enjoying a Spencer Davis‑style number and the “CC Rider” jam that they say was rescued by Jerry Garcia and Brent Mydland. Recording specifics are not mentioned, so the technical quality remains uncertain.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Only one enthusiastic 5‑star review; strong praise for musical moments but no concrete information on recording fidelity, leading to a good‑but‑cautious overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments about the sound source or clarity; reviewer’s positive tone suggests the audio was at least listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Spencer Davis song",
+      "CC Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer highlights a few moments (the Spencer Davis‑style tune and CC Rider) but provides no broader commentary on set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned as helping rescue the performance during CC Rider",
+    "Phil": "",
+    "Bob": "Referred to indirectly as “bobby” in relation to vocals",
+    "Keys": "Brent Mydland noted for stepping in and rescuing the jam",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Spencer Davis song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "CC Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T02:11:19.421449+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-12-10.140202.sbd.miller.flac2496"
+}

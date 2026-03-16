@@ -1,0 +1,60 @@
+{
+  "summary": "First‑ever Corinna debut, strong Space, but mix issues hinder listening",
+  "blurb": "The show opens with the debut of Corinna and delivers a fiery Space featuring the Ollin Arageed theme. Jerry shines on Not Fade Away and the second‑set jam, though the matrix mix buries some instruments. Overall performance is solid but recording quality varies.",
+  "review": "Feb 23 1992 at the Oakland‑Alameda County Coliseum captures a night of mixed fortunes for the Dead. The setlist kicks off with the historic first performance of Corinna, a bright moment that immediately sets an upbeat tone. Highlights roll forward into the second set where China Cat Sunflower → I Know You Rider segues into a marathon Playing In The Band > Terrapin Station → Drums → Space sequence; the Space here is singled out for its “Ollin Arageed” theme and Jerry’s “very Dead” guitar work, earning high praise from the soundboard capture. Not Fade Away closes the set with Jerry’s lead guitar cutting through, giving fans a classic finish, followed by a soulful Box of Rain encore.\n\nHowever, the listening experience is uneven. The matrix recording suffers from an echo‑y, thin mix that often drowns out Jerry and Phil, especially on Terrapin Station and later in the set, while the drum/space segment feels over‑extended to some ears. Audience recordings are noisy and lack clarity, and one reviewer even called the first‑time song at the end a misstep that ruined the flow. The best‑sounding source is the high‑quality soundboard capture (gd1992-02-23.set2.sbd.walker-scotton.miller), which presents the band in clear balance and lets Jerry’s top‑form playing shine through.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 12,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Mixed sentiment across recordings: two positive notes (standout Space, Jerry’s top form) and three mixed/negative comments (poor matrix mix, buried instruments, disappointing set ending). Positive remarks outweigh negatives slightly, yielding a modest +0.6 adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1992-02-23.set2.sbd.walker-scotton.miller.96396.sbeok.flac16",
+    "reason": "Clean soundboard capture with good balance, clear Jerry lead, and the highlighted Space segment."
+  },
+  "key_highlights": [
+    "Historic debut of Corinna (first ever live performance).",
+    "Standout Space featuring the Ollin Arageed theme.",
+    "Jerry’s fiery Not Fade Away closes the second set on a high note.",
+    "Matrix mix issues occasionally bury instruments, especially in Terrapin Station."
+  ],
+  "song_highlights": [
+    "Corinna",
+    "Not Fade Away",
+    "Space"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers top‑form, very Dead guitar work on Not Fade Away and Space; however, the matrix mix sometimes buries his playing.",
+    "Phil": "Bass is present but often faint in the matrix recording; birthday celebration remark suggests solid playing overall.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "Drum performance feels uneven; moments of disengagement and an over‑extended drum/space segment noted.",
+    "Billy": "Shares the same mixed drum assessment as Mickey, with occasional lack of energy during the extended space."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-18T03:29:55.734550+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Corinna"
+    ],
+    [
+      "Playing In The Band",
+      "Terrapin Station",
+      "Drums*",
+      "Space",
+      "I Need A Miracle",
+      "Stella Blue",
+      "Throwing Stones",
+      "Not Fade Away"
+    ]
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent audience recording with crisp, sweet‑sounding sound and a laid‑back show highlighted by a smoking second set jam and strong performances from Jerry and the band.",
+  "review": "Listeners rave about the superb audio quality of this 1978 audience tape, calling it one of the best '78 recordings and recommending headphones for full enjoyment. The concert itself is praised for its relaxed vibe, a standout second‑set jam, and solid playing—especially Jerry’s guitar work and a tasty Scarlet Begonias featuring Donna’s vocals.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All seven reviews give 4‑5 stars, consistently praising both the sound quality and the musical performance; no negative comments were noted."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Audience tape described as sweet‑sounding, crisp and very listenable; reviewers recommend headphones for the best experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Sunrise",
+      "Me and My Uncle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A laid‑back, chill atmosphere with many favorite Dead songs; the second set jam receives special praise, and audience interaction (e.g., the \"Me and My Uncle\" yell) adds to the memorable vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry’s stellar guitar tone and “FAT 78” sound, noting he was “doing what he does best.”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "A brief “mini melt into drums” is mentioned as a nice moment, indicating solid drumming."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunrise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:55:37.087734+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-01-10.aud.Rhinotrocity7.motb-0026.95068.flac16"
+}

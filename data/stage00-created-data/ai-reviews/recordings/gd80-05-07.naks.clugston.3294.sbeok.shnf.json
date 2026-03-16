@@ -1,0 +1,75 @@
+{
+  "summary": "Warm audience recording captures a soaring show highlighted by Shakedown‑Bertha, Terrapin Station and an incendiary Playing in the Band.",
+  "review": "The audience tape delivers a spacious, warm ambience that puts listeners right inside the famed \"Barn\" – despite a few harsh edits between song cuts. Musically the concert is praised for its blazing second set, with Shakedown Street into Bertha, Terrapin Station, Saint of Circumstance and a scorching Playing in the Band standing out, while vocals from Jerry, Bob and Brent receive special kudos.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars, highlighting excellent performance and a good‑quality audience recording; only minor technical complaints appear."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Warm, spacious sound with clear crowd ambience; some listeners note harsh cuts between Shakedown→Bertha and Playin'→Good Lovin', but overall the tape is listenable and immersive."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Bertha",
+      "Terrapin Station",
+      "Saint of Circumstance",
+      "Playing in the Band",
+      "Jack Straw",
+      "English Country Garden"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is described as an outstanding, scorching stretch that mixed things up and kept the audience on fire; the first set flows smoothly with a memorable opening Jack Straw."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals and guitar praised for energy; Garcia’s Cornell alma‑mater tease and vocal work highlighted.",
+    "Phil": "Bass bombs during Shakedown Street noted as tasty; Phil fans love this version.",
+    "Bob": "Strong vocal performance mentioned alongside Jerry and Brent.",
+    "Keys": "Brent Mydland’s vocals (and keyboard presence) called incredible; early Brent‑era vibe appreciated.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "English Country Garden": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T22:45:51.795925+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-05-07.naks.clugston.3294.sbeok.shnf"
+}

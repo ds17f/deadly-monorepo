@@ -1,0 +1,82 @@
+{
+  "summary": "Atmospheric Halloween show with a legendary Werewolves opener and solid jams, captured on a clear audience recording that some feel doesn’t fully translate.",
+  "review": "The Columbia, SC Halloween concert is remembered for its spooky space‑filled intro that morphs into a killer \"Werewolves of London\" and strong moments like \"Music Never Stopped,\" an electrifying \"Looks Like Rain,\" and a standout \"Shakedown Street.\" The audience‑recorded source is generally clear and often cited as the best‑sounding of the batch, though a few reviewers note that the performance loses some impact on tape. Overall the show starts high, tapers off in the first set, and offers a mixed but memorable second‑set jam experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Multiple detailed reviews highlight both strong musical moments and notable dips; recording is praised for clarity, giving a solid but not outstanding combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced; one reviewer calls it the best sounding of the lot, though a few note that the show doesn’t translate perfectly to tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Werewolves of London",
+      "Music Never Stopped",
+      "Looks Like Rain",
+      "Shakedown Street",
+      "Dear Mr. Fantasy"
+    ],
+    "poor_songs": [
+      "Tennessee Jed",
+      "Might As Well",
+      "Ship of Fools"
+    ],
+    "setlist_flow": "A spooky, space‑laden opener erupts into a thrilling \"Werewolves\" that sets an eerie tone; the first set loses momentum after the early high points, while the second set offers solid jams (notably Shakedown) but remains uneven overall."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "His howls and cackles during the opening space jam are highlighted as a key Halloween moment.",
+    "Bob": "Praised for his screaming vocal on \"Looks Like Rain,\" described as one of the sickest performances.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Werewolves of London": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Might As Well": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T10:07:18.979397+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-10-31.aud-oade.remaster.20282.sbeok.shnf"
+}

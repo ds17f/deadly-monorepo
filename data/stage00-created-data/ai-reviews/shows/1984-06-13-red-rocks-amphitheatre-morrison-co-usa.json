@@ -1,0 +1,76 @@
+{
+  "summary": "Second-set fireworks with Let It Grow, Stella Blue and tight jams",
+  "blurb": "Red Rocks delivered a second‑set surge highlighted by Let It Grow into an expansive Drums‑Space‑Wheel sequence, plus heartfelt renditions of Stella Blue and It's All Over Now Baby Blue. Jerry’s guitar tone is praised as perfect while Brent’s Hammond B3 adds depth on Cold Rain & Snow, and the band stays surprisingly tight despite a rain‑soaked first set.",
+  "review": "June 13, 1984 at Red Rocks was a night of weather‑warped drama that turned into one of the year’s most rewarding performances. The first set was hampered by a heavy downpour – the tarp‑filled stage made for a soggy “Cold Rain And Snow” and a drenched Bob – but the band kept the groove tight enough to carry through the rain‑slicked songs. Once the clouds cleared, the second set exploded: a seamless flow from “China Cat Sunflower > I Know You Rider” into “Ship Of Fools” and then a soaring “Let It Grow” that launched into a powerful Drums > Space > The Wheel segment. Jerry’s tone was described as “perfect,” his improvisational spark lit up the night, while Brent’s Hammond B3/Leslie on “Cold Rain & Snow” pushed the sound to new textures. Mickey earned kudos for echo‑like balafon tones in the drums, and the heartfelt delivery of “Stella Blue” (and the plaintive encore “It’s All Over Now Baby Blue”) sealed a show that feels both epic and intimate despite the weather’s early interference.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 13,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Three of four recordings are strongly positive, highlighting standout moments like Let It Grow, Stella Blue, and the Drums‑Space segment; no consistent negative comments appear. This consensus yields a solid positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 1.4 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd84-06-13.sbd.ladner.11263.sbeok.shnf",
+    "reason": "Solid soundboard mix with good instrument separation; captures the show's highlights while minimizing rain‑related balance quirks."
+  },
+  "key_highlights": [
+    "Let It Grow flowing into a powerful Drums‑Space‑Wheel sequence",
+    "Emotive Stella Blue and poignant encore It’s All Over Now Baby Blue",
+    "Candyman and China Cat Sunflower > I Know You Rider stand out despite early rain",
+    "Brent’s Hammond B3/Leslie texture on Cold Rain & Snow adds a rare sonic depth"
+  ],
+  "song_highlights": [
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Ship Of Fools",
+    "Let It Grow",
+    "Stella Blue",
+    "Candyman",
+    "Cold Rain And Snow",
+    "It's All Over Now Baby Blue"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar tone is hailed as perfect, with an improvisational spark that drives the second‑set peaks.",
+    "Phil": "",
+    "Bob": "Weir gets drenched and his voice sounds strained at times, yet his vocal on Stella Blue earns praise.",
+    "Brent": "His Hammond B3 and Leslie tones shine on Cold Rain & Snow, adding depth and pushing the band’s texture.",
+    "Mickey": "Mickey’s drumming is noted for echoing balafon‑like textures and a standout Drums > Space segment described as a psychedelic dream.",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-14T18:18:00.418267+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Ship Of Fools",
+      "Let It Grow",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "I Need A Miracle",
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    [
+      "Candyman"
+    ],
+    [
+      "Cold Rain And Snow",
+      "Don't Ease Me In"
+    ],
+    [
+      "It's All Over Now Baby Blue"
+    ]
+  ]
+}

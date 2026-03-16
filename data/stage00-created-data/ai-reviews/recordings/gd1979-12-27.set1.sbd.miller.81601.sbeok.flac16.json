@@ -1,0 +1,100 @@
+{
+  "summary": "Fair matrix recording with decent clarity, featuring a standout Cassidy and a solid Brokedown Palace amidst an above‑average shoulder show.",
+  "review": "The performance sits in the middle of a strong New Year's Eve run – it opens tight with Jack Straw and hits its peak early on with a superb Cassidy, then delivers a nice Eyes of the World sync before losing steam after Lost Sailor. Recording-wise the miller_81601 soundboard source is clear but has abrupt cuts, while the audience‑only second‑set track needs EQ and slight pitch correction, making the overall listenable yet imperfect.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "One detailed review shows a mix of positive musical moments and technical shortcomings; weighted average yields a solid‑above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "First set from miller_81601 (soundboard) is clear but has abrupt tuning cuts; second set from severson_miller_clugston (audience) lacks upper mids and runs slightly slow, requiring +1% pitch correction and EQ."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Brokedown Palace",
+      "Eyes of the World",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Lost Sailor",
+      "Saint"
+    ],
+    "setlist_flow": "A short, sweet first set that peaks early with Cassidy; a second set that starts strong (China Cat → Rider → Eyes of the World) but tapers after Lost Sailor, ending on a decent encore."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dough Knees": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat it on Down the Line": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T03:47:36.698117+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-27.set1.sbd.miller.81601.sbeok.flac16"
+}

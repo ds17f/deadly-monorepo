@@ -1,0 +1,75 @@
+{
+  "summary": "Good soundboard recording of an April ’69 Chicago show heavy on Pigpen, with standout Schoolgirl and Lovelight despite a sloppy Hard to Handle start.",
+  "review": "The tape captures a solid soundboard mix that most reviewers describe as clear, aggressive and enjoyable. Musically the concert shines on Pigpen‑fronted numbers like The Schoolgirl, Lovelight and Doin' That Rag, though the opening Hard to Handle is widely seen as a weak, slide‑guitar‑laden start. Overall the performance is praised for its energy and Pigpen’s presence, with only occasional notes of sloppiness.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight strong musical moments; recording is consistently praised as good, leading to a weighted rating around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and aggressive sound; reviewers call it nice/good/great quality with no major drop‑outs or balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Schoolgirl",
+      "Lovelight",
+      "Morning Dew",
+      "What's Become of the Baby",
+      "Doin' That Rag"
+    ],
+    "poor_songs": [
+      "Hard to Handle"
+    ],
+    "setlist_flow": "Starts a bit slow and sloppy with Hard to Handle, but picks up after The Schoolgirl and builds momentum through Pigpen‑heavy numbers, delivering an energetic second half."
+  },
+  "band_member_comments": {
+    "Jerry": "Slide guitar on Hard to Handle is seen as experimental and sloppy, but his aggressive, daring playing and vocal work on Doin' That Rag are praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Tom Constanten (TC) provides a dark, atmospheric keyboard texture early in the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 3,
+      "total_mentions": 4
+    },
+    "Doin' That Rag": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "The Schoolgirl": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sittin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "What's Become of the Baby": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T13:58:34.628919+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-04-25.sbd.2596.sbeok.shnf"
+}

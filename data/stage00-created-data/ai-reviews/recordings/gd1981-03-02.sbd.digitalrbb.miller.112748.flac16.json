@@ -1,0 +1,70 @@
+{
+  "summary": "Solid soundboard capture with decent instrument separation but occasional mix issues, highlighted by standout performances of Althea and The Wheel.",
+  "review": "The show is an average Winter‑81 outing with a few high points – Althea opens set 1 strong, and the second‑set Wheel is praised as one of the best versions. Recording-wise the soundboard provides good instrument separation, yet bass is thin, mids are harsh and Bob’s guitar can disappear, making the mix uneven at times.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality averages around 3.8/5 based on multiple positive comments and a few criticisms; recording quality averages about 3/5 with strong separation but notable mix flaws, yielding an overall weighted rating of ~3.6."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Great instrument separation noted by several reviewers, but bass is soft, upper mids/lower treble are over‑emphasized and Bob's guitar often inaudible; overall mix is uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "The Wheel",
+      "El Paso",
+      "Jack A Roe",
+      "Shakedown Street"
+    ],
+    "poor_songs": [
+      "China Doll"
+    ],
+    "setlist_flow": "An average first set with a strong Althea opening; the second set picks up momentum despite a faltering China Doll, culminating in a celebrated Wheel and solid late‑show numbers."
+  },
+  "band_member_comments": {
+    "Jerry": "Soulful vocals on Althea and The Wheel are highlighted as strong points.",
+    "Phil": "",
+    "Bob": "Often buried; several reviewers note his guitar is practically inaudible in the mix.",
+    "Keys": "Brent's keyboards are low in the mix until later in Shakedown Street, making his contributions hard to hear.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack A Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T08:22:05.796281+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-02.sbd.digitalrbb.miller.112748.flac16"
+}

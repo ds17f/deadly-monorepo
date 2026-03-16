@@ -1,0 +1,74 @@
+{
+  "summary": "Excellent audience‑sourced recording captures a soaring 1994 Boston Garden show highlighted by an unforgettable “So Many Roads” and crisp Help‑Slip‑Tower opening.",
+  "review": "The tape, recorded from the audience with shotgun mics behind the board, is clean, crisp and full of crowd energy, making it one of the best‑sounding mid‑90s tapes. Musically the show is a fan favorite – Jerry tears into “So Many Roads,” the set opens with a blazing Help > Slip > Tower, and Scarlet > Fire kicks off an inspired second set, all backed by strong band interplay. Overall sentiment is overwhelmingly positive with very few criticisms.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and numerous enthusiastic comments about both performance and sound quality indicate an excellent show and an excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean, crisp sound that captures crowd energy; recorder used shotgun capsules on PMBs behind the board, resulting in a clear mix with minimal muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads",
+      "Help > Slip > Tower",
+      "Scarlet > Fire",
+      "Stella Blue",
+      "Terrapin Station",
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set opens strong with Help > Slip > Tower, maintains momentum through the first half and launches the second set with a fiery Scarlet > Fire, delivering a smooth, high‑energy flow praised by multiple reviewers."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for soulful, tear‑filled playing on So Many Roads, powerful guitar tone, extra vocal belts and overall fine form.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Help > Slip > Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help > Slip > Franklins": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T02:06:21.616246+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-10-01.pmb.pujol.15079.sbeok.shnf"
+}

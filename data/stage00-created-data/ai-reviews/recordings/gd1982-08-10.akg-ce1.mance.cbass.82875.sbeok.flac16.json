@@ -1,0 +1,75 @@
+{
+  "summary": "High‑energy Iowa field house show with standout Dark Star and Eyes of the World; a close‑to‑stage matrix recording captures the PA/stage blend beautifully.",
+  "review": "The performance is praised for its raw edge and soaring moments – Dark Star, Eyes of the World, Stagger Lee, Bertha and several other gems are highlighted as exceptional. The recording, taken very near the stage, blends PA and on‑stage sound into a clear, lively matrix capture that lets listeners feel the concert’s intensity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All four reviewers are enthusiastic (average 4.75★); musical comments emphasize many standout songs, while recording remarks note a very good close‑to‑stage matrix source."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Very close to the stage; captures an interesting mix of PA and on‑stage sound with overall clear, lively audio."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Eyes of the World",
+      "Stagger Lee",
+      "Bertha",
+      "Aiko",
+      "Roses",
+      "Lost Sailor"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a high‑energy, well‑balanced set with strong first‑set numbers and a consistently powerful vibe throughout the concert."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Aiko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T00:11:23.415469+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-10.akg-ce1.mance.cbass.82875.sbeok.flac16"
+}

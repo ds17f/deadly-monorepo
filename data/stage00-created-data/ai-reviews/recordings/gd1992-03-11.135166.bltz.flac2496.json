@@ -1,0 +1,31 @@
+{
+  "summary": "Very good performance, though recording details are not specified",
+  "review": "The reviewer rates the show four stars and calls it \"very good,\" indicating a solid musical performance. No information is given about the source or audio clarity, so the recording quality remains uncertain.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "low",
+    "rationale": "Only one brief review; positive about the show but provides no details on recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on soundboard, audience mix, clarity, or any technical issues were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer mentions the show was \"very good\" but gives no specifics about set pacing or song flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T04:29:46.030486+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-11.135166.bltz.flac2496"
+}

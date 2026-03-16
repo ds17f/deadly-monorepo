@@ -1,0 +1,77 @@
+{
+  "summary": "Fair‑quality soundboard with mix quirks captures a solid ’92 show highlighted by Althea, The Same Thing, Space and a strong Other One.",
+  "review": "The March 1992 gig is praised as one of the year’s top ten performances despite an uneven first set and some early‑set mixing issues. Highlights such as Althea, The Same Thing, a big psychedelic Space and a peak‑of‑the‑back‑nine Other One shine through, while the soundboard recording needs pitch correction and suffers from occasional mic problems.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "Single detailed review rates the show around 4 stars, noting strong musical moments but also technical flaws; weighting yields a near‑4 overall rating with low confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix not fully set in the first set, mic problem for Jerry on Brown Eyed; SBD runs slightly fast and needs -2% pitch correction. Overall clarity is acceptable but inconsistent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "The Same Thing",
+      "Space",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set feels tentative with a warm‑up Hellina and some mix issues, but the second set gains momentum through a solid Space and an outstanding Other One, giving the concert a B‑ overall pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Mix not settled early; mic problem on Brown Eyed; struggles with Shakedown Street verses but plays well afterward.",
+    "Phil": "",
+    "Bob": "Provides quirky rhythm shouts and feedback/warble chords that work especially on U.S. Blues.",
+    "Keys": "Bruce Hornsby adds accordion on Dewiminna, MIDI horns on Love Light, and a strong piano solo on Standing on the Moon; his contributions are highlighted as a positive element.",
+    "Drums": "Drums>Space segment is noted as improving compared to earlier parts of the tour."
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Same Thing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:04:03.424367+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-20.141806.sbd.miller.flac1644"
+}

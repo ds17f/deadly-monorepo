@@ -1,0 +1,60 @@
+{
+  "summary": "High‑energy 1993 fall show captured with excellent clarity – Jerry’s “Lightning Bolt” guitar shines and the crowd‑charged Not Fade Away finale dazzles.",
+  "review": "The recording delivers a vivid, crystal‑clear picture of a soaring 1993 fall tour performance, highlighted by Jerry Garcia’s remarkable tone on his Stephen Cripe “Lightning Bolt” guitar and an unforgettable Not Fade Away chant from the audience. Reviewers praise the powerful first set, the fiery second‑set sequence (The Wheel > Watchtower > Attics > Not Fade Away), and note that the broadcast quality affirms the tape’s superb sound.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All three detailed reviews are highly positive, emphasizing both stellar musicianship and strong recording fidelity; with limited sample size confidence is moderate."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers repeatedly cite the recording’s clarity, especially Jerry’s guitar tone, and note that it was suitable for broadcast on GD Hour – no drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "The Wheel > Watchtower > Attics > Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A high‑energy fall tour set with a rocking first half (including a memorable ‘Bertha’ closer) that builds into a blistering second set, culminating in the crowd‑chanting Not Fade Away sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for an amazing exposition of his Stephen Cripe “Lightning Bolt” guitar tone throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T16:33:50.351674+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-10.schoeps-evans-brennecke.waddell.91948.flac16"
+}

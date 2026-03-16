@@ -1,0 +1,65 @@
+{
+  "summary": "Dark Star & Slipknot fire, strong second‑set jams",
+  "blurb": "The show shines with a blistering Slipknot and the Help → Slip → Franklin's sequence, plus an unforgettable Dark Star opening. Jerry’s guitar is focused and bright, while Bruce Hornsby adds accordion‑like textures that drive the jams.",
+  "review": "June 14, 1991 at RFK Stadium delivered a performance that many fans still cite as one of the band’s late‑career peaks. The first set rolled along with solid rock numbers, but it was the second set that truly ignited the crowd – a thunderous Slipknot segues into Help On The Way and Franklin’s Tower, all buoyed by Bruce Hornsby’s sparkling keyboards and tight drumming from Mickey and Billy. The Dark Star that opened the set is repeatedly called “possibly the best live show” by listeners, and it rides a wave of focused guitar work from Jerry and a sturdy bass foundation from Phil despite some muddiness in the recording. While Estimated Prophet felt unfocused for a few, the overall energy stayed high, culminating in a soaring Turn On Your Lovelight and a heartfelt encore of It’s All Over Now Baby Blue.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 56,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Multiple recordings praised Dark Star (3 mentions) and the Slipknot/Help>Slip>Franklin's sequence (3 mentions), describing them as 'blistering', 'unforgettable' and 'legendary'. Positive remarks about Jerry’s focused playing and Bruce Hornsby’s keyboard textures were consistent. Only one negative sentiment noted recording hiss, which does not affect show quality. The overall consensus is strongly positive, warranting a +1.4 adjustment.",
+      "final_calculation": "2.5 + 0.4 + 1.4 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd91-06-14.sbd.braverman.16816.sbeok.shnf",
+    "reason": "Soundboard source with clear capture of the band’s dynamics, especially the Dark Star and Slipknot sections."
+  },
+  "key_highlights": [
+    "Unforgettable Dark Star opening hailed as possibly the best live rendition.",
+    "Slipknot jam and Help → Slip → Franklin's sequence deliver high‑energy peaks.",
+    "Bruce Hornsby’s accordion‑like keyboard textures drive the second‑set jams.",
+    "Strong drumming from Mickey and Billy propels the performance throughout."
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "Slipknot",
+    "Help On The Way",
+    "Franklin's Tower",
+    "Jack-A-Roe"
+  ],
+  "band_performance": {
+    "Jerry": "Focused guitar work with great tone, especially on Slipknot and Dark Star.",
+    "Phil": "Solid bass foundation despite some muddiness in the mix.",
+    "Bob": "Energetic vocal contributions; vocals felt unfocused on Estimated Prophet but overall strong.",
+    "Brent": "Bruce Hornsby shines, adding accordion‑like textures that lead Slipknot and Help → Slip → Franklin's.",
+    "Mickey": "Drums were on point, driving the energy throughout especially in the second set.",
+    "Billy": "Tight drumming complementing Mickey, solid in the jam sections."
+  },
+  "processed_recordings": 7,
+  "processed_date": "2025-09-17T21:07:10.868284+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Estimated Prophet",
+      "Dark Star",
+      "Drums",
+      "Space",
+      "Stella Blue",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Help On The Way",
+      "Slipknot",
+      "Franklin's Tower"
+    ],
+    [
+      "Jack-A-Roe"
+    ]
+  ]
+}

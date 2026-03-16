@@ -1,0 +1,31 @@
+{
+  "summary": "Friendly thank‑you note with a 4‑star rating but no details on the recording or performance.",
+  "review": "The only review is a brief courteous message paired with a four‑star rating, offering no insight into the audio source, mix quality, or musical execution. Because of the lack of substantive comments we cannot evaluate either the soundboard/audience quality or the band's performance for this show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "low",
+    "rationale": "Only one short, non‑descriptive review; rating is moderate (4 stars) but provides no concrete information to assess quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T20:05:56.720063+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-06.149524.sbd.pearson-healy.miller.flac2496"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "High‑quality audience mix captures a lively set highlighted by Crazy Fingers, Uncle John's Band, Playin' in the Band and Box of Rain, though some listeners find the crowd overly loud.",
+  "review": "The show is praised for its energetic opener, solid performances of Crazy Fingers, Uncle John's, Playin' in the Band and a sweet Box of Rain, with the Farm Aid banter adding extra flavor. The audience recording is described as “grade‑A” with an excellent blend of crowd and music, but one reviewer feels the crowd noise overwhelms the mix at times.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Three reviewers give strong positive marks for both performance (average ~3.8/5) and sound quality (~4/5), while one reviewer rates the recording poorly due to crowd volume, resulting in an overall weighted rating around 3.7."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note a high‑grade A sound with a perfect mix of crowd and music; however, one listener complains the audience is too loud throughout, affecting clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Uncle John's Band",
+      "Playin' in the Band",
+      "Box of Rain",
+      "Maggie's Farm"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set opens with high energy, includes a fun Farm Aid interlude, and flows through fan‑favored numbers; some wish for The Other One after Maggie's Farm instead of Black Peter."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Mentioned directing the band to play The Other One after Maggie's Farm, indicating his role in set choices.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Maggie's Farm": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:00:27.204447+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-19.nakcm304.suraci.82419.flac16"
+}

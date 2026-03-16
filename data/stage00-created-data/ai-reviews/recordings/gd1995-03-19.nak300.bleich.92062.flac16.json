@@ -1,0 +1,64 @@
+{
+  "summary": "Audience‑tape of a mixed ’95 show highlighted by an electrifying Unbroken Chain moment and decent sound for a crowd recording",
+  "review": "Fans are split on the musical quality – some love the goose‑bumps from Unbroken Chain and the surprise appearance of Alabama, while others bemoan a heavy load of new songs and Jerry’s shaky playing. The audience tape isn’t pristine, but listeners find it acceptable for a crowd recording and appreciate the raw energy of the night.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Average star rating ~3.7 across seven detailed reviews, with strong positive notes about Unbroken Chain offset by criticism of song selection and Jerry’s performance; recording is acceptable for an audience source."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Not great but fine for a crowd tape; clear enough to capture the moment, some ambient noise typical of audience recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Unbroken Chain",
+      "Alabama"
+    ],
+    "poor_songs": [
+      "Corrina",
+      "Mathilda",
+      "Wave to the Wind"
+    ],
+    "setlist_flow": "A set heavy on new material (six‑song first set, several fresh cuts in the second) that many found uneven, but the surprise Unbroken Chain performance provided a high‑point that lifted the overall vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – some reviewers say his playing was shaky, especially on Unbroken Chain, while others defend him and note the crowd’s ecstatic reaction.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Unbroken Chain": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Corrina": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mathilda": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Alabama": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T06:04:43.491119+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-19.nak300.bleich.92062.flac16"
+}

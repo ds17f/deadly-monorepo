@@ -1,0 +1,39 @@
+{
+  "summary": "Remastered soundboard capture of a beloved Philadelphia show, with a fiery second‑set jam and a standout performance of The Wheel.",
+  "review": "Fans rave about this September 1988 Philadelphia concert, calling it a “Philly gem” and noting the scary, high‑energy jams in the second set. The Wheel receives special praise for Brent Mydland’s soulful keyboards, and Mickey Hart’s birthday drum segment (pie in the face) is remembered fondly. The DSBD source sounds clean enough that reviewers have no complaints about the audio quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviews are strongly positive (5, 4, 5 stars) and highlight both musical excellence and a decent remastered soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Remastered DSBD; no reported clarity issues or artifacts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Consistently strong throughout; first set described as “rocks,” second set noted for intense, scary jams and memorable birthday drum moment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s keyboards are highlighted for energy and soul, especially on The Wheel.",
+    "Drums": "Mickey Hart's birthday celebration included a pie in the face during Drums, energizing the crowd."
+  },
+  "song_mentions": {
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T13:27:00.806438+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-09-11.set2.dsbd.fishman.17408.sbefail.shnf"
+}

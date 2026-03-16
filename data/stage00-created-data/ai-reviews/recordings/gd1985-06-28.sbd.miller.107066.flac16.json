@@ -1,0 +1,113 @@
+{
+  "summary": "Crystal‑clear Miller SBD captures a powerful 1985 show highlighted by soaring Bird Song → Comes a Time → Deal, epic Music Never Stopped and an emotional Morning Dew.",
+  "review": "The Miller soundboard tape is remarkably clean – you can hear the crossovers snap and the mix is crisp, with only minor tape‑flip glitches and a few drum dropouts. Musically the show shines on a short first set packed with three Jerry songs and a standout Bird Song → Comes a Time → Deal sequence, while the second set delivers a scorching Music Never Stopped, an intense Tom Thumb jam and one of the year’s most moving Morning Dew performances, despite some weaker moments like Terrapin and A‑I‑S.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 4–5 stars praising the recording quality and several key performances; a few note vocal strain and weak songs, pulling the overall impression to a strong‑plus rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean SBD with audible crossovers and excellent balance. Minor issues: a 14‑second tape flip in the drums, occasional dropouts/crackling on later copies, and a slight pitch offset (+1%) that Miller’s version corrects."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song → Comes a Time → Deal",
+      "Music Never Stopped",
+      "Morning Dew",
+      "Tom Thumb",
+      "Estimated",
+      "Miracle"
+    ],
+    "poor_songs": [
+      "Terrapin",
+      "I Ain't Superstitious > Down in the Bottom",
+      "Ramble On"
+    ],
+    "setlist_flow": "A brief first set packs three consecutive Jerry tunes and ends on a high‑energy Bird Song → Comes a Time → Deal. The second set opens with a powerful Music Never Stopped, weaves through spacey improvisations (Tom Thumb, Estimated) and peaks with an emotional Morning Dew before winding down with Not Fade Away/NFA."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice sounds thin and \"Kermit‑like\" due to health issues, but his guitar work remains inspired and he delivers strong solos throughout.",
+    "Phil": "Bass is tight and bomb‑dropping; Phil’s energy lifts the band, though his mic cuts out early in the second set.",
+    "Bob": "Vocals are gritty yet powerful, keeping the momentum high on most numbers.",
+    "Keys": "Brent Mydland’s keys sit a bit forward in the mix on the second set but add color, especially during Tom Thumb and Miracle.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes a Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tom Thumb": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "I Ain't Superstitious": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ramble On": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T06:31:16.755468+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-06-28.sbd.miller.107066.flac16"
+}

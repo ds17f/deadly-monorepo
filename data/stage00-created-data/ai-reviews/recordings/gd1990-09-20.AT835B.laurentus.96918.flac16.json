@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent audience recording captures a stellar 1990s show highlighted by Dark Star, Greatest Story > U.S. Blues, Truckin', and China Cat Sunflower > I Know You Rider.",
+  "review": "All three reviewers rave about this concert as one of the best from the early ’90s, singling out a searing Dark Star, an epic Greatest Story > U.S. Blues to close set 1, and a second‑set flow that includes a smoking Truckin' and a sensational China Cat Sunflower > I Know You Rider. The audience recording is praised as “excellent” and very clear, making the performance easy to enjoy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Three detailed 5‑star reviews consistently praise both the musical performance (standout songs, strong set flow) and the high‑quality audience recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the audio as excellent and solid, indicating clear, well‑balanced capture despite being an audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Greatest Story > U.S. Blues",
+      "Truckin'",
+      "China Cat Sunflower > I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set praised for a powerful opening and a climactic Greatest Story > U.S. Blues; second set described as “awesome” with seamless transitions and high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story > U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T13:18:54.920995+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-20.AT835B.laurentus.96918.flac16"
+}

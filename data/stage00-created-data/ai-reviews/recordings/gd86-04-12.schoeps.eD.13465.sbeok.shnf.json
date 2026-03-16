@@ -1,0 +1,63 @@
+{
+  "summary": "Generally great‑sounding Schoeps audience tape (with noticeable drop‑outs on Wharf Rat) that shines on an unexpected Jack Straw closer and a lively Hand Jive.",
+  "review": "The recording captures the band with a full, slightly flat but enjoyable sound; the only major flaw is the series of drop‑outs and clicks that mar the Wharf Rat performance. Musically the show delivers a memorable Jack Straw closing on the first set and an energetic Hand Jive that highlights Jerry’s cohesion with the group, while the second set is solid but unremarkable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Positive comments on overall sound and standout songs offset by a serious technical issue on Wharf Rat and mixed opinions about the second set; weighted average yields ~3.4/5."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Full‑sounding Schoeps mic capture, a bit flat compared to typical soundboard tapes; several drop‑outs and clicks affect the Wharf Rat track (5:18, 5:55, 7:34‑7:38)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Hand Jive"
+    ],
+    "poor_songs": [
+      "Wharf Rat",
+      "Truckin'"
+    ],
+    "setlist_flow": "Mellow West‑Coast vibe in the first set with an unexpected Jack Straw closer; second set is competent but lacks any fireworks, ending with a well‑liked Quinn encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as more cohesive and tight than the following night, contributing strong energy especially on Hand Jive.",
+    "Phil": "",
+    "Bob": "Forgets lyrics in Truckin' and asks the audience for help.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Hand Jive": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:49:56.851736+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-04-12.schoeps.eD.13465.sbeok.shnf"
+}

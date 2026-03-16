@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive comments on performance or sound quality – only a title correction for Truckin'.",
+  "review": "The sole review provides a brief correction of the song title (Truckin' vs. Trucking) and offers no insight into the musical performance, set flow, or recording fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one minimal review lacking any evaluation of show or recording; rating defaults to average with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound quality, clarity, or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T14:26:41.592247+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-12-30.158729.mtx.tobin.flac16"
+}

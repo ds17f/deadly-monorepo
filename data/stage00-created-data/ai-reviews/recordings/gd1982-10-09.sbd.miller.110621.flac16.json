@@ -1,0 +1,93 @@
+{
+  "summary": "Excellent soundboard capture of an electrifying 1982 show, with a punchy first set (Touch of Grey, West L.A., Eyes, Morning Dew) and a flawless second set featuring Eyes, The Other One, Truckin' and more.",
+  "review": "The three fans all agree this October‑9‑1982 performance is a highlight of the year – Jerry’s tone is pure, the band locks into deep improvisations and the vocals stay powerful despite occasional strain.  The Miller SBD source is described as crisp, wide‑stereo and an upgrade over previous releases, making the show a joy to hear from start to finish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "All three reviews give 5 stars and praise both the musical performance (standout songs, tight improvisation) and the recording quality (crisp soundboard with great stereo separation)."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with superb stereo separation; noted as an upgrade to previous SBD sources and a good matrix version is also available."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "West L.A.",
+      "Eyes",
+      "Morning Dew",
+      "Throwing Stones",
+      "Estimated",
+      "Truckin'",
+      "The Other One",
+      "Saturday Night",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set energetic and well‑paced, second set flows seamlessly through extended jams (Eyes → Estimated → Truckin' → The Other One) and ends with a classic encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his pure, Dylan‑channeled tone and adventurous improvisation throughout the show.",
+    "Phil": "Praised for intuitive bass work that locks in during the deep, dissonant sections of the second set.",
+    "Bob": "Vocal strain mentioned but he powers through, delivering strong performances on key songs.",
+    "Keys": "Keyboard contributions highlighted in the “guitars/keys jam” leading into tight Truckin'.",
+    "Drums": "Drummer described as taking over the reins with deep, well‑separated stereo presence."
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "West L.A.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T02:40:00.340674+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-10-09.sbd.miller.110621.flac16"
+}

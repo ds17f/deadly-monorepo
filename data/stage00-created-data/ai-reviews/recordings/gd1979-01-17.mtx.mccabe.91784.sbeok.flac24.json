@@ -1,0 +1,44 @@
+{
+  "summary": "Poor matrix recording with missing “Stagger Lee” and an unlistenable section early in “Miracle.”",
+  "review": "The matrix source for this show suffers from serious technical flaws – the track list is off because “Stagger Lee” is omitted, and at about 1:20 into “Miracle” the audio drops to an almost unlistenable level before recovering later. No musical strengths are noted by reviewers, and the overall impression is that the recording detracts far more than it preserves.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one review, rating 1 star, focuses on major recording defects and provides no positive comments about the performance."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "poor",
+    "technical_notes": "Missing “Stagger Lee” makes the song list inaccurate; a severe drop‑out/unlistenable spot at ~1:20 into “Miracle” that only recovers later."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Miracle"
+    ],
+    "setlist_flow": "Setlist appears incorrect due to the omitted “Stagger Lee,” disrupting the flow for listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:34:07.627271+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-17.mtx.mccabe.91784.sbeok.flac24"
+}

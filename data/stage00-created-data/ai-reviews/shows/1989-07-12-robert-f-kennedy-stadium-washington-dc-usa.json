@@ -1,0 +1,79 @@
+{
+  "summary": "Strong set with standout Sugaree opening and vibrant second half",
+  "blurb": "The first set delivers solid material like Touch of Grey and Far From Me, then the band surprises by kicking off the second set with Sugaree. Highlights include Brent Mydland’s keyboards on Mississippi Half-Step Uptown Toodeloo and a seamless Estimated Prophet → Eyes Of The World transition. Overall performance is energetic and tight despite minor recording quirks.",
+  "review": "On July 12, 1989 at RFK Stadium the Dead offered a night that balances solid songwriting with inspired improvisation. The first set rolls through familiar terrain – Touch of Grey, New Minglewood Blues, Mississippi Half-Step Uptown Toodeloo, Far From Me and Cassidy – all delivered with a relaxed but confident vibe. The real surprise comes when the band opens the second set with Sugaree, an unusual choice that immediately lifts the energy. From there they ride a wave of strong jams: Estimated Prophet flows into Eyes Of The World, leading into a fiery drum‑and‑space excursion before launching into I Need A Miracle and a soaring Dear Mr. Fantasy. Brent Mydland shines throughout, especially on Half‑Step Mississippi, Lovelight and the tender moments in Dear Mr. Fantasy, while Jerry’s solos are “on” all night, keeping the group locked in. Bob Weir adds vocal fire on Estimated Prophet, and guest Bruce Hornsby’s accordion/keys texture adds an extra layer of excitement. The show is captured best by the audience tape that, despite a slight speed issue, conveys the ambience and energy of this memorable Washington concert.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 16,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Three recordings describe the performance in strongly positive terms – highlighting standout songs, tight playing, and exceptional moments such as the Sugaree opening, Brent Mydland’s keyboard work and seamless Estimated Prophet → Eyes Of The World transition. The lone negative review only criticizes recording quality, not the music itself, so overall sentiment is clearly positive.",
+      "final_calculation": "2.5 + 0.1 + 1.6 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd89-07-12.aud-fob.gardner.2554.sbeok.shnf",
+    "reason": "Good audience tape that captures the full set with clear ambience; minor speed/pitch issues are outweighed by its completeness and inclusion of all standout moments."
+  },
+  "key_highlights": [
+    "Sugaree opens an unusual second‑set launch, energizing the crowd.",
+    "Brent Mydland’s keyboard work shines on Mississippi Half-Step Uptown Toodeloo, Dear Mr. Fantasy and Turn On Your Lovelight.",
+    "Estimated Prophet → Eyes Of The World transition is tight and vibrant, leading into a powerful jam.",
+    "Bruce Hornsby’s guest appearance adds extra texture on Sugaree and select songs."
+  ],
+  "song_highlights": [
+    "New Minglewood Blues",
+    "Mississippi Half-Step Uptown Toodeloo",
+    "Far From Me",
+    "Cassidy",
+    "Sugaree",
+    "Estimated Prophet",
+    "Eyes Of The World",
+    "I Need A Miracle",
+    "Dear Mr. Fantasy",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Delivered solid solos throughout, especially on Estimated Prophet, and kept the band tightly together despite an odd signal‑effect change on Black Peter.",
+    "Phil": "",
+    "Bob": "Provided strong vocal energy, notably ‘really squealing’ on Estimated Prophet, adding drive to the set.",
+    "Brent": "Keyboard work was a highlight – dynamic playing on Mississippi Half-Step Uptown Toodeloo, heartfelt touches on Dear Mr. Fantasy, and a fiery turn on Turn On Your Lovelight.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-16T21:11:40.553421+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "New Minglewood Blues"
+    ],
+    [
+      "Mississippi Half-Step Uptown Toodeloo"
+    ],
+    [
+      "Far From Me"
+    ],
+    [
+      "Cassidy"
+    ],
+    [
+      "Sugaree"
+    ],
+    [
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Dear Mr. Fantasy",
+      "Black Peter",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

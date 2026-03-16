@@ -1,0 +1,51 @@
+{
+  "summary": "Crisp audience tape captures a high‑energy early‑80s set highlighted by a stellar \"He's Gone\" jam and vibrant Bird Song.",
+  "review": "The recording is an audience (AUD) capture that sounds clear and balanced, letting the crowd’s energy shine without drowning out the music. The show delivers strong performances – Jerry’s guitar is described as “on fire,” Phil’s bass digs in, and Brent’s keys are vivid – with \"He's Gone\" extending into a beautiful jam and Bird Song standing out. Overall the set flows smoothly with consistent excitement throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, praising both performance and recording; the weighted average of show (70%) and tape quality (30%) yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear sound with good crowd balance; nuances such as cymbals, Brent's keyboards and Bobby's rig are audible. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Bird Song",
+      "Stranger"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic early‑80s performance with a consistent, high‑energy flow; the crowd remains mellow yet enthusiastic, supporting the band's mature sound."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s guitar is praised as \"on fire\" with great tone throughout the show.",
+    "Phil": "Phil’s bass work stands out, especially when he “digs in,” adding depth to the mix.",
+    "Bob": "Bob Weir’s rig is noted for its presence and clarity in the recording.",
+    "Keys": "Brent’s keyboard playing is clear and well‑balanced, with nuanced detail captured.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T07:48:11.070567+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-02-26.glassberg.steinthal-cohen-vernon.20342.sbeok.shnf"
+}

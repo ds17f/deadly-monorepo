@@ -1,0 +1,39 @@
+{
+  "summary": "Middling three‑star rating that highlights a memorable Stella Blue, but offers no insight into recording quality.",
+  "review": "The single review rates the show at three stars and calls out 'Stella Blue' as a notable moment, indicating the song left a positive impression. Beyond this brief mention there are no details about the source or clarity of the audio, so the technical quality remains unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one review with a neutral three‑star rating and no concrete information on performance or recording; rating reflects the limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on soundboard, audience mix, clarity, or other technical aspects."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T00:54:51.917457+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-11.155686.sbd.miller.flac1644"
+}

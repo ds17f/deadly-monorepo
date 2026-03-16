@@ -1,0 +1,72 @@
+{
+  "summary": "Excellent soundboard capture of a magical fall ’94 Shoreline show featuring a monster Terrapin and stellar Stella Blue.",
+  "review": "Fans rave about the energetic performance, calling the Terrapin a \"monster jam\" and praising a transcendent Stella Blue. The recording is consistently described as a clear, high‑quality soundboard mix that outshines many audience tapes. Overall the show is regarded as one of the stronger late‑era concerts.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews (12/14) give 4–5 stars and specifically praise both the musical performance and the soundboard recording, yielding a strong positive consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, crisp mix praised as superior to audience recordings; no significant drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin",
+      "Stella Blue",
+      "Jack Straw",
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic second set with tight transitions; spunky for ’94 and highlighted by a powerful Terrapin coda and uplifting ballads."
+  },
+  "band_member_comments": {
+    "Jerry": "Strong vocals and inspired guitar work; occasional lyric slips noted but overall solid performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's keyboards are mentioned with mixed feelings – not a favorite but present.",
+    "Drums": "Great drumming highlighted, especially on Terrapin and Jack Straw."
+  },
+  "song_mentions": {
+    "Terrapin": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Stella Blue": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.B.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T01:23:52.578781+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-09-17.sbd.ladner.10068.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Audience recording captures a stellar second‑set list highlighted by an intense Scarlet Begonias solo, but the sound quality is only fair.",
+  "review": "Both reviewers rave about the concert’s second set, calling it one of the all‑time great lists and singling out Garcia’s soaring Scarlet Begonias solo. The recording is identified as an audience (AUD) source; listeners note that while it isn’t terrible, the audio is not great and shows some muddiness compared to other 1982 AUD tapes.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show quality is rated very high (great second set, standout solo) while recording quality is fair; weighted average yields ~4.1 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Sound quality described as not great but better than many other audience recordings; some muddiness and lack of clarity typical of AUD sources."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second‑set list praised as one of the all‑time greats, indicating strong pacing and memorable transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solo on Scarlet Begonias is highlighted as intense and a show highlight.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T03:35:13.068885+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-12-27.senn441.koucky.ladner.77463.sbeok.flac16"
+}

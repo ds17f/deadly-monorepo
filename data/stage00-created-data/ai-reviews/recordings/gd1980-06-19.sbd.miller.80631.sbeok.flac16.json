@@ -1,0 +1,39 @@
+{
+  "summary": "Crystal‑clear soundboard capture of an outstanding Anchorage show highlighted by a stellar second‑set Peggy‑O.",
+  "review": "The recording is praised as top‑notch and exceptionally clean, with flawless patching that makes the entire two‑set performance sound crisp. Reviewers rave about the rarity and execution of Peggy‑O in the second set, calling this version the best they’ve heard and noting Jerry Garcia’s lead guitar as spot‑on. Overall the show is described as outstanding with no noted flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Both musical performance and recording quality are rated very highly by reviewers; the standout Peggy‑O and flawless soundboard give a strong overall impression despite the small review sample."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the audio as crisp, clean and top‑notch with excellent patching; no issues of muddiness or drop‑outs are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Both sets are noted as outstanding, with a rare and celebrated Peggy‑O appearing in the second set, giving the concert a memorable high point."
+  },
+  "band_member_comments": {
+    "Jerry": "His lead on Peggy‑O is described as spot‑on and awesome.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T00:41:56.505892+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-19.sbd.miller.80631.sbeok.flac16"
+}

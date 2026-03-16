@@ -1,0 +1,39 @@
+{
+  "summary": "Smooth‑ish audience recording of an energetic 6/30/73 show, though the tape is muddy and high‑end stripped by noise reduction.",
+  "review": "The performance shines – fans rave about the tight playing and a roaring start with The Promised Land – but the audience tape suffers from muddiness and a noticeable loss of top‑end clarity, likely due to aggressive noise reduction. While the sound remains listenable, it doesn’t match the quality of the following night’s recording.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (near‑perfect performance) while recording quality is described as smooth yet muddy and high‑end limited; the weighted average yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Muddy, slightly muffled sound with missing high frequencies – likely due to noise reduction or tape age – but still listenable and smoother than some other audience tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High energy from the opening of The Promised Land, maintaining a fun, roaring vibe throughout; overall set feels tight and lively."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T15:26:39.082771+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-06-30.aud.weiner.gdADT.6019.sbefail.shnf"
+}

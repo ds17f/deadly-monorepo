@@ -1,0 +1,67 @@
+{
+  "summary": "High‑energy Omni show with soaring Franklin's Tower and monster Playing > Foolish",
+  "blurb": "The band rides a peppy first set into a heavyweight second set, highlighted by an inspired Franklin's Tower → Feel Like A Stranger jam and a blistering Playing In The Band > Foolish Heart stretch. Jerry’s guitar is on fire, the drummers drive the groove, and the Throwing Stones/Not Fade Away climax caps a memorable night.",
+  "review": "On March 28, 1989 at Atlanta’s Omni the Dead delivered one of their most forward‑moving late‑80s outings. The first set opens with a breezy “Let The Good Times Roll” before launching into a soaring “Franklin's Tower” that seamlessly segues into “Feel Like A Stranger,” a moment reviewers called a “killer jam.” After a solid run through the bluesy “Stagger Lee” and “Ramble On Rose,” the band builds momentum into a tight “Let It Grow” and a heartfelt “Don’t Ease Me In.”\n\nThe second set is where the night truly shines. A sturdy “Samson & Delilah” gives way to “Ship Of Fools,” then the band erupts into an expansive “Playing In The Band” that rockets straight into “Foolish Heart,” delivering a “monster” stretch praised across recordings. Drums and Space flow with intensity, leading into a soulful “Gimme Some Lovin’” and a plaintive “Wharf Rat.” The set closes with a thunderous “Throwing Stones” → “Not Fade Away” finale, followed by an earnest “Box of Rain” encore that rounds out the show. Across all sources the performance is described as high‑energy, peak‑form, and one of the era’s best‑flowing concerts.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 25,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Three recordings are explicitly positive and two are mixed (neutral). No negative sentiment appears. Reviewers consistently praise the Franklin's Tower → Stranger jam, the Playing In The Band > Foolish Heart stretch, and the Throwing Stones/Not Fade Away climax, indicating strong positive consensus across multiple sources.",
+      "final_calculation": "2.5 + 0.2 + 1.4 = 4.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1989-03-28.sbd.walker-scotton.miller.81529.sbeok.flac16",
+    "reason": "Excellent soundboard capture with crisp, well‑balanced mix and minimal flaws; conveys the show’s high energy and tight performance."
+  },
+  "key_highlights": [
+    "Soaring Franklin's Tower → Feel Like A Stranger jam that lifts the first set.",
+    "Monster Playing In The Band > Foolish Heart stretch delivering peak‑form improvisation.",
+    "Thunderous Throwing Stones / Not Fade Away climax rounds out a powerful second set.",
+    "Tight, intense drumming throughout with a clean Space segment."
+  ],
+  "song_highlights": [
+    "Franklin's Tower",
+    "Feel Like A Stranger",
+    "Playing In The Band",
+    "Foolish Heart",
+    "Throwing Stones",
+    "Not Fade Away"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers a powerful, high‑energy lead with crisp guitar tone and soaring solos; occasional lyrical slips noted but overall on fire.",
+    "Phil": "Anchors the low end with steady bass, adds strong backing vocals throughout, and caps the night with a solid Box of Rain encore.",
+    "Bob": "Provides solid backup harmonies, especially noticeable on Gimme Some Lovin' and Wharf Rat.",
+    "Brent": "Hammond organ shines and his vocal contributions stand out, adding texture to jams like Gimme Some Lovin'.",
+    "Mickey": "Drums are intense and dynamic, driving the groove from the first set through Space.",
+    "Billy": "Pairs with Mickey for powerful, tight drumming; highlighted as “sick” work throughout both sets."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-16T17:09:45.300681+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Let The Good Times Roll",
+      "Franklin's Tower",
+      "Feel Like A Stranger"
+    ],
+    [
+      "Playing In The Band",
+      "Foolish Heart",
+      "Drums",
+      "Space",
+      "Gimme Some Lovin'"
+    ],
+    [
+      "Wharf Rat",
+      "Throwing Stones",
+      "Not Fade Away"
+    ]
+  ]
+}

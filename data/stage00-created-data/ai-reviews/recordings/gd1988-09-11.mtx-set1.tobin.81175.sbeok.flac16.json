@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent matrix recording of a high‑energy first set, highlighted by a scorching Promised Land.",
+  "review": "Both reviewers rave about the clear, punchy sound and the high‑energy performance captured on this tape. The standout moment is a fiery rendition of \"Promised Land,\" and the overall vibe of the first set is described as powerful and enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Two enthusiastic reviews (5★ and 4★) praise both the musical performance and the recording quality, leading to a high combined rating despite limited sample size."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the sound as great, clear and energetic; no issues with muddiness or drop‑outs were mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set noted for high energy; specific flow not detailed beyond the praised Promised Land performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T13:27:29.208992+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-11.mtx-set1.tobin.81175.sbeok.flac16"
+}

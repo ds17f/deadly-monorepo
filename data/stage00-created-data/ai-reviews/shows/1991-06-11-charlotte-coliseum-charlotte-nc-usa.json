@@ -1,0 +1,74 @@
+{
+  "summary": "High‑energy set with Terrapin Station and Promised Land highlights",
+  "blurb": "The show delivers powerful performances of West L.A. Fadeaway, Terrapin Station and a soaring The Promised Land. Jerry’s vocals cut clear while Bruce Hornsby and Vince add lush keys throughout. The second set rolls through Victim Or The Crime into an uplifting U.S. Blues encore.",
+  "review": "On June 11, 1991 the Grateful Dead took the stage at Charlotte Coliseum and turned in a high‑octane two‑set marathon that still feels fresh for deadheads. Jerry Garcia’s voice rang crystal‑clear on West L.A. Fadeaway and he traded fiery leads with Bob Weir during the climactic duet, while Bruce Hornsby’s piano sparkle lifted Queen Jane Approximately and the second‑set flow. The band surged through a blistering Victim Or The Crime → Eyes Of The World → Looks Like Rain → Terrapin Station sequence, then launched into an expansive Playing In The Band > Drums > Space > P.I.T.B. stretch that built to a joyous Not Fade Away close and a U.S. Blues encore. Highlights include a soaring The Promised Land finale, Bird Song’s lyrical beauty, and a thunder‑rich drum segment that showcases Mickey Hart and Bill Kreutzmann in top form.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 13,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Three recordings are clearly positive and one is mixed, with no consistent negative commentary about the performance itself. Reviewers repeatedly praise Terrapin Station, The Promised Land, Victim Or The Crime stretch and the overall high‑energy vibe, justifying a strong positive sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 1.4 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd91-06-11.sbd.james.5609.sbeok.shnf",
+    "reason": "Crisp soundboard mix with clear vocals, captures the high‑energy set flow and all standout moments."
+  },
+  "key_highlights": [
+    "Terrapin Station performance shines in the second‑set suite.",
+    "\"The Promised Land\" delivers a soaring climax to the first set.",
+    "Victim Or The Crime → Eyes Of The World → Looks Like Rain sequence is a highlight stretch.",
+    "Exceptional drum/Space segment that fuels the final jam."
+  ],
+  "song_highlights": [
+    "West L.A. Fadeaway",
+    "Terrapin Station",
+    "The Promised Land",
+    "Victim Or The Crime",
+    "Eyes Of The World",
+    "Bird Song",
+    "U.S. Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Vocals are clear and powerful on West L.A. Fadeaway; his lead duels with Bob in the finale, adding extra excitement.",
+    "Phil": "",
+    "Bob": "Engages in a lively vocal duel with Jerry at the show’s climax, boosting the overall energy.",
+    "Brent": "Bruce Hornsby’s piano work is repeatedly praised, especially on Queen Jane Approximately and throughout the second‑set jams; Vince Welnick blends smoothly alongside him.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-17T20:46:42.715679+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "West L.A. Fadeaway"
+    ],
+    [
+      "Victim Or The Crime",
+      "Eyes Of The World",
+      "Looks Like Rain",
+      "Terrapin Station",
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "Playing In The Band",
+      "The Wheel",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Bird Song",
+      "The Promised Land"
+    ],
+    [
+      "U.S. Blues"
+    ]
+  ]
+}

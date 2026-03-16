@@ -1,0 +1,31 @@
+{
+  "summary": "Zero‑star review with no detail – reviewer found the recording and performance unsatisfactory.",
+  "review": "The sole review offers a terse, negative reaction (“Not even, man.”) and assigns zero stars, indicating strong disappointment. No specifics about audio fidelity, source type, or musical moments are provided, so both recording and show quality remain indeterminate beyond the reviewer’s overall disapproval.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief, negative review with no concrete details; rating reflects the extreme low star score given by the reviewer."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer gave no technical commentary; overall impression is negative."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T19:56:19.903565+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-06.141154.FOB.Schoeps.Oade.Bryant.Miller.Noel.t-flac1644"
+}

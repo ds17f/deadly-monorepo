@@ -1,0 +1,62 @@
+{
+  "summary": "An excellent matrix capture of the July‑16 1976 show delivers crystal‑clear sound and tight playing, highlighted by Cosmic Charlie, High Time and an inspiring rendition of The Wheel.",
+  "review": "The matrix source is praised for flawless tape sync, rich instrument separation and a vivid audience feel, making the recording sound almost live.  Musically the concert shines with a jazzy, unpredictable set‑list – the second half especially smokes on Cosmic Charlie, High Time and a lyrical The Wheel, while the band stays in a tight groove throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars, praising both the performance and the matrix recording; weighted scoring of show (≈4.7) and recording (≈4.8) yields an overall rating around 4.7."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Perfectly aligned tapes with no delay or fade, rich full‑band sound, clear instrument separation; occasional comment about odd vocal looping on the Stronger Than Dirt jam but otherwise pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cosmic Charlie",
+      "High Time",
+      "Playin'",
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Unpredictable, jazzy set with many “nuggets”; a strong, smoking second half that stays in a tight groove and delivers memorable transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is described as kind‑vibe, lyrical (especially on The Wheel) and consistently solid throughout the show.",
+    "Phil": "Bass lines at the start of the jam receive special notice – punchy and suggestive of the Stronger Than Dirt theme.",
+    "Bob": "",
+    "Keys": "Donna Jean’s vocals are highlighted as beautiful in the mix; Keith’s keyboards add occasional Slipknot‑like hints during jams.",
+    "Drums": "The two drummers are praised for being tightly tuned to each other and maintaining a flawless groove."
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cosmic Charlie": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stronger Than Dirt": {
+      "positive_mentions": 2,
+      "negative_mentions": 3,
+      "total_mentions": 5
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:27:34.019479+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-07-16.mtx.dan.28042.sbeok.flac16"
+}

@@ -1,0 +1,72 @@
+{
+  "summary": "Soundboard recording with decent clarity despite half‑step decoding problems, highlighted by strong performances of Desolation Row, China Doll, Scarlet/Fire and West LA.",
+  "review": "The show is generally well‑regarded for its tight setlist and memorable renditions – especially Jerry’s cosmic solo on China Doll, the soaring Desolation Row and the energetic Scarlet/Fire run.  Recording quality is solid for a 1987 SBD but hampered by corrupt “Half Step” files that some users cannot decode cleanly.  While a few tracks feel tired or muted, most listeners find the night musically rewarding.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance and highlight several standout songs; recording is good overall but technical issues with half‑step files lower the rating slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp soundboard source, but many users report corrupted or undecodable Half Step SHN files that affect a portion of the tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Desolation Row",
+      "China Doll",
+      "Scarlet/Fire",
+      "West LA",
+      "Throwing Stones"
+    ],
+    "poor_songs": [
+      "Fire",
+      "Mississippi (missing)",
+      "Playing"
+    ],
+    "setlist_flow": "First set is described as plodding yet full‑blooded with strong moments like West LA; the second set starts well but loses momentum toward the end, leaving a mixed impression of energy and fatigue."
+  },
+  "band_member_comments": {
+    "Jerry": "Cosmic solo on China Doll praised; some note he sounds uneven or “baked” and doesn’t reach highs on Fire.",
+    "Phil": "Loud and clear on this tape; sweet, fragile Box performance noted.",
+    "Bob": "Strong vocal on Hell; occasional jokes; Bobby (Weir) curses and energizes the crowd.",
+    "Keys": "",
+    "Drums": "Drums/Space described as fine."
+  },
+  "song_mentions": {
+    "Desolation Row": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Scarlet/Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "West LA": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:31:56.062634+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-05-10.sbd.schneiderman.2256.sbeok.shnf"
+}

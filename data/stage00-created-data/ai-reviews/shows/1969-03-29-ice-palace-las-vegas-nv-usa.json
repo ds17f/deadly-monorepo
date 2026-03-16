@@ -1,0 +1,61 @@
+{
+  "summary": "Dark Star shines; solid early‑'69 set with standout Holy Trinity",
+  "blurb": "The show delivers a scorching Dark Star that carries the band through a classic Holy Trinity of Saint Stephen and The Eleven. Jerry’s lead guitar is on fire while Phil provides booming bass; vocals are uneven. Recording quality varies, but the best soundboard captures the performance crisply.",
+  "review": "On March 29, 1969 at the Ice Palace in Las Vegas, the Dead unleashed an early‑'69 set that still feels fresh. The centerpiece is a blistering Dark Star—Jerry’s shredding leads are described as “killer” and even earned a spontaneous onstage quip about the Ice House—propelling the band into the legendary Holy Trinity of Saint Stephen and The Eleven. Doin’ That Rag and Morning Dew also earned nods, and Phil’s bass was praised as booming, anchoring the psychedelic ride. While Jerry’s vocals draw criticism for being thin or off‑key, the overall pacing is upbeat and energetic. Of the four tapes, the Miller soundboard (gd1969-03-29.123467.sbd.miller.flac16) offers excellent clarity with no drop‑outs, making it the preferred listening source despite other versions suffering from mud, hiss, or splice cuts.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 18,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Multiple recordings consistently praise Dark Star and the Holy Trinity, calling Jerry’s leads \"killer\" and noting Phil’s booming bass; no recurring criticism of the musical performance beyond occasional vocal issues, yielding a modest positive sentiment.",
+      "final_calculation": "2.5 + 0.1 + 0.8 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1969-03-29.123467.sbd.miller.flac16",
+    "reason": "Excellent soundboard capture with crystal‑clear audio, no drop‑outs, and the definitive Dark Star performance."
+  },
+  "key_highlights": [
+    "Dark Star is the high point—Jerry’s lead guitar described as \"killer\" and \"shredding\".",
+    "The Holy Trinity (Dark Star → Saint Stephen → The Eleven) receives unanimous praise.",
+    "Phil’s booming bass noted as a strong foundation throughout the set.",
+    "Best recording offers excellent SBD quality; other tapes suffer from mud, hiss, or splice cuts."
+  ],
+  "song_highlights": [
+    "Morning Dew",
+    "Doin' That Rag",
+    "Dark Star",
+    "Saint Stephen",
+    "The Eleven"
+  ],
+  "band_performance": {
+    "Jerry": "Leads are killer and shredding; vocal performance is thin/off‑key according to some listeners.",
+    "Phil": "Booming bass praised as a strong, solid foundation for the set.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-24T12:35:34.196255+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Morning Dew"
+    ],
+    [
+      "Doin' That Rag"
+    ],
+    [
+      "Dark Star",
+      "Saint Stephen",
+      "The Eleven",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

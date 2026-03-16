@@ -1,0 +1,69 @@
+{
+  "summary": "Audience recording with noticeable dropouts but captures a laid‑back 1978 set highlighted by strong Dire Wolf, Good Lovin' and Deal jams.",
+  "review": "The tape is an audience source that suffers from occasional drop‑outs and muffed lyrics, ending abruptly early in the second set. Musically the show is mellow and nostalgic, with Jerry’s raspy yet sweet vocals shining on Dire Wolf and a solid Good Lovin' closer, while the first set drifts lazily through Jack Straw, Deal and Loser.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "low",
+    "rationale": "Only one moderate‑rated review; show is decent with several praised songs but recording quality is hampered by dropouts, leading to a middle‑of‑the‑road overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Dropouts and muffed lyrics noted; abrupt end early in the second set; overall listenable but not crisp."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dire Wolf",
+      "Good Lovin'",
+      "Deal",
+      "Jack Straw",
+      "Loser",
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A laid‑back first set with plenty of tuning between songs and no rush; the second set is cut short abruptly, leaving the performance feeling incomplete."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's vocals are described as raspy yet sweet, finding a crispy sweet spot; his guitar work is praised on several tunes.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T16:45:26.211539+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-11-21.sbd-part.unknown.30116.sbeok.flac16"
+}

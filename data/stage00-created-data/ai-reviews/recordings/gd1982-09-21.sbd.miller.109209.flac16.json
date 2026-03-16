@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent soundboard capture of a classic NYC show featuring a blistering Playin' → Crazy Fingers opener, West LA Fadeaway, High Time and Big River.",
+  "review": "The recording is praised for its clear, well‑mixed sound thanks to Charlie Miller’s soundboard source.  Fans highlight the explosive Playin' > Crazy Fingers opening, a fiery West LA Fadeaway, a solid High Time and an incendiary Big River, making this a standout late‑summer ’82 performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All seven reviews are 4–5 stars and uniformly praise both the musical performance and the recording quality, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners note a nice, clear sound with no reported drop‑outs or mix issues; credit is given to Charlie Miller for the high‑quality capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin'",
+      "Crazy Fingers",
+      "West LA Fadeaway",
+      "Loser",
+      "High Time",
+      "Big River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show opens with the high‑energy Playin' → Crazy Fingers sequence, maintains momentum through West LA and Loser, and delivers strong mid‑set moments like High Time and a scorching Big River, reflecting NYC’s inspired vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "West LA Fadeaway": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T02:05:34.059270+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-21.sbd.miller.109209.flac16"
+}

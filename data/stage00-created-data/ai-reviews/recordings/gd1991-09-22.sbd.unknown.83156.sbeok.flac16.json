@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard capture of a stellar Boston show highlighted by a soaring Let It Grow and gorgeous Stella Blue.",
+  "review": "Fans rave about the crystal‑clear, amazing sound of this soundboard recording and praise the overall performance as “great” with standout moments like Let It Grow in the second set and a blissful rendition of Stella Blue. Jerry’s vocals and the keyboards receive special kudos, making this a must‑listen for Deadheads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Four out of five reviews give 5‑star glowing praise for both the musical performance and recording quality; only one terse review is neutral/negative, so the combined rating is very high."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the sound \"amazing\" and \"great recording,\" indicating a clear, crisp mix with no noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the set list as great and especially highlight the second set, suggesting a well‑paced, engaging show."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for beautiful vocals on Stella Blue.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Fantastic keyboards noted by reviewers.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T01:43:54.126228+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-22.sbd.unknown.83156.sbeok.flac16"
+}

@@ -1,0 +1,91 @@
+{
+  "summary": "A strong 1981 Long Beach show with a killer Scarlet > Fire, historic Cumberland Blues and clear audience recording",
+  "review": "Fans rave about the performance – the first‑time appearance of Cumberland Blues since ’74, an incendiary Scarlet > Fire and soaring Fire on the Mountain make this a highlight of the summer‑81 runs. The audience (AUD) source is surprisingly clean for a crowd tape, though a few vocal mud patches and a cut‑off in “Don’t Ease Me In” are noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈80 %) give 4–5 stars and praise both the music and recording; only a handful note minor flaws, yielding a strong weighted score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Recorded with four AKG mics on a high‑pole FOB into a mixer (D5M). Listeners describe the sound as clear and rewarding on headphones, though some report muddy vocals on certain systems and a brief cut‑off on “Don’t Ease Me In”. Overall listenable with typical crowd ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Fire on the Mountain",
+      "Cumberland Blues",
+      "Bird Song",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Don’t Ease Me In",
+      "Eyes (tempo not favored)"
+    ],
+    "setlist_flow": "A classic early‑’81 Long Beach set: Alabama Getaway opener, solid first set through Peggy‑O, then a historic second set highlighted by the long‑absent Cumberland Blues and a fiery Scarlet > Fire. The pacing feels tight with strong transitions despite a few minor hiccups."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for comfortable vocals on Peggy‑O, great guitar tone throughout, mu‑tron solo brilliance on L.L. Rain, and overall superb playing.",
+    "Phil": "Bass described as slightly lacking in some ears but otherwise solid foundation.",
+    "Bob": "Vocals blend well with Jerry, especially on Black Peter and Good Lovin'.",
+    "Keys": "Brent (or Keith) noted for tasteful keyboards on L.L. Rain; overall keyboard work regarded as solid.",
+    "Drums": "Drum space occasionally cuts out in the mix; however, Set II drumming is highlighted as “tremendous per‑drums” and generally strong."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "L.L. Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T13:42:42.257930+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-08-27.aud.jeffm.4977.sbeok.shnf"
+}

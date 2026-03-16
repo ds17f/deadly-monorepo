@@ -1,0 +1,90 @@
+{
+  "summary": "Crisp soundboard recording captures a superb Dead show highlighted by a smoking Dark Star, the Wharf Rat Suite and a majestic Morning Dew.",
+  "review": "The sbd source delivers clear guitar tones and balanced mix, with only a brief audience splice toward the end. Musically the band is on fire – first‑set powerhouses like Promised Land, Loser and L.L. Rain flow into an inspired second set featuring horns, a rare Keith Hornsby solo, a beautiful Dark Star and a soaring Morning Dew that builds to an epic finish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Reviewers consistently praise both the performance (standout songs, energetic interplay) and the recording quality (crisp soundboard with minimal issues), yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear guitar tones and balanced mix; brief audience splice near the end but overall excellent clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Wharf Rat Suite",
+      "Morning Dew",
+      "Sugar Magnolia",
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "China > Rider"
+    ],
+    "setlist_flow": "First set bursts with power (Promised Land, Loser, L.L. Rain) and a wild China>Rider interlude; second set deepens the vibe with horns, Keith Hornsby's rare solo, an inspired Wharf Rat Suite, a concise Dark Star and a soaring Morning Dew that culminates in an epic close."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's melodic, lyrical solos and sweet licks are repeatedly praised; his tone is captured beautifully.",
+    "Phil": "Noted for strong interplay with Jerry throughout the jams, especially in the end jam.",
+    "Bob": "",
+    "Keys": "Keith Hornsby's piano work and vocals on \"Let Me Sing Your Blues Away\" receive high marks; horns add a jazzy texture.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat Suite": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "L.L. Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let Me Sing Your Blues Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T17:11:11.667219+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-09-11.113051.sbd.GoodBear.flac16"
+}

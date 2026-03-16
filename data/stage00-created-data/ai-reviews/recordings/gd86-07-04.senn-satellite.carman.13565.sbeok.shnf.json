@@ -1,0 +1,44 @@
+{
+  "summary": "Good‑quality matrix recording of a memorable Buffalo show highlighted by a smoking Cold Rain → Fire second set",
+  "review": "The tape (a satellite/matrix feed) is generally clear and listenable, though a few listeners note occasional muddiness.  The concert itself is remembered for an energetic Cold Rain → Fire segue in the second set and the Farm Aid broadcast, despite Jerry’s health issues that made parts of the performance feel rushed or sluggish.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "22 reviews provide a solid consensus: most praise the Cold Rain → Fire moment and rate the recording as good, while a minority note poor performance due to Jerry’s condition.  Weighted scoring (70 % show, 30 % recording) yields ~3.9/5."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear with decent bass and instrument separation; a few listeners describe occasional muffling or uneven levels, likely due to the satellite broadcast mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain → Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show was short (Jerry’s health) with a long inter‑set break, but the second set surged with Cold Rain → Fire and the Farm Aid broadcast, leaving a lasting impression despite some uneven moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – praised for strong guitar riffs in the second set by several fans, yet others note lyric flubs and sluggish playing due to his health.",
+    "Phil": "Positive – mentioned making strong appearances and holding the band together when Jerry was weak.",
+    "Bob": "",
+    "Keys": "Briefly noted that Brent (and Bobby) tried to lift the energy; no detailed keyboard analysis.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain → Fire": {
+      "positive_mentions": 8,
+      "negative_mentions": 2,
+      "total_mentions": 10
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:07:40.742486+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-07-04.senn-satellite.carman.13565.sbeok.shnf"
+}

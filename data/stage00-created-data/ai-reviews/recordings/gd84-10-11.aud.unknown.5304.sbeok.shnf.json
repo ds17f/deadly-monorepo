@@ -1,0 +1,39 @@
+{
+  "summary": "Clear audience recording captures a fun show with the debut of Dear Mr Fantasy and strong jam energy.",
+  "review": "The reviewer describes an enthusiastic, high‑energy concert where the band rolled out new material like \"Dear Mr Fantasy\" right after drums and space. The sound is reported as loud and clear, making the performance enjoyable even though no technical details are given. Overall it’s a positive recollection of a memorable road‑trip show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Only one detailed review but it is wholly positive about both the performance and the sound, leading to a strong rating despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer notes the sound was loud and clear with no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dear Mr Fantasy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Enthusiastic set featuring new songs and extended jams; overall high energy and good pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dear Mr Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:45:27.649932+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-11.aud.unknown.5304.sbeok.shnf"
+}

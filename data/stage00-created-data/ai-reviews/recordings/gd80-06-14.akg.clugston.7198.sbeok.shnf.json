@@ -1,0 +1,52 @@
+{
+  "summary": "Good audience recording captures an energetic 1980 show highlighted by a stellar Eyes of the World and a superb Ship of Fools, though it lacks some presence and cuts the Alabama intro.",
+  "review": "The tape offers clear but slightly distant sound that still conveys the hot‑'80 vibe, with the pre‑drums second set praised for its tight playing. Standout moments include an “Eyes of the World” that mesmerized the crowd and a “Ship of Fools” many consider one of the best of the era. The only notable flaw is the missing opening bar of Alabama, which some listeners find disappointing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show 4 stars and note good performance; recording quality is described as clear but a bit lacking in presence, yielding an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Excellent clarity with a slight lack of presence; audience tape captures the crowd well, though one track cuts the opening Alabama intro."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World",
+      "Ship of Fools"
+    ],
+    "poor_songs": [
+      "Alabama"
+    ],
+    "setlist_flow": "Energetic early‑'80 set with a well‑executed pre‑drums second set; overall flow praised despite the edited Alabama intro."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alabama": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:35:10.953751+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-06-14.akg.clugston.7198.sbeok.shnf"
+}

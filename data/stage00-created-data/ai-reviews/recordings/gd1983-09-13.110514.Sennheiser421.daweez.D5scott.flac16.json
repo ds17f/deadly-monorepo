@@ -1,0 +1,56 @@
+{
+  "summary": "A+ recording quality captures a strong first set, but the second half drifts and the concert ends perfunctorily.",
+  "review": "The soundboard (presumably) is crystal‑clear – reviewers gave it an A+ rating for its fidelity. Musically the show shines early with standout renditions of Rooster, Ease and a high‑energy Scarlet Begonias/Fire on the Mountain, but the later portions feel meandering, the Spanish Jam fleeting, and the closing numbers perfunctory, earning an overall mixed impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "low",
+    "rationale": "Recording is rated excellent while the performance is only average to good; with a single review the confidence in the composite rating is low."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls it \"A+ on the recording,\" indicating crisp, high‑fidelity sound despite no explicit source type mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Rooster",
+      "Ease",
+      "Scarlett/Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is praised for strong renditions; second half described as meandering with a fleeting Spanish Jam and generally perfunctory closing performances."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ease": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlett/Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spanish Jam": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:40:29.746481+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-13.110514.Sennheiser421.daweez.D5scott.flac16"
+}

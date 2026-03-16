@@ -1,0 +1,103 @@
+{
+  "summary": "High‑quality soundboard capture of a fiery ’69 show highlighted by a soaring Dark Star, blistering Alligator → The Eleven sequence and multiple standout renditions of “He Was A Friend Of Mine”.",
+  "review": "The recording is a solid soundboard source from the late‑60s era – clear enough to enjoy the band’s energy while only showing occasional tape edits. Musically the concert shines with powerful performances of “He Was A Friend Of Mine”, an inspired Alligator/​The Eleven run, a soaring Dark Star and punchy renditions of Morning Dew and Hard To Handle. Overall listeners rave about the vibe despite a few minor splice or cut quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.5/5, with most comments praising both the setlist and performance; recording quality is consistently described as good to great."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced for a 1969 tape. Reviewers note a few splice/tape‑flip edits and occasional cuts, but these are barely noticeable and do not detract from overall listenability."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He Was A Friend Of Mine",
+      "Alligator > The Eleven",
+      "Dark Star",
+      "Morning Dew",
+      "Hard To Handle",
+      "The Other One",
+      "St. Stephen > It's a Sin"
+    ],
+    "poor_songs": [
+      "Alligator (initially sloppy)",
+      "St. Stephen (break in the middle)"
+    ],
+    "setlist_flow": "Second‑set flow is praised for its seamless transitions—Alligator into The Eleven, then back into Alligator and onward to Caution, Feedback and a powerful We Bid You Goodnight. Minor tape flips are noted but listeners report they don’t disrupt the momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work receives high praise – sweet tone on “He Was A Friend Of Mine”, scorching slide on “Hard To Handle”, and extra bursts of adrenaline during Dark Star and the Alligator sequence.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey’s drumming is highlighted as intense (“drumming for dear life”) and adds excitement throughout the set."
+  },
+  "song_mentions": {
+    "He Was A Friend Of Mine": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mountain Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alligator": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "The Eleven": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "St. Stephen > It's a Sin": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Hard To Handle": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Caution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Feedback": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "We Bid You Goodnight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T13:53:32.819418+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-04-23.sbd.wise.70.sbeok.shnf"
+}

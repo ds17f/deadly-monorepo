@@ -1,0 +1,63 @@
+{
+  "summary": "A historically rare 1969 outdoor recording with noticeable hiss and volume issues but a high‑mix organ sound, showcasing an epic Dark Star and standout Turn‑On‑Your‑Love‑Light.",
+  "review": "The performance shines thanks to Tom Constanten’s organ soaring above the mix, a marathon Dark Star that many reviewers call one of ’69’s best, and powerful renditions of Turn On Your Love Light, Hard to Handle and St. Stephen. The audio suffers from hiss, low volume, occasional mono drop‑out and even a half‑step pitch shift, making it a fair‑quality audience capture, but the musical moments more than compensate.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (10 out of 13) are strongly positive about the music, especially Dark Star and organ work, while recording quality is mixed but still listenable; weighting yields a high‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hiss and low overall volume noted by several reviewers; occasional mono switch around 24:30 into Turn On Your Love Light; pitch appears half‑step fast on some copies; organ (TC) unusually high in the mix, which is both a highlight and a clue to the source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Turn On Your Love Light",
+      "Hard to Handle",
+      "St. Stephen",
+      "Eleven"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set features organ‑forward textures; the second half builds into a lengthy, spacey Dark Star and an extended Turn On Your Love Light that many fans cite as a highlight of the late‑summer ’69 run."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Tom Constanten’s organ is prominently up in the mix throughout, delivering a “psychedelic” backdrop on Dark Star; Pigpen’s organ (and vocals) also receive strong praise.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Turn On Your Love Light": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Hard to Handle": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T16:51:51.842995+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-08-23.sbd.2196.sbeok.shnf"
+}

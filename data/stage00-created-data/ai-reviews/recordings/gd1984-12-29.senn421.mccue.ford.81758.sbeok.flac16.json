@@ -1,0 +1,74 @@
+{
+  "summary": "Audience recording captures a solid New Year's show with standout renditions of Althea, Terrapin Station and Stella Blue.",
+  "review": "The concert is praised for its energetic first set and an even stronger second set that flows seamlessly from Not Fade Away into Brokedown Palace. Highlights include emotional vocals on Stella Blue and tight playing on Althea, Let It Grow, and Terrapin Station, while the audience tape offers a clear but occasionally rough listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Three reviews average ~4.3 stars; most comments are positive about performance with only minor criticism of recording roughness, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Very nice audience tape with clear ambience and solid mix, though the first set has some rough changes that affect smoothness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Let It Grow",
+      "Terrapin Station",
+      "Stella Blue",
+      "Not Fade Away",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Brief, energetic first set with a few rough spots; second set improves dramatically with seamless segues, especially the NFA → Brokedown transition."
+  },
+  "band_member_comments": {
+    "Jerry": "Emotional vocal performance on Stella Blue noted; overall solid playing throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:20:19.014973+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-12-29.senn421.mccue.ford.81758.sbeok.flac16"
+}

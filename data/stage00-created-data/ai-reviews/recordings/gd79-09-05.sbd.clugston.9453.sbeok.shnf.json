@@ -1,0 +1,76 @@
+{
+  "summary": "Clean soundboard capture of a high‑energy 1979 Garden show featuring a scorching Bertha, an epic 13‑minute Space jam and a killer Franklin’s Tower, with solid recording despite occasional pops.",
+  "review": "The performance is praised for its tight playing, hot solos and a particularly strong first set that rolls into an incendiary second set highlighted by a monster Bertha, a long‑running Space, and a standout Franklin’s Tower. The soundboard source is generally clear and clean, though a few reviewers note occasional AUD pops and minor patchy moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (12‑plus) give 4‑5 stars, highlighting many standout songs and a strong overall performance while noting only minor recording hiccups."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Nice and clean overall; occasional AUD pops and small patchy sections (e.g., beginning of half‑step), but the mix is clear enough to enjoy the full band dynamics."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Space",
+      "Scarlet > Fire",
+      "Franklin's Tower",
+      "Peggy-O",
+      "Eyes"
+    ],
+    "poor_songs": [
+      "Space (second‑set drum transition) – noted as a low point by one reviewer"
+    ],
+    "setlist_flow": "A powerful first set builds momentum into an even stronger second set; transitions are tight, the energy stays high throughout despite a brief house‑lights interruption."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"hoppin\" during Scarlet and generally energetic; guitar tone praised in early Brent era recordings.",
+    "Phil": "One reviewer wishes Phil's bass were more present in the mix; otherwise no specific performance comments.",
+    "Bob": "",
+    "Keys": "Early Brent (keyboard) period appreciated; sound described as nice and clean, adding to the overall feel of the 1979 shows.",
+    "Drums": "Drums get a lot of love for driving the long Space jam, though one reviewer felt the drum‑into‑Space transition was less inspired."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T23:18:18.777461+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-09-05.sbd.clugston.9453.sbeok.shnf"
+}

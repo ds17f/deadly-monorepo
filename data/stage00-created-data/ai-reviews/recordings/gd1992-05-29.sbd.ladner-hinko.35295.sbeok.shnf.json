@@ -1,0 +1,39 @@
+{
+  "summary": "A mystical, rain‑soaked performance that fans describe as magical, though recording details are unclear.",
+  "review": "Both reviewers rave about the atmospheric vibe of this show – a scorching day turned into a monsoon with fire hoses cooling the crowd and a standout rendition of “Looks Like Rain.” No concrete information is given about the source or clarity of the audio, so listeners should treat the recording quality as unknown. Overall sentiment is upbeat, emphasizing the unique ambience rather than technical fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only two brief reviews with no star ratings; they are positive about the show but give no recording details, limiting confidence in rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on soundboard, audience mix, clarity, or any technical issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight a unique weather‑driven atmosphere—heat, rain, and fire hoses—that created an intense, feverish crowd experience."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:55:28.154767+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-05-29.sbd.ladner-hinko.35295.sbeok.shnf"
+}

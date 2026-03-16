@@ -1,0 +1,63 @@
+{
+  "summary": "Loose Shoreline set with strong IWTY and Foolish Heart moments",
+  "blurb": "The show delivers standout renditions of “I Want To Tell You”, “Foolish Heart”, “Attics Of My Life” and “Sugar Magnolia”. Jerry’s solo on the former shines while Vince’s keyboards suffer from heavy reverb. Overall a mixed‑quality performance that rewards fans who enjoy the 1994 Shoreline vibe.",
+  "review": "July 1, 1994 at Shoreline Amphitheatre captures a typical mid‑’90s Dead night – loose, occasionally wobbly, but peppered with flashes of brilliance. The first set trudges through slower material before picking up momentum on “Bertha”, leading into a jammy “Foolish Heart”. The second half offers the high point of Jerry’s soaring solo on “I Want To Tell You” and an emotive “Attics Of My Life”, while the band rolls smoothly into a bright “Sugar Magnolia”. Drums‑>Space retains the usual Shoreline ambience, giving the percussion a spacious feel. Keyboardist Vince Welnick is buried under excessive reverb that makes his parts sound distant, a point of contention among listeners. The best listening experience comes from the clear soundboard capture (gd94-07-01.sbd.ladner.9369.sbeok.shnf), which preserves the band’s dynamics despite the mix quirks.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.8,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 16,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.2,
+      "sentiment_rationale": "Both recordings are marked 'mixed' – reviewers praise several songs and moments (I Want To Tell You, Foolish Heart, Attics) but also note significant mix issues and uneven playing, resulting in a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.2 = 2.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd94-07-01.sbd.ladner.9369.sbeok.shnf",
+    "reason": "Clear soundboard source with good overall balance; captures the band's dynamics despite some reverb on keyboards."
+  },
+  "key_highlights": [
+    "\"I Want To Tell You\" solo shines, offering a rare moment of fire.",
+    "Loose but rewarding \"Foolish Heart\" jam that builds into strong second‑set energy.",
+    "Vince's keyboard mix is overly reverberant, making parts feel distant."
+  ],
+  "song_highlights": [
+    "I Want To Tell You",
+    "Foolish Heart",
+    "Attics Of My Life",
+    "Black Throated Wind",
+    "Sugar Magnolia"
+  ],
+  "band_performance": {
+    "Jerry": "Mixed – praised for a soaring solo on “I Want To Tell You”, yet some note his playing sounded strained and the mix placed his guitar far back.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Vince Welnick’s keyboards suffer from excessive reverb and an ‘airplane‑hangar’ stereo spread that makes them feel distant; a few reviewers simply note his presence without praise.",
+    "Mickey": "Drums benefit from Shoreline ambience, adding spaciousness; Mickey’s energy lifts the band during “Bertha” and the Drums>Space segment.",
+    "Billy": "Bill Kreutzmann drives the groove with solid energy, especially on “Bertha” and throughout the second‑set percussion section."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-18T22:59:24.921991+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Foolish Heart",
+      "I Want To Tell You"
+    ],
+    [
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "The Last Time",
+      "Attics Of My Life",
+      "Sugar Magnolia"
+    ],
+    [
+      "Black Throated Wind"
+    ]
+  ]
+}

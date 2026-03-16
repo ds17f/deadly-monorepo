@@ -1,0 +1,31 @@
+{
+  "summary": "Recording suffers from swapped stereo channels, making playback confusing; no musical details available.",
+  "review": "The sole reviewer flags a critical technical flaw: the left‑right channels are inverted, which severely hampers listening enjoyment. No comments on performance quality or setlist were provided.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a zero‑star rating, focusing solely on a serious recording issue; no positive aspects mentioned."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Stereo channels are swapped (L→R, R→L), causing inverted imaging and listener confusion."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T03:03:32.367331+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-10-10.nak700.wagner.miller.109823.flac24"
+}

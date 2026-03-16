@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent, clean sound captures a very good show highlighted by a spectacular Stella Blue → Sugar Magnolia segue and Jerry’s hot performance on Bertha.",
+  "review": "Both reviewers rave about the clear, pleasant audio and praise Jerry’s playing – from an “off‑the‑charts” ending on Stella Blue to a scorching vocal on Bertha. The show isn’t called legendary, but the SB→SM transition is singled out as spectacular, making this a very enjoyable recording overall.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Two enthusiastic 5‑star reviews highlight strong performance and clean sound; limited sample size keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the audio as \"nice\" with no complaints about muddiness, drop‑outs or balance issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Sugar Magnolia",
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows well, especially the Stella Blue → Sugar Magnolia transition which is praised as spectacular; overall a very good performance despite not being called \"incredible\"."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple mentions of Jerry ‘going off’ on Stella Blue and being ‘hot’ while singing Bertha, indicating standout guitar work and vocals.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:51:18.022195+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-19.akg460.flaschner.sobel.85410.flac16"
+}

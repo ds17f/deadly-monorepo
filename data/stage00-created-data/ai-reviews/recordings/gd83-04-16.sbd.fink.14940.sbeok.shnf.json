@@ -1,0 +1,88 @@
+{
+  "summary": "Soundboard recording with noticeable hiss but decent clarity captures a memorable night highlighted by Black Queen, Iko Iko and an epic The Other One.",
+  "review": "The show is praised for its energy and surprise guest Stephen Stills, delivering standout performances of Black Queen, Iko Iko, The Other One and classic Dead staples like China Cat Sunflower > I Know You Rider > Uncle John's Band > Truckin'.  While the soundboard source suffers from a persistent hiss that some reviewers find distracting, most note that the overall audio is listenable and even improves on later cassette copies.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Most reviewers love the performance (high show score) but recording quality is uneven due to hiss, pulling the overall rating down."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Noticeable tape hiss described as a 'new instrument'; occasional cassette‑tape noise mentioned, but generally clear enough for enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Queen",
+      "Iko Iko",
+      "The Other One",
+      "Looks Like Rain",
+      "China Cat Sunflower",
+      "I Know You Rider",
+      "Uncle John's Band",
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Maybe You Know"
+    ],
+    "setlist_flow": "First four tunes are called a greatest‑hits package, followed by a steamin' second set with Stephen Stills; overall pacing and song transitions are praised."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work on Looks Like Rain is described as classic and flawless.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Queen": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Maybe You Know": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:29:37.196397+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-16.sbd.fink.14940.sbeok.shnf"
+}

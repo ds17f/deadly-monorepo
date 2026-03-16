@@ -1,0 +1,56 @@
+{
+  "summary": "Excellent matrix recording with a balanced, well‑rounded sound; standout performances include Shakedown, Fire on the Mountain, and a ragged‑but‑spirited Cassidy > Uncle John’s Band > Cassidy sequence.",
+  "review": "The tape captures a late‑era Dead show that rewards deep‑dive listeners with an unusual setlist and several high points – a crisp Shakedown, a fiery Fire on the Mountain, and a spirited (if a bit ragged) Cassidy‑UJB‑Cassidy sandwich. The recording is praised as nicely balanced with just enough crowd, Phil’s bass front‑and‑center, and overall excellent fidelity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All three reviewers gave 4–5 stars and highlighted both strong musical moments and high recording quality; the consistency across reviews yields a confident, above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Balanced front‑of‑house/matrix mix with clear bass presence, well‑rounded sound and just enough audience ambience; praised as crisp and nicely balanced throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Fire on the Mountain",
+      "Cassidy > Uncle John's Band > Cassidy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Unusual setlist that rewards listeners; transitions flow well despite a few ragged moments, making for an engaging overall performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Strong vocal on Shakedown, though his voice sounds a bit frayed on High Time.",
+    "Phil": "Bass is clearly placed in the mix, contributing to the recording’s well‑rounded sound.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy > Uncle John's Band > Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T13:22:23.330063+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-05-27.fob.neumann.fink-wkiltz.91374.flac16"
+}

@@ -1,0 +1,52 @@
+{
+  "summary": "Excellent audience recording captures a high‑energy 1981 show with standout Scarlet Begonias and The Wheel, though the second set omits To Lay Me Down.",
+  "review": "The Nak‑300 audience tape delivers crystal‑clear dynamics and a clean mix that fans repeatedly praise. Musically the concert is energetic, highlighted by Jerry Garcia’s soaring solos and superb renditions of Scarlet Begonias and The Wheel, but the loss of To Lay Me Down in the second set keeps it from being a flawless five‑star performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (mostly 4–5 stars) and strong praise for both the recording fidelity and musical performance outweigh the single noted omission."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Dynamic, crisp sound with excellent clarity; reviewers note slight level fluctuation on Minglewood Blues in a comparison tape but no issues in this Nak‑300 source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "The Wheel"
+    ],
+    "poor_songs": [
+      "To Lay Me Down"
+    ],
+    "setlist_flow": "First set solid and well‑balanced; second set energetic but marred by the missing To Lay Me Down, leaving a slight gap in an otherwise strong performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solos are described as ‘on top of all his solos’ with high energy despite personal struggles.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T11:33:19.349638+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-05-11.nak300-mow.ford.28355.sbeof.flac"
+}

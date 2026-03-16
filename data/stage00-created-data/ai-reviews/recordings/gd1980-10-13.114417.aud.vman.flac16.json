@@ -1,0 +1,39 @@
+{
+  "summary": "Good‑sound recording finally delivers the full show, highlighted by a long Sampson jam.",
+  "review": "The reviewer rates the set 4 stars, praising the overall sound quality and noting that almost every note is audible despite occasional breaks in the tape. The standout moment mentioned is the extended Sampson performance, which fans go crazy for. Recording-wise it’s solid enough to enjoy the entire concert at last.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review (4 stars) noting good sound and a strong performance; limited data leads to low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer mentions \"good sound\" and \"almost every note,\" but also notes the tape is broken up at times, indicating occasional gaps or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sampson"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The review focuses on finally having the entire show available and highlights the long Sampson jam as a high point; no specific criticisms of set pacing are mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sampson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T04:43:27.750883+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-13.114417.aud.vman.flac16"
+}

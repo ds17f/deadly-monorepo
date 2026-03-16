@@ -1,0 +1,79 @@
+{
+  "summary": "Historic Wall of Sound debut with blazing jams and stellar second set",
+  "blurb": "The show marks the first night of the Wall of Sound, delivering a fiery Playing In The Band → Uncle John's Band → Morning Dew corridor. Jerry Garcia’s guitar soars on Black Throated Wind and El Paso while Phil Lesh provides massive bass on the jams. Second‑set highlights include Bertha, Wharf Rat and a seamless U.J.B. sandwich.",
+  "review": "On March 23, 1974, the Grateful Dead rolled into the Cow Palace with the brand‑new Wall of Sound in full force. The first set is a mixed bag – some listeners note an uneven start as the massive PA system settles – but highlights like \"Black Throated Wind\" and the blistering \"El Paso\" already hint at the firepower to come. The real fireworks erupt in the second set, where a legendary jam corridor of Playing In The Band → Uncle John's Band → Morning Dew unfolds, punctuated by a seamless U.J.B. sandwich that many reviewers call historic. Jerry’s guitar blooms like fireworks on his solos, Phil’s bass is unstoppable and drives the low‑end wall, while Keith’s organ adds melodic depth. Bill Kreutzmann’s kick drum is superbly miked, especially during the China Cat Sunflower / I Know You Rider segment. The encore rounds it out with a rousing \"Casey Jones\" and \"One More Saturday Night,\" leaving fans raving about one of the most energetic shows of ’74.\n\nMultiple recordings capture this night in striking detail – from crystal‑clear audience tapes that preserve every nuance of the Wall to soundboard mixes that showcase the deep low end. While a few sources mention minor mix quirks (a high Bob vocal or occasional flanging on \"Ship Of Fools\"), the consensus is clear: this performance stands as a milestone in Dead history and an essential listen for anyone chasing the magic of the Wall of Sound debut.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 64,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Four recordings describe the show as 'legendary', 'blazing', and highlight historic moments like the Wall of Sound debut and the U.J.B. sandwich; multiple reviewers praise Jerry's solos, Phil's bass, and Keith's organ, providing consistent positive sentiment across sources.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1974-03-23.sbd.clugston-orf.1995.sbeok.shnf",
+    "reason": "Crystal‑clear audience capture that showcases the Wall of Sound with superb instrument separation and breathtaking fidelity, despite minor vocal mix quirks."
+  },
+  "key_highlights": [
+    "First night of the Wall of Sound – a historic milestone",
+    "Epic second‑set jam corridor: Playing In The Band → Uncle John's Band → Morning Dew",
+    "Jerry Garcia’s fireworks‑like solos on Black Throated Wind, El Paso and Tennessee Jed",
+    "Phil Lesh’s massive bass foundation driving the high‑energy jams"
+  ],
+  "song_highlights": [
+    "Playing In The Band",
+    "Morning Dew",
+    "Black Throated Wind",
+    "Scarlet Begonias",
+    "China Cat Sunflower",
+    "Bertha",
+    "Cassidy",
+    "Wharf Rat"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar blooms like fireworks; his solos on Black Throated Wind, El Paso and Tennessee Jed are blistering, and he consistently ‘plays his ass off’ throughout the night.",
+    "Phil": "Lesh delivers unstoppable, fire‑filled bass with massive bottom end, especially driving Morning Dew, China Cat Sunflower and the Wall of Sound’s low frequencies.",
+    "Bob": "Bob’s vocals occasionally sit high in the mix and suffer a mic dropout early, but his contributions on Deal, Me & My Uncle and vocal teasing are strong.",
+    "Brent": "Keith’s organ work shines, adding clear melodic depth; his playing is highlighted as ‘on fire’ during the second‑set jams.",
+    "Mickey": "",
+    "Billy": "Bill Kreutzmann’s kick drum is superbly miked, providing a powerful low‑end pulse—particularly evident on the China Cat Sunflower / I Know You Rider segment."
+  },
+  "processed_recordings": 7,
+  "processed_date": "2025-09-22T18:48:28.975647+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Uncle John's Band",
+      "Morning Dew",
+      "Uncle John's Band",
+      "Playing In The Band"
+    ],
+    [
+      "Black Throated Wind"
+    ],
+    [
+      "Scarlet Begonias"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Bertha"
+    ],
+    [
+      "Cassidy"
+    ],
+    [
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ]
+  ]
+}

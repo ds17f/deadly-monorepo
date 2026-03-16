@@ -1,0 +1,62 @@
+{
+  "summary": "Tight Uncle John's Band > Black Peter flow with stellar China Cat jam",
+  "blurb": "The set showcases a smooth transition from Uncle John's Band into Black Peter and a crisp China Cat Sunflower → I Know You Rider pairing. Jerry’s pedal‑steel adds country flavor early, while Phil’s vocals shine on the acoustic numbers. Recording quality varies, but the soundboard capture is excellent.",
+  "review": "February 7, 1970 at the Fillmore West finds the Dead deep in a country‑flavored groove before slipping back into their classic mid‑tempo swing. The opening trio – highlighted by Jerry’s effortless pedal‑steel on “Saw Mill” and “Green Green Grass Of Home” – gives way to an especially laid‑back Uncle John's Band → Black Peter sequence that many reviewers call the night’s high point. From there the band rolls into a smoking “China Cat Sunflower > I Know You Rider” jam, with Phil’s vocal harmonies threading through Jerry’s bright leads and Pigpen’s occasional organ swells. While the matrix source suffers from early muddiness, the top‑rated soundboard capture preserves the crisp mix, rich guitar tones, and the tight interplay that makes this show a fan favorite.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.0,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 12,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Two recordings are explicitly positive, praising the Uncle John's Band → Black Peter transition, China Cat > Rider jam, and Jerry’s pedal‑steel work. A third recording is mixed but still highlights the same songs positively while only noting a few weaker numbers. No consistent negative language about overall performance appears, so a strong positive adjustment is justified.",
+      "final_calculation": "2.5 + 0.1 + 1.4 = 4.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1970-02-07.sbd.bean.3912.sbeok.shnf",
+    "reason": "Excellent soundboard capture with crisp, balanced mix and minimal hiss; preserves the standout Uncle John's Band → Black Peter sequence and China Cat > Rider jam."
+  },
+  "key_highlights": [
+    "Uncle John's Band seamlessly flows into Black Peter, a highlight praised across recordings.",
+    "The “China Cat Sunflower > I Know You Rider” pairing is smoky and tight.",
+    "Jerry’s pedal‑steel adds a distinctive country flavor to the early set.",
+    "High‑quality soundboard recording captures the band’s dynamics with clarity."
+  ],
+  "song_highlights": [
+    "Uncle John's Band",
+    "Black Peter",
+    "High Time",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Saw Mill"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers effortless pedal‑steel on the opening country tunes and bright lead work throughout, especially during the Uncle John's Band → Black Peter sequence.",
+    "Phil": "Provides clear, complementary vocals on Uncle John's Band; his bass is solid overall though a few early mix issues make “Hard To Handle” sound boomy.",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-19T15:43:28.152131+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Uncle John's Band",
+      "Black Peter"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider",
+      "High Time"
+    ],
+    [
+      "Saw Mill"
+    ]
+  ]
+}

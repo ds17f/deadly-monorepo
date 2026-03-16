@@ -1,0 +1,119 @@
+{
+  "summary": "Excellent audience (AUD) recording of a high‑energy spring ’88 show with standout Masterpiece, Terrapin and Rooster, though some second‑set moments feel thin.",
+  "review": "The tape is praised for its crystal‑clear, spacious AUD capture – the taper even notes the 110° ORTF mic setup that gives it exceptional depth. Musically the band delivers several highlights (Masterpiece, Terrapin Station, Rooster, Row Jimmy, The Box, Space and Drums) while a few second‑set cuts (“Throwing,” “Wharf”) are described as rushed or thin. Overall the performance is energetic and enjoyable, especially for fans of Brent’s keyboard work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and strong praise for sound quality outweigh a single mixed review; weighted average yields ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, spacious ORTF (110°) capture; very low crowd noise due to quiet front seats; occasional minor imperfections noted but overall superb clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Masterpiece",
+      "Terrapin Station",
+      "Rooster",
+      "Row Jimmy",
+      "The Box",
+      "Space",
+      "Drums",
+      "Quinn"
+    ],
+    "poor_songs": [
+      "Throwing",
+      "Wharf"
+    ],
+    "setlist_flow": "First set opens with Touch and moves through solid mid‑tempo numbers; second set features a jam‑heavy sequence (Samson, Iko Iko, LLR, Terrapin) that feels bouncy but occasionally slips into thin playing on Throwing and Wharf."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar on ‘Throwing’ sounded odd (described as Stevie Wonder‑style wurlitzer), otherwise no specific praise.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s playing is highlighted repeatedly – dead‑on throughout, LRR standout, and a “god‑tier” organ solo on Rooster.",
+    "Drums": "The drum segment is noted as space‑y and one of the high points of the show."
+  },
+  "song_mentions": {
+    "Masterpiece": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LLR": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Throwing": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Box": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:17:28.179040+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-04-24.aud-fob.leeds.16887.sbeok.shnf"
+}

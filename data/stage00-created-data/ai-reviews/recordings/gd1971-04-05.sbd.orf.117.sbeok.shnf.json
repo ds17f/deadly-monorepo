@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard capture of an upbeat April ’71 Dead show, highlighted by Garcia’s stellar guitar tone and three tracks that made the Skull & Roses album.",
+  "review": "The recording is a clean, crisp sound‑board source that lets listeners hear the band at the peak of their early‑70s form.  Performances are energetic and well‑rehearsed, with Big Railroad Blues, Not Fade Away and Going Down the Road Feeling Bad standing out as marquee moments.  Overall the show is praised as a quintessential ‘good‑time music’ experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews are overwhelmingly positive, with four 5‑star and one 4‑star rating; reviewers highlight both superb soundboard quality and top‑tier performances."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers describe the mix as clean, crisp and upbeat with no noted flaws; suggestions to use EQ are for enhancement only."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Railroad Blues",
+      "Not Fade Away",
+      "Going Down the Road Feeling Bad"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Upbeat, well‑rehearsed and energetic; the band feels 'in the pocket' throughout, delivering a classic early‑70s Dead experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar tone is singled out as never better than April 1971, praised for its clarity and magic.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Going Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T04:01:22.775072+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-05.sbd.orf.117.sbeok.shnf"
+}

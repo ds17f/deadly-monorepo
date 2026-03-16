@@ -1,0 +1,120 @@
+{
+  "summary": "Matrix mix (60 % SBD/40 % AUD) sounds excellent and captures a killer 4‑6‑82 Baltimore show with standout second‑set gems like The Wheel → Truckin' → Good Lovin' and an emotional Brokedown Palace.",
+  "review": "The Tobin matrix blend delivers crystal‑clear instrument separation that many reviewers call the best sounding source for this concert, while the performance itself is hailed as one of ’82’s finest – especially the second set’s seamless flow and powerhouse versions of The Wheel, Truckin', Good Lovin' and a soaring Peggy‑O.  A few listeners note occasional drop‑outs on Terrapin Station and minor roughness on Franklin's Tower, but overall the show is described as killer and emotionally resonant.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over half of the reviews are 5‑star praises focusing on both superb matrix sound quality and an outstanding performance; only a few minor criticisms keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "60 % soundboard, 40 % audience mix praised for sweet balance and clarity; one reviewer notes occasional cut‑outs on Terrapin Station but overall the mix is described as the best‑sounding source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Wheel",
+      "Truckin'",
+      "Good Lovin'",
+      "Brokedown Palace",
+      "Raven Space",
+      "Peggy-O",
+      "On The Road Again (electric)",
+      "Feel Like A Stranger",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [
+      "Terrapin Station",
+      "Franklin's Tower"
+    ],
+    "setlist_flow": "Second set is highlighted as a near‑perfect arc with tight transitions from Feel Like A Stranger through Franklin's Tower, Estimated Prophet, Terrapin Station, Drums into an inspired Raven Space and a string of classics that many fans rank among the best ever."
+  },
+  "band_member_comments": {
+    "Jerry": "Immaculate vocals, exquisite phrasing and a long, soaring solo on Peggy‑O; generally described as 'killer' throughout the night.",
+    "Phil": "Emotional presence at the end – held out his arms during Brokedown Palace and lingered onstage, showing deep connection with the audience.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Feel Like A Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Raven Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around And Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "On The Road Again": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T20:44:21.598398+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-19.mtx.tobin.89314.sbeok.flac16"
+}

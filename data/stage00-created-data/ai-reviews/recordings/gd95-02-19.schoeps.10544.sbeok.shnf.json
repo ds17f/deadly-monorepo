@@ -1,0 +1,64 @@
+{
+  "summary": "Fair‑quality audience recording of a mixed 1995 show – strong moments (Attics, Baby Blue, China Rider) amid vocal slip‑ups and poor acoustics.",
+  "review": "The tape captures an audience‑sourced recording with noticeable fade‑ins/outs and the Delta Center’s less‑than‑ideal acoustics, giving it a fair technical standing. Musically the concert is uneven: Jerry’s vocals stumble on lyrics and sound tired, yet there are bright spots like the Attics jam, a blissful China Rider harmony and an okay Baby Blue encore, while songs such as Estimated Prophet and Alabama Getaway fall flat.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Many reviewers criticize the recording quality and performance (especially Jerry’s vocals and a few weak songs), but several point out standout moments, yielding an overall mixed impression that lands just below average."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners note sound issues, occasional fades in/out, and the Delta Center’s poor acoustics. The audience vibe is captured well, but clarity suffers compared to a clean soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Attics",
+      "Baby Blue",
+      "I China Rider"
+    ],
+    "poor_songs": [
+      "Estimated Prophet",
+      "Alabama Getaway"
+    ],
+    "setlist_flow": "The set feels plodding and sleepy overall, with a few high‑energy peaks that break up the otherwise uneven pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Lyrics slip on stage and his voice sounds awful in several numbers.",
+    "Phil": "Mentioned positively for taking lead on a song (unspecified).",
+    "Bob": "",
+    "Keys": "Vince's keyboard portion of Alabama Getaway is noted, but the performance left listeners sad.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Attics": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I China Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T04:52:31.093527+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-02-19.schoeps.10544.sbeok.shnf"
+}

@@ -1,0 +1,84 @@
+{
+  "summary": "Bright soundboard capture of a legendary Philly night – crystal‑clear guitar, thunderous Fire/Playing/Dark Star/Terrapin sequence and an unforgettable second set.",
+  "review": "The Miller‑Wiley soundboard source delivers a bright, well‑balanced mix that lets Jerry’s twangy “Lightning Bolt” tone and Vince’s Tubular Bells interlude shine.  Fans rave about the second‑set marathon (Scarlet > Fire > Playing in the Band > Dark Star > Terrapin) while noting a few hiccups – a weak Easy Answers transition and a short IFTL encore.  Overall the performance is rated among the best of ’93, with only minor level or ordering quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly positive (many 5‑star) praising the show’s second set and guitar tone; recording is consistently described as clear and bright with only occasional level issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Bright, clear mix; a few reviewers mention slightly low levels or track‑order labeling errors, but overall the sound is clean and well balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire > Playing In The Band > Dark Star > Terrapin Station",
+      "Fire on the Mountain",
+      "Space"
+    ],
+    "poor_songs": [
+      "Easy Answers",
+      "If The Light (IFTL) encore"
+    ],
+    "setlist_flow": "First set solid but unremarkable; second set a tour‑defining marathon with seamless segues, except for a controversial Easy Answers placement and occasional track‑order confusion."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his forward‑twangy tone, “Lightning Bolt” acoustic‑like sound, and scorching runs on Fire and Dark Star.",
+    "Phil": "Generally solid bass work; one reviewer wished he was a bit louder in the mix.",
+    "Bob": "Vocals highlighted as strong (especially falsetto on Fire); contributes nicely to the second‑set climax.",
+    "Keys": "Vince Welnick’s Tubular Bells jam and wordless ballad receive specific acclaim for adding chills.",
+    "Drums": "Pre‑drums segment called “grabs you by the throat”; extended drum jams praised as some of ’93’s best."
+  },
+  "song_mentions": {
+    "Scarlet > Fire > Playing In The Band > Dark Star > Terrapin Station": {
+      "positive_mentions": 14,
+      "negative_mentions": 1,
+      "total_mentions": 15
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Playing In The Band": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Dark Star": {
+      "positive_mentions": 8,
+      "negative_mentions": 2,
+      "total_mentions": 10
+    },
+    "Terrapin Station": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Space": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Easy Answers": {
+      "positive_mentions": 2,
+      "negative_mentions": 4,
+      "total_mentions": 6
+    },
+    "Days Between": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "If The Light (IFTL) encore": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T16:48:53.917816+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-13.sbd.miller-wiley.12096.sbeok.shnf"
+}

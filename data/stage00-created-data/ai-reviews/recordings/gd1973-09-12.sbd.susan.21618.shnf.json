@@ -1,0 +1,63 @@
+{
+  "summary": "Soundboard recording with low‑volume mastering and occasional audio glitches captures a solid 1973 show highlighted by Bird Song, Weather Report Suite and an energetic Eyes of the World.",
+  "review": "The performance is generally praised for its relaxed groove, strong tempo and standout numbers like Bird Song, Weather Report Suite and a jazzy, high‑energy Eyes of the World. The soundboard source suffers from low mastering volume and occasional drop‑outs, but listeners still find the overall mix pleasant enough to enjoy the show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the musical performance highly (4–5 stars) while noting modest recording issues; weighted average yields a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Low mastering volume noted, occasional audio problems and cuts (e.g., Eyes of the World start missing), but overall sound is pleasant when played at a lower level."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Weather Report Suite",
+      "Eyes of the World",
+      "Let It Grow",
+      "Sing Your Blues Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as solid with good tempo and groove; second set appears short but contains high‑energy jams. Overall flow is considered enjoyable though not as spectacular as the previous night."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work praised for new slide figures after Eyes jam and for crazed rhythm guitar interplay with Bob.",
+    "Phil": "",
+    "Bob": "Bob Weir noted for “crazed rhythm guitar” alongside Garcia in Let It Grow.",
+    "Keys": "Keyboard (Keith) part of the Mingus‑like improvisational texture during Let It Grow.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sing Your Blues Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T17:20:55.105877+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-09-12.sbd.susan.21618.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Audience recording praised for its wild second set, hailed as the reviewer’s favorite from the show.",
+  "review": "The listener describes the second set as “wild” and calls this audience tape their favorite from the concert, indicating a strong performance. Although the first set is labeled “weird,” no specific complaints are made, suggesting the overall musical impression is positive. Recording quality is implied to be solid enough for the reviewer to favor it above other sources.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "A single 5‑star review highlights a standout second set and a favorite audience recording, indicating high enjoyment despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it their favorite audience tape; no specific flaws mentioned, implying clear and enjoyable capture of the performance."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "First set described as “weird,” while the second set is praised as “wild” and a highlight of the concert."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T02:38:39.431398+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-07.nak300.damico.89984.sbeok.flac16"
+}

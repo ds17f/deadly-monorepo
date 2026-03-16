@@ -1,0 +1,109 @@
+{
+  "summary": "Good audience recording of a solid 1987 show with standout Gimme Some Lovin' and Handsome Cabin Boy jams, but uneven performance and occasional mix quirks keep it average.",
+  "review": "The audience tape captures the energy of this mid‑’80s Philadelphia gig fairly clearly, though a few mix hiccups and volume imbalances are audible. Musically the show offers highlights like Spencer Davis’s take on “Gimme Some Lovin'”, an entrancing Handsome Cabin Boy jam and strong moments on “I Know You Rider”, but it is also riddled with sloppy spots – muted verses, weak guitar balance on “China Cat Sunflower” and a rushed “Truckin’”. Overall the performance feels average, earning mixed reactions from listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "One detailed review rates the show at 3 stars (average) while praising the audience recording quality; weighted combination yields a modest 3.3‑star overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear enough for most of the set; occasional hiccups stem from mix/equipment issues (guitar volume drops, muffed verses) rather than the recording itself."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Gimme Some Lovin'",
+      "Handsome Cabin Boy jam",
+      "I Know You Rider",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "China Cat Sunflower",
+      "Samson",
+      "Terrapin Station",
+      "Wheel",
+      "Truckin'",
+      "Stella Blue"
+    ],
+    "setlist_flow": "The first set opens with a bouncy “Hey Pocky Way” and settles into a mixed bag of solid jams and some lackluster moments. The long second set is uneven – strong peaks in the post‑drums space leading to an expansive HCB jam, but also several sloppy passages (e.g., “China Cat”, “Samson”, “Terrapin”). The show closes on a high note with a fiery “Sugar Magnolia”."
+  },
+  "band_member_comments": {
+    "Jerry": "Explodes on “Deal” and “I Know You Rider”, but muffs verses, misses notes on “Terrapin”, suffers feedback on the Tiger tone during “Stella Blue”, and lacks his high‑register sweet sound on “Wheel”.",
+    "Phil": "",
+    "Bob": "Guitar volume drops noticeably on “China Cat Sunflower” and he cuts off the ending of “Sugar Magnolia\" with the first chord.",
+    "Keys": "Brent adds unusual harmonics during the first set, noted as a positive texture.",
+    "Drums": "The drummers keep solid time; after‑drums space fuels the standout Handsome Cabin Boy jam."
+  },
+  "song_mentions": {
+    "Hey Pocky Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Handsome Cabin Boy jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:18:13.276444+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-22.137002.5-1.tobin.flac1648"
+}

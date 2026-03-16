@@ -1,0 +1,62 @@
+{
+  "summary": "A high‑energy early‑80s show captured on an excellent audience (FOB) tape, highlighted by a smoking Sugaree, China > Rider > Promised Land and a soaring Althea.",
+  "review": "Listeners rave about the exuberant performance – long jams, tight transitions and standout moments like Sugaree, the China‑Rider‑Promised Land sequence and an inspired Althea. The front‑of‑house audience recording is generally clear and powerful, though a few note bass‑heavy, tinny tones that benefit from EQ. Overall the concert is regarded as one of the era’s finest.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star praise for both the musical performance and the tape quality; only a single moderate (3★) comment mentions recording quirks, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, powerful front‑of‑house capture with good ambience; occasional wind early on and a bassy/tin‑canny character that may need EQ, but overall superior to many soundboard tapes of the period."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "China > Rider > Promised Land",
+      "Playin' > Uncle John's Band",
+      "Althea"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Long, enthusiastic set with seamless transitions; the first set builds into a monster China‑Rider‑Promised Land finale and the second set maintains high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for soulful, soaring guitar work – described as \"pure Jerry soul\" and a central force of the show.",
+    "Phil": "Mentioned in a positive roster of band members; no specific critique beyond general praise.",
+    "Bob": "Referred to as \"Bobby\" with enthusiastic approval of his contributions.",
+    "Keys": "Brent (keyboardist) highlighted positively, noted for adding to the band's fire.",
+    "Drums": "Both Mickey and Billy (the two drummers) are praised for driving the rhythmic backbone."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > Rider > Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' > Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:11:45.625882+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-09-04.fob.nak700.rolfe.miller.93783.sbeok.flac24"
+}

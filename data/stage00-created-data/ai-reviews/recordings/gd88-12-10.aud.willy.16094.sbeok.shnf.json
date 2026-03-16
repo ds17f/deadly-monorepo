@@ -1,0 +1,71 @@
+{
+  "summary": "Audience recording of an energetic 1988 show with solid sound despite occasional muddiness, highlighted by a standout China Cat → Rider transition and strong performances of Tennessee Jed, Bobby’s Lovelight and Jerry’s guitar.",
+  "review": "The crowd‑filled audience tape captures the high‑energy vibe of this late‑’88 concert. Reviewers rave about the powerful second set – especially the seamless China Cat into Rider segue – and praise Jerry’s interaction and guitar work, while noting occasional quiet or muddy sections that keep the recording from being pristine.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑star ratings and describe the performance as strong with several standout moments; technical issues are mentioned but not severe enough to outweigh the musical quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally solid and lively, though some listeners note a quiet, hollow start and occasional muddiness; overall the audience mix conveys the venue’s atmosphere well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat",
+      "Rider",
+      "Tennessee Jed",
+      "Bobby's Lovelight"
+    ],
+    "poor_songs": [
+      "Music",
+      "Tennessee Jed (tone down)",
+      "China Cat (listless according to one reviewer)"
+    ],
+    "setlist_flow": "The first set starts a bit subdued but builds, while the second set erupts with energy – the China Cat → Rider transition is repeatedly highlighted as a must‑listen moment, giving the concert an MSG‑like momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his engaging stage presence (front‑row interaction) and strong guitar work throughout.",
+    "Phil": "",
+    "Bob": "Bobby's Lovelight is praised for “caving the house in”.",
+    "Keys": "Brent’s “spectral synths” add texture to China Cat, noted positively by a reviewer.",
+    "Drums": "An 11‑minute drum segment is described as well‑spaced and solid."
+  },
+  "song_mentions": {
+    "China Cat": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Bobby's Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John’s Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:34:23.886994+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-12-10.aud.willy.16094.sbeok.shnf"
+}

@@ -1,0 +1,81 @@
+{
+  "summary": "Fair‑quality audience tape of a legendary Anaheim show with standout performances of Looks Like Rain, Shakedown Street and Not Fade Away.",
+  "review": "The concert is widely praised for its high energy and memorable moments – Phil’s bass “earthquake” on Shakedown Street, Bob’s fiery rendition of Looks Like Rain and Jerry’s inventive work on Not Fade Away stand out.  The source appears to be an audience recording that runs fast and has a hissy, low‑gen character, but it still captures the natural stadium echo and the overall vibe of the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars for the performance; recording issues are noted but do not dominate, yielding a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Tape runs about 5 % fast, wobbly and hissy low‑gen sound; natural stadium echo is present but overall clarity is limited."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Shakedown Street",
+      "Iko Iko",
+      "Tons of Steel",
+      "West L.A. Fadeaway",
+      "When I Paint My Masterpiece",
+      "Not Fade Away",
+      "Touch of Grey"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Two full Dead sets bookended by a Dylan set and an encore; several reviewers note the encore’s misplacement but overall the pacing and energy are praised."
+  },
+  "band_member_comments": {
+    "Jerry": "His playing is called inventive and ‘genius’ on Not Fade Away, with ace work throughout.",
+    "Phil": "Described as delivering “sonic bombs” on Shakedown Street, adding powerful bass impact.",
+    "Bob": "Praised for a scorching performance of Looks Like Rain; remembered using a pink guitar and a Madonna shirt.",
+    "Keys": "",
+    "Drums": "The drummers receive ace compliments for tight, dynamic playing."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tons of Steel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West L.A. Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "When I Paint My Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T01:24:45.949962+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-26.nak700.yamaguchi-poris.russjcan.98214.flac16"
+}

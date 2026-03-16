@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard excerpt of a inspired Love Light performance – superb audio but only a brief fragment of the concert.",
+  "review": "The snippet captures a high‑energy segment of the show, highlighted by a soaring Love Light and a standout Jerry Garcia feedback solo. Reviewers rave about the crystal‑clear sound quality, though they lament that only this short portion is available. Overall the musical performance shines despite the incomplete recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All reviewers praise the audio fidelity and the band's inspired playing; the only criticism concerns the missing remainder of the concert, not the quality of what is present."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear sound with no noted distortion or drop‑outs; reviewers describe it as “excellent sound quality”. The only drawback is the limited length of the excerpt."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Love Light"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Only a short segment is available, but within that window the band is described as “inspired” and having fun, with smooth transitions into the Love Light jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s feedback solo around the 18‑minute mark receives special praise.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Love Light": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T18:07:23.803258+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-04-11.132470.sbd.bear.latvala.wise.flac16"
+}

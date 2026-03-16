@@ -1,0 +1,52 @@
+{
+  "summary": "Decent audience tape captures a fast‑pacing 1983 show that shines on The Other One but suffers from rushed Eyes and Estimated.",
+  "review": "The recording is an audience (aud) source that most listeners find listenable and fairly clear, though not pristine. Musically the concert feels overly hurried for some fans – especially on Eyes and Estimated – while The Other One receives praise as a highlight.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Average star rating (≈3.3) with mixed comments: recording is acceptable, but the performance is criticized for being too fast, lowering the overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners describe the tape as 'pretty good' and 'OK‑listenable', indicating decent clarity but no high‑fidelity soundboard quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Eyes",
+      "Estimated"
+    ],
+    "setlist_flow": "The set is perceived as rushed; tempo often exceeds the band's comfort level, leading to uneven pacing despite a few strong moments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T09:11:14.319780+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-08-29.111087.Sennheiser421-daweez.d5scott.flac16"
+}

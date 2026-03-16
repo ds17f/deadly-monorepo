@@ -1,0 +1,75 @@
+{
+  "summary": "Crisp soundboard captures a solid, emotionally charged show with standout Terrapin Station jam and superb drum/space work.",
+  "review": "The recording is a clean SBD that renders the band’s playing clearly – especially the soaring guitar tones and the punchy piano on “It’s All Over Now.”  Fans highlight a powerful second set (Terrapin Station, Space, Black Peter, Knockin’ on Heaven’s Door) that may have been dedicated to a friend in a wheelchair, giving the show an extra emotional weight.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Consistently positive comments about both performance and sound quality across ten reviews; occasional low stars are tied to metadata issues rather than the show itself."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear SBD with excellent drum/space capture; a few reviewers note wind ambience but overall clean and balanced mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Space",
+      "Black Peter",
+      "Knockin' on Heaven's Door",
+      "Queen Jane",
+      "So Many Roads",
+      "It's All Over Now"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set felt like a tribute, featuring strong jams and emotional moments (Terrapin Station, Space, Black Peter, Knockin' on Heaven's Door) that gave the concert a memorable arc."
+  },
+  "band_member_comments": {
+    "Jerry": "Crazy guitar sounds captured nicely; tone praised by listeners.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Piano shines on “It’s All Over Now” and adds depth to the Terrapin Station jam.",
+    "Drums": "Great drum/space performance, especially in the second set."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T04:27:42.693388+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-03-11.sbd.gardner.9398.sbeok.shnf"
+}

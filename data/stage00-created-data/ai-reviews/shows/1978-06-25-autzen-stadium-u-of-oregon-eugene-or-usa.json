@@ -1,0 +1,71 @@
+{
+  "summary": "High‑octane set with blistering Garcia leads and wild Space→NFA",
+  "blurb": "The concert bursts open with raw energy, highlighted by a thunderous Space → Not Fade Away transition and a soaring 'Not Fade Away' that carries the second set. Standout moments include the explosive Space–NFA sequence, a fiery 'Candyman', and a rousing U.S. Blues encore. The best‑available soundboard capture is clear and powerful despite occasional glitches.",
+  "review": "On June 25, 1978 at Autzen Stadium, the Dead delivered one of those high‑octane shows that still feels chaotic in the best way. Jerry Garcia ripped through his solos with a fiery intensity—so much so that reviewers described his lead on 'Space' as blistering, even if a few noted occasional intonation slips. The band’s momentum peaked during the seamless Space → Not Fade Away transition, a moment that many fans call \"wild\" and \"thunderous.\" After a rough start to the first set, highlighted by a gritty but exhilarating 'Candyman', the second half surged forward with an inspired 'Not Fade Away' and a spectacular U.S. Blues finale that turned what could have been a yawner into pure celebration. Bob Weir’s on‑stage banter kept the vibe light, while the dual drums drove early intensity before a slight dip after the drum break. The recommended soundboard recording (gd78-06-25.sbd.cotsman.7048.sbefail.shnf) captures this raw power with good overall balance, making it the clearest window onto an unforgettable Oregon Jam.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 25,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Across four recordings, two are clearly positive (highlighting Garcia's leads, Space→NFA and Not Fade Away), one mixed notes a rough first set that improves, and one negative focuses on poor recording quality rather than performance. The preponderance of positive comments about the music outweighs the limited negative feedback, yielding a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.2 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd78-06-25.sbd.cotsman.7048.sbefail.shnf",
+    "reason": "Soundboard source with generally crisp, well‑balanced audio; captures the high energy and key moments despite occasional glitches, making it the most complete and clear representation of the show."
+  },
+  "key_highlights": [
+    "Explosive Space → Not Fade Away transition that drives the second set",
+    "Jerry's soaring lead on 'Not Fade Away' described as killer",
+    "Rousing U.S. Blues encore that lifts the whole concert"
+  ],
+  "song_highlights": [
+    "Space",
+    "Not Fade Away",
+    "Eyes Of The World",
+    "Passenger",
+    "Samson & Delilah",
+    "Candyman",
+    "U.S. Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Rips with fiery, blistering leads and intense solos; a few reviewers note occasional intonation issues but overall his playing is spectacular.",
+    "Phil": "",
+    "Bob": "Keeps the vibe lively with hilarious on‑stage banter and goofy comments throughout the set.",
+    "Keith": "",
+    "Mickey": "Provides strong early drive; energy wanes slightly after the drum break according to some listeners.",
+    "Billy": "Shares the early power with Mickey, contributing to the initial momentum before a modest dip post‑drum break."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-25T13:35:15.429104+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums*",
+      "Space",
+      "Not Fade Away",
+      "Goin' Down The Road Feeling Bad",
+      "Around & Around"
+    ],
+    [
+      "Passenger"
+    ],
+    [
+      "Samson & Delilah"
+    ],
+    [
+      "Candyman"
+    ],
+    [
+      "U.S. Blues"
+    ]
+  ]
+}

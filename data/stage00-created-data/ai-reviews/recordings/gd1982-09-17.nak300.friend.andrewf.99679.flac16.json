@@ -1,0 +1,63 @@
+{
+  "summary": "A solid‑quality tape of a classic Maine show, highlighted by a blistering Jerry solo, a kicking Bertha opener and an epic Dew > Sugar finish.",
+  "review": "Fans rave about this September ’82 Portland concert, calling it one of the best shows they’ve heard with standout moments like a scorching Jerry solo on Deal, a powerful Morning Dew, and a classic Bertha opening that rolls into a soaring Dew > Sugar ending. The recording is described as “okay,” with no major flaws noted, making the performance easy to enjoy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All three reviews are 5‑star and enthusiastically praise the musical performance; recording quality is only noted as okay, yielding a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers say the audio quality is okay with no specific problems mentioned; clarity appears acceptable but not highlighted as exceptional."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Morning Dew",
+      "Estimated Prophet",
+      "Deal",
+      "Sugar"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is praised for its energetic opener (Bertha) and a climactic closing sequence (Dew > Sugar), with strong mid‑set performances that keep the momentum high throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Blistering, first‑class solos all night, especially on Deal and Morning Dew.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent did not sing this night; no specific comments on keyboard playing.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:39:43.835396+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-17.nak300.friend.andrewf.99679.flac16"
+}

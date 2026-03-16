@@ -1,0 +1,39 @@
+{
+  "summary": "Terribly muddy, low‑volume mix but an exceptionally tight performance, especially the He's Gone jam.",
+  "review": "The show is praised as a very well‑played set despite the worst sounding PA the reviewer has ever experienced – muddy and low in volume. While the recording (likely audience) is poor, the musicianship shines, with the He's Gone jam highlighted as a standout moment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Review notes an excellent musical performance (≈4/5) but a poor recording quality (≈2/5); weighted average yields ~3.4 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Muddy, low‑volume sound due to PA problems; the taper’s mix is not at fault but the overall audio is terrible."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Performance praised despite disastrous sound; reviewers emphasize that the band played extremely well throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T08:47:36.779814+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-06.143600.FOB.Schoeps.Brotman.Miller.Noel.t-flac1648"
+}

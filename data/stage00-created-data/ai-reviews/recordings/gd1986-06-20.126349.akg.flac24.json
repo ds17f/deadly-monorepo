@@ -1,0 +1,31 @@
+{
+  "summary": "Recording suffers from out‑of‑phase stereo channels that need inversion to become listenable; no musical details provided.",
+  "review": "The sole review points out a serious technical flaw: the two stereo channels are 180 degrees out of phase, resulting in a thin or hollow sound until one channel is inverted. Apart from this issue, the reviewer gives the tape a tentative three‑star rating, indicating it might be better with some audio work, but offers no commentary on the performance itself.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only one brief review focusing on a major recording defect; no information on musical quality, so rating is driven by technical problems."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Stereo channels are 180° out of phase causing cancellation and muffled sound; inversion of one channel is required for acceptable clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T16:05:25.586153+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-06-20.126349.akg.flac24"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Well‑recorded audience tape of a decent 1994 show with standout performances of Deal, Birdsong and He's Gone > Truckin'.",
+  "review": "The recording is an off‑the‑stage audience capture that sounds surprisingly clear for its source. While the reviewer isn’t a huge fan of the 1994 era, they note the set is solid and highlight Deal, Birdsong and the He’s Gone > Truckin' segue as the high points.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "low",
+    "rationale": "Only one moderate‑rating review; shows a decent performance (≈3/5) and an unusually good audience recording (≈4/5), yielding a weighted average around 3.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it \"very well recorded for an OTS aud\" – clear and listenable despite being an audience source, with no noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Birdsong",
+      "He's Gone > Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A solid but unremarkable early‑90s set; the highlighted tracks provide the main excitement."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone > Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T21:23:25.137533+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-04-01.119748.NAK300.Cage.sbeok.flac1644"
+}

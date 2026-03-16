@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard recording with a crisp mix captures a classic May ’77 set highlighted by Terrapin Station, Estimated Prophet, Eyes of the World, Sugaree and High Time.",
+  "review": "The show is praised as a quintessential spring‑'77 performance – a tight setlist that rolls from Terrapin > Estimated > Eyes into a monster Sugaree and a gorgeous High Time, with an especially strong second half and encore. The recording benefits from a clean soundboard source (with audience patches for reel flips) and a well‑balanced mix by the Owen Brothers, delivering clear and enjoyable audio throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviewers give 4–5 stars, emphasizing both a superb musical performance and high‑quality sound; the weighted average of show (70%) and recording (30%) yields an overall rating in the very good to excellent range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean, crisp mix noted by reviewers; audience source used only for reel‑flip patches, preserving the integrity of the whole show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Estimated Prophet",
+      "Eyes of the World",
+      "Sugaree",
+      "High Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Classic May ’77 flow with a strong second half and encore; reviewers highlight the seamless progression from Terrapin > Estimated > Eyes and the overall great setlist."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T02:40:49.630494+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-26.sbd.wizard.32302.shnf"
+}

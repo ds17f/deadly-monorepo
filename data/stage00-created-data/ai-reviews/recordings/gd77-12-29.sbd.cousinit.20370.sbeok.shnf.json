@@ -1,0 +1,82 @@
+{
+  "summary": "Legendary late‑1977 show with a spectacular China Cat > Rider > China Doll sequence and a monster Terrapin, captured on a soundboard source that suffers low fidelity and speed issues.",
+  "review": "The performance is widely praised – the return of China Cat > Rider > China Doll, a heavyweight Terrapin Station, and tight first‑set work make this one of the band’s standout late‑’77 nights.  Reviewers note the soundboard recording (cousinit) runs too slow, has low fidelity and needs pitch correction, but the musical quality outweighs the technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Show quality is consistently rated 5 stars with multiple standout moments; recording quality is noted as fair/low‑fidelity, pulling the weighted average down to just over four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Cousinit source runs too slow and has low fidelity; levels and balance are a bit wonky and requires ~‑1% pitch correction.  Better SBD upgrades exist, but this specific file is not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat > Rider > China Doll",
+      "Terrapin Station",
+      "Jack Straw",
+      "Bertha",
+      "Good Lovin'"
+    ],
+    "poor_songs": [
+      "Mama Tried",
+      "Sugaree",
+      "Playing"
+    ],
+    "setlist_flow": "First set opens buoyantly with Jack Straw and rolls through celestial jams, while the second set bursts out with Bertha, busy drums, and the long‑awaited China Cat > Rider > China Doll sequence, culminating in a heavy Terrapin Station."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is highlighted repeatedly – intricate fills on Jack Straw, \"levitating\" during the China Cat suite, playing Wolf, and a powerful solo that fans describe as divine.",
+    "Phil": "Stayed on for Drums/Space; his patter appears in the Heart & Soul tuning segment and he contributes steady bass throughout the marathon jams.",
+    "Bob": "",
+    "Keys": "Keith's keyboard contributions are noted – an early solo is obscured, later described as deity‑like on Rider, harpsichord texture on China Doll, and a strong presence throughout the second set.",
+    "Drums": "Busy, driving drums are called out as a big component of the second set, with the percussionists taking over after China Doll and providing a “burst‑start” energy."
+  },
+  "song_mentions": {
+    "China Cat > Rider > China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mama Tried": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:16:29.281435+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-12-29.sbd.cousinit.20370.sbeok.shnf"
+}

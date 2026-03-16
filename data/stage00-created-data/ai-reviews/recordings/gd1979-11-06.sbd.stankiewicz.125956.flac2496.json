@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard recording of a legendary show with a psychedelic second set, highlighted by an epic Playin' In The Band and stellar Black Peter solo.",
+  "review": "Fans rave about this performance as one of the all‑time greats – the second set is called “psychedelic perfection,” featuring what many deem the best ever Playin' In The Band, a moving Black Peter solo, an unforgettable Terrapin Station, and a ripping Promised Land. The soundboard source is praised for being brighter, cleaner and even better than the official Road Trips release.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both musical performance (standout songs, energetic second set) and recording quality (brighter, cleaner than official release)."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Brighter and cleaner than the Road Trips official release; no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' in the Band",
+      "Black Peter",
+      "Terrapin Station",
+      "The Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as psychedelic perfection with seamless, high‑energy transitions; overall show considered a fan favorite."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for ripping on The Promised Land and delivering an epic Playin' In The Band.",
+    "Phil": "Highlighted for ripping alongside Jerry on The Promised Land.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T01:16:18.798149+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-06.sbd.stankiewicz.125956.flac2496"
+}

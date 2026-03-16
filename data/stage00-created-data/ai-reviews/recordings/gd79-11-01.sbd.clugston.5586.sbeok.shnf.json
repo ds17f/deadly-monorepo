@@ -1,0 +1,88 @@
+{
+  "summary": "High‑energy 1979 show with a monster Scarlet > Fire and Terrapin > Playing, captured on a soundboard source that is generally good despite occasional cassette speed/patch issues.",
+  "review": "The performance is widely praised – the second set’s 30‑plus minute Scarlet > Fire jam, Terrapin > Playing, Good Lovin' and the tight first‑set work make this a standout late‑’79 concert. The recording comes from a soundboard (sbd) copy; most listeners find it clear enough to enjoy, though a few note cassette speed quirks and occasional level patches.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently glowing comments about the music (especially Scarlet > Fire, Terrapin > Playing) outweigh minor technical complaints; many reviews (14) give high star ratings."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Original source is a first‑gen cassette that runs slightly fast and has improper Dolby decoding; reviewers note occasional patches, level modulation, and some audience bleed, but overall the soundboard mix is clear enough to distinguish guitars and vocals."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Terrapin > Playing",
+      "Good Lovin'",
+      "Black Peter",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows brilliantly, with a tight first set and an epic second‑set jam that stitches Scarlet > Fire into Terrapin > Playing, followed by high‑octane Good Lovin' and classic closes. Transitions (Peggy‑O → Minglewood Blues, Black Peter → Good Lovin' → U.S. Blues) are highlighted as seamless."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for experimental mutron wah work, soaring solos on Scarlet > Fire and Good Lovin', and overall “off‑the‑hook” guitar playing.",
+    "Phil": "Noted for solid bass lines that keep the band in sync; a few reviewers mention his early support during the jam.",
+    "Bob": "His rhythm guitar and vocal performances are described as inspirational and “off‑the‑hook”.",
+    "Keys": "Brent Mydland receives major praise – synth‑funk textures on Scarlet > Fire, strong lead vocals on Easy To Love You, and energetic jams throughout the show.",
+    "Drums": "Bill Kreutzmann and Mickey Hart’s combined drumming is called “expertise that never misses a beat”, especially during the Space segment."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Terrapin > Playing": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Easy To Love You": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T00:40:27.157293+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-11-01.sbd.clugston.5586.sbeok.shnf"
+}

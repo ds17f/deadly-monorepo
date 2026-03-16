@@ -1,0 +1,31 @@
+{
+  "summary": "Decent front‑of‑house (FOB) recording that sounds a bit distant, while the show itself is praised as smoking.",
+  "review": "The four fan reviews agree the tape was captured with an ECM‑990 front‑of‑house mic array, giving it an audience‑type sound that feels somewhat remote and a little thin at the highs and lows. Despite these sonic limitations the concert is described as “smoking,” indicating strong musical performance, though no specific songs are highlighted.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality receives positive remarks while recording quality is noted as decent but distant; weighting the show (70%) and recording (30%) yields a mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Front‑of‑house mic array (ECM‑990) creates distant, slightly thin sound with some crowd bleed; lack of top/bottom frequency response but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers only note the show as generally “smoking.”"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-12T23:02:51.612143+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-08.fob.sonyecm999.morris.100243.flac16"
+}

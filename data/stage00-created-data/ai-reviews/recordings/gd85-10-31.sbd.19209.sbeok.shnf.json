@@ -1,0 +1,64 @@
+{
+  "summary": "Fair soundboard capture of a polarizing Halloween show – a stellar Space jam and Ship of Fools highlight offset by a divisive Werewolves of London opener.",
+  "review": "The performance swings between highs and lows: reviewers rave about the eerie, “great” Space sequence (including Dr. Mr. Fantasy) and a prime Jam in Ship of Fools, while the opening Funiculi‑>Space‑>Werewolves of London is called both novelty and awful. The soundboard source is generally full and stereo but suffers from hiss, slight pitch problems and tape‑flip glitches that keep it from being clean.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is split – strong moments (Space, Ship of Fools) versus weak opening (Werewolves). Recording is decent soundboard but marred by hiss and pitch issues, yielding an overall average‑to‑good rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Full, thick sound with decent stereo separation, but not crisp; slight bass boost, light hiss, occasional tape‑flip cuts and a half‑step pitch problem noted by reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space",
+      "Ship of Fools",
+      "Dr. Mr. Fantasy"
+    ],
+    "poor_songs": [
+      "Werewolves of London",
+      "L.L.Rain"
+    ],
+    "setlist_flow": "Opening Funiculi>Space>Werewolves is seen as a novelty that many found jarring; the middle portion fluctuates in energy, with Space and its second‑set extensions providing a high point, while the Halloween atmosphere adds surreal visuals but uneven momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Midi/keyboard effects praised by some, but one reviewer calls his playing “out of control” on this Halloween show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Werewolves of London": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dr. Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "L.L.Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T10:08:10.988882+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-10-31.sbd.19209.sbeok.shnf"
+}

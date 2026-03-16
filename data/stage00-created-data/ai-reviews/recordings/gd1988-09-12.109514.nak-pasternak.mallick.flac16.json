@@ -1,0 +1,51 @@
+{
+  "summary": "Good audience‑tape with an excellent Man Smart → Eyes segue and a fun The Other One",
+  "review": "The recording is an above‑average audience tape that captures the show well enough for download. Highlights include a stellar performance of “Man Smart (Heartless Boy)” flowing smoothly into “Eyes of the World,” and a playful, intentionally distorted stretch on “The Other One.” Overall the musical showing is solid and the tape quality is respectable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Single 4‑star review praising both performance (standout songs, good flow) and recording (above‑average audience tape)."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Above‑average audience tape; intentional space‑y distortions noted on The Other One but overall clear enough for enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Man Smart (Heartless Boy)",
+      "Eyes of the World",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Cool segue from Man Smart into Eyes of the World noted as a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Man Smart (Heartless Boy)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T13:35:52.031897+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-12.109514.nak-pasternak.mallick.flac16"
+}

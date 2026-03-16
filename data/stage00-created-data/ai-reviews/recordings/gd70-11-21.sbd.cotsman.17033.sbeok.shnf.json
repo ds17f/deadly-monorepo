@@ -1,0 +1,63 @@
+{
+  "summary": "A poorly‑recorded soundboard tape that still captures a wild late‑1970 show with a blazing Cosmic Charlie/cryptical reprise and classic Dark Star moments.",
+  "review": "The recording is plagued by distortion, drop‑outs and tape‑age artifacts, making it difficult to follow but still tolerable at high volume.  Despite the technical flaws the concert itself is remembered fondly – Jerry and Bob deliver impassioned vocals, Phil’s bass shines on the Cryptical return, and fans rave about Dark Star, Eleven, Uncle John’s Band and Easy Wind.  The odd opening act (chimp performers) and chaotic ticket situation add to the show’s legendary lore.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the performance (high stars) but consistently condemn the audio quality; weighting 70% show and 30% recording yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Severe distortion, muffled/high‑frequency loss, occasional drop‑outs; tape appears degraded and many note the audio is barely usable except at high volume. Some reviewers suspect the file is mislabeled."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cosmic Charlie (Cryptical)",
+      "Dark Star",
+      "Eleven",
+      "Uncle John's Band",
+      "Easy Wind"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert opened with a bizarre chimp act and New Riders, then the Dead launched into an energetic set highlighted by a fiery Cryptical reprise and classic jams; despite chaotic crowd conditions the music flowed strong."
+  },
+  "band_member_comments": {
+    "Jerry": "Both Jerry and Bob are noted singing with conviction; his vocal delivery is praised.",
+    "Phil": "Phil's bass is described as sweet and bouncy, especially on the Cryptical return.",
+    "Bob": "Bob’s vocals are highlighted as passionate alongside Jerry’s.",
+    "Keys": "Ned (keyboardist) is mentioned but absent from the tape; reviewers note his usual presence in 1970/71 shows.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cosmic Charlie (Cryptical)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T01:28:55.713184+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-11-21.sbd.cotsman.17033.sbeok.shnf"
+}

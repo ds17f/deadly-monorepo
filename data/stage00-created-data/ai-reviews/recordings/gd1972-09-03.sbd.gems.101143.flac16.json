@@ -1,0 +1,82 @@
+{
+  "summary": "A three‑set 1972 show with standout performances (Mexicali Blues, China Cat, He's Gone → The Other One → Wharf Rat, Playing in the Band) captured on a soundboard that sounds good overall but has patchy sections.",
+  "review": "Fans rave about the musical flow and highlight several classic jams, especially the He’s Gone/Other One/Wharf Rat sequence and the early set gems. The recording is a sound‑board MP3 that many call the best version on the Archive, though a few tracks suffer from patches or need EQ tweaks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (average ~4.5 stars) while noting occasional recording flaws (average ~3.5). Weighted combination yields a solid 4.2‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally the best‑sounding MP3 version on the Archive; clear overall but some songs have patchy or missing sections and benefit from EQ adjustments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mexicali Blues",
+      "China Cat Sunflower",
+      "He's Gone",
+      "The Other One",
+      "Wharf Rat",
+      "Playing in the Band"
+    ],
+    "poor_songs": [
+      "Cold Rain and Snow",
+      "Rockin' Pneumonia"
+    ],
+    "setlist_flow": "A three‑set monster with a strong early set, an expansive middle, and a memorable third set; occasional missing pieces (Bird Song) and questionable encore noted."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Impassioned backing vocals by Phil are highlighted in the third set.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mexicali Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Rockin' Pneumonia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:01:45.110627+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-03.sbd.gems.101143.flac16"
+}

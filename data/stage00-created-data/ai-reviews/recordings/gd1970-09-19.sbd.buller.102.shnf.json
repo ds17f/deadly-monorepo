@@ -1,0 +1,57 @@
+{
+  "summary": "Great classic ’70s show with standout Morning Dew, Easy Wind and a scorching Dark Star‑St. Stephen‑Darkness jam; audience tape is decent overall with superb sound on the second set.",
+  "review": "The concert is praised for its iconic set‑list – Morning Dew, Easy Wind and an epic Dark Star > St. Stephen > Darkness sequence that rolls into a powerful Turn On Your Love Light. Reviewers note the recording is only “okay” in places but the second‑set material sounds amazing, making the tape worth listening to despite some early‑show technical hiccups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Review is highly enthusiastic about the performance and highlights several songs; recording quality is described as okay overall but excellent on the second set, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Overall sound is acceptable; early part of show has equipment issues, but from Dark Star onward the tape sounds amazing. No major drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Easy Wind",
+      "Dark Star > St. Stephen > Darkness",
+      "Turn On Your Love Light"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Classic early‑70s set‑list that builds nicely, with a patient first set and a second set that delivers high energy jams and an uplifting Love Light finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia (referred to as Bobby) is quoted during the Love Light jam; his solo work on Easy Wind and the Dark Star sequence is praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star > St. Stephen > Darkness": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Turn On Your Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T23:09:11.453891+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-09-19.sbd.buller.102.shnf"
+}

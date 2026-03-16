@@ -1,0 +1,44 @@
+{
+  "summary": "High‑fidelity soundboard capture with a brilliant China Cat Sunflower performance, but the mix is uneven and occasionally brittle.",
+  "review": "The recording is praised for its Hi‑Fi stereo and excellent mix by several reviewers, though others note an unbalanced front‑center guitar that buries Jerry's lead and Keith's piano on songs like Big River. Musically the show shines with a standout China Cat Sunflower sequence and an energetic 23‑song set, even if some listeners find the performance a bit sloppy and overly bright.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Two very positive 5‑star reviews highlight superb sound quality and memorable performances, while two 3‑star reviews point out mix imbalances and a harsh tonal character, yielding an overall mixed but generally favorable assessment."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear Hi‑Fi stereo with excellent mix according to most reviewers; however some note the guitar (Bob) is too forward, burying Jerry's lead and Keith's piano on Big River, and a brittle, glassy brightness that can feel aggressively loud."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A sprawling 23‑song set that captures the band’s transition into their ’72 sound—energetic and adventurous, though a few moments feel sloppy or overly bright."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is praised but several reviewers say it gets lost under the high mix level of Bob's rhythm guitar.",
+    "Phil": "",
+    "Bob": "Bobby’s (Bob Weir) rhythm guitar sits too prominently in the mix, making other instruments difficult to hear.",
+    "Keys": "Keith's piano solo on Big River is barely audible due to the mix imbalance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T04:40:18.108429+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-30.sbd.clugston.8184.sbeok.shnf"
+}

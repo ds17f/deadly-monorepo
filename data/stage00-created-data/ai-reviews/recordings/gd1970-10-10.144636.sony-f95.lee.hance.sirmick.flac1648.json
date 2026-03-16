@@ -1,0 +1,57 @@
+{
+  "summary": "A clean, upgraded 1970 audience recording that captures a solid electric set highlighted by a fierce The Other One and early Sugar Magnolia.",
+  "review": "The upgraded tape delivers surprisingly listenable sound for a 1970 era capture, fixing earlier fidelity complaints. Musically the show is a laid‑back but rewarding electric performance with standout moments like The Other One, Hard to Handle and an early Sugar Magnolia, while the first‑set run of Cryptical > Drums > Other One > ... provides nice continuity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Multiple reviewers praise both the improved recording clarity and the musical performance, giving consistent 4‑star ratings; weighting yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Upgrade markedly improves clarity; earlier versions were criticized for poor sound but this version is described as highly listenable for a 1970 tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Hard to Handle",
+      "Sugar Magnolia",
+      "Candyman"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A slow‑burn, laid‑back electric set with a nice first‑set run (Cryptical > Drums > Other One > ... ) that builds into solid jams; overall pacing is relaxed but rewarding."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry's guitar work on The Other One is highlighted as fierce and rewarding.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T23:40:03.484527+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-10-10.144636.sony-f95.lee.hance.sirmick.flac1648"
+}

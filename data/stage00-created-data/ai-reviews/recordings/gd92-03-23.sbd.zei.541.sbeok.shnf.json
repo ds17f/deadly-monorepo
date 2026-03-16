@@ -1,0 +1,75 @@
+{
+  "summary": "A solid sound‑board capture of the 3/23/92 show with a smoking Jack Straw, soaring Morning Dew and an unforgettable Gloria encore.",
+  "review": "The recording is a clean sound‑board source that occasionally suffers from brief splices (Wheel, Morning Dew) and odd disc ordering, but overall delivers clear instrument separation. Musically the night shines – the first set burns with Jack Straw, West LA and Masterpiece, while the second set recovers after a weak pre‑drums stretch and culminates in a heartfelt Gloria encore. Jerry’s lead on Jack Straw and his emotive Dew solo are repeatedly praised, as is Bruce Hornsby’s piano work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈75 %) rate the show and recording 4‑5 stars, highlighting strong performances and a generally good soundboard capture despite minor splice/ordering issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp board mix with clear instrument separation; occasional quick splice at Wheel (2:24) and a skip between tracks on Morning Dew, plus an unconventional disc order that places the start of set 2 and the encore together."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Paint My Masterpiece",
+      "West LA",
+      "Morning Dew",
+      "Gloria"
+    ],
+    "poor_songs": [
+      "Pre‑drums second set (pre‑drums segment)"
+    ],
+    "setlist_flow": "First set is tight and high‑energy; the pre‑drums portion of the second set feels flat, but the post‑space part revives the momentum and the Gloria encore lifts the whole night."
+  },
+  "band_member_comments": {
+    "Jerry": "Lead guitar on Jack Straw praised as 'chills', emotive solo on Morning Dew noted as a standout; some reviewers sensed tension or disinterest early in the show.",
+    "Phil": "",
+    "Bob": "Laughed with Jerry during Gloria, delivered powerful vocal moments ('screaming his head off'), and hit his stacks when Jerry left the stage (according to one reviewer).",
+    "Keys": "Bruce Hornsby’s piano praised for beauty on Dew; a few reviewers disliked his accordion/piano choice on certain songs.",
+    "Drums": "Pre‑drums segment criticized as weak, but drum jam ('drumz') in the second set received positive remarks."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Paint My Masterpiece": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Gloria": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "West LA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:15:48.189744+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-03-23.sbd.zei.541.sbeok.shnf"
+}

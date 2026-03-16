@@ -1,0 +1,87 @@
+{
+  "summary": "Crisp audience tape captures an explosive second set – Miracle, Shakedown Street, Terrapin > Playing in the Band and a stellar Playin' sandwich – despite a uneven first half.",
+  "review": "The recording is an exceptionally clear audience capture with strong bass and crystal‑clear mix that lets every instrument shine. The show shines brightest after intermission, delivering a monster Miracle/Shakedown pair, a 34‑minute Terrapin > PITB marathon and one of the most memorable Playin' sandwiches of the era, while the first set is viewed as uneven with a few vocal slips. Overall fans praise the second‑set fireworks even though some note hiccups early on.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show and tape highly, highlighting superb second‑set jams and excellent sound quality; a few criticisms of the first set keep the overall rating just above four."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as crisp, amazing, with better bass than many soundboard tapes from ’79; no notable drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Miracle",
+      "Shakedown Street",
+      "Terrapin > Playing in the Band",
+      "Playin' (sandwich)",
+      "Casey Jones"
+    ],
+    "poor_songs": [
+      "Jack Straw (first set vocal issue)",
+      "Serengetti jam (mixed reception)",
+      "Stagger Lee (lethargic)"
+    ],
+    "setlist_flow": "First set feels uneven with occasional vocal slips, but the second set erupts into a seamless flow of high‑energy jams and tight transitions, making it one of the era’s must‑listen performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Hot throughout; brilliant Terrapin solo, precise runs on Playin', dominant during Miracle/Shakedown; occasional disjointedness early in first set.",
+    "Phil": "Lights the fuse on Miracle, dominates mix on Shakedown, soars through the second‑set jams and adds strong bass/funk foundation.",
+    "Bob": "Misses final verse of Jack Straw, but later provides dreamy harmonies on Playin' and delivers a high‑pitched thank you at the end of Casey Jones.",
+    "Keys": "Keith Godchaux praised for one of his better performances; keyboards drive the Miracle/Shakedown groove and support the expansive jams.",
+    "Drums": "Drum sandwich highlighted as a standout moment; drummers (Bill/Mickey) energize the set, especially during Miracle and the Playin' sequence."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin > Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Serengetti jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "From the Heart of Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T19:24:19.948243+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-15.nak300-rolfe.keshevan-wise.4669.shnf"
+}

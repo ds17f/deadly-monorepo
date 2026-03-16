@@ -1,0 +1,45 @@
+{
+  "summary": "High‑energy show highlighted by the soaring Birdsong and fiery Scarlet Fire jams, captured in a hissy audience‑heavy matrix mix.",
+  "review": "The concert delivers an electric atmosphere with standout improvisations like Birdsong and Scarlet Fire that many fans rank among the tour’s best. However, the matrix recording leans heavily toward crowd noise, exhibits noticeable hiss and occasional over‑compression, making the audio sound crowded at times. Overall the performance shines despite the technical shortcomings of the source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is praised (high‑energy, standout jams) while recording quality is criticized for hiss and heavy audience mix; weighted average yields a solid but not stellar rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Audience‑heavy mix with prominent crowd sound, noticeable hiss throughout, and some over‑compression that makes the mix feel crowded."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong",
+      "Scarlet Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First half considered standard fare, but the second half erupts with high‑energy jams and extended improvisations that keep the momentum strong."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T20:42:06.450156+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-04-02.sbd-mtx.miller.82310.sbeok.flac16"
+}

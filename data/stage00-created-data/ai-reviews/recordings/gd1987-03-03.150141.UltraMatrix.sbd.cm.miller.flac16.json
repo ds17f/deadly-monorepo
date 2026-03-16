@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent UltraMatrix tape captures a joyful show highlighted by an impromptu crowd‑led Breakdown despite Jerry’s brief stumble.",
+  "review": "The recording is praised for its superb tape quality, mastering and transfer, delivering crystal‑clear sound that showcases the concert’s atmosphere. Musically the night shines thanks to the communal energy – especially when Jerry Garcia slipped on “Breakdown” and the audience filled in the lyrics, creating a memorable moment of synergy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Show is rated highly for joy and community interaction (≈4/5) while recording quality is rated excellent (5/5); weighted average yields ~4.3 stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers commend the tape, mastering and transfer as top‑notch; no issues with clarity or drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Breakdown"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert flows with strong audience participation, highlighted by the crowd stepping in on “Breakdown” after Jerry’s brief stumble, creating a vivid sense of community."
+  },
+  "band_member_comments": {
+    "Jerry": "Stumbled and forgot words to \"Breakdown\", but the crowd sang for him until he recovered; the moment added to the show's charm.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Breakdown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:09:46.335458+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-03.150141.UltraMatrix.sbd.cm.miller.flac16"
+}

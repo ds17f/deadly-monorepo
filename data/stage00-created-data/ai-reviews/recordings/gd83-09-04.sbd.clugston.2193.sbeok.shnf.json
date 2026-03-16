@@ -1,0 +1,86 @@
+{
+  "summary": "Crisp soundboard capture of a classic ’83 show with scorching Scarlet>Fire, a full‑band Spanish Jam and a feverish Other One.",
+  "review": "The SBD source is remarkably clear – listeners repeatedly note the “crisp”, “superb” and “clean” mix despite an occasional Althea skip. Musically the night shines on Scarlet>Fire, the extended Spanish Jam, The Other One and a punchy Bertha‑>Promised Land opener; even the usual ’83 quirks feel fresh, though Althea drags a bit. Overall fans deem it one of the stronger 1983 performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈70%) are 4‑5 stars and praise both the performance and the crystal‑clear soundboard, outweighing a few isolated complaints about Althea and minor speed quirks."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Exceptionally clear SBD with strong instrument separation; one reviewer notes a brief skip in Althea and occasional perception of speed variation, but overall the mix is crisp, balanced and free of crowd noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "Spanish Jam",
+      "The Other One",
+      "Bertha",
+      "China Cat Sunflower > I Know You Rider",
+      "Esau"
+    ],
+    "poor_songs": [
+      "Althea"
+    ],
+    "setlist_flow": "The set opens with a high‑energy Bertha→Promised Land, rolls through classic ’83 staples, hits a monster Scarlet>Fire segue into Fire, and caps the second set with a soaring Spanish Jam and Wharf Rat jam; pacing is praised despite a slightly shorter second half."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone on Scarlet>Fire and Promised Land is repeatedly called “on fire” and “perfect”.",
+    "Phil": "Noted for a tight intro on The Other One.",
+    "Bob": "Celebrated for enthusiastic vocals, laughing during Wharf Rat, and occasional slide work (sometimes “not contained”).",
+    "Keys": "Brent’s keyboards receive specific praise (“nice in the mix”, “great Spanish Jam keys”), though one mix is said to have a bit too much Brent.",
+    "Drums": "Bill and Mickey’s interplay is highlighted as varied and interesting; drums and Space are described as “varied and interesting” and even audible when PA failed."
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Spanish Jam": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Esau": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-14T09:47:05.154391+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-09-04.sbd.clugston.2193.sbeok.shnf"
+}

@@ -1,0 +1,58 @@
+{
+  "summary": "High‑quality soundboard capture delivers an energetic performance highlighted by Box of Rain, Wang Dang Doodle and Loose Lucy, though Jerry’s playing shows signs of decline.",
+  "review": "The recording is praised for its clear, well‑balanced soundboard mix, allowing the band’s upbeat energy—especially on Box of Rain, Wang Dang Doodle and Loose Lucy—to shine through. While most listeners celebrate the show’s vibe and emotional resonance, one reviewer notes a noticeable dip in Jerry Garcia’s playing from start to finish.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong musical performance with several standout songs and generally excellent soundboard quality; only a single notable criticism of Jerry's playing moderates the overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced mix praised by multiple reviewers; no major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Wang Dang Doodle",
+      "Loose Lucy"
+    ],
+    "poor_songs": [
+      "Shakedown Street"
+    ],
+    "setlist_flow": "The set maintains high energy throughout, with strong transitions and crowd‑pleasing moments despite occasional unevenness in the lead guitar."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer describes Jerry’s playing as “off his game” and showing a decline, while others celebrate his artistry and lasting impact.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T11:03:48.209564+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-25.147721.sbd.spd-cor.sbeok.t-flac16"
+}

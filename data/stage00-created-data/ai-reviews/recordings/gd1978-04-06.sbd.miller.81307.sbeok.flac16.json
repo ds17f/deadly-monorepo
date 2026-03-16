@@ -1,0 +1,50 @@
+{
+  "summary": "Soundboard capture with crystal‑clear tone, highlighted by a killer Good Lovin' and solid Estimated Prophet, though a brief audio glitch mars Bertha.",
+  "review": "The recording is praised for its impeccable clarity and soundboard quality, delivering a very enjoyable listening experience. The show shines on Good Lovin' and an adequately strong Estimated Prophet, but one reviewer notes slower‑moving moments and a noticeable patch of audio trouble during Bertha, giving the overall impression a mixed feel.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Two 4‑star reviews praise both performance and sound quality while a single 2‑star review criticizes the show’s pacing, leading to an overall moderate‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally impeccable clarity; minor audio glitch/patch noted on Bertha."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall a solid set with strong mid‑tempo moments, though some listeners felt parts of the concert were slower and less refined."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T09:39:26.523676+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-06.sbd.miller.81307.sbeok.flac16"
+}

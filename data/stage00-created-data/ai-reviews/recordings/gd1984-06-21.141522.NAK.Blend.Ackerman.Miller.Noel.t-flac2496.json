@@ -1,0 +1,51 @@
+{
+  "summary": "Good show highlighted by Not Fade Away, Dupree's Diamond Blues and They Love Each Other; recording quality not specified",
+  "review": "The reviewer gives the performance a solid thumbs‑up, calling out strong renditions of Not Fade Away, Dupree's Diamond Blues and They Love Each Other. No details are provided about the source or clarity of the audio, so the technical side remains unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only a single 4‑star review; positive comments on three songs but no information on recording quality, leading to a moderate overall rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about soundboard, audience mix, clarity or other technical aspects."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "Dupree's Diamond Blues",
+      "They Love Each Other"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T18:29:52.957191+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-21.141522.NAK.Blend.Ackerman.Miller.Noel.t-flac2496"
+}

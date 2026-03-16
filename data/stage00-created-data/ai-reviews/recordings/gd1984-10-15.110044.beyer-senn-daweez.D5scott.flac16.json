@@ -1,0 +1,51 @@
+{
+  "summary": "Hot early‑80s show with a rare St. Stephen and strong song placement, but recording details are unclear",
+  "review": "Fans rave about the rarity of St. Stephen and praise the set ordering – Bird Song in slot four and a ripping Jack Straw > Day Job closer – while noting the performance feels hot. No concrete information is given about the source or audio fidelity, leaving the recording quality unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Four reviews give consistent 4‑star scores and highlight strong musical moments; lack of technical commentary limits confidence in the recording assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviews do not mention soundboard, audience mix, clarity, or any audio issues, so recording quality cannot be confidently assessed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Bird Song",
+      "Jack Straw > Day Job"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note tight song placement – Bird Song early in the set and a high‑energy Jack Straw > Day Job as the first closer – giving the concert a well‑structured, hot feel."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw > Day Job": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T22:48:31.834385+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-15.110044.beyer-senn-daweez.D5scott.flac16"
+}

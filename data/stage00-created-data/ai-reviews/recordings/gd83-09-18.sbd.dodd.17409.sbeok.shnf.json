@@ -1,0 +1,81 @@
+{
+  "summary": "Good‑sound soundboard capture of a solid ’83 show with standout Let It Grow, Space > The Other One and Terrapin Station, but marred by long Drums‑>Space and Weir’s slide work.",
+  "review": "The recording (soundboard) is clear and pleasant, letting the band’s strong mid‑‘80s playing shine through. Highlights include a killer Let It Grow bass line, an inspired Space → The Other One jam and a tight Terrapin Station, while the Drums‑>Space stretch feels overly long and Bob Weir’s slide guitar draws criticism. Overall opinions are mixed – many enjoy the performance despite a few rough spots.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show quality is generally praised (standout jams, strong rhythm section) but several reviewers note significant negatives (slide guitar, dragging sections). Recording quality is consistently described as good, yielding an overall solid rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and pleasant sound throughout; no major drop‑outs or distortion reported. Some listeners note the Drums→Space segment feels overly long, but the mix is balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Space > The Other One",
+      "Terrapin Station",
+      "Friend Of The Devil"
+    ],
+    "poor_songs": [
+      "Drums>Space",
+      "Wharf Rat",
+      "Around and Around"
+    ],
+    "setlist_flow": "The setlist is described as mundane yet solid; a few reviewers felt parts dragged (especially the Drums‑>Space stretch), while others appreciated the experimental, loose feel of the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for feeling it and delivering soaring leads in the second set; also criticized by some for a caustic tone later in the tour.",
+    "Phil": "His bass line on Let It Grow is called “killer”; noted for a low‑booming, walking tone that underpins the show.",
+    "Bob": "Described as “bonkers” on Friend Of The Devil and providing strong rhythm work elsewhere.",
+    "Keys": "Brent (keyboards) praised for filling all the spaces and adding texture throughout the performance.",
+    "Drums": "The Drums→Space segment is called overly long, but no specific drummer criticism."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space > The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums>Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Around and Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Friend Of The Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:44:11.429026+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-09-18.sbd.dodd.17409.sbeok.shnf"
+}

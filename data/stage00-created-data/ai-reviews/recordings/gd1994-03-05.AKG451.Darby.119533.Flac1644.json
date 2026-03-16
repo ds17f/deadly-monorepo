@@ -1,0 +1,57 @@
+{
+  "summary": "Audience‑recorded tape with strong crowd presence and several highlight moments, but the show itself divides listeners.",
+  "review": "The recording is praised for its vivid audience ambience that many soundboard tapes lack, delivering clear energy especially on tracks like The Stranger, Stagger Lee, China>Rider and a soaring Stella Blue. While one reviewer rates the performance highly, another brands the concert as one of the worst in the era, leaving the overall impression mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Positive comments highlight a good‑to‑great audience recording and several standout songs (4‑star rating), but another reviewer gives a zero‑star verdict on the show overall; averaging these divergent views yields a mid‑range score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Captures crowd energy and ambience that soundboard mixes miss; no specific complaints about clarity or dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Stranger",
+      "Stagger Lee",
+      "China > Rider",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set noted for strong openers and high energy; second set includes a concise China>Rider and an acclaimed Stella Blue, though overall impression varies widely among listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T19:38:44.712769+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-03-05.AKG451.Darby.119533.Flac1644"
+}

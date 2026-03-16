@@ -1,0 +1,45 @@
+{
+  "summary": "Amazing performance with a beautiful Jack Straw opener and high‑energy Iko Iko, though recording details are not specified",
+  "review": "The show is remembered as an unforgettable night – Jerry broke a string early but the band kept the momentum, delivering a gorgeous Jack Straw start and an Iko Iko that shook the balconies. No specific comments about the tape were made, so the audio quality remains unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Review is a 5‑star rave for the musical performance; with no recording details we assume an average tape, yielding a strong overall rating but low confidence due to only one brief review."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Iko Iko"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Jerry broke a string early but the band recovered quickly; the opener and mid‑set energy kept the show memorable."
+  },
+  "band_member_comments": {
+    "Jerry": "Broke a string during the first few tunes, yet the performance remained strong.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:54:24.181767+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-26.neumann-birkhead.koucky.87812.flac16"
+}

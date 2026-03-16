@@ -1,0 +1,65 @@
+{
+  "summary": "Smokestack Lightning ignites a blazing set capped by epic Dancing In The Street",
+  "blurb": "The show bursts open with a scorching Smokestack Lightning and rolls through tight Truckin' and a soaring Dancin' In The Street. Turn On Your Lovelight closes the night with Pigpen’s trademark charisma. Overall performance is high‑energy with standout moments throughout.",
+  "review": "October 30, 1970 at Pritchard Gym captured one of the Dead’s most electrifying late‑show outings. From the opening crack of Smokestack Lightning the band was “on” – Garcia’s guitar turned the Dancin' In The Street into a wheel‑turning, stretch‑out jam, while Pigpen’s bluesy harps and vocal swagger drove Turn On Your Lovelight to a raucous climax. Highlights also include a tight Truckin' with Bob Weir’s gritty lead vocals, a rollicking Saint Stephen → Not Fade Away sequence, and the ever‑fun Candyman. Though a few recordings note occasional drops or minor mix quirks, the musical flow is consistently praised as loose yet purposeful, delivering an unforgettable snapshot of ’70 energy.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 20,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Four recordings are clearly positive, praising the set’s energy, standout songs (Smokestack Lightning, Dancin' In The Street, Turn On Your Lovelight) and strong band interplay. One mixed review notes sound drops but still calls the show tight; one negative review is a poor‑quality recording with no musical commentary. The preponderance of praise yields a solid positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.2 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1970-10-30.121126.sbd.deluca.digitalrbb.miller.flac16",
+    "reason": "Clean digital soundboard capture with good clarity and no dropouts; reviewers call it a ‘clean’ recording that lets the high‑energy performance shine."
+  },
+  "key_highlights": [
+    "Smokestack Lightning launches a smoking hot set.",
+    "Garcia’s guitar drives an epic Dancing In The Street jam.",
+    "Turn On Your Lovelight showcases Pigpen’s charismatic rap and vocal power.",
+    "Tight Truckin' and vibrant Saint Stephen → Not Fade Away segue."
+  ],
+  "song_highlights": [
+    "Smokestack Lightning",
+    "Dancin' In The Street",
+    "Turn On Your Lovelight",
+    "Truckin'",
+    "Saint Stephen"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s lead guitar is highlighted as ‘getting the wheel turning’ on Dancing In The Street and his vocals add depth, especially during the Lovelight climax.",
+    "Phil": "Phil’s bass work is described as the glue holding the outfit together, providing strong harmonic support throughout the set.",
+    "Bob": "Weir delivers a standout vocal on Truckin' and brings early excitement that settles into solid rhythm later in the show.",
+    "Brent": "",
+    "Mickey": "Mickey’s drumming is praised for its looseness and power, contributing to the high‑energy feel of the Good Lovin'/Drums segment and overall drive.",
+    "Billy": "Billy’s drum work is prominent and loopy, lauded for its punchy presence that fuels jams like Truckin' and the late‑show flow."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-20T00:16:18.928223+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Smokestack Lightning"
+    ],
+    [
+      "Dancin' In The Street"
+    ],
+    [
+      "Saint Stephen",
+      "Not Fade Away",
+      "Goin' Down The Road Feeling Bad",
+      "Not Fade Away",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Truckin'"
+    ]
+  ]
+}

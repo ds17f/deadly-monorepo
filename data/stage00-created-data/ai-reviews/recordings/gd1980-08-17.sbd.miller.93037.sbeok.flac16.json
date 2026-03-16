@@ -1,0 +1,75 @@
+{
+  "summary": "A solid 1980 soundboard capture with Brent’s fresh keyboards and standout performances of Scarlet Begonias → Fire on the Mountain, plus tight renditions of Truckin' and Good Lovin'.",
+  "review": "The recording is a well‑balanced SBD that delivers clear, warm sound despite some early‑set glitches and occasional splices. Musically the show shines with a blazing Scarlet Begonias into Fire on the Mountain, solid Friend of the Devil, and tight, animated playing throughout, especially from Brent on keys and Jerry’s pedal work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and praise both the performance (standout songs, tight set) and the soundboard quality; only a few minor criticisms appear."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced with a nice mix; some listeners note early second‑set sound issues, splices, and occasional room‑tone quirks but overall the SBD is better than average."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Fire on the Mountain",
+      "Friend of the Devil",
+      "Samson",
+      "Truckin'",
+      "Good Lovin'",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as tight and well‑structured, with smooth transitions (especially Scarlet > Fire) and energetic moments despite a lack of long jams; early second‑set sound hiccups are noted but the overall pacing feels lively."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – praised for a crisp pedal accent after Scarlet Begonias, but one reviewer complained his guitar was thin in places.",
+    "Phil": "Initially thought missing, but heard clearly on Friend of the Devil; no major issues reported.",
+    "Bob": "",
+    "Keys": "Positive – Brent’s debut on keyboards is highlighted as a strong addition to the touring band.",
+    "Drums": "Drumming described as tight and animated, with notable drum breaks after Good Lovin' and during Truckin'."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T01:38:28.294420+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-08-17.sbd.miller.93037.sbeok.flac16"
+}

@@ -1,0 +1,52 @@
+{
+  "summary": "Nice‑sounding audience recording with a solid setlist, though opinions on the performance are split.",
+  "review": "The first reviewer praises the tape as a clear, well‑balanced audience recording where every song is played well and the setlist shines. The second review is far more critical, questioning song choices and noting missing suite elements, resulting in an overall mixed impression of the show. Recording quality is generally regarded as good, while musical reception varies.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "One glowing five‑star review highlights both performance and audio; a second zero‑star review is critical of the set, giving an average that lands in the low‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as 'real nice sounding' with a good balance between crowd ambience and band mix; no specific flaws mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "First reviewer calls the setlist solid and all songs well‑played; second reviewer notes odd placement of certain numbers (e.g., The Other One) and missing suite sections, giving a mixed view of flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T15:27:17.705700+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-13.senn.grabski.32021.sbefail.flac16"
+}

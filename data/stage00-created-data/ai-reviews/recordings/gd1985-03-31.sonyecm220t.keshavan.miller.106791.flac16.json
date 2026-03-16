@@ -1,0 +1,51 @@
+{
+  "summary": "An audience recording with surprisingly clear sound captures a relaxed show highlighted by an intense China Doll and a fiery Playing in the Band sequence.",
+  "review": "The crowd‑sourced tape is praised for its immaculate hall ambience after the opening songs, allowing every instrument – even Billy's tambourine – to be heard clearly. The band delivers a comfortably loose performance with standout moments on China Doll, Playing in the Band (and its reprise) and a spirited Day Tripper, despite a few flubs and editing quirks. Overall the set is deemed a keeper, though one brief 3‑star review offers no detailed criticism.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Strong musical performance with several highlighted jams and generally clear audience recording; limited data (only two reviews, one terse) keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note the hall sound becomes immaculate by the third song, with clear instrument separation and audible tambourine. Some edits and occasional flubs are mentioned, but overall the tape is considered listenable and a \"keeper.\""
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Doll",
+      "Playing in the Band",
+      "Day Tripper"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A relaxed, comfortable evening with no pressure; songs flow naturally and the band sounds totally at ease."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers an \"incredible screeching\" hoot owl meltdown and a “bad‑ass” raunched guitar tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drums are noted as solid throughout, contributing to the overall relaxed vibe."
+  },
+  "song_mentions": {
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Day Tripper": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:41:06.552435+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-31.sonyecm220t.keshavan.miller.106791.flac16"
+}

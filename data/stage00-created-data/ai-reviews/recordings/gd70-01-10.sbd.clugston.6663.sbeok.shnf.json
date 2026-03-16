@@ -1,0 +1,81 @@
+{
+  "summary": "Clean sound‑board capture of a classic ’70 show highlighted by an epic Lovelight and strong Black Peter performances.",
+  "review": "The recording is a generally clear sound‑board source with only occasional hiss or missing guitar runs, making it very listenable. Musically the show shines on Lovelight, Black Peter and Dire Wolf, displaying the band’s early‑70 folk‑rock vibe mixed with improvisational bursts. Overall the performance is praised by most reviewers despite a few comments about spotty sound quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ≈4.33 /5 across >20 reviews, with the majority highlighting strong musical moments and generally good sound‑board quality; only a few notes of poor audio pull the score down slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clean overall with very little hiss; some reviewers note occasional missing guitar runs and a brief “poor but listenable” segment, plus typical analog anomalies for the era."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lovelight",
+      "Black Peter",
+      "Dire Wolf"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set leans heavily on early‑70 folk material (Cold Rain, Me & My Uncle) while venturing into psychedelic jams; Lovelight serves as the high‑water mark and the band’s interplay—especially between Garcia and Lesh—is repeatedly praised."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocal drawl and guitar tone are lauded; his harmonies with Weir on Dire Wolf get special mention, though a few reviewers note missing runs in this version.",
+    "Phil": "Lesh’s “loping” bass is highlighted as complementing Garcia, and his interplay on Dire Wolf receives strong praise.",
+    "Bob": "Weir is described as earnest/young on Me & My Uncle; no major criticism noted.",
+    "Keys": "Tom Constanten (TC) gets a nod for his parts on Casey Jones and China Cat; otherwise keyboards aren’t discussed in detail.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dire Wolf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Turn On Your Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mason's Children": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T14:28:41.297328+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-01-10.sbd.clugston.6663.sbeok.shnf"
+}

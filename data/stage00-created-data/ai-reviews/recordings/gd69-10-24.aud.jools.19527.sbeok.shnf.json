@@ -1,0 +1,55 @@
+{
+  "summary": "Jerry’s soaring guitar shines through a thin, low‑mid‑focused recording, delivering a powerful set highlighted by “High Time” and the historic China Cat Sunflower > I Know You Rider sequence.",
+  "review": "The show is praised for high‑quality playing and memorable moments, especially Jerry Garcia’s cutting lead tone on “High Time” and the first‑time pairing of China Cat Sunflower into I Know You Rider.  The recording suffers from a lack of top end that makes it sound dated, but the overall punch keeps it listenable for fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the performance highly (average ~4.6) while noting clear deficiencies in the audio quality (average ~2.8); weighted combination yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Listeners note a thin, low‑mid‑heavy sound with missing top end; the recording is described as “low quality” and a possible turn‑off for those used to clearer tapes, though it remains listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Time",
+      "China Cat Sunflower > I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as timeless and powerful, with historic first‑time sequencing that adds excitement despite the audio limitations."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar cuts through everything and is highlighted as a major strength of the performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T17:30:50.395476+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-10-24.aud.jools.19527.sbeok.shnf"
+}

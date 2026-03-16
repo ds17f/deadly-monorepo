@@ -1,0 +1,81 @@
+{
+  "summary": "Good audience recording captures a standout Estimated > Uncle John’s transition, high‑energy post‑Space jams and strong Jerry guitar work.",
+  "review": "The show is praised for its unique moments – especially the Estimated Prophet → Uncle John's Band segue, the soaring post‑Space jam, and Jerry Garcia’s inspired licks (despite a humorous vocal flub on Promised Land). The audience‑recorded tape isn’t pristine but clears up after the opening and delivers an enjoyable listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Multiple 4‑5 star reviews highlight exceptional musical moments while noting only modest recording clarity issues; strong consensus yields a high confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Early portion a bit muffled, but sound clears up; overall decent audience mix with occasional minor noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Uncle John's Band",
+      "Space",
+      "Big River",
+      "Minglewood Blues",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Promised Land"
+    ],
+    "setlist_flow": "First set opens standardly but gains momentum at Big River; second set builds after Space into high‑energy jams, highlighted by the Estimated → Uncle John transition."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers memorable licks throughout and a funny vocal flub on Promised Land.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "J.B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T22:15:42.450615+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-05-01.glassberg.lutch.5917.sbeok.shnf"
+}

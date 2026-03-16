@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard capture of a top‑tier show featuring a standout Cryptical reprise and a vivid Uncle John’s Band.",
+  "review": "Reviewers rave about both the musical performance and the crystal‑clear soundboard recording. The concert is praised as “the real deal” with highlights like the Cryptical Envelopment reprise and an Uncle John’s Band that even sounds like it has a banjo/mandolin, while the audio is described as excellent throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All three reviews are strongly positive (5‑star and 4‑star) and specifically commend both the show’s performance and the recording quality, giving a clear consensus of an outstanding concert with excellent sound."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the soundboard “excellent” and “crisp,” noting no technical flaws or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cryptical Envelopment",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is described as consistently strong, with the Cryptical reprise and a richly textured Uncle John’s Band serving as high points; no pacing or set‑structure issues are mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T17:03:27.918345+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-03-01.sbd.ben.91.shnf"
+}

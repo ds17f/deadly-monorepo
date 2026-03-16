@@ -1,0 +1,108 @@
+{
+  "summary": "Soundboard capture with generally crisp audio (despite occasional NR patches) delivers a stellar Wichita ’11‑17 show highlighted by a blistering “The Other One” and soaring “He’s Gone”.",
+  "review": "This recording of the November 17, 1972 Wichita concert is mostly clear and well‑balanced, though a few listeners note a murky patch and noise‑reduction artifacts. Musically it shines – Jerry’s ferocious guitar, Keith’s jazzy forays, and Phil’s “Footprints”‑style bass drive the band through an unforgettable second set (He’s Gone → Truckin’ → The Other One → Brokedown Palace) with Bird Song, Cumberland Blues and Box of Rain as standout moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of detailed reviews are 4‑5 stars praising the performance (especially The Other One, He's Gone and Cumberland Blues) while noting only minor recording flaws; the strong show weight drives a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and clear soundboard mix; occasional murky audio patch, noise‑reduction artifacts, static/splices on some tracks, and minor speed/pitch issues noted by a few reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "He's Gone",
+      "Cumberland Blues",
+      "Bird Song",
+      "Box of Rain",
+      "Sugar Magnolia",
+      "Truckin'",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Jack Straw"
+    ],
+    "setlist_flow": "First set builds with Bird Song, Sugar Magnolia and rare Box of Rain; the second set launches with a scorching Cumberland Blues into He's Gone → Truckin' → The Other One → Brokedown Palace, providing a high‑energy arc that many reviewers cite as one of the year’s best."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for ferocious playing, soaring guitar tone, “underwater” filter effect and overall leadership on tracks like He's Gone and Cumberland Blues.",
+    "Phil": "Noted for a Miles Davis‑style bass line (“Footprints”) that adds jazz depth; solid ensemble work throughout.",
+    "Bob": "Highlighted for taking lead rhythm moments (e.g., Sugaree, Brown‑Eyed Women) and delivering strong vocal harmonies.",
+    "Keys": "Keith is commended for jazzy excursions (Round Midnight reference), finding his voice in the fall ’72 era and contributing to the improvisational texture.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "He's Gone": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T01:44:14.258614+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-11-17.sbd.warner.15982.sbeok.shnf"
+}

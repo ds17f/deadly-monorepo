@@ -1,0 +1,127 @@
+{
+  "summary": "A crisp soundboard capture of a mellifluous 1973 show, highlighted by soaring Big River, an epic Wharf Rat‑Mississippi‑Playing‑Mind Left Body‑He’s Gone‑Truckin' sequence and a breathtaking Morning Dew.",
+  "review": "Both reviewers rave about the musical flow—especially the second‑set marathon that strings together Wharf Rat, Mississippi Uptown, Playing, Mind Left Body, He's Gone and Truckin' into pure frisson. The soundboard source (Dick’s #14) is praised for its clarity, though a few pitch quirks and out‑of‑tune guitars are noted. Overall the performance feels loose yet inspired, with standout moments from Jerry’s lyrical guitar work and beautiful piano textures.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Two detailed reviews give strong positive scores (5 ★ and 4 ★) and highlight a superb second set; recording is described as crisp with only minor pitch issues, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Recorded from Dick's #14 soundboard copy – clear and well‑balanced, though a slight pitch correction is needed and a few guitars wander out of tune."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big River",
+      "Wharf Rat > Mississippi Uptown > Playing > Mind Left Body > He's Gone > Truckin'",
+      "Morning Dew",
+      "Stella Blue",
+      "Dire Wolf"
+    ],
+    "poor_songs": [
+      "Beat It On Down The Line",
+      "New Speedway",
+      "Dire Wolf (first‑set version)"
+    ],
+    "setlist_flow": "First set is described as slow and a bit lethargic, but the second set erupts into a high‑energy sequence that carries the show to its emotional climax."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is praised for depth and lyrical focus; occasional high‑note strain noted but not detrimental. Fires up on Brown‑Eyed Women, Big River and the second‑set jams.",
+    "Phil": "",
+    "Bob": "Vocals are described as less effective during this run, with noticeable issues in the first set.",
+    "Keys": "Piano is highlighted as beautiful and adds to the overall mellowness of the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mississippi Uptown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mind Left Body": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Nobody's Fault But Mine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Weather Report": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Beat It On Down The Line": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T03:48:12.006995+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-12-02.sbd.clugston.lai.4733.sbefail.shnf"
+}

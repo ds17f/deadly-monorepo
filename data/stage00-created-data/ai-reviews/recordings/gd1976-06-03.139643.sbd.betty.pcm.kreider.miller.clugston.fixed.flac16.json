@@ -1,0 +1,45 @@
+{
+  "summary": "High‑quality soundboard recording of a stellar June ’76 show with a sweet opener, standout Scarlet Begonias and an awesome Help>Slip>Franklin's sequence, though the matrix suffers a channel‑swap quirk.",
+  "review": "The performance is praised for its tight opening, a superb second set highlighted by Scarlet Begonias and a smoking Help > Slipknot! > Franklin’s Tower. Reviewers rave about the overall sound – crisp highs, deep bass and excellent mastering – but note a mild buzz and a channel‑swap issue in the matrix version. Overall the show shines despite the technical hiccup.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (stellar set, standout songs) and generally good soundboard quality offset by a notable channel‑swap problem; three reviews give consistent high praise with one technical complaint."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear high end and deep bass, mild buzz present; matrix version has channels swapped (Jerry on left, Mickey on right), which may affect stereo imaging for some listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Help on the Way > Slipknot! > Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opener described as sweet, second set called stellar; overall flow praised with strong transitions and energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Channel‑swap note mentions Mickey on the right in matrix version."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T03:06:36.736419+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-03.139643.sbd.betty.pcm.kreider.miller.clugston.fixed.flac16"
+}

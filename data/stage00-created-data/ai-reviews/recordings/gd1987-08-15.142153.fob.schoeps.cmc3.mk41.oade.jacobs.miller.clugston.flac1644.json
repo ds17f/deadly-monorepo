@@ -1,0 +1,31 @@
+{
+  "summary": "Great show with an unforgettable performance; recording source unknown and no specific audio comments.",
+  "review": "The reviewer attended the concert and describes it as a great, unforgettable experience, even mentioning meeting Bill Graham. No details are given about the sound quality or source of the recording, so the musical enjoyment is highlighted while technical aspects remain unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "One enthusiastic 5‑star review praises the show but provides no information on recording quality, leading to a strong positive bias for performance and an assumed average rating for audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about soundboard, audience mix, clarity, or other technical aspects were provided in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the concert as an unforgettable and enjoyable experience, indicating a generally strong performance despite lacking detail on individual songs or set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T01:59:37.161441+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-08-15.142153.fob.schoeps.cmc3.mk41.oade.jacobs.miller.clugston.flac1644"
+}

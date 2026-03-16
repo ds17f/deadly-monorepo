@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive information about the recording or performance is provided in the review.",
+  "review": "The lone review offers a personal anecdote without any commentary on sound quality, setlist, or musicianship, leaving both the recording and show qualities indeterminate. The 0‑star rating suggests disappointment, but no specific reasons are given.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 0‑star rating; lacks any concrete details about music or audio quality, so the rating is based solely on the low star count."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No comments on sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T08:48:21.168502+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-05-25.nak300.brockway.kennedy-williams.7600.shnf"
+}

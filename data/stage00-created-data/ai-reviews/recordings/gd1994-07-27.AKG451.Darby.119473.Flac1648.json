@@ -1,0 +1,88 @@
+{
+  "summary": "A vibrant 1994 show with standout jams and an audience recording that sounds a touch better than most AUDs.",
+  "review": "The concert shines thanks to a monster Corrina jam, an ecstatic Drums‑>Space‑>The Last Time sequence and Jerry Garcia sounding healthy and happy. Reviewers also note the band’s tight lock‑in with Vince Welnick on keys, making the performance feel fresh despite the modest audience source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical performance with many highlighted jams and solid playing; recording is an audience (AUD) capture that reviewers find slightly better than average, yielding a good overall listening experience."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as 'slightly better than the other AUDs' – clear enough to enjoy the jams while retaining typical audience ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Corrina",
+      "Drums > Space > The Last Time",
+      "Iko Iko",
+      "Walkin' Blues",
+      "Jack-A-Roe"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set offers solid highlights (HCS, Walkin' Blues, Jack‑A‑Roe, Let It Grow) while the second set expands into a 20‑minute Corrina jam and an exhilarating Drums/Space segment that lifts the entire show."
+  },
+  "band_member_comments": {
+    "Jerry": "Sounds healthy and happy; 'murders' the lyrics to HCS.",
+    "Phil": "",
+    "Bob": "Delivers a master class on Walkin' Blues and goes off during the Corrina jam.",
+    "Keys": "Band syncs tightly with Vince Welnick, adding extra sparkle.",
+    "Drums": "Wild Drums>Space segment that propels into a favorite The Last Time pairing."
+  },
+  "song_mentions": {
+    "HCS": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin' Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums > Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Around and Around": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T00:23:43.441622+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-27.AKG451.Darby.119473.Flac1648"
+}

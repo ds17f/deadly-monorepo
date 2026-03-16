@@ -1,0 +1,88 @@
+{
+  "summary": "Good matrix mix captures an energetic late‑80s show with standout performances of Sugaree, Let It Grow and a fun Throwing Stones → Lovelight transition.",
+  "review": "The recording is a well‑remastered matrix (about half audience, half soundboard) that sounds clear enough for most listeners, though some note a slight audience bias. Musically the concert is upbeat and tight – the first set shines with Sugaree, West L.A., Let It Grow and Don't Ease, while the second set kicks off strong with an Iko jam and a lively Throwing Stones → Lovelight segue. A few moments (Black Muddy River encore and a rushed Morning Dew) draw criticism, but overall it’s an enjoyable late‑80s Dead show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance and deem the matrix recording good; a few negatives lower the average but not enough to drop the rating below strong‑good."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Remastered matrix sounds roughly 50% audience, 50% soundboard; clear overall with some reviewers noting a slight audience dominance but no major dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "West L.A.",
+      "Let It Grow",
+      "Don't Ease",
+      "Throwing Stones",
+      "Lovelight",
+      "Iko"
+    ],
+    "poor_songs": [
+      "Black Muddy River",
+      "Morning Dew"
+    ],
+    "setlist_flow": "First set is upbeat and rollicking with strong song choices; second set opens with a punchy Iko jam and maintains momentum through a fun Throwing Stones → Lovelight transition, though the encore drags a bit."
+  },
+  "band_member_comments": {
+    "Jerry": "Awesome guitar work noted; vocal tone a little harsh/worn later in the night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West L.A.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Don't Ease": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Muddy River": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T21:53:13.567280+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-04-18.sbd.walker-scotton.miller.83732.sbeok.flac16"
+}

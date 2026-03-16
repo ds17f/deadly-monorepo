@@ -1,0 +1,64 @@
+{
+  "summary": "High‑quality soundboard capture of the April ’71 magic with a soaring Dark Star, superb Phil bass work and a standout Good Lovin' moment.",
+  "review": "The recording is a well‑restored 1971 soundboard tape that delivers clear instrument placement despite occasional hum and feedback squeaks. Musically the show shines in its second set – a powerful Dark Star, smoking China Cat Sunflower > I Know You Rider and a fiery Good Lovin' – while the first set is viewed as uneven. Overall fans rave about Garcia’s tone, Phil’s bass brilliance and the historic vibe of this early‑’71 performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Most reviewers (10/12) award 4–5 stars, praising both the musical intensity and the restored soundboard quality; only one review calls out a sloppy first set, keeping the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp mix with excellent instrument placement (Garcia right, Bobby left, Phil center). Minor hum in the right channel and occasional feedback squeak are noted, but overall the restoration work by Tim Diebert is praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Good Lovin'",
+      "China Cat Sunflower > I Know You Rider"
+    ],
+    "poor_songs": [
+      "G.S.E.T.",
+      "First Set (sloppy)"
+    ],
+    "setlist_flow": "A solid first set is described as uneven, but the second set lifts the show with an intense Dark Star and high‑energy jams, delivering the classic April ’71 momentum that many fans consider a peak period."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar tone is repeatedly highlighted as incredible and perfectly placed in the mix.",
+    "Phil": "Multiple reviewers call Phil’s bass performance among his best of ’70‑’71, noting his powerful, melodic lines.",
+    "Bob": "Bob Weir’s rhythm guitar is noted for being turned up and cutting through, especially in the second set.",
+    "Keys": "A possible second keyboard (electric piano) is heard on some tracks; fans speculate about Ned Lagin’s presence.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away > Good Lovin' > Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "G.S.E.T.": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T04:22:30.746630+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-08.sbd.deibert.83756.sbeok.flac16"
+}

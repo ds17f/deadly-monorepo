@@ -1,0 +1,31 @@
+{
+  "summary": "No details provided; the sole review is a brief query with zero stars, offering no insight into sound or performance.",
+  "review": "The only comment simply asks “donde esta” and gives a 0‑star rating, so there’s no information on the concert’s musical quality or the recording’s technical characteristics.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one 0‑star review with no substantive feedback; rating defaults to very low due to lack of positive indicators."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer provides no audio details, only asks where the recording is."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure or performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T16:36:21.766703+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-08-25.sbd.miller.bertha.93888.dvda"
+}

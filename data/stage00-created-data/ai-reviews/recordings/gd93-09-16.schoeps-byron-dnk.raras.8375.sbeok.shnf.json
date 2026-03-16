@@ -1,0 +1,91 @@
+{
+  "summary": "Excellent soundboard capture of a solid ’90s show highlighted by “Days Between” and “China Cat Sunflower”, though a few songs stumble.",
+  "review": "The recording delivers crisp, full‑bodied soundboard quality that lets Jerry’s clean tone shine, while the performance showcases strong moments like “Days Between,” “Lazy River,” and a superb “China Cat Sunflower → I Know You Rider” pairing. Mid‑set drifts with an overlong Drum/Space and a weak take of “Eyes of the World,” but the overall 90s material holds together well.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Show is generally strong with several standout songs, offset by a few weak performances; recording quality is praised as excellent, leading to an overall solid rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp and clean soundboard with deep low‑end, clear guitar and vocals; however the mix lacks crowd ambience making it feel isolated, and a few flubs introduce minor muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Days Between",
+      "China Cat Sunflower",
+      "Lazy River",
+      "Liberty",
+      "Easy Answers"
+    ],
+    "poor_songs": [
+      "Eyes of the World",
+      "I Know You Rider"
+    ],
+    "setlist_flow": "The first half rolls strongly with “China Cat Sunflower → I Know You Rider,” but drifts during an extended Drum/Space before picking up again; 90s material in the second set remains solid overall."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is praised for its clean, sharp tone and strong presence, though he falters on “Eyes of the World.”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The Drum segment is described as vapid and over‑indulgent, lacking energy."
+  },
+  "song_mentions": {
+    "Days Between": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy Answers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Childhood's End": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wave to the Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T17:01:17.637234+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-16.schoeps-byron-dnk.raras.8375.sbeok.shnf"
+}

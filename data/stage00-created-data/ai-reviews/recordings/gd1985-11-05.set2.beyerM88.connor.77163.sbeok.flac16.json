@@ -1,0 +1,31 @@
+{
+  "summary": "Fans recall a high‑energy show with great vibes, but the recording details are not discussed.",
+  "review": "The three reviewers all speak enthusiastically about the concert, noting its excitement and memorable moments (including an impromptu limo ride with sports legends). No comments address the source or sound quality of the tape, so the technical side remains unknown. Overall the show is remembered fondly despite the lack of specific musical highlights.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "All three reviewers gave high star ratings (5, 5, 4) and described a fun, energetic experience; however, no information on recording quality is provided, limiting confidence to medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentioned soundboard, audience mix, clarity, or any audio issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers did not comment on specific songs or set pacing; they emphasized overall excitement and a memorable backstage encounter."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T10:55:41.119943+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-05.set2.beyerM88.connor.77163.sbeok.flac16"
+}

@@ -1,0 +1,50 @@
+{
+  "summary": "Strong playing throughout with standout Bird Song and Ramble On Rose; mostly crystal‑clear soundboard tape though a few muffled sections.",
+  "review": "The concert is praised for its solid performance – the band sounds tight, especially on Bird Song and Ramble On Rose, and Jerry’s vocal tone is noted as kind. The soundboard recording is generally clear, but listeners report a muffled quality on some cuts and the US Blues track sounding more like an audience taping. Overall the show is enjoyable despite these minor sonic hiccups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly and cite strong playing; recording quality is mostly good with a few muffled moments, leading to an overall rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crystal‑clear sound for the majority of the set; US Blues sounds like an audience recording and some sections are described as muffled, indicating occasional mix issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Ramble On Rose"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid with a few gems; second set carries more steam and is considered the stronger half, resulting in an overall solid show."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as kind and generally on point despite mixed performance comments.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T16:50:13.347136+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-24.sbd.walker-scotton.miller.105854.flac16"
+}

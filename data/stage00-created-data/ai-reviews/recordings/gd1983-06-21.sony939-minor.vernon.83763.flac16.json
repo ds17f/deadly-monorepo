@@ -1,0 +1,42 @@
+{
+  "summary": "Review offers only a speculative comment on song order; no information on recording or performance quality.",
+  "review": "The lone review does not discuss the audio fidelity, source type, or overall musical execution of the concert. It merely proposes a personal theory about Jerry Garcia playing “Touch of Grey” before Bob Weir’s “Throwing Stones,” providing no concrete evaluation of either the show or the recording.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "low",
+    "rationale": "Only one brief, non‑evaluative review with a zero‑star rating; insufficient data to assess quality beyond a likely dissatisfaction."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No assessment of set structure or pacing was mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewer notes Jerry’s placement of “Touch of Grey” early in the set as part of a personal theory.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T07:45:32.769947+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-21.sony939-minor.vernon.83763.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent matrix recording that captures a solid 1990 European show highlighted by a soaring Jack Straw opener and a moving The Weight finale.",
+  "review": "The tape offers crystal‑clear sound with the perfect blend of soundboard clarity and audience ambience, giving listeners the feeling of being at Wembley.  Musically the concert is praised for its energetic opening with Jack Straw and an emotional close with The Weight, though reviewers note Jerry’s voice was a bit strained and the band was past their peak.  Overall it’s a well‑recorded, enjoyable performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Consistently high 4‑star reviews emphasize strong show moments and an outstanding matrix recording; weighted average of show (≈4) and recording (≈5) yields ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear as a bell with perfect soundboard‑plus‑audience balance; reviewers describe the audio as outstanding and question whether it is pure soundboard, indicating a superb mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "The Weight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong opening with Jack Straw and an emotionally resonant close with The Weight; overall set praised despite some vocal wear on Jerry."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice noted as 'shot' or strained, but his presence still celebrated.",
+    "Phil": "",
+    "Bob": "Bob Weir steps up vocally to compensate for Jerry's weakened voice.",
+    "Keys": "Mention of an added Hornsby factor (keyboard/organ texture).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T14:26:40.916232+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-10-30.nak300.andrewf.81706.flac16"
+}

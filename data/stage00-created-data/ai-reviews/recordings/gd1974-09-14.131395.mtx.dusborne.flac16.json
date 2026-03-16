@@ -1,0 +1,45 @@
+{
+  "summary": "Well‑patched matrix recording with prominent keyboards delivers a stellar show highlighted by a fantastic \"The Eyes\" and a tight Truckin' ending.",
+  "review": "Both reviewers rave about the performance, calling it an excellent 1974 show with standout moments like a superb \"The Eyes\" and a short but satisfying MLB after \"Truckin'.\" The matrix source is praised for solid patching and clear mixing, though the opening audience‑only tracks are described as a bit boomy and the keyboards sit high in the mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "High praise for musical performance (standout songs, grand set) combined with generally good matrix recording quality; limited to two detailed reviews, so confidence is low."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Matrix combines soundboard and audience; early AUD tracks are boomy, keyboards are high in the mix, but overall patching handles drop‑outs well and mixing is praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Eyes",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First few audience‑only tracks sound a bit boomy, but the show quickly settles into a strong flow with a tight Truckin' ending and an outstanding \"The Eyes\" performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keyboards are notably high in the mix, which reviewers found acceptable.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T00:31:06.839370+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-09-14.131395.mtx.dusborne.flac16"
+}

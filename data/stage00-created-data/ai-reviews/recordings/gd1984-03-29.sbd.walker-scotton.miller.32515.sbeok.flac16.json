@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard capture of a tight, small‑venue show highlighted by a rare Walkin' The Dog opener and an epic Spanish Jam",
+  "review": "The recording is a clean C‑Miller soundboard mix that lets listeners feel the intimacy of a 1,500‑person venue where Jerry was just three rows away. Musically the night shines with a rare Walkin' The Dog opener, a pounding Shakedown Street that launches a legendary 15‑minute Spanish Jam, and jaw‑dropping Garcia work despite a brief guitar dropout; only the Day Job encore draws criticism.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Four reviewers overwhelmingly praise the performance (three 5‑star, one 3‑star) and note solid soundboard quality; the weighted average yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "C‑Miller mix described as clear and crisp; no major dropouts or noise, faithful capture of venue ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Walkin' The Dog",
+      "Shakedown Street",
+      "Spanish Jam"
+    ],
+    "poor_songs": [
+      "Day Job"
+    ],
+    "setlist_flow": "A tight, high‑energy set in a small space; the rare Walkin' The Dog opener builds excitement, Shakedown Street launches an epic second set that culminates in a 15‑minute Spanish Jam, creating a memorable arc despite a weak Day Job encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewers were front‑row with Jerry, noting his colorful glasses and jaw‑dropping playing; his guitar briefly drops out during Shakedown but the groove stays strong.",
+    "Phil": "",
+    "Bob": "Bob is quoted saying \"voices tell me what to take,\" adding a humorous spoken moment.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Walkin' The Dog": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Spanish Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Day Job": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:50:06.582195+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-03-29.sbd.walker-scotton.miller.32515.sbeok.flac16"
+}

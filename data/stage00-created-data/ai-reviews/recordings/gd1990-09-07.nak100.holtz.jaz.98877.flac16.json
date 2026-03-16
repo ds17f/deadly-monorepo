@@ -1,0 +1,39 @@
+{
+  "summary": "Solid audience recording captures Richfield’s vibe, highlighted by a smoking 'Playing in the Band'.",
+  "review": "The fan‑recorded AUD does an excellent job of conveying the atmosphere of the Richfield show and sounds surprisingly clear for an audience tape. The performance is praised as a strong 1990 outing with Vince’s first appearance on keys and a standout, well‑jammed 'Playing in the Band'.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Review is uniformly positive about both the musical performance and the audience recording quality; limited to a single detailed review, so confidence is moderate."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Captures atmosphere well; solid clarity for an AUD with no major issues noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing In The Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall jam‑heavy show with good flow; the 'Playing in the Band' segment is highlighted as a peak moment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "First show featuring Vince on keyboards, noted positively.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T11:16:40.103449+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-07.nak100.holtz.jaz.98877.flac16"
+}

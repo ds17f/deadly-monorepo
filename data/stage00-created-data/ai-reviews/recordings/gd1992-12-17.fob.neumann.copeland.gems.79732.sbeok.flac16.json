@@ -1,0 +1,46 @@
+{
+  "summary": "A solid audience‑sourced recording with good overall playing; the finale’s “Music Never Stopped” shines while a brief “Here Comes Sunshine” feels restrained.",
+  "review": "The tape is praised as the best‑sounding of three audience recordings, delivering a consistently solid performance that works well for a road‑trip listen. Reviewers love the powerful “Music Never Stopped” ending, though one notes that “Here Comes Sunshine” feels short and less free‑flowing late in ’92. Overall the show is enjoyable despite the modest recording source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Two positive 4‑star reviews highlight solid playing and a standout finale, while one negative review criticizes a specific song; recording is deemed good but only audience‑sourced, leading to an overall rating just under 4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as the best sounding of three audience tapes; clear enough for casual listening but not a high‑fidelity soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Music Never Stopped"
+    ],
+    "poor_songs": [
+      "Here Comes Sunshine"
+    ],
+    "setlist_flow": "Generally solid and groovy throughout, with a powerful closing jam; the brief HCS segment is noted as less free‑flowing late in the ’92 era."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's contribution on keyboards receives a positive nod, cited as his “best credit” with the band.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:15:04.119611+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-12-17.fob.neumann.copeland.gems.79732.sbeok.flac16"
+}

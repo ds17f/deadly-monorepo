@@ -1,0 +1,57 @@
+{
+  "summary": "Strong first set; Days Between & Lazy River Road shine despite weak Scarlet>Fire",
+  "blurb": "The concert opens with a tight Hell In A Bucket and moves through solid staples before delivering standout performances of Days Between, Lazy River Road and Corinna in the second set. Scarlet Begonias → Fire On The Mountain is a low point, but the band recovers for an energetic finish including I Need A Miracle and Around & Around.",
+  "review": "April 8, 1994 at Miami Arena captures a spring‑94 Dead show that feels both familiar and surprising. Set 1 is praised for its high energy, with classics like Hell In A Bucket and Bird Song landing cleanly. The second set stumbles early – the Scarlet Begonias → Fire On The Mountain transition falls flat – yet the band quickly finds its groove. Highlights include a soaring Days Between (after a brief wobble), a soulful Lazy River Road and a joyous Corinna that showcase Jerry’s fire‑up guitar work and the group’s tight interplay. The audience recording (gd94-04-08.schoeps.ladner.10503.sbeok.shnf) is crisp and captures the concert’s vibe without drop‑outs, making it the preferred source despite an alternate set‑2 SBD that suffers a half‑step pitch shift.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.0,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 11,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.4,
+      "sentiment_rationale": "Mixed sentiment across recordings, but positive remarks about Days Between, Lazy River Road and Corinna outweigh the single negative note on Scarlet>Fire, yielding a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.4 = 3.0"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd94-04-08.schoeps.ladner.10503.sbeok.shnf",
+    "reason": "Audience capture is crisp and highlights the standout songs without major drop‑outs, making it the most enjoyable listening experience."
+  },
+  "key_highlights": [
+    "Days Between delivers a soaring second‑set performance after an early wobble.",
+    "Lazy River Road and Corinna stand out as high‑energy moments in set 2.",
+    "Scarlet Begonias → Fire On The Mountain is notably weak, but the band recovers quickly."
+  ],
+  "song_highlights": [
+    "Days Between",
+    "Lazy River Road",
+    "Corinna"
+  ],
+  "band_performance": {
+    "Jerry": "Incredible overall with a warm‑up tune; set 2 shows a brief wobble on Days Between before rallying.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-18T21:49:46.135827+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Corinna",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Days Between",
+      "Around & Around"
+    ],
+    [
+      "Lazy River Road"
+    ]
+  ]
+}

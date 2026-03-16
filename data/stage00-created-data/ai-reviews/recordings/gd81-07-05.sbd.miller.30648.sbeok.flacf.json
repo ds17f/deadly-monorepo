@@ -1,0 +1,89 @@
+{
+  "summary": "Clean soundboard capture of a tight early‑80s show highlighted by a smoking Shakedown and an epic Althea > Let It Grow sequence.",
+  "review": "The recording delivers a clear, full‑band mix that lets the band’s tight playing shine, despite occasional tape hiss and vocal flubs. Fans rave about the first‑set Shakedown, the Althea > Let It Grow pairing and the second‑set flow into Space → The Other One → Stella Blue, while noting lyrical slip‑ups that may distract some listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the musical performance and the soundboard quality; only minor criticisms (vocal flubs, tape hiss) keep the rating from the top tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clean mix with full band presence; occasional tape hiss between tracks and some vocal strain, but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Althea",
+      "Let It Grow",
+      "Don't Ease",
+      "Music Never Stopped",
+      "Space",
+      "The Other One",
+      "Stella Blue",
+      "Samson"
+    ],
+    "poor_songs": [
+      "Music Never Stopped"
+    ],
+    "setlist_flow": "The set builds smoothly from a slow, funky Shakedown into tighter jams; the second set maintains momentum with strong transitions (Althea → Let It Grow, Space → Other One → Stella Blue) and an overall relaxed yet energetic flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar described as pristine and on‑point, though a few lyrical flubs are noted.",
+    "Phil": "Praised for being “on fire” and staying in the groove throughout.",
+    "Bob": "",
+    "Keys": "Brent Mydland highlighted for his powerful backing vocals and keyboard contributions that added depth to the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Don't Ease": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:38:20.267098+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-07-05.sbd.miller.30648.sbeok.flacf"
+}

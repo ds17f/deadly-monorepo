@@ -1,0 +1,105 @@
+{
+  "summary": "Pitch‑off, slow soundboard recording of a shaky 1978 show; only the Estimated Prophet → Eyes of the World sequence shines.",
+  "review": "The Miller SBD suffers from noticeable pitch drift, missing vocal tracks and monitor problems that make the performance feel even more sluggish. Musically the concert is riddled with limp renditions – “Promised Land”, “Loser” and “Stagger Lee” are highlighted as train‑wrecks – but a few moments like the Estimated Prophet → Eyes of the World segue, a solid Big River and an energetic Sugar Magnolia provide brief relief.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.7,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it rates the show at ~1½ stars and flags serious recording flaws, leading to a low combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Runs slow with pitch errors (+2 % then +1 %), missing vocal track on Friend of the Devil (matrix needed), monitor problems on Promised Land, overall muddy and draggy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Eyes of the World",
+      "Big River",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Promised Land",
+      "Friend of the Devil",
+      "Loser",
+      "I Need a Miracle",
+      "Stagger Lee",
+      "Ship of Fools",
+      "Terrapin Station"
+    ],
+    "setlist_flow": "The set is fragmented and often limp; many songs sound confused or lifeless, with only a few bright spots providing any momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Adds chiming arpeggios on Estimated Prophet but loses the thread on Terrapin and other songs due to monitor issues.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:11:40.595559+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-09-15.sbd.miller.87782.flac16"
+}

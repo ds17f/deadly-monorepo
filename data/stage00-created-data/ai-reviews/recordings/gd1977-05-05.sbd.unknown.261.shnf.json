@@ -1,0 +1,39 @@
+{
+  "summary": "Great‑sounding soundboard recording of an enjoyable show, highlighted by a jam that segues into Fire.",
+  "review": "The three fan reviews praise the clear, strong sound quality of this soundboard source and note an exciting jam that flows into Fire. While two reviewers rate it highly (4–5 stars) and call it “great,” one gives a zero‑star rating, making the overall sentiment mixed. The only criticism concerns the odd track splitting of the jam/Fire segment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Two positive reviews highlight excellent sound and a solid performance; one negative rating lowers the average but lacks detail, leading to a generally favorable rating with moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the audio as 'great sound' and clear; no major mix issues noted aside from track‑splitting complaints."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised overall, though one reviewer objects to the way the jam into Fire is split into separate tracks, suggesting a more logical grouping would improve listening."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T22:43:14.736901+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-05.sbd.unknown.261.shnf"
+}

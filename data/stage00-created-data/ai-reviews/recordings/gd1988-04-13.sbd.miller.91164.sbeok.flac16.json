@@ -1,0 +1,115 @@
+{
+  "summary": "Excellent soundboard capture of a high‑energy 1988 Chicago run, highlighted by Jerry’s blazing solos and standout versions of Push Comes to Shove, Sugar Magnolia, Bertha and an unforgettable Morning Dew.",
+  "review": "The Miller‑sourced soundboard recording is crystal‑clear and even lets the cheering crowd shine through, a huge upgrade over previous muddy copies. Musically the show is tight and high‑octane – Jerry dominates with scorching leads, Brent adds his trademark vocal fire, and the band delivers memorable takes of Push Comes to Shove, Red Rooster, Sugar Magnolia, Bertha, Playing in the Band and a soaring Morning Dew. A few moments (Franklin’s Tower, Uncle John’s) fall short, but overall it’s an exhilarating snapshot of the spring‑’88 tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for both performance and sound quality across >10 reviews; recording is described as “incredible” while the show receives high marks for energy, solos and set flow."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear mix with minimal noise; captures crowd ambience nicely. No reported drop‑outs or major distortions – a marked improvement over earlier muddy copies."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Push Comes to Shove",
+      "Mississippi Half-Step Uptown Toodeloo",
+      "Feel Like a Stranger",
+      "Red Rooster",
+      "Sugar Magnolia",
+      "Bertha",
+      "Playing in the Band",
+      "Morning Dew",
+      "Touch of Grey"
+    ],
+    "poor_songs": [
+      "Franklin's Tower",
+      "Uncle John's Band"
+    ],
+    "setlist_flow": "Both sets are short but tightly packed, maintaining a high‑energy groove. Transitions (e.g., Playin' reprise into Space) feel natural and keep the momentum rolling."
+  },
+  "band_member_comments": {
+    "Jerry": "Dominates the night with loud, emotive solos; praised for “cranking” his tone, wailing on Morning Dew, and leading powerful jams.",
+    "Phil": "Bass is noted as thin in the mix and not a favorite of reviewers; its presence feels lacking compared to other instruments.",
+    "Bob": "Vocals are enthusiastic – slurring lyric on Queen Jane, wild yelling on Bertha and Uncle John’s, adding fun character throughout.",
+    "Keys": "Brent Mydland delivers heavy distortion, rap‑style vocals (“curses up a storm”), and strong keyboard presence; widely praised.",
+    "Drums": "Bill Kreutzmann and Mickey Hart are described as “perfect sync” and “in solid lockstep,” providing a reliable rhythmic foundation."
+  },
+  "song_mentions": {
+    "Push Comes to Shove": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mississippi Half-Step Uptown Toodeloo": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Red Rooster": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Queen Jane Approximately": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T08:43:58.262659+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-13.sbd.miller.91164.sbeok.flac16"
+}

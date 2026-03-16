@@ -1,0 +1,51 @@
+{
+  "summary": "Crystal‑clear audience tape of a stellar Garden show featuring Bruce Hornsby’s debut, highlighted by Box of Rain, The Weight and a fiery Gimme Some Lovin'.",
+  "review": "The three five‑star reviews rave about an exceptionally crisp audience recording that captures the energy of the Dead’s September 1990 Garden concert.  Highlights include Bruce Hornsby stepping in after Brent Mydland with a soulful take on “Gimme Some Lovin’,” plus classic moments like “Box of Rain” and “The Weight.”  Jerry’s slightly weathered voice is noted but never detracts from the overall excitement.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.9,
+    "confidence": "high",
+    "rationale": "All three detailed reviews give 5‑star ratings, praising both performance (standout songs, Bruce Hornsby’s debut) and recording quality (crisp audience tape).  The consensus is overwhelmingly positive."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the tape \"really crisp\" and \"straight‑on perfection,\" noting clear instrument separation; only minor comment about Jerry's voice sounding weathered."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "The Weight",
+      "Gimme Some Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Show is praised for its high energy and smooth flow, with the new keyboardist adding fresh vocal flavor; no specific pacing issues mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice a bit weathered but he soldiers through the performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Post‑Brent era; Bruce Hornsby fills in on keyboards and sings “Gimme Some Lovin’,” though reviewers note it lacks Brent's B‑3 soulfulness.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T12:14:11.595264+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-15.bk4011.tdarian.french.88946.sbeok.flac16"
+}

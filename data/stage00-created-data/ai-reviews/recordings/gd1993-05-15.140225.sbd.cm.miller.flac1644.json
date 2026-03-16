@@ -1,0 +1,39 @@
+{
+  "summary": "Good‑quality recording of a fun Vegas run, highlighted by an epic 15‑minute Bird Song jam.",
+  "review": "Both reviewers note that the show is a solid Vegas outing with a standout 15‑minute Bird Song stretch. Phil Lesh’s thunderous bass and Jerry Garcia’s sudden re‑entry during the jam are praised, while no major recording flaws are reported, resulting in an overall mixed but positive impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Two reviews (one 3‑star, one 4‑star) focus on strong musical moments and give no recording complaints; the show is viewed as good but not exceptional, leading to a mid‑high rating with moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on sound quality; reviewers could hear instrument details (bass thunder, guitar re‑entry), suggesting a clear and listenable source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A playful 'Playin'' sandwich leads into an extended Bird Song jam, followed by a solid second set with The Days Between and an LSD encore; overall a fun, well‑paced Vegas performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Abrupt, powerful re‑entry into the Bird Song jam is highlighted.",
+    "Phil": "Bass described as thunderous throughout, dropping bombs in the Bird Song section.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T12:32:52.038067+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-05-15.140225.sbd.cm.miller.flac1644"
+}

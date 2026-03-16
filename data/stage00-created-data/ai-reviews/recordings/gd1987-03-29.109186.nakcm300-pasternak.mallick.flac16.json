@@ -1,0 +1,31 @@
+{
+  "summary": "Recording suffers from dropouts and receives a poor rating; no musical highlights are mentioned.",
+  "review": "The sole reviewer notes a dropout (“dropped one here”) and gives the recording a zero‑star rating, indicating a negative listening experience. No comments on the band's performance or setlist are provided, leaving the show quality undefined.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a zero‑star rating and a complaint about a dropout; insufficient data for higher confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer mentions a dropout in the audio, suggesting significant recording issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T20:05:32.820922+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-29.109186.nakcm300-pasternak.mallick.flac16"
+}

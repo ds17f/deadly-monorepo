@@ -1,0 +1,82 @@
+{
+  "summary": "High‑energy 1978 Boston show captured on a very good audience (AUD) tape with standout Half Step→Franklin’s, Peggy‑O and a scorching Tennessee Jed.",
+  "review": "The performance is praised for its raw energy, especially the blistering Half Step→Franklin’s sequence, a gorgeous Peggy‑O ballad and a fiery Tennessee Jed. The AUD recording is generally rated as good to excellent – clear enough to enjoy the crowd ambience while still delivering solid instrument balance, though a few reviewers note occasional tape hiss or slight sluggishness on Franklin’s.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers (12 of 15) give 4‑5 stars and highlight many musical high points; recording quality is repeatedly called excellent or very good, giving a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers call the AUD tape \"excellent\" or \"best of ’78\", noting clear crowd ambience and decent instrument separation. A few mention typical era tape hiss and a slightly sluggish Franklin’s, but overall the sound is listenable and lively."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step > Franklin's",
+      "Peggy-O",
+      "Jack Straw",
+      "Tennessee Jed",
+      "Black Peter > Playin' Reprise",
+      "Everybody Polka! (Mexicali)",
+      "Sampson"
+    ],
+    "poor_songs": [
+      "Franklin's (flubbed lyrics / slower version)"
+    ],
+    "setlist_flow": "The first set is described as a bit tepid by some, but the second set erupts with high‑octane jams – Half Step into Franklin’s, extended Playin' transitions and a rousing round‑and‑round finale that lifts the crowd."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly noted as \"ON\", delivering scorching solos on Peggy-O and Franklin’s; guitar energy drives the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's piano work is highlighted as rare and excellent, especially in the first set.",
+    "Drums": "Drummers receive praise for tight transitions (Playin' > Drums > Black Peter) and a solid second‑set groove."
+  },
+  "song_mentions": {
+    "Half Step > Franklin's": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Peggy-O": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Everybody Polka! (Mexicali)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter > Playin' Reprise": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sampson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T16:05:41.578349+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-11-13.aud.wiley.11483.sbeok.shnf"
+}

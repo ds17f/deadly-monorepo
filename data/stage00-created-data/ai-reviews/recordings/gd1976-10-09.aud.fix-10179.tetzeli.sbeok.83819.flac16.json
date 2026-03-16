@@ -1,0 +1,88 @@
+{
+  "summary": "High‑fidelity matrix recording of a 1976 show featuring a soaring Jerry solo on Franklin’s Tower and standout sets despite a few out‑of‑tune moments.",
+  "review": "The performance is widely praised – the second set shines with a fiery Franklin’s Tower solo, blistering Scarlet Begonias, and a classic St. Stephen > Not Fade Away sandwich, while the first set delivers solid jams though some tunes drift off‑pitch. The fix‑10179 matrix source offers excellent fidelity (the best of the available AUDs) with only minor gaps such as missing drum tracks in one version.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers highlight strong musical moments and a good‑quality matrix recording; the weighted average of show (≈4.5) and recording (≈4) yields a solid 4.3."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Matrixed second set with soundboard‑derived fidelity; noted as the most complete and clearest AUD available, only missing some drum tracks in one version."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Scarlet Begonias",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "St. Stephen > Not Fade Away > St. Stephen",
+      "They Love Each Other",
+      "New Minglewood Blues",
+      "Sugaree"
+    ],
+    "poor_songs": [
+      "Half Step",
+      "Looks Like Rain"
+    ],
+    "setlist_flow": "First set runs over two hours with solid jams but occasional tuning slips; second set is a high‑energy highlight, featuring tight transitions and extended improvisations."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for an epic solo on Franklin's Tower, forceful playing on New Minglewood Blues, and fireworks on Scarlet Begonias.",
+    "Phil": "Noted as great on Sugaree; overall bass work praised in several jams.",
+    "Bob": "",
+    "Keys": "Keith (keyboard) highlighted for brilliant work on They Love Each Other and other intricate passages.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen > Not Fade Away > St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half Step": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T08:15:14.984189+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-10-09.aud.fix-10179.tetzeli.sbeok.83819.flac16"
+}

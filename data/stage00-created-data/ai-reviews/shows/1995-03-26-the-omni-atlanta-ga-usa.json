@@ -1,0 +1,70 @@
+{
+  "summary": "Soaring Estimated Prophet and epic Other One → Morning Dew with mixed first set",
+  "blurb": "The second set shines with a soaring Estimated Prophet and an electrifying The Other One → Morning Dew. Jerry delivers powerful leads on the jams but slips on Terrapin Station and Crazy Fingers in the first set. Overall the show is solid despite uneven moments.",
+  "review": "On March 26, 1995 at The Omni, the Dead delivered a night of highs and lows that still holds interest for fans. The first set rolled through familiar terrain—Cold Rain And Snow, Little Red Rooster, Ramble On Rose—and gave us a sweet Lazy River Road that many reviewers praised for its melodic lift. Unfortunately, the set was marred by a sloppy Terrapin Station and a tentative Crazy Fingers, where Jerry’s guitar seemed to miss verses and lose some of his usual dexterity.\n\nThe real magic erupted in the second set. A tight Samson & Delilah opened the way into an expansive jam that built through It’s All Too Much into a blistering Estimated Prophet, which reviewers called “soaring.” From there the band launched into a thunderous The Other One → Morning Dew sequence that was described as “electrifying” and “unforgettable,” with Jerry’s vocal intensity and guitar work soaring over a psychedelic drums‑>space bridge. The night closed on a high‑energy Johnny B. Goode, leaving the audience buzzing despite the occasional rough spots earlier in the show.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.9,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 28,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Two recordings were clearly positive (highlighting Estimated Prophet, Lazy River Road, Other One > Morning Dew) while one was mixed. The predominance of praise for the second‑set jams and overall solid performance yields a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.2 = 3.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1995-03-26.sbd.tetzeli.fix-3909.34935.shnf",
+    "reason": "Good‑quality soundboard capture with clear mix, praised for sweet clarity and the standout Other One → Morning Dew sequence."
+  },
+  "key_highlights": [
+    "Estimated Prophet – a soaring, high‑energy performance that lifts the second set.",
+    "The Other One → Morning Dew – an electrifying, psychedelic jam highlighted by a tight drums→space transition.",
+    "Lazy River Road – melodic and memorable, cited as a highlight of the first set.",
+    "Johnny B. Goode – a rousing encore that ends the night on a high note."
+  ],
+  "song_highlights": [
+    "Estimated Prophet",
+    "The Other One",
+    "Morning Dew",
+    "Eternity",
+    "Lazy River Road",
+    "Johnny B. Goode"
+  ],
+  "band_performance": {
+    "Jerry": "Powerful on Estimated Prophet and The Other One, delivering soaring leads and intense vocals on Morning Dew; however his playing slips on Terrapin Station and Crazy Fingers, missing verses and showing reduced dexterity.",
+    "Phil": "",
+    "Bob": "",
+    "Vince": "Vocals are a bit forward in the mix, which some listeners found slightly over‑present, but otherwise no major keyboard issues noted.",
+    "Mickey": "Alongside Bill, provides a tight, psychedelic drums→space bridge that fuels the second‑set momentum.",
+    "Billy": "Delivers solid drumming throughout; together with Mickey creates the standout rhythmic flow into The Other One."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-19T06:54:26.986724+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "It's All Too Much",
+      "Crazy Fingers",
+      "Estimated Prophet",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Morning Dew"
+    ],
+    [
+      "Eternity",
+      "Don't Ease Me In"
+    ],
+    [
+      "Lazy River Road"
+    ],
+    [
+      "Johnny B. Goode"
+    ]
+  ]
+}

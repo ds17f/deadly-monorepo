@@ -1,0 +1,57 @@
+{
+  "summary": "Crisp sound‑board recording of the March 17 1995 Philly Spectrum show captures a high‑energy set with standout Lucy and St. Oliver’s, but Garcia’s uneven playing makes the performance mixed.",
+  "review": "The SBD source is clean and well balanced, delivering a bright, crisp listening experience despite occasional audience bass‑heavy bleed that some older AUD copies suffered. Musically the night shines on the “Lucy in the Sky With Diamonds” encore and a lively St. Oliver’s, yet several reviewers note Garcia sounding tired or off‑key, which drags the overall impact to a mixed level.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised (good–excellent), but show performance receives both strong and weak comments, yielding an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear mix with solid instrument separation; occasional bass‑heavy ambience noted but does not detract from overall enjoyment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lucy in the Sky With Diamonds",
+      "St. Oliver’s (The)",
+      "China Cat Sunflower",
+      "Truckin' > Not So Bad"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set tight and energetic, though some find it bland; Lucy encore lifts the momentum before a respectable second set that never quite matches the strong song choices."
+  },
+  "band_member_comments": {
+    "Jerry": "Early reviewers describe him happy and ripping it up, but several note he sounded wiped out, sloppy or \"nearly MIA\" this night.",
+    "Phil": "His vocals are highlighted as loud, warm and a key element that helped hold the show together when Garcia struggled.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drummers' attempts to adjust tempo are mentioned; at times they clash with Jerry’s feel, briefly slowing him down."
+  },
+  "song_mentions": {
+    "Lucy in the Sky With Diamonds": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Oliver’s (The)": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin' > Not So Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T05:40:17.890921+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-03-17.sbd.16057.sbeok.shnf"
+}

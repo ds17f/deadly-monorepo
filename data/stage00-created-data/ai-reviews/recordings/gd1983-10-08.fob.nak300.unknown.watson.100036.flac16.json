@@ -1,0 +1,51 @@
+{
+  "summary": "A lively West L.A. show captured on a solid fan recording, highlighted by a standout Crazy Fingers jam and strong second‑set energy.",
+  "review": "The performance is generally praised for its lively vibe and tight jamming, especially the delicate Crazy Fingers solo and an unexpected James‑Bond‑style interlude in the second set. Reviewers note the recording sounds great – clear enough for headphone listening and considered the best downloadable version of this concert – making it a worthwhile listen despite one reviewer’s initial lukewarm impression.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All three reviewers gave 4‑5 stars and emphasized strong playing and good sound quality; the weighted average of show (70%) and recording (30%) yields a rating in the high‑4 range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the audio as \"great\" and the best downloadable version, with no complaints about dropouts or muddiness; overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Deal",
+      "Cassidy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is noted as lively, with a particularly enjoyable second set that features strong jams and a surprising James‑Bond‑style interlude."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Mention of a James‑Bond theme played by Bobby (likely Bob Weir) noted as a nice surprise.",
+    "Keys": "Crazy Fingers solo praised for its delicate quality, highlighting the keyboard work.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T11:02:58.471140+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-08.fob.nak300.unknown.watson.100036.flac16"
+}

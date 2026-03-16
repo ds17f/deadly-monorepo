@@ -1,0 +1,60 @@
+{
+  "summary": "Scarlet>Fire jam shines despite a dull first set",
+  "blurb": "The second set delivers a soaring Scarlet Begonias into Fire on the Mountain duet that lifts the night, while the first set feels flat and unremarkable. Highlights include Estimated Prophet flowing into Eyes of the World and a heartfelt Wharf Rat closer. The audience recording is muddy but captures the energy.",
+  "review": "December 22, 1978 at the Dallas County Convention Center Arena finds the Dead in a mixed mood. The opening set drifts through familiar terrain—Shakedown Street, Me And My Uncle, Big River and the like—but many listeners describe it as lackluster, lacking the spark that usually drives a first half. The real magic erupts once the band launches into Scarlet Begonias, with Jerry’s tone “taking Scarlet out there,” spiraling into an expansive Fire on the Mountain jam that salvages the evening. From there the second set rolls forward: a warm rendition of From The Heart Of Me gives way to a fluid Estimated Prophet > Eyes Of The World segue, before the dual drummers lock in for Not Fade Away and a soulful Wharf Rat finale. Though the only available source is a fair‑quality audience tape with muddy mids and occasional cuts, it still conveys the excitement of that second‑set surge. Fans looking for the standout moment should cue directly to Scarlet Begonias → Fire on the Mountain.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.9,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 16,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.3,
+      "sentiment_rationale": "The single analysis labels the sentiment as mixed, noting a dull first set but praising the second‑set Scarlet>Fire jam and overall flow. This yields a modest positive adjustment rather than strong praise or criticism.",
+      "final_calculation": "2.5 + 0.1 + 0.3 = 2.9"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd78-12-22.aud.cotsman.14562.sbeok.shnf",
+    "reason": "Only available source; despite muddy audience sound it captures the standout Scarlet>Fire jam and full second‑set flow."
+  },
+  "key_highlights": [
+    "Stellar Scarlet Begonias → Fire on the Mountain jam that lifts the night",
+    "Smooth Estimated Prophet into Eyes of the World transition",
+    "Emotive Wharf Rat close to end the show",
+    "First set considered flat, but second set delivers strong momentum"
+  ],
+  "song_highlights": [
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "Estimated Prophet",
+    "Eyes Of The World",
+    "Wharf Rat"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s guitar on Scarlet Begonias is highlighted for its bright tone and adventurous lead that propels the jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keith": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-25T17:49:47.767775+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Scarlet Begonias",
+      "Fire On The Mountain"
+    ],
+    [
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Not Fade Away",
+      "Wharf Rat"
+    ]
+  ]
+}

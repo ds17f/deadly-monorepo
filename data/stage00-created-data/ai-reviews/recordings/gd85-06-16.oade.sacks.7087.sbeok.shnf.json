@@ -1,0 +1,88 @@
+{
+  "summary": "A solid audience tape with clear mix that captures a historic Greek Theatre show highlighted by the Cryptical → The Other One → Cryptical sequence and strong blues‑rock set.",
+  "review": "This recording delivers a surprisingly clean audience sound—vocals sit forward, guitars sparkle and the mix is balanced enough to hear Brent’s keyboard harmonies. Musically the concert is a fan favorite: the long Cryptical/Other One sandwich, blistering Scarlet Fire, tight Big Railroad Blues and a soaring Looks Like Rain make it one of ’85’s standout nights. Minor flaws such as a rough vocal on Tennessee Jed or a lukewarm Midnight Hour don’t diminish the overall excitement.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "22 reviews overwhelmingly rate the show 4‑5 stars, praise both performance and recording; only a single zero‑star outlier and a few minor criticisms keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Decent mix with emphasis on vocals and leads; overall crystal‑clear for an audience tape, though bass is a bit thin and occasional vocal roughness noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cryptical Envelopment",
+      "The Other One",
+      "Big Railroad Blues",
+      "Looks Like Rain",
+      "Scarlet Fire",
+      "Half Step",
+      "Bertha"
+    ],
+    "poor_songs": [
+      "Midnight Hour",
+      "Tennessee Jed"
+    ],
+    "setlist_flow": "A relaxed Sunday afternoon start, blues‑heavy first set (Big Railroad Blues, Looks Like Rain) that builds into an epic second set centered on the historic Cryptical → Other One sandwich, capped by high‑energy numbers like Scarlet Fire and Bertha."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise his ferocious soloing and guitar tone; vocals are occasionally rough (Tennessee Jed) but fit the vibe.",
+    "Phil": "His bass “bombs” on The Other One are highlighted as a major high point, with early Phil bomb intro receiving special mention.",
+    "Bob": "",
+    "Keys": "Brent’s harmonizing and keyboard work on Scarlet Fire, Half Step and Looks Like Rain receive strong commendations.",
+    "Drums": "Bill's tight drumming noted especially in the pre‑Goin' Down the Road intro; overall rhythm section described as “incredibly tight.”"
+  },
+  "song_mentions": {
+    "Cryptical Envelopment": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "The Other One": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Midnight Hour": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T05:02:10.384185+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-06-16.oade.sacks.7087.sbeok.shnf"
+}

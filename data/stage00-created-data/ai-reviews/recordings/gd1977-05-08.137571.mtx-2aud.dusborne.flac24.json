@@ -1,0 +1,39 @@
+{
+  "summary": "Good‑quality audience recording captures a chilling Deal solo with Jerry in top form.",
+  "review": "The audience tape is surprisingly clear for its type, letting listeners hear the powerful, chilling solo on \"Deal\" that showcases Jerry Garcia at his best. Reviewers praise the performance and note the overall good quality of this fan‑recorded show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Single 5‑star review highlights an excellent performance (especially Jerry's solo) and a decent audience recording; limited data lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Review mentions good quality for an audience recording, indicating clear enough sound despite typical crowd ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; review focuses on the Deal solo."
+  },
+  "band_member_comments": {
+    "Jerry": "Solo described as \"absolutely chilling\" and Jerry called a \"force\".",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T00:04:40.587897+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-08.137571.mtx-2aud.dusborne.flac24"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "Crystal‑clear audience AUD captures a fiery 1986 Hampton show – Jerry’s scorching China Cat > Rider and soaring Visions of Johanna lead the way.",
+  "review": "The recording is an outstanding AUD capture with vivid clarity, letting listeners hear every nuance of Jerry’s guitar fire and the band’s tight interplay. Musically the concert is a highlight of the spring‑86 run – China Cat Sunflower > I Know You Rider, Stagger Lee and Playin’ in the Band are repeatedly praised, while a few slower Dylan covers are viewed as energy dips. Overall the performance outweighs any minor tape quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews (15/18) are 4‑5 stars, praising both the show and the audio; only a few note minor song‑level complaints, giving an overall strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly call the sound \"crisp\", \"clear\" and \"phenomenal\" for an AUD source; occasional mentions of mic hiccups or tape hiss but no serious drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Visions of Johanna",
+      "Stagger Lee",
+      "Playin' in the Band"
+    ],
+    "poor_songs": [
+      "She Belongs to Me"
+    ],
+    "setlist_flow": "The set flows smoothly, with a tight three‑song opening to the second set and high‑energy jams that keep momentum through the night; only a few slower Dylan covers are felt to dip the energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for \"smoking\" and \"attacking\" his guitar on Visions, China Cat, Stagger Lee and Playin'; described as tight, snappy and soaring.",
+    "Phil": "Bass noted as \"blasting hard and clean\", providing a solid foundation throughout the show.",
+    "Bob": "Caught a string break and mic trouble during Truckin', but his rhythm work with Jerry is highlighted as a strong pairing.",
+    "Keys": "",
+    "Drums": "Mickey’s subtle tambourine addition on Visions noted; overall drumming described as powerful and steady."
+  },
+  "song_mentions": {
+    "Visions of Johanna": {
+      "positive_mentions": 4,
+      "negative_mentions": 2,
+      "total_mentions": 6
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "She Belongs to Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T13:00:11.072447+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-03-19.sony.lai.3905.sbefail.shnf"
+}

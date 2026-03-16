@@ -1,0 +1,69 @@
+{
+  "summary": "A vibrant Laguna Seca ’88 audience recording that captures the magic of Victim, Knockin’ on Heaven’s Door and an ecstatic crowd vibe.",
+  "review": "The tape is a surprisingly clear audience (AUD) capture of the sweltering July‑1988 Laguna Seca run, with most reviewers praising its fidelity despite a missing “Don’t Ease Me In” track. Musically the show shines – Victim, Knockin’ on Heaven’s Door, Estimated Prophet and the China‑Crazy Fingers‑Rider sequence are repeatedly called out as highlights, while the double encore adds extra joy. Overall sentiment is overwhelmingly positive, with only a few mixed notes about specific song mixes.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviews rate the show 4‑5 stars and extol both performance and recording quality; the weighted average (70 % show, 30 % recording) yields a solid 4.2 rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp AUD tape with excellent front‑of‑house balance; occasional missing track (Don’t Ease Me In) and minor drop‑outs noted, but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Victim",
+      "Knockin' on Heaven's Door",
+      "Estimated Prophet",
+      "China > Crazy Fingers > Rider",
+      "Touch of Grey",
+      "Smoke Stack Lightnin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe a high‑energy first set that builds into an emotional second set, highlighted by Victim and a double encore; the heat and camping atmosphere are repeatedly mentioned as part of the magic."
+  },
+  "band_member_comments": {
+    "Jerry": "Frequently noted smiling and inspired playing; praised for his tone on Knockin' and Victim.",
+    "Phil": "Briefly referenced in one review with playful “We Want Phil” comment; no detailed critique.",
+    "Bob": "",
+    "Keys": "Brent’s early keyboard fills are highlighted as helping the band lock in; overall keyboards appreciated.",
+    "Drums": "Mixed remarks – some describe the drums as choppy or ‘cacophony of slots’, others enjoy the driving rhythm."
+  },
+  "song_mentions": {
+    "Victim": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "China > Crazy Fingers > Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Smoke Stack Lightnin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T12:17:00.240327+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-07-30.nak700-reutelhuber.miller.21092.sbeok.shnf"
+}

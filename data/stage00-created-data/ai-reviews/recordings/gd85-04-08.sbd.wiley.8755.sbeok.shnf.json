@@ -1,0 +1,104 @@
+{
+  "summary": "High‑energy 4/8/85 Spectrum show captured on a lively audience‑heavy mix; crisp instrumentals and a killer first‑set trio (Midnight Hour, Walking the Dog, Big Boss Man) dominate despite ragged vocals.",
+  "review": "The performance is widely praised for its exuberant playing – the opening three‑song burst (Midnight Hour → Walking the Dog → Big Boss Man), a smoking Cumberland, Althea and an inspired Estimated→Eyes sequence make this one of the tour’s highlights.  The recording, while technically an audience‑heavy mix rather than a pure soundboard, is clear on instruments though vocals are thin and Jerry’s voice sounds rough in places.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and celebrate its energy and setlist; recording quality is generally good though not pristine, yielding an overall strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Instrumental balance is clear and lively; some reviewers note thin bass, occasional vocal weakness and a slightly muffled mix, but the audience ambience adds excitement."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Midnight Hour",
+      "Walking the Dog",
+      "Big Boss Man",
+      "Cumberland",
+      "Althea",
+      "Tons of Steel",
+      "Estimated > Eyes (GDTRFB)",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Revolution",
+      "Touch"
+    ],
+    "setlist_flow": "First set is described as a fire‑starter with a rare three‑song burst and strong jams; second set contains mixed moments – a clunky Revolution but recovers with Bucket, Estimated>Eyes and a soaring Lovelight finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice sounds ragged/ill from a cold, yet his guitar work is praised as 'on fire' on the Midnight Hour/Walking the Dog/Big Boss Man trio and during solos in Estimated.",
+    "Phil": "",
+    "Bob": "Bobby’s bluesy intro into GDTRFB and his energetic playing (including the famous fall) are highlighted; his contributions to Bottom>Superstitious receive kudos.",
+    "Keys": "Brent's keyboard jams (Supplication, Tons of Steel) add flavor; occasional mention of a heavy audience‑mix feel on keys.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Midnight Hour": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Walking the Dog": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Big Boss Man": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Cumberland": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Althea": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Tons of Steel": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Estimated > Eyes (GDTRFB)": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Lovelight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Revolution": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Bottom > Superstitious": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T03:34:22.823359+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-08.sbd.wiley.8755.sbeok.shnf"
+}

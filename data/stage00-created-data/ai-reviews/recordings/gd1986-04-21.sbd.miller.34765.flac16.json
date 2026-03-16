@@ -1,0 +1,90 @@
+{
+  "summary": "Solid 1986 soundboard recording with a strong first set and the standout Estimated > Eyes > Jam > Maybe You Know sequence, though Brent’s keyboard work divides opinion.",
+  "review": "The show captures a classic early‑'86 vibe: a tight first set highlighted by Row Jimmy and an explosive Estimated‑Eyes‑Jam‑Maybe You Know segue that many fans rave about. The soundboard source is generally clear and well balanced, but occasional muddiness and Brent’s erratic keyboard playing give the performance a mixed edge.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the musical performance and the soundboard quality, with only a few strong criticisms of Brent’s playing; overall rating falls in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced soundboard capture, with occasional muddiness in the second set but no major dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated > Eyes > Jam > Maybe You Know",
+      "Row Jimmy",
+      "Not Fade Away",
+      "Don't Ease Me In",
+      "1/2 Step > El Paso"
+    ],
+    "poor_songs": [
+      "Maybe You Know (keyboard issues)"
+    ],
+    "setlist_flow": "First set flows smoothly with strong vocal harmonies and tight playing; second set is energetic but a bit uneven due to keyboard inconsistencies, yet still delivers memorable transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and lead work are praised throughout, with occasional vocal cracks early in the set but overall refreshed performance.",
+    "Phil": "Lesh’s bass is highlighted for its groove and backing vocals, especially on Row Jimmy and Brother Esau.",
+    "Bob": "Weir receives a brief nod for energizing Desolation Row; otherwise not specifically mentioned.",
+    "Keys": "Brent’s keyboard work is polarizing – many enjoy his solos and backing vocals, while others criticize him as wasted and out of sync during parts like Maybe You Know.",
+    "Drums": "The drumming is generally noted as solid with good groove, though some reviewers mention the rhythm section trying to rein in Brent’s excesses."
+  },
+  "song_mentions": {
+    "Estimated > Eyes > Jam > Maybe You Know": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "1/2 Step > El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T15:12:23.968054+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-04-21.sbd.miller.34765.flac16"
+}

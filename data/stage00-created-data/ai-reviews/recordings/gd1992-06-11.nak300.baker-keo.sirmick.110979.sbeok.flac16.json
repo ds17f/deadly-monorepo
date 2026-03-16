@@ -1,0 +1,31 @@
+{
+  "summary": "Fan gives a glowing five‑star rating, but provides no details on the sound or performance.",
+  "review": "The single review is a brief, enthusiastic thank‑you note that awards the recording five stars, indicating strong appreciation from the listener. No specific comments are made about audio fidelity, source type, or musical highlights, so both the recording and show quality remain undefined.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Only one brief five‑star review; while sentiment is clearly positive, lack of detail limits confidence in rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No technical comments provided; reviewer expressed gratitude without mentioning sound quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T06:49:36.664553+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-06-11.nak300.baker-keo.sirmick.110979.sbeok.flac16"
+}

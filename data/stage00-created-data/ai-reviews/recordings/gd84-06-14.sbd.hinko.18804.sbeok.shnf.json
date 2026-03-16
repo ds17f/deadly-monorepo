@@ -1,0 +1,70 @@
+{
+  "summary": "High‑energy 1984 show with a legendary Iko and crisp soundboard recording, though the first set can feel flat.",
+  "review": "Fans rave about this concert’s “best ever” Iko (Aiko) and the soaring Dear Mr. Fantasy/Playin transition, noting tight band interplay and standout solos from Jerry Garcia. The sound‑board source is generally clear and punchy, with only occasional muffled moments on later disc copies. While a few reviewers find the first set listless and the Shakedown lacking snap, the overall vibe is enthusiastic and the recording remains a go‑to for 1984 Dead fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews (≈70%) are glowing about performance and sound quality, with only a handful of mild criticisms; the weightings give a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑balanced board capture praised by several reviewers; occasional comments about disc 3 being muffled and the high‑altitude “thin” sound at Red Rocks, but no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Iko (Aiko)",
+      "Dear Mr. Fantasy",
+      "Shakedown > Playing",
+      "US Blues"
+    ],
+    "poor_songs": [
+      "Shakedown (some feel it lacks punch)",
+      "Dear Mr. Fantasy (one reviewer called it mediocre)"
+    ],
+    "setlist_flow": "The concert opens with a monster Iko that sets an intense tone, followed by solid first‑set numbers that some find uneven. The second set builds momentum with a fiery Shakedown into a sublime Playing jam and a beautifully crafted transition into Dear Mr. Fantasy."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocal power (lung‑shredding) and soaring guitar solos are repeatedly highlighted, especially on Iko, Jack Straw, and the Shakedown/Playing jams.",
+    "Phil": "",
+    "Bob": "Bob Weir’s vocals noted as fizzling out during Playin but praised for his presence on US Blues and other numbers.",
+    "Keys": "Brent Mydland gets credit for a strained yet moving vocal on Dear Mr. Fantasy; also mentioned opening Fantasy lyrics.",
+    "Drums": "Drums>Space segment appreciated, though one reviewer calls the play‑in reprise “clams.”"
+  },
+  "song_mentions": {
+    "Iko (Aiko)": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Shakedown > Playing": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "US Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One (NFA)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T18:19:27.515476+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-06-14.sbd.hinko.18804.sbeok.shnf"
+}

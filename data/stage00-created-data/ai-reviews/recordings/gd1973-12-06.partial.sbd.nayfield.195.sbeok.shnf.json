@@ -1,0 +1,57 @@
+{
+  "summary": "Soundboard source with noticeable splice edits, yet the show dazzles thanks to an epic China Cat Sunflower → The Rider transition.",
+  "review": "The performance is highlighted by what many consider the finest transitional jam between China Cat Sunflower and The Rider, with even Dark Star > Eyes receiving praise.  However, the recording suffers from splices that break the flow of those seamless jams, a point of frustration for some listeners.  Overall the musical moments outweigh the technical hiccups.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Strong show quality (standout jam) combined with a decent soundboard recording, but splice issues lower the overall listening experience."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Splice edits interrupt otherwise seamless jams (China > Rider, Dark Star etc.), causing noticeable breaks in the flow."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "The Rider",
+      "Dark Star",
+      "Eyes"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its fluid transitions, especially the China Cat Sunflower → The Rider jam; splice edits are the only detractor."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T04:11:26.488129+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-12-06.partial.sbd.nayfield.195.sbeok.shnf"
+}

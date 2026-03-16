@@ -1,0 +1,64 @@
+{
+  "summary": "Good soundboard capture of a wild Phoenix show featuring a standout acoustic Black Peter and a memorable Lovelight, though the surprise guest’s antics marred Not Fade Away.",
+  "review": "The recording is generally clear and listenable despite occasional volume spikes from an on‑stage impromptu vocalist. Musically the band delivers a hot performance highlighted by an exquisite acoustic Black Peter and a seamless transition into Lovelight, but the guest’s chaotic contributions detract from Not Fade Away and some blues improv moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise several songs and overall performance; recording is consistently described as good, yielding an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and listenable; occasional volume fluctuations caused by the loud guest vocals, but no major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Lovelight",
+      "Hard to Handle"
+    ],
+    "poor_songs": [
+      "Not Fade Away",
+      "Impromptu Blues"
+    ],
+    "setlist_flow": "Solid acoustic segment and a smooth transition into Lovelight, but the unexpected guest’s chaotic presence disrupts the early part of the set (Not Fade Away) and adds unevenness to the show."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal tone is praised as sweet and musical; notable acoustic solo on Black Peter receives high praise.",
+    "Phil": "",
+    "Bob": "Described as crystal clear in one review; overall band chemistry noted as strong.",
+    "Keys": "",
+    "Drums": "Drums are called tight and well‑driven by reviewers."
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 3,
+      "total_mentions": 4
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Impromptu Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T17:18:32.477881+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-03-08.sbd.9195.sbeok.shnf"
+}

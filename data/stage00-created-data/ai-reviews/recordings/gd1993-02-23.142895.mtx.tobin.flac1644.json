@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent matrix capture of a historic show, highlighted by an extraordinary Ornette Coleman/Space segment and stellar Broken Arrow debut.",
+  "review": "Both reviewers praise the matrix source for its deep bass response and immersive room feel, calling it a perfect blend of soundboard clarity and audience ambience. The performance shines on the second set, with the Ornette Coleman‑inspired space jam, a groundbreaking Broken Arrow debut, and an inspired Johnny B. Goode that rank among the band’s best late‑career moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "High praise for both musical performance (standout second set, experimental space) and recording quality (excellent matrix), offset by only two reviews which limits confidence to medium."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note deep bass capture, crisp soundboard detail combined with vivid audience ambience; no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Broken Arrow",
+      "Johnny B. Goode",
+      "Ornette Coleman (Space)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as less compelling, while the second set delivers experimental brilliance with Ornette Coleman‑inspired space and powerful late‑show jams."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ornette Coleman (Space)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T09:51:16.405401+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-02-23.142895.mtx.tobin.flac1644"
+}

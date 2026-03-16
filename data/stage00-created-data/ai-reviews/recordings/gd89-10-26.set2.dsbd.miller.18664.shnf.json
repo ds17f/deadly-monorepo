@@ -1,0 +1,85 @@
+{
+  "summary": "Excellent soundboard source with a good‑to‑great mix, highlighted by an otherworldly Dark Star and blistering Blow Away.",
+  "review": "The second set of the Miami 10/26/89 show is famed for its ferocious Dark Star, thunderous Blow Away and a haunting Stella Blue.  The Charlie Miller SBD is generally clear and punchy, though a few reviewers note occasional harshness and slight vocal muffling.  Overall the performance is considered one of the band’s most intense late‑80s outings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 60 reviews, the vast majority are 4–5 stars praising both the music and the recording; only a handful note minor mix flaws or give low scores."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp SBD with strong stereo image and vivid MIDI‑horns.  A few listeners mention harsh highs, slight vocal muffling and a faint distortion that softens the attack on some songs (notably Blow Away), but no drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Blow Away",
+      "Estimated Prophet",
+      "Stella Blue",
+      "Not Fade Away",
+      "All Along the Watchtower",
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is solid but less adventurous; second set erupts into a dark, space‑filled journey anchored by Dark Star and followed by high‑energy blows (Blow Away, Not Fade) before winding down with Stella Blue and the gentle Goodnight."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone on Dark Star and Not Fade Away is repeatedly praised as “unreal” and “monster”; vocals described as rough or ragged but fitting the dark vibe.",
+    "Phil": "Bass noted as unusually low‑frequency (≈10 Hz) by one reviewer, giving a dense under‑current to the jam.",
+    "Bob": "Vocal contributions on Victim/Crime and Watchtower are highlighted; occasional “spooky whale” sounds in Stella Blue are mentioned.",
+    "Keys": "Brent Mydland’s manic piano on Blow Away, synth textures on Estimated Prophet and eerie chords throughout Dark Star receive strong commendation.",
+    "Drums": "Bill Kreutzmann and Mickey Hart’s percussion is described as powerful, with the “drums” segment driving the space jam into a frightening climax."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 28,
+      "negative_mentions": 1,
+      "total_mentions": 29
+    },
+    "Blow Away": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 6,
+      "negative_mentions": 2,
+      "total_mentions": 8
+    },
+    "Stella Blue": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Not Fade Away": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Wheel": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T01:43:32.236317+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-10-26.set2.dsbd.miller.18664.shnf"
+}

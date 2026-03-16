@@ -1,0 +1,85 @@
+{
+  "summary": "Excellent soundboard recording of a legendary ’73 Spectrum show, highlighted by a soaring Here Comes Sunshine and monster jams on Dark Star, Spanish Jam, Truckin' and Playin’ in the Band.",
+  "review": "The SBD (Betty) source delivers pristine clarity with a perfect mix that lets every instrument shine. Musically the night is a classic early‑’73 peak – Jerry’s vocals and lead guitar are on fire, Phil’s harmonies soar, Keith’s keyboards sparkle, and the rhythm section drives epic segues from Here Comes Sunshine through Dark Star to a blistering Truckin' and Playin’ in the Band. The second set’s flow is relentless and the crowd energy palpable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Over 30 reviews unanimously praise both performance and audio quality; the show is described as a standout ’73 set with flawless soundboard capture, warranting an elite rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Betty board (SBD) praised as crystal‑clear, well‑balanced and ‘perfect sound’; a few reviewers note occasional muffs or brief glitches but overall the mix is immaculate."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine",
+      "Dark Star",
+      "Spanish Jam",
+      "Truckin'",
+      "Playin' in the Band",
+      "Row Jimmy",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set rides a seamless wave of high‑energy rock and exploratory jams; early songs build swagger while the second half launches into an hour‑long jam suite (Here Comes Sunshine → Dark Star → Truckin' → Spanish Jam → etc.) that many reviewers call ‘monster’ and ‘backwards Dark Star.’"
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as brilliant, guitar tone perfect; leads the jams with gusto and delivers powerful solos.",
+    "Phil": "Harmony vocals praised as priceless; bass heavy yet melodic, often highlighted in the mix (Box of Rain, Row Jimmy).",
+    "Bob": "Rhythm guitar and vocal contributions noted as solid; occasional vocal goofs but overall on point.",
+    "Keys": "Keith’s keyboard work called ‘crushing,’ ‘motown style,’ and a key part of the jam dynamics; several reviewers call the keyboards “awesome.”",
+    "Drums": "Billy (Bill Kreutzmann) lauded for his driving kit work, especially in the Spanish Jam and second‑set flow; Mickey’s presence noted as adding depth."
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 12,
+      "negative_mentions": 2,
+      "total_mentions": 14
+    },
+    "Truckin'": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Spanish Jam": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Row Jimmy": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "He's Gone": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Donna": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T06:42:01.271150+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-03-24.sbd.bertha-ashley.25508.sbeok.shnf"
+}

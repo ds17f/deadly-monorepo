@@ -1,0 +1,69 @@
+{
+  "summary": "Legendary rain‑soaked show captured with excellent audience recording – thunder‑driven performances of Wharf Rat, Sugar Magnolia and The Other One shine.",
+  "review": "Fans describe this June 20 1983 Merriweather Post Pavilion concert as an almost mythic event: relentless storm, lightning strikes that cut the PA, and a second set that rode the chaos with ferocious energy. The audience‑tape source is praised as the best available – clear, full‑bodied and surprisingly detailed despite occasional speed/pitch quirks – and it preserves standout moments like Wharf Rat, Sugar Magnolia, The Other One, Truckin' and a soaring Baby Blue encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Overwhelmingly enthusiastic 5‑star reviews highlight an exceptional performance and a high‑quality audience source; only isolated technical complaints lower the score slightly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, full‑range capture from lawn microphones; praised as the best source despite occasional speed/pitch anomalies and brief PA drop‑outs caused by lightning."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Sugar Magnolia",
+      "The Other One",
+      "Truckin'",
+      "Baby Blue",
+      "Rooster"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid and energetic; second set turned into a storm‑driven marathon with power outages, lightning strikes, and the band feeding off the chaos, culminating in an unforgettable encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone repeatedly called perfect; one reviewer noted he sounded nervous after a lightning strike and another mentioned pitch issues (chipmunk effect).",
+    "Phil": "Bass ‘bombs’ on The Other One praised; several reviewers say Phil was “challenging the thunder gods” with powerful low‑end throughout.",
+    "Bob": "Improvisational highlights, especially his “Bob Star” moments in Sugar Magnolia and spoken “Aborigine rap” during Sugar Mag, are frequently lauded.",
+    "Keys": "Brent Mydland’s keyboard work gets special shout‑outs – his solo on Rooster described as storm‑like and a key part of the show’s intensity.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rooster": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-14T07:38:36.863633+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-20.nak300.grabski.32795.sbefail.flac16"
+}

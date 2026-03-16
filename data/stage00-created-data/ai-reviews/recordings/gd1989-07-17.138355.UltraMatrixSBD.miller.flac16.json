@@ -1,0 +1,39 @@
+{
+  "summary": "Clear matrix recording captures a stellar Uncle John’s Band with Brent Mydland’s soaring backing vocals.",
+  "review": "The UltraMatrix SBD source delivers a clean, well‑balanced sound that lets the performance shine. Reviewers rave about this show being their favorite Uncle John’s Band ever, highlighting Brent’s backing vox as a special touch. The recording is highly recommended for anyone looking to hear that magic moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "A single 5‑star review praises both the musical performance and implies good sound quality; with limited data we weight heavily toward the positive show impression while keeping confidence low."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No specific issues noted; UltraMatrix SBD generally provides clear, balanced audio that captures both band and ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "While the full setlist is unknown, reviewers describe the performance as memorable and energetic, with Uncle John’s Band standing out as a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's backing vocals are singled out for making the Uncle John's Band rendition special.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T21:37:19.590238+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-17.138355.UltraMatrixSBD.miller.flac16"
+}

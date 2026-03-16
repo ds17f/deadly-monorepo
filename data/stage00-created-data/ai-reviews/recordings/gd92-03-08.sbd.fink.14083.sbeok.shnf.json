@@ -1,0 +1,96 @@
+{
+  "summary": "Well‑balanced soundboard recording with crisp mix (minor wow‑flutter at the end) capturing a tight 1992 show highlighted by a smoking Loose Lucy > Desolation > Big Railroad Blues and strong performances from Jerry, Brent and Bob.",
+  "review": "The SBD of the March 8 1992 concert delivers an overall excellent mix—clear vocals, well‑separated instruments and a tight band sound—though listeners note some wow‑flutter on the final “So Many Roads.” Musically the show is praised for its energetic setlist, especially the Loose Lucy > Desolation > Big Railroad Blues sequence, Standing on the Moon and strong renditions of Black Throated Wind and Foolish Heart. The only consistent blemish is the widely‑detested “Wave to the Wind.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the performance 4–5 stars and describe a tight, enjoyable show; recording is praised as excellent with only isolated technical flaws, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Mix is well balanced, vocals upfront yet ambient, instruments clear and crisp. Minor issues: wow‑flutter/drop‑outs toward the end (around “So Many Roads”) and occasional cassette artifacts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loose Lucy > Desolation > Big Railroad Blues",
+      "Standing on the Moon",
+      "Black Throated Wind",
+      "Foolish Heart",
+      "Broken Arrow"
+    ],
+    "poor_songs": [
+      "Wave to the Wind",
+      "So Many Roads (technical issues)"
+    ],
+    "setlist_flow": "Setlist is tight and well‑balanced; the band rides the transitions smoothly, delivering energetic jams while maintaining lyrical clarity. Some listeners find the song selection quirky but overall pacing is praised."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone and runs are lauded, though one reviewer notes a few spots where he sounds “like he’d been playing five days straight.”",
+    "Phil": "",
+    "Bob": "Bob Weir’s vocals are highlighted as among his best on the first set; his ad‑libs receive positive nods.",
+    "Keys": "Brent (Hornsby) receives high praise for the Minglewood jam and overall keyboard work; Bruce’s piano is noted as a nice addition. Vince’s synth parts draw criticism, described as “ugly” or “horrible.”",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wave to the Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 5,
+      "total_mentions": 5
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T04:11:57.863478+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-03-08.sbd.fink.14083.sbeok.shnf"
+}

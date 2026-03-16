@@ -1,0 +1,39 @@
+{
+  "summary": "Fantastic performance hampered by occasional skip glitches in the recording",
+  "review": "The reviewer praises the show as otherwise fantastic and highlights the China Doll solo, but notes that a handful of songs suffer from repeated skips that create small jumps forward. The technical flaws are described as bearable yet rough, making the listening experience mixed.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only one brief review; positive comments about musical performance but strong negative feedback on recording skips leads to a modest rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Repeated skips (small jumps forward) in several songs, making sections sound rough though overall recording is decent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set pacing; reviewer only highlights a solo excerpt."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:33:41.338977+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-05-10.pzm.russjcan.92344.sbeok.flac16"
+}

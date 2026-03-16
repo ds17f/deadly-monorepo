@@ -1,0 +1,97 @@
+{
+  "summary": "Crisp soundboard capture of a classic ’74 show highlighted by a smoking Dark Star→Slipknot! and tight Brown‑Eyed Women.",
+  "review": "The recording is a high‑fidelity soundboard tape that most reviewers describe as crisp, clear and “great AUD”, with only minor distortion on a couple of tracks. Musically the concert shines – Dark Star segues into an inspired Slipknot! jam, Brown‑Eyed Women and Row Jimmy are tight, and the second set flows beautifully through Scarlet, Jack Straw and a stunning Ship Of Fools encore. Overall the performance is praised as quintessential 1974 Dead with just a few quirky moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of reviews (over 15) give 4‑5 stars and highlight both superb musical moments and excellent soundboard quality, with only isolated minor complaints."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Consistently described as crisp, clear and great AUD; a few reviewers note slight distortion on One More Saturday Night and U.S. Blues but no major drop‑outs or static."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > Slipknot!",
+      "Brown Eyed Women",
+      "Scarlet",
+      "Jack Straw",
+      "Ship Of Fools",
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "Stella Blue",
+      "One More Saturday Night"
+    ],
+    "setlist_flow": "Typical 1974 setlist with a solid first set and an especially adventurous second set; the Dark Star > Slipknot! transition anchors the jam‑heavy middle, leading into a tight closer."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for sweet slide on Row Jimmy, strong vocal delivery (e.g., “Come Back Trippin’”), and inventive improvisation in Dark Star.",
+    "Phil": "Noted for great bass tone on Brown‑Eyed Women and taking a lead role vocally/bassically on Jack Straw.",
+    "Bob": "",
+    "Keys": "Keith’s electric piano work highlighted as “plinky winky” on Row Jimmy and creative ideas during Dark Star.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star > Slipknot!": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Scarlet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.J.B.": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship Of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T22:55:54.871561+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-07-25.sbd.fink.1072.sbeok.shnf"
+}

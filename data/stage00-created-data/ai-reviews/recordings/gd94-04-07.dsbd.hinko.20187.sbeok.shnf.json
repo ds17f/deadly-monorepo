@@ -1,0 +1,94 @@
+{
+  "summary": "Good‑quality recording that captures a mixed‑bag show – a standout slow Eyes and ferocious Terrapin jam amid some vocal flubs and uneven second‑set moments.",
+  "review": "The tape delivers solid sound (many reviewers note clear, great audio) though the source is unclear. Musically the concert swings between highlights – an intriguingly slow \"Eyes,\" a powerful post‑Terrapin jam and strong renditions of Friend of the Devil, Queen Jane and Stella Blue – and low points such as Jerry’s flubbed Shakedown Street vocals, a butchered Terrapin performance and a weak Walking Blues. Overall it feels like a respectable 1994 show worth listening to despite its quirks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently praised (good‑to‑great sound), while show quality receives both strong praise for certain jams and criticism for vocal slips, yielding a balanced overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call the sound \"great\" or \"excellent,\" noting clear mix; one mentions Liberty track sourced from mics, suggesting a mixed (matrix) source, but no major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Terrapin Station",
+      "Friend of the Devil",
+      "Queen Jane Approximately",
+      "Ramble on Rose",
+      "Stella Blue",
+      "Liberty"
+    ],
+    "poor_songs": [
+      "Shakedown Street",
+      "Walking Blues",
+      "Playing in the Band"
+    ],
+    "setlist_flow": "The set moves at a pleasant pace with an early‑mid show energy boost from the post‑Terrapin jam, but the second half loses momentum due to vocal flubs and a truncated Playing In The Band."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work shines on Eyes and the Terrapin jam, but vocals are hit‑or‑miss – flubbing Shakedown Street and sounding strained on several numbers.",
+    "Phil": "Provides solid bass support; noted for helping out on Stella Blue in one review.",
+    "Bob": "Mentioned briefly as part of a decent moment during \"Might Not Stop\" (MNS) but no detailed commentary.",
+    "Keys": "",
+    "Drums": "Mickey’s tom‑mallet work is highlighted, though some feel the drum transition into Playing In The Band was clumsy."
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Shakedown Street": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Walking Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane Approximately": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Liberty": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T21:43:55.373175+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-04-07.dsbd.hinko.20187.sbeok.shnf"
+}

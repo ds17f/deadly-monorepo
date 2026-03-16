@@ -1,0 +1,87 @@
+{
+  "summary": "Sharp audience recording of a fan‑favorite Binghamton ’77 show with standout Mississippi Half‑Step, Sunrise and a monster Truckin', despite a weak Scarlet>Fire.",
+  "review": "The audience (AUD) tape is praised as surprisingly clear and well mixed, giving listeners a vivid sense of the happy crowd. Musically the concert shines – the first set is often called one of the best ever with Mississippi Half‑Step, Sunrise and Friend of the Devil, while the second set delivers powerful transitions, a legendary Truckin' finish and memorable New Minglewood Blues and Tennessee Jed moments. The only recurring blemish is a lackluster Scarlet>Fire that several reviewers felt fell short of other 1977 versions.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and strong positive language about both performance and audio outweigh a few criticisms, especially of Scarlet>Fire."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the AUD as sharp, crisp and superb for an audience tape; a few note it isn’t the absolute best (B+), but overall it’s listenable with no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step",
+      "Sunrise",
+      "Friend of the Devil",
+      "Music Never Stopped",
+      "Truckin'",
+      "New Minglewood Blues",
+      "Tennessee Jed"
+    ],
+    "poor_songs": [
+      "Scarlet>Fire"
+    ],
+    "setlist_flow": "The first set is lauded as possibly the best of the tour, flowing smoothly through tight folk‑rock numbers. The second set ramps up the energy with powerful transitions (e.g., Scarlet>Fire), a soaring New Minglewood Blues, and a climactic Truckin' that leaves the crowd exhilarated."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is called sharp and his solos ‘wolf‑guitar roars’; praised for leading jams but noted to run out of gas on Scarlet>Fire.",
+    "Phil": "One reviewer says Phil is “all over the place,” otherwise no detailed commentary.",
+    "Bob": "Bob Weir’s vocals on New Minglewood Blues and Tennessee Jed are highlighted; also praised for supporting Donna Jean on Sunrise.",
+    "Keys": "A cool piano/jam moment during Sunrise is mentioned, but no further detail.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mississippi Half-Step": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Sunrise": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet>Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 3,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:03:26.817620+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-11-06.moore.cribbs.16758.sbeok.shnf"
+}

@@ -1,0 +1,64 @@
+{
+  "summary": "Solid soundboard recording (with a tiny Wheel glitch) captures an energetic second set highlighted by Touch of Gray, Space and The Other One.",
+  "review": "The SBD source is generally clear and pleasant, though listeners note a six‑second drop in the middle of The Wheel. Musically the show is a mixed bag – the band hits high energy peaks on Touch of Gray, Space and The Other One, but the second run through Dear Mr. Fantasy suffers from off‑key vocals and shaky arrangement.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the recording quality and several standout songs, but recurring criticism of Dear Mr. Fantasy and a minor tape glitch lower the overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Nice sounding board mix; a brief cut/skip noted in The Wheel, otherwise clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Gray",
+      "Space",
+      "The Wheel",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Dear Mr. Fantasy"
+    ],
+    "setlist_flow": "Second‑set only release; the band carries a spark from the previous night, delivering high‑energy peaks despite a stumble on Dear Mr. Fantasy."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – Garcia’s vocal lead on Dear Mr. Fantasy is described as off‑key and the guitar break mediocre, though later sections receive praise for his playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Touch of Gray": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T19:16:55.201594+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-06-29.sbd-set2.miller.32781.sbeok.flac16"
+}

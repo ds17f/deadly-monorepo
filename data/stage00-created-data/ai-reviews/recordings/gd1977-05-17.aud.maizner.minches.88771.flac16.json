@@ -1,0 +1,69 @@
+{
+  "summary": "Great audience recording of a tight 1977 show with standout Mississippi Half Step, Samson & Delilah and a warm mix.",
+  "review": "The performance is hailed as one of the band’s finest from ’77, featuring blistering renditions of “Mississippi Half Step,” “El Paso,” “Tennessee Jed,” and a seamless “Scarlet Begonias → Fire On The Mountain” segue, plus a powerhouse second‑set opener with “Samson And Delilah.”  The audience tape is generally crisp and warm, though two mic‑stage voices occasionally intrude, keeping the overall sound in the good rather than excellent range.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Reviews consistently praise the musical performance (top‑tier show) while noting a solid but not flawless audience recording; weighted averaging yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp and clean overall with a warm, even mix; occasional intrusive mic chatter from two stage‑side talkers and minor flubs are noted but do not dominate."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half Step",
+      "El Paso",
+      "Tennessee Jed",
+      "Scarlet Begonias → Fire On The Mountain",
+      "Samson And Delilah",
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The band is tight from start to finish, with seamless transitions and high energy that keep the set moving forward; the second set maintains momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for top‑notch guitar tone on “Tennessee Jed” and overall synchronicity.",
+    "Phil": "",
+    "Bob": "Bob Weir’s contributions highlighted, especially his lead on the powerful “Samson And Delilah.”",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mississippi Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias → Fire On The Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson And Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T01:28:53.364094+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-17.aud.maizner.minches.88771.flac16"
+}

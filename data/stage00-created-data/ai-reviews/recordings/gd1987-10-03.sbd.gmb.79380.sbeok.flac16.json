@@ -1,0 +1,77 @@
+{
+  "summary": "Clean, punchy soundboard capture of an above‑average 1987 show with standout Candyman, When I Paint My Masterpiece, Maggie’s Farm > Cumberland and a potent Stella Blue.",
+  "review": "The recording is a pristine GMB soundboard source – clean, punchy and the richest version available. Musically the concert delivers an above‑average second set highlighted by a steady‑tempo Candyman, Brent‑driven When I Paint My Masterpiece, the seamless Maggie’s Farm > Cumberland segue and a powerful Stella Blue, while the first set sits in the middle of the road.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Reviewers consistently praise the sound quality (clean, punchy) and note several standout songs; the show is described as above‑average with a strong second set, yielding an overall rating around four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean and punchy GMB soundboard source (gmb_79380); described as the richest version with no noticeable distortion, superior to other mixes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman",
+      "When I Paint My Masterpiece",
+      "Maggie's Farm > Cumberland",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is average, but the second set lifts the concert with smooth segues (especially Maggie's Farm into Cumberland) and strong performances, giving the show an overall above‑average flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland shines on When I Paint My Masterpiece and adds new potency to Stella Blue.",
+    "Drums": "The drums are highlighted as particularly good for the 1987 era."
+  },
+  "song_mentions": {
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "When I Paint My Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Maggie's Farm > Cumberland": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West L.A. Fadeaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mighty Quinn": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T04:44:55.141971+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-10-03.sbd.gmb.79380.sbeok.flac16"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Muddy audience tape of a solid 1970 show – The Other One and an electric Deep Elem Blues shine, but the recording is barely listenable.",
+  "review": "The performance is praised for classic 1970‑era jams – especially a monster The Other One→NFA stretch and a rare electric Deep Elem Blues – with Jerry’s picking and occasional vocal quirks noted.  Technically the audience recording suffers from hiss, mud and distant booth mic placement, making it hard to enjoy despite the strong playing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Several reviewers rate the show highly (4‑5 stars) for its musical moments, but most comment that the audience recording quality is poor, pulling the overall average down to an above‑average but mixed rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hissy, muddy sound with distant booth mic placement; occasional drop‑outs and missing songs.  The tape captures the hall ambience but clarity is low, making it hard to burn on CD."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Deep Elem Blues (electric)",
+      "Hard to Handle"
+    ],
+    "poor_songs": [
+      "Viola Lee Blues"
+    ],
+    "setlist_flow": "One‑set show with a strong middle sequence (The Other One → NFA).  Reviewers note missing closing songs (Good Lovin', Minglewood Blues, etc.) and an overall audience vibe that was at times indifferent."
+  },
+  "band_member_comments": {
+    "Jerry": "Picked out the opening before Truckin', tentative electric Deep Elem vocals, repetitive three‑note phrase on Viola Lee Blues, and occasionally sounded like Bobby.",
+    "Phil": "",
+    "Bob": "Mentioned in backstage anecdotes but no specific performance comments.",
+    "Keys": "",
+    "Drums": "Decent playing; NFA drum solo noted as unremarkable."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "NFA": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Deep Elem Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Viola Lee Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T23:38:56.898244+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-10-10.aud.hanno.7590.sbeok.shnf"
+}

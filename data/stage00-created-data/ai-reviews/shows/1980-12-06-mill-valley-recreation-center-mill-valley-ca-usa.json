@@ -1,0 +1,60 @@
+{
+  "summary": "Intimate acoustic set with crisp vocals and warm storytelling",
+  "blurb": "The Mill Valley show is a short, acoustic‑focused set that lets the band dial in beautifully. Highlights include Bird Song, Cassidy, Monkey And The Engineer and Ripple, all delivered with clear vocal work and relaxed vibe.",
+  "review": "On December 6 1980 the Dead took the stage at the Mill Valley Recreation Center for a special‑needs children’s event, stripping down to an acoustic configuration that feels almost private. Jerry’s voice shines through the audience mic—crystal clear enough that he can even chat with a kid about “rock‑n‑roll”—and his guitar, while a touch overdriven, adds a warm grit to the mix. Brent’s understated keyboards and Mickey’s subtle drumming give just enough backbone without crowding the intimacy. The set flows naturally from a plaintive Dire Wolf into the jaunty Jack‑A‑Roe, but the real gems are Bird Song, Cassidy, Monkey And The Engineer and the gently rolling Ripple, each rendered with an immediacy that makes you feel like you’re in the room. Despite occasional clipping and background noise typical of audience recordings, the overall vibe is mellow, relaxed, and genuinely engaging—making this a must‑listen for fans who love the Dead’s quieter side.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 50,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Both recordings are described with unequivocally positive language (e.g., \"crystal‑clear\", \"well‑recorded\", \"great vibe\"). No negative comments about performance appear, and multiple reviewers highlight the same standout songs, indicating strong consensus that the band was locked in during this acoustic set.",
+      "final_calculation": "2.5 + 0.4 + 1.4 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd80-12-06.cantor.clugston.5478.sbeok.shnf",
+    "reason": "Audience mic captures the intimate acoustic vibe with crystal‑clear vocals and room ambience, despite minor clipping; reviewers consistently praise its sound quality."
+  },
+  "key_highlights": [
+    "Intimate acoustic atmosphere perfect for a children’s benefit event",
+    "Crystal‑clear vocal capture of Jerry, allowing spoken moments to shine",
+    "Strong performances of Bird Song, Cassidy, Monkey And The Engineer and Ripple",
+    "Warm, relaxed vibe with subtle contributions from Brent on keys and Mickey on drums"
+  ],
+  "song_highlights": [
+    "Bird Song",
+    "Cassidy",
+    "Monkey And The Engineer",
+    "Ripple"
+  ],
+  "band_performance": {
+    "Jerry": "His voice is clear and well‑mic'd, even engaging a child in conversation; acoustic guitar carries a slight overdrive but remains solid throughout.",
+    "Phil": "Briefly noted for a witty \"Years of practice!\" comment, indicating solid bass presence during the set.",
+    "Bob": "",
+    "Brent": "Keyboards are mentioned positively, providing tasteful texture without overpowering the acoustic feel.",
+    "Mickey": "Drums receive a positive nod, offering subtle rhythmic support that complements the stripped‑down arrangement.",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-13T06:40:40.046679+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bird Song"
+    ],
+    [
+      "Cassidy"
+    ],
+    [
+      "Monkey And The Engineer"
+    ],
+    [
+      "Ripple"
+    ]
+  ]
+}

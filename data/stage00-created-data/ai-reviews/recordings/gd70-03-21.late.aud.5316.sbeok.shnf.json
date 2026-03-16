@@ -1,0 +1,55 @@
+{
+  "summary": "Lively 1970 audience tape with solid, vintage sound and a standout NFA/China Cat tease plus classic covers like Wake Up Little Susie.",
+  "review": "The recording captures the raw energy of a late‑60s/early‑70s show on an old cassette AUD, delivering surprisingly clear tuning and plenty of crowd ambience.  Fans rave about the NFA segment (especially the China Cat tease) and the fun inclusion of vintage covers, while noting a few file glitches such as duplicate tracks and a cut‑off ending to the NFA.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars, praising both performance and tape quality; only one low‑mid review points out missing/cut songs, so the overall impression is strongly positive."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Solid tuning and clear cassette sound for its era; lively crowd ambience adds warmth.  Some issues: duplicate tracks (Uncle John's, Cosmic Charlie), missing early‑show songs, and the end of the NFA is cut off."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "NFA (China Cat tease)",
+      "Wake Up Little Susie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A fun mix of late‑60s/early‑70s material with several old 50’s–60’s covers; the set feels loose and spontaneous, though file errors make the exact order a bit confusing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Pig Pen's percussion is highlighted by several reviewers as adding extra flavor to the performance."
+  },
+  "song_mentions": {
+    "Wake Up Little Susie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "NFA": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Katie Mae": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T17:40:06.458419+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-03-21.late.aud.5316.sbeok.shnf"
+}

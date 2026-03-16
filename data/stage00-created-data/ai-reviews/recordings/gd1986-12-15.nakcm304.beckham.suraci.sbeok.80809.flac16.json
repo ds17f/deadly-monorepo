@@ -1,0 +1,75 @@
+{
+  "summary": "Strong comeback show with a soaring Touch of Grey and debut gems, captured on an audience tape that’s tinny at the start but improves dramatically.",
+  "review": "The performance is celebrated as Jerry Garcia’s triumphant return – Touch of Grey ignites the crowd, Candyman, Push Comes to Shove and Black Muddy River make historic debuts, and Good Lovin ends on a high‑energy note. The audience recording is rough and tinny for the first few minutes (Phil’s bass low‑defined, Bob’s guitar forward), but it settles into a clear, lively mix that lets the crowd atmosphere shine through.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The majority of reviewers (10‑plus) award 4–5 stars and praise the show’s energy, historic moments and crowd reaction; recording flaws are noted but considered minor compared to the performance."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "First few minutes sound tinny and muddy (described as \"uglier than a mud fence\"); Phil’s bass lacks definition, Bob’s guitar is front‑heavy, but the audience presence is vivid and the tape improves after the opening song."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "Candyman",
+      "Push Comes to Shove",
+      "Black Muddy River",
+      "Good Lovin"
+    ],
+    "poor_songs": [
+      "Truckin"
+    ],
+    "setlist_flow": "A high‑octane comeback set – the opening is rough sound‑wise but quickly smooths out, leading into a crowd‑fueled second half packed with debuts and emotional sing‑alongs."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal delivery on Touch of Grey (“I will survive”) moved the audience; his stage presence was highlighted as a historic comeback.",
+    "Phil": "Bass is described as lacking definition in the early part of the tape.",
+    "Bob": "Guitar sits too far forward in the mix; Bobby’s high‑pitched scream during Good Lovin noted positively.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Push Comes to Shove": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Black Muddy River": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat into Playing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T17:38:01.633185+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-12-15.nakcm304.beckham.suraci.sbeok.80809.flac16"
+}

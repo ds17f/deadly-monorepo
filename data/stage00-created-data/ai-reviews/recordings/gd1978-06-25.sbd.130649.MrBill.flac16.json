@@ -1,0 +1,45 @@
+{
+  "summary": "Remastered recording captures Jerry Garcia’s soaring guitar on a killer Not Fade Away and spectacular U.S. Blues, while his loose playing adds raw charm.",
+  "review": "The remastering of this 1978 show is praised for its crystal‑clear sound, letting Jerry’s “magnificent” guitar work shine on Not Fade Away and an unexpectedly thrilling U.S. Blues. Garcia’s occasional technical slip‑ups are noted but embraced as part of the era’s wild vibe, making the performance a fan favorite despite limited commentary on other aspects.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "Two reviews (one detailed, one brief) give an overall high rating; strong musical praise and good remastering suggest a >4‑star rating, but limited sample size lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Fine remastering noted as crisp and clear; no specific issues reported by reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight the set‑ending U.S. Blues as spectacular despite its usual reputation as a yawner, indicating strong second‑half momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as magnificent, lathered‑up and “lambasting the entire countryside,” making Not Fade Away a killer performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T13:33:06.746866+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-06-25.sbd.130649.MrBill.flac16"
+}

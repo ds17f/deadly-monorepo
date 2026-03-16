@@ -1,0 +1,31 @@
+{
+  "summary": "Fantastic show that fans deem a must‑see, but the recording suffers from patch‑related quality issues",
+  "review": "The reviewer raves that this would have been the concert to attend and even wishes for Dark Star Orchestra to recreate it, indicating an outstanding musical performance. However, they note that the sound quality is compromised by the numerous patches, so the listening experience is only fair despite the superb show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "The single detailed 5‑star review praises the performance highly (show weight) while criticizing the recording quality, leading to a strong overall rating but moderate confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Patch changes cause noticeable degradation in clarity; overall the mix is usable but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer describes the concert as a must‑see, implying a strong, engaging set despite no specific song details."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-26T04:15:05.307891+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-31.upg-sbd.Tobin.126183.flac16"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "Scorching Playin'→Dark Star→Morning Dew suite with tight bandwork",
+  "blurb": "The Fox Theatre show delivers a high‑energy second‑set marathon highlighted by the iconic Playin’ → Dark Star → Morning Dew sequence and a soaring Bird Song. Jerry’s lead work shines, Phil’s bass is telepathic, and Keith provides solid keys throughout.",
+  "review": "October 18, 1972 at St. Louis’ Fox Theatre captures the Grateful Dead in top form. The first set rolls through classics with a bright rendition of Bird Song and an uplifting China Cat Sunflower → I Know You Rider, while the second set erupts into a near‑70‑minute jam marathon anchored by Playin’ In The Band that launches into a powerful Dark Star → Morning Dew suite before looping back into Playin’. Highlights include a sweet‑sounding Jerry Garcia on lead and vocals, Phil Lesh’s colossal bass solo (the first Philo Stomp of the night), and Keith Godchaux’s clear, confident keyboards. Bob Weir adds a pleasant bite with his slightly distorted rhythm guitar, especially on Bertha and Big Railroad Blues, while Bill Kreutzmann drives the intensity with ferocious drumming and a crisp drum solo feeding into Dark Star. The soundboard capture is clean and balanced, making this show a must‑listen for anyone chasing that 1972 fire.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 49,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All five recordings are uniformly positive, repeatedly praising the Playin'→Dark Star→Morning Dew suite, Bird Song, and strong individual performances (Phil’s bass solo, Jerry’s lead work). Consistent acclaim across multiple sources justifies a high positive adjustment.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1972-10-18.132378.sbd.miller.flac16",
+    "reason": "Solid soundboard with clear mix, minor hiss only; captures the high‑energy suite and band interplay exceptionally well."
+  },
+  "key_highlights": [
+    "Iconic Playin’ → Dark Star → Morning Dew marathon (≈70 min) with seamless segues",
+    "Bird Song delivers sweet vocal harmonies and soaring guitar wails",
+    "China Cat Sunflower > I Know You Rider shines as a bright first‑set transition",
+    "Bertha features unusually audible Bob Weir fills in the remastered mix"
+  ],
+  "song_highlights": [
+    "Playing In The Band",
+    "Dark Star",
+    "Morning Dew",
+    "Bird Song",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Bertha",
+    "Philo Stomp"
+  ],
+  "band_performance": {
+    "Jerry": "Lead guitar is on fire with memorable wails on Bird Song and Morning Dew; vocals are sweet and sit well in the mix despite occasional low levels.",
+    "Phil": "Telepathic, colossal bass work highlighted by a standout Philo Stomp and dominant solo during Dark Star and Morning Dew.",
+    "Bob": "Gritty rhythm guitar with pleasant distortion adds bite; audible lead fills on Bertha and Big Railroad Blues make his contribution stand out.",
+    "Keith": "Clear, present keyboards that stay rooted throughout; delivers some of his best solos and shines especially in the second‑set jams.",
+    "Mickey": "",
+    "Billy": "Ferocious, hard‑driving drumming with a crisp drum solo that propels the Dark Star transition."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-22T00:31:15.478074+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Drums",
+      "Dark Star",
+      "Morning Dew",
+      "Playing In The Band"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Bertha"
+    ]
+  ]
+}

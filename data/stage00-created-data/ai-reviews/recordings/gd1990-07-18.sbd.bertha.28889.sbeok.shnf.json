@@ -1,0 +1,61 @@
+{
+  "summary": "Remastered sound‑board capture delivers luxurious clarity while the show shines with a soaring Morning Dew, an epic The Other One and a journey‑like Terrapin Station.",
+  "review": "The recording is praised for its extraordinary remastering and accurate sound‑board mix, though some note Brent’s keyboards sit a bit high. Musically the concert is remembered as a warm, tight unit with standout performances of Morning Dew, The Other One, Terrapin Station and other magical moments that have stuck in fans’ memories for decades.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 4‑5 stars and highlight both superb musical moments and high‑quality recording; a few mixed comments about keyboard mix lower the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Extraordinary remastering, clear and luxurious sound reproduction; generally accurate board mix but Brent’s keyboards can be a bit high in the mix for some listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "The Other One",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe the concert as a warm, tightly‑locked unit with seamless transitions that take listeners on a journey from introspective moments to expansive jams."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work on Morning Dew is repeatedly called hair‑raising and magical.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland is praised as awesome, though a few note his keyboard level sits too high in the mix on this recording.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Honky Tonk": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T10:06:31.545594+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-18.sbd.bertha.28889.sbeok.shnf"
+}

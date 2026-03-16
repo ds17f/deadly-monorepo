@@ -1,0 +1,88 @@
+{
+  "summary": "Stunning audience recording of a cold‑rain night in Philadelphia – crisp sound, epic Shakedown Street and a soaring Other One / Morning Dew sequence.",
+  "review": "The Nak‑700 mics captured an unusually clear audience tape that lets the crowd’s energy shine while still delivering solid instrument separation. Musically the show is a highlight of ’82: a funk‑charged first set capped by a blistering Shakedown Street, and a second set where The Other One, Morning Dew, Sugar Magnolia and Baby Blue all soar. Minor click‑glitches are noted but do not detract from an overall exhilarating performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (12 out of 15) award 4‑5 stars and praise both the musical set and the audience recording; only a few note minor flaws, yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape recorded with Nak‑700 mics; praised for clarity and vocal presence, occasional split‑second glitches and slight high‑end distortion noted but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "The Other One",
+      "Morning Dew",
+      "Sugar Magnolia",
+      "Baby Blue",
+      "Candyman",
+      "Looks Like Rain",
+      "Promised Land"
+    ],
+    "poor_songs": [
+      "Terrapin Station"
+    ],
+    "setlist_flow": "First set is funk‑driven and tight, highlighted by Shakedown Street and strong vocal work. Second set builds with a long drums/space segment leading into an epic Other One → Morning Dew sequence that caps the night on a high note."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone and vocals receive repeated praise; notable trading licks with Brent during Shakedown Street.",
+    "Phil": "Bass shines on Morning Dew, described as ‘thundering’ and very present in the mix.",
+    "Bob": "Weir’s vocal delivery on Promised Land, LLR and other numbers is highlighted as a strong point.",
+    "Keys": "Brent Mydland’s keyboard levels are called “exactly perfect”; his interplay with Garcia during Shakedown Street is singled out as spectacular.",
+    "Drums": "The drums‑and‑space segment (~20 min) is noted for its length and intensity, generally viewed positively."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Morning Dew": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Baby Blue": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Candyman": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T19:29:37.291252+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-06.nak700.wagner.miller.90469.sbeok.flac16"
+}

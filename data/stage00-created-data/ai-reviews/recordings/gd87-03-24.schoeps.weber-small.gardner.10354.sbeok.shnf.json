@@ -1,0 +1,69 @@
+{
+  "summary": "Front‑of‑house audience recording captures a blistering Terrapin Station performance, though the mix is muffled and crowd‑heavy.",
+  "review": "The show is remembered for an explosive Terrapin Station that kept building intensity, plus standout moments from Jack Straw, Wharf Rat, Not Fade Away and a monster Let It Grow.  While the front‑of‑house audience tape picks up the excitement, the sound is fairly muffled with heavy crowd noise that can drown out vocals and guitars.  Overall the musical performance far outweighs the technical shortcomings.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the music (especially Terrapin Station) across nine of ten reviews, offset by a few comments about muffled audience recording; weighted rating yields ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Front‑of‑house audience tape (FOB) with Schoeps microphone chain; captures crowd energy but is muffled, with audience noise often overwhelming guitars and vocals.  Drums and Phil's bass come through relatively well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Jack Straw",
+      "Wharf Rat",
+      "Not Fade Away",
+      "Let It Grow",
+      "Greatest Story Ever Told"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set builds into a marathon Terrapin jam that keeps escalating, followed by high‑energy second‑set highlights; reviewers note the second set as essential listening."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for an inspired, aggressive performance on Terrapin Station and other songs; noted for screaming vocals, big‑note hammering, stage antics, and a Bobby‑mirroring moment.",
+    "Phil": "Bass is mentioned as coming through fairly well despite the mix; no major complaints.",
+    "Bob": "",
+    "Keys": "One reviewer notes that Brent (keyboardist) appears to have missed the show, implying weak or absent keyboards.",
+    "Drums": "Both drummers are said to come through fairly well in the muddied recording."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:36:07.209680+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-03-24.schoeps.weber-small.gardner.10354.sbeok.shnf"
+}

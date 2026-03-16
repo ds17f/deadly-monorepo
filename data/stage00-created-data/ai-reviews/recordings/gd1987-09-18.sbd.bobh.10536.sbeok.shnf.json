@@ -1,0 +1,50 @@
+{
+  "summary": "Crystal‑clear soundboard recording with balanced mix, highlighted by a peppy La Bamba and a heartfelt Morning Dew.",
+  "review": "The SBD capture is praised as one of the best‑sounding tapes on Archive, sounding louder yet more balanced and clear than most. Musically the show is solid and fun – the band jokes with a Rocky & Bullwinkle intro, slips in a surprising Jerry‑led La Bamba within Good Lovin', and delivers a moving Morning Dew, though few other moments stand out.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently described as excellent; the performance is decent with a couple of standout songs, leading to an overall strong but not legendary rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Balanced and clear mix, slightly louder than usual, described as beautiful, crisp and the best‑sounding SBD by multiple reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "La Bamba"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Upbeat and playful set with a quirky Rocky & Bullwinkle intro, a fun La Bamba interlude inside Good Lovin', and an emotionally resonant Morning Dew; overall enjoyable despite limited major peaks."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal performance on La Bamba is highlighted as a fantastic surprise.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "La Bamba": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:44:07.204446+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-18.sbd.bobh.10536.sbeok.shnf"
+}

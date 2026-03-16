@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard rehearsal captures a funny, hot Garcia performance despite click‑track drumming issues and occasional mic problems.",
+  "review": "The recording is a soundboard capture of an informal rehearsal that fans find entertaining for its humor and moments where Jerry’s guitar shines, even if his tone sometimes sounds “busted.” While the click track on “Liberty” and some drum mixes are criticized, the overall vibe is enjoyable and the banter (especially Phil’s comment about JG not being heard) adds to its charm.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Multiple reviewers praise the performance and humor while noting specific sound flaws; the balance of positive and negative comments leads to a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Click track on \"Liberty\" sounds like the worst drumming of ’94‑’95; occasional mic issues (JG not being heard) are noted, but overall the FM SBD capture is usable."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Like a Rolling Stone",
+      "Liberty"
+    ],
+    "setlist_flow": "A loose rehearsal with plenty of jokes and informal chatter; not structured like a concert but fun to listen to for its candid moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia sounds hot in places but also \"busted\"; his mic is sometimes inaudible.",
+    "Phil": "Clarifies that JG (Jerry) isn’t being heard, adding humor to the session.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Click‑track drumming on \"Liberty\" is described as reminiscent of the worst moments from ’94‑’95."
+  },
+  "song_mentions": {
+    "Liberty": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Like a Rolling Stone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T19:13:00.884492+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-02-25.rehearsal.fm-sbd.gmb.91250.flac16"
+}

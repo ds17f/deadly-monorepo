@@ -1,0 +1,83 @@
+{
+  "summary": "A lively 1971 Cortland show captured on an audience tape that sounds surprisingly clear, featuring hot Pigpen, tight Jerry, and standout versions of Hard To Handle, Good Lovin' and China Cat Sunflower/I Know You Rider.",
+  "review": "The performance is widely praised for its energy – Pigpen’s raucous vocals and harmonica, Jerry’s crisp guitar tone and Phil’s punchy bass dominate the mix, while the band delivers memorable jams on Hard To Handle, Good Lovin', China Cat Sunflower/​I Know You Rider and Loser.  The audience‑recorded source has a modest tape hiss but is generally clear and well balanced, making the show an enjoyable listening experience despite occasional comments about missing organ presence.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Over 20 reviews overwhelmingly positive about both performance and recording; strong show quality (70% weight) plus good‑to‑excellent tape sound (30% weight) yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note a crisp, balanced mix with Jerry and Phil well represented; tiny tape hiss is mentioned but does not detract. Organ is faint or absent, which some notice. Overall the audience tape sounds better than most spring ’71 recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard To Handle",
+      "Good Lovin'",
+      "China Cat Sunflower / I Know You Rider",
+      "Loser",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set builds strong momentum with a fiery China Cat/​Rider combo and solid originals; the second set sustains intensity through Sugar Magnolia, Truckin' and extended jams, delivering a cohesive, high‑energy experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for tight playing, perfect tone and being clearly audible in the mix.",
+    "Phil": "His bass is described as prominent, electric and ‘in the pocket’; banter before/after songs highlighted his stage presence.",
+    "Bob": "Pigpen receives glowing remarks – hot vocals, hilarious rap bits, powerful harmonica, and memorable on‑stage antics.",
+    "Keys": "",
+    "Drums": "Billy (drummer) noted for steady, in‑the‑pocket drumming and a wild, extended drum solo."
+  },
+  "song_mentions": {
+    "Hard To Handle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Next Time You See Me": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain And Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T05:12:28.265433+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-04-18.sbd.fink.7112.sbeok.shnf"
+}

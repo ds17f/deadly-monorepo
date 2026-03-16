@@ -1,0 +1,87 @@
+{
+  "summary": "High‑energy early‑80s show with a scorching second set and clear audience recording despite occasional storm noise",
+  "review": "The concert captures the Dead at a peak of raw power – Jerry is “cookin’” and Brent’s Rhodes is on fire, delivering standout moments like China > Rider, Estimated, He’s Gone and a trippy Space. The audience tape by Joani Walker is surprisingly clear, though thunder and rain add occasional background rumble and a brief PA knockout during Deal.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and enthusiastic comments about both performance and sound quality outweigh a few neutral/negative outliers."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced for an audience tape; storm ambience and a brief PA knock‑out during Deal are the only noticeable issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > I Know You Rider",
+      "Estimated",
+      "He's Gone",
+      "Space",
+      "The Other One",
+      "T.L.E.O.",
+      "Tennessee Jed",
+      "Althea",
+      "Minglewood"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A fiery first set leads into a rain‑soaked, trippy second set; the band stays tightly locked and the transitions feel natural despite the weather."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised as “cookin’”, “on fire” with perfect tone.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s modified Fender Rhodes is described as hard‑playing, “toy piano” sound and generally “on fire”.",
+    "Drums": "Pre‑drums section highlighted as strong; storm adds thunder ambience but no performance complaints."
+  },
+  "song_mentions": {
+    "China > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "T.L.E.O.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T01:34:06.223176+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-08-16.SonyECM250.walker-scotton.miller.88959.sbeok.flac16"
+}

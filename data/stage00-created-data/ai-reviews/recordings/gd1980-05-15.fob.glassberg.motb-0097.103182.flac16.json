@@ -1,0 +1,76 @@
+{
+  "summary": "Decent audience tape of a solid 1980 show with high‑energy Jack Straw, Franklin's Tower and Lazy Lightning>Supplication, though Althea falls flat.",
+  "review": "The recording is an audience (AUD) capture that, while not pristine, offers clear enough sound to enjoy the performance. The concert shines on several mid‑set numbers—Jack Straw, Peggy-O, Lost Sailor → Saint, Franklin's Tower, Lazy Lightning → Supplication and Stranger—while the second‑set opener Althea is notably weak. Overall reviewers rate both show and tape positively.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Three reviews consistently give 4–5 stars, praising many songs and the tape’s listenability despite modest recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Aud (AUD) tape is solid for the era—clear enough with some ambient room feel; Brent's toy‑piano/organ noises are audible but not distracting."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Peggy-O",
+      "Lost Sailor > Saint",
+      "Franklin's Tower",
+      "Lazy Lightning > Supplication",
+      "Stranger"
+    ],
+    "poor_songs": [
+      "Althea"
+    ],
+    "setlist_flow": "Strong energy after a weak Althea opener; the rest of the set builds momentum with high‑octane numbers and tight playing, especially from Jerry."
+  },
+  "band_member_comments": {
+    "Jerry": "Tighter and more focused in 1980 than earlier years; wakes up after Althea.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent still uses toy‑piano/organ sounds but plays well to the room.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lost Sailor > Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning > Supplication": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:43:36.369248+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-15.fob.glassberg.motb-0097.103182.flac16"
+}

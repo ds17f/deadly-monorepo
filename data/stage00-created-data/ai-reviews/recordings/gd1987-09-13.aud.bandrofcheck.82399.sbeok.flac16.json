@@ -1,0 +1,39 @@
+{
+  "summary": "Audience recording with an exceptionally wide dynamic range that captures Phil’s bass beautifully, paired with a timeless performance highlighted by a soaring Masterpiece.",
+  "review": "The audience tape is praised for its impressive dynamic range and clear capture of Phil Lesh’s low end, making the sound surprisingly vivid for a crowd source. The show itself is remembered fondly, with the reviewer highlighting the emotional impact of “Masterpiece” and describing the night as a lasting testament to the Dead’s 1987 era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "The single detailed review is highly positive about both performance and recording quality, suggesting a strong show with an excellent‑for‑audience tape; limited data keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer notes the widest dynamic range they’ve heard and that Phil’s bass is captured quite well, indicating a clear and vivid audience recording despite typical crowd noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Masterpiece"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The reviewer describes the concert as an unforgettable, organically flowing night that still stands the test of time."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Captured quite well with impressive dynamic range; bass sounds clear and full.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:09:38.418479+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-13.aud.bandrofcheck.82399.sbeok.flac16"
+}

@@ -1,0 +1,78 @@
+{
+  "summary": "Excellent soundboard capture of a rain‑soaked Red Rocks show featuring a stellar Shakedown Street opener, The Other One jams and the iconic Truckin' → Nobody's Fault but Mine jam.",
+  "review": "The recording is praised as crystal‑clear and well balanced, delivering a vivid picture of the band’s resilient performance despite wet weather at Red Rocks. Highlights include the rare Shakedown Street opener, back‑to‑back Lost Sailor/Althea, an inspired stretch from He's Gone onward, The Other One jams with Brent's new keyboard textures, and the memorable Truckin' > Nobody's Fault but Mine outro topped off by Sugar Magnolia.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All three reviewers rate the show 4‑5 stars and explicitly praise both the musical performance and the recording quality; the weighted average of show (70%) and recording (30%) yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the sound as great/clear with no noted flaws, indicating a clean, well‑balanced soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Lost Sailor",
+      "Althea",
+      "The Other One",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong opener with Shakedown Street, smooth transition into new material (Lost Sailor/Althea), a powerful second set from He's Gone onward, and an uplifting finish despite the rain."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Positive remarks about Bob’s encouraging comments that kept the band playing through the rain.",
+    "Keys": "Brent Mydland adds fresh keyboard textures to The Other One jams, enhancing the psychedelic vibe.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lost Sailor": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Nobody's Fault but Mine": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:32:24.530162+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-08-13.nak700.goetz.33583.sbeok.flac16"
+}

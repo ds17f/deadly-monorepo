@@ -1,0 +1,45 @@
+{
+  "summary": "Great audience‑sourced recording capturing a stellar Stella Blue and Terrapin Station performance.",
+  "review": "Both reviewers rave about the tape, noting that despite its age it delivers a clear and enjoyable listening experience. The show shines with standout renditions of Stella Blue and Terrapin Station, making it a memorable entry for anyone who loves that era of the Dead. Overall the musical vibe outweighs any minor generational tape hiss.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Both reviews are 5‑star and praise both the music (especially Stella Blue and Terrapin Station) and the recording, indicating a high‑quality show with an enjoyable but slightly aged source tape."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Old‑generation source tape shows some generational hiss/mud, but remains clear enough to enjoy; reviewers describe it as a \"great recording\" and a \"real treat\"."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set (or the portion captured) flows well, highlighted by strong performances of Stella Blue and Terrapin Station; reviewers felt the show was a treat."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T21:47:39.587827+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-05-12.set2.nak300.friend.andrewf.106434.flac16"
+}

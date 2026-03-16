@@ -1,0 +1,90 @@
+{
+  "summary": "Soundboard recording with occasional mix quirks captures a strong Reno show highlighted by a smoking Truckin' jam, Brown Eyed Women and Me & Bobby McGee.",
+  "review": "The Charlie Miller‑sourced soundboard is generally clear—though the opening “Promised Land” mix is muddy and the tape runs fast, requiring minor pitch correction. Musically the performance shines with a landmark Truckin', tight Brown Eyed Women, an exceptional Me & Bobby McGee, and solid playing from Keith on keys, while The Other One suffers lyrical flubs and Sugar Magnolia feels shaky.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Three detailed reviews emphasize strong musical moments and a decent soundboard source; only minor technical flaws keep the rating just above four."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall, but opening track \"Promised Land\" is poorly mixed; tape runs fast requiring -1% to -2% pitch adjustments; occasional wind‑related ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Brown Eyed Women",
+      "Me & Bobby McGee",
+      "Ship of Fools"
+    ],
+    "poor_songs": [
+      "The Other One",
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "Presented as a three‑hour marathon (often interpreted as three sets) hampered by high winds and the massive Wall of Sound, yet the band kept momentum with tight jams and strong transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocals sound unusually warm; his lead guitar is playful throughout the China→Rider jam and he adds slide work on Truckin'.",
+    "Phil": "Lesh provides solid rumble cues, a powerful bass line during Truckin' (even teasing The Other One), though lyrical recall slips on The Other One.",
+    "Bob": "Vocal delivery is rich and warm for most songs; however he flubs lyrics on The Other One.",
+    "Keys": "Keith’s organ/piano work is highlighted as a standout, especially on U.S. Blues and throughout the set, contributing to the overall tightness.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & Bobby McGee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "China": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T18:53:41.904394+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-05-12.150221.sbd.miller.flac1644"
+}

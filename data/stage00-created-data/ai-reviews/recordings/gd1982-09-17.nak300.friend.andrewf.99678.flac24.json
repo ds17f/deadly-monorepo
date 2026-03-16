@@ -1,0 +1,45 @@
+{
+  "summary": "Positive show featuring a strong Dupree Diamond Blues and a memorable Morning Dew; recording quality not specified",
+  "review": "Both reviewers enjoyed the concert, highlighting Dupree Diamond Blues and Morning Dew as standout moments. No concrete details about the audio source or sound quality were provided, leaving the technical side unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Both reviews are favorable (5 and 4 stars) and mention strong performances, but there is no information on recording quality, so rating leans on show quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not comment on sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dupree Diamond Blues",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Enthusiastic remarks suggest a generally enjoyable set with no noted pacing problems."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dupree Diamond Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T01:40:42.606112+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-09-17.nak300.friend.andrewf.99678.flac24"
+}

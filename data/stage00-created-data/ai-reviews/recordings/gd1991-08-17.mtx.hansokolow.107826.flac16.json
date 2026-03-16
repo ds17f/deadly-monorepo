@@ -1,0 +1,39 @@
+{
+  "summary": "Immaculate matrix recording of a flawless show highlighted by Hornsby's otherworldly Morning Dew and sweet second‑set jams",
+  "review": "The audience and soundboard blend delivers crystal‑clear audio, with reviewers calling the sound immaculate. Musically the concert shines – Jerry’s joyful presence, Bruce Hornsby’s soaring piano on Morning Dew and a beautifully jammed second set earn high praise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All four reviews are highly positive (4‑5 stars) and consistently commend both the performance and sound quality, indicating an outstanding show captured with excellent matrix recording."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the audio as immaculate, crisp and great‑sounding; no issues noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set praised for beautiful jams and overall flow; audience reports a joyful atmosphere throughout the concert."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as smiling all night, adding to the show’s joy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby's piano work highlighted as otherworldly on Morning Dew and masterful throughout the second set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T23:26:02.389214+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-08-17.mtx.hansokolow.107826.flac16"
+}

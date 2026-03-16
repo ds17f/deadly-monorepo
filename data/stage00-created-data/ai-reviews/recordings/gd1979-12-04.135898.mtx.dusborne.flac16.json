@@ -1,0 +1,94 @@
+{
+  "summary": "High‑quality matrix recording of an average‑to‑above‑average show with a standout Estimated Prophet → Franklin’s Tower sequence and solid second‑set jams.",
+  "review": "The matrix mix by Dave Usborne delivers clear instrument separation, softened room ambience and even a tasteful reverb boost that makes Jerry’s recovering vocals sit well. Musically the concert is mixed – an average first set but a very strong second set highlighted by the unusual Estimated Prophet → Franklin’s Tower transition, a groovy Not Fade Away and a lengthy, Brent‑era‑style jam toward the end.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "Recording quality is praised as excellent (matrix with great clarity), while the show receives mixed feedback – some reviewers call it solid, others find it unremarkable, leading to a combined rating just under 4 stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Softened room ambience, excellent instrumental clarity; reviewer added extra reverb to tame sterile SBD vocals. No major drop‑outs reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Franklin's Tower",
+      "Not Fade Away",
+      "Jack Straw",
+      "Minglewood Blues",
+      "Passenger",
+      "Deal",
+      "U.S. Blues"
+    ],
+    "poor_songs": [
+      "Stella Blue",
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "First set described as average with a few highlights (Jack Straw opener, hot Minglewood and strong Passenger→Deal closer). The second set is unusually long (>100 min) and features a pre‑drums Estimated Prophet → Franklin’s Tower jam, solid Not Fade Away, an extended Brent‑era jam near the end, and an infectious crowd reaction after Sugar Magnolia into U.S. Blues."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice has returned to a tolerable level after months of laryngitis but still struggles on songs like Stella Blue; matrix mix softens his SBD vocals.",
+    "Phil": "Bass is described as bouncy, especially in the strong opener (China‑rider reference) and near transitions.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:55:51.027947+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-04.135898.mtx.dusborne.flac16"
+}

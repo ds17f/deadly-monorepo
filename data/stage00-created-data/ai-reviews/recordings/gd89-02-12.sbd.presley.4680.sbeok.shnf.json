@@ -1,0 +1,70 @@
+{
+  "summary": "Good‑quality soundboard capture of a mixed show highlighted by the rare electric “Monkey & the Engineer” and a solid second set with Dylan.",
+  "review": "The recording is generally clear with well‑balanced vocals and Phil’s bass nicely isolated, making it one of the better SBD tapes from this era. Musically the night is uneven – the first set feels polite while the second set shines thanks to guest Bob Dylan, a rare full‑band electric “Monkey & the Engineer”, and strong moments like “How Long Blues” and “Not Fade Away”. Some reviewers note vocal flubs and a lack of tightness, but the rarity of the setlist keeps the show worthwhile.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the recording quality (good‑to‑excellent) and the second‑set highlights, while several point out performance slip‑ups; the weighted average yields a solid but not stellar rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced; vocals and Phil’s bass are well isolated. No major dropouts reported, though some listeners describe it as merely “decent”."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Monkey & the Engineer",
+      "How Long Blues",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "Iko Iko",
+      "Stella",
+      "Foolish"
+    ],
+    "setlist_flow": "First set is polite and a bit restrained; second set picks up energy with Dylan’s chaotic guest spot, the rare electric “Monkey & the Engineer”, and strong blues numbers. Overall flow is uneven but the latter half delivers the memorable moments."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar licks on “Not Fade Away” are praised, but several reviewers note lyric flubs and shaky vocal delivery throughout the show.",
+    "Phil": "Consistently highlighted for smooth, great bass lines and excellent isolation in the mix.",
+    "Bob": "Weir receives mixed feedback – one reviewer calls him an \"A‑hole of the Year\" while others find his contributions acceptable.",
+    "Keys": "Brent’s Hammond organ is described as sounding tired on a few tunes and being turned down to make room for guest guitarist Spencer Davis.",
+    "Drums": "The drum/space segment is mentioned positively, but no specific criticism or standout praise is given."
+  },
+  "song_mentions": {
+    "Monkey & the Engineer": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "How Long Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Foolish": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T16:49:42.577290+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-02-12.sbd.presley.4680.sbeok.shnf"
+}

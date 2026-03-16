@@ -1,0 +1,61 @@
+{
+  "summary": "Stellar recording of an electrifying show with Jerry on fire and standout performances of Music Never Stopped, China Cat Sunflower/I Know You Rider, and a monster Other One>Goin' Down The Road>Saturday Night.",
+  "review": "The reviewer raves about the concert’s raw energy, calling it comparable only to Red Rocks, and highlights Jerry Garcia’s blazing playing throughout. Standout moments include a superb Music Never Stopped opener, a sizzling China Cat Sunflower/I Know You Rider pair, and an epic Other One>Goin' Down The Road>Saturday Night sequence. The recording itself is described as “stellar,” implying excellent sound quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "A single, highly enthusiastic review praises both the musical performance and the audio fidelity, suggesting an outstanding show captured with great recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls the recording “stellar” with no complaints about clarity or mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Music Never Stopped",
+      "China Cat Sunflower / I Know You Rider",
+      "The Other One > Goin' Down The Road Feelin' Bad > Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy flow praised throughout; opener builds momentum and the second set delivers a powerful, seamless sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as ON FIRE the whole show.",
+    "Phil": "",
+    "Bob": "Initially seemed to lack the venue’s electrical energy but quickly ‘gets it right’ and delivers superb songs in both sets.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower / I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down The Road Feelin' Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:20:44.015948+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-10.139379.mtx.seamons.ht112.flac16"
+}

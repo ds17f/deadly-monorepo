@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent matrix recording of a stellar show highlighted by an unforgettable Crazy Fingers and the mystically rich Blues For Allah material.",
+  "review": "All three reviewers rave about this performance – they praise Jerry’s soaring vocals, Keith’s Fender‑Rhodes sparkle on Crazy Fingers, and Bobby’s inventive rhythm work. The matrix (soundboard + audience) capture is described as “very nicely recorded,” making the intricate musical moments easy to hear. No complaints are noted, so both the music and the recording come across as top‑notch.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Consistently five‑star reviews focus on outstanding musical moments and a high‑quality matrix recording; both show and recording merit receive strong positive weighting."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers call the recording “very nicely recorded,” implying clear, balanced sound with no noted flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Blues For Allah"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Not specifically described; reviewers emphasize overall greatness rather than set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Beautiful vocals highlighted as a highlight of the show.",
+    "Phil": "",
+    "Bob": "Unique, punctuated rhythm on his first Ibanez custom noted positively.",
+    "Keys": "Keith breaks out the Fender Rhodes on Crazy Fingers, adding a distinctive texture.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blues For Allah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T02:10:51.551922+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1975-06-17.mtx.menke.gems.97079.flac16"
+}

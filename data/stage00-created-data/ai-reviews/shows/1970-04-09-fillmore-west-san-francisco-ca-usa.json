@@ -1,0 +1,63 @@
+{
+  "summary": "Rare Cowboy jam, fiery Other One, mixed electric set",
+  "blurb": "The acoustic first half shines with a rare Cowboy Song improvisation and a powerful rendition of It's A Man's World. The second half features an intense The Other One sequence but suffers from uneven sound quality on the electric material. Highlights include Not Fade Away and Turn On Your Lovelight.",
+  "review": "April 9, 1970 at the Fillmore West captures one of the most intriguing snapshots of the early‑70 Dead. Pigpen’s acoustic set is a highlight – the band stretches out on an almost mythical Cowboy Song jam that many fans still talk about, and Jerry’s phrasing on It’s A Man’s World feels especially soulful. The electric half launches into a wild, double‑Cryptical Envelopment voyage into The Other One, delivering the kind of high‑octane improvisation that defined this era, before winding down with a rousing Not Fade Away/Turn On Your Lovelight finish. The night is also notable for the surprise appearance of the Miles Davis Quintet as a supporting act, adding an unexpected jazz‑inflected flavor to the evening’s energy. While the sound quality dips in places – tape warble on the acoustic side and dropouts during the electric stretch – the matrix recording (gd70-04-09.sbd.hanno.6157.sbeok.shnf) offers the clearest window into those magical moments, making it the go‑to source for anyone wanting to experience this unique show.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 17,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "Two recordings are clearly positive, two are mixed; no consistent negative language. The overall sentiment leans modestly positive, warranting a small boost.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-04-09.sbd.hanno.6157.sbeok.shnf",
+    "reason": "Matrix source delivers the rare Cowboy jam and clear acoustic portion, despite some electric‑set dropouts; it’s the most complete and sonically balanced representation of the show."
+  },
+  "key_highlights": [
+    "Rare Cowboy Song extended jam in the acoustic set",
+    "Fiery The Other One sequence with dual Cryptical Envelopments",
+    "Strong closing energy on Not Fade Away and Turn On Your Lovelight",
+    "Miles Davis Quintet supporting act adds historic jazz flavor"
+  ],
+  "song_highlights": [
+    "It's A Man's World",
+    "Cowboy Song*",
+    "The Other One",
+    "Not Fade Away"
+  ],
+  "band_performance": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-19T18:05:25.592054+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "It's A Man's World"
+    ],
+    [
+      "Cowboy Song*"
+    ],
+    [
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "Cryptical Envelopment"
+    ],
+    [
+      "Not Fade Away"
+    ]
+  ]
+}

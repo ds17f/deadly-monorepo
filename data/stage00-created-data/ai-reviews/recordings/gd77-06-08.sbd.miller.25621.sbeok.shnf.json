@@ -1,0 +1,106 @@
+{
+  "summary": "Excellent clean soundboard capture of a peak‑1977 show with smoking second‑set jams and flawless recording quality",
+  "review": "The consensus is that this June‑1977 performance is one of the band’s finest – tight grooves, towering Jerry solos (a near‑90‑minute run), and a second set packed with Estimated, Eyes of the World, The Other One, Wharf Rat and a blistering Brokedown Palace.  Charlie Miller’s unpatched soundboard source is described as crystal‑clear, with an especially transparent AUD patch, making the recording sound almost like being onstage.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All reviews praise both the musical performance and the audio fidelity; multiple reviewers call it a top‑10/77 recording with an “excellent” soundboard, yielding a near‑perfect combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean, almost unpatched soundboard; transparent AUD keyboard patch; crisp and clear throughout with no noticeable dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Jack-A-Roe",
+      "Passenger",
+      "Lazy Lightning > Supp",
+      "Estimated",
+      "Eyes of the World",
+      "The Other One",
+      "Wharf Rat",
+      "Not Fade Away",
+      "Good Times Bad Times (GDTRFB)",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Sunrise"
+    ],
+    "setlist_flow": "The set is described as tight and seamless – the first set flows smoothly into an even tighter second set, highlighted by a 90‑minute Jerry marathon with only a four‑minute drum break. Energy crackles from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as ‘man possessed’, delivering a near‑hour‑plus solo run; never stops and drives the show’s intensity.",
+    "Phil": "Appreciated for his bass foundation (no specific critique, just general praise).",
+    "Bob": "",
+    "Keys": "Keyboard sound praised – AUD patch is “almost completely transparent”, making the keys sit perfectly in the mix.",
+    "Drums": "Solid, with a short drum break that keeps momentum; the mix captures the drums cleanly."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Passenger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy Lightning > Supp": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sunrise": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Times Bad Times": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T03:14:47.375369+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-06-08.sbd.miller.25621.sbeok.shnf"
+}

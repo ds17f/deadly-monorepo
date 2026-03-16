@@ -1,0 +1,72 @@
+{
+  "summary": "Soundboard source with fair‑to‑good fidelity (cuts, heavy bass, occasional feedback) captures a fiery March 16 1968 show highlighted by an incendiary Alligator and a standout Eleven.",
+  "review": "The performance is widely praised for its high energy and adventurous jams – especially the blazing Alligator, a soaring Dark Star/China Cat sequence and one of the era’s most talked‑about Eleves.  Technically the tape suffers from frequent drop‑outs, a muddy low end and an infamous feedback burst, but listeners who enjoy ’68 still find it highly listenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and laud the musical content; recording flaws are noted but do not dominate the experience, yielding a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Frequent cuts in several songs, heavy low‑end (Phil’s bass), occasional feedback that sounds like a tractor‑trailer horn, hissy/muddy sections; overall still listenable for the period."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alligator",
+      "The Eleven",
+      "Dark Star",
+      "Caution > Feedback"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set opens with a powerful Morning Dew (debated placement) and moves into extended jams; cuts disrupt continuity but the overall arc stays high‑energy, with the band feeding off each other's improvisations."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work gets high marks – soaring licks in Alligator, fiery phrases in Dark Star, and a strong finish on The Eleven.",
+    "Phil": "Bass noted as heavy/muddy by some listeners; praised for solid support on The Eleven and occasional melodic moments.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Eleven": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Alligator": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Caution > Feedback": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "We Bid You Good Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T08:00:50.955478+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-03-16.sbd.vernon.9388.sbeok.shnf"
+}

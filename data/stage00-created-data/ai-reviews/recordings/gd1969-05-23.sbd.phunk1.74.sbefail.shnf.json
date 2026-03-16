@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard captures a stellar 1969 performance highlighted by a soaring Dark Star and crystal‑clear Morning Dew.",
+  "review": "The recording is praised as an almost flawless soundboard tape – every instrument rings out, the vocals are juicy and the low end is tight. Musically the show shines with a tasty Dark Star, a powerful St. Stephen, thumping Eleven and a haunting Morning Dew that reviewers call “incredible”. Overall the set flows naturally and delivers classic ’69 energy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All seven reviews are overwhelmingly positive, highlighting both superb musical performance and exceptional soundboard quality; the consistent high star ratings justify a near‑top rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the tape as crystal clear, with every instrument audible, tight low end and vocal presence; no complaints about noise or dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Morning Dew",
+      "St. Stephen",
+      "The Eleven",
+      "William Tell Overture"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A strong opening with Dark Star, followed by energetic St. Stephen and The Eleven, then the haunting Morning Dew; overall pacing is praised as classic ’69 momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s voice is described as “fine” and his guitar tone as “perfect” and “tasty”.",
+    "Phil": "Bass is noted as thumping and powerful, especially on The Eleven.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill’s cymbal crashes are highlighted as a high point, with “whooshing” crashes adding excitement."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "William Tell Overture": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T14:36:00.903783+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-05-23.sbd.phunk1.74.sbefail.shnf"
+}

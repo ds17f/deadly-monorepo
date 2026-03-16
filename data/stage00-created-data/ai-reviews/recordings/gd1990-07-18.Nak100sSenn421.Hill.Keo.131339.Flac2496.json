@@ -1,0 +1,42 @@
+{
+  "summary": "Audience recording with superb sound captures what many consider the best summer‑tour show.",
+  "review": "The audience tape is praised for its crystal‑clear, lively mix – described as the best‑sounding crowd recording of the tour. Reviewers also claim this concert may have been the highlight of the summer run, despite a few mislabeled tracks and the absence of an encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Only one detailed review, but it rates both performance (5★) and recording quality very highly, leading to a near‑top overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, vibrant crowd mix; reviewer calls it the best‑sounding audience tape despite some mislabeled track titles."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Overall flow praised as possibly the best show of the summer tour; no encore is present."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T10:14:46.751382+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-18.Nak100sSenn421.Hill.Keo.131339.Flac2496"
+}

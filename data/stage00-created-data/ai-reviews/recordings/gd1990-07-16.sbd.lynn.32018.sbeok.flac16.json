@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard recording (levels a bit low) of an energetic Buffalo show with a killer first set and standout High Time.",
+  "review": "The SBD capture is clear enough for most listeners, though the mix sits slightly low. Musically the band delivers a high‑energy performance – a long, grooving first set highlighted by a rousing \"Don't Ease Me In\" and a spectacular \"High Time\" in the second half. Overall the show feels magical and well‑received by fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All five reviews are strongly positive, praising both performance and sound quality; recording is solid (soundboard) and the show is described as magical with standout moments."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Nice SBD source, generally clear; some reviewers note the levels are a little low but no major distortion or drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "High Time",
+      "Don't Ease Me In"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans rave about the long, groove‑filled first set and a high‑energy second set; overall setlist is called \"FAT\" and flows well, keeping the vibe enthusiastic throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland receives a shout‑out for his performance (mentioned as great in person).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T09:42:06.623433+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-16.sbd.lynn.32018.sbeok.flac16"
+}

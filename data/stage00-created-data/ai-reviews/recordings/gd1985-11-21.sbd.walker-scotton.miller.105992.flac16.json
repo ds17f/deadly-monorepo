@@ -1,0 +1,93 @@
+{
+  "summary": "Crystal‑clear soundboard capture of an all‑time great 1985 show – seamless second set, stellar setlist (Big Boy Pete, She Belongs to Me, Walking the Dog, The Other One) and superb Brent‑era keyboards.",
+  "review": "Fans rave about this recording’s pristine soundboard mix, calling it crisp, superbly balanced and a standout CM transfer. The performance is described as one of the best of the ’80s era – a tight first set and an almost flawless second set with memorable moments like Big Boy Pete, She Belongs to Me, Walking the Dog and a flowing The Other One → Wharf Rat → Playing reprise sequence.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All detailed reviews (5+) praise both the musical performance and the recording quality; no substantive negatives were raised."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, balanced mix praised by multiple reviewers; noted as a superb CM transfer with no significant drop‑outs or muddiness. Only occasional comment about Jerry’s raspy vocal tone, not a recording flaw."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Big Boy Pete",
+      "She Belongs To Me",
+      "Walking the Dog",
+      "The Other One",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as hot and energetic; second set seamless and even more amped, with creative song pairings (Shakedown > Crazy Fingers, The Other One > Wharf Rat > Playing reprise) that kept momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice a bit raspy/“smoked” on this night but guitar work praised; overall performance hailed as exceptional.",
+    "Phil": "\"Going to kick ass\" – bass energy highlighted and praised throughout the show.",
+    "Bob": "Bob’s vocal entry noted at the start of the concert (BBP reference).",
+    "Keys": "Brent Mydland era keyboards lauded; mixing board work by Healy in ’85 singled out as superb.",
+    "Drums": "Drum segment during She Belongs To Me highlighted positively; overall tight, crisp rhythm section."
+  },
+  "song_mentions": {
+    "Big Boy Pete": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "She Belongs To Me": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Walking the Dog": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing reprise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:54:33.358162+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-21.sbd.walker-scotton.miller.105992.flac16"
+}

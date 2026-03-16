@@ -1,0 +1,82 @@
+{
+  "summary": "Good‑quality soundboard source with occasional cuts, capturing a solid June ’80 show highlighted by \"They Love Each Other\", \"Cassidy\", \"Peggy‑O\", \"Wharf Rat\" and \"I Need A Miracle\".",
+  "review": "The Miller SBD of the June 19 1980 concert is generally clear but suffers from several tape cuts that force listeners to dip into audience or matrix mixes. Musically the show sits in the middle of the road – a few standout moments (Peggy‑O, Wharf Rat, I Need A Miracle) are offset by weaker spots like Tennessee Jed and an under‑driven Bertha. Overall it’s an enjoyable snapshot of the era for fans willing to navigate the technical quirks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is average (≈3/5) while recording quality is good (≈4/5); weighted combination yields ~3.3 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp SBD, but contains multiple tape cuts (e.g., loss of Jerry’s guitar on China Cat > Rider, a 5‑sec drum gap) and requires EQ tweaks; matrix or audience tracks are recommended for missing sections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "They Love Each Other",
+      "Cassidy",
+      "Peggy-O",
+      "Wharf Rat",
+      "I Need a Miracle",
+      "Lost Sailor"
+    ],
+    "poor_songs": [
+      "Tennessee Jed",
+      "Bertha"
+    ],
+    "setlist_flow": "First set rated B‑, second set C; overall the concert feels average with occasional high points and some lackluster moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is strong but his precision wavers; his guitar drops out on several cuts, yet later delivers emphatic runs.",
+    "Phil": "Phil Lesh receives praise for a solid performance, especially on \"They Love Each Other\".",
+    "Bob": "Bob Weir (Bobby) contributes well on Lost Sailor and Cassidy but is turned down on the late Bertha.",
+    "Keys": "Keyboardist Brent (on keyboards) is noted as good, adding to the energy of Peggy‑O.",
+    "Drums": "Mickey Hart’s drum segment includes a 5‑second SBD gap; overall drumming is solid."
+  },
+  "song_mentions": {
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T00:41:15.401947+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-06-19.sbd.miller.113300.flac16"
+}

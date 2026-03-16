@@ -1,0 +1,46 @@
+{
+  "summary": "Mixed performance with a weak Shakedown Street and a praised Lost Sailor opener; recording quality cannot be assessed from the reviews.",
+  "review": "Fans are divided on this 1994 show – some call it a dull, energy‑less outing with a disappointing Shakedown Street, while others appreciate the surprise opening of Lost Sailor and Vinny’s fun drumming. No reviewer mentions the sound quality, leaving the recording source and fidelity unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "The show receives both strong negative (1‑star, 0‑star) and moderate positive (3‑star) feedback, resulting in a mixed overall impression; with no data on recording quality the rating leans toward average."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "None of the reviewers commented on sound clarity, mix balance, or source type, so technical quality cannot be determined."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lost Sailor"
+    ],
+    "poor_songs": [
+      "Shakedown Street"
+    ],
+    "setlist_flow": "Several reviewers criticize the typical 90s Dead format as predictable and low‑energy, though one notes the garden “went nuts” when Shakedown Street opened and another enjoys Vinny’s contribution on drums."
+  },
+  "band_member_comments": {
+    "Jerry": "Criticized as lacking feeling and not a spectacular guitarist.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Described as boring and a predictable 'space jerkoff' by one reviewer, while another calls Vinny’s drumming fun."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:32:06.431590+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-15.scheops.bryon.dauria.98063.flac16"
+}

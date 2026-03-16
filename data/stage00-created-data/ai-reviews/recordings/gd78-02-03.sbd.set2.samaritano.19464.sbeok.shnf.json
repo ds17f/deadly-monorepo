@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of an epic ’78 set, highlighted by a soaring Estimated→Eyes jam and a euphoric Music Never Stopped finish.",
+  "review": "Reviewers rave about the performance, calling this night one of the best shows of 1978 with a peak‑dead Estimated into Eyes sequence and a transcendent three‑minute ending on Music Never Stopped. The soundboard source is reported clear and free of issues, making the musical brilliance easy to hear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Strongly positive comments on both performance (standout jams, flow) and recording quality (soundboard, no complaints). Weighting gives a high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear soundboard source; reviewers note no audio problems or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated",
+      "Eyes",
+      "Music Never Stopped",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set flows very nicely with a strong middle section; the Estimated→Eyes jam is described as peak Dead and the closing Music Never Stopped delivers pure euphoria."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work praised, especially during Eyes; his “Wolf” tone adds heaviness to the set.",
+    "Phil": "Lesh’s bass highlighted during Playing in the Band (P.I.T.B).",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T09:20:36.223766+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-02-03.sbd.set2.samaritano.19464.sbeok.shnf"
+}

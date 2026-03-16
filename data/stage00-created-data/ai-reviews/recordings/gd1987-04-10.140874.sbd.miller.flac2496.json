@@ -1,0 +1,57 @@
+{
+  "summary": "Indoor Chicago show with a lively atmosphere; recording quality not discussed but the performance shines on Shakedown Street, Black Peter, Candyman and Box of Rain.",
+  "review": "The reviewer fondly remembers this indoor Dead concert in Chicago as fun and energetic, highlighting Jerry Garcia's rejuvenated vocals and guitar work. Standout moments include strong renditions of Shakedown Street, Black Peter, Candyman and Box of Rain, though the review provides no details on the audio source or fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "Positive remarks about the show but only a single moderate‑star review and no recording‑quality comments, leading to an average combined rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not mention soundboard, audience mix, clarity, or any technical issues; recording quality cannot be assessed from the provided comments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Black Peter",
+      "Candyman",
+      "Box of Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is remembered as lively and fun, with the band feeding a high‑energy crowd in an indoor amphitheater; no specific criticism of song order or pacing was noted."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as rejuvenated, lively, with smooth vocals and energetic playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T21:32:12.834652+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-04-10.140874.sbd.miller.flac2496"
+}

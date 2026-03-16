@@ -1,0 +1,45 @@
+{
+  "summary": "Fair audience recording of a show highlighted by an explosive Bird Song jam and solid Maggie's Farm, with mixed opinions on Jerry’s playing.",
+  "review": "The performance is generally praised for its trippy Bird Song improvisation and a lively take on Maggie's Farm, though some listeners found the overall set boring and Jerry’s guitar uninspired. The audience‑recorded tape suffers from low levels, tunnel‑echo and occasional muddiness, but many say it’s listenable after a little EQ.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "high",
+    "rationale": "Based on 13 reviews the show scores around 3.5/5 for musical quality while the recording averages about 2.4/5; weighted together this yields a ~3.1 star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers note very low levels, loud tunnel‑echo and overall muddy sound; others say the balance is decent and that EQ can clean it up."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Maggie's Farm"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generally solid with high energy moments (Bird Song, Maggie's Farm) but some listeners felt the set was uneven or a bit boring overall."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – praised for his contribution to Bird Song by some, while others called his playing mediocre and uninspired.",
+    "Phil": "Joined in the Maggie's Farm verse; no further specific comments.",
+    "Bob": "Also part of the Maggie's Farm vocal share; otherwise not mentioned.",
+    "Keys": "Vince (keyboards) received positive remarks for his playing throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Maggie's Farm": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T04:25:45.197544+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-12-12.schoeps.ladner.10933.sbeok.shnf"
+}

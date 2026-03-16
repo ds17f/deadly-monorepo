@@ -1,0 +1,45 @@
+{
+  "summary": "Crystal‑clear recording highlights a beautiful “He’s Gone” and a stellar “Stella Blue,” but the band sounds tired and uneven.",
+  "review": "The FLAC capture is praised for its clarity and balance, delivering an especially moving rendition of “He’s Gone” and a soaring “Stella Blue.”  While several fans call the night awesome, one reviewer notes rough vocals, lyric flubs and a generally fatigued feel, making the performance feel mixed overall.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Strong recording quality (high‑fidelity sound) boosts the score, but divergent show impressions (some calling it epic, others mediocre) keep the overall rating just below four stars."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers repeatedly describe the audio as great‑sounding, crisp and beautiful; no dropout or mix issues are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as an epic ’82 night with moments of magic, yet the band sounded tired and some vocals/lyrics were shaky, creating a mixed‑feel overall."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocal roughness from a sore throat; flubs lyrics but delivers an emotional “Stella Blue.”",
+    "Phil": "",
+    "Bob": "Flubs lyric lines alongside Jerry.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T23:08:23.598550+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-03.136587.sen441.schley.flac1644"
+}

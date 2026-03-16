@@ -1,0 +1,45 @@
+{
+  "summary": "Audience recording a bit tinny but captures a rare 1972 Academy of Music set featuring Jerry’s pedal‑steel on the elusive LLR and an incredible Smokestack Lightning jam.",
+  "review": "The show is celebrated for its historic moments – the first Donna Jean “wail,” a seldom‑heard LLR with Jerry Garcia on pedal steel, and a soaring Smokestack Lightning that borders on Truckin'.  The audience source is modestly rough, with tinny coloration, chatter and a few song cuts, but it remains listenable for fans chasing those rarities.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Performance is praised for rare moments and strong playing (high show weight), while the audio quality is described as tinny, rough, and incomplete (lower recording weight)."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Tin‑can, slightly rough sound with noticeable chatter/critique, some songs cut, but overall clear enough to enjoy the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Smokestack Lightning",
+      "LLR (with pedal steel)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Highlights include the first Donna Jean vocal debut, rare LLR featuring Jerry on pedal steel, and a powerful blues jam from Pigpen; despite missing tracks, the flow feels historic and energetic."
+  },
+  "band_member_comments": {
+    "Jerry": "Pedal‑steel work on the rare LLR is specifically praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LLR (with pedal steel)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T12:24:08.503799+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-03-25.set2.aud.berger.100352.flac16"
+}

@@ -1,0 +1,58 @@
+{
+  "summary": "Excellent audience recording captures a high‑energy ’93 show with a smoking Liberty and a tight Bertha→Greatest opener.",
+  "review": "Both reviewers rave about the February 1993 performance, highlighting the rare Bertha → Greatest opener, a standout version of “Liberty,” and the excitement around new material like “Eternity.” The audience source is praised for its clarity—so clear that a matrix mix is imagined—and despite a minor stumble by Jerry on “Lazy River Road,” the show feels fresh and vibrant.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "Both reviews are highly favorable (4‑5 stars), emphasizing strong musical performance and excellent sound quality; limited to two detailed reviews, confidence is set to medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer wishes a soundboard mix were available, but the audience tape is described as clear enough for a potential matrix; overall very listenable with no major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Liberty",
+      "Bertha → Greatest",
+      "Eternity"
+    ],
+    "poor_songs": [
+      "Lazy River Road"
+    ],
+    "setlist_flow": "The set opens with a rare, tightly played Bertha→Greatest transition, then rolls into fresh 1993 material; the band’s energy is high after a month off, making the show feel both exciting and cohesive."
+  },
+  "band_member_comments": {
+    "Jerry": "Stumbles on one verse of “Lazy River Road” but otherwise drives the energetic performance; noted as his last rally before the later decline.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Liberty": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha → Greatest": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:40:41.590941+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-02-21.fob.copeland.evans.GEMS.86058.flac16"
+}

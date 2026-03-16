@@ -1,0 +1,75 @@
+{
+  "summary": "Crisp soundboard capture of a laid‑back ’74 Paris show with standout Peggy‑O, an extended Deal intro and soaring Eyes of the World, though the mix under‑represents Bob Weir’s rhythm guitar.",
+  "review": "The Miller SBD transfer delivers clear stereo separation and very little hiss, letting the relaxed, funk‑infused vibe of this 1974 Paris concert shine through. Reviewers rave about Phil Lesh’s “lead‑bass” work, a beautiful Eyes of the World stretch and a memorable Peggy‑O, while noting that Bob Weir’s guitar is oddly buried in the mix and the pan balance can be strange. Overall the performance is praised as a gem of the year despite its technical quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews are 4‑5 stars and emphasize strong musical moments; recording is generally praised as crisp with only occasional mix issues, yielding a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp stereo imaging and minimal hiss from the reel‑to‑reel transfer; however several reviewers note odd panning (Jerry left, Godchaux right) and a buried/missing Bob Weir rhythm guitar."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Deal",
+      "Eyes of the World",
+      "Morning Dew",
+      "Seastones"
+    ],
+    "poor_songs": [
+      "Morning Dew (mixed opinions, some call it a train‑wreck)"
+    ],
+    "setlist_flow": "A relaxed first set that gets funkier with Deal and Peggy-O, followed by an expansive second set featuring a soaring Eyes of the World and an adventurous Seastones segment; overall pacing is mellow but engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "Quiet, building intro on Morning Dew and solid lead work; some reviewers note odd left‑channel panning.",
+    "Phil": "Repeatedly praised for 'smoking' bass, lead‑bass style, and overall groove throughout the show.",
+    "Bob": "Multiple reviewers complain his rhythm guitar is buried or missing in the mix, especially during early songs like Row Jimmy.",
+    "Keys": "Keith and Ned Lagin provide atmospheric keyboards during Seastones; mixed remarks about balance but generally appreciated.",
+    "Drums": "Bill (Mickey) noted in pan comments but otherwise provides steady, solid drumming."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Seastones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T01:00:50.261944+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-09-21.sbd.miller.30654.sbeok.flacf"
+}

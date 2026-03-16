@@ -1,0 +1,31 @@
+{
+  "summary": "Empty recording with no audible content and a negative review",
+  "review": "The sole reviewer gave this release a single star, stating simply “Nothing here.” No details about performance or audio quality were provided, indicating the tape may be silent or missing. With no positive remarks, the consensus is that this release offers nothing of value.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one brief 1‑star review; no substantive comments to suggest any redeeming qualities."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer reports nothing audible; likely a silent or missing recording."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T03:46:23.600157+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-10.unk.dunahee-stube.237.shnf"
+}

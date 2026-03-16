@@ -1,0 +1,76 @@
+{
+  "summary": "Great audience recording captures a high‑energy show with smoking Althea, knee‑slapping Cumberland Blues and heartfelt Jerry moments.",
+  "review": "The performance is described as electrifying, highlighted by a blazing Althea, a tight Cumberland Blues, and moving renditions of Wharf Rat and The Weight. Reviewers praise the lively audience capture, noting that the crowd ambience adds to the excitement despite the recording being an audience source. Overall the show delivers the classic “feeling” fans cherish.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Both reviewers are enthusiastic (average 4.5 stars) and highlight strong musical moments; recording is noted as good audience sound, yielding a solid combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience capture praised for lively crowd ambience; no specific clarity issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Cumberland Blues",
+      "Promised Land",
+      "China-Rider",
+      "Wharf Rat",
+      "The Weight"
+    ],
+    "poor_songs": [
+      "Rooster"
+    ],
+    "setlist_flow": "Energetic opening with a Half‑Step jam leading into Rooster, then rolling through tight blues and soulful ballads; the second half builds to an emotional climax featuring Jerry’s memorable chords."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his emotive playing and iconic chord choices that resonated with the crowd.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China-Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Weight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rooster": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T15:25:04.638985+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-25.senn-me80.wklitz.91996.flac16"
+}

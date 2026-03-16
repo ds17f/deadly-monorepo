@@ -1,0 +1,83 @@
+{
+  "summary": "Superb sound‑board capture of a classic 1993 Oregon show highlighted by an epic Standing On The Moon and crystal‑clear China > Rider",
+  "review": "The SBD source is crisp, clean and exceptionally balanced, delivering every nuance from Jerry’s new axe to the soaring keys on Promised Land. Musically the night shines with a towering Standing On The Moon, a monster China > Rider, and a tight first‑set that, while short, feeds into a second set that many reviewers call one of the best of the ’90s.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, most rating 4‑5 stars, consistently praising both the recording fidelity and the performance; only a few mixed comments do not outweigh the strong consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean SBD with superb clarity; occasional extreme panning noted but overall superb mix and balance across band and audience ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Standing On The Moon",
+      "China > Rider",
+      "Promised Land",
+      "Bird Song",
+      "I Fought The Law",
+      "Way To Go Home",
+      "Jack Straw"
+    ],
+    "poor_songs": [
+      "Here Comes Sunshine (HCS) – muddled in a few accounts",
+      "Bird Song – disappointing to one reviewer"
+    ],
+    "setlist_flow": "First set is short but tight, serving as a launchpad for a second‑set that builds to an unforgettable Standing On The Moon climax; the show’s pacing keeps energy high despite occasional early‑set brevity."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his new guitar tone, incendiary solos on SOTM and Rider, and vocal delivery (‘be with you’ lyric).",
+    "Phil": "Bass work highlighted as ‘crushing’ the Rider groove.",
+    "Bob": "Vocals back after surgery; guest harmonica (Huey Lewis) noted but not essential.",
+    "Keys": "Keyboard work described as ‘awesome’, especially on Promised Land and the China > Rider jam.",
+    "Drums": "Vince/Mickey interplay in Space praised; drums drive noted as tight throughout."
+  },
+  "song_mentions": {
+    "Standing On The Moon": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "China > Rider": {
+      "positive_mentions": 8,
+      "negative_mentions": 1,
+      "total_mentions": 9
+    },
+    "Promised Land": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bird Song": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "I Fought The Law": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Way To Go Home": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T15:43:44.423893+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-08-21.sbd.nawrocki.15035.sbeok.shnf"
+}

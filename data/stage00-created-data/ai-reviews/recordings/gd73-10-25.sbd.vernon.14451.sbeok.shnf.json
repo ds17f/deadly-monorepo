@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent soundboard recording with occasional glitches, featuring a transcendent second set highlighted by Dark Star, Eyes of the World and Stella Blue.",
+  "review": "The 10/25/73 show is widely celebrated for its adventurous improvisations – the Dark Star–Eyes–Stella sequence and the China Cat → The Rider jam are repeatedly praised, while the first set suffers from a few cuts and tape hiss. The source is a soundboard (SBD) that sounds clear overall but has noticeable patches in places; nevertheless the performance quality more than compensates for the technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (≈80%) give high marks to the musical performance, especially the second set, while recording comments note good soundboard quality with some glitches; weighted averaging yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced SBD, but several reviewers cite cuts/patches in the first set, occasional pops, hiss and bass clipping."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > Eyes of the World > Stella Blue",
+      "China Cat > The Rider",
+      "Bertha",
+      "Weather Report Suite (WRS)",
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "China Cat > The Rider (in one review noted as mediocre)"
+    ],
+    "setlist_flow": "First set is energetic but marred by glitches and a few weaker moments; the second set is universally lauded for its seamless flow, deep improvisations and emotional peaks."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers praise his soaring solos on Dark Star, Eyes and Stella, calling them gorgeous, soulful and a highlight of the night.",
+    "Phil": "His bass work receives special mention – ‘crazy bass sound’, standout licks in Eyes, though some note occasional clipping.",
+    "Bob": "Occasional positive remarks about his vocal support behind Jerry and energetic delivery on songs like Bertha.",
+    "Keys": "Keith’s keyboards are highlighted as magical by several fans; a few find his playing disjointed early in the set but overall supportive.",
+    "Drums": "Bill is described as snappy and driving, providing a solid backbone throughout."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 8,
+      "negative_mentions": 1,
+      "total_mentions": 9
+    },
+    "Eyes of the World": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Stella Blue": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "China Cat > The Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-23T16:36:06.044386+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-10-25.sbd.vernon.14451.sbeok.shnf"
+}

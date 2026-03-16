@@ -1,0 +1,31 @@
+{
+  "summary": "A clean, correctly‑paced source captures a wildly enthusiastic show remembered for its pre‑show Bob Marley music and post‑show Sinatra vibe.",
+  "review": "The recording is praised for being noticeably cleaner and at the proper speed compared with other sources, suggesting a solid technical capture. Fans rave about the concert’s energy – from “devils in the sky” moments to the memorable pre‑show reggae set and Sinatra finish – making it a beloved performance despite the unknown exact date. Overall the audio quality is good and the show itself is highly regarded.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "One reviewer rates the show 5 stars for its excitement, while another gives a modest 3‑star rating focused on recording quality; weighted together this yields a strong overall score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Cleaner than other sources and correctly paced; no major flaws mentioned, but source type not identified."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Enthusiastic performance with notable pre‑show Bob Marley music and post‑show Sinatra, creating a memorable atmosphere despite lack of specific song detail."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T23:33:40.515876+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-06-28.nak100.cohen-lee.105601.flac16"
+}

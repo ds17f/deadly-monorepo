@@ -1,0 +1,77 @@
+{
+  "summary": "Soundboard capture with clear Duane Allman solos makes this April ’71 Fillmore show a solid performance featuring standout It Hurts Me Too and Hard to Handle.",
+  "review": "The recording is a sound‑board source that’s generally crisp, though it suffers from occasional tuning lag, a few track‑order quirks and an I Know You Rider cut‑off. Musically the show shines thanks to Duane Allman’s incendiary solo on It Hurts Me Too, a scorching Hard to Handle, a tight Dark Star and a funky Good Lovin > Drums > Good Lovin sequence.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Many reviewers (5‑star and 4‑star) praise the performance and highlight Duane Allman's contributions, while noting only minor recording imperfections; the weighted average of show and recording quality yields a solid 4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp start with clear instrument separation; initial ~3½ min of tuning on Sugar Magnolia, occasional track‑order issues, and a known cut‑off on I Know You Rider. Overall clarity is good but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "It Hurts Me Too",
+      "Hard to Handle",
+      "Dark Star",
+      "Good Lovin > Drums > Good Lovin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds strong momentum with Dark Star, Wharf Rat and Casey Jones; second set features Duane Allman's guest spots, a solid Good Lovin jam and a tight Hard to Handle. Transitions are praised, though some feel the Duane presence is brief."
+  },
+  "band_member_comments": {
+    "Jerry": "His laid‑back noodling is noted as a contrast to Duane’s aggressive soloing; reviewers say he isn’t outshone except during the Allman duet.",
+    "Phil": "Bass work described as “earth‑shaking” with big bombs and powerful stomps, especially on Good Lovin > Drums segment.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum break in Good Lovin > Drums is highlighted as a fabulous moment."
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "It Hurts Me Too": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Hard to Handle": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin > Drums > Good Lovin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T05:37:01.555388+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-04-26.sbd.murphy.4991.sbefail.shnf"
+}

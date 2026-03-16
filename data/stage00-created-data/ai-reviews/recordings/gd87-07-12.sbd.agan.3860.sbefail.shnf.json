@@ -1,0 +1,63 @@
+{
+  "summary": "Good‑to‑great sound (mixed audience/soundboard) captures a high‑energy Giants Stadium show with standout Ramble On Rose, Joey and a smoking Dew opener.",
+  "review": "The performance shines – Jerry’s guitar on “Ramble On Rose”, the fiery “Joey” duet with Dylan and a tight, crowd‑charged second set (Dew → Playing) are repeatedly praised. Recording quality is uneven: some listeners hear crisp soundboard detail while others note bright highs, sibilance and heavy audience bleed, leaving the audio in the good‑fair range.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviewers (13/24) give 4–5 stars and highlight strong musical moments, while a minority criticize the audio quality; weighted average yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Comments range from “crisp soundboard” to “bright and sibilant highs”, with noticeable crowd bleed. Some note the audience recording sounds better than the alleged SBD, while others call it decent but a bit harsh."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ramble On Rose",
+      "Joey",
+      "The Other One",
+      "Bertha",
+      "Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Two‑set structure with a hot, rowdy first set and an uplifting second set opened by “Dew”. The Dylan/Dead collaboration sits in the middle, keeping momentum high despite occasional rushed feels."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fiery guitar solo on “Ramble On Rose”, pedal‑steel moments, strong vocals and overall tight playing.",
+    "Phil": "Noted as present even on modest speakers; bass described as solid and tight.",
+    "Bob": "Occasional vocal flubs mentioned but generally engaged with the band’s energy.",
+    "Keys": "Brent's keyboards sometimes get lost in the mix yet provide memorable fills; overall keyboard work appreciated.",
+    "Drums": "Mickey’s drumming called “tight” and “particularly quiet”, though a few reviewers note occasional wobble."
+  },
+  "song_mentions": {
+    "Ramble On Rose": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Joey": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-16T00:59:40.034069+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-07-12.sbd.agan.3860.sbefail.shnf"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Fair soundboard with uneven volume captures a fiery ’69 performance highlighted by an inspired Dark Star.",
+  "review": "The recording is a sound‑board capture that suffers from inconsistent levels – parts are almost inaudible while others are blaring – and includes oddly isolated short drum‑solo tracks. Musically the show shines, especially the open, jazzy Dark Star and a spirited rendition of The Other One, with the band clearly on fire in classic ’69 fashion.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly (4‑5 stars) praising Dark Star and overall energy, but a few note serious volume issues, pulling the average down to about four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Volume swings from inaudible to blaring; occasional flat‑soundboard feel. A 12–17 second drum solo is split into its own track, which some listeners find unnecessary."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic ’69 set with a particularly open and jazzy Dark Star; overall flow feels inspired despite the uneven recording."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "One reviewer humorously calls Phil’s bass moment a “fart” but treats it as a notable musical interlude.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "A very short drum solo (12‑17 seconds) was isolated into its own track, which some listeners consider unnecessary."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T12:36:28.486206+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-04-04.fm.unknown.87542.shnf"
+}

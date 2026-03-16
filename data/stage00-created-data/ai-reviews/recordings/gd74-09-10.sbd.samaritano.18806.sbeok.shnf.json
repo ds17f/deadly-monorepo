@@ -1,0 +1,81 @@
+{
+  "summary": "Soundboard recording of a superb 1974 London show – crisp overall sound with occasional drop‑outs, highlighted by an epic Dark Star > Morning Dew and stellar Weather Report Suite.",
+  "review": "The performance is repeatedly praised as one of the best of ’74, featuring a soaring Dark Star into Morning Dew, flawless Weather Report Suite, Let It Grow and a powerful Stella Blue. The soundboard source is generally clear and well‑balanced, though a few reviewers note brief drop‑outs that slightly mar the first set. Overall the music outweighs any technical hiccups, making this a must‑listen for Deadheads.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive 5‑star comments on musical performance; recording is mostly clear with only minor drop‑out complaints, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced soundboard mix; several reviewers mention occasional drop‑outs or brief SQ issues in the first set but overall clarity is high."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > Morning Dew",
+      "Weather Report Suite",
+      "Let It Grow",
+      "Stella Blue",
+      "Peggy-O"
+    ],
+    "poor_songs": [
+      "Dire Wolf (flat/too slow)",
+      "Sugar Magnolia (cut off ending)"
+    ],
+    "setlist_flow": "First set builds slowly but delivers strong peaks (Peggy‑O, Weather Report Suite, Stella Blue). The second set is a highlight with an outstanding NFA and the monumental Dark Star > Morning Dew sequence; transitions are praised for their relaxed yet exploratory feel."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his tone, Spanish‑mode phrasing, soaring Tiger solo in Dark Star, and overall vocal strength.",
+    "Phil": "Described as “on top form”, with a clean, clear bass line that stands out throughout the show.",
+    "Bob": "Noted for energetic screaming at the end of Not Fade Away and adding chaos during the jam sections.",
+    "Keys": "Keith’s Rhodes/keyboard work on Weather Report Suite and Let It Grow is called “perfect” and adds soul to the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star > Morning Dew": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "NFA": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-23T00:07:13.142927+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-09-10.sbd.samaritano.18806.sbeok.shnf"
+}

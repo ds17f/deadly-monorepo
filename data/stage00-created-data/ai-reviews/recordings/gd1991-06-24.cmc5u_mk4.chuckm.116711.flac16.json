@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent second‑set performance highlighted by a standout \"Uncle John's Band\", though recording source and fidelity are unspecified.",
+  "review": "The reviewer enthusiastically praises the second set, calling this rendition of “Uncle John’s Band” the best of the modern era. No details are given about the recording source or sound quality, implying it is at least listenable but unverified. Overall the show receives high praise despite the lack of technical information.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Strong positive comments about a key song indicate a great performance, but only one brief review and no recording details limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No technical comments provided; reviewers did not mention soundboard, audience mix, clarity or any issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer highlights the second set as a high point, specifically praising Uncle John's Band; no further comments on pacing or flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T22:26:58.788915+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-24.cmc5u_mk4.chuckm.116711.flac16"
+}

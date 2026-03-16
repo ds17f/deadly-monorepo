@@ -1,0 +1,66 @@
+{
+  "summary": "Clean soundboard recording with some mix quirks captures an energetic New Year's Eve show highlighted by a fiery Jerry and a memorable third‑set with Etta James and Tower of Power.",
+  "review": "The SBD is generally clear and crisp, though several listeners note that Garcia’s guitar can get lost in the mix and the treble is a bit harsh. Musically the concert shines – an upbeat “Cold Rain & Snow” opener, a soaring “Space → The Other One” peak, and a third set boosted by Etta James and the Tower of Power that many fans call essential, even if the horn section sometimes drowns the band.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average star rating across 19 reviews is ~4.2; most comments are positive about performance, with consistent notes of good but imperfect soundboard quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clean and crystal‑clear SBD; some listeners report too much treble and Jerry’s guitar being buried in the mix. No major dropouts in this version, but balance issues are noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain & Snow",
+      "The Other One (NFA)",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong opener with “Cold Rain & Snow,” a high‑energy first set, the peak of the night during the “Space → The Other One” jam, followed by a second set that fizzles after NFA, and a third set made special by guest appearances (Etta James, Tower of Power) that many consider a collector’s highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia was on fire and delivered great solos, but his guitar is often lost in the mix.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Nicky Hopkins sat in on piano for part of the show; no specific comments about the regular keyboardist.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One (NFA)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "C.C. Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T03:55:32.368987+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-12-31.sbd.bode.5958.sbeok.shnf"
+}

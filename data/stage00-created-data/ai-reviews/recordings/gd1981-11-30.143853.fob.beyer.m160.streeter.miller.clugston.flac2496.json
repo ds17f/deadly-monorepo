@@ -1,0 +1,45 @@
+{
+  "summary": "Perfect sound captures a spirited show highlighted by Phil’s lead into a heartfelt “Might As Well” encore and memorable “Mack the Knife” performances.",
+  "review": "The reviewer describes an enthusiastic concert in an old hockey arena, praising the flawless audio quality. Highlights include Phil Lesh guiding the band into a moving “Might As Well” encore and the curious decision to open and close with “Mack the Knife,” while Jerry’s emotive presence is noted throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "medium",
+    "rationale": "A single five‑star review emphasizes an excellent performance and perfect sound, indicating a very high overall rating despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer explicitly states the sound was perfect, suggesting clear, balanced audio with no noticeable issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Might As Well",
+      "Mack the Knife"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flowed from a strong opening (including Mack the Knife) to an emotionally charged encore led by Phil, with Jerry’s stage presence highlighted."
+  },
+  "band_member_comments": {
+    "Jerry": "Mentioned as being onstage left and leaving his heart on the stage after the performance.",
+    "Phil": "Credited with leading the band into “Might As Well” for an encore.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mack the Knife": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:30:26.247491+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-11-30.143853.fob.beyer.m160.streeter.miller.clugston.flac2496"
+}

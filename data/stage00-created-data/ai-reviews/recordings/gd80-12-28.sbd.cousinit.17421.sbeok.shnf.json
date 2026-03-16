@@ -1,0 +1,87 @@
+{
+  "summary": "High‑quality 1980 soundboard captures a strong first half with standout \"Other One\" intro, Franklin's Tower and Bird Song, though the second half tapers off.",
+  "review": "The recording is a solid 1980 soundboard tape that delivers clear instrument separation and a punchy bass mix, despite a slight fade toward the end. Musically the show shines in its first set with an explosive \"Other One\" intro, engaging Franklin's Tower, smoky Bird Song and tight renditions of Althea, Jack Straw and Don't Ease; the later portion loses momentum, highlighted by a wandering Stella Blue before closing on Sugar Magnolia.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Consistently high praise for performance and a good soundboard source, offset by minor recording fade and a weaker second half, leading to an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear mix with a pronounced bass thump; reviewers note crisp sound and full spectrum typical of good '80 boards, though one mentions a fade toward the end."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Franklin's Tower",
+      "Bird Song",
+      "Althea",
+      "Jack Straw",
+      "Don't Ease",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Stella Blue"
+    ],
+    "setlist_flow": "First half is strong and engaging, featuring tight jams and high energy; the second half loses focus, with a meandering Stella Blue before the set closes on Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar is described as howling out of the gate and in good form for \"Saint\"; overall praised.",
+    "Phil": "Phil’s bass work is highlighted as “dropping bombs” and providing a strong thump that stands out in the mix.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T07:25:11.155173+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-12-28.sbd.cousinit.17421.sbeok.shnf"
+}

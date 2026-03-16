@@ -1,0 +1,31 @@
+{
+  "summary": "Solid playing by the band but the chaotic crowd and stray house lights marred the experience; recording quality is not described.",
+  "review": "The reviewer notes that the musicians performed well despite the difficult circumstances, but the over‑capacity audience, fence‑jumpers, and the house lights being left on during the second set created a negative atmosphere. No details about the audio source or fidelity are provided, so the technical quality of the recording remains unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a mid‑range star rating; performance is praised but crowd/venue issues dominate, and there are no comments on audio quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention sound clarity, mix, or source type, so recording quality cannot be assessed beyond being average by default."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Second set was affected by house lights left on, which may have impacted the vibe; overall playing described as solid despite external disruptions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T11:52:39.423158+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-02.schoeps.unknown.nawrocki.19592.shnf"
+}

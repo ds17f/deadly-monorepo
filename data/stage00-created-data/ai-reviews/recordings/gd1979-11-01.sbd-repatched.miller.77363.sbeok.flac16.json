@@ -1,0 +1,50 @@
+{
+  "summary": "Rich soundboard recording of a stellar ’79 show highlighted by a smoking Scarlet>Fire and superb Terrapin Station",
+  "review": "The Miller‑remastered SBD captures the band firing on all cylinders, with Brent’s organ/Rhodes work and Jerry’s inspired guitar leading an unforgettable performance. Reviewers rave about the extended Scarlet>Fire and a standout Terrapin Station, noting the recording is clear and full‑bodied despite occasional missing track numbers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers give five stars for performance and praise the soundboard quality; only one low rating cites missing track labels, resulting in a strong overall score around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Miller’s remaster provides a rich, clear mix; reviewers note decent sounding SBD with no major drop‑outs, though one user complained about missing track numbers in the stream."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Band described as playing as one, perfect from beginning to end; the show flows naturally with extended jams and cohesive energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for playing unlike any other ’79 performance.",
+    "Phil": "Noted as right there with Jerry, holding his own strong bass work.",
+    "Bob": "Mentioned alongside Phil as part of the tight ensemble.",
+    "Keys": "Brent’s organ and Rhodes piano are described as “ON FIRE” and quintessential ‘79 form.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Easy to Love You": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T00:43:16.542879+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-11-01.sbd-repatched.miller.77363.sbeok.flac16"
+}

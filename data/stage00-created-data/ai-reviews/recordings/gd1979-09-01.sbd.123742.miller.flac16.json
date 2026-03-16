@@ -1,0 +1,71 @@
+{
+  "summary": "High‑energy ’79 show captured on a solid soundboard tape, highlighted by a monster Scarlet > Fire and fluid half‑step Franklin’s.",
+  "review": "The recording is a clean SBD that, despite the tracks being out of order, delivers clear instrument separation and a punchy mix. The concert bursts with mid‑’79 energy – the second set rides on a scorching Scarlet > Fire and inventive half‑step Franklin’s while still showing the occasional slip in timing on Saint of Circumstance and Sailor > Saint.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars, praising the performance and soundboard quality; only minor criticisms about song order and occasional sloppiness keep the rating just below top‑tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced mix praised as “fantastic” and “quite fine”; some reviewers note that the fileset is out of order for second set/encore but no major audio defects."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire",
+      "Mississippi Half-Step > Franklin's Tower",
+      "Good Lovin'",
+      "Miss 1/2 Step > Franklin's"
+    ],
+    "poor_songs": [
+      "Saint of Circumstance",
+      "Sailor > Saint",
+      "Wharf Rat"
+    ],
+    "setlist_flow": "Energetic first set leads into a high‑octane second set; the band shows typical mid‑'79 looseness but maintains strong momentum, especially during the long Scarlet > Fire jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s soloing on Scarlet > Fire and the half‑step Franklin’s is praised as focused, inventive and gorgeous; he’s also blamed for a timing slip in the Wharf Rat break.",
+    "Phil": "Phil’s bass is described as booming (“inside your skull”) and his intro to Fire was overridden by Jerry’s solo choices.",
+    "Bob": "Bob’s vocals stumble on Saint of Circumstance and he “loses it” a bit at the end of Good Lovin'.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Mississippi Half-Step > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sailor > Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T22:48:07.030247+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-09-01.sbd.123742.miller.flac16"
+}

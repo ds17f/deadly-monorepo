@@ -1,0 +1,31 @@
+{
+  "summary": "Matrix recording suffers from a noticeable phasing/flanging effect that compromises audio clarity.",
+  "review": "The matrix source of this tape exhibits a pronounced phasing or flanging artifact, making the sound muddy and less enjoyable. No details about the performance itself were provided, so the musical quality of the show remains unknown.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only a single, zero‑star review mentions a serious recording defect; no information on performance is available."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer notes a distinct phasing/flange effect throughout the recording, leading to muddied sound and reduced clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T01:22:36.121870+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-07-26.148616.mtx.tobin.flac16"
+}

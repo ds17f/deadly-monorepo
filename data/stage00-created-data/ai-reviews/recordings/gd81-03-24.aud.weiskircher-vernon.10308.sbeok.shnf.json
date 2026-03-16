@@ -1,0 +1,78 @@
+{
+  "summary": "Warm, well‑mixed audience recording capturing a hot, tightly‑played show highlighted by Shakedown Street, High Time and Brokedown Palace",
+  "review": "The tape delivers a lively, audience‑filled experience with the band in top form – tight jams, scorching Shakedown Street, a beautiful High Time and a hilarious Brokedown Palace restart. The recording is an audience source that sounds warm and slightly thick, with Phil’s bass sitting forward, making it very listenable despite occasional minor imperfections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4‑star level; most comments praise the performance and recording quality, with only a few mixed notes about Jerry’s jams."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Warm, slightly thick sound with clear crowd ambience; Phil's bass is prominent in the mix, overall clean for an audience tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "High Time",
+      "Brokedown Palace",
+      "Space",
+      "China Cat Sunflower > I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with high energy and tight playing, especially into Shakedown Street and the Space jam; the band stays hot throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally praised for playful improvisations, though one reviewer felt his jams were a bit weak.",
+    "Phil": "Bass is prominent in the mix and appreciated; some listeners wanted even more Phil.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:14:16.405604+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-03-24.aud.weiskircher-vernon.10308.sbeok.shnf"
+}

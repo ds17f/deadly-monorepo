@@ -1,0 +1,64 @@
+{
+  "summary": "Strong second‑set soundboard capture of a stellar 1979 performance with Shakedown Street, Friend of the Devil, Estimated Prophet and an epic Stella Blue, but missing first set and a mid‑song cut hurt the recording.",
+  "review": "Fans rave about this October ’79 show, especially the standout renditions of Shakedown Street, Friend of the Devil, Estimated Prophet and a big‑outro Stella Blue. The second‑set soundboard is the only source (the first set isn’t available) and listeners note an abrupt cutoff during Good Lovin’ and overall modest sound quality, yet the musical flow and early Brent Mydland era vibes keep it highly recommended.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Show receives strong praise for song performance and set flow (70% weight) while recording issues (missing first set, cut in Good Lovin’, modest sound quality) moderate the overall rating (30% weight)."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Second‑set soundboard only; first set missing. Reviewers note an abrupt cut in the middle of Good Lovin' and generally describe the audio as not great, though no severe distortion is reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Friend of the Devil",
+      "Estimated Prophet",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Good Lovin'"
+    ],
+    "setlist_flow": "Fans feel this set flows better than contemporary Cape shows, with a strong second‑set energy and memorable jams, especially the extended Stella Blue outro."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith Godchaux’s playing is noted as having declined from his peak years; Brent Mydland is praised for gelled nicely with the band.",
+    "Drums": "Bill Kreutzmann’s drumming receives strong praise, with fans preferring a two‑drummer setup but acknowledging Bill holds it down well."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T23:48:28.991704+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-10-25.sbd-set2.goodwin.4627.sbefail.shnf"
+}

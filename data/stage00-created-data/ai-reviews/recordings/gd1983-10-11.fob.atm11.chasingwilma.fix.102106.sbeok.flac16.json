@@ -1,0 +1,69 @@
+{
+  "summary": "A superb front‑of‑house audience tape that captures an electrifying 1983 show with standout St. Stephen, Wang Dang Doodle, Jack Straw and a soaring Bertha.",
+  "review": "The recording is praised for its balanced mix where every band member is clear and the overall sound is terrific, despite minor complaints about track separation. The performance itself is described as one of the most energetic shows of the era, highlighted by St. Stephen, Wang Dang Doodle, Jack Straw, Birdsong, Bertha and a rare Phil‑sang China Doll. Fans note the emotional impact of the night and the strong second‑set momentum.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All six reviews are strongly positive (average 4.5★), emphasizing both excellent audience recording quality and a high‑energy, memorable performance."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Balanced FOH tape with every instrument audible; crisp overall sound. Some reviewers note tracks are not always separated, which is the only minor drawback mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Wang Dang Doodle",
+      "Jack Straw",
+      "Birdsong",
+      "Bertha",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set packed with high‑energy moments like Jack Straw and Birdsong; the second set ramps up even further, featuring a powerful pre‑drums run highlighted by Bertha and memorable vocal moments from Phil on China Doll."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Praised for his stage antics (duck‑walking to mic) and for taking the lead vocal on China Doll, adding emotional depth.",
+    "Bob": "Mentioned singing alongside Phil on the last verse of a song, highlighting his vocal contribution.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T11:39:17.913718+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-11.fob.atm11.chasingwilma.fix.102106.sbeok.flac16"
+}

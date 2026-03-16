@@ -1,0 +1,51 @@
+{
+  "summary": "High‑quality soundboard capture of a solid September ’72 show highlighted by an expansive Playin’, a powerful Dark Star, and a fiery Big River.",
+  "review": "Both reviewers praise the performance, noting the September 1972 Playin’ stretching beyond fifteen minutes, a soaring Dark Star, and a standout rendition of Big River that marks the beginning of a long‑running love affair with the song. The recording is described as fine with no major issues, suggesting a clear soundboard source that faithfully renders the band’s energy.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Strong positive comments about key songs and overall performance combined with a generally good recording quality lead to a high rating, though only two reviews limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Fine recording; reviewers note no major flaws and describe it as acceptable clarity for an archival soundboard capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin'",
+      "Dark Star",
+      "Big River"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show flows strongly, especially with the extended Playin’ and Dark Star sequences; despite a minor lyrical slip by Weir, the overall energy remains high."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for ‘picking the hell out of it,’ indicating stellar guitar work throughout.",
+    "Phil": "",
+    "Bob": "Weir gets a bit lost lyrically but still contributes solidly to the performance.",
+    "Keys": "",
+    "Drums": "Bill (referred to as Billy) described as a ‘machine chugging along,’ highlighting tight drumming."
+  },
+  "song_mentions": {
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:31:47.537412+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-16.150979.sbd.mr.flac2444"
+}

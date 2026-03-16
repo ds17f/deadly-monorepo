@@ -1,0 +1,114 @@
+{
+  "summary": "High‑fidelity soundboard capture of a classic ’71 show, with a soaring “The Other One” and crisp “Truckin’” among many standout moments.",
+  "review": "This recording presents an upgraded, hiss‑free soundboard mix that lets the band’s 1971 magic shine through. Reviewers rave about Jerry’s incendiary solos, Keith’s and Pigpen’s synergistic interplay, and a setlist packed with highlights like “The Other One,” “Going Down The Road Feels Bad,” and “Truckin’.” A few listeners note occasional noise‑reduction artifacts and low Pigpen organ levels, but the overall performance is celebrated as one of the year’s best.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars praising both performance and sound quality; minor technical complaints are outweighed by strong musical praise."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, hi‑fi stereo mix with hiss removed and excellent instrument separation. Some listeners report heavy noise‑reduction artifacts and occasional low Pigpen organ levels; one review mentions a low‑bitrate transfer that sounds like 56k."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Going Down The Road Feels Bad",
+      "Truckin'",
+      "Black Peter",
+      "Big Railroad",
+      "Cryptical Envelopment"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set delivers solid, above‑average material (Mr. Charlie, Tennessee Jed, Black Peter) while the second set swings hard with epic jams—Mexicali, Big Boss Man, The Other One, and a fiery GDTRFB/Not Fade Away sequence—ending on a high‑energy Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for scorching guitar tone, especially on “The Other One” and the GDTRFB solo; his lead work is described as ‘monster’ and ‘explosive.’",
+    "Phil": "Noted for a powerful bass intro on “The Other One,” solid groove throughout, and an excellent interplay during jams.",
+    "Bob": "Mentioned singing lead on Jack Straw and delivering strong, confident vocals across the set.",
+    "Keys": "Keith Godchaux highlighted for his magical chemistry with Pigpen, adding rhythmic depth and bright piano textures.",
+    "Drums": "Bill Kreutzmann (referred to as ‘Billy’) lauded for a solid pocket groove that makes listeners want to dance."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Going Down The Road Feels Bad": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mr. Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Railroad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big Boss Man": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "You Win Again": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T11:12:49.131434+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-12-14.sbd.cantor-orf.133.shnf"
+}

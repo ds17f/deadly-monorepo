@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard capture of a magical Spectrum show with superb Truckin', The Other One and Wharf Rat performances.",
+  "review": "The recording delivers crystal‑clear, well‑balanced sound that showcases the famed 1973 Spectrum system, while the performance shines – highlighted by an inspired Truckin' → The Other One → Wharf Rat sequence, a tasty Weather Report jam, and a horn‑backed Casey Jones encore. Reviewers uniformly praise both the musical flow and the audio fidelity, calling it one of the standout shows of that era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All three detailed reviews are highly positive (average 4.7 stars), emphasizing both excellent show moments and a pristine soundboard recording, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviews highlight the crisp, clear Spectrum magic and the superb 1973 sound system; no glitches or muffiness are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One",
+      "Wharf Rat",
+      "Casey Jones",
+      "Weather Report"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set order was corrected for the second set, delivering a smooth, flowing performance with a standout jam into The Other One and a memorable horn‑enhanced encore."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Weather Report": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T14:50:09.872169+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-09-21.127554.sbd.boswell.smith.flac16"
+}

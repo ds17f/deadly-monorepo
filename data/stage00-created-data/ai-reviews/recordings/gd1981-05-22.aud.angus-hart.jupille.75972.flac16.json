@@ -1,0 +1,31 @@
+{
+  "summary": "Very good audience (AUD) recording captures a solid, though unremarkable, Grateful Dead performance.",
+  "review": "The AUD source is praised as the best available for this show, offering clear and listenable sound. The concert itself is described as a good show but without any standout moments or highlights, making it an enjoyable but not essential listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 3‑star ratings and note a decent show with a very good audience recording, but no specific highlights; limited data (only two reviews) yields moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as a very good AUD recording and the best available for this show; no technical complaints noted."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Overall considered a good, steady performance but lacking memorable highlights according to reviewers."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T12:18:00.902365+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-22.aud.angus-hart.jupille.75972.flac16"
+}

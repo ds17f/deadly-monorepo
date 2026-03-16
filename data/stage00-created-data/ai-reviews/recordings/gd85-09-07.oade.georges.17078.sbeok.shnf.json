@@ -1,0 +1,51 @@
+{
+  "summary": "Outstanding audience field recording that captures a high‑energy 1985 Red Rocks show highlighted by the epic Frozen Logger and a soaring Hey Jude coda.",
+  "review": "The Oade brothers’ digital field capture delivers crystal‑clear, spacious sound that makes listeners feel right in the crowd at Red Rocks. The performance is remembered for its electric energy, memorable weather shifts and standout moments like the massive Frozen Logger and an unforgettable Hey Jude finale. Overall both the music and the recording are consistently praised as top‑tier by reviewers.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Over a dozen enthusiastic 5‑star reviews praise both the show’s energy and the exceptional field recording quality, with no notable criticisms."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers highlight the huge ‘field’ sound, spatial ambience, crisp clarity and the Oade brothers’ pioneering digital rig (Sony PCM‑F1, Schoeps mics). The tape is described as one of the best audience recordings available."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Frozen Logger",
+      "Hey Jude (coda)",
+      "Mr. Fantasy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energy stays high throughout despite weather changes; the band’s interaction with the crowd is noted as tight and uplifting, making the set feel like a seamless, memorable summer night."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer references Jerry's return from his diabetic coma, underscoring his significance to this era.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Frozen Logger": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Hey Jude": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:51:05.360319+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-09-07.oade.georges.17078.sbeok.shnf"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Good audience‑sourced recording captures a strong set highlighted by an unforgettable China Doll and scorching Althea/Let It Grow combo.",
+  "review": "The show is praised for its vibrant first set and a standout China Doll that many reviewers call the greatest ever, plus hot performances of Althea, Let It Grow and Friend of the Devil. The source appears to be an audience/matrix tape with solid clarity thanks to quality mics and noise‑reduction, though no reviewer calls it flawless.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the performance highly (4–5 stars) and cite several standout songs, while recording comments are generally positive but lack detailed technical assessment; one outlier low rating keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Recorded with Audio‑Technica 811 mics and JVC KD‑2 noise reduction (super A.N.R.S.), noted as clearer than typical Dolby B decks; reviewers mention crisp first‑set sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Doll",
+      "Althea",
+      "Let It Grow",
+      "Friend of the Devil",
+      "LIG>Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as especially crisp; second set includes a scorching LIG>Deal combo and the celebrated China Doll, giving the concert a strong overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LIG>Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T07:29:45.554735+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-12-30.rolfe.munder.13300.sbeok.shnf"
+}

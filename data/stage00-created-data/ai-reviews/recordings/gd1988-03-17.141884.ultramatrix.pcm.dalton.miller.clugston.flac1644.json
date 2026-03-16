@@ -1,0 +1,31 @@
+{
+  "summary": "A solid performance captured from an unknown source; reviewers consider it a good show.",
+  "review": "The lone review gives the concert four stars and simply calls it a good show. No specifics about the recording method, sound quality, setlist, or individual performances are mentioned, leaving the technical side unclear and likely average.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "low",
+    "rationale": "Only one brief, positive review (4 stars) with no detail on recording quality or songs; rating reflects a decent show but limited information."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No details provided on set structure or song performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T06:33:14.081233+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-17.141884.ultramatrix.pcm.dalton.miller.clugston.flac1644"
+}

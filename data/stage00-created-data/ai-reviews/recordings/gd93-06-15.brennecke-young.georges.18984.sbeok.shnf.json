@@ -1,0 +1,98 @@
+{
+  "summary": "An excellent audience‑recorded capture of the tight, psychedelic Louisville ’93 show with standout Jerry leads and a monster Victim jam.",
+  "review": "The recording is an A‑grade audience tape that preserves the band’s crisp ambience and the crowd energy. The performance shines – a tight first set highlighted by Althea and Wang Dang, and a second set packed with a searing Victim jam, crystalline Crazy Fingers, and a monumental Morning Dew finish. Reviewers repeatedly praise Jerry’s vigor, Phil’s thunderous bass, and the rare Gloria encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (4‑star) and describe the audience recording as excellent; weighted average of show (≈4.5) and recording (≈4.0) yields ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Handheld AMS ST‑250 mic in Blumlein pattern for first set, Cool‑Lux MD5500 stand for second; mastered from a DAT source – reviewers call it “Excellent AUD” and note clear, well‑balanced sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Althea",
+      "Victim",
+      "Estimated",
+      "Morning Dew",
+      "Gloria"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A tight, blues‑y first set flows into a high‑energy second set with seamless transitions; the band builds to a climactic Victim jam and closes with a soaring Morning Dew and rare Gloria encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for fiery leads on Althea, Victim, Estimated and his use of MIDI flute; described as playing with newfound vigor.",
+    "Phil": "Noted for “peels of fragile thunder” during jams and a thunderous bass foundation throughout the show.",
+    "Bob": "Vocals highlighted on Estimated (going nuts) and strong harmonies on He's Gone.",
+    "Keys": "MIDI usage (flute, synth textures) singled out as a distinguishing element of the era’s sound.",
+    "Drums": "Described as percussive with tight, driving rhythms that propelled jams like Victim and Last Time."
+  },
+  "song_mentions": {
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gloria": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T14:17:22.086025+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-15.brennecke-young.georges.18984.sbeok.shnf"
+}

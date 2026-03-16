@@ -1,0 +1,58 @@
+{
+  "summary": "Audience recording with noticeable song truncations; a brief, mellow Brent‑era show that shines only for the rare second‑set Friend of the Devil but is otherwise seen as standard.",
+  "review": "The tape captures an audience mix that suffers from several truncated tracks (Bertha, Wharf Rat, Sugar Magnolia), giving the set a short‑changed feel. Musically the performance is described as mellow and lackluster except for the uncommon second‑set appearance of Friend of the Devil, which some listeners appreciate. Overall the show receives mixed reactions due to its brevity and modest energy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.1,
+    "confidence": "medium",
+    "rationale": "Show quality is judged average‑to‑below average (standard, lackluster set) while the recording is decent for an audience source but marred by truncations; combined score lands just above the midpoint."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Several songs are noticeably truncated (Bertha, Wharf Rat, Sugar Magnolia) giving a short‑show impression; otherwise the audience capture is clear enough for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil"
+    ],
+    "poor_songs": [
+      "Bertha",
+      "Wharf Rat",
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "The set feels brief and somewhat disjointed, with a mellow first‑era Brent vibe; jams are described as uninteresting and the overall pacing is standard."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T21:58:35.702762+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-06-30.senn.eaton.miller.94386.sbeok.flac16"
+}

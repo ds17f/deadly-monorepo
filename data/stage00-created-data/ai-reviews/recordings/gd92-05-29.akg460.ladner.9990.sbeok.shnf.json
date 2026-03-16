@@ -1,0 +1,63 @@
+{
+  "summary": "Fans rave about the blistering Nevada show with killer Crazy Fingers, Watchtower and China Doll moments; recording quality isn’t described but the tape is enjoyable.",
+  "review": "Both reviewers describe an unforgettable, heat‑fueled concert in Las Vegas, highlighting a transcendent second set that featured a glorious transition into Crazy Fingers, a kick‑ass Watchtower and a pristine China Doll. The performances are portrayed as life‑changing with strong praise for Phil’s bass on The Other One and the overall band chemistry. No concrete details about the source or fidelity of the recording are given, so it is assumed to be listenable but technically undocumented.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Both reviews are highly enthusiastic (5 and 4 stars) about the musical performance; recording quality is not mentioned, so a modest assumption of decent sound is applied, yielding an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No reviewer comments on clarity, mix or source type; assumed listenable but technical details absent."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Watchtower",
+      "China Doll",
+      "The Other One",
+      "Looks Like Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds with early jams leading into a powerful second set where the band’s improvisation peaks, especially during Crazy Fingers → Watchtower → China Doll."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "His bass on The Other One is described as opening a 'third eye' and providing thunderous rumble.",
+    "Bob": "Bob (referred to as \"Bobby\") is noted for launching the Black‑Throated segment that sent the reviewer into another dimension.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:55:09.171530+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-05-29.akg460.ladner.9990.sbeok.shnf"
+}

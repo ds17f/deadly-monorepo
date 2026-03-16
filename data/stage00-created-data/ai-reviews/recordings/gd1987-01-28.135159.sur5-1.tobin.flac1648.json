@@ -1,0 +1,42 @@
+{
+  "summary": "Stunning 5.1 matrix mix captures strong Jerry and Phil solos, but the performance suffers from rough vocals, dated lyric delivery and intrusive sound‑board effects.",
+  "review": "Both reviewers rave about the beautiful matrix recording – one even praises its 5.1 surround presentation – making this a technically superb capture. Musically the show gets mixed marks: while Jerry Garcia’s and Phil Lesh’s solos are highlighted as rock‑steady, Bob Weir’s vocal delivery and lyrics feel strained and the Healy sound‑board vocal effects age poorly.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Recording quality is rated near‑excellent (5 stars) while show quality is more average to good (around 3.5). Weighted combination yields a ~4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the matrix as beautiful and fantastic in 5.1 surround, noting crisp, immersive sound with only minor “rough around the edges” comments that relate more to performance than audio fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for solid instrumental work, especially Jerry and Phil’s solos, but vocal delivery feels uneven and Healy’s vocal effects detract from the overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Nice solos by Jerry are specifically praised.",
+    "Phil": "Some nice solos by Phil are highlighted as rock‑steady.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Roses": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "It's All Over Now": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:34:34.425333+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-01-28.135159.sur5-1.tobin.flac1648"
+}

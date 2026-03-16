@@ -1,0 +1,63 @@
+{
+  "summary": "Muddy audience tape that still captures a stellar acoustic set highlighted by Box of Rain and a soaring Dark Star.",
+  "review": "The performance is praised for its historic acoustic set – especially the rare early rendition of “Box of Rain” and a powerful “Dark Star” – and the energy of the crowd.  The recording, however, is an audience (AUD) source that suffers from muffling, a high‑pitched whine and general cloudiness, making the electric portion hard to hear.  Fans love the show despite the technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the musical performance around 4‑5 stars (standout acoustic set, Dark Star) while consistently describing the audio as muffled, noisy or “rickety,” yielding a recording rating near 3. The weighted average (70 % show, 30 % recording) produces a ~3.7 overall."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audience tape with noticeable muffling and a persistent high‑pitched whine; acoustic portions clearer than electric, but overall clouded sound makes some parts hard to follow."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Dark Star",
+      "Ripple",
+      "Brokedown Mountain",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The acoustic half is highlighted as one of the best of 1970, featuring the full band and NRPS guests; the electric set is praised in spirit but its sound is too clouded to assess fully."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s piano on Box of Rain and his guitar tone during Dark Star are noted positively.",
+    "Phil": "Lesh’s vocal strength is mentioned; acoustic lead vocals highlighted.",
+    "Bob": "",
+    "Keys": "Pigpen (and Garcia) on piano add depth to the acoustic numbers; keyboards are audible but not pristine.",
+    "Drums": "Bill Kreutzmann’s drumming described as “rocking”; Mickey Hart adds percussion on some tracks."
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T22:47:18.036271+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-09-17.aud.remaster.sirmick.27591.sbeok.shnf"
+}

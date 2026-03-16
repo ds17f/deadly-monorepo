@@ -1,0 +1,74 @@
+{
+  "summary": "Excellent audience recording captures a scorching 1982 Minnesota show with smoking Scarlet > Fire and a 21‑song marathon.",
+  "review": "Fans rave about the front‑row feel of this audience tape, noting its superb instrumental balance despite a slight boominess and the need to boost Phil’s bass a touch. The performance is described as a “smoking” night with standout moments like Scarlet > Fire on the Mountain, Candyman, Lost Sailor > Saint of Circumstance and an inspiring Space jam that keep the energy high throughout the 21‑song set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Average star rating ≈ 4.8 across 13 reviews, uniformly praising both musical performance and audio quality; consistent positive language indicates a strong show with excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Front‑row audience mic (behind the stage) gives crisp, balanced sound with a slight boominess and occasional bass being buried; reviewers suggest turning Phil up a bit but overall the tape sounds clear and immersive."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Candyman",
+      "Bertha",
+      "Lost Sailor > Saint of Circumstance",
+      "Space",
+      "Truckin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A 21‑song monster that kept the crowd sweating; seamless transitions (Scarlet > Fire, drums into Space) and high energy from start to finish are repeatedly highlighted."
+  },
+  "band_member_comments": {
+    "Jerry": "Powerful vocal inflections on Candyman and sizzling guitar work during Fire on the Mountain; his “outer‑space” themes noted in the jam sections.",
+    "Phil": "Bass sometimes buried in early ’80s board sound, prompting suggestions to boost his level; praised for strong tone and leading the transition from Scarlet into Fire on the Mountain.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Jam before drums and the drum‑to‑Space transition are singled out as favorite early‑’80s mix‑up moments."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor > Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-13T23:23:31.933108+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-08-06.sonyecm.norman.7288.sbeok.shnf"
+}

@@ -1,0 +1,81 @@
+{
+  "summary": "Mixed‑quality source with noticeable splicing but great crowd vibe; highlights include an extended Help>Slipknot>Franklin's and a fiery Corrina > Matilda.",
+  "review": "The show swings between highs and lows – Jerry’s late‑date guitar work shines, the long Help>Slipknot>Franklin's jam is enjoyable, and Corrina > Matilda erupts with crowd‑pleasing chants. The recording captures the venue atmosphere well, though listeners notice frequent tiny cuts and click removal that slightly detract from a seamless listening experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Reviews are split between strong musical moments (e.g., Corrina > Matilda, extended Help jam) and noticeable recording edits; average star rating across six reviews is ~3.2."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Generally good capture of crowd atmosphere, but the source has been heavily cleaned up with many tiny cuts, pop/click removal and splicing that can be distracting."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help>Slipknot>Franklin's",
+      "Corrina > Matilda",
+      "Mexicali"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "B.E. Women",
+      "Help on the Way",
+      "Slipknot"
+    ],
+    "setlist_flow": "First set offers solid playing with a few rough spots; second set is a mixed bag – long, engaging jams like Help>Slipknot>Franklin's and a high‑energy Corrina > Matilda contrast with weaker moments on Jack Straw and B.E. Women."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for strong late‑date guitar work; even joked about blaming Bob for the Slipknot riff.",
+    "Phil": "",
+    "Bob": "Mentioned in a light‑hearted blame game over the Slipknot riff; no specific performance comment.",
+    "Keys": "Vince (keyboards) joins Jerry in impromptu \"Corinna!\" chants toward the end of Corrina > Matilda, adding excitement.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help>Slipknot>Franklin's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Slipknot": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Franklin's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina > Matilda": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "B.E. Women": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T07:15:30.922412+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-03-29.akg.16088.sbeok.shnf"
+}

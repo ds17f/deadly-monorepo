@@ -1,0 +1,50 @@
+{
+  "summary": "High‑energy 1987 show captured on a solid soundboard recording, with both sets smoking and a sweet Terrapin Station highlight",
+  "review": "Fans rave about the fire of both sets, especially noting a standout Terrapin Station and the overall fun setlist. The recording is a typical 1987 SBD – clear enough for enjoyment but not described as pristine. A couple of reviewers point out track‑listing quirks (missing Quinn the Eskimo) which temper the otherwise enthusiastic response.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong musical performance praised by most reviewers and a decent soundboard source, offset by track‑listing complaints and one outlier zero‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Described as a \"nice SBD for '87 standards\" – clear enough for an enjoyable listen, with no major sound issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Turn on Your Love Light"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fun and varied setlist; both sets described as \"smokin'\" with a sweet Terrapin Station performance, though some fans note the unexpected omission of Quinn the Eskimo."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Turn on Your Love Light": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Quinn the Eskimo": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T04:43:45.789975+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-10-03.121961.sbd.miller.sbd.flac16"
+}

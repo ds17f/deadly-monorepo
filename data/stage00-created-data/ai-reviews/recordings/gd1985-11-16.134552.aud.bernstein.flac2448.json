@@ -1,0 +1,45 @@
+{
+  "summary": "Good audience recording captures a hot \"Comes‑a‑Time\" into an extra‑Phil \"Gimme Some Lovin'\", delivering solid sound and strong performance.",
+  "review": "Both reviewers rate this set four stars, praising the crispness of the recording and the energy of the show. Highlights include a scorching rendition of \"Comes a Time\" that flows straight into a lively \"Gimme Some Lovin'\" with Phil Lesh stepping forward, while the sound system setup is noted as impressive. No significant flaws are mentioned.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Consistently positive 4‑star reviews focus on strong musical moments and a clear, well‑balanced recording; limited number of reviews keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the tape as \"Good recording\" with no noted dropouts or muffiness; speaker placement (Nak 304s) suggests a well‑projected live sound captured by an audience mic."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes a Time",
+      "Gimme Some Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly, highlighted by a hot transition from \"Comes a Time\" into an energetic \"Gimme Some Lovin'\" featuring extra Phil."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Extra Phil appears on \"Gimme Some Lovin'\", adding vocal/guitar presence noted by reviewers.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:40:59.443395+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-16.134552.aud.bernstein.flac2448"
+}

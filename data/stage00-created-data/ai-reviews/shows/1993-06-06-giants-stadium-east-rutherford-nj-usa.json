@@ -1,0 +1,75 @@
+{
+  "summary": "Let It Grow shines, Bertha → Good Lovin' sizzles, strong Space jam",
+  "blurb": "The show delivers a standout Let It Grow and an electrifying Bertha → Good Lovin' sequence, while the second set builds into a powerful Space segment and a wah‑wah drenched Playing In The Band. Jerry’s clean tone and Vince’s bright keys complement solid rhythms from Phil, Mickey and Bill, though Bob’s vocals show strain.",
+  "review": "June 6, 1993 at Giants Stadium captured a quintessential early‑’90s Dead experience. The first set opened with the sunny optimism of Here Comes Sunshine and rolled into a crisp Let It Grow that many reviewers called “the highlight of the night.” The second set was where the magic really unfolded: a fiery Bertha → Good Lovin' transition, followed by an extended Uncle John’s Band → Playing In The Band suite that featured Jerry’s wah‑wah pedal work and a thunderous drum duo. After the Space excursion the band rode a soaring groove through Corinna, Attics Of My Life, Throwing Stones and Not Fade Away, ending on a hopeful Liberty encore. While Vince Welnick added sweet, clear flourishes throughout, Bob Weir’s voice was hampered by vocal polyps, giving some songs a ragged edge. Phil Lesh’s bass ranged from “all over the place” during Bertha to a standout “Phil Zone” moment in Broken Arrow. Overall the performance is solid, with enough high points—especially Let It Grow, the Bertha → Good Lovin' sequence, and the space‑driven jams—to make it a worthwhile listen for any Deadhead.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 29,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Two recordings are explicitly positive while three are mixed; reviewers consistently praise Let It Grow, the Bertha → Good Lovin' sequence and the Space jam, but also note vocal issues and occasional weak songs. The overall tone is modestly upbeat, warranting a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.3 + 0.8 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1993-06-06.sbd.gustin.tetzeli.fix-34835.100023.flac16",
+    "reason": "High‑quality soundboard tape with clean guitar tone, clear keyboards and no major drop‑outs; captures the show’s energy best."
+  },
+  "key_highlights": [
+    "Let It Grow shines as a centerpiece of the first set.",
+    "Bertha → Good Lovin' sequence delivers high‑energy transition and tight jams.",
+    "Wah‑wah drenched Playing In The Band with powerful drums and Space buildup.",
+    "Rare cover Broken Arrow highlighted by Phil’s bass work."
+  ],
+  "song_highlights": [
+    "Let It Grow",
+    "Bertha",
+    "Good Lovin'",
+    "Playing In The Band",
+    "Space",
+    "Here Comes Sunshine",
+    "Broken Arrow",
+    "Attics Of My Life"
+  ],
+  "band_performance": {
+    "Jerry": "Clean, sharp tone throughout; standout guitar on Bertha → Good Lovin' and a wah‑wah solo in Playing In The Band.",
+    "Phil": "Bass wanders during Bertha but hits a “Phil Zone” high point in Broken Arrow; drives the rhythm solidly otherwise.",
+    "Bob": "Vocals strained by polyps, giving some numbers a ragged edge despite occasional harmony on Ramble On Rose.",
+    "Vince": "Bright, sweet keyboard flourishes that sit well in the mix; generally clear even when the tape gets muddy.",
+    "Mickey": "Drums contribute to a trance‑like vibe during Space and keep the groove solid throughout the second set.",
+    "Billy": "Pairs with Mickey for tight, propulsive drumming; anchors the high‑energy jams."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-18T13:39:20.550664+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Let It Grow"
+    ],
+    [
+      "Bertha",
+      "Good Lovin'"
+    ],
+    [
+      "Uncle John's Band",
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "Corinna",
+      "Attics Of My Life",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Here Comes Sunshine"
+    ],
+    [
+      "Broken Arrow"
+    ]
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Audience recording with hot live sound and a bass‑forward mix captures an excellent performance.",
+  "review": "The audience tape delivers a hot, lively sound that highlights the low end, giving the show a bass‑happy character. Reviewers praised the overall performance as solid and enjoyable, noting no major flaws. The recording is considered exceptional for an AUD source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one five‑star review; both the show and the audience recording are praised highly, but limited data reduces confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Hot live sound with a strong bass presence; clear enough for an audience source, no reported distortion or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cold Rain and Snow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Performance described as solid and energetic; no specific pacing issues mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Bass highlighted as strong (bass‑happy mix).",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:20:03.415631+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-09-10.fob.nak700.wagner.motb-0079.94509.sbeok.flac24"
+}

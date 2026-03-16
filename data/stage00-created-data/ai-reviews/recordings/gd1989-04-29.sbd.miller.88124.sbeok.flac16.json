@@ -1,0 +1,67 @@
+{
+  "summary": "Excellent Charlie Miller soundboard captures a high‑energy 1989 Irvine Meadows show with standout Blow Away and a searing second‑set jam.",
+  "review": "The recording, sourced from Charlie Miller’s soundboard, is crystal clear and balances the band beautifully. The performance radiates the electric energy of that April night – Brown Eyed Women opens the set strong, Brent Mydland delivers an extended rap on Blow Away, and the second‑set jam (including a ripping He's Gone > Spoonful, The Other One and Wharf Rat) is pure Dead magic.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All nine reviews (aside from one zero‑star outlier) are overwhelmingly positive, praising both the superb soundboard capture and the show’s energy and highlights."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the Charlie Miller board “better than I remember” and note great clarity, no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Blow Away",
+      "He's Gone > Spoonful",
+      "The Other One",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Tight, high‑energy performance with strong openers (Brown Eyed Women), playful ditties (Finiculi Finicula) and a second‑set jam that keeps the momentum soaring."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s extended rap on Blow Away and his overall keyboard/vocal presence are highlighted as major positives.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Blow Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone > Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Finiculi Finicula": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T19:07:23.406307+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-04-29.sbd.miller.88124.sbeok.flac16"
+}

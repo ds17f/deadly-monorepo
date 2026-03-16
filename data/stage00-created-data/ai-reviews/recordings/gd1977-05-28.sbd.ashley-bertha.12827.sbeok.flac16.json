@@ -1,0 +1,75 @@
+{
+  "summary": "Excellent Betty Board sound captures a hot late‑May ’77 show with standout performances of Sugaree, Bertha and Tennessee Jed.",
+  "review": "The Ashley/Bertha “Betty” board delivers crystal‑clear, well‑remastered sound that shines above other May ’77 sources. Musically the concert is consistently above average – a strong Bertha opener, a top‑tier Sugaree, tight Samson & Delilah and an angular yet thrilling Tennessee Jed make it a must‑listen for fans of the spring ’77 peak.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Both show quality (above‑average with many highlighted songs) and recording quality (excellent soundboard, praised for clarity) are strong; weighted average yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Fine recording and remaster; the Betty Board shines, crisp and clear, out‑shining other May ’77 sources that are described as muffled."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Bertha",
+      "Minglewood Blues",
+      "Samson & Delilah",
+      "Tennessee Jed",
+      "Estimated Prophet",
+      "One More Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A consistently hot performance from start to finish – a strong opener sets the tone and both sets stay above‑average, delivering classic spring ’77 energy without reaching the absolute top‑ten tier."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone is praised; his playing is described as angular on Tennessee Jed and he takes interesting extensions on several songs.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T02:50:25.740056+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-28.sbd.ashley-bertha.12827.sbeok.flac16"
+}

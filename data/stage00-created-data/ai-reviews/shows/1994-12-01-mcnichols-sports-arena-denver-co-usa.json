@@ -1,0 +1,70 @@
+{
+  "summary": "Flawed show with bright Bird Song and Sugaree moments",
+  "blurb": "The set offers a solid Sugaree and a wailing Bird Song, but many numbers suffer from lyric flubs and muddy mix. Highlights include Vince’s Way To Go Home and an inspired Space/Drums segment, while songs like Loser and Brokedown Palace fall flat.",
+  "review": "December 1, 1994 at McNichols Sports Arena was a night of uneven inspiration. Jerry Garcia managed flashes of brilliance – his wailing lead on Sugaree and crisp phrasing on Bird Song stand out – but the performance is marred by frequent lyric miscues (Loser, Days Between, Brokedown Palace) and a generally muted guitar tone that makes several cuts sound thin. The rhythm section shines in spite of the sonic fog: Bill Kreutzmann and Mickey Hart drive an expansive Space jam that segues into a tight Drum segment, offering one of the few high‑water moments of the evening. Vince Welnick’s Way To Go Home provides a rare keyboard highlight, yet the overall mix is muddy, especially on audience recordings where Phil’s bass and the drums often disappear behind bathroom‑like acoustics. While Sugaree, Eyes Of The World → Drumz → Watchtower, and the closing Not Fade Away keep the set moving forward, the show feels more like a collection of scattered gems than a cohesive Dead experience.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.1,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 11,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": -0.5,
+      "sentiment_rationale": "Negative sentiment dominates across recordings – frequent lyric miscues, poor sound quality and uneven playing are repeatedly noted. A mixed review adds no positive boost, resulting in a modest negative adjustment.",
+      "final_calculation": "2.5 + 0.1 - 0.5 = 2.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd94-12-01.aud.ladner.10932.sbeok.shnf",
+    "reason": "Most complete capture of the entire set, includes all highlighted songs despite its muddy audience sound; community consensus lists it as the only source covering the full show."
+  },
+  "key_highlights": [
+    "Bird Song showcases Garcia’s fleeting guitar brilliance.",
+    "Sugaree delivers a wailing lead line that cuts through the mix.",
+    "Vince Welnick’s Way To Go Home provides a rare keyboard spotlight.",
+    "Space/Drums segment is the rhythmic high point of an otherwise foggy night."
+  ],
+  "song_highlights": [
+    "Bird Song",
+    "Sugaree",
+    "Eyes Of The World",
+    "Drums",
+    "Space",
+    "All Along The Watchtower",
+    "Days Between",
+    "Way To Go Home"
+  ],
+  "band_performance": {
+    "Jerry": "Shows flashes of strong fretwork on Bird Song and a wailing lead on Sugaree, but frequent lyric miscues and muted tone on Days Between, Here Comes Sunshine, and Brokedown Palace detract from overall impact.",
+    "Phil": "",
+    "Bob": "Vocals slip on Throwing Stones and Loser; however his humorous lyric correction during Throwing Stones adds a memorable laugh for the audience.",
+    "Brent": "Vince’s Way To Go Home shines as a keyboard highlight, but overall keyboard presence is uneven in the mix, with Bralove/Space sections barely audible.",
+    "Mickey": "Drums are strong throughout; Mickey contributes solid rhythmic drive especially during the Space jam.",
+    "Billy": "Bill delivers inspiring fills and power in the Drum segment, helping lift the rhythm section despite recording limitations."
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-19T04:12:09.402360+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bird Song"
+    ],
+    [
+      "Sugaree"
+    ],
+    [
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "All Along The Watchtower",
+      "Days Between",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Way To Go Home"
+    ]
+  ]
+}

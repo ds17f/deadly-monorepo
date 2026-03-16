@@ -1,0 +1,95 @@
+{
+  "summary": "A booming Alpine Valley audience tape captures a scorching, high‑energy show highlighted by the debut of Blow Away, a stellar Terrapin, and an electrifying Other One.",
+  "review": "The recording is a solid audience capture that conveys the massive roof boom and occasional radio‑frequency hiccups but remains listenable. The performance itself is often called one of the best Alpine shows – new songs like Blow Away and Victim debut with gusto, classic numbers such as Terrapin, Box of Rain, Jack Straw, Loser and Cassidy soar, and the second set’s Other One and drum battle are unforgettable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for the musical performance across >20 reviews and generally good audience‑recording quality, with only occasional technical complaints, yields a combined rating in the upper‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Boomy roof adds character; some reviewers note occasional radio‑frequency interference and minor drop‑outs, but overall clarity is strong for an audience tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Blow Away",
+      "Victim",
+      "Terrapin",
+      "Box of Rain",
+      "Jack Straw",
+      "Loser",
+      "Cassidy",
+      "The Other One",
+      "Good Lovin'",
+      "U.S. Blues"
+    ],
+    "poor_songs": [
+      "Victim"
+    ],
+    "setlist_flow": "First set builds strong momentum with classic cuts; the second set introduces fresh material (Blow Away, Victim) and escalates into a high‑energy jam culminating in an intense Other One and drum showcase."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers rave about his soaring solos on Terrapin, Loser feedback, and overall guitar intensity.",
+    "Phil": "Praised for a warm, resonant bass tone that shines especially on Box of Rain and the “wooden roof” vibe.",
+    "Bob": "Mentioned mainly for solid vocal work and occasional lyrical slips (e.g., Truckin' lyric slip) but no major criticism.",
+    "Keys": "Brent Mydland highlighted for debuting Blow Away, delivering powerful vocals and keyboard textures.",
+    "Drums": "Mickey Hart’s timpani‑like burst and the overall drum battle receive enthusiastic mentions; Bill Kreutzmann noted for steady support."
+  },
+  "song_mentions": {
+    "Blow Away": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Victim": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Terrapin": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Box of Rain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Jack Straw": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Loser": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cassidy": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T09:46:48.231347+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-06-20.sennheiser.ladner.17269.sbeok.shnf"
+}

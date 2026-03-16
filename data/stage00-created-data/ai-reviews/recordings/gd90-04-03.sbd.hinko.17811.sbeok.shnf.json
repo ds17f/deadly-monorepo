@@ -1,0 +1,81 @@
+{
+  "summary": "High‑quality soundboard recording of a tight spring‑1990 show, highlighted by scorching Scarlet > Crazy Fingers, stellar Brent keyboards and Jerry’s smoking guitar.",
+  "review": "The Omni 1990 run captures the Dead at a peak of tightness and improvisational flair – an unusual Estimated → Scarlet Begonias → Crazy Fingers segue, fiery Brent on keys, and a space that many call the best of the tour.  The soundboard source is generally clear and punchy, though a few listeners note first‑set muddiness and high‑end clipping.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 20 reviews consistently praise the performance (many 4–5 stars) while noting only minor sound issues; weighted average of show quality (~4.5) and recording quality (~4.0) yields ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, well‑balanced mix overall; occasional first‑set muddiness, high‑frequency clipping, and background noise reported by a few listeners but not enough to detract from the experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated",
+      "Scarlet Begonias",
+      "Crazy Fingers",
+      "Space",
+      "Bid You Goodnight",
+      "Goin' Down the Road Feelin' Bad"
+    ],
+    "poor_songs": [
+      "I Will Take You Home"
+    ],
+    "setlist_flow": "Unusual second‑set opener (Estimated) leads into a seamless Scarlet > Crazy Fingers sequence, keeping the momentum high; first set rocks with Shakedown Street and Sugaree, while the encore delivers a classic Bid You Goodnight."
+  },
+  "band_member_comments": {
+    "Jerry": "Top form throughout – smoking guitar tone, sweet phrasing on Row Jimmy and tight lead work.",
+    "Phil": "Locked‑in bass, heard loud and clear in several reviews.",
+    "Bob": "",
+    "Keys": "Brent shines on keyboards; his playing described as “on fire” and a key highlight of the night.",
+    "Drums": "Mickey Hart’s space drumming praised as one of the best ever; overall drumming called “crazy drum circles” and solid."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Estimated": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Space": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "I Will Take You Home": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bid You Goodnight": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Goin' Down the Road Feelin' Bad": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T06:27:22.763471+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-04-03.sbd.hinko.17811.sbeok.shnf"
+}

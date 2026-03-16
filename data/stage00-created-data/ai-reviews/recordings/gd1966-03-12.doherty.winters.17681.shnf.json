@@ -1,0 +1,51 @@
+{
+  "summary": "Rare 3/12/66 show with strong playing and classic Ice Cream Break, but the mix is unbalanced and has occasional cuts.",
+  "review": "The performance is generally praised – the band sounds excellent, with highlights like Viola Lee Blues, One Kind Favor and the iconic Ice Cream Break banter. Recording quality is uneven: low volume, a muffled bass/keys balance and an overly forward Jerry guitar create a fair‑sounding mix with a few cuts typical of the era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Most reviewers commend the musical performance (average ~4 stars) while noting consistent recording imbalances and volume issues (rating ~3.5), yielding an overall rating near 4 with moderate confidence due to mixed comments."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Low overall volume, muffled bass/keys versus a piercing Jerry guitar, occasional cuts in the tape, and general mix imbalance typical of mid‑60s archival recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Viola Lee Blues",
+      "One Kind Favor",
+      "Ice Cream Break"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows well despite occasional song edits; the band maintains energy throughout, delivering a solid mid‑60s Dead experience."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is described as surfy and impressive but far too loud in the mix, often piercing the eardrums.",
+    "Phil": "Bass is noted as muffled at points, disappearing when volume is lowered.",
+    "Bob": "Early‑stage trademark guitar style praised, yet his parts are also muffled in the recording.",
+    "Keys": "Ron \"Pig\" McKernan's organ, vocals and harmonica work are highlighted positively, though often buried by the mix imbalance.",
+    "Drums": "Bill Kreutzmann’s drumming can disappear at lower volumes due to the unbalanced mix; no specific performance criticism."
+  },
+  "song_mentions": {
+    "Ice Cream Break": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Viola Lee Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One Kind Favor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T04:49:02.572818+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1966-03-12.doherty.winters.17681.shnf"
+}

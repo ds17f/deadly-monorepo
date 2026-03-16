@@ -1,0 +1,45 @@
+{
+  "summary": "Decent recording highlighted by a strong rendition of Cassidy and a peak performance of Stella Blue.",
+  "review": "The reviewer gives this show a solid four‑star rating, emphasizing the strength of 'Cassidy' and an especially inspired stretch of 'Stella Blue.' No specific comments about the audio source or fidelity are provided, suggesting the recording is at least listenable. Overall sentiment is positive, with those two songs standing out as the main attractions.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one 4‑star review; reviewer praises two songs but gives no technical details, so rating is based primarily on show enjoyment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on sound clarity or mix; reviewers did not note any problems."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Limited information provided; reviewer only mentions two songs, both positively."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T09:21:17.840262+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-08-31.140336.sbd.eaton.miller.clugston.flac1648"
+}

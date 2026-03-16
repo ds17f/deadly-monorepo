@@ -1,0 +1,67 @@
+{
+  "summary": "High‑energy Shoreline set with gritty second half and strong Way To Go Home",
+  "blurb": "The show rides a wave of raw, grungy guitar work that peaks on the lead into Way To Go Home and carries through a ferocious second set. Highlights include Friend Of The Devil, Liberty, Morning Dew and an overdriven Way To Go Home intro. Overall the performance is solid with a few flubs but plenty of moments worth revisiting.",
+  "review": "May 21, 1993 at Shoreline Amphitheatre captured the Dead in full spring‑tour mode – a tight first set that built momentum into a blistering second half. Jerry’s guitar sits front‑and‑center, from an overdriven Way To Go Home intro to a heavy, grungy lead that drives “Long Way Home” (the show’s “Way To Go Home”). Bob Weir delivers energetic vocals on Friend Of The Devil and keeps the rhythm punchy despite a mix issue that mutes his guitar early in some recordings. Vince Welnick adds a surprisingly solid solo that finally clicks with the band’s groove, while the dual drummers lock into a propulsive pulse throughout. The setlist shines on “Morning Dew,” which stretches out into one of the night’s most memorable jams, and “Liberty” closes the first set with joyous swing. Though “Estimated Prophet” suffers a noticeable flub and a few mix hiccups, the band recovers quickly, making this show a worthwhile snapshot of the Dead’s 1993 West Coast energy.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 20,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.9,
+      "sentiment_rationale": "Two recordings are clearly positive, praising the gritty second‑set guitars and standout moments like Way To Go Home and Morning Dew. The remaining three are mixed – noting flubs in Estimated Prophet, uneven mix, and occasional missteps – which tempers enthusiasm but does not overturn it. This yields a modest positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.9 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd93-05-21.schoeps.gardner.9400.sbeok.shnf",
+    "reason": "Full‑show audience tape with clear sound, captures the high‑energy performance and includes all key moments (China Cat Sunflower, Way To Go Home intro, Morning Dew) while avoiding major dropouts."
+  },
+  "key_highlights": [
+    "Grungy, heavy guitar tone that powers the second set",
+    "Overdriven Way To Go Home intro leading into a fierce jam",
+    "Extended, emotive Morning Dew finale",
+    "Strong vocal delivery on Friend Of The Devil and energetic Liberty"
+  ],
+  "song_highlights": [
+    "Friend Of The Devil",
+    "Liberty",
+    "Way To Go Home",
+    "Morning Dew",
+    "All Along The Watchtower",
+    "He's Gone"
+  ],
+  "band_performance": {
+    "Jerry": "Prominent, gritty guitar work drives the show; an overdriven Way To Go Home intro and a brief flub on Estimated Prophet that he recovers from quickly.",
+    "Phil": "",
+    "Bob": "Delivers lively vocals on Friend Of The Devil and adds energetic rhythm throughout; his guitar is muted early in some mixes but overall contributes solidly.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-18T12:50:01.952973+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Friend Of The Devil"
+    ],
+    [
+      "Liberty"
+    ],
+    [
+      "Way To Go Home"
+    ],
+    [
+      "Estimated Prophet",
+      "He's Gone",
+      "Drums",
+      "Space",
+      "All Along The Watchtower",
+      "Morning Dew"
+    ]
+  ]
+}

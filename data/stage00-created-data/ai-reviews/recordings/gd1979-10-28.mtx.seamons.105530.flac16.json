@@ -1,0 +1,76 @@
+{
+  "summary": "Matrix recording sounds almost flawless, capturing a high‑energy Cape Cod show highlighted by a monster Half‑Step/Franklin’s jam and stellar China Cat‑Rider sequence.",
+  "review": "The Hunter Seamons matrix feed delivers crystal‑clear sound that lets the band’s fire shine from start to finish. Reviewers rave about the soaring Half‑Step → Franklin’s stretch, the 18‑minute Franklin’s Tower, Althea, Passenger → Ramble On Rose → Music Never Stopped and a knockout China Cat → Rider, while one reviewer notes a harsh vocal break from Jerry on Franklin’s. Overall the performance is seen as one of the best two‑night runs at Cape Cod despite that isolated vocal slip.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Strong praise for both musical performance and near‑flawless matrix recording drives the rating up, but a serious vocal issue noted by a low‑star review pulls it down slightly."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Sound is described as almost flawless and very good; crisp mix with minimal issues. One comment notes a brief transition to the audience (AUD) source in the second set, which some found slightly disappointing but added atmosphere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mississippi Half-Step → Franklin's Tower",
+      "Althea",
+      "Passenger > Ramble On Rose > Music Never Stopped",
+      "China Cat > Rider",
+      "Playing In The Band",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Franklin's Tower (vocal breakdown)"
+    ],
+    "setlist_flow": "The set rolls nonstop from a powerful first set into an equally intense second set, with no let‑up. The only hiccup mentioned is the AUD source swap mid‑show, which some felt broke the perfect flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work and jams are praised throughout; however one reviewer describes a painful vocal collapse during Franklin's Tower.",
+    "Phil": "Phil Lesh’s bass is highlighted as “stepping up” and providing power, especially on the Half‑Step jam.",
+    "Bob": "",
+    "Keys": "Brent Mydland (keys) is called a force to be reckoned with, coming into his own during the second set.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mississippi Half-Step → Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Passenger > Ramble On Rose > Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat > Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Franklin's Tower (vocal breakdown)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T00:24:18.045139+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-10-28.mtx.seamons.105530.flac16"
+}

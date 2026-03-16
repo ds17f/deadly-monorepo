@@ -1,0 +1,87 @@
+{
+  "summary": "High‑fidelity soundboard capture of an emotionally charged Southern California 1987 show, highlighted by Desolation Row, Cold Rain & Snow and a moving Touch of Grey despite occasional mix imbalances.",
+  "review": "The recording is a crystal‑clear soundboard tape with excellent stereo separation that lets you hear each instrument distinctly, though Brent’s Hammond sits a bit too forward in the mix. Musically the night was a roller‑coaster – the first set uneven but saved by powerful moments like Desolation Row and All Over Now, while the second set delivered an unforgettable Touch of Grey, Cold Rain & Snow and a tear‑jerking Stella Blue. Fans note both the emotional significance of the show and a few rough spots such as a clumsy slide solo and lackluster Space.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong musical performance with several standout songs and high emotional impact, combined with an excellent soundboard recording; minor mix issues keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp highs, clear bass and superb stereo spread (Bobby left, Brent right, Jerry centre). The mix is generally clean but Brent's Hammond is a touch too prominent, and occasional balance quirks make some instruments sit low."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Desolation Row",
+      "Cold Rain and Snow",
+      "Touch of Grey",
+      "Stella Blue",
+      "All Over Now"
+    ],
+    "poor_songs": [
+      "Space",
+      "The Wheel",
+      "Eyes"
+    ],
+    "setlist_flow": "First set uneven – strong moments (Desolation Row, All Over Now) offset by a harsh slide solo and vocal croak. Second set ramps up emotionally, with Touch of Grey launching the set and a heartfelt Stella Blue finale, leaving the audience teary."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocals crack on \"FOTD\" and a botched note from Weir throws his voice off during \"Eyes\", but his solo on Stella Blue is described as heart‑tugging; he also adjusts his playing to match Bob’s tone.",
+    "Phil": "",
+    "Bob": "Weir’s off‑key note during the segue into \"Eyes\" is called unreliable and contributes to a botched transition; his vocal delivery on \"Ship\" is noted as exhausted.",
+    "Keys": "Brent’s Hammond solo is praised, yet his mix level is too high, making his playing overly prominent; later a sloppy “Around” is mentioned.",
+    "Drums": "The drummers are praised for rim work in the first set and for spanning the stereo field well; overall drum sound is described as excellent."
+  },
+  "song_mentions": {
+    "Desolation Row": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T21:46:59.049161+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-04-17.sbd.clugston.11872.sbeok.shnf"
+}

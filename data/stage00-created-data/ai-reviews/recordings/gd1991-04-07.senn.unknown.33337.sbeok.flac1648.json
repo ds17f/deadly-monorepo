@@ -1,0 +1,39 @@
+{
+  "summary": "Solid performance with Jerry in front and a restrained Vince, but mis‑labeled tracks make navigation difficult.",
+  "review": "The recording captures a strong show – Vince stays back letting Jerry drive the band, and the standout Turn On The Love Light shines. However, listeners are hampered by completely mislabeled tracks that require manual reordering, and one reviewer even notes the missing Turn Of Your Love Light in the file list. Audio quality is praised as nice, though the source type isn’t clearly identified.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "One reviewer rates it 5 stars praising the music and sound, another gives 0 stars due to labeling problems; overall the performance is good but technical issues lower the average."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Audio is described as nice/clear, but tracks are completely mislabeled and out of order, causing usability problems."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Turn On The Love Light"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Songs are present but mis‑ordered due to labeling errors; once reordered the set flows well and feels complete."
+  },
+  "band_member_comments": {
+    "Jerry": "Letting Jerry take the controls is highlighted as great.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince is praised for not ragging too hard, staying restrained behind Jerry.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Turn On The Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T18:44:44.550891+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-07.senn.unknown.33337.sbeok.flac1648"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Rare Detroit‑suburb show featuring the only known Throwing Stones jam; recording source and quality are not documented.",
+  "review": "The lone review notes a unique performance of \"Throwing Stones\" – described as the only time the band made that ‘sandwich’ – and praises the venue in the Detroit suburbs. No details are given about the audio source or sound quality, so listeners should assume an unknown recording condition.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one vague review; it highlights a rare song moment positively but provides no information on recording quality, leading to a moderate overall rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Review does not mention soundboard, audience mix, clarity, or any audio issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Throwing Stones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure; the only noted highlight is the unique Throwing Stones performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T22:01:03.012938+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-06-20.fob-akg-mahoney-oneill.miller.28393.sbeok.shnf"
+}

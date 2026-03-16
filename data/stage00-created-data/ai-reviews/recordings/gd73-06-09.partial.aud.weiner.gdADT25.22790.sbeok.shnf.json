@@ -1,0 +1,45 @@
+{
+  "summary": "Distant audience tape of the legendary June 9 1973 RFK show; the performance is wildly praised while the sound is flat and far‑back.",
+  "review": "Fans describe this June 9 1973 Washington, D.C. concert as one of the most out‑there and memorable Dead shows, highlighting mind‑blowing interplay on “They Love Each Other/Loose Lucy” and a possible St Stephen tease in “The Greatest Story”. The recording is an audience source with a distant, flat sound that many find less than ideal, though some listeners say the ambience can mask its flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Show quality is consistently praised (multiple 5‑star comments) while recording quality is noted as flat/distant; weighted average yields a strong overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Distant, far‑back mic placement makes the mix sound flat and muffled; some listeners note blemishes but ambience can soften them."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "They Love Each Other",
+      "Loose Lucy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans highlight the improvisational breaks and “mind‑blast” transitions, especially between They Love Each Other and Loose Lucy; overall flow is described as uniquely adventurous."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is described as being in a 'parallel universe' with Lesh during breaks.",
+    "Phil": "Lesh’s bass playing is likewise noted as existing in a parallel universe, contributing to the show’s otherworldly vibe.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T14:13:38.473774+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-06-09.partial.aud.weiner.gdADT25.22790.sbeok.shnf"
+}

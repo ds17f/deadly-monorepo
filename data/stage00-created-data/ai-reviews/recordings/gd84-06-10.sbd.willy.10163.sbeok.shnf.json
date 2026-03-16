@@ -1,0 +1,64 @@
+{
+  "summary": "Tight soundboard capture of a scorching 1984 Cal Expo show with blistering China > Rider, The Other One and soaring Birdsong.",
+  "review": "The SBD source is clean and well‑balanced, though a few listeners note a slight speed/tempo lift. Musically the concert is hailed as one of ’84’s highlights – Jerry’s solo work is described as creative and relentless, Brent’s keyboards shimmer, Phil locks in with Lesh, and the second set opens with an unforgettable China > Rider that drives the band into high‑octane jams on The Other One, Birdsong and He’s Gone. The only blemish mentioned is the “Don't Need Love” segment, which some find tedious.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Overwhelmingly enthusiastic reviews (most 5‑star) praise both performance and sound quality; minor speed complaints and a single mixed‑rating review keep the score just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Well‑balanced, tight mix with crisp detail. A few listeners note the recording sounds slightly sped up, but overall clarity is high and no major drop‑outs are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "China > Rider",
+      "Birdsong",
+      "He's Gone"
+    ],
+    "poor_songs": [
+      "Don't Need Love"
+    ],
+    "setlist_flow": "First set sizzles with strong interplay; the second set launches with a memorable China > Rider and sustains high energy through extended jams on The Other One, Birdsong and He’s Gone."
+  },
+  "band_member_comments": {
+    "Jerry": "Creative, relentless solos praised as \"outstanding\" and \"blazing\", though one reviewer called this specific performance sloppy.",
+    "Phil": "Locked in with Lesh, providing a solid bass foundation; noted for “plundering” the groove.",
+    "Bob": "",
+    "Keys": "Brent’s 1984 keyboard work highlighted as distinctive, trippy and technically excellent throughout the jam sections.",
+    "Drums": "The drum break is referenced positively (pre‑drums song), no specific complaints about Bill's playing."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China > Rider": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Birdsong": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Don't Need Love": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-14T18:03:55.663037+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-06-10.sbd.willy.10163.sbeok.shnf"
+}

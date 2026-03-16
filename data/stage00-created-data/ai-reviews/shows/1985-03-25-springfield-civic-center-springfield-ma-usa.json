@@ -1,0 +1,88 @@
+{
+  "summary": "High‑energy Springfield ’85 with scorching Sugaree and tight Help>Slip>Franklin's",
+  "blurb": "The show rides a blistering first set highlighted by Jack Straw, Sugaree and Bird Song. The second set delivers a seamless Help On The Way → Slipknot! → Franklin’s segue, followed by a soaring China Doll. Despite occasional recording glitches, the band plays with fire and tight improvisational flow.",
+  "review": "March 25, 1985 – Springfield Civic Center – The Dead were in top form during this spring tour stop. Jerry Garcia roared through his solos on Sugaree, Jack Straw and Let It Grow, his tone described as “crystal clear” and “smoking,” even if a stray beeping from his pedal occasionally slipped into the mix. Bob Weir matched him on Sugaree with deep, soulful vocals that gave Garcia a run for his money, while Phil Lesh laid down a solid low‑end foundation and even tried out a fresh lead intro early in the set. Brent Mydland added melodic color to Bird Song and kept the keyboards steady throughout. The rhythm section—Mickey Hart and Bill Kreutzmann—provided a punchy, bouncy drive, especially on the Drums → Space segment that propelled the second‑set momentum into an ecstatic China Doll. Recording quality varies (some SBD tapes suffer from static or squealing pedals), but several audience and matrix sources capture the performance cleanly, making this show a must‑listen for fans of high‑octane 1985 Dead.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 57,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.2,
+      "sentiment_rationale": "Five recordings praise the performance (Sugaree, Help>Slip>Franklin's, Bird Song) with enthusiastic language like \"smoking,\" \"crystal clear,\" and \"tight\" while only one recording is negative and several are mixed due to technical issues, not musical flaws. The net sentiment is clearly positive, warranting a moderate boost.",
+      "final_calculation": "2.5 + 0.4 + 1.2 = 4.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1985-03-25.132153.mtx.dusborne.flac16",
+    "reason": "Excellent matrix capture with clean balance, no high‑frequency squeal, and praised for its crystal‑clear Sugaree and smoking Help>Slip>Franklin's sequence."
+  },
+  "key_highlights": [
+    "Sugaree shines with blazing Garcia solo and tight Weir vocals",
+    "Help On The Way → Slipknot! → Franklin’s segue is seamless and energetic",
+    "Bird Song features melodic Brent lines and soaring guitar work",
+    "Second‑set momentum builds through Estimated Prophet, Eyes Of The World and a soaring China Doll"
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Sugaree",
+    "Little Red Rooster",
+    "Bird Song",
+    "Let It Grow",
+    "Help On The Way",
+    "Slipknot",
+    "Franklin's Tower",
+    "Estimated Prophet",
+    "Eyes Of The World",
+    "Drums",
+    "Space",
+    "I Need A Miracle",
+    "China Doll"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers blazing, fast‑fire solos on Sugaree, Jack Straw and Let It Grow; his tone is crystal clear and “smoking,” though a stray beeping pedal noise and occasional buried vocals distract in the second set.",
+    "Phil": "Phil’s bass stays solid throughout, anchoring the high‑energy jams; he adds a fresh lead intro early in the show and sounds healthier than on many other 1985 dates.",
+    "Bob": "Weir shines on Sugaree with deep vocal work and strong rhythm guitar, giving Garcia a run for his money and keeping the groove tight.",
+    "Brent": "Brent adds melodic lines early in Bird Song and provides solid keyboard support across the set, enhancing the harmonic texture without over‑playing.",
+    "Mickey": "Hart’s percussion is punchy and bouncy, driving the second‑set drum/space segment and adding sparkle to the high‑energy jams.",
+    "Billy": "Kreutzmann pairs with Hart for a powerful, propulsive back‑line that fuels the momentum from Help>Slip>Franklin's through China Doll."
+  },
+  "processed_recordings": 12,
+  "processed_date": "2025-09-15T02:02:42.473467+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw"
+    ],
+    [
+      "Sugaree"
+    ],
+    [
+      "Little Red Rooster"
+    ],
+    [
+      "Bird Song"
+    ],
+    [
+      "Let It Grow"
+    ],
+    [
+      "Help On The Way",
+      "Slipknot",
+      "Franklin's Tower"
+    ],
+    [
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "China Doll",
+      "Goin' Down The Road Feeling Bad",
+      "Good Lovin'"
+    ]
+  ]
+}

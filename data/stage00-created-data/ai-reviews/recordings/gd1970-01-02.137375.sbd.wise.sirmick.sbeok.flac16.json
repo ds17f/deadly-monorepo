@@ -1,0 +1,50 @@
+{
+  "summary": "A high‑quality soundboard capture with Tom Constanten front‑and‑center, highlighted by a blazing Dark Star and incendiary Tighten Up jams.",
+  "review": "The recording is a very good‑quality soundboard mix that puts TC prominently in the foreground, though Phil’s bass can be buried at times. Musically the show shines with an epic Dark Star that many fans rank among the best of 1970 and a fire‑filled Tighten Up sequence, plus strong contributions from Bob Weir. Overall the performance is praised by most reviewers despite a few mixed opinions on the early‑set pacing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give high marks and praise both the musical peaks (Dark Star, Tighten Up) and the soundboard quality; only minor balance issues are noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced mix with TC very high in the mix; generally excellent sound but Phil's bass is occasionally hard to hear, indicating a slight balance flaw."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Tighten Up"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Starts strong with tight harmonies but some feel the first set never fully launches; the second half builds into a fiery Dark Star and a multiple‑peak Tighten Up, delivering the high‑energy 1970 vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "It's hard to hear Phil in this recording.",
+    "Bob": "Praised for his guitar work and a standout solo during Tighten Up; several reviewers call him a talented player.",
+    "Keys": "Tom Constanten (TC) is noticeably forward in the mix, adding a distinctive keyboard presence.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Tighten Up": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T14:09:50.808061+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-01-02.137375.sbd.wise.sirmick.sbeok.flac16"
+}

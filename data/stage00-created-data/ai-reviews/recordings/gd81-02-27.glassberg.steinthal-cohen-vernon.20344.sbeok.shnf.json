@@ -1,0 +1,51 @@
+{
+  "summary": "Stunning audience recording that captures a high‑energy show with fire‑blazing Fire On The Mountain and a killer Scarlet > Fire sequence, though vocal balance is a bit off.",
+  "review": "The concert shines with relentless energy – standout moments include a soaring Fire On The Mountain, a tight Cassidy, and an unforgettable Scarlet > Fire stretch. Recorded as an audience (AUD) tape, the sound is remarkably clear and airy, almost board‑like, but several listeners note distant vocals and a bass‑heavy mix that detracts from perfect balance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Four out of six reviewers rate the show 5 ★, praising both performance and recording; two give 3 ★ focusing on mix issues. The musical performance is strong (70% weight) and the AUD capture is good to excellent (30% weight), leading to an overall rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, airy sound that feels close to the stage; many say it rivals a soundboard. However, vocals are described as distant and the bass is overly prominent, resulting in an imbalanced mix for some listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire On The Mountain",
+      "Cassidy",
+      "Scarlet > Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with nonstop energy, high‑octane jams and no dead‑time; fans note the lack of an OMSN or R&R in the second set as a plus."
+  },
+  "band_member_comments": {
+    "Jerry": "Still in reasonably good voice; guitar work praised throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire On The Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T08:03:01.104550+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-02-27.glassberg.steinthal-cohen-vernon.20344.sbeok.shnf"
+}

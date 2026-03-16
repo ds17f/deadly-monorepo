@@ -1,0 +1,45 @@
+{
+  "summary": "Warm, balanced soundboard capture of a stellar Greek Theatre show highlighted by scorching Fire solos and an unforgettable It’s All Over Now Baby Blue encore.",
+  "review": "Fans rave that this Nakomi 300‑derived source delivers crystal‑clear warmth and balance, making it one of the best‑sounding versions of the concert. The performance is lauded as a year‑best show with standout Fire solos, numerous Jerry Garcia moments, and an exceptional setlist capped by a soaring It’s All Over Now Baby Blue encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All four reviewers give 5‑star ratings, praising both the musical performance and the audio fidelity; the weighting favours a superb show plus excellent sound quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Warmth, balance, and clarity noted; described as less fatiguing and the clearest sounding source among multiple releases."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire on the Mountain",
+      "It’s All Over Now Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Exceptional set list with a brilliant encore and even a second encore, creating a memorable Saturday night atmosphere."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight great Jerry moments and solos throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It’s All Over Now Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T14:27:26.013323+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-09-12.nak300.101497.flac16"
+}

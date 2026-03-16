@@ -1,0 +1,87 @@
+{
+  "summary": "Clear soundboard capture of a fiery 6/22/92 show with standout Fire, Spanish Jam and Other One, though Scarlet suffers from low bass and Dark Star has channel drop‑outs.",
+  "review": "The second set from June 22 1992 is praised for its high energy, a scorching Fire, a tight Spanish Jam → The Other One transition and memorable moments like Stella Blue, So Many Roads and Standing On The Moon.  The SBD source is generally crystal‑clear with excellent drum presence, but listeners note low Phil in Scarlet and right‑channel drop‑outs during Dark Star that detract from an otherwise superb performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (9 of 15) give 4–5 stars and highlight strong musical moments; recording is described as clear SBD with only isolated mix/drop‑out issues, leading to a high overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Exceptionally clear SBD with crisp drums and overall balance; however, right‑channel drop‑outs in Dark Star and noticeably low Phil bass (especially on Scarlet) are reported. Some listeners also note Vince/keys being a bit forward in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire",
+      "Spanish Jam",
+      "The Other One",
+      "Stella Blue",
+      "So Many Roads",
+      "Standing On The Moon"
+    ],
+    "poor_songs": [
+      "Scarlet",
+      "Dark Star"
+    ],
+    "setlist_flow": "Reviewers love the seamless Scarlet → Fire transition and the Spanish Jam into The Other One, describing the second set as a high‑water mark of the 1992 tour. The early part (Scarlet) is seen as weaker due to mix issues, while the latter half delivers sustained groove and memorable ballads."
+  },
+  "band_member_comments": {
+    "Jerry": "A few reviewers note Jerry’s frustration during Dark Star (turning his back, abrupt ending), but later praise his focused guitar work on So Many Roads and Standing On The Moon.",
+    "Phil": "Repeated complaints that Phil’s bass is buried or absent in the mix, especially on Scarlet; he re‑emerges more clearly by Fire.",
+    "Bob": "",
+    "Keys": "Vince (keys) is described as sitting too far forward in the mix on some tracks.",
+    "Drums": "The drum sound receives consistent praise – crisp, powerful and highlighted by two “scintillating” drum/spaces."
+  },
+  "song_mentions": {
+    "Scarlet": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "GDTRFB": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Spanish Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing On The Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T07:28:58.780108+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-22.set2sbd.herman.14043.sbefail.shnf"
+}

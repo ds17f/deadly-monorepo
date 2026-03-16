@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent audience recording of the Alaska run with a smoking Sugaree and a thunderous second set, captured in crisp, ambient sound.",
+  "review": "The June 21 1980 Anchorage show is celebrated for its incendiary performances – especially Jerry’s towering Sugaree, a blistering Lazy Lightning solo and a monstrous Samson – while the audience tape delivers surprisingly clear, full‑bodied audio that many fans rank among the top ten AUD recordings.  The first set draws mixed feelings but the second set’s energy, Truckin’ and Space seal its reputation as a must‑hear show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive comments on both performance (standout songs, Jerry’s playing) and recording quality (crisp, full‑range audience tape). The weighted average of show (≈4.8) and sound (≈4.5) yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, full‑range sound with strong bottom end and ambient crowd presence; occasional splice noted but generally superb for the era and venue. Some reviewers mention a brief drop‑out in the first set, yet most call it one of the best audience tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Samson",
+      "Truckin'",
+      "Loser",
+      "Lazy Lightning",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set receives mixed opinions (some fans missed the ‘country‑Dead’ selections), but the second set erupts with a 14‑minute Sugaree, crushing Samson, high‑energy Truckin’, and an ecstatic Space, delivering a clinic‑like performance that many reviewers cite as the highlight of the Alaska run."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised repeatedly for going off on Sugaree, delivering a blistering Lazy Lightning solo, and crushing Samson; described as ‘incredible’ and ‘off the charts.’",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Samson": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T01:16:26.280042+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-06-21.akg.vernon.23531.sbeok.shnf"
+}

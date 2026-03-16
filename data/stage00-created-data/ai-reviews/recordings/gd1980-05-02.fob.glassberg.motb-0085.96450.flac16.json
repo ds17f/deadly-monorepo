@@ -1,0 +1,39 @@
+{
+  "summary": "Loser shines in this performance, though recording details are unknown.",
+  "review": "The lone review praises the rendition of \"Loser,\" calling it extraordinary for a song that doesn’t always wow a setlist. No information is provided about the source or sound quality, leaving the technical side ambiguous.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "Only one brief review with a zero‑star rating but positive language about the song; lack of recording comments forces a conservative score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on overall set structure."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T22:23:10.091890+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-02.fob.glassberg.motb-0085.96450.flac16"
+}

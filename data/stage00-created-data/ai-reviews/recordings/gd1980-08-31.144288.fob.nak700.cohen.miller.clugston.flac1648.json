@@ -1,0 +1,63 @@
+{
+  "summary": "Clear audience capture of a tight show where the second set ignites, highlighted by Brent’s organ on The Other One and flawless segues.",
+  "review": "The audience recording is praised as the best available for this performance, offering decent high‑end detail and minimal crowd noise despite a boomy PA. Musically the concert shines – a solid first set followed by an on‑fire second set with standout moments like The Other One, Stella Blue, Miracle into Good Lovin', and a heartfelt Goodnight Irene encore. Segues are described as almost rehearsed, making the whole show feel tight and compelling.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "One detailed 4‑star review highlights an excellent musical performance and a good audience recording; limited data keeps confidence low."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience source with clear hi‑hat cymbals, decent dynamic range and minimal hand‑clap noise. PA is a bit boomy and the soundboard feed is muddy, but overall this AUD capture is considered the best for the show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Stella Blue",
+      "Miracle",
+      "Good Lovin'",
+      "Goodnight Irene"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Long first set (six songs before drums) followed by a five‑song second set and encore; segues are described as flawless and almost rehearsed, giving the concert an unusually tight feel."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his soft ballad singing/guitar on the Garcia ballad encore (Goodnight Irene).",
+    "Phil": "Noted for \"dropping the bombs\" – energetic bass work.",
+    "Bob": "Mentioned leading into Miracle and Good Lovin' with Bobby W! (vocals).",
+    "Keys": "Brent Mydland’s organ on The Other One highlighted as especially nice.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goodnight Irene": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T02:35:11.034926+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-08-31.144288.fob.nak700.cohen.miller.clugston.flac1648"
+}

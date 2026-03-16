@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard mix captures a high‑energy third night with Jerry on fire and standout performances of Box of Rain and Stella Blue.",
+  "review": "The third night of the spring tour is described as an insanely energetic show where the whole band was in sync, with Jerry Garcia delivering scorching guitar work and Brent Mydland adding tasteful keyboard touches. The SBD source provides a great, clear mix (though listeners may also enjoy the Schoeps audience feed for ambience), and fans single out Box of Rain and Stella Blue as highlight moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong musical performance highlighted by reviewers combined with a praised soundboard recording yields a high rating, though limited review count lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Great mix and clear soundboard capture; reviewer notes it sounds great but suggests the Schoeps audience mic for full live ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Third night of a spring tour, high energy, band tightly locked in and everything dialed in throughout the performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"on fire\" with exceptional guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent is praised for his soft touch when needed.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:17:03.631953+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-21.142450.sbd.miller.flac1648"
+}

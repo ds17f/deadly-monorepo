@@ -1,0 +1,51 @@
+{
+  "summary": "Crystal‑clear soundboard capture of one of the Dead’s all‑time great shows – Dark Star, The Other One and Turn On Your Love Light in top form.",
+  "review": "The recording is a straight stereo sound‑board mix that sounds album‑ready, with only minor complaints about low‑frequency depth. Musically the concert is legendary: a soaring Dark Star flows into an epic The Other One, capped by a blistering Lovelight, and the band’s collective improvisation is repeatedly described as “the best” of any era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over twenty detailed reviews praise both performance (standout Dark Star, The Other One, Lovelight) and the sound‑board quality; only a handful of policy‑focused negative comments exist, so the combined show‑and‑recording rating is very high."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Stereo sound‑board mix, crystal clear and album ready. One reviewer notes a slight loss of low‑end compared with other copies, but overall clarity and balance are praised."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Other One",
+      "Turn On Your Love Light"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert weaves early acoustic material into a powerful electric set; the highlight is the seamless Dark Star → The Other One transition, followed by an explosive Lovelight that showcases the band’s dynamic range."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his inventive lead on Dark Star and overall guitar tone throughout the show.",
+    "Phil": "",
+    "Bob": "Highlighted for driving a high‑energy The Other One, with strong vocal and rhythm work noted by reviewers.",
+    "Keys": "",
+    "Drums": "Mentioned briefly in connection with the Lovelight drum break; no detailed critique."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 13,
+      "negative_mentions": 0,
+      "total_mentions": 13
+    },
+    "The Other One": {
+      "positive_mentions": 11,
+      "negative_mentions": 0,
+      "total_mentions": 11
+    },
+    "Turn On Your Love Light": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    }
+  },
+  "processed_date": "2025-09-19T16:25:44.266475+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-02-13.early-late.sbd.cotsman.18114.sbeok.shnf"
+}

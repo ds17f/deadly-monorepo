@@ -1,0 +1,92 @@
+{
+  "summary": "A high‑energy show highlighted by Phil’s first solo in a decade and a scorching Shakedown Street, captured on solid soundboard tape that’s generally clear despite occasional speed quirks.",
+  "review": "The March 27 1985 Nassau concert is remembered for Phil Lesh finally taking the mic with Tom Thumb's Blues and a fiery second set packed with Shakedown Street, Playin' in the Forest and a standout Half‑Step > Bucket.  The soundboard recording is clear enough to enjoy the fast tempo and crowd ambience, though some listeners note a slight speed‑up and occasional vocal flubs on Touch of Grey.  Overall the performance shines, especially for longtime fans who value the historic firsts.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "The majority of reviews (4‑5 stars) praise the musical moments and historical significance, while a few note recording speed issues and vocal flubs; weighting show quality heavily yields an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and balanced soundboard tape; occasional perception of slight speed‑up and minor vocal muddiness on Touch of Grey, but crowd ambience is well captured."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tom Thumb's Blues",
+      "Shakedown Street",
+      "Playin' in the Forest",
+      "Half Step > Bucket",
+      "Uncle John's Band",
+      "Stella Blue"
+    ],
+    "poor_songs": [
+      "Touch of Grey",
+      "Tons of Steel"
+    ],
+    "setlist_flow": "A brief first set followed by an especially tight, fast‑paced second set; the band rides a high‑energy groove despite the overall short runtime."
+  },
+  "band_member_comments": {
+    "Jerry": "Occasional vocal flubs on Touch of Grey and some mumbling, but strong vocal delivery on Stella Blue and solid lead guitar throughout.",
+    "Phil": "First solo in ~10 years – sings Tom Thumb's Blues; this historic moment is repeatedly praised by reviewers.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s keyboards shine on Big River and add texture throughout the set.",
+    "Drums": "Post‑drums segment considered less exciting, but the Playin' jam receives strong commendation for its rhythmic drive."
+  },
+  "song_mentions": {
+    "Tom Thumb's Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Shakedown Street": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Playin' in the Forest": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Half Step > Bucket": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 4,
+      "total_mentions": 4
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Tons of Steel": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-15T02:05:09.058288+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-03-27.sbd.ladner.8567.sbeok.shnf"
+}

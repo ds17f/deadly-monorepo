@@ -1,0 +1,73 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a top‑ten ’69 show, highlighted by a soaring Dark Star and blistering The Eleven.",
+  "review": "The newly remastered Miller SBD delivers pristine clarity, superb instrument separation and virtually no hiss, turning what was once a muddy tape into one of the most listenable 1969 recordings. Musically the performance is consistently praised – Dark Star, Mountains of the Moon, The Eleven and the Doin’ That Rag → St. Stephen → The Eleven sequence are called out as stand‑outs, with Jerry’s guitar tone described as “awesome” and Phil’s bass finally clean. A few reviewers note minor edits (missing Dupree’s intro, Cryptical cut) and pitch‑correction quirks, but these do not detract from the overall brilliance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive 5‑star reviews praise both the remastered sound quality and the musical performance; only a handful of minor criticisms appear, yielding an exceptional combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear, dynamic mix with no hiss and superb instrument separation; removal of bass distortion on Dark Star. Minor complaints about occasional edits (Dupree's intro, Cryptical) and pitch‑correction sections in some versions."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Mountains of the Moon",
+      "The Eleven",
+      "The Other One",
+      "Doin' That Rag > St. Stephen > The Eleven"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a seamless, high‑energy flow that ranks the concert among the top ten shows of 1969, with especially strong second‑set sequences."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his superb guitar tone and phrasing; one reviewer wonders if he used a Gibson SG.",
+    "Phil": "Bass distortion on Dark Star was removed in the remaster; Phil’s bass work noted as clearer and more supportive, especially during The Eleven.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "Mountains of the Moon": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Doin' That Rag > St. Stephen > The Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dupree's": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cryptical": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T11:37:00.998849+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-02-22.sbd.miller.112691.flac16"
+}

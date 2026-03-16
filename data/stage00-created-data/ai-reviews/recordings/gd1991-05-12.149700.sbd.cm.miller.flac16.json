@@ -1,0 +1,39 @@
+{
+  "summary": "Good soundboard recording with a standout Deal performance highlighted by Jerry's signature playing.",
+  "review": "The review praises the band's delivery of \"Deal,\" noting that only Jerry could make it shine, which suggests a strong musical moment. No specific comments on audio fidelity are provided, but the .sbd tag implies a solid sound‑board source, leading to an overall positive impression of both performance and recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "A single 4‑star review highlights a memorable song and Jerry's playing; assumed soundboard source gives decent recording quality, resulting in an overall rating above average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on audio clarity or mix; inferred solid soundboard capture from file naming."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for delivering a memorable \"Deal\" performance (“Only like Jerry could do”).",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T19:41:48.364970+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-05-12.149700.sbd.cm.miller.flac16"
+}

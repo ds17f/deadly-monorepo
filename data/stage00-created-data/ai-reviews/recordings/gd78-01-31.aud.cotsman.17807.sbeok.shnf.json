@@ -1,0 +1,51 @@
+{
+  "summary": "Audience recording with superb Let It Grow and Truckin' moments captures a hot, high‑energy show featuring standout Let It Grow and Scarlet > Fire performances.",
+  "review": "The show is praised as a “hot” performance with Jerry’s soaring solo work on Let It Grow and an inspired take on Truckin'.  While the audience tape is generally listenable and even great‑sounding on the highlighted songs, some listeners note it isn’t exceptional compared to other AUD sources.  Overall the music shines through the modest recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Strong show performance (hot, standout songs) combined with a mostly good audience recording yields a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners describe the tape as generally listenable and superb on Let It Grow and Truckin', though some feel there are better AUD recordings available and note a lack of excitement in overall sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "Let It Grow",
+      "Scarlet > Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert maintains strong momentum with an energetic first set highlighted by Truckin' and a second set that builds around a blistering Let It Grow, keeping the crowd engaged throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Blistering solo work on Let It Grow; guitar circulates around the theatre and goes \"nuts\" during peaks.",
+    "Phil": "Featured prominently in the ebb‑and‑flow mix, occasionally taking the loudest spot.",
+    "Bob": "Provides a solid rhythmic foundation, especially noted during Let It Grow.",
+    "Keys": "",
+    "Drums": "Integrated into the dynamic ebb‑and‑flow, adding drive to the performance."
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T09:01:32.284943+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-01-31.aud.cotsman.17807.sbeok.shnf"
+}

@@ -1,0 +1,78 @@
+{
+  "summary": "High‑energy 4/12/69 Utah show shines on Dark Star, The Eleven and Lovelight; an analog SBD captures the vibe with pleasant hiss and occasional splice.",
+  "review": "The performance is praised for its fiery Dark Star, scorching The Eleven, a hot Lovelight and solid Dew and He Was a Friend of Mine, despite the loss of most of The Other One. The soundboard source delivers a warm analog character – a little hiss, some pitch‑correction quirks and a splice in Lovelight – but remains clear enough to let the music breathe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (4‑5 stars) and highlight standout performances; recording quality is good with only minor analog noise and splice issues, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Analog SBD with characteristic hiss and occasional pops; noticeable splice in Lovelight and slight pitch‑drift that some listeners correct. Minor cuts (missing parts of Dark Star/Other One) affect completeness but overall clarity is solid."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Eleven",
+      "Lovelight",
+      "Dew",
+      "He Was a Friend of Mine"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Two‑set university ballroom show with curfew‑induced truncation; early set opens with Dew and features the Yellow Dog joke, while the late set delivers Dark Star (with a brief missing intro) and a smoking Eleven. Despite cuts, the flow feels loose, experimental and exciting."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted for his agitated energy and strong guitar tone; interacts playfully with Pigpen.",
+    "Phil": "",
+    "Bob": "His Yellow Dog storytelling is highlighted as odd but entertaining; overall vocal presence praised.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Eleven": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He Was a Friend of Mine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T13:00:48.861173+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-04-12.sbd.cotsman.14914.sbeok.shnf"
+}

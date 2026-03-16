@@ -1,0 +1,45 @@
+{
+  "summary": "Recording source unknown and quality unclear; the show features a pretty Desolation Row but Bob Weir sounds rushed.",
+  "review": "The performance includes a nicely rendered Desolation Row and Bird Song, though reviewers note that Bob (Weir) seems a little rushed in his playing. No specific information about the recording source or fidelity is provided, leaving the audio quality ambiguous.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.5,
+    "confidence": "low",
+    "rationale": "Only one brief review with a 0‑star rating; positive comments are limited to two songs while the main criticism targets Bob's performance and no recording details are given."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on soundboard, audience mix, clarity or other technical aspects; quality cannot be assessed beyond being unspecified."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Desolation Row",
+      "Bird Song"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Insufficient detail to comment on overall set pacing or flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bobby (Bob Weir) seems a little rushed.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:49:24.819504+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-26.135547.chasingwilma.flac24"
+}

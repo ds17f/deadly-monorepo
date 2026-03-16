@@ -1,0 +1,46 @@
+{
+  "summary": "A sluggish, poorly recorded performance – only the Candyman segment offers any merit.",
+  "review": "All three reviewers criticize this version of the KQED Studios show, calling it slow and unlistenable, with visual psychedelic effects that make the opening “Easy Wind” virtually unwatchable. The recording quality is described as sub‑par, and the performance fails to capture the energy of a true live Dead show, though one reviewer notes that the Candyman portion later in the set is enjoyable.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.4,
+    "confidence": "low",
+    "rationale": "The majority of feedback (2‑star and 1‑star ratings) points to a bad listening experience and poor recording, with only one faint positive note about a later song; limited detail yields low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers mention the video’s psychedelic visual effects rendering the first song unwatchable and describe the overall version as slow and not worth downloading; no clear comments on audio fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Candyman"
+    ],
+    "poor_songs": [
+      "Easy Wind"
+    ],
+    "setlist_flow": "The show starts off sluggish and visually problematic, but improves somewhat in the later Candyman segment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Easy Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T22:41:55.545243+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-08-30.sbd.backus.12750.sbeok.shnf"
+}

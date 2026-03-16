@@ -1,0 +1,39 @@
+{
+  "summary": "Recording source unknown, but the show features an unusually fast “Man Smart (Woman Smarter)” performance.",
+  "review": "The sole review doesn’t discuss the audio source or fidelity, leaving the recording quality unclear. The highlight noted is that the band played “Man Smart (Woman Smarter)” at its fastest tempo ever, indicating a high‑energy moment in the set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one brief review; it praises a specific song’s tempo but provides no recording details and assigns a 0‑star rating, creating uncertainty about overall quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Man Smart (Woman Smarter)"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The review only notes an exceptionally fast tempo for one song; no broader comments on set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Man Smart (Woman Smarter)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T11:02:39.162285+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-11-07.sbd.miller.repatch-88727.88815.sbeok.flac16"
+}

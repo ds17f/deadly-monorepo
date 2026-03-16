@@ -1,0 +1,56 @@
+{
+  "summary": "High‑fidelity soundboard capture of a solid 1971 performance featuring standout Truckin', The Other One and Wharf Rat, though occasional track glitches interrupt the flow.",
+  "review": "The recording delivers excellent soundboard clarity, letting listeners enjoy strong performances of Truckin', The Other One, Wharf Rat and other classics. Reviewers praise the musical delivery but note brief hiccups when the player jumps between tracks and a minor glitch in Bobby McGee, plus some untuned guitars that detract slightly from an otherwise solid show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers give high star ratings and highlight strong song performances; recording is praised for sound quality despite minor track‑jump glitches, yielding an overall good‑to‑great rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, excellent soundboard fidelity noted, but the digital file has brief interruptions when advancing tracks (Truckin' → The Other One, etc.) and a small hiccup at 5:25 in Bobby McGee."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall solid performance, though the listening experience is marred by track‑jump glitches that break the natural flow of the set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Phil Lesh is quoted as saying this is \"Pig's best\" in an oral history, indicating high regard for the show.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bobby McGee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T05:18:47.182330+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-21.sbd.lai.2578.sbefail.shnf"
+}

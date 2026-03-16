@@ -1,0 +1,46 @@
+{
+  "summary": "An excellent matrix recording captures a blistering hot show highlighted by a soaring Terrapin Station, while the Wharf Rat feels mediocre.",
+  "review": "The Dusborne‑crafted matrix source is praised as crystal‑clear and full‑throttle, delivering a richer sound than the raw SBD. The performance is described as immense with Phil’s thunderous bass and Jerry’s ferocious guitar work, though only Terrapin Station truly shines and the Wharf Rat is seen as lackluster.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Three enthusiastic 5‑star reviews highlight both an outstanding matrix recording and a high‑energy show, while the lone 3‑star review offers mild criticism; weighted scoring yields ~4.6 stars."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers call the matrix source \"absolutely incredible\" and note it adds audience ambience to a clean SBD, eliminating hollowness and providing full‑throttle mayhem. No major flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station"
+    ],
+    "poor_songs": [
+      "Wharf Rat"
+    ],
+    "setlist_flow": "The concert is described as a blistering, hot performance with high energy throughout; the matrix mix enhances the flow, though only Terrapin truly stands out."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is intense and \"picking his brains out\" from start to finish; one reviewer notes typical thinness on SBD but praises this recording for delivering full power.",
+    "Phil": "Provides thundering highlights on the bottom end, adding depth to the performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T02:50:08.300445+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-03.135897.mtx.dusborne.flac16"
+}

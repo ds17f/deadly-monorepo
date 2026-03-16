@@ -1,0 +1,45 @@
+{
+  "summary": "Good‑quality recording of a solid summer‑'92 stadium show, highlighted by an especially great Wharf Rat and a killer Crazy Fingers.",
+  "review": "The crowd‑sourced tape captures a tight, energetic performance from the June ’92 Chicago run. Reviewers consistently point out the powerful Wharf Rat and the soaring finale of Crazy Fingers, while noting that the overall sound is clear enough for even hearing‑impaired listeners. The show is described as “solid” and “rocked from start to finish,” making it a worthwhile listen despite no extraordinary technical quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average star rating is 4.0 across eight reviews, all but one are 4‑5 stars and praise both the performance and audible quality; no major complaints were recorded."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Listeners comment on fabulous sound dynamics for a huge stadium setting and note the tape is listenable even for those with tinnitus, indicating clear enough balance despite lack of explicit source details."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Crazy Fingers"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is described as a solid summer ’92 show that “rocked from start to finish,” with no major dips; the energy stays high throughout, culminating in memorable moments like Wharf Rat and Crazy Fingers."
+  },
+  "band_member_comments": {
+    "Jerry": "Great guitar work highlighted at the end of Crazy Fingers.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince’s keyboards are praised for gelling nicely with the band.",
+    "Drums": "Drums receive a positive nod as “great drums” in one review."
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T07:55:24.580734+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-26.aud.harlan.9118.sbeok.shnf"
+}

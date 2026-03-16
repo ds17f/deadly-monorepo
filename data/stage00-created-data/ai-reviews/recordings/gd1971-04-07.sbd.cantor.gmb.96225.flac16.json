@@ -1,0 +1,33 @@
+{
+  "summary": "Mixed‑quality short show with no standout moments and an underwhelming jam after drums; recording details are unspecified",
+  "review": "The concert is described as a brief, solid performance but reviewers note the lack of highlights and criticize the post‑drum jam. No comments were made about the audio source or fidelity, leaving the recording quality unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Average show rating (4, 5, 3) combined with no information on recording quality yields a modest overall score; reviewers are split between praise for brevity and criticism of the jam."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviews do not mention soundboard, audience mix, clarity, or any technical issues, so recording quality cannot be assessed."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Jam after drums"
+    ],
+    "setlist_flow": "The set is noted as short and solid but lacking memorable peaks; the flow feels routine with a disappointing jam segment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T04:17:13.738298+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-04-07.sbd.cantor.gmb.96225.flac16"
+}

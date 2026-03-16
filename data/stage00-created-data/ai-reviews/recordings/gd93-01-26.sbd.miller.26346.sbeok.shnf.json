@@ -1,0 +1,39 @@
+{
+  "summary": "Solid late‑era show with energetic two sets and decent soundboard recording despite occasional level issues",
+  "review": "Most reviewers rave about the wild atmosphere (Chinese acrobats, dragon parade) and strong performances from Jerry, Phil and Bob, highlighting a monster \"Eyes of the World\". The soundboard source is generally praised for its clarity for a 1993 tape, though a few note that the levels were occasionally over‑driven or low, giving the recording an overall good but not flawless quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "The majority of reviews (8 out of 10) give 4‑star praise for the musical performance and a generally good recording, while two early reviews criticize distortion and uninspired playing; weighting show quality higher yields a rating in the high‑3 range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most listeners find the SBD clear for its era, but several note that levels were set too high causing distortion or, conversely, sounding low in places; mixing is not perfect and occasional popping is heard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes of the World"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Two‑set concert with a lively first set despite some uninspired moments, followed by an engaging second set; the acrobatic and dragon parade visuals added excitement."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers call his playing great and even shout \"jerry!!!!\"",
+    "Phil": "\"Phil is a monster during the eyes\" – strong bass work noted.",
+    "Bob": "Early reviewer mentions Bob's voice was off; later reviews praise his effort despite a partially missing voice.",
+    "Keys": "",
+    "Drums": "Dragon parade occurred during drums; recording captures drum hits cleanly for a '93 show."
+  },
+  "song_mentions": {
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:33:33.965336+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-01-26.sbd.miller.26346.sbeok.shnf"
+}

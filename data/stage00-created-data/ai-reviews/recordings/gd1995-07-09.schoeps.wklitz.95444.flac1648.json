@@ -1,0 +1,45 @@
+{
+  "summary": "Mixed performance with uneven vocals and a rough mix, but flashes of brilliance like a ripping Little Red Rooster keep it interesting.",
+  "review": "The July 1995 show is uneven – the recording sounds off‑balance and Jerry Garcia’s vocals suffer from his ill health, leading some listeners to recommend skipping it.  Still, a few moments such as a spirited Little Red Rooster (and a well‑executed “Masterpiece” segment) provide enough merit for dedicated Deadheads who want to hear every era.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "medium",
+    "rationale": "Only two substantive reviews (4★ and 2★) with clear opinions; one praises the show while the other condemns vocal and mix quality, yielding an overall low‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers note a “off” SMR mix and badly flubbed vocals; no specific mention of soundboard or audience source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Little Red Rooster",
+      "The Masterpiece"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed commentary on set pacing; the show is described as generally inconsistent with a few high points."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia was sick during this performance, resulting in noticeably weak vocals.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T12:44:46.098672+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-09.schoeps.wklitz.95444.flac1648"
+}

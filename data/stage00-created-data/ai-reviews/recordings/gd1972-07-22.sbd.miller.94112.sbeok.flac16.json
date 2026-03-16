@@ -1,0 +1,125 @@
+{
+  "summary": "A warbly front‑of‑house mix but a strong 1972 performance with standout versions of You Win Again, Bird Song, Mississippi Half‑Step and an epic Morning Dew.",
+  "review": "The show captures the loose, jam‑heavy spirit of summer ’72 – vocal harmonies are vivid, Bob Weir’s rhythm guitar is omnipresent, and Jerry Garcia delivers heartfelt leads on several highlights. The recording is a patched front‑of‑house (matrix) source that shows water‑damage warble and occasional mix quirks, yet the overall listening experience remains rewarding.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (multiple 5‑star comments) while noting only moderate technical flaws; weighting show quality heavily yields a rating in the high‑four range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Front‑of‑house soundmix patched from Bear and Betty sources; exhibits water‑damage warble, occasional reel wobble (Sugar Mag) and mix imbalances (Ramble, He's Gone), but overall remains listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "You Win Again",
+      "Bird Song",
+      "Mississippi Half-Step",
+      "Morning Dew",
+      "Uncle John's Band",
+      "Stella Blue",
+      "China Cat Sunflower > I Know You Rider",
+      "Deal"
+    ],
+    "poor_songs": [
+      "Truckin'",
+      "Me & Bobby McGee",
+      "Ramble on Rose"
+    ],
+    "setlist_flow": "Two solid first sets that feel like a double‑dose of ’72 material, followed by a classic second set with strong transitions (China>Rider, Deal) and a high‑energy jam climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is described as heartfelt and emotionally resonant; he “leaves heart and soul onstage.”",
+    "Phil": "Phil’s vocals receive praise (strong on Bird Song, B.E. Woman, Half‑Step) and his banter adds to the show’s character.",
+    "Bob": "Weir’s rhythm guitar is called “omnipresent,” with occasional flubs but overall solid; backing vocals are highlighted as potent.",
+    "Keys": "Keith’s keyboards are noted as part of a “great show” alongside Bob, contributing to the jam texture.",
+    "Drums": "Bill (Mickey) provides a full‑stop dynamic that enhances the set; drumming is referenced positively throughout."
+  },
+  "song_mentions": {
+    "You Win Again": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Me & Bobby McGee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T15:39:57.467611+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-07-22.sbd.miller.94112.sbeok.flac16"
+}

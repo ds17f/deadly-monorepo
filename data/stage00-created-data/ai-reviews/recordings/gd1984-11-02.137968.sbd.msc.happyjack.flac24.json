@@ -1,0 +1,31 @@
+{
+  "summary": "Recording is severely flawed with speed issues and horrible sound quality; no musical highlights noted.",
+  "review": "The sole review condemns the recording for being out of sync and sounding terrible, rating it a single star. No comments on the performance itself are provided, so the show cannot be evaluated beyond the technical disaster.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one extremely negative review focusing on recording problems; no positive or neutral data to offset the rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Playback speed appears incorrect, resulting in horrible sound; overall quality described as 'shit' by reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T23:59:15.643996+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-11-02.137968.sbd.msc.happyjack.flac24"
+}

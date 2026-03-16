@@ -1,0 +1,39 @@
+{
+  "summary": "Outstanding Boston show highlighted by a memorable “Fire”, but recording quality is unknown and reviewer’s experience was marred by illness.",
+  "review": "The concert is remembered fondly, especially the performance of \"Fire\", which the reviewer tried to enjoy despite feeling sick. No details about the audio source or sound quality are provided, leaving the recording side uncertain.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "The sole review praises the musical performance but gives a zero‑star rating and offers no information on recording quality, resulting in a moderate overall score with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments about sound clarity, mix, or source; unable to assess technical quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer felt the first set was outstanding but personal illness during the break limited enjoyment of the second set."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:41:56.008213+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-24.schoeps.wklitz.94662.flac16"
+}

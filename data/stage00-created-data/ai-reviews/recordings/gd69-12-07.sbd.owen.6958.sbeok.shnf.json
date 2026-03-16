@@ -1,0 +1,68 @@
+{
+  "summary": "A historically charged December 7 1969 Fillmore West show captured on a soundboard that’s a bit muddy but still listenable, highlighted by Pigpen’s epic Lovelight and a superb St. Stephen → The Eleven stretch.",
+  "review": "The performance shines with the weight of the day after Altamont, delivering powerful renditions like China Cat Sunflower, a monster Turn On Your Lovelight, and one of the season’s best St. Stephen → The Eleven sequences. The soundboard source is muddy and hiss‑prone, requiring EQ work, but it remains sufficiently clear to enjoy the inspired 1969 playing.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (average show rating ≈4.2) while noting mixed but generally acceptable sound quality (average recording rating ≈3). Weighted combination yields ~3.8 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers describe the tape as muddy, slightly hissy and in need of EQ adjustment; it isn’t bright but is still listenable for a historic show."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "Turn On Your Lovelight",
+      "St. Stephen",
+      "The Eleven",
+      "I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set feels heavy and introspective, reflecting the post‑Altamont mood, but transitions well—especially the build from China Cat into Lovelight and the climactic St. Stephen → The Eleven sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is noted as solid 1969‑era tone and part of the overall excellent playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T18:30:14.865864+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-12-07.sbd.owen.6958.sbeok.shnf"
+}

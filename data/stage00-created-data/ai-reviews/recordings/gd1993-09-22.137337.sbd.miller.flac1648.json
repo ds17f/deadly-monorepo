@@ -1,0 +1,82 @@
+{
+  "summary": "Warm, clean soundboard capture of a sax‑laden 1993 show with standout Help>Slip>Knot!>Franklin's and Bird Song, but mixed performance quality on Throwing Stones and some mix hiccups.",
+  "review": "The Miller soundboard (sbd) version is praised for its warmth, lack of digipops and overall clarity, though the mix briefly falters on Ramble before recovering. Musically the concert is notable for David Murray’s tenor sax, delivering a thoughtful Help>Slip>Knot!>Franklin's sequence and an engaging Bird Song, while Throwing Stones and I Fought The Law fall flat. Overall sentiment among reviewers is mixed‑positive, reflecting both high points and uneven moments.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Three detailed reviews give a balanced view: strong recording quality (≈30%) and a show with several highlights but notable weak spots (≈70%). The weighted average lands just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Warm, clean sound with digipops eliminated; some mix issues noted on Ramble but overall accurate and clear. Sax presence is prominent in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Bird Song",
+      "Wharf Rat",
+      "Masterpiece"
+    ],
+    "poor_songs": [
+      "Throwing Stones",
+      "I Fought The Law",
+      "Easy Answers",
+      "Ramble"
+    ],
+    "setlist_flow": "The first set bursts with energy, making the opening feel like a second‑set kickoff; the second set is uneven—highlights around Wharf Rat and sax‑driven jams contrast with weaker, half‑written moments."
+  },
+  "band_member_comments": {
+    "Jerry": "Leaves space for tenor saxophonist David Murray, allowing the sax to breathe within the songs.",
+    "Phil": "",
+    "Bob": "Struggles on Throwing Stones, losing his vocal handle; mic briefly cuts out.",
+    "Keys": "Vince adds a Shangri‑La tuning and a Vaudeville flourish, contributing quirky keyboard textures.",
+    "Drums": "Features an extended Bralove section in the drum break."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "I Fought The Law": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Easy Answers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T17:31:40.479574+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-09-22.137337.sbd.miller.flac1648"
+}

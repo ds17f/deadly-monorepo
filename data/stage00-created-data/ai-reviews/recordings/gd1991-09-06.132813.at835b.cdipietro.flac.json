@@ -1,0 +1,39 @@
+{
+  "summary": "Good-quality recording featuring a nice rendition of Terrapin Station.",
+  "review": "The reviewer rates the show positively, calling it a \"nice pull of a good show\" and highlighting a satisfying performance of Terrapin Station. The recording is described as good, though no specific details about source or clarity are given. Overall the release seems enjoyable both musically and technically.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Single positive 4‑star review praising both the show (notably Terrapin Station) and the recording quality, indicating a solid performance with decent audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it a good recording but provides no specifics on source type or sonic details."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure; reviewer simply notes the overall show as good."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T00:03:50.778973+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-09-06.132813.at835b.cdipietro.flac"
+}

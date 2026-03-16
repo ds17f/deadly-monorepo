@@ -1,0 +1,31 @@
+{
+  "summary": "High‑fidelity matrix mix delivers fantastic sound, but the performance is widely judged as a substandard show.",
+  "review": "The matrix recording is praised for its crystal‑clear 5.1 surround presentation and overall excellent audio quality. However, listeners note that the concert itself suffers from poor playing and lyrical slip‑ups, making it a disappointing musical experience despite the superb sound capture.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Recording quality is rated excellent (5 stars) while show performance is viewed as weak (2 stars). Weighted blend (30% recording, 70% show) yields an overall rating around 3.0."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners highlight a fantastic 5.1 surround mix and a beautifully well‑done matrix that sounds crisp and clear throughout."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as a 'clunker' with substandard playing and missed lyrics, indicating an overall weak performance despite the good flow of material."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T18:33:52.908238+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-01-28.135157.mtx.tobin.flac16"
+}

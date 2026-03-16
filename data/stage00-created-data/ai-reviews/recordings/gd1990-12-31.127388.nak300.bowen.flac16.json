@@ -1,0 +1,31 @@
+{
+  "summary": "Recording quality unknown; reviewers rave about a fantastic second set but lament missing tickets",
+  "review": "The lone review highlights an outstanding second set, describing it as \"fantastic,\" yet the reviewer’s disappointment stems from being unable to secure tickets rather than any issue with the performance itself. No information is given about the source or sonic quality of the recording, so its technical merits remain indeterminate.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.0,
+    "confidence": "low",
+    "rationale": "Only one brief review; positive comment on the music but a zero‑star rating and strong disappointment about ticket availability drive an overall low score with high uncertainty."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on soundboard, audience mix, clarity, or other technical aspects were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Second set praised as fantastic; no specific details on song flow or pacing were mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T16:07:20.598257+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-12-31.127388.nak300.bowen.flac16"
+}

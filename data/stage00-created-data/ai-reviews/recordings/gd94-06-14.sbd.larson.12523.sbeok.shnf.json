@@ -1,0 +1,113 @@
+{
+  "summary": "Soundboard recording of the June 14, 1994 Seattle show captures a solid performance highlighted by Shakedown Street, Paint My Masterpiece and Samba in the Rain, though the mono mix is modest and the setlist leaves fans divided.",
+  "review": "The SBD capture (mono mix by John Cutler) is decent but shows signs of cassette‑generation tape hiss and occasional drop‑outs; it’s clear enough to enjoy the band’s playing. Musically the night shines on tracks like Shakedown Street, Paint My Masterpiece, Samba in the Rain, Lucy Lucy and a fiery Help on the Way opener, while the setlist choices (especially two Vince keyboard numbers) and an uneven Althea ending draw criticism. Overall the show is enjoyable for Deadheads who value the strong moments, but it’s not a landmark performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Reviews are numerous and split; many praise specific songs and the overall playing, yet several note weak set‑list choices and modest mono soundboard quality, leading to a middle‑of‑the‑road rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mono SBD mix by John Cutler; reviewers mention cassette‑generation tape characteristics and occasional drop‑outs, but also note moments of crystal‑clear clarity. No audience ‘Space’ audio present."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Paint My Masterpiece",
+      "Samba in the Rain",
+      "Lucy Lucy",
+      "Help on the Way",
+      "Truckin'",
+      "That Would Be Something"
+    ],
+    "poor_songs": [
+      "Althea (ending)",
+      "Vince songs"
+    ],
+    "setlist_flow": "Transitions such as Victim → Lazy River Road and Truckin' → TWBS are praised, but the overall setlist is considered uneven; strong opener and second‑set moments contrast with two lackluster Vince keyboard numbers and a disappointing Althea conclusion."
+  },
+  "band_member_comments": {
+    "Jerry": "Emotional first solo that brought tears; finger‑picking on Althea noted positively.",
+    "Phil": "",
+    "Bob": "\"Nice job, Bobby!\" – praise for Bob Weir’s vocal lead on Help on the Way.",
+    "Keys": "Two Vince keyboard numbers received negative feedback as weak set‑list choices.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Paint My Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samba in the Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lucy Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "That Would Be Something": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "TWBS": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Vince songs": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T22:16:13.596775+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-06-14.sbd.larson.12523.sbeok.shnf"
+}

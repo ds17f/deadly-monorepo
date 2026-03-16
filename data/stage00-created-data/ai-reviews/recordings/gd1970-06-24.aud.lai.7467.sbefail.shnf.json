@@ -1,0 +1,58 @@
+{
+  "summary": "Powerful 6/24/70 show with standout Alligator‑Other One jam and multiple Attics, but limited by a low‑fidelity audience recording.",
+  "review": "Fans rave about the historic performance – ferocious Other One, three versions of Attics, an inspired Cold Rain & Snow, and a uniquely sweet second Dark Star – while lamenting the muddy, audience‑only source that leaves much to be desired in clarity. The tape captures rare moments (gunshot during Men And My Uncle) but suffers from hiss, occasional drop‑outs, and source confusion across discs.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Reviews consistently praise the musical performance (average show rating ~4.3) but criticize the recording quality (often rated 1‑3 stars). Weighted combination yields a solid 3.8‑star overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Low‑fidelity audience tape with noticeable hiss and occasional drop‑outs; some moments (gunshot) are surprisingly clear, but overall mix is muddy and source confusion exists across discs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alligator > The Other One",
+      "Attics",
+      "Cold Rain & Snow",
+      "Dark Star (second)",
+      "Good Lovin' > China > Rider > Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans describe the show as a ‘peak night’ with an early set that rolls into a ferocious second set, weaving in and out of jams; despite source mysteries, the overall flow is praised for its energy and variety."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocals are highlighted during Men And My Uncle; no specific guitar remarks beyond usual appreciation.",
+    "Phil": "",
+    "Bob": "Bob’s (Bobby) vocal moment on Men And My Uncle is noted, especially the clear gunshot accompanying his singing.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alligator > The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Attics": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star (second)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T21:40:41.852989+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-06-24.aud.lai.7467.sbefail.shnf"
+}

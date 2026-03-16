@@ -1,0 +1,57 @@
+{
+  "summary": "High‑quality audience tape of a solid late‑80s show with standout versions of Peggy‑O, Sugar Magnolia and To Lay Me Down.",
+  "review": "The recording is an audience source that many reviewers describe as full, clear and even “hot,” capturing the band’s tight mid‑80s performance. Highlights include a crisp Jerry vocal on “To Lay Me Down,” a soaring “Sugar Magnolia,” and a powerful rendition of “Peggy‑O.” The second set benefits from a quiet, attentive crowd that adds intimacy without detracting from the sound.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently positive remarks about both musical performance and audio fidelity across five detailed reviews; show quality weighted heavily, recording quality rated excellent."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Full and clear sound with a warm tape character; occasional instrument imbalance due to stage‑side mic placement noted by one reviewer, minor tape hiss mentioned for the soundboard reference only."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Sugar Magnolia",
+      "To Lay Me Down",
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly, with a especially sweet second‑set atmosphere thanks to a quiet, attentive audience; the pre‑drum list adds an interesting touch."
+  },
+  "band_member_comments": {
+    "Jerry": "Clear vocals praised on “To Lay Me Down” and strong guitar work noted on “Sugar Magnolia.”",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Pre‑drum list highlighted as interesting, no negative comments about the drumming."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T06:05:56.167625+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-11-28.naks.clugston.2222.sbeok.shnf"
+}

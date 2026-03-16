@@ -1,0 +1,39 @@
+{
+  "summary": "Recording source unknown with no noted issues; the show is mixed, highlighted by solid Jerry playing but a repeatedly‑performed Easy Answers.",
+  "review": "The sole review gives the performance an average rating, praising Jerry Garcia's guitar work while criticizing the overuse of \"Easy Answers\" in the set. No comments are made about the recording itself, leaving its source and quality unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one brief review (3‑star) that offers limited detail; positive note on Jerry’s playing offsets the negative comment about Easy Answers, resulting in an average overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on sound quality or mix were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Easy Answers"
+    ],
+    "setlist_flow": "No comments on set flow were given."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry's portion is described as \"quite good\" by the reviewer.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Easy Answers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T21:39:03.522012+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-04-06.snchk.fm-sbd.miller.gmb-fixed.91391.flac16"
+}

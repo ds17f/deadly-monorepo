@@ -1,0 +1,31 @@
+{
+  "summary": "Audience recording captures a high‑energy Fox show with an unforgettable, dancing balcony crowd",
+  "review": "The lone review praises the concert’s electric atmosphere – a packed balcony that literally made the floor shake as fans danced. While no specific audio details are given, the .aud. source suggests a typical audience tape that conveys the excitement of the night.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Only one 5‑star review focusing on crowd energy; no technical audio feedback, so rating leans heavily on show excitement with modest assumption about recording quality."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments on sound clarity or mix; presumed standard audience tape quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Review highlights a wildly enthusiastic balcony crowd and overall great vibe, but gives no details on song flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T10:00:25.780512+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-10-29.set2.aud.unknown.cepx.8501.sbeok.shnf"
+}

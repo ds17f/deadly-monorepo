@@ -1,0 +1,81 @@
+{
+  "summary": "Soundboard recording of decent‑to‑good quality captures a classic 1972 show highlighted by stellar Truckin and The Other One jams.",
+  "review": "The transfer is praised for being well‑balanced and clean despite minor cuts, delivering an enjoyable listening experience. Musically the concert shines with expansive Truckin improvisations, a tight Playing in the Band jam, and strong performances of Box of Rain, China Cat Sunflower > I Know You Rider, and The Other One. Overall the show is regarded as a solid representation of the band’s peak 1972 period.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers are enthusiastic about both performance and sound, giving high star ratings; recording is good‑quality soundboard with only minor issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Balanced mix, clear overall sound; a few minor cuts/misnumbered files noted but no major dropouts or muffiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin",
+      "The Other One",
+      "Playing In The Band",
+      "Box of Rain",
+      "China Cat Sunflower > I Know You Rider",
+      "Casey Jones",
+      "Slipknot!",
+      "The Greatest Story Ever Told"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a smooth, jam‑heavy flow with strong transitions, especially the Truckin jam leading into The Other One and a tight Playing In The Band segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as giving \"the wha, wha\" – energetic, focused guitar work throughout the jams.",
+    "Phil": "Mentioned in context of solid rhythm section with Garcia; no specific critique beyond that.",
+    "Bob": "",
+    "Keys": "Keith Godchaux highlighted for his interplay with Garcia and Lesh during the jam sections.",
+    "Drums": "Bill Kreutzmann and Mickey Hart noted for a balanced, not overly drum‑heavy mix."
+  },
+  "song_mentions": {
+    "Truckin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:45:30.486204+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-12-15.136651.sbd.reel1.dat.sirmick.flac16"
+}

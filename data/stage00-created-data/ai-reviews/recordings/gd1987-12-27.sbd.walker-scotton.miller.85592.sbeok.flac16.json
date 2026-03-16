@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent matrix recording captures a high‑energy show highlighted by a moving Peggy‑O and the flawless Uncle John’s → Estimated Prophet transition.",
+  "review": "The performance is consistently praised for its excitement, with standout moments like an emotional Peggy‑O solo and a perfectly timed Uncle John’s Band into Estimated Prophet segue. The remastered source sounds clear and lively—likely a matrix mix—and listeners repeatedly note the band’s sharp playing throughout the second set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Reviews overwhelmingly rate the show 4‑5 stars, highlighting strong musical performance and good sound quality; weighted average of show (70%) and recording (30%) yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Nice, clear sound with a solid remaster by Charlie Miller; listeners suspect a matrix source due to strong audience presence but no major flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Uncle John’s Band",
+      "Estimated Prophet",
+      "Dear Mr. Fantasy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows smoothly, especially the celebrated Uncle John’s → Estimated transition; the second set is repeatedly described as blowing listeners away."
+  },
+  "band_member_comments": {
+    "Jerry": "Emotional Peggy‑O solo (crying), sharp and focused throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland praised for outstanding playing, especially mirroring Jerry on Peggy‑O.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John’s Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:33:24.573071+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-12-27.sbd.walker-scotton.miller.85592.sbeok.flac16"
+}

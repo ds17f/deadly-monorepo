@@ -1,0 +1,91 @@
+{
+  "summary": "Broadcast‑quality front‑of‑house recording with clear mix and a standout mid‑80s set, especially the soaring Scarlet > Fire sequence.",
+  "review": "The Rob Eaton Neumann U‑87 source delivers an unusually clean audience capture that lets Phil’s bass and Brent’s synth textures shine, while Mickey’s inventive drumming adds sparkle. Musically the show is a high‑water mark of the spring‑84 tour – Bird Song, All Over Now, and especially the seamless Scarlet > Fire transition are repeatedly praised, even if a few early numbers feel sluggish. Overall the performance is considered solid to great with only minor tonal warmth issues.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (8 out of 12) give 4‑5 stars and highlight both excellent sound quality and strong musical moments; only a few low‑star comments focus on venue or isolated performance slips."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, clear mix with Phil and Brent especially audible; broadcast‑like clarity thanks to Neumann U‑87 mics placed high to avoid crowd bleed. Some reviewers note a slight lack of overall richness but no major dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Bird Song",
+      "All Over Now",
+      "Estimated",
+      "Bucket"
+    ],
+    "poor_songs": [
+      "Day Job",
+      "Minglewood"
+    ],
+    "setlist_flow": "The first set builds slowly, with Brent’s organ on All Over Now jolting the band awake and a soulful Bird Song. The second set shines – Scarlet launches into an inspired Fire segue, followed by a deep, driving Estimated jam and strong finishes with Dark Star, Truckin' and U.S. Blues."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for a heavy strum lick in the Scarlet solo, strong leads and good vocal shape; one reviewer notes a missing growl on Fire.",
+    "Phil": "Consistently clear in the mix; praised for solid bass lines and a brooding jam that adds depth to the set.",
+    "Bob": "Mentioned mainly for his vocals on Fire and interplay with Jerry during an Eyes segue; no detailed critique.",
+    "Keys": "Brent’s organ/synth work highlighted – scat vocal on All Over Now, synth‑conga texture at the start of Scarlet > Fire, and overall clear presence in the mix.",
+    "Drums": "Mickey lauded for melodic hand‑drum style, inventive fills, thunderous echo on Fire, and a broadcast‑quality drum sound throughout."
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Bird Song": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "All Over Now": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bucket": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Day Job": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T15:28:29.328227+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-13.neumann-u87.eaton.miller.90470.sbeok.flac16"
+}

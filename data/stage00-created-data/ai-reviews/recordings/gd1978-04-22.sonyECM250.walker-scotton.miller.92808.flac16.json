@@ -1,0 +1,57 @@
+{
+  "summary": "Crystal‑clear audience tape of a fire‑filled show highlighted by an immense Deal and a near‑perfect Wharf Rat",
+  "review": "The Walker‑Scotton‑Miller audience recording is exceptionally clear, well balanced and almost sounds like a soundboard, delivering every instrument with crisp definition. Musically the concert shines – thundering Jack Straw, soaring Peggy‑O, an endlessly repeated Deal chorus and a centerpiece Wharf Rat that builds into one of the band’s most intense jams, despite a couple of stray notes from Jerry.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All but one reviewer gave 5 stars and praised both performance and audio; the single 4‑star note only mildly tempers an otherwise flawless consensus."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Highly praised for being clear, crisp and well balanced with minimal crowd noise; several reviewers say it sounds like a soundboard or matrix after digital mastering by Charlie Miller."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Peggy-O",
+      "Deal",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Standard two‑set layout that builds nicely; first set packs the classic faves, second set crescendos with an epic Wharf Rat jam and extended drum passages."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as \"on fire\" with a perfect tone on many songs; crushing Wharf Rat solo though he slips a couple of bad notes toward the end.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Long, cool drum segments highlighted as a strong point of the show."
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Peggy-O": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-25T11:42:19.341669+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-22.sonyECM250.walker-scotton.miller.92808.flac16"
+}

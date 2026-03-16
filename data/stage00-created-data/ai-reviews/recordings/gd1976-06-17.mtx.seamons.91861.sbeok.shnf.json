@@ -1,0 +1,63 @@
+{
+  "summary": "A crystal‑clear matrix mix showcases Jerry’s stellar guitar work and a fire‑brand Help>Slip>Franklin's, though the first set feels a bit sluggish.",
+  "review": "The Hunter‑crafted matrix delivers an excellent, clean, and balanced sound that puts listeners right in the room. Musically the show shines with tight Jerry Garcia leads, a standout Franklin’s Tower and a high‑energy Help → Slip → Franklin’s sequence, but several reviewers note a lethargic first set tempo that drags despite solid playing throughout.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All five reviews praise the matrix recording as excellent, while four highlight strong performance and one criticizes the show’s tempo; the weighted average yields a high‑ish rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean, crisp, well‑balanced mix that sounds like being in the room; no reported dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "The Promised Land"
+    ],
+    "poor_songs": [
+      "Friend of the Devil"
+    ],
+    "setlist_flow": "First set described as smooth but overly slow and lethargic; second set opens strong with Help>Slip>Tower and maintains good energy, though momentum wanes after the opener."
+  },
+  "band_member_comments": {
+    "Jerry": "Nice, crisp guitar work praised throughout; tone noted as perfect.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum solo in Let It Grow is highlighted as nice, though overall energy was considered lacking by one reviewer."
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T04:40:30.347743+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-17.mtx.seamons.91861.sbeok.shnf"
+}

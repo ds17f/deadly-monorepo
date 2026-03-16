@@ -1,0 +1,45 @@
+{
+  "summary": "A sweet, mellow 1973 Denver show captured on a matrix recording, highlighted by stellar performances of Brokedown Palace and Half‑Step to Heaven.",
+  "review": "The reviewers rave about the November ’73 Denver concert, calling it a “nugget” where the band rides a creative high all night.  Standout moments include a gorgeous Brokedown Palace and a soaring Half‑Step to Heaven, with every member praised for their contribution.  Although no specific technical notes are given, the recommendation and five‑star rating imply a listenable matrix source.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Single detailed 5‑star review emphasizes excellent musical performance and recommends the recording, suggesting high show quality and acceptable recording quality."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on sound clarity; positive overall impression suggests a listenable matrix mix with no major issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace",
+      "Half‑Step to Heaven"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as sweet and mellow overall, the band hits a creative high early and sustains it throughout, delivering spectacular performances from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for weaving his “web of never‑ending magic” all night long.",
+    "Phil": "Noted for adding his distinctive bass sound to each song.",
+    "Bob": "Mentioned as sounding great (referred to as Bobby).",
+    "Keys": "Keith highlighted for his distinctive keyboard contribution.",
+    "Drums": "Billy called the backbone of the band, delivering solid drumming."
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Half‑Step to Heaven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T03:13:29.633173+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-11-21.133522.mtx.dusborne.flac16"
+}

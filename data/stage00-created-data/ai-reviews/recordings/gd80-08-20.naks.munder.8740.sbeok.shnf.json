@@ -1,0 +1,91 @@
+{
+  "summary": "Fair audience (AUD) recording with noticeable hiss and crowd bleed, yet the show dazzles on a soaring Morning Dew, fiery Loser and an epic Althea jam.",
+  "review": "The tape is an audience‑sourced capture that suffers from hiss, occasional muffling and a noisy balcony ambience, but most listeners agree the performance shines. Highlights include a blistering Morning Dew, a storytelling Terrapin/Loser run and a second‑set Althea that builds into one of the best jams of the night.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (especially Morning Dew, Loser, Althea) while consistently noting poor to fair AUD recording quality; weighted average of show (70%) and recording (30%) yields a solid good‑to‑great rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Heavy hiss and crowd noise, especially in the first set; many note the need for EQ to make it listenable. Some describe occasional clarity on Morning Dew, but overall the tape is described as 'piss poor' or 'washed out'."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Loser",
+      "Terrapin Station",
+      "Althea",
+      "Deal"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "U.S. Blues"
+    ],
+    "setlist_flow": "First set suffers from poor sound but is still fun; second set improves dramatically, delivering an epic Althea jam and high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for blistering leads on Loser, Deal and Morning Dew, as well as storytelling guitar work during Terrapin.",
+    "Phil": "A few reviewers note Phil’s bass ‘dropping the bomb’ and delivering solid low‑end foundation.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Loser": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "NFA": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T01:51:39.233743+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-08-20.naks.munder.8740.sbeok.shnf"
+}

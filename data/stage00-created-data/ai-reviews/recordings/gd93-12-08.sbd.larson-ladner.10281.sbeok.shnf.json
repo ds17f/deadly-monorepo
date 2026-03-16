@@ -1,0 +1,85 @@
+{
+  "summary": "Good‑quality soundboard capture of a mixed‑bag show – thin mix but clear, with standout “Stagger Lee”, “King Bee” and the “Last Time” jam despite a shaky Jerry and a rough start to “Morning Dew”.",
+  "review": "The SBD source is clean enough for repeated listening, though the mix can feel a bit thin and a few tracks are spliced. Musically the concert swings between high‑energy moments – a driving “Stagger Lee”, a long‑awaited “King Bee” and an inventive “Last Time”/Space jam – and more uneven passages, most notably Jerry Garcia’s faltering vocals on “Morning Dew”. Overall the performance is interesting for its rarity of songs and the St. Stephen tease, but it is not among the band’s strongest shows.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers note a decent recording (good soundboard) and several musical highlights, but many also call out inconsistent playing and a weak start to “Morning Dew”, yielding an overall middle‑to‑upper‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Thin mix but enjoyable; clarity is solid, though a few splices (Lazy River Road, Sugar Magnolia) are audible. Overall the SBD is listenable without major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stagger Lee",
+      "King Bee",
+      "The Last Time",
+      "Rain",
+      "Uncle John's Band"
+    ],
+    "poor_songs": [
+      "Morning Dew"
+    ],
+    "setlist_flow": "Two‑song opener (Rain > Long Way) and a dual‑closer (Morning Dew > Sugar Mag/Sunshine Daydream) bookend a first set packed with rarities, while the second set features an exploratory Space jam that teases St. Stephen before resolving into “The Last Time”."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his playing was uneven – off‑notes on “Playin'”, shaky vocals on “Morning Dew” and a generally ‘decline’ vibe – but several also praise the interplay in the Space/Last Time jam.",
+    "Phil": "Mentioned as supportive, especially during the “Uncle John’s Band” where his bass helped pull Jerry back on track.",
+    "Bob": "Caught the “St. Stephen” riff in the jam and contributed solid rhythm throughout; no major criticism.",
+    "Keys": "Vince (keyboards) receives positive nods for his work on “Long Way”, “Playin' > UJB” and overall support during the improvisations.",
+    "Drums": "The Drums/Space segment is highlighted as a strong, inventive part of the show."
+  },
+  "song_mentions": {
+    "Stagger Lee": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "King Bee": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Rain": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "The Last Time": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 3,
+      "total_mentions": 4
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Fought The Law": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' > UJB": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T18:22:29.696402+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-12-08.sbd.larson-ladner.10281.sbeok.shnf"
+}

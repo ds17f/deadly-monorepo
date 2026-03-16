@@ -1,0 +1,85 @@
+{
+  "summary": "High‑quality audience tape of an electrifying 1980 show, highlighted by a white‑hot post‑drum jam and strong vocals from Jerry and Bob.",
+  "review": "Reviewers rave about the warm, well‑balanced sound of this AUD—often described as close to the board—with only minor blemishes on the U.S. Blues encore. The performance itself is praised as solid throughout, featuring standout moments like the post‑drum sequence (The Other One → Wharf Rat → Goin' Down the Road Feeling Bad), a fiery Good Lovin', and inspired vocals from both Jerry and Bob.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviewers are enthusiastic (average 4.5★); the show is described as exceptional with many standout songs, and the recording is noted as warm and clear, giving a combined high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Close‑to‑board placement gives a rich, warm midrange; clearer than comparable AUDs. Minor cut/blemish on the U.S. Blues encore but overall solid and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Wharf Rat",
+      "Goin' Down the Road Feeling Bad",
+      "Good Lovin'",
+      "U.S. Blues",
+      "Stranger",
+      "Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A strong first set builds momentum into a second set that peaks with an explosive post‑drum jam and finishes on a high note with Good Lovin' and U.S. Blues, giving the concert a satisfying arc."
+  },
+  "band_member_comments": {
+    "Jerry": "In great voice; his guitar tone is praised and a nice extra flourish at the end of Rider.",
+    "Phil": "",
+    "Bob": "Good spirits and strong vocal performance throughout; jokes before the opener carry into Stranger.",
+    "Keys": "",
+    "Drums": "Post‑drum segment (OO → WR → GDTRFB) described as a white‑hot smoker, highlighting Bill's driving energy."
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated > Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T02:59:33.057252+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-09-04.aud.munder.12270.sbeok.shnf"
+}

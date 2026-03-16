@@ -1,0 +1,70 @@
+{
+  "summary": "A poorly recorded show marred by a whistle and uneven performances, with Me & My Uncle > Big River and Candyman providing the only real highlights.",
+  "review": "The taper notes that a rogue whistle near the sweet spot and stray mic stands seriously compromised the sound, ruining Jack Straw and an otherwise strong Sugaree. While Me & My Uncle → Big River and Candyman are praised, Bob Weir’s vocal delivery is called soulless and many moments left listeners frustrated. Overall the recording quality is weak and the performance uneven.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.1,
+    "confidence": "low",
+    "rationale": "Only one detailed review, which rates the show low (2 stars) and cites major recording problems plus several weak performances; a few songs are praised but not enough to raise the overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "A whistle in the sweet spot and mic‑stand interference caused significant audio disruption, frustrating tapers and ruining parts of the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Me & My Uncle",
+      "Big River",
+      "Candyman"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "Sugaree",
+      "Minglewood Blues"
+    ],
+    "setlist_flow": "Inconsistent; occasional strong moments are outweighed by disruptive audio issues and lackluster vocal delivery."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir’s singing is described as soulless, likened to a Pat Boone imitation that ruined several songs.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T23:14:05.641861+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-09-04.127491.set1.nak1000.stankiewicz.flac2496"
+}

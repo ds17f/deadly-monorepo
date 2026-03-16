@@ -1,0 +1,50 @@
+{
+  "summary": "Excellent front‑of‑house (FOB) audience recording captures a scorching 1989 show highlighted by a soaring \"Blow Away\" and a flawless \"Let It Grow\".",
+  "review": "Fans rave about the crystal‑clear FOB capture that makes you feel right in the middle of the stadium, while praising the band’s tight performance – especially the epic \"Blow Away\" and the perfect delivery of \"Let It Grow.\" Jerry’s guitar tone, Phil’s bass depth, and Brent’s 12‑minute keyboard solo are repeatedly highlighted, though Bob’s vocal take on \"Estimated\" draws a lone criticism.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 5) and unanimous praise for both the show’s energy and the superb FOB audience sound place this recording in the top‑tier range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "FOB capture described as crystal‑clear, beautiful, sweet, and better than many official mixes; listeners note a 'you’re there' experience with no reported dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Blow Away",
+      "Let It Grow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong, well‑structured set praised for its energy; first set climaxed with a memorable \"Blow Away\" and the second set kept momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for his incredible timbre, texture, and perfect guitar tone throughout the show.",
+    "Phil": "Bass sound described as beautiful and clear, adding depth to the performance.",
+    "Bob": "His vocal delivery on \"Estimated\" was criticized as affected and annoying compared to earlier eras.",
+    "Keys": "Brent Mydland’s extended solo (≈12 min) is highlighted as a heart‑stopping moment.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Blow Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T20:34:42.389125+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-07.senn421.zaleski.89616.sbeok.flac16"
+}

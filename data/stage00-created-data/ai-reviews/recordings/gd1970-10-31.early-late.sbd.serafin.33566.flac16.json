@@ -1,0 +1,74 @@
+{
+  "summary": "Raw but thrilling gym show with standout Cosmic Charlie, Dark Hollow and a blistering Good Lovin', captured on a soundboard recording that’s rough and split into many tracks",
+  "review": "The performance is a wild, rag‑tag showcase of early‑70s Dead material – the final Viola Lee, a bluesy Next Time, cosmic stretches of Cosmic Charlie and Dark Hollow, plus a killer Good Lovin' jam. The soundboard source sounds raw and a bit fragmented (drums and songs are split into separate tracks), but fans still regard it as a hidden gem despite the technical quirks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers rave about the musical moments and give 4‑5 stars, while the recording is noted as rough and split into many tracks; overall the show’s strength outweighs technical flaws."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Raw, ragged sound with noticeable track splitting (drums and songs cut into separate files); occasional crowd intro audible; overall listenable despite the fragmentation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cosmic Charlie",
+      "Dark Hollow",
+      "Viola Lee (final)",
+      "Good Lovin'",
+      "Next Time",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A chaotic gym atmosphere with an early, quieter college audience followed by a rowdy late‑show crowd that burst through the doors; the band rides the tension into raw, high‑energy renditions of Workingman's Dead and American Beauty material."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his intense playing (bluesy Next Time, nonstop set with peddle steel), despite being a bit unhappy with the rowdy crowd.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Noted as integral to Good Lovin' and The Other One; criticized that drum tracks were cut apart in the release."
+  },
+  "song_mentions": {
+    "Cosmic Charlie": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Hollow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Viola Lee (final)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Next Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Workingman's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T00:27:10.499634+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-10-31.early-late.sbd.serafin.33566.flac16"
+}

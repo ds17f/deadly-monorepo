@@ -1,0 +1,74 @@
+{
+  "summary": "High‑quality soundboard capture of a stellar late‑1978 set featuring standout Jack Straw, Tennessee Jed and an inspired St. Stephen, despite minor hiss and a few cuts.",
+  "review": "Both reviewers rave about the performance – pnc calls the show great with highlights like Jack Straw, Loser, Scarlet Begonias > Fire on the Mountain and Playin' in the Band > Shakedown Street, while Augy praises Jerry’s guitar on Tennessee Jed and a unique St. Stephen. The soundboard source is generally clear, though a faint hiss and an occasional cut are noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Both reviews are highly favorable (4‑ and 5‑star) and emphasize strong musical moments; recording quality is good with only minor issues, leading to a solid above‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced; slight hiss noted by one reviewer and a cut in Playin' in the Band, but overall very listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Loser",
+      "Scarlet Begonias > Fire on the Mountain",
+      "Playin' in the Band > Shakedown Street",
+      "Tennessee Jed",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Relaxed, back‑grooving vibe with a long first set (12 songs) that still maintains momentum; reviewers describe the band as “hanging back grooving” yet hitting home runs throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for powerful guitar work on Tennessee Jed and an unusual envelope‑filter solo on St. Stephen, including a memorable final C chord.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band > Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T18:15:06.001816+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-12-30.sbd.miller.tetzeli.fix-18092.34261.reflac.flac16"
+}

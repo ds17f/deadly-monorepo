@@ -1,0 +1,50 @@
+{
+  "summary": "Excellent audience recording with remarkable bass response captures a solid Fall‑84 show highlighted by a Caution jam inside “Just Wanna' Make Love” and an unusually melodic Space segment.",
+  "review": "The audience tape delivers surprisingly clear low‑end, making the bass stand out while preserving the live ambience. Musically the concert is praised for its unusual pre‑drums setlist and a second‑set that features a nicely adventurous Caution jam within “Just Wanna' Make Love” plus a melodic Space passage, though one reviewer notes an odd final rendition of that song.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Four reviews give an average of 3.25 stars; most comments are positive about performance and sound, but a single zero‑star review drags the overall impression down to a mixed rating around 3.5–4."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Remarkable bass response; described as the best audience version by a reviewer, generally clear and well‑balanced despite being an audience capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Just Wanna' Make Love",
+      "Caution"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Unusual pre‑drums setlist adds intrigue; second set builds with a developing Caution jam in the middle of “Just Wanna' Make Love” and an unusually melodic Space segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Hinted at a melodic tune during Space and broke out ‘I Just Wanna Make Love To You’ later than expected, drawing a brief complaint.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Just Wanna' Make Love": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Caution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:30:57.848855+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-08.nak100.holtz-bolton.GEMS.97535.flac16"
+}

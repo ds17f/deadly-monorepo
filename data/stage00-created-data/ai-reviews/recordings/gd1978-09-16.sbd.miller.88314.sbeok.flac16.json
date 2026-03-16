@@ -1,0 +1,124 @@
+{
+  "summary": "Fair soundboard recording plagued by edits and pitch issues, yet the concert delivers a few bright spots such as Looks Like Rain, Minglewood Blues and Deal.",
+  "review": "The Miller SBD source is the best available but suffers from noticeable speed/pitch problems and numerous short cuts that detract from the listening experience. Musically the night is uneven – some songs (Looks Like Rain, Minglewood Blues, Deal) shine with inspired playing, while others suffer from sloppy tempos and a tired band feel. Overall the show is below‑average for 1978 but still worth hunting down for its unique moments and the historic Hamza El Din guest set.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "high",
+    "rationale": "Three detailed reviews give a clear picture: show quality is mediocre with several highlights, while recording quality is fair to poor due to edits and pitch problems. Weighted combination (70 % show, 30 % recording) yields ~3.2 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Miller SBD is the primary source; runs slightly slow and needs +1 % pitch correction. Numerous sub‑second edits in Drums, Space and other tracks make the mix feel chopped and uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Minglewood Blues",
+      "Deal",
+      "Sunrise",
+      "Shakedown",
+      "Space",
+      "Stella",
+      "El Paso",
+      "Ramble"
+    ],
+    "poor_songs": [
+      "Bertha",
+      "Good Lovin'",
+      "Candyman",
+      "Fire on the Mountain",
+      "Truckin'",
+      "Drums"
+    ],
+    "setlist_flow": "The first set starts brisk but loses momentum, with tempo dragging on several numbers; the second set is similarly uneven, featuring a tired feel toward the end despite occasional bursts of energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solos are highlighted as astonishing (Looks Like Rain), ping‑ponging (Ramble) and bursting (Deal); he also briefly stops playing during a jam but returns strongly.",
+    "Phil": "",
+    "Bob": "Bobby Weir delivers strong vocal moments on Looks Like Rain and signals the band, though his stage banter is noted as chaotic in some spots.",
+    "Keys": "",
+    "Drums": "Mickey Hart and Bill Kreutzmann’s drum segment is heavily edited (10 cuts), which reviewers find bizarre and distracting."
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunrise": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:21:30.294231+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-09-16.sbd.miller.88314.sbeok.flac16"
+}

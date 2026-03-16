@@ -1,0 +1,70 @@
+{
+  "summary": "Rare soundboard capture of the Carbondale show offers decent audio but a shaky performance marred by Jerry’s valium episode; the revival of “Don’t Ease Me In” and a solid “Bertha” stand out.",
+  "review": "The SBD recording is surprisingly clear for a partial tape, preserving a unique Carbondale gig that many fans only know from legend. Musically the night is uneven – Jerry’s heavy valium intake left him drowsy on several songs, yet moments like the tight “Don’t Ease Me In” and an articulate “Jack A Roe” showcase the band’s resilience. The setlist is incomplete, missing the entire second half, which limits a full assessment of the concert flow.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "high",
+    "rationale": "Show quality is average to below‑average due to widespread reports of Jerry’s poor condition and missing second half, while recording quality is good (rare soundboard) – the weighted blend yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD capture; rare for the era. Audio is solid but the tape is incomplete, missing the entire second set and several songs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Don't Ease Me In",
+      "Bertha",
+      "Jack A Roe",
+      "Miracle"
+    ],
+    "poor_songs": [
+      "LLR",
+      "Dancin'"
+    ],
+    "setlist_flow": "Partial first set is present; the band’s set order appears to be re‑working, but the missing second half makes the overall flow hard to judge."
+  },
+  "band_member_comments": {
+    "Jerry": "He took four valiums before the show, sounding drowsy and even nodding off onstage; however one reviewer praised his fast, articulate guitar work and clear vocal on “Don't Ease Me In”.",
+    "Phil": "",
+    "Bob": "One reviewer noted Bob sounded great with solid vocals, despite other comments about later shows where he struggled.",
+    "Keys": "",
+    "Drums": "The drum break was highlighted as a deft segue that recaptured attention."
+  },
+  "song_mentions": {
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Jack A Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "LLR": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dancin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T20:13:36.140209+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-02-07.sbd.cotsman.13879.sbeok.shnf"
+}

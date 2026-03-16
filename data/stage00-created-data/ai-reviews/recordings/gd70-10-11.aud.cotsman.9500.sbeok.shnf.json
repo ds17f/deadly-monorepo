@@ -1,0 +1,80 @@
+{
+  "summary": "Muddy audience recording but a stellar early‑70s set highlighted by an epic Dark Star and classic ’70 jams",
+  "review": "The tape is a lo‑fi audience capture – muddy and cloudy at times – yet the performance shines. Reviewers rave about a soaring Dark Star, a punchy Dancing In The Street jam, and a string of early‑70 classics that make this show a “Primal Dead” favorite despite its sonic flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (average ~4.5) while consistently noting poor‑quality audio (~2.5). Weighted combine gives a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Very muddy/cloudy sound, low‑fidelity audience tape. Some reviewers note occasional clarity on key moments (Dark Star), but overall the mix is thin and noisy."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Dancing In The Street",
+      "Till the Morning Comes",
+      "St. Stephen",
+      "Morning Dew",
+      "Sittin' on Top of the World",
+      "Beat It On Down The Line"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first half leans into countrified, robust early‑70 material; the second half rolls into classic 1970 jam formulas with Dark Star, St. Stephen and a closing NFA → GDTRFB → NFA sequence that Deadheads describe as “marvelous” for an overcast fall day."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his soaring lead work on Dark Star and overall “ass‑kickin’” guitar tone.",
+    "Phil": "Noted for a memorable solo during the Dancing In The Street jam and wah‑laden textures in Dark Star.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Dancing In The Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Till the Morning Comes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sittin' on Top of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down The Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T23:43:25.260148+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-10-11.aud.cotsman.9500.sbeok.shnf"
+}

@@ -1,0 +1,56 @@
+{
+  "summary": "Iconic Other One suite fuels a fiery Avalon set",
+  "blurb": "The show shines with the Cryptical Envelopment → The Other One → Death Don't Have No Mercy sequence and a wild Viola Lee Blues. Jerry’s guitar is inspired throughout, while Mickey and Bill lock in tight rhythms. Overall set flow is strong despite a brief Lovelight solo stumble.",
+  "review": "On April 6, 1969 at the Avalon Ballroom the Dead delivered one of their early‑Dead high‑water marks. The second set erupts with a seamless Cryptical Envelopment → The Other One → Cryptical Envelopment sandwich that collapses into a gut‑wrenching Death Don't Have No Mercy, a moment fans still cite as iconic. A feverish Viola Lee Blues later showcases Pigpen’s organ in full, hot glory while the rhythm section—Mickey and Bill—stay perfectly synchronized, driving the band forward with relentless energy. Jerry Garcia’s lead work is consistently inspired; even when his solo on Turn On Your Lovelight falters a bit, his phrasing elsewhere remains stellar. The set flows tightly overall, delivering raw power and improvisational daring that typify the late‑’60s Dead experience.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 21,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Four of five recordings describe the performance in glowing terms—highlighting the Other One suite, Viola Lee Blues, tight rhythm section and Pigpen’s organ—while only one recording offers a negative note about audio fidelity, not playing. No consistent criticism of musicianship appears, so strong positive sentiment warrants a high adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.6 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1969-04-06.135956.FM.GEMS.Flac16",
+    "reason": "Excellent FM broadcast matrix capture with crystal‑clear instrument separation, lively crowd ambience, and no glitches – it best preserves the iconic suite."
+  },
+  "key_highlights": [
+    "Iconic Cryptical Envelopment → The Other One → Death Don't Have No Mercy sequence.",
+    "Wild Viola Lee Blues jam featuring Pigpen’s expressive organ work.",
+    "Tight rhythm section; Mickey and Bill perfectly synchronized throughout."
+  ],
+  "song_highlights": [
+    "Cryptical Envelopment",
+    "The Other One",
+    "Death Don't Have No Mercy",
+    "Viola Lee Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Exceptionally inspired guitar work across the set, with only a brief misfire on the Lovelight solo and a short dropout during Viola Lee Blues.",
+    "Phil": "",
+    "Bob": "Vocals described as thin by some listeners but still fitting the material; no major issues noted.",
+    "Brent": "Pigpen's organ shines—sweet, hot and wildly expressive—especially during Viola Lee Blues.",
+    "Mickey": "Drums lock in perfectly with Bill, delivering fire‑filled, synchronized rhythms throughout.",
+    "Billy": "Provides a solid, driving foundation that meshes seamlessly with Mickey’s playing."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-24T12:51:18.916943+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Cryptical Envelopment",
+      "The Other One",
+      "Cryptical Envelopment",
+      "Death Don't Have No Mercy"
+    ],
+    [
+      "Viola Lee Blues"
+    ]
+  ]
+}

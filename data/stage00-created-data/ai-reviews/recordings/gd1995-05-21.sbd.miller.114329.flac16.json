@@ -1,0 +1,73 @@
+{
+  "summary": "High‑energy ’95 show with standout Unbroken Chain, Spanish Jam and Days Between, captured on a solid soundboard tape.",
+  "review": "Fans rave about the powerful second‑set flow – an inspired Unbroken Chain, a smoking Spanish Jam that rolls into The Other One and Days Between, all wrapped up with a classic Sugar Magnolia. The recording is a Miller soundboard source that sounds clean enough for repeated listening despite no detailed technical complaints.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers (5/6) give 3‑4 stars and highlight exceptional performances; recording quality is uncomplained and likely a soundboard, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No major audio flaws reported; reviewers note the tape sounds solid and clear enough for enjoyment. One reviewer mentions it may have been recorded on cassette, but no clarity issues are cited."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Unbroken Chain",
+      "Spanish Jam",
+      "The Other One",
+      "Days Between",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as solid, while the second set shines with seamless segues – Corrina into a long drums/space, then an explosive Spanish Jam → Other One → Days Between → Sugar Magnolia sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is repeatedly praised – emotional on Days Between and generally alert/fun throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum/space segment (including guest Carter Beauford) is highlighted as excellent, showing tight rhythmic interplay."
+  },
+  "song_mentions": {
+    "Unbroken Chain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Spanish Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Days Between": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T08:28:38.756109+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-05-21.sbd.miller.114329.flac16"
+}

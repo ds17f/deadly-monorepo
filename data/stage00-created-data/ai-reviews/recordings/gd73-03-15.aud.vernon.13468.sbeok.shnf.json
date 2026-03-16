@@ -1,0 +1,45 @@
+{
+  "summary": "Low‑fidelity recording, yet the performance dazzles with a moving He's Gone and a standout under‑the‑radar The Other One.",
+  "review": "The tape quality is widely regarded as poor—listeners note that composite sources sound noticeably better—so this version is mainly for completists. Musically the show shines: fans rave about the emotional intensity of \"He's Gone\" (3/24/73) and consider the SBD excerpt of \"The Other One\" one of the best hidden gems.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Strong praise for two songs (average show rating ~4.5) offset by consistently low marks on recording quality (rating ~1), yielding a weighted average around 3.5."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Muddy, low‑fidelity sound; reviewers say composite sources are noticeably better."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on pacing; emphasis is on the emotional weight of \"He's Gone\" and the high energy of \"The Other One\"."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T05:59:45.744162+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-03-15.aud.vernon.13468.sbeok.shnf"
+}

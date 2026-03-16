@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent recording of a famed 1986 show, but the performance feels over‑caffeinated – Bertha and Eyes of the World stumble.",
+  "review": "The flac24 capture is praised as an excellent recording that does justice to the famous Chasing Wilma series. However, listeners note that the band runs too hot from “Bertha” onward, with the middle of “Eyes of the World” collapsing like a house of cards, giving the show a chaotic, Ramones‑like feel. The overall vibe is mixed: superb audio quality contrasted with an uneven performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "One reviewer rates the show poorly (2★) while another lauds the recording (4★). Recording is excellent, but performance issues drag the overall rating into the mid‑range."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls it an 'Excellent recording' of the famous show; no specific technical complaints noted."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Bertha",
+      "Eyes of the World"
+    ],
+    "setlist_flow": "The set is described as over‑caffeinated starting with Bertha, and the momentum collapses in the middle of Eyes of the World, giving a chaotic feel."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:03:16.025621+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-27.127543.chasingwilma.flac24"
+}

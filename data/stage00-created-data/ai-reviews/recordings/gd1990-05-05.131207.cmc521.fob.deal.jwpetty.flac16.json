@@ -1,0 +1,31 @@
+{
+  "summary": "Minimal review provides no detail on sound or set, but a zero‑star rating suggests an unsatisfactory recording and performance.",
+  "review": "The sole review offers only a brief personal note and assigns the lowest possible star rating, indicating strong disappointment. No information is given about the source (soundboard vs. audience) or the musical execution, so both recording and show quality must be inferred as poor.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one very brief review with a zero‑star rating; insufficient data to assess specifics, but the rating points to a negative overall impression."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No comments on sound clarity or mix; the zero‑star rating implies the reviewer found the recording unsatisfactory."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information provided about song selection or pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T06:46:19.792255+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-05-05.131207.cmc521.fob.deal.jwpetty.flac16"
+}

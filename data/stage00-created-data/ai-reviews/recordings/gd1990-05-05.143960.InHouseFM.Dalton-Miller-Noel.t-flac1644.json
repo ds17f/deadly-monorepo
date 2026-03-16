@@ -1,0 +1,31 @@
+{
+  "summary": "Mono FM broadcast with lo‑fi, unbalanced mix but an energetic show and solid setlist",
+  "review": "The recording is a mono FM broadcast that sounds lo‑fi and has a noticeable imbalance—Jerry Garcia and Brent Mydland dominate while Bob Weir and Phil Lesh are buried. The performance itself is deemed average by one reviewer yet praised for its energy and great setlist by another, though no specific songs are highlighted.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is generally positive (energy, good setlist) while recording quality suffers from mono, lo‑fi and mix imbalance, leading to an overall middling rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Mono FM broadcast; sound is lo‑fi and heavily polarized with Jerry and Brent prominent, Bob and Phil barely audible. No stereo imaging."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Great setlist overall but performance described as average; energy noted as high by one reviewer."
+  },
+  "band_member_comments": {
+    "Jerry": "Prominent in the mix, very loud compared to others.",
+    "Phil": "Hard to hear; barely audible due to mix imbalance.",
+    "Bob": "Barely audible; mixed down in the broadcast.",
+    "Keys": "Brent Mydland is very prominent and high‑volume in the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T06:35:18.119909+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-05-05.143960.InHouseFM.Dalton-Miller-Noel.t-flac1644"
+}

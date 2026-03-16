@@ -1,0 +1,81 @@
+{
+  "summary": "Low‑fidelity tapes but a solid late‑90s set highlighted by Sugaree, Eyes → Drumz and Watchtower.",
+  "review": "The recording suffers from poor tape quality, making the audio far from crisp, yet the performance shines with a wailing Garcia on Sugaree, a tripped‑out Drum segment that many cite as a high point, and an engaging sequence of Eyes, Watchtower and Days Between. Brokedown Palace is noted as stumbling, and one reviewer advises skipping Shoe Fits. Overall the show is enjoyable but hampered by the subpar source.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "low",
+    "rationale": "Show receives moderate praise (≈3/5) while recording quality is judged very poor (≈1/5); weighted average yields a low‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers state that none of the tapes are high quality; audio is muffled and lacks clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Eyes",
+      "Drumz",
+      "Watchtower",
+      "Days Between"
+    ],
+    "poor_songs": [
+      "Brokedown Palace",
+      "Shoe Fits"
+    ],
+    "setlist_flow": "The set flows through a strong groove from Eyes into an expansive Drum segment, then segues psychedelically into Watchtower and Days Between; encores are mixed with a stumble on Brokedown Palace."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s wailing guitar on Sugaree is praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The Drumz segment is highlighted as a definite high point of the show."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drumz": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Shoe Fits": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T04:10:24.452493+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-12-01.141192.FOB.Schoeps.Clark.Miller.Noel.t-flac1648"
+}

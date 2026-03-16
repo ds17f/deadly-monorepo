@@ -1,0 +1,39 @@
+{
+  "summary": "Clear, present soundboard capture with a standout \"Test Me Test Me\" moment in Bertha, though overall impression is moderate.",
+  "review": "The reviewer praises the recording as the clearest source they've heard, noting superior clarity and presence compared to their previous master. The performance highlight is the explosive \"Test Me Test Me\" line in Bertha, but the three‑star rating suggests an overall mixed or average view of the show.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "Only one review; recording quality is described as excellent while no specific show details are given, resulting in a modest overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Very clear and present sound with less boom‑mic coloration; praised as the best source the reviewer has heard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:55:38.741317+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-08-26.148833.fob.nak700.severson.miller.clugston.flac2496"
+}

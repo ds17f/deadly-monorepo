@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent audience recording of a stellar show featuring an unforgettable Sugaree and a hypnotic Friend of the Devil.",
+  "review": "Reviewers rave about both the performance and the tape, calling the source “incredible” and noting that Sugaree is delivered with such power it “will blow your pants off.” The audience recording captures the vibe cleanly, delivering a clear, lively sound that lets the band’s chemistry shine throughout the set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviews are highly positive (4‑5 stars) and consistently praise both the musical performance and the recording quality, allowing a confident high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners describe the tape as an “incredible source” with clear, crisp sound; no drop‑outs or muddiness are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "While reviewers don’t detail set structure, they highlight the overall flow as great, with Sugaree serving as a high point and Friend of the Devil adding hypnotic depth."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T05:23:13.094400+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-16.aud.freezer.86712.sbeok.flac16"
+}

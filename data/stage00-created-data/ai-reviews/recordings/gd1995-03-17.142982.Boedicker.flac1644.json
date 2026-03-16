@@ -1,0 +1,58 @@
+{
+  "summary": "Good audience-sourced tape with a bit of echo captures a strong second set featuring standout versions of Peggy‑O, Queen Jane and a rare Standing > Sugar Magnolia > Lucy in the Sky combo.",
+  "review": "The show rocks overall – after a rough start on “Here Comes Sunshine” the band settles into a slow‑burn first set highlighted by fantastic takes on “Peggy‑O” and “Queen Jane,” then erupts on the second set with a rare and superb Standing > Sugar Magnolia > Lucy in the Sky sequence. The recording is an audience capture with noticeable room echo, putting it just shy of pristine but still very listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "low",
+    "rationale": "One detailed review praises the musical performance (strong show quality) while noting modest recording issues; the combined assessment yields a high‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "A bit too much echo and room ambience audible, but overall clear enough to enjoy the performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Queen Jane",
+      "Standing > Sugar Magnolia > Lucy in the Sky"
+    ],
+    "poor_songs": [
+      "Here Comes Sunshine"
+    ],
+    "setlist_flow": "Ragged opening on “Here Comes Sunshine” gives way to a slow‑burn first set that builds momentum, culminating in a second‑set surge with rare song combinations and high energy."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing > Sugar Magnolia > Lucy in the Sky": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T05:42:03.283068+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-17.142982.Boedicker.flac1644"
+}

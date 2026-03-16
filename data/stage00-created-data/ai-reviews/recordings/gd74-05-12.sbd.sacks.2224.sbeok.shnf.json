@@ -1,0 +1,95 @@
+{
+  "summary": "Good soundboard capture of the windy May 12 1974 Reno show, with a standout Truckin’→The Other One jam despite mixed performance notes.",
+  "review": "This recording (a sound‑board source) settles after the initial wind‑blown chaos into a clear and well‑balanced mix, letting the band’s hot playing shine through.  Fans praise the high‑energy second‑set sequence – especially Truckin’ into The Other One and the China Cat→UJB→Rider medley – while noting that the wind hampered vocals on Promised Land and gave some songs a rough edge.  Overall the show is seen as a solid representation of the ’74 Dead, albeit an uneven night.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "The majority of reviews (4‑5 star) highlight strong musical moments and a respectable soundboard capture; a few low‑star comments focus on wind‑related issues, pulling the average to a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Initial wind caused muddiness and occasional speaker wobble, but once the Wall of Sound settled the mix became crisp and clear; overall a very listenable sound‑board recording with minor ambience artifacts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One",
+      "China Cat > Uncle John's Band > Me & My Uncle",
+      "Mind Left Body Jam"
+    ],
+    "poor_songs": [
+      "Promised Land",
+      "Row Jimmy"
+    ],
+    "setlist_flow": "First set is uneven, hampered by wind and vocal strain; second set builds momentum with a fiery Truckin’→Other One sequence and an inspiring keyboard jam, making the night memorable despite occasional rough spots."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar work noted as hot but occasionally scrappy; one reviewer said his tone was perfect on the UJB jam.",
+    "Phil": "His bass ‘bombs’ cut through the wind, and fans recall him pointing at a fan during China Cat.",
+    "Bob": "Vocals described as strained in places and even forgetting lyrics to The Other One; Promised Land intro sounded thin.",
+    "Keys": "Keith is praised for wailing on keyboards and staying focused despite the windy conditions.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mind Left Body Jam": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T18:52:17.977770+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-05-12.sbd.sacks.2224.sbeok.shnf"
+}

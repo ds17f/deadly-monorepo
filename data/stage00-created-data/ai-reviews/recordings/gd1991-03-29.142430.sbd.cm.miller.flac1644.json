@@ -1,0 +1,39 @@
+{
+  "summary": "Positive performance with solid Jerry chemistry and a notable New Speedway Boogie; recording quality not specified",
+  "review": "The lone review praises the show’s energy, highlighting good chemistry with Jerry Garcia and a strong rendition of “New Speedway Boogie.” While the reviewer notes that Garcia sounds good on several songs, there are no concrete details about the source or fidelity of the recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "A single 4‑star review emphasizes enjoyable playing and a standout song, but provides little information on recording quality, leading to a solid yet cautious rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewer does not mention the source (soundboard/audience) or specific audio issues; only notes that Garcia \"sounds good on some songs,\" suggesting an acceptable but unverified sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "New Speedway Boogie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer comments positively on the overall vibe and chemistry, implying a cohesive set despite limited detail."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's playing is described as sounding good and having good chemistry with the band.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T17:33:06.740515+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-03-29.142430.sbd.cm.miller.flac1644"
+}

@@ -1,0 +1,68 @@
+{
+  "summary": "High‑quality matrix capture of the June 4 1970 Fillmore West show, with a superb acoustic set and standout performances of Attics of My Life, St. Stephen → Not Fade Away → Midnight Hour, and Baby Blue.",
+  "review": "The matrix recording fills in gaps left by the incomplete soundboard source, delivering clear audience ambience and strong drum‑driven transitions. Fans rave about the acoustic set and electric highlights such as Attics of My Life, the St. Stephen/Not Fade Away/Midnight Hour sequence, and a standout version of All Over Now Baby Blue.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average review rating is 4.7/5 with detailed praise for both performance and recording; the show is consistently described as exceptional and the matrix source is deemed good."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Matrix fills a sizable gap in the original soundboard, providing clean audience ambience and clear instrument separation; drum‑driven transitions are highlighted as particularly well captured."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Attics of My Life",
+      "St. Stephen",
+      "Not Fade Away",
+      "Midnight Hour",
+      "All Over Now Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic set flows into a dynamic electric set with strong transitions, especially the drum‑driven segue from St. Stephen through Not Fade Away to Midnight Hour."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum‑driven transitions on the St. Stephen/Not Fade Away/Midnight Hour sequence are praised for their energy and clarity."
+  },
+  "song_mentions": {
+    "Monkey and the Engineer": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics of My Life": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Over Now Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T20:29:34.709105+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-06-04.123799.mtx.olsen.droncit.dusborne.flac16"
+}

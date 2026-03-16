@@ -1,0 +1,52 @@
+{
+  "summary": "Soundboard recording with clear detail highlights a chilling “Days Between” and an energized “Not Fade Away”, while Jerry’s slower vocals on “So Many Roads” add a bittersweet edge.",
+  "review": "The Miller SBD capture is generally good, delivering crisp instrument separation but a heavy‑metal‑leaning mix for Weir that some find jarring. Musically the show shines with an out‑of‑space “Days Between” and a surprisingly lively “Not Fade Away”, yet Jerry’s worn vocal on “So Many Roads” tempers the overall excitement.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (standout jams vs. slower vocals) while recording quality is good; combined weighted score yields ~3.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear soundboard source; crisp separation but the mix emphasizes heavy‑metal tones on Weir, creating a tonal contrast with Garcia’s softer acoustic parts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Days Between",
+      "Not Fade Away"
+    ],
+    "poor_songs": [
+      "So Many Roads"
+    ],
+    "setlist_flow": "First set leans heavy on Weir, creating a jarring shift; second set closes strong with an energized “Not Fade Away” and encores, though the overall pacing feels uneven due to slower vocal delivery."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice sounds worn and slower, adding melancholy to “So Many Roads” and “Days Between”, but his slide work still holds up.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Days Between": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T01:33:34.951330+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-09-18.136849.sbd.miller.flac16"
+}

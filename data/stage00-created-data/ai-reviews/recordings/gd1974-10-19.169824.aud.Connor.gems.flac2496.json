@@ -1,0 +1,31 @@
+{
+  "summary": "Poor-quality audio recording, but fans appreciate the upload despite lack of show details",
+  "review": "The only review mentions that the source is of poor quality and provides no commentary on the musical performance or setlist. Although the reviewer awards five stars out of gratitude for having any version at all, the technical shortcomings are the dominant impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "low",
+    "rationale": "With a single brief review that only criticizes audio quality and offers no show details, the rating leans low; the high star count reflects appreciation for availability rather than performance."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer explicitly states the recording is of poor quality; no further technical specifics provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No information about the performance or setlist was given in the review."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T01:43:18.896294+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-10-19.169824.aud.Connor.gems.flac2496"
+}

@@ -1,0 +1,46 @@
+{
+  "summary": "Decent monitor recording with mixed performance – fun overall but marred by a few weak song choices and tension between Jerry and Vince.",
+  "review": "The show offers some enjoyable moments, especially the well‑executed \"Samba in the Rain\" and generally fun tracks, but reviewers note uneven material such as the poorly received \"Ain’t That Peculiar\" and a sense of friction between Jerry Garcia and keyboardist Vince Welnick. The recording itself is described only as a modestly enjoyable monitor mix with no glaring technical flaws, though it lacks any standout audio quality praise.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Three reviews give an average of ~3½ stars; comments highlight a decent but uneven performance and a functional but unremarkable recording."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific audio issues mentioned; reviewers refer to it as a fun little recording, implying listenable but not exceptional sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Samba in the Rain"
+    ],
+    "poor_songs": [
+      "Ain't That Peculiar"
+    ],
+    "setlist_flow": "Overall set is uneven – some tracks are enjoyable while others (e.g., \"Ain’t That Peculiar\") fall flat; reviewers also note tension affecting the vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for impeccable taste and clean playing, but described as possibly sore at Vince's sloppy debut of new material and unclear on his own part in \"Samba in the Rain\".",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince Welnick is criticized for debuting songs without fully working them out, showing a lack of concern for quality.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Samba in the Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ain't That Peculiar": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T15:18:07.863744+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-25.fm-monitor.koucky.91249.flac16"
+}

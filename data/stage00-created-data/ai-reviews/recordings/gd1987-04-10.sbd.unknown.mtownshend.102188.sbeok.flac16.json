@@ -1,0 +1,31 @@
+{
+  "summary": "Amazing concert performance but plagued by a low‑fidelity soundboard mix with missing sections.",
+  "review": "Attendees rave that the April 10 1987 show was one of the best they saw, delivering an unforgettable night. However, the available recording is a soundboard source marred by poor clarity, large gaps and an unbalanced mix, making it far from ideal for listening.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is highly praised while recording quality is described as poor; the weighted average yields a solid‑mid rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Not crisp, large segments of songs missing, mix far from perfect; likely soundboard with audience mic added."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note the entire night was amazing and one of the best shows seen, but no specific song or set‑flow details were mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T21:30:01.403478+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-04-10.sbd.unknown.mtownshend.102188.sbeok.flac16"
+}

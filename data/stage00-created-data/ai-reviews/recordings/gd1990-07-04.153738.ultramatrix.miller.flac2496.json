@@ -1,0 +1,50 @@
+{
+  "summary": "Good matrix recording of an enjoyable show with a standout Space → The Wheel transition and a stellar Stella Blue.",
+  "review": "The ultramatrix source provides a clear, well‑balanced listening experience that fans appreciate for the effort put into stitching together multiple feeds. Musically the concert shines especially during the seamless flow from Space into The Wheel and the inspired rendition of Stella Blue, making it a rewarding listen overall.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "A single 4‑star review highlights both solid show performance and decent matrix recording quality; with limited data confidence is moderate."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer praises the matrix effort (mixing different sources, channel stitching) and finds the sound enjoyable and clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Space > The Wheel",
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Smooth set pacing with a notable transition from Space into The Wheel and an inspired Stella Blue performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T08:34:00.254214+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-04.153738.ultramatrix.miller.flac2496"
+}

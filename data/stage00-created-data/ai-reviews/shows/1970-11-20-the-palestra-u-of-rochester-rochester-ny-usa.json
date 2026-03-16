@@ -1,0 +1,61 @@
+{
+  "summary": "Energetic three‑set show with a standout Good Lovin' jam",
+  "blurb": "Three electric sets deliver tight playing and memorable improvisations. A highlight is the stellar Good Lovin' performance that opens the second half, and Jorma’s guest jams in the final set add extra excitement. Jerry’s guitar stays energetic throughout.",
+  "review": "On November 20, 1970 at the Palestra in Rochester, the Dead rolled out three electric sets that were both tight and full of spontaneous fire. The first set moved smoothly through classics like “Cold Rain And Snow” and “Friend Of The Devil,” while the second half kicked off with a knockout double‑take on “Good Lovin'” – the kind of exuberant rendition fans still talk about. Jorma Kaukonen’s appearance for the final set sparked some of the night’s most memorable jams, especially during the extended “The Other One” → “Saint Stephen” sequence. Jerry Garcia’s playing was notably energetic, even pulling a playful pedal‑steel moment that underscored his ever‑present sense of fun. Though the only surviving tape is a fair audience recording with occasional drop‑outs, it remains very listenable and captures the night’s excitement in vivid detail.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 16,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "The single available analysis is uniformly positive, praising the energetic performance, a stellar Good Lovin' jam and Jorma's guest improvisations. This consistent positivity across the only source warrants a modest +0.6 sentiment boost.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-11-20.aud.cotsman.9001.sbeok.shnf",
+    "reason": "Despite fair audience quality and occasional drop‑outs, it captures the full three‑set performance and delivers a very listenable version of the standout Good Lovin' jam."
+  },
+  "key_highlights": [
+    "Stellar Good Lovin' rendition that opens the second half",
+    "Jorma Kaukonen’s guest jams in the final set add unique energy",
+    "Tight, energetic three‑set flow with strong improvisational segments"
+  ],
+  "song_highlights": [
+    "Good Lovin'",
+    "The Other One",
+    "Saint Stephen"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers energetic playing, highlighted by his pedal‑steel anecdote and tight lead throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 1,
+  "processed_date": "2025-09-20T01:27:40.950497+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Good Lovin'",
+      "Drums",
+      "Good Lovin'"
+    ],
+    [
+      "Truckin'",
+      "Drums",
+      "The Other One",
+      "Saint Stephen",
+      "Not Fade Away",
+      "Goin' Down The Road Feeling Bad",
+      "Not Fade Away",
+      "I'm A King Bee"
+    ]
+  ]
+}

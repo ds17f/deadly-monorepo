@@ -1,0 +1,100 @@
+{
+  "summary": "Excellent soundboard recording of a legendary 1978 show – crisp mix, soaring Jerry solos and a standout Peggy‑O, Big River, The Other One and Dancin’ in the Streets.",
+  "review": "Charlie Miller’s superb SBD capture delivers crystal‑clear balance with booming bass and forward drums, letting the band’s 1978 peak shine.  Reviewers rave about Jerry’s fluid Peggy‑O solo, thunderous Big River, a fiery The Other One and an uplifting Dancin’ in the Streets, while only a few songs (TMNS, Ship of Fools, Black Peter) are noted as lacking punch.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, virtually all five‑star, uniformly praise both performance and Miller’s remaster; only minor negative song comments do not detract from overall excellence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑remastered SBD; bass explodes, drums sit forward, no reported dropouts or noise. Charlie Miller’s mix is repeatedly called “great” and “polished.”"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Big River",
+      "The Other One",
+      "Dupree's",
+      "It's All Over Now",
+      "Dancin' in the Streets / The Music Never Stopped",
+      "Looks Like Rain",
+      "Dire Wolf"
+    ],
+    "poor_songs": [
+      "The Music Never Stopped (TMNS)",
+      "Ship of Fools",
+      "Black Peter"
+    ],
+    "setlist_flow": "First set praised for nuance and strong song choices; second set builds energy with powerful drumming, a soaring The Other One and an uplifting Dancin' in the Streets. Overall pacing described as “smoking” and “off the map.”"
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly called sublime, fluid, and emotionally charged – especially on Peggy-O, Big River and The Other One.",
+    "Phil": "Bass noted as “exploding out of your speakers” and generally solid throughout.",
+    "Bob": "Rhythm work described as great; his playing provides a solid foundation for the jams.",
+    "Keys": "Keith (and later Brent) praised for adding color; keyboards cited as “on top of his game.” Confusion about lineup clarified – Brent not yet in band in 1978.",
+    "Drums": "Bill Kreutzmann and Mickey Hart receive high praise, especially during the drum segment that listeners describe as transcendent."
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 14,
+      "negative_mentions": 0,
+      "total_mentions": 14
+    },
+    "Big River": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Dupree's": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "It's All Over Now": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancin' in the Streets / The Music Never Stopped": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped (TMNS)": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:39:50.618510+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-14.sbd.miller.83717.sbeok.flac16"
+}

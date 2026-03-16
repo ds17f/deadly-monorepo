@@ -1,0 +1,94 @@
+{
+  "summary": "Clear soundboard capture of an energetic Albany show with standout Jack Straw, Bertha, New Speedway and a moving Morning Dew.",
+  "review": "The recording is a clean soundboard source that lets the band's on‑stage energy shine through. Reviewers rave about the punchy first‑set opener (Jack Straw → Bertha), the revived “New Speedway,” and the heartfelt second‑set moments like Watchtower, Ship of Fools and an emotionally charged Morning Dew. A few notes mention vocal flubs and occasional rough spots, but overall the performance is remembered fondly.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 4‑star ratings praising the musical flow and key songs; recording quality is described as good. A couple of low‑rating comments note vocal slips, pulling the overall sentiment toward mixed."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear soundboard feed with no major dropouts or muddiness mentioned; reviewers appreciate the availability of a quality board recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Bertha",
+      "New Speedway",
+      "Iko Iko",
+      "Saint of Circumstance",
+      "Ship of Fools",
+      "All Along the Watchtower",
+      "Morning Dew",
+      "Saturday Night"
+    ],
+    "poor_songs": [
+      "Morning Dew"
+    ],
+    "setlist_flow": "Strong, high‑energy first set with a long break before Bertha; second set builds momentum with upbeat numbers and an intense Watchtower leading into a poignant Morning Dew. The show is described as wild, urgent, and emotionally resonant."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for powerful guitar tone, urgency on Watchtower, and emotive delivery on Morning Dew.",
+    "Phil": "",
+    "Bob": "Noted for a few rough chord moments during Saint of Circumstance.",
+    "Keys": "Vince highlighted for growing confidence, effective solo work, and haunting intro on the encore.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T16:58:09.215884+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-03-23.sbd.miller.87729.sbeok.flac16"
+}

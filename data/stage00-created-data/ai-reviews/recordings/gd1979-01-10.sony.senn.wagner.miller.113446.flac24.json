@@ -1,0 +1,69 @@
+{
+  "summary": "Crisp audience tape captures a brilliantly played show highlighted by a soaring Dark Star > Weirdness jam, strong Jerry vocals, and an eerie Space segment.",
+  "review": "The recording, despite a little analog hiss typical of a '79 audience source, is surprisingly clear and crisp, letting the band's energy shine through. Reviewers rave about the powerful performances – especially the Dark Star > Weirdness sequence, Space, and tight playing from Jerry and Bob – making this a standout concert for any Deadhead.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Multiple enthusiastic reviews praise both the musical performance (standout jams, strong vocals) and the surprisingly good audio quality, outweighing a single irrelevant negative comment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "A little analog hiss is present but overall the tape is crisp and clear; listeners note it sounds amazing for an audience recording from ’79."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sweet Suzie",
+      "Space",
+      "Dark Star",
+      "Weirdness",
+      "Wharf Rat",
+      "St. Stephen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers highlight a seamless flow of high‑energy jams, especially the Dark Star > Weirdness sequence, and note strong vocal delivery throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice is strong; fumbles Sweet Suzie lyrics early but overall solid performance.",
+    "Phil": "",
+    "Bob": "Guitar sounds great (referred to as Bobby's guitar).",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sweet Suzie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Weirdness": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T18:51:43.574983+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-01-10.sony.senn.wagner.miller.113446.flac24"
+}

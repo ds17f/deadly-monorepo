@@ -1,0 +1,99 @@
+{
+  "summary": "Sound‑board recording with decent clarity but a buried mix, capturing a laid‑back show highlighted by Black Peter, Sugar Magnolia and a Belushi‑starring U.S. Blues.",
+  "review": "The recording is an okay sound‑board source – clear enough overall yet suffers from low volume and Jerry’s guitar being somewhat buried in the mix. Musically the night is mixed: fans rave about Black Peter, Sugar Magnolia, Scarlet Fire and the novelty of John Belushi on U.S. Blues, while others note sloppy moments (off‑key El Paso, forgotten lyrics in Promised Land) and a lethargic Lost Sailor/​Saint stretch.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is uneven with several standout moments but notable performance flaws; recording quality is acceptable though not superb, yielding a mid‑high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall sound but low volume and occasional mix issues (Jerry’s guitar buried). No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Sugar Magnolia",
+      "U.S. Blues",
+      "Scarlet Fire",
+      "Estimated Prophet",
+      "Minglewood"
+    ],
+    "poor_songs": [
+      "Promised Land",
+      "El Paso",
+      "Lost Sailor",
+      "Far From Me"
+    ],
+    "setlist_flow": "The concert has a relaxed, late‑night vibe with strong first‑set numbers and a second set that drifts into slower, meandering jams; some transitions feel loose while others (e.g., Estimated > Eyes) stay tight."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone praised early on but noted as buried in the mix later; vocal range tested on Black Peter; solos described both as favorite and cheesy/meandering.",
+    "Phil": "Gets lost during Jerry’s solo in Tennessee (according to one reviewer).",
+    "Bob": "Forgets lyrics in Promised Land and is off‑key on El Paso.",
+    "Keys": "Brent (keyboard) gets lost with Phil during a solo; no explicit praise.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "U.S. Blues": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T21:42:47.355657+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-03-30.sbd.miller.27752.sbeok.flacf"
+}

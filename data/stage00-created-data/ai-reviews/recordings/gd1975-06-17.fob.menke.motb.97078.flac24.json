@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard capture with occasional dropouts, but the performance shines—Blues for Allah and a heartfelt Peggy‑O stand out.",
+  "review": "Both reviewers rave about the musical vibe, highlighting a stellar rendition of Blues for Allah and an especially heartfelt Peggy‑O. The soundboard source is generally good, though frequent dropouts detract from an otherwise solid recording that benefits from careful mastering.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Strong positive comments on the show (standout songs, overall excitement) combined with a decent but flawed soundboard recording yields a high rating despite limited review count."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Dropouts are frequent and annoying; mastering improves bass clarity, making the sound decent when the board is functioning."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Blues for Allah",
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Enthusiastic and emotionally resonant performance, though no specific set‑flow details were given."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Blues for Allah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T02:22:06.400059+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1975-06-17.fob.menke.motb.97078.flac24"
+}

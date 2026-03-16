@@ -1,0 +1,39 @@
+{
+  "summary": "Recording quality unknown; reviewer raves about a legendary Dark Star and calls it possibly their best live show despite chaotic crowd antics.",
+  "review": "The sole fan review focuses on the in‑person experience, praising the Dark Star as a career highlight and describing the concert as possibly the best they ever saw. No comments are made about the audio source or its fidelity, so the recording quality remains unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "Only one review with no technical details; positive remarks about the performance but a zero‑star rating and lack of audio info drive a moderate overall score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Not discussed; review centers on overall vibe and a singular Dark Star moment."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T21:01:19.098232+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-14.135770.upg-sbd.tobin.flac16"
+}

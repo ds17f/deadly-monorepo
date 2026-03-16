@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent audience recording captures a tight Playin' > U.J.B. and an all‑time great Dew, highlighting the band’s synchronicity and Jerry’s powerful vocals.",
+  "review": "This AUD tape delivers crystal‑clear crowd ambience that many reviewers say even beats the soundboard, while the performance shines with a soaring Playin' > U.J.B., a memorable Jack Straw > Jack‑a‑Roe opener and, most notably, an all‑time great Dew. Jerry’s vocals are described as strong and full of emotion, and the band’s interplay—especially between Phil and Jerry during the Dew—is praised throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the musical performance (standout Dew, strong vocals) and the audience recording quality, with an average reviewer rating of 4‑plus across seven reviews."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Gorgeous audience recording that captures crowd energy and band connection; reviewers note it is preferable to the soundboard with no significant audio flaws mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' > U.J.B.",
+      "Dew",
+      "Jack Straw > Jack-a-Roe",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid and energetic, Playin' > UJB lifts the show, second set peaks with an outstanding Dew; overall flow praised for its ebb‑and‑flow and tight band synchronicity."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals described as strong, full of emotion, and passionately delivered; his lyric delivery on the Dew is highlighted.",
+    "Phil": "Noted for creating great tension with Jerry during the Dew buildup, indicating a tight bass‑guitar interplay.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin' > U.J.B.": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dew": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Jack Straw > Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:43:51.139756+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-03-27.naks.ladner.14260.sbeok.shnf"
+}

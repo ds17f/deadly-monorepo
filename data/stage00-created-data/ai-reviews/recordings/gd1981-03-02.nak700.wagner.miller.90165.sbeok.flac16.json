@@ -1,0 +1,63 @@
+{
+  "summary": "Crystal‑clear audience tape captures a scorching show highlighted by soaring Shakedown Street and superb renditions of Althea, Jack‑A‑Roe, El Paso and a masterful second set.",
+  "review": "The audience recording is remarkably clean and crisp, giving the listener a vivid sense of the room’s size while keeping Bob, Phil and Brent clearly audible. Musically the concert is hot, with Shakedown Street, Althea, Jack‑A‑Roe, El Paso and an inspired Playing in the Band jam singled out as standouts, and the second set hailed as a masterpiece. Overall the tape is praised for both its superb mix and the high‑energy performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for both musical performance (masterful second set, many standout songs) and technical quality (crisp, clear mix), with the majority of reviews rating 4‑5 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean, crisp sound; excellent room feel; clear separation of instruments; Bob and Phil heard distinctly—a rare post‑1974 clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Althea",
+      "Jack-A-Roe",
+      "El Paso",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as merely OK, but the second half is a masterpiece with a hot vibe and strong encore (U.S. Blues)."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for beautiful, well‑pronounced tone on Shakedown Street and overall guitar work.",
+    "Phil": "Bass heard clearly, noted as rare after ’74; solid foundation throughout the show.",
+    "Bob": "Rhythm guitar/vocals clear in the mix, contributing to the excellent overall sound.",
+    "Keys": "Brent Mydland described as ever‑present and solid on keyboards.",
+    "Drums": "Drumming described as “rocks” with strong presence."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T08:24:37.399542+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-03-02.nak700.wagner.miller.90165.sbeok.flac16"
+}

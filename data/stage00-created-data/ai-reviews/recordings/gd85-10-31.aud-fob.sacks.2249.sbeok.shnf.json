@@ -1,0 +1,51 @@
+{
+  "summary": "Good audience‑DAT capture of a rare South Carolina show highlighted by an electrifying Werewolves/Space sequence.",
+  "review": "The recording, sourced from a DAT (likely audience) tape, is generally clear but shows some hiss, a left‑channel glitch and a slight speed variance. Musically the concert shines with a monster Werewolves/Space jam and a high‑energy Shakedown, though the second set loses a bit of intensity.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong praise for the performance (most reviewers give 4–5 stars) and generally decent sound despite minor technical flaws, leading to an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Decent clarity but noticeable hiss on analog copy, a left‑channel flaw reported by one reviewer and a .1% speed discrepancy that required correction; overall listenable for fans."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Werewolves",
+      "Shakedown",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is praised as strong and intense, while the second set reportedly loses some intensity."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Werewolves": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T10:10:13.827532+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-10-31.aud-fob.sacks.2249.sbeok.shnf"
+}

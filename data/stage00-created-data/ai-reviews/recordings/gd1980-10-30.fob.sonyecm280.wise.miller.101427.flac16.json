@@ -1,0 +1,106 @@
+{
+  "summary": "Stellar 10/30/80 performance highlighted by a soaring Other One and crisp audience recording that captures the show’s acoustic brilliance and electric fire.",
+  "review": "The concert is widely praised for its diverse setlist, tight playing and memorable moments – especially the drums‑>space‑>Other One sequence with guest drummer Billy Cobham and the smooth Lost Sailor > Saint of Circumstance.  The Jim Wise front‑of‑house tape is described as beautiful and well‑balanced despite being audience‑heavy, making it one of the best available recordings of this three‑show run.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star ratings and extol both the musical performance and the audio quality; only one modestly negative comment about audience heaviness tempers the overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Jim Wise's front‑of‑house tape is praised as clear, crisp and beautifully balanced, though a few reviewers note it can be heavy on audience ambience and the first‑set mix is slightly funky."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lost Sailor > Saint of Circumstance",
+      "The Other One (drums > space > Other One)",
+      "Althea",
+      "Shakedown",
+      "Truckin'",
+      "Dark Hollow (acoustic)",
+      "On the Road Again",
+      "Ripple"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The first set shines with acoustic gems and tight electric numbers, the second builds momentum toward a powerful Lost Sailor‑Saint pairing, and the third delivers an epic climax highlighted by the guest‑drummer jam and a whirlwind Other One."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is called beautiful; his solos on Dark Hollow, Ripple and The Other One are described as astonishing and he even walks in rhythm during the jam.",
+    "Phil": "Lesh’s bass work is praised for sneaking into Heaven Help and cueing the band for The Other One; overall his playing is noted as solid throughout.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s electric‑piano solo on Dark Hollow receives special mention, adding sparkle to the acoustic set.",
+    "Drums": "Billy Cobham joins Bill and Mickey for a legendary drums > space > Other One segment; the drumming overall is highlighted as a high point of the night."
+  },
+  "song_mentions": {
+    "Lost Sailor > Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alabama Getaway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Hollow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "On the Road Again": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T05:42:44.483322+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-30.fob.sonyecm280.wise.miller.101427.flac16"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "Balanced audience recording captures a fiery Ventura show highlighted by the Percussion → Improvisation → Morning Dew suite and standout renditions of Dancin' in the Streets, Midnight Hour, and Not Fade Away > Brokedown Palace.",
+  "review": "The performance is praised for its explosive second set, especially the improvisational sequence that leads into a soaring Morning Dew, plus rare moments like Brent’s one‑time rendition of “I Just Wanna Make Love To You.”  The audience tape is described as well‑balanced and free of the echo problems found in other sources, though one reviewer found the hot, dusty conditions uncomfortable and left during Terrapin.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the show highly (5‑star) and note excellent musical moments; recording is praised as balanced, but a single strongly negative review drags overall sentiment to mixed, yielding a solid 4.2 rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note the tape sounds clear and well‑balanced compared with other downloads that suffered echo; no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Percussion → Improvisation → Morning Dew",
+      "Dancin' in the Streets",
+      "Midnight Hour",
+      "Not Fade Away > Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Terrapin"
+    ],
+    "setlist_flow": "The second set is repeatedly described as fiery, spiritual and tightly flowing, while the first set suffered from heat and dust that affected some audience members."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia never left the stage between Not Fade Away and Brokedown Palace; praised in poetic descriptions of the show’s energy.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent (keyboards) performed “I Just Wanna Make Love To You” – a rare occurrence noted by multiple reviewers.",
+    "Drums": "The drumming is highlighted as thunderous and pounding, contributing to the overall power of the performance."
+  },
+  "song_mentions": {
+    "Percussion → Improvisation → Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dancin' in the Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away > Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Just Wanna Make Love To You": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:00:11.721644+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-22.fob.nak300.holtz-bolton.102101.flac16"
+}

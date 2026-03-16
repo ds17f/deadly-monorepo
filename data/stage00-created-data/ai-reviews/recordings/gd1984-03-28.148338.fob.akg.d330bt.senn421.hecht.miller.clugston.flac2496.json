@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent front‑of‑house recording of the 1984 kickoff show with a strong first set highlighted by China Cat Sunflower and Babe It Ain’t No Lie, despite some rough edges in Bob’s performance.",
+  "review": "Both reviewers rate this March 28 1984 concert four stars, praising the crystal‑clear front‑of‑house (FOB) tape and noting that Brent Mydland and Jerry Garcia deliver “insane” playing throughout. The first set is described as strong with a standout China Cat Sunflower → Rider transition and a special rendition of Babe It Ain’t No Lie, although Bob Weir’s vocals/instrumentation sound a bit ragged. Overall the show shines musically while the recording quality makes it very listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Two detailed 4‑star reviews highlight an excellent FOB recording and a solid musical performance, with only minor performance hiccups noted."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers rave about the clear, high‑fidelity front‑of‑house tape; no dropouts or muddiness mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower",
+      "Babe It Ain't No Lie"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong opening set with a cool China Cat Sunflower → Rider segue; the show is a bit rough around the edges due to Bob’s technical issues, but overall flows well."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as doing \"insane things\" throughout, indicating standout guitar work.",
+    "Phil": "",
+    "Bob": "Performance described as \"pretty fucked up\" with technical problems.",
+    "Keys": "Brent Mydland praised for his contributions alongside Jerry.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Babe It Ain't No Lie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:47:06.887948+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-03-28.148338.fob.akg.d330bt.senn421.hecht.miller.clugston.flac2496"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Reviews flag an incorrect date and request deletion; no musical or technical feedback is provided.",
+  "review": "Both reviewers note that the submission appears to have the wrong concert date (likely September 28‑1972) and ask for it to be removed, mentioning a corrected upload elsewhere. There are no comments on sound quality, performance, or band members, so the recording’s artistic merit remains undocumented.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only two brief reviews focused solely on metadata errors; no substantive evaluation of show or recording quality can be made."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "unknown",
+    "technical_notes": "No comments about soundboard, audience mix, clarity, or other technical aspects."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-21T04:29:44.667578+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-18.170831.aud.AndrewF.flac2448"
+}

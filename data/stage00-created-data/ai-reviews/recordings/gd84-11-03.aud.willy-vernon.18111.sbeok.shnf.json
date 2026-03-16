@@ -1,0 +1,64 @@
+{
+  "summary": "Excellent audience recording of a hot ’84 Berkeley run, highlighted by smoking Cumberland and Meet Me At The Bottom.",
+  "review": "The show is widely praised for its adventurous setlist, tight improvisation and standout moments like a blistering “Cumberland” and a smoky “Meet Me At The Bottom.” Reviewers note the audience‑tape captures the energy well despite the venue’s acoustics, delivering clear and lively sound. Even with a few missteps (the “Why Don’t We Do It In The Road” cover), the performance is considered one of the better shows of that six‑night stretch.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviewers gave 4–5 stars and highlighted strong musical moments; recording quality is repeatedly described as excellent audience tape, yielding a combined high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call the audience recording \"amazing\" and note that the authorized taping spot avoided the venue’s problematic acoustics; overall clear, lively mix with no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cumberland",
+      "Meet Me At The Bottom",
+      "Gloria"
+    ],
+    "poor_songs": [
+      "Why Don't We Do It In The Road",
+      "Get Back"
+    ],
+    "setlist_flow": "The six‑night run at Berkeley Community Theater avoided repeats, delivering fresh surprises each night; this final show kept the momentum with strong improvisation and a tight sequence of covers and originals."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for shredding \"Cumberland,\" flying guitar work, and a memorable descending progression in the lights.",
+    "Phil": "Described as a monster on the low end, offering solid bass foundation and attempting to ease into \"Lovelight.\"",
+    "Bob": "Delivered a new blues cover and a hot rendition of \"Gloria.\"",
+    "Keys": "",
+    "Drums": "Mentioned only in passing (after drums came \"Uncle John's\"), no specific praise or criticism."
+  },
+  "song_mentions": {
+    "Cumberland": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Meet Me At The Bottom": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gloria": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Why Don't We Do It In The Road": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Get Back": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T00:07:22.101504+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-11-03.aud.willy-vernon.18111.sbeok.shnf"
+}

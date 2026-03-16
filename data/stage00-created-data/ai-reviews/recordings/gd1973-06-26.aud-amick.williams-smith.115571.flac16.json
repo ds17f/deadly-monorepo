@@ -1,0 +1,51 @@
+{
+  "summary": "High‑energy 1973 show with a smoking Truckin' and The Other One; audience tape is warm but a bit muddy with limited bass.",
+  "review": "The performance bursts with excitement – the band sounds ecstatic, delivering tight jams especially on Truckin' and The Other One, and even the occasional slip feels hilarious. The audience recording captures the vibe well, though it lacks low‑end punch and the mids are a touch harsh, making it best listened at moderate volume.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviewers gave 4–5 stars, praising both the musical fire and the overall listening experience; minor recording flaws are noted but do not detract significantly."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Low bass response, harsh upper‑midrange, slightly muddy texture; enjoyable at moderate volume but not ideal for high‑level listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One",
+      "Here Comes Sunshine"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set builds into an intense, jam‑filled stretch; the energy stays high throughout with seamless transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Higher frequencies of Phil's bass are audible despite overall low bass presence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T15:13:41.079765+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-26.aud-amick.williams-smith.115571.flac16"
+}

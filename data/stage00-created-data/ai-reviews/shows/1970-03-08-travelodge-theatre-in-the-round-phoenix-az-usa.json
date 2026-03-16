@@ -1,0 +1,57 @@
+{
+  "summary": "Acoustic Black Peter shines; Lovelight bright but guest disrupts finale",
+  "blurb": "The set opens with a warm acoustic vibe, highlighted by Jerry’s sweet vocal on Black Peter and a spirited Turn On Your Lovelight. Drums stay tight throughout, though the surprise guest’s vocals mar the closing trio of Not Fade Away, Impromptu Blues, and Lovelight.",
+  "review": "On March 8, 1970 at Phoenix’s Travelodge Theatre in the Round, the Dead delivered an intimate acoustic‑driven first set that still feels fresh. Jerry Garcia’s voice was described as “sweet and musical,” and his solo on the plaintive \"Black Peter\" earned unanimous praise, while Bob Weir’s guitar work was noted as crystal clear. The rhythm section—Mickey Hart and Bill Kreutzmann—kept a tight, well‑driven pulse that anchored the whole show. The highlight of the night, aside from the acoustic gems, was a spirited rendition of \"Turn On Your Lovelight*\" that lifted the energy despite an unexpected guest whose over‑the‑top vocals threw off the final three numbers (Not Fade Away*, Impromptu Blues*, and Lovelight). Overall, the performance is solid with standout moments, but the late‑set intrusion leaves the ending feeling uneven.\n\nFor listeners seeking the best representation of this night, the \"gd70-03-08.sbd.9195.sbeok.shnf\" recording captures the acoustic nuances and overall band chemistry while remaining clear enough to appreciate the subtle interplay, making it the recommended choice despite the guest’s vocal intrusions.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 38,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Two soundboard recordings consistently praise the acoustic \"Black Peter\" and the vibrant \"Turn On Your Lovelight*,\" indicating strong positive sentiment (+0.8). Negative remarks focus on a guest’s disruptive vocals in the final three songs, but these do not outweigh the overall musical strengths.",
+      "final_calculation": "2.5 + 0.3 + 0.8 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-03-08.sbd.9195.sbeok.shnf",
+    "reason": "Decent soundboard capture that balances clarity with the show’s acoustic nuances, providing a faithful representation of the performance despite occasional guest‑related volume spikes."
+  },
+  "key_highlights": [
+    "Jerry’s sweet vocal and standout acoustic solo on \"Black Peter\".",
+    "\"Turn On Your Lovelight*\" shines as the set’s high‑energy centerpiece.",
+    "Tight, well‑driven drumming from Mickey Hart and Bill Kreutzmann throughout.",
+    "Surprise guest’s chaotic vocals disrupt the closing trio, affecting the overall flow."
+  ],
+  "song_highlights": [
+    "Black Peter",
+    "Turn On Your Lovelight*",
+    "Hard To Handle"
+  ],
+  "band_performance": {
+    "Jerry": "Sweet, musical vocal tone; notable acoustic solo on Black Peter praised.",
+    "Phil": "",
+    "Bob": "Crystal‑clear guitar work; overall band chemistry noted as strong.",
+    "Pigpen": "",
+    "Mickey": "Drums tight and well‑driven, providing solid rhythmic foundation.",
+    "Billy": "Drums tight and well‑driven, complementing Mickey’s groove."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-19T17:22:11.249530+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Black Peter"
+    ],
+    [
+      "Not Fade Away*",
+      "Turn On Your Lovelight*"
+    ],
+    [
+      "Hard To Handle"
+    ]
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Short but enthusiastic note for a great Peggy‑O; recording source and quality not specified",
+  "review": "The lone review gives the performance a solid four‑star rating, highlighting a love for the band's rendition of \"Peggy-O.\" No details are offered about the audio source or its fidelity, so the technical side remains unclear. Overall the sentiment is positive, driven by the song’s impact rather than recording quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only one brief review; it rates the show 4 stars and mentions a favorite song, but provides no insight into recording quality, limiting confidence in an overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No information about set structure or pacing was mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T12:33:27.495728+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-07-04.134381.aud.bernstein.flac2448"
+}

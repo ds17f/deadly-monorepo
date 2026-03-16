@@ -1,0 +1,45 @@
+{
+  "summary": "Crystal‑clear audience tape of a killer ’82 second set, highlighted by a soaring Stella Blue and a joyous Casey Jones encore.",
+  "review": "The recording captures the ambience of an outdoor summer night with remarkable clarity despite some wind noise and slight upper‑mid muddiness. The performance is described as one of the band’s finest in ’82, especially the second set where Jerry’s guitar shines and Stella Blue stands out, capped off by a feel‑good Casey Jones encore.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "All substantive reviews praise both the musical performance (especially the second set) and the audio clarity, with only minor technical quibbles; this yields a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Very clear overall, but reviewers note wind noise, burnt‑edge upper mids and a tiny dip during the Stella Blue flip. Still considered one of the clearest ’80‑era audience tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as a ‘BAMF’ (big-ass mother‑f***er) with relaxed, groove‑heavy playing; the outdoor vibe and moonlit ambience add to a seamless, uplifting flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised as being at his best for ’82, delivering top‑tier guitar work throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T23:07:28.498438+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-03.121407.set2-akg.flac16"
+}

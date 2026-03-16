@@ -1,0 +1,80 @@
+{
+  "summary": "Soundboard capture with decent clarity showcases a mixed show where the second‑set shines—standout Black Peter, Bertha and an epic China Cat—though Jerry’s vocals stumble on Terrapin.",
+  "review": "The recording is a clean soundboard source that presents the music with good presence, though a few mix quirks (low‑level Fire on the Mountain in the China jam and some post‑drum fizz loss) are noted. Musically the concert is uneven: Jerry’s singing on Terrapin falls flat, but the second set delivers highlights such as Black Peter, Bertha, When I Paint My Masterpiece, The Wheel and a sprawling China Cat Sunflower that many fans rave about.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise several songs; recording is described as clean with only minor issues, yielding an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clean soundboard with good presence and clarity; occasional mix quirks such as a faint Fire on the Mountain intro in the China jam and reduced fizz after the drums, but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Bertha",
+      "When I Paint My Masterpiece",
+      "The Wheel",
+      "China Cat Sunflower"
+    ],
+    "poor_songs": [
+      "Terrapin Station"
+    ],
+    "setlist_flow": "The first half of the second set feels a bit exploratory and loses some fizz after the drums, but it builds into a sublime second‑half where Black Peter and Bertha become focal points. Overall pacing is uneven, with high moments offset by weaker vocal delivery on Terrapin."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocals are described as off and missing inspiration on Terrapin, yet later praised for raw emotion and optimism.",
+    "Phil": "Noted for adding plenty of harmonies, especially on Built to Last material.",
+    "Bob": "Weir is said to have calmed down on the Dylan‑style vocal approach and returned to stronger singing.",
+    "Keys": "Brent (keyboards) gets highlighted for aggressive lyrical presence during Bertha and contributes to a crisp band snap.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "When I Paint My Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Just a Little Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:04:35.221961+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-10-11.sbd.clugston.6668.sbeok.shnf"
+}

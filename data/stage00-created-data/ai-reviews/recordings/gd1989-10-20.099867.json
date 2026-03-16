@@ -1,0 +1,31 @@
+{
+  "summary": "Recording is incomplete due to missing drum space, with no commentary on the performance",
+  "review": "The sole review flags a critical omission—the drum solo/space is absent—rendering the recording incomplete. No details are provided about sound quality or musical highlights, leading to an overall negative impression.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.0,
+    "confidence": "low",
+    "rationale": "Only one review, giving a zero-star rating and noting a major missing section; no positive information available"
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Drum space is missing from the recording, making it incomplete."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No performance details provided in reviews"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T01:12:09.180409+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-20.099867"
+}

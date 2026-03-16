@@ -1,0 +1,45 @@
+{
+  "summary": "Recording source unknown, but the show is praised for an intense \"Eyes\" performance and its overall underrated vibe.",
+  "review": "Both reviewers rave about the musical power of this concert – one describes a heart‑stopping rendition of Eyes, while another calls the entire night an underrated gem. No details are given about the tape source or sound quality, so listeners should expect a typical archival capture with variable fidelity.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "One reviewer gives a perfect 5‑star rating while the other rates it 0, indicating divergent opinions; however both comments are positive about the performance, leading to an overall moderate rating with medium confidence due to only two reviews."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer mentioned soundboard, audience, or any technical aspects of the audio; therefore recording quality cannot be assessed beyond a generic fair estimate."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Estimated Prophet"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the concert as an underrated, high‑energy show, highlighting especially the powerful delivery of Eyes and a strong vibe throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:04:46.813170+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-09-04.aud.morris.106619.flac24"
+}

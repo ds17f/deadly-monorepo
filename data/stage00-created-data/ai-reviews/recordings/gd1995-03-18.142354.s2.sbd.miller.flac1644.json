@@ -1,0 +1,82 @@
+{
+  "summary": "High‑energy soundboard two recording captures a strong Vince era set with standout renditions of All Too Much, Visions of Johanna and Rain.",
+  "review": "The S2 mix is clean and lets the band’s tight playing shine, especially the 12‑minute drum showcase that drives the show forward. Fans rave about the powerful versions of All Too Much, Iko, Visions of Johanna, The Last Time and the encore Rain, while noting a lackluster Space and a merely okay One More Saturday Night. Overall it’s a solid post‑Bruce performance despite Jerry’s modest guitar work.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "One enthusiastic five‑star review praises many songs and the drum section; recording is described as good, giving a high combined score but low confidence due to single data point."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "S2 (second‑generation soundboard) mix is clear and balanced; drums are emphasized, overall crisp with no major dropouts mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "All Too Much",
+      "Iko Iko",
+      "Visions of Johanna",
+      "U.S. Blues",
+      "The Last Time",
+      "Rain"
+    ],
+    "poor_songs": [
+      "Space",
+      "One More Saturday Night"
+    ],
+    "setlist_flow": "A strong Vince‑era set that moves from upbeat covers into a chaotic breakdown before a solid U.S. Blues, highlighted by an extended drum jam; finishes with tight closing numbers and a flawless Rain encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar work described as unremarkable but still holding his own within the band.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Praised heavily – 12‑minute drum segment called \"kicking ass\" and a favorite part of most S2 shows."
+  },
+  "song_mentions": {
+    "All Too Much": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Visions of Johanna": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Last Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T05:55:20.460596+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-18.142354.s2.sbd.miller.flac1644"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Studio‑clear soundboard capture of a tight 1971 Pauley Pavilion show, highlighted by a smoking Truckin' → The Other One jam and a crisp Sugar Magnolia.",
+  "review": "The recording is praised for its near‑studio clarity, excellent instrument separation and stereo mix, delivering an almost flawless listening experience despite minor patch glitches. The performance itself is described as tight, energetic and inspired, with standout moments like the Truckin' → The Other One improvisation and a sharp Sugar Magnolia, while newcomer Keith Godchaux’s keyboards add extra sparkle.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight both superb recording quality and a tight, inspired performance; only one outlier negative rating does not outweigh the consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as studio‑clear with great tone, separation and stereo mix; a few patch issues noted but overall crystal‑clear sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin' > The Other One",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is characterized as tight and orchestrated, moving smoothly through energetic jams and maintaining a strong, cohesive flow throughout the night."
+  },
+  "band_member_comments": {
+    "Jerry": "Great guitar tone and instrument timbre noted by reviewers.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith Godchaux's playing is highlighted as inspired, especially as a newcomer adding depth to the jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin' > The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T09:53:09.632123+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-11-20.sbd.miller.92908.sbeok.flac16"
+}

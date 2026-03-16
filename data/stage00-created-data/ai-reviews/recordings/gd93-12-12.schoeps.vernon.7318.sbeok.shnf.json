@@ -1,0 +1,39 @@
+{
+  "summary": "Decent (fair) recording of a visually spectacular show highlighted by an excellent Shakedown Street.",
+  "review": "The three reviewers all give the concert four stars, noting an unforgettable light‑show during drum space and a standout rendition of Shakedown Street. The audio isn’t top‑tier – they describe it as “not the best recording, but not awful” – yet it’s still listenable enough to recommend the performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Strong positive comments about the show (visuals, Shakedown Street) offset a mediocre recording quality; three consistent 4‑star reviews give moderate confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers say the recording isn’t great but also not terrible – no specific issues like dropouts are mentioned, just a generally average sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is remembered for its impressive light effects during the drum space and an overall energetic vibe; reviewers felt it was a solid, enjoyable Dead experience despite not being a “must‑see” performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drummers wore red/white light‑up suits and created a striking visual drum space that reviewers highlighted."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:39:34.629764+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-12-12.schoeps.vernon.7318.sbeok.shnf"
+}

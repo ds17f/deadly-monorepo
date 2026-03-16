@@ -1,0 +1,57 @@
+{
+  "summary": "Crystal‑clear soundboard capture of an electrifying Knick show highlighted by Loose Lucy, Casey Jones and a soaring Comes A Time breakout.",
+  "review": "The recording delivers sweet, clean soundboard audio that conveys the high energy of this early‑90s Knickerbocker Arena performance. Reviewers repeatedly point to Loose Lucy, Casey Jones and the Comes A Time segment as show‑stopping moments, with even a beloved cover of I Fought the Law getting shout‑outs. Overall the concert is praised as a “killer” Dead show from the ’90s.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "All three reviewers give high star ratings (5, 5, 4) and focus on both excellent soundboard quality and strong musical moments, indicating a very good to great show with an excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as sweet, clean and crisp; captures the band’s energy without any noted drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loose Lucy",
+      "Casey Jones",
+      "Comes A Time",
+      "I Fought the Law"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy performance throughout, especially noted for an electric vibe at Knick; transitions and audience interaction praised."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum work highlighted during the six‑gun part of I Fought the Law, receiving specific praise."
+  },
+  "song_mentions": {
+    "Loose Lucy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Casey Jones": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "I Fought the Law": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T11:39:36.482927+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-03-27.ams-young.georges.6701.sbeok.shnf"
+}

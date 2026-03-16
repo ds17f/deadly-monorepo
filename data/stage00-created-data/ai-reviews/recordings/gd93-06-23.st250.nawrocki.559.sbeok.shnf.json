@@ -1,0 +1,66 @@
+{
+  "summary": "Good soundboard capture of a 1993 show highlighted by a scorching Terrapin jam and strong Dark Star, though some listeners note shed and mixed set flow.",
+  "review": "The recording is a DAT‑mastered soundboard tape that sounds generally clear with a bit of bleed (“shed”), delivering a solid listening experience. Musically the night shines on Jerry Garcia’s ripping lead work – especially in Terrapin – and features memorable Dark Star, Way to Go Home and an extra‑cool LSD encore, but a few reviewers felt the first set was short and some songs fell flat.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Most reviews praise the performance (Terrapin, Dark Star) and deem the soundboard capture decent, but a few note recording bleed and disappointing moments, leading to an overall good‑to‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Recorded from a DAT master using AMS ST‑250 cardioid/blumlein mics; reviewers mention some shed/bleed and occasional muffling, but overall the mix is clear and enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin",
+      "Dark Star",
+      "Way to Go Home",
+      "L.S.D. Encore"
+    ],
+    "poor_songs": [
+      "Broken Arrow",
+      "Dark Star (inconsistent execution)",
+      "Terrapin (forgotten lyrics) "
+    ],
+    "setlist_flow": "First set described as short and a bit melancholy; second set flows better with strong jams, though some listeners felt the Dark Star never fully took off."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is repeatedly praised for shredding, blistering licks, and ripping lead work throughout the night.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Way to Go Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "L.S.D. Encore": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T15:12:34.594517+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-06-23.st250.nawrocki.559.sbeok.shnf"
+}

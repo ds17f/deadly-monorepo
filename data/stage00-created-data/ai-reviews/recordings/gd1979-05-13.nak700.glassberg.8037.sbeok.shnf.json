@@ -1,0 +1,51 @@
+{
+  "summary": "A thrilling 1979 Dead show with a standout Truckin jam, but the audience‑mic recording is muffled and room‑noisy.",
+  "review": "Fans rave about this May 13 1979 performance – especially the extended Truckin jam that even sneaks in a Nobody's Fault But Mine tease – and describe the setlist as stellar. However, the recording suffers from poor microphone placement that buries the band under audience chatter, making the first set sound distant while the second set improves slightly.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Show quality is rated very high by reviewers (5 ★) while recording quality is judged poor to fair (around 3 ★). Weighted 70/30 blend yields ~4.4 ★."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Mics appear to have captured a lot of audience rows, resulting in muffled band sound and heavy room noise—especially on Sugaree in the first set. Slight improvement in the second set but overall distant mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin"
+    ],
+    "poor_songs": [
+      "Sugaree"
+    ],
+    "setlist_flow": "Great set list with strong performances throughout; first set marred by recording issues, second set sounds clearer and keeps the momentum."
+  },
+  "band_member_comments": {
+    "Jerry": "Reviewer expresses missing Jerry but gives no specific performance comment.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Nobody's Fault But Mine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T21:52:03.411582+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-05-13.nak700.glassberg.8037.sbeok.shnf"
+}

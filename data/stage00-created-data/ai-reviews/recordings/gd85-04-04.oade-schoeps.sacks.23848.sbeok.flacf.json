@@ -1,0 +1,107 @@
+{
+  "summary": "Outstanding spring‑'85 show with a smoking first set (Alabama > Jack Straw, She Belongs to Me) captured on a near‑perfect Oade audience recording.",
+  "review": "The performance is praised for its high energy, tight playing and standout moments like the blistering Alabama > Jack Straw opener, an inspired She Belongs to Me, and a soaring Lovelight; even the mixed Crazy Fingers jam is noted for its daring improvisation.  The Oade brothers’ audience (AUD) source is repeatedly described as bright, well‑balanced and almost “sonic perfection,” making the show both musically and technically superb.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews, most 5‑star, consistently praise both the musical performance and the Oade audience recording; only a few minor criticisms of specific jams."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Bright yet well‑balanced sound, crisp instrument separation; reviewers call it “close to sonic perfection,” with only occasional notes about a slightly disjointed Crazy Fingers mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "She Belongs To Me",
+      "Alabama > Jack Straw",
+      "Lovelight",
+      "Lost Sailor / Saint / Deal",
+      "Miracle"
+    ],
+    "poor_songs": [
+      "Crazy Fingers (mixed)",
+      "Esau",
+      "He's Gone"
+    ],
+    "setlist_flow": "First set described as tight, energetic and full of highlights; second set solid but a bit uneven, with Crazy Fingers and GDTRFB drawing mixed reactions while the encore maintains high energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for fiery guitar tone, crisp solos (especially on She Belongs To Me) and animated vocals; noted as “on fire” and “animated.”",
+    "Phil": "One reviewer caught him suggesting “Monkey and the Engineer” before Dire Wolf, showing his playful stage presence.",
+    "Bob": "Praised for strong vocal delivery on Lovelight and other numbers; his singing described as passionate.",
+    "Keys": "Brent (keyboards) highlighted for “hittin those keys” behind Jerry during Dire Wolf/She Belongs To Me jams.",
+    "Drums": "Bill Kreutzmann’s drumming noted as fast on Crazy Fingers and generally driving the high‑energy feel."
+  },
+  "song_mentions": {
+    "She Belongs To Me": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Alabama > Jack Straw": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "Lovelight": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Lost Sailor / Saint / Deal": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "GDTRFB": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Esau": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T03:00:18.310913+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-04.oade-schoeps.sacks.23848.sbeok.flacf"
+}

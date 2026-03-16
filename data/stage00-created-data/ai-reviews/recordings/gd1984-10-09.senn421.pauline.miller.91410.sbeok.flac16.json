@@ -1,0 +1,63 @@
+{
+  "summary": "Warm, well‑balanced audience recording captures an underrated 1984 show highlighted by a soaring Smokestack Lightning and a smoking Help‑Slip‑Frank sequence.",
+  "review": "The fans rave about the sound quality, calling it the best‑sounding audience source with excellent warmth and balance, though one notes the typical east‑coast arena boom. Musically the concert is praised for Jerry’s hard‑ripping guitar on Smokestack Lightning, solid performances of Jack Straw and a smoking Help‑Slip‑Frank, plus a triumphant He’s Gone and Johnny B. Goode. Overall the show feels underrated but strong, especially in the second set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "All four reviewers gave 4‑star ratings and highlighted both a high‑quality performance and good recording fidelity; weighting favors the strong musical show while acknowledging minor arena boom in the audio."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Described as warm, balanced and the best‑sounding audience source by several reviewers; one notes a boomy, noisy arena characteristic but no serious dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Smokestack Lightning",
+      "Jack Straw",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "He's Gone",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as high‑time and energetic; overall set praised for its underrated vibe and strong transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Riffs hard on Smokestack Lightning and delivers solid leads throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:37:03.386710+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-09.senn421.pauline.miller.91410.sbeok.flac16"
+}

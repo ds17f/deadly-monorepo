@@ -1,0 +1,51 @@
+{
+  "summary": "A tight soundboard mix captures a fun show highlighted by a stellar Race Is On and a sublime Row Jimmy jam.",
+  "review": "The recording offers a solid soundboard mix—clear enough to hear Phil’s bass pushed forward while Jerry sits slightly back, though Vince’s keyboards are noticeably buried. Musically the concert is praised for its high‑energy “Race Is On,” an inspired “Row Jimmy” improvisation and what many call a beautiful encore (Touch of Grey), making it a standout May ’91 West Coast performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and highlight strong performances; recording is described as having a good mix despite some keyboard balance issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Nice overall mix with Phil’s bass prominent, Jerry slightly recessed, and Vince’s keys turned down. No major drop‑outs reported, but the keyboard balance draws criticism."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Race Is On",
+      "Row Jimmy",
+      "Touch of Grey"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first half leading into a tight “Race Is On,” followed by an expansive “Row Jimmy” jam and a memorable encore that fans describe as beautiful."
+  },
+  "band_member_comments": {
+    "Jerry": "Some reviewers note his guitar is slightly turned down in the mix.",
+    "Phil": "Praised for a strong, forward‑present bass line; highlighted as a leader on this show.",
+    "Bob": "",
+    "Keys": "Vince's keyboard work receives heavy criticism – described as plodding, noisy and buried in the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Race Is On": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T19:20:14.201008+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-05-04.sbd.ladner.9117.sbeok.shnf"
+}

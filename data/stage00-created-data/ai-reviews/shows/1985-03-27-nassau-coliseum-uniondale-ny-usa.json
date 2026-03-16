@@ -1,0 +1,70 @@
+{
+  "summary": "High‑energy Nassau show with scorching Shakedown Street and rare Phil solo",
+  "blurb": "The second set rockets off with a blistering Shakedown Street that fuels the whole night. Highlights include Phil Lesh’s first lead vocal in a decade on Just Like Tom Thumb's Blues, a tight Mississippi Half-Step > Hell In A Bucket transition, and a soulful Stella Blue. The band stays locked‑in despite a few vocal slips on Touch of Grey.",
+  "review": "On March 27, 1985 at Nassau Coliseum the Dead delivered a compact but ferocious performance that still feels fresh decades later. After a brisk first set that featured Phil Lesh stepping up to sing Just Like Tom Thumb's Blues – his first solo vocal in roughly ten years – the band surged into an incendiary second set. Shakedown Street opened the set with a punchy groove, instantly sparking a super‑nova exchange between the group and the crowd. From there they rode a high‑energy wave through Uncle John's Band, a monster Playing In The Band, and a seamless Mississippi Half-Step > Hell In A Bucket transition that many fans cite as a highlight of the night. The jam into Space and the ensuing Stella Blue kept the momentum alive before the show closed with an earnest Touch of Grey encore. Jerry’s guitar work remained solid throughout, his vocals shone on Stella Blue even as they faltered a bit on Touch of Grey, while Brent’s keyboards added texture from Big River to the jams. Drums from Mickey and Bill were tight and driving, especially during the pre‑drum “awesome” segment that propelled the second set forward.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 40,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Eight of twelve recordings are clearly positive, praising Shakedown Street, the Mississippi Half‑Step transition, and Phil's historic solo vocal; three mixed reviews note minor flaws but do not detract from overall excitement; only one negative mention of speed issues. The strong consensus yields a high positive adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.4 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1985-03-27.senn421.mccue.ford.34778.sbeok.flac16",
+    "reason": "Front‑of‑house soundboard capture described as crystal clear and excellent, with no reported flaws – the clearest listening experience of this show."
+  },
+  "key_highlights": [
+    "Phil Lesh’s first lead vocal in a decade on Just Like Tom Thumb's Blues",
+    "Shakedown Street opener ignites an electrifying second set",
+    "Mississippi Half‑Step > Hell In A Bucket transition shines as a jam highlight",
+    "Stella Blue delivers a soulful, tightly played close‑out"
+  ],
+  "song_highlights": [
+    "Just Like Tom Thumb's Blues",
+    "Shakedown Street",
+    "Mississippi Half-Step Uptown Toodeloo",
+    "Hell In A Bucket",
+    "Uncle John's Band",
+    "Playing In The Band",
+    "Stella Blue",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Strong lead guitar throughout; vocal delivery solid on Stella Blue but a few flubs on Touch of Grey; energetic presence noted (maroon shirt) especially in the second set.",
+    "Phil": "Historic first solo vocal on Just Like Tom Thumb's Blues, praised as soulful and surprising; bass work remains steady and supportive.",
+    "Bob": "",
+    "Brent": "Keyboards add texture, shining particularly on Big River and throughout the jams; no major issues reported.",
+    "Mickey": "Tight, driving percussion that fuels the high‑energy second set; pre‑drum segment highlighted as \"awesome\".",
+    "Billy": "Consistently tight drumming alongside Mickey, delivering a propulsive rhythm section for Shakedown Street and the jam sequences."
+  },
+  "processed_recordings": 11,
+  "processed_date": "2025-09-15T02:12:57.684974+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Just Like Tom Thumb's Blues"
+    ],
+    [
+      "Shakedown Street"
+    ],
+    [
+      "Mississippi Half-Step Uptown Toodeloo",
+      "Hell In A Bucket"
+    ],
+    [
+      "Uncle John's Band",
+      "Playing In The Band",
+      "Drums",
+      "Space",
+      "Stella Blue",
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Fantastic show with a smoking \"The Other One\" jam, great Wharf Rat and a sweet close, though the recording source isn’t specified.",
+  "review": "Reviewers rave about this performance – the Other One jam is described as “awesome” and even contains a clear James Bond theme quote from Brent’s keyboards, while classics like Wharf Rat, Around > Sugar Magnolia and Baby Blue are highlighted. The show is called solid all the way through with a magical vibe, but none of the reviewers comment on the technical side of the recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All four reviews are 4‑5 stars and consistently praise the musical performance; no recording issues are mentioned, so a high show rating drives the overall score."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No reviewer mentions soundboard vs. audience or specific audio clarity; focus is entirely on performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Wharf Rat",
+      "Around > Sugar Magnolia",
+      "Baby Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe the first disc as a classic, rock‑in’ beginning with spiritual jams and the second disc closing on a high note with Around > Sugar Magnolia; overall flow is called solid and magical."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work shines, delivering a clear James Bond theme quote during The Other One jam.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around > Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T10:45:34.569593+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-09-18.set2-neumann.clugston.7225.sbeok.shnf"
+}

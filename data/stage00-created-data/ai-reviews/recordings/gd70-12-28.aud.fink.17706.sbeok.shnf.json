@@ -1,0 +1,76 @@
+{
+  "summary": "Superb audience recording of a vibrant 1970 show with standout Hurts Me Too, Good Lovin' and China Cat Sunflower, captured in excellent sound quality.",
+  "review": "The tape delivers an unusually clear audience mix that lets the crowd’s energy breathe without overwhelming the music. Musically the concert is solid with blues‑heavy highlights like Hurts Me Too, Smokestack Lightning, Deep Elem Blues and a memorable Good Lovin', though a few numbers (Cold Rain and Snow, Uncle John’s) fall flat for some listeners.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise both performance highlights and the exceptional audience recording; only one moderate rating notes a middling set, keeping the overall score in the good‑to‑great range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Crystal‑clear ambience with the band front‑center; audience is audible enough for energy but never intrusive. Reviewers call it a superb audience tape for any era, especially for 1970."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hurts Me Too",
+      "Smokestack Lightning",
+      "Good Lovin'",
+      "Deep Elem Blues",
+      "China Cat Sunflower"
+    ],
+    "poor_songs": [
+      "Cold Rain and Snow",
+      "Uncle John's Band"
+    ],
+    "setlist_flow": "Overall a blues‑heavy, youthful performance with strong song transitions; the second half leans into cowboy‑type tunes while early numbers feel more exploratory."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deep Elem Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hurts Me Too": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain and Snow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T01:58:07.771362+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-12-28.aud.fink.17706.sbeok.shnf"
+}

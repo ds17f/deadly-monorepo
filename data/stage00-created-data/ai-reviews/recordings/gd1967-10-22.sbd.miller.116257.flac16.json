@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent 1967 soundboard recording of a high‑energy show highlighted by a historic first “The Other One” and crisp, clean remastering.",
+  "review": "This Miller soundboard capture delivers astonishing clarity for a ’67 performance – the mix is described as crisp, clean and deliciously detailed. Musically the concert shines with the debut of The Other One (praised as “ridiculous” and “smoking”), a soaring Lovelight, and a fifteen‑minute “That’s It” that many fans call an orgasmic climax. Jerry Garcia’s lead work is repeatedly called scorching, while Pigpen’s organ on The Other One earns top marks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (average ≈ 4.85) and uniformly enthusiastic comments about both performance and the remastered soundboard indicate an outstanding show with excellent recording quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly note the recording is crisp, clean, deliciously detailed and surprisingly vivid for a 1967 source; no significant drop‑outs or balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Lovelight",
+      "That's It"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy flow with dynamic rhythms; the band rolls from laid‑back moments into extended jams, especially The Other One and That’s It, keeping listeners fully engaged."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is repeatedly called “shredding”, “smoking hot” and delivering scorching lead guitar throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen's organ on The Other One is highlighted as top‑notch, underscoring the early Anthem era keyboard work.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "That's It": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T06:36:21.410070+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1967-10-22.sbd.miller.116257.flac16"
+}

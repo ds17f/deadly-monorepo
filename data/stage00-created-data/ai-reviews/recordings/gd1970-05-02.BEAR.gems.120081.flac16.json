@@ -1,0 +1,63 @@
+{
+  "summary": "Excellent soundboard capture of the legendary Harpur College ‘70 show, highlighted by an epic The Other One and blistering Cosmic Charlie.",
+  "review": "Fans rave about this recording’s clear, well‑balanced sound and praise a performance that swings from a tender acoustic set into a ferocious electric marathon. Standout moments include a monster The Other One, a scorching Cosmic Charlie, and tight renditions of Candyman, Cumberland Blues and Deep River Blues. The only drawback noted is that the upload is incomplete.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both musical performance and sound quality across many reviews; minor issue of incompleteness does not outweigh the strengths."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners describe the audio as great‑sounding, clear and well balanced. No specific mix problems are mentioned; the only criticism is that the release is incomplete."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Cosmic Charlie",
+      "Candyman",
+      "Cumberland Blues",
+      "Deep River Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "An acoustic set that builds emotional depth followed by a high‑energy electric set, with a marathon jam where Saint Stephen flows straight into Cosmic Charlie, showcasing the band's improvisational peak."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead passages are highlighted, especially at the start of The Other One.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cosmic Charlie": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Candyman": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deep River Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T18:48:02.923738+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-05-02.BEAR.gems.120081.flac16"
+}

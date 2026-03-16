@@ -1,0 +1,52 @@
+{
+  "summary": "A beautiful matrix recording captures a solid, average‑good show with a standout Half‑Step opener and a tight Lazy > Supp close.",
+  "review": "The Hunter‑produced matrix (Betty board + Kathy Sublette audience) is praised for its clarity and full crowd presence, giving the performance a clean listening experience. Musically the concert is described as solid – the Half‑Step opening shines and the Lazy > Supp sequence closes the first set well, though some listeners miss the later Franklin’s Tower pairing. Overall the show is enjoyable with Garcia’s improvisations noted as stellar despite a slightly worn vocal.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave high star ratings and praised the clear matrix recording; one calls the show average‑good while the other calls it sweet, leading to a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Beautiful blend of Betty soundboard and Kathy Sublette audience tracks; crisp board source with excellent crowd capture, overall clean and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half-Step",
+      "Lazy > Supp"
+    ],
+    "poor_songs": [
+      "Franklin's Tower"
+    ],
+    "setlist_flow": "The concert opens strong with a Half‑Step opener, closes the first set with a well‑executed Lazy > Supp transition, and features a quirky one‑minute Close Encounters teaser before Sugar Magnolia in the second set."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice improving after laryngitis; improvisations described as stellar.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Lazy > Supp": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:00:00.277240+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-08.148615.mtx.seamons.ht118.flac16"
+}

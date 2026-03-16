@@ -1,0 +1,100 @@
+{
+  "summary": "High‑energy Spring ’78 show with stellar Terrapin, Samson and Playing in the Band, captured on a clear audience tape that lacks a bit of brightness but remains very listenable.",
+  "review": "The performance is hailed as one of the best of spring 1978 – an inspired first set followed by an hour‑plus, jazz‑infused second set highlighted by a monster Terrapin > Playing in the Band transition, Samson’s crushing drive and gorgeous Wharf Rat. The audience recording is praised for its clarity and lack of intrusive shouts, though it is noted to be slightly dull‑sounding, while the processed copy brings out a more audible bass.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews are overwhelmingly positive about both musicianship and recording; show quality is exceptional, recording is good with minor tonal shortcomings."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear vocal and instrument separation, no audience shouts present; slightly lacking brightness/dull mid‑range, but overall very listenable. Processed version improves bass presence."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin",
+      "Samson and Delilah",
+      "Playing in the Band",
+      "Wharf Rat",
+      "Sugar Magnolia",
+      "Peggy-O",
+      "Loser"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first set builds momentum; second set flows seamlessly through a jazz‑infused hour with smooth transitions (Terrapin into PITB, drums/space showcase) and finishes on an uplifting Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring guitar tone, graceful solos, strong vocals, and a full‑force return after laryngitis concerns.",
+    "Phil": "Bass is more audible in the processed copy; leads early in jams, notable descending three‑note phrase on Me & My Uncle, and reasserts himself at the end of PITB.",
+    "Bob": "Vocal chemistry with Donna highlighted; contributes Shakedown‑style rhythm riff before Uncle; overall solid vocal performance.",
+    "Keys": "Keith is mostly invisible throughout most of the show, but shines briefly on Minglewood, Peggy-O and delivers a pretty outro into drums.",
+    "Drums": "Billy & Mickey deliver thunderous, pre‑Beast and Beam style rhythms; Drums/Space segment praised as a showcase."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson and Delilah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:09:33.873226+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-05-06.aud.glassberg.motb.82963.sbeok.flac16"
+}

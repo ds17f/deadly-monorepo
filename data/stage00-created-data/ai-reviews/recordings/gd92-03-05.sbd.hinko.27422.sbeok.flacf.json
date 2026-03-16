@@ -1,0 +1,59 @@
+{
+  "summary": "Crisp SBD recording with a smoking Help > Slipknot > Franklin’s sequence and strong Jerry work, though the mix suffers from hiss and distant vocals.",
+  "review": "The show is praised for its energetic first set and an especially fiery Help → Slipknot → Franklin’s Tower jam that showcases Jerry Garcia at his best. Reviewers note the soundboard source is generally clear and “crisp,” but several point out a persistent hiss, vocal distance and occasional mix imbalances (Vince’s keyboards turned down, Hornsby boosted). Overall the performance is above‑average with standout moments despite the mixed recording quirks.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 3–5 stars, highlighting strong playing (especially Jerry) and a good‑to‑great soundboard recording; occasional hiss and mix issues keep it from an exceptional rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp overall with clear instrument separation, but noticeable tape hiss, distant vocal placement and occasional volume quirks (Vince low, Hornsby high) are mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Eyes of the World",
+      "Truckin'"
+    ],
+    "poor_songs": [
+      "Good Lovin'",
+      "Way To Go"
+    ],
+    "setlist_flow": "First set is described as solid and improves in mix, while the second set builds into a standout Slipknot jam; occasional song choices (e.g., Good Lovin') are felt jarring."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for ripping the Slipknot/Franklin's segment and sounding lively throughout.",
+    "Phil": "His bass work is highlighted as great, especially on Truckin'.",
+    "Bob": "",
+    "Keys": "Vince’s organ tone receives mixed feedback—solid on some tunes but often turned down or criticized for poor sound; Hornsby is noted as prominent in the mix during his final tour.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T03:59:57.336458+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-03-05.sbd.hinko.27422.sbeok.flacf"
+}

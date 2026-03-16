@@ -1,0 +1,72 @@
+{
+  "summary": "Soundboard recording with noticeable hiss but clean second set; the show is a quintessential early‑'80s performance highlighted by scorching Scarlet Begonias, Cassidy, Music Never Stopped and Fire on the Mountain.",
+  "review": "Fans rave about this early‑’80s concert, calling it righteous and full of rock‑n‑roll energy with standout moments from Scarlet Begonias through to a bone‑chilling Fire on the Mountain. The SBD source is generally clean – especially in the second set – though a persistent hiss keeps some listeners from giving it a perfect rating.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "The musical performance is praised across multiple reviews (high show weight), while the recording quality is solid but marred by hiss (moderate recording weight)."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall clean SBD, but a pervasive hiss is noted—especially in the first set. Reviewers say the second set sounds clearer; one reviewer mentions a matrix version with sharper treble and better instrument blend."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Cassidy",
+      "Music Never Stopped",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert maintains a high‑energy rock ’n’ roll feel throughout, with an especially vivid second set where the band moves from conventional openings into expansive, liquid improvisations."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as shooting fireballs; his notes are woven around by Bob's guitar ribbons.",
+    "Phil": "",
+    "Bob": "Weaves beautiful ribbons of sound around Jerry’s notes; strong vocal and rhythmic presence noted throughout.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "RR Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Going Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "JBG": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:19:17.336282+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-11.sbd.miller.89577.sbeok.flac16"
+}

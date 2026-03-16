@@ -1,0 +1,86 @@
+{
+  "summary": "Soundboard source with a rough transfer, yet the show dazzles – Friend of the Devil, Supplication jam and an epic Black Peter stand out.",
+  "review": "The performance captures a classic late‑October ’77 vibe with a tight second set highlighted by a smoking Friend of the Devil, a soaring Supplication sequence and a monster Black Peter jam.  While the soundboard source is solid, reviewers note a mediocre transfer and uneven vocal mix (Garcia low, Weir clear), which keeps the listening experience from being pristine.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Two five‑star reviews praise the musical performance and overall sound, while one three‑star review flags a poor transfer.  Averaging the star ratings (3 + 5 + 5)/3 ≈ 4.33 and adjusting for noted recording flaws yields a 4.2 rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Transfer is described as lame with occasional vocal level issues (Garcia low, Weir clear) and minor drop‑outs on Truckin'. Overall clarity is acceptable but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil",
+      "Supplication",
+      "Black Peter",
+      "Truckin'",
+      "Nobody's Fault But Mine",
+      "Iko Iko",
+      "Sugar Magnolia",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set launches strongly with tight transitions; the band rides a high energy groove through the jams, delivering powerful vocal moments and dynamic instrumental interplay."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar work praised as expressive and 'great'; vocals noted but sometimes buried in mix.",
+    "Phil": "Bass booms at the start of The Other One and again after Truckin', providing a solid foundation.",
+    "Bob": "Weir's backing vocals come through clearly; no specific lead vocal comments.",
+    "Keys": "Keith's keyboards highlighted as 'great keys' throughout the show.",
+    "Drums": "Tight rhythm section; drums transition into The Other One described as slinky."
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Nobody's Fault But Mine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T04:58:12.548122+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-12.sbd.goodbear.3919.sbefail.shnf"
+}

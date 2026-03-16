@@ -1,0 +1,39 @@
+{
+  "summary": "Mixed recording quality with over‑recorded loud spots, but a solid set highlighted by a strong Attics.",
+  "review": "The audience tape from the second tier is uneven – loud passages are over‑recorded and overall clarity isn’t great – yet the performance itself is a standard but solid show. Reviewers especially praised the powerful rendition of “Attics,” calling it a highlight, while noting the venue’s sound was only enjoyable up close.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "One moderate (3‑star) review mentions both positive show aspects and recording flaws; weighting gives a slightly above‑average score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Taper recorded from second tier, not optimal spot; over‑recorded in loud spots, overall sound lacks clarity and sounds muddy unless close to the stage."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Attics"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Standard, solid performance with good pacing; nothing extraordinary beyond a strong Attics."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Attics": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T22:57:15.496169+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-07-01.116005.NeumannKMF4.daweez.d5scott.flac16"
+}

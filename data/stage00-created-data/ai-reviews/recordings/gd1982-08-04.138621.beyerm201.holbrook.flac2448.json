@@ -1,0 +1,39 @@
+{
+  "summary": "Decent audio that outperforms a boom box, highlighted by a memorable Stagger Lee performance",
+  "review": "The recording is praised for sounding clearer than listening on a boombox, suggesting a respectable level of fidelity. Fans especially note the inclusion of “Stagger Lee,” which they recall wanting to hear on tape. Overall sentiment is positive despite limited detail on the full show.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "low",
+    "rationale": "Only one review (4 stars) provides modest praise for sound quality and a single song highlight; weighted average of show (≈3.5) and recording (≈4) yields ~3.7."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer says it sounds better than a boombox, implying clearer audio; no specific issues or source details mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stagger Lee"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on pacing; the main positive note is the presence of Stagger Lee, which fans were eager to hear."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T23:16:09.923900+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-04.138621.beyerm201.holbrook.flac2448"
+}

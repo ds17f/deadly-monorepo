@@ -1,0 +1,39 @@
+{
+  "summary": "Fair audience tape with distant vocals, but the 1972 Milwaukee show shines thanks to a monster Other One and a strong second set.",
+  "review": "The recording is an audience capture from the PAC in Milwaukee that suffers from soft overall levels, thin bass and very distant vocals, making it hard to listen at times. Musically, fans rave about the incredible jam on The Other One (the “Philo Stomp”) and a powerful second set that ranks among their top concerts despite the acoustic limitations.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Eight reviews provide consistent feedback: the show is praised (many 4‑5★ comments) while the tape quality draws criticism (several 2‑3★). The average star rating (~3.75) and strong consensus give a high‑confidence moderate‑to‑good overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Distant, almost inaudible vocals; everything is very soft; bass a little thin; acoustics of the PAC were poor, but no chatter from taper. Overall listenable after acclimating."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Legendary 1972 Milwaukee performance with a standout jam on The Other One and an especially strong second set; first set considered less repeatable by some listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Bass noted as thin but present, reflecting the venue's acoustic challenges.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T00:43:31.130164+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-10-24.sonyecm250.unknown.miller.97614.sbeok.flac16"
+}

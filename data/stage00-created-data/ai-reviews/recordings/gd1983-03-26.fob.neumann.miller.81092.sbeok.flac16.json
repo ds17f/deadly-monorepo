@@ -1,0 +1,47 @@
+{
+  "summary": "A mostly enjoyable Vegas show with a beautiful Jerry solo and strong Scarlet Begonias, captured in a good‑ish remastered recording despite venue challenges.",
+  "review": "Fans recall this 1983 Aladdin performance as a vivid, trippy night in Las Vegas, highlighting Jerry Garcia’s gorgeous solo and Phil Lesh’s booming bass on Scarlet Begonias. The recording—remastered and surprisingly clear given the notoriously difficult venue—is generally easy to listen to, though some note that the first set felt chaotic and Brother Esau stumbled. Overall the second half of the concert shines.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and praise key moments and recording clarity; a few note performance slips, pulling the overall impression toward a solid but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Remastered version sounds clearer than the live night; listeners describe it as easy to hear and wonderful for Jerry’s solo, though some note the venue was hard to record and the sound differs from what was heard in‑room."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Jerry's solo (highlighted across the set)"
+    ],
+    "poor_songs": [
+      "Brother Esau"
+    ],
+    "setlist_flow": "First set described as chaotic and a bit of a train‑wreck, while the second set was smoother and more memorable; overall vibe heavily colored by the unique Las Vegas atmosphere."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo is called \"just beautiful\" and a highlight of the recording.",
+    "Phil": "Lesh “drops the bombs” on Scarlet Begonias; also noted for his over‑the‑top leisure‑suit look.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brother Esau": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T04:04:46.990324+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-03-26.fob.neumann.miller.81092.sbeok.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Dull, sleepy sounding recording with a low‑energy set and a plodding St. Stephen.",
+  "review": "Both reviewers found this show lacking punch – one dismisses it outright while the other calls the performance ‘Tylenol PM’ compared to more vibrant shows. The sound is described as muted and the only specific song criticism targets St. Stephen, which feels sluggish. No details about the source type are given.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.6,
+    "confidence": "medium",
+    "rationale": "Limited feedback (2 reviews) points to a weak performance and muted recording; one review is essentially negative, the other average, yielding an overall below‑average rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Described as sounding dull and sleepy ('Tylenol PM'), lacking the fullness of other recordings; no explicit mention of soundboard or audience source."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "St. Stephen"
+    ],
+    "setlist_flow": "No specific comments on set pacing; overall energy judged low by reviewers."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T14:02:51.088410+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-31.sbd.tetzeli.34934.sbeok.shnf"
+}

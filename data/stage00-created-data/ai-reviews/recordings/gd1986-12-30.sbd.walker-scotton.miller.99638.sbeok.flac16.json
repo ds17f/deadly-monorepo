@@ -1,0 +1,100 @@
+{
+  "summary": "Excellent soundboard capture of a fiery late‑1986 show, highlighted by standout performances of \"Stella Blue\", \"Hell in a Bucket\" and a soaring \"Eyes\".",
+  "review": "The Walker‑Scotton Miller transfer delivers crystal‑clear, correctly pitched soundboard audio that lets the band’s late‑‘86 energy shine.  Jerry’s tone is back on fire, with Brent’s keys immaculate, Phil’s bass lush and Bobby adding his trademark feedback; the set bursts with highlights like \"Stella Blue\", \"Hell in a Bucket\", \"My Brother Esau\" and an unforgettable \"Eyes\" while a few second‑set moments feel rough.  Overall the show is regarded as one of the year’s best despite some uneven spots.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Three detailed reviews average 4.33 stars, two are strongly positive about both performance and recording, the third is mixed but still acknowledges many high points; the soundboard source is praised for clarity and correct pitch."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑mixed SBD capture with proper pitch (Walker‑Scotton Miller transfer). Reviewers note the mix is clear and Brent’s keys sit perfectly; no major dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Hell in a Bucket",
+      "My Brother Esau",
+      "Iko Iko",
+      "Not Fade Away",
+      "Eyes",
+      "Music Never Stopped"
+    ],
+    "poor_songs": [
+      "Ship of Fools",
+      "Estimated",
+      "Throwing Stones",
+      "Johnny B. Goode"
+    ],
+    "setlist_flow": "First set launches with high‑octane dynamics (\"Hell in a Bucket\") and strong mid‑tempo numbers, while the second set is more uneven but contains several peaks—especially \"Iko Iko\", \"Not Fade Away\" and the soaring \"Eyes\".  The overall pacing keeps the energy up despite occasional rough spots."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for a ‘back‑in‑form’ tone on Stella Blue, leading the show with powerful solos and high energy throughout.",
+    "Phil": "Described as delivering luscious bass lines; comes alive especially in later songs like \"Eyes\".",
+    "Bob": "His haunting feedback on Stella Blue and impromptu vocal reprise in Music Never Stopped are highlighted; noted for psychedelic Bobby‑isms.",
+    "Keys": "Brent’s keyboards are called perfectly mixed and sit beautifully in the mix.",
+    "Drums": "Roughness mentioned on \"Ship of Fools\"; otherwise drumming supports the show’s drive."
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "My Brother Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T18:13:34.781200+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-12-30.sbd.walker-scotton.miller.99638.sbeok.flac16"
+}

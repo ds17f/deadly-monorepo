@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard recording of a high‑energy show highlighted by a smoking Half‑Step > Franklin’s and an off‑the‑charts Eyes of the World.",
+  "review": "The performance is described as top‑shelf throughout, with Jerry delivering precise, upbeat solos, Mickey and Bill laying down an Ollin Arageed drum beat that segues into a killer Drums > Not Fade Away jam, and a standout Half‑Step > Franklin’s. The soundboard source is praised as almost perfect, making the recording crisp and highly listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All four reviews are very positive (three 5‑star, one 4‑star). Reviewers repeatedly call out superb playing and an almost perfect soundboard recording, indicating a high‑quality show and excellent audio."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers note the sound is crisp, boss, and an \"almost perfect sounding board\"; one reviewer gave the sound a 4/5 rating."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half-Step > Franklin's Tower",
+      "Eyes of the World",
+      "Drums > Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows with high energy, tight transitions (notably Drums > Not Fade Away into the jam), and consistently strong playing throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Super up‑beat and precise soloing; his guitar work is described as \"off the charts\".",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Mickey and Bill deliver an Ollin Arageed hand‑drum beat and a stellar Drums > Not Fade Away segment."
+  },
+  "song_mentions": {
+    "Half-Step > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums > Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T17:09:31.137074+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-12-12.sbd.clugston.4859.sbeok.shnf"
+}

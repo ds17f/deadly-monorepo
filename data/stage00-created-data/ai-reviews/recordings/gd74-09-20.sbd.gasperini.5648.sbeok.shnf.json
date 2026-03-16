@@ -1,0 +1,71 @@
+{
+  "summary": "A solid sound‑board capture (a bit uneven) that still lets the night’s highlights—fiery Scarlet Begonias, flowing Truckin’/Eyes jams and a mesmerizing China Cat—to shine.",
+  "review": "The gd74-09-20 sbd tape offers generally good sound‑board clarity, though listeners note prominent drums/Garcia, primitive noise reduction and occasional hum that make the mix feel uneven at times. Musically the show is praised for its jam‑heavy second set – especially Scarlet Begonias, Truckin’/Eyes of the World and a vivid China Cat – while some critics felt the first set was flat and Let It Grow fell short.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "The majority of detailed reviews (15+) are 3‑5 stars and highlight strong performances despite noted recording flaws, yielding a weighted overall rating just above four."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Garcia's guitar is crystal clear; drums and Jerry are prominent. Primitive noise reduction creates occasional abrasive or uneven instrument/vocal levels, plus a faint hum in some streams. Overall listenable but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Truckin'",
+      "Eyes of the World",
+      "China Cat",
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "Let It Grow (some reviewers found it nasty)",
+      "First Set (general flat/tired playing)"
+    ],
+    "setlist_flow": "The first set is described by several listeners as loosely played and occasionally tired, but the second set erupts into a jam‑rich, synergistic flow—highlighted by a soaring China Cat → Rider transition and fluid Scarlet Begonias that keep the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone is often described as crystal clear and experimentally adventurous; his guitar sits front‑and‑center in the mix, sometimes overwhelming other parts.",
+    "Phil": "Comments are mixed – praised for leading a beautiful Phil‑fronted jam on China Cat, but also called flat, tired, or ‘not adding much’ on Let It Grow.",
+    "Bob": "Weir receives both praise (rhythm guitar talent, occasional lead work) and criticism (only one vocal presence on this night).",
+    "Keys": "Keith is noted for cool playing and synth textures; Ned Lagin’s brief synth cameo during Scarlet Begonias is heard faintly, leading to speculation about missing keyboard layers.",
+    "Drums": "Bill (William) and the drum mix are prominent in the soundboard source; some reviewers feel the drums drive the performance while others note they sounded “lost” early on."
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "China Cat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T00:56:27.631920+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-09-20.sbd.gasperini.5648.sbeok.shnf"
+}

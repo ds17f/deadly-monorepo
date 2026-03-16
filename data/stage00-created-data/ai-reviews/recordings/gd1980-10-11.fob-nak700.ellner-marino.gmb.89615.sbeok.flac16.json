@@ -1,0 +1,31 @@
+{
+  "summary": "Complete show now available but no details on sound quality or performance",
+  "review": "Fans are thrilled to finally have the entire concert in one file, though reviewers give little insight into how the music sounds or plays. One reviewer rates it five stars for completeness, while another gives a zero‑star rating and merely wishes for a box‑set presentation.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "Only two brief reviews with opposing star scores and no concrete comments on performance or recording quality, making it hard to gauge the show’s merit."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewers mentioned sound clarity, mix balance, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T04:37:18.644560+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-11.fob-nak700.ellner-marino.gmb.89615.sbeok.flac16"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent matrix recording captures an ecstatic European show with standout renditions of Wharf Rat, Eyes of the World and U.S. Blues.",
+  "review": "The tape delivers a crystal‑clear matrix mix that most listeners describe as “fantastic” or “exquisite,” while the performance itself is hailed as one of the band’s most generous and enthusiastic outings – highlighted by soaring versions of Wharf Rat, Eyes of the World, U.S. Blues and even a sun‑kissed Sunshine Daydream.  Aside from a minor gripe about a few seconds of lingering crowd noise after songs, the consensus is that this is an unmissable Desert Island addition.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "The majority of reviews (5‑star) praise both the musical performance and the matrix recording quality; only one low‑rating comment notes a small crowd‑gap issue, leading to an overall very high rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners repeatedly call the sound “fantastic,” “exquisite” and “crisp.” One reviewer notes that a few seconds of audience noise are left at the end of songs, but this is considered a minor inconvenience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Wharf Rat",
+      "Eyes of the World",
+      "U.S. Blues",
+      "Sunshine Daydream"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is described as a joyous, generous set with multiple encores that kept the audience ecstatic; transitions are smooth and the overall pacing feels like a celebratory summer day."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised throughout – reviewers thank Jerry and note the playing as sophisticated and generous.",
+    "Phil": "Explicit thanks to Phil, indicating solid bass work appreciated by listeners.",
+    "Bob": "Thanked alongside the rest of the band; his contributions are viewed positively.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sunshine Daydream": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T00:23:20.499411+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-09-11.132458.mtx.GEMS-BCE.flac16"
+}

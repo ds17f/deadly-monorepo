@@ -1,0 +1,31 @@
+{
+  "summary": "Outstanding 2nd‑set performance captured on a solid soundboard source, but the recording is incomplete (Space cuts early and Miracle missing)",
+  "review": "Reviewers rave about the musical quality of this show – especially the “primo” second set – and note that the SBD source sounds excellent. However, the recording is flawed: the Space track ends a minute early and the entire Miracle segment is absent, which led to a very low star rating.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "medium",
+    "rationale": "The performance itself is praised as outstanding (high show score), but the missing portions of the recording are a serious drawback, resulting in an overall rating below average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD sound, but Space cuts off ~1 min early and Miracle is completely missing; likely upload/encoding issue rather than source quality."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Second set highlighted as “primo”; no specific song critiques, but overall musical performance described as outstanding."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T03:57:20.570956+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-19.137413.sbd.miller.flac16"
+}

@@ -1,0 +1,79 @@
+{
+  "summary": "Audience‑recorded Vegas ’95 show with solid sound quality, highlighted by a soaring Morning Dew and decent set flow despite weaker moments like Samba and Eternity.",
+  "review": "The performance is remembered chiefly for Jerry’s emotional delivery of Morning Dew and the upbeat energy on Race Is On and China‑Rider. While the audience recording is generally clear enough to enjoy the show, the set suffers from a few uneven spots—most notably an uninspired Samba in the Rain and a lackluster Eternity closer. Overall fans are split, with many cherishing the highlights while others find the night uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Average star rating (≈3.0) across 16 reviews; strong praise for specific songs and decent recording quality balanced by several low‑star, negative comments about the overall show."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Several reviewers note that the AUD (audience) source is listenable with good sound quality for a crowd recording; no major drop‑outs or muffling mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Race Is On",
+      "China Rider"
+    ],
+    "poor_songs": [
+      "Samba In The Rain",
+      "Eternity"
+    ],
+    "setlist_flow": "The first set contains strong moments like Race Is On and China‑Rider, leading into a heartfelt Morning Dew that caps the night; however the second half loses momentum with a weak Samba and an underwhelming Eternity closer."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his vocal delivery on Morning Dew, humorous stage banter, and occasional strong guitar runs; also noted as less focused in other parts of the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums (and the ensuing Space) are highlighted as creative and trippy sections that lift the performance."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Race Is On": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Samba In The Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T08:23:31.867681+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-05-20.nak.12101.wankleswurth.sbeok.shnf"
+}

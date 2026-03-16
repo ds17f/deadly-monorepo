@@ -1,0 +1,87 @@
+{
+  "summary": "Clearer SBD with a few missing bits captures a peak‑spring‑1990 show highlighted by Hell in a Bucket, Just a Little Light and Brent’s stellar keyboards.",
+  "review": "The 135497_sbd_miller recording is a pitch‑corrected soundboard source that sounds clean but suffers from a tape‑flip in Space and lost intros to Just a Little Light and Big Railroad Blues. Musically the concert is regarded as one of the band’s top spring ’90 performances, with Brent Mydland at his zenith and standout moments on Hell in a Bucket, Dupree's Diamond Blues, Blow Away, Gimme Some Lovin' → Morning Dew and Brokedown Palace. The only notable let‑down mentioned is the lone appearance of Built to Last.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (4‑star and 5‑star ratings) and note only minor technical flaws; recording is good but not flawless, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clearer pitch‑corrected SBD, but missing the start of Just a Little Light & Big Railroad Blues, a 14 sec tape flip in Space, mislabeled second set and some tunings cut."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hell in a Bucket",
+      "Dupree's Diamond Blues",
+      "Just a Little Light",
+      "Blow Away",
+      "Gimme Some Lovin'",
+      "Morning Dew",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [
+      "Built to Last"
+    ],
+    "setlist_flow": "First set launches strong with Hell in a Bucket and a roaring Dupree's, stays solid through Just a Little Light and Blow Away. The second set is uneven at the start (Built to Last, Victim) but gains momentum after Space, delivering a high‑energy Gimme Some Lovin' → Morning Dew sequence and closing on an emotive Brokedown Palace."
+  },
+  "band_member_comments": {
+    "Jerry": "Uses envelope autowah on Just a Little Light, skips a verse in Dupree's, expresses a desire for China Cat after Space.",
+    "Phil": "",
+    "Bob": "Adds quirky new lyrics to Black‑Throated Wind; contributes vocal lines throughout.",
+    "Keys": "Brent Mydland is repeatedly praised as at his zenith – key player on Hell in a Bucket, Just a Little Light, Blow Away and Brokedown Palace.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Just a Little Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blow Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Built to Last": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black-Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T05:18:43.633324+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-26.135497.sbd.miller.flac16"
+}

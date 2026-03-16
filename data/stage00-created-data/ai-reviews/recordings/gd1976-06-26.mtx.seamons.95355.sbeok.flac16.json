@@ -1,0 +1,88 @@
+{
+  "summary": "Terrific matrix recording captures an underrated June ’76 show with a standout second set featuring St. Stephen and the Crazy Fingers > Stella Blue sequence.",
+  "review": "Both reviewers praise the high‑quality matrix source, calling it crisp and “terrific.” The concert is described as an average first set but a superb second set highlighted by the Playing in the Band sandwich, a year‑best St. Stephen, and a killer Crazy Fingers > Stella Blue jam, with only Saturday Night falling a bit flat. Overall sentiment is strongly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Show quality averages around 4/5 and recording quality is rated 5/5; weighted average yields ~4.3 stars, but only two reviews limit confidence."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix mix is described as terrific and well‑balanced with no audible flaws noted by reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "St. Stephen",
+      "Crazy Fingers > Stella Blue"
+    ],
+    "poor_songs": [
+      "Saturday Night"
+    ],
+    "setlist_flow": "First set is a solid, typical June ’76 run (Promised Land, Sugaree, Lazy Lightning, Mississippi Half‑Step), while the second set delivers the high points of the tour with strong jams and tight interplay."
+  },
+  "band_member_comments": {
+    "Jerry": "Generally solid playing; reviewer notes that in longer post‑1977 versions his solo momentum can wane, but no specific criticism here.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith's contributions are highlighted as essential to the energy of Crazy Fingers > Stella Blue and overall interplay.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mississippi Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers > Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saturday Night": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T05:26:45.631240+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-26.mtx.seamons.95355.sbeok.flac16"
+}

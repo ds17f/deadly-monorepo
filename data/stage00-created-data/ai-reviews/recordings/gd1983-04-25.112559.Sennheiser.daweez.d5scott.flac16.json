@@ -1,0 +1,46 @@
+{
+  "summary": "Good-quality source capture of a solid show with a standout Friend of the Devil and a smoky post‑drums baroque jam, though Terrapin Station is weak.",
+  "review": "The recording is regarded as the best available source for this concert, offering a cleaner finish after “Rooster” and overall decent clarity. Musically the show delivers a solid first set, a great Friend of the Devil, nice Phil bass bombs, and an impressive post‑drums baroque jam following The Wheel, while Terrapin Station falls short. Reviewers are uniformly positive, rating it 4 stars.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "All three reviewers gave 4‑star ratings and highlighted strong musical moments despite a few weak spots; recording is praised as the best source, leading to an overall solid rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Best source available for this show; first two tunes from original tape then a cleaner source appears after Rooster. No major dropouts reported, but the mix is not explicitly identified as soundboard or audience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Friend of the Devil"
+    ],
+    "poor_songs": [
+      "Terrapin Station"
+    ],
+    "setlist_flow": "Solid first set with good song selection; second set highlighted by a smoky post‑drums baroque jam after The Wheel, giving the show strong momentum despite the weak Terrapin."
+  },
+  "band_member_comments": {
+    "Jerry": "Referred to as “J. Straw” and praised for great playing.",
+    "Phil": "Noted for nice bass “bombs” during the performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Post‑drums baroque jam after The Wheel is highlighted as a smoky moment."
+  },
+  "song_mentions": {
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T06:25:32.447366+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-25.112559.Sennheiser.daweez.d5scott.flac16"
+}

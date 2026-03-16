@@ -1,0 +1,114 @@
+{
+  "summary": "Outstanding show highlighted by a soaring Bird Song and a marathon Playin' in the Band; recording source unknown but presumed listenable.",
+  "review": "The concert is praised as a keeper, with virtually every song called out for its energy—especially Bird Song, an extended Playin' in the Band, Dark Star, El Paso and Sugaree. While reviewers gush about the musicianship, they give no concrete details on the tape source, implying the audio is at least serviceable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "A single 5‑star review lauds the musical performance across the entire set; recording quality is not discussed, so rating reflects strong show quality with assumed adequate audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific comments on sound clarity or mix; reviewer focuses solely on performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Playin' in the Band",
+      "Dark Star",
+      "El Paso",
+      "Sugaree",
+      "Casey Jones",
+      "He's Gone",
+      "Truckin'",
+      "Ramble on Rose",
+      "Jack Straw",
+      "Sing Me Back Home"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as a strong, high‑energy start; second set noted as good with a solid flow and several highlights, culminating in the beloved Bird Song."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple mentions of Jerry's guitar work—'Listen Harder man' on Sugaree, fantastic tone on Bird Song, and an epic 20‑minute Playin' in the Band.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "B.I.O.D.T.L.": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sing Me Back Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T17:21:42.705267+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-09-10.sbd.vernon.5680.sbeok.shnf"
+}

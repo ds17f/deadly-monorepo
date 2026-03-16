@@ -1,0 +1,82 @@
+{
+  "summary": "Fair audience tape of the Wise run captures an electrifying show with a soaring Passenger after early guitar woes, plus standout Scarlet > Fire and Playin' in the Band.",
+  "review": "The performance is widely praised for its tight ensemble feel, especially the explosive second‑set jam that erupts once Jerry’s guitar is fixed – highlighted by a blistering Passenger, a dreamy Scarlet > Fire transition, and an inspired Playin' in the Band. While some listeners note occasional crowd or cell‑phone noise typical of audience tapes, most agree the musical moments outweigh the technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4–5 stars and emphasize strong playing; recording issues are noted but not enough to dominate enjoyment, yielding a weighted average around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Occasional crowd noise and reported cell‑phone interference; tape is generally listenable with decent clarity for an audience capture, but not as clean as a soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Passenger",
+      "Scarlet > Fire",
+      "Playin' in the Band",
+      "Wharf Rat",
+      "To Lay Me Down",
+      "Not Fade Away",
+      "Althea"
+    ],
+    "poor_songs": [
+      "Friend of the Devil (FOTD)"
+    ],
+    "setlist_flow": "The set is praised for its tight, ensemble feel and a dramatic second‑set start that turns into a high‑energy jam after Jerry’s guitar issue; a few reviewers find the first‑set flow uneven but overall the pacing is strong."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar troubles at the start of set 2, then a powerful tone and shredding on Passenger and To Lay Me Down.",
+    "Phil": "",
+    "Bob": "Steps in with slide work during Passenger; vocal delivery noted as fresh and strong.",
+    "Keys": "Early‑80s Brent praised for laid‑back style yet delivers a killer spacey Playin' jam.",
+    "Drums": "Bill's drums‑only segment is brief and appreciated, providing a nice breather before the space jam."
+  },
+  "song_mentions": {
+    "Passenger": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Althea": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil (FOTD)": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T08:44:02.341083+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-03-05.wise.lutch.3920.sbeok.shnf"
+}

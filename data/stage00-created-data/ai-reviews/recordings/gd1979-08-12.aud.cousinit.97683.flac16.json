@@ -1,0 +1,31 @@
+{
+  "summary": "Audience recording that improves in clarity as it progresses; no detailed performance notes provided",
+  "review": "The tape, captured from the audience, starts a bit rough but gains clarity as the concert goes on. The reviewer, who was present at the show, rates it an average three stars and offers no specific comments about the music itself.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one brief review with a neutral 3‑star rating; limited information on both performance and technical quality leads to an average overall score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Title notes that sound improves as it goes along, implying early sections are less clear while later parts become better."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T22:25:51.276707+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-08-12.aud.cousinit.97683.flac16"
+}

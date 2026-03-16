@@ -1,0 +1,70 @@
+{
+  "summary": "Excellent audience recording with crystal‑clear interplay and a stellar second set highlighted by Scarlet Begonias, Dire Wolf and China Doll",
+  "review": "The tape captures an outstanding 1984 Richmond show – the first set is solid while the second set erupts into classic Dead magic, especially the scorching Scarlet Begonias and soaring Dire Wolf. The Da Weez/D5scott audience source is praised for its fullness and clarity, though the drum break is a bit short.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (two 5‑star, one 4‑star) and enthusiastic comments about both performance and sound quality drive a top‑tier rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "High levels and sweet‑spot placement give clear instrumental interplay; reviewers note the mix is full and the recording among the best audience sources, with only a minor issue that the drum segment is cut short."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias",
+      "Dire Wolf",
+      "China Doll",
+      "Minglewood Blues",
+      "Looks Like Rain"
+    ],
+    "poor_songs": [
+      "Drums"
+    ],
+    "setlist_flow": "First set is steady and enjoyable; the second set takes off with a twisted, high‑energy flow that many reviewers call the highlight of the night."
+  },
+  "band_member_comments": {
+    "Jerry": "His post‑drum solo is described as ‘screws up then climbs to another level’ and his Scarlet Begonias solo is called steam‑locomotive powerful.",
+    "Phil": "Praised for “philling up the bottom” and leading the way on Scarlet Begonias, with a strong bass presence throughout.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum break is noted as being cut very short."
+  },
+  "song_mentions": {
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T21:18:23.799678+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-06.109985.beyer-senn-daweez.D5scott.flac16"
+}

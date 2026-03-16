@@ -1,0 +1,63 @@
+{
+  "summary": "Fair audience recording with occasional crackles, but a jazzy 1994 show highlighted by Bird Song, Foolish Heart and Attics",
+  "review": "The tape was captured from the tapers section (FOB), so listeners hear some PA crackle and moments where Jerry's guitar is buried, though several reviewers still call the sound nice. Musically the concert shines with a jazzy Bird Song, an epic Foolish Heart jam and a powerful Attics sequence, while The Other One drew criticism from one fan.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the performance around 4‑star level (strong setlist and jams) but recording quality is split between “nice” and “crackle‑filled,” pulling the overall weighted rating down."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Captured from the tapers section (FOB). Reviewers note occasional horrible crackles in the PA and moments where Jerry's guitar is hard to hear, but some still describe the mix as nice."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Foolish Heart",
+      "Attics"
+    ],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": "Set 1 praised for Bird Song; Set 2 considered a solid whole with strong jams and seamless transitions, especially the Foolish Heart/Attics segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – some note strong, jazzy playing while others say his guitar is buried or weak in the mix.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T01:06:04.685594+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-08-03.fob.schoepsCMC54.travitz-litz.85704.flac1648"
+}

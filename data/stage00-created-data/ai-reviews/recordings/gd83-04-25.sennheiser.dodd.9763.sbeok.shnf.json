@@ -1,0 +1,75 @@
+{
+  "summary": "A solid audience tape of the spring ’83 show, delivering a high‑energy set with a smoking Goin’ Down The Road → Sugar Magnolia jam and clear, though occasionally uneven, sound.",
+  "review": "The performance is widely praised for its electric second‑set flow – highlighted by Jerry’s liquid solo on “Goin’ Down The Road,” the soaring “Sugar Magnolia” finish, and an inspired “Terrapin Station.”  Recording quality is typical of a good audience capture: generally clear with occasional level quirks, but more than listenable.  Overall the show is considered a standout night from that tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rave about the musical performance and only note minor, typical audience‑tape issues; the weighted average of strong show (≈4.5) and decent recording (≈3.5) yields a 4.2 rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear for an audience tape; some listeners mention occasional level or muffled moments, but overall the mix is listenable and captures the live atmosphere."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Goin' Down The Road",
+      "Sugar Magnolia",
+      "Terrapin Station",
+      "The Wheel > Playin' Reprise",
+      "China Cat Sunflower",
+      "Brown Eyed Women",
+      "Satisfaction"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A classic spring‑80s arc – solid first set with familiar jams, a second set that builds from “The Wheel” into an expansive “Playin' Reprise,” peaks with the legendary GDTR → Sugar Magnolia sequence, and closes on a high‑octane “Satisfaction.”"
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for a ‘liquid’ solo on Goin’ Down The Road and ripping throughout the finale.",
+    "Phil": "Noted using his new six‑string bass and ‘dropping bombs’ during the jams.",
+    "Bob": "",
+    "Keys": "Brent is highlighted for scorching Rooster work and nasty scat lines.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Goin' Down The Road": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Wheel > Playin' Reprise": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Satisfaction": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-14T06:24:43.589683+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-25.sennheiser.dodd.9763.sbeok.shnf"
+}

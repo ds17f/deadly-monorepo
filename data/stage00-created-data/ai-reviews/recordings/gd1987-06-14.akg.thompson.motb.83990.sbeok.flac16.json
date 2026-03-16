@@ -1,0 +1,45 @@
+{
+  "summary": "Great show with tight Hell in a Bucket and lively Not Fade Away, captured on a good‑quality recording",
+  "review": "The reviewer describes the concert as a warm summer party, highlighting an energetic opening with Hell in a Bucket and a fan‑charged Not Fade Away. Phil Lesh is praised for his form, and overall the performance feels joyous, while the recording quality is noted as solid throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "low",
+    "rationale": "Strong positive comments on both performance and recording, but only a single review limits confidence"
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it a \"Great Show Good Recording\" with no specific issues mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hell in A Bucket",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy opener and enthusiastic fan interaction keep the momentum flowing; overall a festive, well‑paced concert."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Praised for being in great form during Hell in A Bucket",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hell in A Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T22:54:41.364316+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-06-14.akg.thompson.motb.83990.sbeok.flac16"
+}

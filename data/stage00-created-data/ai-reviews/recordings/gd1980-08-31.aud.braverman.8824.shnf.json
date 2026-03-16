@@ -1,0 +1,51 @@
+{
+  "summary": "Magical second set and stellar song selection make this a top‑year show, though the recording quality is uncertain for an official release.",
+  "review": "The reviewer hails the concert as one of the best of the year, praising Healy’s sound tweaks that made the second set feel magical and highlighting standout performances of “Greatest Story,” “Uncle John’s Band,” and “Comes‑a‑Time.” While the musical performance is described as exceptional, the tape’s vault quality is questioned, leaving the recording side less certain.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "low",
+    "rationale": "A single 5‑star review praises the show highly but expresses doubt about the tape’s suitability for official release, leading to a strong show rating tempered by uncertain recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Healy’s sound was reportedly tweaked perfectly for the second set, but the reviewer is unsure if the vault tape meets official release standards."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Greatest Story Ever Told",
+      "Uncle John's Band",
+      "Comes a Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its magical second half and strong song selection, being called the best of the year by the reviewer."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T02:34:22.115521+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-08-31.aud.braverman.8824.shnf"
+}

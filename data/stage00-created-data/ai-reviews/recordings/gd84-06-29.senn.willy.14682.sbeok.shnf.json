@@ -1,0 +1,73 @@
+{
+  "summary": "High‑energy mid‑80s show with a scorching Scarlet > Touch > Mr. Fantasy sequence; audience tape captures the party vibe but is thin on low end and buries Phil’s bass.",
+  "review": "The performance is consistently praised for its rock‑driven first set and psychedelic second set, with the Scarlet > Touch > Mr. Fantasy medley, Birdsong, The Other One and Bertha singled out as highlights. The recording is an audience capture that delivers the crowd’s excitement but suffers from a thin low end, overly loud audience, and a buried bass line, making Phil’s contribution hard to hear. Despite these technical flaws the show is regarded as a classic 1984 summer party.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the musical performance 4‑5 stars, while the recording quality is described as fair to poor; weighting show (70%) and recording (30%) yields an overall rating around 4.1."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Single‑mic lawn audience tape; thin low end, band often buried under crowd noise, bass and Phil’s tone barely audible, but drums are well separated and crowd energy is captured."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Touch > Mr. Fantasy",
+      "Birdsong",
+      "The Other One",
+      "Bertha",
+      "China Cat Sunflower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy, rock‑focused first set that builds into a psychedelic second set; tight transitions and strong jams keep the momentum and party atmosphere throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead vocal on Mr. Fantasy (and occasional forgotten lyrics) is praised along with his fiery guitar work throughout the show.",
+    "Phil": "Bass is consistently noted as too low or buried in the audience mix, making Phil’s thunder hard to hear.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drum separation is highlighted as remarkable for an audience recording; the rhythm section drives the high‑energy set."
+  },
+  "song_mentions": {
+    "Scarlet > Touch > Mr. Fantasy": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Birdsong": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T19:15:59.160264+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-06-29.senn.willy.14682.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "High‑energy 1978 performance centered on a soaring Franklin's Tower, captured on a solid soundboard source.",
+  "review": "The show is praised for its wild ’78 vibe with the band “going nuts,” power chords and loud crashing that culminate in an insanely great rendition of Franklin's Tower. Reviewers note the recording sounds fine – it’s a soundboard capture that even benefits from a little added reverb – and overall describe the flow as excellent.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "medium",
+    "rationale": "Both reviewers give high star ratings (4‑5) and focus on the show’s excitement, especially Franklin's Tower; recording quality is not criticized and the .sbd tag implies a decent soundboard source, leading to an overall strong rating despite limited data."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No major flaws mentioned; reviewer suggests adding software reverb for extra ambience, implying the raw recording is clear but a bit dry."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic ’78‑style jam with power chords and loud vocals; flow described as good and very exciting."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T10:07:51.660679+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-10.sbd.dodd.5259.shnf"
+}

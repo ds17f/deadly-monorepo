@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent performance highlighted by a killer \"He's Gone\" and Jerry's transcendent guitar, though recording details are unknown",
+  "review": "The reviewer raves about the show, especially the rendition of \"He's Gone\" where Jerry Garcia’s guitar lines are described as skin‑crawling and face‑stealing. No technical comments on the source or sound quality were provided, so the recording quality remains undetermined.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "A single 5‑star review praises the musical performance heavily; with no recording information the rating leans on show quality, yielding a high overall score but low confidence due to limited data."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not comment on soundboard vs. audience source, clarity, or mix issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar work is described as tracing notes while singing, giving listeners chills.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T03:25:16.513207+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-16.ps2-sbd.willy.15409.sbeok.shnf"
+}

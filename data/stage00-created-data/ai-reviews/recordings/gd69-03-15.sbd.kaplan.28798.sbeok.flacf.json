@@ -1,0 +1,59 @@
+{
+  "summary": "Fair‑quality soundboard tape captures a modestly strong show highlighted by an inspiring Dark Star, The Eleven, and a beloved Hard to Handle.",
+  "review": "The performance is praised for its honest, humble vibe with standout jams like Dark Star, The Eleven and a memorable Hard to Handle, though the opening numbers are considered weaker. The recording, sourced from Bear’s personal tape stash, shows noticeable hiss and roar but remains listenable, earning mixed technical marks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Show quality is generally good with several highlighted jams; recording quality is fair due to tape hiss and non‑pristine source, leading to a weighted average around 3.6."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Hiss and roar present from Bear's personal tape; not a pristine reel but still reasonably clear for a fan taping."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Eleven",
+      "Hard to Handle"
+    ],
+    "poor_songs": [
+      "Opening songs (first couple)",
+      "Schoolgirl"
+    ],
+    "setlist_flow": "Overall honest and modest pacing with strong second‑half jams; early part less compelling but the show builds into memorable improvisations."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's lead work is highlighted, especially in The Eleven and Hard to Handle; some reviewers dislike his slide on Hard to Handle.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Schoolgirl": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T12:18:03.439966+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-03-15.sbd.kaplan.28798.sbeok.flacf"
+}

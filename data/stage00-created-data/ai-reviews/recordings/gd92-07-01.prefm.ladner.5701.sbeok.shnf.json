@@ -1,0 +1,73 @@
+{
+  "summary": "Crisp sound‑board recording of a solid 1992 Buckeye Lake show with a hot West LA second set and standout Bird Song, Drums/Space and Whar­f Rat.",
+  "review": "The tape is a clean‑sounding sound‑board source that most listeners describe as crisp or phenomenal. Musically the concert shines in the second half – the West LA/Fadeaway jam, an inspired Bird Song, powerful Drums/Space and a tight Wharf Rat are repeatedly highlighted. While a few reviewers note a frayed Jerry voice and a generally “flat” feel to parts of the set, the overall vibe is positive with many fans recalling a memorable night.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both performance and recording (4‑5 stars), with only a minority giving low scores; the show is generally regarded as good to great and the tape is described as clear, yielding an overall 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Repeated comments about crisp, clear, or phenomenal sound; a few isolated complaints of “awful” sound but no consistent issues like drop‑outs or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "West L.A. / Fadeaway",
+      "Bird Song",
+      "Drums and Space",
+      "Wharf Rat",
+      "Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as tight; second set praised for its energy, especially the West LA jam and extended improvisations. Some listeners felt the vibe grew odd later in the night, but most agree the show builds nicely toward a strong finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice noted as frayed or tired by some, but guitar tone praised as perfect; also mentions of MIDI excursions and solid solos.",
+    "Phil": "Bass highlighted for “nice bombs” toward the end and overall good work throughout the set.",
+    "Bob": "",
+    "Keys": "Keyboards described as rocking; guest harmonica (Steve Miller/Norton Buffalo) added extra color.",
+    "Drums": "Drums/Space repeatedly called incredible, with train‑like quadraphonic effects and an air‑horn that stood out."
+  },
+  "song_mentions": {
+    "West L.A. / Fadeaway": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Drums and Space": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Picasso Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    }
+  },
+  "processed_date": "2025-09-18T08:15:02.794071+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-07-01.prefm.ladner.5701.sbeok.shnf"
+}

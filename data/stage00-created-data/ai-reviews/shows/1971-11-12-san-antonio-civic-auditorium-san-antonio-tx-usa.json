@@ -1,0 +1,68 @@
+{
+  "summary": "High‑energy set with stellar Other One > Big Railroad Blues",
+  "blurb": "The second set delivers a powerhouse suite of The Other One into Big Railroad Blues, while the first set rocks tight Truckin' and Mexicali Blues. Jerry's vocals are on the races and Keith's piano sits front‑center, giving the night a unique texture. Recording quality varies across sources, but the top soundboard captures the band's dynamic groove.",
+  "review": "On November 12, 1971 at the San Antonio Civic Auditorium the Dead rolled out a blistering two‑set marathon that still feels fresh decades later. The first set builds momentum with crisp renditions of Truckin', Jack Straw and an especially vibrant Mexicali Blues, capped by a soulful Black Peter. The second set erupts into a high‑octane suite: Cryptic Envelopment segues into a thunderous The Other One, which morphs seamlessly into a fiery Big Railroad Blues before the band rides that energy straight into Sugar Magnolia and a rousing Casey Jones. Jerry Garcia’s vocals are “on the races” and his lead work shines on the suite, while Keith Godchaux’s piano takes an unusually front‑center role, adding a bright, melodic thrust throughout. The rhythm section locks in tightly—Phil Lesh’s snappy bass anchors the groove and Bill Kreutzmann’s drums drive it forward with precision. Though some recordings suffer from hiss or occasional drop‑outs, the best soundboard capture preserves the night’s dynamic range and lets listeners hear every nuance of that 1971 fire.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.2,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 19,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Four recordings praise the performance (standout Other One > Big Railroad Blues, strong second‑set energy, vibrant first set) while only one negative notes distortion and another mixed review points to recording issues rather than playing. The consistent positive language (“excellent”, “fire‑filled”, “superb”) across multiple soundboard sources warrants a solid positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 1.6 = 4.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd71-11-12.sbd.clugston.4759.sbeok.shnf",
+    "reason": "Clear soundboard capture with balanced mix, minimal hiss, and full representation of the band’s dynamics—perfect for hearing the standout Other One > Big Railroad Blues suite."
+  },
+  "key_highlights": [
+    "The Other One → Big Railroad Blues suite delivers a fire‑filled second set climax.",
+    "Vibrant Truckin' and Mexicali Blues showcase tight jamming in the first set.",
+    "Keith Godchaux’s piano sits front‑center, adding a bright texture to the night."
+  ],
+  "song_highlights": [
+    "The Other One",
+    "Big Railroad Blues",
+    "Truckin'",
+    "Mexicali Blues",
+    "Black Peter",
+    "Jack Straw"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia’s vocals are praised as great and ‘on the races’; his lead work on The Other One is highlighted, with overall solid tone despite occasional quiet/compressed guitar notes.",
+    "Phil": "Lesh provides a snappy, tasty bass foundation that anchors the groove; noted for standout lines early in the set.",
+    "Bob": "",
+    "Keith": "Godchaux’s piano is prominent and ‘nice sounding’, sitting front‑center without being overbearing, adding unique texture throughout the show.",
+    "Mickey": "",
+    "Billy": "Kreutzmann is described as snappy on the beat, locking tightly with Phil’s bass for a tight rhythm section."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-20T09:29:32.863512+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "Cryptical Envelopment",
+      "Big Railroad Blues"
+    ],
+    [
+      "Truckin'"
+    ],
+    [
+      "Mexicali Blues"
+    ],
+    [
+      "Black Peter"
+    ],
+    [
+      "Jack Straw"
+    ]
+  ]
+}

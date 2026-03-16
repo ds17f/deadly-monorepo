@@ -1,0 +1,124 @@
+{
+  "summary": "Flawless Oade audience recording captures a generally strong show with standout Sugaree, Spoonful and Throwing Stones > Sugar Magnolia, though the performance is uneven in places.",
+  "review": "The Oade AUD tape delivers crystal‑clear crowd ambience and well‑balanced instruments, making it an excellent listening experience. Musically the concert shines on tracks like Sugaree, Ramble On Rose, Let It Grow, Spoonful and the high‑energy Throwing Stones > Sugar Magnolia sequence, but a few numbers (Terrapin, Ship of Fools) fall flat, leading to a mixed overall impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently praised as flawless; show performance receives many positive notes with some criticisms, resulting in an overall strong but not perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Flawless audience recording with generous crowd ambience, clear vocals and well‑balanced instruments; reviewers note it sounds great and “well balanced” throughout."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Ramble On Rose",
+      "Let It Grow",
+      "Spoonful",
+      "Throwing Stones > Sugar Magnolia",
+      "Wharf Rat",
+      "Dayjob"
+    ],
+    "poor_songs": [
+      "Terrapin",
+      "Uncle John’s Band",
+      "Ship of Fools"
+    ],
+    "setlist_flow": "First set opens strong with a solid Bucket and mid‑tempo numbers, peaks on Sugaree and Ramble On Rose, then tapers with an uneven Uncle > Mexicali. Second set maintains energy, delivering a fiery Spoonful and extended Truckin' jam, but includes a clunky Terrapin and a lukewarm Ship of Fools before closing powerfully with Throwing Stones > Sugar Magnolia and a soaring Wharf Rat/Dayjob."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar leads described as “furious,” “crying,” and his vocals called the best he sang in ’85; Weir (Bobby) praised for passionate, strong singing throughout.",
+    "Phil": "Phil’s bass noted as tight with generous “bombs” and generally solid throughout the show.",
+    "Bob": "Bob Weir’s (referred to as Bobby) vocals highlighted as enthusiastic on Sugaree, Let It Grow and other numbers.",
+    "Keys": "Brent Mydland provides background vocals, a notable B‑3 solo on Superstition, and contributes heavily to vocal harmonies.",
+    "Drums": "The drum/space segment described as dark, intense and “very dark with some intense jamming,” leading into the final jam."
+  },
+  "song_mentions": {
+    "Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Uncle John’s Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Superstition": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Man Smart (Woman Smarter)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dayjob": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:52:46.929892+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-03.oade-schoeps.sacks.23927.sbeok.flacf"
+}

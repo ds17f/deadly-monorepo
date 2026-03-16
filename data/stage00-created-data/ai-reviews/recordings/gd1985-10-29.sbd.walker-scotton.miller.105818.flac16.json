@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent soundboard tape captures a solid ’85 Dead show with strong performances and a standout Franklin’s Tower.",
+  "review": "The recording is praised for its crystal‑clear tape quality, indicating an excellent soundboard source that faithfully reproduces the concert. While the set may not contain every classic peak, reviewers note many strong moments and highlight Franklin’s Tower as a particular high point. Overall the show delivers enjoyable Dead magic with top‑notch audio.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high reviewer scores (mostly 4–5 stars) and strong praise for both the performance and the tape quality lead to a weighted rating of ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers comment on superb tape clarity and overall sound, with no reported dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generally solid performance; not billed as an all‑time classic but delivers many strong moments that keep the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T09:59:37.829532+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-10-29.sbd.walker-scotton.miller.105818.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "High‑quality audience tape captures an intimate acoustic set and a fiery third set, with crystal‑clear Jerry solo work.",
+  "review": "The recording is praised for its surprisingly clear audience capture despite modest equipment, delivering the warmth of the acoustic set and the punch of the electric sets. Reviewers highlight Jerry Garcia’s soaring solo on “Crazy Cat Sunflower” and an overall “fire” in the third set, while noting only a bit of chatter during the acoustic numbers. The show is regarded as a standout Dead performance with excellent listenability.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviewers give 5‑star ratings and praise both the musical performance (strong acoustic set, fiery third set, notable Jerry solo) and the surprisingly good audience recording quality; only minor complaints about chatter are noted."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear audience recording made with modest gear; acoustic set has some crowd chatter, but overall balance and presence are strong. No major drop‑outs or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Cat Sunflower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Acoustic set is intimate and well‑captured, followed by a solid electric portion with a few minor hiccups; the third set is described as pure fire, giving the concert a strong upward trajectory."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on “Crazy Cat Sunflower” is highlighted as soaring and emotionally resonant.",
+    "Phil": "Fans note the low‑frequency interaction between PA and hall, implying solid bass presence.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T03:46:07.195472+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-09-29.nak300.walker-scotton.miller.106783.flac16"
+}

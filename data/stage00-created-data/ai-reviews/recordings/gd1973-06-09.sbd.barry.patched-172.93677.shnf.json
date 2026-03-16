@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard recording with decent sound captures a scorching RFK show where the band pushed through heat‑induced fatigue, delivering a smoking “Playing In The Band” and an uplifting “Box of Rain”.",
+  "review": "The patched soundboard source provides a listenable mix that many fans describe as ‘nice’.  The performance was mixed – Jerry slipped up at times but delivered a stellar PITB solo, the band soldiered through extreme heat, and Garcia later called the set “horrible”, yet audience members still recall highlights like “Box of Rain”.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is uneven (strong PITB and Box of Rain vs. Garcia’s own criticism and heat‑related sluggishness) while the recording is a usable soundboard with no major flaws, yielding an overall rating in the good‑to‑average range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Listeners note the mix is decent/nice; no specific complaints about clarity or drop‑outs, but no detailed technical praise either."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Playing In The Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The scorching DC heat made the first set feel sluggish at points, yet the band’s grit kept a full 14‑song first set and a high‑energy second set highlighted by PITB."
+  },
+  "band_member_comments": {
+    "Jerry": "Has occasional screw‑ups but is 'smokin'' on Playing In The Band.",
+    "Phil": "Questioned why he always sang at RFK; no specific playing comment.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T14:12:57.400884+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-09.sbd.barry.patched-172.93677.shnf"
+}

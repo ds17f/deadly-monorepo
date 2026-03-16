@@ -1,0 +1,58 @@
+{
+  "summary": "Intimate acoustic benefit show captured with surprisingly clear audio, highlighted by a stellar \"Knockin' on Heaven's Door\" and rare Phil Lesh finger‑style playing.",
+  "review": "The recording delivers a warm, couch‑like listening experience of an off‑the‑cuff four‑man acoustic set that feels both raw and beautifully balanced despite the lack of keyboards. Reviewers rave about the unusual song list – especially \"Knockin' on Heaven's Door\" – and note Phil Lesh’s finger‑style bass reminiscent of Working Man’s Dead, while the audio quality is praised as clear and enjoyable even though it required some de‑glitching.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both performance and sound, with only minor notes about glitches; the show is regarded as a rare gem and the audio is described as clear and pleasant."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners describe the audio as \"nice\", \"crisp\" and \"like having the Dead on the couch,\" though one reviewer notes that the source had to be de‑glitched, re‑attenuated and that some alternate sources were hissy or clipped."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Knockin' on Heaven's Door",
+      "This Time Forever",
+      "Jack-a-Roe"
+    ],
+    "poor_songs": [
+      "Deep Elem"
+    ],
+    "setlist_flow": "A spontaneous, four‑man acoustic set with no keyboards that showcases rare song choices and an intimate, off‑cuff vibe; the flow feels playful and historically unique."
+  },
+  "band_member_comments": {
+    "Jerry": "Slide work noted as nice by reviewers.",
+    "Phil": "Finger‑style bass reminiscent of Working Man's Dead, highlighted as a standout element.",
+    "Bob": "",
+    "Keys": "No keyboards present; the lineup was a four‑man acoustic group.",
+    "Drums": "Mickey provided percussion only."
+  },
+  "song_mentions": {
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "This Time Forever": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deep Elem": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack-a-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T16:19:37.342749+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-11-17.sbd.dodd.audiohead22.remaster-7687.90110.sbefail.flac16"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard capture of a strong 12/30/77 set featuring soaring “Half Step” and stellar “He’s Gone”, though several second‑set cuts are missing.",
+  "review": "The performance is widely praised – Jerry’s half‑step work and a top‑notch rendition of “He’s Gone” are singled out as highlights. Reviewers note the recording sounds fine (no specific audio complaints) but lament that five key second‑set songs are absent, leaving the show feeling incomplete.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers rate the music very highly (5‑star comments) while a single low rating complains about missing tracks; no concrete recording‑quality issues are mentioned, so the overall score leans positive but is tempered by the incompleteness."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers do not mention any sound problems; the lack of criticism suggests an acceptable, clear soundboard recording despite missing portions of the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half Step",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The show is praised for its strong playing, but five second‑set songs are absent, which reviewers feel breaks the flow and leaves the set feeling incomplete."
+  },
+  "band_member_comments": {
+    "Jerry": "His half‑step work is highlighted as a major high point.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half Step": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T07:25:42.612987+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-12-30.sbd.cribbs.30624.sbeok.shnf"
+}

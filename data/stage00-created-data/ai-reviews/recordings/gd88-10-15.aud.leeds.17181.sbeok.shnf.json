@@ -1,0 +1,113 @@
+{
+  "summary": "Muddy analog audience tape of a high‑energy St. Pete show – great setlist and lively playing, but the sound is poor.",
+  "review": "The performance captures a spirited four‑set marathon with strong moments like \"Blow Away,\" \"Truckin'\" and a soaring \"Uncle John’s Band,\" while the analog audience recording is muddy, distant and often distorts Phil's bass. Reviewers praise the band’s energy and Brent’s keyboard sparkle but lament that the low‑fidelity tape makes many highlights hard to enjoy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.9,
+    "confidence": "medium",
+    "rationale": "Consistent criticism of the recording quality drags the overall score down, but several reviewers note solid musical performance and memorable songs, yielding a rating just under three stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Described as muddy, distant and with heavy distortion on Phil's bass; overall low‑fidelity analog audience tape that obscures detail despite occasional clearer moments in the second set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Blow Away",
+      "Truckin'",
+      "Uncle John's Band",
+      "Tennessee Jed",
+      "Queen Jane Approximately"
+    ],
+    "poor_songs": [
+      "Sugaree",
+      "Crazy Fingers",
+      "Smokestack Lightning",
+      "Stella Blue"
+    ],
+    "setlist_flow": "Four‑set marathon with a solid first set and an especially energetic second set; the band kept momentum high despite occasional generic jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Several reviewers note his twills, low booming harmonies and well‑placed flurries of notes – generally positive.",
+    "Phil": "His bass is repeatedly described as distorted and wave‑like, a recording issue rather than performance criticism.",
+    "Bob": "",
+    "Keys": "Brent Mydland gets praise for “sparkling fairy dust” and synth textures that add to the show’s vibe.",
+    "Drums": "Drums/Space sections are mentioned as energetic but without specific critique of Bill's playing."
+  },
+  "song_mentions": {
+    "Blow Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Push": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane Approximately": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelite": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:00:11.301389+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd88-10-15.aud.leeds.17181.sbeok.shnf"
+}

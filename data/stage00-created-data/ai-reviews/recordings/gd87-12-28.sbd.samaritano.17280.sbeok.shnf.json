@@ -1,0 +1,39 @@
+{
+  "summary": "Poor, warbly soundboard recording despite a solid performance that improves by “Far From Me”.",
+  "review": "Both reviewers agree the source is badly compromised – the first notes pervasive distortion and warble, while the second mentions glitches in the opening songs that ease up around “Far From Me.” The concert itself is described as solid (the reviewer even attended), so musically the show holds up despite the technical mess.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality appears decent (≈4/5) but recording is rated poor (≈2/5); weighted average yields ~3.4 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Severe warble, distortion and drop‑outs in the first few tracks; overall muddied and unlistenable for most of the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Far From Me"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Performance described as solid overall; early part suffers from recording glitches but improves later."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:43:34.994259+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-12-28.sbd.samaritano.17280.sbeok.shnf"
+}

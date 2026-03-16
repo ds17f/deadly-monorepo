@@ -1,0 +1,63 @@
+{
+  "summary": "Lively Warfield ’83 show with a smoking Help‑Slip‑Franklins and strong Jack Straw/Bird Song, captured on a decent audience tape that’s a bit muddy but still enjoyable.",
+  "review": "The performance shines especially in the second set – the Help > Slip > Franklin’s sequence and the fiery Jack Straw/Bird Song opener are repeatedly praised.  The audience (AUD) recording isn’t pristine; listeners note mud, low‑level clapping and a front‑heavy PA mix, yet it retains the live atmosphere that many fans love.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show highly (4–5 stars) and highlight standout performances, while recording quality is mixed but generally acceptable; weighted average yields a strong 4‑plus rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Muddy mids, occasional low‑level clapping, and a PA mix that pushes vocals forward while burying guitars; however the tape captures the room’s live vibe and keeps instruments reasonably separate."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower",
+      "Jack Straw > Bird Song",
+      "Used to Love Her",
+      "Esau",
+      "Estimated"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The second set is the highlight, launching with a high‑energy Help‑Slip‑Franklins and maintaining momentum through Jack Straw/Bird Song and Estimated.  The first set is deemed less exciting by some, but overall the concert flows well and keeps the crowd engaged."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s interplay with Mydland on Bird Song is praised; some note his guitar gets buried in the front‑heavy PA mix.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum segment following Estimated is noted as a solid, flowing transition."
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack Straw > Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Used to Love Her": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Esau": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T04:14:03.199398+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-03-29.sennheiser.dodd.11262.sbeok.shnf"
+}

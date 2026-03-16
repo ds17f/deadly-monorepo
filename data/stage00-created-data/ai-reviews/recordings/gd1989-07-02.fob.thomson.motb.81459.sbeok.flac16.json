@@ -1,0 +1,63 @@
+{
+  "summary": "Stunning audience recording with crisp cymbals and front‑center vocals; the show shines thanks to a Playin > Crazy Fingers opener, a monster Dear Mister Fantasy, and scorching Eyes of the World.",
+  "review": "The July‑1989 Foxborough (FOB) show is captured on an exceptionally lively audience matrix that puts the band right in the sweet spot – crisp cymbals, clear vocals and a vivid crowd ambience, with only a minor mix dip for Jerry during Fantasy. Musically the concert dazzles: a rare Playin > Crazy Fingers opener, a blistering Dear Mister Fantasy, powerful Eyes of the World, and an energised second set that even surprises with Friend of the Devil and Truckin’ > He’s Gone.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Average user rating is ~4.44 stars; reviews overwhelmingly praise both performance and recording, with only a few minor criticisms (mix balance, sobriety comment). Weighting favors the strong musical show (70%) and excellent audience capture (30%)."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix‑like blend (~85% audience) with crisp cymbals, front‑center vocals and clear instrument separation. Some crowd noise is present; a noted mix issue has Jerry’s guitar low in the Fantasy segment."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band > Crazy Fingers",
+      "Dear Mister Fantasy",
+      "Eyes of the World",
+      "Truckin' > He's Gone",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Unusual but thrilling opener (Playin > Crazy Fingers) set a high‑octane tone; second set opened with Friend of the Devil after a Garcia ball, keeping momentum. Fast tempo on the early second‑set track and a hot, humid night added extra energy, culminating in a monumental Fantasy > Hey Jude reprise."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone praised as crisp and front‑center; a Hendrix‑style drum riff highlighted; however one reviewer noted his mix was too low during Fantasy and another felt his sober playing lacked the usual spark.",
+    "Phil": "Bass presence noted as solid and clearly audible in the sweet‑spot recording.",
+    "Bob": "",
+    "Keys": "Brent (keyboards) received strong accolades for stepping into the spotlight, delivering tight harmonies and driving the band’s energy.",
+    "Drums": "Danny Thompson (drummer) praised for holding it together; the drum‑solo Hendrix riff during Eyes of the World was singled out as a highlight."
+  },
+  "song_mentions": {
+    "Playing in the Band > Crazy Fingers": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Dear Mister Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes of the World": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin' > He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T20:02:17.989704+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-07-02.fob.thomson.motb.81459.sbeok.flac16"
+}

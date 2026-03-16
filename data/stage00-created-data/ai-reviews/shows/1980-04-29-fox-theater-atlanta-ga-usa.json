@@ -1,0 +1,66 @@
+{
+  "summary": "Energetic second set with strong Miracle‑Bertha run, mixed first‑set",
+  "blurb": "Second set builds momentum, delivering a killer closing sequence of I Need A Miracle → Bertha → Good Lovin' → U.S. Blues. First set features solid classics but suffers from uneven moments on Lost Sailor > Saint Of Circumstance and Terrapin Station. Crystal‑clear audience recordings capture the performance with exceptional balance.",
+  "review": "On April 29, 1980, the Grateful Dead took the Fox Theater in Atlanta for a concise spring‑80 set that swings between tight grooves and occasional slip‑ups. The first set rolls through familiar terrain—Jack Straw, Friend of the Devil, Mama Tried into Mexicali Blues—but listeners note that Lost Sailor → Saint Of Circumstance feels a bit flat and Terrapin Station drags as Jerry zones out and forgets lyrics. By contrast, the second set ignites, stringing together a soaring I Need A Miracle → Bertha → Good Lovin' → U.S. Blues run that lifts the whole show. Bob’s blues work on New Minglewood Blues is called out for being off‑key, yet his rhythm elsewhere holds steady, and Jerry’s guitar shines on most numbers, earning “kick‑ass” praise despite a few lyrical lapses. The audience tape captured by Barry Glassberg stands out as one of the era’s clearest recordings, delivering balanced presence that lets the band’s energy shine through even when the playing wavers.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 14,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 1.0,
+      "sentiment_rationale": "Two recordings are clearly positive (crystal‑clear audio, strong Miracle‑Bertha run) while one is mixed (mentions lyric slips and off‑key moments). The overall tone leans positive, so a moderate +1.0 sentiment boost is applied.",
+      "final_calculation": "2.5 + 0.1 + 1.0 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd80-04-29.glassberg.lutch.5455.sbeok.shnf",
+    "reason": "Glassberg’s audience tape is described as crystal‑clear, exceptionally balanced and captures the band’s energy with no dropouts, making it the most enjoyable listening experience."
+  },
+  "key_highlights": [
+    "Second‑set closing run (I Need A Miracle → Bertha → Good Lovin' → U.S. Blues) praised as electrifying.",
+    "Lost Sailor > Saint Of Circumstance sequence shines despite mixed comments on other first‑set songs.",
+    "Jerry’s guitar is “kick‑ass” on most numbers, though Terrapin Station shows lapses.",
+    "Glassberg audience recording offers crystal‑clear, balanced sound rare for 1980 shows."
+  ],
+  "song_highlights": [
+    "Lost Sailor",
+    "Saint Of Circumstance",
+    "Good Lovin'",
+    "I Need A Miracle",
+    "Bertha",
+    "U.S. Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Generally strong, described as “kick‑ass” on most songs; however he zones out on Terrapin Station and forgets lyrics in a few spots.",
+    "Phil": "",
+    "Bob": "Off‑key/off‑tempo on New Minglewood Blues and Lost Sailor > Saint Of Circumstance, but otherwise holds his part solidly.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-12T22:14:23.512634+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Lost Sailor",
+      "Saint Of Circumstance"
+    ],
+    [
+      "Terrapin Station",
+      "Jam",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Bertha",
+      "Good Lovin'"
+    ],
+    [
+      "U.S. Blues"
+    ]
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Crisp soundboard capture of a solid 1993 show highlighted by rare Supplication and fiery Foolish Heart, though an edited version disrupts the natural flow.",
+  "review": "The performance is praised for its energetic jams – especially a rare Suplication, a scorching Foolish Heart and a fluid Brown‑Eyed Women – with Jerry’s guitar on fire and strong keyboard/drum mix. The soundboard source is generally clean and detailed, but one reviewer notes that an edited version removes crowd ambience and creates an artificial song-to-song transition.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Show quality is consistently rated high (3 reviews 4‑5 stars) while recording quality is mostly praised as crisp soundboard, with a single complaint about an edited version; the weighted average yields ~4.1."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the mix as crisp and high‑quality, with strong drum/keys balance; one reviewer criticizes an edited copy that removes crowd noise and forces songs to flow into each other."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Supplication",
+      "Foolish Heart",
+      "Brown-Eyed Women",
+      "Stagger Lee"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Original performance flows naturally with a slightly slower, fluid tempo; an edited version trims crowd and tuning sections, creating an artificial song‑to‑song transition."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as 'on fire' with great jam energy; reviewer even tried to discourage him from playing Corrina again.",
+    "Phil": "",
+    "Bob": "Bobby (Bob) breaks out a strong Suplication and contributes solid rhythm work.",
+    "Keys": "Keyboards are noted as highly mixed, jazzy and percussion‑lead driven.",
+    "Drums": "Drumming is praised for its prominence and quality, especially at the start of Corrina."
+  },
+  "song_mentions": {
+    "Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brown-Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:52:47.014581+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-05-22.sbd.miller.11665.sbeok.shnf"
+}

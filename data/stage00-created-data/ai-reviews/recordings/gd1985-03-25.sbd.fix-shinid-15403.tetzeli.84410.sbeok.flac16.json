@@ -1,0 +1,107 @@
+{
+  "summary": "Energetic 1985 show with scorching Jack Straw, Sugaree and Bird Song, but marred by a persistent beeping/squealing noise on the soundboard recording.",
+  "review": "The performance is widely praised for its high‑octane first set (Jack Straw, Little Red Rooster, Sugaree) and an inspired second half featuring Bird Song, Let It Grow and a hot Help→Slip→Franklin’s sequence. However listeners repeatedly note a distracting beeping/squealing artifact that crops up on the soundboard, especially during Slipknot and Estimated, and some vocals are buried in the mix.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers laud the musical performance (70% weight) while several point out consistent recording flaws (30% weight), yielding an overall rating just above four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Periodic static and a major squealing noise in the second set, plus a persistent beeping/buzzing tone from Jerry's distortion pedal that is especially noticeable during Help→Slip→Franklin’s and Estimated; vocals (especially Jerry's) sometimes buried."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Sugaree",
+      "Bird Song",
+      "Let It Grow",
+      "Estimated",
+      "China Doll"
+    ],
+    "poor_songs": [
+      "All Over Now",
+      "Post Space"
+    ],
+    "setlist_flow": "The first set bursts with energy and tight jams, while the second set maintains momentum despite some vocal mix issues; overall pacing is fast‑paced and jam‑heavy, though recording glitches interrupt a few transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia delivers blazing solos and stays energetic, but his vocals are occasionally buried and a beeping pedal tone distracts during the second set.",
+    "Phil": "Phil's bass is solid; one reviewer notes a new lead intro at the start of the show and mentions his voice sounded ragged on other dates but healthier here.",
+    "Bob": "Weir shines on Sugaree, providing deep vocal work and strong rhythm, even giving Garcia a run for his money.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Sugaree": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Roses": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 3,
+      "total_mentions": 5
+    },
+    "Help>Slip>Franklin's": {
+      "positive_mentions": 2,
+      "negative_mentions": 3,
+      "total_mentions": 5
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "All Over Now": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "China Doll": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Goin' Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Post Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T01:51:14.970348+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-03-25.sbd.fix-shinid-15403.tetzeli.84410.sbeok.flac16"
+}

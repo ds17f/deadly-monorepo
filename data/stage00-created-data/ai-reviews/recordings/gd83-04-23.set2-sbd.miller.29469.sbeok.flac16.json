@@ -1,0 +1,51 @@
+{
+  "summary": "Soundboard capture of a high‑energy New Haven show – standout Scarlet > Fire and The Other One, with solid but not flawless audio.",
+  "review": "The second set from the April‑1983 New Haven run is repeatedly called one of the best, driven by a scorching Scarlet > Fire sequence and an epic The Other One that blows the roof off.  The SBD source is generally praised as clear and “right on,” though a few listeners note occasional pitch quirks and missing audience bass depth.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of reviewers give 4‑5 stars, highlighting exceptional performances (especially Scarlet > Fire and The Other One) while noting only minor recording imperfections."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD mix with crisp mids; a few reports of fast‑pitched Scarlet/Fire, occasional channel “wavy gravy,” and reduced low‑end from missing audience bass, but overall listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "The Other One",
+      "Wharf Rat"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second‑set momentum is relentless – high‑energy jams, tight transitions and a climactic run from Scarlet > Fire into The Other One that fans cite as the show’s apex."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his “groove pockets” and adventurous soloing throughout the set.",
+    "Phil": "Repeatedly called a “monster” dropping bombs; one outlier mentions ear‑splitting volume, but overall his bass work is highlighted as a driving force.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T06:13:40.950134+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-04-23.set2-sbd.miller.29469.sbeok.flac16"
+}

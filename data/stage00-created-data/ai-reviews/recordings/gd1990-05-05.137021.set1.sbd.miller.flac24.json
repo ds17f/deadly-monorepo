@@ -1,0 +1,31 @@
+{
+  "summary": "No detailed information on recording or performance; reviewer gave a low rating.",
+  "review": "The sole review provides only a brief personal note and assigns zero stars, offering no insight into the sound quality, mix, or musical execution of the show. Consequently, any assessment of the recording’s technical merits or the concert’s highlights is speculative.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one vague review with a zero‑star rating; insufficient data to gauge quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "No comments on sound clarity or mix; low star rating suggests dissatisfaction."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T06:43:32.236702+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-05-05.137021.set1.sbd.miller.flac24"
+}

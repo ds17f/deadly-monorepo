@@ -1,0 +1,60 @@
+{
+  "summary": "High‑quality soundboard capture of a contemplative show highlighted by superb Black Peter and New Speedway, but missing sections of The Other One and Dark Star detract from an otherwise solid performance.",
+  "review": "The recording is praised for its crystal‑clear SBD source and the unique, thoughtful playing that shines on tracks like Black Peter and New Speedway. While most listeners find the set engaging, a few note that the tape drops portions of The Other One and the Dark Star → Alligator segue, giving the release a mixed technical edge.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Strong musical moments and excellent soundboard quality are offset by notable missing audio sections; overall rating reflects good show with minor recording flaws."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, high‑fidelity SBD source praised, but the tape is missing the last 15–20 seconds of The Other One and portions at the Dark Star → Alligator transition."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "New Speedway"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as contemplative and interesting, though a few listeners felt it dragged at times; missing segue sections slightly disrupt the flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Alligator": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T19:33:44.787290+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-12-30.sbd.unknown.4575.sbefail.shnf"
+}

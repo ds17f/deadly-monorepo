@@ -1,0 +1,81 @@
+{
+  "summary": "High‑energy fall ’71 show with Keith’s debut and a flood of first‑time songs, captured on an overall solid soundboard tape.",
+  "review": "The October 19 1971 concert is celebrated for its historic firsts – Keith Godchaux’s debut, six brand‑new originals (Tennessee Jed, Jack Straw, Mexicali Blues, Comes A Time, One More Saturday Night and Ramble On Rose) and standout performances of The Other One suite, Wharf Rat and Cryptical.  Most listeners praise the crisp soundboard source, though a few note occasional distortion, so the recording is solid if not flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The majority of reviews (over 30) are glowing about both performance and historic significance; only a handful complain about distortion, giving an overall strong show rating with good technical quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Most reviewers call the tape crisp, high‑fidelity and pre‑FM (better than thin FM recordings). A few note distortion or dropouts, but these are outliers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "The Other One",
+      "Wharf Rat",
+      "Cryptical",
+      "Jack Straw",
+      "Tennessee Jed",
+      "Mexicali Blues",
+      "One More Saturday Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A historic first‑show vibe – Keith’s debut, six original debuts and a tight, high‑tempo set that moves fluidly from new material into classic jams, keeping the energy relentless throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for strong guitar work and vocal moments (falsetto on Comes A Time, energetic jamming on One More Saturday Night), with one minor complaint about a vocal slip in 'Playing In The Band'.",
+    "Phil": "Mixed notes – some feel his bass sounds thinner than expected, but no major criticism; overall solid foundation.",
+    "Bob": "Generally positive (vocals and rhythm work noted), though one reviewer mentioned he sounded off‑key during a section of 'Playing In The Band'.",
+    "Keys": "Keith Godchaux’s debut is highlighted as a major plus – killer piano, unique organ style, even a striking left/right channel separation; a few reviewers feel the keyboard mix can sound scattered.",
+    "Drums": "Bill Kreutzmann receives high praise for an “in‑the‑pocket” groove and inventive leads before The Other One; his drumming on Cryptical is singled out as especially strong."
+  },
+  "song_mentions": {
+    "Comes A Time": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Cryptical": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Mexicali Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-20T08:13:16.100438+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd71-10-19.orefm.clugston.3301.sbeok.shnf"
+}

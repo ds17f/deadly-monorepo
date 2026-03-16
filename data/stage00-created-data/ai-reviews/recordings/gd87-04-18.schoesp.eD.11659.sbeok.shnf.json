@@ -1,0 +1,39 @@
+{
+  "summary": "Good audience recording of a solid 1987 show with a strong first set but a shaky second half and jet‑noise interruptions",
+  "review": "The tape captures an energetic 1987 Irvine performance that many fans rate as one of the better shows from that year, especially the first set. Recording quality is decent for an audience source, though the unexpected jet sound loop and occasional volume drops make it less than pristine. The second set loses momentum, with a weak \"Lovelight\" and a lackluster encore where Jerry's playing falters.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the musical performance and consider this one of the better ’87 tapes, but comments about jet interference, a weak second set, and mixed star ratings bring the overall rating to solid‑good rather than excellent."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Decent clarity for an audience tap, but jet sound looped into the PA creates sudden loud spikes and many tapers turned down their headphones, causing occasional volume inconsistencies."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Lovelight"
+    ],
+    "setlist_flow": "Two‑set show; first set praised as strong, second set described as flailing with a lack of encore and an overall drop in energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Several reviewers note Jerry’s playing deteriorates on the encore and seems unfocused during parts of the second set.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T21:55:07.202933+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-04-18.schoesp.eD.11659.sbeok.shnf"
+}

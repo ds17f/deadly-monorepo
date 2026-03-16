@@ -1,0 +1,63 @@
+{
+  "summary": "Good‑quality soundboard capture of a strong show with standout U.S. Blues, Althea and Days Between performances",
+  "review": "The concert is praised for its solid set list and memorable moments – U.S. Blues, Jack Straw, Althea, Throwing Stones and the emotionally charged The Days Between all get special mention.  The soundboard source is generally clear, though a faint fuzz/hiss appears when the volume is turned up, keeping the recording from being perfect but still very listenable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Three consistent reviews (4–5 stars) highlight a strong musical performance and only minor recording hiss, leading to a high overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix with a noticeable fuzz/buzz at higher volumes; no major drop‑outs or balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "U.S. Blues",
+      "Jack Straw",
+      "Althea",
+      "Throwing Stones",
+      "The Days Between"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers love the set‑list sequencing and describe the show as strong with a natural flow that kept the energy up from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar is described as clear and crisp, with a firm tone; also noted as one of his last live appearances, adding emotional weight.",
+    "Phil": "",
+    "Bob": "Bob (referred to as \"Bobby\") saves the day a few times, implying strong vocal/guitar contributions.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:45:00.858405+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-18.sbd.wiley.8708.sbefail.shnf"
+}

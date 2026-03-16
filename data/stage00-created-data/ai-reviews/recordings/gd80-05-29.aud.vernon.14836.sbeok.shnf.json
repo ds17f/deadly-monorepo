@@ -1,0 +1,56 @@
+{
+  "summary": "Decent audience tape with solid setlist highlights (Let it Grow, Eye of the World, Comes a Time) but hampered by tape warble and average overall performance.",
+  "review": "The recording captures an audience‑sourced tape that benefits from good mic placement and appropriate crowd ambience, yet suffers from noticeable warble and generational loss. Musically the show is typical for 1980 with a few standout moments – a hot Let It Grow, an engaging Eye of the World and a heartfelt Comes a Time – while the drum‑into‑Lost Sailor transition draws particular praise.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is average with a few highlights (≈3.5/5) and recording quality is fair due to tape warble (≈3.0/5); weighted combination yields ~3.4 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Good mic placement and crowd balance, but noticeable warble suggests a second‑generation analog tape with degraded condition."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Eye of the World",
+      "Comes a Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical early‑80s pacing; solid first set with a few highlights, and an interesting drum‑into‑Lost Sailor transition that adds uniqueness."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Jam from drums into Lost Sailor described as interesting and unique."
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eye of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:54:43.001532+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-05-29.aud.vernon.14836.sbeok.shnf"
+}

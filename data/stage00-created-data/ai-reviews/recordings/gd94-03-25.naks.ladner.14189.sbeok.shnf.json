@@ -1,0 +1,92 @@
+{
+  "summary": "A solid audience recording captures a high‑energy 1994 New York show with standout The Weight, Black‑Throated Wind and Picasso performances, though Jerry’s playing is uneven.",
+  "review": "The concert bursts with the excitement of an NYC crowd; early numbers like Help > Slip > Franklin's, Picasso Moon and a scorching Black‑Throated Wind showcase the band at its most lively. Bruce Hornsby’s accordion adds a different flavor, but Jerry Garcia’s reduced solo work drags the second set down, leaving only The Weight and a post‑Corrina jam as highlights. The audience tape is listenable with occasional muddiness, making it a worthwhile document of an uneven but memorable night.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4/5 and praise several songs; recording is described as decent but not pristine, yielding an overall rating in the high‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally listenable with some muddiness noted; accordion presence adds texture but the mix is not crystal‑clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Weight",
+      "Black-Throated Wind",
+      "Picasso Moon",
+      "Help > Slip > Franklin's",
+      "Corrina"
+    ],
+    "poor_songs": [
+      "Eternity",
+      "Don't Ease",
+      "Franklin's"
+    ],
+    "setlist_flow": "First set rolls strong with Help‑Slip‑Frank, Picasso and Black‑Throated Wind; second set stalls after a decent post‑Corrina jam, only rescued by The Weight and the occasional burst of energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – solid focus early on but limited solos later, making parts feel uninspired.",
+    "Phil": "Positive – praised for top‑form playing in several reviews.",
+    "Bob": "Very positive – highlighted for a powerful Black‑Throated Wind and overall strong performance.",
+    "Keys": "Bruce Hornsby appears only on accordion; reviewers note the novelty but many wish he had been on piano.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Weight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help > Slip > Franklin's": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black-Throated Wind": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Picasso Moon": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Corrina": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Attics": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Don't Ease": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Franklin's": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T20:38:39.010789+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-03-25.naks.ladner.14189.sbeok.shnf"
+}

@@ -1,0 +1,62 @@
+{
+  "summary": "A high‑quality matrix mix captures a solid but uneven 1977 performance, highlighted by a stellar Minglewood Blues and a moving Peggy‑O.",
+  "review": "The Dusborne matrix is praised for its clear, well‑balanced sound that lets the instruments and vocals sit nicely together. While some listeners find the overall energy lacking and Jerry’s singing weak, others enjoy the inspired renditions of Minglewood Blues, Peggy‑O and a nice Playin' → Other One sequence, making it a listenable show worth revisiting.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently rated good–excellent, but opinions on the performance are split; averaging these weighted factors yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note a very good mix with well‑balanced voice mics and instruments; no major dropouts or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood Blues",
+      "Peggy-O",
+      "Playing in the Band",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set includes pleasant gaps with Bobby’s banter that add charm, but overall energy is described as low and pacing uneven by some listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals are criticized as weak and lacking energy in one review; otherwise not highlighted.",
+    "Phil": "",
+    "Bob": "Bobby's audience interaction and solid playing are mentioned positively.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T05:55:25.193389+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-30.137374.mtx.dusborne.flac16"
+}

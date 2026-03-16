@@ -1,0 +1,57 @@
+{
+  "summary": "A jaw‑dropping audience recording with full, crisp sound that captures a scorching early‑80s show highlighted by a blistering Scarlet Begonias > Fire on the Mountain set.",
+  "review": "The Walker‑Scotton audience tape is consistently praised for its deep, rich bass and crystal‑clear highs, making it sound almost better than many soundboard releases.  Musically the concert is described as tight and energetic, with a standout second‑set opener “Scarlet Begonias > Fire on the Mountain,” fiery Jerry Garcia leads, and an overall hot start‑to‑finish vibe.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All but one review give five stars and extol both the performance and the audio; recording quality is deemed excellent and show quality exceptional, leading to a near‑perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviews repeatedly note full, deep sound, rich bass, crisp highs, no hiss or distortion, and a clean mix that rivals soundboards; no major drop‑outs or balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Feel Like a Stranger",
+      "One More Saturday Night",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Standard‑issue 1980 setlist but performed with tight interplay; second set opens with a scorching Scarlet/Fire that carries the fire through the night, and the show maintains high energy from start to finish."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s leads are described as raw, distorted and ‘raunchy,’ delivering a “garcia goodies” performance that ignites the band.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The drum work is praised, especially the space segment with guest percussionists Airto & Flora adding extra flavor."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T06:55:16.504731+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-12-13.nak300.walker-scotton.miller.88964.sbeok.flac16"
+}

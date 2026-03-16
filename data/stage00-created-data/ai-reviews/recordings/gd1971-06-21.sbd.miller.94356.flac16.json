@@ -1,0 +1,64 @@
+{
+  "summary": "Excellent soundboard capture of a classic ’71 backyard gig, highlighted by smoking Hard To Handle, a monster The Other One and a revelation‑filled Morning Dew.",
+  "review": "The Charlie Miller transfer delivers an intimate yet crystal‑clear soundboard recording that lets every instrument shine – especially Jerry’s soaring guitar tone and Pig’s unexpected electric‑piano textures. Musically the show is a quintessential early‑’71 performance with Hard To Handle, The Other One, Wharf Rat and Morning Dew standing out, only marred by a brief miscue on Casey Jones.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over a dozen detailed reviews overwhelmingly praise both the performance and the audio fidelity; minor criticisms are isolated, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners note an intimate, clear and raw mix – every instrument is audible, vocals are spot‑on, and the transfer preserves the live ambience without noticeable dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard To Handle",
+      "The Other One",
+      "Wharf Rat",
+      "Morning Dew"
+    ],
+    "poor_songs": [
+      "Casey Jones"
+    ],
+    "setlist_flow": "A typical early‑’71 outdoor house‑party set that flows naturally, with high energy throughout and only a brief miscommunication at the end of Casey Jones."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for insane playing, perfect tone and clear subtleties in the mix.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pig (Keith) on electric piano adds interesting textures, especially on The Other One; organ absent but e‑piano shines.",
+    "Drums": "Bill Kreutzmann hailed as a star drummer, though one reviewer notes he was \"all over the place\" in places."
+  },
+  "song_mentions": {
+    "Hard To Handle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T06:35:26.034965+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-06-21.sbd.miller.94356.flac16"
+}

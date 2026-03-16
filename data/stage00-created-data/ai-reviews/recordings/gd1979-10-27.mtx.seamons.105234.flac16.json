@@ -1,0 +1,58 @@
+{
+  "summary": "A seamless matrix mix gives a front‑of‑stage feel and solid jams, highlighted by an ecstatic Franklin’s Tower, but vocal strain and divided opinions on the crowd blend keep it from being flawless.",
+  "review": "The Hunter Seamons matrix brings the show close to the stage with crisp instrumentation and a powerful Franklin’s Tower that many reviewers call heavenly. While the performance features strong jams throughout both sets, Jerry’s strained vocals on some songs and the controversial addition of audience noise generate mixed reactions, leaving the overall experience solid but uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Abundant reviews provide a clear picture: the show delivers good musical moments (≈3.5/5) and the matrix recording is generally praised (≈3.8/5). Weighted together this yields an overall rating around 3.6, with medium confidence due to contradictory opinions."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Many note the matrix is seamless, crisp and gives a front‑of‑band feel; others decry the added crowd as sacrilegious or cheesy. Overall the blend evens out levels and brightens instruments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Dancing > Franklin's Tower"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "Minglewood"
+    ],
+    "setlist_flow": "Both sets contain solid jams and a notable second‑set transition (Dancing into Franklin’s Tower). The pacing is generally praised, though some feel the performance is uneven due to vocal fatigue."
+  },
+  "band_member_comments": {
+    "Jerry": "His guitar tone receives high praise, but his vocals are described as strained and shredded on parts of Franklin's Tower.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Reference to Brent’s addition in the ’79 lineup; no specific performance comments.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Minglewood": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dancing > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T00:13:55.695703+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-10-27.mtx.seamons.105234.flac16"
+}

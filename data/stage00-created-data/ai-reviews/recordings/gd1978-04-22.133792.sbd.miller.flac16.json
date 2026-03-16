@@ -1,0 +1,63 @@
+{
+  "summary": "Powerful performance with scorching Wharf Rat, Jack Straw and Sugar Magnolia; recording quality not described.",
+  "review": "The show is praised for its high energy and standout moments – a blistering Jack Straw, an unstoppable Sugar Magnolia, fierce final solos on Wharf Rat, and spirited renditions of Deal and Looks Like Rain. Reviewers note only minor slip‑ups (a miscue after “get up and fly away” and a few bum notes in Jerry’s early solo) that don’t detract from the overall excitement. No technical details about the tape are provided.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently enthusiastic reviews highlight an excellent musical performance; lack of recording‑quality info lowers the overall weighted score slightly."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers do not comment on soundboard vs. audience sources, clarity, or mix issues; focus is entirely on performance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Deal",
+      "Sugar Magnolia",
+      "Wharf Rat",
+      "Looks Like Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Punchy first set with spirited takes, followed by a swinging second set that builds to fierce solos and a sparkling close; overall flow described as lively and cohesive."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for an intense final solo on Wharf Rat (described as the highest guitar peak ever) despite a few bum notes early in his solo and a small miscue later.",
+    "Phil": "",
+    "Bob": "Noted for delivering the classic quip “we quit, see ya’ll later” at the show’s end.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T11:41:32.553704+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-04-22.133792.sbd.miller.flac16"
+}

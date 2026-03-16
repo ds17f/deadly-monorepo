@@ -1,0 +1,44 @@
+{
+  "summary": "Good matrix recording with slight audience bleed and modest bass distortion; energetic set highlighted by a great He's Gone but missing the Bird Song.",
+  "review": "The Ultramatrix source offers a clear upgrade over previous transfers, though it includes a touch too much audience ambience and some bass distortion. Musically the show is well‑played and energetic, with “He’s Gone” standing out, but the beloved Bird Song is absent from this release. Overall it’s recommended for fans despite these minor drawbacks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "low",
+    "rationale": "One detailed review rates the show and recording positively (4/5). The performance is strong with a standout song, while the matrix recording is good but has minor audience bleed and bass distortion, leading to an overall rating just under 4."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Clear improvement over earlier sources; slight excess of audience in the mix and modest bass distortion noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic and well‑played set, though it lacks the highlight moments of the following night and is missing the Bird Song."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:47:20.917466+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-26.s2.sbd.seaweed.124744.flac2448"
+}

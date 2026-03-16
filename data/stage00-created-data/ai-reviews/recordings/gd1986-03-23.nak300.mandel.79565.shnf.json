@@ -1,0 +1,39 @@
+{
+  "summary": "Average‑quality unknown‑source recording with a decent show where Hand Jive stands out.",
+  "review": "The two brief fan notes give little detail on the audio fidelity, but they do agree that the performance is at least fair and that Hand Jive is the only specifically praised moment. No clear comments about mix clarity or major flaws are provided, leaving the technical quality ambiguous.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only two short reviews; one offers a neutral personal recollection and the other gives a modest 3‑star rating with a single song highlight, so the overall assessment is average with low certainty."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not mention sound clarity, mix balance, or source type; no explicit recording issues were noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hand Jive"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hand Jive": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T13:30:11.878820+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-23.nak300.mandel.79565.shnf"
+}

@@ -1,0 +1,105 @@
+{
+  "summary": "High‑quality soundboard capture of the historic 1987 New Year's Eve concert, highlighted by scorching versions of Bertha, Bird Song, Wharf Rat and Knockin' on Heaven's Door.",
+  "review": "The SBD recording is clean and well‑balanced, offering the best audio source for this marathon NYE show. Fans rave about several standout performances—Bertha, Cold Rain & Snow, Bird Song, Music Never Stopped, Wharf Rat, Not Fade Away and Knockin' on Heaven's Door—while noting a few minor hiccups such as a lyric slip in Push Comes to Shove and some edits in the broadcast. Overall the musical flow across three sets feels electric and the extra interview/skit material adds historic flavor.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Reviews consistently praise the performance and list many standout songs; recording is described as the best‑quality SBD available, with only minor technical quirks."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Soundboard (SBD) praised as the highest‑quality source; some broadcast edits noted (missing Promised Land intro, 10‑sec edit in Space) and occasional missing instrument bleed on SBD, but overall clear and balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha",
+      "Cold Rain & Snow",
+      "Bird Song",
+      "Music Never Stopped",
+      "Hell In A Bucket",
+      "Wharf Rat",
+      "Not Fade Away",
+      "Knockin' on Heaven's Door",
+      "Iko Iko",
+      "Do You Wanna Dance?"
+    ],
+    "poor_songs": [
+      "Push Comes to Shove"
+    ],
+    "setlist_flow": "Three‑set marathon typical of a NYE celebration, with a warm opener, high‑energy second set and a festive third set featuring guest appearances; pacing keeps momentum despite long runtime."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar shines on Wharf Rat and Space (teases Too early), plus a memorable yell at Bobby during the show.",
+    "Phil": "Phil is noted for his involvement in the multi‑track mix; no specific performance comments.",
+    "Bob": "Bob (Bobby) leads the missing Promised Land intro and delivers strong vocals throughout, especially on Bird Song and other numbers.",
+    "Keys": "Brent (keys) “really smokes” during Iko Iko and adds notable texture to several songs.",
+    "Drums": "Bill Graham’s entrance is highlighted; Mickey is described as good‑natured after years of jokes about his appearance."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell In A Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Knockin' on Heaven's Door": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Do You Wanna Dance?": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Push Comes to Shove": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T05:57:29.192194+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-12-31.140070.sbd.pcm.miller.flac1644"
+}

@@ -1,0 +1,73 @@
+{
+  "summary": "Crisp sound‑board capture of the historic March 18 1977 Winterland show, highlighted by the first Scarlet Begonias→Fire on the Mountain combo, a killer Sugaree, soaring Half‑Step and an unforgettable Terrapin suite.",
+  "review": "The recording is a clean SBD (with a few audience patches and a short splice in Fire) that lets the band's chemistry shine.  The performance is one of the most celebrated ’77 shows – the debut Scarlet Begonias/Fire, soaring Jerry Garcia tones on Half‑Step and Sugaree, Phil’s fretless bass brilliance, and a unique Terrapin/Alhambra sequence make it a must‑listen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive reviews (majority 4–5 stars) praise both the musical performance and the sound‑board quality; only minor recording glitches are noted, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and clear with excellent instrument separation.  A few audience patches (start of the show) and a ~30‑second splice in Fire are mentioned, but they do not detract significantly from overall listenability."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias → Fire on the Mountain",
+      "Sugaree",
+      "Half‑Step (1/2 Step)",
+      "Terrapin Suite (At a Siding / Alhambra segment)",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set opens with an energetic first Fire, moves through the classic mid‑show peak of Scarlet Begonias→Fire, then rolls into a rich second half featuring the Terrapin suite, Half‑Step, and a soaring Sugaree before closing with a powerful Not Fade Away."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for a fat, rich tone on Half‑Step and Sugaree; one outlier calls his playing “all over the place” but the consensus is overwhelmingly positive.",
+    "Phil": "Highlighted for his fretless bass work on Scarlet→Fire, strong presence on Fire and Sugaree, and overall “extraordinary” performance throughout the night.",
+    "Bob": "",
+    "Keys": "Keith’s piano solo on Sugaree receives specific acclaim (“goes to goose‑bumps”).",
+    "Drums": "Mickey Hart’s contributions noted (first Fire, rhythmic drive), with occasional mention of a splice in the drum track."
+  },
+  "song_mentions": {
+    "Scarlet Begonias → Fire on the Mountain": {
+      "positive_mentions": 15,
+      "negative_mentions": 0,
+      "total_mentions": 15
+    },
+    "Sugaree": {
+      "positive_mentions": 22,
+      "negative_mentions": 0,
+      "total_mentions": 22
+    },
+    "Half‑Step": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Terrapin Suite (At a Siding / Alhambra)": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Not Fade Away": {
+      "positive_mentions": 8,
+      "negative_mentions": 2,
+      "total_mentions": 10
+    },
+    "Peggy-O": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "St. Stephen": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-24T20:37:53.253589+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-03-18.sbd.unknown.254.sbeok.shnf"
+}

@@ -1,0 +1,81 @@
+{
+  "summary": "High‑energy 1981 show brimming with standout tunes; recording quality not discussed but likely adequate.",
+  "review": "The performance is praised for its lively tempos and passionate vocals, with highlights such as Jack Straw, Bird Song, Let It Grow, Deal, Stella Blue, Terrapin Station, Sailor/​Saint and Brokedown Palace. While the reviewers are enthusiastic about the music, no specific comments about the source or clarity of the recording were provided.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Strong positive remarks about many songs and overall show quality offset by lack of information on recording fidelity; two reviews (5‑star enthusiastic, 4‑star neutral) lead to a solid rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about soundboard, audience mix, clarity or other technical aspects were mentioned in the reviews."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Bird Song",
+      "Let It Grow",
+      "Deal",
+      "Stella Blue",
+      "Terrapin Station",
+      "Sailor/ Saint",
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note the set flowed well with tempos that felt “just right,” strong vocal harmonies throughout, and only minor flubs that didn’t detract from overall enjoyment."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice is highlighted as a standout element of the entire show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sailor/ Saint": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T11:46:37.151512+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-05-13.mtx.tobin.86917.sbeok.flac16"
+}

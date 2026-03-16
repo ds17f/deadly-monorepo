@@ -1,0 +1,115 @@
+{
+  "summary": "Crisp audience tape with a mid‑range bite captures a solid late‑1979 show highlighted by Fire on the Mountain, Wharf Rat and a soaring Dancin’ > Franklin’s sequence.",
+  "review": "The recording is an audience source that is generally clear and crisp, though the mids are overly pronounced and can be harsh at higher volumes. Musically the concert delivers several standout moments – a blazing Fire on the Mountain, a killer Wharf Rat, and an energetic Dancin’ > Franklin’s > He's Gone > Caution Jam > The Other One sequence – but the first set suffers from weak spots like flubbed Loser and a very quiet Easy To Love You. Overall the show is enjoyable with a strong second set, tempered by uneven energy in parts of the performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is solid with multiple high‑energy highlights (≈70% weight) while recording quality is good but marred by excessive mids (≈30% weight), leading to an overall rating in the upper‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear and crisp in many sections, but a pronounced mid‑range makes the tape harsh at higher volumes; no major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire on the Mountain",
+      "Wharf Rat",
+      "Mama Tried",
+      "Minglewood Blues",
+      "Scarlet Begonias / Fire on the Mountain",
+      "Dancin' > Franklin's Tower",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Loser",
+      "Sailor>Saint",
+      "Easy To Love You",
+      "Terrapin Station (lyric issues)"
+    ],
+    "setlist_flow": "First set is uneven with a few weak moments, but the second set rocks – scarlet‑fire, Terrapin through the PITB reprise, and an exhilarating Dancin’ > Franklin’s sequence keep the energy high."
+  },
+  "band_member_comments": {
+    "Jerry": "Flubs Loser and Sailor>Saint, making those sections sound weak.",
+    "Phil": "",
+    "Bob": "Belts out the lyrics on Playin' in the Band; vocal performance is solid.",
+    "Keys": "Early Brent Mydland era noted – funky organ sounds praised but overall keyboard contribution receives mixed feedback.",
+    "Drums": "No specific commentary beyond the standard drum segment after The Other One."
+  },
+  "song_mentions": {
+    "Mama Tried": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sailor>Saint": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Easy To Love You": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Dancin' > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Caution Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet Begonias / Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T23:35:07.148835+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd79-10-24.senn.munder.13298.sbeok.shnf"
+}

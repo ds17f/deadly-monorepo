@@ -1,0 +1,61 @@
+{
+  "summary": "High‑energy European show with a hiss‑laden but listenable soundboard, highlighted by stellar The Other One and Truckin' jams.",
+  "review": "The Lille 1972 concert captures the band in top form – Jerry’s lead work is “smoking,” Phil rides the vibe, Bob delivers his trademark slashing leads, and the rhythm section drives epic stretches of The Other One and Truckin'.  The SBD source has noticeable hiss (especially in quiet passages) and a slight speed anomaly reported by some, but overall the mix is clear enough to enjoy the performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and enthusiastic comments about the music outweigh modest complaints about hiss; strong show quality with multiple standout jams."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Noticeable tape hiss, particularly in quieter sections; occasional speed‑off issue (≈1 % slow) mentioned; overall clear and balanced mix suitable for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One > He's Gone",
+      "Truckin'",
+      "China Cat Sunflower > I Know You Rider"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Standard first‑set fare for ’72 followed by a second set that really takes off – the Truckin' opening segues into an expansive, spacey Other One jam, delivering the show’s high point."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for “smoking” leads on Truckin' and overall strong guitar tone.",
+    "Phil": "Described as having a spectacular, almost visual experience; bass work noted as solid throughout.",
+    "Bob": "Highlighted for his slashing lead lines on Truckin' and consistent rhythm playing.",
+    "Keys": "Pigpen’s organ fills add eerie texture; keyboards generally praised though not a focal point.",
+    "Drums": "Bill Kreutzmann’s drumming is called “great” and drives the extended Other One section."
+  },
+  "song_mentions": {
+    "The Other One > He's Gone": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mr. Charlie": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T13:52:48.254581+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-05-13.sbd.ladner.3457.sbeok.shnf"
+}

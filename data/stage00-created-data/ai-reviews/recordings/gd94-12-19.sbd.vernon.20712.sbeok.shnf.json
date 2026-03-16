@@ -1,0 +1,91 @@
+{
+  "summary": "Soundboard source with occasional pitch problems, but the show dazzles thanks to a transcendent Days Between and several standout moments.",
+  "review": "The recording is a sound‑board capture that is generally crisp, yet listeners report speed/pitch drift from the original DAT and an overbearing audience bleed on one channel. Musically the concert is highlighted by an emotional, near‑perfect performance of “Days Between” plus strong renditions of Broken Arrow, Brokedown Palace and Miracle, though a few spots (early So Many Roads, New Speedway Boogie, Drums/Space) are noted as sloppy or tedious.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "The majority of reviews praise the performance (especially Days Between) while noting recording flaws; weighted 70 % show quality and 30 % audio quality yields a solid mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Pitch/speed drift attributed to a malfunctioning master DAT; occasional audience bleed (one vocal dominating left channel); some copies missing tracks (Masterpiece‑Deal); overall board is crisp but not uniformly reliable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Days Between",
+      "Broken Arrow",
+      "Brokedown Palace",
+      "Miracle",
+      "Stagger Lee"
+    ],
+    "poor_songs": [
+      "New Speedway Boogie",
+      "Drums/Space"
+    ],
+    "setlist_flow": "First set is described as decent with a solid Stagger Lee and Deal closer; the second set builds to a powerful Days Between near the end, followed by an extended jam leading into Miracle. The concert peaks on Days Between before winding down with Lovelight and Brokedown Palace encores."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice full of emotion, nailed lyrics on Days Between; early So Many Roads lines slipped, occasional off‑pitch moments.",
+    "Phil": "Phil’s bass work praised on Broken Arrow; Lesh later called Days Between \"achingly nostalgic\".",
+    "Bob": "Bob (Bobby) highlighted on Miracle and Lovelight, with some calling his playing among the best in years.",
+    "Keys": "",
+    "Drums": "Long drum/space segment criticized as tedious by one reviewer; otherwise drummers provide a solid 10‑minute jam before Miracle."
+  },
+  "song_mentions": {
+    "Days Between": {
+      "positive_mentions": 9,
+      "negative_mentions": 1,
+      "total_mentions": 10
+    },
+    "Broken Arrow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Stagger Lee": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Masterpiece": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Drums/Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T04:47:06.305725+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-12-19.sbd.vernon.20712.sbeok.shnf"
+}

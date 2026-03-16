@@ -1,0 +1,58 @@
+{
+  "summary": "Pristine soundboard capture of a mixed‑bag show highlighted by Jerry’s double “headlight” verse and an excellent Baby Blue.",
+  "review": "The Miller‑processed soundboard tape is crisp and almost flawless, giving the listener a clean window onto the performance. Musically the concert is uneven – the early set shines with a rare double “headlight” vocal from Jerry and a sweet rendition of Baby Blue, but the second set feels predictable and a rushed “Eyes of the World” drags the show down.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Recording quality is consistently praised as pristine (high score), while show quality receives mixed feedback ranging from “good” to “humdrum,” pulling the overall rating toward the middle of the scale."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, pristine mix with Millerized processing that adds warmth; no drop‑outs or major balance issues reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Riders (double headlight verse)",
+      "Baby Blue"
+    ],
+    "poor_songs": [
+      "Eyes of the World (rushed)",
+      "Second set after drums (predictable/obligatory)"
+    ],
+    "setlist_flow": "Early set flows well and carries an Oregon‑cool vibe, but the second half feels formulaic and lacks the spark that earlier shows of ’84 delivered."
+  },
+  "band_member_comments": {
+    "Jerry": "Delivers a powerful double “headlight” verse with authority; highlighted as a rare vocal moment.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Second‑set drumming is noted as merely a prelude to an obligatory, predictable jam."
+  },
+  "song_mentions": {
+    "Riders (double headlight verse)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Baby Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T17:41:03.566177+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-05-07.sbd.fix.walker-scotton.miller.96343.sbeok.flac16"
+}

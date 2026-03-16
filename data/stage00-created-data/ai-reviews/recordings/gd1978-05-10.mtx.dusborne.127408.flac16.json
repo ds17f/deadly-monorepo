@@ -1,0 +1,82 @@
+{
+  "summary": "Matrix-sourced recording captures a high‑octane 1978 show highlighted by scorching Wharf Rat, The Other One and a soaring Let It Grow > Deal sequence.",
+  "review": "Both reviewers rave about the concert’s relentless energy, calling the final thirty minutes – especially The Other One, Wharf Rat and Sugar Magnolia – some of the hottest post‑drums ever.  The first set builds with a blistering Let It Grow > Deal close, while the second set maintains the fire, all presented on a clear, well‑balanced matrix mix.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Consistently five‑star reviews praise both performance and matrix recording; minor set‑list slips are outweighed by numerous standout moments."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix mix praised as clear, balanced and well‑captured; no dropouts or major flaws mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Wharf Rat",
+      "Sugar Magnolia",
+      "Let It Grow",
+      "Deal",
+      "Big River"
+    ],
+    "poor_songs": [
+      "Jack Straw",
+      "Bertha"
+    ],
+    "setlist_flow": "First set builds from a shaky Jack Straw into a high‑energy Let It Grow > Deal close; second set escalates with intense jams, culminating in an incendiary final thirty minutes."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T12:37:41.369690+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-05-10.mtx.dusborne.127408.flac16"
+}

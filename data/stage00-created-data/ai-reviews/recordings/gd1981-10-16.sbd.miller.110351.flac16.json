@@ -1,0 +1,88 @@
+{
+  "summary": "Excellent soundboard transfer of a quirky 1981 club show – acoustic gems like “Cassidy” and “Ripple” plus a fiery electric set highlighted by “Birdsong” and “Lovelight”.",
+  "review": "The Charlie Miller‑sourced soundboard capture is clear and well‑balanced, preserving Brent’s clean keys and the band’s on‑stage spontaneity.  While the acoustic half feels a bit uneven for some listeners, the electric portion delivers a high‑energy, almost Vegas‑style set with standout moments such as “Birdsong”, “Lovelight” and a scorching “Samson & Delilah”.  Overall the performance is celebrated by reviewers despite a few song choices they’d skip.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5) and detailed praise for both the music and the transfer indicate a strong show with an excellent soundboard recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Transfer by Charlie Miller praised as “great”, clean mix, Brent’s keyboards sit nicely, no major drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Ain't No Lie",
+      "Ripple",
+      "Birdsong",
+      "Lovelight",
+      "Samson & Delilah"
+    ],
+    "poor_songs": [
+      "Hully Gully",
+      "Gloria",
+      "Greatest Dead (GDTRFB)"
+    ],
+    "setlist_flow": "Acoustic set is a pleasant, if not peak‑year, collection of bouncy tunes; the electric half feels like an hour‑long novelty/club gig that erupts into high‑octane jams, especially after the Lovelight transition."
+  },
+  "band_member_comments": {
+    "Jerry": "Playing on rented gear (Yamaha SC1200/Strat) – described as “on fire”, shredding, though one reviewer notes a thinner tone due to missing stereo splitter.",
+    "Phil": "Lots of praise – “tears it up” on Birdsong, high in the mix and delivers great moments throughout.",
+    "Bob": "Ready to sing; his vocals noted positively in the energetic second set.",
+    "Keys": "Brent’s clean keyboard tones highlighted as a highlight of the night.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ain't No Lie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ripple": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Gloria": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Hully Gully": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Greatest Dead (GDTRFB)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T15:59:36.436255+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-16.sbd.miller.110351.flac16"
+}

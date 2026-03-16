@@ -1,0 +1,39 @@
+{
+  "summary": "Matrix recording captures an ecstatic Red Rocks show highlighted by a soaring \"Ship of Fools\" performance.",
+  "review": "Both reviewers rave about the July 7/8, 1978 Red Rocks concerts, calling the night “cosmic” and praising Jerry’s impassioned scream on “Ship of Fools.” No recording flaws are mentioned, suggesting the matrix source is at least clear enough to enjoy the high‑energy set.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Strong enthusiasm for the musical performance (especially Jerry on \"Ship of Fools\") and no reported audio issues give a high rating, but limited detail about recording quality keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers did not comment on sound problems; the matrix mix is presumed adequate for listening."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ship of Fools"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The night is described as “cosmic” with a particularly powerful moment when Jerry screams \"Ship of Fools,\" indicating an overall high‑energy, well‑flowing performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his screaming vocal on \"Ship of Fools\" and noted that his voice remains sweet throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T14:04:12.578144+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-07-07.mtx.octopusrider.98917.flac16"
+}

@@ -1,0 +1,85 @@
+{
+  "summary": "Stunning front‑of‑house capture of a vibrant 1995 Portland show highlighted by a soaring Shakedown and a fiery Looks Like Rain.",
+  "review": "The recording is a clear, warm FOB mix that lets the band’s 1995 energy shine through.  Highlights include an epic 20‑minute Shakedown, a blazing Looks Like Rain, and strong performances of Terrapin Station, Dire Wolf and Sugar Magnolia.  Overall the show feels energetic yet reflective, with solid playing from Jerry, Phil and Vince.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews praise both the musical performance and the front‑of‑house recording; standout songs are repeatedly mentioned positively, while no serious technical flaws are reported."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, warm FOB (front‑of‑house) capture with good balance and no major glitches; reviewers describe it as \"stunning\" and \"sweet\"."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Looks Like Rain",
+      "Terrapin Station",
+      "Dire Wolf",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Samba"
+    ],
+    "setlist_flow": "The first set is praised as one of the strongest of the era, while the second set builds a reflective yet energetic arc; pacing is described as nicely paced and not rushed."
+  },
+  "band_member_comments": {
+    "Jerry": "Warm, expressive vocals and confident guitar work; growling lead on Shakedown and magical octave‑bending pedal highlighted.",
+    "Phil": "Thunderous bass, especially during the 20‑minute Shakedown; described as \"Phil was Phil\".",
+    "Bob": "",
+    "Keys": "Vince’s piano shines on Days Between with tasteful flourishes; overall keyboard work praised.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Samba": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Dire Wolf": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Music Never Stops": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack-A-Roe": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T09:18:01.610406+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-05-29.fob.schoeps.unknown.larson.34270.flac16"
+}

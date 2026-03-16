@@ -1,0 +1,93 @@
+{
+  "summary": "Fiery early‑80s set with Jerry on fire and tight Saint jam",
+  "blurb": "The show delivers a high‑energy first set featuring Jack Straw, El Paso and a fiery Deal, followed by a second‑set highlight in the Saint Of Circumstance jam and a solid encore. Jerry Garcia is repeatedly described as “on fire,” while Phil Lesh provides thunderous bass and Bill Kreutzmann drives the tempo. Standout moments include Ramble On Rose, Althea’s blistering lick, and the tight “Saint” sequence.",
+  "review": "June 7, 1980 at Folsom Field saw the Dead in top form, kicking off with a brisk, uptempo first set that built momentum from Jack Straw through a string of classics—Friend Of The Devil into El Paso, Mama Tried, and a scorching Deal. Reviewers rave about Jerry’s incendiary playing, calling him “on fire” especially on Deal and the Althea solo, while Phil’s bass bombs shook the stadium and Bill’s hyper‑tempo drumming kept the set moving at breakneck speed. The second set is anchored by an unforgettable Saint Of Circumstance jam that weaves into Lost Sailor and a seamless transition through Drums and Space before launching into Not Fade Away and Wharf Rat. The encore capped the night with Alabama Getaway, One More Saturday Night and U.S. Blues, leaving the crowd buzzing. Across audience recordings the performance is consistently praised for its energy and tightness, even though some tapes suffer from typical AUD hiss; the sirmick audience tape stands out as a clear, “top‑notch” capture that lets every nuance shine.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 18,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.8,
+      "sentiment_rationale": "Two recordings are clearly positive, praising Jerry’s fire, the Saint Of Circumstance jam and overall high energy; two others are mixed but still note standout moments (Althea lick, Ramble On Rose). The balance yields a modestly positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.8 = 3.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd80-06-07.aud.sirmick.31348.sbeok.flacf",
+    "reason": "Top‑notch audience tape with clear mix; reviewers call it “better than a SBD” and note its listenability despite being an AUD source."
+  },
+  "key_highlights": [
+    "Jerry’s incendiary solos on Deal and Althea.",
+    "Saint Of Circumstance jam that lifts the second set.",
+    "Phil Lesh’s thunderous bass bombs driving the stadium vibe.",
+    "Bill Kreutzmann’s hyper‑tempo drumming throughout."
+  ],
+  "song_highlights": [
+    "Jack Straw",
+    "Friend Of The Devil",
+    "El Paso",
+    "Mama Tried",
+    "Passenger",
+    "Loser",
+    "Feel Like A Stranger",
+    "Deal",
+    "Saint Of Circumstance",
+    "Alabama Getaway",
+    "One More Saturday Night",
+    "Ramble On Rose"
+  ],
+  "band_performance": {
+    "Jerry": "On fire all night, delivering scorching solos on Deal and a blistering Althea lick; his energy drives the set.",
+    "Phil": "Provides powerful bass bombs and a thundering low end that shakes the stadium, anchoring the high‑energy flow.",
+    "Bob": "Minor lyrical slip in Passenger but otherwise solid rhythm work throughout the show.",
+    "Brent": "Adds the X‑factor on keys, pushing the uptempo vibe forward and complementing Jerry’s lead.",
+    "Mickey": "",
+    "Billy": "Hyper‑tempo drumming fuels tracks like Mama Tried and keeps the momentum relentless across both sets."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-13T00:15:19.952188+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Jack Straw"
+    ],
+    [
+      "Friend Of The Devil",
+      "El Paso",
+      "Mama Tried"
+    ],
+    [
+      "Passenger"
+    ],
+    [
+      "Loser"
+    ],
+    [
+      "Feel Like A Stranger"
+    ],
+    [
+      "Deal"
+    ],
+    [
+      "Lost Sailor",
+      "Saint Of Circumstance",
+      "Jam",
+      "Drums",
+      "Space",
+      "Not Fade Away",
+      "Wharf Rat",
+      "Good Lovin'"
+    ],
+    [
+      "Alabama Getaway",
+      "One More Saturday Night"
+    ],
+    [
+      "Ramble On Rose"
+    ]
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "summary": "Decent but unverified recording; the Hell > Sugaree transition shines while other moments feel uneven.",
+  "review": "Fans recall a standout Hell > Sugaree sequence that makes this show memorable, yet the Throwing Stones into Magnolia segue attracted criticism for sloppy vocals and stage antics. No reviewer mentioned sound quality, so the recording source and fidelity remain unclear.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Average star average (3) across three reviews with mixed comments; positive remarks about a key song but notable criticism of another segment, and no recording‑quality information."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers did not discuss sound clarity, mix balance or source type, so the audio quality cannot be definitively assessed."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hell > Sugaree"
+    ],
+    "poor_songs": [
+      "Throwing Stones",
+      "Magnolia"
+    ],
+    "setlist_flow": "The set features a celebrated Hell > Sugaree transition, but the Throwing Stones → Magnolia segue is viewed as weak due to vocal and performance issues."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s snappy Appalachian bends during the Magnolia transition are praised.",
+    "Phil": "Phil’s comfortable bass lines are noted but deemed insufficient to rescue the problematic segment.",
+    "Bob": "",
+    "Keys": "Brent’s piano is described as pretty yet unable to lift the overall performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hell > Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:53:42.510024+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-04-03.sbd.clugston.7550.sbeok.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "A solid show that suffers from a low‑fidelity FM broadcast source and heavy drum gating.",
+  "review": "Reviewers agree the concert itself was a great performance—especially given the heat and notable guests—but the available recording is plagued by poor fidelity, mono FM SBD pickup and over‑compressed drums. The best audio comes from an audience cassette recorded close to the stage, while the official source sounds flat and muddy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is praised (≈4/5) but recording quality is rated poorly (≈2/5); weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "FM broadcast source is mono and muffled; heavy gating/compression on drums reduces dynamics. Reviewers note all available sources sound like \"crap\" with limited fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers focus on overall performance quality rather than individual song flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Reviewers mention heavy gating/compression on the drums, affecting dynamic range."
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-17T06:45:31.331248+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-05-05.141939.FOB.Schoeps.BK.Mattes.Miler.Noel.t-flac1648"
+}

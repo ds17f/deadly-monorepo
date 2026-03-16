@@ -1,0 +1,57 @@
+{
+  "summary": "Clean soundboard capture of a relaxed 1974 show with standout Uncle John's Band, Sugaree and extended Seastones, though Bob Weir's guitar is faint in the mix.",
+  "review": "The Miller‑transferred soundboard tape delivers decent clarity and adds about 20 minutes of previously missing material, but the mix noticeably drowns out Bob Weir’s guitar. Musically the band is described as confident and laid‑back, with Phil’s vocals on Uncle John’s Band, a nailed Sugaree, and exploratory versions of Playing in the Band and Morning Dew earning particular praise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently positive comments on performance (standout songs, relaxed vibe) and a generally good soundboard recording despite a minor mix issue; 4 detailed reviews provide strong consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Modest improvement in clarity with Miller transfer, extra ~20 min of Phil and Ned material added; however Bob Weir's guitar is largely absent from the mix, likely due to Ned patching."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Uncle John's Band",
+      "Sugaree",
+      "Playing in the Band",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A laid‑back, groove‑deep performance with no major outro/intro jams in the last set; the Seastones segment adds an experimental flavor and marks a clear shift from earlier European shows."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Vocals on Uncle John's Band praised; extra 20 min of Phil (and Ned) material highlighted.",
+    "Bob": "Near‑absence of Bob's guitar in the mix noted as a drawback.",
+    "Keys": "Seastones influence mentioned, indicating prominent keyboard/experimental textures.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T01:02:46.432461+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-09-21.131530.sbd.miller.flac16"
+}

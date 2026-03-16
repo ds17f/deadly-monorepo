@@ -1,0 +1,45 @@
+{
+  "summary": "Soundboard capture with a bit of background hiss, but an overall solid performance highlighted by Pigpen’s Turn On Your Lovelight and a standout acoustic jam on Mountains of the Moon.",
+  "review": "The show is remembered fondly for its festival atmosphere, fluid Jerry Garcia solos and a memorable acoustic ending to “Mountains of the Moon.”  The soundboard source is generally clear, though a faint hiss can be heard; most listeners find it listenable and even recommend EQ tweaks.  Pigpen’s presence and “Turn On Your Lovelight” make this a must‑have for fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 5‑star, praising the performance (Pigpen, Jerry’s solos, Mountains of the Moon) while recording comments are mixed but overall acceptable; weighted combination yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Background hiss makes some instruments and vocals less clear; one reviewer notes it sounds better than other copies and can be improved with EQ, but overall the soundboard is listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Turn On Your Lovelight",
+      "Mountains of the Moon"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans recall a short, festival‑style set with high energy, fluid Jerry solos and strong Pigpen moments; the concert felt like an original 1968 rock fest with seamless transitions between bands."
+  },
+  "band_member_comments": {
+    "Jerry": "Great acoustic guitar jam at the end of “Mountains of the Moon” and fluid SG‑style solos noted by several reviewers.",
+    "Phil": "Phil’s bass work on “Mountains of the Moon” is praised as solid.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Mountains of the Moon": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Turn On Your Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T10:01:10.766995+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-12-20.sbd.miller.89663.sbeok.flac16"
+}

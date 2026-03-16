@@ -1,0 +1,31 @@
+{
+  "summary": "Audience recording captures the crowd’s energy but suffers from muffled band sound that buries the performance.",
+  "review": "The two fan reviews are split. One reviewer loves the lively audience vibe and even rates it five stars despite noting that the music isn’t crisp, claiming it sounds better than the available soundboard tape. The other finds the band's instruments buried in the mix, making it difficult to enjoy an otherwise decent set, and gives it only two stars.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "One very positive review and one negative review lead to a moderate average; the show itself isn’t described as exceptional, while the recording is judged fair due to clarity issues."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Not crisp; band sound buried and low on high‑end clarity, though not completely muddy. Crowd ambience is strong."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific highlights mentioned; one reviewer finds the set list uninteresting if familiar with the tour."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar is often buried and hard to hear in this recording.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T02:19:23.499565+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-08-29.senn421.wise.miller.100390.flac16"
+}

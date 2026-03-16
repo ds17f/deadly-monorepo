@@ -1,0 +1,70 @@
+{
+  "summary": "A pristine Miller soundboard captures a blistering 1968 Greek set, highlighted by an epic Dark Star, raging The Eleven and magical Lovelight.",
+  "review": "The recording is crystal‑clear – a classic Chuck Miller tape that lets every instrument shine, with only a faint guitar dip on Schoolgirl and a slight buzz in Lovelight. Musically the show is pure fire: Dark Star soars, The Eleven rips, Lovelight burns, and the Caution→Feedback jam is legendary, while Phil’s bass dominates and Jerry’s leads sparkle. Overall fans rave about the energy and historic significance of this rare Greek performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly praise both the performance (standout Dark Star, Eleven, Lovelight) and the sound quality; only minor recording quirks are noted, leading to an excellent combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, crystal‑clear mix with every instrument audible. Minor issues: faint Garcia guitar on Schoolgirl and a slight buzz in Lovelight, but overall superb fidelity typical of Miller tapes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "The Eleven",
+      "Lovelight",
+      "Caution > Feedback",
+      "St. Stephen"
+    ],
+    "poor_songs": [
+      "Schoolgirl"
+    ],
+    "setlist_flow": "The set flows with high‑energy transitions – Lovelight segues into a rolling Dark Star, the Eleven bursts into Caution, and the feedback climax feels like a composed group piece. The energy stays relentless throughout despite the short runtime."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for hypnotic tone on Dark Star, fiery fills on Lovelight and powerful leads on The Eleven; many reviewers call his playing \"amazing\" and \"in the mix\".",
+    "Phil": "Described as \"in charge\", with a booming bass presence (especially on Schoolgirl), extended solos that delight fans, and a prominent spot in the mix throughout.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "The Eleven": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Lovelight": {
+      "positive_mentions": 8,
+      "negative_mentions": 1,
+      "total_mentions": 9
+    },
+    "Caution > Feedback": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "St. Stephen": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Schoolgirl": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T09:38:29.325948+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd68-10-20.sbd.miller.21441.sbeok.shnf"
+}

@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent sound and a wildly exploratory set, opening with Playin' in the Band and a second‑set that rockets to outer limits.",
+  "review": "Both reviewers rave about the recording’s crystal‑clear, “tremendous” sound and give the show five stars. The concert kicks off with an adventurous Playin' in the Band that leads into exploratory renditions of China Doll and High Time, while the second set is described as taking the band to the outer limits. No technical flaws are noted, making this a must‑listen performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Both reviews give 5 stars and explicitly praise both sound quality and musical performance; with only two reviews confidence is medium."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers highlight the recording’s clear, tremendous sound and note no issues such as muddiness or drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playin' in the Band",
+      "China Doll",
+      "High Time"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opening with Playin' in the Band sets an exploratory tone that carries through China Doll and High Time, and the second set is praised for pushing the band to outer limits."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin' in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T17:18:23.755252+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-27.nak300.friend-morrone.124956.flac1644"
+}

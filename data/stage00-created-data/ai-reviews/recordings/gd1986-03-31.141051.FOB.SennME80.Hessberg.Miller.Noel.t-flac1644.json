@@ -1,0 +1,46 @@
+{
+  "summary": "Solid soundboard recording of a contemplative show featuring a mood‑rich The Stranger, though the Truckin' transition feels rushed.",
+  "review": "The recording is praised as one of the better captures from this tour, delivering clear front‑of‑house board sound with no notable technical flaws. Musically the concert is described as thoughtful and immersive, highlighted by an unusually spare rendition of The Stranger, while the Truckin' > JBG segue is criticized for being rushed. Overall the vibe was mixed due to crowd disruptions, but the ensemble playing remains strong.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "low",
+    "rationale": "Only a single mixed review; positive remarks about recording quality and The Stranger offset by criticism of the rushed Truckin' transition, yielding an average rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No specific technical issues mentioned; reviewer calls it the best recording despite unrelated crowd 'bad vibes', indicating a clean and listenable capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Stranger"
+    ],
+    "poor_songs": [
+      "Truckin'"
+    ],
+    "setlist_flow": "A contemplative second set that invites deep listening, but momentum is interrupted by a rushed Truckin' transition and crowd disruptions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann was seen waving his fist in frustration during the show."
+  },
+  "song_mentions": {
+    "The Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:24:38.650217+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-31.141051.FOB.SennME80.Hessberg.Miller.Noel.t-flac1644"
+}

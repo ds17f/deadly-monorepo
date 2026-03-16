@@ -1,0 +1,57 @@
+{
+  "summary": "Good‑quality matrix recording of an upbeat 1988 St. Pete show with sweet Box of Rain and a standout Victim/Foolish Heart combo, though the audio is a bit muddy.",
+  "review": "The performance captures the Dead in high spirits – a bright opening of Box of Rain, a memorable Victim → Foolish Heart pairing, and a solid Watchtower/Dew set‑ender. Reviewers note Jerry’s vocals sound good but the mix is “mucky” for an ultramatrix source, giving the recording a slightly gritty character.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is solid with several highlighted moments, but the recording is described as muddy/mucky, pulling the overall rating down a notch."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard‑derived matrix, though reviewers call it \"mucky\" and note some lack of presence; still listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Box of Rain",
+      "Victim",
+      "Foolish Heart",
+      "Watchtower/Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as fizzing without a strong Bird Song or Cassidy moment, but the second set lifts the show with stronger song pairings and a sweet set‑ender."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice sounded good throughout this tour.",
+    "Phil": "",
+    "Bob": "Weirdly lacking in Bob's presence during the first set.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower/Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T15:05:42.187426+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-10-16.sbd.miller.92389.sbeok.flac16"
+}

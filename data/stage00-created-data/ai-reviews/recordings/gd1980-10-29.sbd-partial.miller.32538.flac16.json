@@ -1,0 +1,31 @@
+{
+  "summary": "Soundboard partial with a noticeable left‑channel imbalance, but a fast and enjoyable performance.",
+  "review": "The recording is sourced from the soundboard, though listeners note a blown‑speaker/mic issue that leaves the left channel weaker than the right. Musically the show is praised for its energy, albeit a bit faster than expected, making it an engaging listen despite the technical hiccup.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "low",
+    "rationale": "Only two brief reviews; one praises the show (3★) while the other points out a channel imbalance (4★). Weighted average of show (≈3.5) and recording quality (≈3) yields a modest rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Left‑channel mic/speaker appears blown or weak, causing imbalance; otherwise typical soundboard clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Performance described as fast‑paced; no specific set‑structure comments."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T05:38:46.247321+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-10-29.sbd-partial.miller.32538.flac16"
+}

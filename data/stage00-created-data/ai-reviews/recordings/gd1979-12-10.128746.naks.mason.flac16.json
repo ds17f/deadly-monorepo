@@ -1,0 +1,45 @@
+{
+  "summary": "Great 1979 Chicago audience tape captures a spectacular performance with standout He's Gone and Truckin', audio is solid for an audience recording.",
+  "review": "The show is praised as a classic late‑'70s Dead concert, highlighted by powerful renditions of He's Gone and Truckin' and strong vocals from Jerry and Bob. The Mason‑Taylor tape delivers good‑quality sound for a crowd source, though some listeners note it isn’t “best‑of‑breed” compared to professional board recordings. Overall the performance shines despite the modest recording setup.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Three reviews give an average of 4.3 stars; two are highly positive about both music and audio, while one points out the tape’s limitations. Weighted toward show quality (70%) with solid but not flawless recording quality yields a rating around 4.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and enjoyable for an audience tape; praised as “great audio,” though one reviewer mentions the tapes are not top‑tier in fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "He's Gone",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic classic ’79 vibe with strong vocal performances and tight band interplay; no specific flow issues noted."
+  },
+  "band_member_comments": {
+    "Jerry": "His singing is still beautiful; guitar work not specifically mentioned.",
+    "Phil": "",
+    "Bob": "Vocals praised as beautiful.",
+    "Keys": "Positive note about Brent joining the band and enhancing the sound.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T03:23:55.292821+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-10.128746.naks.mason.flac16"
+}

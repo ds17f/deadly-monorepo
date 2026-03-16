@@ -1,0 +1,66 @@
+{
+  "summary": "High‑energy show with tight rock jams, standout Hand Jive and Box of Rain",
+  "blurb": "The set bursts with high‑octane rockers like Willie And The Hand Jive, Truckin' and a soaring Box of Rain. Jerry’s guitar tone shines while Phil’s bass rolls and the crowd chants “We Want Phil” add extra fire. The performance stays focused, avoiding the overblown jams common in ’87.",
+  "review": "On April 4, 1987 at the Centrum in Worcester, the Dead delivered a compact, high‑energy set that leans hard into rock while still sprinkling in their trademark improvisational moments. The first set builds from a brisk “Touch of Grey” through tight renditions of “Greatest Story Ever Told,” “Althea,” and “Tennessee Jed,” climaxing with a heartfelt “Box of Rain.” In the second set, the band erupts into a blistering “Willie And The Hand Jive,” rolls into a seamless “Playing In The Band” → “Comes A Time” segue, and rides a tight post‑drums three‑song stretch that includes an inspired “Truckin'” leading straight into a soaring “Morning Dew.” The encore’s “One More Saturday Night” is delivered with only a minor lyrical slip, keeping the night’s momentum intact.\n\nAcross multiple audience and matrix recordings the performance is praised for its crisp sound and palpable excitement. Jerry’s guitar tone is described as stellar, even dancing onstage during “Iko Iko,” while Phil’s bass provides a rolling foundation highlighted by the iconic “We Want Phil” chant just before “Box of Rain.” Brent’s keyboards add texture—occasionally forward in the mix—but enhance the overall groove. The drums lock in tight, driving the high‑octane flow without any major missteps. In short, this show captures a rare moment of pure rock focus and collective joy that stands out among the Dead’s 1987 outings.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.3,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 35,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.5,
+      "sentiment_rationale": "Six of seven recordings use positive language (\"high‑energy,\" \"excellent,\" \"standout\"), praising the rock focus, tight jams, and crowd interaction. The lone negative review only critiques recording fidelity, not performance. Consistent acclaim for Hand Jive, Box of Rain, Truckin', and overall energy justifies a strong positive adjustment.",
+      "final_calculation": "2.5 + 0.3 + 1.5 = 4.3"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1987-04-04.140305.fm.miller.flac2496",
+    "reason": "Excellent matrix source with rich, well‑balanced sound that captures the high‑energy rock focus and tight band interplay."
+  },
+  "key_highlights": [
+    "High‑octane rock set featuring Hand Jive, Truckin' and a soaring Box of Rain.",
+    "Jerry’s stellar guitar tone and on‑stage energy lift songs like Iko Iko.",
+    "Phil’s bass roll and the crowd’s “We Want Phil” chant create an emotional peak before Box of Rain.",
+    "Multiple audience recordings praised for crystal‑clear fidelity, making this show a top‑tier 1987 performance."
+  ],
+  "song_highlights": [
+    "Willie And The Hand Jive",
+    "Truckin'",
+    "Morning Dew",
+    "Comes A Time",
+    "Box of Rain",
+    "Iko Iko"
+  ],
+  "band_performance": {
+    "Jerry": "Stellar guitar tone throughout, especially on Iko Iko where his playing is described as on‑fire and even dancing onstage.",
+    "Phil": "Great bass roll highlighted across recordings; crowd chant “We Want Phil” before Box of Rain adds a special moment.",
+    "Bob": "Minor vocal slip on One More Saturday Night noted, otherwise no significant commentary.",
+    "Brent": "Keyboards add texture throughout; occasionally forward in the mix but overall enhance the rock‑focused energy.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 7,
+  "processed_date": "2025-09-15T21:06:12.885148+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Playing In The Band",
+      "Comes A Time",
+      "Willie And The Hand Jive",
+      "Drums",
+      "Space",
+      "Truckin'",
+      "Playing In The Band",
+      "Morning Dew"
+    ],
+    [
+      "Box of Rain"
+    ],
+    [
+      "Iko Iko"
+    ]
+  ]
+}

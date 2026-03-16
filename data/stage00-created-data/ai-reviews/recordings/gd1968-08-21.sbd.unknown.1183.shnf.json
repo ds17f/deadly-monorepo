@@ -1,0 +1,78 @@
+{
+  "summary": "Super‑soundboard capture of a high‑energy 1968 Fillmore West set with standout Dark Star, Alligator and an incandescent Midnight Hour.",
+  "review": "The recording is a classic 1968 soundboard tape that, despite a rough opening track and a few occasional drop‑outs, delivers clear instrument separation and strong overall fidelity. Musically the show shines – Jerry’s soaring guitar on Dark Star, Pigpen’s gritty vocals on Alligator and Good Morning Little School Girl, and a fiery Midnight Hour finale make this one of the era’s must‑hear performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4–5) and enthusiastic comments about both performance and sound quality outweigh minor technical flaws, yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp with excellent instrument balance; first track sounds muffled due to cassette source and the end of Lovelight is cut off, but overall clarity is high."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Alligator",
+      "Midnight Hour",
+      "Good Morning Little School Girl",
+      "The Eleven",
+      "St. Stephen",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Midnight Hour (average in one review)",
+      "Lovelight (cut off ending)"
+    ],
+    "setlist_flow": "A typical high‑energy 1968 set with long, seamless jams; strong first‑set transitions and a second‑set that mirrors the Live Dead material, highlighted by a historic Dark Star→St. Stephen→The Eleven sequence."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring lead guitar tone, mountain‑jam theme in Alligator, fiery vocals on Lovelight and strong improvisational interplay with Phil.",
+    "Phil": "Noted for intertwining bass lines with Jerry during Dark Star, creating a “psychic dance”.",
+    "Bob": "",
+    "Keys": "Pigpen’s organ and harmonica work lauded on Alligator, Good Morning Little School Girl, and Midnight Hour; vocal performances highlighted as stellar.",
+    "Drums": "Double‑drummer effect on Midnight Hour appreciated; solid rhythmic foundation throughout the set."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Alligator": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Midnight Hour": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Good Morning Little School Girl": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T08:45:56.973392+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-08-21.sbd.unknown.1183.shnf"
+}

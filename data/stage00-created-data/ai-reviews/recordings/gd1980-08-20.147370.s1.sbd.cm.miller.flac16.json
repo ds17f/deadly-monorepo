@@ -1,0 +1,39 @@
+{
+  "summary": "Good soundboard capture of a memorable Loser performance despite early tape issues",
+  "review": "The review praises the show mainly for Jerry Garcia's unique guitar work on \"Loser,\" calling it a favorite comparison track. While the original tape was described as crappy, the release of a soundboard version has greatly improved clarity, making the recording enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review (4‑star) mentions strong performance of Loser and better soundboard quality; limited data leads to low confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Original audience tape was described as crappy, but the current soundboard release is noted as a clear improvement, providing decent clarity and balance."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; focus is on Loser performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone described as unique and amazing, especially on Loser.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T01:52:02.977459+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-08-20.147370.s1.sbd.cm.miller.flac16"
+}

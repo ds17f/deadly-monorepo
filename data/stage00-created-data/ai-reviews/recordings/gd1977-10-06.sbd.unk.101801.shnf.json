@@ -1,0 +1,49 @@
+{
+  "summary": "A dubious composite (likely hoax) with poor recording fidelity, but the show is noted for a rare Black Peter and an overall decent performance.",
+  "review": "Fans are divided – some praise the rarity of the Black Peter in the second set and describe the first set as raucous and enjoyable, while others flag the tape as a spliced hoax with mismatched tracks. The recording quality is considered poor and its source uncertain, making the listening experience uneven despite the musical highlights.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Positive comments about a rare Black Peter give the show decent merit (≈70% weight), but multiple reviewers call the tape a hoax/composite, lowering recording quality (≈30% weight). The mix yields an overall rating around 3.4."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Multiple reviewers note splices, mismatched song sources and label the tape a hoax; no clear soundboard or audience description provided."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Standard late‑1977 second set with a rare NFA > Black Peter > NFA sequence; first set described as raucous and the overall show considered average but enjoyable."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Eyes": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T04:32:53.877799+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-06.sbd.unk.101801.shnf"
+}

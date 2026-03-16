@@ -1,0 +1,63 @@
+{
+  "summary": "A legendary May‑77 show captured on the famed Betty soundboard – crystal‑clear recording of a tight, high‑energy performance highlighted by an epic Morning Dew and scorching Scarlet/Fire.",
+  "review": "The Cornell ‘77 concert is universally praised as one of the band’s tightest shows, with Jerry Garcia, Bob Weir and the rhythm section firing on all cylinders; highlights include a monumental Morning Dew, blistering Scarlet→Fire and a killer Row Jimmy.  The Betty‑board SBD source is described as “supreme”, “crisp” and “the best quality ever heard,” making the listening experience virtually flawless despite occasional comments about low‑end boominess.  While a handful of reviewers note the show’s mythic status can feel over‑hyped, the overwhelming sentiment is that both performance and recording are top‑tier.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "The vast majority of reviews (≈90%) award five stars and explicitly praise both the musical execution and the Betty soundboard recording; only a few low‑star comments exist and they focus on hype rather than actual quality, leading to an overall rating in the 4.5–5 range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Betty board SBD is repeatedly called ‘crisp’, ‘clear’, ‘balanced’ and ‘the best quality ever’; some users note a slight low‑end boominess but overall the mix is praised as superb with no drop‑outs or major artifacts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Scarlet > Fire",
+      "Row Jimmy",
+      "Dancin'",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers commend the set’s seamless flow and cohesive feel, especially the second‑set jam marathon that showcases the band’s tight interplay; the show is often cited as a benchmark for May ’77 performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for being ‘on’, delivering epic solos (e.g., Morning Dew) and having perfect tone.",
+    "Phil": "Positive notes on his bass foundation (‘bombs me to oblivion’) and overall groove.",
+    "Bob": "Mentioned playing slide and delivering strong rhythm/vocal work throughout the set.",
+    "Keys": "Keith’s keyboards are highlighted as ‘on’ and essential to the jam dynamics; occasional nods to Brent in later‑era discussions.",
+    "Drums": "Drummers described as ‘money’, providing a solid, driving pulse."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Row Jimmy": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Dancin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-24T23:15:06.513883+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-05-08.sbd.cantor.sacks.266.shnf"
+}

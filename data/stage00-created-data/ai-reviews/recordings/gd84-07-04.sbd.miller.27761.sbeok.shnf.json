@@ -1,0 +1,81 @@
+{
+  "summary": "Soundboard tape with good clarity captures a chaotic indoor show – high‑reverb vibe, standout Help > Slip > Franklin’s and He’s Gone, but uneven playing.",
+  "review": "The recording is a soundboard source that delivers crisp highs, deep lows and virtually distortion‑free playback, though a few reviewers note minor inconsistencies. The concert itself was an indoor “psychedelic” experience with soaring reverb, flying saucer LSD doses and a wild second‑set jam marathon; Help > Slip > Franklin’s and He’s Gone shine while some songs (Cumberland Blues, Far From Me) fall flat, and Jerry’s guitar work is described as both distracted and occasionally brilliant.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average to high star ratings (≈4.2 avg), many reviewers praise the sound quality and memorable moments, while a few note performance lapses – overall a good show captured well."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear highs and deep lows, distortion‑free mix; some listeners mention occasional lyrical slips but no major audio defects. Overall the tape reproduces the full spectrum of the indoor venue sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "He's Gone",
+      "Feel Like a Stranger",
+      "Truckin' > Wharf Rat"
+    ],
+    "poor_songs": [
+      "Cumberland Blues",
+      "Far From Me",
+      "Good Lovin'"
+    ],
+    "setlist_flow": "Indoor venue produced massive reverb and a “fuse‑burning” intro. The first set was uneven, but the second set exploded into long jams (Help > Slip, He’s Gone, Truckin’). Energy ebbed at times (Cumberland Blues) before surging again with drums and an Other One tease."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as distracted in places – forgetting lyrics and sounding “sputtering” – but also praised for a solid tone when he regained focus.",
+    "Phil": "Repeatedly highlighted as the driving force; his bass is called hot, melty and a ‘Phil extravaganza’, plus he dedicated songs to a friend named Paul.",
+    "Bob": "Weir opens the show with a dedication (likely to “Brian or Ryan Paul”) and is noted for keeping rhythm while others jam.",
+    "Keys": "Brent Mydland gets mention; his song Far From Me is deemed a ho‑hum version, but overall keyboard presence is solid.",
+    "Drums": "The drum segment receives praise for new‑found fervor and propelling the band back into space after a tentative middle."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin' > Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T19:45:09.682829+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-07-04.sbd.miller.27761.sbeok.shnf"
+}

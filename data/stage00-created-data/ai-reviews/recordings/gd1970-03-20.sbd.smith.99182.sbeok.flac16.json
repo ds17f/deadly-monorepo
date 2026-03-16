@@ -1,0 +1,63 @@
+{
+  "summary": "Cleaned‑up soundboard capture of a classic early‑1970 show featuring a killer acoustic set and a smoking Lovelight/Viola Lee Blues performance.",
+  "review": "The new SBD transfer dramatically reduces tape hiss and brings out instrument separation, though occasional distortion and a low Pigpen organ mix keep it from flawless. Musically the concert is an above‑average early‑’70 outing – the acoustic set shines with Deep Elem Blues and Friend of the Devil, while the electric half delivers a ferocious Viola Lee Blues and a standout Lovelight with classic Pig Pen rap.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the performance and highlight several songs, but note recording flaws (hiss, distortion, low organ) that prevent a top rating; weighted average of show (70%) and sound quality (30%) yields a solid above‑average score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reduced tape hiss and clearer instrument separation on the new transfer; occasional distortion, a cut in Black Peter, vocal mix louder than instruments, and Pig Pen's organ low in the mix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Lovelight",
+      "Viola Lee Blues",
+      "Deep Elem Blues",
+      "Friend of the Devil",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong acoustic first set (Deep Elem, Friend of the Devil, etc.) followed by a solid electric portion; highlights include a blazing Viola Lee Blues and a jam‑filled Lovelight, though a tape cut affects Black Peter."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Sings loudly and on key; his high harmonies are noted but often get buried in the mix.",
+    "Bob": "",
+    "Keys": "Pig Pen's organ sits low in the mix, though his vocal rap on Lovelight is a highlight.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Lovelight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Viola Lee Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deep Elem Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T17:29:53.525723+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-03-20.sbd.smith.99182.sbeok.flac16"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a smoking early‑1970 set highlighted by The Other One, Black Peter and Dancing in the Streets.",
+  "review": "The recording is praised for its clear, improved sound quality, delivering an energetic performance that many fans rank among their favorites. Standout moments include a fiery version of The Other One, a vocal‑driven Black Peter, and a jubilant Dancing In The Streets/Midnight Hour close. Overall the show exudes the confidence and jam‑heavy spirit that defined 1970.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All five reviews are strongly positive (average 4.6 stars), highlighting both superb musical moments and a high‑quality soundboard source."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note the copy sounds much better than other versions, describing the sound as clear and well‑balanced with no reported flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Black Peter",
+      "Dancing In The Streets",
+      "Midnight Hour"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as high‑energy and jam‑rich, capturing the confident early‑1970 vibe that made that year legendary."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his vocal delivery on Black Peter and his playing on The Other One.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Mention of Tom Constanten’s impending departure adds a unique keyboard flavor to the night.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancing In The Streets": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T14:23:24.024256+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-01-03.sbd.lai.6642.sbefail.shnf"
+}

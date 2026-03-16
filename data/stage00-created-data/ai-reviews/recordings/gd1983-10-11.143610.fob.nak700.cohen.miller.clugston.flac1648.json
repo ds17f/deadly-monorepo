@@ -1,0 +1,74 @@
+{
+  "summary": "Great show with high energy and standout versions of St. Stephen, Wang Dang, Jack Straw and more; recording sounds good though source type is unclear",
+  "review": "Both reviewers rave about the performance – calling it one of the hottest shows they’ve seen, highlighting a breakout Wang Dang Doodle, powerful first‑set cuts like Jack Straw and Birdsong, an explosive pre‑drums run with Bertha, and a memorable St. Stephen that even inspired t‑shirt sales. The recording is judged “good to my ears” (4‑star sound rating) and, while the exact source isn’t identified, it’s considered listenable enough for fans.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Show quality is described as outstanding with many highlight moments; recording quality is rated good by a reviewer, leading to an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Sound described as good to the ears; no major flaws mentioned, though reviewers suggest a matrix or audience source would capture the vibe best."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "St. Stephen",
+      "Wang Dang Doodle",
+      "Jack Straw",
+      "Birdsong",
+      "Bertha",
+      "China Doll"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy first set with strong cuts (Jack Straw, Birdsong) followed by an even more intense second set featuring a rocking pre‑drums run and Bertha; overall flow described as relentless and unforgettable."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Sings lead on China Doll – a rare occurrence noted positively",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Revolution": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Birdsong": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T11:49:14.626551+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-10-11.143610.fob.nak700.cohen.miller.clugston.flac1648"
+}

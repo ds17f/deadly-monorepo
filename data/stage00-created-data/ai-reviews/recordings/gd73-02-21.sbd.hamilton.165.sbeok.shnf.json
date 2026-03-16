@@ -1,0 +1,57 @@
+{
+  "summary": "Good‑quality soundboard capture of a strong February ’73 show, but the mash‑up of two nights makes the sync and flow confusing.",
+  "review": "The performance is widely praised – highlights include back‑to‑back Dark Stars, a smoking Eyes of the World transition, and an inspired Truckin’ jam that leads into Stella Blue. The SBD recording is generally clear and well‑balanced, though listeners note the material is spliced from two consecutive shows, causing timing glitches and some audible noise.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.5,
+    "confidence": "medium",
+    "rationale": "Show quality is rated high by several reviewers (4‑5 ★) while recording quality is decent but marred by the two‑show splice, yielding an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear balance and good SBD fidelity, a bit noisy; biggest issue is out‑of‑sync material from two different dates causing confusion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Eyes of the World",
+      "Stella Blue",
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Setlists are strong with two Dark Stars in a row, but the forced combination of 2/21 and 2/22 material disrupts the natural flow of each concert."
+  },
+  "band_member_comments": {
+    "Jerry": "His short solo after the Eyes transition is noted as nice.",
+    "Phil": "His extended solo during the Eyes jam receives specific praise.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T05:31:25.448419+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-02-21.sbd.hamilton.165.sbeok.shnf"
+}

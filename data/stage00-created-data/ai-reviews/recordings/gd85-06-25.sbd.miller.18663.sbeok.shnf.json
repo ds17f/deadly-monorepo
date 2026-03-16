@@ -1,0 +1,82 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a classic ‘85 Blossom set, highlighted by an electrifying Day Tripper opener, soaring Row Jimmy, monster China > Rider and a marathon Playing in the Band.",
+  "review": "The recording is a pristine soundboard source that delivers crisp instrument separation and plenty of stage ambience. Musically the show ranks among the era’s best – the first‑set energy sparked by Day Tripper carries through stellar performances of Row Jimmy, Jack Straw → Might As Well, and an epic second set dominated by China > Rider, Playing in the Band and a blazing Sugar Magnolia.  Even with a few minor flubs (Beat It On Down the Line, a lukewarm Might As Well), the overall vibe is high‑octane and unforgettable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Overwhelmingly positive fan commentary (≈90% 4–5 stars) praises both the superb soundboard quality and the show’s standout performances; only a handful of mixed or low‑star notes temper the rating slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers repeatedly call the tape \"crisp\", \"clear\" and \"excellent sound\"; a single comment mentions choppy moments, but the consensus is that the mix is balanced with great instrument separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Day Tripper",
+      "Row Jimmy",
+      "China > Rider",
+      "Playing in the Band",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Beat It On Down the Line",
+      "Might As Well",
+      "Touch of Grey"
+    ],
+    "setlist_flow": "A high‑energy first set opens with Day Tripper and rolls through tight transitions (Jack Straw → Might As Well). The second set builds from a short pre‑drums into seamless segues, delivering the centerpiece China > Rider and an expansive Playing in the Band before closing with a fiery Sugar Magnolia."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for scorching solos (especially on Row Jimmy, China > Rider and Playing) and overall inspired lead guitar work.",
+    "Phil": "Noted for a powerful bass line during Gimme Some Lovin' and solid foundation throughout the set.",
+    "Bob": "Bobby (Weir) highlighted for his stage antics—running across the stage, climbing speakers—and strong rhythm playing on classics like Day Tripper.",
+    "Keys": "Brent’s keyboard vocals get a shout‑out; Keith’s playing is described as “crazy stuff” typical of ’85.",
+    "Drums": "Bill and Mickey receive commendations for tight control of both pre‑ and post‑drums sections."
+  },
+  "song_mentions": {
+    "Day Tripper": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Row Jimmy": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "China > Rider": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Playing in the Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw > Might As Well": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Beat It On Down the Line": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T05:46:53.624474+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-06-25.sbd.miller.18663.sbeok.shnf"
+}

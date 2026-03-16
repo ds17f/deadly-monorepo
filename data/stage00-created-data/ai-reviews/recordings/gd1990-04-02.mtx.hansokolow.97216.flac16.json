@@ -1,0 +1,39 @@
+{
+  "summary": "Matrix-sourced recording with crisp sound captures a great setlist, highlighted by the surprise performance of \"Death Don't Have No Mercy\".",
+  "review": "Both reviewers praise the show’s strong setlist and solid playing, noting the unexpected cover of “Death Don't Have No Mercy” as a highlight. The matrix restoration cleans up the raw SBD flaws, delivering an excellent‑quality listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "High marks for both performance (great setlist, good playing) and recording (matrix cleanup praised as 'killer'), yielding a strong combined score despite only two reviews."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix mix cleans up flaws of the raw soundboard, resulting in clear and crisp audio; reviewers describe it as 'killer' and a successful restoration."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Death Don't Have No Mercy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a nice mix of songs and good playing throughout, describing the setlist as great."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Death Don't Have No Mercy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T06:21:01.381400+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-04-02.mtx.hansokolow.97216.flac16"
+}

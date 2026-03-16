@@ -1,0 +1,93 @@
+{
+  "summary": "Warm, slightly tinny audience recording captures an outstanding 1981 show highlighted by Bird Song, Playing in the Band and a stellar first set.",
+  "review": "The performance is frequently praised as one of the best of ’81 – a brilliant first set with Sugaree, Lazy Lightning and New Minglewood Blues, followed by a soaring second‑set sequence Bird > Samson > To Lay Me Down and a marathon Playing in the Band.  The audience source is clear enough to hear the band’s energy but sounds a bit remote, high‑end and lacking some Phil bass presence, which keeps the recording at a good rather than excellent level.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Show quality is consistently described as exceptional (many 5‑star comments) while recording quality is generally good with noted high‑end/tinny issues; combined weighted score yields ~4.3."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Warm ambience but a bit too much high end and slightly tinny; clear enough to enjoy the performance but lacks full bass presence (Phil) and some ambience compared to soundboard mixes."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "New Minglewood Blues",
+      "Playing in the Band",
+      "Sugaree",
+      "Lazy Lightning",
+      "Stella Blue",
+      "Terrapin Station",
+      "It Must Have Been The Roses",
+      "To Lay Me Down",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is highlighted as a fan favorite with strong song placement; second set features the classic Bird > Samson > To Lay Me Down sequence and an epic Playing in the Band that showcases the band’s cohesion."
+  },
+  "band_member_comments": {
+    "Jerry": "His solos on New Minglewood Blues and overall guitar work are praised as spectacular.",
+    "Phil": "Several reviewers note a thin bass presence ('a little too Phil‑Lite') and that Phil is less audible in this audience mix.",
+    "Bob": "",
+    "Keys": "Brent Mydland’s Hammond organ on New Minglewood Blues receives high praise; keyboards are described as fantastic.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It Must Have Been The Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T10:10:06.160727+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-03-23.aud.macdonald.6685.sbeok.shnf"
+}

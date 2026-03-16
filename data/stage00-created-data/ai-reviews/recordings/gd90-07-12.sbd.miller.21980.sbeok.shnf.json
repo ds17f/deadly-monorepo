@@ -1,0 +1,73 @@
+{
+  "summary": "Soundboard recording of good quality captures a rain‑soaked night with a stellar Dark Star and top‑tier performances of Cassidy, Victim, Box of Rain and Hey Jude.",
+  "review": "The show is remembered for its magical atmosphere – a sudden summer downpour that amplified Jerry's guitar thunder, a joyous A Little Light moment, and a ripping Dark Star.  Performance-wise the band delivers classics like Cassidy (a top‑10 version), Victim (flawless) and an unforgettable Hey Jude finale, while the soundboard source offers typical early‑90s clarity that’s solid if not the absolute best available.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Reviews overwhelmingly praise the musical performance (many 4–5 star comments) and note only minor recording‑quality caveats, yielding a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Sound quality described as typical of the era; one reviewer notes another source sounds better, but overall clarity and mix are acceptable for a 1990 recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cassidy",
+      "Victim",
+      "Dark Star",
+      "Box of Rain",
+      "Hey Jude"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set flows from a sunny start into a dramatic rain‑driven second half, highlighted by the transition from Box of Rain through drums and a soaring Dark Star, ending with an emotional Hey Jude."
+  },
+  "band_member_comments": {
+    "Jerry": "Thunder seemed to crack along with the intensity of Jerry's guitar during the rainstorm.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Mentioned as the tail end of Brent's tenure, implying strong keyboard work.",
+    "Drums": "Box through Drums segment described as \"plain sickness\"; drums and space praised."
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "A Little Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hey Jude": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T09:18:50.056725+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-07-12.sbd.miller.21980.sbeok.shnf"
+}

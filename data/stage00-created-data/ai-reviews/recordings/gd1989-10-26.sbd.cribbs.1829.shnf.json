@@ -1,0 +1,51 @@
+{
+  "summary": "High‑quality soundboard tape with a haunting Jerry and stellar Brent keyboards, highlighted by an outstanding Dark Star and Blow Away in the second set.",
+  "review": "The recording captures a crisp soundboard source that most listeners describe as great, though a few note a harsh, jangly edge. Musically the show shines especially in the second half, where Dark Star and Blow Away are repeatedly called phenomenal, and Brent’s keyboard work receives rave praise. The first set is solid but less spectacular, and an editing hiccup between “Me And My Uncle” and “Big River” is the only noted flaw.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Six detailed reviews lean strongly positive, praising both performance (especially Dark Star, Blow Away and Brent's keys) and sound quality; the average star rating is 4.17, leading to a solid 4.2 overall."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and clear with great tonal balance; some listeners describe the tape as harsh or jangly, and one notes an editing gap between two early songs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Blow Away",
+      "Stella"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is competent but not spectacular; the second set flows powerfully, anchored by a monster Dark Star and an inspired Blow Away, making it the highlight of the evening."
+  },
+  "band_member_comments": {
+    "Jerry": "Described as ‘scary’ and intense, his lead work drives the dark, spooky vibe on Dark Star and Blow Away.",
+    "Phil": "",
+    "Bob": "Noted for adding eerie “whale” sounds during Stella, enhancing the night‑time atmosphere.",
+    "Keys": "Brent receives glowing praise as a ‘keyboard god,’ especially on Blow Away where his playing is called phenomenal.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Blow Away": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:37:56.428168+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-26.sbd.cribbs.1829.shnf"
+}

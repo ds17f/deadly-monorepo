@@ -1,0 +1,44 @@
+{
+  "summary": "Excellent Sennheiser audience recording captures a solid, slightly eerie 4/30/84 performance with a notable second‑set Looks Like Rain but few standout moments.",
+  "review": "The Sennheiser AUD capture is praised as crisp and immersive, putting the listener right in the middle of the crowd. The show itself is described as “evil” yet musically above average, highlighted by the rare second‑set appearance of Looks Like Rain, though some reviewers felt there were no major highlights.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the recording highly (4–5 stars) and note excellent audience sound quality, while the musical performance is viewed as solid but not spectacular, leading to a strong overall rating with high confidence due to five detailed reviews."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Sennheiser AUD mic delivers crisp, crowd‑immersive sound; reviewers report no dropouts or major issues and consider it a must‑have audience recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Standard first/second set format of the Brent era; notable for the rare second‑set placement of Looks Like Rain, otherwise a solid but unremarkable performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry’s guitar ultimately shines despite the “evil” vibe that pervades the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T17:29:47.639723+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-30.senn421.pauline.miller.91165.sbeok.flac16"
+}

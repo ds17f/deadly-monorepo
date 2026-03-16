@@ -1,0 +1,73 @@
+{
+  "summary": "Excellent early Kentucky soundboard capture with standout Dark Star > St. Stephen > Eleven and the rare Rosemary, though hiss and occasional talk mar a few moments.",
+  "review": "The show shines with a smoking Dark Star → St. Stephen → Eleven sequence, a rare and quiet Rosemary, and the usual 1968 magic that even younger heads can appreciate. The soundboard source is surprisingly clear for ’68 but retains some hiss and a mysterious voice during equipment repairs, keeping the listening experience from being pristine.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Strong musical performance with several highlighted songs outweighs moderate recording flaws (hiss, occasional talk). Weighted 70% show quality + 30% recording quality yields a solid >4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Hiss reduced by cleaning but still audible; occasional non‑band voice during equipment repairs; overall clear for a 1968 tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star > St. Stephen > Eleven",
+      "Rosemary",
+      "Morning Dew",
+      "Death Don't Leave Your House",
+      "New Potato"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early Kentucky show feels special; rare songs like Rosemary give the set a unique flavor despite some missing numbers and incomplete jams."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star > St. Stephen > Eleven": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Rosemary": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Death Don't Leave Your House": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Potato": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "St. Stephen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eleven": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T09:57:21.617121+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1968-12-07.sbd.miller.88674.sbeok.flac16"
+}

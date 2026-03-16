@@ -1,0 +1,56 @@
+{
+  "summary": "Soundboard recording captures a smooth second set highlighted by the rare Cryptical > Other One > Cryptical sequence, a Smokestack Lightning opener and an uplifting Good Lovin' closer.",
+  "review": "The reviewer rates this show four stars, praising its overall smoothness and noting that it feels like the band hit “optimal overdrive” on the final night of the California run. Standout moments include the Cryptical > Other One > Cryptical sandwich, Smokestack Lightning kicking off the second set, and a big Good Lovin' finish. No audio flaws are mentioned, suggesting the soundboard source is clean and enjoyable.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "One detailed positive review highlights strong musical performance and no recording complaints; weighted rating leans toward a high‑quality show with good soundboard audio."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer does not note any sound issues; the absence of criticism implies a clear, listenable recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Cryptical Envelopment > The Other One > Cryptical Envelopment",
+      "Smokestack Lightning",
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as the smoothest of the three‑night run, with a nicely flowing second set that builds to a big Good Lovin' closer."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen’s vocal line (“Where you been all last night…”) is highlighted during the Smokestack Lightning intro.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Cryptical Envelopment > The Other One > Cryptical Envelopment": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T02:00:24.016784+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-12-28.sbd.barbella.6015.sbefail.shnf"
+}

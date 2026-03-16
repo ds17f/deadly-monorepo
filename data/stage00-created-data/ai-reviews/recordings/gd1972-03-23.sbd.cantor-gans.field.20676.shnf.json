@@ -1,0 +1,51 @@
+{
+  "summary": "Excellent soundboard capture of the March 23 1972 Academy of Music show featuring a scorching Dark Star and standout Two Souls In Communion.",
+  "review": "The recording is a Betty Cantor sound‑board tape praised for its crystal‑clear, tight mix with no noticeable flaws. Fans rave about the high‑energy second set – especially the epic Dark Star, fiery Not Fade Away ending, and one of the best renditions of Two Souls In Communion – making this show a must‑have for any 1972 collection.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All five reviews are 5‑star, uniformly praising both the musical performance and the recording quality; the show is described as exceptional and the source is a high‑quality soundboard."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Betty Cantor board source; reviewers repeatedly note great, crisp sound with no dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Two Souls In Communion",
+      "Dark Star",
+      "Not Fade Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A tight, high‑energy second set that feels like a bridge between the raw ’70‑’71 vibe and the polished European tour that followed."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "Described as \"on fire\" – his bass work is highlighted for its intensity.",
+    "Bob": "His vocal/screaming at the end of Not Fade Away adds extra excitement, noted alongside Mickey Hart’s (Pig) contribution.",
+    "Keys": "",
+    "Drums": "Mickey Hart ('Pig') praised for his energetic playing, especially during the climactic Not Fade Away."
+  },
+  "song_mentions": {
+    "Two Souls In Communion": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T12:10:41.801405+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-03-23.sbd.cantor-gans.field.20676.shnf"
+}

@@ -1,0 +1,69 @@
+{
+  "summary": "A high‑energy audience tape that captures a blistering Shakedown, soaring Saint of Circumstance and an epic Morning Dew with crystal‑clear crowd vibes.",
+  "review": "Fans rave about the show’s explosive first‑set opener (Shakedown), Phil’s powerhouse bass on Saint of Circumstance, Jerry’s monster Deal solo and a transcendent Morning Dew that closes the night. The George Bethke audience recording is generally clear and vivid, though a few reviewers note occasional bass‑peak distortion.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All ten reviews are five‑star and overwhelmingly praise the performance; recording is praised as clear with only minor technical hiccups, yielding a combined high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Overall lively and detailed capture of band and crowd; occasional bass‑peak distortion on Shakedown, Saint, Truckin' and Dew noted by a few reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Saint of Circumstance",
+      "Deal",
+      "Morning Dew",
+      "Truckin'",
+      "Help on the Way > Slipknot! > Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong opening with Shakedown, seamless transitions through a fiery first set (Deal closing) and an electrifying second set featuring Help‑Slip‑Frank and a soaring Dew finale; crowd energy is described as palpable throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry's explosive solo on Deal and his tone on Saint of Circumstance, calling it \"off the hook\" and \"floored\".",
+    "Phil": "Phil’s bass work is praised as “all over” the show, especially his blasting start on Shakedown.",
+    "Bob": "",
+    "Keys": "Brief mention of a \"Brent number\" (keyboard spotlight) but no detailed commentary on Keith/Brent/Vince performance.",
+    "Drums": "The drum segment after the Bobby jam is noted as \"mighty fine\"; overall rhythm section praised."
+  },
+  "song_mentions": {
+    "Shakedown": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Morning Dew": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T08:02:46.539512+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-24.senn421.bethke.118888.flac16"
+}

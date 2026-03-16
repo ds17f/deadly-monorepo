@@ -1,0 +1,98 @@
+{
+  "summary": "A pristine sound‑board recording that captures a powerhouse 1977 Portland show – highlighted by an incendiary Scarlet > Fire, ripping Deal, soaring Let It Grow and many other classics.",
+  "review": "The consensus among reviewers is that this SBD source delivers crystal‑clear, full‑bodied audio with especially strong low‑end bass. Musically the night shines with a blistering Deal, a near‑perfect Scarlet > Fire sequence, tight jams on Let It Grow and Samson, plus memorable moments from Casey Jones, Wharf Rat and Truckin'. A few critics note a thin jam between Scarlet and Fire and a lackluster Playing In The Band, but overall the performance is rated among the best of ’77.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Average reviewer rating ≈ 4.84/5, with overwhelming praise for both sound quality and musical performance; only minor criticisms on a few jams keep the score just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the mix as fuller than other versions, with strong bass, crisp clarity and \"luminous\" sound; no significant drop‑outs or noise reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Scarlet > Fire",
+      "Let It Grow",
+      "Samson",
+      "Casey Jones",
+      "Wharf Rat",
+      "Truckin'",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Playing In The Band"
+    ],
+    "setlist_flow": "First set builds energy with strong openings and a fiery Deal; the pre‑drum second set delivers Samson and the iconic Scarlet > Fire, while the post‑drum portion erupts into an exhilarating Wheel → Truckin' climax."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for tearing up Deal, delivering melodic solos on Casey Jones and driving incendiary jams throughout.",
+    "Phil": "Noted for laying down a bouncy groove on Fire that fuels the band’s improvisations.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "Let It Grow": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Samson": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Casey Jones": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Dupree's Diamond Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing In The Band": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T04:19:54.512022+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-02.sbd.cantor.gmb.86354.sbeok.flac16"
+}

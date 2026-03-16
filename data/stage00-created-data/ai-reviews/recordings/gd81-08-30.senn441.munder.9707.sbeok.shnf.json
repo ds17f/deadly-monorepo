@@ -1,0 +1,57 @@
+{
+  "summary": "Crisp, 441‑mic audience recording of a hot Compton Terrace show with standout Franklin’s Tower and The Other One, though the low end sounds thin for some listeners",
+  "review": "The performance is praised as being in fine form – Jerry’s vocals are strong, Brent’s organ shines on tracks like Samson, and the band delivers a monster The Other One and a memorable Franklin’s Tower. The audience‑sourced 441 Sennheiser tape is generally described as clear and crisp, but several listeners note a lack of bass depth that makes the mix sound tinny.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers (8) give high marks and highlight strong playing; only a few note low‑end issues, leading to an overall positive but slightly mixed assessment."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear, crisp 441 Sennheiser mic capture; praised for detail and clarity. Some listeners complain of missing low‑end/bass, describing the sound as tinny or lacking bottom."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "The Other One",
+      "Samson",
+      "Cumberland Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set remembered fondly; second‑set highlights include a soaring Franklin’s Tower and a big The Other One. Overall the band is in fine form despite the desert heat."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's vocals are described as strong and confident; his guitar work is praised indirectly through the overall tight performance.",
+    "Phil": "Bass presence is criticized by a few reviewers who say Phil sounds missing or lacks low end, though others hear sufficient bottom.",
+    "Bob": "",
+    "Keys": "Brent Mydland's organ is highlighted as ‘shot from the get‑go’ and interesting on Samson; his playing adds texture.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T13:58:15.724954+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-08-30.senn441.munder.9707.sbeok.shnf"
+}

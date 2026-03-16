@@ -1,0 +1,92 @@
+{
+  "summary": "Top‑notch 1980 soundboard capture of a stellar Lakeland show featuring a blistering Deal, soaring Terrapin Station and rare electric Deep Elem Blues.",
+  "review": "The recording is praised as one of the best 1980 SBDs – crisp, well‑balanced and even enhanced by post‑remaster patches. Musically the band delivers a powerful set with highlights like “Deal,” “Looks Like Rain,” an electrified “Deep Elem Blues,” and a fiery “Terrapin Station” that keep the energy high from start to finish. While most fans rave about the performance, a few note a sloppy Jack Straw and a slightly underwhelming second‑set drum/space stretch.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the show (standout songs, strong playing) and the recording (crisp soundboard), with only minor criticisms."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as better than most boards, top‑notch for 1980 despite typical SBD mix quirks; patches improve between songs and the keyboard mix is prominent but clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Looks Like Rain",
+      "Terrapin Station",
+      "To Lay Me Down",
+      "Deep Elem Blues",
+      "Little Red Rooster",
+      "Stranger"
+    ],
+    "poor_songs": [
+      "Jack Straw"
+    ],
+    "setlist_flow": "The first set is praised for its energy and rare electric numbers, followed by a creative 41‑minute pre‑drum sequence that many call \"yummy\". The second set continues with strong jams but the extended drum/space segment is seen as a bit uneven before closing with a screaming “Deal.”"
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone and overall playing are lauded, though one reviewer noted he stumbled on the lyrics of “To Lay Me Down” yet still ripped ahead.",
+    "Phil": "Phil Lesh is highlighted as a beast on “Passenger” and provides solid bass throughout the show.",
+    "Bob": "Bob Weir is mentioned as being lower in the mix compared to Brent, but no specific performance criticism is given.",
+    "Keys": "Brent Mydland’s keyboards sit high in the mix and receive strong praise for tone and presence.",
+    "Drums": "The pre‑drumz sequence is described as powerful and creative; the long drum/space section is noted as solid but slightly underwhelming."
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Deep Elem Blues": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Stranger": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Jack Straw": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Passenger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T06:03:18.543511+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-11-28.sbd.vernon.tobin.fix-20049.90062.sbeok.flac16"
+}

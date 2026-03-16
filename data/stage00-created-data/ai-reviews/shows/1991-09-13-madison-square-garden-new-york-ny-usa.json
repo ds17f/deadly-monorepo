@@ -1,0 +1,76 @@
+{
+  "summary": "Scorching Scarlet>Fire, soaring Althea, solid set with mixed pacing",
+  "blurb": "Features a blistering Scarlet Begonias → Fire On The Mountain transition and an inspired Althea. Jerry’s guitar is on fire while the band delivers strong performances despite occasional uneven moments.",
+  "review": "On September 13, 1991 at Madison Square Garden the Dead gave fans a night of highs and lows that still rewards repeated listening. The show’s crown jewel is the searing Scarlet Begonias → Fire On The Mountain segue, which several reviewers called “expansive” and “monster,” followed by an uplifting Althea that lets Jerry stretch his tone into full‑throttle glory. Peggy‑O and Big River also shine in the first set, while Victim Or The Crime opens a second‑set suite that moves through The Other One, Stella Blue and a gritty Not Fade Away. Jerry is praised for confident, transitional‑phase playing—though a missed vocal entry on Touch and an occasional stumble during Fire are noted—but overall his lead work feels “explosive” and “on fire.” Bob Weir enjoys a louder mix in the absence of Bruce’s keyboards, and Bruce Hornsby (joined by Vince Welnick) is described as “strong” and “jamming,” keeping the harmonic texture rich. The rhythm section stays solid, with Mickey and Bill holding down tight grooves even when the set’s pacing feels uneven. For listeners seeking the clearest picture, the Kowalski soundboard (gd91-09-13.sbd.kowalski.520.sbeok.shnf) offers a good mix despite a vocal fade on Touch; the matrix recording (gd1991‑09‑13.110642.dmtx.hansokolow.flac16) provides an excellent balance of board and room ambience, while audience captures add extra atmosphere.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 23,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.9,
+      "sentiment_rationale": "Four recordings report positive sentiment (highlighting Scarlet>Fire, Althea, strong matrix and audience captures), two are mixed, and one is negative. The preponderance of praise outweighs the negatives, yielding a moderate positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 0.9 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd91-09-13.sbd.kowalski.520.sbeok.shnf",
+    "reason": "Good soundboard capture with clear mix, includes the standout Scarlet>Fire and Althea moments despite minor vocal fade."
+  },
+  "key_highlights": [
+    "Scorching Scarlet Begonias → Fire On The Mountain transition",
+    "Soaring Althea that showcases Jerry’s evolving guitar tone",
+    "Strong keyboard jamming from Bruce Hornsby, keeping the harmonic texture rich",
+    "Solid rhythm section with occasional uneven pacing but overall rewarding set"
+  ],
+  "song_highlights": [
+    "Scarlet Begonias",
+    "Fire On The Mountain",
+    "Althea",
+    "Peggy-O",
+    "Big River",
+    "Cumberland Blues",
+    "Victim Or The Crime",
+    "Bird Song"
+  ],
+  "band_performance": {
+    "Jerry": "Explosive tone on Scarlet>Fire and a soaring Althea; playing is confident despite a missed vocal entry on Touch and an isolated stumble.",
+    "Phil": "",
+    "Bob": "More prominent in the mix without Bruce, solid rhythm work; cut off Stella Blue early according to one review.",
+    "Bruce": "Strong, jamming keyboard work praised as ‘strong’ throughout the set.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 7,
+  "processed_date": "2025-09-18T00:55:07.772139+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Victim Or The Crime",
+      "Scarlet Begonias",
+      "Fire On The Mountain",
+      "Drums",
+      "Space",
+      "The Other One",
+      "Stella Blue",
+      "Throwing Stones",
+      "Not Fade Away"
+    ],
+    [
+      "Althea"
+    ],
+    [
+      "Peggy-O"
+    ],
+    [
+      "Big River",
+      "Cumberland Blues"
+    ],
+    [
+      "Bird Song"
+    ]
+  ]
+}

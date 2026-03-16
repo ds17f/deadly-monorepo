@@ -1,0 +1,80 @@
+{
+  "summary": "A superb patched sound‑board capture of the May 20 1973 UCSB show, highlighted by a blazing Here Comes Sunshine, gorgeous Row Jimmy and a monster GSET.",
+  "review": "The recording is a well‑patched SBD that sounds clear and balanced with only occasional high‑frequency buzz after the first set. Musically the night is fire‑hot – Jerry’s voice may be a little strained but his guitar is fierce, and the band delivers classics like Here Comes Sunshine, Eyes, the Truckin’ > Other One > Stella Blue sequence and an unforgettable Grateful Dead Set. Fans rave about the third set “having wings” and the overall flow of the performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over a dozen detailed reviews praise the musical performance as exceptional, with only minor, isolated recording quirks; the consensus yields a top‑tier rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Patched SBD is crisp and well balanced. A few reviewers note a faint high‑frequency buzz (likely bass or equipment) after the first set and occasional background chatter (Donna’s shrieking), but these do not detract from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Here Comes Sunshine",
+      "Eyes",
+      "Truckin' > The Other One > Stella Blue > Sugar Magnolia",
+      "Looks Like Rain",
+      "China Cat Sunflower > I Know You Rider",
+      "Playin' in the Band",
+      "Grateful Dead Set"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is long and well‑paced, with a particularly strong third set that reviewers say “has wings.” Transitions are smooth and the band maintains high energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice sounds strained/has a cold but his guitar work is amplified and fiery.",
+    "Phil": "One reviewer hears a faint buzzing in the first set, possibly from his bass.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Here Comes Sunshine": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Row Jimmy": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin' > The Other One > Stella Blue > Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Grateful Dead Set": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-22T07:41:47.733894+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-05-20.sbd-patched.schlissel.24495.sbeok.shnf"
+}

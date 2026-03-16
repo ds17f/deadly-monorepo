@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent soundboard recording of a stellar 1985 show, highlighted by Terrapin Station, Women Are Smarter and a scorching Promised Land",
+  "review": "Fans rave about the crystal‑clear SBD source and the high energy of this late‑summer ’85 performance. The first set is praised as “fabulous” with standout moments like Terrapin Station, while the second set opens with a treat – Women Are Smarter into Crazy Fingers – and rolls through classics such as Throwing Stones/Turn On Your Love Light and an incendiary Promised Land. Jerry’s encore “Hello” and Bob’s iconic pink alligator shirt add extra flavor.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All three reviews are 5‑star, consistently praising both the musical performance (standout songs, strong set flow) and the recording quality (soundboard, crisp sound)."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers describe the sound as \"good\", \"great\" and note no drop‑outs or muddiness; the SBD is considered fine and crisp."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Women Are Smarter",
+      "Crazy Fingers",
+      "Throwing Stones",
+      "Turn On Your Love Light",
+      "Promised Land"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as fabulous, second‑set opener a treat that builds into a powerful sequence ending with a memorable encore."
+  },
+  "band_member_comments": {
+    "Jerry": "\"Hello\" encore sounded good; no specific guitar critique beyond that.",
+    "Phil": "",
+    "Bob": "Noted wearing a pink Alligator T‑Shirt, adding visual flair.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Women Are Smarter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Turn On Your Love Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:28:29.950104+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-07-02.133611.upd-sbd.tobin.flac16"
+}

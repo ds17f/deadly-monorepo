@@ -1,0 +1,50 @@
+{
+  "summary": "Warm Oade audience tape captures a high‑energy show highlighted by a ripping Scarlet Begonias → Fire on the Mountain sequence and a rock‑and‑roll post‑drum jam.",
+  "review": "The recording is a solid Oade audience capture – clear enough to feel right in the pavilion with only minimal chatter.  Musically the concert shines, especially the blistering Scarlet Begonias/Fire on the Mountain transition, a fire‑filled Fire finale and an electrifying post‑drum jam that reviewers call “rock‑and‑roll”.  Overall both the performance and the tape are consistently praised.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.8 stars; comments praise both the show (standout jams, setlist) and the recording (warm, clear Oade audience), yielding a high combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Typical Oade audience tape – warm tone, clear pavilion ambience, very little chatter, no noticeable drop‑outs; feels like being right there."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Post-Drums"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic pacing with a strong second‑half; the Scarlet Begonias/Fire sequence and the post‑drum jam are highlighted as high points."
+  },
+  "band_member_comments": {
+    "Jerry": "Nice licks at the end of Fire on the Mountain are specifically praised.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "The post‑drum jam is described as rock‑and‑roll intense."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Post-Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T07:16:45.733558+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-07-01.oade-schoeps.sacks.25243.sbeok.flacf"
+}

@@ -1,0 +1,106 @@
+{
+  "summary": "Audience recording captures a strong second set highlighted by the Estimated > Eyes jam and solid performances, though occasional flubs and modest sound keep it from perfection.",
+  "review": "The show delivers several standout moments – a ripping Playing in the Band, a superb Feel Like a Stranger, and an expansive Estimated > Eyes sequence with Jerry’s spot‑on solo and quirky digital‑clarinet effect. The audience tape is lively and captures crowd excitement, but it isn’t flawless; missed vocals and a flubbed Box of Rain keep purists from being fully satisfied.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Single 4‑star review praises the musical performance heavily while noting modest recording imperfections; weighted toward show quality yields a solid four‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Lively crowd ambience captured, but several flubs – missed chord on Box of Rain and occasional missing vocals – prevent it from being a perfect tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like a Stranger",
+      "Loser",
+      "Tennessee Jed",
+      "Estimated",
+      "Eyes",
+      "Playing in the Band",
+      "The Wheel",
+      "Stella Blue",
+      "Throwing Stones",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Samson",
+      "Box of Rain"
+    ],
+    "setlist_flow": "First set is largely forgettable with a few weak spots, but the second set builds momentum after a so‑so Samson and a ripping Playing in the Band, culminating in an expansive Estimated > Eyes jam followed by tight finishes."
+  },
+  "band_member_comments": {
+    "Jerry": "Nailed his Estimated solo and delivered spot‑on guitar on Stella Blue; even experimented with a digital clarinet effect.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Short drum segment noted, but no specific praise or criticism."
+  },
+  "song_mentions": {
+    "Box of Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T10:45:09.600365+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-07-22.aud.Holtz.Nak300s.112525.flac16"
+}

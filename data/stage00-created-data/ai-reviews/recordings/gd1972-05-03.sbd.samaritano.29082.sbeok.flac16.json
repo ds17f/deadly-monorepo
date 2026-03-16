@@ -1,0 +1,125 @@
+{
+  "summary": "Stellar soundboard capture of a marathon Olympia show with awe‑inspiring The Other One and many classic performances, marred only by a brief Casey Jones glitch.",
+  "review": "The May 1972 Olympia concert is hailed as one of the tour’s top shows, featuring a soaring The Other One sandwiched around Me & My Uncle, a blistering China Cat Sunflower > I Know You Rider, and relentless energy through two four‑hour sets. The soundboard source is generally clear, though reviewers note a small glitch on Casey Jones that adds a tiny blemish to an otherwise excellent recording.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All four reviews are overwhelmingly positive (5, 5, 5, 4 stars) and praise the musical performance while only flagging a minor technical glitch; recording is a soundboard with good fidelity."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced, but Casey Jones contains a brief glitch (4:25‑4:30) that some listeners notice."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Me & My Uncle",
+      "China Cat Sunflower > I Know You Rider",
+      "He's Gone",
+      "Tennessee Jed",
+      "Not Fade Away",
+      "One More Saturday Night"
+    ],
+    "poor_songs": [
+      "Casey Jones (glitch)",
+      "Black Throated Wind (average)",
+      "Truckin' (not at peak)",
+      "Wharf Rat (dull)"
+    ],
+    "setlist_flow": "A marathon four‑hour set that stays on a high level throughout; the first set is consistently tight while the second maintains momentum with a few looser moments, delivering an overall exhilarating concert experience."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and wah are praised throughout – ‘perfect’ on several cuts, double‑bends on One More Saturday Night, and wild fills that lift Not Fade Away.",
+    "Phil": "Phil Lesh is highlighted for launching rumble on The Other One and being “ON” during He's Gone, showing tight interplay with the band.",
+    "Bob": "Bob Weir’s hoarse rasp on Not Fade Away and solid rhythm work are noted positively.",
+    "Keys": "Keith (keyboard) receives shout‑outs for being ‘ON’ in He's Gone and adding depth to the jams.",
+    "Drums": "Bill Kreutzmann’s 32nd‑note tom rolls and overall drum power receive enthusiastic mention."
+  },
+  "song_mentions": {
+    "Casey Jones": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down the Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Throated Wind": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T13:17:03.349112+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-05-03.sbd.samaritano.29082.sbeok.flac16"
+}

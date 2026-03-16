@@ -1,0 +1,31 @@
+{
+  "summary": "A high‑quality recording captures an unforgettable, excellent show.",
+  "review": "The reviewer hails this as an outstanding recording of a stellar concert, noting the cold weather but still describing the performance as “unforgettable.” No technical flaws are mentioned, and the overall experience is praised highly.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "low",
+    "rationale": "Only one 5‑star review; it praises both the performance and the recording without noting any flaws, suggesting a top‑tier show and very good audio quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewer calls the recording excellent and thanks for it; no specific comments about clarity, mix or issues."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No detailed set‑list commentary, but overall experience described as unforgettable and excellent."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T16:44:17.774555+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-03.153801.nak304.vita.miller.clugston.flac2496"
+}

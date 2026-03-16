@@ -1,0 +1,45 @@
+{
+  "summary": "A solid late‑80s audience recording that captures the crowd vibe with only a hint of high‑end fuzz, highlighted by a great Playing in the Band → Uncle John's Band segue and a nicely rendered All Along The Watchtower.",
+  "review": "This tape is an excellent example of what a well‑tapered audience source can deliver from the late‑80s era—clear enough to hear arena nuances with just a tiny high‑frequency fuzz. Musically the band warms up slowly but still provides a solid set, featuring a standout PITB > U.J. transition and an inspired All Along The Watchtower, while the remainder of the performance is fairly average for the period.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "low",
+    "rationale": "One detailed review gives a positive (4‑star) rating; the show is described as solid with a few highlights, and the audience recording is noted as good despite minor high‑end fuzz."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear arena sound with nuanced crowd ambience; only a very small amount of high‑end \"fuzz\" audible on headphones."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band > Uncle John's Band",
+      "All Along The Watchtower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The band appears to warm up slowly early in the run, delivering a solid but not inspired first set and picking up momentum with highlights like the PITB > U.J. segue; overall pacing is steady though the rest of the set is described as average 1988 fare."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band > Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Along The Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T13:50:02.568419+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-09-15.nak300.andrewf.88535.sbeok.flac16"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Clear soundboard recording; a modest show highlighted by strong performances of Roses, To Lay Me Down and Ship Of Fools.",
+  "review": "The SBD capture is praised for its great clarity, making the music easy to hear despite a tough‑crowd ambience. The concert itself is viewed as average overall, but fans point out several standout moments – especially “Roses,” “To Lay Me Down,” “Ship Of Fools” and an energetic “Touch of Grey.” Comments about the drummers’ birthday piece add a quirky footnote but don’t affect the musical assessment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is rated around average with a few highlighted songs, while recording quality is noted as great; combined weighting yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers describe the sound as 'great' and clear; no major issues reported, though one notes a tough crowd that may be audible."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Roses",
+      "To Lay Me Down",
+      "Ship Of Fools",
+      "Touch of Grey"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Seen as an average performance with a few high points; unique for being the only show at the Red Wings arena."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Reviewers remark on a 'birthday drummers' piece that seems out of place, but no specific performance appraisal is given."
+  },
+  "song_mentions": {
+    "Roses": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship Of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T08:31:24.143125+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-11.sbd.miller.91243.sbeok.flac16"
+}

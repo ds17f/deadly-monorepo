@@ -1,0 +1,39 @@
+{
+  "summary": "Soundboard capture with a clean mix and great Brent electric‑piano tone, but marred by a half‑step low pitch and a huge cut in “Playin’”, leading to mixed listener reactions.",
+  "review": "The SBD version is praised for its clear instrument balance and especially the beautiful electric‑piano sound from Brent, yet several reviewers criticize serious technical flaws—a noticeable half‑step pitch drop and a long dropout during “Playin’”. Opinions range from calling it terrible to deeming it merely okay, resulting in an overall mixed impression of both the performance and the recording.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Three reviews give divergent star ratings (1‑4‑3) and highlight strong mix quality but major pitch and dropout issues, leading to a below‑average overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Clean, well‑mixed sound with excellent electric piano presence; however the tape runs about a half‑step low in pitch and contains a large cut in the middle of “Playin’”, making it sound off‑key and missing material."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Playin'"
+    ],
+    "setlist_flow": "No specific comments on set pacing; reviewers focus mainly on recording flaws rather than musical flow."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's electric piano is highlighted as clear, warm and a major plus to the performance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T08:44:38.332819+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-03-05.set2-sbd.fink.14024.sbeok.shnf"
+}

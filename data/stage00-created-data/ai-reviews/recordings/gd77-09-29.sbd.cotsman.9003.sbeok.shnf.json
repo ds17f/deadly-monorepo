@@ -1,0 +1,68 @@
+{
+  "summary": "Solid soundboard capture of the Seattle 9/29/77 show, highlighted by an epic Franklin's Tower and tight Light‑In‑The‑Glass.",
+  "review": "Fans rave about the performance, especially Jerry’s soaring solos on LIG and a standout 17‑minute Franklin’s Tower, plus strong contributions from Bob and memorable moments like the China Cat tease. The SBD recording is generally clear and well‑balanced, though one listener notes it plays back in mono right‑channel only, limiting the piano presence.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4–5 stars and praise both the musical performance (especially Franklin's Tower, LIG, Stella Blue) and the sound quality; only a few minor criticisms about energy level or mono playback keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Overall clear SBD sound noted as \"nice\" and \"good\", but one reviewer reports a mono right‑channel only mix that mutes the piano/Keith. No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower",
+      "Light In The Glass",
+      "Stella Blue",
+      "Truckin'",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set solid with a particularly strong closing trio (including Franklin's); LIG warms up the band, leading into an intense second set that, while not groundbreaking overall, delivers memorable jams and tight playing."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for epic, high‑energy solos on Light In The Glass and a 17‑minute Franklin's Tower; described as \"going nuts\" and delivering some of his best leads of the year.",
+    "Phil": "",
+    "Bob": "Highlighted for strong rhythm work and a notable China Cat tease within Franklin's Tower; reviewers call his playing integral to the show’s feel.",
+    "Keys": "Several listeners note an absence or very low presence of keyboards (Keith appears missing, possibly due to mono right‑channel playback).",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Franklin's Tower": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Stella Blue": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Light In The Glass": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-25T04:08:46.102692+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd77-09-29.sbd.cotsman.9003.sbeok.shnf"
+}

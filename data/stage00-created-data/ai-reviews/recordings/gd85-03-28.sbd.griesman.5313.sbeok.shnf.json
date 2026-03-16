@@ -1,0 +1,84 @@
+{
+  "summary": "Crisp soundboard recording of a high‑energy ’85 show highlighted by a smoking Scarlet>Fire and an explosive Truckin’ → Smokestack → High Time opener.",
+  "review": "The SBD captures the spring‑85 Nassau run with clear, lively mix that lets the band’s exuberance shine.  Highlights include a blistering Scarlet>Fire, a rare Truckin’ opening followed by Smokestack Lightning and High Time, plus monster China‑Rider and The Other One in the second set.  While the drums sit a bit low and the bass is occasionally shy, the overall sound is solid and the performances are consistently inspiring.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Most reviewers award 4‑5 stars, praising both the musical performance (standout jams, rare set choices) and the soundboard quality (crisp, clear). Only a few low‑rating comments mention vocal strain or minor mix quirks, so the combined weighted score is high."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally crisp and well‑balanced; occasional bass‑shyness and low drum level noted, plus sporadic distortion. Overall listenable with no major dropouts."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet>Fire",
+      "Truckin'",
+      "Smokestack Lightning",
+      "High Time",
+      "China>Rider",
+      "The Other One"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Rare Truckin’ opener launches an energetic first set that rolls through Smokestack and High Time, closing with China‑Rider.  The second set maintains momentum with a lengthy Scarlet>Fire followed by a seamless jam sequence (Looks Like Rain → jam → drums → space → Gimme Some Lovin' → The Other One → Black Peter)."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice is raspy/bronchitic on this night, but his guitar tone remains excellent and he “rips” solos throughout.",
+    "Phil": "Phil’s bass work is praised (several “Lesh bombs”), and his new mic setup is noted as a positive change.",
+    "Bob": "Bob Weir delivers powerful rhythm guitar and vocal performances; his whammy‑bar on Scarlet>Fire gets special commendation.",
+    "Keys": "Brent Mydland’s keyboard jams drive the LLR and other improvisations, often highlighted as “lovely” and front‑and‑center in the mix.",
+    "Drums": "Mickey Hart’s drumming is energetic; some reviewers note drums sit low in the mix but overall his playing adds great energy."
+  },
+  "song_mentions": {
+    "Scarlet>Fire": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Truckin'": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Smokestack Lightning": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "High Time": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "China>Rider": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Black Peter": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "El Paso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T02:15:08.593662+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-03-28.sbd.griesman.5313.sbeok.shnf"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Fair audience tape with occasional drop‑outs, but an energetic show highlighted by a stellar “Good Lovin'” and Jorma’s last‑set jams.",
+  "review": "The recording is an audience cassette with noticeable cuts and drop‑outs, yet it remains surprisingly listenable for a 1970‑era tape. Musically the concert is praised for its tight, high‑energy playing and especially for the standout “Good Lovin'” performance and the extended jams featuring guest guitarist Jorma Kaukonen.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight strong musical moments, while acknowledging consistent but tolerable tape flaws; the balance yields an overall rating just above four."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Hand‑held cassette source with significant drop‑outs, cuts and occasional reel flips (2nd/3rd generation copies). Despite these issues the tape is described as “very listenable” for a 1970 audience recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Three electric sets with Jorma joining for the final set; the show is described as tight, energetic and full of memorable jams, especially in the last half."
+  },
+  "band_member_comments": {
+    "Jerry": "Positive mentions of his energetic playing (pedal‑steel anecdote) and overall tight performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T01:26:02.863114+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-11-20.aud.cotsman.9001.sbeok.shnf"
+}

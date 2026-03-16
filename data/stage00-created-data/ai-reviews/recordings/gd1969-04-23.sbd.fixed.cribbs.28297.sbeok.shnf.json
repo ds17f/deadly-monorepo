@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard capture of the April 23 1969 Ark show, highlighted by a stellar “Other One” and a killer “Hard to Handle” cover.",
+  "review": "All three reviewers rave about this recording, calling the sound quality great and even remarkable for its era. The performance is praised as fun and energetic with Jerry’s guitar described as “alive,” and standout moments include an inspired take on “The Other One” and a superb “Hard to Handle” cover.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Consistently five‑star reviews emphasize both superb musical performance and excellent soundboard quality, giving the show and recording top marks."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note great/remarkable sound quality for a 1969 tape; crisp and clear with only typical vintage coloration, recommending EQ tweaks for optimal playback."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Hard to Handle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as a fun, high‑energy performance typical of the Ark shows; the set flows smoothly with memorable moments in both the first and second sets."
+  },
+  "band_member_comments": {
+    "Jerry": "Highlighted as “alive” on this night, delivering stellar guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T13:54:07.113715+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1969-04-23.sbd.fixed.cribbs.28297.sbeok.shnf"
+}

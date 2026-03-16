@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent FM‑board recording captures a strong two‑set performance with rare Ballad of a Thin Man, split Sugar Magnolia and a scorching Scarlet > Fire.",
+  "review": "The tape is praised for its clean FM broadcast source with proper EQ and virtually no static, delivering an almost studio‑quality sound. Musically the show shines – a solid first set followed by a second set that includes a rare Ballad of a Thin Man, a split Sugar Magnolia, and a fiery Scarlet > Fire that even got the audience gasping. Overall the performance is regarded as one of the best from 1988.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Three detailed reviews, two five‑star and one three‑star, highlight both an excellent FM‑board recording and a high‑quality performance with several standout songs."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "FM broadcast source recorded via a Sony D5 deck; praised for clear, fresh EQ, lack of static or drop‑outs and overall crispness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Ballad of a Thin Man",
+      "Sugar Magnolia (split)",
+      "Scarlet > Fire",
+      "To Lay Me Down"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A regular first set followed by a second set that opens with Sugar Magnolia rather than the expected space jam; overall flow is strong and includes rare cuts that energize the crowd."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ballad of a Thin Man": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "To Lay Me Down": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T06:57:36.626376+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-03-27.147999.fm.hessberg.miller.clugston.flac2496"
+}

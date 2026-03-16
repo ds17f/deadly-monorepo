@@ -1,0 +1,59 @@
+{
+  "summary": "Excellent audience recording of the 9/7/85 Red Rocks show with crisp sound and standout performances of Frozen Logger, Shakedown Street and Crazy Fingers.",
+  "review": "The remastered AUD capture delivers clear, punchy audio that lets listeners hear every smile on the speakers, while the band offers a light‑hearted, high‑energy set highlighted by Frozen Logger, Shakedown Street and an inspired Crazy Fingers.  Most fans praise the flow of the second set, though a few note rushed pacing and vocal wear from Jerry.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong musical performance with multiple standout songs and consistently praised sound quality; isolated criticisms are outweighed by the majority of enthusiastic 5‑star reviews."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Excellent clarity and crispness noted across reviews, strong low‑end presence (some say a bit loud), overall very listenable AUD source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Frozen Logger",
+      "Shakedown Street",
+      "Crazy Fingers",
+      "Comes a Time"
+    ],
+    "poor_songs": [
+      "Crazy Fingers"
+    ],
+    "setlist_flow": "The second set is praised for its pure Dead goodness and smooth flow, though one reviewer felt it was slightly rushed compared to classic shows."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals noted as deteriorating by some reviewers, but slide‑guitar work in the first set receives high praise.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Frozen Logger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:55:01.438652+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-09-07.schoeps.oade.373.sbeok.shnf"
+}

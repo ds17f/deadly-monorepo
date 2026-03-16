@@ -1,0 +1,70 @@
+{
+  "summary": "Excellent soundboard capture of a hot Albany show, highlighted by a smoking Help‑Slip‑Franklin’s and a killer Deal.",
+  "review": "The recording is a clean, well‑balanced soundboard mix that lets every instrument shine, especially Jerry's ragged‑but‑powerful vocals and Bobby's prominent keyboards. The performance swings between fire (Help>Slip>Franklin’s, Deal, Brown Eyed Women, Samson>China Cat, Good Lovin') and occasional dips (notably a out‑of‑tune Desolation Row). Overall the show is regarded as one of the stronger 1991 dates despite mixed opinions.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the music and the pristine soundboard recording, yielding a strong average rating; a few lower‑scoring reviews keep the overall assessment from being purely positive."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean mix with every instrument in the balance; no reported dropouts or major flaws."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slipknot! > Franklin's Tower",
+      "Deal",
+      "Brown Eyed Women",
+      "Samson > China Cat Sunflower",
+      "Good Lovin'"
+    ],
+    "poor_songs": [
+      "Desolation Row"
+    ],
+    "setlist_flow": "The set is praised for high energy and strong transitions, especially in the second half; a few reviewers note uneven moments that prevent it from being uniformly stellar."
+  },
+  "band_member_comments": {
+    "Jerry": "Voice described as ragged yet powerful and gorgeous on Desolation Row.",
+    "Phil": "",
+    "Bob": "Creative and prominently mixed keyboard work, but out of tune and overly loud on Desolation Row.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson > China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Desolation Row": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T17:05:45.285774+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-03-24.sbd.hinko.25274.sbeok.shnf"
+}

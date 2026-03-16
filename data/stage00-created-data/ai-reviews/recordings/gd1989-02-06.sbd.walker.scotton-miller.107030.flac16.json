@@ -1,0 +1,98 @@
+{
+  "summary": "Soundboard recording of a solid show with standout Sugaree, Brown Eyed Women and Terrapin Station; occasional muddiness and track‑label quirks.",
+  "review": "The performance opens explosively with a high‑energy Not Fade Away → Sugaree → Wang Dang Doodle run and delivers several highlights such as a superb Brown Eyed Women, an extended Terrapin Station, and a biting Bucket that many fans rate above Throwing Stones.  The soundboard source is generally clear and “great,” though a few sections (especially the rhythm section on Brent’s organ) are described as muddy and the track labeling is confused.  Overall the show is enjoyable with a few mid‑set lulls (Jack A Roe, Tennessee) that keep the rating in the mixed‑positive range.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is strong with many praised songs and good band interplay (≈4/5), while recording quality is solid but not flawless due to occasional muddiness (≈3.5/5). Weighted average yields ~3.9."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑mixed; reviewers call it a “great recording,” but note some mud in the rhythm section when Brent is on organ and occasional track‑label confusion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Brown Eyed Women",
+      "Terrapin Station",
+      "Other One",
+      "Bucket",
+      "Scarlet",
+      "Wang Dang Doodle"
+    ],
+    "poor_songs": [
+      "Jack A Roe",
+      "Tennessee"
+    ],
+    "setlist_flow": "A thunderous opening set that loses a bit of momentum after Jack A Roe, but the second set recovers with an expansive Terrapin Station and strong jams, ending on a high note."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocals are highlighted (nice backing, lyric slip noted) and his guitar tone is praised; occasional vocal ‘malfunction’ mentioned but harmless.",
+    "Phil": "Phil’s bass work gets praise (“Good to hear Phil”) though the mix can be muddy when the rhythm section swells; he also extends Terrapin Station and appears in the Scarlet jam.",
+    "Bob": "",
+    "Keys": "Brent (organ/keys) is “up in the mix,” sings with Garcia, and adds a distinctive organ texture that some describe as slightly muddy.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack A Roe": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Brown Eyed Women": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Chinese New Year": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wang Dang Doodle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T16:19:17.230779+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-02-06.sbd.walker.scotton-miller.107030.flac16"
+}

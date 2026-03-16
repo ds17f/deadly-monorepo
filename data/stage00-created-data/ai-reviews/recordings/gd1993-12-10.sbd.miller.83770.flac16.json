@@ -1,0 +1,81 @@
+{
+  "summary": "A well‑mastered soundboard capture of a mixed‑quality show, highlighted by Terrapin Station and the jazzy interplay of Branford with Jerry’s guitar.",
+  "review": "Charlie Miller’s transfer provides a clear, crisp soundboard recording that lets listeners hear every nuance. The performance swings between strong moments – an inspired Terrapin Station, soaring So Many Roads and a fiery Scarlet > Fire sequence – and weaker spots where the band flubs lyrics and loses focus. Overall the show is enjoyable but uneven.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "high",
+    "rationale": "Recording quality consistently praised (soundboard, excellent mastering). Show receives both high praise for several songs and criticism for lyrical slips and overall inconsistency, yielding a mixed but moderately positive rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Charlie Miller’s mastering praised as crisp and clean; no significant drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "So Many Roads",
+      "Scarlet Begonias > Fire on the Mountain",
+      "Hell in a Bucket",
+      "Loser"
+    ],
+    "poor_songs": [
+      "So Many Roads (lyric slip)",
+      "Eternity"
+    ],
+    "setlist_flow": "First set is varied with several solid numbers, but the second set shines with the Terrapin jam and the Scarlet > Fire sequence; pacing is uneven as the band lapses later in the show."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s tone and guitar work are repeatedly praised as perfect and climactic, though a few reviewers note occasional lyric slips.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Branford Marsalis’ saxophone adds heavier licks and jazzy texture, enhancing the overall sound.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Ramble On Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:30:32.394450+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-12-10.sbd.miller.83770.flac16"
+}

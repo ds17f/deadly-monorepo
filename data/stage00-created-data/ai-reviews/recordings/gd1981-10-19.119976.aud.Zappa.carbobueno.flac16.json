@@ -1,0 +1,39 @@
+{
+  "summary": "Strong performance with Jerry fully on, featuring a standout Let It Grow; recording quality not specified but presumed solid.",
+  "review": "The reviewer rates the concert a perfect five stars, calling it a strong show where Jerry Garcia was certainly 'on.' While no concrete details about the source or fidelity are given, the enthusiasm suggests the audio is at least listenable and complements the high‑energy set, especially the Let It Grow rendition.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Single five‑star review praises the show heavily; recording quality is unknown, so rating reflects strong musical performance with uncertain technical assessment."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No explicit comments on soundboard or audience source; reviewers implied overall satisfaction with the audio."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer notes a generally strong show without specific criticisms, indicating a cohesive and energetic performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Jerry was certainly on, delivering an inspired performance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T16:16:16.405230+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-10-19.119976.aud.Zappa.carbobueno.flac16"
+}

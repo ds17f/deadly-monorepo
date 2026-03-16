@@ -1,0 +1,57 @@
+{
+  "summary": "Crisp sound‑board recording of a legendary second set – killer Sugar Magnolia, soaring Slipknot > Franklin’s Tower and a blistering Dancin’ make this 1976 show shine.",
+  "review": "The SBD capture is exceptionally clean with crisp vocals, clear drums and a mix that lets Jerry’s lead guitar cut through without drowning the rest of the band.  Fans rave about the second‑set fireworks – Sugar Magnolia, Slipknot into Franklin’s Tower and an inspired Dancin’ – making this one of the most memorable ’76 tapes.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All but one review are 4‑5 stars, praising both the musical performance (standout second set) and the high‑quality soundboard source; only a minor keyboard‑mix comment tempers an otherwise glowing consensus."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Very clean mix with crisp vocals, audible drums and little treble harshness; Jerry sits forward in the mix but is praised for his tone.  No noticeable drop‑outs or crowd noise."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugar Magnolia",
+      "Slipknot!",
+      "Franklin's Tower",
+      "Dancin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set is the highlight – high energy, tight transitions and inspired jams; reviewers note the overall setlist as average but the performance of these songs lifts the whole show."
+  },
+  "band_member_comments": {
+    "Jerry": "Front‑of‑mix lead guitar that dominates the performance; praised for soaring tone and being “way out in front” of the band.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keith is a bit frenetic and busy during Samson, but overall keyboards sit well in the mix.",
+    "Drums": "Crisp, clearly audible drumming praised as some of the best‑heard 1976 drum work."
+  },
+  "song_mentions": {
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Dancin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Slipknot!": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T05:17:57.114348+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd76-06-24.set2-sbd.wiley.14498.sbeok.shnf"
+}

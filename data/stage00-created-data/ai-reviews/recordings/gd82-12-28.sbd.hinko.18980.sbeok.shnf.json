@@ -1,0 +1,98 @@
+{
+  "summary": "Clear soundboard recording with a strong first set and a wildly praised Shakedown Street jam, though the second set feels sleepy and Terrapin Station falls flat.",
+  "review": "The SBD source delivers crisp audio (with a patched Baby Blue) that lets the band's first‑set energy shine – highlights include Jack Straw, Lazy Lightning→Deal, Touch of Grey and a killer Shakedown Street. The second half drags for many listeners, with a weak Terrapin Station and overall sleepy vibe, but the Shakedown groove and Baby Blue moment rescue it for most fans.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Average star rating ≈4.1 across >20 reviews, strong praise for first‑set and Shakedown Street versus consistent criticism of the second set; recording quality is consistently noted as good."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and crisp overall; Baby Blue patched from another B+ SBD, no major drop‑outs or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown Street",
+      "Baby Blue",
+      "Touch of Grey",
+      "Morning Dew",
+      "Dire Wolf",
+      "Jack Straw",
+      "Lazy Lightning -> Deal",
+      "Samson"
+    ],
+    "poor_songs": [
+      "Terrapin Station"
+    ],
+    "setlist_flow": "First set rolls smoothly with several first‑set gems; the second set is slower and sleepy for many listeners, though the Shakedown Street jam provides a high point that lifts the overall pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocal flubs noted on Shakedown Street and Terrapin Station, but his guitar solo on Shakedown is repeatedly praised as brilliant and fierce.",
+    "Phil": "Bass groove highlighted during Shakedown Street, described as a funk heartbeat that drives the jam.",
+    "Bob": "Bob Weir’s vocals (especially on Samson) contain lyrical slips but are otherwise solid; his rhythm work receives little specific comment.",
+    "Keys": "Brent Mydland’s keyboard fills and flourishes are praised throughout, especially during Shakedown Street where they add psychedelic texture.",
+    "Drums": "Bill Kreutzmann (and Mickey Hart) are credited with deep, funky grooves in Shakedown Street; some reviewers felt the overall second‑set drumming was sluggish."
+  },
+  "song_mentions": {
+    "Shakedown Street": {
+      "positive_mentions": 9,
+      "negative_mentions": 3,
+      "total_mentions": 12
+    },
+    "Baby Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Terrapin Station": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning -> Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Man Smart (Woman Smarter)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "On the Road Again": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T03:40:46.102886+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-12-28.sbd.hinko.18980.sbeok.shnf"
+}

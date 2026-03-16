@@ -1,0 +1,45 @@
+{
+  "summary": "Matrix recording of a stellar Alpine Valley show on 6/20/1988, highlighted by first‑time performances of “Victim or the Crime” and “Blow Away”, with generally good sound.",
+  "review": "The reviewers rave about this June 20 1988 Alpine Valley concert, calling it an awesome show and noting that both \"Victim or the Crime\" and \"Blow Away\" were played for the first time. The source is an ultramatrix recording, which suggests a blend of soundboard and audience feeds; while no specific audio issues are mentioned, the lack of criticism implies acceptable sound quality.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review, but it is strongly positive (4‑star rating) and highlights unique setlist moments; recording quality not discussed, so rating leans on show merit."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments about sound clarity or mix; assumed adequate for a matrix source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Victim or the Crime",
+      "Blow Away"
+    ],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Victim or the Crime": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Blow Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:47:57.851226+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-06-20.151410.ultramatrix.miller.flac2496"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Soundboard recording hampered by a bad mix – keyboards too high and Jerry's guitar buried.",
+  "review": "The performance itself contains some smooth playing, but the soundboard tape suffers from a poorly balanced mix with overly bright keyboards and sub‑optimal levels on Jerry’s guitar. These issues dominate the listening experience, making it difficult to enjoy the show despite its musical merits.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.3,
+    "confidence": "low",
+    "rationale": "Only one brief, 1‑star review focusing on serious mix problems; little positive information about the performance to raise the rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Mix is unbalanced – keyboards excessively high and Jerry's guitar not at optimal level, resulting in a muddy overall sound."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar levels are too low; not at the optimal mix balance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keyboards are mixed far too high, detracting from the overall sound.",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T20:36:17.009328+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-15.151691.sbd.anon.gems.bandrofcheck.flac16"
+}

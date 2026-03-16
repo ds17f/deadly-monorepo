@@ -1,0 +1,51 @@
+{
+  "summary": "Mixed performance with standout Looks Like Rain and Stella Blue, but hampered by poor Civic Center sound.",
+  "review": "The show has moments that Deadheads love – an electrifying Looks Like Rain and a haunting slide‑laden Stella Blue – yet overall energy is low and the recording suffers from bad acoustics in the Civic Center. While the first set’s song selection was decent, the second set felt over‑played until the Box of Rain encore rescued it.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Two reviewers gave 4 stars praising specific songs and performance, one gave 2 stars highlighting poor sound; the weighted average of show (≈3.5) and recording quality (≈2) yields a rating around 3.2."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers note bad sound in the Civic Center, likely an audience capture with muddiness and lack of clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "Stella Blue",
+      "Box of Rain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set had decent song choices but low energy; second set felt over‑played until the Box of Rain encore, with Looks Like Rain providing a high point."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Weir’s slide on Stella Blue creates an eerie feeling that reviewers highlighted.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Box of Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T14:42:33.682620+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd86-04-04.BeyerM88s.connor.29580.sbeok.flacf"
+}

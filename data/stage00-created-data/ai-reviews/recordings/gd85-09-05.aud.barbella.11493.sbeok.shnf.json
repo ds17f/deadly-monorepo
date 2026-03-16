@@ -1,0 +1,46 @@
+{
+  "summary": "An eighties audience recording with some static and average tape quality, but a solid performance highlighted by Let It Grow and strong Phil Lesh bass work.",
+  "review": "The show is praised for being on‑point, especially the band’s tight playing and moments like Let It Grow, Scarlet Begonias and Fire on the Mountain. However listeners note that the audience recording suffers from noticeable static during Let It Grow and overall average fidelity, making it a mixed‑quality capture.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Show performance receives high praise (average 4.5/5) while recording quality is rated average to fair (around 3/5). Weighted combination yields ~4.1 stars."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Average audience tape with noticeable static on \"Let It Grow\" and general hiss; mic source described but not enough to offset the tape issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow",
+      "Scarlet Begonias",
+      "Fire on the Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Typical eighties set with good flow; reviewers highlight strong playing throughout despite recording flaws."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "His bass is described as \"hemorrhaging bass farts\" – a vivid, positive nod to his performance.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Let It Grow": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T08:39:39.138966+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-09-05.aud.barbella.11493.sbeok.shnf"
+}

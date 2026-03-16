@@ -1,0 +1,76 @@
+{
+  "summary": "Soaring Dark Star, blistering Sugar Magnolia, tight first‑set roar",
+  "blurb": "The show delivers a powerhouse first set and an epic second set anchored by a marathon Dark Star and a soaring Sugar Magnolia. Jerry’s searing guitar work shines throughout, with Pigpen’s organ adding West Coast flavor. Highlights include Good Lovin', Sing Me Back Home and the heartfelt Two Souls in Communion.",
+  "review": "May 4, 1972 at Paris’ Olympia Theatre captured one of the Dead’s most celebrated European nights. The first set rolls through classics like Greatest Story Ever Told, Deal and Mr. Charlie with a tight, energetic feel that sets up an unforgettable second half. After a soulful rendition of Good Lovin' and a breezy Jack Straw, the band launches into a monumental Dark Star – Jerry Garcia’s blazing lead weaving through Phil Lesh’s eerie, space‑y bass textures while Bill Kreutzmann drives a snappy jazz‑filled drum solo that many reviewers call one of his best. The journey resolves into a soaring Sugar Magnolia before the set closes with sing‑along staples Sing Me Back Home and Uncle John’s Band, capped off by an exuberant One More Saturday Night encore. Pigpen’s organ work, especially on Two Souls in Communion (The Stranger), adds a West Coast syncopated flavor that rounds out the night’s magic.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.4,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 40,
+      "review_count_boost": 0.3,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "All four recordings are marked positive, repeatedly praising Dark Star, Sugar Magnolia, Good Lovin' and Pigpen's organ. Multiple sources highlight Jerry’s blazing guitar, Bill’s standout drum solo, and the overall tight performance, yielding strong consistent positivity.",
+      "final_calculation": "2.5 + 0.3 + 1.6 = 4.4"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1972-05-04.sbd.miller.77294.sbeok.flac16",
+    "reason": "Crystal‑clear soundboard mix with excellent balance, minimal crowd noise and flawless transfer; captures the full show with superb clarity."
+  },
+  "key_highlights": [
+    "Epic Dark Star with a standout Bill Kreutzmann drum solo.",
+    "Soaring Sugar Magnolia that caps the second set.",
+    "Pigpen’s emotive Two Souls in Communion performance.",
+    "Tight, high‑energy first set featuring Mr. Charlie and Jack Straw."
+  ],
+  "song_highlights": [
+    "Dark Star",
+    "Sugar Magnolia",
+    "Good Lovin'",
+    "Sing Me Back Home",
+    "Mr. Charlie",
+    "Jack Straw",
+    "It Hurts Me Too",
+    "The Stranger (Two Souls in Communion)"
+  ],
+  "band_performance": {
+    "Jerry": "Blazing, inspired guitar work throughout, especially on Dark Star, Sugar Magnolia and Jack Straw.",
+    "Phil": "Eerie, space‑y bass textures that add depth to the Dark Star improvisation.",
+    "Bob": "Inventive rhythm fills and vocal excitement that lift the set; his voice energizes the crowd.",
+    "Keith": "Adds syncopated, West Coast flavor on organ, enhancing jams and providing rhythmic dimension; Pigpen’s organ work shines, especially on Two Souls in Communion.",
+    "Mickey": "",
+    "Billy": "Delivers one of his best drum solos—a snappy jazz‑beat that drives the Dark Star to new heights."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-20T13:26:26.093588+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Dark Star",
+      "Drums",
+      "Dark Star",
+      "Sugar Magnolia"
+    ],
+    [
+      "Good Lovin'"
+    ],
+    [
+      "Sing Me Back Home"
+    ],
+    [
+      "Mr. Charlie"
+    ],
+    [
+      "Jack Straw"
+    ],
+    [
+      "It Hurts Me Too"
+    ],
+    [
+      "The Stranger (Two Souls in Communion)"
+    ]
+  ]
+}

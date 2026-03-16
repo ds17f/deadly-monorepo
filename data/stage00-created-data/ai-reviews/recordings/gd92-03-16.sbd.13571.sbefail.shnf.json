@@ -1,0 +1,61 @@
+{
+  "summary": "Soundboard recording is clear with good low‑end but suffers from low volume, while the show shines with standout performances of C.C. Rider, Takes A Train and a fiery Corrina.",
+  "review": "The concert captures a solid late‑era Dead performance – the first set rocks and the second set stays tight, highlighted by the final definitive versions of C.C. Rider and Takes A Train and a soaring Corrina. The soundboard source is generally clean with plenty of bass, though many listeners note the overall low volume and a lack of audience ambience that makes the mix feel a bit thin.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (70%+) and rate the show 4‑5 stars, while recording comments are mostly positive with a few criticisms about volume, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear mix with strong low end; however several reviewers note the set‑wide low volume and that the board lacks crowd ambience, making some nuances feel buried."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "C.C. Rider",
+      "Takes A Train",
+      "Corrina"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as rock‑in’ and solid, second set tight and energetic; overall the concert is viewed as a high‑energy late‑tour show with many highlights despite occasional volume dip early on."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for strong vocals on Corrina and generally great guitar work throughout.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's synth lines on Estimated Prophet were called annoying; Brent (the “fat man”) received a positive nod, though some wish Keith had been present.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "C.C. Rider": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Takes A Train": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Corrina": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T04:41:42.150220+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-03-16.sbd.13571.sbefail.shnf"
+}

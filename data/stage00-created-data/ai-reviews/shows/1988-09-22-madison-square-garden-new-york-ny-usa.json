@@ -1,0 +1,76 @@
+{
+  "summary": "Powerful first set, uneven second; highlights Shakedown & China>Rider",
+  "blurb": "The opening set crackles with energy – Shakedown Street and the seamless Greatest Story Ever Told transition shine. The second half stumbles through a meandering China > I Know You Rider and mixed Estimated Prophet, but closes strong on Just Like Tom Thumb's Blues and Turn On Your Lovelight.",
+  "review": "On September 22, 1988 at Madison Square Garden the Dead delivered a first‑set that many fans still talk about. Jerry Garcia was in top form, laying down thick, roaring tones on Shakedown Street and driving the band forward with a fierce, scowling intensity that even had him ribbing Bob during transitions. Brent’s keyboards added contagious enthusiasm, especially on the later Fantasy‑type jams (though not on the official setlist), while Mickey and Billy kept the rhythm “whipping it up,” despite a few moments of looseness.\n\nThe second set was more hit‑or‑miss. The classic China Cat Sunflower → I Know You Rider segue still sparked excitement, but the flow faltered with an oddly placed Just Like Tom Thumb's Blues that left some listeners scratching their heads. Estimated Prophet and Eyes Of The World received mixed reactions – Bob’s “Na na nahs” on the former were a comic high point for some, yet others found his vocal delivery dour. The night finished on a high note with an energetic turn into Turn On Your Lovelight and a heartfelt encore of Brokedown Palace, making the show worth a spin despite its uneven moments.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 2.2,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 19,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": -0.4,
+      "sentiment_rationale": "Across four recordings, sentiment is mixed: one positive (praising first‑set power), one mixed (well‑played yet unremarkable), and two negative (noting a problematic Tom Thumb's Blues placement and poor recording quality). The prevalence of negative remarks about the second set outweighs the lone strong praise, resulting in a modest negative adjustment.",
+      "final_calculation": "2.5 + 0.1 + -0.4 = 2.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd88-09-22.sbd.miller.5290.sbeok.shnf",
+    "reason": "Excellent soundboard‑style mix; crisp, well‑balanced and captures the first‑set power without drop‑outs."
+  },
+  "key_highlights": [
+    "First set delivers a powerhouse start with Shakedown Street and seamless segues.",
+    "Standout Bird Song > Greatest Story transition (despite setlist discrepancy) praised for energy.",
+    "China Cat Sunflower > I Know You Rider still sparkles, though the second half meanders.",
+    "Strong closing jam on Just Like Tom Thumb's Blues and Turn On Your Lovelight."
+  ],
+  "song_highlights": [
+    "Shakedown Street",
+    "Greatest Story Ever Told",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Estimated Prophet",
+    "Eyes Of The World",
+    "Just Like Tom Thumb's Blues",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers powerful, high‑energy guitar tones throughout; scowls at Bob during transitions, adding a fierce edge to the set.",
+    "Phil": "",
+    "Bob": "Provides comedic \"Na na nah\" vocal moments on Estimated Prophet, though his delivery is described as dour in one version.",
+    "Brent": "Shows contagious enthusiasm on keyboards, sitting well in the mix and driving jams like Fantasy‑style sections.",
+    "Mickey": "Drums are “whipping it up” with strong energy, keeping the groove solid despite occasional sloppiness.",
+    "Billy": "Partners Mickey in a high‑octane rhythm attack; overall percussion drives the band forward."
+  },
+  "processed_recordings": 4,
+  "processed_date": "2025-09-16T14:20:45.255449+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Shakedown Street"
+    ],
+    [
+      "Beat It On Down The Line",
+      "Greatest Story Ever Told"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Dear Mr. Fantasy",
+      "Hey Jude Finale",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Just Like Tom Thumb's Blues"
+    ]
+  ]
+}

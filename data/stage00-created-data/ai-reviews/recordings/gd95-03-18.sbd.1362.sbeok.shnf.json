@@ -1,0 +1,87 @@
+{
+  "summary": "A high‑energy 1995 Spectrum show captured on a crisp soundboard tape, highlighted by a soaring Visions of Johanna and an electrifying Iko Iko.",
+  "review": "The performance is widely praised for its electric second set – the Visions of Johanna, Iko Iko, It’s All Too Much, Space and Rain are repeatedly called out as standout moments.  The recording is described as a clean, well‑balanced soundboard source that lets the band’s tight rhythm section and Vince’s piano shine, with only occasional minor complaints about specific songs.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and focus on strong musical moments; the few negative comments are isolated to individual song issues.  The recording is repeatedly called crisp and well‑mixed, giving a solid technical foundation."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Multiple reviewers call the tape \"crispy\", \"perfect sounding board\" and note clear vocals and instruments. No major drop‑outs or balance problems are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Visions of Johanna",
+      "Iko Iko",
+      "It’s All Too Much",
+      "Space",
+      "Rain"
+    ],
+    "poor_songs": [
+      "Hell in a Bucket",
+      "West LA Fadeaway",
+      "Tom Thumb"
+    ],
+    "setlist_flow": "The set is described as flowing naturally, with the first set building energy and the second set delivering a sustained high‑octane groove; transitions (e.g., Playin' > Uncle) are noted as especially tight."
+  },
+  "band_member_comments": {
+    "Jerry": "His vocal delivery on Visions of Johanna is repeatedly called emotional and \"beautiful\"; guitar tone is praised though a few note he wasn't at his absolute peak.",
+    "Phil": "Bass work described as tight and rhythmic; Phil’s backup vocals on Iko Iko receive specific praise.",
+    "Bob": "Weir’s vocal contributions are highlighted (e.g., the bridge of Iko Iko) and his improvisational groove in Space is noted as a jam highlight.",
+    "Keys": "Vince’s piano is repeatedly called \"magnificent\", \"barrel‑house\" and a key factor in making It’s All Too Much and other songs shine.",
+    "Drums": "Bill and Mickey are described as “tight”, “transfixed” and providing the solid rhythmic backbone throughout the show."
+  },
+  "song_mentions": {
+    "Visions of Johanna": {
+      "positive_mentions": 27,
+      "negative_mentions": 0,
+      "total_mentions": 27
+    },
+    "Iko Iko": {
+      "positive_mentions": 22,
+      "negative_mentions": 0,
+      "total_mentions": 22
+    },
+    "It’s All Too Much": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Rain": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Space": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Hell in a Bucket": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Tom Thumb": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "West LA Fadeaway": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-19T05:52:26.387391+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-03-18.sbd.1362.sbeok.shnf"
+}

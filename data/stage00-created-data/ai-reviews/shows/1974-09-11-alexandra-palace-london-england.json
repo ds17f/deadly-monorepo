@@ -1,0 +1,66 @@
+{
+  "summary": "Seastones/Eyes marathon with tight jams and classic rockers",
+  "blurb": "The show rockets through a legendary Seastones → Eyes Of The World suite, delivering one of the longest and most adventurous second‑set jams of ’74. Jerry’s tone is flawless, Phil drives the improvisations with a massive bass solo, and the band rides a relentless groove into an epic Wharf Rat and a rousing encore.",
+  "review": "September 11, 1974 at Alexandra Palace captures the Grateful Dead at a creative peak. The first set lays down solid groundwork with bright renditions of Scarlet Begonias, Jack Straw and a monster Playing In The Band that builds anticipation for what follows. The second‑set is the heart of the night: a crystal‑clear Seastones interlude segues into an expansive Eyes Of The World jam that stretches beyond 40 minutes, morphing seamlessly into a soaring Wharf Rat before the band fires off Around & Around and Ship Of Fools with relentless energy. Keith’s piano adds subtle texture while Bill Kreutzmann locks in tight, propulsive drumming. The encore closes on a high‑octane U.S. Blues, leaving the audience buzzing. Across all available recordings the performance is consistently praised for its inventiveness, tight interplay, and the sheer audacity of the extended improvisations – making this one of the standout shows of the 1974 European tour.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 60,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "The majority of recordings (8 out of 9) are described with overwhelmingly positive language—‘legendary’, ‘stellar’, ‘perfect tone’, ‘massive bass solo’, ‘epic’. Only one analysis is mixed, noting a minor tape compression issue and a few listeners calling Seastones a snoozefest. No consistent negative criticism appears, so a strong positive sentiment adjustment of +1.6 is applied.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1974-09-11.sbd.partial.cribbs.121207.flac16",
+    "reason": "Crystal‑clear soundboard capture that highlights the Eyes Of The World suite and Seastones intermission with minimal hiss and no dropouts, widely praised as one of the best ’74 SBDs."
+  },
+  "key_highlights": [
+    "Seastones → Eyes Of The World marathon (40+ minutes) with flawless band cohesion",
+    "Massive 12½‑minute bass solo by Phil during Eyes",
+    "Epic Wharf Rat that follows a mini‑Dark Star transition from the first set",
+    "High‑energy encore U.S. Blues rounding out an unforgettable night"
+  ],
+  "song_highlights": [
+    "Scarlet Begonias",
+    "Eyes Of The World",
+    "Wharf Rat",
+    "Seastones*",
+    "Playing In The Band",
+    "U.S. Blues"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers a perfect, youthful tone throughout; his solos are inventive on the Seastones/Eyes marathon and he adds subtle string‑bending flourishes during Wharf Rat.",
+    "Phil": "Lesh anchors the jams with a massive 12½‑minute bass solo in Eyes and drives the whole set forward with relentless groove and subsonic tones.",
+    "Bob": "Weir’s rhythm work is solid; his guitar shines on Ship Of Fools and Goin' Down The Road, despite occasional drop‑outs noted in some patched recordings.",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": "Kreutzmann provides a steady, propulsive pulse, especially during the Seastones interlude and the long second‑set improvisations."
+  },
+  "processed_recordings": 9,
+  "processed_date": "2025-09-23T00:25:57.893359+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Scarlet Begonias"
+    ],
+    [
+      "Seastones*",
+      "Jam",
+      "Eyes Of The World",
+      "Jam",
+      "Wharf Rat"
+    ],
+    [
+      "Playing In The Band"
+    ],
+    [
+      "U.S. Blues"
+    ]
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "summary": "Soundboard recording captures a solid 1995 Philadelphia Spectrum show highlighted by a soaring “Standing on the Moon” and vibrant “Lucy in the Sky”, though occasional venue‑sound issues and cassette‑master artifacts temper the experience.",
+  "review": "The GD 1995‑03‑17 SBD delivers a generally clear soundboard source that lets listeners hear many of the night’s high points – Jerry ripping on Watchtower, an ecstatic “Standing on the Moon”, and a lush “Lucy in the Sky with Diamonds”.  The second set shines with Drums>Space and a powerful All Along the Watchtower, while the first set suffers from poor house‑mix on songs like Here Comes Sunshine and Sugar Magnolia.  Overall the performance is energetic and memorable despite some muddiness inherited from the cassette‑master lineage.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical peaks (SOTM, Watchtower, LSD) and note the recording is a decent soundboard; a minority cite venue‑sound problems and cassette‑master loss, yielding an overall strong but not flawless rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear SBD with good instrument separation.  A few reviewers mention the source stems from a cassette master that sounds muffled in places, and occasional house‑mix bleed makes some songs (e.g., Here Comes Sunshine) sound thin."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Standing on the Moon",
+      "Lucy in the Sky with Diamonds",
+      "All Along the Watchtower",
+      "Drums > Space"
+    ],
+    "poor_songs": [
+      "Here Comes Sunshine",
+      "Sugar Magnolia"
+    ],
+    "setlist_flow": "First set is uneven – strong openings but hampered by venue sound, especially on Here Comes Sunshine.  The second set builds momentum with a powerful Watchtower, an expansive SOTM and an inspired Drum/Space segment that many reviewers cite as the night’s highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed – sometimes buried in the mix or turned down, but praised for ripping on Watchtower and Standing on the Moon; vocal delivery noted as surprisingly clear later in the tour.",
+    "Phil": "Generally positive – his bass drives the second‑set power (China Cat), vocals stand out on Truckin' and Lazy River Road, though one reviewer described his voice as a “hum” early in the show.",
+    "Bob": "Positive – praised for high energy on Lucy in the Sky, acoustic work on Eternity, and overall fire throughout the night despite occasional inaudibility in the house mix.",
+    "Keys": "Vince’s synth‑trumpet colors noted on Samba in the Rain and Space; no major complaints.",
+    "Drums": "Highly praised – Mickey & Bill’s Drum/Space segment described as “great” and a highlight of the later‑Dead era."
+  },
+  "song_mentions": {
+    "Standing on the Moon": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Lucy in the Sky with Diamonds": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Lazy River Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eternity": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums > Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T05:37:52.583792+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-03-17.sbd.miller.97658.flac16"
+}

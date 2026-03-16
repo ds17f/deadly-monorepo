@@ -1,0 +1,51 @@
+{
+  "summary": "Soundboard recording is thin on bass but captures a solid early‑’82 show with standout performances of Peggy‑O, They Love Each Other and Franklin’s Tower.",
+  "review": "The concert is praised for its energy and favorite moments – Peggy‑O and They Love Each Other are highlighted as new favorites, and Garcia’s tasty lead work shines through. However, the SBD suffers from the typical early‑’82 thin low end, making the mix bright and lacking punch, especially on the Franklin’s Tower segment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Strong musical performance (≈4 / 5) but a thin early‑'82 soundboard mix lacking bass (≈3 / 5); weighted average yields ~3.7–3.8."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Typical early‑’82 SBD thinness – noticeable lack of bass, bright high end, occasional well‑recorded moments but overall mix feels less full than later ’82 shows."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "They Love Each Other",
+      "Franklin's Tower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall a good early‑’82 set with strong song choices; reviewers note the show feels hot and engaging despite the recording’s bass shortcomings."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's playing described as 'really tasty' and a highlight of the performance.",
+    "Phil": "Phil's intro bass on certain numbers is noted as well recorded, though overall bass is thin in this era.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T20:50:44.952898+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-04-19.sbd.tobin.89313.sbeok.flac16"
+}

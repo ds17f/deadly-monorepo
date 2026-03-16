@@ -35,7 +35,7 @@ class DatabaseManager @Inject constructor(
     
     companion object {
         private const val TAG = "DatabaseManager"
-        private const val REQUIRED_DATA_VERSION = "2.3.0"
+        private const val REQUIRED_DATA_VERSION = GitHubDataService.REQUIRED_DATA_VERSION
     }
     
     private val _progress = MutableStateFlow(DatabaseProgress())

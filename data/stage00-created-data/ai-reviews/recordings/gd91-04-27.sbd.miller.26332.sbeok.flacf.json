@@ -1,0 +1,73 @@
+{
+  "summary": "Crisp soundboard capture of a solid ’91 show highlighted by a smoking Black Peter and stellar Sugar Magnolia, with dark‑moody drums/space.",
+  "review": "The Miller SBD source delivers an exceptionally clear and dynamic listening experience – the first few seconds of the outdoor crowd bleed fade seamlessly into full soundboard fidelity.  Musically the concert is a strong example of the band’s ’91 form, featuring standout moments like Black Peter, Sugar Magnolia, the Scarlet Begonias > Fire on the Mountain segue and an especially dark, moody Drums/Space stretch.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise both the recording clarity and the musical performance; only one outlier low rating exists, so overall quality is judged very good to excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Initial ~15 s outdoor audience capture then seamless transition to full SBD; reviewers describe the sound as crisp, dynamic and ‘world‑class’ for a Miller recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Black Peter",
+      "Sugar Magnolia",
+      "Scarlet Begonias > Fire on the Mountain",
+      "Playing in the Band > Uncle John's Band",
+      "Drums > Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Opening with an unexpected Touch set a quirky tone; the second set builds with a powerful pre‑space segment and climaxes in a moody, dark Drums/Space that many reviewers highlighted as exceptional."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is praised overall; one reviewer notes he sounds best when he ‘sounds like Garcia’, especially during the space jam.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby’s accordion/piano work divided opinion – some prefer his piano over accordion; Vince Welnick is described as “actually OK”.",
+    "Drums": "The drums and ensuing space are repeatedly called dark, moody and exceptionally good."
+  },
+  "song_mentions": {
+    "Touch": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Drums > Space": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band > Uncle John's Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T19:02:23.938113+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-04-27.sbd.miller.26332.sbeok.flacf"
+}

@@ -1,0 +1,76 @@
+{
+  "summary": "Crisp audience capture of a summer ’74 show – China Cat Sunflower→I Know You Rider, Wharf Rat and a monster Play‑in‑the‑Band shine while the recording is top‑notch for an Aud source.",
+  "review": "The June 22 1974 Miami concert is praised for its high‑energy second set, with highlights like China Cat Sunflower→I Know You Rider, a soaring Wharf Rat and a 28‑minute Play‑in‑the‑Band.  The audience (Aud) recording is described as crisp, clean and “wall‑of‑sound”‑like, though the drums sit low in the mix for one listener.  Overall fans consider it a standout mid‑70s gem.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Nearly all reviewers give 5 stars, praising both the performance and the audio quality; only minor mix issues are noted, yielding a strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Very crisp and clean capture of the Wall‑of‑Sound; tonal instruments clear, drums somewhat low in the mix for one reviewer, but overall top‑notch Aud recording."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower > I Know You Rider",
+      "Wharf Rat",
+      "Playin' in the Band",
+      "Scarlet Begonias",
+      "Deal",
+      "Johnny B. Goode"
+    ],
+    "poor_songs": [
+      "Eyes of the World"
+    ],
+    "setlist_flow": "First set described as fairly pedestrian with a solid Scarlet Begonias, while the second set delivers the classic summer‑jam vibe – long Play‑in‑the‑Band, tight China>Rider and emotive Wharf Rat, capped by an upbeat Johnny B. Goode encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocals on \"Deal\" called fantastic; generally praised for being at his best.",
+    "Phil": "",
+    "Bob": "Bob’s guitar noted as “at their best” early in a review; no specific criticism beyond occasional drop‑out on other sources.",
+    "Keys": "",
+    "Drums": "One reviewer says drums are very low in the mix."
+  },
+  "song_mentions": {
+    "China Cat Sunflower > I Know You Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Johnny B. Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes of the World": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T21:11:18.257000+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-06-22.moore.weiner.gdADT13.14193.sbeok.shnf"
+}

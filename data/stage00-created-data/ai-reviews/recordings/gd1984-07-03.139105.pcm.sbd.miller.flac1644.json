@@ -1,0 +1,63 @@
+{
+  "summary": "Solid show with a nice second set highlighted by Deal, Scarlet>Touch>Fire, Jam, Space and The Wheel; recording quality not commented on.",
+  "review": "The reviewer rates the performance 4‑stars, noting that the second set is enjoyable and calling out several highlights including Deal, the Scarlet → Touch → Fire sequence, a jam, Space and The Wheel. No specific comments about the source or sound quality are provided, so the recording’s technical merits remain unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only a single 4‑star review is available; it praises the musical performance but gives no information on recording quality, leading to a moderate rating with low confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments regarding soundboard/audience source or clarity; unable to assess technical quality."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Scarlet > Touch > Fire",
+      "Jam",
+      "Space",
+      "The Wheel"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as nice with several highlighted moments; overall flow appears positive."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet > Touch > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T19:37:23.435998+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-03.139105.pcm.sbd.miller.flac1644"
+}

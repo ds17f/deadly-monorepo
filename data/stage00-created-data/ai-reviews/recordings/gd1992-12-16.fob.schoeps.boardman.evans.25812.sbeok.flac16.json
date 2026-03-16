@@ -1,0 +1,63 @@
+{
+  "summary": "A high‑energy ’92 show highlighted by a smoking Dark Star and All Along the Watchtower, captured on a decent audience recording that’s clear enough for enjoyment.",
+  "review": "Reviewers rave about this concert as one of the best shows of 1992, singling out Dark Star (second verse only), Row Jimmy, Let It Grow, All Along the Watchtower and a smoking Casey Jones encore. The audio is described as an audience recording that is good to very good—clear enough to appreciate the performance but lacking the polish of an official soundboard.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Strong, consistent praise for the musical performance (standout songs, best show of ’92) combined with generally positive but varied comments on recording quality results in a high overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Decent clarity and balance for an audience source; not as pristine as an official soundboard, with some reviewers noting it’s “not spectacular” but still enjoyable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Row Jimmy",
+      "Let It Grow",
+      "All Along the Watchtower",
+      "Casey Jones"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Both sets flow well, with a strong first set featuring Row Jimmy and Let It Grow, and a second set that builds to an impressive All Along the Watchtower and a smoking Casey Jones encore."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's keyboard work is praised as surprisingly good on this show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T09:03:16.909232+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-12-16.fob.schoeps.boardman.evans.25812.sbeok.flac16"
+}

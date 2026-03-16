@@ -1,0 +1,84 @@
+{
+  "summary": "Warm audience recording captures an electrifying 10/15/84 show highlighted by a scorching Sugaree, epic Scarlet‑Fire jam and soaring second‑set performances.",
+  "review": "The October 15, 1984 concert is consistently praised for its fiery playing – from a blistering Sugaree and Jack Straw to the marathon Scarlet/Fire/Playin' sequence that rockets into The Wheel.  Reviewers note the audience source is surprisingly clear and warm, making the second‑set fireworks (Bird Song, Wharf Rat, Playin’ in the Band) easy to enjoy despite occasional tape‑age dropouts.  Overall the show is regarded as one of the standout nights of the ’84 fall tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over a dozen substantive reviews, all but three are 4‑5 stars and emphasize superb musical performance with only minor recording flaws."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Warm audience tape with decent clarity; some reviewers mention occasional dropouts in the original cassette but the archived version is listenable and captures crowd ambience well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Sugaree",
+      "Scarlet/FIre/Playin'",
+      "The Wheel",
+      "Bird Song",
+      "Wharf Rat",
+      "Playing in the Band"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set builds with solid staples (Sugaree, Jack Straw) while the second set erupts into long improvisational peaks – the Scarlet‑Fire jam leading into The Wheel and a soaring finish with Bird Song and an encore of Sweet Baby Blue."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s lead work is repeatedly lauded – virtuosic transitions from Space to The Wheel, fierce licks in the Scarlet‑Fire jam, and a powerful, if slightly ‘amphibian’, vocal delivery.",
+    "Phil": "Bass described as “fire on the mountain” with spacey, driving lines that underpin the extended jams.",
+    "Bob": "Weir noted for his heavy, raunchy distortion, adding extra grit to the performance.",
+    "Keys": "",
+    "Drums": "Drummers receive praise for fun, energetic playing, though one reviewer wishes the drum track were complete."
+  },
+  "song_mentions": {
+    "Sugaree": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet/FIre/Playin'": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "The Wheel": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Sweet Baby Blue": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T22:46:24.048184+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-10-15.senn.miller.22022.sbeok.shnf"
+}

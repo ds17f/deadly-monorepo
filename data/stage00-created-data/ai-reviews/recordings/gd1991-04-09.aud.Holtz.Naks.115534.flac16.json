@@ -1,0 +1,39 @@
+{
+  "summary": "Strong show highlighted by a beautiful Foolish Heart, captured in a clear but slightly trebly recording.",
+  "review": "Both reviewers praise the concert as very good, singling out Foolish Heart as a standout moment. The sound capture is described as excellent, though one notes a bright, somewhat shrieky character to the mix. Overall the performance and audio are enjoyable with only minor tonal quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Both reviews give 4‑star ratings, highlighting a solid musical performance and good (if slightly bright) recording quality, leading to an overall rating around four stars."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Excellent capture overall; described as trebly and a bit shrieky, indicating bright but clear sound with minor harshness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Foolish Heart"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a generally successful concert without specific set‑list issues."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Foolish Heart": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:56:23.187637+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-04-09.aud.Holtz.Naks.115534.flac16"
+}

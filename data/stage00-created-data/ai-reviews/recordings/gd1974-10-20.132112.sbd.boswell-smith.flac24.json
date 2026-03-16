@@ -1,0 +1,31 @@
+{
+  "summary": "A stellar Winterland performance where every song shines, though the recording source is not specified.",
+  "review": "The reviewer raves that this show is “SICK” and that each song is a highlight, emphasizing how the band played rather than what they played. No details are given about the audio source or sound quality, leaving the technical side unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "The single 5‑star review is overwhelmingly positive about the musical performance, but provides no information on recording quality, so rating reflects strong show value with uncertainty about audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments on soundboard vs. audience, clarity, or mix are provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer stresses that every song is a highlight and praises the overall playing, but gives no specifics about set pacing or transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-23T01:53:33.176168+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-10-20.132112.sbd.boswell-smith.flac24"
+}

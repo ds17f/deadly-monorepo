@@ -1,0 +1,98 @@
+{
+  "summary": "Stunning soundboard capture of an epic 1978 Red Rocks show featuring blistering Garcia, a legendary Estimated→Other One→Eyes sequence and standout Dire Wolf, Franklin’s Tower and Wharf Rat performances.",
+  "review": "The recording is widely praised for its crystal‑clear, well‑balanced soundboard mix (Charlie Miller’s upgrade shines) and even the occasional board imperfection is deemed irrelevant. Musically the concert is hailed as one of ’78’s best – an explosive second set highlighted by Estimated, The Other One, Eyes of the World and soaring versions of Dire Wolf, Franklin’s Tower and Wharf Rat, with only the closing Deal receiving mild criticism.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "Over a dozen reviews uniformly rave about both performance and audio quality; the show is described as legendary while the soundboard source is called stunning, justifying an almost‑perfect rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, dynamic mix with superb stereo imaging (Charlie Miller upgrade). Reviewers note “stunning audio quality,” “sounds great,” and only minor board imperfections that don’t detract from the listening experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated",
+      "The Other One",
+      "Eyes of the World",
+      "Dire Wolf",
+      "Franklin's Tower",
+      "Wharf Rat",
+      "Bertha",
+      "It Must Have Been The Roses"
+    ],
+    "poor_songs": [
+      "Deal"
+    ],
+    "setlist_flow": "First set solid but less remarkable; the second set is described as epic, with seamless transitions (especially the Estimated→Other One→Eyes sandwich) and high‑energy jams that keep the momentum soaring throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is called blistering, haunting and \"blood crazy,\" with a tone that could “cut” through rock; his solos on Estimated and other jams are highlighted as extraordinary.",
+    "Phil": "Phil Lesh receives praise for tight, close two‑part harmonies and driving bass lines that lock in perfectly with the drums.",
+    "Bob": "Bobby (Weir) is noted for strong vocals and guitar work, especially during Deal where a vocal slip was mentioned, but overall his contribution is praised.",
+    "Keys": "Keyboardists are commended for powerful playing; one reviewer notes a piano‑banging Keith moment that Garcia tried to quiet, underscoring the keyboards’ impact.",
+    "Drums": "Bill Kreutzmann’s drumming is described as “rapid fire” and essential in giving the band breathing space, with overall drum work receiving high marks."
+  },
+  "song_mentions": {
+    "Dire Wolf": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Wharf Rat": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Estimated": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Other One": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It Must Have Been The Roses": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T14:09:35.523363+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-07-08.sbd.miller.106070.flac16"
+}

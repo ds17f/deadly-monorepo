@@ -1,0 +1,31 @@
+{
+  "summary": "Mixed reactions with limited feedback; recording quality unclear but some listeners seem pleased",
+  "review": "The two brief reviews give little detail on the performance or audio, offering only a thank‑you note and a cryptic comment. One reviewer rates it highly (4 stars) while another gives it zero, resulting in an overall mixed impression.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "low",
+    "rationale": "Only two reviews with vague comments; one positive 4‑star rating and one 0‑star rating lead to a low average and high uncertainty."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific remarks about sound clarity, mix, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or pacing were given."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T21:17:04.001354+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-04-07.aud.morris.106060.sbeok.flac16"
+}

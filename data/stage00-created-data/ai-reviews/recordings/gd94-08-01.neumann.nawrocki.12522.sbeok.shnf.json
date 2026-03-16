@@ -1,0 +1,75 @@
+{
+  "summary": "High‑energy Palace show with stellar Stella Blue and Stagger Lee, captured on a clear audience tape.",
+  "review": "The August 1994 Palace concert shines thanks to an emotional Stella Blue finale, a fun Stagger Lee jam and a second set that flows flawlessly through classics like Music Never Stopped, Satisfaction and Watchtower.  The audience recording is surprisingly clean – the mics picked up the band well, though the crowd ambience is audible and a few reviewers note dated MIDI‑keyboard sounds.  Overall the performance and tape combine to make an outstanding listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the musical performance (many standout songs, emotional moments) and the recording quality (clear audience tape with good mic work). Only minor complaints about crowd noise and MIDI keyboards keep it just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear mic placement captures band well; some listeners wish for less crowd ambience and note dated MIDI‑keyboard tones, but no major dropouts or distortion reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "Stagger Lee",
+      "Music Never Stopped",
+      "Satisfaction",
+      "Victim > Scarlet > Fire",
+      "Watchtower",
+      "Liberty"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set described as wonderful from start to finish, with seamless transitions and high‑energy jams that keep the audience roaring."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for his mournful vocal on Stella Blue and overall emotional impact; many call it a ‘Garcia bump’ experience.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Several reviewers complain about the dated MIDI‑keyboard sounds typical of early ’90s setups.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Stagger Lee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Music Never Stopped": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Victim > Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Liberty": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T00:49:15.282420+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-08-01.neumann.nawrocki.12522.sbeok.shnf"
+}

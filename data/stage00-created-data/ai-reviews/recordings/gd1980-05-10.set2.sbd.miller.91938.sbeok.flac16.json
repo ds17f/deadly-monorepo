@@ -1,0 +1,64 @@
+{
+  "summary": "Excellent soundboard recording of a fiery early‑80s second set with standout Comes A Time, China Cat > Rider and He's Gone > Uncle John's jams",
+  "review": "The SBD source delivers crisp, dynamic sound that captures the band’s high‑energy playing. Reviewers rave about the pre‑drums jam, the front‑loaded second set and the seamless transitions – especially China Cat into Rider, Comes A Time, and the He's Gone > Uncle John's sequence – while noting a few slip‑ups in Phil’s bass and a single disappointing Comes A Time moment.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is ~4.4/5, with consistent praise for both performance and sound quality; only a few isolated criticisms keep the score just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, well‑balanced mix with good dynamics; a touch “hot” in places but overall clear and listenable. Reviewers suggest a matrix could add ambience, but the SBD is praised as superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Comes A Time",
+      "China Cat > Keep Your Daylights Running (Rider)",
+      "He's Gone > Uncle John's",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [
+      "Comes A Time"
+    ],
+    "setlist_flow": "The pre‑drums jam sets an epic tone, followed by a front‑loaded second set that rides high on tight transitions (China Cat → Rider, Stranger → Comes A Time) and ends with a double encore that keeps the energy soaring."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly highlighted for superb solos, especially on Comes A Time and the China Cat > Rider sequence; described as “lighting it up” and delivering his best version of several tunes.",
+    "Phil": "Mixed feedback – some note a lackluster, root‑note bass approach, while others say he lays down a solid foundation despite not taking the lead.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work is called “uniquely sublime” and adds special flavor to the jam sections.",
+    "Drums": "The pre‑drums improvisation is praised as one of the best jamming moments; drummers are credited for driving the high‑energy flow."
+  },
+  "song_mentions": {
+    "Comes A Time": {
+      "positive_mentions": 7,
+      "negative_mentions": 1,
+      "total_mentions": 8
+    },
+    "China Cat > Keep Your Daylights Running (Rider)": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "He's Gone > Uncle John's": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "NFA > Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:07:32.917539+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-10.set2.sbd.miller.91938.sbeok.flac16"
+}

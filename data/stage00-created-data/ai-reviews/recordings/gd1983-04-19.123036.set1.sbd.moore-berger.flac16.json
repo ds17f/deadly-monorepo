@@ -1,0 +1,63 @@
+{
+  "summary": "Strong first‑set showing with standout Jack Straw, Over Now, Big River and Lazy Lightnin, yet a sub‑par soundboard recording limits the experience.",
+  "review": "The reviewer praises the first set as really good, highlighting Jack Straw, a smoking version of Over Now, solid Big River and an above‑average Lazy Lightnin. They also note the legendary long Sugaree in the second set (though not present on this disc) but lament that the recording quality is sub‑par, reducing overall enjoyment.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "low",
+    "rationale": "Positive comments about many songs suggest a strong show (≈4.5/5), but the recording is described as sub‑par, pulling the combined weighted rating down to around 3½."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer calls the audio \"sub‑par\" and says a better recording would really help; likely muffled or lacking clarity despite being an SBD source."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Over Now",
+      "Big River",
+      "Lazy Lightnin",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as really good with strong song choices; second‑set opener Sugaree noted as a monumental guitar extravaganza, though it is not included in this recording."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Big River": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightnin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T05:53:03.186547+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-04-19.123036.set1.sbd.moore-berger.flac16"
+}

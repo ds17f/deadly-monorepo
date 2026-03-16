@@ -1,0 +1,84 @@
+{
+  "summary": "Excellent audience recording captures a high‑energy 1978 performance with a smoking Estimated Prophet → Eyes sequence and solid sound despite slight speed/pitch quirks.",
+  "review": "The show is consistently praised for its energy and tight playing, highlighted by an outstanding Estimated Prophet → Eyes of the World jam and strong versions of Wharf Rat, Truckin' and Looks Like Rain. The audience (AUD) source delivers thick bass, clear instrument separation and a glossy late‑Keith keyboard sound, though a few listeners note it runs a bit fast and has minor tracking quirks.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4–5 stars and praise both the performance and the AUD sound; only a few note speed/pitch issues, resulting in an overall strong combined rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Full‑sound, thick bass and good instrument separation typical of late‑Keith era AUDs; a few comments about the tape running slightly fast and needing pitch correction, plus a tracking error where the Bass & Drums segment is mislabeled."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Estimated Prophet",
+      "Eyes of the World",
+      "Wharf Rat",
+      "Looks Like Rain"
+    ],
+    "poor_songs": [
+      "Iko Iko"
+    ],
+    "setlist_flow": "The set rides a high‑energy first half into a mellow, jam‑laden second set with big peaks—especially the Estimated Prophet → Eyes sequence and an extended post‑drums/Space section. Pacing is praised throughout despite a few minor slip‑ups."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's tone is highlighted as killer; his guitar work on 'Eyes of the World' receives specific praise.",
+    "Phil": "Bass is described as thick and solid, though Phil steps out during an extended drums/space segment (~13 min).",
+    "Bob": "Weir’s slide practice is called jarring by one reviewer; otherwise no strong comments.",
+    "Keys": "Keith is praised for clean, glossy playing characteristic of the late‑Keith era.",
+    "Drums": "The drummers are largely in sync with a high‑energy performance; post‑drums section noted as especially good despite some variability."
+  },
+  "song_mentions": {
+    "Estimated Prophet": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eyes of the World": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "It's All Over Now": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "They Love Each Other": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Beat It On Down the Line": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T13:49:07.535659+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-07-05.fob.knight.motb-0070.91785.flac16"
+}

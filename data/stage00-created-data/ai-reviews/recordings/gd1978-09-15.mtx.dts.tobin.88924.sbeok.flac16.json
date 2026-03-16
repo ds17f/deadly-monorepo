@@ -1,0 +1,31 @@
+{
+  "summary": "Enthusiastic fan review hails the concert as excellent, though no recording details are provided.",
+  "review": "The reviewer gives the show a glowing five‑star rating, calling it an \"excellent concert\" and expressing personal connection to its date. No specific comments about sound quality or source type are mentioned, so the technical side remains unclear while the musical impression is wholly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single five‑star review praises the performance highly; lack of recording specifics limits confidence, but overall sentiment suggests a strong show and acceptable audio."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer does not discuss sound quality, mix, or source; only thanks the archivists for making the recording available."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-25T15:10:27.029767+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-09-15.mtx.dts.tobin.88924.sbeok.flac16"
+}

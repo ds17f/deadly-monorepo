@@ -1,0 +1,73 @@
+{
+  "summary": "High‑energy June 12 1992 show shines with a scorching Scarlet > Fire sequence; soundboard is solid though some listeners prefer the audience mix.",
+  "review": "Fans rave about this 6/12/92 concert, calling it one of the best of the ’90s thanks to blistering Jerry solos, killer midi‑horn guitar jams on Scarlet > Fire and a flawless flow into China Doll and Sugar Magnolia. The soundboard source is generally clear and well‑balanced, but a few reviewers note speed or gain quirks and suggest the audience (AUD) version for extra punch.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Most reviews are 5‑star praising performance; mixed but mostly positive comments on recording quality keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Soundboard is clear and well‑balanced; some listeners report speed issues on the SBD and gain spikes during Jack Straw, while the audience (AUD) version is praised for its punchy, ambient feel."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "Promised Land",
+      "Jack Straw",
+      "China Doll",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert maintains relentless momentum with seamless transitions—especially the fiery Scarlet > Fire and the uplifting China Doll into Sugar Magnolia—making it one of the band’s top ’92 performances."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for shredding solos and his midi‑horn guitar jams during Scarlet > Fire.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince’s keyboard work is highlighted as a standout, delivering strong organ/piano textures throughout.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet > Fire": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Promised Land": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jerry solo": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Vince": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-18T06:55:51.139625+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-12.bk4011.Fochesato.4882.sbeok.shnf"
+}

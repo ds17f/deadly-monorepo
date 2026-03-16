@@ -1,0 +1,45 @@
+{
+  "summary": "Bright, clear matrix source that captures Jerry’s sparkle‑tinkle guitar and Brent’s shimmering keys, but the set is a routine show with only a few highlights.",
+  "review": "The recording is bright and well‑balanced, letting the crowd’s excitement come through while highlighting the high‑end runs of Jerry Garcia and Brent Mydland. The performance itself is described as fairly routine, with the Half‑Step jam and Gentlemen sequence standing out as the only notable moments. Overall the source shines even if the concert doesn’t break new ground.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only one detailed review; it praises the recording (good) but calls the show routine, leading to an average combined rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "good",
+    "technical_notes": "Bright, clear sound that captures sparkle‑tinkle of guitar and keys; crowd audible and lively; limited low‑end presence from Phil’s bass."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Half-Step",
+      "Gentlemen"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as pretty routine with no major surprises, though the crowd gets stoked in the right places."
+  },
+  "band_member_comments": {
+    "Jerry": "Sparkle‑tinkle guitar tone highlighted and well captured.",
+    "Phil": "Higher‑end bass runs audible; low‑register bass less present.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard sparkle‑tinkle noted positively.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Half-Step": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gentlemen": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T10:25:56.057826+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-06-26.Nak300CP4.Floater.Keo.115734.Flac2496"
+}

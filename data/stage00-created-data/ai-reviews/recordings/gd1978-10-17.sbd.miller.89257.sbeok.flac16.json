@@ -1,0 +1,97 @@
+{
+  "summary": "High‑quality soundboard capture of a near‑perfect 1978 show, highlighted by a smoking “If I Had the World to Give” and blistering Jack Straw.",
+  "review": "The recording is a clean SBD with crisp Jerry vocals and only occasional hiss or patch quirks, making it very listenable. The performance shines on Jack Straw, If I Had the World to Give, Eyes, and the second‑set jams, though early first‑set numbers like Promised Land feel a bit flat. Overall reviewers rave about the band’s energy after their Egypt run, with only minor set‑list hiccups noted.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4.5+; most comments praise both the musical performance and the soundboard quality, with only one mixed review lowering the overall score slightly."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp mix, Jerry's voice clear; a few hiss artifacts and an abrupt patch on Eyes, plus a slight slowdown in the first set that may need pitch correction."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "If I Had the World to Give",
+      "Jack Straw",
+      "Eyes",
+      "Around and Around",
+      "Stagger Lee"
+    ],
+    "poor_songs": [
+      "Promised Land",
+      "Estimated",
+      "Around"
+    ],
+    "setlist_flow": "The first set starts a bit tentative but builds into a strong Jack Straw, while the second set erupts with space, a soaring If I Had the World to Give and high‑energy jams that keep the momentum rolling."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his ‘Wolf’ tone, glissando chords, powerful solos and crisp vocal presence throughout the show.",
+    "Phil": "Only noted for his opening remarks about the World Series; no specific musical commentary.",
+    "Bob": "Described as “going crazy” on stage, delivering jokes and adding vigor to Around & Around.",
+    "Keys": "",
+    "Drums": "Long drum segment before space is highlighted, but no detailed critique beyond that."
+  },
+  "song_mentions": {
+    "If I Had the World to Give": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Jack Straw": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Around and Around": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Stagger Lee": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T15:28:02.727258+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1978-10-17.sbd.miller.89257.sbeok.flac16"
+}

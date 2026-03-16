@@ -1,0 +1,45 @@
+{
+  "summary": "Excellent soundboard recording of a tight 1980 show highlighted by a monster Feel Like A Stranger and a solid He's Gone.",
+  "review": "The three reviewers rave about the band's chemistry, especially the interplay between Brent and Jerry on Feel Like A Stranger, calling the performance tight, long and meaty. Recording quality is praised as crystal‑clear with an excellent mix that lets every instrument shine, making this a very listenable capture of the era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All three reviews are positive (4–5 stars) and highlight both strong musical performance and high‑quality soundboard audio, giving a combined impression of an outstanding show with excellent recording."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Reviewers note a very clear mix, great sound quality and the ability to hear all instruments distinctly throughout the set."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like A Stranger",
+      "He's Gone"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall tight and engaging performance with strong band interplay; no major pacing or song‑selection issues mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "Big, meaty tone throughout; praised for awesome guitar work and seamless interaction with Brent.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Interplay between Brent (keys) and Jerry highlighted as a highlight of the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Feel Like A Stranger": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:31:12.331128+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-12.sbd.miller.92239.sbeok.flac16"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Cleaned‑up soundboard but sounds overly dolbyized with reduced high end; fans still hail the show as a killer performance.",
+  "review": "The two reviewers agree the show itself is strong, with one calling it a “killer SBD.” However, the audio processing is contentious – one reviewer feels the Dolby‑style compression stripped away high frequencies, while another praises the hiss removal and overall cleanliness. The result is a mixed impression of an otherwise solid 1973 performance.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "low",
+    "rationale": "Both reviewers note a good show, but they disagree on the recording quality; limited data (only two reviews) leads to low confidence and a moderate overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Hiss removed, but excessive Dolby‑style processing reduces high‑end detail; some listeners find the sound overly compressed and lacking clarity."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-22T07:34:26.713533+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-05-13.sbd.smith-lee.GEMS.97558.flac16"
+}

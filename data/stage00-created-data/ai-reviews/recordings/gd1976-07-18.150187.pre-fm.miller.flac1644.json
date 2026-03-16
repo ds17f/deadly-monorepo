@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent pre‑FM audience tape with delicate clarity and a standout rendition of Stella Blue.",
+  "review": "Both reviewers rave about the sound quality of this pre‑FM reel, noting its surprising clarity despite a faint line hiss and minimal crowd bleed. The performance shines especially on “Stella Blue,” which one fan calls the best they’ve ever heard in two decades. Overall the recording is both technically impressive and musically satisfying.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "Both reviews are 5‑star, praising both the audio fidelity and the musical performance (especially Stella Blue), leading to a high combined rating despite limited review count."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, delicate sound with very little crowd presence; faint background line hiss is separate from the music but does not detract from overall clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T06:49:46.705939+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-07-18.150187.pre-fm.miller.flac1644"
+}

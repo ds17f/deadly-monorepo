@@ -1,0 +1,62 @@
+{
+  "summary": "Crystal‑clear soundboard capture of a legendary Fillmore East show highlighted by an epic Dark Star and a standout Not Fade Away/China Cat jam.",
+  "review": "The recording is a pristine SBD that sounds as fresh today as it did in ’70, with minimal hiss and excellent balance despite minor pitch‑correction quirks noted by a few archivists. Musically the night shines – Dark Star dominates the praise, bolstered by a fiery Not Fade Away featuring an extended China Cat tease, a soaring St. Stephen and memorable Pigpen banter. Overall reviewers are overwhelmingly enthusiastic.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "Over 30 reviews (mostly 5‑star) extol both the performance and the soundboard quality; only a handful of low or mixed ratings exist, so the combined show (70%) + recording (30%) score is near‑perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clean mix with very little noise; some reviewers note slight speed/pitch variations in certain tracks but overall the transfer is superb."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Not Fade Away (China Cat jam)",
+      "St. Stephen",
+      "Lovelight"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set builds beautifully from the exploratory Dark Star into a high‑energy Not Fade Away/China Cat segment, then lifts into a soaring St. Stephen before winding down with an intimate Lovelight and a raucous Pigpen finale."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly praised for his soaring lead on Dark Star and overall top‑form playing.",
+    "Phil": "One reviewer notes Phil’s bass carries the day during the extended jam; otherwise no specific comments.",
+    "Bob": "Bobby (Bob) gets kudos for his rhythmic “groovy” jam in Not Fade Away and his powerful rhythm work later in the set.",
+    "Keys": "",
+    "Drums": "Mickey’s drumming is highlighted, especially his “cannon” fills during Dark Star and St. Stephen."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 30,
+      "negative_mentions": 1,
+      "total_mentions": 31
+    },
+    "Not Fade Away": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "China Cat": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-19T23:05:45.517042+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1970-09-19.sbd.reynolds.97906.flac16"
+}

@@ -1,0 +1,73 @@
+{
+  "summary": "Audience‑sourced tape of the Atlanta ’91 show captures a stellar performance highlighted by a smoking Help > Slip > Franklin’s, powerful Estimated, heartfelt Standing on the Moon and an uplifting U.S. Blues encore, though the crowd recording lacks the crispness of a soundboard.",
+  "review": "The concert is widely praised as one of the top shows of the ’91 spring tour, with a fiery first set, a second‑set peak featuring Help > Slip > Franklin’s, Estimated and an unforgettable He's Gone, plus a moving Standing on the Moon and a rousing U.S. Blues encore.  The recording is audience‑only, which many reviewers find less clean than available soundboards, giving it a fair but listenable quality.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Show quality is consistently rated very high (top‑10 status, multiple 5‑star praises) while the audience recording is noted as less crisp than soundboards, bringing the overall rating to a strong but not perfect level."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Audience tape lacks the crispness of available SBDs; some reviewers describe it as sterile or muffled compared to soundboard recordings, but overall still usable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help > Slip > Franklin's Tower",
+      "The Other One",
+      "He's Gone",
+      "Standing on the Moon",
+      "U.S. Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A spirited first set leads into a second‑set peak with seamless transitions; the post‑drums segment is considered weak, but the encore lifts the energy back up."
+  },
+  "band_member_comments": {
+    "Jerry": "Touching performance on 'Standing on the Moon' and strong lead on 'He's Gone'.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Hornsby delivers a chilling vocal jam; Welnick adds faux‑horn work during Estimated.",
+    "Drums": "Post‑drums segment is noted as unremarkable."
+  },
+  "song_mentions": {
+    "Help > Slip > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "U.S. Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "High Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T18:17:01.134686+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-04-04.akg.dodd.15548.sbeok.shnf"
+}

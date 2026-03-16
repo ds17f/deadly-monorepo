@@ -1,0 +1,73 @@
+{
+  "summary": "Solid 1994 show with a standout Iko opener and a smoking Help>Slip>Frank>Estimated>Terrapin stretch, captured on a patchy soundboard that varies in clarity.",
+  "review": "The performance is praised for its strong song selection – the Iko opener, Loose Lucy, a tight Space jam, and an exhilarating second‑set sequence ending with Terrapin. The recording is identified as a soundboard (sbd) source but listeners note fluctuating clarity, occasional timing quirks, and a lack of true stereo separation. Overall the show shines despite the technical imperfections.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Reviewers consistently highlight strong musical moments while noting variable soundboard quality; weighted average of show (≈4.5) and recording (≈3.5) yields ~4.2."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Sound quality fluctuates throughout, not true stereo, occasional vocal effects and timing issues; overall listenable but inconsistent clarity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Iko Iko",
+      "Loose Lucy",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Estimated",
+      "Terrapin"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Good song selection with a strong first set opener and an especially powerful second‑set sequence, punctuated by a lively Space jam and solid post‑drum segment."
+  },
+  "band_member_comments": {
+    "Jerry": "Sounds a little tired on Terrapin but belts out vocals; occasional timing slips noted.",
+    "Phil": "Goes off for an extended, nice space jam.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Post‑drum segment described as strong."
+  },
+  "song_mentions": {
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Post-Drumz": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T02:56:15.909109+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1994-10-10.sbd.miller.34563.sbeok.flac16"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent, in‑your‑face audio captures a 1988 Dead show loaded with standout performances of “Feel Like a Stranger,” “Let It Grow,” and “Shakedown Street.”",
+  "review": "Fans rave about the crystal‑clear, punchy recording and praise the set for its energetic renditions of classics like Feel Like a Stranger, Let It Grow, Shakedown Street and China Cat Sunflower. Bob Weir’s guitar work receives special kudos, and the bonus encore adds an extra thrill. Overall the show is celebrated as one of the better‑recorded 1988 performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Average reviewer rating is 4.6/5, with consistent praise for both musical performance and recording quality; only one mixed review lowers the average slightly."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers describe the audio as ‘in‑your‑face,’ ‘great sound,’ and ‘very good recording’ with no mention of dropouts or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Feel Like a Stranger",
+      "Let It Grow",
+      "Shakedown Street",
+      "China Cat Sunflower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its strong flow, bonus encore and ‘hat‑trick’ ending, giving the concert an uplifting, cohesive feel."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir’s guitar work described as divine with crazy noises that impressed listeners.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Feel Like a Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T09:25:35.909238+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1988-04-30.aud.mckeown.7727.shnf"
+}

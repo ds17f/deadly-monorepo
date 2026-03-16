@@ -1,0 +1,84 @@
+{
+  "summary": "Fair but listenable recording captures a mellow West Coast show with highlights like “Standing on the Moon” and “Cold Rain”, though occasional distortion and tunnel‑like muddiness detract a bit.",
+  "review": "The performance is solid – a typical late‑80s west‑coast set that many fans describe as ‘choice’, with several standout moments (the sultry Cold Rain, an affectionate Standing on the Moon, and a moving Just a Little Light). The audio is uneven: listeners note hot levels, distortion and a tunnel‑like muffled quality, but EQ can clean it up enough for an enjoyable listen.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show around 3 ★ with a few 4 ★ praises; recording quality is consistently described as fair to mediocre, pulling the overall weighted score into the low‑mid range."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Occasional distortion and hot levels; tunnel‑like muffled sound that makes the mix feel buried. Some reviewers say a quick EQ fixes much of the muddiness, but overall clarity is limited."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Standing on the Moon",
+      "Cold Rain",
+      "Just a Little Light",
+      "Terrapin"
+    ],
+    "poor_songs": [
+      "Picasso"
+    ],
+    "setlist_flow": "A typical mellow west‑coast set with decent pacing; early tuning delays give way to strong second‑set jams, though the first Picasso sequence is regarded as weak."
+  },
+  "band_member_comments": {
+    "Jerry": "Penetrating solos praised ('penetrating solos', 'trumpet skills'), but occasional premature mic grab noted.",
+    "Phil": "",
+    "Bob": "Described as ‘selfish empowerment’ with odd vocal stylings that sometimes detract.",
+    "Keys": "Brent Mydland’s organ highlighted on “Just a Little Light” and overall keyboard texture mentioned positively.",
+    "Drums": "The drum segment is called ‘pounding’, adding energy to the set."
+  },
+  "song_mentions": {
+    "Cold Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Picasso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Just a Little Light": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Drums": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T19:03:17.527390+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-04-28.sbd.clugston.13755.sbefail.shnf"
+}

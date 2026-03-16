@@ -1,0 +1,69 @@
+{
+  "summary": "Audience recording captures a strong second set with standout Wharf Rat and Playin' jams, though the tape isn’t as pristine as a soundboard.",
+  "review": "The show is praised for its tight flow, especially the seamless transition from Might As Well into a superb second‑set jam, with highlights like Wharf Rat, Candyman, Tennessee Jed and the Playin' reprise. The audience source has been cleaned up and sounds decent, but listeners note hiss, crowd noise and occasional patching that keep it from sounding like a top‑tier soundboard.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Reviews consistently praise the musical performance (strong second set, many standout jams) while noting the recording is an audience tape with some hiss and patchwork, leading to a solid but not perfect overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Cleaned up audience tape; crowd noise and occasional hiss remain. Not as crisp as a soundboard, with some channel flips/patches noted by listeners."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Tennessee Jed",
+      "Might As Well",
+      "Candyman",
+      "Wharf Rat",
+      "Playin'",
+      "Samson"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Second set flows perfectly with seamless transitions (e.g., Might As Well into the opening jam and a memorable Playin' reprise); first set is solid with strong tunes throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might As Well": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Candyman": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Samson": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T07:00:19.697257+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-08-02.fob.singer.motb-1.81456.sbeok.flac16"
+}

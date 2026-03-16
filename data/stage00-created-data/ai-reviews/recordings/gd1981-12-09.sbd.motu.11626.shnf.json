@@ -1,0 +1,31 @@
+{
+  "summary": "Recording source unknown, but the show is mixed – a sloppy first set and a hotter second set highlighted by a tasty Bob & Brent jam into drums.",
+  "review": "The reviewer rates the concert four stars, noting that while the overall performance is pretty good, it suffers from sloppiness, especially in the first set which they call a \"hot mess.\" The second set improves and includes an enjoyable Bob‑Weir and Brent‑Mydland jam leading into the drums. No specific comments on the recording quality are provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only one review; it praises the show overall with a 4‑star rating despite calling parts sloppy, and gives no recording details, leading to an estimated rating just below four stars."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No reviewer comments on sound quality; assumed acceptable given the overall positive star rating."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "First set described as a \"hot mess\" (sloppy), second set noted as hotter but still messy, with a highlighted jam by Bob and Brent into the drums."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Positive mention of a tasty jam by Bob Weir leading into drums.",
+    "Keys": "Positive mention of Brent Mydland's contribution to the jam.",
+    "Drums": "Jam into drums noted as a highlight."
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-13T17:18:49.295554+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-09.sbd.motu.11626.shnf"
+}

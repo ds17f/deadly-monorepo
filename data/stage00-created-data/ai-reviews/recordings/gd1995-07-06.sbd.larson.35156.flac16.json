@@ -1,0 +1,45 @@
+{
+  "summary": "A mixed‑quality soundboard capture of a uneven 1995 show – the band sounds tired overall, but Eyes (with a Whammy pedal solo) and Unbroken shine.",
+  "review": "The recording is a soundboard (sbd) that many listeners find clear and “gorgeous,” yet it suffers from speed anomalies, channel balance quirks and occasional drop‑outs. Musically the concert is viewed as a lackluster part of the band’s late‑90s run; Jerry’s playing is described both as fatigued and, in moments like Eyes, creatively adventurous with a Digitech Whammy effect. The set does offer highlights – notably a strong Unbroken and an inspired Eyes – but the overall energy feels spent.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Reviews are split between high praise for the soundboard quality and low marks for the band’s performance, yielding an average rating around the middle of the scale."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced (\"gorgeous soundboard\"), but suffers from a right‑handed mix imbalance, ~2.7% speed slowdown, drop‑outs in He's Gone, clipping on the Drumz > Space segment, and abrupt set break silences."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Unbroken"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is viewed as an uneven snapshot of the band’s 1995 tour – occasional high points (Eyes, Unbroken) are outweighed by a generally tired, low‑energy performance that feels like a “shadow” of earlier years."
+  },
+  "band_member_comments": {
+    "Jerry": "Mixed feedback – described as exhausted and creatively spent in one review, yet praised for an inventive Whammy pedal solo during Eyes.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Unbroken": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T12:08:47.295980+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-06.sbd.larson.35156.flac16"
+}

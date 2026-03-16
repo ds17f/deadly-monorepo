@@ -1,0 +1,82 @@
+{
+  "summary": "Crisp soundboard capture with excellent pitch, highlighted by a powerhouse second set featuring Mighty Quinn, Samson & Delilah, and Space > The Other One.",
+  "review": "The recording is a clean sound‑board source that most listeners describe as clear and well‑pitched, though a few note a slight slowdown on the second set and a mix that could benefit from a matrix. Musically the concert shines in the latter half – Jerry’s confident lead, Brent’s soaring keys and a tight rhythm section lift classics like Mighty Quinn, Samson & Delilah, He's Gone into I Need a Miracle and a smoking Space > The Other One. The first set is seen as uneven, but the overall performance earns strong praise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Show quality consistently rated high (standout second‑set performances) while recording quality is generally good with minor pitch/mix issues; weighted average yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, crisp sound and perfect pitch noted by several reviewers; one reviewer mentions a ~1% slowdown and first‑set mix imperfections that could be improved with a matrix."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Mighty Quinn",
+      "Samson & Delilah",
+      "He's Gone",
+      "I Need a Miracle",
+      "Crazy Fingers",
+      "Space > The Other One"
+    ],
+    "poor_songs": [
+      "Gimme Some Lovin'",
+      "Stagger Lee"
+    ],
+    "setlist_flow": "First set is described as uneven and lacking spark, while the second set builds momentum with tight segues and high‑energy jams that elevate the concert to a memorable performance."
+  },
+  "band_member_comments": {
+    "Jerry": "Confident lead guitar throughout; occasional vocal flub on Crazy Fingers but overall hot playing.",
+    "Phil": "Playing noted as solid despite first‑set looseness.",
+    "Bob": "",
+    "Keys": "Brent Mydland praised for intense interplay and helping lift the jam after Jerry’s vocal slip.",
+    "Drums": "Post‑drum segment highlighted as strong; drums keep the energy high in the second set."
+  },
+  "song_mentions": {
+    "Space > The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "I Need a Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Mighty Quinn": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Gimme Some Lovin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stagger Lee": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T12:11:59.311195+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-12-30.sbd.walker-scotton.miller.106019.flac16"
+}

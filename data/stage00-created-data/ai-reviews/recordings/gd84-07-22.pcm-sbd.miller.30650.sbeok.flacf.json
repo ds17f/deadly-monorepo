@@ -1,0 +1,65 @@
+{
+  "summary": "Crystal‑clear soundboard captures a blistering Ventura ’84 show highlighted by an epic Loser, soaring Dew and a transcendent Terrapin/Space sequence.",
+  "review": "The Miller‑remastered SBD delivers pristine clarity with virtually no distortion, letting the band’s 1984 magic shine through.  Highlights include Jerry’s deep‑growl on “Loser,” Phil’s thunderous bass on “Dew,” and a soaring Terrapin Station → Drums → Space that many fans describe as cosmic.  Overall the performance feels like one of the year’s top shows, with only minor lyrical slips noted on “Terrapin.”",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over 30 reviews overwhelmingly praise both the musical performance and the audio fidelity; recording is deemed excellent and show quality is consistently described as outstanding."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, crisp, zero distortion, superb stereo image. A few reviewers note a slightly forward hi‑hat/cymbal presence but it does not detract from overall fidelity."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "The Dew",
+      "Terrapin Station",
+      "Dancing In The Streets",
+      "Midnight Hour"
+    ],
+    "poor_songs": [
+      "Terrapin Station (lyric flubs/mumbling noted by a few reviewers)"
+    ],
+    "setlist_flow": "The concert opens with an electrifying “Dancin’ In The Streets,” builds through tight mid‑set grooves, peaks at the Terrapin Station → Drums → Space sequence, and closes on a soaring “Brokedown Palace.” Reviewers describe the flow as seamless, energetic summer‑vibe perfection."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for a deep, growling vocal on “Loser” and stellar guitar tone; a few comments mention mumbling on “Terrapin.”",
+    "Phil": "His bass work is highlighted as thunderous on “Dew” and “Loser,” earning the nickname ‘Thunder Lizard.’",
+    "Bob": "Noted for mangling lyrics on “Terrapin” by one reviewer, otherwise no major comments.",
+    "Keys": "Brent (keys) receives high praise for his performance of “I Just Want To Make Love To You” and overall solid playing; hi‑hat prominence is mentioned as a mix quirk.",
+    "Drums": "Bill/Mickey lauded for the cosmic “Drums → Space” segment and tight groove throughout."
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "The Dew": {
+      "positive_mentions": 7,
+      "negative_mentions": 0,
+      "total_mentions": 7
+    },
+    "Dancing In The Streets": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Terrapin Station": {
+      "positive_mentions": 5,
+      "negative_mentions": 3,
+      "total_mentions": 8
+    },
+    "Midnight Hour": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T20:57:22.076966+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-07-22.pcm-sbd.miller.30650.sbeok.flacf"
+}

@@ -1,0 +1,72 @@
+{
+  "summary": "Good audience recording that captures an epic Terrapin jam and a beautiful Eyes, with crisp hall‑room echo despite occasional tinny edges.",
+  "review": "The show is remembered for its soaring second‑set highlights – a monster Terrapin, a gorgeous Eyes, solid Looks Like Rain and a fiery Sugaree – all delivered by a band in top form.  The balcony‑position audience tape is surprisingly clear with nice hall ambience, though it has a slight tinny character and occasional on‑stage chatter that momentarily distracts.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical performance (Terrapin, Eyes, LLR, Sugaree) and give 4‑5 stars; recording quality is described as good with only minor flaws, yielding an overall strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Crisp but hall‑echoed sound with a slight tinny Boston Garden character; occasional talking over Stella Blue and a brief dip in Jerry's volume after the midi‑flute, otherwise clear."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin",
+      "Eyes",
+      "Looks Like Rain",
+      "Sugaree"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set strong with Bucket and Sugaree, second set builds momentum through Eyes, acoustic LLR, Way to Go Home and culminates in an epic Terrapin that drives the crowd wild."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar work is highlighted throughout – twisted, eruptive leads on Terrapin, a beautiful solo on Eyes, with only a brief volume dip after his midi‑flute intro.",
+    "Phil": "Phil’s bass lines are noted for their clarity; reviewers could hear the top and bottom of his notes even from the balcony.",
+    "Bob": "Bob Weir delivers solid acoustic rhythm and vocals on Looks Like Rain and contributes to the overall tight feel.",
+    "Keys": "Vince (keys) gets praise for a bluesy take on Way To Go Home, though the synth \"Angel Chorus\" effect is called cheesy by one reviewer.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Eyes": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bucket": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Same Thing": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Way To Go Home": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T18:04:19.117276+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-09-29.schoeps.pujol.12436.sbeok.shnf"
+}

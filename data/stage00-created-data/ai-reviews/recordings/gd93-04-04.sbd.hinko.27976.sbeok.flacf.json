@@ -1,0 +1,99 @@
+{
+  "summary": "Smooth, high‑energy 4/4/93 show with standout tracks like “Bird Song” and “Liberty”, captured on a low‑level but clear soundboard recording.",
+  "review": "The April 4 1993 performance is praised for its tight playing, smooth flow and several highlight moments – especially “Bird Song,” “Liberty,” “Broken Arrow,” and the second‑set opener “Eyes to Open.”  The SBD source is a clean, well‑balanced mix though the board level is low and a faint hiss appears in quiet passages.  Overall fans rate the show highly despite the modest volume.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "9 detailed reviews give an average of 4‑star ratings; most comments are enthusiastic about the musical performance while noting only minor recording level issues, justifying a rating slightly above the raw star average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear and even mix with a low board level that requires volume boost; slight hiss in very quiet moments; audience copy also available and described as pumped."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Liberty",
+      "Broken Arrow",
+      "So Many Roads",
+      "Eyes to Open",
+      "Attics"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a smooth, well‑structured flow – a strong first set that builds into an especially tight second set, with the opener “Midnight Hour” setting a good mood and the second‑set songs feeding each other nicely."
+  },
+  "band_member_comments": {
+    "Jerry": "Consistently praised for clean, smooth solos, thoughtful phrasing and strong guitar tone throughout the show.",
+    "Phil": "Highlighted on vocal contributions (Broken Arrow, backup harmonies) and noted for singing beautifully on select tunes.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Midnight Hour": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "So Many Roads": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes to Open": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Attics": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Liberty": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Bird Song": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Eternity": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Broken Arrow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T12:14:08.435799+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd93-04-04.sbd.hinko.27976.sbeok.flacf"
+}

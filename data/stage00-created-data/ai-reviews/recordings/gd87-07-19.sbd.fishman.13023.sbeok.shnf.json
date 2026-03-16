@@ -1,0 +1,117 @@
+{
+  "summary": "Good soundboard capture with a few bass‑shy moments; the show shines on rare Dylan‑era numbers like Heart of Mine and Watchin' the River Flow but overall feels mellow.",
+  "review": "The recording is a decent soundboard source – clear enough to hear the band, though a bit bass‑shy and punctuated by some crowd chatter (notably after “Minglewood”).  Musically the concert is a mixed bag: the first set is low‑energy, while the second offers occasional sparks (“Gimme”, “Lovelight”), and the third Dylan set provides the highlights with rare gems such as “Heart of Mine,” “Watchin' the River Flow,” and a rousing “Tangled up in Blue.”  Fans who appreciate the historic Dead/Dylan collaboration will find plenty to love, but listeners seeking high‑octane improvisation may be left wanting.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Reviews range from very critical (1‑2 ★) to enthusiastic (5 ★).  The show has notable high points (Dylan set, rare songs) but overall performance energy is described as mellow; recording quality is generally good with minor issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear soundboard source but a little bass‑shy; crowd noise is audible, especially the post‑Minglewood dialogue. No major dropouts reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Heart of Mine",
+      "Watchin' the River Flow",
+      "The Ballad of Frankie Lee and Judas Priest",
+      "Tangled up in Blue",
+      "Iko",
+      "Gimme",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Playin'",
+      "The Wheel",
+      "He's Gone",
+      "Peggy",
+      "West",
+      "Truckin'"
+    ],
+    "setlist_flow": "Three‑set concert with a subdued first set, a mixed second set that contains occasional sparks, and a third Dylan‑Dead set that delivers the most excitement.  Overall pacing is mellow; the historic Dylan material provides the primary high points."
+  },
+  "band_member_comments": {
+    "Jerry": "His voice on “Iko” is described as fresh; solos are called safe but competent, with several reviewers noting his classic turnaround work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboard playing gets a nod for energy on “Lovelight”; overall keyboards are mentioned but not singled out elsewhere.",
+    "Drums": "One reviewer wonders where the drummers are and notes a generally low‑energy feel from the rhythm section."
+  },
+  "song_mentions": {
+    "Playin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Wheel": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Heart of Mine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchin' the River Flow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Ballad of Frankie Lee and Judas Priest": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tangled up in Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "West": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Let": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T01:08:10.796255+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-07-19.sbd.fishman.13023.sbeok.shnf"
+}

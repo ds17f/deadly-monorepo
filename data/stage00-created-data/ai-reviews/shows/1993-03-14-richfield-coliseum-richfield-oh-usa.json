@@ -1,0 +1,65 @@
+{
+  "summary": "Terrapin Station shines; Stella Blue and Touch of Grey stand out.",
+  "blurb": "The set delivers a strong Terrapin Station and an emotive Stella Blue, while Jerry’s vocal on Touch of Grey is a highlight. The overall flow mixes classic material with newer songs, though some moments feel flat and the keyboard tone can be thin.",
+  "review": "On March 14‑1993 the Dead braved a snowbound night at Richfield Coliseum and produced a show that swings between highlights and hiccups. Terrapin Station opens the second set with its usual grandeur, and Jerry’s voice on Touch of Grey is praised as one of his strongest late‑era performances. Stella Blue soars in the Space‑to‑Stella transition, capturing the band’s emotional depth despite an overall mix that some listeners find thin, especially Vince’s keyboard tone. The first set offers solid moments like Brown Eyed Women and Cold Rain And Snow, but a few songs (notably Corinna and I Fought The Law) suffer from flat playing and lyrical slips. Bob Weir’s on‑stage spit incident during Throwing Stones adds a memorable flash of Dead‑style mischief. For fans seeking the clearest capture, the Miller soundboard recording balances the band’s warm communal vibe with enough detail to hear the nuances that make this night worth revisiting.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.8,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 56,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 0.9,
+      "sentiment_rationale": "Mixed sentiment across recordings with two clear positives (Terrapin Station, Stella Blue) and one notably negative review citing flat playing and thin keyboard tone. Positive mentions outweigh negatives but are not unanimous, yielding a moderate +0.9 adjustment.",
+      "final_calculation": "2.5 + 0.4 + 0.9 = 3.8"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1993-03-14.sbd.miller.96305.sbeok.flac16",
+    "reason": "Clear soundboard source with balanced audio that captures the standout Terrapin Station, Stella Blue and Touch of Grey performances."
+  },
+  "key_highlights": [
+    "Terrapin Station delivers a powerful, classic centerpiece.",
+    "Stella Blue shines emotionally in the second set.",
+    "Jerry’s vocal on Touch of Grey is highlighted as one of his strongest late‑era moments.",
+    "Keyboard texture is thin at times, and some songs feel flat."
+  ],
+  "song_highlights": [
+    "Terrapin Station",
+    "Stella Blue",
+    "Touch of Grey",
+    "Brown Eyed Women",
+    "Throwing Stones"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers powerful vocals on Touch of Grey and strong guitar work on Terrapin Station, though a few coughs and flat tones appear in later songs.",
+    "Phil": "Lesh’s bass is prominent—especially in the SBD mix—and he steadies the band during tighter spots like Tom Thumb's Blues.",
+    "Bob": "Weir adds energy, notably his stage spit incident during Throwing Stones, but otherwise no standout commentary.",
+    "Vince": "Welnick’s keyboard tone is described as thin/cheesy and struggles to lock in at times, detracting from the overall texture.",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-18T10:24:52.748063+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Corinna",
+      "Terrapin Station",
+      "Drums",
+      "Space",
+      "I Need A Miracle",
+      "Stella Blue",
+      "Throwing Stones",
+      "Turn On Your Lovelight"
+    ],
+    [
+      "Touch of Grey"
+    ],
+    [
+      "Brown Eyed Women"
+    ]
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Audience recording with tinny hall ambience but captures an energetic early‑'72 show highlighted by a lively Good Lovin' and China Cat Sunflower.",
+  "review": "The tape is an audience (AUD) source that suffers from a thin, slightly muffled sound and noticeable venue noise, yet the band comes through clearly enough to feel the high‑energy vibe of this early‑1972 performance. Reviewers rave about the upbeat set, especially Good Lovin' and China Cat Sunflower, while acknowledging the recording’s technical flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Show quality is praised by most reviewers (energy, setlist) while recording quality receives mixed feedback; weighted average yields a solid 4‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Typical 1972 audience tape – noticeable hall ambience, tinny mids and occasional muffling; overall instruments are audible but clarity is uneven."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Good Lovin'",
+      "China Cat Sunflower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers describe a bouncy, upbeat set that maintains strong energy from start to finish; the early‑'72 vibe feels lively and engaging."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Good Lovin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T11:51:52.268863+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-03-05.aud.miller.20704.sbeok.shnf"
+}

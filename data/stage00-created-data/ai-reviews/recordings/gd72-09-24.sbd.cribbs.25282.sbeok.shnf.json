@@ -1,0 +1,72 @@
+{
+  "summary": "Soundboard recording of good clarity with minor edits captures a high‑energy September 1972 show highlighted by an epic 45‑minute Dark Star → China Cat Sunflower → Rider sequence.",
+  "review": "The September‑24‑72 Palace Theater performance is widely praised for its relentless energy and a monumental second‑set jam that stretches Dark Star into China Cat Sunflower and Rider for over 45 minutes.  The SBD source (cribbs_25282) sounds clear and well‑balanced, though several reviewers note occasional edits, speed quirks and brief cuts.  Overall the musical delivery—especially Jerry’s soaring lead, Phil’s bass takeover, and Keith’s keyboard work—is considered outstanding.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers award 4‑5 stars and highlight both strong musical performance (especially the Dark Star jam) and a generally good soundboard recording despite some editing issues."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall mix with occasional edits, speed/pitch adjustments, and a few missing or patched sections; no major distortion or muffling."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "China Cat Sunflower",
+      "Rider",
+      "Tomorrow Is Forever"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy first set followed by a sprawling second set that culminates in a 45+ minute Dark Star → China Cat → Rider suite; the pacing keeps momentum up throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for leading the epic jams, his guitar tone and improvisational drive are highlighted throughout.",
+    "Phil": "Noted for a strong bass takeover during the Dark Star stretch and solid work on One More Saturday Night.",
+    "Bob": "Commended for launching El Paso and providing steady rhythm/vocals; described as a “lead engine” in several spots.",
+    "Keys": "Keith is called “great,” especially on the jam sections; keyboards add depth to the improvisations.",
+    "Drums": "Bill’s drumming (referred to as Drumz) is integral to the lengthy Dark Star segment."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "China Cat Sunflower": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Rider": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Tomorrow Is Forever": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Greatest Story Ever Told > Bertha > Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Sugaree": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T03:53:56.289292+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-09-24.sbd.cribbs.25282.sbeok.shnf"
+}

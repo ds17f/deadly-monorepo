@@ -1,0 +1,93 @@
+{
+  "summary": "Clear soundboard capture of a solid 1972 show with standout In‑The‑Band, The Other One and soaring Bird Song, despite occasional splice cuts.",
+  "review": "The recording, sourced from Charlie Miller’s soundboard archive, delivers a generally clear mix that lets Keith Godchaux’s inventive playing shine, though a few tracks suffer minor splices and the bass sits low. Musically the show is praised for tight jams – especially In The Band, The Other One, Bird Song and Truckin’ – and a relaxed yet energetic second set, earning enthusiastic fan response overall.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Most reviewers give 4‑5 stars and highlight strong performances with only minor recording glitches; the weighted average of show (≈4.6) and recording quality (≈4.2) yields a high rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear and well‑balanced, with Keith audible and Garcia’s tone crisp; occasional splice/cut in tracks like Cumberland Blues, Half Step and Mexicali, and a slightly low bass level."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "In The Band",
+      "The Other One",
+      "Going Down the Road",
+      "Bird Song",
+      "Playin'",
+      "Truckin'",
+      "Cumberland Blues",
+      "Tennessee Jed"
+    ],
+    "poor_songs": [
+      "Half Step"
+    ],
+    "setlist_flow": "A relaxed, tight performance that builds into a strong second set; jams flow smoothly despite a few minor recording glitches."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia is described as \"on fire\" with superb tone and soaring solos throughout.",
+    "Phil": "Bass is noted as sounding low in the mix; listeners wish it were cranked up.",
+    "Bob": "Weir’s vocals are characterized as hoarse/frog‑throat, adding a unique flavor; his screams on Sugar Magnolia receive mixed remarks.",
+    "Keys": "Keith Godchaux praised for being inventive and clearly audible in the mix.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "In The Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Going Down the Road": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "Playin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Cumberland Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Box of Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Half Step": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T02:38:59.874195+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-12-12.sbd.miller.32041.sbeok.flacf"
+}

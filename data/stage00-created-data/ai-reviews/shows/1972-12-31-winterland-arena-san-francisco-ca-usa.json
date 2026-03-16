@@ -1,0 +1,81 @@
+{
+  "summary": "Epic Truckin’→Other One jam, soaring leads and high‑energy second set",
+  "blurb": "The show features a monster Truckin' → The Other One → Morning Dew sequence that runs over 50 minutes, plus strong performances of Box of Rain, Candyman and Jack Straw. Jerry’s soaring guitar and Bill’s driving drums keep the energy high into the early morning.",
+  "review": "On New Year's Eve 1972 at Winterland the Dead unleashed a second‑set marathon that has become legendary among fans. The centerpiece is an astonishing Truckin' → The Other One → Morning Dew suite—roughly 55 minutes of nonstop improvisation that showcases Garcia’s blistering, soulful leads, Phil Lesh’s inventive bass lines, and Bill Kreutzmann’s relentless drumming (even a memorable moment where he scolds a “putz” onstage). The first set supplies classic highlights like Box of Rain, Candyman, Jack Straw and the ever‑groovy Around & Around, while the encore caps it off with Uncle John’s Band and One More Saturday Night. Across multiple soundboard sources the performance is consistently praised as “scorching,” “monster,” and a high point in the Dead’s 1972 run, making this show a must‑listen for anyone who loves deep jams and late‑night energy.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.5,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 49,
+      "review_count_boost": 0.4,
+      "sentiment_adjustment": 1.6,
+      "sentiment_rationale": "Four of the six recordings are marked positive, repeatedly praising the Truckin' → Other One → Morning Dew jam, Garcia’s soaring leads, Phil’s inventive bass solo, and Bill’s driving drums. The remaining two are mixed but contain no consistent negative criticism. This strong, consistent praise across multiple sources warrants a high positive sentiment adjustment.",
+      "final_calculation": "2.5 + 0.4 + 1.6 = 4.5"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd72-12-31.prefm.vernon.20559.sbeok.shnf",
+    "reason": "Excellent pre‑FM soundboard with pristine balance; captures the monster Truckin’→Other One→Morning Dew jam in crystal‑clear detail."
+  },
+  "key_highlights": [
+    "Monster 55‑minute Truckin' → The Other One → Morning Dew sequence that defines the second set.",
+    "Phil Lesh’s inventive bass solo and powerful opening lines on The Other One.",
+    "Bill Kreutzmann’s driving drumming, including a memorable “putz” scold during the late‑night jam."
+  ],
+  "song_highlights": [
+    "Truckin'",
+    "The Other One",
+    "Morning Dew*",
+    "Mississippi Half-Step Uptown Toodeloo",
+    "Sugar Magnolia",
+    "Box of Rain",
+    "Candyman",
+    "Tennessee Jed",
+    "Around & Around",
+    "Jack Straw"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers scorching leads throughout, especially his soaring solo on Morning Dew; his tone is praised as hot and blistering, though a few reviewers note his mix dips on Big River.",
+    "Phil": "Lesh provides an inventive bass solo during the jam and fuels the opening of The Other One with powerful lines; his interplay with Bill in the drum‑and‑bass segment is highlighted.",
+    "Bob": "Weir’s rhythm work stays solid; his vocal on Jack Straw is called breath‑taking, contributing strong drive to the set.",
+    "Brent": "Keith’s keyboard textures weave into the post‑drums jam, adding color and balance without overpowering the band.",
+    "Mickey": "",
+    "Billy": "Bill Kreutzmann drives the epic Truckin’→Other One→Morning Dew sequence with relentless energy, even scolding a “putz” during the late‑night Other One, anchoring the long improvisations."
+  },
+  "processed_recordings": 6,
+  "processed_date": "2025-09-22T02:59:53.170098+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Truckin'",
+      "The Other One",
+      "Drums",
+      "The Other One",
+      "Morning Dew*"
+    ],
+    [
+      "Mississippi Half-Step Uptown Toodeloo"
+    ],
+    [
+      "Sugar Magnolia"
+    ],
+    [
+      "Box of Rain"
+    ],
+    [
+      "Candyman"
+    ],
+    [
+      "Tennessee Jed"
+    ],
+    [
+      "Around & Around"
+    ],
+    [
+      "Jack Straw"
+    ]
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "summary": "China>Rider fire and tight The Other One jam",
+  "blurb": "The show delivers a scorching China Cat Sunflower > I Know You Rider segue and an expansive The Other One. Setlist includes strong outings of La Bamba, Ode To Billie Dean**, and a seamless Cryptical Envelopment into Sugar Magnolia. Energy stays high throughout both electric sets despite the rough audience tape.",
+  "review": "On November 11, 1970 the Dead rolled into Brooklyn’s 46th Street Rock Palace for the third night of a historic four‑night run. Even though the only surviving sources are muddy audience recordings, the performance shines through: Jerry Garcia is “hanging out with fans,” his guitar presence and charisma cutting through the muffled mix as he launches the classic China Cat Sunflower > I Know You Rider pairing into a blazing jam. The Other One erupts into a monster improvisation that keeps the crowd on its feet, while the second set trades high‑octane rockers like La Bamba and Ode To Billie Dean** for soulful moments such as Cryptical Envelopment slipping smoothly into Sugar Magnolia. Reviewers note the band’s tight flow and historic vibe, making this show a must‑listen for anyone chasing that early‑70s electric energy, even if you have to brace for some audio roughness.\n\nBoth audience tapes are technically poor—described as “dismal,” “rough,” and “muffled”—but the second recording is generally regarded as less listenable than the Cotsman tape, which, despite its flaws, captures enough of the band’s fire to be recommended. If you can tolerate some grain, this show offers a vivid snapshot of the Dead at a pivotal moment in their evolution.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.2,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 19,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.6,
+      "sentiment_rationale": "One recording is clearly positive, highlighting China Cat Sunflower > Rider and The Other One; the other is mixed but still praises setlist strength and tight playing while noting poor audio. Overall sentiment leans modestly positive with no consistent negative performance criticism, just recording issues.",
+      "final_calculation": "2.5 + 0.1 + 0.6 = 3.2"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd70-11-11.aud.cotsman.17081.sbeok.shnf",
+    "reason": "Despite poor fidelity, this tape is less noisy than the alternative and captures the band's energy and standout moments more clearly."
+  },
+  "key_highlights": [
+    "China Cat Sunflower > I Know You Rider segue ignites the first set.",
+    "The Other One expands into a monster jam that drives the show’s peak.",
+    "Cryptical Envelopment flows seamlessly into Sugar Magnolia, showcasing tight transitions.",
+    "Strong second‑set highlights include La Bamba and Ode To Billie Dean**, despite audio challenges."
+  ],
+  "song_highlights": [
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "The Other One",
+    "La Bamba",
+    "Ode To Billie Dean**",
+    "Cryptical Envelopment",
+    "Sugar Magnolia"
+  ],
+  "band_performance": {
+    "Jerry": "Garcia delivers charismatic lead guitar, his presence shines even through the muffled audience tape.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "",
+    "Mickey": "",
+    "Billy": ""
+  },
+  "processed_recordings": 2,
+  "processed_date": "2025-09-20T01:17:30.602864+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Cryptical Envelopment",
+      "Drums",
+      "The Other One",
+      "Cryptical Envelopment",
+      "Sugar Magnolia"
+    ],
+    [
+      "Good Lovin'",
+      "Drums",
+      "Good Lovin'",
+      "La Bamba",
+      "Good Lovin'"
+    ],
+    [
+      "Ode To Billie Dean**"
+    ]
+  ]
+}

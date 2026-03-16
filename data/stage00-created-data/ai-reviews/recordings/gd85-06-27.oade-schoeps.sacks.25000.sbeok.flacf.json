@@ -1,0 +1,55 @@
+{
+  "summary": "Audience Oade recording delivers a fuller, more present sound but is marred by tape cuts and perceived speed issues, while the performance offers a strong first set despite uneven playing.",
+  "review": "The Oade‑Schoeps capture provides a richer, more immersive listening experience than many other audience tapes, though some listeners note occasional tape dropouts (e.g., the Baby Blue cut) and debate over playback speed. Musically the show shines in its first set with highlights such as “Stranger” and “Eyes of the World,” but the band appears unfocused at times, especially Jerry’s repeated attempts to launch into “Lazy Lightning.” Overall the recording is solid enough for fans but not without flaws.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 2.8,
+    "confidence": "medium",
+    "rationale": "Reviews are split: several praise the Oade source and first‑set highlights, while others criticize tape cuts, speed perception, and uneven band performance, leading to a middling overall rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Fuller, more immersive Oade‑Schoeps sound; some listeners recommend EQ adjustments. Noted tape cut on the Baby Blue segment and occasional complaints about perceived fast playback (later disputed)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Eyes"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is highlighted as the strongest part of the concert; overall performance is uneven with moments of unfocused playing, particularly during attempts at “Lazy Lightning.”"
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly tries to launch into ‘Lazy Lightning’ but the rest of the band seems detached.",
+    "Phil": "",
+    "Bob": "Bobby appears to ignore Jerry's cues and spaces out during the show.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Baby Blue": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lazy Lightning": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T06:14:56.994175+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-06-27.oade-schoeps.sacks.25000.sbeok.flacf"
+}

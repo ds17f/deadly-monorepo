@@ -1,0 +1,73 @@
+{
+  "summary": "A legendary Europe ’72 Beat‑Club set bristling with volcanic jams (Truckin’, The Other One, Playin’) but hampered by a slow, hissy soundboard source.",
+  "review": "The performance captures the peak of the spring‑1972 tour – blistering leads from Jerry, a monster 23‑minute The Other One and an incendiary Truckin’/Drums/Other One sequence that many fans rank among the year’s best.  Technically the recording is a degraded SBD with pitch‑slowdown, hiss and occasional feedback, so while the music shines, the audio fidelity remains only fair.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "high",
+    "rationale": "Most reviewers rave about the musical intensity (show rating ~4.2) but consistently criticize the slow‑pitch, hissy soundboard (recording rating ~2.5). Weighted average yields a solid 3.7."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Degraded SBD with noticeable pitch‑slowdown, hiss, and occasional feedback (especially during Loser). The mix is muddy but the jams still cut through; no audience ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'",
+      "The Other One",
+      "Playin' in the Band"
+    ],
+    "poor_songs": [
+      "Loser"
+    ],
+    "setlist_flow": "A full‑length TV broadcast set (≈90 min) with warm‑up tracks, a tight first half and a powerhouse second half highlighted by Truckin'>Drums>Other One.  Occasional false starts (Sugaree, PITB) add quirks but the overall arc stays energetic."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s solos are repeatedly praised – intense leads on The Other One and a wildfire solo on Truckin’.  Pitch slowdown is noted but doesn’t dull his brilliance.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Black‑Throated Wind is called slower than usual yet unique; overall keyboard work isn’t singled out beyond that.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 4,
+      "negative_mentions": 1,
+      "total_mentions": 5
+    },
+    "The Other One": {
+      "positive_mentions": 6,
+      "negative_mentions": 1,
+      "total_mentions": 7
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Loser": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black-Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mr. Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-21T14:20:58.291027+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-04-21.fm.vernon.9380.sbeok.shnf"
+}

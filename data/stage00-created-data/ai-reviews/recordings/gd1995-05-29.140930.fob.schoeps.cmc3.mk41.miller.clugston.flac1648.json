@@ -1,0 +1,69 @@
+{
+  "summary": "Mixed show with a strong second half (Terrapin, Days Between, Sugar Magnolia, Shakedown St.) and decent performance but no clear recording quality notes",
+  "review": "The concert is praised for its powerful later set – Terrapin Station through Days Between into a spirited Sugar Magnolia, plus a surprise Shakedown Street opener and a standout Dire Wolf. Reviewers note Garcia’s unusually present playing and solid drums/space, while the first set is called forgettable; no specific comments on the audio source or fidelity are provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.2,
+    "confidence": "medium",
+    "rationale": "Reviews show a decent‑to‑good performance (average 3.5+ stars) but give no information on recording quality, leading to an overall moderate rating with medium confidence from three reviews."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Reviewers do not discuss soundboard vs. audience or clarity; no technical observations were made."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station",
+      "Days Between",
+      "Sugar Magnolia",
+      "Shakedown Street",
+      "Dire Wolf",
+      "Tom Thumb's Blues"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as forgettable, but the second half—from Terrapin through Days Between and a lively Sugar Magnolia—receives strong praise; Shakedown Street opening set 2 is noted as an unexpected highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia seems consistently more present than expected.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Drums/Space does not disappoint, providing solid rhythmic support."
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Days Between": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown Street": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tom Thumb's Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T09:18:47.941945+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-05-29.140930.fob.schoeps.cmc3.mk41.miller.clugston.flac1648"
+}

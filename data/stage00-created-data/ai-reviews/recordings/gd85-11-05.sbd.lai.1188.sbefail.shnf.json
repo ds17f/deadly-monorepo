@@ -1,0 +1,79 @@
+{
+  "summary": "Crisp 1985 soundboard captures a stellar Worcester show highlighted by a smoking Shakedown and Tom Thumb Blues, with the band firing on all cylinders.",
+  "review": "The November 5 1985 Centrum show is remembered for its powerhouse second set – a blistering Shakedown, soaring Tom Thumb Blues and an unforgettable Black Peter. The SBD source is clear and punchy, with only faint tape‑hiss in the quiet moments, letting Jerry’s solos and Phil’s on‑stage shouts shine. Overall fans rave about the energy, the birthday tribute to Bill Walton and the many memorable stage antics.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "The majority of 23 reviews are 4‑5 stars, praising both the musical performance (especially the second set) and the clear soundboard recording; only a few low or neutral comments exist."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, clear SBD with excellent instrument separation; minor tape‑hiss in very quiet sections noted by one reviewer, but no significant dropouts or distortion."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "Tom Thumb Blues",
+      "Black Peter",
+      "Birdsong",
+      "Good Lovin'",
+      "Hell"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "A tight first set builds into an explosive second set; the Shakedown serves as the high‑point climax, with seamless transitions and plenty of crowd‑pleasing moments throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "His solo on Tom Thumb Blues is repeatedly praised; memorable stage antics (towel, sweater) are highlighted.",
+    "Phil": "Noted for shouting \"Garciaaa\" before Jerry’s solo and occasional health comments, but his playing receives no criticism.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Tom Thumb Blues": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Shakedown": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Black Peter": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Birdsong": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Hell": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Supplication": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Happy Birthday": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-15T10:53:00.406658+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-11-05.sbd.lai.1188.sbefail.shnf"
+}

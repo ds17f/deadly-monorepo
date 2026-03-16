@@ -1,0 +1,57 @@
+{
+  "summary": "Jerry’s raw, front‑center guitar powers a fiery first set while the recording is modestly clear but not pristine.",
+  "review": "The show shines thanks to Jerry Garcia’s wild, cranked‑up playing – highlights include a blistering Minglewood Blues opener, an raucous Loser, a killer Far From Me solo and a soaring close with The Music Never Stopped.  Recording quality is decent for an early‑80s download but could use a cleaner mix, especially in the second set which falls flat compared to the first.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Three consistent 4‑star reviews praise the performance (especially Jerry) and note only modest recording flaws, yielding a solid overall rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "Sound is a bit muddy; guitar sits forward and can be harsh. Reviewers say it could be cleaner but still listenable for an early‑80s download."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Minglewood Blues",
+      "Loser",
+      "Far From Me",
+      "The Music Never Stopped"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is high‑energy and raw, driven by Jerry’s aggressive lead work. The second set loses momentum and feels weaker in comparison."
+  },
+  "band_member_comments": {
+    "Jerry": "Front‑and‑center, cranked‑up tone; raw, wild solos dominate the first set but fade on the second.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Minglewood Blues": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Far From Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T22:20:04.949405+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd80-05-02.hance-wise.3202.sbeok.shnf"
+}

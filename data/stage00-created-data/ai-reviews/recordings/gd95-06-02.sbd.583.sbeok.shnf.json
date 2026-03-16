@@ -1,0 +1,92 @@
+{
+  "summary": "Excellent soundboard capture of a mixed‑quality 1995 Shoreline show – soaring SOTM and monks chant shine despite uneven playing.",
+  "review": "The gd95‑06‑02.sbd recording is praised for its crystal‑clear soundboard mix, though a few listeners note a thin bass and occasional drum timing slips. Musically the concert swings between high points – a powerful Standing on the Moon, an inspired Guyot Monks chant, and a fiery New Speedway Boogie – and low moments where Garcia’s voice sounds nasal or the band drifts into unfocused jams (notably Birdsong and Saint of Circumstance). Overall fans feel the emotional weight outweighs the technical slips.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently rated excellent (≈4.5/5) while show quality is mixed but leans positive (≈3.7/5). Weighted average yields ~4.0 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Very clear, well‑balanced SBD; a few comments about under‑represented bass and occasional drum timing issues, but overall crisp with no drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Standing on the Moon",
+      "Guyot Monks chant (Drums → Space)",
+      "New Speedway Boogie",
+      "Alabama > Greatest Story",
+      "That Would be Something"
+    ],
+    "poor_songs": [
+      "Birdsong (for some reviewers)",
+      "Saint of Circumstance",
+      "Truckin' (TWBS) – described as unemotional"
+    ],
+    "setlist_flow": "First set builds with a strong Alabama > Greatest opening, then meanders through slower jams; the second set lifts the vibe with New Speedway Boogie, the monks chant and an emotionally charged Standing on the Moon, though occasional rambling sections keep the flow uneven."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s guitar tone is noted as fuller than many ’95 shows, but his vocals are described as nasal, mumbled or emotionally strained; he shines on SOTM and New Speedway Boogie while faltering on Birdsong and Saint of Circumstance.",
+    "Phil": "",
+    "Bob": "Weir is praised for keeping songs together when Garcia wanes, and his vocal delivery on songs like Schoolgirl and the monks chant receives positive remarks.",
+    "Keys": "Vince’s keyboard work gets mixed feedback – some love his lead in SOTM and overall musicality, others criticize his vocal tone as painful or out‑of‑key during Birdsong.",
+    "Drums": "Bill & Mickey are lauded by a few for an “all‑time best” drum performance, yet several reviewers note timing issues and a lack of cohesion on certain jams."
+  },
+  "song_mentions": {
+    "Alabama > Greatest Story": {
+      "positive_mentions": 8,
+      "negative_mentions": 5,
+      "total_mentions": 13
+    },
+    "Birdsong": {
+      "positive_mentions": 6,
+      "negative_mentions": 7,
+      "total_mentions": 13
+    },
+    "Standing on the Moon": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "New Speedway Boogie": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Guyot Monks chant": {
+      "positive_mentions": 6,
+      "negative_mentions": 0,
+      "total_mentions": 6
+    },
+    "Schoolgirl": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    },
+    "He's Gone": {
+      "positive_mentions": 2,
+      "negative_mentions": 2,
+      "total_mentions": 4
+    },
+    "Truckin' (TWBS)": {
+      "positive_mentions": 1,
+      "negative_mentions": 4,
+      "total_mentions": 5
+    },
+    "That Would be Something": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "El Paso": {
+      "positive_mentions": 3,
+      "negative_mentions": 2,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-19T09:26:55.628305+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd95-06-02.sbd.583.sbeok.shnf"
+}

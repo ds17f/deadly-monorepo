@@ -1,0 +1,45 @@
+{
+  "summary": "Highly praised primetime show with standout Not Fade Away → And We Bid You Good Night segue; recording quality not described in reviews",
+  "review": "Reviewers hail this concert as a full‑bore primetime performance packed with highlights, especially the seamless transition from \"Not Fade Away\" into \"And We Bid You Good Night.\" No specific comments about the audio source or fidelity are provided, leaving the technical quality unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Strong positive remarks about the musical performance offset by a lack of recording‑quality details; only one review limits confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No explicit comments on sound quality, clarity, or mix were given in the available review."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Not Fade Away",
+      "And We Bid You Good Night"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Described as a primetime show with many highlights and an enjoyable closing segue; overall flow praised."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "And We Bid You Good Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T04:57:38.368278+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-03-24.156367.UltraMatrix.sbd.cm.miller.flac2496"
+}

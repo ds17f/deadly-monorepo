@@ -1,0 +1,81 @@
+{
+  "summary": "Warm, well‑recorded soundboard capture of a classic Sept 15 1985 show highlighted by an unforgettable Scarlet > Fire and solid U.S. Blues set.",
+  "review": "The set‑2 recording is a clean soundboard source that delivers the warm tube‑tone ambience the Dead were famous for in ’85, with plenty of praise for Jerry’s soaring leads on Scarlet Begonias > Fire and the tight groove on Samson & Delilah.  The performance is strong overall – U.S. Blues, Truckin’, She Belongs to Me and a high‑energy Satisfaction round out a set that many fans describe as “primo ’85” despite a few sloppy moments such as an underwhelming Comes a Time.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑5 stars, emphasizing excellent soundboard quality and standout performances; only minor criticisms (sloppy moments) keep the rating just shy of perfect."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Consistently described as warm, clear and well‑balanced with a pleasant tube‑fuzz tone; several reviewers note it is “reasonably good quality board recording” and “great sound”."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire on the Mountain",
+      "Samson & Delilah",
+      "She Belongs to Me",
+      "Truckin'",
+      "U.S. Blues",
+      "Satisfaction"
+    ],
+    "poor_songs": [
+      "Comes a Time"
+    ],
+    "setlist_flow": "Fans note an experimental yet cohesive flow – the Twilight Zone tuning segues into a mellow Scarlet‑Fire opener, followed by tight jams and a high‑energy U.S. Blues finish that keeps the momentum rolling."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for “sweetness”, soaring leads on Scarlet > Fire, inventive licks on Samson, and warm, froggy vocal tone.",
+    "Phil": "Highlighted for his “first notes” on Satisfaction and laying down a solid low‑end “down comforter”.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard textures described as “sepia bubbles” adding warmth to the mix.",
+    "Drums": "Bill (and Mickey) receive nods for high‑jinks and driving the U.S. Blues groove."
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire on the Mountain": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "She Belongs to Me": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "U.S. Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Satisfaction": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Comes a Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Twilight Zone tuning": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    }
+  },
+  "processed_date": "2025-09-15T09:21:44.329176+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd85-09-15.sbd.set2.walker.378.sbeok.shnf"
+}

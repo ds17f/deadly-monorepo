@@ -1,0 +1,64 @@
+{
+  "summary": "Clear audience recording captures a laid‑back, uneven show with standout Help>Slip>Franklin's, Peggy‑O and Terrapin moments.",
+  "review": "The tape offers surprisingly clear sound for an audience source, though background chatter can be distracting. The performance swings between relaxed grooves (Help>Slip>Franklin's, Peggy‑O, Terrapin) and uneven stretches (notably a shaky Franklin's Tower), with Jerry’s playing ranging from solid to “struggling with gravity.” Overall the concert is memorable for its vibe and the infamous wave, but it isn’t consistently brilliant.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Show quality is mixed (average‑to‑good) while the audience recording is clear but has background noise; enough detailed reviews (7) give a solid basis for rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Overall clear and listenable, but audible audience conversation/buzzkill in the mix that can detract from some moments."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Peggy-O",
+      "Terrapin Station",
+      "Black Peter"
+    ],
+    "poor_songs": [
+      "Franklin's Tower"
+    ],
+    "setlist_flow": "The concert opens with a laid‑back groove and mellow crowd, features an iconic wave during the break, but suffers from an uneven first set and a long lighted intermission before a more engaging second half."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for relaxed tone early on; later described as having trouble ‘negotiating gravity’ and sounding shaky.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Spooky, atmospheric space/drum sections noted as a highlight."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T05:09:28.544313+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-03-21.schoeps.nawrocki.11268.sbeok.shnf"
+}

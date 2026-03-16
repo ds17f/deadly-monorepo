@@ -1,0 +1,39 @@
+{
+  "summary": "Decent audience tape that at least captures a solid performance of Bertha.",
+  "review": "Both reviewers give the recording a middling three‑star rating. The first notes an \"ok aud recording\" and is pleased it includes a rendition of \"Bertha,\" suggesting the sound is acceptable but unremarkable. The second review provides no musical detail, leaving the show quality largely unknown.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "low",
+    "rationale": "Only two brief, neutral reviews; both rate the release 3 stars and give minimal commentary, so the overall rating reflects an average show with acceptable audience sound."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Described as \"ok\" by a reviewer; no specific issues or praise noted beyond it being an audience capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bertha"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No detailed comments on set structure or pacing were provided."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bertha": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T09:40:46.847680+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-04-06.wagner.minches.18510.sbeok.shnf"
+}

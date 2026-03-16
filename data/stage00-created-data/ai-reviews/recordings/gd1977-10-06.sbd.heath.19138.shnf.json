@@ -1,0 +1,44 @@
+{
+  "summary": "Crisp soundboard with bright tone and strong first‑set energy, though the recording’s provenance is disputed.",
+  "review": "The show delivers lively transitions and a standout Dire Wolf performance, with Jerry and Bob weaving guitars and plenty of Phil’s bass presence. The SBD source sounds clear and bright, but several reviewers question the authenticity of the date and suspect spliced material, tempering overall enthusiasm.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the musical performance and sound quality (average 4‑5 stars), but concerns about source authenticity and possible splicing lower the overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Bright, crisp SBD with clear instrument separation; plenty of bass presence. Some listeners note potential splicing and questionable dating, but no major audio defects reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dire Wolf"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first set with smooth transitions; overall flow praised as engaging and listener‑friendly."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar weaving with Bob noted positively; bright tone highlighted.",
+    "Phil": "Bass is prominent ('plenty of Phil') and adds to the mix.",
+    "Bob": "His seventies rhythm work described as listener‑friendly, with a limber tone on Dire Wolf.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dire Wolf": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Estimated Prophet": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T04:29:57.422205+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1977-10-06.sbd.heath.19138.shnf"
+}

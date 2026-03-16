@@ -1,0 +1,51 @@
+{
+  "summary": "Good soundboard capture of a strong Palo Alto show featuring standout Crazy Fingers, He's Gone and Smokestack.",
+  "review": "The reviewer rates the recording four stars, noting that Frost’s usual high‑quality soundboard is “good” with no audible flaws. Musically the concert is praised as “very very good,” with particular love for the opener and the sequence of Crazy Fingers, He’s Gone and Smokestack, capturing the relaxed early‑afternoon vibe of the Palo Alto dates.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "low",
+    "rationale": "Single positive review (4★) highlights both a solid performance and clear recording; limited data lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer describes the sound as good with no specific issues; typical Frost soundboard clarity noted."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "He's Gone",
+      "Smokestack"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early‑afternoon show praised for its relaxed atmosphere and strong set list; the opener is highlighted as a highlight."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Smokestack": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T15:57:47.673808+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-05-11.Senn421sNak300s.Darby.120513.Flac1644"
+}

@@ -1,0 +1,57 @@
+{
+  "summary": "Excellent soundboard capture of a solid 1993 show featuring standout performances of Jack Straw, Scarlet Begonias → Fire, and an unexpectedly inspiring Black Peter.",
+  "review": "The recording is a crisp, well‑balanced soundboard that lets the guitars and drums shine, making the music easy to enjoy. Fans highlight the superb renditions of Jack Straw, the Scarlet Begonias → Fire segue, and a surprisingly moving version of Black Peter that turned skeptics into fans. Overall the show is praised as a strong example of the underrated ’93 era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Consistently positive comments about both performance (standout songs) and recording quality (crisp soundboard), though some reviews are brief, yielding a solid but not unanimous rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp guitars and drums, nicely‑balanced tone; no reported dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "Scarlet Begonias",
+      "Fire",
+      "Black Peter"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Fans note a well‑paced set that blends classic material with newer songs; the sequence feels cohesive despite minor criticisms of overall setlist perfection."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Billy and Mickey's Rhythm Devils were described as \"smoking hot\"; drums praised for crispness alongside guitars."
+  },
+  "song_mentions": {
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T14:46:54.536299+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1993-06-21.sbd.miller.108982.flac16"
+}

@@ -1,0 +1,75 @@
+{
+  "summary": "A high‑energy spring ’90 show with a scorching Loser captured on a crisp audience recording.",
+  "review": "The performance is repeatedly praised for its fire – especially Jerry’s soaring solo on “Loser,” a superb second set packed with Terrapin Station, Help>Slip>Franklin's and an unforgettable U.J.B. The audience (AUD) source is noted as clear and rich, with only occasional echo, making the recording a solid listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Over 30 detailed reviews overwhelmingly highlight outstanding musical moments (70% weight) and consistently describe the audience recording as good‑to‑excellent (30% weight), yielding a strong combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Listeners report crisp, rich sound with occasional echo; not the absolute best AUD but solid and very listenable, capturing crowd energy well."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Loser",
+      "Terrapin Station",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Uncle John's Band",
+      "Desolation Row",
+      "Stella Blue",
+      "Watchtower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set described as tight and surf‑like, second set builds momentum with powerful jams and crowd‑driven moments; overall pacing praised for constant energy."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly lauded for a blistering solo on “Loser,” near‑perfect tone (with occasional missed notes), and overall fire throughout the show.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent’s heavy bell work highlighted as a boost to the band’s sound; keyboards praised for adding depth.",
+    "Drums": "Post‑drum jams noted as ‘rocks’; drums described as solid and tight."
+  },
+  "song_mentions": {
+    "Loser": {
+      "positive_mentions": 12,
+      "negative_mentions": 0,
+      "total_mentions": 12
+    },
+    "Terrapin Station": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Uncle John's Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T04:56:49.127120+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-03-24.schoeps.wiley.11806.sbeok.shnf"
+}

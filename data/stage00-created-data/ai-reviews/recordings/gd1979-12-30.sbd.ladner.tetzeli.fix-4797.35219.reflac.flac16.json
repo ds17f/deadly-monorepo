@@ -1,0 +1,88 @@
+{
+  "summary": "Decent soundboard recording with a few speed‑warps, featuring a modest first set and a punchier second set highlighted by Deal, Scarlet Fire and a fiery Wharf Rat.",
+  "review": "The three reviewers agree the show is an average ’79 outing that picks up in the second set. Highlights such as “Deal,” the aggressive “Scarlet > Fire” sequence, “Let It Grow,” “Truckin’” and a raucous “Wharf Rat” are praised, while songs like “Around & Around” and the encore fall flat. The source is a soundboard (ladner/tetzeli fix) that runs slightly slow (~1 %) and shows tape‑warping and occasional battery‑wow noise, but overall remains clear enough for most listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "high",
+    "rationale": "Show quality is mixed‑average with several strong moments; recording is generally good but has speed and tape‑warping issues, leading to a solid mid‑range overall rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Runs ~1 % slow (needs slight pitch up), exhibits tape‑slowdown/warp on early songs and occasional battery‑wow/AUD chatter, but overall clear and listenable."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Deal",
+      "Scarlet Fire",
+      "Let It Grow",
+      "Truckin'",
+      "Wharf Rat",
+      "Johnny B. Goode",
+      "Don't Ease Me In"
+    ],
+    "poor_songs": [
+      "Around & Around",
+      "Encore (last song)"
+    ],
+    "setlist_flow": "First set is described as average and low‑energy, likely shortened to conserve stamina; the second set picks up with early peaks (Scarlet > Fire, Let It Grow) and maintains higher energy through drums/space, though it tapers off toward the encore."
+  },
+  "band_member_comments": {
+    "Jerry": "Noted experimenting with his new “Tiger” guitar – aggressive tones on Deal and wild harmonic squeals during Scarlet Fire.",
+    "Phil": "",
+    "Bob": "Strong interplay with Jerry on Deal; vocal lead on Let It Grow; occasional criticism of his vocal style on Around & Around.",
+    "Keys": "",
+    "Drums": "High‑energy drums and space sections, described as sounding more like mid‑80s than typical ’79."
+  },
+  "song_mentions": {
+    "Deal": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let It Grow": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Around & Around": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Johnny B Goode": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T04:09:02.208542+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1979-12-30.sbd.ladner.tetzeli.fix-4797.35219.reflac.flac16"
+}

@@ -1,0 +1,82 @@
+{
+  "summary": "Soundboard recording captures a high‑energy 9/20/87 MSG show with standout Hell > Iko > LLRain and strong second‑set jams, though the mix is occasionally tinny.",
+  "review": "The performance shines on the opening quad of Hell in a Bucket → Iko Iko → Little Light Rain → He's Gone, with Jerry’s soaring guitar work and Brent’s echo‑chamber keyboards driving an intense second set.  Most listeners praise the overall sound quality, but a few note a tinny midside and occasional vocal distortion that dulls some moments.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "The majority of reviews are 4‑star or higher, highlighting strong musical moments and generally good soundboard quality; a few criticisms about mix tinness moderate the rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear overall with crisp instrument separation, but some listeners describe a slightly tinny character, vocal distortion on Bob Weir and occasional echo‑fader artifacts on Brent’s keyboards."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hell in a Bucket",
+      "Iko Iko",
+      "Little Light Rain",
+      "Throwing Stones",
+      "Wharf Rat"
+    ],
+    "poor_songs": [
+      "He's Gone (lack of jam)",
+      "Space (bogged down)",
+      "Too (short and repetitive)"
+    ],
+    "setlist_flow": "First set is solid but uneventful; the second‑set quad launches a high‑octane surge that sustains most of the night, though the post‑drums segment settles into more routine fare."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soaring tone, precise note bending and an endless flow especially on Hell in a Bucket and He's Gone.",
+    "Phil": "",
+    "Bob": "Vocal distortion noted by some reviewers; his energy is appreciated but the mic treatment can be alienating.",
+    "Keys": "Brent Mydland’s echo‑chamber Hammond work is highlighted as a key texture, though the mix is described as slightly tinny on keyboards at times.",
+    "Drums": "Bill Kreutzmann’s drumming noted briefly; no specific praise or criticism."
+  },
+  "song_mentions": {
+    "Hell in a Bucket": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Little Light Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Too": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Wharf Rat": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T04:04:49.523293+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-09-20.sbd.eD.16128.sbeok.shnf"
+}

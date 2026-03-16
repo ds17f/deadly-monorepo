@@ -1,0 +1,44 @@
+{
+  "summary": "Solid recording marred by the complete removal of the Space segment, which hurts an otherwise good Spanish‑Jam performance.",
+  "review": "The reviewer praises the overall sound quality but is upset that the entire Space portion has been cut, making the transition into the drum solo feel abrupt. The Spanish jam receives a positive nod, yet the editing detracts from the natural flow of the show. With only one low‑star review, the sentiment leans negative.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.3,
+    "confidence": "low",
+    "rationale": "Only a single 2‑star review; reviewer likes the audio quality but is strongly dissatisfied with the missing Space, leading to an overall low rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Audio is clear and well‑balanced, but the Space segment has been completely removed, causing a jarring edit."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Spanish Jam"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Removal of the Space track disrupts the natural build‑up into the drum solo, making the set feel disjointed."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Reviewer notes irritation at hearing the drum solo without the preceding Space segment."
+  },
+  "song_mentions": {
+    "Spanish Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T10:05:26.996504+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-06-18.147123.walsh.suraci.at835.flac16"
+}

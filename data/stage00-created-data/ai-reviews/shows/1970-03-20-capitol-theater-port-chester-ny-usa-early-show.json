@@ -1,0 +1,74 @@
+{
+  "summary": "Strong early‑70 set with standout Viola Lee Blues and Lovelight",
+  "blurb": "The show features a punchy first half highlighted by Casey Jones, China Cat Sunflower > I Know You Rider, and an electric second set where Viola Lee Blues and Turn On Your Lovelight shine. Phil’s vocals are strong but often buried in the mix, and Pigpen’s organ sits low. Recording quality varies, with the cleaned‑up soundboard transfer being the most listenable.",
+  "review": "Port Chester’s Capitol Theater captured the Grateful Dead on March 20, 1970 at a pivotal moment in their early‑70 evolution. The first set kicks off with a tight Casey Jones that rolls into the classic China Cat Sunflower > I Know You Rider pairing, while acoustic gems like Deep Elem Blues and Friend Of The Devil keep the energy rolling. The electric second half really takes flight – Good Lovin' launches a series of drums and Not Fade Away interludes before bursting into an extended Viola Lee Blues that lets Jerry stretch out with searing solos, followed by a soulful Turn On Your Lovelight where Pigpen’s organ, though low in the mix, adds a bluesy texture. Phil’s vocal work is confident and on‑key, even if his higher harmonies get lost amid the tape hiss. Overall, the performance is solid with strong set pacing, though a few middling numbers (Hard To Handle, Black Peter) and occasional recording artifacts keep it from being flawless. The cleaned‑up SBD transfer (Smith) offers the clearest window into this night, making it the recommended listen for fans wanting to experience this early‑70 fire without the worst of the tape noise.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.1,
+    "confidence": "medium",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 17,
+      "review_count_boost": 0.1,
+      "sentiment_adjustment": 0.5,
+      "sentiment_rationale": "All three recordings are labeled 'mixed', indicating both notable strengths (Viola Lee Blues, Good Lovin', Lovelight) and weaknesses (tape hiss, low organ mix, a few poor songs). The balance of positive highlights across multiple sources warrants a modest positive adjustment.",
+      "final_calculation": "2.5 + 0.1 + 0.5 = 3.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd1970-03-20.sbd.smith.99182.sbeok.flac16",
+    "reason": "Cleaned‑up soundboard transfer reduces tape hiss and improves instrument separation, delivering the clearest representation of the performance despite a few cuts."
+  },
+  "key_highlights": [
+    "Viola Lee Blues extended jam showcases Garcia’s lead work.",
+    "Turn On Your Lovelight delivers soulful organ and vocal interplay.",
+    "Strong electric set flow with seamless segues from Good Lovin' into drums and back.",
+    "The Smith SBD transfer provides the best overall sound despite minor tape hiss."
+  ],
+  "song_highlights": [
+    "Casey Jones",
+    "China Cat Sunflower",
+    "I Know You Rider",
+    "Good Lovin'",
+    "Viola Lee Blues",
+    "High Time",
+    "Turn On Your Lovelight"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers solid lead guitar throughout, with standout solos on Viola Lee Blues and Good Lovin'.",
+    "Phil": "Sings loudly and on‑key; his higher harmonies are often buried in the mix.",
+    "Bob": "Provides steady rhythm guitar and vocal support across both sets.",
+    "Brent": "",
+    "Mickey": "Keeps a tight groove, driving the electric set forward.",
+    "Billy": "Locks in with Mickey to maintain a powerful rhythmic foundation."
+  },
+  "processed_recordings": 3,
+  "processed_date": "2025-09-19T17:28:18.260361+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Casey Jones"
+    ],
+    [
+      "China Cat Sunflower",
+      "I Know You Rider"
+    ],
+    [
+      "Good Lovin'",
+      "Drums",
+      "Not Fade Away",
+      "Drums",
+      "Good Lovin'"
+    ],
+    [
+      "Viola Lee Blues"
+    ],
+    [
+      "High Time"
+    ],
+    [
+      "Turn On Your Lovelight"
+    ]
+  ]
+}

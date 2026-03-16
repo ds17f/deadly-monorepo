@@ -1,0 +1,124 @@
+{
+  "summary": "Matrix recording is fair with occasional static and mic glitches, but the show shines thanks to a stellar Throwing Stones jam and a space‑filled second set.",
+  "review": "Fans rave about the relaxed vibe and especially the second‑set magic – the Throw & Stones jam, a soaring Space/Masterpiece sequence and solid renditions of Box and Watchtower. The matrix source suffers from mic problems, pops and static that can be painful on headphones, pulling the technical rating down to fair.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is generally praised (high‑energy second set, many standout songs) while recording quality is marred by static, mic issues and missing instruments; the weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Mic problems on early songs, noticeable pops/static during Box and Ease, occasional squeaks in the Space/Masterpiece segment, missing Hammond organ solo mid‑set; overall listenable but not pristine."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Throwing Stones",
+      "Space / Masterpiece",
+      "Box",
+      "Watchtower",
+      "Deal"
+    ],
+    "poor_songs": [
+      "The Promised Land",
+      "Far",
+      "Cumberland",
+      "Mexicali",
+      "Man Smart (Peggy-O)"
+    ],
+    "setlist_flow": "A relaxed first set with a few lyrical slips, followed by an effortlessly seamless second set that blends new material with classic jams; the space‑jam transition and Throwing Stones highlight keep momentum high despite occasional missing drum fills."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note his fluid, Gilmour‑like solos and that he was \"on\" all night, delivering clean stories and strong lead work.",
+    "Phil": "",
+    "Bob": "One reviewer lambasted Bob Weir’s vocal on the Masterpiece/Space piece, calling it a low point of the show.",
+    "Keys": "Brent Mydland is mentioned frequently – his hoarse voice adds humor, he helps pull songs like \"Alabama\" out of the sludge, but his Hammond organ solo disappears midway and his vocals are described as funny at times.",
+    "Drums": "Criticism includes a missing drum break in the Playing‑in‑the‑Band jam and occasional gaps where drums disappear; however, the Deal‑into‑drums moment is praised."
+  },
+  "song_mentions": {
+    "Throwing Stones": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Space / Masterpiece": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Box": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Ease": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "West": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Walkin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Crazy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint (St. Stephen)": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Breakdown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Promised Land": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Far": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Cumberland": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Mexicali": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Man Smart (Peggy-O)": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T23:15:20.831184+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd87-06-21.matrix.ladner.11497.sbeok.shnf"
+}

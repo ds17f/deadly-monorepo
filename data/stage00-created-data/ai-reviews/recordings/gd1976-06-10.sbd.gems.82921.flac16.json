@@ -1,0 +1,39 @@
+{
+  "summary": "Clear soundboard mix with solid performances, though a few song changes feel a bit loose.",
+  "review": "The recording is a well‑balanced soundboard capture that lets every voice and instrument shine, especially highlighting Keith’s keyboard work and the late‑show Space. The band delivers an energetic set – Jerry’s searing ’76 tone and Phil on a mission stand out – but some transitions like Help on the Way are noted as a little loose.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Consistently 4‑star reviews point to a good show with strong playing and a clear soundboard recording; minor performance looseness keeps the rating just below excellent."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Voices are mixed well and clear, overall crisp soundboard capture; some reviewers note a bit of looseness in song changes but no major drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Help on the Way"
+    ],
+    "setlist_flow": "Energetic and tight overall, with strong vocal blends and lively playing; a few transitions (e.g., Help on the Way) feel slightly loose."
+  },
+  "band_member_comments": {
+    "Jerry": "His usual ’76 searing guitar tone is present and praised.",
+    "Phil": "Described as being ‘on a mission’, indicating an inspired bass performance.",
+    "Bob": "",
+    "Keys": "Keith’s keyboard work sounds great, according to reviewers.",
+    "Drums": "Bill (Billy) is noted as having a lot of fun behind the kit."
+  },
+  "song_mentions": {
+    "Help on the Way": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T03:42:35.395505+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-06-10.sbd.gems.82921.flac16"
+}

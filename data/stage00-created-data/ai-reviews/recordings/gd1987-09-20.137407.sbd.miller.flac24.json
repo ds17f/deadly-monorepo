@@ -1,0 +1,31 @@
+{
+  "summary": "No substantive information on recording or performance; review provides only a brief personal comment.",
+  "review": "The single review offers a minimal personal note (“I sang a little while and then flew on.”) and does not discuss the audio quality, setlist, or any musical details, leaving essentially no insight into the show's merits or flaws.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one review with a zero‑star rating and no descriptive content; rating is inferred from the explicit low star count rather than detailed analysis."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": ""
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-16T04:08:04.048379+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-09-20.137407.sbd.miller.flac24"
+}

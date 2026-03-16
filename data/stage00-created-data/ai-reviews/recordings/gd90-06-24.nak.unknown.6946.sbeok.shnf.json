@@ -1,0 +1,46 @@
+{
+  "summary": "Audience‑sourced recording with a flat but well‑balanced mix captures an uneven show, highlighted by a strong “Let It Grow” performance and hampered by a weak “Help on the Way.”",
+  "review": "The tape is an audience recording that sounds a bit flat and artificially equalized, yet vocals and instruments are clear and nicely balanced with very little crowd noise. Musically the concert swings between interesting first‑set moments and a jam‑heavy second set; “Let It Grow” shines while Jerry’s vocal on “Help on the Way” falls short. Overall the show receives mixed reactions from listeners.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.6,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (some high praise, some strong criticism) while recording quality is generally good but noted as flat; combined weighted rating yields ~3.6."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Flat‑sounding mix that appears artificially normalized; vocals clear, instruments balanced, crowd noise almost absent between songs. Some listeners note low audience presence."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Let It Grow"
+    ],
+    "poor_songs": [
+      "Help on the Way"
+    ],
+    "setlist_flow": "First set described as interesting; second set a jam‑fest with varying intensity. Overall flow is uneven, with strong moments in the second half but vocal issues early on."
+  },
+  "band_member_comments": {
+    "Jerry": "Struggles vocally at the start; voice is out on \"Help on the Way\" and hurts to listen to.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland's contributions are described as okay; no standout keyboard moments noted.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T08:23:13.171499+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-06-24.nak.unknown.6946.sbeok.shnf"
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "Strong show with standout jams on Playing in the Band and Eyes, captured in a generally good‑quality recording.",
+  "review": "Both reviewers praise this performance as very strong, highlighting extended improvisations on “Playing in the Band” and “Eyes” and noting an excellent song selection. The recording is described without major flaws, though one reviewer remarks on a noticeable tonal shift around the 14‑minute mark of “Playing in the Band,” likening it to early ’70s Miles Davis funk and Pink Floyd’s experimental era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Two detailed 4‑star reviews emphasize a strong musical performance with only minor, stylistic comments about the audio; this yields a high show rating and a good recording rating, resulting in an overall AI rating around 4.3."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No major audio issues reported; one reviewer notes a tonal shift at ~14:00 during “Playing in the Band” that sounds like early‑70s Miles Davis funk and Pink Floyd’s experimental period."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Eyes"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is praised for its solid song selection with extended jams focused on “Playing in the Band” and “Eyes,” delivering a very strong overall vibe despite limited long improvisations."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T21:12:49.083349+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd74-06-22.mtx.seamons.106156.flac24"
+}

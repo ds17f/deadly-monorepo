@@ -1,0 +1,84 @@
+{
+  "summary": "Excellent audience recording captures a high‑energy 1981 show with standout Iko > Miracle > Stella > Good Lovin' sequence, superb Brent Mydland keyboards and tight Jerry Garcia work.",
+  "review": "The tape, sourced from a Nak‑300 audience mic, is crystal clear with just a hint of crowd ambience, letting every instrument shine – especially Brent’s keyboards. Musically the concert rides a high‑energy wave from a solid first set into an inspired second set highlighted by Iko > Miracle > Stella > Good Lovin' and tight performances of Bird Song, Let It Grow and Deal.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "All seven reviews are 4‑5 stars, praising both the musical performance and the recording fidelity; the weighted average yields a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Nak‑300 audience capture with minimal crowd noise, crisp mix, clear instrument separation, especially strong keyboard presence."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Iko Iko > The Miracle > Stella Blue > Good Lovin'",
+      "Bird Song",
+      "Let It Grow",
+      "Deal",
+      "China Cat Sunflower (CC Rider)",
+      "Friend of the Devil"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is tight and energetic, second set builds to a high‑note climax; transitions flow naturally and maintain momentum throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Fine form on Bird Song and solid overall playing.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboards sound great and are highlighted throughout the show.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Let It Grow": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Miracle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Good Lovin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-13T11:45:48.300626+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd81-05-13.nak300.munder.8918.sbeok.shnf"
+}

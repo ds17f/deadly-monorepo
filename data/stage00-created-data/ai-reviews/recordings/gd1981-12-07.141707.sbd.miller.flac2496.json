@@ -1,0 +1,63 @@
+{
+  "summary": "Soundboard recording with a decent show – highlights include “The Music Never Stands” and “Saint of Circumstance,” but the mix is uneven.",
+  "review": "The performance is solid for an ’81 winter run, delivering strong moments like TMNS, Deep Elem Blues, Althea and a fiery second‑set stretch beginning with Saint of Circumstance. Listeners note that the soundboard tape suffers from a wonky mix – Brent’s keyboards sit too high while Jerry’s guitar can get buried – yet it remains listenable.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.7,
+    "confidence": "medium",
+    "rationale": "Show quality is generally good with several standout songs, but recording mix issues lower the overall enjoyment; weighted rating reflects this balance."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Mix feels off – keyboards (Brent) are overly prominent and Jerry’s guitar is not as forward as desired. Overall clarity is acceptable for a soundboard but the balance detracts from the experience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Music Never Stands",
+      "Saint of Circumstance",
+      "Deep Elem Blues",
+      "Althea",
+      "Sailor's Tale > Saint of Circumstance"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "First set is respectable but somewhat uneven; the second set really lifts off with a strong Saint of Circumstance opening and an energetic closing jam."
+  },
+  "band_member_comments": {
+    "Jerry": "Some reviewers wish his guitar was more dominant in the mix.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent's keyboard levels are described as too high and generally out of balance.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "The Music Never Stands": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deep Elem Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Althea": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sailor's Tale > Saint of Circumstance": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T17:11:26.616619+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1981-12-07.141707.sbd.miller.flac2496"
+}

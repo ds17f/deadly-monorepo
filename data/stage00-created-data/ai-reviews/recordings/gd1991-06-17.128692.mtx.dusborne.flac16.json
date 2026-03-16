@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent matrix mix captures an extraordinary show highlighted by a soaring Eyes opener, epic Dark Star and standout Bruce Hornsby contributions.",
+  "review": "The Dusborne matrix delivers crystal‑clear balance of soundboard and audience sources, earning praise as “perfect” and “right on the money.”  The performance itself is celebrated for its electrifying Eyes opener, a monster Dark Star, tight Truckin' fills from Bruce Hornsby, and memorable moments like Loose Lucy and New Speedway, making this one of the best shows of the early‑’90 tour.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All six reviewers give 4–5 stars and highlight both an outstanding musical performance and a flawless matrix recording, indicating an exceptional show with excellent technical quality."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Mix of soundboard (SBD) and audience (AUD) described as \"right on the money,\" \"perfect,\" and \"sounds wonderful\" with no reported drop‑outs or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Eyes",
+      "Dark Star",
+      "Truckin'",
+      "Loose Lucy",
+      "New Speedway",
+      "Might As Well"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note a cohesive flow, with the powerful Eyes opener setting the tone and seamless transitions into extended jams; Bruce Hornsby’s piano adds fresh energy throughout."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry was especially energized playing with Bruce Hornsby, enjoying the interplay and song choices.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Bruce Hornsby is praised for tasteful fills on Truckin' and making the band feel fresh; Vince’s keyboard work is called underrated but growing, adding high harmonies alongside Bruce.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loose Lucy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Speedway": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Might As Well": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T21:36:13.723168+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-17.128692.mtx.dusborne.flac16"
+}

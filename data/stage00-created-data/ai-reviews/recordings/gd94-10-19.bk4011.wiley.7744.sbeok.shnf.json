@@ -1,0 +1,63 @@
+{
+  "summary": "Good audience recording capturing a strong fall‑94 show highlighted by an epic Stella Blue and a soaring Terrapin Station, though crowd chatter is prominent.",
+  "review": "The concert is praised for its setlist flow – a standout Stranger opener, a long Terrapin Station jam, and a transcendent Stella Blue that leads into a spectacular Sugar Magnolia. While the audience‑sourced tape is noted as one of the better crowd recordings of the era, listeners do hear plenty of crowd noise and occasional muddiness, making it less ideal for those who want pure music isolation.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 4‑5 stars and highlight strong performances; recording quality is generally regarded as good for an audience source, leading to an overall high rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Audience tape with noticeable crowd chatter and occasional muffled moments, but praised for crisp mic work (4011s) and overall clarity that makes it one of the better audience recordings."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue",
+      "The Stranger",
+      "Terrapin Station",
+      "So Many Roads",
+      "Sugar Magnolia"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Strong fall‑94 set with a great Stranger opener, an extended Terrapin Station, and smooth transitions into Birdsong/Samson and Sugar Magnolia; overall pacing praised by multiple reviewers."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers highlight Jerry's transcendent playing on Stella Blue and the soaring lead‑in to Sugar Magnolia.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "The Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "So Many Roads": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Sugar Magnolia": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-19T03:49:01.065473+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd94-10-19.bk4011.wiley.7744.sbeok.shnf"
+}

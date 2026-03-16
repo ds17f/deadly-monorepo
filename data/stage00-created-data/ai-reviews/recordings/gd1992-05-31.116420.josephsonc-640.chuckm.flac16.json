@@ -1,0 +1,64 @@
+{
+  "summary": "Clear audience tape captures a thick \"Morning Dew\" and a smoking Spoonful→The Other One, though Garcia’s guitar falters at times.",
+  "review": "The recording is an audience capture that sounds surprisingly clear and complete, with strong drum ambience praised by listeners. Musically the show shines on \"Morning Dew\", the extended Space jam and the seamless Spoonful → The Other One transition, but the performance feels unfocused overall and Jerry Garcia struggles with his guitar during parts of \"Picasso\".",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "medium",
+    "rationale": "Both reviewers note strong moments (Morning Dew, Space, Spoonful→Other One) and a good recording, but one points out unfocused playing and guitar problems, resulting in an overall balanced rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Clear and complete capture with notable drum effects; no major drop‑outs or muddiness reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Morning Dew",
+      "Space",
+      "Spoonful",
+      "The Other One"
+    ],
+    "poor_songs": [
+      "Picasso"
+    ],
+    "setlist_flow": "Early blues‑jam feel gives way to psychedelic stretches; the Spoonful → The Other One segue is highlighted, though overall the set feels a bit unfocused."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia struggled with guitar issues, especially during \"Picasso\", sounding thin and sometimes silent.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Listeners praised the drum ambience and effects throughout the show."
+  },
+  "song_mentions": {
+    "Morning Dew": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Spoonful": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Picasso": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T06:21:55.796124+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-05-31.116420.josephsonc-640.chuckm.flac16"
+}

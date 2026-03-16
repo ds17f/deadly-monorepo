@@ -1,0 +1,39 @@
+{
+  "summary": "Highly praised recording featuring a standout “Brokedown Palace”, though technical details are not provided",
+  "review": "The sole fan review is enthusiastic, awarding five stars and highlighting the performance of “Brokedown Palace”. No specific comments about the audio source or sound quality were given, so the recording’s technical merits remain unknown.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "Only one review, but it is a perfect five‑star rating and mentions a beloved song, suggesting strong show appeal despite lack of recording details."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "No specific technical comments were provided by the reviewer."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Brokedown Palace"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No details on set structure or pacing were mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brokedown Palace": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T23:53:49.615215+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-08.144731.sbd.healy.streeter.smith.miller.clugston.flac2496"
+}

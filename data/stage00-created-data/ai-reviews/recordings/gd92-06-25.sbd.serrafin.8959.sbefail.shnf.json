@@ -1,0 +1,75 @@
+{
+  "summary": "A crystal‑clear soundboard recording of a high‑energy 1992 Chicago show, highlighted by So Many Roads, Lovelight (with James Cotton) and Good Morning Little Schoolgirl.",
+  "review": "The remastered SBD capture is praised for its pristine clarity, depth and “sonic perfection,” making it a go‑to listen for audiophiles. Musically the concert shines with Jerry’s sparkling solo on So Many Roads, a fiery Lovelight featuring James Cotton, and an inspired second set that includes Good Morning Little Schoolgirl, I KO and a jubilant Gloria encore. While a few reviewers note edited cuts (notably the missing Bertha solo) and occasional mix quirks, the overwhelming response is that both performance and recording are outstanding.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Most reviewers (30+) give 4‑5 stars and extol both the music and sound quality; only a handful criticize edits, so the weighted average of show (≈4.6) and recording (≈4.2) yields ~4.5."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Crisp, balanced mix praised as “sonicly perfect” and ideal for headphones; some users note edited cuts (Bertha solo) and occasional tinny/over‑processed sections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "So Many Roads",
+      "Lovelight (with James Cotton)",
+      "Good Morning Little Schoolgirl",
+      "Iko",
+      "Gloria Encore"
+    ],
+    "poor_songs": [
+      "Bertha"
+    ],
+    "setlist_flow": "Second set sizzles with a seamless flow from IKO into strong jams; guests Steve Miller and James Cotton add excitement, while the encore leaves the audience dancing."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s playing is widely praised – sparkling solo on So Many Roads and tight lead work throughout; a few note occasional sleepy moments but overall strong.",
+    "Phil": "Mixed remarks – some enjoy his bass foundation, others cite “Phil bombs during Gloria” and prefer being closer to the stage for better sound.",
+    "Bob": "Positive vibe, especially his vocal delivery on Good Morning Little Schoolgirl; no major criticisms.",
+    "Keys": "Vince (and earlier Brent) receive both praise (“vastly underrated”) and criticism of patch choices that sounded thin or clunky during this era.",
+    "Drums": "The drum train‑horn segment is highlighted as a memorable moment; no substantive complaints."
+  },
+  "song_mentions": {
+    "So Many Roads": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Lovelight (with James Cotton)": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Good Morning Little Schoolgirl": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gloria Encore": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bertha": {
+      "positive_mentions": 0,
+      "negative_mentions": 3,
+      "total_mentions": 3
+    },
+    "Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-18T07:48:24.155058+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd92-06-25.sbd.serrafin.8959.sbefail.shnf"
+}

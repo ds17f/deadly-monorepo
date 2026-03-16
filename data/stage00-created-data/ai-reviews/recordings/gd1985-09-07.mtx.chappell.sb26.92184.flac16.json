@@ -1,0 +1,31 @@
+{
+  "summary": "Highly praised show described as the best ever attended, though recording details are not provided",
+  "review": "The reviewer rates this concert a perfect five stars and calls it the best show they have ever seen, but offers no specifics about the performance or the audio source. No information is given on sound quality, song list, or individual band members.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "Single enthusiastic 5‑star review with no technical details; strong positive sentiment about the show but insufficient data for a high‑confidence rating"
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on soundboard, audience mix, clarity, or other audio characteristics"
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer indicates the concert was outstanding overall but provides no specifics about set structure or pacing"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T09:00:24.024083+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-07.mtx.chappell.sb26.92184.flac16"
+}

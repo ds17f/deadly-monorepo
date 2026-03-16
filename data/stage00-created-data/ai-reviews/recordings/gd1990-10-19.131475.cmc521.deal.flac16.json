@@ -1,0 +1,62 @@
+{
+  "summary": "A memorable Berlin concert captured in a deep, close‑miked sound that showcases stellar versions of Shakedown Street, Deal and Scarlet Fire.",
+  "review": "Both reviewers rave about the band being on fire – Jerry’s guitar, Phil’s bass and the whole crew are described as running on all cylinders with standout performances of Shakedown Street, Deal, Scarlet Fire and a palpable Dark Star vibe. The recording is praised for its unique mid‑range focus and unusually deep, close soundstage, making it a very listenable document despite the lack of technical specifics.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "medium",
+    "rationale": "Strong musical performance highlighted by several standout songs and enthusiastic fan language; recording quality is described as unique and enjoyable, though source details are vague."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Reviewers note a distinctive mid‑range emphasis, slightly odd EQ, and a deep, close soundstage that gives drums, guitars and keyboards great separation."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Shakedown",
+      "BEW",
+      "Deal",
+      "Scarlet-Fire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic first set leading into a powerful second; the band’s chemistry is described as \"running on all cylinders\" with an electric atmosphere that made even the anticipation of Dark Star feel tangible."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Shakedown": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "BEW": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Scarlet-Fire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T13:42:06.524356+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-10-19.131475.cmc521.deal.flac16"
+}

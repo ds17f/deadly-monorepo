@@ -1,0 +1,70 @@
+{
+  "summary": "Excellent matrix mix delivers crystal‑clear sound, showcasing a fiery Fire on the Mountain and soaring Going Down The Road Feeling Bad.",
+  "review": "The matrix recording expertly blends board clarity with crowd ambience, giving the show the sonic justice it deserves. Fans rave about Jerry’s wah‑wah rocket at the end of Fire on the Mountain, the manic Going Down The Road Feeling Bad, and other gems like Scarlet Begonias, Cassidy and The Music Never Stopped. Overall the performance is high‑energy rock ’n’ roll with standout moments throughout.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.4,
+    "confidence": "high",
+    "rationale": "Consistently strong positive comments on both musical performance and recording quality; average user rating is 4.25, weighted toward a great show with excellent matrix sound."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Matrix balances the flat‑sounding board with crowd energy, providing clear instrument separation and lively ambience; no notable flaws reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Fire on the Mountain",
+      "Going Down The Road Feeling Bad",
+      "Scarlet Begonias",
+      "Cassidy",
+      "The Music Never Stopped"
+    ],
+    "poor_songs": [
+      "Don't Ease Me In"
+    ],
+    "setlist_flow": "A rock‑n‑roll driven show with high energy throughout; first set’s crowd crush noted but the music maintains forward momentum and seamless transitions."
+  },
+  "band_member_comments": {
+    "Jerry": "Outstanding wah‑wah solo ending Fire on the Mountain and stellar leads throughout, especially during GDTRFB.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": "Bill Kreutzmann ('Bobby') weaves beautiful ribbons of sound around Jerry's notes, adding dynamic feedback textures."
+  },
+  "song_mentions": {
+    "Fire on the Mountain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Going Down The Road Feeling Bad": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Scarlet Begonias": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cassidy": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Music Never Stopped": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Don't Ease Me In": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-12T23:21:12.321998+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1980-05-11.mtx.dusborne.126880.flac16"
+}

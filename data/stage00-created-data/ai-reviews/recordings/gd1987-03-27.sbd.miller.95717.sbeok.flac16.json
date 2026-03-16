@@ -1,0 +1,45 @@
+{
+  "summary": "Hot 1987 show with standout Touch of Grey and an emotional Morning Dew, but the soundboard recording is poor – listeners are advised to use the audience mix.",
+  "review": "The performance shines on classics like Touch of Grey and a heartfelt Morning Dew, capturing the crowd’s excitement. However, reviewers repeatedly note that the soundboard tape sounds bad with drop‑outs, recommending the audience recording for a clearer experience.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is praised (high ratings, strong song mentions) while recording quality is criticized by multiple reviewers; the weighted average yields a solid but not outstanding rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewers describe the tape as 'bad' with drop‑outs and recommend using the audience (aud) mix instead of the soundboard."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Touch of Grey",
+      "Morning Dew"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Energetic, hot performance with high points in Touch of Grey and a moving Morning Dew; overall flow praised despite the flawed recording."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Touch of Grey": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T19:54:01.790486+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1987-03-27.sbd.miller.95717.sbeok.flac16"
+}

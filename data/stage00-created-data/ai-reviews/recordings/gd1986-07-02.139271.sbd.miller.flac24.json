@@ -1,0 +1,42 @@
+{
+  "summary": "Phenomenal soundboard recording of a modest show – Phil’s bass shines while Jerry steps off during Desolation Row and returns for Space.",
+  "review": "The tape captures an excellent‑sounding board mix that listeners describe as phenomenal, with clear balance and no noticeable flaws. Musically the concert is viewed as average overall; the first set was uneven (especially the Dylan/Petty guest spot) while the second set felt stronger, highlighted by Phil Lesh’s bass work covering for Jerry during Desolation Row and a satisfying return for Space.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "medium",
+    "rationale": "Show quality is rated around average (≈3.5/5) while recording quality is praised as excellent (≈4.5/5); weighted combination yields ~3.8 stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners repeatedly note phenomenal clarity, crispness and balance; no drop‑outs or muddiness were reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Desolation Row",
+      "Space"
+    ],
+    "poor_songs": [
+      "First set (Dylan/Petty guest spot)"
+    ],
+    "setlist_flow": "First set felt uneven and hampered by a weak Dylan‑Petty opening; second set improved markedly, especially after Jerry’s return for Space."
+  },
+  "band_member_comments": {
+    "Jerry": "Absent during Desolation Row, causing some concern, but his return for Space was noted positively.",
+    "Phil": "His bass work filled the void nicely when Garcia stepped off stage.",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Desolation Row": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T16:55:04.873040+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-07-02.139271.sbd.miller.flac24"
+}

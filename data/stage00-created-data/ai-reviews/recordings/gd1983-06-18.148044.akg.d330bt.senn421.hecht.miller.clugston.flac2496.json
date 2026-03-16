@@ -1,0 +1,44 @@
+{
+  "summary": "Rowdy Scarlet Begonias and an eclectic second set make the show shine, though Fire on the Mountain suffers from flutter and the recording is split across sources.",
+  "review": "The performance is highlighted by a thunderous Scarlet Begonias that kicks off a wildly eclectic second set, earning high praise from fans. Recording quality is mixed – while most of the tape sounds good, there are notable flutter problems on Fire on the Mountain and the set is currently only available in separate parts, suggesting a matrix source would be ideal.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is rated very high based on enthusiastic comments, but recording issues (flutter on Fire on the Mountain and incomplete set source) pull the overall rating down."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "fair",
+    "technical_notes": "Generally decent sound, but noticeable flutter on Fire on the Mountain; current release only covers part of the show, prompting calls for a proper matrix remaster."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Eclectic second set that opens with an especially rowdy Scarlet Begonias; overall pacing praised despite missing first‑set material in this source."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Fire on the Mountain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T07:24:50.557332+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1983-06-18.148044.akg.d330bt.senn421.hecht.miller.clugston.flac2496"
+}

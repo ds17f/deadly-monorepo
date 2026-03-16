@@ -1,0 +1,31 @@
+{
+  "summary": "Muddy soundboard mix with buried guitars but a solid above‑average performance.",
+  "review": "Reviewers agree the show is slightly better than average, though the recording suffers from a muddy mix that buries Jerry's guitar and muffles Bob's vocals. The tape appears to be a soundboard source with possible PA or cassette generation issues, making the audio quality poor despite the decent playing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.3,
+    "confidence": "medium",
+    "rationale": "Show quality is noted as above average (≈3.5/5) while recording quality is described as muddy and poor (≈2/5). Weighted combination yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Mix is very muddy; Jerry's guitar often buried, Bob's vocals muffled/distorted. Likely PA or board problems and possible late‑generation cassette degradation."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Performance described as just above average with no specific set‑list issues mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar often buried in the mix, possibly due to his loud on‑stage amp.",
+    "Phil": "",
+    "Bob": "Vocals muffled and distorted on several numbers.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T13:55:05.615465+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd83-10-30.sbd.miller.22800.sbeok.shnf"
+}

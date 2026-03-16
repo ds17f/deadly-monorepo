@@ -1,0 +1,39 @@
+{
+  "summary": "Cleaned‑up soundboard recording of an early‑Dead show with a beloved Alice D. Millionaire performance and generally good band energy despite some high‑end loss.",
+  "review": "The three‑set Matrix concert from December 1, 1966 captures the band in solid form, highlighted by a fan‑favorite rendition of “Alice D. Millionaire.” The soundboard source has had the original hiss removed, giving a clearer listen, though some listeners note a slight loss of high‑frequency sparkle and occasional song‑order confusion.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "medium",
+    "rationale": "Most reviewers praise the performance and appreciate the cleaned‑up recording; minor technical shortcomings keep the rating just below top tier."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Original tape hiss eliminated in newer source, but high‑end frequencies are a bit recessed; some reviewers note songs are mixed out of order (Lindy, Dancin' in the Street, Me & My Uncle)."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Alice D. Millionaire"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Three‑set early‑Dead set at the Matrix with strong audience interaction and solid playing; setlist is well‑documented though track order confusion is mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Alice D. Millionaire": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-26T06:06:50.688968+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1966-12-01.sbd.32800.shnf"
+}

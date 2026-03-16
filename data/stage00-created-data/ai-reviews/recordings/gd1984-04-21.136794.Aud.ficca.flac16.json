@@ -1,0 +1,31 @@
+{
+  "summary": "Highly praised audience recording hailed as the best source for this beloved show",
+  "review": "The reviewer loves the performance and considers this the best available source, though they plan to patch the drum and DNL tracks with a Neuman tape, hinting at minor balance issues. Overall the show is regarded positively and the audience capture is deemed good.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Single 4‑star review expresses strong enthusiasm for both performance and recording, but limited data prevents a higher confidence rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Reviewer calls it the best source yet mentions patching DNL and drums with a Neuman tape, indicating slight balance or noise‑level concerns."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-14T16:27:08.078415+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-21.136794.Aud.ficca.flac16"
+}

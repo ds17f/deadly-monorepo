@@ -1,0 +1,39 @@
+{
+  "summary": "Excellent sound quality captures a show full of transitional jams and a notable Bob Weir tease of China Cat Sunflower.",
+  "review": "Both reviewers praise the recording’s crystal‑clear audio while noting that the set is heavy on fluid, transitional jams. A highlight mentioned is Bob Weir’s playful tease of “China Cat Sunflower,” which adds an extra spark to the performance. The only criticism concerns the track ordering and a drum‑wheel split rather than a single continuous drum track.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "medium",
+    "rationale": "Reviews are enthusiastic about the musical flow and record quality, but limited data (only two comments with no star rating) lowers confidence."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "excellent",
+    "technical_notes": "Excellent sound quality noted; however reviewers point out that track order isn’t timed to the right songs and the drum‑wheel should be a single track."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China Cat Sunflower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Show features many smooth transitional jams; reviewers appreciate the flow despite some mismatched track ordering."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "Bob Weir teases China Cat Sunflower during the performance.",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "China Cat Sunflower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-23T08:11:28.216616+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1976-10-03.fmsbd.jerugim.248.shnf"
+}

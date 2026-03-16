@@ -1,0 +1,46 @@
+{
+  "summary": "Good soundboard recording of a solid show; Franklin's Tower lifts an initially shakey start.",
+  "review": "The concert opens a bit shaky, with the Help on the Way > Slipknot sequence sounding bogged down, but the energy picks up when Franklin's Tower kicks in. Reviewers describe the performance as solid throughout and note good sound quality, though nothing extraordinary makes this night stand out.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one 4‑star review; it praises the show as solid and the recording as good, leading to an overall rating of four stars."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Good sound quality noted; no major issues mentioned, though not highlighted as exceptional."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Franklin's Tower"
+    ],
+    "poor_songs": [
+      "Help on the Way > Slipknot!"
+    ],
+    "setlist_flow": "Starts shakily with a bogged‑down Help/Slipknot, then gains momentum as Franklin's Tower gets the party started."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot!": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Franklin's Tower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T17:07:39.323219+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-03-24.sbd.ladner.18119.sbeok.shnf"
+}

@@ -1,0 +1,31 @@
+{
+  "summary": "Positive fan enthusiasm despite no detailed info on recording or performance",
+  "review": "The lone reviewer gives a upbeat 4‑star rating, expressing excitement about attending multiple shows and anticipating many more. No specific comments are made about the audio source, sound quality, setlist, or individual performances.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 3.8,
+    "confidence": "low",
+    "rationale": "Only one moderately‑high rating (4 stars) with vague praise; without concrete details on music or recording quality the estimate leans toward a good but not exceptional show/recording."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments about sound clarity, mix, or source type."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-18T05:10:52.155527+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1992-03-21.fob.schoeps.evens.gems.76484.sbefail.flac16"
+}

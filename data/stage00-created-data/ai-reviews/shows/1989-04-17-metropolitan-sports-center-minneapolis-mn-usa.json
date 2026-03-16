@@ -1,0 +1,77 @@
+{
+  "summary": "Fiery Bertha, soaring Space, and solid second‑set flow",
+  "blurb": "The show delivers a high‑energy first set highlighted by Bertha, Built To Last and Iko Iko, while the second set strings together Crazy Fingers > Estimated Prophet > Eyes Of The World > Space into an inspired jam that rolls into Wharf Rat. Brent’s keyboards dominate the peaks, and Jerry experiments with a Strat and MIDI “horn” for added color.",
+  "review": "On April 17, 1989 the Grateful Dead capped their Minnesota run at the Metropolitan Sports Center in Minneapolis with a set that balances classic fire and late‑‘80s experimentation. The first set opens tight with Iko Iko and builds through New Minglewood Blues to a scorching Bertha where Brent Mydland’s organ shines, while Jerry Garcia’s tone remains unmistakably classic even as he toys with a new MIDI “horn” and a bright Strat that split opinion among fans. \n\nThe second set is the real highlight: Crazy Fingers segues into an immaculate Estimated Prophet, which then flows into a soaring Eyes Of The World before the band launches into a powerful Space jam. The rhythmic foundation laid by Mickey Hart and Bill Kreutzmann keeps everything grounded as Brent goes berserk on keyboards, culminating in a seamless transition through The Wheel and Gimme Some Lovin’ into a rocking Wharf Rat > No Fixed Address finish, before closing with a triumphant Knockin' On Heaven's Door. Across the recordings the performance is consistently praised for its energy and musicianship, even if some audience edits interrupt the flow in certain sources.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 3.6,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 21,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 0.9,
+      "sentiment_rationale": "Two recordings (soundboard and matrix) are clearly positive, highlighting solid playing and excellent capture; three others are mixed but still note standout songs and energetic moments without consistent criticism. The overall consensus is moderately positive, justifying a +0.9 sentiment boost.",
+      "final_calculation": "2.5 + 0.2 + 0.9 = 3.6"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd89-04-17.aud.wiley.9207.sbeok.shnf",
+    "reason": "Good front‑of‑stage imaging with crisp highs and balanced mix; captures the key Bertha, Space and MIDI guitar moments despite some editing gaps."
+  },
+  "key_highlights": [
+    "Fiery Bertha and high‑energy Space segment showcase Brent's powerful keyboards.",
+    "First appearance of MIDI guitars adds a quirky, experimental diversion.",
+    "Second set’s seamless segues from Crazy Fingers through Estimated Prophet into Eyes Of The World and Space create an inspired jam flow.",
+    "Solid rhythmic foundation from Mickey Hart and Bill Kreutzmann underpins the improvisations."
+  ],
+  "song_highlights": [
+    "Bertha",
+    "Space",
+    "Cold Rain And Snow",
+    "Samson & Delilah",
+    "Built To Last",
+    "Iko Iko",
+    "Wharf Rat"
+  ],
+  "band_performance": {
+    "Jerry": "Delivers his classic tone while experimenting with a Strat and the new MIDI “horn,” adding fresh color that divided opinion but kept the energy high.",
+    "Phil": "",
+    "Bob": "",
+    "Brent": "Energized the set, especially on Bertha and Space, and went full‑tilt during the extended Space jam, providing bright organ leads and rhythmic punches.",
+    "Mickey": "Provides a steady percussive backbone that blends smoothly with the band's flow throughout both sets.",
+    "Billy": "His hi‑hat work and splash cymbals cut through clearly even in audience mixes, reinforcing the tight rhythm section."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-16T19:00:20.747565+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Bertha"
+    ],
+    [
+      "Crazy Fingers",
+      "Estimated Prophet",
+      "Eyes Of The World",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "Gimme Some Lovin'",
+      "Wharf Rat",
+      "Not Fade Away"
+    ],
+    [
+      "Cold Rain And Snow"
+    ],
+    [
+      "Samson & Delilah"
+    ],
+    [
+      "Built To Last"
+    ],
+    [
+      "Iko Iko"
+    ]
+  ]
+}

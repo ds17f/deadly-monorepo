@@ -1,0 +1,52 @@
+{
+  "summary": "A crisp soundboard recording captures an energetic show highlighted by a monster The Other One and a killer Foolish Heart.",
+  "review": "The performance is praised for its high energy, especially the second‑set magic of The Other One and the beautifully rendered Foolish Heart. Reviewers also note balanced, clear board sound that makes the tape very listenable, with only a few minor complaints about an uneven first set and one weak Picasso Moon rendition.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently strong praise for both the musical performance (especially The Other One and Foolish Heart) and the soundboard recording quality; only isolated negative comments."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Multiple reviewers call the board sound \"nice and balanced\" and give it five‑star sound quality. No major dropouts reported, just occasional minor imperfections."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "The Other One",
+      "Foolish Heart"
+    ],
+    "poor_songs": [
+      "Picasso Moon"
+    ],
+    "setlist_flow": "Second set is described as magical and high‑energy, while the first set is seen as average; overall pacing keeps listeners engaged."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for being in great form and delivering strong energy.",
+    "Phil": "Noted for solid, engaging bass work throughout the show.",
+    "Bob": "His mic was creatively altered by Healy, adding a distinctive texture to his sound.",
+    "Keys": "",
+    "Drums": "Both drummers received high marks for tight, lively playing."
+  },
+  "song_mentions": {
+    "The Other One": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Foolish Heart": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Picasso Moon": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T19:27:14.990637+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-05-07.dsbd.stephens.10978.sbeok.shnf"
+}

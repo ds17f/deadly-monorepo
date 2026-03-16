@@ -1,0 +1,57 @@
+{
+  "summary": "A rough, often out‑of‑sync show with a few bright spots (Peggy‑O, Ship of Fools, Gimme Some, Watchtower) and an UltraMatrix matrix recording of unknown quality.",
+  "review": "The reviewer found the 10/18/89 performance generally uneven, describing the band as “extremely out of sync” for most of the night. A handful of songs – notably Peggy‑O, Ship of Fools, Gimme Some and Watchtower – were highlighted as good to better moments, and Brent Mydland’s occasional front‑man attempts earned a nod. No specific comments on the recording quality were provided.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Only one review, giving a moderate 3‑star rating and noting both performance flaws and some song highlights; recording quality not addressed."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on sound clarity or mix; UltraMatrix suggests a matrix source but its quality cannot be assessed from the review."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Peggy-O",
+      "Ship of Fools",
+      "Gimme Some",
+      "All Along the Watchtower"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall set felt out of sync, though occasional tighter, leaner moments were noted; pacing suffered by the lack of cohesion."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland shows his front‑man side and has some strong moments.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Peggy-O": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ship of Fools": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Gimme Some": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "All Along the Watchtower": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T00:43:18.222801+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-18.147728.UltraMatrix.sbd.cm.miller.flac16"
+}

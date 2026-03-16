@@ -1,0 +1,45 @@
+{
+  "summary": "Crystal‑clear matrix mix captures a high‑energy Oct 1984 show with standout Bird Song and a smoking Jack Straw.",
+  "review": "The matrix recording is praised as superb, crystal‑clear and perfectly balanced with no drop‑outs, delivering an immersive listening experience. The performance shines with Jerry ripping on guitar, Brent’s jazzy keys, and the band staying tight while delivering dizzying Bird Song jams and a smoking Jack Straw that fans single out as highlights.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "All seven reviews are 4‑5 stars, uniformly praising both the musical performance and the matrix recording quality; standout songs and tight playing push the rating into the high‑range."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Superb matrix mix with crystal clarity, well balanced stereo image, no audible drop‑outs between songs, and a clean, detailed soundstage."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Bird Song",
+      "Jack Straw"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "High‑energy show with tight band interplay; crowd interaction (Weir's plea after CC Rider) adds excitement, and the set flows naturally from a soaring first‑set heat into adventurous jams."
+  },
+  "band_member_comments": {
+    "Jerry": "Multiple reviewers note Jerry’s ripping guitar work and his charismatic stage presence throughout the show.",
+    "Phil": "",
+    "Bob": "Weir is mentioned for his crowd‑pleasing plea after \"CC Rider\" and his vocal contribution.",
+    "Keys": "Brent (keyboard) gets credit for “chopping it up” and adding jazzy textures during jams.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Bird Song": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Jack Straw": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T23:22:08.922078+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-10-20.122859.mtx.dusborne.flac16"
+}

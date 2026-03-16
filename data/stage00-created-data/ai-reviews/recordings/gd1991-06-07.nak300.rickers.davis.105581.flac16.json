@@ -1,0 +1,45 @@
+{
+  "summary": "Audience DAT captures a solid ’91 show with a sunset‑lit “Music” finale and an oddball Space jam, but Hornsby’s aggressive keyboards dominate the first set.",
+  "review": "The recording is an audience DAT that sounds better than most full‑show crowd tapes from this era, preserving the ambience of a June night in 1991. Musically the band delivers a memorable “Music” moment as the sun sets and a quirky Space section, though early‑set keyboard overplay by Hornsby drowns out Garcia and Weir, making set two feel more balanced.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is decent with standout moments but marred by overbearing keyboards; recording is a good‑ish audience DAT, giving an overall moderate rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Typical audience DAT capture – clear enough to follow the music and better than most full‑show crowd recordings; no major dropouts or muffling reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Music",
+      "Space"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Set 1 is overrun by aggressive keyboard playing, muting Garcia and Weir; Set 2 evens out and restores a more balanced band dynamic."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s parts are often muted by Hornsby’s aggressive playing in set 1.",
+    "Phil": "",
+    "Bob": "Weir’s comping is forced to be louder to cut through the dense keyboard texture.",
+    "Keys": "Brent Hornsby dominates early, playing overly aggressively and overrunning the music; later he mellows out.",
+    "Drums": "Post‑drum sequence noted as a highlight by one reviewer."
+  },
+  "song_mentions": {
+    "Music": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T20:21:36.200741+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1991-06-07.nak300.rickers.davis.105581.flac16"
+}

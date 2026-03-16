@@ -1,0 +1,46 @@
+{
+  "summary": "Soundboard recording of mixed fidelity captures an uneven 1995 show, highlighted by a spectacular “Visions Of Johanna” amid Jerry’s frequent lyric lapses.",
+  "review": "The performance is marked by Jerry Garcia forgetting lyrics and sounding detached, which many reviewers criticize, though his guitar tone on “Visions Of Johanna” still shines. The soundboard source suffers from occasional muddiness and venue‑related issues, but moments of clarity make the recording listenable for fans who appreciate the era’s rawness.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "high",
+    "rationale": "Ten detailed reviews show a clear split between praise for standout moments (e.g., Visions Of Johanna) and criticism of overall performance and recording quality, yielding an average rating around the mid‑range."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Several reviewers call the audio \"messed up\" or \"bad\" due to venue acoustics and recording issues, while others note a spot‑on guitar sound and a spectacular capture of Visions Of Johanna."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Visions Of Johanna"
+    ],
+    "poor_songs": [
+      "Unbroken Chain"
+    ],
+    "setlist_flow": "The set feels uneven—frequent lyric slips and a sense of disengagement from Jerry contrast with occasional sparks, especially the praised Visions Of Johanna, giving the show an overall mixed vibe."
+  },
+  "band_member_comments": {
+    "Jerry": "Frequently criticized for forgetting lyrics and sounding like a \"shell of his former self,\" yet some note his guitar tone remains solid and he nails most words on Visions Of Johanna.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Visions Of Johanna": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    },
+    "Unbroken Chain": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T12:15:26.156399+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-07-08.sbd.larson.35157.flac16"
+}

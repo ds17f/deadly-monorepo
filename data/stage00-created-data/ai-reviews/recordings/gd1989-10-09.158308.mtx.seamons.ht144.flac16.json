@@ -1,0 +1,53 @@
+{
+  "summary": "Excellent matrix recording with crystal‑clear sound, featuring standout performances of “Stranger” and “Little Red Rooster” plus a superb second set.",
+  "review": "Both reviewers rave about the audio quality, calling it awesome and noting that the matrix mix captures the band cleanly. Musically the show shines – “Stranger,” “Little Red Rooster,” and the entire second set receive high praise, while “We Can Run” is mentioned as a personal weak point but still solid. Overall it’s a highly enjoyable listening experience.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "medium",
+    "rationale": "Both reviews are 5‑star and highlight superb sound and strong performances, yielding a near‑top rating despite the small sample size."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Awesome, clear, balanced matrix mix with no reported dropouts or muddiness."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stranger",
+      "Little Red Rooster",
+      "Second Set (overall)"
+    ],
+    "poor_songs": [
+      "We Can Run"
+    ],
+    "setlist_flow": "The show flows smoothly, with a particularly strong second set that keeps the energy high; only one track draws mild criticism."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Little Red Rooster": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "We Can Run": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T23:56:28.984927+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-09.158308.mtx.seamons.ht144.flac16"
+}

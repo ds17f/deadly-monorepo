@@ -1,0 +1,45 @@
+{
+  "summary": "Flat, noise‑reduced soundboard capture of a classic 1973 show with a standout psychedelic Other One and smooth transition into Eyes.",
+  "review": "The recording suffers from a flat, muffled sound due to aggressive noise reduction, making it less vivid than an alternate tape version. Musically, the performance shines – beautiful renditions of the set are highlighted by a psychedelic Other One that flows into Eyes and an improved He's Gone midway through. Despite the technical shortcomings, fans appreciate the overall 1973 energy.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "medium",
+    "rationale": "Show quality is praised (psychedelic Other One, strong transitions) while recording quality is criticized for flat, muffled sound; weighted average of show (≈4.5) and recording (≈2.5) yields ~3.9."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Noise reduction on the first three discs creates a muffled, flat sound; overall less dynamic than other available copy. No major hiss noted in this version, but the lack of clarity makes it inferior to the alternate tape."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Other One",
+      "Eyes"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Generally strong set with beautiful renditions and a seamless transition from Other One into Eyes, keeping the momentum high throughout the night."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Eyes": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T07:35:15.105975+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd73-05-13.sbd.minches.7270.sbeok.shnf"
+}

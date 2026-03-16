@@ -1,0 +1,44 @@
+{
+  "summary": "Excellent matrix recording captures a superb 1973 Dead show with a standout Truckin' ending that sneaks in a Here Comes Sunshine riff.",
+  "review": "The three reviewers all rave about the sound, calling it fantastic and great throughout, which points to an excellent matrix source.  Musically the concert is described as a “truly great Dead show” loaded with classic material – even the end of Truckin' gets special mention for slipping in a Here Comes Sunshine tease.  Overall the performance feels fresh and inspiring, making this a must‑listen for fans of the 1973 era.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.8,
+    "confidence": "high",
+    "rationale": "All three reviews give 5 stars and consistently praise both the audio fidelity and the musical quality, indicating an almost flawless experience."
+  },
+  "recording_quality": {
+    "source_type": "matrix",
+    "quality_rating": "excellent",
+    "technical_notes": "Clear, balanced mix with no reported drop‑outs or muddiness; reviewers highlight “great sound” and a “fantastic sounding recording.”"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Truckin'"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Reviewers note the concert is packed with many good songs from 1973, flowing smoothly and delivering a strong overall experience."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Here Comes Sunshine": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-22T14:14:43.632954+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1973-06-09.131169.mtx.fix.dusborne.flac16"
+}

@@ -1,0 +1,39 @@
+{
+  "summary": "Well‑balanced tape of an off‑night show – first set solid, second set lackluster with Brent’s new song sounding trite.",
+  "review": "The recording is surprisingly clear and well EQ‑balanced for a night the band admits was off. While the first set holds steady, it never rises above unremarkable, and the second set falls flat, especially Brent's newer composition which reviewers found intrusive. Overall the performance is judged as not great despite decent sound quality.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 2.5,
+    "confidence": "low",
+    "rationale": "One low‑star review emphasizes a poor show (off night, lackluster second set) but notes good recording balance; weighted average yields a rating around 2½."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "good",
+    "technical_notes": "Tape not overly cloudy, very well EQ balanced; no major distortion or drop‑outs mentioned."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [
+      "Brent's new song"
+    ],
+    "setlist_flow": "First set steady but unremarkable; second set described as lackluster, with the new Brent composition feeling trite and intrusive."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Negative comment on Brent's new song, calling it trite and intrusive.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Brent's new song": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-14T16:26:21.729977+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-04-21.neumannu87.bandrofcheck.34682.sbeok.shnf"
+}

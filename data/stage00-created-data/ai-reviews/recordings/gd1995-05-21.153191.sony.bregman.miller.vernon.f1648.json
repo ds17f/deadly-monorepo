@@ -1,0 +1,31 @@
+{
+  "summary": "Enthusiastic review of a fun Vegas show with a good band, though recording details are unknown",
+  "review": "The reviewer loved the Vegas performance, calling the band \"good\" and giving the recording a perfect five‑star rating. No specifics about sound quality or source are provided, so the audio aspect remains unclear while the musical impression is clearly positive.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "low",
+    "rationale": "A single enthusiastic 5‑star review praises the band's performance; lack of any recording commentary limits confidence and keeps the rating slightly below perfect."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "unknown",
+    "technical_notes": "No comments about sound source, clarity, or mix were made in the review."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "Reviewer notes a generally good band and enjoyable Vegas atmosphere but gives no detail on song order or set pacing."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-19T08:37:32.265171+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1995-05-21.153191.sony.bregman.miller.vernon.f1648"
+}

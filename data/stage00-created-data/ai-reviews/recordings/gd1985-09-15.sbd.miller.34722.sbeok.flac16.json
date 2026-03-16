@@ -1,0 +1,85 @@
+{
+  "summary": "Excellent Miller soundboard capture of a solid 1985 show highlighted by a scorching Scarlet > Fire, superb She Belongs to Me and a hot second set.",
+  "review": "The recording is a clean Miller‑sourced soundboard that delivers clear instrument separation and very good overall fidelity, with only minor leveling quirks in the first set. Musically the concert is praised for its energetic second set – especially Scarlet > Fire, She Belongs to Me, and the unusually long pre‑drums – while the first set offers strong bluesy solos and a standout Smokestack Lightnin'.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the show 3‑5 stars, highlighting numerous standout performances; recording quality is consistently described as excellent or very good, leading to a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Miller source noted as clear and well‑balanced; occasional early‑set leveling issues but overall crisp with excellent instrument definition."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Fire",
+      "She Belongs To Me",
+      "Comes A Time",
+      "Deal",
+      "Truckin'",
+      "US Blues",
+      "Satisfaction"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Unusual setlist with a short first set and an extended, high‑energy second set; long pre‑drums and a rare placement of US Blues/Satisfaction are noted as highlights rather than flaws."
+  },
+  "band_member_comments": {
+    "Jerry": "Bluesy, soaring solos praised; a minor vocal slip on Comes A Time is mentioned but overall his playing is tight.",
+    "Phil": "Bass work described as hot and driving, especially during Scarlet > Fire.",
+    "Bob": "Rhythm guitar praised on Smokestack Lightnin' and first‑set jams; a single flub noted in Truckin'.",
+    "Keys": "Brent (keyboard) receives strong praise for powerful solos throughout the second set; Merl Saunders era references but no criticism.",
+    "Drums": "Long pre‑drums and an energetic 1985 drums/space segment are highlighted as a high point."
+  },
+  "song_mentions": {
+    "Smokestack Lightnin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "She Belongs To Me": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Scarlet > Fire": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Dupree's": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "US Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Satisfaction": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T09:23:17.113865+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1985-09-15.sbd.miller.34722.sbeok.flac16"
+}

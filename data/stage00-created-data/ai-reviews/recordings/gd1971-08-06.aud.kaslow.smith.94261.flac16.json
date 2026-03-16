@@ -1,0 +1,44 @@
+{
+  "summary": "High‑energy 1971 Hollywood Palladium show captured in a clear audience recording, highlighted by a superb Hard to Handle performance.",
+  "review": "Fans rave about this late‑summer 1971 set, noting the powerful energy, memorable New Riders appearance and Pigpen’s stunning final organ work. The audience (AUD) tape is praised for its clarity and ambience, though one reviewer calls it poor, leaving the overall recording quality solid but not flawless.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "The majority of reviews (6/7) are highly positive about both performance and sound; only one cites poor audio, resulting in a strong overall rating with high confidence."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Most listeners describe the AUD tape as crisp and full of ‘thunder juice’, capturing audience excitement; one reviewer notes stage chatter and calls it a poor recording, indicating occasional mic issues."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hard to Handle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert flows with high energy, featuring an early New Riders set with Garcia on pedal steel, followed by classic Dead jams that keep the audience dancing, culminating in a standout Hard to Handle."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Pigpen's organ work is praised as stunning and noted as one of his last great performances on the instrument.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hard to Handle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-20T07:31:05.780122+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1971-08-06.aud.kaslow.smith.94261.flac16"
+}

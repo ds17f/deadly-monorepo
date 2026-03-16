@@ -1,0 +1,69 @@
+{
+  "summary": "Excellent soundboard recording with clean, sweet audio; the show shines on a stellar Morning Dew, beautiful Take You Home, and a killer Terrapin jam.",
+  "review": "The Charlie Miller‑remastered SBD sounds crystal‑clear and sweet, earning high praise from multiple listeners. Musically the concert delivers several highlights – Brent’s “Take You Home,” an emotional “Morning Dew,” a soaring Terrapin jam led by Jerry, plus solid performances of Brokedown Palace, New Minglewood Blues and Hey Pocky A‑Way – though a few reviewers note that the track‑list metadata is scrambled, which can be confusing.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Recording quality is consistently described as excellent; show quality is strong with many standout songs despite some mixed comments about track order and occasional lukewarm remarks."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Clean, sweet sound; praised Charlie Miller remaster; no major audio flaws noted. Complaints focus on track‑list ordering rather than sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Take You Home",
+      "Morning Dew",
+      "Terrapin",
+      "Brokedown Palace",
+      "New Minglewood Blues",
+      "Hey Pocky A-way"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Relaxed, fun vibe with strong jams; however the displayed track order is scrambled, causing confusion for listeners."
+  },
+  "band_member_comments": {
+    "Jerry": "Terrapin jam highlighted his lead work and was called a “killer” moment.",
+    "Phil": "Phil’s bass bombs on Morning Dew were specifically praised.",
+    "Bob": "",
+    "Keys": "Brent’s piano/keys on “Take You Home” described as beautiful; many miss Brent’s era.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Take You Home": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Brokedown Palace": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Terrapin": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "New Minglewood Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Hey Pocky A-way": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-16T17:20:47.517330+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-03-31.sbd.miller.32349.sbeok.flac16"
+}

@@ -1,0 +1,60 @@
+{
+  "summary": "A superb audience tape of a 1984 show that captures a smoking Help‑Slip‑Franklin’s sequence and an unforgettable Wharf Rat, with generally excellent sound despite some hall echo.",
+  "review": "The recording is widely praised as one of the best audience sources from the spring ’84 tour – the omni mics capture clear instrument separation and bring the Philly Civic Hall ambience to life, even if Jerry's guitar sits a bit low in the mix. Musically the concert shines on the second set, especially the Help > Slipknot > Franklin’s suite, the soaring Wharf Rat and a powerful Playing‑in‑the‑Band, while the first set is viewed as solid but less inspiring.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "The majority of reviews (20+) are enthusiastic about both performance and tape quality; show strength (70%) and recording excellence (30%) combine to a strong rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "good",
+    "technical_notes": "Omni mics placed ~30 ft back give a pleasant hall echo and good instrument separation; some reviewers note a slightly low Jerry guitar mix and occasional tape hiss, but overall the sound is clear and lively."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Playing in the Band",
+      "Wharf Rat",
+      "China Doll"
+    ],
+    "poor_songs": [
+      "China Doll (mixed opinions)",
+      "Playing in the Band (some reviewers found it uninspired)"
+    ],
+    "setlist_flow": "First set is solid but not remarkable; the second set erupts with a tight, adventurous flow – Help‑Slip‑Franklin’s builds into a deep Playing and culminates in an iconic Wharf Rat."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia’s vocals and lead work are repeatedly called “on” and “crushing,” though a few notes mention his guitar sitting low in the mix or occasional vocal roughness.",
+    "Phil": "Phil’s bass is described as “bombs” and “fat,” providing strong foundation throughout the night.",
+    "Bob": "",
+    "Keys": "Brent (keys) receives praise for vibrant organ work, especially on Minglewood and the jazzy textures in the second set.",
+    "Drums": "Two‑drummer setup is noted as balanced; drums do not dominate but add drive without muddying the mix."
+  },
+  "song_mentions": {
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 14,
+      "negative_mentions": 0,
+      "total_mentions": 14
+    },
+    "Playing in the Band": {
+      "positive_mentions": 5,
+      "negative_mentions": 2,
+      "total_mentions": 7
+    },
+    "Wharf Rat": {
+      "positive_mentions": 9,
+      "negative_mentions": 0,
+      "total_mentions": 9
+    },
+    "China Doll": {
+      "positive_mentions": 7,
+      "negative_mentions": 2,
+      "total_mentions": 9
+    }
+  },
+  "processed_date": "2025-09-14T16:25:52.988105+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd84-04-21.neumann.nawrocki.18253.sbeok.shnf"
+}

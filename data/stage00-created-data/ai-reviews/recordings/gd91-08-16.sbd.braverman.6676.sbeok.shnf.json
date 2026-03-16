@@ -1,0 +1,64 @@
+{
+  "summary": "Soundboard recording with good clarity captures a 1991 show highlighted by a scorching Scarlet > Victim > Fire sandwich and a novel first‑set Dark Star.",
+  "review": "The performance shines thanks to Bruce Hornsby’s piano driving the band, especially through the seamless Scarlet‑Victim‑Fire sequence and an energetic Jack Straw → Bertha opener. While most listeners praise the interplay and Jerry’s tone, a few note loose bass strings and a slightly recessed drum/keyboard mix, leaving the soundboard source solid but not pristine.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.9,
+    "confidence": "high",
+    "rationale": "The majority of reviews (over 70%) are highly positive about the musical moments and give 4‑5 stars, while a minority criticize recording balance and call the show average; weighted averaging yields ~3.9."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear soundboard source; some listeners report drums and Vince’s keyboards mixed far back, Jerry’s guitar slightly recessed, and Phil’s bass sounding loose/tinny on Jack Straw."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet > Victim > Fire",
+      "Dark Star (1st set)",
+      "Jack Straw → Bertha",
+      "Stuck Inside of Mobile"
+    ],
+    "poor_songs": [
+      "Dark Star (short version, cited as weak by a few reviewers)"
+    ],
+    "setlist_flow": "The first set is noted for the novelty of a brief Dark Star that opens the close, followed by a tight Jack Straw‑Bertha opener. The second set’s Scarlet‑Victim‑Fire sandwich flows seamlessly and is repeatedly called the highlight; overall pacing is praised though some feel energy dips in later songs."
+  },
+  "band_member_comments": {
+    "Jerry": "Interplay with Hornsby lauded; his tone, runs on Dark Star, and clear vocals receive consistent praise.",
+    "Phil": "Bass strings described as loose or tinny early in the show, but later noted for propelling Fire with great energy.",
+    "Bob": "",
+    "Keys": "Bruce Hornsby credited with driving the band forward, adding piano depth; Vince’s keyboards praised on solos yet mixed back in the mix.",
+    "Drums": "Some mention drums sounding distant in parts of the recording."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 12,
+      "negative_mentions": 2,
+      "total_mentions": 14
+    },
+    "Scarlet > Victim > Fire": {
+      "positive_mentions": 10,
+      "negative_mentions": 0,
+      "total_mentions": 10
+    },
+    "Jack Straw → Bertha": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Stuck Inside of Mobile": {
+      "positive_mentions": 4,
+      "negative_mentions": 2,
+      "total_mentions": 6
+    },
+    "Promised Land": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T23:16:11.137415+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd91-08-16.sbd.braverman.6676.sbeok.shnf"
+}

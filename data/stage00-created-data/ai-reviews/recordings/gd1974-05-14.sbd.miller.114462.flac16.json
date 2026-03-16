@@ -1,0 +1,100 @@
+{
+  "summary": "Studio‑quality soundboard captures a stellar May 14 1974 performance highlighted by a soaring Scarlet Begonias into Roses, tight Dark Star and a crisp Weather Report Suite.",
+  "review": "The Miller SBD upgrade delivers crystal‑clear, warm mix that sounds almost commercial, with every instrument well defined. The show itself is a fan favorite – the first set builds into a spectacular Scarlet Begonias → Must Have Been The Roses, while the second set offers a tight Dark Star, flawless Weather Report Suite and punchy U.S. Blues. Minor flaws (a tape‑flip on China Doll and a few early‑set mix quirks) do not detract from an overall outstanding performance.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Consistently high praise for both the recording (studio‑like clarity) and the musical performance, with only isolated minor issues; weighted rating yields a strong 4.6/5."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Crisp, warm mix with studio‑like clarity; occasional tape‑flip on China Doll and slight pitch variance but overall superb sound."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias → Must Have Been The Roses",
+      "Dark Star",
+      "Weather Report Suite",
+      "U.S. Blues",
+      "Deal"
+    ],
+    "poor_songs": [
+      "China Doll"
+    ],
+    "setlist_flow": "Early songs sound a bit thin as the band dials in the mix, but the second set erupts with sustained energy and seamless segues; overall pacing is tight and rewarding."
+  },
+  "band_member_comments": {
+    "Jerry": "Guitar tone described as perfect/studio quality; Deal solo called one of the best ever; generally praised for tight playing throughout.",
+    "Phil": "Bass work highlighted as strong, especially on Big River and Row Jimmy; backing vocals noted as key to the sound.",
+    "Bob": "",
+    "Keys": "Keith G lauded for great piano/organ work – both grand piano and electric Rhodes shine, particularly on Begonias and Weather Report Suite.",
+    "Drums": "Bill's drumming described as crisp, marching‑band like power that drives the set."
+  },
+  "song_mentions": {
+    "Scarlet Begonias → Must Have Been The Roses": {
+      "positive_mentions": 8,
+      "negative_mentions": 0,
+      "total_mentions": 8
+    },
+    "Dark Star": {
+      "positive_mentions": 5,
+      "negative_mentions": 1,
+      "total_mentions": 6
+    },
+    "Weather Report Suite": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "U.S. Blues": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Deal": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Big River": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Row Jimmy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playin' in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "China Doll": {
+      "positive_mentions": 1,
+      "negative_mentions": 2,
+      "total_mentions": 3
+    },
+    "Must Have Been The Roses": {
+      "positive_mentions": 3,
+      "negative_mentions": 1,
+      "total_mentions": 4
+    }
+  },
+  "processed_date": "2025-09-22T19:09:43.366777+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1974-05-14.sbd.miller.114462.flac16"
+}

@@ -1,0 +1,84 @@
+{
+  "summary": "Clean soundboard recording with a slightly odd mix, but the show shines thanks to stellar Dark Star, Good Lovin' jam and emotive performances throughout.",
+  "review": "Fans rave about this 1970 gem – Jerry’s soulful lead on Dark Star and High Time, Bob Weir’s inspired jams in Good Lovin' and Cold Rain & Snow, and a seamless flow that stitches together High Time → Dark Star → The Other One → St. Stephen → NFA → Lovelight → Me and My Uncle. The soundboard source is generally clean, though the stereo split (instruments on one side, vocals on the other) feels unusual.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "high",
+    "rationale": "Consistently high star ratings (mostly 4‑5), strong praise for musical performance and only minor comments about a quirky mix, indicating an excellent show with good recording quality."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clean overall sound but unusual stereo separation (most instruments on one channel, vocals on the other) and a brief cut of the opening Morning Dew."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dark Star",
+      "Good Lovin'",
+      "Cold Rain & Snow",
+      "High Time",
+      "Lovelight",
+      "Me and My Uncle"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The concert is praised for its inventive segues – High Time flowing into a spacey Dark Star, which morphs into The Other One, then a crisp St. Stephen → NFA transition leading to an ecstatic Lovelight that beautifully leads into Me and My Uncle."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for soulful, soaring lead work on Dark Star, High Time and the overall emotional intensity of the set.",
+    "Phil": "",
+    "Bob": "Highlighted for his standout jam in Good Lovin' and beautiful phrasing on Cold Rain & Snow.",
+    "Keys": "",
+    "Drums": "Described as jazzy and tight; drum breaks into St. Stephen and NFA are noted as particularly effective."
+  },
+  "song_mentions": {
+    "Dark Star": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Good Lovin'": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cold Rain & Snow": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "High Time": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "St. Stephen": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Lovelight": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Me and My Uncle": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Morning Dew": {
+      "positive_mentions": 1,
+      "negative_mentions": 1,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-19T17:52:19.882909+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd70-03-24.sbd.hollister.2990.sbeok.shnf"
+}

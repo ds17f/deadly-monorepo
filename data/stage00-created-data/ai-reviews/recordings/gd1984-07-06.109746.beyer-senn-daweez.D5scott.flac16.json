@@ -1,0 +1,39 @@
+{
+  "summary": "A decent overall show that’s elevated by an unforgettable, blistering version of Dear Mr. Fantasy; recording source and sound quality are not specified.",
+  "review": "The performance is described as average but gets a major boost from what reviewers call the most impassioned and unforgettable rendition of Dear Mr. Fantasy the band ever played. No details about the tape source or audio fidelity are given, so the technical side remains unknown, while the musical highlight makes the show worth a higher rating.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.0,
+    "confidence": "low",
+    "rationale": "Only one review; strong positive comment about Dear Mr. Fantasy raises overall impression, but lack of recording details limits certainty."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No reviewer comments on soundboard vs. audience, clarity, or mix; recording quality cannot be assessed from the available feedback."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Dear Mr. Fantasy"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Overall considered average, but the performance is dramatically uplifted by the Dear Mr. Fantasy rendition."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Dear Mr. Fantasy": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-14T19:55:40.321092+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1984-07-06.109746.beyer-senn-daweez.D5scott.flac16"
+}

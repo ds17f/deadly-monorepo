@@ -1,0 +1,31 @@
+{
+  "summary": "Highly rated recording but no specific details on sound or performance were provided",
+  "review": "The sole review gives the recording a perfect five‑star rating, indicating strong overall appreciation. However, the reviewer offers no commentary on the audio source, mix quality, or musical highlights, leaving the exact strengths of this show unclear.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.5,
+    "confidence": "low",
+    "rationale": "A single five‑star review suggests a very positive impression, but the lack of any descriptive feedback limits confidence in assessing both performance and recording quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No specific comments about sound clarity, mix balance, or source type were provided."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No commentary on set structure or pacing was given."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-20T12:30:10.810583+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-03-26.136689.sbd.sirmick.flac1648"
+}

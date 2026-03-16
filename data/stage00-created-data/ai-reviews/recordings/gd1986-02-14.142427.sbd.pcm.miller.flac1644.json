@@ -1,0 +1,39 @@
+{
+  "summary": "High‑energy show with a face‑melting Terrapin Station; solid SBD source needing a touch of EQ warmth",
+  "review": "The three reviewers are uniformly enthusiastic, praising the performance—especially an incendiary rendition of “Terrapin Station”—and noting that the soundboard recording is clear but could benefit from a bit of EQ warming, which is typical for SBDs. Overall the music is described as excellent and the technical quality as good enough to enjoy without major issues.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "medium",
+    "rationale": "All three reviews are positive (5, 5, 4 stars) and highlight both strong musical performance and acceptable recording quality; limited detail keeps confidence at medium."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear SBD capture but a little EQ‑warming is desired, which is common for this source type"
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Terrapin Station"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on pacing, but reviewers imply the entire set was solid with Terrapin as a high point"
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Terrapin Station": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-15T12:53:08.350294+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-02-14.142427.sbd.pcm.miller.flac1644"
+}

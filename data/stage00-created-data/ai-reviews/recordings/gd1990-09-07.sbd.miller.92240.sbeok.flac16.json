@@ -1,0 +1,69 @@
+{
+  "summary": "Solid sound‑board capture with a few uneven spots, showcasing a fiery post‑Brent show highlighted by an explosive Crazy Fingers and soaring Bird Song.",
+  "review": "The recording is a sound‑board source that is generally clear but a bit uneven in places, yet it still conveys the raw energy of the night. The performance is praised for Jerry’s incendiary playing, Vince’s debut on synth, and standout moments like Crazy Fingers, Bird Song, Playing In The Band and Space. Overall fans view this as one of the best shows from the early Vince era despite a rough start to Cold Rain.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Most reviewers (9/11) gave 4‑5 stars and highlighted strong musical moments; recording comments note only minor unevenness, leading to a high combined rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Generally clear with occasional uneven frequency balance; a rough start on Cold Rain and some minor EQ issues are mentioned but no major drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Crazy Fingers",
+      "Bird Song",
+      "Playing in the Band",
+      "Space"
+    ],
+    "poor_songs": [
+      "Cold Rain"
+    ],
+    "setlist_flow": "The concert is described as an emotional tribute after Brent’s death, with Vince integrating smoothly mid‑show and Jerry delivering fire‑brand leads; the set builds from a tentative opening into a powerful second half."
+  },
+  "band_member_comments": {
+    "Jerry": "Repeatedly called 'on fire' and praised for his incendiary lead work, though one reviewer notes a general decline in his playing during this era.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Vince's synth debut is lauded as impressive; the shift from Brent’s organ to Vince’s keyboards is viewed positively.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Crazy Fingers": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Bird Song": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Space": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Cold Rain": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Black Peter": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T11:09:45.755124+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-09-07.sbd.miller.92240.sbeok.flac16"
+}

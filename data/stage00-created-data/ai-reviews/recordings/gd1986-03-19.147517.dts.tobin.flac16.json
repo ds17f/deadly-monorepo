@@ -1,0 +1,31 @@
+{
+  "summary": "Review flags a mislabeling issue – files are LPCM, not DTS, with no musical commentary provided.",
+  "review": "The sole review notes that the upload appears to be plain LPCM audio rather than the advertised DTS format, suggesting a labeling error. No details about the performance or sound quality are given, and the reviewer gave it zero stars, indicating strong dissatisfaction.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.2,
+    "confidence": "low",
+    "rationale": "Only one brief, negative review focusing on a file‑type mismatch; no positive show or recording comments to boost the rating."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "poor",
+    "technical_notes": "Reviewer reports files are LPCM rather than DTS, implying a possible labeling error and lack of expected high‑resolution surround sound."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": ""
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T13:02:51.904243+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-19.147517.dts.tobin.flac16"
+}

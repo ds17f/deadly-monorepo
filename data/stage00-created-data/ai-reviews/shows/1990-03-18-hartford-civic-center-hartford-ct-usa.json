@@ -1,0 +1,86 @@
+{
+  "summary": "Epic Morning Dew finale, tight Shakedown Street, Brent's soaring keys",
+  "blurb": "The set opens with a punchy Shakedown Street and rolls through blues‑heavy numbers before launching into a seamless second‑set flow that peaks with the classic Morning Dew. Brent Mydland’s organ drives the energy while Phil Lesh delivers an unforgettable bass solo on Dew.",
+  "review": "On March 18, 1990 at the Hartford Civic Center, the Dead delivered one of the spring ’90 tour’s most fluid performances. A bright Shakedown Street kicked off a first set that moved through Little Red Rooster, Stagger Lee and Mexicali Blues with tight interplay, but it was the second set that truly shone—Jerry’s experimental guitar tones and Brent’s organ swells carried the band through an immaculate He’s Gone → Truckin' → Spoonful → Space jam, into a soaring Looks Like Rain, and culminated in an emotional Morning Dew that featured Phil’s “unreal” bass solo. The show is highlighted by strong transitions, Brent’s moaning keyboards, and a rhythm section that stays crisp throughout, making this night a must‑listen for anyone chasing the ’90 era flow.",
+  "ratings": {
+    "average_rating": 0.0,
+    "ai_rating": 4.1,
+    "confidence": "high",
+    "rating_calculation": {
+      "base_rating": 2.5,
+      "review_count_total": 21,
+      "review_count_boost": 0.2,
+      "sentiment_adjustment": 1.4,
+      "sentiment_rationale": "Four out of five recordings are marked positive and one mixed, with consistent praise for the set flow, Brent's keyboards, Jerry's adventurous tones, and standout songs like Morning Dew and Shakedown Street. No recurring negative comments were found, just a single mixed note, warranting a strong positive adjustment.",
+      "final_calculation": "2.5 + 0.2 + 1.4 = 4.1"
+    }
+  },
+  "best_recording": {
+    "identifier": "gd90-03-18.sbd.huck.9364.sbeok.shnf",
+    "reason": "Good‑quality soundboard with clear mix; despite a minor splice in Shakedown, it captures the full set and Brent’s keyboard brilliance."
+  },
+  "key_highlights": [
+    "Brent Mydland’s organ dominates, especially on Shakedown Street, Iko Iko and Spoonful.",
+    "Phil Lesh’s bass solo during Morning Dew is a show‑stopping moment.",
+    "Seamless He’s Gone → Truckin' → Spoonful → Space jam sequence in the second set.",
+    "Morning Dew close delivers an emotional climax with tight band interplay."
+  ],
+  "song_highlights": [
+    "Shakedown Street",
+    "Little Red Rooster",
+    "Stagger Lee",
+    "Mexicali Blues",
+    "Looks Like Rain",
+    "He's Gone",
+    "Truckin'",
+    "Spoonful",
+    "Iko Iko",
+    "The Music Never Stopped",
+    "Morning Dew",
+    "All Along The Watchtower"
+  ],
+  "band_performance": {
+    "Jerry": "Adventurous guitar work shines with slide solos, MIDI textures and experimental tones that add color without overwhelming the mix.",
+    "Phil": "Lays down a thunderous low‑end, dropping bombs throughout; his bass solo on Morning Dew is highlighted as \"unreal\".",
+    "Bob": "Provides energetic rhythm guitar, especially effective in early blues numbers like Shakedown Street and Little Red Rooster.",
+    "Brent": "Consistently praised for moaning, grooving organ work that drives the set, delivering standout moments on Shakedown Street, Iko Iko, Looks Like Rain and Spoonful.",
+    "Mickey": "Locks in tight, supportive drumming; adds texture during improvisational passages.",
+    "Billy": "Pairs with Mickey for a solid, tight rhythm foundation, particularly evident in the second‑set jams."
+  },
+  "processed_recordings": 5,
+  "processed_date": "2025-09-17T03:58:29.926450+00:00",
+  "model_used": "gpt-oss-120b",
+  "processing_status": "completed",
+  "must_listen_sequences": [
+    [
+      "Shakedown Street",
+      "Little Red Rooster"
+    ],
+    [
+      "Stagger Lee"
+    ],
+    [
+      "Me And My Uncle",
+      "Mexicali Blues"
+    ],
+    [
+      "Looks Like Rain"
+    ],
+    [
+      "He's Gone",
+      "Truckin'",
+      "Spoonful",
+      "Drums",
+      "Space",
+      "The Wheel",
+      "All Along The Watchtower",
+      "Morning Dew"
+    ],
+    [
+      "Iko Iko"
+    ],
+    [
+      "The Music Never Stopped"
+    ]
+  ]
+}

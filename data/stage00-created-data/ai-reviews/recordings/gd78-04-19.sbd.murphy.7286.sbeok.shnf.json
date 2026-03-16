@@ -1,0 +1,46 @@
+{
+  "summary": "Excellent soundboard recording with crystal‑clear levels; the show shines thanks to a standout Werewolves of London and an upbeat first set.",
+  "review": "The tape is a pristine Gans/Betty’s Board capture – levels are perfect, the mix clean and the audience ambience minimal. Musically the concert delivers an energetic first set and a historically interesting second set highlighted by the debut of Warren Zevon’s Werewolves of London, though some listeners note off‑time vocals from Jerry and a weak appearance by Donna Dogchow on The Other One.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "high",
+    "rationale": "Six detailed reviews give an average of 4.2 stars; the majority praise both performance and recording, with only one negative comment that does not outweigh the overall enthusiasm."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Listeners repeatedly describe the tape as \"very clean\", \"perfect levels\" and \"crisp\"; no significant drop‑outs or muddiness are reported."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Werewolves of London"
+    ],
+    "poor_songs": [
+      "The Other One"
+    ],
+    "setlist_flow": "First set described as upbeat and well played; second set noted as interesting with a historic debut of Werewolves of London, though the track list mislabeling (Deal vs Samson) caused minor confusion."
+  },
+  "band_member_comments": {
+    "Jerry": "Vocal timing was off on some verses, but his slide guitar work received praise.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Werewolves of London": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-25T11:26:57.195736+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd78-04-19.sbd.murphy.7286.sbeok.shnf"
+}

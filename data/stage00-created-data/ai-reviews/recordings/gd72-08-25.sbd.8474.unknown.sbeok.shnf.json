@@ -1,0 +1,81 @@
+{
+  "summary": "Clear soundboard recording captures a standout 8‑25‑72 show with a monster Other One → Comes A Time jam and superb Jack Straw, despite being only a partial set.",
+  "review": "The audience‑sourced soundboard tape delivers excellent separation and balance, letting every nuance of Jerry’s white Strat shine.  The performance is praised as one of the best of ’72 – tight first‑set numbers like Black‑Throated Wind, Loser and El Paso flow into a second‑set monster featuring Other One → Comes A Time and an exquisite Jack Straw.  The only drawback noted is that the recording appears to be incomplete, covering just part of the concert.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "medium",
+    "rationale": "Most reviewers give 4‑5 stars and highlight exceptional playing and a very clear recording, though several note the set is only partial which keeps the rating from being higher."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "Clear, well‑balanced mix with perfect instrument separation; some reviewers call it \"best concert sound\" while others note only a partial (first‑set) capture."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Jack Straw",
+      "The Other One",
+      "Comes A Time",
+      "Black-Throated Wind",
+      "Loser",
+      "Down the Line",
+      "He's Gone",
+      "El Paso"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "Early on‑stage tech hiccups gave way to tight ensemble playing; the first set is strong and the second set delivers expansive jams, though the recording’s incompleteness affects overall flow."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for a \"phat white Strat\", perfect tone, poignant playing on Comes A Time and immaculate dual‑guitar work.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Black-Throated Wind": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Loser": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Down the Line": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "He's Gone": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "El Paso": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Jack Straw": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Comes A Time": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T16:35:31.134911+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd72-08-25.sbd.8474.unknown.sbeok.shnf"
+}

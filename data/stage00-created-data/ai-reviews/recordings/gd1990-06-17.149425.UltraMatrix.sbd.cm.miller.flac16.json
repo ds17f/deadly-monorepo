@@ -1,0 +1,39 @@
+{
+  "summary": "Enthusiastic fans rave about a stellar Stella Blue performance, though the recording’s technical quality isn’t described.",
+  "review": "The lone five‑star review is all excitement for the band's rendition of “Stella Blue,” calling it “friction amazing.” No details are given about the source or sound quality, so the recording remains uncharacterized beyond its UltraMatrix label. Overall sentiment is overwhelmingly positive based on the song’s praise.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.3,
+    "confidence": "low",
+    "rationale": "Only one brief, highly positive review mentions a standout performance but gives no recording details; rating reflects strong show impression with unknown audio quality."
+  },
+  "recording_quality": {
+    "source_type": "unknown",
+    "quality_rating": "fair",
+    "technical_notes": "No comments on sound clarity, mix, or source type were provided by reviewers."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Stella Blue"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "No information about set structure or pacing was mentioned."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Stella Blue": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T08:04:14.030727+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1990-06-17.149425.UltraMatrix.sbd.cm.miller.flac16"
+}

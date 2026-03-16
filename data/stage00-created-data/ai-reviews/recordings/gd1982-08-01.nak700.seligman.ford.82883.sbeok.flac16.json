@@ -1,0 +1,58 @@
+{
+  "summary": "Fair‑quality audience tape captures a hot Oklahoma show with a standout second set (Playing > Iko transition and The Wheel) despite multiple cassette generations.",
+  "review": "The recording is an audience capture taken from several generations of cassette with Dolby noise reduction, so the sound is only fair but still conveys the concert’s energy. Musically the band shines in the second set – the seamless Playing‑in‑the‑Band to Iko Iko transition and a smooth rendition of The Wheel are repeatedly praised, though Lost/Saint feels indecisive. Overall the show is remembered fondly despite the oppressive heat.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.1,
+    "confidence": "high",
+    "rationale": "Most reviewers rate the performance 4‑5 stars and highlight strong second‑set moments; recording quality is noted as only fair, yielding a solid combined score."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "Several cassette generations with Dolby noise reduction introduce tape hiss and limited clarity, but the tape captures the concert’s ambience."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Playing in the Band",
+      "Iko Iko",
+      "The Wheel"
+    ],
+    "poor_songs": [
+      "Lost Sailor / Saint of Circumstance"
+    ],
+    "setlist_flow": "An extremely hot first set left everyone weary, but the second set revived the vibe with a bright Playing‑>Iko opening and a smooth The Wheel; overall pacing improves after the heat wears down."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Playing in the Band": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Iko Iko": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "The Wheel": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lost Sailor / Saint of Circumstance": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T22:44:36.441061+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1982-08-01.nak700.seligman.ford.82883.sbeok.flac16"
+}

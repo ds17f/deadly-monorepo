@@ -1,0 +1,31 @@
+{
+  "summary": "Audience‑only tape mislabeled as soundboard; loud crowd overwhelms a decent show",
+  "review": "Both reviewers note that the recording is not a soundboard but an audience tape with a very loud crowd, making the audio hard to enjoy. They do mention the concert itself was a \"great show,\" but the mislabeling and poor sonic clarity dominate their criticism.",
+  "sentiment": "negative",
+  "ai_rating": {
+    "stars": 1.5,
+    "confidence": "medium",
+    "rationale": "Both reviewers gave 1‑star ratings, focusing on the faulty labeling and noisy audience; while they praise the performance, the recording issues drive the overall rating down."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "poor",
+    "technical_notes": "Loud audience bleed throughout; misidentified as a soundboard (SBD) leading to disappointment."
+  },
+  "show_quality": {
+    "standout_songs": [],
+    "poor_songs": [],
+    "setlist_flow": "No specific comments on set structure; reviewers simply call it a \"great show\" without detailing songs."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {},
+  "processed_date": "2025-09-15T13:09:22.708024+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1986-03-20.sbd.fishman.107321.flac16"
+}

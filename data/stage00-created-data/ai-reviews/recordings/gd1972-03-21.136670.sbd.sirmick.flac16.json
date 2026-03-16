@@ -1,0 +1,117 @@
+{
+  "summary": "Soundboard recording with some hum issues captures a stellar early‑’72 show featuring the first Looks Like Rain, The Stranger and a blazing Ramble on Rose.",
+  "review": "The performance is consistently high‑energy, highlighted by Jerry Garcia’s sublime pedal‑steel on Looks Like Rain, the debut of The Stranger, and one of the best ever Ramble on Rose jams.  Although the SBD source suffers from hum, occasional clipping and mis‑labeling that require EQ and pitch correction, the music more than makes up for the technical flaws.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.7,
+    "confidence": "high",
+    "rationale": "All three reviewers give five‑star ratings and praise the musical performance; only modest recording defects are noted, so the weighted average (70 % show + 30 % recording) yields a high overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "fair",
+    "technical_notes": "Hum/persistent buzz throughout, some missing tracks (e.g., Chinatown), clipped beginnings, mislabeled files and a need for pitch correction on Casey Jones & Saturday Night; however the overall mix is clearer than most SBDs after EQ and hum reduction."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Looks Like Rain",
+      "The Stranger",
+      "Ramble on Rose",
+      "Big Railroad Blues",
+      "One More Saturday Night",
+      "Truckin'",
+      "Greatest Story Ever Told"
+    ],
+    "poor_songs": [
+      "Me & My Uncle"
+    ],
+    "setlist_flow": "A marathon first set (≈2 hrs) that builds into an expansive second set (≈1.5 hrs); the show flows well with several first‑time debuts and extended jams that keep the momentum high."
+  },
+  "band_member_comments": {
+    "Jerry": "Pedal‑steel on Looks Like Rain is described as “utterly sublime”; his solo at the end of Greatest Story receives special praise.",
+    "Phil": "",
+    "Bob": "Bobby’s rhythm guitar work is called “incredible” (especially on Tennessee Jed) and generally drives the band forward.",
+    "Keys": "Keith’s part disappears in Chinatown; otherwise no specific keyboard commentary.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Looks Like Rain": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Greatest Story Ever Told": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Mr. Charlie": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Tennessee Jed": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Playing in the Band": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Next Time You See Me": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Truckin'": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "The Other One": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "The Stranger": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Ramble on Rose": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Me & My Uncle": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Big Railroad Blues": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Not Fade Away": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Goin' Down the Road Feeling Bad": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "One More Saturday Night": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-20T12:01:34.198403+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1972-03-21.136670.sbd.sirmick.flac16"
+}

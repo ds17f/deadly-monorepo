@@ -1,0 +1,93 @@
+{
+  "summary": "Excellent soundboard capture of an Oct‑22‑89 show with a soaring Birdsong, stellar post‑Franklin’s space jam and solid second‑set jams, though Blow Away falls flat.",
+  "review": "The recording is a clean, well‑mastered soundboard tape that lets the band’s late‑‘80s resurgence shine. The second set delivers highlights – a 15‑minute Birdsong, an inspired post‑Franklin’s space jam, Slipknot and Help>Slip>Franklin’s sequences, plus strong performances from Jerry on his “Wolf” guitar. The first set is uneven and Blow Away is consistently called out as weak, but the overall show is regarded as a solid example of the 1989 fall tour.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 4.2,
+    "confidence": "high",
+    "rationale": "Most reviewers praise the musical peaks and the pristine soundboard source; only a few note specific song flaws (Blow Away) and some broader era‑bias criticism, yielding a strong but not flawless overall score."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as ultra‑clean, sterile, top‑quality mastering (Charlie Miller). No major dropouts; occasional comments about “rough spots” refer to performance rather than audio."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Birdsong",
+      "Post‑Franklin's Space Jam",
+      "Help on the Way > Slipknot! > Franklin's Tower",
+      "Slipknot Jam",
+      "Samson & Delilah",
+      "Miracle",
+      "Stella",
+      "Queen Jane"
+    ],
+    "poor_songs": [
+      "Blow Away"
+    ],
+    "setlist_flow": "First set considered uneven/so‑so, but the second set is a showcase of extended jams and tight transitions; unusual placement of Help>Slip>Franklin’s works well."
+  },
+  "band_member_comments": {
+    "Jerry": "Comfortable on his “Wolf” guitar all tour; solos highlighted on Queen Jane and praised for melodic “gossamer buttress notes”.",
+    "Phil": "Some reviewers felt Lesh’s presence was diminished compared to earlier years.",
+    "Bob": "",
+    "Keys": "Brent’s keyboard work criticized on Blow Away (forgot lyrics) but noted for using MIDI during the tour.",
+    "Drums": "Space jam after Franklin's praised; drums contribute strongly to the post‑Franklin’s improvisation."
+  },
+  "song_mentions": {
+    "Birdsong": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Blow Away": {
+      "positive_mentions": 0,
+      "negative_mentions": 2,
+      "total_mentions": 2
+    },
+    "Post‑Franklin's Space Jam": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Help on the Way > Slipknot! > Franklin's Tower": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Slipknot Jam": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Samson & Delilah": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Miracle": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Stella": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Queen Jane": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Dark Star": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-17T01:17:37.128560+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd1989-10-22.sbd.walker-scotton.miller.83319.sbeok.flac16"
+}

@@ -1,0 +1,63 @@
+{
+  "summary": "Soundboard recording plagued by tape hiss and cuts, yet a few gems like Casey Jones and Lovelight manage to shine through.",
+  "review": "The three reviews paint a picture of an uneven July‑4‑1969 show: the soundboard source suffers from noticeable tape hiss, frequent splices and gnarly audio after “Me & My Uncle,” making most of the performance hard to enjoy. Still, listeners highlight a standout version of “Casey Jones” and the closing minutes of “Lovelight” as bright spots, with Jerry Garcia’s guitar and vocal work receiving specific praise.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Recording quality is poor (major tape hiss, cuts) while the musical performance has a few strong moments but overall is inconsistent; weighted average yields an approximate 3‑star rating."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "poor",
+    "technical_notes": "Tape hiss throughout, numerous cuts and splices, audio becomes unbearable after \"Me & My Uncle\" except for the final minutes of \"Lovelight\". Overall sound is described as gnarly and bad."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Casey Jones",
+      "Lovelight"
+    ],
+    "poor_songs": [
+      "Slewfoot",
+      "Let Me In"
+    ],
+    "setlist_flow": "A transitional show featuring early versions of future staples; the set feels uneven and is hampered by serious audio problems."
+  },
+  "band_member_comments": {
+    "Jerry": "Garcia's guitar tone and vocals are praised on \"Casey Jones\".",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Me & My Uncle": {
+      "positive_mentions": 0,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Lovelight": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Casey Jones": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Slewfoot": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    },
+    "Let Me In": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-24T16:04:31.831215+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd69-07-04.sbd.cotsman.4360.sbeok.shnf"
+}

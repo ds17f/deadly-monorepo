@@ -1,0 +1,58 @@
+{
+  "summary": "Good‑soundboard capture of a raw, adventurous show highlighted by a scorching Hey Pocky Way→IKO jam but marred by sloppy moments like Saint of Circumstance",
+  "review": "The recording is a solid soundboard source with clear mix and no major audio flaws. Musically the concert feels charged and improvisational – the Hey Pocky Way→IKO sequence, Cold Rain and an enthusiastic Alabama Getaway stand out, while the second‑set Saint of Circumstance drags the vibe down and many listeners note overall sloppiness.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.0,
+    "confidence": "medium",
+    "rationale": "Show quality is uneven – some standout jams but several reviewers call the performance sloppy or one of the worst shows – while the recording itself is clean, yielding an overall rating around average."
+  },
+  "recording_quality": {
+    "source_type": "soundboard",
+    "quality_rating": "good",
+    "technical_notes": "No significant audio complaints; mix is clear. One reviewer wondered about missing vocals after the first verse of Hey Pocky Way→IKO, but overall the sound is crisp and well‑balanced."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Hey Pocky Way > IKO",
+      "Cold Rain",
+      "Alabama"
+    ],
+    "poor_songs": [
+      "Saint of Circumstance"
+    ],
+    "setlist_flow": "An oddball, adventurous set‑list that jumps from Foolish Heart into Alabama and the pocky/IKO sequence early; the show feels raw and inspired but often sloppy, giving a mixed sense of energy."
+  },
+  "band_member_comments": {
+    "Jerry": "One reviewer noted Jerry watching Brent’s zonked‑out keyboard solo with a puzzled look.",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Brent Mydland’s organ/keyboard work on Hey Pocky Way→IKO is praised as “hot” and likened to ‘the Jerry Garcia of the keyboards.’",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Hey Pocky Way > IKO": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Cold Rain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Alabama": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Saint of Circumstance": {
+      "positive_mentions": 0,
+      "negative_mentions": 1,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-16T19:40:26.185837+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd89-06-18.sbd.wiley.9053.sbeok.shnf"
+}

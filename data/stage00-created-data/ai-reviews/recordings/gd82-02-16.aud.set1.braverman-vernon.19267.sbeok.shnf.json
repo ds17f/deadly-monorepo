@@ -1,0 +1,44 @@
+{
+  "summary": "Audience‑sourced recording with mixed sound clarity captures a jam‑heavy set highlighted by a fiery Scarlet Begonias > Fire On The Mountain sequence.",
+  "review": "The show is praised for its strong jamming vibe and a standout Scarlet Begonias > Fire On The Mountain transition, though some listeners find the audio quality uneven—one calls it terrible while another lauds the immersive audience feel. Overall the performance sits in the middle ground, offering decent enjoyment for fans who value the band's live energy over pristine sound.",
+  "sentiment": "mixed",
+  "ai_rating": {
+    "stars": 3.4,
+    "confidence": "medium",
+    "rationale": "Show quality is mixed (some rave about jamming, others call it mediocre) and recording quality is contradictory (terrible vs. great audience feel). Weighted average yields a mid‑range rating."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "fair",
+    "technical_notes": "One reviewer calls the audio terrible with muffled bass guitar and occasional drum bleed, while another praises it as an immersive audience recording that feels like being there."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "Scarlet Begonias > Fire On The Mountain"
+    ],
+    "poor_songs": [],
+    "setlist_flow": "The set is described as jam‑heavy and enjoyable, with the second night (this recording) sounding great to some listeners despite overall mixed impressions of the performance."
+  },
+  "band_member_comments": {
+    "Jerry": "",
+    "Phil": "",
+    "Bob": "",
+    "Keys": "Keyboard work noted as sweet on 'Friend of the Devil'.",
+    "Drums": ""
+  },
+  "song_mentions": {
+    "Scarlet Begonias > Fire On The Mountain": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Friend of the Devil": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    }
+  },
+  "processed_date": "2025-09-13T18:11:46.884806+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd82-02-16.aud.set1.braverman-vernon.19267.sbeok.shnf"
+}

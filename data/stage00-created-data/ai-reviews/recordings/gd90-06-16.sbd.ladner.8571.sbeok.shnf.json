@@ -1,0 +1,78 @@
+{
+  "summary": "An outstanding summer‑’90 show with crystal‑clear audience recording, highlighted by a monster China > Rider and a sizzling Estimated freakout.",
+  "review": "Fans rave about the superb audio – crisp instrument separation that makes this arguably the best audience tape of the era – and the high‑energy performance.  Brent’s vocals and keyboards are on fire, Jerry’s midi‑enhanced guitar shines, and the second set delivers a legendary China > Rider jam plus an unforgettable Estimated freakout.  Minor gripes (a slightly slow tempo and a faster‑than‑ideal Truckin') do little to dent the overall excitement.",
+  "sentiment": "positive",
+  "ai_rating": {
+    "stars": 4.6,
+    "confidence": "high",
+    "rationale": "Over a dozen enthusiastic 4–5‑star reviews praise both musical performance and audio fidelity; only minor tempo comments appear, so the combined show (70%) and recording (30%) score is very high."
+  },
+  "recording_quality": {
+    "source_type": "audience",
+    "quality_rating": "excellent",
+    "technical_notes": "Described as ‘crispy’, with superb instrument separation; many call it the best audience tape they’ve heard. One reviewer suspects a matrix blend, but overall the sound is clear, balanced and free of noticeable drop‑outs."
+  },
+  "show_quality": {
+    "standout_songs": [
+      "China > Rider",
+      "Estimated",
+      "Terrapin Station",
+      "Big Boss Man",
+      "Let the Good Times Roll",
+      "Truckin'",
+      "Touch of Grey"
+    ],
+    "poor_songs": [
+      "Truckin' (could be a little faster)",
+      "Overall tempo felt a bit slow"
+    ],
+    "setlist_flow": "A high‑energy summer ’90 set with an unusual opener (LTGTR > Truckin' > Touch of Grey) that sets a ‘no‑messing‑around’ vibe, followed by a jam‑heavy second set anchored by the epic China > Rider and extended Estimated freakout."
+  },
+  "band_member_comments": {
+    "Jerry": "Praised for crisp guitar tone, creative midi effects and overall brilliance; described as “BREEEEENT”.",
+    "Phil": "Bass work noted on the China jam and a few ‘phil‑bombs’; saves the day later in the set.",
+    "Bob": "Bobby’s vocal improvisations on Estimated highlighted as one of his top ten freakouts.",
+    "Keys": "Brent Mydland’s keyboards and vocals are described as “on fire”, delivering strong counterpoint and memorable moments.",
+    "Drums": "Mickey’s Japanese‑style drums and the dual‑drummer runs on Terrapin are singled out for excitement."
+  },
+  "song_mentions": {
+    "China > Rider": {
+      "positive_mentions": 5,
+      "negative_mentions": 0,
+      "total_mentions": 5
+    },
+    "Estimated": {
+      "positive_mentions": 4,
+      "negative_mentions": 0,
+      "total_mentions": 4
+    },
+    "Truckin'": {
+      "positive_mentions": 2,
+      "negative_mentions": 1,
+      "total_mentions": 3
+    },
+    "Terrapin Station": {
+      "positive_mentions": 3,
+      "negative_mentions": 0,
+      "total_mentions": 3
+    },
+    "Big Boss Man": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    },
+    "Let the Good Times Roll": {
+      "positive_mentions": 1,
+      "negative_mentions": 0,
+      "total_mentions": 1
+    },
+    "Touch of Grey": {
+      "positive_mentions": 2,
+      "negative_mentions": 0,
+      "total_mentions": 2
+    }
+  },
+  "processed_date": "2025-09-17T07:51:39.855497+00:00",
+  "model_used": "gpt-oss-120b",
+  "recording_id": "gd90-06-16.sbd.ladner.8571.sbeok.shnf"
+}
