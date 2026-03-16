@@ -52,3 +52,19 @@ iosApp/fastlane/report.xml
 iosApp/fastlane/README.md
 *.key
 *.key.pub
+
+# Node.js
+node_modules/
+dist/
+
+# API
+api/data/
+.env
+
+# Docker
+docker-compose.override.yml
+
+# UI (Next.js)
+ui/.next/
+ui/out/
+ui/data/
