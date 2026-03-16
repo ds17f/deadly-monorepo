@@ -2,16 +2,11 @@ package com.grateful.deadly.feature.playlist.screens.main.models
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
 import android.util.Log
-import androidx.core.content.FileProvider
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.playlist.PlaylistService
 import com.grateful.deadly.core.database.AppPreferences
-import com.grateful.deadly.core.design.component.buildShareCard
-import com.grateful.deadly.core.design.component.loadCoverBitmapForShare
-import com.grateful.deadly.core.design.component.generateQrBitmapWithLogo
 import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.favorites.ReviewService
 import com.grateful.deadly.core.api.recent.RecentShowsService
@@ -43,8 +38,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.withContext
-import java.io.File
-import java.io.FileOutputStream
 import javax.inject.Inject
 import javax.inject.Named
 
@@ -668,82 +661,25 @@ class PlaylistViewModel @Inject constructor(
     }
 
     /**
-     * Share current show as a text message (optionally with image)
+     * Share current show as a text message (just the URL)
      */
-    fun shareAsMessage(attachImage: Boolean) {
+    fun shareAsMessage() {
         val showData = _baseUiState.value.showData ?: return
 
-        viewModelScope.launch {
-            try {
-                val url = if (showData.currentRecordingId != null) {
-                    "https://share.thedeadly.app/show/${showData.showId}/recording/${showData.currentRecordingId}"
-                } else {
-                    "https://share.thedeadly.app/show/${showData.showId}"
-                }
-
-                val message = buildString {
-                    appendLine("Grateful Dead")
-                    appendLine()
-                    appendLine(showData.displayDate)
-                    if (showData.venue.isNotBlank()) appendLine(showData.venue)
-                    if (showData.location.isNotBlank()) appendLine(showData.location)
-                    appendLine()
-                    appendLine("Listen in The Deadly app:")
-                    append(url)
-                }
-
-                val imageBitmap: Bitmap? = if (attachImage) {
-                    try {
-                        val cover = loadCoverBitmapForShare(appContext, showData.coverImageUrl, showData.currentRecordingId)
-                        val qr = withContext(Dispatchers.Default) {
-                            generateQrBitmapWithLogo(appContext, url, 600)
-                        }
-                        val card = withContext(Dispatchers.Default) {
-                            buildShareCard(appContext, qr, cover, showData.displayDate, showData.venue, showData.location)
-                        }
-                        cover?.recycle()
-                        qr.recycle()
-                        card
-                    } catch (e: Exception) {
-                        Log.e(TAG, "Failed to build share card", e)
-                        null
-                    }
-                } else null
-
-                if (imageBitmap != null) {
-                    val shareDir = File(appContext.cacheDir, "share_images")
-                    shareDir.mkdirs()
-                    shareDir.listFiles()?.filter { it.name.startsWith("share_") }?.forEach { it.delete() }
-                    val file = File(shareDir, "share_${System.currentTimeMillis()}.png")
-                    withContext(Dispatchers.IO) {
-                        FileOutputStream(file).use { out ->
-                            imageBitmap.compress(Bitmap.CompressFormat.PNG, 100, out)
-                        }
-                    }
-                    val uri = FileProvider.getUriForFile(appContext, "${appContext.packageName}.fileprovider", file)
-                    val intent = Intent(Intent.ACTION_SEND).apply {
-                        type = "image/png"
-                        putExtra(Intent.EXTRA_STREAM, uri)
-                        putExtra(Intent.EXTRA_TEXT, message)
-                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_ACTIVITY_NEW_TASK)
-                    }
-                    appContext.startActivity(Intent.createChooser(intent, "Share via").apply {
-                        flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                    })
-                } else {
-                    val intent = Intent(Intent.ACTION_SEND).apply {
-                        type = "text/plain"
-                        putExtra(Intent.EXTRA_TEXT, message)
-                        flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                    }
-                    appContext.startActivity(Intent.createChooser(intent, "Share via").apply {
-                        flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                    })
-                }
-            } catch (e: Exception) {
-                Log.e(TAG, "Error sharing as message", e)
-            }
+        val url = if (showData.currentRecordingId != null) {
+            "https://share.thedeadly.app/shows/${showData.showId}/recording/${showData.currentRecordingId}"
+        } else {
+            "https://share.thedeadly.app/shows/${showData.showId}"
         }
+
+        val intent = Intent(Intent.ACTION_SEND).apply {
+            type = "text/plain"
+            putExtra(Intent.EXTRA_TEXT, url)
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        }
+        appContext.startActivity(Intent.createChooser(intent, "Share via").apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        })
     }
     
     /**

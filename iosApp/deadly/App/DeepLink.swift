@@ -31,7 +31,7 @@ enum DeepLink: Equatable {
             // https://share.thedeadly.app/collection/{collectionId}
             guard pathParts.count >= 2 else { return nil }
             switch pathParts[0] {
-            case "show":
+            case "show", "shows":
                 let showId = pathParts[1]
                 let recordingId = pathParts.count >= 4 && pathParts[2] == "recording"
                     ? pathParts[3] : nil

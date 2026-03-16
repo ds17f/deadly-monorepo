@@ -34,7 +34,7 @@ struct QRCodeView: View {
 
     private func generateQRCode() -> UIImage? {
         guard let recordingId = show.bestRecordingId else { return nil }
-        let url = "https://share.thedeadly.app/show/\(show.id)/recording/\(recordingId)"
+        let url = "https://share.thedeadly.app/shows/\(show.id)/recording/\(recordingId)"
         let context = CIContext()
         let filter = CIFilter.qrCodeGenerator()
         filter.message = Data(url.utf8)

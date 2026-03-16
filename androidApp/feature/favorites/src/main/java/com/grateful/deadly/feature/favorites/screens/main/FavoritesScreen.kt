@@ -70,7 +70,6 @@ fun FavoritesScreen(
     var qrCodeShow by remember { mutableStateOf<FavoriteShowViewModel?>(null) }
     var shareChooserShow by remember { mutableStateOf<FavoriteShowViewModel?>(null) }
     var reviewShowTarget by remember { mutableStateOf<FavoriteShowViewModel?>(null) }
-    val attachImage by viewModel.appPreferences.shareAttachImage.collectAsState()
     val reviewState by viewModel.currentReview.collectAsState()
 
     Column(
@@ -262,12 +261,10 @@ fun FavoritesScreen(
 
     shareChooserShow?.let { show ->
         ShareChooserSheet(
-            attachImage = attachImage,
-            onAttachImageChanged = { viewModel.appPreferences.setShareAttachImage(it) },
             onMessageShare = {
                 val target = show
                 shareChooserShow = null
-                viewModel.shareAsMessage(target, attachImage)
+                viewModel.shareAsMessage(target)
             },
             onQrShare = {
                 val target = show
@@ -280,9 +277,9 @@ fun FavoritesScreen(
 
     qrCodeShow?.let { show ->
         val url = if (show.bestRecordingId != null) {
-            "https://share.thedeadly.app/show/${show.showId}/recording/${show.bestRecordingId}"
+            "https://share.thedeadly.app/shows/${show.showId}/recording/${show.bestRecordingId}"
         } else {
-            "https://share.thedeadly.app/show/${show.showId}"
+            "https://share.thedeadly.app/shows/${show.showId}"
         }
         QrCodeDisplay(
             url = url,

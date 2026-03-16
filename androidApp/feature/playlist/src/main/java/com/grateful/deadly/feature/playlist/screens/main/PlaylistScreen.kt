@@ -56,7 +56,6 @@ fun PlaylistScreen(
     var showQrCode by remember { mutableStateOf(false) }
     var showShareChooser by remember { mutableStateOf(false) }
     var showEqualizerSheet by remember { mutableStateOf(false) }
-    val attachImage by viewModel.appPreferences.shareAttachImage.collectAsState()
     val isOffline by viewModel.isOffline.collectAsState()
     val showWriteReview by viewModel.showWriteReview.collectAsState()
     val userReview by viewModel.userReview.collectAsState()
@@ -323,11 +322,9 @@ fun PlaylistScreen(
     // Share Chooser
     if (showShareChooser) {
         ShareChooserSheet(
-            attachImage = attachImage,
-            onAttachImageChanged = { viewModel.appPreferences.setShareAttachImage(it) },
             onMessageShare = {
                 showShareChooser = false
-                viewModel.shareAsMessage(attachImage)
+                viewModel.shareAsMessage()
             },
             onQrShare = {
                 showShareChooser = false
@@ -341,9 +338,9 @@ fun PlaylistScreen(
     if (showQrCode) {
         uiState.showData?.let { showData ->
             val url = if (showData.currentRecordingId != null) {
-                "https://share.thedeadly.app/show/${showData.showId}/recording/${showData.currentRecordingId}"
+                "https://share.thedeadly.app/shows/${showData.showId}/recording/${showData.currentRecordingId}"
             } else {
-                "https://share.thedeadly.app/show/${showData.showId}"
+                "https://share.thedeadly.app/shows/${showData.showId}"
             }
             QrCodeDisplay(
                 url = url,

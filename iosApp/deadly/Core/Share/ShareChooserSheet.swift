@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct ShareChooserSheet: View {
-    @Binding var attachImage: Bool
     let onMessageShare: () -> Void
     let onQrShare: () -> Void
 
@@ -48,17 +47,6 @@ struct ShareChooserSheet: View {
                             }
                         }
                     }
-
-                    Section {
-                        Toggle(isOn: $attachImage) {
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text("Attach image")
-                                Text("Included with message")
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
-                    }
                 }
             }
             .navigationTitle("Share")
@@ -69,6 +57,6 @@ struct ShareChooserSheet: View {
                 }
             }
         }
-        .presentationDetents([.height(320)])
+        .presentationDetents([.height(260)])
     }
 }

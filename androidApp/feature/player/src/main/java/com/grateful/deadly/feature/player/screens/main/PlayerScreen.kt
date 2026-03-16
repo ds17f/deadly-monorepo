@@ -67,7 +67,6 @@ fun PlayerScreen(
     var showConnectBottomSheet by remember { mutableStateOf(false) }
     var showEqualizerBottomSheet by remember { mutableStateOf(false) }
     var showQueueBottomSheet by remember { mutableStateOf(false) }
-    val attachImage by viewModel.appPreferences.shareAttachImage.collectAsState()
     // Mini player visibility based on scroll position
     // Show mini player only when player controls are completely off screen
     val showMiniPlayer by remember {
@@ -199,11 +198,9 @@ fun PlayerScreen(
 
         if (showShareChooser) {
             ShareChooserSheet(
-                attachImage = attachImage,
-                onAttachImageChanged = { viewModel.appPreferences.setShareAttachImage(it) },
                 onMessageShare = {
                     showShareChooser = false
-                    viewModel.shareAsMessage(attachImage)
+                    viewModel.shareAsMessage()
                 },
                 onQrShare = {
                     showShareChooser = false
@@ -219,12 +216,12 @@ fun PlayerScreen(
             if (showId != null) {
                 val url = if (recordingId != null) {
                     buildString {
-                        append("https://share.thedeadly.app/show/$showId/recording/$recordingId")
+                        append("https://share.thedeadly.app/shows/$showId/recording/$recordingId")
                         val trackNumber = uiState.navigationInfo.trackNumber
                         if (trackNumber != null) append("/track/$trackNumber")
                     }
                 } else {
-                    "https://share.thedeadly.app/show/$showId"
+                    "https://share.thedeadly.app/shows/$showId"
                 }
                 QrCodeDisplay(
                     url = url,

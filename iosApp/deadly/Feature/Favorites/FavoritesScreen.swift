@@ -128,10 +128,6 @@ struct FavoritesScreen: View {
         }
         .sheet(item: $shareChooserShow) { favoriteShow in
             ShareChooserSheet(
-                attachImage: Binding(
-                    get: { container.appPreferences.shareAttachImage },
-                    set: { container.appPreferences.shareAttachImage = $0 }
-                ),
                 onMessageShare: {
                     let target = favoriteShow
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
@@ -149,27 +145,11 @@ struct FavoritesScreen: View {
         .sheet(item: $messageShareShow) { favoriteShow in
             let show = favoriteShow.show
             let url: String = {
-                var u = "https://share.thedeadly.app/show/\(show.id)"
+                var u = "https://share.thedeadly.app/shows/\(show.id)"
                 if let rid = show.bestRecordingId { u += "/recording/\(rid)" }
                 return u
             }()
-            let text = MessageShareService.buildShareMessage(
-                showDate: DateFormatting.formatShowDate(show.date),
-                venue: show.venue.name,
-                location: show.venue.displayLocation,
-                shareUrl: url
-            )
-            let image: UIImage? = container.appPreferences.shareAttachImage ? {
-                guard let qr = ShareCardGenerator.generateQRCodeWithLogo(url: url, size: 600) else { return nil }
-                return ShareCardGenerator.buildShareCard(
-                    qrImage: qr,
-                    coverImage: nil,
-                    showDate: DateFormatting.formatShowDate(show.date),
-                    venue: show.venue.name,
-                    location: show.venue.displayLocation
-                )
-            }() : nil
-            let items = MessageShareService.shareItems(text: text, image: image, url: URL(string: url))
+            let items = MessageShareService.shareItems(url: url)
             ShareActivityView(items: items)
         }
         .sheet(item: $qrCodeShow) { favoriteShow in

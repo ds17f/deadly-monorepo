@@ -124,7 +124,7 @@ fun MainNavigation(
         if (currentRoute == null || currentRoute == "splash") return@LaunchedEffect
         val segments = uri.pathSegments
         when (segments.getOrNull(0)) {
-            "show" -> {
+            "show", "shows" -> {
                 val showId = segments.getOrNull(1) ?: return@LaunchedEffect
                 val recordingId = segments.getOrNull(3)
                 val trackNumber = if (segments.getOrNull(4) == "track") {

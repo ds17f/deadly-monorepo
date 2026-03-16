@@ -12,6 +12,16 @@ import Lineup from "@/components/Lineup";
 import ShowReview from "@/components/ShowReview";
 import ShowNav from "@/components/ShowNav";
 import type { Recording } from "@/types/recording";
+import type { Show } from "@/types/show";
+
+function resolveCoverImageUrl(show: Show): string {
+  const front = show.ticket_images?.find((t) => t.side === "front");
+  if (front) return front.url;
+  const unknown = show.ticket_images?.find((t) => t.side === "unknown");
+  if (unknown) return unknown.url;
+  if (show.photos?.length > 0) return show.photos[0].url;
+  return "https://share.thedeadly.app/logo.png";
+}
 
 function formatDateForTitle(dateStr: string): string {
   const [y, m, d] = dateStr.split("-").map(Number);
@@ -48,6 +58,7 @@ export async function generateMetadata({
     descParts.push(show.ai_show_review.summary);
   }
   const description = descParts.join(" \u2014 ");
+  const imageUrl = resolveCoverImageUrl(show);
 
   return {
     title,
@@ -58,11 +69,13 @@ export async function generateMetadata({
       type: "article",
       url: `https://share.thedeadly.app/shows/${id}`,
       siteName: "The Deadly",
+      images: [{ url: imageUrl }],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title,
       description,
+      images: [imageUrl],
     },
   };
 }

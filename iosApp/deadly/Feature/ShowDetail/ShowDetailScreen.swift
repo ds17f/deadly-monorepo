@@ -297,10 +297,6 @@ struct ShowDetailScreen: View {
         }
         .sheet(isPresented: $showShareChooser) {
             ShareChooserSheet(
-                attachImage: Binding(
-                    get: { container.appPreferences.shareAttachImage },
-                    set: { container.appPreferences.shareAttachImage = $0 }
-                ),
                 onMessageShare: {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         showMessageShare = true
@@ -315,24 +311,8 @@ struct ShowDetailScreen: View {
         }
         .sheet(isPresented: $showMessageShare) {
             if let recording = playlistService.currentRecording {
-                let url = "https://share.thedeadly.app/show/\(currentShowId)/recording/\(recording.identifier)"
-                let text = MessageShareService.buildShareMessage(
-                    showDate: DateFormatting.formatShowDate(show.date),
-                    venue: show.venue.name,
-                    location: show.venue.displayLocation,
-                    shareUrl: url
-                )
-                let image: UIImage? = container.appPreferences.shareAttachImage ? {
-                    guard let qr = ShareCardGenerator.generateQRCodeWithLogo(url: url, size: 600) else { return nil }
-                    return ShareCardGenerator.buildShareCard(
-                        qrImage: qr,
-                        coverImage: nil,
-                        showDate: DateFormatting.formatShowDate(show.date),
-                        venue: show.venue.name,
-                        location: show.venue.displayLocation
-                    )
-                }() : nil
-                let items = MessageShareService.shareItems(text: text, image: image, url: URL(string: url))
+                let url = "https://share.thedeadly.app/shows/\(currentShowId)/recording/\(recording.identifier)"
+                let items = MessageShareService.shareItems(url: url)
                 ShareActivityView(items: items)
             }
         }
