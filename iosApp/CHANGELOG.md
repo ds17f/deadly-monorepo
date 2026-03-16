@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.21.0] - 2026-03-15
+
+### New Features
+* re-enable CarPlay audio entitlement and scene config (209b723)
+* add source type badge with persisted data and user settings (9806fac)
+
+### Other Changes
+* chore: commit changes to gitignore for keys (4e6b1f5)
+
+
 ## [2.20.0] - 2026-03-13
 
 ### New Features
@@ -28,8 +38,6 @@
 
 ### Other Changes
 * Revert "chore: release ios version 2.20.0" (e6475e9)
-
-
 ## [2.19.0] - 2026-03-09
 
 ### New Features
