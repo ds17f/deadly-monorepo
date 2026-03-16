@@ -28,6 +28,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
 
+      - name: Fetch show data
+        run: |
+          ASSET_URL=$(curl -s https://api.github.com/repos/ds17f/dead-metadata/releases/latest \
+            | jq -r '.assets[] | select(.name == "data.zip") | .browser_download_url')
+          curl -sL "$ASSET_URL" -o /tmp/data.zip
+          mkdir -p ui/data
+          unzip -q /tmp/data.zip -d ui/data
+          rm /tmp/data.zip
+          echo "Extracted $(ls ui/data/shows/ | wc -l) shows, $(ls ui/data/recordings/ | wc -l) recordings"
+
       - name: Setup Node.js
         uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
         with:
