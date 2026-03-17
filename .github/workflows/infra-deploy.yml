@@ -61,7 +61,15 @@ jobs:
               git pull origin "${REF}" 2>/dev/null || true
             else
               echo "Cloning fresh..."
-              git clone "https://github.com/${REPO}.git" /opt/deadly
+              # cloud-init may have created /opt/deadly already; clone beside it then swap
+              rm -rf /tmp/deadly-clone
+              git clone "https://github.com/${REPO}.git" /tmp/deadly-clone
+              # preserve cloud-init marker if present
+              if [ -f /opt/deadly/.cloud-init-complete ]; then
+                cp /opt/deadly/.cloud-init-complete /tmp/deadly-clone/
+              fi
+              rm -rf /opt/deadly
+              mv /tmp/deadly-clone /opt/deadly
               cd /opt/deadly
               git checkout "${REF}" 2>/dev/null || git checkout "origin/${REF}"
             fi
