@@ -2,8 +2,16 @@
 
 import { QRCodeSVG } from "qrcode.react";
 
-export default function ShowQRCode({ showId }: { showId: string }) {
-  const url = `https://share.thedeadly.app/shows/${showId}`;
+export default function ShowQRCode({
+  showId,
+  recordingId,
+}: {
+  showId: string;
+  recordingId?: string;
+}) {
+  const url = recordingId
+    ? `https://share.thedeadly.app/shows/${showId}/recording/${recordingId}`
+    : `https://share.thedeadly.app/shows/${showId}`;
 
   return (
     <div className="mt-4 rounded-lg border border-white/10 bg-deadly-surface p-4">
@@ -27,9 +35,14 @@ export default function ShowQRCode({ showId }: { showId: string }) {
           </div>
         </div>
       </div>
-      <p className="mt-2 text-center text-xs text-white/40">
-        Scan to listen in The Deadly app
-      </p>
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-2 block text-center text-xs text-white/40 hover:text-white/60 break-all"
+      >
+        {url}
+      </a>
     </div>
   );
 }

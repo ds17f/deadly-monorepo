@@ -354,7 +354,7 @@ ios-deploy-testflight:
 # =============================================================================
 
 REMOTE_HOST    ?= dsilbergleithcu@worklaptop.local
-REMOTE_PATH    ?= ~/Developer/ai/claude-personal/container-home/workspace/Developer/deadly-monorepo
+REMOTE_PATH    ?= ~/Developer/deadly-monorepo
 REMOTE_IOS     ?= $(REMOTE_PATH)/iosApp
 REMOTE_ANDROID ?= $(REMOTE_PATH)/androidApp
 
@@ -398,11 +398,11 @@ ios-remote-resolve:
 
 android-remote-build:
 	@echo "Building on $(REMOTE_HOST)..."
-	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && cd $(REMOTE_ANDROID) && ./gradlew assembleDebug 2>&1 | tail -20"
+	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && cd $(REMOTE_ANDROID) && ./gradlew assembleDebug --console=plain"
 
 android-remote-install:
 	@echo "Building + installing on $(REMOTE_HOST)..."
-	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && cd $(REMOTE_ANDROID) && ./gradlew installDebug 2>&1 | tail -20"
+	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && cd $(REMOTE_ANDROID) && ./gradlew installDebug --console=plain"
 
 android-remote-emulator:
 	@echo "Starting emulator on $(REMOTE_HOST)..."

@@ -90,14 +90,14 @@ export default function ShowActions({
       )}
 
       <a
-        href={`deadly://show/${showId}`}
+        href={archiveId ? `https://share.thedeadly.app/shows/${showId}/recording/${archiveId}` : `https://share.thedeadly.app/shows/${showId}`}
         className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-deadly-accent px-5 py-3 font-semibold text-white transition-colors hover:bg-deadly-accent/10 lg:hidden"
       >
         <Image src="/logo.png" alt="" width={24} height={24} />
         Listen on Deadly
       </a>
 
-      <ShowQRCode showId={showId} />
+      <ShowQRCode showId={showId} recordingId={archiveId ?? undefined} />
 
       <div className="mt-3 flex items-center gap-3">
         <a
