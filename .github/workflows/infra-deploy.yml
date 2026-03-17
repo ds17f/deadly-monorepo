@@ -51,21 +51,21 @@ jobs:
           REPO: ${{ github.repository }}
           REF: ${{ inputs.ref }}
         run: |
-          ssh "$SERVER" bash -s <<'SCRIPT'
+          ssh "$SERVER" bash -s <<SCRIPT
             set -euo pipefail
             if [ -d /opt/deadly/.git ]; then
               echo "Updating existing clone..."
               cd /opt/deadly
               git fetch origin
-              git checkout "$REF" 2>/dev/null || git checkout "origin/$REF"
-              git pull origin "$REF" 2>/dev/null || true
+              git checkout "${REF}" 2>/dev/null || git checkout "origin/${REF}"
+              git pull origin "${REF}" 2>/dev/null || true
             else
               echo "Cloning fresh..."
-              git clone "https://github.com/$REPO.git" /opt/deadly
+              git clone "https://github.com/${REPO}.git" /opt/deadly
               cd /opt/deadly
-              git checkout "$REF" 2>/dev/null || git checkout "origin/$REF"
+              git checkout "${REF}" 2>/dev/null || git checkout "origin/${REF}"
             fi
-            echo "HEAD: $(git rev-parse --short HEAD)"
+            echo "HEAD: \$(git rev-parse --short HEAD)"
           SCRIPT
 
       - name: Read data version
