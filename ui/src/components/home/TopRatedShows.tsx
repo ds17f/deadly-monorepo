@@ -31,8 +31,10 @@ function dailyShuffle<T>(arr: T[]): T[] {
 
 export default function TopRatedShows({
   shows,
+  filterLabel,
 }: {
   shows: ShowIndexEntry[];
+  filterLabel?: string;
 }) {
   const picks = useMemo(() => dailyShuffle(shows).slice(0, DISPLAY_COUNT), [shows]);
 
@@ -43,6 +45,9 @@ export default function TopRatedShows({
         Top Rated
         <span className="ml-2 inline-block h-px w-16 align-middle bg-white/20" />
       </h4>
+      {filterLabel && (
+        <p className="mb-2 text-xs text-deadly-heading">{filterLabel}</p>
+      )}
       <div className="space-y-3">
         {picks.map((show) => (
           <Link

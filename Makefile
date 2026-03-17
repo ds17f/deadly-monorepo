@@ -92,7 +92,7 @@ ui-data:
 # UI Remote targets (Linux → Mac)
 ui-remote-install:
 	@echo "Installing UI deps on $(REMOTE_HOST)..."
-	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH)/ui && npm install"
+	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH)/ui && rm -rf node_modules .next && npm install"
 
 ui-remote-dev:
 	@echo "Starting UI dev server on $(REMOTE_HOST)... (ctrl-c to stop)"

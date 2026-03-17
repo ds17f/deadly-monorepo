@@ -89,9 +89,24 @@ export default function HomeContent({
 
   const topRated = useMemo(() => {
     if (!hasActiveFilter) return topRatedAll;
-    // Recompute top rated from filtered list
     return [...filtered].sort((a, b) => b.r - a.r).slice(0, 20);
   }, [hasActiveFilter, topRatedAll, filtered]);
+
+  const topRatedFilterLabel = useMemo(() => {
+    const parts: string[] = [];
+    if (selectedYear !== null) parts.push(String(selectedYear));
+    else if (selectedDecade !== null) {
+      const labels: Record<string, string> = {
+        "1965-1969": "60s", "1970-1979": "70s",
+        "1980-1989": "80s", "1990-1995": "90s",
+      };
+      parts.push(labels[`${selectedDecade.from}-${selectedDecade.to}`] ?? "");
+    }
+    if (selectedSource !== null) parts.push(selectedSource);
+    if (searchQuery.trim()) parts.push(`"${searchQuery.trim()}"`);
+    if (parts.length === 0) return undefined;
+    return `Filtered: ${parts.join(" / ")}`;
+  }, [selectedYear, selectedDecade, selectedSource, searchQuery]);
 
   function resetPage() {
     setCurrentPage(0);
@@ -158,7 +173,7 @@ export default function HomeContent({
         </div>
       <div className="mt-6 lg:mt-0">
         <GetTheApp />
-        <TopRatedShows shows={topRated} />
+        <TopRatedShows shows={topRated} filterLabel={topRatedFilterLabel} />
         <CollectionsGrid collections={collections} />
       </div>
     </div>
