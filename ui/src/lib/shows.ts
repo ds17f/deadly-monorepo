@@ -77,6 +77,7 @@ export function buildShowIndex(): ShowIndexEntry[] {
       rc: s.recording_count,
       sum: s.ai_show_review?.summary ?? "",
       ar: s.avg_rating,
+      st: Object.keys(s.source_types ?? {}),
     };
   });
 }

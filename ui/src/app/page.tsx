@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <HomeContent
       showIndex={showIndex}
-      topRated={topRated}
+      topRatedAll={topRated}
       collections={collections}
       yearData={yearData}
       totalShows={fullIndex.length}
