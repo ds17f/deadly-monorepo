@@ -1,4 +1,5 @@
 import Database from "better-sqlite3";
+import crypto from "node:crypto";
 import path from "node:path";
 
 const DB_PATH = process.env.USERS_DB_PATH ?? path.join(process.cwd(), "data", "users.db");
@@ -19,8 +20,33 @@ export function getUsersDb(): Database.Database {
 
 function initSchema(db: Database.Database): void {
   db.exec(`
+    CREATE TABLE IF NOT EXISTS auth_users (
+      id TEXT PRIMARY KEY,
+      name TEXT,
+      email TEXT UNIQUE,
+      "emailVerified" TIMESTAMP,
+      image TEXT
+    );
+
+    CREATE TABLE IF NOT EXISTS auth_accounts (
+      id TEXT PRIMARY KEY,
+      "userId" TEXT NOT NULL REFERENCES auth_users(id) ON DELETE CASCADE,
+      type TEXT NOT NULL,
+      provider TEXT NOT NULL,
+      "providerAccountId" TEXT NOT NULL,
+      refresh_token TEXT,
+      access_token TEXT,
+      expires_at INTEGER,
+      token_type TEXT,
+      scope TEXT,
+      id_token TEXT,
+      session_state TEXT,
+      UNIQUE(provider, "providerAccountId")
+    );
+
     CREATE TABLE IF NOT EXISTS accounts (
       id TEXT PRIMARY KEY,
+      auth_user_id TEXT UNIQUE REFERENCES auth_users(id) ON DELETE SET NULL,
       email TEXT UNIQUE NOT NULL,
       name TEXT,
       provider TEXT NOT NULL,
@@ -118,6 +144,22 @@ function initSchema(db: Database.Database): void {
       updated_at INTEGER NOT NULL DEFAULT (unixepoch())
     );
   `);
+}
+
+export function createAppUser(authUserId: string, email: string, name: string | null, provider: string): string {
+  const db = getUsersDb();
+  const id = crypto.randomUUID();
+  db.prepare(
+    `INSERT INTO accounts (id, auth_user_id, email, name, provider) VALUES (?, ?, ?, ?, ?)`
+  ).run(id, authUserId, email, name, provider);
+  return id;
+}
+
+export function getAppUserByAuthId(authUserId: string): { id: string; email: string; name: string | null } | undefined {
+  const db = getUsersDb();
+  return db.prepare(
+    `SELECT id, email, name FROM accounts WHERE auth_user_id = ?`
+  ).get(authUserId) as { id: string; email: string; name: string | null } | undefined;
 }
 
 export function closeUsersDb(): void {

@@ -9,8 +9,8 @@
 .PHONY: android-build-release android-build-bundle android-deploy-testing
 .PHONY: android-promote-alpha android-promote-beta android-promote-production
 .PHONY: ios-build-release ios-deploy-testflight
-.PHONY: ios-remote-unlock ios-remote-sync ios-remote-build ios-remote-install ios-remote-sim ios-remote-test ios-remote-resolve
-.PHONY: android-remote-sync android-remote-build android-remote-install
+.PHONY: ios-remote-unlock ios-remote-build ios-remote-install ios-remote-sim ios-remote-test ios-remote-resolve
+.PHONY: android-remote-build android-remote-install
 .PHONY: android-remote-emulator android-remote-emu-list android-remote-emu-stop android-remote-run-emulator
 .PHONY: android-auto-dhu android-remote-auto-dhu
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
@@ -91,23 +91,19 @@ ui-data:
 
 # UI Remote targets (Linux → Mac)
 ui-remote-install:
-	@$(MAKE) ios-remote-sync
 	@echo "Installing UI deps on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH)/ui && npm install"
 
 ui-remote-dev:
-	@$(MAKE) ios-remote-sync
 	@echo "Starting UI dev server on $(REMOTE_HOST)... (ctrl-c to stop)"
 	@ssh -t $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH)/ui && npm run dev"
 
 ui-remote-build:
-	@$(MAKE) ios-remote-sync
 	@echo "Building UI on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH)/ui && npm run build"
 
 # Fast dev build — only generates 10 pages (middle of the catalog so prev/next works)
 ui-remote-dev-build:
-	@$(MAKE) ios-remote-sync
 	@echo "Building UI (dev, 10 pages) on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH)/ui && DEV_PAGES=10 npm run build"
 
@@ -134,9 +130,9 @@ help:
 	@echo "  ui-data          - Copy dataset from dead-metadata into ui/data/"
 	@echo ""
 	@echo "UI REMOTE (Linux → Mac):"
-	@echo "  ui-remote-install  - Sync + install UI deps on Mac"
-	@echo "  ui-remote-dev      - Sync + run UI dev server on Mac"
-	@echo "  ui-remote-build    - Sync + build static UI on Mac"
+	@echo "  ui-remote-install  - Install UI deps on Mac"
+	@echo "  ui-remote-dev      - Run UI dev server on Mac"
+	@echo "  ui-remote-build    - Build static UI on Mac"
 	@echo ""
 	@echo "ANDROID RELEASE:"
 	@echo "  android-release          - Android release with auto-versioning"
@@ -179,17 +175,16 @@ help:
 	@echo "  ios-log              - Stream app logs from simulator via os_log"
 	@echo ""
 	@echo "API REMOTE (Linux → Mac):"
-	@echo "  api-remote-up      - Sync + start full stack on Mac (Docker Compose)"
+	@echo "  api-remote-up      - Start full stack on Mac (Docker Compose)"
 	@echo "  api-remote-down    - Stop stack on Mac"
 	@echo "  api-remote-logs    - View logs from remote stack"
 	@echo "  api-remote-ps      - Show remote service status"
-	@echo "  api-remote-dev     - Sync + run API directly on Mac (no Docker)"
+	@echo "  api-remote-dev     - Run API directly on Mac (no Docker)"
 	@echo "  api-remote-health  - Health check against remote API"
 	@echo ""
 	@echo "ANDROID REMOTE BUILD (Linux → Mac):"
-	@echo "  android-remote-sync        - Rsync working tree to Mac"
-	@echo "  android-remote-build       - Sync + build debug APK on Mac"
-	@echo "  android-remote-install     - Sync + build + install to connected Android device"
+	@echo "  android-remote-build       - Build debug APK on Mac"
+	@echo "  android-remote-install     - Build + install to connected Android device"
 	@echo "  android-remote-emulator    - Start Android emulator on Mac"
 	@echo "  android-remote-emu-list    - List available AVDs on Mac"
 	@echo "  android-remote-emu-stop    - Stop all running emulators on Mac"
@@ -198,12 +193,11 @@ help:
 	@echo ""
 	@echo "IOS REMOTE BUILD (Linux → Mac):"
 	@echo "  ios-remote-unlock    - Unlock Mac keychain for SSH code signing (once per reboot)"
-	@echo "  ios-remote-sync      - Rsync working tree to Mac"
-	@echo "  ios-remote-build     - Sync + build debug on Mac simulator"
-	@echo "  ios-remote-install   - Sync + build + install to connected device"
-	@echo "  ios-remote-sim       - Sync + build + run on iPhone 17 simulator"
-	@echo "  ios-remote-test      - Sync + run tests on Mac simulator"
-	@echo "  ios-remote-resolve   - Sync + resolve SPM package dependencies"
+	@echo "  ios-remote-build     - Build debug on Mac simulator"
+	@echo "  ios-remote-install   - Build + install to connected device"
+	@echo "  ios-remote-sim       - Build + run on iPhone 17 simulator"
+	@echo "  ios-remote-test      - Run tests on Mac simulator"
+	@echo "  ios-remote-resolve   - Resolve SPM package dependencies"
 	@echo ""
 	@echo "INFRASTRUCTURE (default: digitalocean, override: INFRA_PROVIDER=oci):"
 	@echo "  infra-init       - Initialize Terraform providers"
@@ -360,34 +354,12 @@ ios-deploy-testflight:
 # =============================================================================
 
 REMOTE_HOST    ?= dsilbergleithcu@worklaptop.local
-REMOTE_PATH    ?= ~/Developer/ai/deadly-monorepo
+REMOTE_PATH    ?= ~/Developer/ai/claude-personal/container-home/workspace/Developer/deadly-monorepo
 REMOTE_IOS     ?= $(REMOTE_PATH)/iosApp
 REMOTE_ANDROID ?= $(REMOTE_PATH)/androidApp
 
-# Sync working tree to Mac (rsync, excludes build artifacts)
-ios-remote-sync:
-	@echo "Syncing to $(REMOTE_HOST):$(REMOTE_PATH)..."
-	@rsync -avz --delete \
-		--exclude='.git' \
-		--exclude='.claude' \
-		--exclude='PLANS' \
-		--exclude='androidApp/app/build' \
-		--exclude='androidApp/**/build' \
-		--exclude='androidApp/.gradle' \
-		--exclude='iosApp/build' \
-		--exclude='iosApp/**/build' \
-		--exclude='iosApp/**/.build' \
-		--exclude='node_modules' \
-		--exclude='.secrets' \
-		--exclude='data/stage01-collected-data' \
-		--exclude='data/stage02-generated-data' \
-		--exclude='data/data.zip' \
-		--exclude='data/scripts/.venv' \
-		./ $(REMOTE_HOST):$(REMOTE_PATH)/
-
-# Sync + build debug on Mac
+# Build debug on Mac
 ios-remote-build:
-	@$(MAKE) ios-remote-sync
 	@echo "Building on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'generic/platform=iOS Simulator' build 2>&1 | tail -20"
 
@@ -396,31 +368,27 @@ ios-remote-unlock:
 	@echo "Unlocking keychain on $(REMOTE_HOST)..."
 	@ssh -t $(REMOTE_HOST) "security unlock-keychain ~/Library/Keychains/login.keychain-db"
 
-# Sync + build + install to connected device (requires USB-connected iPhone + KEYCHAIN_PASSWORD env var)
+# Build + install to connected device (requires USB-connected iPhone + KEYCHAIN_PASSWORD env var)
 ios-remote-install:
-	@$(MAKE) ios-remote-sync
 	@echo "Building on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "security unlock-keychain -p '$(KEYCHAIN_PASSWORD)' ~/Library/Keychains/login.keychain-db && cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'generic/platform=iOS' -allowProvisioningUpdates build 2>&1 | tail -20"
 	@echo "Installing to device..."
 	@ssh $(REMOTE_HOST) 'DEVICE_ID=$$(xcrun devicectl list devices 2>/dev/null | grep -oE "[0-9A-F]{8}-([0-9A-F]{4}-){3}[0-9A-F]{12}" | head -1) && APP_PATH=$$(cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination "generic/platform=iOS" -showBuildSettings 2>/dev/null | grep " BUILT_PRODUCTS_DIR" | head -1 | awk "{print \$$3}")/deadly.app && xcrun devicectl device install app --device "$$DEVICE_ID" "$$APP_PATH" 2>&1'
 
-# Sync + build + launch on iPhone 17 simulator
+# Build + launch on iPhone 17 simulator
 ios-remote-sim:
-	@$(MAKE) ios-remote-sync
 	@echo "Building for simulator on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 17' build 2>&1 | tail -20"
 	@echo "Launching on simulator..."
 	@ssh $(REMOTE_HOST) 'APP_PATH=$$(cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination "platform=iOS Simulator,name=iPhone 17" -showBuildSettings 2>/dev/null | grep " BUILT_PRODUCTS_DIR" | head -1 | awk "{print \$$3}")/deadly.app && xcrun simctl boot "iPhone 17" 2>/dev/null; xcrun simctl install booted "$$APP_PATH" && xcrun simctl launch booted com.grateful.deadly && open -a Simulator'
 
-# Sync + run tests on Mac simulator
+# Run tests on Mac simulator
 ios-remote-test:
-	@$(MAKE) ios-remote-sync
 	@echo "Running tests on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "cd $(REMOTE_IOS) && xcodebuild test -project deadly.xcodeproj -scheme deadly -destination 'platform=iOS Simulator,name=iPhone 17' 2>&1 | tail -40"
 
 # Resolve SPM packages on Mac (needed after adding new dependencies)
 ios-remote-resolve:
-	@$(MAKE) ios-remote-sync
 	@echo "Resolving packages on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "cd $(REMOTE_IOS) && xcodebuild -resolvePackageDependencies -project deadly.xcodeproj 2>&1 | tail -20"
 
@@ -428,33 +396,11 @@ ios-remote-resolve:
 # ANDROID REMOTE BUILD (Linux → Mac)
 # =============================================================================
 
-android-remote-sync:
-	@echo "Syncing to $(REMOTE_HOST):$(REMOTE_PATH)..."
-	@rsync -avz --delete \
-		--exclude='.git' \
-		--exclude='.claude' \
-		--exclude='PLANS' \
-		--exclude='androidApp/app/build' \
-		--exclude='androidApp/**/build' \
-		--exclude='androidApp/.gradle' \
-		--exclude='iosApp/build' \
-		--exclude='iosApp/**/build' \
-		--exclude='iosApp/**/.build' \
-		--exclude='node_modules' \
-		--exclude='.secrets' \
-		--exclude='data/stage01-collected-data' \
-		--exclude='data/stage02-generated-data' \
-		--exclude='data/data.zip' \
-		--exclude='data/scripts/.venv' \
-		./ $(REMOTE_HOST):$(REMOTE_PATH)/
-
 android-remote-build:
-	@$(MAKE) android-remote-sync
 	@echo "Building on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && cd $(REMOTE_ANDROID) && ./gradlew assembleDebug 2>&1 | tail -20"
 
 android-remote-install:
-	@$(MAKE) android-remote-sync
 	@echo "Building + installing on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && cd $(REMOTE_ANDROID) && ./gradlew installDebug 2>&1 | tail -20"
 
@@ -470,7 +416,6 @@ android-remote-emu-stop:
 	@ssh $(REMOTE_HOST) "cd $(REMOTE_ANDROID) && make emu-stop"
 
 android-remote-run-emulator:
-	@$(MAKE) android-remote-sync
 	@echo "Starting emulator workflow on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && export PATH=\$$PATH:\$$ANDROID_HOME/platform-tools:\$$ANDROID_HOME/emulator && cd $(REMOTE_ANDROID) && \
 		if adb devices 2>/dev/null | grep -q 'emulator.*device\$$'; then \
@@ -599,9 +544,8 @@ api-remote-pull:
 	@echo "Pulling base images on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && docker pull node:22-slim && docker pull caddy:2-alpine && docker pull redis:7-alpine"
 
-# Sync + build + start full stack on remote Mac (requires KEYCHAIN_PASSWORD env var)
+# Build + start full stack on remote Mac (requires KEYCHAIN_PASSWORD env var)
 api-remote-up:
-	@$(MAKE) ios-remote-sync
 	@echo "Starting stack on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "security unlock-keychain -p '$(KEYCHAIN_PASSWORD)' ~/Library/Keychains/login.keychain-db && $(REMOTE_ENVPATH) && cd $(REMOTE_PATH) && docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build -d"
 
@@ -619,9 +563,8 @@ api-remote-ps:
 
 # Run API directly on remote Mac (no Docker, fast iteration)
 api-remote-dev:
-	@$(MAKE) ios-remote-sync
 	@echo "Starting API on $(REMOTE_HOST)..."
-	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH)/api && npm install && npm run dev"
+	@ssh -t $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH)/api && npm rebuild better-sqlite3 2>/dev/null; npm install && npm run dev"
 
 # Health check against remote API
 api-remote-health:
