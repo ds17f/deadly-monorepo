@@ -98,6 +98,7 @@ jobs:
             echo "Extracting to ui/data/..."
             rm -rf ui/data
             mkdir -p ui/data
+            sudo apt-get install -y -qq unzip >/dev/null 2>&1 || true
             unzip -qo /tmp/data.zip -d ui/data/
             rm /tmp/data.zip
 
