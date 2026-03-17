@@ -1,5 +1,6 @@
 import Image from "next/image";
 import AppStoreBadge from "@/components/AppStoreBadge";
+import ShowQRCode from "@/components/ShowQRCode";
 import type { Recording } from "@/types/recording";
 import type { AiShowReview } from "@/types/show";
 
@@ -90,11 +91,13 @@ export default function ShowActions({
 
       <a
         href={`deadly://show/${showId}`}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-deadly-accent px-5 py-3 font-semibold text-white transition-colors hover:bg-deadly-accent/10"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-deadly-accent px-5 py-3 font-semibold text-white transition-colors hover:bg-deadly-accent/10 lg:hidden"
       >
         <Image src="/logo.png" alt="" width={24} height={24} />
         Listen on Deadly
       </a>
+
+      <ShowQRCode showId={showId} />
 
       <div className="mt-3 flex items-center gap-3">
         <a

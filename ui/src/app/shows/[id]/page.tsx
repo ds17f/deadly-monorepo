@@ -11,6 +11,7 @@ import Setlist from "@/components/Setlist";
 import Lineup from "@/components/Lineup";
 import ShowReview from "@/components/ShowReview";
 import ShowNav from "@/components/ShowNav";
+import ShowPageClient from "@/components/player/ShowPageClient";
 import type { Recording } from "@/types/recording";
 import type { Show } from "@/types/show";
 
@@ -113,6 +114,11 @@ export default async function ShowPage({
             firstRecordingId={show.recordings[0] ?? null}
             recordings={recordings}
             aiReview={show.ai_show_review}
+          />
+          <ShowPageClient
+            recordings={recordings}
+            bestRecordingId={show.best_recording}
+            showId={show.show_id}
           />
           {show.lineup && show.lineup.length > 0 && (
             <Lineup members={show.lineup} />
