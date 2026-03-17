@@ -34,6 +34,12 @@ services:
       - LOG_LEVEL=${LOG_LEVEL:-info}
       - USERS_DB_PATH=/app/data/users.db
       - CORS_ORIGIN=${CORS_ORIGIN:-*}
+      - AUTH_SECRET=${AUTH_SECRET}
+      - AUTH_URL=${AUTH_URL}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - APPLE_CLIENT_ID=${APPLE_CLIENT_ID}
+      - APPLE_CLIENT_SECRET=${APPLE_CLIENT_SECRET}
     volumes:
       - api_data:/app/data
     expose:
