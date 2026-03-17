@@ -6,5 +6,6 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-FROM scratch AS export
-COPY --from=builder /app/out /
+FROM busybox:stable AS export
+COPY --from=builder /app/out /out
+CMD ["true"]
