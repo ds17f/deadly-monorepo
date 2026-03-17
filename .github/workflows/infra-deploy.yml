@@ -1,0 +1,156 @@
+name: Deploy Alpha
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Git ref to deploy"
+        default: "main"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: "Deploy to alpha"
+    runs-on: ubuntu-latest
+    environment: alpha
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.B2_TFSTATE_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.B2_TFSTATE_APP_KEY }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+        with:
+          ref: ${{ inputs.ref }}
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3.1.2
+
+      - name: Terraform Init
+        working-directory: infra/digitalocean
+        run: terraform init
+
+      - name: Get server IP
+        id: server
+        working-directory: infra/digitalocean
+        run: echo "ip=$(terraform output -raw droplet_ip)" >> "$GITHUB_OUTPUT"
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H "${{ steps.server.outputs.ip }}" >> ~/.ssh/known_hosts 2>/dev/null || true
+
+      - name: Clone or update repo on server
+        env:
+          SERVER: deploy@${{ steps.server.outputs.ip }}
+          REPO: ${{ github.repository }}
+          REF: ${{ inputs.ref }}
+        run: |
+          ssh "$SERVER" bash -s <<'SCRIPT'
+            set -euo pipefail
+            if [ -d /opt/deadly/.git ]; then
+              echo "Updating existing clone..."
+              cd /opt/deadly
+              git fetch origin
+              git checkout "$REF" 2>/dev/null || git checkout "origin/$REF"
+              git pull origin "$REF" 2>/dev/null || true
+            else
+              echo "Cloning fresh..."
+              git clone "https://github.com/$REPO.git" /opt/deadly
+              cd /opt/deadly
+              git checkout "$REF" 2>/dev/null || git checkout "origin/$REF"
+            fi
+            echo "HEAD: $(git rev-parse --short HEAD)"
+          SCRIPT
+
+      - name: Read data version
+        id: data
+        run: echo "version=$(cat data/version)" >> "$GITHUB_OUTPUT"
+
+      - name: Download and extract data on server
+        env:
+          SERVER: deploy@${{ steps.server.outputs.ip }}
+          DATA_VERSION: ${{ steps.data.outputs.version }}
+          REPO: ${{ github.repository }}
+        run: |
+          ssh "$SERVER" bash -s <<SCRIPT
+            set -euo pipefail
+            cd /opt/deadly
+
+            echo "Downloading data v${DATA_VERSION}..."
+            curl -fSL -o /tmp/data.zip \
+              "https://github.com/${REPO}/releases/download/data-v${DATA_VERSION}/data.zip"
+
+            echo "Extracting to ui/data/..."
+            rm -rf ui/data
+            mkdir -p ui/data
+            unzip -qo /tmp/data.zip -d ui/data/
+            rm /tmp/data.zip
+
+            echo "Data: \$(ls ui/data/shows/ | wc -l) shows, \$(ls ui/data/recordings/ | wc -l) recordings"
+          SCRIPT
+
+      - name: Build and start stack
+        env:
+          SERVER: deploy@${{ steps.server.outputs.ip }}
+        run: |
+          ssh "$SERVER" bash -s <<'SCRIPT'
+            set -euo pipefail
+            cd /opt/deadly
+
+            echo "Pruning old Docker resources..."
+            docker system prune -f
+
+            echo "Building and starting stack..."
+            docker compose up --build -d
+
+            echo "Running containers:"
+            docker compose ps
+          SCRIPT
+
+      - name: Health check
+        env:
+          SITE: https://beta.thedeadly.app
+        run: |
+          echo "Waiting for $SITE/api/health ..."
+          for i in $(seq 1 24); do
+            if curl -fsSk "$SITE/api/health" -o /dev/null 2>/dev/null; then
+              echo "Health check passed on attempt $i"
+              exit 0
+            fi
+            echo "  Attempt $i/24 — waiting 5s..."
+            sleep 5
+          done
+          echo "::warning::Health check did not pass within 2 minutes"
+          exit 1
+
+      - name: Job summary
+        if: always()
+        env:
+          SERVER_IP: ${{ steps.server.outputs.ip }}
+          DATA_VERSION: ${{ steps.data.outputs.version }}
+          REF: ${{ inputs.ref }}
+        run: |
+          HEALTH="unknown"
+          if curl -fsSk "https://beta.thedeadly.app/api/health" -o /dev/null 2>/dev/null; then
+            HEALTH="healthy"
+          else
+            HEALTH="unhealthy"
+          fi
+
+          cat >> "$GITHUB_STEP_SUMMARY" <<EOF
+          ## Deploy Summary
+
+          | Field | Value |
+          |-------|-------|
+          | Ref | \`${REF}\` |
+          | Data version | \`${DATA_VERSION}\` |
+          | Server IP | \`${SERVER_IP}\` |
+          | Health | ${HEALTH} |
+          | Site | [beta.thedeadly.app](https://beta.thedeadly.app) |
+          EOF

@@ -14,7 +14,7 @@
 .PHONY: android-remote-emulator android-remote-emu-list android-remote-emu-stop android-remote-run-emulator
 .PHONY: android-auto-dhu android-remote-auto-dhu
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
-.PHONY: infra-init infra-plan infra-apply infra-retry infra-destroy infra-output
+.PHONY: infra-init infra-plan infra-apply infra-retry infra-destroy infra-output infra-deploy
 .PHONY: data-download data-generate data-package data-download-stage01 data-upload-stage01 data-collect data-release data-clean
 
 # =============================================================================
@@ -212,6 +212,7 @@ help:
 	@echo "  infra-retry      - Retry OCI instance creation until capacity available (make infra-retry INTERVAL=5)"
 	@echo "  infra-destroy    - Tear down all infrastructure"
 	@echo "  infra-output     - Show current Terraform outputs (instance IP, etc.)"
+	@echo "  infra-deploy     - Deploy alpha stack via GHA (current branch)"
 	@echo "  setup-infra-secrets - Upload infra secrets (DO, B2, SSH) to GitHub"
 	@echo ""
 	@echo "DATA PIPELINE:"
@@ -656,6 +657,10 @@ infra-destroy:
 
 infra-output:
 	@cd $(INFRA_DIR) && $(TERRAFORM) output
+
+# Deploy alpha stack via GHA (triggers infra-deploy.yml)
+infra-deploy:
+	gh workflow run infra-deploy.yml -f ref=$(shell git rev-parse --abbrev-ref HEAD)
 
 # =============================================================================
 # DATA PIPELINE (delegates to data/Makefile)
