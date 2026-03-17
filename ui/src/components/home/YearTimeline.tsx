@@ -15,19 +15,22 @@ export default function YearTimeline({
   const maxCount = Math.max(...yearData.map((y) => y.count));
 
   return (
-    <section className="mb-12">
-      <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-lg font-bold text-deadly-title">Shows by Year</h2>
+    <section className="mb-8">
+      <div className="flex items-center justify-between">
+        <h3 className="mb-2 text-sm font-bold uppercase tracking-wider text-deadly-title/80">
+          Shows by Year
+          <span className="ml-2 inline-block h-px w-16 align-middle bg-white/20" />
+        </h3>
         {selectedYear !== null && (
           <button
             onClick={() => onSelectYear(null)}
             className="text-sm text-deadly-heading hover:text-white"
           >
-            Clear filter
+            Clear
           </button>
         )}
       </div>
-      <div className="flex items-end gap-[2px] overflow-x-auto pb-2 scrollbar-none">
+      <div className="flex items-end gap-[2px] overflow-x-auto pb-2">
         {yearData.map((bucket) => {
           const heightPct = (bucket.count / maxCount) * 100;
           const isSelected = selectedYear === bucket.year;
@@ -54,9 +57,11 @@ export default function YearTimeline({
               <div
                 className={`mt-1 text-[10px] ${
                   isSelected ? "font-bold text-deadly-red" : "text-white/40"
-                } ${bucket.year % 5 === 0 ? "" : "hidden md:block"}`}
+                } ${bucket.year % 5 === 0 || bucket.year === yearData[0].year || bucket.year === yearData[yearData.length - 1].year ? "" : "hidden md:block"}`}
               >
-                {String(bucket.year).slice(2)}
+                {bucket.year === yearData[0].year || bucket.year === yearData[yearData.length - 1].year
+                  ? String(bucket.year)
+                  : String(bucket.year).slice(2)}
               </div>
             </button>
           );

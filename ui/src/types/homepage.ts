@@ -18,6 +18,8 @@ export interface ShowIndexEntry {
   sum: string;
   /** avg_rating (community) */
   ar: number;
+  /** source type keys (e.g. ["SBD","AUD"]) */
+  st: string[];
 }
 
 export interface CollectionSummary {

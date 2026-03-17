@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import type { CollectionSummary } from "@/types/homepage";
-import CollectionCard from "./CollectionCard";
 
 const INITIAL_COUNT = 12;
 
@@ -16,22 +15,30 @@ export default function CollectionsGrid({
 
   if (collections.length === 0) return null;
   return (
-    <section className="mb-12">
-      <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-lg font-bold text-deadly-title">Collections</h2>
+    <section className="mb-8">
+      <h3 className="mb-2 text-sm font-bold uppercase tracking-wider text-deadly-title/80">
+        Collections
+        <span className="ml-2 inline-block h-px w-16 align-middle bg-white/20" />
+      </h3>
+      <div className="flex flex-wrap gap-2">
+        {visible.map((c) => (
+          <span
+            key={c.id}
+            className="rounded-full bg-deadly-surface px-3 py-1 text-sm text-white/80"
+            title={c.description}
+          >
+            {c.name}
+            <span className="ml-1 text-xs text-white/40">{c.total_shows}</span>
+          </span>
+        ))}
         {collections.length > INITIAL_COUNT && (
           <button
             onClick={() => setShowAll((v) => !v)}
-            className="text-sm text-deadly-heading hover:text-white"
+            className="rounded-full bg-deadly-surface px-3 py-1 text-sm text-deadly-heading hover:text-white"
           >
-            {showAll ? "Show less" : `Show all ${collections.length}`}
+            {showAll ? "Show less" : `+${collections.length - INITIAL_COUNT} more`}
           </button>
         )}
-      </div>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {visible.map((c) => (
-          <CollectionCard key={c.id} collection={c} />
-        ))}
       </div>
     </section>
   );

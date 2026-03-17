@@ -1,51 +1,82 @@
 "use client";
 
-import Image from "next/image";
-import AppStoreBadge from "@/components/AppStoreBadge";
-
-const PLAY_STORE_URL =
-  "https://play.google.com/store/apps/details?id=com.grateful.deadly";
-const GOOGLE_PLAY_BADGE_URL =
-  "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png";
-
 export default function HeroSection({ totalShows }: { totalShows: number }) {
   return (
-    <section className="relative mb-12 overflow-hidden rounded-2xl py-12 text-center">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(220,20,60,0.15)_0%,_transparent_70%)]" />
-      <div className="relative">
-        <Image
-          src="/logo.png"
-          alt="The Deadly logo"
-          width={80}
-          height={80}
-          className="mx-auto mb-4"
-        />
-        <h1 className="text-4xl font-bold text-white md:text-5xl">
-          The Deadly
-        </h1>
-        <p className="mt-3 text-lg text-white/60">
-          Every Grateful Dead concert. Free. Forever.
-        </p>
-        <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/40">
-          The Deadly is an open-source app that brings all{" "}
-          {totalShows.toLocaleString()} known Grateful Dead shows into one
-          place — sourced from the Internet Archive, enriched with AI-generated
-          reviews, setlists, and ratings. Browse three decades of live music
-          from 1965 to 1995.
-        </p>
-        <div className="mt-6 flex items-center justify-center gap-3">
-          <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
-            <Image
-              src={GOOGLE_PLAY_BADGE_URL}
-              alt="Get it on Google Play"
-              width={160}
-              height={48}
-              unoptimized
-            />
-          </a>
-          <AppStoreBadge width={160} height={48} />
+    <header className="mb-8">
+      <p className="text-lg font-bold uppercase tracking-wider text-deadly-title">
+        The Deadly
+      </p>
+      <h1 className="mt-1 text-2xl font-bold text-white md:text-3xl">
+        A modern player for live Grateful Dead
+      </h1>
+      <p className="mt-3 text-sm font-semibold text-deadly-heading">
+        100% free. 100% open source. No ads, no account required, no paywalls.
+      </p>
+      <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/60">
+        The Deadly is a{" "}
+        <span className="text-deadly-heading">cross-platform music player</span>{" "}
+        built around{" "}
+        <span className="text-deadly-heading">shows, not recordings</span>.
+        All{" "}
+        <span className="text-deadly-heading">
+          {totalShows.toLocaleString()} known concerts
+        </span>{" "}
+        from 1965 to 1995 are sourced from the{" "}
+        <span className="text-deadly-heading">Internet Archive</span>, but
+        instead of digging through tapes you get a clean, show-first
+        experience. Our heuristic and AI-powered engine{" "}
+        <span className="text-deadly-heading">
+          automatically selects the best recording
+        </span>{" "}
+        for each show, biasing towards{" "}
+        <span className="text-deadly-heading">soundboards</span> and highly
+        rated sources.
+      </p>
+      <div className="mt-4 max-w-2xl space-y-3">
+        <div>
+          <h2 className="text-sm font-bold uppercase tracking-wider text-deadly-title/80">
+            Listen anywhere
+            <span className="ml-2 inline-block h-px w-16 align-middle bg-white/20" />
+          </h2>
+          <p className="mt-1 text-sm text-white/60">
+            Native{" "}
+            <span className="text-deadly-heading">iOS and Android</span> apps
+            with background playback,{" "}
+            <span className="text-deadly-heading">CarPlay</span>,{" "}
+            <span className="text-deadly-heading">Android Auto</span>,
+            equalizer, and{" "}
+            <span className="text-deadly-heading">show and song favorites</span>.
+            Tap play and go.
+          </p>
+        </div>
+        <div>
+          <h2 className="text-sm font-bold uppercase tracking-wider text-deadly-title/80">
+            Find anything
+            <span className="ml-2 inline-block h-px w-16 align-middle bg-white/20" />
+          </h2>
+          <p className="mt-1 text-sm text-white/60">
+            Search across{" "}
+            <span className="text-deadly-heading">
+              dates, venues, cities, songs, and band members
+            </span>
+            . Filter by decade, source type, or browse{" "}
+            <span className="text-deadly-heading">curated collections</span>.
+          </p>
+        </div>
+        <div>
+          <h2 className="text-sm font-bold uppercase tracking-wider text-deadly-title/80">
+            Every show reviewed
+            <span className="ml-2 inline-block h-px w-16 align-middle bg-white/20" />
+          </h2>
+          <p className="mt-1 text-sm text-white/60">
+            Every show has a{" "}
+            <span className="text-deadly-heading">fresh write-up</span> drawn
+            from each recording&apos;s listener comments &mdash; covering the
+            playing, the highlights, and the quality of each source. Know what
+            to listen for before you press play.
+          </p>
         </div>
       </div>
-    </section>
+    </header>
   );
 }
