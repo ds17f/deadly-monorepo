@@ -68,8 +68,9 @@ jobs:
               if [ -f /opt/deadly/.cloud-init-complete ]; then
                 cp /opt/deadly/.cloud-init-complete /tmp/deadly-clone/
               fi
-              rm -rf /opt/deadly
-              mv /tmp/deadly-clone /opt/deadly
+              sudo rm -rf /opt/deadly
+              sudo mv /tmp/deadly-clone /opt/deadly
+              sudo chown -R deploy:deploy /opt/deadly
               cd /opt/deadly
               git checkout "${REF}" 2>/dev/null || git checkout "origin/${REF}"
             fi
