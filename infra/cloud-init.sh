@@ -35,7 +35,7 @@ ufw allow 443/tcp
 ufw --force enable
 
 # ── App directory ────────────────────────────────────────────────────────
-mkdir -p /opt/deadly /opt/deadly/api-data
+mkdir -p /opt/deadly /opt/deadly/api-data /opt/deadly/ui-out
 chown -R deploy:deploy /opt/deadly
 
 # ── Signal completion ────────────────────────────────────────────────────

@@ -164,31 +164,53 @@ jobs:
             set -euo pipefail
             cd /opt/deadly
 
-            echo "Ensuring api-data directory exists..."
-            mkdir -p api-data
+            mkdir -p api-data ui-out
 
-            # Migrate from old named volume to bind mount (one-time)
-            if docker volume inspect deadly_api_data &>/dev/null; then
-              echo "Migrating data from named volume to bind mount..."
-              docker run --rm \
-                -v deadly_api_data:/src:ro \
-                -v /opt/deadly/api-data:/dst \
+            # One-time migration from old named volume (ui_static)
+            if docker volume inspect deadly_ui_static &>/dev/null; then
+              echo "Migrating UI from named volume to bind mount..."
+              docker run --rm -v deadly_ui_static:/src:ro -v /opt/deadly/ui-out:/dst \
                 busybox sh -c 'cp -a /src/. /dst/'
-              docker volume rm deadly_api_data 2>/dev/null || true
-              echo "Migration complete."
+              docker compose rm -sf ui caddy 2>/dev/null || true
+              docker volume rm deadly_ui_static 2>/dev/null || true
             fi
 
-            echo "Pruning old Docker resources..."
+            # One-time migration from old api_data named volume
+            if docker volume inspect deadly_api_data &>/dev/null; then
+              echo "Migrating data from named volume to bind mount..."
+              docker run --rm -v deadly_api_data:/src:ro -v /opt/deadly/api-data:/dst \
+                busybox sh -c 'cp -a /src/. /dst/'
+              docker volume rm deadly_api_data 2>/dev/null || true
+            fi
+
+            # Pre-build ALL images (Caddy keeps running the whole time)
+            echo "Pre-building all images..."
+            docker compose build ui api
+
+            # Extract new UI static files to staging directory
+            echo "Extracting static files..."
+            rm -rf ui-out-next
+            mkdir -p ui-out-next
+            docker compose run --rm --no-deps \
+              -v /opt/deadly/ui-out-next:/extract \
+              ui sh -c 'cp -a /out/. /extract/'
+
+            # Atomic swap of UI files
+            echo "Swapping UI files..."
+            if [ -d ui-out ] && [ "$(ls -A ui-out 2>/dev/null)" ]; then
+              mv ui-out ui-out-old
+              mv ui-out-next ui-out
+              rm -rf ui-out-old
+            else
+              rm -rf ui-out
+              mv ui-out-next ui-out
+            fi
+
+            # Fast container swap — images already built, just restart
+            echo "Swapping containers..."
+            docker compose up -d api redis caddy
+
             docker system prune -f
-
-            echo "Removing stale UI volume so fresh build output is used..."
-            docker compose rm -sf ui caddy || true
-            docker volume rm deadly_ui_static 2>/dev/null || true
-
-            echo "Building and starting stack..."
-            docker compose up --build -d
-
-            echo "Running containers:"
             docker compose ps
           SCRIPT
 
