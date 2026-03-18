@@ -1,6 +1,7 @@
 "use client";
 
 import { QRCodeSVG } from "qrcode.react";
+import { getShareBaseUrl } from "@/lib/share";
 
 export default function ShowQRCode({
   showId,
@@ -9,9 +10,10 @@ export default function ShowQRCode({
   showId: string;
   recordingId?: string;
 }) {
+  const base = getShareBaseUrl();
   const url = recordingId
-    ? `https://share.thedeadly.app/shows/${showId}/recording/${recordingId}`
-    : `https://share.thedeadly.app/shows/${showId}`;
+    ? `${base}/shows/${showId}/recording/${recordingId}`
+    : `${base}/shows/${showId}`;
 
   return (
     <div className="mt-4 rounded-lg border border-white/10 bg-deadly-surface p-4">
