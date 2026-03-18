@@ -117,6 +117,8 @@ jobs:
           APPLE_KEY_ID: ${{ secrets.APPLE_KEY_ID }}
           APPLE_PRIVATE_KEY: ${{ secrets.APPLE_PRIVATE_KEY }}
         run: |
+          # Escape newlines in PEM key so it stays on one line in .env
+          APPLE_PRIVATE_KEY_ESCAPED=$(printf '%s' "$APPLE_PRIVATE_KEY" | sed ':a;N;$!ba;s/\n/\\n/g')
           printf '%s\n' \
             "AUTH_SECRET=${AUTH_SECRET}" \
             "AUTH_URL=${AUTH_URL}" \
@@ -125,7 +127,7 @@ jobs:
             "APPLE_CLIENT_ID=${APPLE_CLIENT_ID}" \
             "APPLE_TEAM_ID=${APPLE_TEAM_ID}" \
             "APPLE_KEY_ID=${APPLE_KEY_ID}" \
-            "APPLE_PRIVATE_KEY=${APPLE_PRIVATE_KEY}" \
+            "APPLE_PRIVATE_KEY=${APPLE_PRIVATE_KEY_ESCAPED}" \
             | ssh "$SERVER" 'cat > /opt/deadly/.env && chmod 600 /opt/deadly/.env'
 
       - name: Backup database to B2
