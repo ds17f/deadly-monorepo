@@ -52,6 +52,23 @@ export const authConfig: AuthConfig = {
       return session;
     },
   },
+  cookies: {
+    // Apple uses response_mode=form_post, so the callback is a cross-origin
+    // POST from appleid.apple.com. SameSite=Lax (the default) blocks cookies
+    // on cross-origin POST — use "none" so state/nonce survive the round-trip.
+    state: {
+      name: "__Secure-authjs.state",
+      options: { httpOnly: true, sameSite: "none" as const, path: "/", secure: true },
+    },
+    nonce: {
+      name: "__Secure-authjs.nonce",
+      options: { httpOnly: true, sameSite: "none" as const, path: "/", secure: true },
+    },
+    pkceCodeVerifier: {
+      name: "__Secure-authjs.pkce.code_verifier",
+      options: { httpOnly: true, sameSite: "none" as const, path: "/", secure: true },
+    },
+  },
   pages: {
     error: "/auth/error",
   },
