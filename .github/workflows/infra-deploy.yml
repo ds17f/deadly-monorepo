@@ -115,17 +115,14 @@ jobs:
           APPLE_CLIENT_ID: ${{ secrets.APPLE_CLIENT_ID }}
           APPLE_CLIENT_SECRET: ${{ secrets.APPLE_CLIENT_SECRET }}
         run: |
-          ssh "$SERVER" bash -s <<SCRIPT
-            cat > /opt/deadly/.env <<ENVEOF
-AUTH_SECRET=${AUTH_SECRET}
-AUTH_URL=${AUTH_URL}
-GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
-GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
-APPLE_CLIENT_ID=${APPLE_CLIENT_ID}
-APPLE_CLIENT_SECRET=${APPLE_CLIENT_SECRET}
-ENVEOF
-            chmod 600 /opt/deadly/.env
-          SCRIPT
+          printf '%s\n' \
+            "AUTH_SECRET=${AUTH_SECRET}" \
+            "AUTH_URL=${AUTH_URL}" \
+            "GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}" \
+            "GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}" \
+            "APPLE_CLIENT_ID=${APPLE_CLIENT_ID}" \
+            "APPLE_CLIENT_SECRET=${APPLE_CLIENT_SECRET}" \
+            | ssh "$SERVER" 'cat > /opt/deadly/.env && chmod 600 /opt/deadly/.env'
 
       - name: Backup database to B2
         env:
