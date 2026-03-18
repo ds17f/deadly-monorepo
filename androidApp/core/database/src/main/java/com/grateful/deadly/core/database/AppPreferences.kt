@@ -40,6 +40,7 @@ class AppPreferences @Inject constructor(
         private const val KEY_EQ_BAND_LEVELS = "eq_band_levels"
         private const val KEY_SHARE_ATTACH_IMAGE = "share_attach_image"
         private const val KEY_SOURCE_BADGE_STYLE = "source_badge_style"
+        private const val KEY_USE_BETA_SHARE_LINKS = "use_beta_share_links"
     }
 
     private val _includeShowsWithoutRecordings = MutableStateFlow(
@@ -146,5 +147,23 @@ class AppPreferences @Inject constructor(
         _sourceBadgeStyle.value = value
         ShowArtworkService.badgeStyle = SourceBadgeStyle.fromString(value)
     }
+
+    // ── Beta Share Links ──────────────────────────────────────────────────
+
+    private val _useBetaShareLinks = MutableStateFlow(
+        prefs.getBoolean(KEY_USE_BETA_SHARE_LINKS, false)
+    )
+
+    /** When true, generated share links use share.beta.thedeadly.app instead of share.thedeadly.app. */
+    val useBetaShareLinks: StateFlow<Boolean> = _useBetaShareLinks.asStateFlow()
+
+    fun setUseBetaShareLinks(value: Boolean) {
+        prefs.edit().putBoolean(KEY_USE_BETA_SHARE_LINKS, value).apply()
+        _useBetaShareLinks.value = value
+    }
+
+    /** The base URL for generating share links, respecting the beta toggle. */
+    val shareBaseUrl: String
+        get() = if (_useBetaShareLinks.value) "https://share.beta.thedeadly.app" else "https://share.thedeadly.app"
 
 }

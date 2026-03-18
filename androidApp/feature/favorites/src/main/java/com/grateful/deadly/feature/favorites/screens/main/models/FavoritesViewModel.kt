@@ -422,9 +422,9 @@ class FavoritesViewModel @Inject constructor(
      */
     fun shareAsMessage(show: FavoriteShowViewModel) {
         val url = if (show.bestRecordingId != null) {
-            "https://share.thedeadly.app/shows/${show.showId}/recording/${show.bestRecordingId}"
+            "${appPreferences.shareBaseUrl}/shows/${show.showId}/recording/${show.bestRecordingId}"
         } else {
-            "https://share.thedeadly.app/shows/${show.showId}"
+            "${appPreferences.shareBaseUrl}/shows/${show.showId}"
         }
 
         val intent = Intent(Intent.ACTION_SEND).apply {

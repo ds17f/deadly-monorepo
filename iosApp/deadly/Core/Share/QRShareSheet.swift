@@ -16,8 +16,10 @@ struct QRShareSheet: View {
     @State private var isSharing = false
     @Environment(\.dismiss) private var dismiss
 
+    @Environment(\.appContainer) private var container
+
     private var shareUrl: String {
-        var url = "https://share.thedeadly.app/shows/\(showId)"
+        var url = "\(container.appPreferences.shareBaseUrl)/shows/\(showId)"
         if let rid = recordingId { url += "/recording/\(rid)" }
         if let track = trackNumber { url += "/track/\(track)" }
         return url

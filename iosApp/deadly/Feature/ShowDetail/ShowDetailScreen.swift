@@ -311,7 +311,7 @@ struct ShowDetailScreen: View {
         }
         .sheet(isPresented: $showMessageShare) {
             if let recording = playlistService.currentRecording {
-                let url = "https://share.thedeadly.app/shows/\(currentShowId)/recording/\(recording.identifier)"
+                let url = "\(container.appPreferences.shareBaseUrl)/shows/\(currentShowId)/recording/\(recording.identifier)"
                 let items = MessageShareService.shareItems(url: url)
                 ShareActivityView(items: items)
             }

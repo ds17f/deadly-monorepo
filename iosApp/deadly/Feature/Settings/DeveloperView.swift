@@ -13,6 +13,18 @@ struct DeveloperView: View {
         List {
             Section {
                 Toggle(isOn: Binding(
+                    get: { container.appPreferences.useBetaShareLinks },
+                    set: { container.appPreferences.useBetaShareLinks = $0 }
+                )) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Use beta share links")
+                        Text("Generate share links using share.beta.thedeadly.app")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+
+                Toggle(isOn: Binding(
                     get: { container.appPreferences.forceOnline },
                     set: { container.appPreferences.forceOnline = $0 }
                 )) {

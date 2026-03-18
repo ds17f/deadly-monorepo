@@ -38,6 +38,7 @@ android {
 dependencies {
     // V2 Core dependencies
     implementation(project(":core:api:player"))
+    implementation(project(":core:database"))
     implementation(project(":core:media"))
     implementation(project(":core:domain"))
     implementation(project(":core:model"))

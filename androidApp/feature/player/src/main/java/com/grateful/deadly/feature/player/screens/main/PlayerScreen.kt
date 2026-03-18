@@ -216,12 +216,12 @@ fun PlayerScreen(
             if (showId != null) {
                 val url = if (recordingId != null) {
                     buildString {
-                        append("https://share.thedeadly.app/shows/$showId/recording/$recordingId")
+                        append("${viewModel.appPreferences.shareBaseUrl}/shows/$showId/recording/$recordingId")
                         val trackNumber = uiState.navigationInfo.trackNumber
                         if (trackNumber != null) append("/track/$trackNumber")
                     }
                 } else {
-                    "https://share.thedeadly.app/shows/$showId"
+                    "${viewModel.appPreferences.shareBaseUrl}/shows/$showId"
                 }
                 QrCodeDisplay(
                     url = url,
