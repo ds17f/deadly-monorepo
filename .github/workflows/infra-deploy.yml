@@ -113,7 +113,9 @@ jobs:
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
           APPLE_CLIENT_ID: ${{ secrets.APPLE_CLIENT_ID }}
-          APPLE_CLIENT_SECRET: ${{ secrets.APPLE_CLIENT_SECRET }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          APPLE_KEY_ID: ${{ secrets.APPLE_KEY_ID }}
+          APPLE_PRIVATE_KEY: ${{ secrets.APPLE_PRIVATE_KEY }}
         run: |
           printf '%s\n' \
             "AUTH_SECRET=${AUTH_SECRET}" \
@@ -121,7 +123,9 @@ jobs:
             "GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}" \
             "GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}" \
             "APPLE_CLIENT_ID=${APPLE_CLIENT_ID}" \
-            "APPLE_CLIENT_SECRET=${APPLE_CLIENT_SECRET}" \
+            "APPLE_TEAM_ID=${APPLE_TEAM_ID}" \
+            "APPLE_KEY_ID=${APPLE_KEY_ID}" \
+            "APPLE_PRIVATE_KEY=${APPLE_PRIVATE_KEY}" \
             | ssh "$SERVER" 'cat > /opt/deadly/.env && chmod 600 /opt/deadly/.env'
 
       - name: Backup database to B2

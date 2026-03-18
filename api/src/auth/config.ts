@@ -3,6 +3,9 @@ import Google from "@auth/core/providers/google";
 import Apple from "@auth/core/providers/apple";
 import { SqliteAdapter } from "./adapter.js";
 import { getAppUserByAuthId } from "../db/users.js";
+import { generateAppleSecret } from "./apple-secret.js";
+
+const appleClientSecret = await generateAppleSecret();
 
 export const authConfig: AuthConfig = {
   adapter: SqliteAdapter(),
@@ -13,7 +16,7 @@ export const authConfig: AuthConfig = {
     }),
     Apple({
       clientId: process.env.APPLE_CLIENT_ID!,
-      clientSecret: process.env.APPLE_CLIENT_SECRET!,
+      clientSecret: appleClientSecret,
     }),
   ],
   secret: process.env.AUTH_SECRET,
