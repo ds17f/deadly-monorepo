@@ -28,7 +28,7 @@ export default function UserMenu() {
     const callbackUrl = path.startsWith("/api/") ? "/" : path;
     return (
       <a
-        href={`/api/auth/signin/google?callbackUrl=${encodeURIComponent(callbackUrl)}`}
+        href={`/signin?callbackUrl=${encodeURIComponent(callbackUrl)}`}
         className="rounded-md border border-white/20 px-3 py-1.5 text-sm text-white/70 transition hover:border-white/40 hover:text-white"
       >
         Sign in
