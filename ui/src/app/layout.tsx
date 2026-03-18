@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import AppStoreBadge from "@/components/AppStoreBadge";
+import AuthProvider from "@/components/auth/AuthProvider";
+import UserMenu from "@/components/auth/UserMenu";
 import PlayerProvider from "@/components/player/PlayerProvider";
 import HeaderPlayer from "@/components/player/HeaderPlayer";
 import "./globals.css";
@@ -29,9 +31,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-deadly-bg text-white antialiased">
+        <AuthProvider>
         <PlayerProvider>
           <nav className="border-b border-white/10 px-6 py-4">
-            <div className="mx-auto flex max-w-5xl items-center">
+            <div className="mx-auto flex max-w-5xl items-center justify-between">
               <Link
                 href="/"
                 className="flex items-center gap-2 text-xl font-bold text-white"
@@ -44,8 +47,9 @@ export default function RootLayout({
                 />
                 The Deadly
               </Link>
-              <div className="ml-auto">
+              <div className="flex items-center gap-4">
                 <HeaderPlayer />
+                <UserMenu />
               </div>
             </div>
           </nav>
@@ -100,6 +104,7 @@ export default function RootLayout({
             </div>
           </footer>
         </PlayerProvider>
+        </AuthProvider>
       </body>
     </html>
   );
