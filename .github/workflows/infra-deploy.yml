@@ -199,10 +199,10 @@ jobs:
             echo "Extracting static files..."
             sudo rm -rf ui-out-next
             mkdir -p ui-out-next
-            docker compose run --rm --no-deps \
+            docker compose run --rm --no-deps -T \
               --user "$(id -u):$(id -g)" \
               -v /opt/deadly/ui-out-next:/extract \
-              ui sh -c 'cp -r /out/. /extract/'
+              ui sh -c 'cp -r /out/. /extract/' </dev/null
 
             # Atomic swap of UI files
             echo "Swapping UI files..."
