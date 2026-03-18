@@ -336,7 +336,7 @@ class PlayerViewModel @Inject constructor(
         val recordingId = trackInfo.recordingId
 
         val url = buildString {
-            append("https://share.thedeadly.app/shows/$showId/recording/$recordingId")
+            append("${appPreferences.shareBaseUrl}/shows/$showId/recording/$recordingId")
             if (trackInfo.trackNumber != null) append("/track/${trackInfo.trackNumber}")
         }
 

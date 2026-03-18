@@ -277,9 +277,9 @@ fun FavoritesScreen(
 
     qrCodeShow?.let { show ->
         val url = if (show.bestRecordingId != null) {
-            "https://share.thedeadly.app/shows/${show.showId}/recording/${show.bestRecordingId}"
+            "${viewModel.appPreferences.shareBaseUrl}/shows/${show.showId}/recording/${show.bestRecordingId}"
         } else {
-            "https://share.thedeadly.app/shows/${show.showId}"
+            "${viewModel.appPreferences.shareBaseUrl}/shows/${show.showId}"
         }
         QrCodeDisplay(
             url = url,

@@ -338,9 +338,9 @@ fun PlaylistScreen(
     if (showQrCode) {
         uiState.showData?.let { showData ->
             val url = if (showData.currentRecordingId != null) {
-                "https://share.thedeadly.app/shows/${showData.showId}/recording/${showData.currentRecordingId}"
+                "${viewModel.appPreferences.shareBaseUrl}/shows/${showData.showId}/recording/${showData.currentRecordingId}"
             } else {
-                "https://share.thedeadly.app/shows/${showData.showId}"
+                "${viewModel.appPreferences.shareBaseUrl}/shows/${showData.showId}"
             }
             QrCodeDisplay(
                 url = url,

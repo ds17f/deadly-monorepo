@@ -4,17 +4,19 @@ import android.content.Context
 import android.content.Intent
 import com.grateful.deadly.core.model.Show
 import com.grateful.deadly.core.model.Recording
+import com.grateful.deadly.core.database.AppPreferences
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
 class ShareService @Inject constructor(
-    @ApplicationContext private val context: Context
+    @ApplicationContext private val context: Context,
+    private val appPreferences: AppPreferences
 ) {
 
     fun shareShow(show: Show, recording: Recording) {
-        val url = "https://share.thedeadly.app/shows/${show.id}/recording/${recording.identifier}"
+        val url = "${appPreferences.shareBaseUrl}/shows/${show.id}/recording/${recording.identifier}"
         val shareIntent = createShareIntent(url)
         context.startActivity(shareIntent)
     }

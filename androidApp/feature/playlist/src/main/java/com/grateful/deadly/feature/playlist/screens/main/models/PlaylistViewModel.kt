@@ -667,9 +667,9 @@ class PlaylistViewModel @Inject constructor(
         val showData = _baseUiState.value.showData ?: return
 
         val url = if (showData.currentRecordingId != null) {
-            "https://share.thedeadly.app/shows/${showData.showId}/recording/${showData.currentRecordingId}"
+            "${appPreferences.shareBaseUrl}/shows/${showData.showId}/recording/${showData.currentRecordingId}"
         } else {
-            "https://share.thedeadly.app/shows/${showData.showId}"
+            "${appPreferences.shareBaseUrl}/shows/${showData.showId}"
         }
 
         val intent = Intent(Intent.ACTION_SEND).apply {

@@ -444,7 +444,7 @@ struct PlayerScreen: View {
     }
 
     private func buildShareUrl(showId: String, recordingId: String?, trackNumber: String?) -> String {
-        var url = "https://share.thedeadly.app/shows/\(showId)"
+        var url = "\(container.appPreferences.shareBaseUrl)/shows/\(showId)"
         if let rid = recordingId { url += "/recording/\(rid)" }
         if let track = trackNumber { url += "/track/\(track)" }
         return url

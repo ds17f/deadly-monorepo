@@ -145,7 +145,7 @@ struct FavoritesScreen: View {
         .sheet(item: $messageShareShow) { favoriteShow in
             let show = favoriteShow.show
             let url: String = {
-                var u = "https://share.thedeadly.app/shows/\(show.id)"
+                var u = "\(container.appPreferences.shareBaseUrl)/shows/\(show.id)"
                 if let rid = show.bestRecordingId { u += "/recording/\(rid)" }
                 return u
             }()

@@ -59,6 +59,12 @@ class SettingsViewModel @Inject constructor(
         appPreferences.setSourceBadgeStyle(value)
     }
 
+    val useBetaShareLinks: StateFlow<Boolean> = appPreferences.useBetaShareLinks
+
+    fun toggleUseBetaShareLinks() {
+        appPreferences.setUseBetaShareLinks(!appPreferences.useBetaShareLinks.value)
+    }
+
     val forceOnline: StateFlow<Boolean> = appPreferences.forceOnline
 
     fun toggleForceOnline() {

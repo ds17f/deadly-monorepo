@@ -3,6 +3,7 @@ import CoreImage.CIFilterBuiltins
 
 struct QRCodeView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.appContainer) private var container
     let show: Show
 
     var body: some View {
@@ -34,7 +35,7 @@ struct QRCodeView: View {
 
     private func generateQRCode() -> UIImage? {
         guard let recordingId = show.bestRecordingId else { return nil }
-        let url = "https://share.thedeadly.app/shows/\(show.id)/recording/\(recordingId)"
+        let url = "\(container.appPreferences.shareBaseUrl)/shows/\(show.id)/recording/\(recordingId)"
         let context = CIContext()
         let filter = CIFilter.qrCodeGenerator()
         filter.message = Data(url.utf8)

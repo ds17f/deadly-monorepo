@@ -11,6 +11,15 @@ final class AppPreferences {
     private static let eqBandGainsKey = "eq_band_gains"
     private static let shareAttachImageKey = "share_attach_image"
     private static let sourceBadgeStyleKey = "source_badge_style"
+    private static let useBetaShareLinksKey = "use_beta_share_links"
+
+    var useBetaShareLinks: Bool {
+        didSet { UserDefaults.standard.set(useBetaShareLinks, forKey: Self.useBetaShareLinksKey) }
+    }
+
+    var shareBaseUrl: String {
+        useBetaShareLinks ? "https://share.beta.thedeadly.app" : "https://share.thedeadly.app"
+    }
 
     var includeShowsWithoutRecordings: Bool {
         didSet { UserDefaults.standard.set(includeShowsWithoutRecordings, forKey: Self.includeShowsWithoutRecordingsKey) }
@@ -50,6 +59,7 @@ final class AppPreferences {
     init() {
         UserDefaults.standard.register(defaults: [
             Self.includeShowsWithoutRecordingsKey: false,
+            Self.useBetaShareLinksKey: false,
             Self.forceOnlineKey: false,
             Self.favoritesDisplayModeKey: "LIST",
             Self.eqEnabledKey: false,
@@ -58,6 +68,7 @@ final class AppPreferences {
             Self.sourceBadgeStyleKey: "LONG",
         ])
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
+        useBetaShareLinks = UserDefaults.standard.bool(forKey: Self.useBetaShareLinksKey)
         forceOnline = UserDefaults.standard.bool(forKey: Self.forceOnlineKey)
         // Read new key first, fall back to legacy key for migration
         favoritesDisplayMode = UserDefaults.standard.string(forKey: Self.favoritesDisplayModeKey)
