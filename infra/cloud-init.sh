@@ -35,8 +35,8 @@ ufw allow 443/tcp
 ufw --force enable
 
 # ── App directory ────────────────────────────────────────────────────────
-mkdir -p /opt/deadly
-chown deploy:deploy /opt/deadly
+mkdir -p /opt/deadly /opt/deadly/api-data
+chown -R deploy:deploy /opt/deadly
 
 # ── Signal completion ────────────────────────────────────────────────────
 touch /opt/deadly/.cloud-init-complete

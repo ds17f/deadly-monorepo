@@ -17,6 +17,6 @@ services:
       - "3001:3001"
     volumes:
       - ./api/src:/app/src:ro
-      - api_data:/app/data
+      - ./api-data:/app/data
     environment:
       - LOG_LEVEL=debug

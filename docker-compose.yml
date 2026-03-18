@@ -42,7 +42,7 @@ services:
       - APPLE_CLIENT_ID=${APPLE_CLIENT_ID}
       - APPLE_CLIENT_SECRET=${APPLE_CLIENT_SECRET}
     volumes:
-      - api_data:/app/data
+      - ./api-data:/app/data
     expose:
       - "3001"
 
@@ -57,6 +57,5 @@ services:
 volumes:
   caddy_data:
   caddy_config:
-  api_data:
   redis_data:
   ui_static:

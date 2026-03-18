@@ -1,11 +1,11 @@
 .PHONY: dev dev-up dev-down dev-logs dev-ps api-dev api-install api-build api-typecheck
-.PHONY: docker-remote-pull docker-remote-up docker-remote-down docker-remote-logs docker-remote-ps api-remote-dev api-remote-health
+.PHONY: docker-remote-pull docker-remote-up docker-remote-down docker-remote-destroy docker-remote-logs docker-remote-ps api-remote-dev api-remote-health
 .PHONY: help docs-help docs-install docs-build docs-serve docs-clean docs-pr
 .PHONY: ui-install ui-dev ui-build ui-typecheck ui-data
 .PHONY: ui-remote-install ui-remote-dev ui-remote-build ui-remote-dev-build ui-dev-build
 .PHONY: android-release android-release-version android-release-dry-run android-install
 .PHONY: ios-release ios-release-version ios-release-dry-run
-.PHONY: setup-signing setup-github-secrets setup-hooks
+.PHONY: setup-signing setup-github-secrets setup-api-secrets setup-hooks
 .PHONY: android-build-release android-build-bundle android-deploy-testing
 .PHONY: android-promote-alpha android-promote-beta android-promote-production
 .PHONY: ios-build-release ios-deploy-testflight
@@ -16,6 +16,7 @@
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
 .PHONY: infra-init infra-plan infra-apply infra-retry infra-destroy infra-output infra-deploy
 .PHONY: data-download data-generate data-package data-download-stage01 data-upload-stage01 data-collect data-release data-clean
+.PHONY: db-backup-list db-restore
 
 # =============================================================================
 # API & DOCKER COMPOSE
@@ -156,6 +157,7 @@ help:
 	@echo "  setup-hooks          - Configure git to use .githooks/ (run once after clone)"
 	@echo "  setup-signing        - Generate keystore and .secrets/ setup"
 	@echo "  setup-github-secrets - Upload all secrets to GitHub repository"
+	@echo "  setup-api-secrets    - Upload API/OAuth secrets to GitHub 'alpha' environment"
 	@echo ""
 	@echo "ANDROID FASTLANE:"
 	@echo "  android-build-release - Build signed Android release APK"
@@ -176,7 +178,8 @@ help:
 	@echo ""
 	@echo "DOCKER REMOTE (Linux → Mac):"
 	@echo "  docker-remote-up   - Start full stack on Mac (Docker Compose)"
-	@echo "  docker-remote-down - Stop stack on Mac"
+	@echo "  docker-remote-down    - Stop stack on Mac"
+	@echo "  docker-remote-destroy - Destroy stack on Mac (clean rebuild)"
 	@echo "  docker-remote-logs - View logs from remote stack"
 	@echo "  docker-remote-ps   - Show remote service status"
 	@echo "  docker-remote-pull - Pre-pull base images on Mac"
@@ -221,6 +224,10 @@ help:
 	@echo "  data-collect               - Re-collect stage01 from APIs (rare, hours)"
 	@echo "  data-release VERSION=X     - Tag + push, CI builds and publishes data.zip"
 	@echo "  data-clean                 - Remove generated data artifacts"
+	@echo ""
+	@echo "DATABASE BACKUPS:"
+	@echo "  db-backup-list   - List available database backups in B2"
+	@echo "  db-restore       - Download latest backup (or specific: make db-restore BACKUP=users-XXX.db)"
 	@echo ""
 	@echo "DOCUMENTATION:"
 	@echo "  docs-help       - Show documentation-specific help"
@@ -303,6 +310,16 @@ setup-signing:
 
 setup-github-secrets:
 	@./scripts/setup-github-secrets.sh
+
+setup-api-secrets:
+	@echo "Uploading API secrets to GitHub 'alpha' environment..."
+	@gh secret set AUTH_SECRET --env alpha --body "$$(grep '^AUTH_SECRET=' api/.env | cut -d= -f2-)"
+	@gh secret set AUTH_URL --env alpha --body "https://beta.thedeadly.app"
+	@gh secret set GOOGLE_CLIENT_ID --env alpha --body "$$(grep '^GOOGLE_CLIENT_ID=' api/.env | cut -d= -f2-)"
+	@gh secret set GOOGLE_CLIENT_SECRET --env alpha --body "$$(grep '^GOOGLE_CLIENT_SECRET=' api/.env | cut -d= -f2-)"
+	@gh secret set APPLE_CLIENT_ID --env alpha --body "$$(grep '^APPLE_CLIENT_ID=' api/.env | cut -d= -f2-)"
+	@gh secret set APPLE_CLIENT_SECRET --env alpha --body "$$(grep '^APPLE_CLIENT_SECRET=' api/.env | cut -d= -f2-)"
+	@echo "Done. Secrets set in 'alpha' environment."
 
 # =============================================================================
 # ANDROID FASTLANE
@@ -556,6 +573,11 @@ docker-remote-up:
 docker-remote-down:
 	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH) && docker compose -f docker-compose.yml -f docker-compose.dev.yml down"
 
+# Destroy stack on remote Mac (removes containers, images, and volumes for a clean rebuild)
+docker-remote-destroy:
+	@echo "Destroying stack on $(REMOTE_HOST)..."
+	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH) && docker compose -f docker-compose.yml -f docker-compose.dev.yml down --rmi local -v"
+
 # View logs from remote stack
 docker-remote-logs:
 	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH) && docker compose -f docker-compose.yml -f docker-compose.dev.yml logs -f"
@@ -663,3 +685,34 @@ data-release:
 # Remove generated data artifacts
 data-clean:
 	@$(MAKE) -C data clean
+
+# =============================================================================
+# DATABASE BACKUPS (B2)
+# =============================================================================
+
+B2_ENDPOINT    := https://s3.us-west-004.backblazeb2.com
+B2_BACKUP_PATH := s3://deadly-backups/db
+
+# List available database backups in B2
+db-backup-list:
+	@aws s3 ls $(B2_BACKUP_PATH)/ --endpoint-url $(B2_ENDPOINT) --region us-west-004
+
+# Download latest (or specific) backup into local api-data/
+#   make db-restore                          # latest backup
+#   make db-restore BACKUP=users-20260317T120000Z.db  # specific backup
+db-restore:
+	@mkdir -p api-data
+	@if [ -n "$(BACKUP)" ]; then \
+		echo "Downloading $(BACKUP)..."; \
+		aws s3 cp $(B2_BACKUP_PATH)/$(BACKUP) api-data/users.db \
+			--endpoint-url $(B2_ENDPOINT) --region us-west-004; \
+	else \
+		echo "Downloading latest backup..."; \
+		LATEST=$$(aws s3 ls $(B2_BACKUP_PATH)/ --endpoint-url $(B2_ENDPOINT) --region us-west-004 \
+			| sort | tail -1 | awk '{print $$4}'); \
+		if [ -z "$$LATEST" ]; then echo "No backups found"; exit 1; fi; \
+		echo "Found: $$LATEST"; \
+		aws s3 cp $(B2_BACKUP_PATH)/$$LATEST api-data/users.db \
+			--endpoint-url $(B2_ENDPOINT) --region us-west-004; \
+	fi
+	@echo "Restored to api-data/users.db"

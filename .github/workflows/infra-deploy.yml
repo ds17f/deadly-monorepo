@@ -105,6 +105,60 @@ jobs:
             echo "Data: \$(ls ui/data/shows/ | wc -l) shows, \$(ls ui/data/recordings/ | wc -l) recordings"
           SCRIPT
 
+      - name: Write environment file
+        env:
+          SERVER: deploy@${{ steps.server.outputs.ip }}
+          AUTH_SECRET: ${{ secrets.AUTH_SECRET }}
+          AUTH_URL: ${{ secrets.AUTH_URL }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          APPLE_CLIENT_ID: ${{ secrets.APPLE_CLIENT_ID }}
+          APPLE_CLIENT_SECRET: ${{ secrets.APPLE_CLIENT_SECRET }}
+        run: |
+          ssh "$SERVER" bash -s <<SCRIPT
+            cat > /opt/deadly/.env <<ENVEOF
+AUTH_SECRET=${AUTH_SECRET}
+AUTH_URL=${AUTH_URL}
+GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+APPLE_CLIENT_ID=${APPLE_CLIENT_ID}
+APPLE_CLIENT_SECRET=${APPLE_CLIENT_SECRET}
+ENVEOF
+            chmod 600 /opt/deadly/.env
+          SCRIPT
+
+      - name: Backup database to B2
+        env:
+          SERVER: deploy@${{ steps.server.outputs.ip }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.B2_BACKUPS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.B2_BACKUPS_APP_KEY }}
+          B2_ENDPOINT: https://s3.us-west-004.backblazeb2.com
+        run: |
+          # Create backup on server using SQLite's safe .backup command
+          HAS_DB=$(ssh "$SERVER" '[ -f /opt/deadly/api-data/users.db ] && echo yes || echo no')
+          if [ "$HAS_DB" = "no" ]; then
+            echo "No database found — skipping backup (first deploy)"
+            exit 0
+          fi
+
+          ssh "$SERVER" 'sqlite3 /opt/deadly/api-data/users.db ".backup /tmp/users-backup.db"'
+          echo "Backup created on server"
+
+          # Download and upload to B2
+          TIMESTAMP=$(date -u +%Y%m%dT%H%M%SZ)
+          scp "$SERVER:/tmp/users-backup.db" "/tmp/users-${TIMESTAMP}.db"
+
+          echo "Uploading to B2..."
+          aws s3 cp "/tmp/users-${TIMESTAMP}.db" \
+            "s3://deadly-backups/db/users-${TIMESTAMP}.db" \
+            --endpoint-url "$B2_ENDPOINT" \
+            --region us-west-004
+          echo "Backup uploaded: s3://deadly-backups/db/users-${TIMESTAMP}.db"
+
+          # Clean up
+          ssh "$SERVER" "rm -f /tmp/users-backup.db"
+          rm -f "/tmp/users-${TIMESTAMP}.db"
+
       - name: Build and start stack
         env:
           SERVER: deploy@${{ steps.server.outputs.ip }}
@@ -113,8 +167,26 @@ jobs:
             set -euo pipefail
             cd /opt/deadly
 
+            echo "Ensuring api-data directory exists..."
+            mkdir -p api-data
+
+            # Migrate from old named volume to bind mount (one-time)
+            if docker volume inspect deadly_api_data &>/dev/null; then
+              echo "Migrating data from named volume to bind mount..."
+              docker run --rm \
+                -v deadly_api_data:/src:ro \
+                -v /opt/deadly/api-data:/dst \
+                busybox sh -c 'cp -a /src/. /dst/'
+              docker volume rm deadly_api_data 2>/dev/null || true
+              echo "Migration complete."
+            fi
+
             echo "Pruning old Docker resources..."
             docker system prune -f
+
+            echo "Removing stale UI volume so fresh build output is used..."
+            docker compose rm -sf ui caddy || true
+            docker volume rm deadly_ui_static 2>/dev/null || true
 
             echo "Building and starting stack..."
             docker compose up --build -d
