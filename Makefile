@@ -1,5 +1,5 @@
 .PHONY: dev dev-up dev-down dev-logs dev-ps api-dev api-install api-build api-typecheck
-.PHONY: api-remote-pull api-remote-up api-remote-down api-remote-logs api-remote-ps api-remote-dev api-remote-health
+.PHONY: docker-remote-pull docker-remote-up docker-remote-down docker-remote-logs docker-remote-ps api-remote-dev api-remote-health
 .PHONY: help docs-help docs-install docs-build docs-serve docs-clean docs-pr
 .PHONY: ui-install ui-dev ui-build ui-typecheck ui-data
 .PHONY: ui-remote-install ui-remote-dev ui-remote-build ui-remote-dev-build ui-dev-build
@@ -174,11 +174,14 @@ help:
 	@echo "  ios-resolve          - Resolve SPM package dependencies"
 	@echo "  ios-log              - Stream app logs from simulator via os_log"
 	@echo ""
+	@echo "DOCKER REMOTE (Linux → Mac):"
+	@echo "  docker-remote-up   - Start full stack on Mac (Docker Compose)"
+	@echo "  docker-remote-down - Stop stack on Mac"
+	@echo "  docker-remote-logs - View logs from remote stack"
+	@echo "  docker-remote-ps   - Show remote service status"
+	@echo "  docker-remote-pull - Pre-pull base images on Mac"
+	@echo ""
 	@echo "API REMOTE (Linux → Mac):"
-	@echo "  api-remote-up      - Start full stack on Mac (Docker Compose)"
-	@echo "  api-remote-down    - Stop stack on Mac"
-	@echo "  api-remote-logs    - View logs from remote stack"
-	@echo "  api-remote-ps      - Show remote service status"
 	@echo "  api-remote-dev     - Run API directly on Mac (no Docker)"
 	@echo "  api-remote-health  - Health check against remote API"
 	@echo ""
@@ -354,7 +357,7 @@ ios-deploy-testflight:
 # =============================================================================
 
 REMOTE_HOST    ?= dsilbergleithcu@worklaptop.local
-REMOTE_PATH    ?= ~/Developer/deadly-monorepo
+REMOTE_PATH    ?= ~/Developer/ai/claude-personal/container-home/workspace/Developer/deadly-monorepo
 REMOTE_IOS     ?= $(REMOTE_PATH)/iosApp
 REMOTE_ANDROID ?= $(REMOTE_PATH)/androidApp
 
@@ -540,25 +543,25 @@ REMOTE_DOCKER  := /Applications/Docker.app/Contents/Resources/bin
 REMOTE_ENVPATH := export PATH=$(REMOTE_DOCKER):$(REMOTE_BREW)/node@22/bin:/usr/local/bin:$$PATH
 
 # Pre-pull base images (avoids keychain auth issues over SSH)
-api-remote-pull:
+docker-remote-pull:
 	@echo "Pulling base images on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && docker pull node:22-slim && docker pull caddy:2-alpine && docker pull redis:7-alpine"
 
 # Build + start full stack on remote Mac (requires KEYCHAIN_PASSWORD env var)
-api-remote-up:
+docker-remote-up:
 	@echo "Starting stack on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "security unlock-keychain -p '$(KEYCHAIN_PASSWORD)' ~/Library/Keychains/login.keychain-db && $(REMOTE_ENVPATH) && cd $(REMOTE_PATH) && docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build -d"
 
 # Stop stack on remote Mac
-api-remote-down:
+docker-remote-down:
 	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH) && docker compose -f docker-compose.yml -f docker-compose.dev.yml down"
 
 # View logs from remote stack
-api-remote-logs:
+docker-remote-logs:
 	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH) && docker compose -f docker-compose.yml -f docker-compose.dev.yml logs -f"
 
 # Show remote service status
-api-remote-ps:
+docker-remote-ps:
 	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH) && docker compose -f docker-compose.yml -f docker-compose.dev.yml ps"
 
 # Run API directly on remote Mac (no Docker, fast iteration)
