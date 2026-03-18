@@ -3,9 +3,8 @@ services:
     build:
       context: ./ui
       dockerfile: Dockerfile
-    volumes:
-      - ui_static:/out
     restart: "no"
+    # no volumes — files extracted by deploy script
 
   caddy:
     image: caddy:2-alpine
@@ -18,11 +17,10 @@ services:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data
       - caddy_config:/config
-      - ui_static:/srv/ui:ro
+      - ./ui-out:/srv/ui:ro
       - ./web:/srv/share:ro
     depends_on:
       - api
-      - ui
 
   api:
     build:
@@ -58,4 +56,3 @@ volumes:
   caddy_data:
   caddy_config:
   redis_data:
-  ui_static:
