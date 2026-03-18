@@ -169,8 +169,9 @@ jobs:
             # One-time migration from old named volume (ui_static)
             if docker volume inspect deadly_ui_static &>/dev/null; then
               echo "Migrating UI from named volume to bind mount..."
-              docker run --rm -v deadly_ui_static:/src:ro -v /opt/deadly/ui-out:/dst \
-                busybox sh -c 'cp -a /src/. /dst/'
+              docker run --rm --user "$(id -u):$(id -g)" \
+                -v deadly_ui_static:/src:ro -v /opt/deadly/ui-out:/dst \
+                busybox sh -c 'cp -r /src/. /dst/'
               docker compose rm -sf ui caddy 2>/dev/null || true
               docker volume rm deadly_ui_static 2>/dev/null || true
             fi
@@ -178,8 +179,9 @@ jobs:
             # One-time migration from old api_data named volume
             if docker volume inspect deadly_api_data &>/dev/null; then
               echo "Migrating data from named volume to bind mount..."
-              docker run --rm -v deadly_api_data:/src:ro -v /opt/deadly/api-data:/dst \
-                busybox sh -c 'cp -a /src/. /dst/'
+              docker run --rm --user "$(id -u):$(id -g)" \
+                -v deadly_api_data:/src:ro -v /opt/deadly/api-data:/dst \
+                busybox sh -c 'cp -r /src/. /dst/'
               docker volume rm deadly_api_data 2>/dev/null || true
             fi
 
@@ -189,20 +191,21 @@ jobs:
 
             # Extract new UI static files to staging directory
             echo "Extracting static files..."
-            rm -rf ui-out-next
+            sudo rm -rf ui-out-next
             mkdir -p ui-out-next
             docker compose run --rm --no-deps \
+              --user "$(id -u):$(id -g)" \
               -v /opt/deadly/ui-out-next:/extract \
-              ui sh -c 'cp -a /out/. /extract/'
+              ui sh -c 'cp -r /out/. /extract/'
 
             # Atomic swap of UI files
             echo "Swapping UI files..."
             if [ -d ui-out ] && [ "$(ls -A ui-out 2>/dev/null)" ]; then
               mv ui-out ui-out-old
               mv ui-out-next ui-out
-              rm -rf ui-out-old
+              sudo rm -rf ui-out-old
             else
-              rm -rf ui-out
+              sudo rm -rf ui-out
               mv ui-out-next ui-out
             fi
 
