@@ -2,6 +2,7 @@
 
 import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 
 function SignInForm() {
   const searchParams = useSearchParams();
@@ -16,12 +17,19 @@ function SignInForm() {
 
   return (
     <div className="w-full max-w-sm rounded-xl border border-white/10 bg-deadly-surface p-8 shadow-lg">
-      <div className="mb-6 text-center">
+      <div className="mb-6 flex flex-col items-center text-center">
+        <Image
+          src="/logo.png"
+          alt="The Deadly"
+          width={64}
+          height={64}
+          className="mb-4"
+        />
         <h1 className="text-2xl font-bold text-white">
           Sign in to The Deadly
         </h1>
         <p className="mt-2 text-sm text-white/50">
-          Stream every Grateful Dead show ever recorded
+          Stream 2,300+ Grateful Dead concerts from 1965 to 1995
         </p>
       </div>
 
@@ -54,13 +62,17 @@ function SignInForm() {
           Sign in with Google
         </button>
       </form>
+
+      <p className="mt-4 text-center text-xs text-white/30">
+        We use single sign-on to keep your account secure. We only receive your name and email.
+      </p>
     </div>
   );
 }
 
 export default function SignInPage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-deadly-bg px-4">
+    <div className="flex min-h-screen items-start justify-center bg-deadly-bg px-4 pt-[15vh]">
       <Suspense>
         <SignInForm />
       </Suspense>

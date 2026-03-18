@@ -44,5 +44,8 @@ export const authConfig: AuthConfig = {
       return session;
     },
   },
+  pages: {
+    error: "/auth/error",
+  },
   trustHost: true,
 };
