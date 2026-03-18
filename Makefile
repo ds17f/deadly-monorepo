@@ -14,7 +14,7 @@
 .PHONY: android-remote-emulator android-remote-emu-list android-remote-emu-stop android-remote-run-emulator
 .PHONY: android-auto-dhu android-remote-auto-dhu
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
-.PHONY: infra-init infra-plan infra-apply infra-retry infra-destroy infra-output infra-deploy
+.PHONY: infra-init infra-plan infra-apply infra-retry infra-destroy infra-output infra-deploy infra-logs infra-ssh
 .PHONY: data-download data-generate data-package data-download-stage01 data-upload-stage01 data-collect data-release data-clean
 .PHONY: db-backup-list db-restore
 
@@ -215,6 +215,8 @@ help:
 	@echo "  infra-destroy    - Tear down all infrastructure"
 	@echo "  infra-output     - Show current Terraform outputs (instance IP, etc.)"
 	@echo "  infra-deploy     - Deploy alpha stack via GHA (current branch)"
+	@echo "  infra-logs       - View production logs (SERVICE=api, LINES=100)"
+	@echo "  infra-ssh        - SSH into production server"
 	@echo "  setup-infra-secrets - Upload infra secrets (DO, B2, SSH) to GitHub"
 	@echo ""
 	@echo "DATA PIPELINE:"
@@ -637,6 +639,24 @@ infra-output:
 # Deploy alpha stack via GHA (triggers infra-deploy.yml)
 infra-deploy:
 	gh workflow run infra-deploy.yml -f ref=$(shell git rev-parse --abbrev-ref HEAD)
+
+# Resolve production server IP from DigitalOcean API (uses token from terraform.tfvars)
+PROD_SSH_KEY   ?= ssh-key-2026-03-15.key
+PROD_DO_TOKEN  = $(shell grep '^do_token' infra/digitalocean/terraform.tfvars 2>/dev/null | cut -d'"' -f2)
+PROD_IP       ?= $(shell curl -sf -H "Authorization: Bearer $(PROD_DO_TOKEN)" \
+                  "https://api.digitalocean.com/v2/droplets?tag_name=deadly" \
+                  | python3 -c "import sys,json;d=json.load(sys.stdin)['droplets'][0]['networks']['v4'];print(next(n['ip_address'] for n in d if n['type']=='public'))" 2>/dev/null)
+
+# View logs from production server (all services, or specify SERVICE=api)
+#   make infra-logs                # all services, last 100 lines + follow
+#   make infra-logs SERVICE=api    # only API logs
+#   make infra-logs LINES=500      # last 500 lines
+infra-logs:
+	@ssh -i $(PROD_SSH_KEY) deploy@$(PROD_IP) "cd /opt/deadly && docker compose logs $(SERVICE) --tail $(or $(LINES),100) -f"
+
+# SSH into production server
+infra-ssh:
+	@ssh -i $(PROD_SSH_KEY) deploy@$(PROD_IP)
 
 # =============================================================================
 # DATA PIPELINE (delegates to data/Makefile)
