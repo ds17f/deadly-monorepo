@@ -1,5 +1,5 @@
 .PHONY: dev dev-up dev-down dev-logs dev-ps api-dev api-install api-build api-typecheck
-.PHONY: docker-remote-pull docker-remote-up docker-remote-down docker-remote-destroy docker-remote-logs docker-remote-ps api-remote-dev api-remote-health
+.PHONY: docker-remote-pull docker-remote-up docker-remote-down docker-remote-destroy docker-remote-logs docker-remote-ps docker-remote-redeploy docker-remote-redeploy-logs api-remote-dev api-remote-health
 .PHONY: help docs-help docs-install docs-build docs-serve docs-clean docs-pr
 .PHONY: ui-install ui-dev ui-build ui-typecheck ui-data
 .PHONY: ui-remote-install ui-remote-dev ui-remote-build ui-remote-dev-build ui-dev-build
@@ -182,6 +182,8 @@ help:
 	@echo "  docker-remote-destroy - Destroy stack on Mac (clean rebuild)"
 	@echo "  docker-remote-logs - View logs from remote stack"
 	@echo "  docker-remote-ps   - Show remote service status"
+	@echo "  docker-remote-redeploy      - Destroy + rebuild + start stack on Mac"
+	@echo "  docker-remote-redeploy-logs - Destroy + rebuild + start + tail logs"
 	@echo "  docker-remote-pull - Pre-pull base images on Mac"
 	@echo ""
 	@echo "API REMOTE (Linux → Mac):"
@@ -581,6 +583,12 @@ docker-remote-destroy:
 # View logs from remote stack
 docker-remote-logs:
 	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH) && docker compose -f docker-compose.yml -f docker-compose.dev.yml logs -f"
+
+# Destroy + rebuild + start stack on remote Mac
+docker-remote-redeploy: docker-remote-destroy docker-remote-up
+
+# Destroy + rebuild + start + tail logs on remote Mac
+docker-remote-redeploy-logs: docker-remote-redeploy docker-remote-logs
 
 # Show remote service status
 docker-remote-ps:
