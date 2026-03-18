@@ -2,8 +2,10 @@ services:
   caddy:
     ports: !override
       - "8080:80"
+      - "8081:8081"
     volumes:
       - ./Caddyfile.dev:/etc/caddy/Caddyfile:ro
+      - ./web:/srv/share:ro
 
   api:
     build:

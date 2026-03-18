@@ -1,4 +1,5 @@
-{$SITE_ADDRESS:beta.thedeadly.app} {
+# Production + Beta full site
+{$SITE_ADDRESS:thedeadly.app, beta.thedeadly.app} {
 	handle /api/* {
 		reverse_proxy api:3001
 	}
@@ -12,4 +13,11 @@
 		file_server
 		try_files {path} {path}.html /index.html
 	}
+}
+
+# Production + Beta share site
+{$SHARE_ADDRESS:share.thedeadly.app, share.beta.thedeadly.app} {
+	root * /srv/share
+	file_server
+	try_files {path} {path}/index.html /index.html
 }

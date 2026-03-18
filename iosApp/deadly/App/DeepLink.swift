@@ -26,7 +26,9 @@ enum DeepLink: Equatable {
                 return nil
             }
 
-        } else if url.scheme == "https", url.host == "share.thedeadly.app" {
+        } else if url.scheme == "https",
+                  let host = url.host,
+                  host == "share.thedeadly.app" || host == "share.beta.thedeadly.app" {
             // https://share.thedeadly.app/show/{showId}[/recording/{recordingId}[/track/{trackNumber}]]
             // https://share.thedeadly.app/collection/{collectionId}
             guard pathParts.count >= 2 else { return nil }

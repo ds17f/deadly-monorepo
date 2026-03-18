@@ -13,3 +13,9 @@
 		try_files {path} {path}.html /index.html
 	}
 }
+
+:8081 {
+	root * /srv/share
+	file_server
+	try_files {path} {path}/index.html /index.html
+}

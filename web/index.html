@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
   <title>The Deadly – Every Grateful Dead Show, Free</title>
   <meta name="description" content="The Deadly is a free, open-source app for streaming every Grateful Dead concert from the Internet Archive. No account required. No data collected.">
   <meta property="og:title" content="The Deadly – Every Grateful Dead Show, Free">
@@ -33,7 +34,14 @@
     }
     .logo { font-size: 2.5rem; margin-bottom: 8px; }
     h1 { font-size: 2rem; margin-bottom: 8px; }
-    .subtitle { color: #aaa; margin-bottom: 16px; font-size: 1rem; }
+    .subtitle { color: #aaa; margin-bottom: 8px; font-size: 1rem; }
+    .show-info {
+      color: #ddd;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      display: none;
+    }
     .description {
       color: #bbb;
       font-size: 0.9rem;
@@ -42,6 +50,7 @@
       padding: 0 8px;
     }
     .description a { color: #aaa; }
+    .actions { margin-bottom: 32px; }
     .open-btn {
       display: block;
       background: #c8102e;
@@ -51,13 +60,23 @@
       border-radius: 8px;
       font-size: 1.1rem;
       font-weight: 600;
-      margin-bottom: 32px;
+      margin-bottom: 12px;
     }
     .open-btn:hover { background: #a50d26; }
+    .web-btn {
+      display: none;
+      background: #333;
+      color: #eee;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    .web-btn:hover { background: #444; }
     .store-badges { margin-bottom: 12px; }
-    .store-badges a { display: inline-block; }
+    .store-badges a { display: inline-block; margin: 0 4px; }
     .store-badges img { height: 60px; }
-    .coming-soon { color: #666; font-size: 0.85rem; margin-bottom: 32px; }
     .privacy-note { color: #666; font-size: 0.8rem; }
     footer {
       width: 100%;
@@ -78,20 +97,27 @@
     <h1>The Deadly</h1>
     <p class="subtitle">Listen to every Grateful Dead show, free.</p>
 
+    <p class="show-info" id="show-info"></p>
+
     <p class="description">
       The Deadly is a free, open-source app that streams every Grateful Dead concert
       from the <a href="https://archive.org/details/GratefulDead" target="_blank" rel="noopener noreferrer">Internet Archive</a>.
       No account. No sign-up. No ads.
     </p>
 
-    <a class="open-btn" href="deadly://">Open in The Deadly App</a>
+    <div class="actions">
+      <a class="open-btn" id="app-link" href="deadly://">Open in The Deadly App</a>
+      <a class="web-btn" id="web-link" href="#">Open on Web</a>
+    </div>
 
     <div class="store-badges">
       <a href="https://play.google.com/store/apps/details?id=com.grateful.deadly" target="_blank" rel="noopener noreferrer">
         <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="60">
       </a>
+      <a href="https://apps.apple.com/app/the-deadly/id6743090498" target="_blank" rel="noopener noreferrer">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="40" style="margin-top: 10px;">
+      </a>
     </div>
-    <p class="coming-soon">iOS coming soon.</p>
 
     <p class="privacy-note">We do not collect, store, or sell any personal data.</p>
   </main>
@@ -103,5 +129,62 @@
     &nbsp;&middot;&nbsp;
     Grateful Dead recordings courtesy of the <a href="https://archive.org/details/GratefulDead" target="_blank" rel="noopener noreferrer">Internet Archive</a>
   </footer>
+
+  <script>
+    (function() {
+      var path = window.location.pathname;
+
+      // Parse show/recording from URL path
+      // Patterns: /show/{id}[/recording/{rid}] or /shows/{id}[/recording/{rid}]
+      var match = path.match(/^\/(shows?)\/([^/]+)(?:\/recording\/([^/]+))?/);
+
+      if (match) {
+        var showId = match[2];
+        var recordingId = match[3];
+
+        // Build deep link URL
+        var deepLink = 'deadly://show/' + showId;
+        if (recordingId) {
+          deepLink += '/recording/' + recordingId;
+        }
+        document.getElementById('app-link').href = deepLink;
+
+        // Format show date from ID (e.g. "1991-03-17-capitol-centre..." -> "March 17, 1991")
+        var dateMatch = showId.match(/^(\d{4})-(\d{2})-(\d{2})/);
+        if (dateMatch) {
+          var date = new Date(dateMatch[1], parseInt(dateMatch[2], 10) - 1, dateMatch[3]);
+          var formatted = date.toLocaleDateString('en-US', {
+            year: 'numeric', month: 'long', day: 'numeric'
+          });
+          // Extract venue from slug after the date
+          var venueSlug = showId.replace(/^\d{4}-\d{2}-\d{2}-?/, '');
+          var venue = venueSlug ? venueSlug.replace(/-/g, ' ') : '';
+          var info = formatted;
+          if (venue) {
+            info += ' \u2014 ' + venue.replace(/\b\w/g, function(c) { return c.toUpperCase(); });
+          }
+          var showInfoEl = document.getElementById('show-info');
+          showInfoEl.textContent = info;
+          showInfoEl.style.display = 'block';
+        }
+
+        // Determine web domain from share hostname
+        var webDomain;
+        if (window.location.hostname === 'share.beta.thedeadly.app') {
+          webDomain = 'beta.thedeadly.app';
+        } else if (window.location.hostname === 'share.thedeadly.app') {
+          webDomain = 'thedeadly.app';
+        } else {
+          // Local dev: link to full site on port 8080
+          webDomain = window.location.hostname + ':8080';
+        }
+
+        var webUrl = window.location.protocol + '//' + webDomain + '/shows/' + showId;
+        var webLink = document.getElementById('web-link');
+        webLink.href = webUrl;
+        webLink.style.display = 'block';
+      }
+    })();
+  </script>
 </body>
 </html>
