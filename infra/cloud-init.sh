@@ -9,7 +9,7 @@ apt-get update && apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options:
 curl -fsSL https://get.docker.com | sh
 
 # ── sqlite3 (for backup scripts) ────────────────────────────────────────
-apt-get install -y sqlite3
+apt-get install -y sqlite3 rsync
 
 # ── Deploy user with docker access ──────────────────────────────────────
 useradd -m -s /bin/bash -G docker,sudo deploy
