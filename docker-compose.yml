@@ -19,6 +19,7 @@ services:
       - caddy_data:/data
       - caddy_config:/config
       - ui_static:/srv/ui:ro
+      - ./web:/srv/share:ro
     depends_on:
       - api
       - ui

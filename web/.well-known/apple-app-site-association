@@ -5,6 +5,7 @@
         "appIDs": ["U928S254LZ.com.grateful.deadly"],
         "components": [
           { "/": "/show/*" },
+          { "/": "/shows/*" },
           { "/": "/collection/*" }
         ]
       }
