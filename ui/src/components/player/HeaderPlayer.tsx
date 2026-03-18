@@ -1,7 +1,9 @@
 "use client";
 
+import { useState, useCallback } from "react";
 import { usePlayer } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
+import QueuePanel from "./QueuePanel";
 
 function formatTime(seconds: number): string {
   if (!isFinite(seconds) || seconds < 0) return "0:00";
@@ -43,6 +45,9 @@ export default function HeaderPlayer() {
     close,
     playShow,
   } = usePlayer();
+
+  const [queueOpen, setQueueOpen] = useState(false);
+  const closeQueue = useCallback(() => setQueueOpen(false), []);
 
   const currentTrack =
     tracks && currentTrackIndex >= 0 ? tracks[currentTrackIndex] : null;
@@ -98,7 +103,8 @@ export default function HeaderPlayer() {
   }
 
   return (
-    <div className="flex flex-1 items-center gap-3 overflow-hidden pl-4 sm:gap-4">
+    <div className="relative flex flex-1 items-center pl-4">
+    <div className="flex flex-1 items-center gap-3 overflow-hidden sm:gap-4">
       {/* Show + track info */}
       <div className="min-w-0 flex-1">
         <div className="flex items-baseline gap-2">
@@ -209,6 +215,21 @@ export default function HeaderPlayer() {
         </button>
       </div>
 
+      {/* Queue toggle */}
+      <button
+        onClick={() => setQueueOpen((o) => !o)}
+        className={`flex-shrink-0 rounded-full p-1.5 transition-colors ${
+          queueOpen
+            ? "text-deadly-highlight"
+            : "text-white/40 hover:text-white/70"
+        }`}
+        aria-label={queueOpen ? "Close queue" : "Show queue"}
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z" />
+        </svg>
+      </button>
+
       {/* Close button */}
       <button
         onClick={close}
@@ -219,6 +240,11 @@ export default function HeaderPlayer() {
           <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
         </svg>
       </button>
+
+    </div>
+
+      {/* Queue panel overlay */}
+      {queueOpen && <QueuePanel onClose={closeQueue} />}
     </div>
   );
 }
