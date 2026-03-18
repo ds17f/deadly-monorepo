@@ -206,16 +206,13 @@ jobs:
               -v /opt/deadly/ui-out-next:/extract \
               ui sh -c 'cp -r /out/. /extract/' </dev/null
 
-            # Atomic swap of UI files
-            echo "Swapping UI files..."
-            if [ -d ui-out ] && [ "$(ls -A ui-out 2>/dev/null)" ]; then
-              mv ui-out ui-out-old
-              mv ui-out-next ui-out
-              sudo rm -rf ui-out-old
-            else
-              sudo rm -rf ui-out
-              mv ui-out-next ui-out
-            fi
+            # Sync new files into ui-out in-place (no directory swap)
+            # rsync replaces each file atomically (write tmp + rename),
+            # and the directory inode stays the same so the bind mount works
+            # — Caddy keeps serving without a restart
+            echo "Syncing UI files..."
+            rsync -a --delete ui-out-next/ ui-out/
+            sudo rm -rf ui-out-next
 
             # Fast container swap — images already built, just restart
             echo "Swapping containers..."
