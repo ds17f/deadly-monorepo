@@ -190,8 +190,10 @@ jobs:
             fi
 
             # Pre-build ALL images (Caddy keeps running the whole time)
+            # --no-cache on ui to ensure source changes are picked up
             echo "Pre-building all images..."
-            docker compose build ui api
+            docker compose build --no-cache ui
+            docker compose build api
 
             # Extract new UI static files to staging directory
             echo "Extracting static files..."
