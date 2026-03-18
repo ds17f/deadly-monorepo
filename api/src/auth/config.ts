@@ -17,6 +17,11 @@ export const authConfig: AuthConfig = {
     Apple({
       clientId: process.env.APPLE_CLIENT_ID!,
       clientSecret: appleClientSecret,
+      // Apple's OIDC discovery omits userinfo_endpoint, causing @auth/core to
+      // throw. Explicit endpoints skip discovery. The userinfo URL is never
+      // fetched — Apple is OIDC so identity comes from the ID token.
+      token: { url: "https://appleid.apple.com/auth/token" },
+      userinfo: { url: "https://appleid.apple.com" },
     }),
   ],
   secret: process.env.AUTH_SECRET,
