@@ -322,7 +322,9 @@ setup-api-secrets:
 	@gh secret set GOOGLE_CLIENT_ID --env alpha --body "$$(grep '^GOOGLE_CLIENT_ID=' api/.env | cut -d= -f2-)"
 	@gh secret set GOOGLE_CLIENT_SECRET --env alpha --body "$$(grep '^GOOGLE_CLIENT_SECRET=' api/.env | cut -d= -f2-)"
 	@gh secret set APPLE_CLIENT_ID --env alpha --body "$$(grep '^APPLE_CLIENT_ID=' api/.env | cut -d= -f2-)"
-	@gh secret set APPLE_CLIENT_SECRET --env alpha --body "$$(grep '^APPLE_CLIENT_SECRET=' api/.env | cut -d= -f2-)"
+	@gh secret set APPLE_TEAM_ID --env alpha --body "$$(grep '^APPLE_TEAM_ID=' api/.env | cut -d= -f2-)"
+	@gh secret set APPLE_KEY_ID --env alpha --body "$$(grep '^APPLE_KEY_ID=' api/.env | cut -d= -f2-)"
+	@gh secret set APPLE_PRIVATE_KEY --env alpha --body "$$(grep '^APPLE_PRIVATE_KEY=' api/.env | cut -d= -f2-)"
 	@echo "Done. Secrets set in 'alpha' environment."
 
 # =============================================================================
