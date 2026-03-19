@@ -4,6 +4,7 @@ import { useState, useCallback, useRef, useEffect } from "react";
 import { usePlayer } from "@/contexts/PlayerContext";
 import { useConnect } from "@/contexts/ConnectContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
+import { useInterpolatedPosition } from "@/hooks/useInterpolatedPosition";
 import QueuePanel from "./QueuePanel";
 import DevicePicker from "@/components/connect/DevicePicker";
 
@@ -47,16 +48,20 @@ export default function HeaderPlayer() {
     playTrack,
     seek,
     close,
+    dismiss,
     playShow,
   } = usePlayer();
 
-  const { isConnected, devices, activeSession, isActiveDevice, claimSession } = useConnect();
+  const { isConnected, devices, userState, isActiveDevice, claimSession } = useConnect();
   const [queueOpen, setQueueOpen] = useState(false);
   const [devicePickerOpen, setDevicePickerOpen] = useState(false);
   const closeQueue = useCallback(() => setQueueOpen(false), []);
   const closeDevicePicker = useCallback(() => setDevicePickerOpen(false), []);
 
   const pendingSeekRef = useRef<{ trackIndex: number; positionMs: number } | null>(null);
+
+  const isLocalPlayback = status === "playing" || status === "paused" || status === "buffering" || status === "loading";
+  const interpolatedMs = useInterpolatedPosition(userState, isLocalPlayback, elapsed);
 
   // Once tracks load after claiming a session, jump to correct track + seek
   useEffect(() => {
@@ -80,27 +85,27 @@ export default function HeaderPlayer() {
   }, [tracks, playTrack]);
 
   const handleClaimSession = useCallback(() => {
-    if (!activeSession) return;
+    if (!userState) return;
 
     // Store seek info for after tracks load
     pendingSeekRef.current = {
-      trackIndex: activeSession.state.trackIndex,
-      positionMs: activeSession.state.positionMs,
+      trackIndex: userState.trackIndex,
+      positionMs: userState.positionMs,
     };
 
     // Claim session on server (will broadcast back with our deviceId)
     claimSession();
 
-    // Load the show from session state
+    // Load the show from user state
     playShow({
-      showId: activeSession.state.showId,
+      showId: userState.showId,
       recordings: [],
-      bestRecordingId: activeSession.state.recordingId,
-      date: activeSession.state.date ?? "",
-      venue: activeSession.state.venue ?? "",
-      location: activeSession.state.location ?? "",
+      bestRecordingId: userState.recordingId,
+      date: userState.date ?? "",
+      venue: userState.venue ?? "",
+      location: userState.location ?? "",
     });
-  }, [activeSession, playShow, claimSession]);
+  }, [userState, playShow, claimSession]);
 
   const currentTrack =
     tracks && currentTrackIndex >= 0 ? tracks[currentTrackIndex] : null;
@@ -108,21 +113,60 @@ export default function HeaderPlayer() {
   const hasPrevious = currentTrackIndex > 0;
   const isActive = status !== "idle" && currentTrack;
 
-  // Active session on another device — show "Play here" prompt
-  if (activeSession && !isActiveDevice && !isActive) {
-    const sessionState = activeSession.state;
-    const date = sessionState.date ? formatShowDate(sessionState.date) : "";
-    const venue = sessionState.venue
-      ? sessionState.venue + (sessionState.location ? `, ${sessionState.location}` : "")
+  // Parked state: userState exists but no device is playing, and we're not actively playing
+  if (!isActive && userState && !userState.isPlaying && userState.activeDeviceId === null) {
+    const date = userState.date ? formatShowDate(userState.date) : "";
+    const venue = userState.venue
+      ? userState.venue + (userState.location ? `, ${userState.location}` : "")
       : "";
     return (
       <div className="flex flex-1 items-center justify-end gap-3 overflow-hidden pl-4">
         <div className="min-w-0 flex-1 text-right">
           <p className="truncate text-sm font-medium text-white/70">
-            Playing on {activeSession.deviceName}
+            Last Played
           </p>
           <p className="truncate text-xs text-white/40">
             {date}{venue ? ` — ${venue}` : ""}
+          </p>
+        </div>
+        <button
+          onClick={handleClaimSession}
+          className="flex flex-shrink-0 items-center gap-1.5 rounded-full bg-deadly-highlight px-3.5 py-1.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+          Resume
+        </button>
+        <button
+          onClick={dismiss}
+          className="flex-shrink-0 rounded-full p-1.5 text-white/25 transition-colors hover:text-white/50"
+          aria-label="Dismiss"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+          </svg>
+        </button>
+      </div>
+    );
+  }
+
+  // Playing on another device — show "Play here" prompt
+  if (!isActive && userState && userState.activeDeviceId !== null && !isActiveDevice) {
+    const date = userState.date ? formatShowDate(userState.date) : "";
+    const venue = userState.venue
+      ? userState.venue + (userState.location ? `, ${userState.location}` : "")
+      : "";
+    const remoteElapsedSec = interpolatedMs / 1000;
+    return (
+      <div className="flex flex-1 items-center justify-end gap-3 overflow-hidden pl-4">
+        <div className="min-w-0 flex-1 text-right">
+          <p className="truncate text-sm font-medium text-white/70">
+            {userState.isPlaying ? "Playing" : "Paused"} on {userState.activeDeviceName}
+          </p>
+          <p className="truncate text-xs text-white/40">
+            {date}{venue ? ` — ${venue}` : ""}
+            {remoteElapsedSec > 0 && ` · ${formatTime(remoteElapsedSec)}`}
           </p>
         </div>
         <button
@@ -139,11 +183,12 @@ export default function HeaderPlayer() {
   }
 
   // Nothing playing and no show viewed — hide completely
-  if (!isActive && !viewedShow) return null;
+  if (!isActive && !viewedShow && !activeShow) return null;
 
   // Idle state: show play button with show info
-  if (!isActive && viewedShow) {
-    const info = showLabel(viewedShow);
+  if (!isActive && (viewedShow || activeShow)) {
+    const displayShow = viewedShow ?? activeShow!;
+    const info = showLabel(displayShow);
     return (
       <div className="flex flex-1 items-center justify-end gap-3 overflow-hidden pl-4">
         <div className="min-w-0 flex-1 text-right">
@@ -153,7 +198,7 @@ export default function HeaderPlayer() {
           <p className="truncate text-xs text-white/40">{info.venue}</p>
         </div>
         <button
-          onClick={() => playShow(viewedShow)}
+          onClick={() => playShow(displayShow)}
           className="flex flex-shrink-0 items-center gap-1.5 rounded-full bg-deadly-highlight px-3.5 py-1.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
         >
           <svg
@@ -177,7 +222,9 @@ export default function HeaderPlayer() {
   const trackCount = tracks?.length ?? 0;
 
   // Show "Playing on [device]" when another device owns the session while we're also playing
-  const remoteSessionInfo = activeSession && !isActiveDevice ? activeSession.deviceName : null;
+  const remoteSessionInfo = userState && !isActiveDevice && userState.activeDeviceId
+    ? userState.activeDeviceName
+    : null;
 
   function handleSeek(e: React.MouseEvent<HTMLDivElement>) {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -320,7 +367,7 @@ export default function HeaderPlayer() {
         </svg>
       </button>
 
-      {/* Close button */}
+      {/* Close button — parks the state */}
       <button
         onClick={close}
         className="flex-shrink-0 rounded-full p-1.5 text-white/25 transition-colors hover:text-white/50"

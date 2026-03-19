@@ -29,10 +29,29 @@ export interface ActiveSession {
   updatedAt: number;
 }
 
+export interface UserPlaybackState {
+  showId: string;
+  recordingId: string;
+  trackIndex: number;
+  positionMs: number;
+  date?: string;
+  venue?: string;
+  location?: string;
+
+  // Nullable — null means "parked" (no device actively playing)
+  activeDeviceId: string | null;
+  activeDeviceName: string | null;
+  activeDeviceType: "ios" | "android" | "web" | null;
+  isPlaying: boolean;
+
+  updatedAt: number;
+}
+
 export interface ConnectContextValue {
   isConnected: boolean;
   devices: ConnectDevice[];
   activeSession: ActiveSession | null;
+  userState: UserPlaybackState | null;
   isActiveDevice: boolean;
 
   // New session-based functions
@@ -40,6 +59,7 @@ export interface ConnectContextValue {
   claimSession: () => void;
   playOnDevice: (deviceId: string, state: PlaybackState) => void;
   sendPositionUpdate: (state: PlaybackState) => void;
+  clearState: () => void;
 
   // Legacy — kept for backward compatibility
   incomingState: PlaybackState | null;
@@ -55,11 +75,13 @@ const DEFAULT_VALUE: ConnectContextValue = {
   isConnected: false,
   devices: [],
   activeSession: null,
+  userState: null,
   isActiveDevice: false,
   announcePlayback: () => {},
   claimSession: () => {},
   playOnDevice: () => {},
   sendPositionUpdate: () => {},
+  clearState: () => {},
   incomingState: null,
   playingOnDevice: null,
   transferPlayback: () => {},

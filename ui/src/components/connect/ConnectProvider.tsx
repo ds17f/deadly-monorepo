@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { ConnectContext } from "@/contexts/ConnectContext";
-import type { ConnectDevice, PlaybackState, ActiveSession } from "@/contexts/ConnectContext";
+import type { ConnectDevice, PlaybackState, ActiveSession, UserPlaybackState } from "@/contexts/ConnectContext";
 import { ConnectWebSocket } from "@/lib/connectWs";
 
 function generateDeviceId(): string {
@@ -40,6 +40,7 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
   const [isConnected, setIsConnected] = useState(false);
   const [devices, setDevices] = useState<ConnectDevice[]>([]);
   const [activeSession, setActiveSession] = useState<ActiveSession | null>(null);
+  const [userState, setUserState] = useState<UserPlaybackState | null>(null);
   // Legacy state — kept for backward compatibility
   const [incomingState, setIncomingState] = useState<PlaybackState | null>(null);
   const [playingOnDevice, setPlayingOnDevice] = useState<ConnectDevice | null>(null);
@@ -50,7 +51,7 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
     return generateDeviceId();
   }, []);
 
-  const isActiveDevice = activeSession?.deviceId === localDeviceId && localDeviceId !== "";
+  const isActiveDevice = userState?.activeDeviceId === localDeviceId && localDeviceId !== "";
 
   useEffect(() => {
     if (!user?.id) {
@@ -59,6 +60,7 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
       setIsConnected(false);
       setDevices([]);
       setActiveSession(null);
+      setUserState(null);
       return;
     }
 
@@ -69,7 +71,7 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
         const msg = data as {
           type: string;
           devices?: ConnectDevice[];
-          state?: PlaybackState;
+          state?: PlaybackState | UserPlaybackState;
           session?: ActiveSession | null;
           fromDeviceId?: string;
           command?: { action: string };
@@ -81,9 +83,12 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
           case "active_session":
             setActiveSession(msg.session ?? null);
             break;
+          case "user_state":
+            setUserState((msg.state as UserPlaybackState) ?? null);
+            break;
           case "transfer_received":
             if (msg.state) {
-              setIncomingState(msg.state);
+              setIncomingState(msg.state as PlaybackState);
               setPlayingOnDevice(null);
             }
             break;
@@ -138,6 +143,10 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
     wsRef.current?.send({ type: "position_update", state });
   }, []);
 
+  const clearState = useCallback(() => {
+    wsRef.current?.send({ type: "state_clear" });
+  }, []);
+
   // Legacy functions
   const transferPlayback = useCallback((targetDeviceId: string, state: PlaybackState) => {
     wsRef.current?.send({ type: "transfer", targetDeviceId, state });
@@ -161,19 +170,21 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
     isConnected,
     devices,
     activeSession,
+    userState,
     isActiveDevice,
     announcePlayback,
     claimSession,
     playOnDevice,
     sendPositionUpdate,
+    clearState,
     incomingState,
     playingOnDevice,
     transferPlayback,
     sendCommand,
     clearIncomingState,
   }), [
-    isConnected, devices, activeSession, isActiveDevice,
-    announcePlayback, claimSession, playOnDevice, sendPositionUpdate,
+    isConnected, devices, activeSession, userState, isActiveDevice,
+    announcePlayback, claimSession, playOnDevice, sendPositionUpdate, clearState,
     incomingState, playingOnDevice, transferPlayback, sendCommand, clearIncomingState,
   ]);
 

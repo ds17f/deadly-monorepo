@@ -37,6 +37,7 @@ export interface PlayerContextValue {
   prevTrack: () => void;
   seek: (fraction: number) => void;
   close: () => void;
+  dismiss: () => void;
 }
 
 export const PlayerContext = createContext<PlayerContextValue | null>(null);

@@ -16,7 +16,7 @@ function formatShowDate(dateStr: string): string {
 
 export default function UserMenu() {
   const { user, isLoading, signOut } = useAuth();
-  const { devices, isConnected, activeSession } = useConnect();
+  const { devices, isConnected, userState } = useConnect();
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -86,17 +86,19 @@ export default function UserMenu() {
               <p className="text-xs text-white/50">{user.email}</p>
             )}
           </div>
-          {isConnected && activeSession?.state && (
+          {isConnected && userState && (
             <div className="mb-2 border-b border-white/10 pb-2">
               <p className="mb-1 text-[10px] font-medium uppercase tracking-wider text-white/30">
-                Now Playing
+                {userState.isPlaying ? "Now Playing" : "Last Played"}
               </p>
               <p className="truncate text-xs font-medium text-deadly-highlight">
-                {activeSession.state.date && formatShowDate(activeSession.state.date)}
-                {activeSession.state.venue && ` — ${activeSession.state.venue}`}
+                {userState.date && formatShowDate(userState.date)}
+                {userState.venue && ` — ${userState.venue}`}
               </p>
               <p className="truncate text-[10px] text-white/40">
-                on {activeSession.deviceName}
+                {userState.activeDeviceId
+                  ? `on ${userState.activeDeviceName}`
+                  : "Paused"}
               </p>
             </div>
           )}
@@ -108,7 +110,7 @@ export default function UserMenu() {
               <div className="space-y-0.5">
                 {devices.map((device) => {
                   const isCurrent = device.deviceId === localDeviceId;
-                  const isPlaying = activeSession?.deviceId === device.deviceId;
+                  const isDevicePlaying = userState?.activeDeviceId === device.deviceId && userState?.isPlaying;
                   return (
                     <div
                       key={device.deviceId}
@@ -124,7 +126,7 @@ export default function UserMenu() {
                             <span className="ml-1 text-deadly-highlight">(this device)</span>
                           )}
                         </span>
-                        {isPlaying && (
+                        {isDevicePlaying && (
                           <span className="flex h-4 items-end gap-[2px] text-deadly-highlight">
                             <span className="inline-block w-[3px] animate-[eq-bar_0.8s_ease-in-out_infinite_alternate] rounded-sm bg-current" style={{ height: "40%" }} />
                             <span className="inline-block w-[3px] animate-[eq-bar_0.8s_ease-in-out_0.2s_infinite_alternate] rounded-sm bg-current" style={{ height: "70%" }} />
@@ -132,10 +134,10 @@ export default function UserMenu() {
                           </span>
                         )}
                       </div>
-                      {isPlaying && activeSession?.state && (
+                      {isDevicePlaying && userState && (
                         <p className="mt-0.5 truncate pl-[calc(0.5rem+1ch)] text-[10px] text-deadly-highlight/70">
-                          {activeSession.state.date && formatShowDate(activeSession.state.date)}
-                          {activeSession.state.venue && ` — ${activeSession.state.venue}`}
+                          {userState.date && formatShowDate(userState.date)}
+                          {userState.venue && ` — ${userState.venue}`}
                         </p>
                       )}
                     </div>
