@@ -22,6 +22,7 @@ export const authConfig: AuthConfig = {
       // fetched — Apple is OIDC so identity comes from the ID token.
       token: { url: "https://appleid.apple.com/auth/token" },
       userinfo: { url: "https://appleid.apple.com" },
+      client: { token_endpoint_auth_method: "client_secret_post" },
     }),
   ],
   secret: process.env.AUTH_SECRET,

@@ -1,9 +1,11 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { usePlayer } from "@/contexts/PlayerContext";
+import { useConnect } from "@/contexts/ConnectContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
 import QueuePanel from "./QueuePanel";
+import DevicePicker from "@/components/connect/DevicePicker";
 
 function formatTime(seconds: number): string {
   if (!isFinite(seconds) || seconds < 0) return "0:00";
@@ -38,22 +40,103 @@ export default function HeaderPlayer() {
     status,
     elapsed,
     duration,
+    selectedRecording,
     togglePlayPause,
     nextTrack,
     prevTrack,
+    playTrack,
     seek,
     close,
     playShow,
   } = usePlayer();
 
+  const { isConnected, devices, activeSession, isActiveDevice, claimSession } = useConnect();
   const [queueOpen, setQueueOpen] = useState(false);
+  const [devicePickerOpen, setDevicePickerOpen] = useState(false);
   const closeQueue = useCallback(() => setQueueOpen(false), []);
+  const closeDevicePicker = useCallback(() => setDevicePickerOpen(false), []);
+
+  const pendingSeekRef = useRef<{ trackIndex: number; positionMs: number } | null>(null);
+
+  // Once tracks load after claiming a session, jump to correct track + seek
+  useEffect(() => {
+    if (!pendingSeekRef.current || !tracks || tracks.length === 0) return;
+
+    const { trackIndex, positionMs } = pendingSeekRef.current;
+    pendingSeekRef.current = null;
+
+    if (trackIndex > 0 && trackIndex < tracks.length) {
+      playTrack(trackIndex);
+    }
+
+    if (positionMs > 0) {
+      const timer = setTimeout(() => {
+        window.dispatchEvent(
+          new CustomEvent("connect:seek", { detail: { seconds: positionMs / 1000 } })
+        );
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [tracks, playTrack]);
+
+  const handleClaimSession = useCallback(() => {
+    if (!activeSession) return;
+
+    // Store seek info for after tracks load
+    pendingSeekRef.current = {
+      trackIndex: activeSession.state.trackIndex,
+      positionMs: activeSession.state.positionMs,
+    };
+
+    // Claim session on server (will broadcast back with our deviceId)
+    claimSession();
+
+    // Load the show from session state
+    playShow({
+      showId: activeSession.state.showId,
+      recordings: [],
+      bestRecordingId: activeSession.state.recordingId,
+      date: activeSession.state.date ?? "",
+      venue: activeSession.state.venue ?? "",
+      location: activeSession.state.location ?? "",
+    });
+  }, [activeSession, playShow, claimSession]);
 
   const currentTrack =
     tracks && currentTrackIndex >= 0 ? tracks[currentTrackIndex] : null;
   const hasNext = tracks ? currentTrackIndex < tracks.length - 1 : false;
   const hasPrevious = currentTrackIndex > 0;
   const isActive = status !== "idle" && currentTrack;
+
+  // Active session on another device — show "Play here" prompt
+  if (activeSession && !isActiveDevice && !isActive) {
+    const sessionState = activeSession.state;
+    const date = sessionState.date ? formatShowDate(sessionState.date) : "";
+    const venue = sessionState.venue
+      ? sessionState.venue + (sessionState.location ? `, ${sessionState.location}` : "")
+      : "";
+    return (
+      <div className="flex flex-1 items-center justify-end gap-3 overflow-hidden pl-4">
+        <div className="min-w-0 flex-1 text-right">
+          <p className="truncate text-sm font-medium text-white/70">
+            Playing on {activeSession.deviceName}
+          </p>
+          <p className="truncate text-xs text-white/40">
+            {date}{venue ? ` — ${venue}` : ""}
+          </p>
+        </div>
+        <button
+          onClick={handleClaimSession}
+          className="flex flex-shrink-0 items-center gap-1.5 rounded-full bg-deadly-highlight px-3.5 py-1.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+          Play here
+        </button>
+      </div>
+    );
+  }
 
   // Nothing playing and no show viewed — hide completely
   if (!isActive && !viewedShow) return null;
@@ -93,6 +176,9 @@ export default function HeaderPlayer() {
   const info = activeShow ? showLabel(activeShow) : null;
   const trackCount = tracks?.length ?? 0;
 
+  // Show "Playing on [device]" when another device owns the session while we're also playing
+  const remoteSessionInfo = activeSession && !isActiveDevice ? activeSession.deviceName : null;
+
   function handleSeek(e: React.MouseEvent<HTMLDivElement>) {
     const rect = e.currentTarget.getBoundingClientRect();
     const fraction = Math.max(
@@ -117,11 +203,15 @@ export default function HeaderPlayer() {
             </span>
           )}
         </div>
-        {info && (
+        {remoteSessionInfo ? (
+          <p className="truncate text-xs text-deadly-highlight">
+            Playing on {remoteSessionInfo}
+          </p>
+        ) : info ? (
           <p className="truncate text-xs text-white/40">
             {info.date} — {info.venue}
           </p>
-        )}
+        ) : null}
       </div>
 
       {/* Seek bar */}
@@ -242,6 +332,44 @@ export default function HeaderPlayer() {
       </button>
 
     </div>
+
+      {/* Device picker — outside overflow-hidden so dropdown isn't clipped */}
+      {isConnected && devices.length > 1 && (
+        <div className="relative flex-shrink-0">
+          <button
+            onClick={() => setDevicePickerOpen((o) => !o)}
+            className={`rounded-full p-1.5 transition-colors ${
+              devicePickerOpen
+                ? "text-deadly-highlight"
+                : "text-white/40 hover:text-white/70"
+            }`}
+            aria-label="Connect to device"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M1 18v3h4v-3H1zm0-6v3h8v-3H1zm0-6v3h12V6H1zm20 12.59L17.42 15 16 16.41 21 21.41l5-5L24.59 15 21 18.59z" />
+            </svg>
+          </button>
+          {devicePickerOpen && (
+            <DevicePicker
+              currentState={
+                activeShow && selectedRecording
+                  ? {
+                      showId: activeShow.showId,
+                      recordingId: selectedRecording,
+                      trackIndex: currentTrackIndex,
+                      positionMs: Math.floor(elapsed * 1000),
+                      status: status === "playing" ? "playing" : "paused",
+                      date: activeShow.date,
+                      venue: activeShow.venue,
+                      location: activeShow.location,
+                    }
+                  : null
+              }
+              onClose={closeDevicePicker}
+            />
+          )}
+        </div>
+      )}
 
       {/* Queue panel overlay */}
       {queueOpen && <QueuePanel onClose={closeQueue} />}

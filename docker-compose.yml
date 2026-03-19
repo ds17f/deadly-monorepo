@@ -41,10 +41,13 @@ services:
       - APPLE_TEAM_ID=${APPLE_TEAM_ID}
       - APPLE_KEY_ID=${APPLE_KEY_ID}
       - APPLE_PRIVATE_KEY=${APPLE_PRIVATE_KEY}
+      - REDIS_URL=redis://redis:6379
     volumes:
       - ./api-data:/app/data
     expose:
       - "3001"
+    depends_on:
+      - redis
 
   redis:
     image: redis:7-alpine

@@ -3,8 +3,10 @@
 import { useState, useRef, useCallback, useEffect, useMemo } from "react";
 import type { ArchiveTrack, PlaybackStatus } from "@/types/player";
 import { fetchArchiveTracks } from "@/lib/archive";
+import { updatePlaybackPosition } from "@/lib/userDataApi";
 import { PlayerContext } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
+import { useConnect } from "@/contexts/ConnectContext";
 
 const PREV_TRACK_THRESHOLD = 3; // seconds
 const AUDIO_RETRY_DELAYS = [0, 1000, 2000];
@@ -15,6 +17,8 @@ export default function PlayerProvider({
 }: {
   children: React.ReactNode;
 }) {
+  const { announcePlayback, sendPositionUpdate } = useConnect();
+
   const [activeShow, setActiveShow] = useState<ViewedShow | null>(null);
   const [viewedShow, setViewedShow] = useState<ViewedShow | null>(null);
   const [tracks, setTracks] = useState<ArchiveTrack[] | null>(null);
@@ -252,6 +256,86 @@ export default function PlayerProvider({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Report playback position every 15s while playing, and on pause/track change
+  const positionReportRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  useEffect(() => {
+    if (positionReportRef.current) {
+      clearInterval(positionReportRef.current);
+      positionReportRef.current = null;
+    }
+
+    function reportPosition() {
+      const audio = getActiveAudio();
+      if (!activeShow || !selectedRecording || !audio || currentTrackIndex < 0) return;
+      const positionMs = Math.floor(audio.currentTime * 1000);
+      // Report via REST (fallback/persistence)
+      updatePlaybackPosition({
+        showId: activeShow.showId,
+        recordingId: selectedRecording,
+        trackIndex: currentTrackIndex,
+        positionMs,
+      }).catch(() => {});
+      // Also report via WebSocket for real-time sync
+      sendPositionUpdate({
+        showId: activeShow.showId,
+        recordingId: selectedRecording,
+        trackIndex: currentTrackIndex,
+        positionMs,
+        status: status === "playing" ? "playing" : "paused",
+      });
+    }
+
+    if (status === "playing") {
+      positionReportRef.current = setInterval(reportPosition, 15000);
+    } else if (status === "paused") {
+      // Report once on pause
+      reportPosition();
+    }
+
+    return () => {
+      if (positionReportRef.current) {
+        clearInterval(positionReportRef.current);
+      }
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [status, activeShow, selectedRecording, currentTrackIndex, sendPositionUpdate]);
+
+  // Announce playback state changes via WebSocket for Connect session
+  useEffect(() => {
+    if (!activeShow || !selectedRecording || currentTrackIndex < 0) return;
+    if (status !== "playing" && status !== "paused") return;
+
+    const audio = getActiveAudio();
+    const positionMs = audio ? Math.floor(audio.currentTime * 1000) : 0;
+
+    announcePlayback({
+      showId: activeShow.showId,
+      recordingId: selectedRecording,
+      trackIndex: currentTrackIndex,
+      positionMs,
+      status: status === "playing" ? "playing" : "paused",
+      date: activeShow.date,
+      venue: activeShow.venue,
+      location: activeShow.location,
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [status, activeShow, selectedRecording, currentTrackIndex, announcePlayback]);
+
+  // Listen for absolute seek from Connect transfer
+  useEffect(() => {
+    function handleConnectSeek(e: Event) {
+      const { seconds } = (e as CustomEvent).detail;
+      const audio = getActiveAudio();
+      if (audio && typeof seconds === "number") {
+        audio.currentTime = seconds;
+      }
+    }
+    window.addEventListener("connect:seek", handleConnectSeek);
+    return () => window.removeEventListener("connect:seek", handleConnectSeek);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   function updateMediaSession(track: ArchiveTrack) {
     if (!("mediaSession" in navigator)) return;
     const showId = activeShow?.showId ?? "";
@@ -344,6 +428,22 @@ export default function PlayerProvider({
     // Clear error first to prevent stale error flash
     setErrorMessage(null);
 
+    // Announce stop before clearing state so the server knows playback ended
+    if (activeShow && selectedRecording) {
+      const audio = getActiveAudio();
+      const positionMs = audio ? Math.floor(audio.currentTime * 1000) : 0;
+      announcePlayback({
+        showId: activeShow.showId,
+        recordingId: selectedRecording,
+        trackIndex: currentTrackIndex,
+        positionMs,
+        status: "stopped",
+        date: activeShow.date,
+        venue: activeShow.venue,
+        location: activeShow.location,
+      });
+    }
+
     const audioA = audioARef.current;
     const audioB = audioBRef.current;
     if (audioA) {
@@ -368,7 +468,7 @@ export default function PlayerProvider({
     if ("mediaSession" in navigator) {
       navigator.mediaSession.metadata = null;
     }
-  }, []);
+  }, [activeShow, selectedRecording, currentTrackIndex, announcePlayback]);
 
   const selectRecording = useCallback(
     (identifier: string) => {
