@@ -17,3 +17,8 @@ body {
   color: #ffffff;
   font-family: system-ui, -apple-system, sans-serif;
 }
+
+@keyframes eq-bar {
+  0% { height: 20%; }
+  100% { height: 100%; }
+}

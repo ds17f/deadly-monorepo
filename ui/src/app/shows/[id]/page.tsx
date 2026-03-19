@@ -12,6 +12,8 @@ import Lineup from "@/components/Lineup";
 import ShowReview from "@/components/ShowReview";
 import ShowNav from "@/components/ShowNav";
 import ShowPlayerPanel from "@/components/player/ShowPlayerPanel";
+import FavoriteButton from "@/components/userdata/FavoriteButton";
+import UserReview from "@/components/userdata/UserReview";
 import type { Recording } from "@/types/recording";
 import type { Show } from "@/types/show";
 
@@ -101,11 +103,15 @@ export default async function ShowPage({
       <ShowNav prevId={prev} nextId={next} />
       <div className="grid grid-cols-1 gap-x-12 lg:grid-cols-3">
         <div className="lg:col-span-2">
-          <ShowHeader show={show} />
+          <div className="flex items-start justify-between gap-4">
+            <ShowHeader show={show} />
+            <FavoriteButton showId={show.show_id} />
+          </div>
           {show.setlist && show.setlist.length > 0 && (
             <Setlist sets={show.setlist} songHighlights={songHighlights} />
           )}
           {show.ai_show_review && <ShowReview review={show.ai_show_review} />}
+          <UserReview showId={show.show_id} />
         </div>
         <div className="mt-6 lg:mt-0">
           <ShowActions

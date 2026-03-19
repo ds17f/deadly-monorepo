@@ -1,12 +1,16 @@
 import Fastify from "fastify";
 import cors from "@fastify/cors";
 import formbody from "@fastify/formbody";
+import websocket from "@fastify/websocket";
 import swagger from "@fastify/swagger";
 import swaggerUi from "@fastify/swagger-ui";
 import { healthRoutes } from "./routes/health.js";
 import { authRoutes } from "./auth/routes.js";
 import { tokenRoutes } from "./auth/token.js";
+import { userRoutes } from "./routes/user.js";
 import { authMiddleware } from "./auth/middleware.js";
+import { connectRoutes } from "./connect/routes.js";
+import { initRedisSubscriber } from "./connect/registry.js";
 
 export function buildApp() {
   const app = Fastify({
@@ -43,10 +47,15 @@ export function buildApp() {
   });
 
   app.register(formbody);
+  app.register(websocket);
   app.register(healthRoutes);
   app.register(authMiddleware);
   app.register(authRoutes);
   app.register(tokenRoutes);
+  app.register(userRoutes);
+  app.register(connectRoutes);
+
+  initRedisSubscriber();
 
   return app;
 }
