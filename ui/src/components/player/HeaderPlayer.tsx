@@ -366,7 +366,7 @@ export default function HeaderPlayer() {
           {devicePickerOpen && (
             <DevicePicker
               currentState={
-                activeShow && selectedRecording
+                isActive && isActiveDevice && activeShow && selectedRecording
                   ? {
                       showId: activeShow.showId,
                       recordingId: selectedRecording,
@@ -377,7 +377,20 @@ export default function HeaderPlayer() {
                       venue: activeShow.venue,
                       location: activeShow.location,
                     }
-                  : null
+                  : userState
+                    ? {
+                        showId: userState.showId,
+                        recordingId: userState.recordingId,
+                        trackIndex: userState.trackIndex,
+                        positionMs: Math.floor(interpolatedMs),
+                        durationMs: userState.durationMs,
+                        trackTitle: userState.trackTitle,
+                        status: userState.isPlaying ? "playing" : "paused",
+                        date: userState.date,
+                        venue: userState.venue,
+                        location: userState.location,
+                      }
+                    : null
               }
               onClose={closeDevicePicker}
             />
