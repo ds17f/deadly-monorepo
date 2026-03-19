@@ -7,6 +7,7 @@ import androidx.credentials.CredentialManager
 import androidx.credentials.CustomCredential
 import androidx.credentials.GetCredentialRequest
 import com.google.android.libraries.identity.googleid.GetGoogleIdOption
+import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import com.grateful.deadly.core.api.auth.AuthService
 import com.grateful.deadly.core.api.auth.AuthState
@@ -70,13 +71,15 @@ class AuthServiceImpl(
         if (appPreferences.useBetaMode) "${KEY_USER_JSON}_beta" else "${KEY_USER_JSON}_prod"
 
     override suspend fun signInWithGoogle(activity: Activity) {
-        val googleIdOption = GetGoogleIdOption.Builder()
-            .setFilterByAuthorizedAccounts(false)
-            .setServerClientId(googleClientId)
+        // Use GetSignInWithGoogleOption which always shows the Google Sign-In
+        // bottom sheet, even when no credentials are cached on the device.
+        // GetGoogleIdOption silently fails with NoCredentialException if the
+        // OAuth client isn't fully propagated or no accounts are authorized.
+        val signInOption = GetSignInWithGoogleOption.Builder(googleClientId)
             .build()
 
         val request = GetCredentialRequest.Builder()
-            .addCredentialOption(googleIdOption)
+            .addCredentialOption(signInOption)
             .build()
 
         val result = credentialManager.getCredential(activity, request)
