@@ -2,6 +2,7 @@ import { Auth } from "@auth/core";
 import type { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
 import { authConfig } from "./config.js";
 import { requireAuth } from "./middleware.js";
+import { getUsersDb } from "../db/users.js";
 
 export async function authRoutes(app: FastifyInstance): Promise<void> {
   app.get("/api/auth/me", {
@@ -34,8 +35,18 @@ export async function authRoutes(app: FastifyInstance): Promise<void> {
   app.all("/api/auth/*", {
     schema: { hide: true },
   }, async (request: FastifyRequest, reply: FastifyReply) => {
+    // Apple sends the user's name only on the first authorization, in a `user`
+    // POST body parameter (JSON). Auth.js ignores it — extract before forwarding.
+    const appleName = extractAppleName(request);
+
     const webRequest = await toWebRequest(request);
     const webResponse = await Auth(webRequest, authConfig);
+
+    // If Apple sent a name, backfill it into the freshly-created user record.
+    if (appleName) {
+      backfillAppleName(request, appleName);
+    }
+
     return sendWebResponse(reply, webResponse);
   });
 }
@@ -104,5 +115,47 @@ async function sendWebResponse(reply: FastifyReply, response: Response): Promise
     reply.send(body);
   } else {
     reply.send();
+  }
+}
+
+/** Extract the user's name from Apple's `user` POST parameter (JSON). */
+function extractAppleName(request: FastifyRequest): string | null {
+  if (!request.url.includes("/callback/apple")) return null;
+  if (request.method !== "POST") return null;
+
+  const body = request.body as Record<string, string> | undefined;
+  const userParam = body?.user;
+  if (!userParam) return null;
+
+  try {
+    const parsed = JSON.parse(typeof userParam === "string" ? userParam : JSON.stringify(userParam));
+    const first = parsed?.name?.firstName ?? "";
+    const last = parsed?.name?.lastName ?? "";
+    const full = [first, last].filter(Boolean).join(" ");
+    return full || null;
+  } catch {
+    return null;
+  }
+}
+
+/** Update both auth_users and accounts tables with the Apple-provided name. */
+function backfillAppleName(request: FastifyRequest, name: string): void {
+  try {
+    const body = request.body as Record<string, string> | undefined;
+    const email = body?.email ?? (body?.user ? JSON.parse(body.user)?.email : null);
+    if (!email) return;
+
+    const db = getUsersDb();
+    // Update auth_users (Auth.js layer) — only if name is currently null
+    db.prepare(
+      `UPDATE auth_users SET name = ? WHERE email = ? AND name IS NULL`
+    ).run(name, email.toLowerCase());
+
+    // Update accounts (app layer) — only if name is currently null
+    db.prepare(
+      `UPDATE accounts SET name = ? WHERE email = ? AND name IS NULL`
+    ).run(name, email.toLowerCase());
+  } catch {
+    // Non-critical — don't break the auth flow
   }
 }
