@@ -1,6 +1,7 @@
 import type { WebSocket } from "@fastify/websocket";
-import type { ConnectDevice, PlaybackCommand, PlaybackState, ActiveSession, ConnectMessage } from "./types.js";
+import type { ConnectDevice, PlaybackCommand, PlaybackState, ActiveSession, UserPlaybackState, ConnectMessage } from "./types.js";
 import { getPublisher, getSubscriber } from "../db/redis.js";
+import { loadUserPlaybackState, upsertPlaybackPosition, clearPlaybackPosition } from "../db/userdata.js";
 
 interface ConnectedDevice {
   device: ConnectDevice;
@@ -10,8 +11,11 @@ interface ConnectedDevice {
 // In-memory registry: userId → deviceId → ConnectedDevice
 const registry = new Map<string, Map<string, ConnectedDevice>>();
 
-// Per-user active playback session
+// Per-user active playback session (legacy, kept for backward compat broadcasts)
 const activeSessions = new Map<string, ActiveSession>();
+
+// Per-user persistent playback state (new model)
+const userStates = new Map<string, UserPlaybackState>();
 
 export function registerDevice(device: ConnectDevice, socket: WebSocket): void {
   let userDevices = registry.get(device.userId);
@@ -24,7 +28,19 @@ export function registerDevice(device: ConnectDevice, socket: WebSocket): void {
   // Broadcast updated device list to all user's devices
   broadcastDeviceList(device.userId);
 
-  // Send current active session to the newly registered device
+  // If no in-memory state, try loading from DB
+  let state = userStates.get(device.userId) ?? null;
+  if (!state) {
+    state = loadUserPlaybackState(device.userId);
+    if (state) {
+      userStates.set(device.userId, state);
+    }
+  }
+
+  // Send current user state to the newly registered device
+  sendToSocket(socket, { type: "user_state", state });
+
+  // Also send legacy active_session for backward compat
   const session = activeSessions.get(device.userId) ?? null;
   sendToSocket(socket, { type: "active_session", session });
 }
@@ -34,7 +50,30 @@ export function unregisterDevice(userId: string, deviceId: string): void {
   if (!userDevices) return;
   userDevices.delete(deviceId);
 
-  // If disconnecting device owns the active session, clear it
+  // If disconnecting device owns the active state, park it (don't delete)
+  const state = userStates.get(userId);
+  if (state && state.activeDeviceId === deviceId) {
+    state.activeDeviceId = null;
+    state.activeDeviceName = null;
+    state.activeDeviceType = null;
+    state.isPlaying = false;
+    state.updatedAt = Date.now();
+
+    // Persist position to DB
+    upsertPlaybackPosition(userId, {
+      showId: state.showId,
+      recordingId: state.recordingId,
+      trackIndex: state.trackIndex,
+      positionMs: state.positionMs,
+      date: state.date,
+      venue: state.venue,
+      location: state.location,
+    });
+
+    broadcastUserState(userId, state);
+  }
+
+  // Legacy: clear active session if this device owned it
   clearActiveSession(userId, deviceId);
 
   if (userDevices.size === 0) {
@@ -101,7 +140,58 @@ export function relayTransfer(userId: string, fromDeviceId: string, targetDevice
   return true;
 }
 
-// ── Active Session ──────────────────────────────────────────────────
+// ── User Playback State ────────────────────────────────────────────
+
+export function updateUserState(userId: string, patch: Partial<UserPlaybackState>): void {
+  let state = userStates.get(userId);
+  if (state) {
+    Object.assign(state, patch, { updatedAt: Date.now() });
+  } else {
+    // Need at least showId/recordingId to create a new state
+    if (!patch.showId || !patch.recordingId) return;
+    state = {
+      showId: patch.showId,
+      recordingId: patch.recordingId,
+      trackIndex: patch.trackIndex ?? 0,
+      positionMs: patch.positionMs ?? 0,
+      date: patch.date,
+      venue: patch.venue,
+      location: patch.location,
+      activeDeviceId: patch.activeDeviceId ?? null,
+      activeDeviceName: patch.activeDeviceName ?? null,
+      activeDeviceType: patch.activeDeviceType ?? null,
+      isPlaying: patch.isPlaying ?? false,
+      updatedAt: Date.now(),
+    };
+  }
+  userStates.set(userId, state);
+  broadcastUserState(userId, state);
+
+  // Relay to other server instances
+  getPublisher().publish(`connect:user:${userId}`, JSON.stringify({
+    type: "state_relay",
+    userId,
+    state,
+  })).catch(() => {});
+}
+
+export function getUserState(userId: string): UserPlaybackState | null {
+  return userStates.get(userId) ?? null;
+}
+
+export function deleteUserState(userId: string): void {
+  userStates.delete(userId);
+  clearPlaybackPosition(userId);
+  broadcastUserState(userId, null);
+
+  getPublisher().publish(`connect:user:${userId}`, JSON.stringify({
+    type: "state_relay",
+    userId,
+    state: null,
+  })).catch(() => {});
+}
+
+// ── Active Session (legacy) ────────────────────────────────────────
 
 export function setActiveSession(userId: string, session: ActiveSession): void {
   activeSessions.set(userId, session);
@@ -135,13 +225,21 @@ export function broadcastPosition(userId: string, fromDeviceId: string, state: P
   const userDevices = registry.get(userId);
   if (!userDevices) return;
 
-  // Update active session position if sender is the active device
+  // Update legacy active session position if sender is the active device
   const session = activeSessions.get(userId);
   if (session && session.deviceId === fromDeviceId) {
     session.state.positionMs = state.positionMs;
     session.state.trackIndex = state.trackIndex;
     session.state.status = state.status;
     session.updatedAt = Date.now();
+  }
+
+  // Update user state position if sender is the active device
+  const uState = userStates.get(userId);
+  if (uState && uState.activeDeviceId === fromDeviceId) {
+    uState.positionMs = state.positionMs;
+    uState.trackIndex = state.trackIndex;
+    uState.updatedAt = Date.now();
   }
 
   const msg: ConnectMessage = {
@@ -191,12 +289,30 @@ export function initRedisSubscriber(): void {
           activeSessions.delete(data.userId);
         }
         broadcastActiveSession(data.userId, data.session);
+      } else if (data.type === "state_relay") {
+        // Update local cache and broadcast to local devices
+        if (data.state) {
+          userStates.set(data.userId, data.state);
+        } else {
+          userStates.delete(data.userId);
+        }
+        broadcastUserState(data.userId, data.state);
       }
     } catch { /* ignore malformed messages */ }
   });
 }
 
 // ── Helpers ─────────────────────────────────────────────────────────
+
+function broadcastUserState(userId: string, state: UserPlaybackState | null): void {
+  const userDevices = registry.get(userId);
+  if (!userDevices) return;
+
+  const msg: ConnectMessage = { type: "user_state", state };
+  for (const { socket } of userDevices.values()) {
+    sendToSocket(socket, msg);
+  }
+}
 
 function broadcastActiveSession(userId: string, session: ActiveSession | null): void {
   const userDevices = registry.get(userId);

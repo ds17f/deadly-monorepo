@@ -84,6 +84,9 @@ export interface PlaybackPositionV3 {
   recordingId: string;
   trackIndex: number;
   positionMs: number;
+  date?: string;
+  venue?: string;
+  location?: string;
 }
 
 // ── Favorite Shows ──────────────────────────────────────────────────
@@ -325,7 +328,7 @@ export function upsertRecentShow(userId: string, showId: string): void {
 export function getPlaybackPosition(userId: string): PlaybackPositionV3 | null {
   const db = getUsersDb();
   const row = db.prepare(
-    `SELECT show_id, recording_id, track_index, position_ms
+    `SELECT show_id, recording_id, track_index, position_ms, date, venue, location
      FROM playback_position WHERE user_id = ?`
   ).get(userId) as Record<string, unknown> | undefined;
 
@@ -335,21 +338,52 @@ export function getPlaybackPosition(userId: string): PlaybackPositionV3 | null {
     recordingId: row.recording_id as string,
     trackIndex: row.track_index as number,
     positionMs: row.position_ms as number,
+    date: row.date as string | undefined,
+    venue: row.venue as string | undefined,
+    location: row.location as string | undefined,
   };
 }
 
 export function upsertPlaybackPosition(userId: string, pos: PlaybackPositionV3): void {
   const db = getUsersDb();
   db.prepare(
-    `INSERT INTO playback_position (user_id, show_id, recording_id, track_index, position_ms, updated_at)
-     VALUES (?, ?, ?, ?, ?, unixepoch())
+    `INSERT INTO playback_position (user_id, show_id, recording_id, track_index, position_ms, date, venue, location, updated_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, unixepoch())
      ON CONFLICT(user_id) DO UPDATE SET
        show_id = excluded.show_id,
        recording_id = excluded.recording_id,
        track_index = excluded.track_index,
        position_ms = excluded.position_ms,
+       date = excluded.date,
+       venue = excluded.venue,
+       location = excluded.location,
        updated_at = excluded.updated_at`
-  ).run(userId, pos.showId, pos.recordingId, pos.trackIndex, pos.positionMs);
+  ).run(userId, pos.showId, pos.recordingId, pos.trackIndex, pos.positionMs,
+    pos.date ?? null, pos.venue ?? null, pos.location ?? null);
+}
+
+export function loadUserPlaybackState(userId: string): import("../connect/types.js").UserPlaybackState | null {
+  const pos = getPlaybackPosition(userId);
+  if (!pos) return null;
+  return {
+    showId: pos.showId,
+    recordingId: pos.recordingId,
+    trackIndex: pos.trackIndex,
+    positionMs: pos.positionMs,
+    date: pos.date,
+    venue: pos.venue,
+    location: pos.location,
+    activeDeviceId: null,
+    activeDeviceName: null,
+    activeDeviceType: null,
+    isPlaying: false,
+    updatedAt: Date.now(),
+  };
+}
+
+export function clearPlaybackPosition(userId: string): void {
+  const db = getUsersDb();
+  db.prepare(`DELETE FROM playback_position WHERE user_id = ?`).run(userId);
 }
 
 // ── Settings ────────────────────────────────────────────────────────

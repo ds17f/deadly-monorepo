@@ -17,7 +17,7 @@ export default function PlayerProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const { announcePlayback, sendPositionUpdate } = useConnect();
+  const { announcePlayback, sendPositionUpdate, clearState, userState } = useConnect();
 
   const [activeShow, setActiveShow] = useState<ViewedShow | null>(null);
   const [viewedShow, setViewedShow] = useState<ViewedShow | null>(null);
@@ -40,6 +40,7 @@ export default function PlayerProvider({
   const tracksRef = useRef<ArchiveTrack[] | null>(null);
   const currentTrackIndexRef = useRef(-1);
   const preloadedNextRef = useRef(false);
+  const hydratedRef = useRef(false);
 
   // Keep refs in sync
   useEffect(() => {
@@ -336,6 +337,23 @@ export default function PlayerProvider({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Hydration: when userState arrives from server and no local activeShow, hydrate show info
+  useEffect(() => {
+    if (hydratedRef.current) return;
+    if (!userState || activeShow) return;
+
+    hydratedRef.current = true;
+    setActiveShow({
+      showId: userState.showId,
+      recordings: [],
+      bestRecordingId: userState.recordingId,
+      date: userState.date ?? "",
+      venue: userState.venue ?? "",
+      location: userState.location ?? "",
+    });
+    setSelectedRecording(userState.recordingId);
+  }, [userState, activeShow]);
+
   function updateMediaSession(track: ArchiveTrack) {
     if (!("mediaSession" in navigator)) return;
     const showId = activeShow?.showId ?? "";
@@ -347,6 +365,7 @@ export default function PlayerProvider({
   }
 
   const playRecording = useCallback(async (identifier: string) => {
+    hydratedRef.current = true; // Mark as hydrated since we're actively playing
     setIsLoadingTracks(true);
     setErrorMessage(null);
     try {
@@ -428,7 +447,7 @@ export default function PlayerProvider({
     // Clear error first to prevent stale error flash
     setErrorMessage(null);
 
-    // Announce stop before clearing state so the server knows playback ended
+    // Announce stop before clearing local audio so the server parks the state
     if (activeShow && selectedRecording) {
       const audio = getActiveAudio();
       const positionMs = audio ? Math.floor(audio.currentTime * 1000) : 0;
@@ -457,18 +476,28 @@ export default function PlayerProvider({
     activeAudioRef.current = "A";
     preloadedNextRef.current = false;
 
+    // Stop playback but keep show info loaded (parked state)
     setStatus("idle");
     setCurrentTrackIndex(-1);
     setTracks(null);
     setElapsed(0);
     setDuration(0);
-    setActiveShow(null);
-    setSelectedRecording(null);
     setIsLoadingTracks(false);
     if ("mediaSession" in navigator) {
       navigator.mediaSession.metadata = null;
     }
+    // Note: activeShow and selectedRecording are NOT cleared — this is the parked state
   }, [activeShow, selectedRecording, currentTrackIndex, announcePlayback]);
+
+  const dismiss = useCallback(() => {
+    close();
+    // Clear all local state
+    setActiveShow(null);
+    setSelectedRecording(null);
+    hydratedRef.current = false;
+    // Clear server state
+    clearState();
+  }, [close, clearState]);
 
   const selectRecording = useCallback(
     (identifier: string) => {
@@ -503,6 +532,7 @@ export default function PlayerProvider({
       prevTrack,
       seek,
       close,
+      dismiss,
     }),
     [
       activeShow,
@@ -524,6 +554,7 @@ export default function PlayerProvider({
       prevTrack,
       seek,
       close,
+      dismiss,
     ]
   );
 

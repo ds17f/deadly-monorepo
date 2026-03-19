@@ -1,6 +1,6 @@
 import type { FastifyInstance } from "fastify";
 import { requireAuth } from "../auth/middleware.js";
-import { registerDevice, unregisterDevice, relayCommand, relayTransfer, broadcastPosition, setActiveSession, clearActiveSession, getActiveSession, getDevicesForUser } from "./registry.js";
+import { registerDevice, unregisterDevice, relayCommand, relayTransfer, broadcastPosition, setActiveSession, clearActiveSession, getActiveSession, getDevicesForUser, updateUserState, deleteUserState } from "./registry.js";
 import { upsertPlaybackPosition } from "../db/userdata.js";
 import type { ConnectMessage, RegisterMessage, CommandMessage, TransferMessage, PositionUpdateMessage, SessionUpdateMessage, SessionPlayOnMessage } from "./types.js";
 
@@ -67,6 +67,9 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
             recordingId: pos.state.recordingId,
             trackIndex: pos.state.trackIndex,
             positionMs: pos.state.positionMs,
+            date: pos.state.date,
+            venue: pos.state.venue,
+            location: pos.state.location,
           });
           break;
         }
@@ -74,9 +77,73 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
         case "session_update": {
           const su = msg as SessionUpdateMessage;
           if (!deviceId) return;
+
           if (su.state.status === "stopped") {
+            // Park the user state (don't delete)
+            updateUserState(userId, {
+              showId: su.state.showId,
+              recordingId: su.state.recordingId,
+              trackIndex: su.state.trackIndex,
+              positionMs: su.state.positionMs,
+              date: su.state.date,
+              venue: su.state.venue,
+              location: su.state.location,
+              activeDeviceId: null,
+              activeDeviceName: null,
+              activeDeviceType: null,
+              isPlaying: false,
+            });
+            // Persist to DB on stop
+            upsertPlaybackPosition(userId, {
+              showId: su.state.showId,
+              recordingId: su.state.recordingId,
+              trackIndex: su.state.trackIndex,
+              positionMs: su.state.positionMs,
+              date: su.state.date,
+              venue: su.state.venue,
+              location: su.state.location,
+            });
+            // Legacy
             clearActiveSession(userId, deviceId);
+          } else if (su.state.status === "paused") {
+            // Paused: keep device set but not playing
+            updateUserState(userId, {
+              showId: su.state.showId,
+              recordingId: su.state.recordingId,
+              trackIndex: su.state.trackIndex,
+              positionMs: su.state.positionMs,
+              date: su.state.date,
+              venue: su.state.venue,
+              location: su.state.location,
+              activeDeviceId: deviceId,
+              activeDeviceName: deviceName,
+              activeDeviceType: deviceType,
+              isPlaying: false,
+            });
+            // Legacy
+            setActiveSession(userId, {
+              deviceId,
+              deviceName,
+              deviceType,
+              state: su.state,
+              updatedAt: Date.now(),
+            });
           } else {
+            // Playing
+            updateUserState(userId, {
+              showId: su.state.showId,
+              recordingId: su.state.recordingId,
+              trackIndex: su.state.trackIndex,
+              positionMs: su.state.positionMs,
+              date: su.state.date,
+              venue: su.state.venue,
+              location: su.state.location,
+              activeDeviceId: deviceId,
+              activeDeviceName: deviceName,
+              activeDeviceType: deviceType,
+              isPlaying: true,
+            });
+            // Legacy
             setActiveSession(userId, {
               deviceId,
               deviceName,
@@ -100,6 +167,13 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
               updatedAt: Date.now(),
             });
           }
+          // Also update user state
+          updateUserState(userId, {
+            activeDeviceId: deviceId,
+            activeDeviceName: deviceName,
+            activeDeviceType: deviceType,
+            isPlaying: true,
+          });
           break;
         }
 
@@ -119,6 +193,28 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
             state: spo.state,
             updatedAt: Date.now(),
           });
+          // Also update user state
+          updateUserState(userId, {
+            showId: spo.state.showId,
+            recordingId: spo.state.recordingId,
+            trackIndex: spo.state.trackIndex,
+            positionMs: spo.state.positionMs,
+            date: spo.state.date,
+            venue: spo.state.venue,
+            location: spo.state.location,
+            activeDeviceId: targetDevice.deviceId,
+            activeDeviceName: targetDevice.name,
+            activeDeviceType: targetDevice.type,
+            isPlaying: true,
+          });
+          break;
+        }
+
+        case "state_clear": {
+          if (!deviceId) return;
+          deleteUserState(userId);
+          // Also clear legacy
+          clearActiveSession(userId);
           break;
         }
 

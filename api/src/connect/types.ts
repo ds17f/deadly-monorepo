@@ -36,6 +36,24 @@ export interface ActiveSession {
   updatedAt: number;
 }
 
+export interface UserPlaybackState {
+  showId: string;
+  recordingId: string;
+  trackIndex: number;
+  positionMs: number;
+  date?: string;
+  venue?: string;
+  location?: string;
+
+  // Nullable — null means "parked" (no device actively playing)
+  activeDeviceId: string | null;
+  activeDeviceName: string | null;
+  activeDeviceType: DeviceType | null;
+  isPlaying: boolean;
+
+  updatedAt: number;
+}
+
 // ── WebSocket Messages ──────────────────────────────────────────────
 
 export interface RegisterMessage {
@@ -97,6 +115,15 @@ export interface ActiveSessionMessage {
   session: ActiveSession | null;
 }
 
+export interface UserStateMessage {
+  type: "user_state";
+  state: UserPlaybackState | null;
+}
+
+export interface StateClearMessage {
+  type: "state_clear";
+}
+
 export interface ErrorMessage {
   type: "error";
   message: string;
@@ -114,4 +141,6 @@ export type ConnectMessage =
   | SessionClaimMessage
   | SessionPlayOnMessage
   | ActiveSessionMessage
+  | UserStateMessage
+  | StateClearMessage
   | ErrorMessage;

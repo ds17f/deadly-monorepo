@@ -127,6 +127,9 @@ function initSchema(db: Database.Database): void {
       recording_id TEXT NOT NULL,
       track_index INTEGER NOT NULL,
       position_ms INTEGER NOT NULL,
+      date TEXT,
+      venue TEXT,
+      location TEXT,
       updated_at INTEGER NOT NULL DEFAULT (unixepoch()),
       PRIMARY KEY (user_id)
     );
@@ -144,6 +147,21 @@ function initSchema(db: Database.Database): void {
       updated_at INTEGER NOT NULL DEFAULT (unixepoch())
     );
   `);
+
+  // Migrations: add columns to existing tables
+  const cols = db.prepare(
+    `SELECT name FROM pragma_table_info('playback_position')`
+  ).all() as { name: string }[];
+  const colNames = new Set(cols.map((c) => c.name));
+  if (!colNames.has("date")) {
+    db.exec(`ALTER TABLE playback_position ADD COLUMN date TEXT`);
+  }
+  if (!colNames.has("venue")) {
+    db.exec(`ALTER TABLE playback_position ADD COLUMN venue TEXT`);
+  }
+  if (!colNames.has("location")) {
+    db.exec(`ALTER TABLE playback_position ADD COLUMN location TEXT`);
+  }
 }
 
 export function createAppUser(authUserId: string, email: string, name: string | null, provider: string): string {
