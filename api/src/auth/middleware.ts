@@ -1,7 +1,7 @@
 import type { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
-import { jwtDecrypt } from "jose";
 import { Auth } from "@auth/core";
 import { authConfig } from "./config.js";
+import { decodeJwt } from "./crypto.js";
 
 declare module "fastify" {
   interface FastifyRequest {
@@ -10,45 +10,6 @@ declare module "fastify" {
       email?: string;
       name?: string;
     };
-  }
-}
-
-const AUTH_SECRET = process.env.AUTH_SECRET;
-
-// Auth.js v5 uses JWE with dir + A256CBC-HS512, which requires a 512-bit key
-// derived via HKDF. We use Auth.js's own getDerivedEncryptionKey for correctness.
-let encryptionKey: Uint8Array | null = null;
-
-async function getSecretKey(): Promise<Uint8Array> {
-  if (encryptionKey) return encryptionKey;
-  // Auth.js uses @panva/hkdf with:
-  //   digest: sha256, ikm: secret, salt: cookieName, info: "Auth.js Generated Encryption Key (<cookieName>)"
-  //   length: 64 bytes for A256CBC-HS512
-  const cookieName = "authjs.session-token";
-  const encoder = new TextEncoder();
-  const keyMaterial = encoder.encode(AUTH_SECRET);
-  const rawKey = await crypto.subtle.importKey("raw", keyMaterial, "HKDF", false, ["deriveBits"]);
-  const bits = await crypto.subtle.deriveBits(
-    {
-      name: "HKDF",
-      hash: "SHA-256",
-      salt: encoder.encode(cookieName),
-      info: encoder.encode(`Auth.js Generated Encryption Key (${cookieName})`),
-    },
-    rawKey,
-    512, // A256CBC-HS512 needs 64 bytes
-  );
-  encryptionKey = new Uint8Array(bits);
-  return encryptionKey;
-}
-
-async function decodeJwt(token: string): Promise<Record<string, unknown> | null> {
-  try {
-    const key = await getSecretKey();
-    const { payload } = await jwtDecrypt(token, key);
-    return payload as Record<string, unknown>;
-  } catch (err) {
-    return null;
   }
 }
 

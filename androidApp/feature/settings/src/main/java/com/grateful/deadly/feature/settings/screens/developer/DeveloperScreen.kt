@@ -20,16 +20,16 @@ fun DeveloperScreen(
 ) {
     val forceOnline by viewModel.forceOnline.collectAsState()
 
-    val useBetaShareLinks by viewModel.useBetaShareLinks.collectAsState()
+    val useBetaMode by viewModel.useBetaMode.collectAsState()
 
     LazyColumn(modifier = Modifier.fillMaxSize()) {
 
         item {
             DevToggleRow(
-                title = "Use beta share links",
-                subtitle = "Generate share links using share.beta.thedeadly.app",
-                checked = useBetaShareLinks,
-                onCheckedChange = { viewModel.toggleUseBetaShareLinks() }
+                title = "Use Beta Mode",
+                subtitle = "Use beta API and share links (beta.thedeadly.app)",
+                checked = useBetaMode,
+                onCheckedChange = { viewModel.toggleUseBetaMode() }
             )
         }
 

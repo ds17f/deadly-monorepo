@@ -1,3 +1,4 @@
+import AuthenticationServices
 import SwiftUI
 import UIKit
 import UniformTypeIdentifiers
@@ -14,6 +15,8 @@ struct SettingsScreen: View {
     @State private var importResult: BackupImportResult?
     @State private var importError: String?
     @State private var showingImportAlert = false
+    @State private var authError: String?
+    @State private var showingAuthError = false
     private func settingsRow(_ title: String, systemImage: String) -> some View {
         HStack {
             Image(systemName: systemImage)
@@ -33,6 +36,73 @@ struct SettingsScreen: View {
 
     var body: some View {
         List {
+            // MARK: - Account
+            Section("Account") {
+                if container.authService.isSignedIn {
+                    if let user = container.authService.currentUser {
+                        VStack(alignment: .leading, spacing: 4) {
+                            if let name = user.name {
+                                Text(name)
+                                    .font(.body)
+                            }
+                            if let email = user.email {
+                                Text(email)
+                                    .font(.callout)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                    }
+                    Button("Sign Out", role: .destructive) {
+                        container.authService.signOut()
+                    }
+                } else {
+                    SignInWithAppleButton(.signIn) { request in
+                        request.requestedScopes = [.fullName, .email]
+                    } onCompletion: { _ in
+                        // Handled by AuthService delegate
+                    }
+                    .signInWithAppleButtonStyle(.whiteOutline)
+                    .frame(height: 44)
+                    // Use our own async flow instead of the completion handler
+                    .overlay {
+                        Color.clear
+                            .contentShape(Rectangle())
+                            .onTapGesture {
+                                Task {
+                                    do {
+                                        try await container.authService.signInWithApple()
+                                    } catch {
+                                        authError = error.localizedDescription
+                                        showingAuthError = true
+                                    }
+                                }
+                            }
+                    }
+
+                    Button {
+                        Task {
+                            do {
+                                guard let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                                      let viewController = scene.windows.first?.rootViewController else { return }
+                                try await container.authService.signInWithGoogle(presenting: viewController)
+                            } catch {
+                                authError = error.localizedDescription
+                                showingAuthError = true
+                            }
+                        }
+                    } label: {
+                        HStack {
+                            Image(systemName: "g.circle.fill")
+                                .font(.title2)
+                            Text("Sign in with Google")
+                        }
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .frame(height: 44)
+                    }
+                    .buttonStyle(.bordered)
+                }
+            }
+
             // MARK: - Preferences
             Section("Preferences") {
                 Toggle(isOn: Binding(
@@ -184,6 +254,13 @@ struct SettingsScreen: View {
             } else {
                 Text(importError ?? "Unknown error.")
             }
+        }
+
+        // MARK: - Auth Error Alert
+        .alert("Sign In Error", isPresented: $showingAuthError) {
+            Button("OK") {}
+        } message: {
+            Text(authError ?? "Unknown error.")
         }
 
         // MARK: - Favorites Export Share Sheet

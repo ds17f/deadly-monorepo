@@ -97,8 +97,23 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
               window.dispatchEvent(new CustomEvent("connect:command", { detail: msg.command }));
             }
             break;
-          case "position_update":
+          case "session_play_on":
+            if (msg.state) {
+              window.dispatchEvent(new CustomEvent("connect:play_on", { detail: msg.state }));
+            }
             break;
+          case "position_update": {
+            const state = msg.state as PlaybackState;
+            setUserState(prev => prev ? {
+              ...prev,
+              positionMs: state.positionMs,
+              trackIndex: state.trackIndex,
+              durationMs: state.durationMs ?? prev.durationMs,
+              trackTitle: state.trackTitle ?? prev.trackTitle,
+              updatedAt: Date.now(),
+            } : prev);
+            break;
+          }
         }
       },
       onOpen: () => {
@@ -172,6 +187,7 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
     activeSession,
     userState,
     isActiveDevice,
+    setUserState,
     announcePlayback,
     claimSession,
     playOnDevice,
@@ -183,7 +199,7 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
     sendCommand,
     clearIncomingState,
   }), [
-    isConnected, devices, activeSession, userState, isActiveDevice,
+    isConnected, devices, activeSession, userState, isActiveDevice, setUserState,
     announcePlayback, claimSession, playOnDevice, sendPositionUpdate, clearState,
     incomingState, playingOnDevice, transferPlayback, sendCommand, clearIncomingState,
   ]);

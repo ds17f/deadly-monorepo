@@ -14,6 +14,8 @@ export interface PlaybackState {
   recordingId: string;
   trackIndex: number;
   positionMs: number;
+  durationMs?: number;
+  trackTitle?: string;
   status: "playing" | "paused" | "stopped";
   // Show metadata for the receiving device
   date?: string;
@@ -34,6 +36,8 @@ export interface UserPlaybackState {
   recordingId: string;
   trackIndex: number;
   positionMs: number;
+  durationMs: number;
+  trackTitle?: string;
   date?: string;
   venue?: string;
   location?: string;
@@ -53,6 +57,7 @@ export interface ConnectContextValue {
   activeSession: ActiveSession | null;
   userState: UserPlaybackState | null;
   isActiveDevice: boolean;
+  setUserState: React.Dispatch<React.SetStateAction<UserPlaybackState | null>>;
 
   // New session-based functions
   announcePlayback: (state: PlaybackState) => void;
@@ -77,6 +82,7 @@ const DEFAULT_VALUE: ConnectContextValue = {
   activeSession: null,
   userState: null,
   isActiveDevice: false,
+  setUserState: () => {},
   announcePlayback: () => {},
   claimSession: () => {},
   playOnDevice: () => {},

@@ -7,6 +7,7 @@ import { updatePlaybackPosition } from "@/lib/userDataApi";
 import { PlayerContext } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
 import { useConnect } from "@/contexts/ConnectContext";
+import type { PlaybackState } from "@/contexts/ConnectContext";
 
 const PREV_TRACK_THRESHOLD = 3; // seconds
 const AUDIO_RETRY_DELAYS = [0, 1000, 2000];
@@ -17,7 +18,7 @@ export default function PlayerProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const { announcePlayback, sendPositionUpdate, clearState, userState } = useConnect();
+  const { announcePlayback, sendPositionUpdate, clearState, claimSession, userState, isActiveDevice } = useConnect();
 
   const [activeShow, setActiveShow] = useState<ViewedShow | null>(null);
   const [viewedShow, setViewedShow] = useState<ViewedShow | null>(null);
@@ -41,6 +42,11 @@ export default function PlayerProvider({
   const currentTrackIndexRef = useRef(-1);
   const preloadedNextRef = useRef(false);
   const hydratedRef = useRef(false);
+  const wasActiveRef = useRef(false);
+  const activeShowRef = useRef<ViewedShow | null>(null);
+  const selectedRecordingRef = useRef<string | null>(null);
+  const sendPositionUpdateRef = useRef(sendPositionUpdate);
+  const statusRef = useRef<PlaybackStatus>("idle");
 
   // Keep refs in sync
   useEffect(() => {
@@ -49,6 +55,18 @@ export default function PlayerProvider({
   useEffect(() => {
     currentTrackIndexRef.current = currentTrackIndex;
   }, [currentTrackIndex]);
+  useEffect(() => {
+    activeShowRef.current = activeShow;
+  }, [activeShow]);
+  useEffect(() => {
+    selectedRecordingRef.current = selectedRecording;
+  }, [selectedRecording]);
+  useEffect(() => {
+    sendPositionUpdateRef.current = sendPositionUpdate;
+  }, [sendPositionUpdate]);
+  useEffect(() => {
+    statusRef.current = status;
+  }, [status]);
 
   function getActiveAudio(): HTMLAudioElement | null {
     return activeAudioRef.current === "A"
@@ -175,6 +193,31 @@ export default function PlayerProvider({
         }
       }
     });
+
+    // Immediately broadcast position on seek so other clients update their progress bars
+    audio.addEventListener("seeked", () => {
+      if (
+        (activeAudioRef.current === "A" && audio === audioARef.current) ||
+        (activeAudioRef.current === "B" && audio === audioBRef.current)
+      ) {
+        const show = activeShowRef.current;
+        const rec = selectedRecordingRef.current;
+        const idx = currentTrackIndexRef.current;
+        const t = tracksRef.current;
+        if (!show || !rec || idx < 0) return;
+        const positionMs = Math.floor(audio.currentTime * 1000);
+        const trackTitle = t && idx >= 0 && idx < t.length ? t[idx].title : undefined;
+        sendPositionUpdateRef.current({
+          showId: show.showId,
+          recordingId: rec,
+          trackIndex: idx,
+          positionMs,
+          durationMs: Math.floor((audio.duration || 0) * 1000),
+          trackTitle,
+          status: statusRef.current === "playing" ? "playing" : "paused",
+        });
+      }
+    });
   }
 
   // Create audio elements once
@@ -278,11 +321,16 @@ export default function PlayerProvider({
         positionMs,
       }).catch(() => {});
       // Also report via WebSocket for real-time sync
+      const trackTitle = tracks && currentTrackIndex >= 0 && currentTrackIndex < tracks.length
+        ? tracks[currentTrackIndex].title
+        : undefined;
       sendPositionUpdate({
         showId: activeShow.showId,
         recordingId: selectedRecording,
         trackIndex: currentTrackIndex,
         positionMs,
+        durationMs: Math.floor((audio?.duration || 0) * 1000),
+        trackTitle,
         status: status === "playing" ? "playing" : "paused",
       });
     }
@@ -310,18 +358,24 @@ export default function PlayerProvider({
     const audio = getActiveAudio();
     const positionMs = audio ? Math.floor(audio.currentTime * 1000) : 0;
 
+    const currentTrackTitle = tracks && currentTrackIndex >= 0 && currentTrackIndex < tracks.length
+      ? tracks[currentTrackIndex].title
+      : undefined;
+
     announcePlayback({
       showId: activeShow.showId,
       recordingId: selectedRecording,
       trackIndex: currentTrackIndex,
       positionMs,
+      durationMs: Math.floor((audio?.duration || 0) * 1000),
+      trackTitle: currentTrackTitle,
       status: status === "playing" ? "playing" : "paused",
       date: activeShow.date,
       venue: activeShow.venue,
       location: activeShow.location,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [status, activeShow, selectedRecording, currentTrackIndex, announcePlayback]);
+  }, [status, activeShow, selectedRecording, currentTrackIndex, tracks, announcePlayback]);
 
   // Listen for absolute seek from Connect transfer
   useEffect(() => {
@@ -353,6 +407,30 @@ export default function PlayerProvider({
     });
     setSelectedRecording(userState.recordingId);
   }, [userState, activeShow]);
+
+  // Mutual exclusion: stop local playback when another device claims the session
+  useEffect(() => {
+    if (isActiveDevice) {
+      wasActiveRef.current = true;
+    } else if (wasActiveRef.current) {
+      // We were active but no longer — another device claimed the session
+      wasActiveRef.current = false;
+      const audio = getActiveAudio();
+      if (audio && !audio.paused) {
+        audio.pause();
+        audio.src = "";
+      }
+      // Reset local player state to idle without announcing (server already knows)
+      setStatus("idle");
+      setCurrentTrackIndex(-1);
+      setTracks(null);
+      setElapsed(0);
+      setDuration(0);
+      if ("mediaSession" in navigator) {
+        navigator.mediaSession.metadata = null;
+      }
+    }
+  }, [isActiveDevice]);
 
   function updateMediaSession(track: ArchiveTrack) {
     if (!("mediaSession" in navigator)) return;
@@ -437,6 +515,77 @@ export default function PlayerProvider({
     }
   }, [tracks, currentTrackIndex]);
 
+  // Listen for incoming play_on from Connect (another device sent playback to us)
+  const pendingPlayOnRef = useRef<{ trackIndex: number; positionMs: number } | null>(null);
+
+  // When tracks load after a play_on, seek to the correct track + position
+  useEffect(() => {
+    if (!pendingPlayOnRef.current || !tracks || tracks.length === 0) return;
+
+    const { trackIndex, positionMs } = pendingPlayOnRef.current;
+    pendingPlayOnRef.current = null;
+
+    if (trackIndex > 0 && trackIndex < tracks.length) {
+      playTrack(trackIndex);
+    }
+
+    if (positionMs > 0) {
+      const timer = setTimeout(() => {
+        window.dispatchEvent(
+          new CustomEvent("connect:seek", { detail: { seconds: positionMs / 1000 } })
+        );
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [tracks, playTrack]);
+
+  useEffect(() => {
+    function handlePlayOn(e: Event) {
+      const state = (e as CustomEvent).detail as PlaybackState;
+      if (!state) return;
+
+      // Store seek info before loading tracks
+      pendingPlayOnRef.current = {
+        trackIndex: state.trackIndex,
+        positionMs: state.positionMs,
+      };
+
+      // Claim the session — we are now the active device
+      claimSession();
+
+      // Load and play the show from the provided state
+      playShow({
+        showId: state.showId,
+        recordings: [],
+        bestRecordingId: state.recordingId,
+        date: state.date ?? "",
+        venue: state.venue ?? "",
+        location: state.location ?? "",
+      });
+    }
+    window.addEventListener("connect:play_on", handlePlayOn);
+    return () => window.removeEventListener("connect:play_on", handlePlayOn);
+  }, [claimSession, playShow]);
+
+  // Listen for remote commands from non-active devices
+  useEffect(() => {
+    function handleRemoteCommand(e: Event) {
+      const { action, seekMs } = (e as CustomEvent).detail;
+      const audio = getActiveAudio();
+      if (!audio) return;
+      switch (action) {
+        case "play":  audio.play().catch(() => {}); break;
+        case "pause": audio.pause(); break;
+        case "next":  nextTrack(); break;
+        case "prev":  prevTrack(); break;
+        case "seek":  if (seekMs != null) audio.currentTime = seekMs / 1000; break;
+      }
+    }
+    window.addEventListener("connect:command", handleRemoteCommand);
+    return () => window.removeEventListener("connect:command", handleRemoteCommand);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [nextTrack, prevTrack]);
+
   const seek = useCallback((fraction: number) => {
     const audio = getActiveAudio();
     if (!audio || !isFinite(audio.duration)) return;
@@ -456,6 +605,7 @@ export default function PlayerProvider({
         recordingId: selectedRecording,
         trackIndex: currentTrackIndex,
         positionMs,
+        durationMs: Math.floor((audio?.duration || 0) * 1000),
         status: "stopped",
         date: activeShow.date,
         venue: activeShow.venue,

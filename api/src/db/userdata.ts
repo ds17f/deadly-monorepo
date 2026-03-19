@@ -370,6 +370,7 @@ export function loadUserPlaybackState(userId: string): import("../connect/types.
     recordingId: pos.recordingId,
     trackIndex: pos.trackIndex,
     positionMs: pos.positionMs,
+    durationMs: 0,
     date: pos.date,
     venue: pos.venue,
     location: pos.location,

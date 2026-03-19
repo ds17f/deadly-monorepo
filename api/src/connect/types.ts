@@ -21,6 +21,8 @@ export interface PlaybackState {
   recordingId: string;
   trackIndex: number;
   positionMs: number;
+  durationMs?: number;
+  trackTitle?: string;
   status: "playing" | "paused" | "stopped";
   // Show metadata for display on receiving devices
   date?: string;
@@ -41,6 +43,8 @@ export interface UserPlaybackState {
   recordingId: string;
   trackIndex: number;
   positionMs: number;
+  durationMs: number;
+  trackTitle?: string;
   date?: string;
   venue?: string;
   location?: string;

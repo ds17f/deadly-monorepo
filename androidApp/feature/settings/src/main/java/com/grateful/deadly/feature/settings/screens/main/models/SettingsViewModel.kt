@@ -5,6 +5,8 @@ import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.grateful.deadly.core.api.auth.AuthService
+import com.grateful.deadly.core.api.auth.AuthState
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.migration.MigrationImportService
 import com.grateful.deadly.core.database.migration.MigrationResult
@@ -30,6 +32,7 @@ class SettingsViewModel @Inject constructor(
     private val migrationImportService: MigrationImportService,
     private val backupImportExportService: BackupImportExportService,
     private val appPreferences: AppPreferences,
+    private val authService: AuthService,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
 
@@ -59,16 +62,37 @@ class SettingsViewModel @Inject constructor(
         appPreferences.setSourceBadgeStyle(value)
     }
 
-    val useBetaShareLinks: StateFlow<Boolean> = appPreferences.useBetaShareLinks
+    val authState: StateFlow<AuthState> = authService.authState
 
-    fun toggleUseBetaShareLinks() {
-        appPreferences.setUseBetaShareLinks(!appPreferences.useBetaShareLinks.value)
+    val useBetaMode: StateFlow<Boolean> = appPreferences.useBetaModeFlow
+
+    fun toggleUseBetaMode() {
+        val newValue = !appPreferences.useBetaMode
+        appPreferences.setUseBetaMode(newValue)
+        (authService as? com.grateful.deadly.core.auth.AuthServiceImpl)?.onEnvironmentChanged()
     }
 
     val forceOnline: StateFlow<Boolean> = appPreferences.forceOnline
 
     fun toggleForceOnline() {
         appPreferences.setForceOnline(!appPreferences.forceOnline.value)
+    }
+
+    fun signInWithGoogle(activity: android.app.Activity, onError: (String) -> Unit) {
+        viewModelScope.launch {
+            try {
+                authService.signInWithGoogle(activity)
+            } catch (e: Exception) {
+                Log.e(TAG, "Google sign-in failed", e)
+                onError(e.message ?: "Sign-in failed")
+            }
+        }
+    }
+
+    fun signOut() {
+        viewModelScope.launch {
+            authService.signOut()
+        }
     }
 
     fun onImportMigration(uri: Uri) {
