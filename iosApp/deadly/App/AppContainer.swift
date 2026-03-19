@@ -28,6 +28,7 @@ final class AppContainer {
     let archiveClient: URLSessionArchiveMetadataClient
     let downloadService: DownloadServiceImpl
     let equalizerService: EqualizerService
+    let authService: AuthService
     let playbackRestorationService: PlaybackRestorationService
 
     init() {
@@ -47,6 +48,7 @@ final class AppContainer {
             database = db
             let prefs = AppPreferences()
             appPreferences = prefs
+            authService = MainActor.assumeIsolated { AuthService(appPreferences: prefs) }
             dataImportService = DataImportService(
                 gitHubClient: URLSessionGitHubReleasesClient(),
                 zipExtractor: ZipExtractor(),

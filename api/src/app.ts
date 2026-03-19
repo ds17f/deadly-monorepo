@@ -7,6 +7,7 @@ import swaggerUi from "@fastify/swagger-ui";
 import { healthRoutes } from "./routes/health.js";
 import { authRoutes } from "./auth/routes.js";
 import { tokenRoutes } from "./auth/token.js";
+import { mobileAuthRoutes } from "./auth/mobile.js";
 import { userRoutes } from "./routes/user.js";
 import { authMiddleware } from "./auth/middleware.js";
 import { connectRoutes } from "./connect/routes.js";
@@ -52,6 +53,7 @@ export function buildApp() {
   app.register(authMiddleware);
   app.register(authRoutes);
   app.register(tokenRoutes);
+  app.register(mobileAuthRoutes);
   app.register(userRoutes);
   app.register(connectRoutes);
 

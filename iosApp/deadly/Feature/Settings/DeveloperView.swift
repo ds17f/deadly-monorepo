@@ -13,12 +13,15 @@ struct DeveloperView: View {
         List {
             Section {
                 Toggle(isOn: Binding(
-                    get: { container.appPreferences.useBetaShareLinks },
-                    set: { container.appPreferences.useBetaShareLinks = $0 }
+                    get: { container.appPreferences.useBetaMode },
+                    set: {
+                        container.appPreferences.useBetaMode = $0
+                        container.authService.onEnvironmentChanged()
+                    }
                 )) {
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("Use beta share links")
-                        Text("Generate share links using share.beta.thedeadly.app")
+                        Text("Use Beta Mode")
+                        Text("Use beta API and share links (beta.thedeadly.app)")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }

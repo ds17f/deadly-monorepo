@@ -58,6 +58,7 @@ android {
         buildConfigField("int", "VERSION_CODE", "${versionCode}")
         buildConfigField("long", "BUILD_TIME", "${System.currentTimeMillis()}L")
         buildConfigField("String", "GENIUS_ACCESS_TOKEN", "\"${localProps.getProperty("genius.access.token", "")}\"")
+        buildConfigField("String", "GOOGLE_ANDROID_CLIENT_ID", "\"${localProps.getProperty("google.android.client.id", "")}\"")
 
     }
 
@@ -161,6 +162,8 @@ dependencies {
     implementation(project(":core:recent"))
     implementation(project(":core:model"))
     implementation(project(":core:domain"))
+    implementation(project(":core:api:auth"))
+    implementation(project(":core:auth"))
     implementation(project(":core:api:favorites"))
 
     // Feature Dependencies

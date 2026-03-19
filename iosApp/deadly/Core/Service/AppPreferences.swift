@@ -12,13 +12,24 @@ final class AppPreferences {
     private static let shareAttachImageKey = "share_attach_image"
     private static let sourceBadgeStyleKey = "source_badge_style"
     private static let useBetaShareLinksKey = "use_beta_share_links"
+    private static let useBetaModeKey = "use_beta_mode"
 
-    var useBetaShareLinks: Bool {
-        didSet { UserDefaults.standard.set(useBetaShareLinks, forKey: Self.useBetaShareLinksKey) }
+    /// Controls both share link URLs and API base URL.
+    /// Reads new key first, falls back to legacy key for migration.
+    var useBetaMode: Bool {
+        didSet {
+            UserDefaults.standard.set(useBetaMode, forKey: Self.useBetaModeKey)
+            // Keep legacy key in sync for older code paths
+            UserDefaults.standard.set(useBetaMode, forKey: Self.useBetaShareLinksKey)
+        }
     }
 
     var shareBaseUrl: String {
-        useBetaShareLinks ? "https://share.beta.thedeadly.app" : "https://share.thedeadly.app"
+        useBetaMode ? "https://share.beta.thedeadly.app" : "https://share.thedeadly.app"
+    }
+
+    var apiBaseUrl: String {
+        useBetaMode ? "https://beta.thedeadly.app" : "https://thedeadly.app"
     }
 
     var includeShowsWithoutRecordings: Bool {
@@ -59,7 +70,7 @@ final class AppPreferences {
     init() {
         UserDefaults.standard.register(defaults: [
             Self.includeShowsWithoutRecordingsKey: false,
-            Self.useBetaShareLinksKey: false,
+            Self.useBetaModeKey: false,
             Self.forceOnlineKey: false,
             Self.favoritesDisplayModeKey: "LIST",
             Self.eqEnabledKey: false,
@@ -68,7 +79,12 @@ final class AppPreferences {
             Self.sourceBadgeStyleKey: "LONG",
         ])
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
-        useBetaShareLinks = UserDefaults.standard.bool(forKey: Self.useBetaShareLinksKey)
+        // Read new key; if never set, fall back to legacy key for migration
+        if UserDefaults.standard.object(forKey: Self.useBetaModeKey) != nil {
+            useBetaMode = UserDefaults.standard.bool(forKey: Self.useBetaModeKey)
+        } else {
+            useBetaMode = UserDefaults.standard.bool(forKey: Self.useBetaShareLinksKey)
+        }
         forceOnline = UserDefaults.standard.bool(forKey: Self.forceOnlineKey)
         // Read new key first, fall back to legacy key for migration
         favoritesDisplayMode = UserDefaults.standard.string(forKey: Self.favoritesDisplayModeKey)

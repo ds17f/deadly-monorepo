@@ -1,5 +1,6 @@
 package com.grateful.deadly.feature.settings
 
+import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.widget.Toast
@@ -15,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.grateful.deadly.core.api.auth.AuthState
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.SourceBadgeStyle
 import com.grateful.deadly.feature.settings.BuildConfig
@@ -31,9 +33,65 @@ fun SettingsScreen(
     val context = LocalContext.current
     val includeShowsWithoutRecordings by viewModel.includeShowsWithoutRecordings.collectAsState()
     val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
+    val authState by viewModel.authState.collectAsState()
     val version = BuildConfig.VERSION_NAME
 
     LazyColumn(modifier = Modifier.fillMaxSize()) {
+
+        // ── ACCOUNT ───────────────────────────────────────────────────
+        item { SectionHeader("Account") }
+
+        when (val state = authState) {
+            is AuthState.SignedIn -> {
+                item {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp, vertical = 12.dp)
+                    ) {
+                        state.user.name?.let { name ->
+                            Text(text = name, style = MaterialTheme.typography.bodyLarge)
+                        }
+                        state.user.email?.let { email ->
+                            Text(
+                                text = email,
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                    }
+                }
+                item {
+                    PreferenceRow(
+                        title = "Sign Out",
+                        titleColor = MaterialTheme.colorScheme.error,
+                        onClick = { viewModel.signOut() }
+                    )
+                }
+            }
+            is AuthState.SignedOut -> {
+                item {
+                    PreferenceRow(
+                        title = "Sign in with Google",
+                        onClick = {
+                            val activity = context as? Activity ?: return@PreferenceRow
+                            viewModel.signInWithGoogle(activity) { error ->
+                                Toast.makeText(context, error, Toast.LENGTH_SHORT).show()
+                            }
+                        },
+                        trailing = {
+                            Icon(
+                                painter = IconResources.Navigation.ChevronRight(),
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                    )
+                }
+            }
+        }
+
+        item { HorizontalDivider() }
 
         // ── PREFERENCES ──────────────────────────────────────────────
         item { SectionHeader("Preferences") }

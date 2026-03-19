@@ -154,6 +154,8 @@ export function updateUserState(userId: string, patch: Partial<UserPlaybackState
       recordingId: patch.recordingId,
       trackIndex: patch.trackIndex ?? 0,
       positionMs: patch.positionMs ?? 0,
+      durationMs: patch.durationMs ?? 0,
+      trackTitle: patch.trackTitle,
       date: patch.date,
       venue: patch.venue,
       location: patch.location,
@@ -239,6 +241,8 @@ export function broadcastPosition(userId: string, fromDeviceId: string, state: P
   if (uState && uState.activeDeviceId === fromDeviceId) {
     uState.positionMs = state.positionMs;
     uState.trackIndex = state.trackIndex;
+    if (state.durationMs != null) uState.durationMs = state.durationMs;
+    if (state.trackTitle != null) uState.trackTitle = state.trackTitle;
     uState.updatedAt = Date.now();
   }
 

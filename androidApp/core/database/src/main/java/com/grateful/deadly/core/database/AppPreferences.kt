@@ -41,6 +41,7 @@ class AppPreferences @Inject constructor(
         private const val KEY_SHARE_ATTACH_IMAGE = "share_attach_image"
         private const val KEY_SOURCE_BADGE_STYLE = "source_badge_style"
         private const val KEY_USE_BETA_SHARE_LINKS = "use_beta_share_links"
+        private const val KEY_USE_BETA_MODE = "use_beta_mode"
     }
 
     private val _includeShowsWithoutRecordings = MutableStateFlow(
@@ -148,22 +149,48 @@ class AppPreferences @Inject constructor(
         ShowArtworkService.badgeStyle = SourceBadgeStyle.fromString(value)
     }
 
-    // ── Beta Share Links ──────────────────────────────────────────────────
+    // ── Beta Mode ──────────────────────────────────────────────────────
 
-    private val _useBetaShareLinks = MutableStateFlow(
-        prefs.getBoolean(KEY_USE_BETA_SHARE_LINKS, false)
-    )
+    private val _useBetaMode: MutableStateFlow<Boolean>
 
-    /** When true, generated share links use share.beta.thedeadly.app instead of share.thedeadly.app. */
-    val useBetaShareLinks: StateFlow<Boolean> = _useBetaShareLinks.asStateFlow()
+    init {
+        // Read new key; fall back to legacy key for migration
+        val betaValue = if (prefs.contains(KEY_USE_BETA_MODE)) {
+            prefs.getBoolean(KEY_USE_BETA_MODE, false)
+        } else {
+            prefs.getBoolean(KEY_USE_BETA_SHARE_LINKS, false)
+        }
+        _useBetaMode = MutableStateFlow(betaValue)
+    }
 
-    fun setUseBetaShareLinks(value: Boolean) {
-        prefs.edit().putBoolean(KEY_USE_BETA_SHARE_LINKS, value).apply()
-        _useBetaShareLinks.value = value
+    /** When true, uses beta API and share URLs. */
+    val useBetaMode: Boolean
+        get() = _useBetaMode.value
+
+    val useBetaModeFlow: StateFlow<Boolean> = _useBetaMode
+
+    fun setUseBetaMode(value: Boolean) {
+        prefs.edit()
+            .putBoolean(KEY_USE_BETA_MODE, value)
+            .putBoolean(KEY_USE_BETA_SHARE_LINKS, value) // keep legacy key in sync
+            .apply()
+        _useBetaMode.value = value
     }
 
     /** The base URL for generating share links, respecting the beta toggle. */
     val shareBaseUrl: String
-        get() = if (_useBetaShareLinks.value) "https://share.beta.thedeadly.app" else "https://share.thedeadly.app"
+        get() = if (_useBetaMode.value) "https://share.beta.thedeadly.app" else "https://share.thedeadly.app"
+
+    /** The base URL for API calls. */
+    val apiBaseUrl: String
+        get() = if (_useBetaMode.value) "https://beta.thedeadly.app" else "https://thedeadly.app"
+
+    // ── Backward-compatible aliases ──────────────────────────────────
+
+    /** @deprecated Use [useBetaModeFlow] instead. */
+    val useBetaShareLinks: StateFlow<Boolean> get() = _useBetaMode
+
+    /** @deprecated Use [setUseBetaMode] instead. */
+    fun setUseBetaShareLinks(value: Boolean) = setUseBetaMode(value)
 
 }
