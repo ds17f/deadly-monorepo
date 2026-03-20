@@ -114,6 +114,12 @@ export interface SessionPlayOnMessage {
   state: PlaybackState;
 }
 
+export interface SessionPlayOnReceivedMessage {
+  type: "session_play_on";
+  state: PlaybackState;
+  fromDeviceName: string;
+}
+
 export interface ActiveSessionMessage {
   type: "active_session";
   session: ActiveSession | null;
@@ -144,6 +150,7 @@ export type ConnectMessage =
   | SessionUpdateMessage
   | SessionClaimMessage
   | SessionPlayOnMessage
+  | SessionPlayOnReceivedMessage
   | ActiveSessionMessage
   | UserStateMessage
   | StateClearMessage

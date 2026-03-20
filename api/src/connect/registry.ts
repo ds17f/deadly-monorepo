@@ -140,6 +140,32 @@ export function relayTransfer(userId: string, fromDeviceId: string, targetDevice
   return true;
 }
 
+export function relayPlayOn(userId: string, fromDeviceId: string, targetDeviceId: string, state: PlaybackState, fromDeviceName: string): boolean {
+  const userDevices = registry.get(userId);
+  if (!userDevices) return false;
+
+  const target = userDevices.get(targetDeviceId);
+  if (!target) {
+    const msg = JSON.stringify({
+      type: "play_on_relay",
+      userId,
+      fromDeviceId,
+      targetDeviceId,
+      state,
+      fromDeviceName,
+    });
+    getPublisher().publish(`connect:user:${userId}`, msg).catch(() => {});
+    return true;
+  }
+
+  sendToSocket(target.socket, {
+    type: "session_play_on",
+    state,
+    fromDeviceName,
+  });
+  return true;
+}
+
 // ── User Playback State ────────────────────────────────────────────
 
 export function updateUserState(userId: string, patch: Partial<UserPlaybackState>): void {
@@ -283,6 +309,16 @@ export function initRedisSubscriber(): void {
             type: "transfer_received",
             fromDeviceId: data.fromDeviceId,
             state: data.state,
+          });
+        }
+      } else if (data.type === "play_on_relay") {
+        const userDevices = registry.get(data.userId);
+        const target = userDevices?.get(data.targetDeviceId);
+        if (target) {
+          sendToSocket(target.socket, {
+            type: "session_play_on",
+            state: data.state,
+            fromDeviceName: data.fromDeviceName,
           });
         }
       } else if (data.type === "session_relay") {

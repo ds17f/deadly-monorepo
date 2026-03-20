@@ -74,6 +74,7 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
           state?: PlaybackState | UserPlaybackState;
           session?: ActiveSession | null;
           fromDeviceId?: string;
+          fromDeviceName?: string;
           command?: { action: string };
         };
         switch (msg.type) {
@@ -99,7 +100,9 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
             break;
           case "session_play_on":
             if (msg.state) {
-              window.dispatchEvent(new CustomEvent("connect:play_on", { detail: msg.state }));
+              window.dispatchEvent(new CustomEvent("connect:play_on", {
+                detail: { ...msg.state as PlaybackState, fromDeviceName: msg.fromDeviceName },
+              }));
             }
             break;
           case "position_update": {

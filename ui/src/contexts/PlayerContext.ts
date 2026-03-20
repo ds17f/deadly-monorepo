@@ -38,6 +38,12 @@ export interface PlayerContextValue {
   seek: (fraction: number) => void;
   close: () => void;
   dismiss: () => void;
+
+  // Autoplay permission
+  autoplayBlocked: boolean;
+  autoplayInfo: { showDate: string; venue: string; fromDevice: string } | null;
+  retryAutoplay: () => void;
+  dismissAutoplay: () => void;
 }
 
 export const PlayerContext = createContext<PlayerContextValue | null>(null);

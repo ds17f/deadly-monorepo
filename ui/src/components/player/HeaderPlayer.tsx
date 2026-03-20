@@ -7,6 +7,7 @@ import { useConnect } from "@/contexts/ConnectContext";
 
 import { useInterpolatedPosition } from "@/hooks/useInterpolatedPosition";
 import QueuePanel from "./QueuePanel";
+import AutoplayPrompt from "./AutoplayPrompt";
 import DevicePicker from "@/components/connect/DevicePicker";
 
 function formatTime(seconds: number): string {
@@ -400,6 +401,7 @@ export default function HeaderPlayer() {
 
       {/* Queue panel overlay */}
       {queueOpen && <QueuePanel onClose={closeQueue} />}
+      <AutoplayPrompt />
     </div>
   );
 }
