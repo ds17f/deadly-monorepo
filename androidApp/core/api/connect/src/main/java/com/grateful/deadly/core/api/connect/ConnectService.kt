@@ -11,4 +11,5 @@ interface ConnectService {
     val playbackEvents: SharedFlow<ConnectPlaybackEvent>
     fun connect()
     fun disconnect()
+    fun sendSessionUpdate(state: OutgoingPlaybackState)
 }

@@ -185,6 +185,23 @@ final class AppContainer {
             let connectLog = Logger(subsystem: "com.grateful.deadly", category: "ConnectPlayback")
             let connectSvc = connectService
             MainActor.assumeIsolated {
+                let sendUpdate: (String) -> Void = { [weak playlistSvc, weak player] status in
+                    guard let playlistSvc, let player else { return }
+                    guard let show = playlistSvc.currentShow else { return }
+                    connectSvc.sendSessionUpdate(OutgoingPlaybackState(
+                        showId: show.id,
+                        recordingId: playlistSvc.currentRecording?.identifier ?? "",
+                        trackIndex: player.queueState.currentIndex,
+                        positionMs: Int(player.progress.currentTime * 1000),
+                        durationMs: Int(player.progress.duration * 1000),
+                        trackTitle: player.currentTrack?.title,
+                        status: status,
+                        date: show.date,
+                        venue: show.venue.name,
+                        location: show.location.displayText
+                    ))
+                }
+
                 connectSvc.onPlaybackEvent = { [weak playlistSvc, weak player] event in
                     Task { @MainActor in
                         guard let playlistSvc, let player else {
@@ -221,11 +238,16 @@ final class AppContainer {
                                 player.seek(to: TimeInterval(state.positionMs) / 1000.0)
                                 connectLog.info("[ConnectPlayback] Seeked to \(state.positionMs)ms")
                             }
+                            sendUpdate("playing")
                         case .command(let cmd):
                             connectLog.info("[ConnectPlayback] Command: \(cmd.action)")
                             switch cmd.action {
-                            case "play": player.play()
-                            case "pause": player.pause()
+                            case "play":
+                                player.play()
+                                sendUpdate("playing")
+                            case "pause":
+                                player.pause()
+                                sendUpdate("paused")
                             case "next": player.next()
                             case "prev": player.previous()
                             case "seek":
@@ -237,6 +259,7 @@ final class AppContainer {
                         case .stop:
                             connectLog.info("[ConnectPlayback] Stop: pausing playback")
                             player.pause()
+                            sendUpdate("stopped")
                         }
                     }
                 }

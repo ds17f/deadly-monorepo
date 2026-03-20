@@ -56,6 +56,20 @@ data class PlaybackCommand(
     val seekMs: Long? = null,
 )
 
+@Serializable
+data class OutgoingPlaybackState(
+    val showId: String,
+    val recordingId: String,
+    val trackIndex: Int,
+    val positionMs: Long,
+    val durationMs: Long,
+    val trackTitle: String? = null,
+    val status: String,
+    val date: String? = null,
+    val venue: String? = null,
+    val location: String? = null,
+)
+
 sealed class ConnectPlaybackEvent {
     data class PlayOn(val state: IncomingPlaybackState) : ConnectPlaybackEvent()
     data class Command(val command: PlaybackCommand) : ConnectPlaybackEvent()

@@ -147,6 +147,13 @@ final class ConnectService {
         logger.info("[Connect] Sent register: deviceId=\(self.deviceId)")
     }
 
+    // MARK: - Outgoing session update
+
+    func sendSessionUpdate(_ state: OutgoingPlaybackState) {
+        webSocket.send(SessionUpdateMessage(state: state))
+        logger.info("[Connect] Sent session_update: status=\(state.status)")
+    }
+
     // MARK: - Incoming message handling
 
     private func handleMessage(_ text: String) {

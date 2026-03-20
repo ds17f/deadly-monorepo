@@ -122,6 +122,15 @@ class ConnectServiceImpl @Inject constructor(
         })
     }
 
+    override fun sendSessionUpdate(state: OutgoingPlaybackState) {
+        val msg = buildJsonObject {
+            put("type", "session_update")
+            put("state", json.encodeToJsonElement(state))
+        }
+        webSocket?.send(msg.toString())
+        Log.d(TAG, "[Connect] Sent session_update: status=${state.status}")
+    }
+
     override fun disconnect() {
         intentionalClose = true
         reconnectJob?.cancel()

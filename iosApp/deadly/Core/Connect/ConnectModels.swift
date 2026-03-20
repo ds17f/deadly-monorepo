@@ -34,6 +34,26 @@ struct RegisterDevice: Encodable {
     let capabilities: [String]
 }
 
+// MARK: - Outgoing Session Update
+
+struct SessionUpdateMessage: Encodable {
+    let type = "session_update"
+    let state: OutgoingPlaybackState
+}
+
+struct OutgoingPlaybackState: Encodable {
+    let showId: String
+    let recordingId: String
+    let trackIndex: Int
+    let positionMs: Int
+    let durationMs: Int
+    let trackTitle: String?
+    let status: String  // "playing", "paused", "stopped"
+    let date: String?
+    let venue: String?
+    let location: String?
+}
+
 // MARK: - Incoming Playback State (from remote device)
 
 struct IncomingPlaybackState: Codable {
