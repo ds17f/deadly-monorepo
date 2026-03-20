@@ -207,6 +207,14 @@ export function getUserState(userId: string): UserPlaybackState | null {
   return userStates.get(userId) ?? null;
 }
 
+export function sendSessionStop(userId: string, deviceId: string): void {
+  const userDevices = registry.get(userId);
+  const device = userDevices?.get(deviceId);
+  if (device) {
+    sendToSocket(device.socket, { type: "session_stop" });
+  }
+}
+
 export function deleteUserState(userId: string): void {
   userStates.delete(userId);
   clearPlaybackPosition(userId);

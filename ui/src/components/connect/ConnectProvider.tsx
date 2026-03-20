@@ -105,6 +105,9 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
               }));
             }
             break;
+          case "session_stop":
+            window.dispatchEvent(new CustomEvent("connect:session_stop"));
+            break;
           case "position_update": {
             const state = msg.state as PlaybackState;
             setUserState(prev => prev ? {

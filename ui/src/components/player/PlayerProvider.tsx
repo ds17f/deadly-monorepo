@@ -51,6 +51,7 @@ export default function PlayerProvider({
   const selectedRecordingRef = useRef<string | null>(null);
   const sendPositionUpdateRef = useRef(sendPositionUpdate);
   const statusRef = useRef<PlaybackStatus>("idle");
+  const suppressAutoplayRef = useRef(false);
 
   // Keep refs in sync
   useEffect(() => {
@@ -273,16 +274,23 @@ export default function PlayerProvider({
     retryCountRef.current = 0;
     preloadedNextRef.current = false;
     setErrorMessage(null);
-    setStatus("loading");
     audio.src = track.url;
-    audio.play().catch((err) => {
-      if (err instanceof DOMException && err.name === "NotAllowedError") {
-        setAutoplayBlocked(true);
-        setAutoplayInfo(pendingPlayOnInfoRef.current);
-        autoplayBlockedAudioRef.current = audio;
-      }
+
+    // If a play-on transfer arrived while paused, load but don't play
+    if (suppressAutoplayRef.current) {
+      suppressAutoplayRef.current = false;
       setStatus("paused");
-    });
+    } else {
+      setStatus("loading");
+      audio.play().catch((err) => {
+        if (err instanceof DOMException && err.name === "NotAllowedError") {
+          setAutoplayBlocked(true);
+          setAutoplayInfo(pendingPlayOnInfoRef.current);
+          autoplayBlockedAudioRef.current = audio;
+        }
+        setStatus("paused");
+      });
+    }
 
     updateMediaSession(track);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -445,6 +453,27 @@ export default function PlayerProvider({
     }
   }, [isActiveDevice]);
 
+  // Server-directed stop: the server tells this device to stop playing
+  useEffect(() => {
+    const handleSessionStop = () => {
+      const audio = getActiveAudio();
+      if (audio && !audio.paused) {
+        audio.pause();
+        audio.src = "";
+      }
+      setStatus("idle");
+      setCurrentTrackIndex(-1);
+      setTracks(null);
+      setElapsed(0);
+      setDuration(0);
+      if ("mediaSession" in navigator) {
+        navigator.mediaSession.metadata = null;
+      }
+    };
+    window.addEventListener("connect:session_stop", handleSessionStop);
+    return () => window.removeEventListener("connect:session_stop", handleSessionStop);
+  }, []);
+
   function updateMediaSession(track: ArchiveTrack) {
     if (!("mediaSession" in navigator)) return;
     const showId = activeShow?.showId ?? "";
@@ -529,14 +558,19 @@ export default function PlayerProvider({
   }, [tracks, currentTrackIndex]);
 
   // Listen for incoming play_on from Connect (another device sent playback to us)
-  const pendingPlayOnRef = useRef<{ trackIndex: number; positionMs: number } | null>(null);
+  const pendingPlayOnRef = useRef<{ trackIndex: number; positionMs: number; status: string } | null>(null);
 
   // When tracks load after a play_on, seek to the correct track + position
   useEffect(() => {
     if (!pendingPlayOnRef.current || !tracks || tracks.length === 0) return;
 
-    const { trackIndex, positionMs } = pendingPlayOnRef.current;
+    const { trackIndex, positionMs, status } = pendingPlayOnRef.current;
     pendingPlayOnRef.current = null;
+
+    // If the sender was paused, suppress autoplay on the incoming track load
+    if (status !== "playing") {
+      suppressAutoplayRef.current = true;
+    }
 
     if (trackIndex > 0 && trackIndex < tracks.length) {
       playTrack(trackIndex);
@@ -557,10 +591,11 @@ export default function PlayerProvider({
       const detail = (e as CustomEvent).detail as PlaybackState & { fromDeviceName?: string };
       if (!detail) return;
 
-      // Store seek info before loading tracks
+      // Store seek info and play/pause state before loading tracks
       pendingPlayOnRef.current = {
         trackIndex: detail.trackIndex,
         positionMs: detail.positionMs,
+        status: detail.status,
       };
 
       // Stash play_on context for autoplay prompt
