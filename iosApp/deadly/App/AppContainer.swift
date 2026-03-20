@@ -263,6 +263,16 @@ final class AppContainer {
                         }
                     }
                 }
+
+                // Periodic session_update every 15s while playing (keeps web progress bar in sync)
+                Task { @MainActor [weak player] in
+                    while !Task.isCancelled {
+                        try? await Task.sleep(for: .seconds(15))
+                        guard let player, player.playbackState.isPlaying else { continue }
+                        guard connectSvc.connectionState == .connected else { continue }
+                        sendUpdate("playing")
+                    }
+                }
             }
 
             // PlaybackRestorationService — persists and restores playback position across kills

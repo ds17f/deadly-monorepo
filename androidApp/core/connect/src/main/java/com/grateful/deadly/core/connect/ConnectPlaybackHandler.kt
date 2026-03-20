@@ -8,6 +8,8 @@ import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -23,11 +25,26 @@ class ConnectPlaybackHandler @Inject constructor(
     private var lastShowDate: String? = null
     private var lastVenue: String? = null
     private var lastLocation: String? = null
+    private var periodicReportJob: Job? = null
 
     init {
         scope.launch {
             connectService.playbackEvents.collect { event ->
                 handleEvent(event)
+            }
+        }
+        // Periodic session_update every 15s while playing (keeps web progress bar in sync)
+        scope.launch {
+            mediaControllerRepository.isPlaying.collect { playing ->
+                periodicReportJob?.cancel()
+                if (playing) {
+                    periodicReportJob = scope.launch {
+                        while (true) {
+                            delay(15_000)
+                            sendUpdate("playing")
+                        }
+                    }
+                }
             }
         }
     }
