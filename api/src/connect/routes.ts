@@ -1,6 +1,6 @@
 import type { FastifyInstance } from "fastify";
 import { requireAuth } from "../auth/middleware.js";
-import { registerDevice, unregisterDevice, relayCommand, relayTransfer, relayPlayOn, broadcastPosition, setActiveSession, clearActiveSession, getActiveSession, getDevicesForUser, updateUserState, deleteUserState } from "./registry.js";
+import { registerDevice, unregisterDevice, relayCommand, relayTransfer, relayPlayOn, broadcastPosition, setActiveSession, clearActiveSession, getActiveSession, getDevicesForUser, updateUserState, deleteUserState, getUserState, sendSessionStop } from "./registry.js";
 import { upsertPlaybackPosition } from "../db/userdata.js";
 import type { ConnectMessage, RegisterMessage, CommandMessage, TransferMessage, PositionUpdateMessage, SessionUpdateMessage, SessionPlayOnMessage } from "./types.js";
 
@@ -52,6 +52,11 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
           if (!deviceId) {
             socket.send(JSON.stringify({ type: "error", message: "Register first" }));
             return;
+          }
+          // Stop the old active device if different from the transfer target
+          const transferState = getUserState(userId);
+          if (transferState?.activeDeviceId && transferState.activeDeviceId !== xfer.targetDeviceId) {
+            sendSessionStop(userId, transferState.activeDeviceId);
           }
           relayTransfer(userId, deviceId, xfer.targetDeviceId, xfer.state);
           break;
@@ -163,6 +168,11 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
 
         case "session_claim": {
           if (!deviceId) return;
+          // Stop the old active device if different from the claimer
+          const claimState = getUserState(userId);
+          if (claimState?.activeDeviceId && claimState.activeDeviceId !== deviceId) {
+            sendSessionStop(userId, claimState.activeDeviceId);
+          }
           const current = getActiveSession(userId);
           if (current) {
             setActiveSession(userId, {
@@ -173,12 +183,12 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
               updatedAt: Date.now(),
             });
           }
-          // Also update user state
+          // Also update user state — preserve current play/pause state
           updateUserState(userId, {
             activeDeviceId: deviceId,
             activeDeviceName: deviceName,
             activeDeviceType: deviceType,
-            isPlaying: true,
+            isPlaying: claimState?.isPlaying ?? false,
           });
           break;
         }
@@ -186,6 +196,11 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
         case "session_play_on": {
           const spo = msg as SessionPlayOnMessage;
           if (!deviceId) return;
+          // Stop the old active device if different from the play-on target
+          const playOnState = getUserState(userId);
+          if (playOnState?.activeDeviceId && playOnState.activeDeviceId !== spo.targetDeviceId) {
+            sendSessionStop(userId, playOnState.activeDeviceId);
+          }
           // Find the target device info
           const targetDevice = getDevicesForUser(userId).find(d => d.deviceId === spo.targetDeviceId);
           if (!targetDevice) {
@@ -214,7 +229,7 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
             activeDeviceId: targetDevice.deviceId,
             activeDeviceName: targetDevice.name,
             activeDeviceType: targetDevice.type,
-            isPlaying: true,
+            isPlaying: spo.state.status === "playing",
           });
           break;
         }

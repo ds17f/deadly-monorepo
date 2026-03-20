@@ -134,6 +134,10 @@ export interface StateClearMessage {
   type: "state_clear";
 }
 
+export interface SessionStopMessage {
+  type: "session_stop";
+}
+
 export interface ErrorMessage {
   type: "error";
   message: string;
@@ -154,4 +158,5 @@ export type ConnectMessage =
   | ActiveSessionMessage
   | UserStateMessage
   | StateClearMessage
+  | SessionStopMessage
   | ErrorMessage;
