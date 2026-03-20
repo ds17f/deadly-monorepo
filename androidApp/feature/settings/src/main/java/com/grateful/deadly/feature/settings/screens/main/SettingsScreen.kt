@@ -17,6 +17,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.api.auth.AuthState
+import com.grateful.deadly.core.api.connect.ConnectConnectionState
+import com.grateful.deadly.core.api.connect.ConnectDevice
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.SourceBadgeStyle
 import com.grateful.deadly.feature.settings.BuildConfig
@@ -36,6 +38,9 @@ fun SettingsScreen(
     val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
     val authState by viewModel.authState.collectAsState()
     val serverEnvironment by viewModel.serverEnvironment.collectAsState()
+    val connectState by viewModel.connectConnectionState.collectAsState()
+    val connectDevices by viewModel.connectDevices.collectAsState()
+    var showDeviceSheet by remember { mutableStateOf(false) }
     val version = BuildConfig.VERSION_NAME
 
     LazyColumn(modifier = Modifier.fillMaxSize()) {
@@ -46,19 +51,32 @@ fun SettingsScreen(
         when (val state = authState) {
             is AuthState.SignedIn -> {
                 item {
-                    Column(
+                    Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(horizontal = 16.dp, vertical = 12.dp)
+                            .padding(horizontal = 16.dp, vertical = 12.dp),
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
-                        state.user.name?.let { name ->
-                            Text(text = name, style = MaterialTheme.typography.bodyLarge)
+                        Column(modifier = Modifier.weight(1f)) {
+                            state.user.name?.let { name ->
+                                Text(text = name, style = MaterialTheme.typography.bodyLarge)
+                            }
+                            state.user.email?.let { email ->
+                                Text(
+                                    text = email,
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
+                            }
                         }
-                        state.user.email?.let { email ->
-                            Text(
-                                text = email,
-                                style = MaterialTheme.typography.bodyMedium,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                        IconButton(onClick = { showDeviceSheet = true }) {
+                            Icon(
+                                painter = IconResources.Content.Cast(),
+                                contentDescription = "Connected devices",
+                                tint = if (connectState == ConnectConnectionState.CONNECTED)
+                                    MaterialTheme.colorScheme.primary
+                                else
+                                    MaterialTheme.colorScheme.onSurfaceVariant
                             )
                         }
                     }
@@ -277,6 +295,13 @@ fun SettingsScreen(
         }
     }
 
+    if (showDeviceSheet) {
+        ConnectDeviceSheet(
+            connectionState = connectState,
+            devices = connectDevices,
+            onDismiss = { showDeviceSheet = false }
+        )
+    }
 }
 
 // ── Section header ────────────────────────────────────────────────────────────
@@ -489,6 +514,77 @@ private fun SourceBadgeStyleRow(
                     )
                 ) {
                     Text(style.label)
+                }
+            }
+        }
+    }
+}
+
+// ── Connect device sheet ─────────────────────────────────────────────────────
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ConnectDeviceSheet(
+    connectionState: ConnectConnectionState,
+    devices: List<ConnectDevice>,
+    onDismiss: () -> Unit
+) {
+    ModalBottomSheet(onDismissRequest = onDismiss) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp)
+                .padding(bottom = 32.dp)
+        ) {
+            Text(
+                text = "Connected Devices",
+                style = MaterialTheme.typography.titleMedium,
+                modifier = Modifier.padding(bottom = 4.dp)
+            )
+            Text(
+                text = when (connectionState) {
+                    ConnectConnectionState.CONNECTED -> "Connected"
+                    ConnectConnectionState.CONNECTING -> "Connecting…"
+                    ConnectConnectionState.RECONNECTING -> "Reconnecting…"
+                    ConnectConnectionState.DISCONNECTED -> "Disconnected"
+                },
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(bottom = 16.dp)
+            )
+            if (devices.isEmpty()) {
+                Text(
+                    text = "No devices connected",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            } else {
+                devices.forEach { device ->
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 8.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Icon(
+                            painter = IconResources.Content.Cast(),
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier.size(20.dp)
+                        )
+                        Spacer(modifier = Modifier.width(12.dp))
+                        Column {
+                            Text(
+                                text = device.name,
+                                style = MaterialTheme.typography.bodyMedium
+                            )
+                            Text(
+                                text = device.type.replaceFirstChar { it.uppercase() },
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                    }
                 }
             }
         }

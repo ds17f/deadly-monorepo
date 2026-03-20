@@ -165,6 +165,8 @@ dependencies {
     implementation(project(":core:domain"))
     implementation(project(":core:api:auth"))
     implementation(project(":core:auth"))
+    implementation(project(":core:api:connect"))
+    implementation(project(":core:connect"))
     implementation(project(":core:api:favorites"))
 
     // Feature Dependencies

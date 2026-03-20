@@ -17,6 +17,7 @@ struct SettingsScreen: View {
     @State private var showingImportAlert = false
     @State private var authError: String?
     @State private var showingAuthError = false
+    @State private var showingDeviceSheet = false
     private func settingsRow(_ title: String, systemImage: String) -> some View {
         HStack {
             Image(systemName: systemImage)
@@ -40,16 +41,28 @@ struct SettingsScreen: View {
             Section("Account") {
                 if container.authService.isSignedIn {
                     if let user = container.authService.currentUser {
-                        VStack(alignment: .leading, spacing: 4) {
-                            if let name = user.name {
-                                Text(name)
-                                    .font(.body)
+                        HStack {
+                            VStack(alignment: .leading, spacing: 4) {
+                                if let name = user.name {
+                                    Text(name)
+                                        .font(.body)
+                                }
+                                if let email = user.email {
+                                    Text(email)
+                                        .font(.callout)
+                                        .foregroundStyle(.secondary)
+                                }
                             }
-                            if let email = user.email {
-                                Text(email)
-                                    .font(.callout)
-                                    .foregroundStyle(.secondary)
+                            Spacer()
+                            Button { showingDeviceSheet = true } label: {
+                                Image(systemName: "antenna.radiowaves.left.and.right")
+                                    .foregroundStyle(
+                                        container.connectService.connectionState == .connected
+                                            ? DeadlyColors.primary
+                                            : .secondary
+                                    )
                             }
+                            .buttonStyle(.plain)
                         }
                     }
                     Button("Sign Out", role: .destructive) {
@@ -288,6 +301,11 @@ struct SettingsScreen: View {
             FavoritesExportShareSheet(data: item.data, filename: item.filename)
         }
 
+        // MARK: - Connect Device Sheet
+        .sheet(isPresented: $showingDeviceSheet) {
+            ConnectDeviceSheet(connectService: container.connectService)
+        }
+
     }
 }
 
@@ -312,4 +330,80 @@ struct FavoritesExportShareSheet: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
+}
+
+// MARK: - ConnectDeviceSheet
+
+private struct ConnectDeviceSheet: View {
+    let connectService: ConnectService
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationStack {
+            List {
+                Section {
+                    switch connectService.connectionState {
+                    case .connected:
+                        Text("Connected")
+                            .foregroundStyle(.secondary)
+                    case .connecting:
+                        Text("Connecting…")
+                            .foregroundStyle(.secondary)
+                    case .reconnecting:
+                        Text("Reconnecting…")
+                            .foregroundStyle(.secondary)
+                    case .disconnected:
+                        Text("Disconnected")
+                            .foregroundStyle(.secondary)
+                    }
+                }
+
+                if let userState = connectService.userState, let trackTitle = userState.trackTitle {
+                    Section("Now Playing") {
+                        HStack(spacing: 12) {
+                            Image(systemName: "play.fill")
+                                .foregroundStyle(DeadlyColors.primary)
+                            VStack(alignment: .leading) {
+                                Text(trackTitle)
+                                if let date = userState.date {
+                                    Text(date)
+                                        .font(.callout)
+                                        .foregroundStyle(.secondary)
+                                }
+                            }
+                        }
+                    }
+                }
+
+                Section("Devices") {
+                    if connectService.devices.isEmpty {
+                        Text("No devices connected")
+                            .foregroundStyle(.secondary)
+                    } else {
+                        ForEach(connectService.devices) { device in
+                            let isActive = connectService.userState?.activeDeviceId == device.deviceId
+                            HStack(spacing: 12) {
+                                Image(systemName: "antenna.radiowaves.left.and.right")
+                                    .foregroundStyle(isActive ? DeadlyColors.primary : .secondary)
+                                VStack(alignment: .leading) {
+                                    Text(device.name)
+                                        .foregroundStyle(isActive ? DeadlyColors.primary : .primary)
+                                    Text(device.type.capitalized)
+                                        .font(.callout)
+                                        .foregroundStyle(.secondary)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Connected Devices")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Done") { dismiss() }
+                }
+            }
+        }
+    }
 }
