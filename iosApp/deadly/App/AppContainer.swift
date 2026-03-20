@@ -29,6 +29,7 @@ final class AppContainer {
     let downloadService: DownloadServiceImpl
     let equalizerService: EqualizerService
     let authService: AuthService
+    let connectService: ConnectService
     let playbackRestorationService: PlaybackRestorationService
 
     init() {
@@ -191,6 +192,19 @@ final class AppContainer {
             let monitor = MainActor.assumeIsolated { NetworkMonitor(appPreferences: prefs) }
             networkMonitor = monitor
             MainActor.assumeIsolated { monitor.start() }
+
+            // ConnectService — multi-device playback coordination over WebSocket
+            // Use a local to avoid Swift DI checker seeing 'self' capture before connectService is set.
+            let _authSvc = authService
+            let connectSvc = MainActor.assumeIsolated {
+                ConnectService(
+                    authService: _authSvc,
+                    appPreferences: prefs,
+                    streamPlayer: player,
+                    playlistService: playlistSvc
+                )
+            }
+            connectService = connectSvc
 
             // Start playback observation after all services are wired
             MainActor.assumeIsolated { recentService.startObservingPlayback() }

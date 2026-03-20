@@ -7,11 +7,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.favorites.ReviewService
+import com.grateful.deadly.core.api.connect.ConnectService
 import com.grateful.deadly.core.api.player.PanelContentService
 import com.grateful.deadly.core.api.player.PlayerService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.media.equalizer.EqualizerRepository
 import com.grateful.deadly.core.media.equalizer.EqualizerState
+import com.grateful.deadly.core.api.connect.PlaybackCommand
 import com.grateful.deadly.core.model.CurrentTrackInfo
 import com.grateful.deadly.core.model.LineupMember
 import com.grateful.deadly.core.model.PlaybackStatus
@@ -19,6 +21,7 @@ import com.grateful.deadly.core.model.QueueInfo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.async
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -30,6 +33,7 @@ class PlayerViewModel @Inject constructor(
     private val favoritesService: FavoritesService,
     private val reviewService: ReviewService,
     private val equalizerRepository: EqualizerRepository,
+    val connectService: ConnectService,
     val appPreferences: AppPreferences,
     @ApplicationContext private val appContext: Context
 ) : ViewModel() {
@@ -38,67 +42,62 @@ class PlayerViewModel @Inject constructor(
         private const val TAG = "PlayerViewModel"
     }
 
-    // Reactive UI state from PlayerService flows - using unified CurrentTrackInfo, PlaybackStatus, and QueueInfo
-    val uiState: StateFlow<PlayerUiState> = combine(
-        playerService.currentTrackInfo,
-        playerService.playbackStatus,
-        playerService.queueInfo
-    ) { trackInfo, playbackStatus, queueInfo ->
-        // Early return for null case - no track playing
-        if (trackInfo == null) return@combine PlayerUiState(
-            trackDisplayInfo = TrackDisplayInfo(
-                title = "No Track Playing",
-                artist = "",
-                album = "",
-                showDate = "",
-                venue = "",
-                duration = "0:00",
-                recordingId = null
-            ),
-            navigationInfo = NavigationInfo(
-                showId = null,
-                recordingId = null
-            ),
-            progressDisplayInfo = ProgressDisplayInfo(
-                currentPosition = "0:00",
-                totalDuration = "0:00",
-                progressPercentage = 0.0f
-            ),
-            isPlaying = false,
-            isLoading = false,
-            hasNext = queueInfo.hasNext,
-            hasPrevious = queueInfo.hasPrevious,
-            error = null
-        )
+    // Whether a remote device is currently active (not this device)
+    val isRemoteActive: StateFlow<Boolean> = connectService.userState.map { state ->
+        state != null && state.activeDeviceId != null && state.activeDeviceId != connectService.deviceId
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
 
-        // trackInfo is guaranteed non-null from here on
-        PlayerUiState(
-            trackDisplayInfo = TrackDisplayInfo(
-                title = trackInfo.songTitle,
-                artist = trackInfo.artist,
-                album = trackInfo.album,
-                showDate = trackInfo.showDate,
-                venue = trackInfo.venue ?: "",
-                duration = playerService.formatDuration(playbackStatus.duration),
-                recordingId = trackInfo.recordingId,
-                coverImageUrl = trackInfo.coverImageUrl
-            ),
-            navigationInfo = NavigationInfo(
-                showId = trackInfo.showId,
-                recordingId = trackInfo.recordingId,
-                trackNumber = trackInfo.trackNumber
-            ),
-            progressDisplayInfo = ProgressDisplayInfo(
-                currentPosition = playerService.formatPosition(playbackStatus.currentPosition),
-                totalDuration = playerService.formatDuration(playbackStatus.duration),
-                progressPercentage = playbackStatus.progress
-            ),
-            isPlaying = trackInfo.playbackState.isPlaying,
-            isLoading = trackInfo.playbackState.isLoading,
-            hasNext = queueInfo.hasNext,
-            hasPrevious = queueInfo.hasPrevious,
-            error = null // TODO: Add error state from service
-        )
+    // Ticker that emits current time every 500ms when remote is active (for interpolated progress)
+    private val progressTicker: Flow<Long> = flow {
+        while (true) {
+            emit(System.currentTimeMillis())
+            delay(500)
+        }
+    }
+
+    // Reactive UI state — switches between local PlayerService state and remote userState
+    val uiState: StateFlow<PlayerUiState> = combine(
+        combine(
+            playerService.currentTrackInfo,
+            playerService.playbackStatus,
+            playerService.queueInfo,
+        ) { trackInfo, playbackStatus, queueInfo ->
+            Triple(trackInfo, playbackStatus, queueInfo)
+        },
+        combine(
+            connectService.userState,
+            progressTicker,
+        ) { remoteState, now -> Pair(remoteState, now) },
+    ) { (trackInfo, playbackStatus, queueInfo), (remoteState, now) ->
+        val isRemote = remoteState != null &&
+            remoteState.activeDeviceId != null &&
+            remoteState.activeDeviceId != connectService.deviceId
+
+        val localState = buildLocalUiState(trackInfo, playbackStatus, queueInfo)
+
+        if (isRemote && remoteState != null) {
+            val interpolatedMs = if (remoteState.isPlaying) {
+                val elapsed = now - remoteState.updatedAt
+                (remoteState.positionMs + elapsed).coerceAtMost(remoteState.durationMs)
+            } else {
+                remoteState.positionMs
+            }
+            val progress = if (remoteState.durationMs > 0) {
+                (interpolatedMs.toFloat() / remoteState.durationMs.toFloat()).coerceIn(0f, 1f)
+            } else 0f
+
+            localState.copy(
+                progressDisplayInfo = ProgressDisplayInfo(
+                    currentPosition = formatMs(interpolatedMs),
+                    totalDuration = formatMs(remoteState.durationMs),
+                    progressPercentage = progress,
+                ),
+                isPlaying = remoteState.isPlaying,
+                remoteDeviceName = remoteState.activeDeviceName,
+            )
+        } else {
+            localState
+        }
     }.stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5000),
@@ -207,6 +206,75 @@ class PlayerViewModel @Inject constructor(
         }
     }
 
+    private fun buildLocalUiState(
+        trackInfo: CurrentTrackInfo?,
+        playbackStatus: PlaybackStatus,
+        queueInfo: QueueInfo,
+    ): PlayerUiState {
+        if (trackInfo == null) return PlayerUiState(
+            trackDisplayInfo = TrackDisplayInfo(
+                title = "No Track Playing",
+                artist = "",
+                album = "",
+                showDate = "",
+                venue = "",
+                duration = "0:00",
+                recordingId = null
+            ),
+            navigationInfo = NavigationInfo(showId = null, recordingId = null),
+            progressDisplayInfo = ProgressDisplayInfo(
+                currentPosition = "0:00",
+                totalDuration = "0:00",
+                progressPercentage = 0.0f
+            ),
+            isPlaying = false,
+            isLoading = false,
+            hasNext = queueInfo.hasNext,
+            hasPrevious = queueInfo.hasPrevious,
+            error = null
+        )
+
+        return PlayerUiState(
+            trackDisplayInfo = TrackDisplayInfo(
+                title = trackInfo.songTitle,
+                artist = trackInfo.artist,
+                album = trackInfo.album,
+                showDate = trackInfo.showDate,
+                venue = trackInfo.venue ?: "",
+                duration = playerService.formatDuration(playbackStatus.duration),
+                recordingId = trackInfo.recordingId,
+                coverImageUrl = trackInfo.coverImageUrl
+            ),
+            navigationInfo = NavigationInfo(
+                showId = trackInfo.showId,
+                recordingId = trackInfo.recordingId,
+                trackNumber = trackInfo.trackNumber
+            ),
+            progressDisplayInfo = ProgressDisplayInfo(
+                currentPosition = playerService.formatPosition(playbackStatus.currentPosition),
+                totalDuration = playerService.formatDuration(playbackStatus.duration),
+                progressPercentage = playbackStatus.progress
+            ),
+            isPlaying = trackInfo.playbackState.isPlaying,
+            isLoading = trackInfo.playbackState.isLoading,
+            hasNext = queueInfo.hasNext,
+            hasPrevious = queueInfo.hasPrevious,
+            error = null
+        )
+    }
+
+    private fun formatMs(ms: Long): String {
+        val totalSeconds = (ms / 1000).coerceAtLeast(0)
+        val mins = totalSeconds / 60
+        val secs = totalSeconds % 60
+        return "$mins:${secs.toString().padStart(2, '0')}"
+    }
+
+    private fun sendRemoteCommand(action: String, seekMs: Long? = null) {
+        val targetId = connectService.userState.value?.activeDeviceId ?: return
+        connectService.sendCommand(targetId, PlaybackCommand(action = action, seekMs = seekMs))
+    }
+
     /**
      * Load recording - No-op since state comes from MediaController
      */
@@ -220,6 +288,11 @@ class PlayerViewModel @Inject constructor(
      */
     fun onPlayPauseClicked() {
         Log.d(TAG, "🕒🎵 [UI] PlayerViewModel play/pause clicked at ${System.currentTimeMillis()}")
+        val remote = connectService.userState.value
+        if (remote != null && remote.activeDeviceId != null && remote.activeDeviceId != connectService.deviceId) {
+            sendRemoteCommand(if (remote.isPlaying) "pause" else "play")
+            return
+        }
         viewModelScope.launch {
             try {
                 playerService.togglePlayPause()
@@ -234,6 +307,10 @@ class PlayerViewModel @Inject constructor(
      */
     fun onNextClicked() {
         Log.d(TAG, "🕒🎵 [UI] PlayerViewModel next clicked at ${System.currentTimeMillis()}")
+        if (isRemoteActive.value) {
+            sendRemoteCommand("next")
+            return
+        }
         viewModelScope.launch {
             try {
                 playerService.seekToNext()
@@ -248,6 +325,10 @@ class PlayerViewModel @Inject constructor(
      */
     fun onPreviousClicked() {
         Log.d(TAG, "🕒🎵 [UI] PlayerViewModel previous clicked at ${System.currentTimeMillis()}")
+        if (isRemoteActive.value) {
+            sendRemoteCommand("prev")
+            return
+        }
         viewModelScope.launch {
             try {
                 playerService.seekToPrevious()
@@ -262,6 +343,12 @@ class PlayerViewModel @Inject constructor(
      */
     fun onSeek(position: Float) {
         Log.d(TAG, "🕒🎵 [UI] PlayerViewModel seek to $position at ${System.currentTimeMillis()}")
+        val remote = connectService.userState.value
+        if (remote != null && remote.activeDeviceId != null && remote.activeDeviceId != connectService.deviceId) {
+            val seekMs = (remote.durationMs * position).toLong()
+            sendRemoteCommand("seek", seekMs)
+            return
+        }
         viewModelScope.launch {
             try {
                 // Get current duration and convert percentage to milliseconds
@@ -382,7 +469,8 @@ data class PlayerUiState(
     val isLoading: Boolean = false,
     val hasNext: Boolean = false,
     val hasPrevious: Boolean = false,
-    val error: String? = null
+    val error: String? = null,
+    val remoteDeviceName: String? = null
 )
 
 /**

@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftAudioStreamEx
+import Combine
 
 struct PlayerScreen: View {
     let streamPlayer: StreamPlayer
@@ -13,7 +14,9 @@ struct PlayerScreen: View {
     @State private var showMessageShare = false
     @State private var showEqualizerSheet = false
     @State private var showPlayerMenuSheet = false
+    @State private var showConnectSheet = false
     @State private var isCurrentTrackFavorite = false
+    @State private var remoteProgressTick = Date()
     @Environment(\.appContainer) private var container
 
     private var playbackError: StreamPlayerError? {
@@ -42,6 +45,56 @@ struct PlayerScreen: View {
 
     private var currentTrackNumber: String? {
         streamPlayer.currentTrack?.metadata["trackNumber"]
+    }
+
+    // MARK: - Remote mode
+
+    private var connectService: ConnectService {
+        container.connectService
+    }
+
+    private var isRemoteMode: Bool {
+        guard let state = connectService.userState else { return false }
+        return state.activeDeviceId != nil && !connectService.isActiveDevice
+    }
+
+    private var displayProgress: Double {
+        if isRemoteMode {
+            let _ = remoteProgressTick
+            guard let state = connectService.userState, state.durationMs > 0 else { return 0 }
+            let posMs = Double(connectService.interpolatedPositionMs)
+            return min(posMs / Double(state.durationMs), 1.0)
+        }
+        return streamPlayer.progress.progress
+    }
+
+    private var displayCurrentTime: TimeInterval {
+        if isRemoteMode {
+            let _ = remoteProgressTick
+            return Double(connectService.interpolatedPositionMs) / 1000.0
+        }
+        return streamPlayer.progress.currentTime
+    }
+
+    private var displayDuration: TimeInterval {
+        if isRemoteMode, let state = connectService.userState {
+            return Double(state.durationMs) / 1000.0
+        }
+        return streamPlayer.progress.duration
+    }
+
+    private var displayIsPlaying: Bool {
+        if isRemoteMode, let state = connectService.userState {
+            return state.isPlaying
+        }
+        return streamPlayer.playbackState.isPlaying
+    }
+
+    private var headerContextText: String {
+        if isRemoteMode, let name = connectService.userState?.activeDeviceName {
+            return "Playing on \(name)"
+        }
+        return "Now Playing"
     }
 
     var body: some View {
@@ -97,14 +150,18 @@ struct PlayerScreen: View {
                         VStack(spacing: 6) {
                             Slider(
                                 value: Binding(
-                                    get: { sliderValue ?? streamPlayer.progress.progress },
+                                    get: { sliderValue ?? displayProgress },
                                     set: { sliderValue = $0 }
                                 ),
                                 in: 0...1
                             ) { editing in
                                 if !editing, let value = sliderValue {
-                                    let target = value * streamPlayer.progress.duration
-                                    streamPlayer.seek(to: target)
+                                    if isRemoteMode {
+                                        remoteSeek(fraction: value)
+                                    } else {
+                                        let target = value * streamPlayer.progress.duration
+                                        streamPlayer.seek(to: target)
+                                    }
                                     sliderValue = nil
                                 }
                             }
@@ -112,10 +169,10 @@ struct PlayerScreen: View {
                             .padding(.horizontal, 24)
 
                             HStack {
-                                Text(formatTime(sliderValue.map { $0 * streamPlayer.progress.duration }
-                                                ?? streamPlayer.progress.currentTime))
+                                Text(formatTime(sliderValue.map { $0 * displayDuration }
+                                                ?? displayCurrentTime))
                                 Spacer()
-                                Text("-\(formatTime(streamPlayer.progress.remaining))")
+                                Text("-\(formatTime(displayDuration - (sliderValue.map { $0 * displayDuration } ?? displayCurrentTime)))")
                             }
                             .font(.caption)
                             .foregroundStyle(.tertiary)
@@ -125,7 +182,7 @@ struct PlayerScreen: View {
                         Spacer().frame(height: 12)
 
                         // Queue position
-                        if streamPlayer.queueState.totalTracks > 0 {
+                        if !isRemoteMode && streamPlayer.queueState.totalTracks > 0 {
                             Text("Track \(streamPlayer.queueState.currentIndex + 1) of \(streamPlayer.queueState.totalTracks)")
                                 .font(.caption2)
                                 .foregroundStyle(.tertiary)
@@ -136,7 +193,7 @@ struct PlayerScreen: View {
                         // Playback controls
                         HStack(spacing: 52) {
                             Button {
-                                streamPlayer.previous()
+                                if isRemoteMode { remotePrevious() } else { streamPlayer.previous() }
                             } label: {
                                 Image(systemName: "backward.fill")
                                     .font(.title)
@@ -144,23 +201,23 @@ struct PlayerScreen: View {
                             }
 
                             Button {
-                                streamPlayer.togglePlayPause()
+                                if isRemoteMode { remotePlayPause() } else { streamPlayer.togglePlayPause() }
                             } label: {
-                                Image(systemName: streamPlayer.playbackState.isPlaying
+                                Image(systemName: displayIsPlaying
                                       ? "pause.circle.fill" : "play.circle.fill")
                                     .font(.system(size: 70))
                                     .foregroundStyle(DeadlyColors.primary)
                             }
 
                             Button {
-                                streamPlayer.next()
+                                if isRemoteMode { remoteNext() } else { streamPlayer.next() }
                             } label: {
                                 Image(systemName: "forward.fill")
                                     .font(.title)
-                                    .foregroundStyle(streamPlayer.queueState.hasNext
+                                    .foregroundStyle(isRemoteMode || streamPlayer.queueState.hasNext
                                                      ? .primary : .tertiary)
                             }
-                            .disabled(!streamPlayer.queueState.hasNext)
+                            .disabled(!isRemoteMode && !streamPlayer.queueState.hasNext)
                         }
 
                         Spacer().frame(height: 24)
@@ -192,6 +249,9 @@ struct PlayerScreen: View {
         .sheet(isPresented: $showEqualizerSheet) {
             EqualizerSheet()
                 .presentationDetents([.medium, .large])
+        }
+        .sheet(isPresented: $showConnectSheet) {
+            ConnectSheet(connectService: container.connectService)
         }
         .sheet(isPresented: $showPlayerMenuSheet) {
             playerMenuSheet
@@ -233,6 +293,11 @@ struct PlayerScreen: View {
                 )
             }
         }
+        .onReceive(Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()) { date in
+            if isRemoteMode {
+                remoteProgressTick = date
+            }
+        }
         .alert("Playback Error", isPresented: $showErrorAlert) {
             Button("Retry") {
                 streamPlayer.play()
@@ -268,7 +333,7 @@ struct PlayerScreen: View {
                 if let showId = currentShowId { onViewShow?(showId) }
             } label: {
                 VStack(spacing: 2) {
-                    Text("Now Playing")
+                    Text(headerContextText)
                         .font(.caption2)
                         .foregroundStyle(.tertiary)
                         .textCase(.uppercase)
@@ -338,6 +403,20 @@ struct PlayerScreen: View {
             .buttonStyle(.plain)
             .disabled(currentShowId == nil)
 
+            // Connect
+            Button {
+                showConnectSheet = true
+            } label: {
+                Image(systemName: "dot.radiowaves.left.and.right")
+                    .font(.title2)
+                    .foregroundStyle(
+                        container.connectService.connectionState == .connected
+                        ? Color.accentColor : .secondary
+                    )
+                    .frame(width: 44, height: 44)
+            }
+            .buttonStyle(.plain)
+
             Spacer()
         }
         .padding(.horizontal, 24)
@@ -388,6 +467,31 @@ struct PlayerScreen: View {
             }
         }
         .presentationDetents([.medium])
+    }
+
+    // MARK: - Remote commands
+
+    private func remotePlayPause() {
+        guard let activeId = connectService.userState?.activeDeviceId else { return }
+        let action = connectService.userState?.isPlaying == true ? "pause" : "play"
+        connectService.sendCommand(targetDeviceId: activeId, command: PlaybackCommand(action: action))
+    }
+
+    private func remoteNext() {
+        guard let activeId = connectService.userState?.activeDeviceId else { return }
+        connectService.sendCommand(targetDeviceId: activeId, command: PlaybackCommand(action: "next"))
+    }
+
+    private func remotePrevious() {
+        guard let activeId = connectService.userState?.activeDeviceId else { return }
+        connectService.sendCommand(targetDeviceId: activeId, command: PlaybackCommand(action: "prev"))
+    }
+
+    private func remoteSeek(fraction: Double) {
+        guard let activeId = connectService.userState?.activeDeviceId,
+              let state = connectService.userState else { return }
+        let seekMs = Int(fraction * Double(state.durationMs))
+        connectService.sendCommand(targetDeviceId: activeId, command: PlaybackCommand(action: "seek", seekMs: seekMs))
     }
 
     private func toggleFavoriteSong() {

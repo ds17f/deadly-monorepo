@@ -50,6 +50,7 @@ dependencies {
     implementation(project(":core:design"))
     implementation(project(":core:media"))
     implementation(project(":core:api:player"))
+    implementation(project(":core:api:connect"))
     implementation(project(":core:api:favorites"))
     implementation(project(":core:database"))
     

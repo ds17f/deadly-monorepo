@@ -92,7 +92,7 @@ fun PlayerScreen(
                     Column {
                         // Top navigation bar
                         PlayerTopBar(
-                            contextText = "Playing from Show", // TODO: Make dynamic
+                            contextText = uiState.remoteDeviceName?.let { "Playing on $it" } ?: "Playing from Show",
                             onNavigateBack = onNavigateBack,
                             onMoreOptionsClick = { showTrackActionsBottomSheet = true },
                             onContextClick = {
@@ -238,7 +238,8 @@ fun PlayerScreen(
 
         if (showConnectBottomSheet) {
             PlayerConnectSheet(
-                onDismiss = { showConnectBottomSheet = false }
+                connectService = viewModel.connectService,
+                onDismiss = { showConnectBottomSheet = false },
             )
         }
 
