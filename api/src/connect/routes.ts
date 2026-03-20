@@ -1,6 +1,6 @@
 import type { FastifyInstance } from "fastify";
 import { requireAuth } from "../auth/middleware.js";
-import { registerDevice, unregisterDevice, relayCommand, relayTransfer, broadcastPosition, setActiveSession, clearActiveSession, getActiveSession, getDevicesForUser, updateUserState, deleteUserState } from "./registry.js";
+import { registerDevice, unregisterDevice, relayCommand, relayTransfer, relayPlayOn, broadcastPosition, setActiveSession, clearActiveSession, getActiveSession, getDevicesForUser, updateUserState, deleteUserState } from "./registry.js";
 import { upsertPlaybackPosition } from "../db/userdata.js";
 import type { ConnectMessage, RegisterMessage, CommandMessage, TransferMessage, PositionUpdateMessage, SessionUpdateMessage, SessionPlayOnMessage } from "./types.js";
 
@@ -192,6 +192,9 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
             socket.send(JSON.stringify({ type: "error", message: "Target device not found" }));
             return;
           }
+          // Forward play_on to the target device
+          const senderDevice = getDevicesForUser(userId).find(d => d.deviceId === deviceId);
+          relayPlayOn(userId, deviceId, spo.targetDeviceId, spo.state, senderDevice?.name ?? "another device");
           setActiveSession(userId, {
             deviceId: targetDevice.deviceId,
             deviceName: targetDevice.name,

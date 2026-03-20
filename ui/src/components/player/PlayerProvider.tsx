@@ -32,6 +32,10 @@ export default function PlayerProvider({
   );
   const [isLoadingTracks, setIsLoadingTracks] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [autoplayBlocked, setAutoplayBlocked] = useState(false);
+  const [autoplayInfo, setAutoplayInfo] = useState<{ showDate: string; venue: string; fromDevice: string } | null>(null);
+  const autoplayBlockedAudioRef = useRef<HTMLAudioElement | null>(null);
+  const pendingPlayOnInfoRef = useRef<{ showDate: string; venue: string; fromDevice: string } | null>(null);
 
   // Dual audio elements for gapless playback
   const audioARef = useRef<HTMLAudioElement | null>(null);
@@ -124,6 +128,10 @@ export default function PlayerProvider({
       ) {
         setStatus("playing");
         retryCountRef.current = 0;
+        setAutoplayBlocked(false);
+        setAutoplayInfo(null);
+        autoplayBlockedAudioRef.current = null;
+        pendingPlayOnInfoRef.current = null;
       }
     });
 
@@ -267,7 +275,12 @@ export default function PlayerProvider({
     setErrorMessage(null);
     setStatus("loading");
     audio.src = track.url;
-    audio.play().catch(() => {
+    audio.play().catch((err) => {
+      if (err instanceof DOMException && err.name === "NotAllowedError") {
+        setAutoplayBlocked(true);
+        setAutoplayInfo(pendingPlayOnInfoRef.current);
+        autoplayBlockedAudioRef.current = audio;
+      }
       setStatus("paused");
     });
 
@@ -541,13 +554,20 @@ export default function PlayerProvider({
 
   useEffect(() => {
     function handlePlayOn(e: Event) {
-      const state = (e as CustomEvent).detail as PlaybackState;
-      if (!state) return;
+      const detail = (e as CustomEvent).detail as PlaybackState & { fromDeviceName?: string };
+      if (!detail) return;
 
       // Store seek info before loading tracks
       pendingPlayOnRef.current = {
-        trackIndex: state.trackIndex,
-        positionMs: state.positionMs,
+        trackIndex: detail.trackIndex,
+        positionMs: detail.positionMs,
+      };
+
+      // Stash play_on context for autoplay prompt
+      pendingPlayOnInfoRef.current = {
+        showDate: detail.date ?? "",
+        venue: detail.venue ?? "",
+        fromDevice: detail.fromDeviceName ?? "another device",
       };
 
       // Claim the session — we are now the active device
@@ -555,12 +575,12 @@ export default function PlayerProvider({
 
       // Load and play the show from the provided state
       playShow({
-        showId: state.showId,
+        showId: detail.showId,
         recordings: [],
-        bestRecordingId: state.recordingId,
-        date: state.date ?? "",
-        venue: state.venue ?? "",
-        location: state.location ?? "",
+        bestRecordingId: detail.recordingId,
+        date: detail.date ?? "",
+        venue: detail.venue ?? "",
+        location: detail.location ?? "",
       });
     }
     window.addEventListener("connect:play_on", handlePlayOn);
@@ -574,7 +594,13 @@ export default function PlayerProvider({
       const audio = getActiveAudio();
       if (!audio) return;
       switch (action) {
-        case "play":  audio.play().catch(() => {}); break;
+        case "play":  audio.play().catch((err) => {
+          if (err instanceof DOMException && err.name === "NotAllowedError") {
+            setAutoplayBlocked(true);
+            setAutoplayInfo(pendingPlayOnInfoRef.current);
+            autoplayBlockedAudioRef.current = audio;
+          }
+        }); break;
         case "pause": audio.pause(); break;
         case "next":  nextTrack(); break;
         case "prev":  prevTrack(); break;
@@ -660,6 +686,23 @@ export default function PlayerProvider({
     [status, playRecording]
   );
 
+  const retryAutoplay = useCallback(() => {
+    const audio = autoplayBlockedAudioRef.current ?? getActiveAudio();
+    if (!audio) return;
+    audio.play().catch(() => { setStatus("paused"); });
+    setAutoplayBlocked(false);
+    setAutoplayInfo(null);
+    autoplayBlockedAudioRef.current = null;
+    pendingPlayOnInfoRef.current = null;
+  }, []);
+
+  const dismissAutoplay = useCallback(() => {
+    setAutoplayBlocked(false);
+    setAutoplayInfo(null);
+    autoplayBlockedAudioRef.current = null;
+    pendingPlayOnInfoRef.current = null;
+  }, []);
+
   const value = useMemo(
     () => ({
       activeShow,
@@ -683,6 +726,10 @@ export default function PlayerProvider({
       seek,
       close,
       dismiss,
+      autoplayBlocked,
+      autoplayInfo,
+      retryAutoplay,
+      dismissAutoplay,
     }),
     [
       activeShow,
@@ -705,6 +752,10 @@ export default function PlayerProvider({
       seek,
       close,
       dismiss,
+      autoplayBlocked,
+      autoplayInfo,
+      retryAutoplay,
+      dismissAutoplay,
     ]
   );
 
