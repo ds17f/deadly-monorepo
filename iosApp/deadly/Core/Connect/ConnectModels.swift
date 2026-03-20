@@ -34,6 +34,52 @@ struct RegisterDevice: Encodable {
     let capabilities: [String]
 }
 
+// MARK: - Incoming Playback State (from remote device)
+
+struct IncomingPlaybackState: Codable {
+    let showId: String
+    let recordingId: String
+    let trackIndex: Int
+    let positionMs: Int
+    let durationMs: Int?
+    let trackTitle: String?
+    let status: String?
+    let date: String?
+    let venue: String?
+    let location: String?
+
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        showId = try c.decode(String.self, forKey: .showId)
+        recordingId = try c.decode(String.self, forKey: .recordingId)
+        trackIndex = try c.decodeIfPresent(Int.self, forKey: .trackIndex) ?? 0
+        positionMs = try c.decodeIfPresent(Int.self, forKey: .positionMs) ?? 0
+        durationMs = try c.decodeIfPresent(Int.self, forKey: .durationMs)
+        trackTitle = try c.decodeIfPresent(String.self, forKey: .trackTitle)
+        status = try c.decodeIfPresent(String.self, forKey: .status)
+        date = try c.decodeIfPresent(String.self, forKey: .date)
+        venue = try c.decodeIfPresent(String.self, forKey: .venue)
+        location = try c.decodeIfPresent(String.self, forKey: .location)
+    }
+}
+
+struct PlaybackCommand: Codable {
+    let action: String
+    let seekMs: Int?
+
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        action = try c.decode(String.self, forKey: .action)
+        seekMs = try c.decodeIfPresent(Int.self, forKey: .seekMs)
+    }
+}
+
+enum ConnectPlaybackEvent {
+    case playOn(IncomingPlaybackState)
+    case command(PlaybackCommand)
+    case stop
+}
+
 // MARK: - User Playback State
 
 struct UserPlaybackState: Codable {

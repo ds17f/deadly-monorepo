@@ -39,6 +39,9 @@ class ConnectServiceImpl @Inject constructor(
     private val _userState = MutableStateFlow<UserPlaybackState?>(null)
     override val userState: StateFlow<UserPlaybackState?> = _userState.asStateFlow()
 
+    private val _playbackEvents = MutableSharedFlow<ConnectPlaybackEvent>(extraBufferCapacity = 8)
+    override val playbackEvents: SharedFlow<ConnectPlaybackEvent> = _playbackEvents.asSharedFlow()
+
     private var webSocket: WebSocket? = null
     private var reconnectJob: Job? = null
     private var reconnectDelay = INITIAL_RECONNECT_DELAY
@@ -169,6 +172,34 @@ class ConnectServiceImpl @Inject constructor(
                 }
                 _userState.value = state
                 Log.d(TAG, "[Connect] User state: playing=${state?.isPlaying}, activeDevice=${state?.activeDeviceName}")
+            }
+            "session_play_on", "transfer_received" -> {
+                val state = try {
+                    obj["state"]?.let { json.decodeFromJsonElement<IncomingPlaybackState>(it) }
+                } catch (e: Exception) {
+                    Log.w(TAG, "Failed to decode playback state", e)
+                    null
+                }
+                if (state != null) {
+                    Log.d(TAG, "[Connect] Play on: showId=${state.showId}, track=${state.trackIndex}")
+                    _playbackEvents.tryEmit(ConnectPlaybackEvent.PlayOn(state))
+                }
+            }
+            "command_received" -> {
+                val command = try {
+                    obj["command"]?.let { json.decodeFromJsonElement<PlaybackCommand>(it) }
+                } catch (e: Exception) {
+                    Log.w(TAG, "Failed to decode playback command", e)
+                    null
+                }
+                if (command != null) {
+                    Log.d(TAG, "[Connect] Command: ${command.action}")
+                    _playbackEvents.tryEmit(ConnectPlaybackEvent.Command(command))
+                }
+            }
+            "session_stop" -> {
+                Log.d(TAG, "[Connect] Session stop received")
+                _playbackEvents.tryEmit(ConnectPlaybackEvent.Stop)
             }
         }
     }

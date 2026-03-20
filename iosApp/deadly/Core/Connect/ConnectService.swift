@@ -19,6 +19,12 @@ final class ConnectService {
     private(set) var connectionState: ConnectConnectionState = .disconnected
     private(set) var devices: [ConnectDevice] = []
     private(set) var userState: UserPlaybackState?
+    private(set) var debugLastMessage: String = "(none)"
+
+    // MARK: - Playback event callback
+
+    @ObservationIgnored
+    var onPlaybackEvent: ((ConnectPlaybackEvent) -> Void)?
 
     // MARK: - Dependencies
 
@@ -138,7 +144,7 @@ final class ConnectService {
             )
         )
         webSocket.send(msg)
-        logger.info("[Connect] Sent register: deviceId=\(deviceId)")
+        logger.info("[Connect] Sent register: deviceId=\(self.deviceId)")
     }
 
     // MARK: - Incoming message handling
@@ -147,6 +153,8 @@ final class ConnectService {
         guard let data = text.data(using: .utf8),
               let obj = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
               let type = obj["type"] as? String else { return }
+
+        debugLastMessage = type
 
         switch type {
         case "devices":
@@ -162,6 +170,26 @@ final class ConnectService {
                 userState = state
                 logger.info("[Connect] User state: playing=\(state.isPlaying), activeDevice=\(state.activeDeviceName ?? "none")")
             }
+        case "session_play_on", "transfer_received":
+            logger.info("[Connect] Got \(type), onPlaybackEvent is \(self.onPlaybackEvent == nil ? "nil" : "set")")
+            if let stateObj = obj["state"],
+               let stateData = try? JSONSerialization.data(withJSONObject: stateObj),
+               let state = try? JSONDecoder().decode(IncomingPlaybackState.self, from: stateData) {
+                logger.info("[Connect] Play on decoded: showId=\(state.showId), track=\(state.trackIndex)")
+                onPlaybackEvent?(.playOn(state))
+            } else {
+                logger.warning("[Connect] Failed to decode state from \(type) message")
+            }
+        case "command_received":
+            if let cmdObj = obj["command"],
+               let cmdData = try? JSONSerialization.data(withJSONObject: cmdObj),
+               let command = try? JSONDecoder().decode(PlaybackCommand.self, from: cmdData) {
+                logger.info("[Connect] Command: \(command.action)")
+                onPlaybackEvent?(.command(command))
+            }
+        case "session_stop":
+            logger.info("[Connect] Session stop received")
+            onPlaybackEvent?(.stop)
         default:
             break
         }

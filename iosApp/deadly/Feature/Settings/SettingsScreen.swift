@@ -358,6 +358,15 @@ private struct ConnectDeviceSheet: View {
                     }
                 }
 
+                Section("Debug") {
+                    Text("Last msg: \(connectService.debugLastMessage)")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                    Text("Callback: \(connectService.onPlaybackEvent == nil ? "nil" : "set")")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+
                 if let userState = connectService.userState, let trackTitle = userState.trackTitle {
                     Section("Now Playing") {
                         HStack(spacing: 12) {

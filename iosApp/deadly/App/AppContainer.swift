@@ -1,4 +1,5 @@
 import AVFoundation
+import os.log
 import SwiftUI
 import SwiftAudioStreamEx
 #if canImport(UIKit)
@@ -179,6 +180,67 @@ final class AppContainer {
                 analyticsService: analytics
             )
             playlistService = playlistSvc
+
+            // Wire Connect playback events to the player
+            let connectLog = Logger(subsystem: "com.grateful.deadly", category: "ConnectPlayback")
+            let connectSvc = connectService
+            MainActor.assumeIsolated {
+                connectSvc.onPlaybackEvent = { [weak playlistSvc, weak player] event in
+                    Task { @MainActor in
+                        guard let playlistSvc, let player else {
+                            connectLog.warning("[ConnectPlayback] playlistSvc or player deallocated, ignoring event")
+                            return
+                        }
+                        switch event {
+                        case .playOn(let state):
+                            connectLog.info("[ConnectPlayback] PlayOn: showId=\(state.showId), recording=\(state.recordingId), track=\(state.trackIndex), positionMs=\(state.positionMs)")
+                            await playlistSvc.loadShow(state.showId)
+                            connectLog.info("[ConnectPlayback] After loadShow: tracks=\(playlistSvc.tracks.count), recording=\(playlistSvc.currentRecording?.identifier ?? "nil")")
+                            if state.recordingId != playlistSvc.currentRecording?.identifier,
+                               let recording = try? showRepo.getRecordingById(state.recordingId) {
+                                await playlistSvc.selectRecording(recording)
+                                connectLog.info("[ConnectPlayback] Switched to recording: \(recording.identifier)")
+                            }
+                            playlistSvc.playTrack(at: state.trackIndex)
+                            connectLog.info("[ConnectPlayback] After playTrack: playbackState=\(String(describing: player.playbackState))")
+                            // Safety: ensure playback starts even if loadQueue doesn't auto-play
+                            // in this non-user-initiated context
+                            if !player.playbackState.isPlaying {
+                                player.play()
+                                connectLog.info("[ConnectPlayback] Explicit play() called")
+                            }
+                            if state.positionMs > 0 {
+                                // Wait for the player to finish loading before seeking,
+                                // otherwise the seek is lost
+                                for _ in 0..<50 {
+                                    if player.playbackState == .playing || player.playbackState == .buffering {
+                                        break
+                                    }
+                                    try? await Task.sleep(for: .milliseconds(100))
+                                }
+                                player.seek(to: TimeInterval(state.positionMs) / 1000.0)
+                                connectLog.info("[ConnectPlayback] Seeked to \(state.positionMs)ms")
+                            }
+                        case .command(let cmd):
+                            connectLog.info("[ConnectPlayback] Command: \(cmd.action)")
+                            switch cmd.action {
+                            case "play": player.play()
+                            case "pause": player.pause()
+                            case "next": player.next()
+                            case "prev": player.previous()
+                            case "seek":
+                                if let ms = cmd.seekMs {
+                                    player.seek(to: TimeInterval(ms) / 1000.0)
+                                }
+                            default: break
+                            }
+                        case .stop:
+                            connectLog.info("[ConnectPlayback] Stop: pausing playback")
+                            player.pause()
+                        }
+                    }
+                }
+            }
 
             // PlaybackRestorationService — persists and restores playback position across kills
             let restorationSvc = MainActor.assumeIsolated {
