@@ -19,6 +19,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.api.auth.AuthState
 import com.grateful.deadly.core.api.connect.ConnectConnectionState
 import com.grateful.deadly.core.api.connect.ConnectDevice
+import com.grateful.deadly.core.api.connect.UserPlaybackState
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.SourceBadgeStyle
 import com.grateful.deadly.feature.settings.BuildConfig
@@ -40,6 +41,7 @@ fun SettingsScreen(
     val serverEnvironment by viewModel.serverEnvironment.collectAsState()
     val connectState by viewModel.connectConnectionState.collectAsState()
     val connectDevices by viewModel.connectDevices.collectAsState()
+    val connectUserState by viewModel.connectUserState.collectAsState()
     var showDeviceSheet by remember { mutableStateOf(false) }
     val version = BuildConfig.VERSION_NAME
 
@@ -299,6 +301,7 @@ fun SettingsScreen(
         ConnectDeviceSheet(
             connectionState = connectState,
             devices = connectDevices,
+            userState = connectUserState,
             onDismiss = { showDeviceSheet = false }
         )
     }
@@ -527,6 +530,7 @@ private fun SourceBadgeStyleRow(
 private fun ConnectDeviceSheet(
     connectionState: ConnectConnectionState,
     devices: List<ConnectDevice>,
+    userState: UserPlaybackState?,
     onDismiss: () -> Unit
 ) {
     ModalBottomSheet(onDismissRequest = onDismiss) {
@@ -552,6 +556,42 @@ private fun ConnectDeviceSheet(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(bottom = 16.dp)
             )
+            val trackTitle = userState?.trackTitle
+            if (userState != null && trackTitle != null) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(
+                        painter = IconResources.PlayerControls.Play(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.size(20.dp)
+                    )
+                    Spacer(modifier = Modifier.width(12.dp))
+                    Column {
+                        Text(
+                            text = "Now Playing",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                        Text(
+                            text = trackTitle,
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                        userState.date?.let { date ->
+                            Text(
+                                text = date,
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                    }
+                }
+                HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
+            }
             if (devices.isEmpty()) {
                 Text(
                     text = "No devices connected",
@@ -560,6 +600,7 @@ private fun ConnectDeviceSheet(
                 )
             } else {
                 devices.forEach { device ->
+                    val isActive = userState?.activeDeviceId == device.deviceId
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -569,14 +610,17 @@ private fun ConnectDeviceSheet(
                         Icon(
                             painter = IconResources.Content.Cast(),
                             contentDescription = null,
-                            tint = MaterialTheme.colorScheme.primary,
+                            tint = if (isActive) MaterialTheme.colorScheme.primary
+                                   else MaterialTheme.colorScheme.onSurfaceVariant,
                             modifier = Modifier.size(20.dp)
                         )
                         Spacer(modifier = Modifier.width(12.dp))
                         Column {
                             Text(
                                 text = device.name,
-                                style = MaterialTheme.typography.bodyMedium
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = if (isActive) MaterialTheme.colorScheme.primary
+                                        else MaterialTheme.colorScheme.onSurface
                             )
                             Text(
                                 text = device.type.replaceFirstChar { it.uppercase() },

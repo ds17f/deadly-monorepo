@@ -335,7 +335,7 @@ struct FavoritesExportShareSheet: UIViewControllerRepresentable {
 // MARK: - ConnectDeviceSheet
 
 private struct ConnectDeviceSheet: View {
-    let connectService: ConnectService
+    var connectService: ConnectService
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {

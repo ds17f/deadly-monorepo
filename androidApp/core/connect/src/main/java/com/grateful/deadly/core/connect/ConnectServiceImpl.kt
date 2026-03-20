@@ -36,6 +36,9 @@ class ConnectServiceImpl @Inject constructor(
     private val _devices = MutableStateFlow<List<ConnectDevice>>(emptyList())
     override val devices: StateFlow<List<ConnectDevice>> = _devices.asStateFlow()
 
+    private val _userState = MutableStateFlow<UserPlaybackState?>(null)
+    override val userState: StateFlow<UserPlaybackState?> = _userState.asStateFlow()
+
     private var webSocket: WebSocket? = null
     private var reconnectJob: Job? = null
     private var reconnectDelay = INITIAL_RECONNECT_DELAY
@@ -123,6 +126,7 @@ class ConnectServiceImpl @Inject constructor(
         webSocket = null
         _connectionState.value = ConnectConnectionState.DISCONNECTED
         _devices.value = emptyList()
+        _userState.value = null
     }
 
     private fun sendRegister(ws: WebSocket) {
@@ -156,6 +160,15 @@ class ConnectServiceImpl @Inject constructor(
                 } ?: emptyList()
                 _devices.value = list
                 Log.d(TAG, "Devices: ${list.map { "${it.name} (${it.type})" }}")
+            }
+            "user_state" -> {
+                val state = try {
+                    obj["state"]?.let { json.decodeFromJsonElement<UserPlaybackState>(it) }
+                } catch (_: Exception) {
+                    null
+                }
+                _userState.value = state
+                Log.d(TAG, "[Connect] User state: playing=${state?.isPlaying}, activeDevice=${state?.activeDeviceName}")
             }
         }
     }

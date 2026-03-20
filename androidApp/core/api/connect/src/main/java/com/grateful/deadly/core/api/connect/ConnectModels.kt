@@ -16,3 +16,21 @@ data class ConnectDevice(
     val name: String,
     val capabilities: List<String> = emptyList(),
 )
+
+@Serializable
+data class UserPlaybackState(
+    val showId: String? = null,
+    val recordingId: String? = null,
+    val trackIndex: Int = 0,
+    val positionMs: Long = 0,
+    val durationMs: Long = 0,
+    val trackTitle: String? = null,
+    val date: String? = null,
+    val venue: String? = null,
+    val location: String? = null,
+    val activeDeviceId: String? = null,
+    val activeDeviceName: String? = null,
+    val activeDeviceType: String? = null,
+    val isPlaying: Boolean = false,
+    val updatedAt: Long = 0,
+)

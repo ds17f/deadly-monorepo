@@ -10,6 +10,7 @@ import com.grateful.deadly.core.api.auth.AuthState
 import com.grateful.deadly.core.api.connect.ConnectConnectionState
 import com.grateful.deadly.core.api.connect.ConnectDevice
 import com.grateful.deadly.core.api.connect.ConnectService
+import com.grateful.deadly.core.api.connect.UserPlaybackState
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.migration.MigrationImportService
@@ -86,6 +87,7 @@ class SettingsViewModel @Inject constructor(
 
     val connectConnectionState: StateFlow<ConnectConnectionState> = connectService.connectionState
     val connectDevices: StateFlow<List<ConnectDevice>> = connectService.devices
+    val connectUserState: StateFlow<UserPlaybackState?> = connectService.userState
 
     val useBetaMode: StateFlow<Boolean> = appPreferences.useBetaModeFlow
 

@@ -1,7 +1,10 @@
 import Foundation
+import os.log
 #if canImport(UIKit)
 import UIKit
 #endif
+
+private let logger = Logger(subsystem: "com.grateful.deadly", category: "Connect")
 
 /// Manages the Connect WebSocket lifecycle and state.
 ///
@@ -15,6 +18,7 @@ final class ConnectService {
 
     private(set) var connectionState: ConnectConnectionState = .disconnected
     private(set) var devices: [ConnectDevice] = []
+    private(set) var userState: UserPlaybackState?
 
     // MARK: - Dependencies
 
@@ -96,6 +100,7 @@ final class ConnectService {
         webSocket.disconnect()
         connectionState = .disconnected
         devices = []
+        userState = nil
     }
 
     // MARK: - WebSocket callbacks
@@ -133,7 +138,7 @@ final class ConnectService {
             )
         )
         webSocket.send(msg)
-        print("[Connect] Sent register: deviceId=\(deviceId)")
+        logger.info("[Connect] Sent register: deviceId=\(deviceId)")
     }
 
     // MARK: - Incoming message handling
@@ -148,7 +153,14 @@ final class ConnectService {
             if let devicesData = try? JSONSerialization.data(withJSONObject: obj["devices"] ?? []),
                let list = try? JSONDecoder().decode([ConnectDevice].self, from: devicesData) {
                 devices = list
-                print("[Connect] Devices: \(list.map { "\($0.name) (\($0.type))" })")
+                logger.info("[Connect] Devices: \(list.map { "\($0.name) (\($0.type))" })")
+            }
+        case "user_state":
+            if let stateObj = obj["state"],
+               let stateData = try? JSONSerialization.data(withJSONObject: stateObj),
+               let state = try? JSONDecoder().decode(UserPlaybackState.self, from: stateData) {
+                userState = state
+                logger.info("[Connect] User state: playing=\(state.isPlaying), activeDevice=\(state.activeDeviceName ?? "none")")
             }
         default:
             break
