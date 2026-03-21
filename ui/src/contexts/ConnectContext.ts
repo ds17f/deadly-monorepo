@@ -9,6 +9,11 @@ export interface ConnectDevice {
   capabilities: string[];
 }
 
+export interface SessionTrack {
+  title: string;
+  duration: number; // seconds
+}
+
 export interface PlaybackState {
   showId: string;
   recordingId: string;
@@ -21,6 +26,8 @@ export interface PlaybackState {
   date?: string;
   venue?: string;
   location?: string;
+  // Track list for server-side navigation
+  tracks?: SessionTrack[];
 }
 
 export interface ActiveSession {
@@ -48,6 +55,9 @@ export interface UserPlaybackState {
   activeDeviceType: "ios" | "android" | "web" | null;
   isPlaying: boolean;
 
+  // Server-managed track list
+  tracks?: SessionTrack[];
+
   updatedAt: number;
 }
 
@@ -59,19 +69,12 @@ export interface ConnectContextValue {
   isActiveDevice: boolean;
   setUserState: React.Dispatch<React.SetStateAction<UserPlaybackState | null>>;
 
-  // New session-based functions
   announcePlayback: (state: PlaybackState) => void;
   claimSession: () => void;
   playOnDevice: (deviceId: string, state: PlaybackState) => void;
   sendPositionUpdate: (state: PlaybackState) => void;
+  sendCommand: (action: string, seekMs?: number) => void;
   clearState: () => void;
-
-  // Legacy — kept for backward compatibility
-  incomingState: PlaybackState | null;
-  playingOnDevice: ConnectDevice | null;
-  transferPlayback: (targetDeviceId: string, state: PlaybackState) => void;
-  sendCommand: (targetDeviceId: string, action: string, seekMs?: number) => void;
-  clearIncomingState: () => void;
 }
 
 export const ConnectContext = createContext<ConnectContextValue | null>(null);
@@ -87,12 +90,8 @@ const DEFAULT_VALUE: ConnectContextValue = {
   claimSession: () => {},
   playOnDevice: () => {},
   sendPositionUpdate: () => {},
-  clearState: () => {},
-  incomingState: null,
-  playingOnDevice: null,
-  transferPlayback: () => {},
   sendCommand: () => {},
-  clearIncomingState: () => {},
+  clearState: () => {},
 };
 
 export function useConnect(): ConnectContextValue {

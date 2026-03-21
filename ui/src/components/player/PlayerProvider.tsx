@@ -52,6 +52,8 @@ export default function PlayerProvider({
   const sendPositionUpdateRef = useRef(sendPositionUpdate);
   const statusRef = useRef<PlaybackStatus>("idle");
   const suppressAutoplayRef = useRef(false);
+  const suppressAnnounceRef = useRef(false);
+  const prevUserStateRef = useRef<{ isPlaying: boolean; trackIndex: number; positionMs: number } | null>(null);
 
   // Keep refs in sync
   useEffect(() => {
@@ -376,6 +378,13 @@ export default function PlayerProvider({
     if (!activeShow || !selectedRecording || currentTrackIndex < 0) return;
     if (status !== "playing" && status !== "paused") return;
 
+    // Skip announcing if this state change was caused by a server-originated command
+    // (prevents feedback loop: server broadcasts → player acts → player announces → server broadcasts)
+    if (suppressAnnounceRef.current) {
+      suppressAnnounceRef.current = false;
+      return;
+    }
+
     const audio = getActiveAudio();
     const positionMs = audio ? Math.floor(audio.currentTime * 1000) : 0;
 
@@ -394,6 +403,8 @@ export default function PlayerProvider({
       date: activeShow.date,
       venue: activeShow.venue,
       location: activeShow.location,
+      // Include track list so server can resolve next/prev
+      tracks: tracks?.map(t => ({ title: t.title, duration: t.duration })),
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [status, activeShow, selectedRecording, currentTrackIndex, tracks, announcePlayback]);
@@ -622,30 +633,62 @@ export default function PlayerProvider({
     return () => window.removeEventListener("connect:play_on", handlePlayOn);
   }, [claimSession, playShow]);
 
-  // Listen for remote commands from non-active devices
+  // React to server state changes when this device IS the active player.
+  // Commands (play/pause/seek/next/prev) now go through the server's UserPlaybackState,
+  // so we react to state diffs rather than receiving direct command_received messages.
   useEffect(() => {
-    function handleRemoteCommand(e: Event) {
-      const { action, seekMs } = (e as CustomEvent).detail;
-      const audio = getActiveAudio();
-      if (!audio) return;
-      switch (action) {
-        case "play":  audio.play().catch((err) => {
+    if (!isActiveDevice || !userState) {
+      prevUserStateRef.current = userState
+        ? { isPlaying: userState.isPlaying, trackIndex: userState.trackIndex, positionMs: userState.positionMs }
+        : null;
+      return;
+    }
+
+    const prev = prevUserStateRef.current;
+    prevUserStateRef.current = {
+      isPlaying: userState.isPlaying,
+      trackIndex: userState.trackIndex,
+      positionMs: userState.positionMs,
+    };
+
+    if (!prev) return;
+
+    const audio = getActiveAudio();
+    if (!audio) return;
+
+    // Play/pause changed by server
+    if (userState.isPlaying !== prev.isPlaying) {
+      suppressAnnounceRef.current = true;
+      if (userState.isPlaying) {
+        audio.play().catch((err) => {
           if (err instanceof DOMException && err.name === "NotAllowedError") {
             setAutoplayBlocked(true);
             setAutoplayInfo(pendingPlayOnInfoRef.current);
             autoplayBlockedAudioRef.current = audio;
           }
-        }); break;
-        case "pause": audio.pause(); break;
-        case "next":  nextTrack(); break;
-        case "prev":  prevTrack(); break;
-        case "seek":  if (seekMs != null) audio.currentTime = seekMs / 1000; break;
+        });
+      } else {
+        audio.pause();
       }
     }
-    window.addEventListener("connect:command", handleRemoteCommand);
-    return () => window.removeEventListener("connect:command", handleRemoteCommand);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [nextTrack, prevTrack]);
+
+    // Track changed by server (next/prev)
+    if (userState.trackIndex !== prev.trackIndex) {
+      suppressAnnounceRef.current = true;
+      setCurrentTrackIndex(userState.trackIndex);
+    }
+
+    // Seek: only react if position diverged significantly (>2s) from current
+    if (userState.trackIndex === prev.trackIndex &&
+        userState.isPlaying === prev.isPlaying &&
+        Math.abs(userState.positionMs - prev.positionMs) > 2000) {
+      const currentMs = audio.currentTime * 1000;
+      if (Math.abs(userState.positionMs - currentMs) > 2000) {
+        suppressAnnounceRef.current = true;
+        audio.currentTime = userState.positionMs / 1000;
+      }
+    }
+  }, [isActiveDevice, userState]);
 
   const seek = useCallback((fraction: number) => {
     const audio = getActiveAudio();

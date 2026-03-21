@@ -52,7 +52,7 @@ export default function HeaderPlayer() {
     playShow,
   } = usePlayer();
 
-  const { isConnected, devices, userState, isActiveDevice, claimSession, sendCommand, setUserState } = useConnect();
+  const { isConnected, userState, isActiveDevice, claimSession, sendCommand } = useConnect();
   const [queueOpen, setQueueOpen] = useState(false);
   const [devicePickerOpen, setDevicePickerOpen] = useState(false);
   const closeQueue = useCallback(() => setQueueOpen(false), []);
@@ -146,34 +146,34 @@ export default function HeaderPlayer() {
   // Parked: userState exists, no active device, not locally playing
   const isParked = !!(userState && !userState.activeDeviceId && !isActive);
 
-  // Remote control helpers — send commands to the active device
+  // Remote track boundary checks (from server-managed track list)
+  const remoteTrackCount = userState?.tracks?.length ?? 0;
+  const remoteHasNext = remoteTrackCount > 0 && (userState?.trackIndex ?? 0) < remoteTrackCount - 1;
+  const remoteHasPrevious = (userState?.trackIndex ?? 0) > 0;
+
+  // Remote control helpers — send commands through the server (state-mediated)
   const remoteTogglePlayPause = useCallback(() => {
-    if (!userState?.activeDeviceId) return;
-    const newIsPlaying = !userState.isPlaying;
-    sendCommand(userState.activeDeviceId, newIsPlaying ? "play" : "pause");
-    setUserState(prev => prev ? { ...prev, isPlaying: newIsPlaying, updatedAt: Date.now() } : prev);
-  }, [userState, sendCommand, setUserState]);
+    sendCommand(userState?.isPlaying ? "pause" : "play");
+  }, [userState, sendCommand]);
 
   const remoteNext = useCallback(() => {
-    if (!userState?.activeDeviceId) return;
-    sendCommand(userState.activeDeviceId, "next");
-  }, [userState, sendCommand]);
+    sendCommand("next");
+  }, [sendCommand]);
 
   const remotePrev = useCallback(() => {
-    if (!userState?.activeDeviceId) return;
-    sendCommand(userState.activeDeviceId, "prev");
-  }, [userState, sendCommand]);
+    if (interpolatedMs > 3000 || !remoteHasPrevious) {
+      // Restart current track (matches local player behavior)
+      sendCommand("seek", 0);
+    } else {
+      sendCommand("prev");
+    }
+  }, [sendCommand, interpolatedMs, remoteHasPrevious]);
 
   const remoteSeek = useCallback((fraction: number) => {
-    if (!userState || userState.durationMs == null) return;
+    if (!userState?.durationMs) return;
     const seekMs = Math.floor(fraction * userState.durationMs);
-    // Optimistically update local position so UI reflects immediately
-    setUserState(prev => prev ? { ...prev, positionMs: seekMs, updatedAt: Date.now() } : prev);
-    // Send command to active device (if one exists)
-    if (userState.activeDeviceId) {
-      sendCommand(userState.activeDeviceId, "seek", seekMs);
-    }
-  }, [userState, sendCommand, setUserState]);
+    sendCommand("seek", seekMs);
+  }, [userState, sendCommand]);
 
   // Unified transport actions — local vs remote vs parked
   const handleTogglePlayPause = isActive && isActiveDevice
@@ -281,7 +281,7 @@ export default function HeaderPlayer() {
       <div className="flex flex-shrink-0 items-center gap-0.5">
         <button
           onClick={handlePrev}
-          disabled={!handlePrev || !!(isActive && isActiveDevice && !hasPrevious && elapsed < 3)}
+          disabled={!handlePrev || !!(isActive && isActiveDevice && !hasPrevious && elapsed < 3) || !!(isRemoteActive && !remoteHasPrevious && interpolatedMs < 3000)}
           className="rounded-full p-1.5 text-white/60 transition-colors hover:text-white disabled:text-white/20"
           aria-label="Previous track"
         >
@@ -319,7 +319,7 @@ export default function HeaderPlayer() {
 
         <button
           onClick={handleNext}
-          disabled={!handleNext || !!(isActive && isActiveDevice && !hasNext)}
+          disabled={!handleNext || !!(isActive && isActiveDevice && !hasNext) || (isRemoteActive && !remoteHasNext)}
           className="rounded-full p-1.5 text-white/60 transition-colors hover:text-white disabled:text-white/20"
           aria-label="Next track"
         >

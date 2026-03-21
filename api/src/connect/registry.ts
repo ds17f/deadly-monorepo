@@ -1,5 +1,5 @@
 import type { WebSocket } from "@fastify/websocket";
-import type { ConnectDevice, PlaybackCommand, PlaybackState, ActiveSession, UserPlaybackState, ConnectMessage } from "./types.js";
+import type { ConnectDevice, PlaybackState, ActiveSession, UserPlaybackState, ConnectMessage } from "./types.js";
 import { getPublisher, getSubscriber } from "../db/redis.js";
 import { loadUserPlaybackState, upsertPlaybackPosition, clearPlaybackPosition } from "../db/userdata.js";
 
@@ -87,57 +87,6 @@ export function getDevicesForUser(userId: string): ConnectDevice[] {
   const userDevices = registry.get(userId);
   if (!userDevices) return [];
   return Array.from(userDevices.values()).map((c) => c.device);
-}
-
-export function relayCommand(userId: string, fromDeviceId: string, targetDeviceId: string, command: PlaybackCommand): boolean {
-  const userDevices = registry.get(userId);
-  if (!userDevices) return false;
-
-  const target = userDevices.get(targetDeviceId);
-  if (!target) {
-    // Try Redis for multi-instance relay
-    const msg = JSON.stringify({
-      type: "command_relay",
-      userId,
-      fromDeviceId,
-      targetDeviceId,
-      command,
-    });
-    getPublisher().publish(`connect:user:${userId}`, msg).catch(() => {});
-    return true;
-  }
-
-  sendToSocket(target.socket, {
-    type: "command_received",
-    fromDeviceId,
-    command,
-  });
-  return true;
-}
-
-export function relayTransfer(userId: string, fromDeviceId: string, targetDeviceId: string, state: PlaybackState): boolean {
-  const userDevices = registry.get(userId);
-  if (!userDevices) return false;
-
-  const target = userDevices.get(targetDeviceId);
-  if (!target) {
-    const msg = JSON.stringify({
-      type: "transfer_relay",
-      userId,
-      fromDeviceId,
-      targetDeviceId,
-      state,
-    });
-    getPublisher().publish(`connect:user:${userId}`, msg).catch(() => {});
-    return true;
-  }
-
-  sendToSocket(target.socket, {
-    type: "transfer_received",
-    fromDeviceId,
-    state,
-  });
-  return true;
 }
 
 export function relayPlayOn(userId: string, fromDeviceId: string, targetDeviceId: string, state: PlaybackState, fromDeviceName: string): boolean {
@@ -299,27 +248,7 @@ export function initRedisSubscriber(): void {
   sub.on("pmessage", (_pattern: string, _channel: string, message: string) => {
     try {
       const data = JSON.parse(message);
-      if (data.type === "command_relay") {
-        const userDevices = registry.get(data.userId);
-        const target = userDevices?.get(data.targetDeviceId);
-        if (target) {
-          sendToSocket(target.socket, {
-            type: "command_received",
-            fromDeviceId: data.fromDeviceId,
-            command: data.command,
-          });
-        }
-      } else if (data.type === "transfer_relay") {
-        const userDevices = registry.get(data.userId);
-        const target = userDevices?.get(data.targetDeviceId);
-        if (target) {
-          sendToSocket(target.socket, {
-            type: "transfer_received",
-            fromDeviceId: data.fromDeviceId,
-            state: data.state,
-          });
-        }
-      } else if (data.type === "play_on_relay") {
+      if (data.type === "play_on_relay") {
         const userDevices = registry.get(data.userId);
         const target = userDevices?.get(data.targetDeviceId);
         if (target) {
