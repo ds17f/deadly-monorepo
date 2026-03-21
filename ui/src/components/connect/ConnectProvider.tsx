@@ -84,9 +84,20 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
           case "active_session":
             setActiveSession(msg.session ?? null);
             break;
-          case "user_state":
-            setUserState((msg.state as UserPlaybackState) ?? null);
+          case "user_state": {
+            const incoming = (msg.state as UserPlaybackState) ?? null;
+            setUserState(prev => {
+              if (!incoming) return null;
+              return {
+                ...incoming,
+                // Client-side timestamp so interpolation baseline is accurate
+                updatedAt: Date.now(),
+                // Don't let durationMs regress to 0 when we already know the duration
+                durationMs: incoming.durationMs || prev?.durationMs || 0,
+              };
+            });
             break;
+          }
           case "transfer_received":
             if (msg.state) {
               setIncomingState(msg.state as PlaybackState);
