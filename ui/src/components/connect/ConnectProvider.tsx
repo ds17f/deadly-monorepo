@@ -41,9 +41,6 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
   const [devices, setDevices] = useState<ConnectDevice[]>([]);
   const [activeSession, setActiveSession] = useState<ActiveSession | null>(null);
   const [userState, setUserState] = useState<UserPlaybackState | null>(null);
-  // Legacy state — kept for backward compatibility
-  const [incomingState, setIncomingState] = useState<PlaybackState | null>(null);
-  const [playingOnDevice, setPlayingOnDevice] = useState<ConnectDevice | null>(null);
   const wsRef = useRef<ConnectWebSocket | null>(null);
 
   const localDeviceId = useMemo(() => {
@@ -73,9 +70,7 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
           devices?: ConnectDevice[];
           state?: PlaybackState | UserPlaybackState;
           session?: ActiveSession | null;
-          fromDeviceId?: string;
           fromDeviceName?: string;
-          command?: { action: string };
         };
         switch (msg.type) {
           case "devices":
@@ -94,21 +89,12 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
                 updatedAt: Date.now(),
                 // Don't let durationMs regress to 0 when we already know the duration
                 durationMs: incoming.durationMs || prev?.durationMs || 0,
+                // Don't let trackTitle regress to undefined when we already have it
+                trackTitle: incoming.trackTitle ?? prev?.trackTitle,
               };
             });
             break;
           }
-          case "transfer_received":
-            if (msg.state) {
-              setIncomingState(msg.state as PlaybackState);
-              setPlayingOnDevice(null);
-            }
-            break;
-          case "command_received":
-            if (msg.command) {
-              window.dispatchEvent(new CustomEvent("connect:command", { detail: msg.command }));
-            }
-            break;
           case "session_play_on":
             if (msg.state) {
               window.dispatchEvent(new CustomEvent("connect:play_on", {
@@ -175,27 +161,15 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
     wsRef.current?.send({ type: "position_update", state });
   }, []);
 
-  const clearState = useCallback(() => {
-    wsRef.current?.send({ type: "state_clear" });
-  }, []);
-
-  // Legacy functions
-  const transferPlayback = useCallback((targetDeviceId: string, state: PlaybackState) => {
-    wsRef.current?.send({ type: "transfer", targetDeviceId, state });
-    const target = devices.find((d) => d.deviceId === targetDeviceId) ?? null;
-    setPlayingOnDevice(target);
-  }, [devices]);
-
-  const sendCommand = useCallback((targetDeviceId: string, action: string, seekMs?: number) => {
+  const sendCommand = useCallback((action: string, seekMs?: number) => {
     wsRef.current?.send({
       type: "command",
-      targetDeviceId,
       command: { action, ...(seekMs !== undefined ? { seekMs } : {}) },
     });
   }, []);
 
-  const clearIncomingState = useCallback(() => {
-    setIncomingState(null);
+  const clearState = useCallback(() => {
+    wsRef.current?.send({ type: "state_clear" });
   }, []);
 
   const value = useMemo(() => ({
@@ -209,16 +183,11 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
     claimSession,
     playOnDevice,
     sendPositionUpdate,
-    clearState,
-    incomingState,
-    playingOnDevice,
-    transferPlayback,
     sendCommand,
-    clearIncomingState,
+    clearState,
   }), [
     isConnected, devices, activeSession, userState, isActiveDevice, setUserState,
-    announcePlayback, claimSession, playOnDevice, sendPositionUpdate, clearState,
-    incomingState, playingOnDevice, transferPlayback, sendCommand, clearIncomingState,
+    announcePlayback, claimSession, playOnDevice, sendPositionUpdate, sendCommand, clearState,
   ]);
 
   return (

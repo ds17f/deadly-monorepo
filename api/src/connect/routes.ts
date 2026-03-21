@@ -1,8 +1,8 @@
 import type { FastifyInstance } from "fastify";
 import { requireAuth } from "../auth/middleware.js";
-import { registerDevice, unregisterDevice, relayCommand, relayTransfer, relayPlayOn, broadcastPosition, setActiveSession, clearActiveSession, getActiveSession, getDevicesForUser, updateUserState, deleteUserState, getUserState, sendSessionStop } from "./registry.js";
+import { registerDevice, unregisterDevice, relayPlayOn, broadcastPosition, setActiveSession, clearActiveSession, getActiveSession, getDevicesForUser, updateUserState, deleteUserState, getUserState, sendSessionStop } from "./registry.js";
 import { upsertPlaybackPosition } from "../db/userdata.js";
-import type { ConnectMessage, RegisterMessage, CommandMessage, TransferMessage, PositionUpdateMessage, SessionUpdateMessage, SessionPlayOnMessage } from "./types.js";
+import type { ConnectMessage, RegisterMessage, CommandMessage, PositionUpdateMessage, SessionUpdateMessage, SessionPlayOnMessage } from "./types.js";
 
 export async function connectRoutes(app: FastifyInstance): Promise<void> {
   app.get("/ws/connect", {
@@ -43,22 +43,53 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
             socket.send(JSON.stringify({ type: "error", message: "Register first" }));
             return;
           }
-          relayCommand(userId, deviceId, cmd.targetDeviceId, cmd.command);
-          break;
-        }
-
-        case "transfer": {
-          const xfer = msg as TransferMessage;
-          if (!deviceId) {
-            socket.send(JSON.stringify({ type: "error", message: "Register first" }));
+          const action = cmd.command.action;
+          const state = getUserState(userId);
+          if (!state) {
+            socket.send(JSON.stringify({ type: "error", message: "No active session" }));
             return;
           }
-          // Stop the old active device if different from the transfer target
-          const transferState = getUserState(userId);
-          if (transferState?.activeDeviceId && transferState.activeDeviceId !== xfer.targetDeviceId) {
-            sendSessionStop(userId, transferState.activeDeviceId);
+
+          if (action === "play" || action === "pause") {
+            updateUserState(userId, { isPlaying: action === "play" });
+          } else if (action === "stop") {
+            updateUserState(userId, {
+              activeDeviceId: null,
+              activeDeviceName: null,
+              activeDeviceType: null,
+              isPlaying: false,
+            });
+          } else if (action === "seek" && cmd.command.seekMs != null) {
+            updateUserState(userId, { positionMs: cmd.command.seekMs });
+          } else if (action === "next") {
+            const tracks = state.tracks;
+            const newIndex = tracks
+              ? Math.min(state.trackIndex + 1, tracks.length - 1)
+              : state.trackIndex + 1;
+            if (newIndex === state.trackIndex) break; // Already at last track
+            const newTrack = tracks?.[newIndex];
+            updateUserState(userId, {
+              trackIndex: newIndex,
+              positionMs: 0,
+              ...(newTrack ? {
+                trackTitle: newTrack.title,
+                durationMs: Math.floor(newTrack.duration * 1000),
+              } : {}),
+            });
+          } else if (action === "prev") {
+            const tracks = state.tracks;
+            const newIndex = Math.max(state.trackIndex - 1, 0);
+            if (newIndex === state.trackIndex) break; // Already at first track — client handles restart via seek
+            const newTrack = tracks?.[newIndex];
+            updateUserState(userId, {
+              trackIndex: newIndex,
+              positionMs: 0,
+              ...(newTrack ? {
+                trackTitle: newTrack.title,
+                durationMs: Math.floor(newTrack.duration * 1000),
+              } : {}),
+            });
           }
-          relayTransfer(userId, deviceId, xfer.targetDeviceId, xfer.state);
           break;
         }
 
@@ -83,6 +114,9 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
           const su = msg as SessionUpdateMessage;
           if (!deviceId) return;
 
+          // Store tracks if provided
+          const tracksPatch = su.state.tracks ? { tracks: su.state.tracks } : {};
+
           if (su.state.status === "stopped") {
             // Park the user state (don't delete)
             updateUserState(userId, {
@@ -99,6 +133,7 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
               activeDeviceName: null,
               activeDeviceType: null,
               isPlaying: false,
+              ...tracksPatch,
             });
             // Persist to DB on stop
             upsertPlaybackPosition(userId, {
@@ -128,6 +163,7 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
               activeDeviceName: deviceName,
               activeDeviceType: deviceType,
               isPlaying: false,
+              ...tracksPatch,
             });
             // Legacy
             setActiveSession(userId, {
@@ -153,6 +189,7 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
               activeDeviceName: deviceName,
               activeDeviceType: deviceType,
               isPlaying: true,
+              ...tracksPatch,
             });
             // Legacy
             setActiveSession(userId, {
@@ -217,6 +254,8 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
             state: spo.state,
             updatedAt: Date.now(),
           });
+          // Store tracks if provided
+          const playOnTracksPatch = spo.state.tracks ? { tracks: spo.state.tracks } : {};
           // Also update user state
           updateUserState(userId, {
             showId: spo.state.showId,
@@ -230,6 +269,7 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
             activeDeviceName: targetDevice.name,
             activeDeviceType: targetDevice.type,
             isPlaying: spo.state.status === "playing",
+            ...playOnTracksPatch,
           });
           break;
         }

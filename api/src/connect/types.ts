@@ -16,6 +16,11 @@ export interface PlaybackCommand {
   seekMs?: number;
 }
 
+export interface SessionTrack {
+  title: string;
+  duration: number; // seconds
+}
+
 export interface PlaybackState {
   showId: string;
   recordingId: string;
@@ -28,6 +33,8 @@ export interface PlaybackState {
   date?: string;
   venue?: string;
   location?: string;
+  // Track list for server-side navigation
+  tracks?: SessionTrack[];
 }
 
 export interface ActiveSession {
@@ -55,6 +62,9 @@ export interface UserPlaybackState {
   activeDeviceType: DeviceType | null;
   isPlaying: boolean;
 
+  // Server-managed track list for next/prev resolution
+  tracks?: SessionTrack[];
+
   updatedAt: number;
 }
 
@@ -72,26 +82,7 @@ export interface DevicesMessage {
 
 export interface CommandMessage {
   type: "command";
-  targetDeviceId: string;
   command: PlaybackCommand;
-}
-
-export interface CommandReceivedMessage {
-  type: "command_received";
-  fromDeviceId: string;
-  command: PlaybackCommand;
-}
-
-export interface TransferMessage {
-  type: "transfer";
-  targetDeviceId: string;
-  state: PlaybackState;
-}
-
-export interface TransferReceivedMessage {
-  type: "transfer_received";
-  fromDeviceId: string;
-  state: PlaybackState;
 }
 
 export interface PositionUpdateMessage {
@@ -147,9 +138,6 @@ export type ConnectMessage =
   | RegisterMessage
   | DevicesMessage
   | CommandMessage
-  | CommandReceivedMessage
-  | TransferMessage
-  | TransferReceivedMessage
   | PositionUpdateMessage
   | SessionUpdateMessage
   | SessionClaimMessage
