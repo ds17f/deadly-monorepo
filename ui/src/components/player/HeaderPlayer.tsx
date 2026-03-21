@@ -149,8 +149,10 @@ export default function HeaderPlayer() {
   // Remote control helpers — send commands to the active device
   const remoteTogglePlayPause = useCallback(() => {
     if (!userState?.activeDeviceId) return;
-    sendCommand(userState.activeDeviceId, userState.isPlaying ? "pause" : "play");
-  }, [userState, sendCommand]);
+    const newIsPlaying = !userState.isPlaying;
+    sendCommand(userState.activeDeviceId, newIsPlaying ? "play" : "pause");
+    setUserState(prev => prev ? { ...prev, isPlaying: newIsPlaying, updatedAt: Date.now() } : prev);
+  }, [userState, sendCommand, setUserState]);
 
   const remoteNext = useCallback(() => {
     if (!userState?.activeDeviceId) return;

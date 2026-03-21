@@ -17,7 +17,7 @@ export default function DevicePicker({
   currentState: PlaybackState | null;
   onClose: () => void;
 }) {
-  const { devices, userState, playOnDevice, claimSession } = useConnect();
+  const { devices, userState, playOnDevice, claimSession, setUserState } = useConnect();
 
   const localDeviceId = useMemo(() => {
     if (typeof window === "undefined") return "";
@@ -56,6 +56,22 @@ export default function DevicePicker({
                     window.dispatchEvent(new CustomEvent("connect:play_on", { detail: currentState }));
                   } else {
                     playOnDevice(device.deviceId, currentState);
+                    setUserState({
+                      showId: currentState.showId,
+                      recordingId: currentState.recordingId,
+                      trackIndex: currentState.trackIndex,
+                      positionMs: currentState.positionMs,
+                      durationMs: currentState.durationMs ?? 0,
+                      trackTitle: currentState.trackTitle,
+                      date: currentState.date,
+                      venue: currentState.venue,
+                      location: currentState.location,
+                      activeDeviceId: device.deviceId,
+                      activeDeviceName: device.name,
+                      activeDeviceType: device.type as "ios" | "android" | "web",
+                      isPlaying: true,
+                      updatedAt: Date.now(),
+                    });
                   }
                 }
                 onClose();
