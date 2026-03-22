@@ -64,11 +64,62 @@ class AuthServiceImpl(
         }
     }
 
+    /** Fetch a Bearer token from the custom server's dev-token endpoint. */
+    suspend fun fetchDevToken() {
+        val email = appPreferences.customDevEmail.value
+        val baseUrl = appPreferences.customServerUrl.value
+        Log.d(TAG, "fetchDevToken: email='$email' baseUrl='$baseUrl'")
+        if (email.isEmpty() || baseUrl.isEmpty()) {
+            Log.w(TAG, "fetchDevToken: email or baseUrl is empty, aborting")
+            return
+        }
+
+        try {
+            val url = "$baseUrl/api/auth/dev-token?email=${java.net.URLEncoder.encode(email, "UTF-8")}"
+            Log.d(TAG, "fetchDevToken: requesting $url")
+            val response = withContext(Dispatchers.IO) {
+                val request = Request.Builder().url(url).get().build()
+                httpClient.newCall(request).execute()
+            }
+            Log.d(TAG, "fetchDevToken: response code=${response.code}")
+            if (response.isSuccessful) {
+                val body = response.body?.string() ?: return
+                val tokenResponse = json.decodeFromString<DevTokenResponse>(body)
+                Log.d(TAG, "fetchDevToken: got token, fetching user info")
+                // Fetch real user info using the token
+                val meResponse = withContext(Dispatchers.IO) {
+                    val meRequest = Request.Builder()
+                        .url("${appPreferences.apiBaseUrl}/api/auth/me")
+                        .addHeader("Authorization", "Bearer ${tokenResponse.token}")
+                        .get().build()
+                    httpClient.newCall(meRequest).execute()
+                }
+                if (meResponse.isSuccessful) {
+                    val meBody = meResponse.body?.string() ?: return
+                    val user = json.decodeFromString<SerializableAuthUser>(meBody)
+                    prefs.edit()
+                        .putString(getTokenKey(), tokenResponse.token)
+                        .putString(getUserKey(), json.encodeToString(SerializableAuthUser.serializer(), user))
+                        .apply()
+                    _authState.value = AuthState.SignedIn(user.toAuthUser())
+                    Log.d(TAG, "fetchDevToken: signed in as ${user.name ?: user.email}")
+                } else {
+                    Log.w(TAG, "fetchDevToken: /me failed (${meResponse.code})")
+                }
+            }
+        } catch (e: Exception) {
+            Log.w(TAG, "Failed to fetch dev token", e)
+        }
+    }
+
+    @Serializable
+    private data class DevTokenResponse(val token: String)
+
     private fun getTokenKey(): String =
-        if (appPreferences.useBetaMode) "${KEY_TOKEN}_beta" else "${KEY_TOKEN}_prod"
+        "${KEY_TOKEN}_${appPreferences.serverEnvironment.value}"
 
     private fun getUserKey(): String =
-        if (appPreferences.useBetaMode) "${KEY_USER_JSON}_beta" else "${KEY_USER_JSON}_prod"
+        "${KEY_USER_JSON}_${appPreferences.serverEnvironment.value}"
 
     override suspend fun signInWithGoogle(activity: Activity) {
         // Use GetSignInWithGoogleOption which always shows the Google Sign-In
@@ -141,10 +192,11 @@ class AuthServiceImpl(
         _authState.value = AuthState.SignedOut
     }
 
-    override fun getAuthToken(): String? =
-        prefs.getString(getTokenKey(), null)
+    override fun getAuthToken(): String? {
+        return prefs.getString(getTokenKey(), null)
+    }
 
-    /** Call when beta mode toggle changes. */
+    /** Call when environment changes so the service picks up the right token. */
     fun onEnvironmentChanged() {
         _authState.value = AuthState.SignedOut
         restoreSession()

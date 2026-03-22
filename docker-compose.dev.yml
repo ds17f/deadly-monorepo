@@ -27,6 +27,7 @@ services:
       - ./api/src:/app/src:ro
       - ./api-data:/app/data
     environment:
+      - NODE_ENV=development
       - LOG_LEVEL=debug
 
 volumes:

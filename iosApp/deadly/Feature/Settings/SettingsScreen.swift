@@ -55,6 +55,15 @@ struct SettingsScreen: View {
                     Button("Sign Out", role: .destructive) {
                         container.authService.signOut()
                     }
+                } else if container.appPreferences.serverEnvironment == "custom" {
+                    Button {
+                        Task { await container.authService.fetchDevToken() }
+                    } label: {
+                        Text("Sign In (Dev)")
+                            .frame(maxWidth: .infinity, alignment: .center)
+                            .frame(height: 44)
+                    }
+                    .buttonStyle(.bordered)
                 } else {
                     SignInWithAppleButton(.signIn) { request in
                         request.requestedScopes = [.fullName, .email]

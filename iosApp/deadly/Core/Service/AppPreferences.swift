@@ -13,23 +13,48 @@ final class AppPreferences {
     private static let sourceBadgeStyleKey = "source_badge_style"
     private static let useBetaShareLinksKey = "use_beta_share_links"
     private static let useBetaModeKey = "use_beta_mode"
+    private static let serverEnvironmentKey = "server_environment"
+    private static let customServerUrlKey = "custom_server_url"
+    private static let customDevEmailKey = "custom_dev_email"
 
-    /// Controls both share link URLs and API base URL.
-    /// Reads new key first, falls back to legacy key for migration.
-    var useBetaMode: Bool {
+    /// Server environment: "prod", "beta", or "custom".
+    var serverEnvironment: String {
         didSet {
-            UserDefaults.standard.set(useBetaMode, forKey: Self.useBetaModeKey)
-            // Keep legacy key in sync for older code paths
-            UserDefaults.standard.set(useBetaMode, forKey: Self.useBetaShareLinksKey)
+            UserDefaults.standard.set(serverEnvironment, forKey: Self.serverEnvironmentKey)
+            // Keep legacy keys in sync
+            let isBeta = serverEnvironment == "beta"
+            UserDefaults.standard.set(isBeta, forKey: Self.useBetaModeKey)
+            UserDefaults.standard.set(isBeta, forKey: Self.useBetaShareLinksKey)
         }
     }
 
+    /// Custom server URL for local dev testing (e.g. "http://192.168.1.100:3000").
+    var customServerUrl: String {
+        didSet { UserDefaults.standard.set(customServerUrl, forKey: Self.customServerUrlKey) }
+    }
+
+    /// Email for dev token endpoint on custom server.
+    var customDevEmail: String {
+        didSet { UserDefaults.standard.set(customDevEmail, forKey: Self.customDevEmailKey) }
+    }
+
+    /// Backward-compatible computed property for auth key namespacing.
+    var useBetaMode: Bool { serverEnvironment == "beta" }
+
     var shareBaseUrl: String {
-        useBetaMode ? "https://share.beta.thedeadly.app" : "https://share.thedeadly.app"
+        switch serverEnvironment {
+        case "beta": return "https://share.beta.thedeadly.app"
+        case "custom": return customServerUrl
+        default: return "https://share.thedeadly.app"
+        }
     }
 
     var apiBaseUrl: String {
-        useBetaMode ? "https://beta.thedeadly.app" : "https://thedeadly.app"
+        switch serverEnvironment {
+        case "beta": return "https://beta.thedeadly.app"
+        case "custom": return customServerUrl
+        default: return "https://thedeadly.app"
+        }
     }
 
     var includeShowsWithoutRecordings: Bool {
@@ -79,11 +104,15 @@ final class AppPreferences {
             Self.sourceBadgeStyleKey: "LONG",
         ])
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
-        // Read new key; if never set, fall back to legacy key for migration
-        if UserDefaults.standard.object(forKey: Self.useBetaModeKey) != nil {
-            useBetaMode = UserDefaults.standard.bool(forKey: Self.useBetaModeKey)
+        customServerUrl = UserDefaults.standard.string(forKey: Self.customServerUrlKey) ?? ""
+        customDevEmail = UserDefaults.standard.string(forKey: Self.customDevEmailKey) ?? ""
+        // Migrate: read new key first, fall back to legacy beta mode keys
+        if let env = UserDefaults.standard.string(forKey: Self.serverEnvironmentKey) {
+            serverEnvironment = env
+        } else if UserDefaults.standard.object(forKey: Self.useBetaModeKey) != nil {
+            serverEnvironment = UserDefaults.standard.bool(forKey: Self.useBetaModeKey) ? "beta" : "prod"
         } else {
-            useBetaMode = UserDefaults.standard.bool(forKey: Self.useBetaShareLinksKey)
+            serverEnvironment = UserDefaults.standard.bool(forKey: Self.useBetaShareLinksKey) ? "beta" : "prod"
         }
         forceOnline = UserDefaults.standard.bool(forKey: Self.forceOnlineKey)
         // Read new key first, fall back to legacy key for migration

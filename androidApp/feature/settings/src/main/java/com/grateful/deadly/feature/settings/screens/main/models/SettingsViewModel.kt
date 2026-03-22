@@ -66,9 +66,38 @@ class SettingsViewModel @Inject constructor(
 
     val useBetaMode: StateFlow<Boolean> = appPreferences.useBetaModeFlow
 
+    val serverEnvironment: StateFlow<String> = appPreferences.serverEnvironment
+    val customServerUrl: StateFlow<String> = appPreferences.customServerUrl
+    val customDevEmail: StateFlow<String> = appPreferences.customDevEmail
+
+    fun setServerEnvironment(value: String) {
+        appPreferences.setServerEnvironment(value)
+        val impl = authService as? com.grateful.deadly.core.auth.AuthServiceImpl
+        impl?.onEnvironmentChanged()
+        if (value == "custom") {
+            viewModelScope.launch { impl?.fetchDevToken() }
+        }
+    }
+
+    fun setCustomServerUrl(value: String) {
+        appPreferences.setCustomServerUrl(value)
+    }
+
+    fun setCustomDevEmail(value: String) {
+        appPreferences.setCustomDevEmail(value)
+    }
+
+    fun fetchDevToken() {
+        val impl = authService as? com.grateful.deadly.core.auth.AuthServiceImpl ?: run {
+            Log.w(TAG, "fetchDevToken: authService is not AuthServiceImpl")
+            return
+        }
+        viewModelScope.launch { impl.fetchDevToken() }
+    }
+
     fun toggleUseBetaMode() {
         val newValue = !appPreferences.useBetaMode
-        appPreferences.setUseBetaMode(newValue)
+        appPreferences.setServerEnvironment(if (newValue) "beta" else "prod")
         (authService as? com.grateful.deadly.core.auth.AuthServiceImpl)?.onEnvironmentChanged()
     }
 

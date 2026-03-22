@@ -11,6 +11,8 @@ import { mobileAuthRoutes } from "./auth/mobile.js";
 import { userRoutes } from "./routes/user.js";
 import { authMiddleware } from "./auth/middleware.js";
 import { connectRoutes } from "./connect/routes.js";
+import { devTokenRoutes } from "./auth/dev-token.js";
+import { isDev } from "./env.js";
 import { initRedisSubscriber } from "./connect/registry.js";
 
 export function buildApp() {
@@ -56,6 +58,10 @@ export function buildApp() {
   app.register(mobileAuthRoutes);
   app.register(userRoutes);
   app.register(connectRoutes);
+
+  if (isDev) {
+    app.register(devTokenRoutes);
+  }
 
   initRedisSubscriber();
 

@@ -11,19 +11,17 @@ final class AuthService: NSObject {
 
     var isSignedIn: Bool { token != nil }
 
-    private(set) var token: String? {
-        didSet { tokenDidChange() }
-    }
+    private(set) var token: String?
 
     private let appPreferences: AppPreferences
 
-    /// Keychain keys are namespaced by environment so beta/prod tokens don't collide.
+    /// Keychain keys are namespaced by environment so tokens don't collide.
     private var tokenKeychainKey: String {
-        appPreferences.useBetaMode ? "auth_token_beta" : "auth_token_prod"
+        "auth_token_\(appPreferences.serverEnvironment)"
     }
 
     private var userKeychainKey: String {
-        appPreferences.useBetaMode ? "auth_user_beta" : "auth_user_prod"
+        "auth_user_\(appPreferences.serverEnvironment)"
     }
 
     init(appPreferences: AppPreferences) {
@@ -47,11 +45,38 @@ final class AuthService: NSObject {
         }
     }
 
-    /// Call when the beta mode toggle changes so the service picks up the right token.
+    /// Call when the environment changes so the service picks up the right token.
     func onEnvironmentChanged() {
         currentUser = nil
         token = nil
         restoreSession()
+    }
+
+    /// Fetch a Bearer token from the custom server's dev-token endpoint.
+    func fetchDevToken() async {
+        let email = appPreferences.customDevEmail
+        let baseUrl = appPreferences.customServerUrl
+        guard !email.isEmpty, !baseUrl.isEmpty,
+              let encoded = email.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+              let url = URL(string: "\(baseUrl)/api/auth/dev-token?email=\(encoded)") else {
+            return
+        }
+
+        do {
+            let (data, response) = try await URLSession.shared.data(from: url)
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                return
+            }
+            struct DevTokenResponse: Codable { let token: String }
+            let tokenResponse = try JSONDecoder().decode(DevTokenResponse.self, from: data)
+            token = tokenResponse.token
+            if let tokenData = tokenResponse.token.data(using: .utf8) {
+                KeychainHelper.save(key: tokenKeychainKey, data: tokenData)
+            }
+            await fetchCurrentUser()
+        } catch {
+            // Network error — dev token not available
+        }
     }
 
     // MARK: - Sign In with Apple
@@ -163,9 +188,6 @@ final class AuthService: NSObject {
         }
     }
 
-    private func tokenDidChange() {
-        // Placeholder for future observers (e.g. connect service)
-    }
 }
 
 // MARK: - ASAuthorizationControllerDelegate
