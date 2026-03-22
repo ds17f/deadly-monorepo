@@ -185,9 +185,30 @@ final class AppContainer {
             let connectLog = Logger(subsystem: "com.grateful.deadly", category: "ConnectPlayback")
             let connectSvc = connectService
             MainActor.assumeIsolated {
-                let sendUpdate: (String) -> Void = { [weak playlistSvc, weak player] status in
+                // When true, the diff-detection loop skips one reaction cycle.
+                // Set before applying a server-directed state change so the resulting
+                // user_state echo doesn't re-trigger the same action.
+                var suppressDiffReaction = false
+
+                // When true, the periodic 15s reporter skips sending updates.
+                // Prevents the brief muted play inside seekAndSettle from leaking
+                // a "playing" status to the server.
+                var suppressUpdates = false
+
+                // Previous user_state for diff detection
+                var prevIsPlaying: Bool?
+                var prevTrackIndex: Int?
+                var prevPositionMs: Int?
+
+                let sendUpdate: (String, Bool) -> Void = { [weak playlistSvc, weak player] status, includeTracks in
                     guard let playlistSvc, let player else { return }
                     guard let show = playlistSvc.currentShow else { return }
+                    let tracks: [SessionTrack]? = includeTracks ? playlistSvc.tracks.map { track in
+                        SessionTrack(
+                            title: track.title,
+                            duration: track.durationInterval ?? 0
+                        )
+                    } : nil
                     connectSvc.sendSessionUpdate(OutgoingPlaybackState(
                         showId: show.id,
                         recordingId: playlistSvc.currentRecording?.identifier ?? "",
@@ -198,7 +219,8 @@ final class AppContainer {
                         status: status,
                         date: show.date,
                         venue: show.venue.name,
-                        location: show.location.displayText
+                        location: show.location.displayText,
+                        tracks: tracks
                     ))
                 }
 
@@ -210,57 +232,167 @@ final class AppContainer {
                         }
                         switch event {
                         case .playOn(let state):
-                            connectLog.info("[ConnectPlayback] PlayOn: showId=\(state.showId), recording=\(state.recordingId), track=\(state.trackIndex), positionMs=\(state.positionMs)")
+                            connectLog.notice("[ConnectPlayback] PlayOn: showId=\(state.showId, privacy: .public), recording=\(state.recordingId, privacy: .public), track=\(state.trackIndex), positionMs=\(state.positionMs)")
                             await playlistSvc.loadShow(state.showId)
-                            connectLog.info("[ConnectPlayback] After loadShow: tracks=\(playlistSvc.tracks.count), recording=\(playlistSvc.currentRecording?.identifier ?? "nil")")
+                            connectLog.notice("[ConnectPlayback] After loadShow: tracks=\(playlistSvc.tracks.count), recording=\(playlistSvc.currentRecording?.identifier ?? "nil", privacy: .public)")
                             if state.recordingId != playlistSvc.currentRecording?.identifier,
                                let recording = try? showRepo.getRecordingById(state.recordingId) {
                                 await playlistSvc.selectRecording(recording)
-                                connectLog.info("[ConnectPlayback] Switched to recording: \(recording.identifier)")
+                                connectLog.notice("[ConnectPlayback] Switched to recording: \(recording.identifier, privacy: .public)")
                             }
-                            playlistSvc.playTrack(at: state.trackIndex)
-                            connectLog.info("[ConnectPlayback] After playTrack: playbackState=\(String(describing: player.playbackState))")
-                            // Safety: ensure playback starts even if loadQueue doesn't auto-play
-                            // in this non-user-initiated context
-                            if !player.playbackState.isPlaying {
-                                player.play()
-                                connectLog.info("[ConnectPlayback] Explicit play() called")
+                            let shouldPlay = state.status != "paused"
+                            let loaded = playlistSvc.playTrack(at: state.trackIndex)
+                            connectLog.notice("[ConnectPlayback] playTrack(\(state.trackIndex)) → \(loaded ? "OK" : "FAILED", privacy: .public), currentTrack=\(player.currentTrack?.title ?? "nil", privacy: .public)")
+                            guard loaded else {
+                                connectLog.error("[ConnectPlayback] Aborting — playTrack failed, not sending update to avoid corrupting server state")
+                                return
                             }
-                            if state.positionMs > 0 {
-                                // Wait for the player to finish loading before seeking,
-                                // otherwise the seek is lost
-                                for _ in 0..<50 {
-                                    if player.playbackState == .playing || player.playbackState == .buffering {
-                                        break
+                            if shouldPlay {
+                                if !player.playbackState.isPlaying {
+                                    player.play()
+                                    connectLog.notice("[ConnectPlayback] Explicit play() called")
+                                }
+                                if state.positionMs > 0 {
+                                    var readyLoops = 0
+                                    for _ in 0..<50 {
+                                        if player.playbackState == .playing || player.playbackState == .buffering { break }
+                                        try? await Task.sleep(for: .milliseconds(100))
+                                        readyLoops += 1
                                     }
+                                    if readyLoops >= 50 {
+                                        connectLog.warning("[ConnectPlayback] Timed out waiting for playing/buffering (state=\(String(describing: player.playbackState)))")
+                                    }
+                                    player.seek(to: TimeInterval(state.positionMs) / 1000.0)
+                                    connectLog.notice("[ConnectPlayback] Seeked to \(state.positionMs)ms")
+                                }
+                            } else if state.positionMs > 0 {
+                                // Paused transfer with a position: wait for the engine to
+                                // start playing (loadQueue auto-plays), then use seekAndSettle
+                                // so the HTTP range request completes and the progress bar updates.
+                                var readyLoops = 0
+                                for _ in 0..<50 {
+                                    if player.playbackState == .playing || player.playbackState == .buffering { break }
                                     try? await Task.sleep(for: .milliseconds(100))
+                                    readyLoops += 1
                                 }
-                                player.seek(to: TimeInterval(state.positionMs) / 1000.0)
-                                connectLog.info("[ConnectPlayback] Seeked to \(state.positionMs)ms")
-                            }
-                            sendUpdate("playing")
-                        case .command(let cmd):
-                            connectLog.info("[ConnectPlayback] Command: \(cmd.action)")
-                            switch cmd.action {
-                            case "play":
-                                player.play()
-                                sendUpdate("playing")
-                            case "pause":
+                                if readyLoops >= 50 {
+                                    connectLog.warning("[ConnectPlayback] Timed out waiting for playing/buffering before seekAndSettle (state=\(String(describing: player.playbackState)))")
+                                }
+                                suppressUpdates = true
+                                await player.seekAndSettle(to: TimeInterval(state.positionMs) / 1000.0, shouldPause: true)
+                                suppressUpdates = false
+                                connectLog.notice("[ConnectPlayback] seekAndSettle to \(state.positionMs)ms (paused)")
+                            } else {
                                 player.pause()
-                                sendUpdate("paused")
-                            case "next": player.next()
-                            case "prev": player.previous()
-                            case "seek":
-                                if let ms = cmd.seekMs {
-                                    player.seek(to: TimeInterval(ms) / 1000.0)
-                                }
-                            default: break
+                                connectLog.notice("[ConnectPlayback] Paused after loading (source was paused)")
                             }
+                            // Suppress the diff loop from reacting to the server's
+                            // echo of this update (which may carry a stale position)
+                            suppressDiffReaction = true
+                            // Send update with tracks so server can resolve next/prev
+                            let reportedStatus = shouldPlay ? "playing" : "paused"
+                            sendUpdate(reportedStatus, true)
+                            connectLog.notice("[ConnectPlayback] Sent update: show=\(playlistSvc.currentShow?.id ?? "nil", privacy: .public), recording=\(playlistSvc.currentRecording?.identifier ?? "nil", privacy: .public), track=\(player.queueState.currentIndex), pos=\(Int(player.progress.currentTime * 1000))ms, status=\(reportedStatus, privacy: .public)")
                         case .stop:
-                            connectLog.info("[ConnectPlayback] Stop: pausing playback")
+                            connectLog.notice("[ConnectPlayback] Stop: pausing playback")
                             player.pause()
-                            sendUpdate("stopped")
+                            sendUpdate("stopped", false)
                         }
+                    }
+                }
+
+                // React to server state diffs when this device is the active player
+                Task { @MainActor [weak player] in
+                    var lastUserState: UserPlaybackState?
+                    while !Task.isCancelled {
+                        try? await Task.sleep(for: .milliseconds(200))
+                        guard let player else { return }
+                        let current = connectSvc.userState
+
+                        // Track prev state even when not active device
+                        guard let state = current else {
+                            lastUserState = nil
+                            prevIsPlaying = nil
+                            prevTrackIndex = nil
+                            prevPositionMs = nil
+                            continue
+                        }
+
+                        let isActive = state.activeDeviceId == connectSvc.deviceId
+
+                        if !isActive {
+                            prevIsPlaying = state.isPlaying
+                            prevTrackIndex = state.trackIndex
+                            prevPositionMs = state.positionMs
+                            lastUserState = state
+                            continue
+                        }
+
+                        guard let pPlaying = prevIsPlaying,
+                              let pTrackIndex = prevTrackIndex,
+                              let pPositionMs = prevPositionMs else {
+                            prevIsPlaying = state.isPlaying
+                            prevTrackIndex = state.trackIndex
+                            prevPositionMs = state.positionMs
+                            lastUserState = state
+                            continue
+                        }
+
+                        // Only react if updatedAt actually changed (new server broadcast)
+                        if state.updatedAt == (lastUserState?.updatedAt ?? 0) {
+                            continue
+                        }
+
+                        // Skip this cycle if a local action (e.g. session_play_on) just
+                        // sent an update — the echo would carry stale position data
+                        if suppressDiffReaction {
+                            suppressDiffReaction = false
+                            connectLog.notice("[ConnectPlayback] Diff suppressed (echo): track=\(state.trackIndex), playing=\(state.isPlaying), pos=\(state.positionMs)ms")
+                            prevIsPlaying = state.isPlaying
+                            prevTrackIndex = state.trackIndex
+                            prevPositionMs = state.positionMs
+                            lastUserState = state
+                            continue
+                        }
+
+                        connectLog.notice("[ConnectPlayback] Diff eval: server(track=\(state.trackIndex), playing=\(state.isPlaying), pos=\(state.positionMs)ms) vs prev(track=\(pTrackIndex), playing=\(pPlaying), pos=\(pPositionMs)ms), playerTrack=\(player.currentTrack?.title ?? "nil", privacy: .public)")
+
+                        // Play/pause diff
+                        if state.isPlaying != pPlaying {
+                            if state.isPlaying {
+                                player.play()
+                                connectLog.notice("[ConnectPlayback] State diff: play")
+                            } else {
+                                player.pause()
+                                connectLog.notice("[ConnectPlayback] State diff: pause")
+                            }
+                        }
+
+                        // Track index diff (next/prev)
+                        if state.trackIndex != pTrackIndex {
+                            connectLog.notice("[ConnectPlayback] State diff: track \(pTrackIndex) → \(state.trackIndex), calling \(state.trackIndex > pTrackIndex ? "next()" : "previous()")")
+                            if state.trackIndex > pTrackIndex {
+                                player.next()
+                            } else {
+                                player.previous()
+                            }
+                        }
+
+                        // Seek diff (>2s divergence from previous state, same track & play state)
+                        if state.trackIndex == pTrackIndex &&
+                           state.isPlaying == pPlaying &&
+                           abs(state.positionMs - pPositionMs) > 2000 {
+                            let currentMs = Int(player.progress.currentTime * 1000)
+                            if abs(state.positionMs - currentMs) > 2000 {
+                                player.seek(to: TimeInterval(state.positionMs) / 1000.0)
+                                connectLog.notice("[ConnectPlayback] State diff: seek to \(state.positionMs)ms")
+                            }
+                        }
+
+                        prevIsPlaying = state.isPlaying
+                        prevTrackIndex = state.trackIndex
+                        prevPositionMs = state.positionMs
+                        lastUserState = state
                     }
                 }
 
@@ -268,9 +400,10 @@ final class AppContainer {
                 Task { @MainActor [weak player] in
                     while !Task.isCancelled {
                         try? await Task.sleep(for: .seconds(15))
+                        guard !suppressUpdates else { continue }
                         guard let player, player.playbackState.isPlaying else { continue }
                         guard connectSvc.connectionState == .connected else { continue }
-                        sendUpdate("playing")
+                        sendUpdate("playing", false)
                     }
                 }
             }
@@ -317,7 +450,12 @@ final class AppContainer {
 // MARK: - EnvironmentKey
 
 private struct AppContainerKey: EnvironmentKey {
-    static let defaultValue = AppContainer()
+    // Must NOT create a new AppContainer() here — that would open a second
+    // WebSocket connection, and the server would route events to whichever
+    // connected last, leaving the views' instance deaf.
+    nonisolated(unsafe) static var defaultValue: AppContainer {
+        DeadlyAppDelegate.shared.container
+    }
 }
 
 extension EnvironmentValues {

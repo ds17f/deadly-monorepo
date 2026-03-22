@@ -189,6 +189,26 @@ public final class StreamPlayer {
         seek(to: target)
     }
 
+    /// Seek to a position, ensuring the HTTP range request completes.
+    /// When the player needs to end up paused, this briefly plays muted
+    /// so the range request fires on an active connection, waits for it
+    /// to land, then restores volume and pauses.
+    ///
+    /// - Parameters:
+    ///   - position: Target time in seconds.
+    ///   - shouldPause: If true, mute→seek→wait→unmute→pause. If false, just seek normally.
+    public func seekAndSettle(to position: TimeInterval, shouldPause: Bool) async {
+        if shouldPause {
+            volume = 0
+            seek(to: position)
+            try? await Task.sleep(for: .milliseconds(300))
+            volume = 1
+            pause()
+        } else {
+            seek(to: position)
+        }
+    }
+
     // MARK: - Queue modification
 
     public func append(_ track: TrackItem) {
@@ -318,7 +338,12 @@ public final class StreamPlayer {
     private func syncTrackFromEngine() {
         let index = engine.currentIndex
         guard index >= 0, index < tracks.count else { return }
+        let prevTitle = currentTrack?.title ?? "nil"
         currentTrack = tracks[index]
+        let newTitle = tracks[index].title
+        if newTitle != prevTitle {
+            logger.notice("syncTrackFromEngine: index=\(index) prev=\(prevTitle, privacy: .public) new=\(newTitle, privacy: .public)")
+        }
         progress = .zero
         updateQueueState(index: index)
         updateNowPlaying()

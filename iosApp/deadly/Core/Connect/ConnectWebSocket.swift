@@ -1,8 +1,13 @@
 import Foundation
+import os.log
+
+private let wsLog = Logger(subsystem: "com.grateful.deadly", category: "ConnectWS")
 
 /// Low-level WebSocket wrapper around URLSessionWebSocketTask
 /// with automatic exponential-backoff reconnection (1 s → 30 s).
 final class ConnectWebSocket: NSObject, URLSessionWebSocketDelegate {
+    private var msgSeq = 0
+    private let instanceId = Int.random(in: 1000...9999)
 
     var onOpen: (() -> Void)?
     var onClose: (() -> Void)?
@@ -19,6 +24,7 @@ final class ConnectWebSocket: NSObject, URLSessionWebSocketDelegate {
     private static let maxDelay: TimeInterval = 30
 
     func connect(url: URL, token: String) {
+        wsLog.notice("[ConnectWS:\(self.instanceId)] connect() called, existing task state: \(String(describing: self.task?.state), privacy: .public)")
         intentionalClose = false
         currentURL = url
         currentToken = token
@@ -87,6 +93,10 @@ final class ConnectWebSocket: NSObject, URLSessionWebSocketDelegate {
             switch result {
             case .success(let message):
                 if case .string(let text) = message {
+                    self.msgSeq += 1
+                    let seq = self.msgSeq
+                    let prefix = text.prefix(80)
+                    wsLog.notice("[ConnectWS:\(self.instanceId)] recv #\(seq): \(prefix, privacy: .public)")
                     self.onMessage?(text)
                 }
                 self.receiveNext()

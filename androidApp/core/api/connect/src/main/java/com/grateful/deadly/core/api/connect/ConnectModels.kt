@@ -1,6 +1,5 @@
 package com.grateful.deadly.core.api.connect
 
-import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.serialization.Serializable
 
 enum class ConnectConnectionState {
@@ -51,9 +50,9 @@ data class IncomingPlaybackState(
 )
 
 @Serializable
-data class PlaybackCommand(
-    val action: String,
-    val seekMs: Long? = null,
+data class SessionTrack(
+    val title: String,
+    val duration: Double,  // seconds
 )
 
 @Serializable
@@ -68,10 +67,10 @@ data class OutgoingPlaybackState(
     val date: String? = null,
     val venue: String? = null,
     val location: String? = null,
+    val tracks: List<SessionTrack>? = null,
 )
 
 sealed class ConnectPlaybackEvent {
     data class PlayOn(val state: IncomingPlaybackState) : ConnectPlaybackEvent()
-    data class Command(val command: PlaybackCommand) : ConnectPlaybackEvent()
     data object Stop : ConnectPlaybackEvent()
 }

@@ -30,6 +30,7 @@ dependencies {
     implementation(project(":core:api:auth"))
     implementation(project(":core:database"))
     implementation(project(":core:media"))
+    implementation("androidx.media3:media3-common:1.3.1")
 
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")

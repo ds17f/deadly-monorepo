@@ -36,7 +36,7 @@ final class ConnectService {
     private let webSocket = ConnectWebSocket()
     private var observationTask: Task<Void, Never>?
 
-    private var deviceId: String {
+    var deviceId: String {
         let key = "connect_device_id"
         if let existing = UserDefaults.standard.string(forKey: key) {
             return existing
@@ -144,14 +144,14 @@ final class ConnectService {
             )
         )
         webSocket.send(msg)
-        logger.info("[Connect] Sent register: deviceId=\(self.deviceId)")
+        logger.notice("[Connect] Sent register: deviceId=\(self.deviceId)")
     }
 
     // MARK: - Outgoing session update
 
     func sendSessionUpdate(_ state: OutgoingPlaybackState) {
         webSocket.send(SessionUpdateMessage(state: state))
-        logger.info("[Connect] Sent session_update: status=\(state.status)")
+        logger.notice("[Connect] Sent session_update: status=\(state.status)")
     }
 
     // MARK: - Incoming message handling
@@ -168,34 +168,27 @@ final class ConnectService {
             if let devicesData = try? JSONSerialization.data(withJSONObject: obj["devices"] ?? []),
                let list = try? JSONDecoder().decode([ConnectDevice].self, from: devicesData) {
                 devices = list
-                logger.info("[Connect] Devices: \(list.map { "\($0.name) (\($0.type))" })")
+                logger.notice("[Connect] Devices: \(list.map { "\($0.name) (\($0.type))" })")
             }
         case "user_state":
             if let stateObj = obj["state"],
                let stateData = try? JSONSerialization.data(withJSONObject: stateObj),
                let state = try? JSONDecoder().decode(UserPlaybackState.self, from: stateData) {
                 userState = state
-                logger.info("[Connect] User state: playing=\(state.isPlaying), activeDevice=\(state.activeDeviceName ?? "none")")
+                logger.notice("[Connect] User state: playing=\(state.isPlaying), activeDevice=\(state.activeDeviceName ?? "none")")
             }
-        case "session_play_on", "transfer_received":
-            logger.info("[Connect] Got \(type), onPlaybackEvent is \(self.onPlaybackEvent == nil ? "nil" : "set")")
+        case "session_play_on":
+            logger.notice("[Connect] Got \(type, privacy: .public), onPlaybackEvent is \(self.onPlaybackEvent == nil ? "nil" : "set", privacy: .public)")
             if let stateObj = obj["state"],
                let stateData = try? JSONSerialization.data(withJSONObject: stateObj),
                let state = try? JSONDecoder().decode(IncomingPlaybackState.self, from: stateData) {
-                logger.info("[Connect] Play on decoded: showId=\(state.showId), track=\(state.trackIndex)")
+                logger.notice("[Connect] Play on decoded: showId=\(state.showId), track=\(state.trackIndex)")
                 onPlaybackEvent?(.playOn(state))
             } else {
                 logger.warning("[Connect] Failed to decode state from \(type) message")
             }
-        case "command_received":
-            if let cmdObj = obj["command"],
-               let cmdData = try? JSONSerialization.data(withJSONObject: cmdObj),
-               let command = try? JSONDecoder().decode(PlaybackCommand.self, from: cmdData) {
-                logger.info("[Connect] Command: \(command.action)")
-                onPlaybackEvent?(.command(command))
-            }
         case "session_stop":
-            logger.info("[Connect] Session stop received")
+            logger.notice("[Connect] Session stop received")
             onPlaybackEvent?(.stop)
         default:
             break

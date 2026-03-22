@@ -1,4 +1,5 @@
 import Foundation
+import os.log
 import SwiftAudioStreamEx
 
 @Observable
@@ -20,6 +21,7 @@ final class PlaylistServiceImpl: PlaylistService {
     private let recordingPreferenceDAO: RecordingPreferenceDAO
     private let downloadService: DownloadService?
     private let analyticsService: AnalyticsService?
+    private let logger = Logger(subsystem: "com.grateful.deadly", category: "Playlist")
     let streamPlayer: StreamPlayer
 
     /// Tracks the currently playing item for playback_end analytics.
@@ -140,9 +142,13 @@ final class PlaylistServiceImpl: PlaylistService {
         await selectRecording(recording)
     }
 
-    func playTrack(at index: Int) {
+    @discardableResult
+    func playTrack(at index: Int) -> Bool {
         guard index >= 0, index < tracks.count,
-              let recording = currentRecording else { return }
+              let recording = currentRecording else {
+            logger.warning("playTrack(\(index)) failed: tracks=\(self.tracks.count), recording=\(self.currentRecording?.identifier ?? "nil")")
+            return false
+        }
 
         // Fire playback_end for the previous track, if any
         trackPlaybackEnd()
@@ -151,7 +157,7 @@ final class PlaylistServiceImpl: PlaylistService {
         // instead of rebuilding the entire queue (avoids redundant network redirect resolution).
         if streamPlayer.currentTrack?.metadata["recordingId"] == recording.identifier {
             streamPlayer.skipTo(index: index)
-            return
+            return true
         }
         // Propagate the show's ticket art so mini player and full player can display it.
         // Fall back to archive.org's auto-generated image for the recording.
@@ -198,6 +204,7 @@ final class PlaylistServiceImpl: PlaylistService {
             "recording_id": recordingId,
             "track_number": index + 1,
         ])
+        return true
     }
 
     /// Fires a `playback_end` event for the currently tracked playback, if any.
@@ -242,6 +249,7 @@ final class PlaylistServiceImpl: PlaylistService {
         do {
             tracks = try await archiveClient.fetchTracks(recordingId: recordingId)
         } catch {
+            logger.error("fetchTracks(\(recordingId)) failed: \(error.localizedDescription)")
             trackLoadError = error.localizedDescription
             tracks = []
             analyticsService?.track("error", props: [

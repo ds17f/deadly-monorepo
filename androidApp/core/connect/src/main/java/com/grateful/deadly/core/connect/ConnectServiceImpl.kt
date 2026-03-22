@@ -182,7 +182,7 @@ class ConnectServiceImpl @Inject constructor(
                 _userState.value = state
                 Log.d(TAG, "[Connect] User state: playing=${state?.isPlaying}, activeDevice=${state?.activeDeviceName}")
             }
-            "session_play_on", "transfer_received" -> {
+            "session_play_on" -> {
                 val state = try {
                     obj["state"]?.let { json.decodeFromJsonElement<IncomingPlaybackState>(it) }
                 } catch (e: Exception) {
@@ -192,18 +192,6 @@ class ConnectServiceImpl @Inject constructor(
                 if (state != null) {
                     Log.d(TAG, "[Connect] Play on: showId=${state.showId}, track=${state.trackIndex}")
                     _playbackEvents.tryEmit(ConnectPlaybackEvent.PlayOn(state))
-                }
-            }
-            "command_received" -> {
-                val command = try {
-                    obj["command"]?.let { json.decodeFromJsonElement<PlaybackCommand>(it) }
-                } catch (e: Exception) {
-                    Log.w(TAG, "Failed to decode playback command", e)
-                    null
-                }
-                if (command != null) {
-                    Log.d(TAG, "[Connect] Command: ${command.action}")
-                    _playbackEvents.tryEmit(ConnectPlaybackEvent.Command(command))
                 }
             }
             "session_stop" -> {

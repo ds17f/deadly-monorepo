@@ -41,6 +41,11 @@ struct SessionUpdateMessage: Encodable {
     let state: OutgoingPlaybackState
 }
 
+struct SessionTrack: Encodable {
+    let title: String
+    let duration: Double  // seconds
+}
+
 struct OutgoingPlaybackState: Encodable {
     let showId: String
     let recordingId: String
@@ -52,6 +57,7 @@ struct OutgoingPlaybackState: Encodable {
     let date: String?
     let venue: String?
     let location: String?
+    let tracks: [SessionTrack]?
 }
 
 // MARK: - Incoming Playback State (from remote device)
@@ -83,20 +89,8 @@ struct IncomingPlaybackState: Codable {
     }
 }
 
-struct PlaybackCommand: Codable {
-    let action: String
-    let seekMs: Int?
-
-    init(from decoder: Decoder) throws {
-        let c = try decoder.container(keyedBy: CodingKeys.self)
-        action = try c.decode(String.self, forKey: .action)
-        seekMs = try c.decodeIfPresent(Int.self, forKey: .seekMs)
-    }
-}
-
 enum ConnectPlaybackEvent {
     case playOn(IncomingPlaybackState)
-    case command(PlaybackCommand)
     case stop
 }
 

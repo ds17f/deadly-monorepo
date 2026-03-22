@@ -20,7 +20,7 @@ protocol PlaylistService: AnyObject {
 
     func loadShow(_ showId: String) async
     func selectRecording(_ recording: Recording) async
-    func playTrack(at index: Int)
+    @discardableResult func playTrack(at index: Int) -> Bool
     func recordRecentPlay()
 
     // Navigate to adjacent shows by date

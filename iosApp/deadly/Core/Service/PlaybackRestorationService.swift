@@ -83,15 +83,11 @@ final class PlaybackRestorationService {
             return
         }
 
-        // Mute, seek while playing (so the HTTP range request fires on an active
-        // connection), wait for seek to land, then unmute and pause.
         if seekPosition > 0 {
-            streamPlayer.volume = 0
-            streamPlayer.seek(to: seekPosition)
-            try? await Task.sleep(for: .milliseconds(300))
-            streamPlayer.volume = 1
+            await streamPlayer.seekAndSettle(to: seekPosition, shouldPause: true)
+        } else {
+            streamPlayer.pause()
         }
-        streamPlayer.pause()
         logger.info("Restored at track \(trackIndex), position \(seekPosition, format: .fixed(precision: 1))s — paused")
     }
 
