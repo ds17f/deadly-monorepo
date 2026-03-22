@@ -28,6 +28,7 @@ services:
       dockerfile: Dockerfile
     restart: unless-stopped
     environment:
+      - NODE_ENV=production
       - PORT=3001
       - HOST=0.0.0.0
       - LOG_LEVEL=${LOG_LEVEL:-info}
@@ -44,6 +45,9 @@ services:
       - APPLE_KEY_ID=${APPLE_KEY_ID}
       - APPLE_PRIVATE_KEY=${APPLE_PRIVATE_KEY}
       - REDIS_URL=redis://redis:6379
+      - ANALYTICS_DB_PATH=/app/data/analytics.db
+      - ANALYTICS_API_KEY=${ANALYTICS_API_KEY}
+      - ANALYTICS_RAW_RETENTION_DAYS=${ANALYTICS_RAW_RETENTION_DAYS:-}
     volumes:
       - ./api-data:/app/data
     expose:
