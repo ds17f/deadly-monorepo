@@ -8,7 +8,7 @@ import {
   pruneOldEvents,
   type AnalyticsEvent,
 } from "../db/analytics.js";
-import { requireAuth } from "../auth/middleware.js";
+import { requireAdmin } from "../auth/middleware.js";
 
 const VALID_PLATFORMS = new Set(["ios", "android", "web"]);
 const MAX_EVENTS_PER_BATCH = 100;
@@ -240,7 +240,7 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
           },
         },
       },
-      preHandler: requireAuth,
+      preHandler: requireAdmin,
     },
     async () => {
       return getSummary();

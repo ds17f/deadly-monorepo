@@ -149,6 +149,14 @@ function initSchema(db: Database.Database): void {
   `);
 
   // Migrations: add columns to existing tables
+  const accountCols = db.prepare(
+    `SELECT name FROM pragma_table_info('accounts')`
+  ).all() as { name: string }[];
+  const accountColNames = new Set(accountCols.map((c) => c.name));
+  if (!accountColNames.has("is_admin")) {
+    db.exec(`ALTER TABLE accounts ADD COLUMN is_admin INTEGER NOT NULL DEFAULT 0`);
+  }
+
   const cols = db.prepare(
     `SELECT name FROM pragma_table_info('playback_position')`
   ).all() as { name: string }[];
@@ -173,11 +181,18 @@ export function createAppUser(authUserId: string, email: string, name: string | 
   return id;
 }
 
-export function getAppUserByAuthId(authUserId: string): { id: string; email: string; name: string | null } | undefined {
+export function getAppUserByAuthId(authUserId: string): { id: string; email: string; name: string | null; is_admin: number } | undefined {
   const db = getUsersDb();
   return db.prepare(
-    `SELECT id, email, name FROM accounts WHERE auth_user_id = ?`
-  ).get(authUserId) as { id: string; email: string; name: string | null } | undefined;
+    `SELECT id, email, name, is_admin FROM accounts WHERE auth_user_id = ?`
+  ).get(authUserId) as { id: string; email: string; name: string | null; is_admin: number } | undefined;
+}
+
+export function getAppUserById(accountId: string): { id: string; email: string; name: string | null; is_admin: number } | undefined {
+  const db = getUsersDb();
+  return db.prepare(
+    `SELECT id, email, name, is_admin FROM accounts WHERE id = ?`
+  ).get(accountId) as { id: string; email: string; name: string | null; is_admin: number } | undefined;
 }
 
 export function closeUsersDb(): void {
