@@ -100,7 +100,7 @@ function validateAndClean(raw: RawEvent): AnalyticsEvent | null {
 
 export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
   const apiKey = process.env.ANALYTICS_API_KEY;
-  if (!apiKey) {
+  if (!apiKey && process.env.NODE_ENV !== "development") {
     throw new Error(
       "ANALYTICS_API_KEY must be set. Generate one with: node -e \"console.log(crypto.randomUUID())\"",
     );
@@ -164,10 +164,12 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       }>,
       reply: FastifyReply,
     ) => {
-      // Check API key
-      const provided = request.headers["x-analytics-key"];
-      if (provided !== apiKey) {
-        return reply.code(401).send({ error: "Invalid analytics key" });
+      // Check API key (skipped in dev when no key is set)
+      if (apiKey) {
+        const provided = request.headers["x-analytics-key"];
+        if (provided !== apiKey) {
+          return reply.code(401).send({ error: "Invalid analytics key" });
+        }
       }
 
       // Rate limit by IP
