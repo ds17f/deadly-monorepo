@@ -12,19 +12,36 @@ struct DeveloperView: View {
     var body: some View {
         List {
             Section {
-                Toggle(isOn: Binding(
-                    get: { container.appPreferences.useBetaMode },
+                Picker("Server", selection: Binding(
+                    get: { container.appPreferences.serverEnvironment },
                     set: {
-                        container.appPreferences.useBetaMode = $0
+                        container.appPreferences.serverEnvironment = $0
                         container.authService.onEnvironmentChanged()
                     }
                 )) {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("Use Beta Mode")
-                        Text("Use beta API and share links (beta.thedeadly.app)")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    }
+                    Text("Production").tag("prod")
+                    Text("Beta").tag("beta")
+                    Text("Custom").tag("custom")
+                }
+                .pickerStyle(.segmented)
+                .listRowSeparator(.hidden)
+
+                if container.appPreferences.serverEnvironment == "custom" {
+                    TextField("Server URL", text: Binding(
+                        get: { container.appPreferences.customServerUrl },
+                        set: { container.appPreferences.customServerUrl = $0 }
+                    ))
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
+                    .keyboardType(.URL)
+
+                    TextField("Email", text: Binding(
+                        get: { container.appPreferences.customDevEmail },
+                        set: { container.appPreferences.customDevEmail = $0 }
+                    ))
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
+                    .keyboardType(.emailAddress)
                 }
 
                 Toggle(isOn: Binding(

@@ -9,7 +9,9 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.text.KeyboardOptions
 import java.io.File
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.feature.settings.SettingsViewModel
@@ -20,17 +22,61 @@ fun DeveloperScreen(
 ) {
     val forceOnline by viewModel.forceOnline.collectAsState()
 
-    val useBetaMode by viewModel.useBetaMode.collectAsState()
+    val serverEnvironment by viewModel.serverEnvironment.collectAsState()
+    val customServerUrl by viewModel.customServerUrl.collectAsState()
+    val customDevEmail by viewModel.customDevEmail.collectAsState()
+
+    val environments = listOf("prod" to "Production", "beta" to "Beta", "custom" to "Custom")
 
     LazyColumn(modifier = Modifier.fillMaxSize()) {
 
         item {
-            DevToggleRow(
-                title = "Use Beta Mode",
-                subtitle = "Use beta API and share links (beta.thedeadly.app)",
-                checked = useBetaMode,
-                onCheckedChange = { viewModel.toggleUseBetaMode() }
-            )
+            Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)) {
+                Text(text = "Server", style = MaterialTheme.typography.bodyLarge)
+                Spacer(modifier = Modifier.height(8.dp))
+                SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+                    environments.forEachIndexed { index, (value, label) ->
+                        SegmentedButton(
+                            selected = serverEnvironment == value,
+                            onClick = { viewModel.setServerEnvironment(value) },
+                            shape = SegmentedButtonDefaults.itemShape(index, environments.size)
+                        ) {
+                            Text(label)
+                        }
+                    }
+                }
+            }
+        }
+
+        if (serverEnvironment == "custom") {
+            item {
+                OutlinedTextField(
+                    value = customServerUrl,
+                    onValueChange = { viewModel.setCustomServerUrl(it) },
+                    label = { Text("Server URL") },
+                    placeholder = { Text("http://192.168.1.100:3000") },
+                    singleLine = true,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 4.dp)
+                )
+            }
+
+            item {
+                OutlinedTextField(
+                    value = customDevEmail,
+                    onValueChange = { viewModel.setCustomDevEmail(it) },
+                    label = { Text("Email") },
+                    placeholder = { Text("your@email.com") },
+                    singleLine = true,
+                    keyboardOptions = KeyboardOptions(
+                        keyboardType = KeyboardType.Email
+                    ),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 4.dp)
+                )
+            }
         }
 
         item { HorizontalDivider() }

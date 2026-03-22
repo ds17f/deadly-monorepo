@@ -34,6 +34,7 @@ fun SettingsScreen(
     val includeShowsWithoutRecordings by viewModel.includeShowsWithoutRecordings.collectAsState()
     val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
     val authState by viewModel.authState.collectAsState()
+    val serverEnvironment by viewModel.serverEnvironment.collectAsState()
     val version = BuildConfig.VERSION_NAME
 
     LazyColumn(modifier = Modifier.fillMaxSize()) {
@@ -70,23 +71,39 @@ fun SettingsScreen(
                 }
             }
             is AuthState.SignedOut -> {
-                item {
-                    PreferenceRow(
-                        title = "Sign in with Google",
-                        onClick = {
-                            val activity = context as? Activity ?: return@PreferenceRow
-                            viewModel.signInWithGoogle(activity) { error ->
-                                Toast.makeText(context, error, Toast.LENGTH_SHORT).show()
+                if (serverEnvironment == "custom") {
+                    item {
+                        PreferenceRow(
+                            title = "Sign In (Dev)",
+                            onClick = { viewModel.fetchDevToken() },
+                            trailing = {
+                                Icon(
+                                    painter = IconResources.Navigation.ChevronRight(),
+                                    contentDescription = null,
+                                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
                             }
-                        },
-                        trailing = {
-                            Icon(
-                                painter = IconResources.Navigation.ChevronRight(),
-                                contentDescription = null,
-                                tint = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
-                    )
+                        )
+                    }
+                } else {
+                    item {
+                        PreferenceRow(
+                            title = "Sign in with Google",
+                            onClick = {
+                                val activity = context as? Activity ?: return@PreferenceRow
+                                viewModel.signInWithGoogle(activity) { error ->
+                                    Toast.makeText(context, error, Toast.LENGTH_SHORT).show()
+                                }
+                            },
+                            trailing = {
+                                Icon(
+                                    painter = IconResources.Navigation.ChevronRight(),
+                                    contentDescription = null,
+                                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
+                            }
+                        )
+                    }
                 }
             }
         }

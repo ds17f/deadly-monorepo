@@ -42,6 +42,9 @@ class AppPreferences @Inject constructor(
         private const val KEY_SOURCE_BADGE_STYLE = "source_badge_style"
         private const val KEY_USE_BETA_SHARE_LINKS = "use_beta_share_links"
         private const val KEY_USE_BETA_MODE = "use_beta_mode"
+        private const val KEY_SERVER_ENVIRONMENT = "server_environment"
+        private const val KEY_CUSTOM_SERVER_URL = "custom_server_url"
+        private const val KEY_CUSTOM_DEV_EMAIL = "custom_dev_email"
     }
 
     private val _includeShowsWithoutRecordings = MutableStateFlow(
@@ -149,48 +152,84 @@ class AppPreferences @Inject constructor(
         ShowArtworkService.badgeStyle = SourceBadgeStyle.fromString(value)
     }
 
-    // ── Beta Mode ──────────────────────────────────────────────────────
+    // ── Server Environment ───────────────────────────────────────────
 
-    private val _useBetaMode: MutableStateFlow<Boolean>
+    private val _serverEnvironment: MutableStateFlow<String>
+    private val _customServerUrl: MutableStateFlow<String>
+    private val _customDevEmail: MutableStateFlow<String>
 
     init {
-        // Read new key; fall back to legacy key for migration
-        val betaValue = if (prefs.contains(KEY_USE_BETA_MODE)) {
-            prefs.getBoolean(KEY_USE_BETA_MODE, false)
+        // Migrate: read new key first, fall back to legacy beta mode keys
+        val env = if (prefs.contains(KEY_SERVER_ENVIRONMENT)) {
+            prefs.getString(KEY_SERVER_ENVIRONMENT, "prod")!!
+        } else if (prefs.contains(KEY_USE_BETA_MODE)) {
+            if (prefs.getBoolean(KEY_USE_BETA_MODE, false)) "beta" else "prod"
         } else {
-            prefs.getBoolean(KEY_USE_BETA_SHARE_LINKS, false)
+            if (prefs.getBoolean(KEY_USE_BETA_SHARE_LINKS, false)) "beta" else "prod"
         }
-        _useBetaMode = MutableStateFlow(betaValue)
+        _serverEnvironment = MutableStateFlow(env)
+        _customServerUrl = MutableStateFlow(prefs.getString(KEY_CUSTOM_SERVER_URL, "") ?: "")
+        _customDevEmail = MutableStateFlow(prefs.getString(KEY_CUSTOM_DEV_EMAIL, "") ?: "")
     }
 
-    /** When true, uses beta API and share URLs. */
-    val useBetaMode: Boolean
-        get() = _useBetaMode.value
+    /** Server environment: "prod", "beta", or "custom". */
+    val serverEnvironment: StateFlow<String> = _serverEnvironment.asStateFlow()
 
-    val useBetaModeFlow: StateFlow<Boolean> = _useBetaMode
-
-    fun setUseBetaMode(value: Boolean) {
+    fun setServerEnvironment(value: String) {
+        val isBeta = value == "beta"
         prefs.edit()
-            .putBoolean(KEY_USE_BETA_MODE, value)
-            .putBoolean(KEY_USE_BETA_SHARE_LINKS, value) // keep legacy key in sync
+            .putString(KEY_SERVER_ENVIRONMENT, value)
+            .putBoolean(KEY_USE_BETA_MODE, isBeta)
+            .putBoolean(KEY_USE_BETA_SHARE_LINKS, isBeta)
             .apply()
-        _useBetaMode.value = value
+        _serverEnvironment.value = value
     }
 
-    /** The base URL for generating share links, respecting the beta toggle. */
+    /** Custom server URL for local dev testing (e.g. "http://192.168.1.100:3000"). */
+    val customServerUrl: StateFlow<String> = _customServerUrl.asStateFlow()
+
+    fun setCustomServerUrl(value: String) {
+        prefs.edit().putString(KEY_CUSTOM_SERVER_URL, value).apply()
+        _customServerUrl.value = value
+    }
+
+    /** Email for dev token endpoint on custom server. */
+    val customDevEmail: StateFlow<String> = _customDevEmail.asStateFlow()
+
+    fun setCustomDevEmail(value: String) {
+        prefs.edit().putString(KEY_CUSTOM_DEV_EMAIL, value).apply()
+        _customDevEmail.value = value
+    }
+
+    /** Backward-compatible computed property for auth key namespacing. */
+    val useBetaMode: Boolean
+        get() = _serverEnvironment.value == "beta"
+
+    val useBetaModeFlow: StateFlow<Boolean>
+        get() = MutableStateFlow(useBetaMode)
+
+    /** The base URL for generating share links. */
     val shareBaseUrl: String
-        get() = if (_useBetaMode.value) "https://share.beta.thedeadly.app" else "https://share.thedeadly.app"
+        get() = when (_serverEnvironment.value) {
+            "beta" -> "https://share.beta.thedeadly.app"
+            "custom" -> _customServerUrl.value
+            else -> "https://share.thedeadly.app"
+        }
 
     /** The base URL for API calls. */
     val apiBaseUrl: String
-        get() = if (_useBetaMode.value) "https://beta.thedeadly.app" else "https://thedeadly.app"
+        get() = when (_serverEnvironment.value) {
+            "beta" -> "https://beta.thedeadly.app"
+            "custom" -> _customServerUrl.value
+            else -> "https://thedeadly.app"
+        }
 
     // ── Backward-compatible aliases ──────────────────────────────────
 
-    /** @deprecated Use [useBetaModeFlow] instead. */
-    val useBetaShareLinks: StateFlow<Boolean> get() = _useBetaMode
+    /** @deprecated Use [serverEnvironment] instead. */
+    val useBetaShareLinks: StateFlow<Boolean> get() = MutableStateFlow(useBetaMode)
 
-    /** @deprecated Use [setUseBetaMode] instead. */
-    fun setUseBetaShareLinks(value: Boolean) = setUseBetaMode(value)
+    /** @deprecated Use [setServerEnvironment] instead. */
+    fun setUseBetaShareLinks(value: Boolean) = setServerEnvironment(if (value) "beta" else "prod")
 
 }
