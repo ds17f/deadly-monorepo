@@ -34,11 +34,12 @@ export const authConfig: AuthConfig = {
         // First sign-in: embed the auth user ID
         token.authUserId = user.id;
       }
-      // Resolve the app-level account ID
-      if (token.authUserId && !token.accountId) {
+      // Resolve the app-level account ID and admin flag
+      if (token.authUserId) {
         const appUser = getAppUserByAuthId(token.authUserId as string);
         if (appUser) {
           token.accountId = appUser.id;
+          token.isAdmin = appUser.is_admin === 1;
         }
       }
       return token;
@@ -49,6 +50,9 @@ export const authConfig: AuthConfig = {
       }
       if (token.authUserId) {
         (session.user as unknown as Record<string, unknown>).authUserId = token.authUserId;
+      }
+      if (token.isAdmin) {
+        (session.user as unknown as Record<string, unknown>).isAdmin = token.isAdmin;
       }
       return session;
     },
