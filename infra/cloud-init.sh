@@ -21,8 +21,8 @@ chmod 600 /home/deploy/.ssh/authorized_keys
 echo 'deploy ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/deploy
 chmod 440 /etc/sudoers.d/deploy
 
-# ── 2GB swap (safety net for Docker image builds) ───────────────────────
-fallocate -l 2G /swapfile
+# ── 1GB swap (images pulled from registry, no local builds) ──────────
+fallocate -l 1G /swapfile
 chmod 600 /swapfile
 mkswap /swapfile
 swapon /swapfile

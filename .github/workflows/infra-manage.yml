@@ -18,15 +18,24 @@ on:
           - digitalocean
           - oci
         default: digitalocean
+      environment:
+        description: "Environment to manage"
+        required: true
+        type: choice
+        options:
+          - alpha
+          - beta
+          - prod
+        default: alpha
 
 permissions:
   contents: read
 
 jobs:
   infra:
-    name: "${{ inputs.action }} (${{ inputs.provider }})"
+    name: "${{ inputs.action }} ${{ inputs.environment }} (${{ inputs.provider }})"
     runs-on: ubuntu-latest
-    environment: alpha
+    environment: ${{ inputs.environment }}
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.B2_TFSTATE_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.B2_TFSTATE_APP_KEY }}
@@ -56,26 +65,61 @@ jobs:
         working-directory: ${{ env.TF_DIR }}
         run: terraform init
 
+      - name: Resolve Terraform target
+        id: target
+        run: |
+          ENV="${{ inputs.environment }}"
+          PROVIDER="${{ inputs.provider }}"
+          if [ "$PROVIDER" = "digitalocean" ]; then
+            echo "droplet=-target=digitalocean_droplet.${ENV}" >> "$GITHUB_OUTPUT"
+            echo "firewall=-target=digitalocean_firewall.${ENV}" >> "$GITHUB_OUTPUT"
+            echo "output_key=${ENV}_ip" >> "$GITHUB_OUTPUT"
+          else
+            echo "droplet=-target=oci_core_instance.${ENV}" >> "$GITHUB_OUTPUT"
+            echo "firewall=" >> "$GITHUB_OUTPUT"
+            echo "output_key=${ENV}_ip" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Terraform Apply
         if: inputs.action == 'launch'
         working-directory: ${{ env.TF_DIR }}
-        run: terraform apply -auto-approve
+        run: |
+          terraform apply -auto-approve \
+            ${{ steps.target.outputs.droplet }} \
+            ${{ steps.target.outputs.firewall }}
 
       - name: Terraform Destroy
         if: inputs.action == 'destroy'
         working-directory: ${{ env.TF_DIR }}
-        run: terraform destroy -auto-approve
+        run: |
+          terraform destroy -auto-approve \
+            ${{ steps.target.outputs.droplet }} \
+            ${{ steps.target.outputs.firewall }}
 
       - name: Get outputs
         if: inputs.action == 'launch'
         id: outputs
         working-directory: ${{ env.TF_DIR }}
         run: |
-          if [ "${{ inputs.provider }}" = "digitalocean" ]; then
-            echo "ip=$(terraform output -raw droplet_ip)" >> "$GITHUB_OUTPUT"
-          else
-            echo "ip=$(terraform output -raw instance_public_ip)" >> "$GITHUB_OUTPUT"
-          fi
+          echo "ip=$(terraform output -raw ${{ steps.target.outputs.output_key }})" >> "$GITHUB_OUTPUT"
+
+      - name: Update GitHub environment variable
+        if: inputs.action == 'launch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          IP="${{ steps.outputs.outputs.ip }}"
+          ENV="${{ inputs.environment }}"
+          REPO="${{ github.repository }}"
+
+          # Create or update SERVER_IP variable in the GitHub environment
+          # Try update first, create if it doesn't exist
+          gh api -X PATCH "repos/${REPO}/environments/${ENV}/variables/SERVER_IP" \
+            -f name=SERVER_IP -f value="${IP}" 2>/dev/null \
+          || gh api -X POST "repos/${REPO}/environments/${ENV}/variables" \
+            -f name=SERVER_IP -f value="${IP}"
+
+          echo "Set SERVER_IP=${IP} for environment '${ENV}'"
 
       - name: Wait for cloud-init
         if: inputs.action == 'launch'
@@ -107,6 +151,7 @@ jobs:
           echo "| Field | Value |" >> "$GITHUB_STEP_SUMMARY"
           echo "|-------|-------|" >> "$GITHUB_STEP_SUMMARY"
           echo "| Provider | ${{ inputs.provider }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Environment | ${{ inputs.environment }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| IP | \`${IP}\` |" >> "$GITHUB_STEP_SUMMARY"
           echo "| SSH | \`ssh -i ssh-key deploy@${IP}\` |" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
@@ -122,5 +167,7 @@ jobs:
         run: |
           echo "## Infrastructure Destroyed" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "Provider: **${{ inputs.provider }}**" >> "$GITHUB_STEP_SUMMARY"
-          echo "All resources have been torn down." >> "$GITHUB_STEP_SUMMARY"
+          echo "| Field | Value |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|-------|-------|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Provider | **${{ inputs.provider }}** |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Environment | **${{ inputs.environment }}** |" >> "$GITHUB_STEP_SUMMARY"

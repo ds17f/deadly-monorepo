@@ -1,10 +1,18 @@
-name: Deploy Alpha
+name: Deploy
 
 on:
   workflow_dispatch:
     inputs:
+      environment:
+        description: "Target environment"
+        type: choice
+        options:
+          - alpha
+          - beta
+          - prod
+        default: alpha
       ref:
-        description: "Git ref to deploy"
+        description: "Git ref to deploy (resolves to image tag)"
         default: "main"
         type: string
 
@@ -13,12 +21,11 @@ permissions:
 
 jobs:
   deploy:
-    name: "Deploy to alpha"
+    name: "Deploy to ${{ inputs.environment }}"
     runs-on: ubuntu-latest
-    environment: alpha
+    environment: ${{ inputs.environment }}
     env:
-      AWS_ACCESS_KEY_ID: ${{ secrets.B2_TFSTATE_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.B2_TFSTATE_APP_KEY }}
+      REGISTRY: ghcr.io/${{ github.repository }}
 
     steps:
       - name: Checkout
@@ -26,17 +33,27 @@ jobs:
         with:
           ref: ${{ inputs.ref }}
 
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3.1.2
+      - name: Resolve image tag
+        id: image
+        run: echo "tag=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
-      - name: Terraform Init
-        working-directory: infra/digitalocean
-        run: terraform init
+      - name: Verify images exist
+        run: |
+          TAG="${{ steps.image.outputs.tag }}"
+          echo "Checking for images tagged ${TAG}..."
+          docker manifest inspect "ghcr.io/${{ github.repository }}/api:${TAG}" > /dev/null
+          docker manifest inspect "ghcr.io/${{ github.repository }}/ui:${TAG}" > /dev/null
+          echo "Both images found."
 
       - name: Get server IP
         id: server
-        working-directory: infra/digitalocean
-        run: echo "ip=$(terraform output -raw droplet_ip)" >> "$GITHUB_OUTPUT"
+        run: |
+          IP="${{ vars.SERVER_IP }}"
+          if [ -z "$IP" ]; then
+            echo "::error::SERVER_IP not set for environment '${{ inputs.environment }}'"
+            exit 1
+          fi
+          echo "ip=${IP}" >> "$GITHUB_OUTPUT"
 
       - name: Setup SSH
         run: |
@@ -45,69 +62,17 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H "${{ steps.server.outputs.ip }}" >> ~/.ssh/known_hosts 2>/dev/null || true
 
-      - name: Clone or update repo on server
+      - name: Copy config and static files to server
         env:
           SERVER: deploy@${{ steps.server.outputs.ip }}
-          REPO: ${{ github.repository }}
-          REF: ${{ inputs.ref }}
         run: |
-          ssh "$SERVER" bash -s <<SCRIPT
-            set -euo pipefail
-            if [ -d /opt/deadly/.git ]; then
-              echo "Updating existing clone..."
-              cd /opt/deadly
-              git fetch origin
-              git checkout "${REF}" 2>/dev/null || git checkout "origin/${REF}"
-              git pull origin "${REF}" 2>/dev/null || true
-            else
-              echo "Cloning fresh..."
-              # cloud-init may have created /opt/deadly already; clone beside it then swap
-              rm -rf /tmp/deadly-clone
-              git clone "https://github.com/${REPO}.git" /tmp/deadly-clone
-              # preserve cloud-init marker if present
-              if [ -f /opt/deadly/.cloud-init-complete ]; then
-                cp /opt/deadly/.cloud-init-complete /tmp/deadly-clone/
-              fi
-              sudo rm -rf /opt/deadly
-              sudo mv /tmp/deadly-clone /opt/deadly
-              sudo chown -R deploy:deploy /opt/deadly
-              cd /opt/deadly
-              git checkout "${REF}" 2>/dev/null || git checkout "origin/${REF}"
-            fi
-            echo "HEAD: \$(git rev-parse --short HEAD)"
-          SCRIPT
-
-      - name: Read data version
-        id: data
-        run: echo "version=$(cat data/version)" >> "$GITHUB_OUTPUT"
-
-      - name: Download and extract data on server
-        env:
-          SERVER: deploy@${{ steps.server.outputs.ip }}
-          DATA_VERSION: ${{ steps.data.outputs.version }}
-          REPO: ${{ github.repository }}
-        run: |
-          ssh "$SERVER" bash -s <<SCRIPT
-            set -euo pipefail
-            cd /opt/deadly
-
-            echo "Downloading data v${DATA_VERSION}..."
-            curl -fSL -o /tmp/data.zip \
-              "https://github.com/${REPO}/releases/download/data-v${DATA_VERSION}/data.zip"
-
-            echo "Extracting to ui/data/..."
-            rm -rf ui/data
-            mkdir -p ui/data
-            sudo apt-get install -y -qq unzip >/dev/null 2>&1 || true
-            unzip -qo /tmp/data.zip -d ui/data/
-            rm /tmp/data.zip
-
-            echo "Data: \$(ls ui/data/shows/ | wc -l) shows, \$(ls ui/data/recordings/ | wc -l) recordings"
-          SCRIPT
+          scp docker-compose.yml Caddyfile "$SERVER:/opt/deadly/"
+          rsync -a --delete web/ "$SERVER:/opt/deadly/web/"
 
       - name: Write environment file
         env:
           SERVER: deploy@${{ steps.server.outputs.ip }}
+          IMAGE_TAG: ${{ steps.image.outputs.tag }}
           AUTH_SECRET: ${{ secrets.AUTH_SECRET }}
           AUTH_URL: ${{ secrets.AUTH_URL }}
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
@@ -120,9 +85,20 @@ jobs:
           APPLE_PRIVATE_KEY: ${{ secrets.APPLE_PRIVATE_KEY }}
           ANALYTICS_API_KEY: ${{ secrets.ANALYTICS_API_KEY }}
         run: |
+          SITE_ADDRESS="${{ vars.SITE_ADDRESS }}"
+          SHARE_ADDRESS="${{ vars.SHARE_ADDRESS }}"
+          if [ -z "$SITE_ADDRESS" ] || [ -z "$SHARE_ADDRESS" ]; then
+            echo "::error::SITE_ADDRESS or SHARE_ADDRESS not set for environment '${{ inputs.environment }}'"
+            exit 1
+          fi
+
           # Escape newlines in PEM key so it stays on one line in .env
           APPLE_PRIVATE_KEY_ESCAPED=$(printf '%s' "$APPLE_PRIVATE_KEY" | sed ':a;N;$!ba;s/\n/\\n/g')
           printf '%s\n' \
+            "IMAGE_TAG=${IMAGE_TAG}" \
+            "REGISTRY=${REGISTRY}" \
+            "SITE_ADDRESS=${SITE_ADDRESS}" \
+            "SHARE_ADDRESS=${SHARE_ADDRESS}" \
             "AUTH_SECRET=${AUTH_SECRET}" \
             "AUTH_URL=${AUTH_URL}" \
             "GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}" \
@@ -137,6 +113,7 @@ jobs:
             | ssh "$SERVER" 'cat > /opt/deadly/.env && chmod 600 /opt/deadly/.env'
 
       - name: Backup database to B2
+        if: inputs.environment == 'prod'
         env:
           SERVER: deploy@${{ steps.server.outputs.ip }}
           AWS_ACCESS_KEY_ID: ${{ secrets.B2_BACKUPS_KEY_ID }}
@@ -168,7 +145,7 @@ jobs:
           ssh "$SERVER" "rm -f /tmp/users-backup.db"
           rm -f "/tmp/users-${TIMESTAMP}.db"
 
-      - name: Build and start stack
+      - name: Deploy
         env:
           SERVER: deploy@${{ steps.server.outputs.ip }}
         run: |
@@ -178,32 +155,11 @@ jobs:
 
             mkdir -p api-data ui-out
 
-            # One-time migration from old named volume (ui_static)
-            if docker volume inspect deadly_ui_static &>/dev/null; then
-              echo "Migrating UI from named volume to bind mount..."
-              docker run --rm --user "$(id -u):$(id -g)" \
-                -v deadly_ui_static:/src:ro -v /opt/deadly/ui-out:/dst \
-                busybox sh -c 'cp -r /src/. /dst/'
-              docker compose rm -sf ui caddy 2>/dev/null || true
-              docker volume rm deadly_ui_static 2>/dev/null || true
-            fi
+            # Pull new images
+            echo "Pulling images..."
+            docker compose pull api ui
 
-            # One-time migration from old api_data named volume
-            if docker volume inspect deadly_api_data &>/dev/null; then
-              echo "Migrating data from named volume to bind mount..."
-              docker run --rm --user "$(id -u):$(id -g)" \
-                -v deadly_api_data:/src:ro -v /opt/deadly/api-data:/dst \
-                busybox sh -c 'cp -r /src/. /dst/'
-              docker volume rm deadly_api_data 2>/dev/null || true
-            fi
-
-            # Pre-build ALL images (Caddy keeps running the whole time)
-            # --no-cache on ui to ensure source changes are picked up
-            echo "Pre-building all images..."
-            docker compose build --no-cache ui
-            docker compose build api
-
-            # Extract new UI static files to staging directory
+            # Extract UI static files to staging directory
             echo "Extracting static files..."
             sudo rm -rf ui-out-next
             mkdir -p ui-out-next
@@ -212,16 +168,13 @@ jobs:
               -v /opt/deadly/ui-out-next:/extract \
               ui sh -c 'cp -r /out/. /extract/' </dev/null
 
-            # Sync new files into ui-out in-place (no directory swap)
-            # rsync replaces each file atomically (write tmp + rename),
-            # and the directory inode stays the same so the bind mount works
-            # — Caddy keeps serving without a restart
+            # Sync new files into ui-out in-place (zero-downtime)
             echo "Syncing UI files..."
             rsync -a --delete ui-out-next/ ui-out/
             sudo rm -rf ui-out-next
 
-            # Fast container swap — images already built, just restart
-            echo "Swapping containers..."
+            # Restart services
+            echo "Restarting containers..."
             docker compose up -d api redis caddy
 
             docker system prune -f
@@ -230,7 +183,7 @@ jobs:
 
       - name: Health check
         env:
-          SITE: https://beta.thedeadly.app
+          SITE: https://${{ vars.SITE_ADDRESS }}
         run: |
           echo "Waiting for $SITE/api/health ..."
           for i in $(seq 1 24); do
@@ -248,11 +201,13 @@ jobs:
         if: always()
         env:
           SERVER_IP: ${{ steps.server.outputs.ip }}
-          DATA_VERSION: ${{ steps.data.outputs.version }}
+          IMAGE_TAG: ${{ steps.image.outputs.tag }}
           REF: ${{ inputs.ref }}
+          ENV: ${{ inputs.environment }}
+          SITE: ${{ vars.SITE_ADDRESS }}
         run: |
           HEALTH="unknown"
-          if curl -fsSk "https://beta.thedeadly.app/api/health" -o /dev/null 2>/dev/null; then
+          if curl -fsSk "https://${SITE}/api/health" -o /dev/null 2>/dev/null; then
             HEALTH="healthy"
           else
             HEALTH="unhealthy"
@@ -263,9 +218,10 @@ jobs:
 
           | Field | Value |
           |-------|-------|
+          | Environment | \`${ENV}\` |
           | Ref | \`${REF}\` |
-          | Data version | \`${DATA_VERSION}\` |
+          | Image tag | \`${IMAGE_TAG::12}\` |
           | Server IP | \`${SERVER_IP}\` |
           | Health | ${HEALTH} |
-          | Site | [beta.thedeadly.app](https://beta.thedeadly.app) |
+          | Site | [${SITE}](https://${SITE}) |
           EOF

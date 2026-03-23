@@ -1,5 +1,5 @@
-# Production + Beta full site
-{$SITE_ADDRESS:thedeadly.app, beta.thedeadly.app} {
+# Main site — SITE_ADDRESS set per environment in .env
+{$SITE_ADDRESS} {
 	handle /api/* {
 		reverse_proxy api:3001
 	}
@@ -15,8 +15,8 @@
 	}
 }
 
-# Production + Beta share site
-{$SHARE_ADDRESS:share.thedeadly.app, share.beta.thedeadly.app} {
+# Share site — SHARE_ADDRESS set per environment in .env
+{$SHARE_ADDRESS} {
 	root * /srv/share
 	file_server
 	try_files {path} {path}/index.html /index.html

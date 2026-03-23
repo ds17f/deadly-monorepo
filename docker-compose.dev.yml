@@ -1,5 +1,8 @@
 services:
   ui:
+    build:
+      context: ./ui
+      dockerfile: Dockerfile
     volumes:
       - ui_static:/out
 

@@ -1,8 +1,6 @@
 services:
   ui:
-    build:
-      context: ./ui
-      dockerfile: Dockerfile
+    image: ${REGISTRY:-ghcr.io/ds17f/deadly-monorepo}/ui:${IMAGE_TAG:-latest}
     restart: "no"
     # no volumes — files extracted by deploy script
 
@@ -23,9 +21,7 @@ services:
       - api
 
   api:
-    build:
-      context: ./api
-      dockerfile: Dockerfile
+    image: ${REGISTRY:-ghcr.io/ds17f/deadly-monorepo}/api:${IMAGE_TAG:-latest}
     restart: unless-stopped
     environment:
       - NODE_ENV=production
