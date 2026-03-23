@@ -7,6 +7,9 @@ services:
   caddy:
     image: caddy:2-alpine
     restart: unless-stopped
+    environment:
+      - SITE_ADDRESS=${SITE_ADDRESS}
+      - SHARE_ADDRESS=${SHARE_ADDRESS}
     ports:
       - "80:80"
       - "443:443"
