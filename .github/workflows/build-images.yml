@@ -1,0 +1,87 @@
+name: Build Images
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - api/**
+      - ui/**
+      - data/version
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Git ref to build"
+        default: "main"
+        type: string
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build:
+    name: Build & push images
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+
+      - name: Read data version
+        id: data
+        run: echo "version=$(cat data/version)" >> "$GITHUB_OUTPUT"
+
+      - name: Download data for UI build
+        run: |
+          curl -fSL -o /tmp/data.zip \
+            "https://github.com/${{ github.repository }}/releases/download/data-v${{ steps.data.outputs.version }}/data.zip"
+          mkdir -p ui/data
+          unzip -qo /tmp/data.zip -d ui/data/
+          echo "Data: $(ls ui/data/shows/ | wc -l) shows, $(ls ui/data/recordings/ | wc -l) recordings"
+
+      - name: Login to GHCR
+        uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567 # v3.3.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@988b5a0280414f521da01fcc63a27aeeb4b104db # v3.6.1
+
+      - name: Build and push API image
+        uses: docker/build-push-action@4f58ea79222b3b9dc2c8bbdd6debcef730109a75 # v6.9.0
+        with:
+          context: ./api
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}/api:${{ github.sha }}
+            ghcr.io/${{ github.repository }}/api:latest
+
+      - name: Build and push UI image
+        uses: docker/build-push-action@4f58ea79222b3b9dc2c8bbdd6debcef730109a75 # v6.9.0
+        with:
+          context: ./ui
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}/ui:${{ github.sha }}
+            ghcr.io/${{ github.repository }}/ui:latest
+
+      - name: Summary
+        run: |
+          SHA="${{ github.sha }}"
+          cat >> "$GITHUB_STEP_SUMMARY" <<EOF
+          ## Images Published
+
+          | Image | Tag |
+          |-------|-----|
+          | \`ghcr.io/${{ github.repository }}/api\` | \`${SHA}\` |
+          | \`ghcr.io/${{ github.repository }}/ui\` | \`${SHA}\` |
+
+          Deploy with:
+          \`\`\`
+          make infra-deploy ENV=beta REF=${SHA::7}
+          \`\`\`
+          EOF

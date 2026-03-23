@@ -14,7 +14,7 @@
 .PHONY: android-remote-emulator android-remote-emu-list android-remote-emu-stop android-remote-run-emulator
 .PHONY: android-auto-dhu android-remote-auto-dhu
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
-.PHONY: infra-init infra-plan infra-apply infra-retry infra-destroy infra-output infra-deploy infra-logs infra-ssh
+.PHONY: infra-init infra-plan infra-apply infra-retry infra-destroy infra-output infra-deploy infra-promote infra-logs infra-ssh images-build
 .PHONY: data-download data-generate data-package data-download-stage01 data-upload-stage01 data-collect data-release data-clean
 .PHONY: db-backup-list db-restore
 
@@ -214,9 +214,11 @@ help:
 	@echo "  infra-retry      - Retry OCI instance creation until capacity available (make infra-retry INTERVAL=5)"
 	@echo "  infra-destroy    - Tear down all infrastructure"
 	@echo "  infra-output     - Show current Terraform outputs (instance IP, etc.)"
-	@echo "  infra-deploy     - Deploy alpha stack via GHA (current branch)"
-	@echo "  infra-logs       - View production logs (SERVICE=api, LINES=100)"
-	@echo "  infra-ssh        - SSH into production server"
+	@echo "  images-build     - Build & push images to GHCR (current branch)"
+	@echo "  infra-deploy     - Deploy to environment (ENV=beta|prod, current branch)"
+	@echo "  infra-promote    - Promote beta image tag to prod"
+	@echo "  infra-logs       - View logs (ENV=beta|prod, SERVICE=api, LINES=100)"
+	@echo "  infra-ssh        - SSH into server (ENV=beta|prod)"
 	@echo "  setup-infra-secrets - Upload infra secrets (DO, B2, SSH) to GitHub"
 	@echo ""
 	@echo "DATA PIPELINE:"
@@ -639,27 +641,44 @@ infra-destroy:
 infra-output:
 	@cd $(INFRA_DIR) && $(TERRAFORM) output
 
-# Deploy alpha stack via GHA (triggers infra-deploy.yml)
-infra-deploy:
-	gh workflow run infra-deploy.yml -f ref=$(shell git rev-parse --abbrev-ref HEAD)
+# Build and push images to GHCR from current branch
+images-build:
+	gh workflow run build-images.yml -f ref=$(shell git rev-parse --abbrev-ref HEAD)
 
-# Resolve production server IP from DigitalOcean API (uses token from terraform.tfvars)
+# Deploy to an environment (ENV=beta|prod)
+#   make infra-deploy              # deploy current branch to beta
+#   make infra-deploy ENV=prod     # deploy current branch to prod
+ENV ?= beta
+infra-deploy:
+	gh workflow run infra-deploy.yml -f environment=$(ENV) -f ref=$(shell git rev-parse --abbrev-ref HEAD)
+
+# Promote: deploy whatever image tag is on beta to prod
+infra-promote:
+	@BETA_TAG=$$(ssh -i $(PROD_SSH_KEY) deploy@$(BETA_IP) "grep '^IMAGE_TAG=' /opt/deadly/.env | cut -d= -f2"); \
+	echo "Promoting image tag: $$BETA_TAG"; \
+	gh workflow run infra-deploy.yml -f environment=prod -f ref=$$BETA_TAG
+
+# Resolve server IPs from DigitalOcean API
 PROD_SSH_KEY   ?= ssh-key-2026-03-15.key
 PROD_DO_TOKEN  = $(shell grep '^do_token' infra/digitalocean/terraform.tfvars 2>/dev/null | cut -d'"' -f2)
 PROD_IP       ?= $(shell curl -sf -H "Authorization: Bearer $(PROD_DO_TOKEN)" \
-                  "https://api.digitalocean.com/v2/droplets?tag_name=deadly" \
+                  "https://api.digitalocean.com/v2/droplets?tag_name=prod" \
+                  | python3 -c "import sys,json;d=json.load(sys.stdin)['droplets'][0]['networks']['v4'];print(next(n['ip_address'] for n in d if n['type']=='public'))" 2>/dev/null)
+BETA_IP       ?= $(shell curl -sf -H "Authorization: Bearer $(PROD_DO_TOKEN)" \
+                  "https://api.digitalocean.com/v2/droplets?tag_name=beta" \
                   | python3 -c "import sys,json;d=json.load(sys.stdin)['droplets'][0]['networks']['v4'];print(next(n['ip_address'] for n in d if n['type']=='public'))" 2>/dev/null)
 
-# View logs from production server (all services, or specify SERVICE=api)
-#   make infra-logs                # all services, last 100 lines + follow
+# View logs from a server (ENV=beta|prod, SERVICE=api, LINES=100)
+#   make infra-logs                # beta, all services, last 100 lines + follow
+#   make infra-logs ENV=prod       # prod logs
 #   make infra-logs SERVICE=api    # only API logs
 #   make infra-logs LINES=500      # last 500 lines
 infra-logs:
-	@ssh -i $(PROD_SSH_KEY) deploy@$(PROD_IP) "cd /opt/deadly && docker compose logs $(SERVICE) --tail $(or $(LINES),100) -f"
+	@ssh -i $(PROD_SSH_KEY) deploy@$(if $(filter prod,$(ENV)),$(PROD_IP),$(BETA_IP)) "cd /opt/deadly && docker compose logs $(SERVICE) --tail $(or $(LINES),100) -f"
 
-# SSH into production server
+# SSH into a server (ENV=beta|prod)
 infra-ssh:
-	@ssh -i $(PROD_SSH_KEY) deploy@$(PROD_IP)
+	@ssh -i $(PROD_SSH_KEY) deploy@$(if $(filter prod,$(ENV)),$(PROD_IP),$(BETA_IP))
 
 # =============================================================================
 # DATA PIPELINE (delegates to data/Makefile)
