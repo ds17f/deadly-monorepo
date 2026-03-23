@@ -82,6 +82,6 @@ jobs:
 
           Deploy with:
           \`\`\`
-          make infra-deploy ENV=beta REF=${SHA::7}
+          make web-deploy ENV=beta REF=${SHA::7}
           \`\`\`
           EOF
