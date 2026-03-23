@@ -325,6 +325,7 @@ setup-api-secrets:
 	@gh secret set APPLE_TEAM_ID --env alpha --body "$$(grep '^APPLE_TEAM_ID=' api/.env | cut -d= -f2-)"
 	@gh secret set APPLE_KEY_ID --env alpha --body "$$(grep '^APPLE_KEY_ID=' api/.env | cut -d= -f2-)"
 	@gh secret set APPLE_PRIVATE_KEY --env alpha --body "$$(grep '^APPLE_PRIVATE_KEY=' api/.env | cut -d= -f2-)"
+	@gh secret set ANALYTICS_API_KEY --env alpha --body "$$(grep '^ANALYTICS_API_KEY=' api/.env | cut -d= -f2-)"
 	@echo "Done. Secrets set in 'alpha' environment."
 
 # =============================================================================
