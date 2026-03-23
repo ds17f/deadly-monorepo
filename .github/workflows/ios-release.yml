@@ -58,6 +58,7 @@ jobs:
         cat > iosApp/deadly/App/Secrets.swift << 'SWIFT'
         enum Secrets {
             static let geniusAccessToken = "${{ secrets.GENIUS_ACCESS_TOKEN }}"
+            static let analyticsApiKey = "${{ secrets.ANALYTICS_API_KEY }}"
         }
         SWIFT
 
