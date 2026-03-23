@@ -103,24 +103,6 @@ jobs:
         run: |
           echo "ip=$(terraform output -raw ${{ steps.target.outputs.output_key }})" >> "$GITHUB_OUTPUT"
 
-      - name: Update GitHub environment variable
-        if: inputs.action == 'launch'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          IP="${{ steps.outputs.outputs.ip }}"
-          ENV="${{ inputs.environment }}"
-          REPO="${{ github.repository }}"
-
-          # Create or update SERVER_IP variable in the GitHub environment
-          # Try update first, create if it doesn't exist
-          gh api -X PATCH "repos/${REPO}/environments/${ENV}/variables/SERVER_IP" \
-            -f name=SERVER_IP -f value="${IP}" 2>/dev/null \
-          || gh api -X POST "repos/${REPO}/environments/${ENV}/variables" \
-            -f name=SERVER_IP -f value="${IP}"
-
-          echo "Set SERVER_IP=${IP} for environment '${ENV}'"
-
       - name: Wait for cloud-init
         if: inputs.action == 'launch'
         run: |

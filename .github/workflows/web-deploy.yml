@@ -1,4 +1,4 @@
-name: Deploy
+name: Web Deploy
 
 on:
   workflow_dispatch:
@@ -26,6 +26,8 @@ jobs:
     environment: ${{ inputs.environment }}
     env:
       REGISTRY: ghcr.io/${{ github.repository }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.B2_TFSTATE_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.B2_TFSTATE_APP_KEY }}
 
     steps:
       - name: Checkout
@@ -45,15 +47,28 @@ jobs:
           docker manifest inspect "ghcr.io/${{ github.repository }}/ui:${TAG}" > /dev/null
           echo "Both images found."
 
-      - name: Get server IP
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3.1.2
+        with:
+          terraform_wrapper: false
+
+      - name: Get server IP from Terraform
         id: server
         run: |
-          IP="${{ vars.SERVER_IP }}"
+          cd infra/digitalocean
+          cat > terraform.tfvars <<EOF
+          do_token = "${{ secrets.DO_API_TOKEN }}"
+          EOF
+          echo "${{ secrets.SSH_PUBLIC_KEY }}" > ../../ssh-key-2026-03-15.key.pub
+
+          terraform init -input=false > /dev/null
+          IP=$(terraform output -raw ${{ inputs.environment }}_ip 2>/dev/null || true)
           if [ -z "$IP" ]; then
-            echo "::error::SERVER_IP not set for environment '${{ inputs.environment }}'"
+            echo "::error::No droplet found for environment '${{ inputs.environment }}' in Terraform state"
             exit 1
           fi
           echo "ip=${IP}" >> "$GITHUB_OUTPUT"
+          echo "Server IP: ${IP}"
 
       - name: Setup SSH
         run: |

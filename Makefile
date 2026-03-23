@@ -5,7 +5,7 @@
 .PHONY: ui-remote-install ui-remote-dev ui-remote-build ui-remote-dev-build ui-dev-build
 .PHONY: android-release android-release-version android-release-dry-run android-install
 .PHONY: ios-release ios-release-version ios-release-dry-run
-.PHONY: setup-signing setup-github-secrets setup-api-secrets setup-hooks
+.PHONY: setup-signing setup-github-secrets setup-env-secrets setup-hooks
 .PHONY: android-build-release android-build-bundle android-deploy-testing
 .PHONY: android-promote-alpha android-promote-beta android-promote-production
 .PHONY: ios-build-release ios-deploy-testflight
@@ -14,7 +14,7 @@
 .PHONY: android-remote-emulator android-remote-emu-list android-remote-emu-stop android-remote-run-emulator
 .PHONY: android-auto-dhu android-remote-auto-dhu
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
-.PHONY: infra-init infra-plan infra-apply infra-retry infra-destroy infra-output infra-deploy infra-promote infra-logs infra-ssh images-build
+.PHONY: infra-init infra-plan infra-apply infra-retry infra-destroy infra-output web-deploy web-promote infra-logs infra-ssh images-build
 .PHONY: data-download data-generate data-package data-download-stage01 data-upload-stage01 data-collect data-release data-clean
 .PHONY: db-backup-list db-restore
 
@@ -157,7 +157,7 @@ help:
 	@echo "  setup-hooks          - Configure git to use .githooks/ (run once after clone)"
 	@echo "  setup-signing        - Generate keystore and .secrets/ setup"
 	@echo "  setup-github-secrets - Upload all secrets to GitHub repository"
-	@echo "  setup-api-secrets    - Upload API/OAuth secrets to GitHub 'alpha' environment"
+	@echo "  setup-env-secrets    - Upload app secrets to a GitHub environment (ENV=alpha)"
 	@echo ""
 	@echo "ANDROID FASTLANE:"
 	@echo "  android-build-release - Build signed Android release APK"
@@ -215,8 +215,8 @@ help:
 	@echo "  infra-destroy    - Tear down all infrastructure"
 	@echo "  infra-output     - Show current Terraform outputs (instance IP, etc.)"
 	@echo "  images-build     - Build & push images to GHCR (current branch)"
-	@echo "  infra-deploy     - Deploy to environment (ENV=beta|prod, current branch)"
-	@echo "  infra-promote    - Promote beta image tag to prod"
+	@echo "  web-deploy       - Deploy web stack to environment (ENV=beta|prod, current branch)"
+	@echo "  web-promote      - Promote beta image tag to prod"
 	@echo "  infra-logs       - View logs (ENV=beta|prod, SERVICE=api, LINES=100)"
 	@echo "  infra-ssh        - SSH into server (ENV=beta|prod)"
 	@echo "  setup-infra-secrets - Upload infra secrets (DO, B2, SSH) to GitHub"
@@ -317,18 +317,8 @@ setup-signing:
 setup-github-secrets:
 	@./scripts/setup-github-secrets.sh
 
-setup-api-secrets:
-	@echo "Uploading API secrets to GitHub 'alpha' environment..."
-	@gh secret set AUTH_SECRET --env alpha --body "$$(grep '^AUTH_SECRET=' api/.env | cut -d= -f2-)"
-	@gh secret set AUTH_URL --env alpha --body "https://beta.thedeadly.app"
-	@gh secret set GOOGLE_CLIENT_ID --env alpha --body "$$(grep '^GOOGLE_CLIENT_ID=' api/.env | cut -d= -f2-)"
-	@gh secret set GOOGLE_CLIENT_SECRET --env alpha --body "$$(grep '^GOOGLE_CLIENT_SECRET=' api/.env | cut -d= -f2-)"
-	@gh secret set APPLE_CLIENT_ID --env alpha --body "$$(grep '^APPLE_CLIENT_ID=' api/.env | cut -d= -f2-)"
-	@gh secret set APPLE_TEAM_ID --env alpha --body "$$(grep '^APPLE_TEAM_ID=' api/.env | cut -d= -f2-)"
-	@gh secret set APPLE_KEY_ID --env alpha --body "$$(grep '^APPLE_KEY_ID=' api/.env | cut -d= -f2-)"
-	@gh secret set APPLE_PRIVATE_KEY --env alpha --body "$$(grep '^APPLE_PRIVATE_KEY=' api/.env | cut -d= -f2-)"
-	@gh secret set ANALYTICS_API_KEY --env alpha --body "$$(grep '^ANALYTICS_API_KEY=' api/.env | cut -d= -f2-)"
-	@echo "Done. Secrets set in 'alpha' environment."
+setup-env-secrets:
+	@./scripts/setup-env-secrets.sh $(ENV)
 
 # =============================================================================
 # ANDROID FASTLANE
@@ -645,18 +635,18 @@ infra-output:
 images-build:
 	gh workflow run build-images.yml -f ref=$(shell git rev-parse --abbrev-ref HEAD)
 
-# Deploy to an environment (ENV=beta|prod)
-#   make infra-deploy              # deploy current branch to beta
-#   make infra-deploy ENV=prod     # deploy current branch to prod
+# Deploy web stack to an environment (ENV=beta|prod)
+#   make web-deploy              # deploy current branch to beta
+#   make web-deploy ENV=prod     # deploy current branch to prod
 ENV ?= beta
-infra-deploy:
-	gh workflow run infra-deploy.yml -f environment=$(ENV) -f ref=$(shell git rev-parse --abbrev-ref HEAD)
+web-deploy:
+	gh workflow run web-deploy.yml -f environment=$(ENV) -f ref=$(shell git rev-parse --abbrev-ref HEAD)
 
 # Promote: deploy whatever image tag is on beta to prod
-infra-promote:
+web-promote:
 	@BETA_TAG=$$(ssh -i $(PROD_SSH_KEY) deploy@$(BETA_IP) "grep '^IMAGE_TAG=' /opt/deadly/.env | cut -d= -f2"); \
 	echo "Promoting image tag: $$BETA_TAG"; \
-	gh workflow run infra-deploy.yml -f environment=prod -f ref=$$BETA_TAG
+	gh workflow run web-deploy.yml -f environment=prod -f ref=$$BETA_TAG
 
 # Resolve server IPs from DigitalOcean API
 PROD_SSH_KEY   ?= ssh-key-2026-03-15.key
