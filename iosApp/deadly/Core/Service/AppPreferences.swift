@@ -16,6 +16,8 @@ final class AppPreferences {
     private static let serverEnvironmentKey = "server_environment"
     private static let customServerUrlKey = "custom_server_url"
     private static let customDevEmailKey = "custom_dev_email"
+    private static let analyticsEnabledKey = "analytics_enabled"
+    private static let installIdKey = "install_id"
 
     /// Server environment: "prod", "beta", or "custom".
     var serverEnvironment: String {
@@ -85,6 +87,13 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(sourceBadgeStyle, forKey: Self.sourceBadgeStyleKey) }
     }
 
+    var analyticsEnabled: Bool {
+        didSet { UserDefaults.standard.set(analyticsEnabled, forKey: Self.analyticsEnabledKey) }
+    }
+
+    /// Persistent install ID (UUID). Generated once on first access, survives opt-out/opt-in cycles.
+    let installId: String
+
     var eqBandGains: [Float] {
         didSet {
             let strings = eqBandGains.map { String($0) }
@@ -121,6 +130,16 @@ final class AppPreferences {
             ?? "LIST"
         shareAttachImage = UserDefaults.standard.bool(forKey: Self.shareAttachImageKey)
         sourceBadgeStyle = UserDefaults.standard.string(forKey: Self.sourceBadgeStyleKey) ?? "LONG"
+        analyticsEnabled = UserDefaults.standard.object(forKey: Self.analyticsEnabledKey) == nil
+            ? true
+            : UserDefaults.standard.bool(forKey: Self.analyticsEnabledKey)
+        if let existing = UserDefaults.standard.string(forKey: Self.installIdKey), !existing.isEmpty {
+            installId = existing
+        } else {
+            let newId = UUID().uuidString
+            UserDefaults.standard.set(newId, forKey: Self.installIdKey)
+            installId = newId
+        }
         eqEnabled = UserDefaults.standard.bool(forKey: Self.eqEnabledKey)
         eqPreset = UserDefaults.standard.string(forKey: Self.eqPresetKey) ?? "flat"
 

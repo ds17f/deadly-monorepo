@@ -28,7 +28,8 @@ fun SettingsScreen(
     onNavigateToEqualizer: () -> Unit = {},
     onNavigateToLegal: () -> Unit = {},
     onNavigateToMission: () -> Unit = {},
-    onNavigateToDeveloper: () -> Unit = {}
+    onNavigateToDeveloper: () -> Unit = {},
+    onNavigateToPrivacyData: () -> Unit = {}
 ) {
     val context = LocalContext.current
     val includeShowsWithoutRecordings by viewModel.includeShowsWithoutRecordings.collectAsState()
@@ -260,6 +261,20 @@ fun SettingsScreen(
         }
 
         item { HorizontalDivider() }
+
+        item {
+            PreferenceRow(
+                title = "Privacy & Data",
+                onClick = onNavigateToPrivacyData,
+                trailing = {
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            )
+        }
     }
 
 }

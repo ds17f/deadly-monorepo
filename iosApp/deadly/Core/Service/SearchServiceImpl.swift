@@ -6,16 +6,18 @@ final class SearchServiceImpl: SearchService {
     private let showDAO: ShowDAO
     private let showRepository: any ShowRepository
     private let appPreferences: AppPreferences
+    private let analyticsService: AnalyticsService?
 
     private(set) var results: [SearchResultShow] = []
     private(set) var isLoading = false
     private(set) var query = ""
 
-    nonisolated init(showSearchDAO: ShowSearchDAO, showDAO: ShowDAO, showRepository: any ShowRepository, appPreferences: AppPreferences) {
+    nonisolated init(showSearchDAO: ShowSearchDAO, showDAO: ShowDAO, showRepository: any ShowRepository, appPreferences: AppPreferences, analyticsService: AnalyticsService? = nil) {
         self.showSearchDAO = showSearchDAO
         self.showDAO = showDAO
         self.showRepository = showRepository
         self.appPreferences = appPreferences
+        self.analyticsService = analyticsService
     }
 
     // MARK: - SearchService
@@ -54,8 +56,16 @@ final class SearchServiceImpl: SearchService {
                 let matchType = determineMatchType(show, query: trimmed)
                 return SearchResultShow(show: show, relevanceScore: score, matchType: matchType)
             }
+            analyticsService?.track("search", props: [
+                "query_length": trimmed.count,
+                "result_count": results.count,
+            ])
         } catch {
             results = []
+            analyticsService?.track("error", props: [
+                "source": "search",
+                "message": error.localizedDescription,
+            ])
         }
     }
 

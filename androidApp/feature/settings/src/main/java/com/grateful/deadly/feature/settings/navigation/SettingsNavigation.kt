@@ -8,6 +8,7 @@ import com.grateful.deadly.feature.settings.screens.developer.DeveloperScreen
 import com.grateful.deadly.feature.settings.screens.equalizer.EqualizerScreen
 import com.grateful.deadly.feature.settings.screens.legal.LegalScreen
 import com.grateful.deadly.feature.settings.screens.mission.MissionScreen
+import com.grateful.deadly.feature.settings.screens.privacy.PrivacyDataScreen
 
 /**
  * Settings navigation route constants
@@ -17,6 +18,7 @@ const val EQUALIZER_ROUTE = "equalizer"
 const val LEGAL_ROUTE = "legal"
 const val MISSION_ROUTE = "mission"
 const val DEVELOPER_ROUTE = "developer"
+const val PRIVACY_DATA_ROUTE = "privacy_data"
 
 /**
  * Extension function for NavController to navigate to Settings
@@ -34,7 +36,8 @@ fun NavGraphBuilder.settingsScreen(
     onNavigateToEqualizer: () -> Unit,
     onNavigateToLegal: () -> Unit,
     onNavigateToMission: () -> Unit,
-    onNavigateToDeveloper: () -> Unit
+    onNavigateToDeveloper: () -> Unit,
+    onNavigateToPrivacyData: () -> Unit
 ) {
     composable(route = SETTINGS_ROUTE) {
         SettingsScreen(
@@ -42,7 +45,8 @@ fun NavGraphBuilder.settingsScreen(
             onNavigateToEqualizer = onNavigateToEqualizer,
             onNavigateToLegal = onNavigateToLegal,
             onNavigateToMission = onNavigateToMission,
-            onNavigateToDeveloper = onNavigateToDeveloper
+            onNavigateToDeveloper = onNavigateToDeveloper,
+            onNavigateToPrivacyData = onNavigateToPrivacyData
         )
     }
 }
@@ -85,6 +89,14 @@ fun NavGraphBuilder.missionScreen(
     }
 }
 
+fun NavGraphBuilder.privacyDataScreen(
+    onNavigateBack: () -> Unit
+) {
+    composable(route = PRIVACY_DATA_ROUTE) {
+        PrivacyDataScreen()
+    }
+}
+
 /**
  * Settings navigation graph
  */
@@ -95,7 +107,8 @@ fun NavGraphBuilder.settingsGraph(navController: NavController) {
         onNavigateToEqualizer = { navController.navigate(EQUALIZER_ROUTE) },
         onNavigateToLegal = { navController.navigate(LEGAL_ROUTE) },
         onNavigateToMission = { navController.navigate(MISSION_ROUTE) },
-        onNavigateToDeveloper = { navController.navigate(DEVELOPER_ROUTE) }
+        onNavigateToDeveloper = { navController.navigate(DEVELOPER_ROUTE) },
+        onNavigateToPrivacyData = { navController.navigate(PRIVACY_DATA_ROUTE) }
     )
 
     equalizerScreen(
@@ -111,6 +124,10 @@ fun NavGraphBuilder.settingsGraph(navController: NavController) {
     )
 
     developerScreen(
+        onNavigateBack = { navController.popBackStack() }
+    )
+
+    privacyDataScreen(
         onNavigateBack = { navController.popBackStack() }
     )
 }

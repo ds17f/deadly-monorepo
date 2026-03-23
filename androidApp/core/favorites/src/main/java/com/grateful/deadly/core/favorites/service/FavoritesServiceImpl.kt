@@ -1,6 +1,7 @@
 package com.grateful.deadly.core.favorites.service
 
 import android.util.Log
+import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.media.download.MediaDownloadManager
@@ -34,6 +35,7 @@ class FavoritesServiceImpl @Inject constructor(
     private val favoritesRepository: FavoritesRepository,
     private val shareService: ShareService,
     private val mediaDownloadManager: MediaDownloadManager,
+    private val analyticsService: AnalyticsService,
     @Named("FavoritesApplicationScope") private val coroutineScope: CoroutineScope
 ) : FavoritesService {
 
@@ -85,13 +87,17 @@ class FavoritesServiceImpl @Inject constructor(
     // Add show to favorites
     override suspend fun addToFavorites(showId: String): Result<Unit> {
         Log.d(TAG, "addToFavorites('$showId') - using FavoritesRepository")
-        return favoritesRepository.addShowToFavorites(showId)
+        val result = favoritesRepository.addShowToFavorites(showId)
+        if (result.isSuccess) analyticsService.track("feature_use", mapOf("feature" to "add_favorite"))
+        return result
     }
 
     // Remove show from favorites
     override suspend fun removeFromFavorites(showId: String): Result<Unit> {
         Log.d(TAG, "removeFromFavorites('$showId') - using FavoritesRepository")
-        return favoritesRepository.removeShowFromFavorites(showId)
+        val result = favoritesRepository.removeShowFromFavorites(showId)
+        if (result.isSuccess) analyticsService.track("feature_use", mapOf("feature" to "remove_favorite"))
+        return result
     }
 
     // Clear entire favorites
@@ -154,6 +160,7 @@ class FavoritesServiceImpl @Inject constructor(
 
     override suspend fun downloadShow(showId: String, recordingId: String?): Result<Unit> {
         Log.d(TAG, "downloadShow('$showId', recording=$recordingId)")
+        analyticsService.track("feature_use", mapOf("feature" to "download_show"))
         // Auto-add to favorites if not already present
         if (!favoritesRepository.isShowFavorite(showId)) {
             favoritesRepository.addShowToFavorites(showId)
@@ -223,6 +230,7 @@ class FavoritesServiceImpl @Inject constructor(
             shareService.shareShow(show, recording)
 
             Log.d(TAG, "Successfully shared show: ${show.displayTitle}")
+            analyticsService.track("feature_use", mapOf("feature" to "share_show"))
             Result.success(Unit)
 
         } catch (e: Exception) {

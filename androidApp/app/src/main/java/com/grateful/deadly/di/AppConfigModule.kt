@@ -18,4 +18,12 @@ object AppConfigModule {
     @Provides
     @Named("googleAndroidClientId")
     fun provideGoogleAndroidClientId(): String = BuildConfig.GOOGLE_ANDROID_CLIENT_ID
+
+    @Provides
+    @Named("analyticsApiKey")
+    fun provideAnalyticsApiKey(): String = BuildConfig.ANALYTICS_API_KEY
+
+    @Provides
+    @Named("appVersionName")
+    fun provideAppVersionName(): String = BuildConfig.VERSION_NAME
 }

@@ -30,8 +30,10 @@ final class AppContainer {
     let equalizerService: EqualizerService
     let authService: AuthService
     let playbackRestorationService: PlaybackRestorationService
+    let analyticsService: AnalyticsService
 
     init() {
+        let initStart = CFAbsoluteTimeGetCurrent()
         // Configure audio session for background playback at app launch
         #if os(iOS)
         do {
@@ -48,6 +50,7 @@ final class AppContainer {
             database = db
             let prefs = AppPreferences()
             appPreferences = prefs
+            let analytics = AnalyticsService(appPreferences: prefs, apiKey: Secrets.analyticsApiKey)
             authService = MainActor.assumeIsolated { AuthService(appPreferences: prefs) }
             dataImportService = DataImportService(
                 gitHubClient: URLSessionGitHubReleasesClient(),
@@ -57,7 +60,8 @@ final class AppContainer {
                 collectionsDAO: CollectionsDAO(database: db),
                 showSearchDAO: ShowSearchDAO(database: db),
                 dataVersionDAO: DataVersionDAO(database: db),
-                favoritesDAO: FavoritesDAO(database: db)
+                favoritesDAO: FavoritesDAO(database: db),
+                analyticsService: analytics
             )
             let showRepo = GRDBShowRepository(
                 showDAO: ShowDAO(database: db),
@@ -69,7 +73,8 @@ final class AppContainer {
                 showSearchDAO: ShowSearchDAO(database: db),
                 showDAO: ShowDAO(database: db),
                 showRepository: showRepo,
-                appPreferences: prefs
+                appPreferences: prefs,
+                analyticsService: analytics
             )
             let revService = ReviewService(
                 showReviewDAO: ShowReviewDAO(database: db),
@@ -83,7 +88,8 @@ final class AppContainer {
                 favoritesDAO: FavoritesDAO(database: db),
                 showReviewDAO: ShowReviewDAO(database: db),
                 showRepository: showRepo,
-                reviewService: revService
+                reviewService: revService,
+                analyticsService: analytics
             )
             favoritesImportExportService = FavoritesImportExportService(
                 favoritesDAO: FavoritesDAO(database: db),
@@ -151,7 +157,8 @@ final class AppContainer {
                     showRepository: showRepo,
                     favoritesDAO: FavoritesDAO(database: db),
                     downloadTaskDAO: DownloadTaskDAO(database: db),
-                    storageManager: DownloadStorageManager()
+                    storageManager: DownloadStorageManager(),
+                    analyticsService: analytics
                 )
             }
             downloadService = downloadSvc
@@ -163,7 +170,8 @@ final class AppContainer {
                 recentShowsService: recentService,
                 recordingPreferenceDAO: RecordingPreferenceDAO(database: db),
                 streamPlayer: player,
-                downloadService: downloadSvc
+                downloadService: downloadSvc,
+                analyticsService: analytics
             )
             playlistService = playlistSvc
 
@@ -194,6 +202,12 @@ final class AppContainer {
 
             // Start playback observation after all services are wired
             MainActor.assumeIsolated { recentService.startObservingPlayback() }
+
+            // Analytics — fire-and-forget anonymous usage tracking
+            analyticsService = analytics
+            let coldStartMs = Int((CFAbsoluteTimeGetCurrent() - initStart) * 1000)
+            analytics.track("app_open")
+            analytics.track("cold_start", props: ["duration_ms": coldStartMs])
         } catch {
             fatalError("Failed to open database: \(error)")
         }

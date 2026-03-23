@@ -14,6 +14,7 @@ import com.grateful.deadly.core.media.exception.FormatNotAvailableException
 import com.grateful.deadly.core.model.PlaybackStatus
 import com.grateful.deadly.core.model.PlaybackState
 import com.grateful.deadly.core.model.Track
+import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.network.archive.service.ArchiveService
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
@@ -40,7 +41,8 @@ import javax.inject.Singleton
 @Singleton
 class MediaControllerRepository @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val archiveService: ArchiveService
+    private val archiveService: ArchiveService,
+    private val analyticsService: AnalyticsService
 ) {
     companion object {
         private const val TAG = "MediaControllerRepository"
@@ -99,7 +101,10 @@ class MediaControllerRepository @Inject constructor(
     
     private val _mediaItemCount = MutableStateFlow(0)
     val mediaItemCount: StateFlow<Int> = _mediaItemCount.asStateFlow()
-    
+
+    // Analytics: tracks the currently playing item for playback_end
+    private var analyticsPlaybackInfo: Triple<String, String, Int>? = null // showId, recordingId, trackNumber
+
     // Unified playback status with computed progress
     val playbackStatus: StateFlow<PlaybackStatus> = combine(
         _currentPosition, _duration
@@ -297,6 +302,13 @@ class MediaControllerRepository @Inject constructor(
                                 Log.d(TAG, "🕒🎵 [URL] Calling controller.play() for track $trackIndex at ${System.currentTimeMillis()}")
                                 controller.play()
                                 Log.d(TAG, "🕒🎵 [URL] controller.play() for track $trackIndex completed at ${System.currentTimeMillis()}")
+                                firePlaybackEnd()
+                                analyticsPlaybackInfo = Triple(showId, recordingId, trackIndex + 1)
+                                analyticsService.track("playback_start", mapOf(
+                                    "show_id" to showId,
+                                    "recording_id" to recordingId,
+                                    "track_number" to (trackIndex + 1)
+                                ))
                             } else {
                                 Log.d(TAG, "🕒🎵 [URL] Track $trackIndex loaded at position $position (paused) at ${System.currentTimeMillis()}")
                             }
@@ -464,6 +476,9 @@ class MediaControllerRepository @Inject constructor(
                         }
                         
                         override fun onMediaItemTransition(mediaItem: androidx.media3.common.MediaItem?, reason: Int) {
+                            // Fire playback_end for the track that just finished/was skipped
+                            firePlaybackEnd()
+
                             _currentMediaItem.value = mediaItem
                             _currentShowId.value = extractShowIdFromMediaItem(mediaItem)
                             _currentRecordingId.value = extractRecordingIdFromMediaItem(mediaItem)
@@ -688,6 +703,21 @@ class MediaControllerRepository @Inject constructor(
         }
     }
     
+    private fun firePlaybackEnd() {
+        val info = analyticsPlaybackInfo ?: return
+        val position = _currentPosition.value
+        val dur = _duration.value
+        val completionRate = if (dur > 0) (position.toDouble() / dur).coerceIn(0.0, 1.0) else 0.0
+        analyticsService.track("playback_end", mapOf(
+            "show_id" to info.first,
+            "recording_id" to info.second,
+            "track_number" to info.third,
+            "duration_ms" to position,
+            "completion_rate" to (Math.round(completionRate * 100) / 100.0)
+        ))
+        analyticsPlaybackInfo = null
+    }
+
     private fun extractShowIdFromMediaItem(mediaItem: androidx.media3.common.MediaItem?): String? {
         return mediaItem?.mediaMetadata?.extras?.getString("showId")
     }

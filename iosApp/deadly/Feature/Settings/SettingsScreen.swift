@@ -217,6 +217,12 @@ struct SettingsScreen: View {
                 }
             }
 
+            Section {
+                NavigationLink("Privacy & Data") {
+                    PrivacyDataView()
+                }
+            }
+
         }
         .navigationTitle("Settings")
 

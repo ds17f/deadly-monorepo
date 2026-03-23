@@ -14,6 +14,7 @@ struct DataImportService: Sendable {
     let showSearchDAO: ShowSearchDAO
     let dataVersionDAO: DataVersionDAO
     let favoritesDAO: FavoritesDAO
+    let analyticsService: AnalyticsService?
 
     private static let batchSize = 500
 
@@ -25,6 +26,10 @@ struct DataImportService: Sendable {
                 do {
                     try await performImport(force: force) { continuation.yield($0) }
                 } catch {
+                    self.analyticsService?.track("error", props: [
+                        "source": "data_import",
+                        "message": error.localizedDescription,
+                    ])
                     continuation.yield(ImportProgress(
                         phase: .failed,
                         processed: 0,
