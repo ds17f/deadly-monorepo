@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.auth.AuthService
 import com.grateful.deadly.core.api.auth.AuthState
+import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.migration.MigrationImportService
 import com.grateful.deadly.core.database.migration.MigrationResult
@@ -33,6 +34,7 @@ class SettingsViewModel @Inject constructor(
     private val backupImportExportService: BackupImportExportService,
     private val appPreferences: AppPreferences,
     private val authService: AuthService,
+    private val analyticsService: AnalyticsService,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
 
@@ -54,6 +56,17 @@ class SettingsViewModel @Inject constructor(
 
     fun toggleIncludeShowsWithoutRecordings() {
         appPreferences.setIncludeShowsWithoutRecordings(!appPreferences.includeShowsWithoutRecordings.value)
+    }
+
+    val analyticsEnabled: StateFlow<Boolean> = appPreferences.analyticsEnabled
+
+    fun toggleAnalyticsEnabled() {
+        val newValue = !appPreferences.analyticsEnabled.value
+        // Track the toggle event before the flag changes
+        val event = if (newValue) "analytics_opt_in" else "analytics_opt_out"
+        analyticsService.track("feature_use", mapOf("feature" to event))
+        analyticsService.flush()
+        appPreferences.setAnalyticsEnabled(newValue)
     }
 
     val sourceBadgeStyle: StateFlow<String> = appPreferences.sourceBadgeStyle

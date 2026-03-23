@@ -17,6 +17,7 @@ final class DownloadServiceImpl: DownloadService {
     private let favoritesDAO: FavoritesDAO
     private let downloadTaskDAO: DownloadTaskDAO
     private let storageManager: DownloadStorageManager
+    private let analyticsService: AnalyticsService?
 
     private let sessionDelegate: DownloadSessionDelegate
     private let urlSession: URLSession
@@ -35,13 +36,15 @@ final class DownloadServiceImpl: DownloadService {
         showRepository: some ShowRepository,
         favoritesDAO: FavoritesDAO,
         downloadTaskDAO: DownloadTaskDAO,
-        storageManager: DownloadStorageManager
+        storageManager: DownloadStorageManager,
+        analyticsService: AnalyticsService? = nil
     ) {
         self.archiveClient = archiveClient
         self.showRepository = showRepository
         self.favoritesDAO = favoritesDAO
         self.downloadTaskDAO = downloadTaskDAO
         self.storageManager = storageManager
+        self.analyticsService = analyticsService
 
         let delegate = DownloadSessionDelegate()
         self.sessionDelegate = delegate
@@ -133,6 +136,7 @@ final class DownloadServiceImpl: DownloadService {
 
     func downloadShow(_ showId: String, recordingId: String?) async throws {
         logger.debug("Starting download for show: \(showId)")
+        analyticsService?.track("feature_use", props: ["feature": "download_show"])
 
         // Resolve recording
         let resolvedRecordingId: String

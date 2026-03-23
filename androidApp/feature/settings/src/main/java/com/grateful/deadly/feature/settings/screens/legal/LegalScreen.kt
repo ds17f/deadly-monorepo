@@ -94,7 +94,27 @@ fun LegalScreen() {
 
         item {
             ArticleSection(title = "Privacy Policy") {
-                ArticleParagraph("We do not collect any personal information or data. This app operates without collecting, storing, or transmitting any personal data, usage analytics, or device information.")
+                ArticleParagraph("This app collects anonymous usage analytics to help us understand how the app is used and improve the experience. Analytics are enabled by default and can be turned off at any time in Settings.")
+                Text(
+                    text = "What we collect:",
+                    style = MaterialTheme.typography.bodyLarge,
+                    fontWeight = FontWeight.Medium,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+                ArticleBullet("A random install ID (not tied to your identity)")
+                ArticleBullet("Basic usage events (e.g. app opens, playback, searches)")
+                ArticleBullet("App version and platform")
+                Text(
+                    text = "What we do not collect:",
+                    style = MaterialTheme.typography.bodyLarge,
+                    fontWeight = FontWeight.Medium,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+                ArticleBullet("No personal information, names, emails, or accounts")
+                ArticleBullet("No device identifiers or advertising IDs")
+                ArticleBullet("No location data")
+                ArticleBullet("No listening history tied to your identity")
+                ArticleParagraph("You can opt out of analytics at any time from the Preferences section in Settings.")
                 ArticleLink(
                     label = "Read Full Privacy Policy",
                     onClick = { openUrl("https://share.thedeadly.app/privacy") }

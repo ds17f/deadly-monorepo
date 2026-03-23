@@ -3,6 +3,7 @@ package com.grateful.deadly.core.search
 import android.util.Log
 import com.grateful.deadly.core.api.search.SearchService
 import com.grateful.deadly.core.api.search.SearchFilter
+import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.dao.ShowSearchDao
 import com.grateful.deadly.core.database.mappers.ShowMappers
@@ -26,7 +27,8 @@ import javax.inject.Singleton
 class SearchServiceImpl @Inject constructor(
     @AppDatabase private val showSearchDao: ShowSearchDao,
     private val showMappers: ShowMappers,
-    private val appPreferences: AppPreferences
+    private val appPreferences: AppPreferences,
+    private val analyticsService: AnalyticsService
 ) : SearchService {
     
     companion object {
@@ -99,10 +101,18 @@ class SearchServiceImpl @Inject constructor(
             _searchStatus.value = if (results.isEmpty()) SearchStatus.NO_RESULTS else SearchStatus.SUCCESS
             
             Log.d(TAG, "Search completed - ${results.size} results in ${searchDuration}ms")
-            
+            analyticsService.track("search", mapOf(
+                "query_length" to query.length,
+                "result_count" to results.size
+            ))
+
         } catch (e: Exception) {
             Log.e(TAG, "Search failed", e)
             _searchStatus.value = SearchStatus.ERROR
+            analyticsService.track("error", mapOf(
+                "source" to "search",
+                "message" to (e.message ?: "unknown")
+            ))
             return Result.failure(e)
         }
         

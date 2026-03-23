@@ -19,7 +19,11 @@ final class PlaylistServiceImpl: PlaylistService {
     private let recentShowsService: RecentShowsService
     private let recordingPreferenceDAO: RecordingPreferenceDAO
     private let downloadService: DownloadService?
+    private let analyticsService: AnalyticsService?
     let streamPlayer: StreamPlayer
+
+    /// Tracks the currently playing item for playback_end analytics.
+    private var playbackStartInfo: (showId: String, recordingId: String, trackNumber: Int)?
 
     nonisolated init(
         showRepository: some ShowRepository,
@@ -27,7 +31,8 @@ final class PlaylistServiceImpl: PlaylistService {
         recentShowsService: RecentShowsService,
         recordingPreferenceDAO: RecordingPreferenceDAO,
         streamPlayer: StreamPlayer,
-        downloadService: DownloadService? = nil
+        downloadService: DownloadService? = nil,
+        analyticsService: AnalyticsService? = nil
     ) {
         self.showRepository = showRepository
         self.archiveClient = archiveClient
@@ -35,6 +40,7 @@ final class PlaylistServiceImpl: PlaylistService {
         self.recordingPreferenceDAO = recordingPreferenceDAO
         self.streamPlayer = streamPlayer
         self.downloadService = downloadService
+        self.analyticsService = analyticsService
     }
 
     // MARK: - Show Navigation
@@ -137,6 +143,10 @@ final class PlaylistServiceImpl: PlaylistService {
     func playTrack(at index: Int) {
         guard index >= 0, index < tracks.count,
               let recording = currentRecording else { return }
+
+        // Fire playback_end for the previous track, if any
+        trackPlaybackEnd()
+
         // If the player already has this recording's queue loaded, skip directly to the index
         // instead of rebuilding the entire queue (avoids redundant network redirect resolution).
         if streamPlayer.currentTrack?.metadata["recordingId"] == recording.identifier {
@@ -181,6 +191,28 @@ final class PlaylistServiceImpl: PlaylistService {
             )
         }
         streamPlayer.loadQueue(trackItems, startingAt: index)
+
+        playbackStartInfo = (showId: showId, recordingId: recordingId, trackNumber: index + 1)
+        analyticsService?.track("playback_start", props: [
+            "show_id": showId,
+            "recording_id": recordingId,
+            "track_number": index + 1,
+        ])
+    }
+
+    /// Fires a `playback_end` event for the currently tracked playback, if any.
+    private func trackPlaybackEnd() {
+        guard let info = playbackStartInfo else { return }
+        let progress = streamPlayer.progress
+        let completionRate = progress.duration > 0 ? progress.currentTime / progress.duration : 0
+        analyticsService?.track("playback_end", props: [
+            "show_id": info.showId,
+            "recording_id": info.recordingId,
+            "track_number": info.trackNumber,
+            "duration_ms": Int(progress.currentTime * 1000),
+            "completion_rate": round(completionRate * 100) / 100,
+        ])
+        playbackStartInfo = nil
     }
 
     func recordRecentPlay() {
@@ -212,6 +244,10 @@ final class PlaylistServiceImpl: PlaylistService {
         } catch {
             trackLoadError = error.localizedDescription
             tracks = []
+            analyticsService?.track("error", props: [
+                "source": "fetch_tracks",
+                "message": error.localizedDescription,
+            ])
         }
     }
 

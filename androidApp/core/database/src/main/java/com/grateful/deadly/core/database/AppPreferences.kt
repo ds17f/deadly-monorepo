@@ -45,6 +45,8 @@ class AppPreferences @Inject constructor(
         private const val KEY_SERVER_ENVIRONMENT = "server_environment"
         private const val KEY_CUSTOM_SERVER_URL = "custom_server_url"
         private const val KEY_CUSTOM_DEV_EMAIL = "custom_dev_email"
+        private const val KEY_ANALYTICS_ENABLED = "analytics_enabled"
+        private const val KEY_INSTALL_ID = "install_id"
     }
 
     private val _includeShowsWithoutRecordings = MutableStateFlow(
@@ -150,6 +152,32 @@ class AppPreferences @Inject constructor(
         prefs.edit().putString(KEY_SOURCE_BADGE_STYLE, value).apply()
         _sourceBadgeStyle.value = value
         ShowArtworkService.badgeStyle = SourceBadgeStyle.fromString(value)
+    }
+
+    // ── Analytics ──────────────────────────────────────────────────────
+
+    private val _analyticsEnabled = MutableStateFlow(
+        if (prefs.contains(KEY_ANALYTICS_ENABLED)) prefs.getBoolean(KEY_ANALYTICS_ENABLED, true) else true
+    )
+
+    /** When true, anonymous usage analytics are collected and sent. */
+    val analyticsEnabled: StateFlow<Boolean> = _analyticsEnabled.asStateFlow()
+
+    fun setAnalyticsEnabled(value: Boolean) {
+        prefs.edit().putBoolean(KEY_ANALYTICS_ENABLED, value).apply()
+        _analyticsEnabled.value = value
+    }
+
+    /** Persistent install ID (UUID). Generated once on first access, survives opt-out/opt-in cycles. */
+    val installId: String = run {
+        val existing = prefs.getString(KEY_INSTALL_ID, null)
+        if (!existing.isNullOrEmpty()) {
+            existing
+        } else {
+            val newId = java.util.UUID.randomUUID().toString()
+            prefs.edit().putString(KEY_INSTALL_ID, newId).apply()
+            newId
+        }
     }
 
     // ── Server Environment ───────────────────────────────────────────

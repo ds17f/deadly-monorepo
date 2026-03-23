@@ -1,6 +1,7 @@
 package com.grateful.deadly.core.media.di
 
 import android.content.Context
+import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.network.archive.service.ArchiveService
 import dagger.Module
@@ -21,8 +22,9 @@ object MediaModule {
     @Singleton
     fun provideMediaControllerRepository(
         @ApplicationContext context: Context,
-        archiveService: ArchiveService
+        archiveService: ArchiveService,
+        analyticsService: AnalyticsService
     ): MediaControllerRepository {
-        return MediaControllerRepository(context, archiveService)
+        return MediaControllerRepository(context, archiveService, analyticsService)
     }
 }

@@ -192,6 +192,10 @@ fun MainNavigation(
                     onNavigateToDeveloper = {
                         scope.launch { drawerState.close() }
                         navController.navigate("developer")
+                    },
+                    onNavigateToPrivacyData = {
+                        scope.launch { drawerState.close() }
+                        navController.navigate("privacy_data")
                     }
                 )
             }

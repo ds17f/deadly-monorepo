@@ -49,7 +49,19 @@ struct LegalView: View {
                 }
 
                 ArticleSection("Privacy Policy") {
-                    Text("We do not collect any personal information or data. This app operates without collecting, storing, or transmitting any personal data, usage analytics, or device information.")
+                    Text("This app collects anonymous usage analytics to help us understand how the app is used and improve the experience. Analytics are enabled by default and can be turned off at any time in Settings.")
+                    Text("What we collect:")
+                        .fontWeight(.medium)
+                    BulletRow("A random install ID (not tied to your identity)")
+                    BulletRow("Basic usage events (e.g. app opens, playback, searches)")
+                    BulletRow("App version and platform")
+                    Text("What we do not collect:")
+                        .fontWeight(.medium)
+                    BulletRow("No personal information, names, emails, or accounts")
+                    BulletRow("No device identifiers or advertising IDs")
+                    BulletRow("No location data")
+                    BulletRow("No listening history tied to your identity")
+                    Text("You can opt out of analytics at any time from the Preferences section in Settings.")
                     ArticleLink("Read Full Privacy Policy",
                                 url: "https://share.thedeadly.app/privacy")
                 }

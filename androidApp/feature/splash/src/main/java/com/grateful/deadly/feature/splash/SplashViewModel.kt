@@ -6,6 +6,7 @@ import com.grateful.deadly.feature.splash.model.Phase
 import com.grateful.deadly.feature.splash.service.SplashService
 import com.grateful.deadly.feature.splash.service.SplashUiState
 import com.grateful.deadly.feature.splash.service.InitResult
+import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.service.DatabaseManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.StateFlow
@@ -17,7 +18,8 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class SplashViewModel @Inject constructor(
-    private val splashService: SplashService
+    private val splashService: SplashService,
+    private val analyticsService: AnalyticsService
 ) : ViewModel() {
     
     val uiState: StateFlow<SplashUiState> = splashService.uiState
@@ -26,6 +28,8 @@ class SplashViewModel @Inject constructor(
         initializeDatabase()
     }
     
+    private val initStartTime = System.currentTimeMillis()
+
     private fun initializeDatabase() {
         viewModelScope.launch {
             try {
@@ -74,6 +78,8 @@ class SplashViewModel @Inject constructor(
                 
                 when (result) {
                     is InitResult.Success -> {
+                        val coldStartMs = System.currentTimeMillis() - initStartTime
+                        analyticsService.track("cold_start", mapOf("duration_ms" to coldStartMs))
                         // Handle immediate success (e.g., database already initialized)
                         splashService.updateUiState(
                             isReady = true,

@@ -59,6 +59,7 @@ android {
         buildConfigField("long", "BUILD_TIME", "${System.currentTimeMillis()}L")
         buildConfigField("String", "GENIUS_ACCESS_TOKEN", "\"${localProps.getProperty("genius.access.token", "")}\"")
         buildConfigField("String", "GOOGLE_ANDROID_CLIENT_ID", "\"${localProps.getProperty("google.android.client.id", "")}\"")
+        buildConfigField("String", "ANALYTICS_API_KEY", "\"${localProps.getProperty("analytics.api.key", "")}\"")
 
     }
 

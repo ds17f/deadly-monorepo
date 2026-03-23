@@ -11,6 +11,7 @@ final class FavoritesServiceImpl {
     private let showReviewDAO: ShowReviewDAO
     private let showRepository: any ShowRepository
     private let reviewService: ReviewService
+    private let analyticsService: AnalyticsService?
 
     private(set) var shows: [FavoriteShow] = []
     private(set) var songs: [FavoriteTrack] = []
@@ -21,13 +22,15 @@ final class FavoritesServiceImpl {
         favoritesDAO: FavoritesDAO,
         showReviewDAO: ShowReviewDAO,
         showRepository: any ShowRepository,
-        reviewService: ReviewService
+        reviewService: ReviewService,
+        analyticsService: AnalyticsService? = nil
     ) {
         self.database = database
         self.favoritesDAO = favoritesDAO
         self.showReviewDAO = showReviewDAO
         self.showRepository = showRepository
         self.reviewService = reviewService
+        self.analyticsService = analyticsService
     }
 
     // MARK: - Mutations
@@ -55,6 +58,7 @@ final class FavoritesServiceImpl {
                     Column("favoritedAt").set(to: now)
                 )
         }
+        analyticsService?.track("feature_use", props: ["feature": "add_favorite"])
     }
 
     func removeFromFavorites(showId: String) throws {
@@ -67,6 +71,7 @@ final class FavoritesServiceImpl {
                     Column("favoritedAt").set(to: nil as Int64?)
                 )
         }
+        analyticsService?.track("feature_use", props: ["feature": "remove_favorite"])
     }
 
     func isFavorite(showId: String) throws -> Bool {
