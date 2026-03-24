@@ -1,5 +1,30 @@
 # Changelog
 
+## [2.21.0] - 2026-03-24
+
+### New Features
+* add anonymous usage analytics with opt-out support (a2c63c49)
+* add custom dev server URL in developer settings (7bcf952b)
+* add mobile Google and Apple Sign-In with unified connect transport (b4a8b192)
+* add beta share links toggle in developer settings (554d2d04)
+* add beta share domain and consolidate share landing page (68fcde08)
+* consolidate data pipeline into monorepo and wire versioned releases (e6e5957e)
+* simplify sharing to URL-only and align share URLs to /shows/ path (1d5095c0)
+
+### Bug Fixes
+* wire ANALYTICS_API_KEY into CI/CD and release workflows (7afe976f)
+* pass Google mobile client IDs to API container (7f873a9b)
+* use GetSignInWithGoogleOption for reliable sign-in (6c0d81a4)
+
+### Documentation Updates
+* update dead-metadata refs to monorepo data pipeline (7bf56288)
+
+### Other Changes
+* chore(ci): standardize workflow display names with platform prefix (6d6a1059)
+* chore(ci): Add makefile targets for full rebuild of docker remote and logs (2e8ba1b7)
+* chore: rename api-remote-* targets to docker-remote-* and update remote path (714be733)
+
+
 ## [2.20.0] - 2026-03-15
 
 ### New Features
@@ -8,8 +33,6 @@
 ### Other Changes
 * chore: commit changes to gitignore for keys (4e6b1f5)
 * Revert "chore: release ios version 2.20.0" (e6475e9)
-
-
 ## [2.19.0] - 2026-03-13
 
 ### New Features
