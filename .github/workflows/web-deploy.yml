@@ -45,7 +45,8 @@ jobs:
           echo "Checking for images tagged ${TAG}..."
           docker manifest inspect "ghcr.io/${{ github.repository }}/api:${TAG}" > /dev/null
           docker manifest inspect "ghcr.io/${{ github.repository }}/ui:${TAG}" > /dev/null
-          echo "Both images found."
+          docker manifest inspect "ghcr.io/${{ github.repository }}/caddy:${TAG}" > /dev/null
+          echo "All images found."
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3.1.2
@@ -77,12 +78,11 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H "${{ steps.server.outputs.ip }}" >> ~/.ssh/known_hosts 2>/dev/null || true
 
-      - name: Copy config and static files to server
+      - name: Copy config to server
         env:
           SERVER: deploy@${{ steps.server.outputs.ip }}
         run: |
-          scp docker-compose.yml Caddyfile "$SERVER:/opt/deadly/"
-          rsync -a --delete web/ "$SERVER:/opt/deadly/web/"
+          scp docker-compose.yml "$SERVER:/opt/deadly/"
 
       - name: Write environment file
         env:
@@ -172,7 +172,7 @@ jobs:
 
             # Pull new images
             echo "Pulling images..."
-            docker compose pull api ui
+            docker compose pull api ui caddy
 
             # Extract UI static files to staging directory
             echo "Extracting static files..."

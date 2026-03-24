@@ -7,6 +7,9 @@ services:
       - ui_static:/out
 
   caddy:
+    build:
+      context: .
+      dockerfile: caddy/Dockerfile
     ports: !override
       - "8080:80"
       - "8081:8081"
