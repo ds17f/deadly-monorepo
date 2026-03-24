@@ -8,6 +8,13 @@
 		reverse_proxy api:3001
 	}
 
+	# Serve AASA with correct Content-Type for iOS Universal Links
+	handle /.well-known/apple-app-site-association {
+		root * /srv/ui
+		header Content-Type application/json
+		file_server
+	}
+
 	handle {
 		root * /srv/ui
 		file_server
@@ -17,7 +24,16 @@
 
 # Share site — SHARE_ADDRESS set per environment in .env
 {$SHARE_ADDRESS} {
-	root * /srv/share
-	file_server
-	try_files {path} {path}/index.html /index.html
+	# Serve AASA with correct Content-Type for iOS Universal Links
+	handle /.well-known/apple-app-site-association {
+		root * /srv/share
+		header Content-Type application/json
+		file_server
+	}
+
+	handle {
+		root * /srv/share
+		file_server
+		try_files {path} {path}/index.html /index.html
+	}
 }

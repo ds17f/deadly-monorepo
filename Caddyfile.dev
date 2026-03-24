@@ -15,7 +15,16 @@
 }
 
 :8081 {
-	root * /srv/share
-	file_server
-	try_files {path} {path}/index.html /index.html
+	# Serve AASA with correct Content-Type for iOS Universal Links
+	handle /.well-known/apple-app-site-association {
+		root * /srv/share
+		header Content-Type application/json
+		file_server
+	}
+
+	handle {
+		root * /srv/share
+		file_server
+		try_files {path} {path}/index.html /index.html
+	}
 }
