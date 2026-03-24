@@ -5,7 +5,7 @@ services:
     # no volumes — files extracted by deploy script
 
   caddy:
-    image: caddy:2-alpine
+    image: ${REGISTRY:-ghcr.io/ds17f/deadly-monorepo}/caddy:${IMAGE_TAG:-latest}
     restart: unless-stopped
     environment:
       - SITE_ADDRESS=${SITE_ADDRESS}
@@ -15,11 +15,9 @@ services:
       - "443:443"
       - "443:443/udp"
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data
       - caddy_config:/config
       - ./ui-out:/srv/ui:ro
-      - ./web:/srv/share:ro
     depends_on:
       - api
 

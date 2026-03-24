@@ -7,6 +7,8 @@ on:
       - api/**
       - ui/**
       - data/version
+      - Caddyfile
+      - web/**
   workflow_dispatch:
     inputs:
       ref:
@@ -69,6 +71,16 @@ jobs:
             ghcr.io/${{ github.repository }}/ui:${{ github.sha }}
             ghcr.io/${{ github.repository }}/ui:latest
 
+      - name: Build and push Caddy image
+        uses: docker/build-push-action@4f58ea79222b3b9dc2c8bbdd6debcef730109a75 # v6.9.0
+        with:
+          context: .
+          file: ./caddy/Dockerfile
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}/caddy:${{ github.sha }}
+            ghcr.io/${{ github.repository }}/caddy:latest
+
       - name: Summary
         run: |
           SHA="${{ github.sha }}"
@@ -79,6 +91,7 @@ jobs:
           |-------|-----|
           | \`ghcr.io/${{ github.repository }}/api\` | \`${SHA}\` |
           | \`ghcr.io/${{ github.repository }}/ui\` | \`${SHA}\` |
+          | \`ghcr.io/${{ github.repository }}/caddy\` | \`${SHA}\` |
 
           Deploy with:
           \`\`\`
