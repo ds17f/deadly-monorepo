@@ -35,6 +35,9 @@ struct HomeScreen: View {
         }
         .navigationBarTitleDisplayMode(.inline)
         .task { await homeService.refresh() }
+        .onChange(of: container.appPreferences.disabledArtistIds) { _, _ in
+            Task { await homeService.refresh() }
+        }
     }
 
     // MARK: - Featured Artists
@@ -162,7 +165,7 @@ struct HomeScreen: View {
 
     private var collectionsSection: some View {
         VStack(alignment: .leading, spacing: DeadlySpacing.itemSpacing) {
-            Text("Grateful Dead Collections")
+            Text("Collections")
                 .font(.title2)
                 .fontWeight(.bold)
 

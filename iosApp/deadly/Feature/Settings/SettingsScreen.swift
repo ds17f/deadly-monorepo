@@ -148,13 +148,10 @@ struct SettingsScreen: View {
 
             // MARK: - Artists
             Section("Artists") {
-                ForEach(Artist.browsable) { artist in
-                    Toggle(isOn: Binding(
-                        get: { container.appPreferences.isArtistEnabled(artist.id) },
-                        set: { container.appPreferences.setArtistEnabled(artist.id, enabled: $0) }
-                    )) {
-                        Text(artist.name)
-                    }
+                NavigationLink {
+                    ArtistsSettingsScreen()
+                } label: {
+                    Label("Artists", systemImage: "music.mic")
                 }
             }
 
