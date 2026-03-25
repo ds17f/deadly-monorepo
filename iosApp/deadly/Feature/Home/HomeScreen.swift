@@ -7,11 +7,10 @@ struct HomeScreen: View {
     private var content: HomeContent { homeService.content }
 
     var body: some View {
+        let favorites = container.appPreferences.favoriteArtists
         ScrollView {
             LazyVStack(alignment: .leading, spacing: DeadlySpacing.sectionSpacing) {
-                if !content.featuredArtists.isEmpty {
-                    featuredArtistsSection
-                }
+                favoriteArtistsSection(favorites)
 
                 if !content.recentShows.isEmpty {
                     recentShowsSection
@@ -25,7 +24,7 @@ struct HomeScreen: View {
                     collectionsSection
                 }
 
-                if content.recentShows.isEmpty && content.todayInHistory.isEmpty && content.featuredCollections.isEmpty && content.featuredArtists.isEmpty && !homeService.isLoading {
+                if content.recentShows.isEmpty && content.todayInHistory.isEmpty && content.featuredCollections.isEmpty && !homeService.isLoading {
                     emptyState
                 }
 
@@ -37,50 +36,62 @@ struct HomeScreen: View {
         .task { await homeService.refresh() }
     }
 
-    // MARK: - Featured Artists
+    // MARK: - Favorite Artists
 
-    private var featuredArtistsSection: some View {
+    private func favoriteArtistsSection(_ favorites: [Artist]) -> some View {
         VStack(alignment: .leading, spacing: DeadlySpacing.itemSpacing) {
-            Text("Artists")
+            Text("Favorite Artists")
                 .font(.title2)
                 .fontWeight(.bold)
 
-            Text("Browse live recordings from the Internet Archive")
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
-
-            ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack(spacing: DeadlySpacing.itemSpacing) {
-                    ForEach(content.featuredArtists) { artist in
-                        NavigationLink(value: ArtistRoute.detail(artist)) {
-                            VStack(alignment: .leading, spacing: 8) {
-                                AsyncImage(url: URL(string: artist.imageUrl)) { phase in
-                                    switch phase {
-                                    case .success(let image):
-                                        image
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                    default:
-                                        Rectangle()
-                                            .fill(Color(.systemGray5))
-                                            .overlay {
-                                                Image(systemName: "music.mic")
-                                                    .font(.title2)
-                                                    .foregroundStyle(.secondary)
-                                            }
-                                    }
-                                }
-                                .frame(width: 120, height: 120)
-                                .clipShape(RoundedRectangle(cornerRadius: DeadlySize.carouselCornerRadius))
-
-                                Text(artist.name)
-                                    .font(.caption)
-                                    .fontWeight(.medium)
-                                    .lineLimit(2)
-                                    .frame(width: 120, alignment: .leading)
-                            }
+            if favorites.isEmpty {
+                NavigationLink {
+                    ArtistsScreen()
+                } label: {
+                    HStack(spacing: 12) {
+                        Image(systemName: "plus.circle.fill")
+                            .font(.title2)
+                            .foregroundStyle(DeadlyColors.primary)
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Add some favorites")
+                                .font(.subheadline)
+                                .fontWeight(.medium)
+                                .foregroundStyle(.primary)
+                            Text("Browse artists and tap the heart to add them here")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
                         }
-                        .buttonStyle(.plain)
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    .padding(DeadlySpacing.screenPadding)
+                    .background(Color(.systemGray6), in: RoundedRectangle(cornerRadius: DeadlySize.cardCornerRadius))
+                }
+                .buttonStyle(.plain)
+            } else {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHStack(spacing: DeadlySpacing.itemSpacing) {
+                        ForEach(favorites) { artist in
+                            NavigationLink(value: ArtistRoute.detail(artist)) {
+                                VStack(alignment: .leading, spacing: 8) {
+                                    ShowArtwork(
+                                        recordingId: nil,
+                                        imageUrl: artist.imageUrl,
+                                        size: 120,
+                                        cornerRadius: DeadlySize.carouselCornerRadius
+                                    )
+
+                                    Text(artist.name)
+                                        .font(.caption)
+                                        .fontWeight(.medium)
+                                        .lineLimit(2)
+                                        .frame(width: 120, alignment: .leading)
+                                }
+                            }
+                            .buttonStyle(.plain)
+                        }
                     }
                 }
             }
