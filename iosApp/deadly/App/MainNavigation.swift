@@ -6,6 +6,7 @@ struct MainNavigation: View {
     @Environment(\.appContainer) private var container
     @State private var showFullPlayer = false
     @State private var homeStack = NavigationPath()
+    @State private var artistsStack = NavigationPath()
     @State private var searchStack = NavigationPath()
     @State private var favoritesStack = NavigationPath()
     @State private var collectionsStack = NavigationPath()
@@ -33,6 +34,29 @@ struct MainNavigation: View {
                             case .detail(let id):
                                 CollectionDetailScreen(collectionId: id)
                             }
+                        }
+                        .navigationDestination(for: ArtistRoute.self) { route in
+                            switch route {
+                            case .detail(let artist):
+                                ArtistDetailScreen(artist: artist)
+                            }
+                        }
+                }
+                .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+                .offlineBanner(isConnected: container.networkMonitor.isConnected)
+            }
+            Tab("Artists", systemImage: "music.mic", value: .artists) {
+                NavigationStack(path: $artistsStack) {
+                    ArtistsScreen()
+                        .settingsLogoButton($showingSettings, title: "Artists")
+                        .navigationDestination(for: ArtistRoute.self) { route in
+                            switch route {
+                            case .detail(let artist):
+                                ArtistDetailScreen(artist: artist)
+                            }
+                        }
+                        .navigationDestination(for: String.self) { showId in
+                            ShowDetailScreen(showId: showId)
                         }
                 }
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
@@ -217,6 +241,10 @@ struct MainNavigation: View {
             homeStack = NavigationPath()
             homeStack.append(showId)
             selectedTab = .home
+        case .artists:
+            artistsStack = NavigationPath()
+            artistsStack.append(showId)
+            selectedTab = .artists
         case .search:
             searchStack = NavigationPath()
             searchStack.append(showId)
@@ -246,7 +274,7 @@ struct MainNavigation: View {
 // MARK: - Tab enum
 
 enum AppTab: String, Hashable {
-    case home, search, favorites, collections
+    case home, artists, search, favorites, collections
 
     var title: String { rawValue.capitalized }
 }

@@ -4,13 +4,13 @@ struct MissionView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                Text("We built this app for one simple reason: we want to encourage Deadheads — old and new — to engage with, enjoy, and share the music of the Grateful Dead.")
+                Text("We built this app to make the Internet Archive's Live Music Archive accessible to everyone. Browse and stream thousands of live concert recordings from artists who embrace the taping and sharing tradition — all freely available and non-commercial.")
 
-                Text("The goal is to make listening to live shows as easy and enjoyable as possible in a modern streaming experience. We have deep respect for the spirit of the band and the long-standing belief that this music is meant to be shared — freely, non-commercially, and in community.")
+                Text("The Live Music Archive is home to recordings from the Grateful Dead, their side projects, tribute bands, and many other artists who allow audience taping. This app provides a modern streaming experience for exploring this incredible collection.")
 
                 Text("This app is completely open source. Anyone can inspect the code, contribute improvements, or build upon it.")
 
-                Text("No money is made from streaming music through this app. It exists because one Deadhead wanted a modern way to listen to his favorite band.")
+                Text("No money is made from streaming music through this app. All content is provided by and streamed directly from the Internet Archive (archive.org).")
             }
             .font(.body)
             .lineSpacing(5)

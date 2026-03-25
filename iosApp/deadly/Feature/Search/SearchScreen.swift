@@ -23,6 +23,11 @@ struct SearchScreen: View {
     @State private var randomShow: Show?
     @State private var refreshCounter = 0
 
+    // Multi-artist search
+    @State private var searchScope: SearchScope = .allArtists
+    @State private var iaSearchResults: [ArchiveShow] = []
+    @State private var iaSearchLoading = false
+
     /// Show results when the search bar is active or an era is selected.
     private var showingResults: Bool {
         eraOverride != nil || isSearchFieldFocused || !searchText.isEmpty
@@ -62,10 +67,15 @@ struct SearchScreen: View {
     var body: some View {
         VStack(spacing: 0) {
             searchBar
-            if showingResults {
+            scopePicker
+            if searchScope == .allArtists && showingResults {
+                iaResultsView
+            } else if showingResults {
                 resultsView
-            } else {
+            } else if searchScope == .gratefulDead {
                 browseView
+            } else {
+                iaDefaultView
             }
         }
         .toolbar(showingResults ? .hidden : .visible, for: .navigationBar)
@@ -76,6 +86,7 @@ struct SearchScreen: View {
             searchText = ""
             isSearchFieldFocused = false
             searchService.clearResults()
+            iaSearchResults = []
             eraOverride = nil
             eraLabel = nil
             filterPath = FilterPath()
@@ -100,8 +111,8 @@ struct SearchScreen: View {
             filterPath = FilterPath()
             if newValue.isEmpty {
                 searchService.clearResults()
-                if isSearchFieldFocused {
-                    // Cleared search text while focused — show all shows again
+                iaSearchResults = []
+                if isSearchFieldFocused && searchScope == .gratefulDead {
                     loadAllEras()
                 }
                 return
@@ -110,7 +121,29 @@ struct SearchScreen: View {
             searchTask = Task {
                 try? await Task.sleep(for: .milliseconds(300))
                 guard !Task.isCancelled else { return }
-                await searchService.search(query: newValue)
+                if searchScope == .allArtists {
+                    await performIASearch(query: newValue)
+                } else {
+                    await searchService.search(query: newValue)
+                }
+            }
+        }
+        .onChange(of: searchScope) { _, newScope in
+            // Re-run search with new scope if there's a query
+            if !searchText.isEmpty {
+                searchTask?.cancel()
+                searchTask = Task {
+                    if newScope == .allArtists {
+                        await performIASearch(query: searchText)
+                    } else {
+                        iaSearchResults = []
+                        await searchService.search(query: searchText)
+                    }
+                }
+            } else {
+                iaSearchResults = []
+                searchService.clearResults()
+                eraOverride = nil
             }
         }
         .task {
@@ -537,4 +570,72 @@ struct SearchScreen: View {
             return sortDirection == .ascending ? cmp : !cmp
         }
     }
+
+    // MARK: - Scope picker
+
+    private var scopePicker: some View {
+        Picker("Search Scope", selection: $searchScope) {
+            Text("All Artists").tag(SearchScope.allArtists)
+            Text("Grateful Dead").tag(SearchScope.gratefulDead)
+        }
+        .pickerStyle(.segmented)
+        .padding(.horizontal, DeadlySpacing.screenPadding)
+        .padding(.bottom, 8)
+    }
+
+    // MARK: - IA Search
+
+    private func performIASearch(query: String) async {
+        iaSearchLoading = true
+        defer { iaSearchLoading = false }
+        do {
+            let result = try await container.archiveSearchClient.searchAllArtists(
+                query: query, page: 1, pageSize: 50
+            )
+            iaSearchResults = result.shows
+        } catch {
+            iaSearchResults = []
+        }
+    }
+
+    private var iaResultsView: some View {
+        Group {
+            if iaSearchLoading {
+                ProgressView()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            } else if iaSearchResults.isEmpty && !searchText.isEmpty {
+                ContentUnavailableView.search(text: searchText)
+            } else if iaSearchResults.isEmpty {
+                ContentUnavailableView(
+                    "Search the Archive",
+                    systemImage: "magnifyingglass",
+                    description: Text("Search for shows across all Live Music Archive artists.")
+                )
+            } else {
+                List(iaSearchResults) { show in
+                    NavigationLink(value: show.identifier) {
+                        ArtistShowRow(show: show)
+                    }
+                    .buttonStyle(.plain)
+                }
+                .listStyle(.plain)
+                .scrollDismissesKeyboard(.immediately)
+            }
+        }
+    }
+
+    private var iaDefaultView: some View {
+        ContentUnavailableView(
+            "Search the Archive",
+            systemImage: "magnifyingglass",
+            description: Text("Search for shows across all Live Music Archive artists.")
+        )
+    }
+}
+
+// MARK: - Search Scope
+
+enum SearchScope: String, CaseIterable {
+    case allArtists
+    case gratefulDead
 }

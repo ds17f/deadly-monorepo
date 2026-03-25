@@ -1,6 +1,7 @@
 import Foundation
 
 struct HomeContent: Sendable {
+    var featuredArtists: [Artist] = []
     var todayInHistory: [Show] = []
     var featuredCollections: [CollectionSummary] = []
     var recentShows: [Show] = []

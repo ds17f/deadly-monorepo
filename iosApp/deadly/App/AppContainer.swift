@@ -26,6 +26,8 @@ final class AppContainer {
     let recentShowsService: RecentShowsServiceImpl
     let miniPlayerService: MiniPlayerServiceImpl
     let archiveClient: URLSessionArchiveMetadataClient
+    let archiveSearchClient: URLSessionArchiveSearchClient
+    let archiveShowService: URLSessionArchiveShowService
     let downloadService: DownloadServiceImpl
     let equalizerService: EqualizerService
     let authService: AuthService
@@ -149,6 +151,8 @@ final class AppContainer {
 
             let archive = URLSessionArchiveMetadataClient()
             archiveClient = archive
+            archiveSearchClient = URLSessionArchiveSearchClient()
+            archiveShowService = URLSessionArchiveShowService()
 
             // DownloadService is @MainActor; manage offline downloads
             let downloadSvc = MainActor.assumeIsolated {
@@ -167,6 +171,7 @@ final class AppContainer {
             let playlistSvc = PlaylistServiceImpl(
                 showRepository: showRepo,
                 archiveClient: archive,
+                archiveShowService: archiveShowService,
                 recentShowsService: recentService,
                 recordingPreferenceDAO: RecordingPreferenceDAO(database: db),
                 streamPlayer: player,
