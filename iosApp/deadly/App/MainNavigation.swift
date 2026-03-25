@@ -45,22 +45,24 @@ struct MainNavigation: View {
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
                 .offlineBanner(isConnected: container.networkMonitor.isConnected)
             }
-            Tab("Artists", systemImage: "music.mic", value: .artists) {
-                NavigationStack(path: $artistsStack) {
-                    ArtistsScreen()
-                        .settingsLogoButton($showingSettings, title: "Artists")
-                        .navigationDestination(for: ArtistRoute.self) { route in
-                            switch route {
-                            case .detail(let artist):
-                                ArtistDetailScreen(artist: artist)
+            if !container.appPreferences.enabledBrowsableArtists.isEmpty {
+                Tab("Artists", systemImage: "music.mic", value: .artists) {
+                    NavigationStack(path: $artistsStack) {
+                        ArtistsScreen()
+                            .settingsLogoButton($showingSettings, title: "Artists")
+                            .navigationDestination(for: ArtistRoute.self) { route in
+                                switch route {
+                                case .detail(let artist):
+                                    ArtistDetailScreen(artist: artist)
+                                }
                             }
-                        }
-                        .navigationDestination(for: String.self) { showId in
-                            ShowDetailScreen(showId: showId)
-                        }
+                            .navigationDestination(for: String.self) { showId in
+                                ShowDetailScreen(showId: showId)
+                            }
+                    }
+                    .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+                    .offlineBanner(isConnected: container.networkMonitor.isConnected)
                 }
-                .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
-                .offlineBanner(isConnected: container.networkMonitor.isConnected)
             }
             Tab("Search", systemImage: "magnifyingglass", value: .search) {
                 NavigationStack(path: $searchStack) {

@@ -146,6 +146,18 @@ struct SettingsScreen: View {
                 }
             }
 
+            // MARK: - Artists
+            Section("Artists") {
+                ForEach(Artist.browsable) { artist in
+                    Toggle(isOn: Binding(
+                        get: { container.appPreferences.isArtistEnabled(artist.id) },
+                        set: { container.appPreferences.setArtistEnabled(artist.id, enabled: $0) }
+                    )) {
+                        Text(artist.name)
+                    }
+                }
+            }
+
             // MARK: - Audio
             Section("Audio") {
                 if let onNavigateToEqualizer {

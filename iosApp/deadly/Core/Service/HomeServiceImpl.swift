@@ -5,6 +5,7 @@ final class HomeServiceImpl: HomeService {
     private let showRepository: any ShowRepository
     private let collectionsDAO: CollectionsDAO
     private let recentShowsService: RecentShowsService
+    private let appPreferences: AppPreferences
 
     private(set) var content = HomeContent()
     private(set) var isLoading = false
@@ -12,11 +13,13 @@ final class HomeServiceImpl: HomeService {
     nonisolated init(
         showRepository: any ShowRepository,
         collectionsDAO: CollectionsDAO,
-        recentShowsService: RecentShowsService
+        recentShowsService: RecentShowsService,
+        appPreferences: AppPreferences
     ) {
         self.showRepository = showRepository
         self.collectionsDAO = collectionsDAO
         self.recentShowsService = recentShowsService
+        self.appPreferences = appPreferences
     }
 
     func refresh() async {
@@ -45,7 +48,7 @@ final class HomeServiceImpl: HomeService {
             let recentShows = await recentShowsService.getRecentShows(limit: 8)
 
             content = HomeContent(
-                featuredArtists: Artist.browsable,
+                featuredArtists: appPreferences.enabledBrowsableArtists,
                 todayInHistory: todayShows,
                 featuredCollections: collections,
                 recentShows: recentShows

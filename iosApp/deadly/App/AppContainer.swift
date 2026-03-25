@@ -146,7 +146,8 @@ final class AppContainer {
             homeService = HomeServiceImpl(
                 showRepository: showRepo,
                 collectionsDAO: CollectionsDAO(database: db),
-                recentShowsService: recentService
+                recentShowsService: recentService,
+                appPreferences: prefs
             )
 
             let archive = URLSessionArchiveMetadataClient()
