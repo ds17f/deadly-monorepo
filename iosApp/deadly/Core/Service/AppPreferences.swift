@@ -18,6 +18,7 @@ final class AppPreferences {
     private static let customDevEmailKey = "custom_dev_email"
     private static let analyticsEnabledKey = "analytics_enabled"
     private static let installIdKey = "install_id"
+    private static let disabledArtistIdsKey = "disabled_artist_ids"
 
     /// Server environment: "prod", "beta", or "custom".
     var serverEnvironment: String {
@@ -101,6 +102,30 @@ final class AppPreferences {
         }
     }
 
+    /// IDs of artists the user has disabled in Settings.
+    var disabledArtistIds: Set<String> {
+        didSet {
+            let data = try? JSONEncoder().encode(Array(disabledArtistIds))
+            UserDefaults.standard.set(data, forKey: Self.disabledArtistIdsKey)
+        }
+    }
+
+    func isArtistEnabled(_ artistId: String) -> Bool {
+        !disabledArtistIds.contains(artistId)
+    }
+
+    func setArtistEnabled(_ artistId: String, enabled: Bool) {
+        if enabled {
+            disabledArtistIds.remove(artistId)
+        } else {
+            disabledArtistIds.insert(artistId)
+        }
+    }
+
+    var enabledBrowsableArtists: [Artist] {
+        Artist.browsable.filter { isArtistEnabled($0.id) }
+    }
+
     init() {
         UserDefaults.standard.register(defaults: [
             Self.includeShowsWithoutRecordingsKey: false,
@@ -142,6 +167,13 @@ final class AppPreferences {
         }
         eqEnabled = UserDefaults.standard.bool(forKey: Self.eqEnabledKey)
         eqPreset = UserDefaults.standard.string(forKey: Self.eqPresetKey) ?? "flat"
+
+        if let data = UserDefaults.standard.data(forKey: Self.disabledArtistIdsKey),
+           let ids = try? JSONDecoder().decode([String].self, from: data) {
+            disabledArtistIds = Set(ids)
+        } else {
+            disabledArtistIds = []
+        }
 
         if let savedGains = UserDefaults.standard.string(forKey: Self.eqBandGainsKey) {
             eqBandGains = savedGains.split(separator: ",").compactMap { Float($0) }

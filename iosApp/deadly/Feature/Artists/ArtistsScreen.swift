@@ -3,7 +3,7 @@ import SwiftUI
 struct ArtistsScreen: View {
     @Environment(\.appContainer) private var container
 
-    private let artists = Artist.browsable
+    private var artists: [Artist] { container.appPreferences.enabledBrowsableArtists }
 
     var body: some View {
         ScrollView {
