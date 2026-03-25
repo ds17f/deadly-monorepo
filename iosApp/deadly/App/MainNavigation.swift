@@ -45,24 +45,22 @@ struct MainNavigation: View {
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
                 .offlineBanner(isConnected: container.networkMonitor.isConnected)
             }
-            if !container.appPreferences.enabledBrowsableArtists.isEmpty {
-                Tab("Artists", systemImage: "music.mic", value: .artists) {
-                    NavigationStack(path: $artistsStack) {
-                        ArtistsScreen()
-                            .settingsLogoButton($showingSettings, title: "Artists")
-                            .navigationDestination(for: ArtistRoute.self) { route in
-                                switch route {
-                                case .detail(let artist):
-                                    ArtistDetailScreen(artist: artist)
-                                }
+            Tab("Artists", systemImage: "music.mic", value: .artists) {
+                NavigationStack(path: $artistsStack) {
+                    ArtistsScreen()
+                        .settingsLogoButton($showingSettings, title: "Artists")
+                        .navigationDestination(for: ArtistRoute.self) { route in
+                            switch route {
+                            case .detail(let artist):
+                                ArtistDetailScreen(artist: artist)
                             }
-                            .navigationDestination(for: String.self) { showId in
-                                ShowDetailScreen(showId: showId)
-                            }
-                    }
-                    .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
-                    .offlineBanner(isConnected: container.networkMonitor.isConnected)
+                        }
+                        .navigationDestination(for: String.self) { showId in
+                            ShowDetailScreen(showId: showId)
+                        }
                 }
+                .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+                .offlineBanner(isConnected: container.networkMonitor.isConnected)
             }
             Tab("Search", systemImage: "magnifyingglass", value: .search) {
                 NavigationStack(path: $searchStack) {
@@ -81,6 +79,12 @@ struct MainNavigation: View {
                         .settingsLogoButton($showingSettings, title: "Favorites")
                         .navigationDestination(for: String.self) { showId in
                             ShowDetailScreen(showId: showId)
+                        }
+                        .navigationDestination(for: ArtistRoute.self) { route in
+                            switch route {
+                            case .detail(let artist):
+                                ArtistDetailScreen(artist: artist)
+                            }
                         }
                         .navigationDestination(for: FavoritesRoute.self) { route in
                             switch route {

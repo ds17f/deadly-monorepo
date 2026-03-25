@@ -1,7 +1,6 @@
 import Foundation
 
 /// Lightweight show model from Internet Archive search results.
-/// Used for non-Dead artists where we don't have rich local data.
 struct ArchiveShow: Identifiable, Codable, Sendable, Hashable {
     let identifier: String
     let date: String?

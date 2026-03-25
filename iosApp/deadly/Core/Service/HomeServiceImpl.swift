@@ -48,7 +48,7 @@ final class HomeServiceImpl: HomeService {
             let recentShows = await recentShowsService.getRecentShows(limit: 8)
 
             content = HomeContent(
-                featuredArtists: appPreferences.enabledBrowsableArtists,
+                featuredArtists: Artist.all,
                 todayInHistory: todayShows,
                 featuredCollections: collections,
                 recentShows: recentShows

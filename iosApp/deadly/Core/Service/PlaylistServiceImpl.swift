@@ -50,15 +50,19 @@ final class PlaylistServiceImpl: PlaylistService {
 
     var hasNextShow: Bool {
         guard let current = currentShow else { return false }
-        // Chronological navigation only works for shows in the local database
-        guard current.band == "Grateful Dead" else { return false }
+        // Chronological navigation only works for artists with local data
+        guard isLocalArtist(current.band) else { return false }
         return (try? showRepository.getNextShow(afterDate: current.date)) != nil
     }
 
     var hasPreviousShow: Bool {
         guard let current = currentShow else { return false }
-        guard current.band == "Grateful Dead" else { return false }
+        guard isLocalArtist(current.band) else { return false }
         return (try? showRepository.getPreviousShow(beforeDate: current.date)) != nil
+    }
+
+    private func isLocalArtist(_ band: String) -> Bool {
+        Artist.all.first { $0.name == band }?.hasLocalData ?? false
     }
 
     func navigateToNextShow() async -> Bool {
@@ -109,7 +113,7 @@ final class PlaylistServiceImpl: PlaylistService {
 
     func loadShow(_ showId: String) async {
         do {
-            // Try local database first (Grateful Dead shows with rich data)
+            // Try local database first (artists with rich local data)
             let show = try showRepository.getShowById(showId)
             if let show {
                 currentShow = show

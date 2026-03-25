@@ -6,7 +6,7 @@ import Foundation
 /// - recent              → Recently Played
 /// - library_shows       → Favorite Shows
 /// - library_songs       → Favorite Songs
-/// - today               → Today in Grateful Dead History
+/// - today               → Today In History
 /// - years               → Browse by Year
 ///   └── year/{year}     → Shows for year
 /// - top_rated           → Top Rated Shows

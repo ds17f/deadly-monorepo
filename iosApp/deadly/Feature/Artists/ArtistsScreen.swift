@@ -3,7 +3,7 @@ import SwiftUI
 struct ArtistsScreen: View {
     @Environment(\.appContainer) private var container
 
-    private var artists: [Artist] { container.appPreferences.enabledBrowsableArtists }
+    private var artists: [Artist] { Artist.all }
 
     var body: some View {
         ScrollView {
@@ -23,11 +23,11 @@ struct ArtistsScreen: View {
 
     private var header: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Live Music Archive")
+            Text("Artists")
                 .font(.title2)
                 .fontWeight(.bold)
 
-            Text("Browse publicly available live recordings from the Internet Archive.")
+            Text("Browse live recordings from the Internet Archive.")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
         }
@@ -45,7 +45,14 @@ struct ArtistsScreen: View {
         ) {
             ForEach(artists) { artist in
                 NavigationLink(value: ArtistRoute.detail(artist)) {
-                    ArtistCard(artist: artist)
+                    ArtistCard(
+                        artist: artist,
+                        isFavorite: container.appPreferences.isFavoriteArtist(artist.id),
+                        onToggleFavorite: {
+                            let current = container.appPreferences.isFavoriteArtist(artist.id)
+                            container.appPreferences.setFavoriteArtist(artist.id, favorite: !current)
+                        }
+                    )
                 }
                 .buttonStyle(.plain)
             }
@@ -71,24 +78,39 @@ struct ArtistsScreen: View {
 
 private struct ArtistCard: View {
     let artist: Artist
+    var isFavorite: Bool = false
+    var onToggleFavorite: (() -> Void)? = nil
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            AsyncImage(url: URL(string: artist.imageUrl)) { phase in
-                switch phase {
-                case .success(let image):
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                case .failure:
-                    placeholderImage
-                default:
-                    placeholderImage
-                        .overlay { ProgressView() }
+            ZStack(alignment: .topTrailing) {
+                AsyncImage(url: URL(string: artist.imageUrl)) { phase in
+                    switch phase {
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    case .failure:
+                        placeholderImage
+                    default:
+                        placeholderImage
+                            .overlay { ProgressView() }
+                    }
                 }
+                .frame(width: DeadlySize.carouselCard, height: DeadlySize.carouselCard)
+                .clipShape(RoundedRectangle(cornerRadius: DeadlySize.carouselCornerRadius))
+
+                Button {
+                    onToggleFavorite?()
+                } label: {
+                    Image(systemName: isFavorite ? "heart.fill" : "heart")
+                        .font(.caption)
+                        .foregroundStyle(isFavorite ? .red : .white)
+                        .padding(6)
+                        .background(.ultraThinMaterial, in: Circle())
+                }
+                .padding(4)
             }
-            .frame(width: DeadlySize.carouselCard, height: DeadlySize.carouselCard)
-            .clipShape(RoundedRectangle(cornerRadius: DeadlySize.carouselCornerRadius))
 
             Text(artist.name)
                 .font(.subheadline)

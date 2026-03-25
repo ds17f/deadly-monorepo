@@ -35,20 +35,17 @@ struct HomeScreen: View {
         }
         .navigationBarTitleDisplayMode(.inline)
         .task { await homeService.refresh() }
-        .onChange(of: container.appPreferences.disabledArtistIds) { _, _ in
-            Task { await homeService.refresh() }
-        }
     }
 
     // MARK: - Featured Artists
 
     private var featuredArtistsSection: some View {
         VStack(alignment: .leading, spacing: DeadlySpacing.itemSpacing) {
-            Text("Live Music Archive")
+            Text("Artists")
                 .font(.title2)
                 .fontWeight(.bold)
 
-            Text("Browse publicly available live recordings")
+            Text("Browse live recordings from the Internet Archive")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
 
