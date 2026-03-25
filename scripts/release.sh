@@ -54,13 +54,15 @@ case "$PLATFORM" in
     VERSION_PROPS="androidApp/version.properties"
     CHANGELOG_FILE="androidApp/CHANGELOG.md"
     TAG_MATCH="android/v*"
-    EXCLUDE_PLATFORM="ios"
+    EXCLUDE_PLATFORMS="ios|web"
+    EXCLUDE_COMPONENTS="infra"
     ;;
   ios)
     VERSION_PROPS="iosApp/version.properties"
     CHANGELOG_FILE="iosApp/CHANGELOG.md"
     TAG_MATCH="ios/v*"
-    EXCLUDE_PLATFORM="android"
+    EXCLUDE_PLATFORMS="android|web"
+    EXCLUDE_COMPONENTS="infra"
     ;;
   all)
     echo -e "${RED}❌ Error: --platform all is no longer supported.${NC}"
@@ -74,6 +76,17 @@ case "$PLATFORM" in
     exit 1
     ;;
 esac
+
+# Filter out commits not relevant to this platform.
+# Removes commits scoped to excluded platforms and excluded components.
+filter_platform() {
+  local result
+  result=$(grep -vE "\((${EXCLUDE_PLATFORMS})[/)]" || true)
+  if [ -n "$EXCLUDE_COMPONENTS" ] && [ -n "$result" ]; then
+    result=$(echo "$result" | grep -vE "\([^)]*(${EXCLUDE_COMPONENTS})[/)]" || true)
+  fi
+  echo "$result"
+}
 
 if [ "$DRY_RUN" = true ]; then
   echo -e "${YELLOW}🧪 DRY RUN MODE - No changes will be made${NC}"
@@ -132,19 +145,19 @@ if [ "$VERSION_PROVIDED" = false ]; then
 
   # Check for breaking changes
   BREAKING_CHANGES=$(git log ${FROM_REVISION} --pretty=format:"%s" \
-    | grep -v "(${EXCLUDE_PLATFORM}[/)]" \
+    | filter_platform \
     | grep -E "^[a-z]+(\([^)]+\))?!:" || echo "")
   BREAKING_CHANGES_COUNT=$(echo "$BREAKING_CHANGES" | grep -v "^$" | wc -l | tr -d ' ')
 
   # Check for features
   FEATURES=$(git log ${FROM_REVISION} --pretty=format:"%s" \
-    | grep -v "(${EXCLUDE_PLATFORM}[/)]" \
+    | filter_platform \
     | grep -E "^feat(\([^)]+\))?:" || echo "")
   FEATURES_COUNT=$(echo "$FEATURES" | grep -v "^$" | wc -l | tr -d ' ')
 
   # Check for fixes
   FIXES=$(git log ${FROM_REVISION} --pretty=format:"%s" \
-    | grep -v "(${EXCLUDE_PLATFORM}[/)]" \
+    | filter_platform \
     | grep -E "^fix(\([^)]+\))?:" || echo "")
   FIXES_COUNT=$(echo "$FIXES" | grep -v "^$" | wc -l | tr -d ' ')
 
@@ -229,10 +242,10 @@ extract_commits() {
   local extra_exclude=${3:-}
   local commits
 
-  # Filter by type, then exclude opposite-platform commits
+  # Filter by type, then exclude irrelevant platform/component commits
   commits=$(git log ${FROM_REVISION} --pretty=format:"* %s (%h)" \
     | grep "^* ${type}" \
-    | grep -v "(${EXCLUDE_PLATFORM}[/)]" \
+    | filter_platform \
     || true)
 
   # Apply optional extra exclude pattern (e.g. to filter out ci-scoped commits)
@@ -267,12 +280,12 @@ extract_commits "build" "Build System"
 # CI Changes: pure ci: type + feat/fix commits with ci in scope, both filtered by platform
 CI_FROM_TYPE=$(git log ${FROM_REVISION} --pretty=format:"* %s (%h)" \
   | grep "^* ci" \
-  | grep -v "(${EXCLUDE_PLATFORM}[/)]" \
+  | filter_platform \
   || true)
 CI_FROM_FEAT_FIX=$(git log ${FROM_REVISION} --pretty=format:"* %s (%h)" \
   | grep -E "^\* (feat|fix)" \
   | grep "([^)]*ci" \
-  | grep -v "(${EXCLUDE_PLATFORM}[/)]" \
+  | filter_platform \
   || true)
 CI_COMMITS=$(printf "%s\n%s" "$CI_FROM_TYPE" "$CI_FROM_FEAT_FIX" | grep -v "^$" || true)
 if [ -n "$CI_COMMITS" ]; then
@@ -287,7 +300,7 @@ fi
 # Get miscellaneous commits (those not following conventional commit format)
 # Exclude opposite-platform commits and release chore commits
 MISC_COMMITS=$(git log ${FROM_REVISION} --pretty=format:"* %s (%h)" \
-  | grep -v "(${EXCLUDE_PLATFORM}[/)]" \
+  | filter_platform \
   | grep -v "^* chore: release " \
   | grep -v "^* \(feat\|fix\|perf\|refactor\|docs\|test\|build\|ci\)" || true)
 
