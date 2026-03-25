@@ -67,7 +67,9 @@ struct SearchScreen: View {
     var body: some View {
         VStack(spacing: 0) {
             searchBar
-            scopePicker
+            if !container.appPreferences.enabledBrowsableArtists.isEmpty {
+                scopePicker
+            }
             if searchScope == .allArtists && showingResults {
                 iaResultsView
             } else if showingResults {
@@ -144,6 +146,11 @@ struct SearchScreen: View {
                 iaSearchResults = []
                 searchService.clearResults()
                 eraOverride = nil
+            }
+        }
+        .onChange(of: container.appPreferences.enabledBrowsableArtists) { _, newValue in
+            if newValue.isEmpty {
+                searchScope = .gratefulDead
             }
         }
         .task {
