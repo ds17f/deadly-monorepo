@@ -146,15 +146,6 @@ struct SettingsScreen: View {
                 }
             }
 
-            // MARK: - Artists
-            Section("Artists") {
-                NavigationLink {
-                    ArtistsSettingsScreen()
-                } label: {
-                    Label("Artists", systemImage: "music.mic")
-                }
-            }
-
             // MARK: - Audio
             Section("Audio") {
                 if let onNavigateToEqualizer {

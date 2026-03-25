@@ -18,7 +18,7 @@ final class AppPreferences {
     private static let customDevEmailKey = "custom_dev_email"
     private static let analyticsEnabledKey = "analytics_enabled"
     private static let installIdKey = "install_id"
-    private static let disabledArtistIdsKey = "disabled_artist_ids"
+    private static let favoriteArtistIdsKey = "favorite_artist_ids"
 
     /// Server environment: "prod", "beta", or "custom".
     var serverEnvironment: String {
@@ -102,28 +102,28 @@ final class AppPreferences {
         }
     }
 
-    /// IDs of artists the user has disabled in Settings.
-    var disabledArtistIds: Set<String> {
+    /// IDs of artists the user has favorited.
+    var favoriteArtistIds: Set<String> {
         didSet {
-            let data = try? JSONEncoder().encode(Array(disabledArtistIds))
-            UserDefaults.standard.set(data, forKey: Self.disabledArtistIdsKey)
+            let data = try? JSONEncoder().encode(Array(favoriteArtistIds))
+            UserDefaults.standard.set(data, forKey: Self.favoriteArtistIdsKey)
         }
     }
 
-    func isArtistEnabled(_ artistId: String) -> Bool {
-        !disabledArtistIds.contains(artistId)
+    func isFavoriteArtist(_ artistId: String) -> Bool {
+        favoriteArtistIds.contains(artistId)
     }
 
-    func setArtistEnabled(_ artistId: String, enabled: Bool) {
-        if enabled {
-            disabledArtistIds.remove(artistId)
+    func setFavoriteArtist(_ artistId: String, favorite: Bool) {
+        if favorite {
+            favoriteArtistIds.insert(artistId)
         } else {
-            disabledArtistIds.insert(artistId)
+            favoriteArtistIds.remove(artistId)
         }
     }
 
-    var enabledBrowsableArtists: [Artist] {
-        Artist.browsable.filter { isArtistEnabled($0.id) }
+    var favoriteArtists: [Artist] {
+        Artist.all.filter { isFavoriteArtist($0.id) }
     }
 
     init() {
@@ -168,11 +168,11 @@ final class AppPreferences {
         eqEnabled = UserDefaults.standard.bool(forKey: Self.eqEnabledKey)
         eqPreset = UserDefaults.standard.string(forKey: Self.eqPresetKey) ?? "flat"
 
-        if let data = UserDefaults.standard.data(forKey: Self.disabledArtistIdsKey),
+        if let data = UserDefaults.standard.data(forKey: Self.favoriteArtistIdsKey),
            let ids = try? JSONDecoder().decode([String].self, from: data) {
-            disabledArtistIds = Set(ids)
+            favoriteArtistIds = Set(ids)
         } else {
-            disabledArtistIds = []
+            favoriteArtistIds = []
         }
 
         if let savedGains = UserDefaults.standard.string(forKey: Self.eqBandGainsKey) {

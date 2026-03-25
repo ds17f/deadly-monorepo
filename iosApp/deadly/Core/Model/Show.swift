@@ -58,4 +58,17 @@ struct Show: Codable, Sendable, Equatable, Identifiable {
     var hasRating: Bool { averageRating.map { $0 > 0 } ?? false }
     var displayRating: String { averageRating.map { String(format: "%.1f★", $0) } ?? "Not Rated" }
     var hasMultipleRecordings: Bool { recordingCount > 1 }
+
+    /// Convert to ArchiveShow for uniform display in artist detail screens.
+    func toArchiveShow() -> ArchiveShow {
+        ArchiveShow(
+            identifier: id,
+            date: date,
+            title: "\(band) Live at \(venue.name) on \(date)",
+            venue: venue.name,
+            coverage: location.displayText,
+            avgRating: averageRating.map { Double($0) },
+            numReviews: totalReviews
+        )
+    }
 }

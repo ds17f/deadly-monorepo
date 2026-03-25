@@ -39,7 +39,7 @@ struct FavoritesScreen: View {
     @Environment(\.appContainer) private var container
     private var service: FavoritesServiceImpl { container.favoritesService }
 
-    @State private var selectedTab: FavoritesTab = .shows
+    @State private var selectedTab: FavoritesTab = .artists
     @State private var sortOption: FavoritesSortOption = .dateAdded
     @State private var sortDirection: FavoritesSortDirection = .descending
     @State private var songSortOption: FavoritesSongSortOption = .dateAdded
@@ -85,16 +85,20 @@ struct FavoritesScreen: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            filterChips
             tabPicker
-            sortAndDisplayControls
-                .padding(.bottom, 8)
-            Divider()
-
-            if selectedTab == .shows {
-                showsContent
+            if selectedTab == .artists {
+                artistsContent
             } else {
-                songsContent
+                filterChips
+                sortAndDisplayControls
+                    .padding(.bottom, 8)
+                Divider()
+
+                if selectedTab == .shows {
+                    showsContent
+                } else {
+                    songsContent
+                }
             }
         }
         .navigationBarTitleDisplayMode(.inline)
@@ -236,6 +240,43 @@ struct FavoritesScreen: View {
             switch displayMode {
             case .list: listView
             case .grid: gridView
+            }
+        }
+    }
+
+    // MARK: - Artists content
+
+    private let artistColumns = [
+        GridItem(.flexible(), spacing: DeadlySpacing.gridSpacing),
+        GridItem(.flexible(), spacing: DeadlySpacing.gridSpacing),
+    ]
+
+    @ViewBuilder
+    private var artistsContent: some View {
+        let favorites = container.appPreferences.favoriteArtists
+        if favorites.isEmpty {
+            ContentUnavailableView(
+                "No Favorite Artists",
+                systemImage: "music.mic",
+                description: Text("Tap the heart on an artist to add them here.")
+            )
+        } else {
+            ScrollView {
+                LazyVGrid(columns: artistColumns, spacing: DeadlySpacing.sectionSpacing) {
+                    ForEach(favorites) { artist in
+                        NavigationLink(value: ArtistRoute.detail(artist)) {
+                            FavoriteArtistCard(
+                                artist: artist,
+                                isFavorite: true,
+                                onToggleFavorite: {
+                                    container.appPreferences.setFavoriteArtist(artist.id, favorite: false)
+                                }
+                            )
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+                .padding(DeadlySpacing.screenPadding)
             }
         }
     }
@@ -629,6 +670,55 @@ struct FavoritesScreen: View {
             Label("Remove from Favorites", systemImage: "heart.slash")
         }
     }
+}
 
+// MARK: - Favorite Artist Card
 
+private struct FavoriteArtistCard: View {
+    let artist: Artist
+    let isFavorite: Bool
+    var onToggleFavorite: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            ZStack(alignment: .topTrailing) {
+                AsyncImage(url: URL(string: artist.imageUrl)) { phase in
+                    switch phase {
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    default:
+                        Rectangle()
+                            .fill(Color(.systemGray5))
+                            .overlay {
+                                Image(systemName: "music.mic")
+                                    .font(.largeTitle)
+                                    .foregroundStyle(.secondary)
+                            }
+                    }
+                }
+                .frame(width: DeadlySize.carouselCard, height: DeadlySize.carouselCard)
+                .clipShape(RoundedRectangle(cornerRadius: DeadlySize.carouselCornerRadius))
+
+                Button {
+                    onToggleFavorite()
+                } label: {
+                    Image(systemName: isFavorite ? "heart.fill" : "heart")
+                        .font(.body)
+                        .foregroundStyle(isFavorite ? .red : .white)
+                        .padding(8)
+                        .background(.ultraThinMaterial, in: Circle())
+                }
+                .padding(6)
+            }
+
+            Text(artist.name)
+                .font(.subheadline)
+                .fontWeight(.medium)
+                .lineLimit(2)
+        }
+        .frame(width: DeadlySize.carouselCard)
+        .accessibilityElement(children: .combine)
+    }
 }

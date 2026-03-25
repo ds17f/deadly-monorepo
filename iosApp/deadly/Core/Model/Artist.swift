@@ -37,7 +37,4 @@ extension Artist {
         Artist(id: "scarlet-begonias", name: "Scarlet Begonias", collection: "ScarletBegoniaz"),
         Artist(id: "terrapin-flyer", name: "Terrapin Flyer", collection: "TerrapinFlyer"),
     ]
-
-    /// All artists except Grateful Dead (which has its own rich experience).
-    static let browsable: [Artist] = all.filter { !$0.hasLocalData }
 }

@@ -75,8 +75,8 @@ final class CarPlayManager {
     }
 
     private func buildTodayTab() -> CPListTemplate {
-        let template = CPListTemplate(title: "TIGDH", sections: [])
-        template.tabTitle = "TIGDH"
+        let template = CPListTemplate(title: "Today", sections: [])
+        template.tabTitle = "Today"
         template.tabImage = UIImage(systemName: "calendar")
         loadTodayShows(into: template)
         return template

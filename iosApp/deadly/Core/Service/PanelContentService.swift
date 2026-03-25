@@ -45,7 +45,7 @@ final class PanelContentService {
         let venueCity = show.venue.city
 
         // Both services guard against empty input and return nil — safe to always call.
-        async let lyricsResult: String? = genius.getLyrics(songTitle: songToLoad, artist: "Grateful Dead")
+        async let lyricsResult: String? = genius.getLyrics(songTitle: songToLoad, artist: show.band)
         async let venueResult: String? = wikipedia.getVenueSummary(venueName: venueName, city: venueCity)
 
         let (l, v) = await (lyricsResult, venueResult)
