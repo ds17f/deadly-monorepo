@@ -2,25 +2,19 @@ import SwiftUI
 
 // MARK: - Quotes
 
-/// Rotating quotes displayed during import. Add your favorite Grateful Dead lyrics here.
-/// Format: (quote, song attribution)
+/// Rotating quotes displayed during import.
+/// Format: (quote, attribution)
 private let deadlyQuotes: [(quote: String, song: String)] = [
-    // Replace these placeholders with your favorite lyrics
-    ("What a long strange trip it's been", "Truckin'"),
-    ("Once in a while you get shown the light", "Scarlet Begonias"),
-    ("Nothing left to do but smile, smile, smile", "He's Gone"),
-    ("Ain't no time to hate, barely time to wait", "Uncle John's Band"),
-    ("Sometimes the light's all shining on me", "Truckin'"),
-    ("Let there be songs to fill the air", "Ripple"),
-    ("Every silver lining's got a touch of grey", "Touch of Grey"),
-    ("If the thunder don't get you then the lightning will", "The Wheel"),
-    ("Gotta get down to the Cumberland Mine", "Cumberland Blues"),
-    ("Wake up to find out that you are the eyes of the world", "Eyes of the World"),
-    ("Going where the wind don't blow so strange", "Brokedown Palace"),
-    ("The sky was yellow and the sun was blue", "Scarlet Begonias"),
-    ("Without love in the dream it will never come true", "Help on the Way"),
-    ("Such a long, long time to be gone and a short time to be there", "Box of Rain"),
-    ("Lately it occurs to me what a long strange trip it's been", "Truckin'"),
+    ("Music is the best", "Frank Zappa"),
+    ("Where words fail, music speaks", "Hans Christian Andersen"),
+    ("One good thing about music, when it hits you, you feel no pain", "Bob Marley"),
+    ("Live music is the art of the moment", "The Archive"),
+    ("Every show is unique, unrepeatable, and worth preserving", "The Archive"),
+    ("The taper's art: capturing lightning in a bottle", "Live Music Archive"),
+    ("Freely shared, non-commercially, and in community", "The Archive"),
+    ("Thousands of artists. Hundreds of thousands of recordings.", "Live Music Archive"),
+    ("Preserving live music for future generations", "Internet Archive"),
+    ("The best music is the music that's shared", "The Community"),
 ]
 
 // MARK: - Import Screen State
@@ -127,7 +121,7 @@ struct DataImportScreen: View {
                 )
 
             // Tagline
-            Text("The Killer App for the Golden Road")
+            Text("Live Music Archive")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
         }

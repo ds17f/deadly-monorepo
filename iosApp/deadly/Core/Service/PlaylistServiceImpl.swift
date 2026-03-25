@@ -16,6 +16,7 @@ final class PlaylistServiceImpl: PlaylistService {
 
     private let showRepository: any ShowRepository
     private let archiveClient: any ArchiveMetadataClient
+    private let archiveShowService: any ArchiveShowService
     private let recentShowsService: RecentShowsService
     private let recordingPreferenceDAO: RecordingPreferenceDAO
     private let downloadService: DownloadService?
@@ -28,6 +29,7 @@ final class PlaylistServiceImpl: PlaylistService {
     nonisolated init(
         showRepository: some ShowRepository,
         archiveClient: some ArchiveMetadataClient,
+        archiveShowService: some ArchiveShowService,
         recentShowsService: RecentShowsService,
         recordingPreferenceDAO: RecordingPreferenceDAO,
         streamPlayer: StreamPlayer,
@@ -36,6 +38,7 @@ final class PlaylistServiceImpl: PlaylistService {
     ) {
         self.showRepository = showRepository
         self.archiveClient = archiveClient
+        self.archiveShowService = archiveShowService
         self.recentShowsService = recentShowsService
         self.recordingPreferenceDAO = recordingPreferenceDAO
         self.streamPlayer = streamPlayer
@@ -47,11 +50,14 @@ final class PlaylistServiceImpl: PlaylistService {
 
     var hasNextShow: Bool {
         guard let current = currentShow else { return false }
+        // Chronological navigation only works for shows in the local database
+        guard current.band == "Grateful Dead" else { return false }
         return (try? showRepository.getNextShow(afterDate: current.date)) != nil
     }
 
     var hasPreviousShow: Bool {
         guard let current = currentShow else { return false }
+        guard current.band == "Grateful Dead" else { return false }
         return (try? showRepository.getPreviousShow(beforeDate: current.date)) != nil
     }
 
@@ -103,17 +109,36 @@ final class PlaylistServiceImpl: PlaylistService {
 
     func loadShow(_ showId: String) async {
         do {
+            // Try local database first (Grateful Dead shows with rich data)
             let show = try showRepository.getShowById(showId)
-            currentShow = show
-            // Check for user's preferred recording before falling back to best.
-            if let preferredId = try? recordingPreferenceDAO.fetchRecordingId(showId),
-               let preferred = try? showRepository.getRecordingById(preferredId) {
-                currentRecording = preferred
-            } else if let bestId = show?.bestRecordingId {
-                currentRecording = try showRepository.getRecordingById(bestId)
-            }
-            if currentRecording == nil {
-                currentRecording = try showRepository.getBestRecordingForShow(showId)
+            if let show {
+                currentShow = show
+                // Check for user's preferred recording before falling back to best.
+                if let preferredId = try? recordingPreferenceDAO.fetchRecordingId(showId),
+                   let preferred = try? showRepository.getRecordingById(preferredId) {
+                    currentRecording = preferred
+                } else if let bestId = show.bestRecordingId {
+                    currentRecording = try showRepository.getRecordingById(bestId)
+                }
+                if currentRecording == nil {
+                    currentRecording = try showRepository.getBestRecordingForShow(showId)
+                }
+            } else {
+                // Fallback: load from Internet Archive API (non-Dead artists)
+                let iaShow = try await archiveShowService.loadShow(identifier: showId)
+                currentShow = iaShow
+                // For IA shows, the identifier IS the recording
+                currentRecording = Recording(
+                    identifier: showId,
+                    showId: showId,
+                    sourceType: .unknown,
+                    rating: Double(iaShow.averageRating ?? 0),
+                    reviewCount: iaShow.totalReviews,
+                    taper: nil,
+                    source: nil,
+                    lineage: nil,
+                    sourceTypeString: nil
+                )
             }
             if let recording = currentRecording {
                 await fetchTracks(recordingId: recording.identifier)
@@ -176,7 +201,7 @@ final class PlaylistServiceImpl: PlaylistService {
             return TrackItem(
                 url: url,
                 title: track.title,
-                artist: "Grateful Dead",
+                artist: currentShow?.band ?? "Unknown Artist",
                 albumTitle: albumTitle,
                 artworkURL: artworkURL,
                 duration: track.durationInterval,
