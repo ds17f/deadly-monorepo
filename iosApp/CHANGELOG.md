@@ -1,5 +1,28 @@
 # Changelog
 
+## [2.23.0] - 2026-03-25
+
+### New Features
+* persist show metadata so non-GD favorites survive offline (96566c47)
+* include favorite non-GD artists in today-in-history section (bf5ad5fb)
+* persist show metadata in recents so non-GD shows display offline (f799e0be)
+* replace static artist list with personalized favorites section (776fef60)
+* add extracted browse components for artist detail (39281dd5)
+* give all artists a rich browse and search experience (0631ab01)
+* move artist toggles to sub-panel with live UI updates (5dcbc714)
+* add per-artist enable/disable toggles (1ecabba3)
+* expand app to support the full Live Music Archive (4196a060)
+
+### Bug Fixes
+* gate GD shows in today-in-history behind favorites check (a8aac793)
+
+### Code Refactoring
+* remove featured collections section (dd851cac)
+
+### CI Changes
+* filter web and infra commits from mobile changelogs (d36ebe8d)
+
+
 ## [2.22.0] - 2026-03-24
 
 ### New Features
@@ -22,8 +45,6 @@
 * chore(ci): standardize workflow display names with platform prefix (6d6a1059)
 * chore(ci): Add makefile targets for full rebuild of docker remote and logs (2e8ba1b7)
 * chore: rename api-remote-* targets to docker-remote-* and update remote path (714be733)
-
-
 ## [2.21.0] - 2026-03-15
 
 ### New Features
