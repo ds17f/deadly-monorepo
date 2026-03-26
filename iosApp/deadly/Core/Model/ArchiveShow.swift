@@ -9,6 +9,7 @@ struct ArchiveShow: Identifiable, Codable, Sendable, Hashable {
     let coverage: String?
     let avgRating: Double?
     let numReviews: Int?
+    let collection: String?
 
     var id: String { identifier }
 
@@ -104,6 +105,39 @@ struct ArchiveSearchResponse: Codable, Sendable {
         let coverage: String?
         let avg_rating: Double?
         let num_reviews: Int?
+        let collection: ArchiveCollection?
+
+        /// IA's `collection` field can be a single string or an array of strings.
+        enum ArchiveCollection: Codable, Sendable {
+            case single(String)
+            case multiple([String])
+
+            init(from decoder: Decoder) throws {
+                let container = try decoder.singleValueContainer()
+                if let value = try? container.decode(String.self) {
+                    self = .single(value)
+                } else if let values = try? container.decode([String].self) {
+                    self = .multiple(values)
+                } else {
+                    self = .single("")
+                }
+            }
+
+            func encode(to encoder: Encoder) throws {
+                var container = encoder.singleValueContainer()
+                switch self {
+                case .single(let value): try container.encode(value)
+                case .multiple(let values): try container.encode(values)
+                }
+            }
+
+            var first: String? {
+                switch self {
+                case .single(let value): return value.isEmpty ? nil : value
+                case .multiple(let values): return values.first
+                }
+            }
+        }
 
         func toArchiveShow() -> ArchiveShow {
             ArchiveShow(
@@ -113,7 +147,8 @@ struct ArchiveSearchResponse: Codable, Sendable {
                 venue: venue,
                 coverage: coverage,
                 avgRating: avg_rating,
-                numReviews: num_reviews
+                numReviews: num_reviews,
+                collection: collection?.first
             )
         }
 
