@@ -69,7 +69,7 @@ struct SearchResultRow: View {
                 if isFavorite {
                     try? container.favoritesService.removeFromFavorites(showId: result.show.id)
                 } else {
-                    try? container.favoritesService.addToFavorites(showId: result.show.id)
+                    try? container.favoritesService.addToFavorites(showId: result.show.id, show: result.show)
                 }
                 isFavorite.toggle()
             }

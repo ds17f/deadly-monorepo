@@ -50,6 +50,19 @@ final class TestRecentShowsService: RecentShowsService {
     func stopObservingPlayback() {}
 }
 
+
+struct StubArchiveSearchClient: ArchiveSearchClient {
+    func searchShows(artist: Artist, page: Int, pageSize: Int) async throws -> (shows: [ArchiveShow], totalCount: Int) {
+        return ([], 0)
+    }
+    func searchAllArtists(query: String, page: Int, pageSize: Int) async throws -> (shows: [ArchiveShow], totalCount: Int) {
+        return ([], 0)
+    }
+    func fetchAllShows(collections: [String]) async throws -> [ArchiveShow] {
+        return []
+    }
+}
+
 @MainActor
 @Suite("HomeService Tests")
 struct HomeServiceTests {
@@ -69,7 +82,9 @@ struct HomeServiceTests {
         service = HomeServiceImpl(
             showRepository: repo,
             collectionsDAO: CollectionsDAO(database: db),
-            recentShowsService: recentShowsService
+            recentShowsService: recentShowsService,
+            appPreferences: AppPreferences(),
+            archiveSearchClient: StubArchiveSearchClient()
         )
     }
 

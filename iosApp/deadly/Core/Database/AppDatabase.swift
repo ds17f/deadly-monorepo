@@ -133,6 +133,9 @@ struct AppDatabase: @unchecked Sendable {
             try db.execute(sql: "ALTER TABLE recent_shows ADD COLUMN coverImageUrl TEXT")
             try db.execute(sql: "ALTER TABLE recent_shows ADD COLUMN recordingId TEXT")
         }
+        migrator.registerMigration("v12-favorite-shows-metadata") { db in
+            try AppDatabase.recreateFavoriteShowsWithMetadata(db)
+        }
         try migrator.migrate(dbWriter)
     }
 
@@ -426,5 +429,46 @@ struct AppDatabase: @unchecked Sendable {
             WHERE libraryNotes IS NOT NULL OR customRating IS NOT NULL
                OR recordingQuality IS NOT NULL OR playingQuality IS NOT NULL
         """)
+    }
+
+    // MARK: - Favorite Shows Metadata (drop FK, add display columns)
+
+    private static func recreateFavoriteShowsWithMetadata(_ db: Database) throws {
+        // Recreate without FK to shows — non-GD shows don't have a ShowRecord
+        try db.create(table: "favorite_shows_new") { t in
+            t.column("showId", .text).primaryKey()
+            t.column("addedToFavoritesAt", .integer).notNull()
+            t.column("isPinned", .boolean).notNull().defaults(to: false)
+            t.column("notes", .text)
+            t.column("preferredRecordingId", .text)
+            t.column("downloadedRecordingId", .text)
+            t.column("downloadedFormat", .text)
+            t.column("customRating", .double)
+            t.column("lastAccessedAt", .integer)
+            t.column("tags", .text)
+            t.column("recordingQuality", .integer)
+            t.column("playingQuality", .integer)
+            // Display metadata for non-local shows (same pattern as recent_shows)
+            t.column("band", .text)
+            t.column("showDate", .text)
+            t.column("venue", .text)
+            t.column("location", .text)
+            t.column("coverImageUrl", .text)
+        }
+        try db.execute(sql: """
+            INSERT INTO favorite_shows_new
+            SELECT showId, addedToFavoritesAt, isPinned, notes,
+                   preferredRecordingId, downloadedRecordingId, downloadedFormat,
+                   customRating, lastAccessedAt, tags,
+                   recordingQuality, playingQuality,
+                   NULL, NULL, NULL, NULL, NULL
+            FROM favorite_shows
+        """)
+        try db.drop(table: "favorite_shows")
+        try db.rename(table: "favorite_shows_new", to: "favorite_shows")
+        try db.create(index: "idx_favorite_shows_addedToFavoritesAt",
+                      on: "favorite_shows", columns: ["addedToFavoritesAt"])
+        try db.create(index: "idx_favorite_shows_isPinned",
+                      on: "favorite_shows", columns: ["isPinned"])
     }
 }
