@@ -81,7 +81,6 @@ struct HomeServiceTests {
         )
         service = HomeServiceImpl(
             showRepository: repo,
-            collectionsDAO: CollectionsDAO(database: db),
             recentShowsService: recentShowsService,
             appPreferences: AppPreferences(),
             archiveSearchClient: StubArchiveSearchClient()
@@ -136,22 +135,6 @@ struct HomeServiceTests {
         ))
     }
 
-    private func insertCollection(id: String, name: String, totalShows: Int, tags: [String] = []) throws {
-        let now = Int64(Date().timeIntervalSince1970 * 1000)
-        let tagsJson = (try? String(data: JSONEncoder().encode(tags), encoding: .utf8)) ?? "[]"
-        try CollectionsDAO(database: db).insert(DeadCollectionRecord(
-            id: id,
-            name: name,
-            description: "A collection",
-            tagsJson: tagsJson,
-            showIdsJson: "[]",
-            totalShows: totalShows,
-            primaryTag: tags.first,
-            createdAt: now,
-            updatedAt: now
-        ))
-    }
-
     private func insertRecentShow(showId: String, timestamp: Int64) throws {
         try RecentShowDAO(database: db).upsert(showId: showId, timestamp: timestamp)
     }
@@ -171,23 +154,7 @@ struct HomeServiceTests {
     func emptyDatabase() async throws {
         await service.refresh()
         #expect(service.content.todayInHistory.isEmpty)
-        #expect(service.content.featuredCollections.isEmpty)
         #expect(service.content.recentShows.isEmpty)
-    }
-
-    @Test("refresh loads featured collections sorted by totalShows desc")
-    func featuredCollectionsSortedByShowCount() async throws {
-        try insertCollection(id: "c1", name: "Small Collection", totalShows: 5)
-        try insertCollection(id: "c2", name: "Large Collection", totalShows: 50)
-        try insertCollection(id: "c3", name: "Medium Collection", totalShows: 20)
-
-        await service.refresh()
-
-        let collections = service.content.featuredCollections
-        #expect(collections.count == 3)
-        #expect(collections[0].id == "c2")  // 50
-        #expect(collections[1].id == "c3")  // 20
-        #expect(collections[2].id == "c1")  // 5
     }
 
     @Test("refresh loads recent shows ordered by recency")
@@ -225,22 +192,4 @@ struct HomeServiceTests {
         #expect(service.content.todayInHistory.contains { $0.id == dateStr })
     }
 
-    @Test("CollectionSummary showCountText singular")
-    func showCountTextSingular() {
-        let summary = CollectionSummary(id: "x", name: "Test", description: "", totalShows: 1, tags: [])
-        #expect(summary.showCountText == "1 show")
-    }
-
-    @Test("CollectionSummary showCountText plural")
-    func showCountTextPlural() {
-        let summary = CollectionSummary(id: "x", name: "Test", description: "", totalShows: 42, tags: [])
-        #expect(summary.showCountText == "42 shows")
-    }
-
-    @Test("CollectionSummary formattedName returns name unchanged")
-    func formattedNameReturnsName() {
-        let name = "Spring 1977 Tour"
-        let summary = CollectionSummary(id: "x", name: name, description: "", totalShows: 10, tags: [])
-        #expect(summary.formattedName == name)
-    }
 }

@@ -148,7 +148,6 @@ final class AppContainer {
             // HomeService depends on RecentShowsService + ArchiveSearchClient
             homeService = HomeServiceImpl(
                 showRepository: showRepo,
-                collectionsDAO: CollectionsDAO(database: db),
                 recentShowsService: recentService,
                 appPreferences: prefs,
                 archiveSearchClient: archiveSearch

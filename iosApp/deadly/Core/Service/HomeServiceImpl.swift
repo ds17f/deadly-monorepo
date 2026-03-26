@@ -6,7 +6,6 @@ final class HomeServiceImpl: HomeService {
     private let logger = Logger(subsystem: "com.grateful.deadly", category: "HomeService")
 
     private let showRepository: any ShowRepository
-    private let collectionsDAO: CollectionsDAO
     private let recentShowsService: RecentShowsService
     private let appPreferences: AppPreferences
     private let archiveSearchClient: any ArchiveSearchClient
@@ -20,13 +19,11 @@ final class HomeServiceImpl: HomeService {
 
     nonisolated init(
         showRepository: any ShowRepository,
-        collectionsDAO: CollectionsDAO,
         recentShowsService: RecentShowsService,
         appPreferences: AppPreferences,
         archiveSearchClient: any ArchiveSearchClient
     ) {
         self.showRepository = showRepository
-        self.collectionsDAO = collectionsDAO
         self.recentShowsService = recentShowsService
         self.appPreferences = appPreferences
         self.archiveSearchClient = archiveSearchClient
@@ -50,23 +47,10 @@ final class HomeServiceImpl: HomeService {
             todayShows.append(contentsOf: archiveShows)
             todayShows.sort { $0.year < $1.year }
 
-            let collectionRecords = try collectionsDAO.fetchFeatured(limit: 10)
-            let collections = collectionRecords.map { record in
-                let tags = (try? JSONDecoder().decode([String].self, from: Data(record.tagsJson.utf8))) ?? []
-                return CollectionSummary(
-                    id: record.id,
-                    name: record.name,
-                    description: record.description,
-                    totalShows: record.totalShows,
-                    tags: tags
-                )
-            }
-
             let recentShows = await recentShowsService.getRecentShows(limit: 8)
 
             content = HomeContent(
                 todayInHistory: todayShows,
-                featuredCollections: collections,
                 recentShows: recentShows
             )
 
