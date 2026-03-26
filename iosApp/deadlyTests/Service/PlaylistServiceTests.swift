@@ -64,6 +64,13 @@ final class StubRecentShowsService: RecentShowsService {
     func stopObservingPlayback() {}
 }
 
+
+struct StubArchiveShowService: ArchiveShowService {
+    func loadShow(identifier: String) async throws -> Show {
+        throw URLError(.fileDoesNotExist)
+    }
+}
+
 // MARK: - Tests
 
 @MainActor
@@ -95,6 +102,7 @@ struct PlaylistServiceTests {
         service = PlaylistServiceImpl(
             showRepository: showRepo,
             archiveClient: stubClient,
+            archiveShowService: StubArchiveShowService(),
             recentShowsService: stubRecentShowsService,
             recordingPreferenceDAO: RecordingPreferenceDAO(database: db),
             streamPlayer: streamPlayer

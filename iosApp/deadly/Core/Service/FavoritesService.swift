@@ -35,7 +35,7 @@ final class FavoritesServiceImpl {
 
     // MARK: - Mutations
 
-    func addToFavorites(showId: String) throws {
+    func addToFavorites(showId: String, show: Show? = nil) throws {
         let now = Int64(Date().timeIntervalSince1970 * 1000)
         try database.write { db in
             var record = FavoriteShowRecord(
@@ -48,7 +48,12 @@ final class FavoritesServiceImpl {
                 downloadedFormat: nil,
                 customRating: nil,
                 lastAccessedAt: nil,
-                tags: nil
+                tags: nil,
+                band: show?.band,
+                showDate: show?.date,
+                venue: show?.venue.name,
+                location: show?.location.displayText,
+                coverImageUrl: show?.coverImageUrl
             )
             try record.insert(db)
             try ShowRecord
@@ -99,7 +104,7 @@ final class FavoritesServiceImpl {
             let reviewMap = Dictionary(uniqueKeysWithValues: reviewRecords.map { ($0.showId, $0) })
 
             let favoriteShows: [FavoriteShow] = records.compactMap { record in
-                guard let show = showMap[record.showId] else { return nil }
+                guard let show = showMap[record.showId] ?? record.toShow() else { return nil }
                 let review = reviewMap[record.showId]
                 return FavoriteShow(
                     show: show,

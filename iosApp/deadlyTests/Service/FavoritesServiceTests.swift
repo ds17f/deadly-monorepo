@@ -199,4 +199,109 @@ struct FavoritesServiceTests {
         #expect(service.shows[1].id == "1989-10-09")   // 4.7
         #expect(service.shows[2].id == "1972-08-27")   // 4.5
     }
+
+    // MARK: - Non-GD show favorites
+
+    @Test("addToFavorites with non-GD show stores metadata and appears in refresh")
+    func addNonGDShowToFavorites() throws {
+        let show = Show(
+            id: "ratdog2003-06-07.sbd",
+            date: "2003-06-07",
+            year: 2003,
+            band: "Ratdog",
+            venue: Venue(name: "Red Rocks", city: "Morrison", state: "CO", country: "USA"),
+            location: Location(displayText: "Morrison, CO", city: "Morrison", state: "CO"),
+            setlist: nil,
+            lineup: nil,
+            recordingIds: ["ratdog2003-06-07.sbd"],
+            bestRecordingId: "ratdog2003-06-07.sbd",
+            bestSourceType: .unknown,
+            recordingCount: 1,
+            averageRating: nil,
+            totalReviews: 0,
+            coverImageUrl: nil,
+            isFavorite: false,
+            favoritedAt: nil
+        )
+
+        try service.addToFavorites(showId: show.id, show: show)
+
+        #expect(try service.isFavorite(showId: show.id) == true)
+
+        let record = try favoriteRecord(for: show.id)
+        #expect(record?.band == "Ratdog")
+        #expect(record?.showDate == "2003-06-07")
+        #expect(record?.venue == "Red Rocks")
+        #expect(record?.location == "Morrison, CO")
+
+        service.refresh()
+        #expect(service.shows.count == 1)
+        #expect(service.shows[0].show.band == "Ratdog")
+        #expect(service.shows[0].show.venue.name == "Red Rocks")
+    }
+
+    @Test("removeFromFavorites works for non-GD show")
+    func removeNonGDShowFromFavorites() throws {
+        let show = Show(
+            id: "ratdog2003-06-07.sbd",
+            date: "2003-06-07",
+            year: 2003,
+            band: "Ratdog",
+            venue: Venue(name: "Red Rocks", city: "Morrison", state: "CO", country: "USA"),
+            location: Location(displayText: "Morrison, CO", city: "Morrison", state: "CO"),
+            setlist: nil,
+            lineup: nil,
+            recordingIds: ["ratdog2003-06-07.sbd"],
+            bestRecordingId: "ratdog2003-06-07.sbd",
+            bestSourceType: .unknown,
+            recordingCount: 1,
+            averageRating: nil,
+            totalReviews: 0,
+            coverImageUrl: nil,
+            isFavorite: false,
+            favoritedAt: nil
+        )
+
+        try service.addToFavorites(showId: show.id, show: show)
+        try service.removeFromFavorites(showId: show.id)
+
+        #expect(try service.isFavorite(showId: show.id) == false)
+        service.refresh()
+        #expect(service.shows.isEmpty)
+    }
+
+    @Test("refresh includes both GD and non-GD favorites")
+    func refreshMixedFavorites() throws {
+        try insertShow(showId: "1977-05-08", date: "1977-05-08", year: 1977, month: 5,
+                       venueName: "Barton Hall")
+        try service.addToFavorites(showId: "1977-05-08")
+
+        let nonGDShow = Show(
+            id: "ratdog2003-06-07.sbd",
+            date: "2003-06-07",
+            year: 2003,
+            band: "Ratdog",
+            venue: Venue(name: "Red Rocks", city: "Morrison", state: "CO", country: "USA"),
+            location: Location(displayText: "Morrison, CO", city: "Morrison", state: "CO"),
+            setlist: nil,
+            lineup: nil,
+            recordingIds: ["ratdog2003-06-07.sbd"],
+            bestRecordingId: "ratdog2003-06-07.sbd",
+            bestSourceType: .unknown,
+            recordingCount: 1,
+            averageRating: nil,
+            totalReviews: 0,
+            coverImageUrl: nil,
+            isFavorite: false,
+            favoritedAt: nil
+        )
+        try service.addToFavorites(showId: nonGDShow.id, show: nonGDShow)
+
+        service.refresh()
+        #expect(service.shows.count == 2)
+
+        let bands = Set(service.shows.map(\.show.band))
+        #expect(bands.contains("Grateful Dead"))
+        #expect(bands.contains("Ratdog"))
+    }
 }

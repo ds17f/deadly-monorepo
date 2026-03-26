@@ -136,7 +136,7 @@ struct ShowDetailScreen: View {
                         if isFavorite {
                             try? container.favoritesService.removeFromFavorites(showId: currentShowId)
                         } else {
-                            try? container.favoritesService.addToFavorites(showId: currentShowId)
+                            try? container.favoritesService.addToFavorites(showId: currentShowId, show: playlistService.currentShow)
                         }
                         isFavorite.toggle()
                     } label: {
@@ -414,7 +414,7 @@ struct ShowDetailScreen: View {
                         if isFavorite {
                             try? container.favoritesService.removeFromFavorites(showId: currentShowId)
                         } else {
-                            try? container.favoritesService.addToFavorites(showId: currentShowId)
+                            try? container.favoritesService.addToFavorites(showId: currentShowId, show: playlistService.currentShow)
                         }
                         isFavorite.toggle()
                         showMenuSheet = false
@@ -654,7 +654,7 @@ struct ShowDetailScreen: View {
                 do {
                     // Auto-add to favorites when downloading
                     if !isFavorite {
-                        try? container.favoritesService.addToFavorites(showId: currentShowId)
+                        try? container.favoritesService.addToFavorites(showId: currentShowId, show: playlistService.currentShow)
                         isFavorite = true
                     }
                     try await downloadService.downloadShow(currentShowId, recordingId: playlistService.currentRecording?.identifier)
