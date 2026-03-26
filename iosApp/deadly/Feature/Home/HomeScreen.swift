@@ -20,11 +20,7 @@ struct HomeScreen: View {
                     carouselSection("Today In History", shows: content.todayInHistory)
                 }
 
-                if !content.featuredCollections.isEmpty {
-                    collectionsSection
-                }
-
-                if content.recentShows.isEmpty && content.todayInHistory.isEmpty && content.featuredCollections.isEmpty && !homeService.isLoading {
+                if content.recentShows.isEmpty && content.todayInHistory.isEmpty && !homeService.isLoading {
                     emptyState
                 }
 
@@ -165,29 +161,6 @@ struct HomeScreen: View {
                                 rating: show.hasRating ? show.displayRating : nil
                             )
                         }
-                    }
-                }
-            }
-        }
-    }
-
-    private var collectionsSection: some View {
-        VStack(alignment: .leading, spacing: DeadlySpacing.itemSpacing) {
-            Text("Collections")
-                .font(.title2)
-                .fontWeight(.bold)
-
-            ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack(spacing: DeadlySpacing.itemSpacing) {
-                    ForEach(content.featuredCollections) { collection in
-                        NavigationLink(value: CollectionRoute.detail(collection.id)) {
-                            ShowCarouselCard(
-                                imageRecordingId: nil,
-                                imageUrl: nil,
-                                lines: [collection.formattedName, collection.showCountText]
-                            )
-                        }
-                        .buttonStyle(.plain)
                     }
                 }
             }
