@@ -6,17 +6,34 @@ struct RecentShowDAO: Sendable {
     // MARK: - UPSERT
 
     /// Insert on first play; increment totalPlayCount and update lastPlayedTimestamp on subsequent plays.
-    func upsert(showId: String, timestamp: Int64) throws {
+    /// Metadata columns use COALESCE on conflict to preserve existing values when new ones are nil.
+    func upsert(
+        showId: String,
+        timestamp: Int64,
+        band: String? = nil,
+        showDate: String? = nil,
+        venue: String? = nil,
+        location: String? = nil,
+        coverImageUrl: String? = nil,
+        recordingId: String? = nil
+    ) throws {
         try database.write { db in
             try db.execute(
                 sql: """
-                    INSERT INTO recent_shows (showId, lastPlayedTimestamp, firstPlayedTimestamp, totalPlayCount)
-                    VALUES (?, ?, ?, 1)
+                    INSERT INTO recent_shows (showId, lastPlayedTimestamp, firstPlayedTimestamp, totalPlayCount,
+                                              band, showDate, venue, location, coverImageUrl, recordingId)
+                    VALUES (?, ?, ?, 1, ?, ?, ?, ?, ?, ?)
                     ON CONFLICT(showId) DO UPDATE SET
                         lastPlayedTimestamp = excluded.lastPlayedTimestamp,
-                        totalPlayCount = totalPlayCount + 1
+                        totalPlayCount = totalPlayCount + 1,
+                        band = COALESCE(excluded.band, recent_shows.band),
+                        showDate = COALESCE(excluded.showDate, recent_shows.showDate),
+                        venue = COALESCE(excluded.venue, recent_shows.venue),
+                        location = COALESCE(excluded.location, recent_shows.location),
+                        coverImageUrl = COALESCE(excluded.coverImageUrl, recent_shows.coverImageUrl),
+                        recordingId = COALESCE(excluded.recordingId, recent_shows.recordingId)
                     """,
-                arguments: [showId, timestamp, timestamp]
+                arguments: [showId, timestamp, timestamp, band, showDate, venue, location, coverImageUrl, recordingId]
             )
         }
     }

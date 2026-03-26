@@ -12,6 +12,10 @@ struct RecentShowCard: View {
                 cornerRadius: DeadlySize.artworkCornerRadius
             )
             VStack(alignment: .leading, spacing: 2) {
+                Text(show.band)
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(1)
                 Text(show.date)
                     .font(.subheadline)
                     .fontWeight(.semibold)

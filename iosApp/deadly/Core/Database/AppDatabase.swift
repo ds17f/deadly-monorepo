@@ -125,6 +125,14 @@ struct AppDatabase: @unchecked Sendable {
                 WHERE bestSourceType IS NULL
             """)
         }
+        migrator.registerMigration("v11-recent-shows-metadata") { db in
+            try db.execute(sql: "ALTER TABLE recent_shows ADD COLUMN band TEXT")
+            try db.execute(sql: "ALTER TABLE recent_shows ADD COLUMN showDate TEXT")
+            try db.execute(sql: "ALTER TABLE recent_shows ADD COLUMN venue TEXT")
+            try db.execute(sql: "ALTER TABLE recent_shows ADD COLUMN location TEXT")
+            try db.execute(sql: "ALTER TABLE recent_shows ADD COLUMN coverImageUrl TEXT")
+            try db.execute(sql: "ALTER TABLE recent_shows ADD COLUMN recordingId TEXT")
+        }
         try migrator.migrate(dbWriter)
     }
 
@@ -242,6 +250,13 @@ struct AppDatabase: @unchecked Sendable {
             t.column("lastPlayedTimestamp", .integer).notNull()
             t.column("firstPlayedTimestamp", .integer).notNull()
             t.column("totalPlayCount", .integer).notNull().defaults(to: 0)
+            // Display metadata for non-local shows (populated at record time)
+            t.column("band", .text)
+            t.column("showDate", .text)
+            t.column("venue", .text)
+            t.column("location", .text)
+            t.column("coverImageUrl", .text)
+            t.column("recordingId", .text)
         }
         try db.create(index: "idx_recent_shows_lastPlayedTimestamp", on: "recent_shows", columns: ["lastPlayedTimestamp"])
 
