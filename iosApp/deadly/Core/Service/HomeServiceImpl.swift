@@ -41,7 +41,9 @@ final class HomeServiceImpl: HomeService {
             let month = calendar.component(.month, from: now)
             let day = calendar.component(.day, from: now)
 
-            var todayShows = try showRepository.getShowsForDate(month: month, day: day)
+            // Only include local GD shows if Grateful Dead is a favorite
+            let gdIsFavorite = appPreferences.favoriteArtists.contains { $0.hasLocalData }
+            var todayShows = gdIsFavorite ? try showRepository.getShowsForDate(month: month, day: day) : [Show]()
 
             // Merge shows from favorite non-GD artists via Archive.org
             let archiveShows = await fetchArchiveTodayInHistory(month: month, day: day)
