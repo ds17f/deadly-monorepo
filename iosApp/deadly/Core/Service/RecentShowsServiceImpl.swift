@@ -46,6 +46,14 @@ final class RecentShowsServiceImpl: RecentShowsService {
     private var observationTask: Task<Void, Never>?
     private var streamContinuation: AsyncStream<[Show]>.Continuation?
 
+    // Metadata captured from current track for persisting with recent show record
+    private var currentTrackBand: String?
+    private var currentTrackDate: String?
+    private var currentTrackVenue: String?
+    private var currentTrackLocation: String?
+    private var currentTrackCoverImageUrl: String?
+    private var currentTrackRecordingId: String?
+
     // MARK: - Init
 
     nonisolated init(
@@ -77,7 +85,16 @@ final class RecentShowsServiceImpl: RecentShowsService {
     func recordShowPlay(showId: String) {
         let timestamp = Int64(Date().timeIntervalSince1970 * 1000)
         do {
-            try recentShowDAO.upsert(showId: showId, timestamp: timestamp)
+            try recentShowDAO.upsert(
+                showId: showId,
+                timestamp: timestamp,
+                band: currentTrackBand,
+                showDate: currentTrackDate,
+                venue: currentTrackVenue,
+                location: currentTrackLocation,
+                coverImageUrl: currentTrackCoverImageUrl,
+                recordingId: currentTrackRecordingId
+            )
             logger.info("Recorded show play: \(showId)")
             Task {
                 await refreshRecentShows()
@@ -92,9 +109,11 @@ final class RecentShowsServiceImpl: RecentShowsService {
             let records = try recentShowDAO.fetchRecent(limit: limit)
             let showIds = records.map(\.showId)
             let shows = try showRepository.getShowsByIds(showIds)
-            // Maintain order from records (most recent first)
             let showsById = Dictionary(shows.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
-            return showIds.compactMap { showsById[$0] }
+            // Prefer rich Show from local DB; fall back to stored metadata for non-local shows
+            return records.compactMap { record in
+                showsById[record.showId] ?? record.toShow()
+            }
         } catch {
             logger.error("Failed to get recent shows: \(error.localizedDescription)")
             return []
@@ -185,9 +204,15 @@ final class RecentShowsServiceImpl: RecentShowsService {
         hasRecordedCurrentTrack = false
         currentTrackStartTime = Date().timeIntervalSince1970
 
-        // Extract showId from track metadata
+        // Extract showId and display metadata from track
         let showId = track?.metadata["showId"]
         currentTrackShowId = showId
+        currentTrackBand = track?.artist
+        currentTrackDate = track?.metadata["showDate"]
+        currentTrackVenue = track?.metadata["venue"]
+        currentTrackLocation = track?.metadata["location"]
+        currentTrackCoverImageUrl = track?.artworkURL?.absoluteString
+        currentTrackRecordingId = track?.metadata["recordingId"]
 
         if let showId {
             logger.debug("Track changed, now tracking show: \(showId)")
