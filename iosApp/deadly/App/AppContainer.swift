@@ -142,17 +142,20 @@ final class AppContainer {
             }
             recentShowsService = recentService
 
-            // HomeService depends on RecentShowsService
+            let archiveSearch = URLSessionArchiveSearchClient()
+            archiveSearchClient = archiveSearch
+
+            // HomeService depends on RecentShowsService + ArchiveSearchClient
             homeService = HomeServiceImpl(
                 showRepository: showRepo,
                 collectionsDAO: CollectionsDAO(database: db),
                 recentShowsService: recentService,
-                appPreferences: prefs
+                appPreferences: prefs,
+                archiveSearchClient: archiveSearch
             )
 
             let archive = URLSessionArchiveMetadataClient()
             archiveClient = archive
-            archiveSearchClient = URLSessionArchiveSearchClient()
             archiveShowService = URLSessionArchiveShowService()
 
             // DownloadService is @MainActor; manage offline downloads

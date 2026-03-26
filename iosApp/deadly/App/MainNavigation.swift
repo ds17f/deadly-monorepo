@@ -6,15 +6,13 @@ struct MainNavigation: View {
     @Environment(\.appContainer) private var container
     @State private var showFullPlayer = false
     @State private var homeStack = NavigationPath()
-    @State private var artistsStack = NavigationPath()
-    @State private var searchStack = NavigationPath()
+    @State private var browseStack = NavigationPath()
     @State private var favoritesStack = NavigationPath()
     @State private var collectionsStack = NavigationPath()
     @State private var pendingShowNavigation: String?
     @State private var pendingDeepLink: DeepLink?
     @State private var selectedTab: AppTab = .home
     @State private var playerSourceTab: AppTab = .home
-    @State private var searchResetToken = 0
     @State private var showingSettings = false
     @State private var showingEqualizer = false
 
@@ -45,27 +43,16 @@ struct MainNavigation: View {
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
                 .offlineBanner(isConnected: container.networkMonitor.isConnected)
             }
-            Tab("Artists", systemImage: "music.mic", value: .artists) {
-                NavigationStack(path: $artistsStack) {
+            Tab("Browse", systemImage: "music.mic", value: .browse) {
+                NavigationStack(path: $browseStack) {
                     ArtistsScreen()
-                        .settingsLogoButton($showingSettings, title: "Artists")
+                        .settingsLogoButton($showingSettings, title: "Browse")
                         .navigationDestination(for: ArtistRoute.self) { route in
                             switch route {
                             case .detail(let artist):
                                 ArtistDetailScreen(artist: artist)
                             }
                         }
-                        .navigationDestination(for: String.self) { showId in
-                            ShowDetailScreen(showId: showId)
-                        }
-                }
-                .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
-                .offlineBanner(isConnected: container.networkMonitor.isConnected)
-            }
-            Tab("Search", systemImage: "magnifyingglass", value: .search) {
-                NavigationStack(path: $searchStack) {
-                    SearchScreen(resetToken: searchResetToken)
-                        .settingsLogoButton($showingSettings, title: "Search")
                         .navigationDestination(for: String.self) { showId in
                             ShowDetailScreen(showId: showId)
                         }
@@ -226,10 +213,6 @@ struct MainNavigation: View {
         Binding(
             get: { selectedTab },
             set: { newTab in
-                if newTab == .search && selectedTab == .search {
-                    // Re-tapped search — toggle back to browse
-                    searchResetToken += 1
-                }
                 selectedTab = newTab
             }
         )
@@ -247,14 +230,10 @@ struct MainNavigation: View {
             homeStack = NavigationPath()
             homeStack.append(showId)
             selectedTab = .home
-        case .artists:
-            artistsStack = NavigationPath()
-            artistsStack.append(showId)
-            selectedTab = .artists
-        case .search:
-            searchStack = NavigationPath()
-            searchStack.append(showId)
-            selectedTab = .search
+        case .browse:
+            browseStack = NavigationPath()
+            browseStack.append(showId)
+            selectedTab = .browse
         case .favorites:
             favoritesStack = NavigationPath()
             favoritesStack.append(showId)
@@ -280,7 +259,7 @@ struct MainNavigation: View {
 // MARK: - Tab enum
 
 enum AppTab: String, Hashable {
-    case home, artists, search, favorites, collections
+    case home, browse, favorites, collections
 
     var title: String { rawValue.capitalized }
 }

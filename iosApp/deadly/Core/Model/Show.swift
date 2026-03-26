@@ -68,7 +68,8 @@ struct Show: Codable, Sendable, Equatable, Identifiable {
             venue: venue.name,
             coverage: location.displayText,
             avgRating: averageRating.map { Double($0) },
-            numReviews: totalReviews
+            numReviews: totalReviews,
+            collection: nil
         )
     }
 }

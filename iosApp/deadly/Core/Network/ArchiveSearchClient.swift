@@ -5,12 +5,13 @@ import Foundation
 protocol ArchiveSearchClient: Sendable {
     func searchShows(artist: Artist, page: Int, pageSize: Int) async throws -> (shows: [ArchiveShow], totalCount: Int)
     func searchAllArtists(query: String, page: Int, pageSize: Int) async throws -> (shows: [ArchiveShow], totalCount: Int)
+    func fetchAllShows(collections: [String]) async throws -> [ArchiveShow]
 }
 
 struct URLSessionArchiveSearchClient: ArchiveSearchClient {
     private let session: URLSession
     private let baseURL = "https://archive.org/advancedsearch.php"
-    private let fields = "identifier,date,title,venue,coverage,avg_rating,num_reviews"
+    private let fields = "identifier,date,title,venue,coverage,avg_rating,num_reviews,collection"
 
     init(session: URLSession = .shared) {
         self.session = session
@@ -25,6 +26,14 @@ struct URLSessionArchiveSearchClient: ArchiveSearchClient {
         // Search across all etree collections
         let iaQuery = "collection:etree AND (\(query)) AND mediatype:etree"
         return try await performSearch(query: iaQuery, page: page, pageSize: pageSize)
+    }
+
+    func fetchAllShows(collections: [String]) async throws -> [ArchiveShow] {
+        guard !collections.isEmpty else { return [] }
+        let collectionClause = collections.map { "collection:\($0)" }.joined(separator: " OR ")
+        let query = "(\(collectionClause)) AND mediatype:etree"
+        let (shows, _) = try await performSearch(query: query, page: 1, pageSize: 5000)
+        return shows
     }
 
     // MARK: - Private

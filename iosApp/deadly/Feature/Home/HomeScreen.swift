@@ -148,7 +148,7 @@ struct HomeScreen: View {
                             ShowCarouselCard(
                                 imageRecordingId: show.bestRecordingId,
                                 imageUrl: show.coverImageUrl,
-                                lines: [show.date, show.venue.name, show.location.displayText],
+                                lines: [show.band, show.date, show.venue.name, show.location.displayText],
                                 recordingCount: show.recordingCount
                             )
                         }
