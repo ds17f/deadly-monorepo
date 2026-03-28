@@ -1,13 +1,19 @@
 "use client";
 
-export default function HeroSection({ totalShows }: { totalShows: number }) {
+export default function HeroSection({
+  totalShows,
+  totalRecordings,
+}: {
+  totalShows: number;
+  totalRecordings?: number;
+}) {
   return (
     <header className="mb-8">
       <p className="text-lg font-bold uppercase tracking-wider text-deadly-title">
         The Deadly
       </p>
       <h1 className="mt-1 text-2xl font-bold text-white md:text-3xl">
-        A modern player for live Grateful Dead
+        A modern player for live music from the Archive
       </h1>
       <p className="mt-3 text-sm font-semibold text-deadly-heading">
         100% free. 100% open source. No ads, no account required, no paywalls.
@@ -17,14 +23,25 @@ export default function HeroSection({ totalShows }: { totalShows: number }) {
         <span className="text-deadly-heading">cross-platform music player</span>{" "}
         built around{" "}
         <span className="text-deadly-heading">shows, not recordings</span>.
-        All{" "}
-        <span className="text-deadly-heading">
-          {totalShows.toLocaleString()} known concerts
-        </span>{" "}
-        from 1965 to 1995 are sourced from the{" "}
-        <span className="text-deadly-heading">Internet Archive</span>, but
-        instead of digging through tapes you get a clean, show-first
-        experience. Our heuristic and AI-powered engine{" "}
+        {totalShows > 0 && (
+          <>
+            {" "}Browse{" "}
+            <span className="text-deadly-heading">
+              {totalShows.toLocaleString()} concerts
+            </span>
+            {totalRecordings != null && totalRecordings > 0 && (
+              <>
+                {" "}and{" "}
+                <span className="text-deadly-heading">
+                  {totalRecordings.toLocaleString()} recordings
+                </span>
+              </>
+            )}
+            {" "}sourced from the{" "}
+            <span className="text-deadly-heading">Internet Archive</span>.
+          </>
+        )}{" "}
+        Our heuristic engine{" "}
         <span className="text-deadly-heading">
           automatically selects the best recording
         </span>{" "}
@@ -57,23 +74,10 @@ export default function HeroSection({ totalShows }: { totalShows: number }) {
           <p className="mt-1 text-sm text-white/60">
             Search across{" "}
             <span className="text-deadly-heading">
-              dates, venues, cities, songs, and band members
+              dates, venues, cities, and songs
             </span>
             . Filter by decade, source type, or browse{" "}
             <span className="text-deadly-heading">curated collections</span>.
-          </p>
-        </div>
-        <div>
-          <h2 className="text-sm font-bold uppercase tracking-wider text-deadly-title/80">
-            Every show reviewed
-            <span className="ml-2 inline-block h-px w-16 align-middle bg-white/20" />
-          </h2>
-          <p className="mt-1 text-sm text-white/60">
-            Every show has a{" "}
-            <span className="text-deadly-heading">fresh write-up</span> drawn
-            from each recording&apos;s listener comments &mdash; covering the
-            playing, the highlights, and the quality of each source. Know what
-            to listen for before you press play.
           </p>
         </div>
       </div>

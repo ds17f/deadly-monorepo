@@ -14,6 +14,7 @@ import ShowNav from "@/components/ShowNav";
 import ShowPlayerPanel from "@/components/player/ShowPlayerPanel";
 import FavoriteButton from "@/components/userdata/FavoriteButton";
 import UserReview from "@/components/userdata/UserReview";
+import DynamicShowPage from "@/components/DynamicShowPage";
 import type { Recording } from "@/types/recording";
 import type { Show } from "@/types/show";
 
@@ -40,17 +41,33 @@ export async function generateStaticParams() {
   return getBuildShowIds().map((id) => ({ id }));
 }
 
+function tryGetStaticShow(id: string): Show | null {
+  try {
+    return getShowById(id);
+  } catch {
+    return null;
+  }
+}
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const { id } = await params;
-  const show = getShowById(id);
-  const dateStr = formatDateForTitle(show.date);
-  const title = `Grateful Dead ${dateStr} — ${show.venue} | The Deadly`;
+  const show = tryGetStaticShow(id);
 
-  const descParts = [`Grateful Dead at ${show.venue}, ${show.location_raw}`];
+  if (!show) {
+    return {
+      title: `Show ${id} | The Deadly`,
+      description: "Live concert on The Deadly",
+    };
+  }
+
+  const dateStr = formatDateForTitle(show.date);
+  const title = `${show.band} ${dateStr} — ${show.venue} | The Deadly`;
+
+  const descParts = [`${show.band} at ${show.venue}, ${show.location_raw}`];
   if (show.recording_count > 0) {
     descParts.push(`${show.recording_count} recordings`);
   }
@@ -89,7 +106,14 @@ export default async function ShowPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const show = getShowById(id);
+  const show = tryGetStaticShow(id);
+
+  // Non-GD show: render client-side from API
+  if (!show) {
+    return <DynamicShowPage showId={id} />;
+  }
+
+  // Static GD show: render server-side as before
   const { prev, next } = getAdjacentShows(id);
 
   const recordings: Recording[] = show.recordings

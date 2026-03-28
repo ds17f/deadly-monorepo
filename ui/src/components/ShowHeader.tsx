@@ -29,7 +29,7 @@ export default function ShowHeader({ show }: { show: Show }) {
   return (
     <header>
       <p className="text-lg font-bold uppercase tracking-wider text-deadly-title">
-        Grateful Dead
+        {show.band}
       </p>
       <h1 className="mt-1 text-2xl font-bold text-white md:text-3xl">
         {formatDate(show.date)}

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 export type SortBy = "date" | "rating";
 
-const DECADES = [
+const DEFAULT_DECADES = [
   { label: "60s", from: 1965, to: 1969 },
   { label: "70s", from: 1970, to: 1979 },
   { label: "80s", from: 1980, to: 1989 },
@@ -47,6 +47,7 @@ export default function SearchFilter({
   onSourceChange,
   includeNoRecordings,
   onIncludeNoRecordingsChange,
+  decades,
 }: {
   searchQuery: string;
   onSearchChange: (q: string) => void;
@@ -58,6 +59,7 @@ export default function SearchFilter({
   onSourceChange: (s: string | null) => void;
   includeNoRecordings: boolean;
   onIncludeNoRecordingsChange: (v: boolean) => void;
+  decades?: { label: string; from: number; to: number }[];
 }) {
   const [local, setLocal] = useState(searchQuery);
   const timer = useRef<ReturnType<typeof setTimeout>>(null);
@@ -115,7 +117,7 @@ export default function SearchFilter({
       </div>
 
       <div className="flex flex-wrap items-center gap-2">
-        {DECADES.map((dec) => (
+        {(decades ?? DEFAULT_DECADES).map((dec) => (
           <Chip
             key={dec.label}
             label={dec.label}

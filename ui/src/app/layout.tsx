@@ -16,9 +16,9 @@ const GOOGLE_PLAY_BADGE_URL =
   "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png";
 
 export const metadata: Metadata = {
-  title: "The Deadly — Every Grateful Dead Concert",
+  title: "The Deadly — Live Music from the Archive",
   description:
-    "Every Grateful Dead concert — setlists, recordings, and reviews for 2,300+ shows from 1965 to 1995.",
+    "A modern player for live music from the Internet Archive. Browse concerts, recordings, and setlists across artists.",
   openGraph: {
     siteName: "The Deadly",
     type: "website",
@@ -96,7 +96,7 @@ export default function RootLayout({
                 <span>
                   Recordings courtesy of the{" "}
                   <a
-                    href="https://archive.org/details/GratefulDead"
+                    href="https://archive.org/details/etree"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white/40 hover:text-white/70"
