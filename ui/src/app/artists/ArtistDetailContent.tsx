@@ -210,39 +210,37 @@ export default function ArtistDetailContent({ artistId: id }: { artistId: string
   }
 
   return (
-    <div>
-      <header className="mb-8">
-        <p className="text-lg font-bold uppercase tracking-wider text-deadly-title">
-          {artist.name}
-        </p>
-        {artist.short_name && (
-          <span className="text-sm text-white/40">{artist.short_name}</span>
-        )}
-        <div className="mt-1 text-sm text-white/50">
-          {formatYears(artist)}
-        </div>
-        {artist.description && (
-          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-white/60">
-            {artist.description}
+    <div className="grid grid-cols-1 gap-x-12 lg:grid-cols-3">
+      <div className="lg:col-span-2">
+        <header className="mb-8">
+          <p className="text-lg font-bold uppercase tracking-wider text-deadly-title">
+            {artist.name}
           </p>
-        )}
-        <div className="mt-3 flex items-center gap-4 text-sm text-white/50">
-          <span>
-            {artist.show_count.toLocaleString()} show
-            {artist.show_count !== 1 ? "s" : ""}
-          </span>
-          {artist.recording_count > 0 && (
-            <span>
-              {artist.recording_count.toLocaleString()} recording
-              {artist.recording_count !== 1 ? "s" : ""}
-            </span>
+          {artist.short_name && (
+            <span className="text-sm text-white/40">{artist.short_name}</span>
           )}
-        </div>
-      </header>
-
-      <div className="grid grid-cols-1 gap-x-12 lg:grid-cols-3">
-        <div className="lg:col-span-2">
-          <YearTimeline
+          <div className="mt-1 text-sm text-white/50">
+            {formatYears(artist)}
+          </div>
+          {artist.description && (
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-white/60">
+              {artist.description}
+            </p>
+          )}
+          <div className="mt-3 flex items-center gap-4 text-sm text-white/50">
+            <span>
+              {artist.show_count.toLocaleString()} show
+              {artist.show_count !== 1 ? "s" : ""}
+            </span>
+            {artist.recording_count > 0 && (
+              <span>
+                {artist.recording_count.toLocaleString()} recording
+                {artist.recording_count !== 1 ? "s" : ""}
+              </span>
+            )}
+          </div>
+        </header>
+        <YearTimeline
             yearData={yearData}
             selectedYear={selectedYear}
             onSelectYear={handleYearSelect}
@@ -270,13 +268,21 @@ export default function ArtistDetailContent({ artistId: id }: { artistId: string
           />
         </div>
         <div className="mt-6 lg:mt-0">
+          {artist.image_url && (
+            <div className="mb-6 overflow-hidden rounded-lg bg-deadly-surface p-3">
+              <img
+                src={artist.image_url}
+                alt={artist.name}
+                className="w-full rounded"
+              />
+            </div>
+          )}
           <GetTheApp />
           <TopRatedShows shows={topRated} filterLabel={topRatedFilterLabel} />
           {collections.length > 0 && (
             <CollectionsGrid collections={collections} />
           )}
         </div>
-      </div>
     </div>
   );
 }

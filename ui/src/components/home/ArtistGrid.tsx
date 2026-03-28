@@ -28,11 +28,11 @@ export default function ArtistGrid({ artists }: { artists: Artist[] }) {
           className="group rounded-lg bg-deadly-surface p-5 transition-colors hover:bg-white/10"
         >
           {artist.image_url && (
-            <div className="mb-3 aspect-video overflow-hidden rounded-md bg-white/5">
+            <div className="mb-3 flex items-center justify-center overflow-hidden rounded-md bg-white/5 p-2">
               <img
                 src={artist.image_url}
                 alt={artist.name}
-                className="h-full w-full object-cover"
+                className="max-h-40 w-auto rounded"
               />
             </div>
           )}
