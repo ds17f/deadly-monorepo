@@ -8,6 +8,9 @@ import {
 } from "../db/catalog.js";
 import { getImporter, availableCollectors } from "../importers/registry.js";
 
+/** In-memory progress logs for active pipeline runs. Keyed by runId. */
+const pipelineLogs = new Map<number, { t: number; msg: string }[]>();
+
 export async function adminRoutes(app: FastifyInstance): Promise<void> {
   // ── Artist Management ─────────────────────────────────────────
 
@@ -226,6 +229,47 @@ export async function adminRoutes(app: FastifyInstance): Promise<void> {
     };
   });
 
+  // ── MusicBrainz Lookup ──────────────────────────────────────────
+
+  app.get<{
+    Querystring: { q: string };
+  }>("/api/admin/catalog/search-musicbrainz", {
+    schema: { tags: ["admin"], summary: "Search MusicBrainz for artist MBID" },
+    preHandler: requireAdmin,
+  }, async (request, reply) => {
+    const q = request.query.q?.trim();
+    if (!q) return reply.code(400).send({ error: "Query parameter 'q' is required" });
+
+    const url = `https://musicbrainz.org/ws/2/artist/?query=artist:${encodeURIComponent(q)}&fmt=json&limit=5`;
+    const res = await fetch(url, {
+      headers: { "User-Agent": "TheDeadlyApp/1.0 (https://thedeadly.app)" },
+    });
+
+    if (!res.ok) return reply.code(502).send({ error: "MusicBrainz search failed" });
+
+    const data = await res.json() as {
+      artists: {
+        id: string;
+        name: string;
+        type?: string;
+        score: number;
+        area?: { name: string };
+        "life-span"?: { begin?: string; end?: string; ended?: boolean };
+        tags?: { name: string; count: number }[];
+      }[];
+    };
+
+    return data.artists.map((a) => ({
+      musicbrainz_id: a.id,
+      name: a.name,
+      type: a.type ?? null,
+      score: a.score,
+      area: a.area?.name ?? null,
+      active_from: a["life-span"]?.begin ? parseInt(a["life-span"].begin, 10) || null : null,
+      tags: (a.tags ?? []).slice(0, 5).map((t) => t.name),
+    }));
+  });
+
   // ── Pipeline ──────────────────────────────────────────────────
 
   app.post<{ Params: { artistId: string } }>("/api/admin/catalog/refresh/:artistId", {
@@ -236,7 +280,7 @@ export async function adminRoutes(app: FastifyInstance): Promise<void> {
     if (!artist) return reply.code(404).send({ error: "Artist not found" });
 
     const dataSources = JSON.parse(artist.data_sources) as Record<string, string>;
-    const importer = getImporter(artist.id, dataSources);
+    const importer = await getImporter(artist.id, dataSources);
     if (!importer) {
       return reply.code(400).send({ error: `No importer available for ${artist.name}` });
     }
@@ -251,8 +295,10 @@ export async function adminRoutes(app: FastifyInstance): Promise<void> {
     });
 
     // Fire and forget — errors are captured in pipeline_runs
+    pipelineLogs.set(runId, []);
     importer.run(artist.id, (msg) => {
       request.log.info({ artistId: artist.id, runId }, msg);
+      pipelineLogs.get(runId)?.push({ t: Date.now(), msg });
     }).then((result) => {
       completePipelineRun(
         runId, "completed",
@@ -262,6 +308,7 @@ export async function adminRoutes(app: FastifyInstance): Promise<void> {
       request.log.info({ artistId: artist.id, runId, result }, "Import completed");
     }).catch((err: Error) => {
       completePipelineRun(runId, "failed", 0, 0, err.message);
+      pipelineLogs.get(runId)?.push({ t: Date.now(), msg: `ERROR: ${err.message}` });
       request.log.error({ artistId: artist.id, runId, err }, "Import failed");
     });
   });
@@ -302,6 +349,32 @@ export async function adminRoutes(app: FastifyInstance): Promise<void> {
     const run = getPipelineRun(Number(request.params.id));
     if (!run) return reply.code(404).send({ error: "Pipeline run not found" });
     return run;
+  });
+
+  app.get<{
+    Params: { id: string };
+    Querystring: { since?: string };
+  }>("/api/admin/pipeline/runs/:id/logs", {
+    schema: { tags: ["admin"], summary: "Progress logs for a pipeline run (in-memory, active runs only)" },
+    preHandler: requireAdmin,
+  }, async (request, reply) => {
+    const runId = Number(request.params.id);
+    const logs = pipelineLogs.get(runId);
+    if (!logs) return reply.send({ logs: [], done: true });
+
+    // Optional: only return logs after a timestamp (for incremental polling)
+    const since = request.query.since ? Number(request.query.since) : 0;
+    const filtered = since > 0 ? logs.filter((l) => l.t > since) : logs;
+
+    const run = getPipelineRun(runId);
+    const done = run?.status !== "running";
+
+    // Clean up completed runs after client has seen them
+    if (done && since > 0) {
+      pipelineLogs.delete(runId);
+    }
+
+    return { logs: filtered, done };
   });
 
   // ── Stats ─────────────────────────────────────────────────────

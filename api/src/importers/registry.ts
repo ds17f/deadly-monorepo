@@ -5,6 +5,11 @@
  */
 import type { ArtistImporter } from "./types.js";
 import { GratefulDeadImporter } from "./grateful-dead.js";
+import { GenericImporter } from "./generic-importer.js";
+import { SetlistFmSource } from "./sources/setlistfm.js";
+import { IARecordingSource } from "./sources/ia-recordings.js";
+import { getCatalogDb, updateArtist } from "../db/catalog.js";
+import { lookupMusicBrainzId } from "./sources/musicbrainz.js";
 
 export interface CollectorInfo {
   type: string;
@@ -28,22 +33,69 @@ export const availableCollectors: CollectorInfo[] = [
       + "(currently 2.3.0). Override with GD_DATA_VERSION env var. If GD_DATA_DIR is set and the directory "
       + "exists, it uses that instead of downloading. This is the importer for the Grateful Dead's curated dataset.",
   },
-  // To add a new collector:
-  // 1. Create a class implementing ArtistImporter in api/src/importers/
-  // 2. Add a case to getImporter() below
-  // 3. Add a CollectorInfo entry to this array
+  {
+    type: "ia-setlistfm",
+    name: "Internet Archive + setlist.fm",
+    description: "Fetches recordings from Internet Archive and setlists from setlist.fm, merged by date.",
+    help: "Requires the artist to have ia_collection and musicbrainz_id set. "
+      + "Uses SETLISTFM_API_KEY env var for setlist.fm API access. "
+      + "Rate-limited to 2 req/sec for setlist.fm. "
+      + "Creates shows from setlists, links IA recordings by date, computes best recordings.",
+  },
 ];
 
 /**
  * Get the importer for an artist based on its collector_type.
  * Returns null if no importer matches.
+ *
+ * Async because it may auto-resolve the MusicBrainz ID from the
+ * artist name if not already set.
  */
-export function getImporter(artistId: string, dataSources: Record<string, string>): ArtistImporter | null {
+export async function getImporter(artistId: string, dataSources: Record<string, string>): Promise<ArtistImporter | null> {
   const collectorType = dataSources.collector_type;
 
   switch (collectorType) {
     case "stage02-json":
       return new GratefulDeadImporter();
+
+    case "ia-setlistfm": {
+      const db = getCatalogDb();
+      const artist = db.prepare(
+        "SELECT name, ia_collection, musicbrainz_id FROM artists WHERE id = ?",
+      ).get(artistId) as { name: string; ia_collection: string | null; musicbrainz_id: string | null } | undefined;
+
+      if (!artist?.ia_collection) {
+        throw new Error(
+          `Artist "${artistId}" requires ia_collection for ia-setlistfm importer`,
+        );
+      }
+
+      // Auto-resolve MusicBrainz ID if not set
+      let mbid = artist.musicbrainz_id;
+      if (!mbid) {
+        mbid = await lookupMusicBrainzId(artist.name);
+        if (!mbid) {
+          throw new Error(
+            `Could not auto-resolve MusicBrainz ID for "${artist.name}". `
+            + `Set musicbrainz_id manually on the artist record.`,
+          );
+        }
+        // Save it so we don't look it up again
+        updateArtist(artistId, { musicbrainz_id: mbid });
+      }
+
+      const apiKey = process.env.SETLISTFM_API_KEY;
+      if (!apiKey) {
+        throw new Error("SETLISTFM_API_KEY env var is required for ia-setlistfm importer");
+      }
+
+      return new GenericImporter(
+        new SetlistFmSource(mbid, apiKey),
+        new IARecordingSource(artist.ia_collection),
+        "ia-setlistfm",
+      );
+    }
+
     default:
       return null;
   }

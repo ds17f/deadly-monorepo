@@ -478,6 +478,7 @@ export function getPipelineRun(id: number): PipelineRunRow | undefined {
   return db.prepare("SELECT * FROM pipeline_runs WHERE id = ?").get(id) as PipelineRunRow | undefined;
 }
 
+
 // ── Stats ───────────────────────────────────────────────────────
 
 export interface CatalogStats {

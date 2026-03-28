@@ -45,6 +45,7 @@ services:
       - ANALYTICS_DB_PATH=/app/data/analytics.db
       - ANALYTICS_API_KEY=${ANALYTICS_API_KEY}
       - ANALYTICS_RAW_RETENTION_DAYS=${ANALYTICS_RAW_RETENTION_DAYS:-}
+      - SETLISTFM_API_KEY=${SETLISTFM_API_KEY:-}
     volumes:
       - ./api-data:/app/data
     expose:
