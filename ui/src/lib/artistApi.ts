@@ -18,6 +18,7 @@ interface ShowRow {
   best_source_type: string | null;
   avg_rating: number | null;
   total_reviews: number;
+  cover_image_url: string | null;
   setlist_raw: string | null;
   song_list: string | null;
   lineup_raw: string | null;
@@ -92,6 +93,33 @@ export async function fetchShowRecordings(showId: string): Promise<RecordingRow[
   return res.json();
 }
 
+export interface AdjacentShows {
+  prev: { id: string; date: string; venue_name: string | null } | null;
+  next: { id: string; date: string; venue_name: string | null } | null;
+}
+
+export interface ShowReviewRow {
+  id: number;
+  show_id: string;
+  type: string;
+  author: string | null;
+  summary: string | null;
+  content: Record<string, unknown> | null;
+  created_at: number;
+}
+
+export async function fetchShowAdjacent(showId: string): Promise<AdjacentShows> {
+  const res = await fetch(`/api/shows/${encodeURIComponent(showId)}/adjacent`);
+  if (!res.ok) return { prev: null, next: null };
+  return res.json();
+}
+
+export async function fetchShowReviews(showId: string): Promise<ShowReviewRow[]> {
+  const res = await fetch(`/api/shows/${encodeURIComponent(showId)}/reviews`);
+  if (!res.ok) return [];
+  return res.json();
+}
+
 export async function fetchArtistSearch(
   query: string,
   artistId?: string
@@ -162,6 +190,7 @@ export function showRowToShow(
       return acc;
     }, {} as Record<string, number>),
     ai_show_review: null,
+    cover_image_url: row.cover_image_url ?? null,
     ticket_images: [],
     photos: [],
   };

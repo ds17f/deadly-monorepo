@@ -253,8 +253,14 @@ export class GratefulDeadImporter implements ArtistImporter {
       INSERT INTO shows (id, slug, artist_id, date, year, month, day_of_year, show_sequence,
         venue_name, city, state, country, primary_source, is_future,
         setlist_status, setlist_raw, song_list, lineup_status, lineup_raw,
-        recording_count, best_recording_id, best_source_type, avg_rating, total_reviews, notes)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        recording_count, best_recording_id, best_source_type, avg_rating, total_reviews,
+        cover_image_url, notes)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `);
+
+    const insertReview = db.prepare(`
+      INSERT INTO show_reviews (show_id, type, author, summary, content)
+      VALUES (?, ?, ?, ?, ?)
     `);
 
     const insertFts = db.prepare(`
@@ -308,6 +314,15 @@ export class GratefulDeadImporter implements ArtistImporter {
 
         const totalReviews = (show.total_high_ratings ?? 0) + (show.total_low_ratings ?? 0);
 
+        // Extract cover image from ticket_images: prefer front, then unknown, then first
+        let coverImageUrl: string | null = null;
+        const ticketImages: { url: string; side?: string }[] = show.ticket_images ?? [];
+        if (ticketImages.length > 0) {
+          const front = ticketImages.find((t) => t.side === "front");
+          const unknown = ticketImages.find((t) => t.side === "unknown");
+          coverImageUrl = (front ?? unknown ?? ticketImages[0]).url;
+        }
+
         insertShow.run(
           shortId, slug, artistId, date, year, month, dayOfYear(date), seq,
           venue || null, city, state, country,
@@ -319,8 +334,21 @@ export class GratefulDeadImporter implements ArtistImporter {
           bestSource,
           show.avg_rating ?? null,
           totalReviews,
+          coverImageUrl,
           null, // notes
         );
+
+        // Insert AI review if present
+        const aiReview = show.ai_show_review;
+        if (aiReview && (aiReview.summary || aiReview.review || aiReview.blurb)) {
+          insertReview.run(
+            shortId,
+            "ai",
+            "claude",
+            aiReview.summary ?? null,
+            JSON.stringify(aiReview),
+          );
+        }
 
         insertFts.run(
           shortId, artistName, formatDateVariants(date),

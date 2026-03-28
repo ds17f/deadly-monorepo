@@ -24,7 +24,7 @@ export default function ArtistGrid({ artists }: { artists: Artist[] }) {
       {artists.map((artist) => (
         <Link
           key={artist.id}
-          href={`/artists?id=${artist.id}`}
+          href={`/artists/${artist.id}`}
           className="group rounded-lg bg-deadly-surface p-5 transition-colors hover:bg-white/10"
         >
           {artist.image_url && (

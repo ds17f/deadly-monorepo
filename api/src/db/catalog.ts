@@ -68,11 +68,24 @@ function initSchema(db: Database.Database): void {
       best_source_type TEXT,
       avg_rating REAL,
       total_reviews INTEGER NOT NULL DEFAULT 0,
+      cover_image_url TEXT,
       notes TEXT,
       created_at INTEGER NOT NULL DEFAULT (unixepoch()),
       updated_at INTEGER NOT NULL DEFAULT (unixepoch()),
       UNIQUE(artist_id, date, venue_name, show_sequence)
     );
+
+    CREATE TABLE IF NOT EXISTS show_reviews (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      show_id TEXT NOT NULL REFERENCES shows(id) ON DELETE CASCADE,
+      type TEXT NOT NULL,
+      author TEXT,
+      summary TEXT,
+      content TEXT,
+      created_at INTEGER NOT NULL DEFAULT (unixepoch())
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_show_reviews_show ON show_reviews(show_id);
 
     CREATE INDEX IF NOT EXISTS idx_shows_artist_date ON shows(artist_id, date);
     CREATE INDEX IF NOT EXISTS idx_shows_year ON shows(artist_id, year);
@@ -127,6 +140,13 @@ function initSchema(db: Database.Database): void {
       error_message TEXT
     );
   `);
+
+  // ── Migrations for existing databases ──────────────────────────
+  // Add cover_image_url column if missing (existing DBs won't have it from CREATE TABLE)
+  const showCols = db.prepare("PRAGMA table_info(shows)").all() as { name: string }[];
+  if (!showCols.some((c) => c.name === "cover_image_url")) {
+    db.exec("ALTER TABLE shows ADD COLUMN cover_image_url TEXT");
+  }
 
   // FTS5 virtual table — separate because CREATE VIRTUAL TABLE IF NOT EXISTS
   // is supported in SQLite 3.37+ but we check manually for safety
@@ -200,6 +220,7 @@ export interface ShowRow {
   best_source_type: string | null;
   avg_rating: number | null;
   total_reviews: number;
+  cover_image_url: string | null;
   notes: string | null;
   created_at: number;
   updated_at: number;
@@ -242,6 +263,16 @@ export interface PipelineRunRow {
   records_processed: number;
   records_created: number;
   error_message: string | null;
+}
+
+export interface ShowReviewRow {
+  id: number;
+  show_id: string;
+  type: string;
+  author: string | null;
+  summary: string | null;
+  content: string | null;
+  created_at: number;
 }
 
 // ── Artists ─────────────────────────────────────────────────────
@@ -372,6 +403,38 @@ export function getShowsByDayOfYear(dayOfYear: number): (ShowRow & { artist_name
     WHERE s.day_of_year = ? AND s.recording_count > 0
     ORDER BY s.date DESC
   `).all(dayOfYear) as (ShowRow & { artist_name: string })[];
+}
+
+export function getAdjacentShows(showId: string): { prev: { id: string; date: string; venue_name: string | null } | null; next: { id: string; date: string; venue_name: string | null } | null } {
+  const db = getCatalogDb();
+  const show = db.prepare("SELECT artist_id, date, show_sequence FROM shows WHERE id = ?").get(showId) as
+    { artist_id: string; date: string; show_sequence: number } | undefined;
+  if (!show) return { prev: null, next: null };
+
+  const prev = db.prepare(`
+    SELECT id, date, venue_name FROM shows
+    WHERE artist_id = ? AND (date < ? OR (date = ? AND show_sequence < ?))
+    ORDER BY date DESC, show_sequence DESC LIMIT 1
+  `).get(show.artist_id, show.date, show.date, show.show_sequence) as
+    { id: string; date: string; venue_name: string | null } | undefined;
+
+  const next = db.prepare(`
+    SELECT id, date, venue_name FROM shows
+    WHERE artist_id = ? AND (date > ? OR (date = ? AND show_sequence > ?))
+    ORDER BY date ASC, show_sequence ASC LIMIT 1
+  `).get(show.artist_id, show.date, show.date, show.show_sequence) as
+    { id: string; date: string; venue_name: string | null } | undefined;
+
+  return { prev: prev ?? null, next: next ?? null };
+}
+
+// ── Show Reviews ────────────────────────────────────────────────
+
+export function getReviewsForShow(showId: string): ShowReviewRow[] {
+  const db = getCatalogDb();
+  return db.prepare(
+    "SELECT * FROM show_reviews WHERE show_id = ? ORDER BY created_at DESC"
+  ).all(showId) as ShowReviewRow[];
 }
 
 // ── Recordings ──────────────────────────────────────────────────

@@ -95,8 +95,9 @@ export class GenericImporter implements ArtistImporter {
       INSERT INTO shows (id, slug, artist_id, date, year, month, day_of_year, show_sequence,
         venue_name, city, state, country, primary_source, is_future,
         setlist_status, setlist_raw, song_list, lineup_status, lineup_raw,
-        recording_count, best_recording_id, best_source_type, avg_rating, total_reviews, notes)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        recording_count, best_recording_id, best_source_type, avg_rating, total_reviews,
+        cover_image_url, notes)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `);
 
     const insertFts = db.prepare(`
@@ -136,6 +137,7 @@ export class GenericImporter implements ArtistImporter {
           show.setlist_status, setlistRaw, show.song_list || null,
           null, null, // lineup_status, lineup_raw
           0, null, null, null, 0, // recording aggregates (updated later)
+          null, // cover_image_url (set in phase 3)
           null, // notes
         );
 
@@ -170,8 +172,9 @@ export class GenericImporter implements ArtistImporter {
       INSERT INTO shows (id, slug, artist_id, date, year, month, day_of_year, show_sequence,
         venue_name, city, state, country, primary_source, is_future,
         setlist_status, setlist_raw, song_list, lineup_status, lineup_raw,
-        recording_count, best_recording_id, best_source_type, avg_rating, total_reviews, notes)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        recording_count, best_recording_id, best_source_type, avg_rating, total_reviews,
+        cover_image_url, notes)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `);
 
     const stubFtsInsert = db.prepare(`
@@ -200,7 +203,8 @@ export class GenericImporter implements ArtistImporter {
             "missing", null, null,
             null, null,
             0, null, null, null, 0,
-            null,
+            null, // cover_image_url
+            null, // notes
           );
 
           stubFtsInsert.run(
@@ -270,6 +274,13 @@ export class GenericImporter implements ArtistImporter {
     `);
 
     updateAggregates.run(artistId);
+
+    // Set cover_image_url from best recording's IA thumbnail
+    db.prepare(`
+      UPDATE shows SET cover_image_url = 'https://archive.org/services/img/' || best_recording_id
+      WHERE artist_id = ? AND best_recording_id IS NOT NULL AND cover_image_url IS NULL
+    `).run(artistId);
+
     onProgress?.("Done.");
 
     return result;

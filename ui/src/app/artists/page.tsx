@@ -1,20 +1,24 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, redirect } from "next/navigation";
 import { Suspense } from "react";
-import ArtistDetailContent from "./ArtistDetailContent";
 
-function ArtistPageInner() {
+function ArtistRedirect() {
   const params = useSearchParams();
   const id = params.get("id");
-  if (!id) return null;
-  return <ArtistDetailContent artistId={id} />;
+  if (id) {
+    redirect(`/artists/${id}`);
+    return null;
+  }
+  // No id param — redirect to home
+  redirect("/");
+  return null;
 }
 
 export default function ArtistPage() {
   return (
     <Suspense>
-      <ArtistPageInner />
+      <ArtistRedirect />
     </Suspense>
   );
 }

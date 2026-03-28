@@ -45,6 +45,7 @@ export interface Show {
   raw_rating: number;
   source_types: Record<string, number>;
   ai_show_review: AiShowReview | null;
+  cover_image_url: string | null;
   ticket_images: TicketImage[];
   photos: ShowPhoto[];
 }

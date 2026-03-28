@@ -7,6 +7,24 @@
 		reverse_proxy api:3001
 	}
 
+	handle /shows/* {
+		root * /srv/ui
+		file_server
+		try_files {path} {path}/index.html /shows/_/index.html
+	}
+
+	handle /artists/* {
+		root * /srv/ui
+		file_server
+		try_files {path} {path}/index.html /artists/_/index.html
+	}
+
+	handle /show/* {
+		root * /srv/ui
+		file_server
+		try_files {path} {path}/index.html /show/_/index.html
+	}
+
 	handle {
 		root * /srv/ui
 		file_server

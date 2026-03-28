@@ -5,6 +5,8 @@ import {
   getRecordingsForShow, getRecording,
   getCollectionsForArtist, getShowIdsForCollection,
   searchShows,
+  getAdjacentShows,
+  getReviewsForShow,
 } from "../db/catalog.js";
 
 export async function catalogRoutes(app: FastifyInstance): Promise<void> {
@@ -67,6 +69,26 @@ export async function catalogRoutes(app: FastifyInstance): Promise<void> {
     const show = getShow(request.params.id);
     if (!show) return reply.code(404).send({ error: "Show not found" });
     return show;
+  });
+
+  app.get<{ Params: { id: string } }>("/api/shows/:id/adjacent", {
+    schema: { tags: ["catalog"], summary: "Get prev/next shows for navigation" },
+  }, async (request, reply) => {
+    const show = getShow(request.params.id);
+    if (!show) return reply.code(404).send({ error: "Show not found" });
+    return getAdjacentShows(request.params.id);
+  });
+
+  app.get<{ Params: { id: string } }>("/api/shows/:id/reviews", {
+    schema: { tags: ["catalog"], summary: "Get reviews for a show" },
+  }, async (request, reply) => {
+    const show = getShow(request.params.id);
+    if (!show) return reply.code(404).send({ error: "Show not found" });
+    const reviews = getReviewsForShow(request.params.id);
+    return reviews.map((r) => ({
+      ...r,
+      content: r.content ? JSON.parse(r.content) : null,
+    }));
   });
 
   // ── Recordings ──────────────────────────────────────────────

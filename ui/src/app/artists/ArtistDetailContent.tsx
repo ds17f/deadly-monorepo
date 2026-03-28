@@ -33,7 +33,8 @@ interface ShowRow {
   venue_name: string | null; city: string | null; state: string | null;
   country: string; recording_count: number; best_recording_id: string | null;
   best_source_type: string | null; avg_rating: number | null;
-  total_reviews: number; setlist_raw: string | null; song_list: string | null;
+  total_reviews: number; cover_image_url: string | null;
+  setlist_raw: string | null; song_list: string | null;
   lineup_raw: string | null; notes: string | null;
 }
 
