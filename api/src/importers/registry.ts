@@ -55,14 +55,25 @@ export async function getImporter(artistId: string, dataSources: Record<string, 
   const collectorType = dataSources.collector_type;
 
   switch (collectorType) {
-    case "stage02-json":
+    case "stage02-json": {
+      // Auto-set image_url from IA collection thumbnail if not already set
+      const db2 = getCatalogDb();
+      const gdArtist = db2.prepare(
+        "SELECT ia_collection, image_url FROM artists WHERE id = ?",
+      ).get(artistId) as { ia_collection: string | null; image_url: string | null } | undefined;
+      if (gdArtist && !gdArtist.image_url && gdArtist.ia_collection) {
+        updateArtist(artistId, {
+          image_url: `https://archive.org/services/img/${encodeURIComponent(gdArtist.ia_collection)}`,
+        });
+      }
       return new GratefulDeadImporter();
+    }
 
     case "ia-setlistfm": {
       const db = getCatalogDb();
       const artist = db.prepare(
-        "SELECT name, ia_collection, musicbrainz_id FROM artists WHERE id = ?",
-      ).get(artistId) as { name: string; ia_collection: string | null; musicbrainz_id: string | null } | undefined;
+        "SELECT name, ia_collection, musicbrainz_id, image_url FROM artists WHERE id = ?",
+      ).get(artistId) as { name: string; ia_collection: string | null; musicbrainz_id: string | null; image_url: string | null } | undefined;
 
       if (!artist?.ia_collection) {
         throw new Error(
@@ -87,6 +98,12 @@ export async function getImporter(artistId: string, dataSources: Record<string, 
       const apiKey = process.env.SETLISTFM_API_KEY;
       if (!apiKey) {
         throw new Error("SETLISTFM_API_KEY env var is required for ia-setlistfm importer");
+      }
+
+      // Auto-set image_url from IA collection thumbnail if not already set
+      if (!artist.image_url && artist.ia_collection) {
+        const imageUrl = `https://archive.org/services/img/${encodeURIComponent(artist.ia_collection)}`;
+        updateArtist(artistId, { image_url: imageUrl });
       }
 
       return new GenericImporter(

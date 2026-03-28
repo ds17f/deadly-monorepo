@@ -110,6 +110,24 @@ export async function adminRoutes(app: FastifyInstance): Promise<void> {
     return reply.code(204).send();
   });
 
+  // ── Backfill artist images from IA collection thumbnails ─────
+
+  app.post("/api/admin/catalog/backfill-images", {
+    schema: { tags: ["admin"], summary: "Set image_url from IA collection for artists missing one" },
+    preHandler: requireAdmin,
+  }, async () => {
+    const artists = listArtists();
+    const updated: string[] = [];
+    for (const artist of artists) {
+      if (!artist.image_url && artist.ia_collection) {
+        const imageUrl = `https://archive.org/services/img/${encodeURIComponent(artist.ia_collection)}`;
+        updateArtist(artist.id, { image_url: imageUrl });
+        updated.push(artist.id);
+      }
+    }
+    return { updated, count: updated.length };
+  });
+
   // ── Internet Archive Lookup ──────────────────────────────────
 
   app.get<{
@@ -221,6 +239,7 @@ export async function adminRoutes(app: FastifyInstance): Promise<void> {
       title: meta.metadata.title ?? id,
       creator: meta.metadata.creator ?? null,
       description,
+      image_url: `https://archive.org/services/img/${encodeURIComponent(meta.metadata.identifier ?? id)}`,
       item_count: earliest.response.numFound,
       active_from: activeFrom,
       active_to: activeTo,

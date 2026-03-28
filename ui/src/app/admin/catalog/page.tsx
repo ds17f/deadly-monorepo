@@ -526,6 +526,7 @@ interface IACollectionDetail {
   title: string;
   creator: string | null;
   description: string;
+  image_url: string | null;
   item_count: number;
   active_from: number | null;
   active_to: number | null;
@@ -550,6 +551,7 @@ function AddArtistForm({ collectors, onCreated }: { collectors: CollectorInfo[];
     short_name: "",
     ia_collection: "",
     description: "",
+    image_url: "",
     active_from: "",
     active_to: "",
     is_active: false,
@@ -599,6 +601,7 @@ function AddArtistForm({ collectors, onCreated }: { collectors: CollectorInfo[];
         short_name: "",
         ia_collection: detail.identifier,
         description: detail.description.slice(0, 500),
+        image_url: detail.image_url ?? "",
         active_from: detail.active_from ? String(detail.active_from) : "",
         active_to: detail.active_to ? String(detail.active_to) : "",
         is_active: detail.is_active,
@@ -616,7 +619,7 @@ function AddArtistForm({ collectors, onCreated }: { collectors: CollectorInfo[];
   const handleManualEntry = () => {
     setForm({
       id: "", name: "", short_name: "", ia_collection: "",
-      description: "", active_from: "", active_to: "",
+      description: "", image_url: "", active_from: "", active_to: "",
       is_active: false, collector_type: "", data_source_setlists: "",
     });
     setPhase("form");
@@ -657,6 +660,7 @@ function AddArtistForm({ collectors, onCreated }: { collectors: CollectorInfo[];
           short_name: form.short_name || undefined,
           ia_collection: form.ia_collection || undefined,
           description: form.description || undefined,
+          image_url: form.image_url || undefined,
           active_from: form.active_from ? Number(form.active_from) : undefined,
           active_to: form.active_to ? Number(form.active_to) : undefined,
           is_active: form.is_active,
