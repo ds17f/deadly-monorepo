@@ -7,22 +7,48 @@
 		reverse_proxy api:3001
 	}
 
+	# Dynamic route fallback: when the exact file doesn't exist, rewrite
+	# the ID segment to "_" to serve the shell page and its RSC payloads.
+	# This enables client-side navigation without full page reloads,
+	# preserving audio playback across page transitions.
+
 	handle /shows/* {
 		root * /srv/ui
+
+		@shell {
+			not file {path} {path}/index.html
+			path_regexp showpath ^/shows/[^/]+(/.*)?$
+		}
+		rewrite @shell /shows/_{re.showpath.1}
+
+		try_files {path} {path}/index.html
 		file_server
-		try_files {path} {path}/index.html /shows/_/index.html
 	}
 
 	handle /artists/* {
 		root * /srv/ui
+
+		@shell {
+			not file {path} {path}/index.html
+			path_regexp artistpath ^/artists/[^/]+(/.*)?$
+		}
+		rewrite @shell /artists/_{re.artistpath.1}
+
+		try_files {path} {path}/index.html
 		file_server
-		try_files {path} {path}/index.html /artists/_/index.html
 	}
 
 	handle /show/* {
 		root * /srv/ui
+
+		@shell {
+			not file {path} {path}/index.html
+			path_regexp showoldpath ^/show/[^/]+(/.*)?$
+		}
+		rewrite @shell /show/_{re.showoldpath.1}
+
+		try_files {path} {path}/index.html
 		file_server
-		try_files {path} {path}/index.html /show/_/index.html
 	}
 
 	handle {
@@ -33,7 +59,6 @@
 }
 
 :8081 {
-	# Serve AASA with correct Content-Type for iOS Universal Links
 	handle /.well-known/apple-app-site-association {
 		root * /srv/share
 		header Content-Type application/json
