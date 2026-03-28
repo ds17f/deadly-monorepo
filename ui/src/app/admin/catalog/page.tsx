@@ -2,7 +2,7 @@
 
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 
 interface ArtistSummary {
   id: string;
@@ -322,6 +322,9 @@ export default function CatalogAdmin() {
         )}
       </section>
 
+      {/* Pipeline Console */}
+      <PipelineConsole pipelineStatus={pipelineStatus} />
+
       {/* Pipeline History */}
       <section className="mb-8">
         <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3">
@@ -330,6 +333,119 @@ export default function CatalogAdmin() {
         <PipelineHistory />
       </section>
     </div>
+  );
+}
+
+function PipelineConsole({ pipelineStatus }: { pipelineStatus: PipelineStatus[] }) {
+  const [logs, setLogs] = useState<{ t: number; msg: string }[]>([]);
+  const [activeRunId, setActiveRunId] = useState<number | null>(null);
+  const [done, setDone] = useState(false);
+  const [minimized, setMinimized] = useState(false);
+  const logEndRef = useRef<HTMLDivElement>(null);
+  const sinceRef = useRef(0);
+
+  // Find any running pipeline
+  const runningStatus = pipelineStatus.find((p) => p.last_run?.status === "running");
+  const runId = runningStatus?.last_run?.id ?? null;
+  const artistName = runningStatus?.artist_name ?? null;
+
+  // Reset when a new run starts
+  useEffect(() => {
+    if (runId && runId !== activeRunId) {
+      setActiveRunId(runId);
+      setLogs([]);
+      setDone(false);
+      setMinimized(false);
+      sinceRef.current = 0;
+    } else if (!runId && activeRunId && done) {
+      // Keep showing logs after completion, don't clear
+    }
+  }, [runId, activeRunId, done]);
+
+  // Poll logs
+  useEffect(() => {
+    if (!activeRunId) return;
+
+    const poll = async () => {
+      try {
+        const res = await fetch(
+          `/api/admin/pipeline/runs/${activeRunId}/logs?since=${sinceRef.current}`,
+          { credentials: "include" },
+        );
+        if (!res.ok) return;
+        const data = await res.json() as { logs: { t: number; msg: string }[]; done: boolean };
+        if (data.logs.length > 0) {
+          setLogs((prev) => [...prev, ...data.logs]);
+          sinceRef.current = data.logs[data.logs.length - 1].t;
+        }
+        if (data.done) setDone(true);
+      } catch { /* ignore */ }
+    };
+
+    poll();
+    const interval = setInterval(poll, 1500);
+    return () => clearInterval(interval);
+  }, [activeRunId]);
+
+  // Auto-scroll
+  useEffect(() => {
+    if (!minimized) logEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [logs, minimized]);
+
+  // Nothing to show
+  if (!activeRunId || (done && logs.length === 0)) return null;
+
+  return (
+    <section className="mb-8">
+      <div className="bg-zinc-950 border border-zinc-800 rounded-lg overflow-hidden font-mono">
+        {/* Title bar */}
+        <div className="flex items-center justify-between px-3 py-1.5 bg-zinc-900 border-b border-zinc-800">
+          <div className="flex items-center gap-2">
+            <span className={`inline-block w-2 h-2 rounded-full ${done ? "bg-zinc-500" : "bg-green-500 animate-pulse"}`} />
+            <span className="text-xs text-zinc-400">
+              Pipeline {done ? "completed" : "running"}
+              {artistName && ` — ${artistName}`}
+              {activeRunId && ` (#${activeRunId})`}
+            </span>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setMinimized((v) => !v)}
+              className="text-xs text-zinc-500 hover:text-zinc-300 transition-colors px-1"
+            >
+              {minimized ? "expand" : "minimize"}
+            </button>
+            {done && (
+              <button
+                onClick={() => { setActiveRunId(null); setLogs([]); }}
+                className="text-xs text-zinc-500 hover:text-zinc-300 transition-colors px-1"
+              >
+                close
+              </button>
+            )}
+          </div>
+        </div>
+        {/* Log output */}
+        {!minimized && (
+          <div className="p-3 max-h-64 overflow-y-auto text-xs leading-relaxed">
+            {logs.map((log, i) => (
+              <div key={i} className="flex gap-2">
+                <span className="text-zinc-600 shrink-0 select-none">
+                  {new Date(log.t).toLocaleTimeString()}
+                </span>
+                <span className={log.msg.startsWith("ERROR") ? "text-red-400" : "text-zinc-300"}>
+                  {log.msg}
+                </span>
+              </div>
+            ))}
+            {!done && logs.length === 0 && (
+              <span className="text-zinc-600">Waiting for output...</span>
+            )}
+            <div ref={logEndRef} />
+          </div>
+        )}
+      </div>
+    </section>
   );
 }
 
