@@ -5,7 +5,6 @@ import type { Show } from "@/types/show";
 
 interface ShowRow {
   id: string;
-  slug: string;
   artist_id: string;
   date: string;
   year: number;
@@ -94,8 +93,8 @@ export async function fetchShowRecordings(showId: string): Promise<RecordingRow[
 }
 
 export interface AdjacentShows {
-  prev: { id: string; date: string; venue_name: string | null } | null;
-  next: { id: string; date: string; venue_name: string | null } | null;
+  prev: { id: string; date: string; venue_name: string | null; artist_id: string } | null;
+  next: { id: string; date: string; venue_name: string | null; artist_id: string } | null;
 }
 
 export interface ShowReviewRow {

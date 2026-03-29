@@ -53,8 +53,18 @@
 
 	handle {
 		root * /srv/ui
+
+		# Catch-all route: rewrite RSC payload requests for unknown paths
+		# to the [...slug] shell at /_/ so client-side navigation works.
+		# Matches __next.*.txt and index.txt at any depth.
+		@catchall_rsc {
+			not file {path}
+			path_regexp rsc ^(?:/[^/]+)+(/(?:__next\.[^/]+|index\.txt))$
+		}
+		rewrite @catchall_rsc /_{re.rsc.1}
+
 		file_server
-		try_files {path} {path}/index.html {path}.html /index.html
+		try_files {path} {path}/index.html {path}.html /_/index.html
 	}
 }
 

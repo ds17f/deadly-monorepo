@@ -3,6 +3,7 @@
 import { useMemo } from "react";
 import Link from "next/link";
 import type { ShowIndexEntry } from "@/types/homepage";
+import { showUrl } from "@/lib/urls";
 
 const DISPLAY_COUNT = 6;
 
@@ -31,9 +32,11 @@ function dailyShuffle<T>(arr: T[]): T[] {
 
 export default function TopRatedShows({
   shows,
+  artistId,
   filterLabel,
 }: {
   shows: ShowIndexEntry[];
+  artistId: string;
   filterLabel?: string;
 }) {
   const picks = useMemo(() => dailyShuffle(shows).slice(0, DISPLAY_COUNT), [shows]);
@@ -52,7 +55,7 @@ export default function TopRatedShows({
         {picks.map((show) => (
           <Link
             key={show.id}
-            href={`/shows/${show.id}`}
+            href={showUrl(artistId, show.id)}
             className="block rounded-lg bg-deadly-surface p-3 transition-colors hover:bg-white/10"
           >
             <div className="text-sm font-medium text-white">

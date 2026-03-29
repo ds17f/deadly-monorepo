@@ -1,5 +1,4 @@
 import Database from "better-sqlite3";
-import crypto from "node:crypto";
 import path from "node:path";
 
 const DB_PATH = process.env.CATALOG_DB_PATH ?? path.join(process.cwd(), "data", "catalog.db");
@@ -16,11 +15,6 @@ export function getCatalogDb(): Database.Database {
 
   initSchema(db);
   return db;
-}
-
-/** Generate a short, URL-safe ID for shows (8 chars, 48 bits of entropy). */
-export function generateShowId(): string {
-  return crypto.randomBytes(6).toString("base64url");
 }
 
 function initSchema(db: Database.Database): void {
@@ -45,7 +39,6 @@ function initSchema(db: Database.Database): void {
 
     CREATE TABLE IF NOT EXISTS shows (
       id TEXT PRIMARY KEY,
-      slug TEXT NOT NULL,
       artist_id TEXT NOT NULL REFERENCES artists(id),
       date TEXT NOT NULL,
       year INTEGER NOT NULL,
@@ -90,7 +83,6 @@ function initSchema(db: Database.Database): void {
     CREATE INDEX IF NOT EXISTS idx_shows_artist_date ON shows(artist_id, date);
     CREATE INDEX IF NOT EXISTS idx_shows_year ON shows(artist_id, year);
     CREATE INDEX IF NOT EXISTS idx_shows_day_of_year ON shows(day_of_year);
-    CREATE INDEX IF NOT EXISTS idx_shows_slug ON shows(slug);
 
     CREATE TABLE IF NOT EXISTS recordings (
       id TEXT PRIMARY KEY,
@@ -197,7 +189,6 @@ export interface ArtistRow {
 
 export interface ShowRow {
   id: string;
-  slug: string;
   artist_id: string;
   date: string;
   year: number;
@@ -405,25 +396,25 @@ export function getShowsByDayOfYear(dayOfYear: number): (ShowRow & { artist_name
   `).all(dayOfYear) as (ShowRow & { artist_name: string })[];
 }
 
-export function getAdjacentShows(showId: string): { prev: { id: string; date: string; venue_name: string | null } | null; next: { id: string; date: string; venue_name: string | null } | null } {
+export function getAdjacentShows(showId: string): { prev: { id: string; date: string; venue_name: string | null; artist_id: string } | null; next: { id: string; date: string; venue_name: string | null; artist_id: string } | null } {
   const db = getCatalogDb();
   const show = db.prepare("SELECT artist_id, date, show_sequence FROM shows WHERE id = ?").get(showId) as
     { artist_id: string; date: string; show_sequence: number } | undefined;
   if (!show) return { prev: null, next: null };
 
   const prev = db.prepare(`
-    SELECT id, date, venue_name FROM shows
+    SELECT id, date, venue_name, artist_id FROM shows
     WHERE artist_id = ? AND (date < ? OR (date = ? AND show_sequence < ?))
     ORDER BY date DESC, show_sequence DESC LIMIT 1
   `).get(show.artist_id, show.date, show.date, show.show_sequence) as
-    { id: string; date: string; venue_name: string | null } | undefined;
+    { id: string; date: string; venue_name: string | null; artist_id: string } | undefined;
 
   const next = db.prepare(`
-    SELECT id, date, venue_name FROM shows
+    SELECT id, date, venue_name, artist_id FROM shows
     WHERE artist_id = ? AND (date > ? OR (date = ? AND show_sequence > ?))
     ORDER BY date ASC, show_sequence ASC LIMIT 1
   `).get(show.artist_id, show.date, show.date, show.show_sequence) as
-    { id: string; date: string; venue_name: string | null } | undefined;
+    { id: string; date: string; venue_name: string | null; artist_id: string } | undefined;
 
   return { prev: prev ?? null, next: next ?? null };
 }

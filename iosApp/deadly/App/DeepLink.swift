@@ -28,12 +28,15 @@ enum DeepLink: Equatable {
 
         } else if url.scheme == "https",
                   let host = url.host,
-                  host == "share.thedeadly.app" || host == "share.beta.thedeadly.app" {
-            // https://share.thedeadly.app/show/{showId}[/recording/{recordingId}[/track/{trackNumber}]]
-            // https://share.thedeadly.app/collection/{collectionId}
+                  host == "share.thedeadly.app" || host == "share.beta.thedeadly.app" ||
+                  host == "thedeadly.app" || host == "beta.thedeadly.app" {
+            // New format: https://share.thedeadly.app/{artist}/{showId}[/{recordingId}]
+            // Legacy: https://share.thedeadly.app/show/{showId}[/recording/{recordingId}[/track/{trackNumber}]]
+            // Legacy: https://share.thedeadly.app/collection/{collectionId}
             guard pathParts.count >= 2 else { return nil }
             switch pathParts[0] {
             case "show", "shows":
+                // Legacy format
                 let showId = pathParts[1]
                 let recordingId = pathParts.count >= 4 && pathParts[2] == "recording"
                     ? pathParts[3] : nil
@@ -43,6 +46,12 @@ enum DeepLink: Equatable {
             case "collection":
                 return .collection(id: pathParts[1])
             default:
+                // New format: /{artist}/{showId}[/{recordingId}]
+                if pathParts.count >= 2 {
+                    let showId = pathParts[1]
+                    let recordingId = pathParts.count >= 3 ? pathParts[2] : nil
+                    return .show(id: showId, recordingId: recordingId, trackNumber: nil)
+                }
                 return nil
             }
         }

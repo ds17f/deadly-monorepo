@@ -6,7 +6,7 @@
  * (setlist.fm, spaffnerds, etc). The pairing is hardwired in the
  * importer registry — no runtime configuration needed.
  */
-import { getCatalogDb, generateShowId } from "../db/catalog.js";
+import { getCatalogDb } from "../db/catalog.js";
 import type { ImportResult, ImportProgress, ArtistImporter } from "./types.js";
 import type { ShowSource, RecordingSource, ShowData, RecordingData } from "./sources/types.js";
 import { SOURCE_PRIORITY } from "./sources/ia-recordings.js";
@@ -18,7 +18,7 @@ const MONTH_NAMES = [
   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
 ];
 
-function slugify(text: string, maxLen = 80): string {
+function slugify(text: string, maxLen = 120): string {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, maxLen);
 }
 
@@ -92,12 +92,12 @@ export class GenericImporter implements ArtistImporter {
     const dateToShowIds = new Map<string, string[]>();
 
     const insertShow = db.prepare(`
-      INSERT INTO shows (id, slug, artist_id, date, year, month, day_of_year, show_sequence,
+      INSERT INTO shows (id, artist_id, date, year, month, day_of_year, show_sequence,
         venue_name, city, state, country, primary_source, is_future,
         setlist_status, setlist_raw, song_list, lineup_status, lineup_raw,
         recording_count, best_recording_id, best_source_type, avg_rating, total_reviews,
         cover_image_url, notes)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `);
 
     const insertFts = db.prepare(`
@@ -122,8 +122,7 @@ export class GenericImporter implements ArtistImporter {
         const seq = (dateVenueCounts.get(dvKey) ?? 0) + 1;
         dateVenueCounts.set(dvKey, seq);
 
-        const shortId = generateShowId();
-        const slug = slugify(`${artistName}-${show.date}-${show.venue}`);
+        const showId = slugify(`${show.date}-${show.venue}-${show.city ?? ""}-${show.state ?? ""}-${show.country}`);
         const parts = show.date.split("-");
         const year = parseInt(parts[0] ?? "0", 10);
         const month = parseInt(parts[1] ?? "0", 10);
@@ -131,7 +130,7 @@ export class GenericImporter implements ArtistImporter {
         const setlistRaw = show.setlist_raw.length > 0 ? JSON.stringify(show.setlist_raw) : null;
 
         insertShow.run(
-          shortId, slug, artistId, show.date, year, month, dayOfYear(show.date), seq,
+          showId, artistId, show.date, year, month, dayOfYear(show.date), seq,
           show.venue || null, show.city, show.state, show.country,
           show.primary_source, 0,
           show.setlist_status, setlistRaw, show.song_list || null,
@@ -142,13 +141,13 @@ export class GenericImporter implements ArtistImporter {
         );
 
         insertFts.run(
-          shortId, artistName, formatDateVariants(show.date),
+          showId, artistName, formatDateVariants(show.date),
           show.venue, show.city ?? "", show.state ?? "", show.song_list, "",
         );
 
-        existingShows.set(dvKey, shortId);
+        existingShows.set(dvKey, showId);
         const ids = dateToShowIds.get(show.date) ?? [];
-        ids.push(shortId);
+        ids.push(showId);
         dateToShowIds.set(show.date, ids);
         result.showsCreated++;
       }
@@ -169,12 +168,12 @@ export class GenericImporter implements ArtistImporter {
 
     // Create stub shows for recordings with no matching setlist show
     const stubShowInsert = db.prepare(`
-      INSERT INTO shows (id, slug, artist_id, date, year, month, day_of_year, show_sequence,
+      INSERT INTO shows (id, artist_id, date, year, month, day_of_year, show_sequence,
         venue_name, city, state, country, primary_source, is_future,
         setlist_status, setlist_raw, song_list, lineup_status, lineup_raw,
         recording_count, best_recording_id, best_source_type, avg_rating, total_reviews,
         cover_image_url, notes)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `);
 
     const stubFtsInsert = db.prepare(`
@@ -190,14 +189,13 @@ export class GenericImporter implements ArtistImporter {
 
         // No show for this date — create a stub
         if (!showIds?.length) {
-          const stubId = generateShowId();
-          const stubSlug = slugify(`${artistName}-${rec.date}-unknown-venue`);
+          const stubId = slugify(`${rec.date}-unknown-venue-us`);
           const parts = rec.date.split("-");
           const year = parseInt(parts[0] ?? "0", 10);
           const month = parseInt(parts[1] ?? "0", 10);
 
           stubShowInsert.run(
-            stubId, stubSlug, artistId, rec.date, year, month, dayOfYear(rec.date), 1,
+            stubId, artistId, rec.date, year, month, dayOfYear(rec.date), 1,
             null, null, null, "US",
             "archive.org", 0,
             "missing", null, null,

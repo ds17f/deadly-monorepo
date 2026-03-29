@@ -13,7 +13,7 @@ import path from "node:path";
 import { pipeline } from "node:stream/promises";
 import { createWriteStream } from "node:fs";
 import { inflateRawSync } from "node:zlib";
-import { getCatalogDb, generateShowId } from "../db/catalog.js";
+import { getCatalogDb } from "../db/catalog.js";
 import type { ImportResult, ImportProgress, ArtistImporter } from "./types.js";
 
 const GITHUB_REPO = "ds17f/deadly-monorepo";
@@ -28,7 +28,7 @@ const SOURCE_PRIORITY: Record<string, number> = {
 const MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-function slugify(text: string, maxLen = 80): string {
+function slugify(text: string, maxLen = 120): string {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, maxLen);
 }
 
@@ -250,12 +250,12 @@ export class GratefulDeadImporter implements ArtistImporter {
     const dateToShowIds = new Map<string, string[]>();
 
     const insertShow = db.prepare(`
-      INSERT INTO shows (id, slug, artist_id, date, year, month, day_of_year, show_sequence,
+      INSERT INTO shows (id, artist_id, date, year, month, day_of_year, show_sequence,
         venue_name, city, state, country, primary_source, is_future,
         setlist_status, setlist_raw, song_list, lineup_status, lineup_raw,
         recording_count, best_recording_id, best_source_type, avg_rating, total_reviews,
         cover_image_url, notes)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `);
 
     const insertReview = db.prepare(`
@@ -295,8 +295,7 @@ export class GratefulDeadImporter implements ArtistImporter {
         const seq = (dateVenueCounts.get(dvKey) ?? 0) + 1;
         dateVenueCounts.set(dvKey, seq);
 
-        const shortId = generateShowId();
-        const slug = slugify(`${artistName.toLowerCase().replace(/\s+/g, "-")}-${date}-${venue}`);
+        const showId = slugify(`${date}-${venue}-${city ?? ""}-${state ?? ""}-${country}`);
         const parts = date.split("-");
         const year = parseInt(parts[0] ?? "0", 10);
         const month = parseInt(parts[1] ?? "0", 10);
@@ -324,7 +323,7 @@ export class GratefulDeadImporter implements ArtistImporter {
         }
 
         insertShow.run(
-          shortId, slug, artistId, date, year, month, dayOfYear(date), seq,
+          showId, artistId, date, year, month, dayOfYear(date), seq,
           venue || null, city, state, country,
           "jerrygarcia.com", 0,
           show.setlist_status ?? null, setlistRaw, songList,
@@ -342,7 +341,7 @@ export class GratefulDeadImporter implements ArtistImporter {
         const aiReview = show.ai_show_review;
         if (aiReview && (aiReview.summary || aiReview.review || aiReview.blurb)) {
           insertReview.run(
-            shortId,
+            showId,
             "ai",
             "claude",
             aiReview.summary ?? null,
@@ -351,13 +350,13 @@ export class GratefulDeadImporter implements ArtistImporter {
         }
 
         insertFts.run(
-          shortId, artistName, formatDateVariants(date),
+          showId, artistName, formatDateVariants(date),
           venue, city ?? "", state ?? "", songList, memberList,
         );
 
-        oldIdToNewId.set(oldShowId, shortId);
+        oldIdToNewId.set(oldShowId, showId);
         const ids = dateToShowIds.get(date) ?? [];
-        ids.push(shortId);
+        ids.push(showId);
         dateToShowIds.set(date, ids);
         result.showsCreated++;
       }

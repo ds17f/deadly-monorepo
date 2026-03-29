@@ -32,6 +32,7 @@ function SourceBadge({ type }: { type: string }) {
 }
 
 interface ShowActionsProps {
+  artistId: string;
   showId: string;
   bestRecordingId: string | null;
   firstRecordingId: string | null;
@@ -40,6 +41,7 @@ interface ShowActionsProps {
 }
 
 export default function ShowActions({
+  artistId,
   showId,
   bestRecordingId,
   firstRecordingId,
@@ -90,9 +92,9 @@ export default function ShowActions({
         </div>
       )}
 
-      <ListenOnDeadlyLink showId={showId} recordingId={archiveId} />
+      <ListenOnDeadlyLink artistId={artistId} showId={showId} recordingId={archiveId} />
 
-      <ShowQRCode showId={showId} recordingId={archiveId ?? undefined} />
+      <ShowQRCode artistId={artistId} showId={showId} recordingId={archiveId ?? undefined} />
 
       <div className="mt-3 flex items-center gap-3">
         <a

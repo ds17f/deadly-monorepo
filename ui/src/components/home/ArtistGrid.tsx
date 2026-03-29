@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import type { Artist } from "@/types/artist";
+import { artistUrl } from "@/lib/urls";
 
 function formatYears(artist: Artist): string {
   const from = artist.active_from;
@@ -24,7 +25,7 @@ export default function ArtistGrid({ artists }: { artists: Artist[] }) {
       {artists.map((artist) => (
         <Link
           key={artist.id}
-          href={`/artists/${artist.id}`}
+          href={artistUrl(artist.id)}
           className="group rounded-lg bg-deadly-surface p-5 transition-colors hover:bg-white/10"
         >
           {artist.image_url && (

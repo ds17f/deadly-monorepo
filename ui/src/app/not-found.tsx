@@ -15,18 +15,15 @@ export default function NotFound() {
   useEffect(() => {
     const segments = window.location.pathname.split("/").filter(Boolean);
 
-    // Build deep link from path: deadly://show/{id}[/recording/{rid}]
+    // Build deep link from path: deadly://{artist}/{showId}[/{recordingId}]
     if (segments.length > 0) {
       setDeepLink("deadly:/" + window.location.pathname);
     }
 
     // Detect recording ID for Archive.org link
-    if (
-      segments[0] === "show" &&
-      segments[2] === "recording" &&
-      segments[3]
-    ) {
-      const recordingId = decodeURIComponent(segments[3]);
+    // New format: /{artist}/{showId}/{recordingId}
+    if (segments.length >= 3) {
+      const recordingId = decodeURIComponent(segments[2]);
       setArchiveUrl(
         "https://archive.org/details/" + encodeURIComponent(recordingId)
       );

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import type { ShowIndexEntry } from "@/types/homepage";
+import { showUrl } from "@/lib/urls";
 
 const PAGE_SIZE = 50;
 
@@ -17,10 +18,12 @@ function formatDate(dateStr: string): string {
 
 export default function ShowList({
   shows,
+  artistId,
   currentPage,
   onPageChange,
 }: {
   shows: ShowIndexEntry[];
+  artistId: string;
   currentPage: number;
   onPageChange: (page: number) => void;
 }) {
@@ -38,7 +41,7 @@ export default function ShowList({
         {page.map((show) => (
           <Link
             key={show.id}
-            href={`/shows/${show.id}`}
+            href={showUrl(artistId, show.id)}
             className="flex items-center gap-4 rounded-lg px-3 py-2.5 transition-colors hover:bg-deadly-surface"
           >
             <span className="w-28 shrink-0 text-sm text-deadly-red">

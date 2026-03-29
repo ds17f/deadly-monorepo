@@ -23,7 +23,7 @@ import DynamicShowNav from "@/components/DynamicShowNav";
 import FavoriteButton from "@/components/userdata/FavoriteButton";
 import UserReview from "@/components/userdata/UserReview";
 
-export default function DynamicShowPage({ showId }: { showId: string }) {
+export default function DynamicShowPage({ showId, selectedRecordingId }: { showId: string; selectedRecordingId?: string }) {
   const [show, setShow] = useState<Show | null>(null);
   const [recordings, setRecordings] = useState<Recording[]>([]);
   const [adjacent, setAdjacent] = useState<AdjacentShows>({ prev: null, next: null });
@@ -118,6 +118,7 @@ export default function DynamicShowPage({ showId }: { showId: string }) {
         </div>
         <div className="mt-6 lg:mt-0">
           <ShowActions
+            artistId={artistId}
             showId={show.show_id}
             bestRecordingId={show.best_recording}
             firstRecordingId={show.recordings[0] ?? null}

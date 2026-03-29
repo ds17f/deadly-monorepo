@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import type { AdjacentShows } from "@/lib/artistApi";
+import { artistUrl, showUrl } from "@/lib/urls";
 
 function formatShortDate(dateStr: string): string {
   const [y, m, d] = dateStr.split("-").map(Number);
@@ -27,7 +28,7 @@ export default function DynamicShowNav({
   return (
     <nav className="mb-6 flex flex-col gap-3">
       <Link
-        href={`/artists/${encodeURIComponent(artistId)}`}
+        href={artistUrl(artistId)}
         className="text-sm text-white/40 hover:text-white/70 transition-colors"
       >
         &larr; {artistName}
@@ -37,7 +38,7 @@ export default function DynamicShowNav({
       <div className="flex w-full items-center justify-between lg:hidden">
         {prev ? (
           <Link
-            href={`/shows/${prev.id}`}
+            href={showUrl(prev.artist_id, prev.id)}
             className="rounded-lg px-4 py-2 text-xl text-white/40 transition-colors hover:bg-white/5 hover:text-white/70"
           >
             &lsaquo;
@@ -53,7 +54,7 @@ export default function DynamicShowNav({
         </a>
         {next ? (
           <Link
-            href={`/shows/${next.id}`}
+            href={showUrl(next.artist_id, next.id)}
             className="rounded-lg px-4 py-2 text-xl text-white/40 transition-colors hover:bg-white/5 hover:text-white/70"
           >
             &rsaquo;
@@ -67,7 +68,7 @@ export default function DynamicShowNav({
       <div className="hidden w-full items-center justify-between lg:flex">
         {prev ? (
           <Link
-            href={`/shows/${prev.id}`}
+            href={showUrl(prev.artist_id, prev.id)}
             className="group flex items-center gap-2 rounded-lg px-3 py-2 transition-colors hover:bg-white/5"
           >
             <span className="text-white/40 group-hover:text-white/70">&larr;</span>
@@ -85,7 +86,7 @@ export default function DynamicShowNav({
         )}
         {next ? (
           <Link
-            href={`/shows/${next.id}`}
+            href={showUrl(next.artist_id, next.id)}
             className="group flex items-center gap-2 rounded-lg px-3 py-2 text-right transition-colors hover:bg-white/5"
           >
             <div>

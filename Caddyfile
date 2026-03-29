@@ -15,10 +15,64 @@
 		file_server
 	}
 
+	# Dynamic route fallback: when the exact file doesn't exist, rewrite
+	# the ID segment to "_" to serve the shell page and its RSC payloads.
+	# This enables client-side navigation without full page reloads,
+	# preserving audio playback across page transitions.
+
+	handle /shows/* {
+		root * /srv/ui
+
+		@shell {
+			not file {path} {path}/index.html
+			path_regexp showpath ^/shows/[^/]+(/.*)?$
+		}
+		rewrite @shell /shows/_{re.showpath.1}
+
+		try_files {path} {path}/index.html
+		file_server
+	}
+
+	handle /artists/* {
+		root * /srv/ui
+
+		@shell {
+			not file {path} {path}/index.html
+			path_regexp artistpath ^/artists/[^/]+(/.*)?$
+		}
+		rewrite @shell /artists/_{re.artistpath.1}
+
+		try_files {path} {path}/index.html
+		file_server
+	}
+
+	handle /show/* {
+		root * /srv/ui
+
+		@shell {
+			not file {path} {path}/index.html
+			path_regexp showoldpath ^/show/[^/]+(/.*)?$
+		}
+		rewrite @shell /show/_{re.showoldpath.1}
+
+		try_files {path} {path}/index.html
+		file_server
+	}
+
 	handle {
 		root * /srv/ui
+
+		# Catch-all route: rewrite RSC payload requests for unknown paths
+		# to the [...slug] shell at /_/ so client-side navigation works.
+		# Matches __next.*.txt and index.txt at any depth.
+		@catchall_rsc {
+			not file {path}
+			path_regexp rsc ^(?:/[^/]+)+(/(?:__next\.[^/]+|index\.txt))$
+		}
+		rewrite @catchall_rsc /_{re.rsc.1}
+
 		file_server
-		try_files {path} {path}/index.html {path}.html /index.html
+		try_files {path} {path}/index.html {path}.html /_/index.html
 	}
 }
 

@@ -29,7 +29,7 @@ function formatYears(artist: Artist): string {
 }
 
 interface ShowRow {
-  id: string; slug: string; artist_id: string; date: string; year: number;
+  id: string; artist_id: string; date: string; year: number;
   venue_name: string | null; city: string | null; state: string | null;
   country: string; recording_count: number; best_recording_id: string | null;
   best_source_type: string | null; avg_rating: number | null;
@@ -264,6 +264,7 @@ export default function ArtistDetailContent({ artistId: id }: { artistId: string
           />
           <ShowList
             shows={filtered}
+            artistId={id}
             currentPage={currentPage}
             onPageChange={setCurrentPage}
           />
@@ -279,7 +280,7 @@ export default function ArtistDetailContent({ artistId: id }: { artistId: string
             </div>
           )}
           <GetTheApp />
-          <TopRatedShows shows={topRated} filterLabel={topRatedFilterLabel} />
+          <TopRatedShows shows={topRated} artistId={id} filterLabel={topRatedFilterLabel} />
           {collections.length > 0 && (
             <CollectionsGrid collections={collections} />
           )}

@@ -11,12 +11,14 @@ import SearchFilter, { type SortBy } from "./SearchFilter";
 import ShowList from "./ShowList";
 
 export default function HomeContent({
+  artistId,
   showIndex,
   topRatedAll,
   collections,
   yearData,
   totalShows,
 }: {
+  artistId: string;
   showIndex: ShowIndexEntry[];
   topRatedAll: ShowIndexEntry[];
   collections: CollectionSummary[];
@@ -167,13 +169,14 @@ export default function HomeContent({
           />
           <ShowList
             shows={filtered}
+            artistId={artistId}
             currentPage={currentPage}
             onPageChange={setCurrentPage}
           />
         </div>
       <div className="mt-6 lg:mt-0">
         <GetTheApp />
-        <TopRatedShows shows={topRated} filterLabel={topRatedFilterLabel} />
+        <TopRatedShows shows={topRated} artistId={artistId} filterLabel={topRatedFilterLabel} />
         <CollectionsGrid collections={collections} />
       </div>
     </div>

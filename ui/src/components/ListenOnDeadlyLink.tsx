@@ -4,16 +4,18 @@ import Image from "next/image";
 import { getShareBaseUrl } from "@/lib/share";
 
 export default function ListenOnDeadlyLink({
+  artistId,
   showId,
   recordingId,
 }: {
+  artistId: string;
   showId: string;
   recordingId: string | null;
 }) {
   const base = getShareBaseUrl();
   const href = recordingId
-    ? `${base}/shows/${showId}/recording/${recordingId}`
-    : `${base}/shows/${showId}`;
+    ? `${base}/${artistId}/${showId}/${recordingId}`
+    : `${base}/${artistId}/${showId}`;
 
   return (
     <a
