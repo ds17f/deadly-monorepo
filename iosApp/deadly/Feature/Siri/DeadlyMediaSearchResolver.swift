@@ -23,11 +23,11 @@ struct DeadlyMediaSearchResolver {
         "barton hall": "Barton Hall",
     ]
 
-    /// Two-digit year expansion for the Grateful Dead's active years (1965–1995).
+    /// Two-digit year expansion for live music era (1960s–present).
     private static func expandYear(_ twoDigit: Int) -> Int? {
         switch twoDigit {
-        case 65...99: return 1900 + twoDigit
-        case 0...5:   return 2000 + twoDigit  // for JGB/post-Dead (rare)
+        case 60...99: return 1900 + twoDigit
+        case 0...25:  return 2000 + twoDigit
         default:      return nil
         }
     }
@@ -70,7 +70,7 @@ struct DeadlyMediaSearchResolver {
         if let match = tryWrittenDate(trimmed) { return match }
 
         // Pattern: just a 4-digit year
-        if let year = Int(trimmed), year >= 1965, year <= 1995 {
+        if let year = Int(trimmed), year >= 1960, year <= 2025 {
             return nil // Return nil for bare years — caller should handle as year browse
         }
 

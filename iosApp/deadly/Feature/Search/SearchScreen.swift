@@ -279,11 +279,10 @@ struct SearchScreen: View {
                     endPoint: .bottom
                 )
 
-                // Logo watermark
-                Image("deadly_logo")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 40, height: 40)
+                // Watermark
+                Image(systemName: "music.note")
+                    .font(.system(size: 24))
+                    .foregroundStyle(.white)
                     .opacity(0.2)
                     .padding(8)
 

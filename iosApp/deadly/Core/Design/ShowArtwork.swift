@@ -101,10 +101,13 @@ struct ShowArtwork: View {
     }
 
     private var placeholder: some View {
-        Image("deadly_logo_square")
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .frame(width: size, height: size)
-            .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+        ZStack {
+            RoundedRectangle(cornerRadius: cornerRadius)
+                .fill(Color(.secondarySystemBackground))
+            Image(systemName: "music.note")
+                .font(.system(size: size * 0.35))
+                .foregroundStyle(.secondary)
+        }
+        .frame(width: size, height: size)
     }
 }

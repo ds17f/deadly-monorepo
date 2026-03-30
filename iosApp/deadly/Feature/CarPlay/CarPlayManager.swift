@@ -21,8 +21,8 @@ final class CarPlayManager {
     private let trackResolver: CarPlayTrackResolver
     private let placeholderImage: UIImage?
 
-    private static let deadFirstYear = 1965
-    private static let deadLastYear = 1995
+    private static let firstYear = 1960
+    private static let lastYear = 2025
     /// CarPlay list item artwork size (44pt standard).
     private static let artworkSize = CGSize(width: 44, height: 44)
 
@@ -35,7 +35,8 @@ final class CarPlayManager {
             recordingPreferenceDAO: RecordingPreferenceDAO(database: container.database),
             downloadService: container.downloadService
         )
-        self.placeholderImage = UIImage(named: "deadly_logo_square")
+        let config = UIImage.SymbolConfiguration(pointSize: 44, weight: .regular)
+        self.placeholderImage = UIImage(systemName: "music.note", withConfiguration: config)
     }
 
     func configure() {
@@ -75,15 +76,15 @@ final class CarPlayManager {
     }
 
     private func buildTodayTab() -> CPListTemplate {
-        let template = CPListTemplate(title: "TIGDH", sections: [])
-        template.tabTitle = "TIGDH"
+        let template = CPListTemplate(title: "On This Day", sections: [])
+        template.tabTitle = "On This Day"
         template.tabImage = UIImage(systemName: "calendar")
         loadTodayShows(into: template)
         return template
     }
 
     private func buildDiscoverTab() -> CPListTemplate {
-        let yearsItem = CPListItem(text: "Browse by Year", detailText: "1965–1995")
+        let yearsItem = CPListItem(text: "Browse by Year", detailText: nil)
         yearsItem.handler = { [weak self] _, completion in
             self?.showYearsList()
             completion()
@@ -153,7 +154,7 @@ final class CarPlayManager {
     // MARK: - Show Drill-Down
 
     private func showYearsList() {
-        let items: [CPListItem] = (Self.deadFirstYear...Self.deadLastYear).map { year in
+        let items: [CPListItem] = (Self.firstYear...Self.lastYear).map { year in
             let item = CPListItem(text: "\(year)", detailText: nil)
             item.handler = { [weak self] _, completion in
                 self?.showYearShows(year)

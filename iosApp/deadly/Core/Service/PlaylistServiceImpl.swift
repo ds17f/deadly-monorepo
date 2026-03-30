@@ -163,6 +163,7 @@ final class PlaylistServiceImpl: PlaylistService {
             return URL(string: "https://archive.org/services/img/\(recording.identifier)")
         }()
         let albumTitle = currentShow.map { "\($0.venue.name) — \($0.date)" }
+        let artistName = currentShow?.band ?? ""
         let showId = currentShow?.id ?? ""
         let recordingId = recording.identifier
         let trackItems = tracks.enumerated().map { idx, track in
@@ -176,7 +177,7 @@ final class PlaylistServiceImpl: PlaylistService {
             return TrackItem(
                 url: url,
                 title: track.title,
-                artist: "Grateful Dead",
+                artist: artistName,
                 albumTitle: albumTitle,
                 artworkURL: artworkURL,
                 duration: track.durationInterval,

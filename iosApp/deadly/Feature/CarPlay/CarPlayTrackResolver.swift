@@ -95,7 +95,7 @@ final class CarPlayTrackResolver {
             return TrackItem(
                 url: url,
                 title: track.title,
-                artist: "Grateful Dead",
+                artist: show.band,
                 albumTitle: albumTitle,
                 artworkURL: artworkURL,
                 duration: track.durationInterval,

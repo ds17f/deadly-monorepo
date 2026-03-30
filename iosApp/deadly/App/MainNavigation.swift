@@ -287,10 +287,9 @@ private extension View {
                 ToolbarItem(placement: .topBarLeading) {
                     Button { showingSettings.wrappedValue = true } label: {
                         HStack(spacing: 8) {
-                            Image("deadly_logo")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 28, height: 28)
+                            Image(systemName: "music.note")
+                                .font(.system(size: 20, weight: .semibold))
+                                .foregroundStyle(DeadlyColors.primary)
                             Text(title)
                                 .font(.title3)
                                 .fontWeight(.bold)

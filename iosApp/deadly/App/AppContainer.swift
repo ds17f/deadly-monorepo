@@ -110,11 +110,27 @@ final class AppContainer {
             let player = MainActor.assumeIsolated { StreamPlayer() }
             streamPlayer = player
 
-            // Set app logo as fallback for lock screen / Now Playing when artwork unavailable
+            // Fallback artwork for lock screen / Now Playing when artwork unavailable.
+            // Uses a music note SF Symbol rendered to a square image.
             #if os(iOS)
             MainActor.assumeIsolated {
-                if let logoImage = UIImage(named: "deadly_logo_square") {
-                    player.setFallbackArtwork(logoImage)
+                let size: CGFloat = 300
+                let config = UIImage.SymbolConfiguration(pointSize: 120, weight: .light)
+                if let symbol = UIImage(systemName: "music.note", withConfiguration: config) {
+                    let renderer = UIGraphicsImageRenderer(size: CGSize(width: size, height: size))
+                    let fallback = renderer.image { ctx in
+                        UIColor(red: 0x1A / 255, green: 0x1A / 255, blue: 0x1A / 255, alpha: 1).setFill()
+                        ctx.fill(CGRect(origin: .zero, size: CGSize(width: size, height: size)))
+                        let tinted = symbol.withTintColor(.white.withAlphaComponent(0.5), renderingMode: .alwaysOriginal)
+                        let symSize = tinted.size
+                        tinted.draw(in: CGRect(
+                            x: (size - symSize.width) / 2,
+                            y: (size - symSize.height) / 2,
+                            width: symSize.width,
+                            height: symSize.height
+                        ))
+                    }
+                    player.setFallbackArtwork(fallback)
                 }
             }
             #endif

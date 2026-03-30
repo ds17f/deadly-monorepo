@@ -4,14 +4,13 @@ import CoreImage.CIFilterBuiltins
 
 enum ShareCardGenerator {
 
-    // MARK: - QR Code with Logo
+    // MARK: - QR Code
 
-    /// Generates a QR code with the deadly logo overlaid in the center.
-    /// Uses error correction level H to tolerate the ~30% occlusion from the logo.
+    /// Generates a QR code image at the given size.
     static func generateQRCodeWithLogo(url: String, size: CGFloat) -> UIImage? {
         let filter = CIFilter.qrCodeGenerator()
         filter.message = Data(url.utf8)
-        filter.correctionLevel = "H"
+        filter.correctionLevel = "M"
 
         guard let outputImage = filter.outputImage else { return nil }
 
@@ -20,35 +19,7 @@ enum ShareCardGenerator {
 
         let ciContext = CIContext()
         guard let cgImage = ciContext.createCGImage(scaledImage, from: scaledImage.extent) else { return nil }
-        let qrImage = UIImage(cgImage: cgImage)
-
-        let renderer = UIGraphicsImageRenderer(size: CGSize(width: size, height: size))
-        return renderer.image { _ in
-            qrImage.draw(in: CGRect(origin: .zero, size: CGSize(width: size, height: size)))
-
-            if let logo = UIImage(named: "deadly_logo") {
-                let circleSize = size * 0.22
-                let logoSize = size * 0.18
-                let center = CGPoint(x: size / 2, y: size / 2)
-
-                // White circle behind logo to mask QR modules
-                let circleRadius = circleSize / 2
-                UIColor.white.setFill()
-                UIBezierPath(ovalIn: CGRect(
-                    x: center.x - circleRadius,
-                    y: center.y - circleRadius,
-                    width: circleRadius * 2,
-                    height: circleRadius * 2
-                )).fill()
-
-                logo.draw(in: CGRect(
-                    x: center.x - logoSize / 2,
-                    y: center.y - logoSize / 2,
-                    width: logoSize,
-                    height: logoSize
-                ))
-            }
-        }
+        return UIImage(cgImage: cgImage)
     }
 
     // MARK: - Share Card
@@ -75,19 +46,23 @@ enum ShareCardGenerator {
             bg.setFill()
             ctx.fill(CGRect(x: 0, y: 0, width: W, height: H))
 
-            // Top section: cover art or logo placeholder
+            // Top section: cover art or symbol placeholder
             let validCover = coverImage.flatMap { isValidCover($0) ? $0 : nil }
             if let cover = validCover {
                 drawCenterCropped(image: cover, in: CGRect(x: 0, y: 0, width: W, height: topH), context: cgCtx)
-            } else if let logo = UIImage(named: "deadly_logo") {
-                let logoW = W * 0.4
-                let logoH = logoW * (logo.size.height / logo.size.width)
-                logo.draw(in: CGRect(
-                    x: (W - logoW) / 2,
-                    y: (topH - logoH) / 2,
-                    width: logoW,
-                    height: logoH
-                ))
+            } else {
+                let config = UIImage.SymbolConfiguration(pointSize: 160, weight: .light)
+                if let symbol = UIImage(systemName: "music.note", withConfiguration: config) {
+                    let tint = UIColor(white: 1, alpha: 0.3)
+                    let tinted = symbol.withTintColor(tint, renderingMode: .alwaysOriginal)
+                    let symSize = tinted.size
+                    tinted.draw(in: CGRect(
+                        x: (W - symSize.width) / 2,
+                        y: (topH - symSize.height) / 2,
+                        width: symSize.width,
+                        height: symSize.height
+                    ))
+                }
             }
 
             // Gradient scrim over bottom 300pt of top section

@@ -6,24 +6,12 @@ struct LegalView: View {
             VStack(alignment: .leading, spacing: 36) {
 
                 ArticleSection("Streaming & Recording Access Policy") {
-                    Text("This app streams live recordings from the Internet Archive, a non-profit digital library that hosts recordings in accordance with the Grateful Dead's long-standing non-commercial taping tradition and current rights-holder policies.")
-                    Text("This app is independent and not affiliated with the band, its members, or its management.")
-                }
-
-                ArticleSection("The Band's Taping & Sharing Tradition") {
-                    Text("The Grateful Dead historically permitted audience members to record live performances for personal, non-commercial use and free trading. This policy helped create one of the most active live-music communities in history.")
-                    Text("Historical policy statements:")
-                        .fontWeight(.medium)
-                    ArticleLink("Grateful Dead Statement to Digital Archive Operators",
-                                url: "https://web.archive.org/web/20051124082136/http://www.sugarmegs.org/purpose.html")
-                    ArticleLink("WIRED: Everyone Is Grateful Again",
-                                url: "https://www.wired.com/2005/12/everyone-is-grateful-again/")
+                    Text("This app streams live recordings from the Internet Archive, a non-profit digital library that hosts community-contributed concert recordings.")
+                    Text("This app is independent and not affiliated with any artist, label, or rights holder.")
                 }
 
                 ArticleSection("Internet Archive Collection Policy") {
-                    Text("The Internet Archive hosts the Grateful Dead collection under specific access rules set in coordination with rights holders. Availability of recordings — including whether they are stream-only or downloadable — is determined by the Archive and applicable rights holders.")
-                    ArticleLink("Grateful Dead Collection Help Page",
-                                url: "https://archivesupport.zendesk.com/hc/en-us/articles/360004715891-The-Grateful-Dead-Collection")
+                    Text("The Internet Archive hosts live music collections under specific access rules set in coordination with rights holders. Availability of recordings — including whether they are stream-only or downloadable — is determined by the Archive and applicable rights holders.")
                 }
 
                 ArticleSection("How This App Handles Streaming") {
@@ -45,7 +33,7 @@ struct LegalView: View {
                 }
 
                 ArticleSection("Respect for Artists & Rights Holders") {
-                    Text("This app exists to support listening, exploration, and historical appreciation of the Grateful Dead's live performances — in the spirit of their taping tradition — while respecting modern copyright law and the policies of the Internet Archive and rights holders.")
+                    Text("This app exists to support listening, exploration, and historical appreciation of live performances — while respecting modern copyright law and the policies of the Internet Archive and rights holders.")
                 }
 
                 ArticleSection("Privacy Policy") {

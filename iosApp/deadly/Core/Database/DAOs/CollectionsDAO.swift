@@ -23,9 +23,15 @@ struct CollectionsDAO: Sendable {
 
     // MARK: - Fetch
 
+    /// SQL predicate that excludes collections tagged as official releases.
+    private static let excludeOfficial =
+        "tagsJson NOT LIKE '%\"official\"%' ESCAPE '\\' AND tagsJson NOT LIKE '%\"official-release\"%' ESCAPE '\\'"
+
     func fetchAll() throws -> [DeadCollectionRecord] {
         try database.read { db in
-            try DeadCollectionRecord.fetchAll(db)
+            try DeadCollectionRecord
+                .filter(sql: Self.excludeOfficial)
+                .fetchAll(db)
         }
     }
 
@@ -38,6 +44,7 @@ struct CollectionsDAO: Sendable {
     func fetchFeatured(limit: Int) throws -> [DeadCollectionRecord] {
         try database.read { db in
             try DeadCollectionRecord
+                .filter(sql: Self.excludeOfficial)
                 .order(Column("totalShows").desc)
                 .limit(limit)
                 .fetchAll(db)
@@ -49,7 +56,7 @@ struct CollectionsDAO: Sendable {
         let pattern = "%\"\(escapeLike(tag))\"%"
         return try database.read { db in
             try DeadCollectionRecord
-                .filter(sql: "tagsJson LIKE ? ESCAPE '\\'", arguments: [pattern])
+                .filter(sql: "tagsJson LIKE ? ESCAPE '\\' AND \(Self.excludeOfficial)", arguments: [pattern])
                 .fetchAll(db)
         }
     }
@@ -59,7 +66,7 @@ struct CollectionsDAO: Sendable {
         let pattern = "%\(escapeLike(query))%"
         return try database.read { db in
             try DeadCollectionRecord
-                .filter(sql: "name LIKE ? ESCAPE '\\' OR description LIKE ? ESCAPE '\\'", arguments: [pattern, pattern])
+                .filter(sql: "(name LIKE ? ESCAPE '\\' OR description LIKE ? ESCAPE '\\') AND \(Self.excludeOfficial)", arguments: [pattern, pattern])
                 .fetchAll(db)
         }
     }
@@ -69,14 +76,16 @@ struct CollectionsDAO: Sendable {
         let pattern = "%\"\(escapeLike(showId))\"%"
         return try database.read { db in
             try DeadCollectionRecord
-                .filter(sql: "showIdsJson LIKE ? ESCAPE '\\'", arguments: [pattern])
+                .filter(sql: "showIdsJson LIKE ? ESCAPE '\\' AND \(Self.excludeOfficial)", arguments: [pattern])
                 .fetchAll(db)
         }
     }
 
     func fetchCount() throws -> Int {
         try database.read { db in
-            try DeadCollectionRecord.fetchCount(db)
+            try DeadCollectionRecord
+                .filter(sql: Self.excludeOfficial)
+                .fetchCount(db)
         }
     }
 

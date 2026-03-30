@@ -50,7 +50,7 @@ final class HomeServiceImpl: HomeService {
                 recentShows: recentShows
             )
 
-            // Prefetch artwork for Today In History carousel
+            // Prefetch artwork for On This Day carousel
             let imageUrls = todayShows.compactMap { show -> URL? in
                 if let coverUrl = show.coverImageUrl, let url = URL(string: coverUrl) {
                     return url

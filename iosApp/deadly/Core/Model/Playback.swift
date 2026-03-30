@@ -71,7 +71,7 @@ struct CurrentTrackInfo: Codable, Sendable, Equatable {
 
     // Track-specific data
     let songTitle: String       // e.g. "Scarlet Begonias"
-    let artist: String          // e.g. "Grateful Dead"
+    let artist: String
     let album: String           // e.g. "May 8, 1977 - Barton Hall"
     let trackNumber: Int?
     let filename: String
