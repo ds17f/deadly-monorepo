@@ -1,7 +1,7 @@
 .PHONY: dev dev-up dev-down dev-logs dev-ps api-dev api-install api-build api-typecheck
 .PHONY: docker-remote-pull docker-remote-up docker-remote-down docker-remote-destroy docker-remote-logs docker-remote-ps docker-remote-redeploy docker-remote-redeploy-logs api-remote-dev api-remote-health
 .PHONY: help docs-help docs-install docs-build docs-serve docs-clean docs-pr
-.PHONY: ui-install ui-dev ui-build ui-typecheck ui-data
+.PHONY: ui-install ui-dev ui-build ui-typecheck ui-data share-pages
 .PHONY: ui-remote-install ui-remote-dev ui-remote-build ui-remote-dev-build ui-dev-build
 .PHONY: android-release android-release-version android-release-dry-run android-install
 .PHONY: ios-release ios-release-version ios-release-dry-run
@@ -89,6 +89,10 @@ ui-data:
 	@cp -r $(DEAD_METADATA)/recordings ui/data/
 	@if [ -f $(DEAD_METADATA)/collections.json ]; then cp $(DEAD_METADATA)/collections.json ui/data/; fi
 	@echo "Done. $$(ls ui/data/shows/ | wc -l) shows, $$(ls ui/data/recordings/ | wc -l) recordings."
+
+# Generate per-show share pages with OG tags for social media cards
+share-pages:
+	python3 scripts/generate-share-pages.py
 
 # UI Remote targets (Linux → Mac)
 ui-remote-install:

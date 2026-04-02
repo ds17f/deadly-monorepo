@@ -31,6 +31,11 @@
 		file_server
 	}
 
+	# Rewrite /shows/{id}/recording/{rid} to /shows/{id}/ so the
+	# show's OG-tagged index.html is served for recording share links
+	@recording path_regexp recording ^/shows/([^/]+)/recording/.*$
+	rewrite @recording /shows/{re.recording.1}/
+
 	handle {
 		root * /srv/share
 		file_server

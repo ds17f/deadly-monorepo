@@ -17,13 +17,18 @@ import UserReview from "@/components/userdata/UserReview";
 import type { Recording } from "@/types/recording";
 import type { Show } from "@/types/show";
 
+const SITE_URL = (process.env.SITE_URL || "https://thedeadly.app").replace(
+  /\/$/,
+  "",
+);
+
 function resolveCoverImageUrl(show: Show): string {
   const front = show.ticket_images?.find((t) => t.side === "front");
   if (front) return front.url;
   const unknown = show.ticket_images?.find((t) => t.side === "unknown");
   if (unknown) return unknown.url;
   if (show.photos?.length > 0) return show.photos[0].url;
-  return "https://share.thedeadly.app/logo.png";
+  return `${SITE_URL}/logo.png`;
 }
 
 function formatDateForTitle(dateStr: string): string {
@@ -70,7 +75,6 @@ export async function generateMetadata({
       title,
       description,
       type: "article",
-      url: `https://share.thedeadly.app/shows/${id}`,
       siteName: "The Deadly",
       images: [{ url: imageUrl }],
     },
