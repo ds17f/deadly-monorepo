@@ -1,11 +1,12 @@
 # Changelog
 
+## [2.24.1] - 2026-04-02
+
+
 ## [2.24.0] - 2026-03-31
 
 ### CI Changes
 * filter web and infra commits from mobile changelogs (d36ebe8d)
-
-
 ## [2.22.0] - 2026-03-24
 
 ### New Features
