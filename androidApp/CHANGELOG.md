@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.21.1] - 2026-04-02
+
+### CI Changes
+* filter web and infra commits from mobile changelogs (d36ebe8d)
+
+
 ## [2.21.0] - 2026-03-24
 
 ### New Features
@@ -23,8 +29,6 @@
 * chore(ci): standardize workflow display names with platform prefix (6d6a1059)
 * chore(ci): Add makefile targets for full rebuild of docker remote and logs (2e8ba1b7)
 * chore: rename api-remote-* targets to docker-remote-* and update remote path (714be733)
-
-
 ## [2.20.0] - 2026-03-15
 
 ### New Features
