@@ -56,7 +56,18 @@ export async function generateMetadata({
   const title = `Grateful Dead ${dateStr} — ${show.venue} | The Deadly`;
 
   const descParts = [`Grateful Dead at ${show.venue}, ${show.location_raw}`];
-  if (show.recording_count > 0) {
+  const sourceLabel: Record<string, string> = {
+    SBD: "Soundboard",
+    MATRIX: "Matrix",
+    AUD: "Audience",
+    FM: "FM broadcast",
+  };
+  const bestSource = ["SBD", "MATRIX", "FM", "AUD"].find(
+    (t) => (show.source_types?.[t] ?? 0) > 0,
+  );
+  if (bestSource) {
+    descParts.push(`${sourceLabel[bestSource]} available`);
+  } else if (show.recording_count > 0) {
     descParts.push(`${show.recording_count} recordings`);
   }
   if (show.avg_rating > 0) {

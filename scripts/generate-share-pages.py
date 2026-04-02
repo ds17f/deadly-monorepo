@@ -54,9 +54,13 @@ def resolve_cover_image(show: dict) -> str:
 def build_description(show: dict) -> str:
     """Build an OG description matching the Next.js generateMetadata logic."""
     parts = [f"Grateful Dead at {show['venue']}, {show['location_raw']}"]
-    rc = show.get("recording_count", 0)
-    if rc > 0:
-        parts.append(f"{rc} recordings")
+    source_labels = {"SBD": "Soundboard", "MATRIX": "Matrix", "FM": "FM broadcast", "AUD": "Audience"}
+    source_types = show.get("source_types") or {}
+    best_source = next((t for t in ["SBD", "MATRIX", "FM", "AUD"] if source_types.get(t, 0) > 0), None)
+    if best_source:
+        parts.append(f"{source_labels[best_source]} available")
+    elif show.get("recording_count", 0) > 0:
+        parts.append(f"{show['recording_count']} recordings")
     avg = show.get("avg_rating", 0)
     if avg > 0:
         parts.append(f"{avg:.1f}\u2605")
