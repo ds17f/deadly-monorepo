@@ -71,6 +71,9 @@ ui/.next/
 ui/out/
 ui/data/
 
+# Generated share pages (built by make share-pages)
+web/shows/
+
 # Data pipeline
 data/stage01-collected-data/
 data/stage02-generated-data/

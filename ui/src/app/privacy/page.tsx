@@ -9,7 +9,6 @@ export const metadata: Metadata = {
     description:
       "Privacy Policy for The Deadly app. Learn about our anonymous usage analytics and your privacy choices.",
     type: "website",
-    url: "https://share.thedeadly.app/privacy",
   },
 };
 
