@@ -1,8 +1,8 @@
 "use client";
 
 import { useAuth } from "@/contexts/AuthContext";
-import { useRouter } from "next/navigation";
-import { useEffect, useState, useCallback, useMemo } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState, useCallback, useMemo, Suspense } from "react";
 
 interface AnalyticsSummary {
   dau: number;
@@ -49,11 +49,46 @@ const METRIC_LABELS: Record<DetailMetric, string> = {
   playback: "Playback (30d)",
 };
 
+interface InstallEvent {
+  id: number;
+  event: string;
+  ts: number;
+  sid: string;
+  platform: string;
+  app_version: string;
+  props: string | null;
+}
+
+interface InstallData {
+  iid: string;
+  platform: string;
+  app_version: string;
+  first_seen: string;
+  last_seen: string;
+  total_events: number;
+  events: InstallEvent[];
+}
+
 const REFRESH_INTERVAL = 30_000;
 
-export default function AnalyticsDashboard() {
+export default function AnalyticsPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-deadly-bg flex items-center justify-center">
+          <p className="text-zinc-400">Loading...</p>
+        </div>
+      }
+    >
+      <AnalyticsDashboard />
+    </Suspense>
+  );
+}
+
+function AnalyticsDashboard() {
   const { user, isLoading: authLoading } = useAuth();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [data, setData] = useState<AnalyticsSummary | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -64,6 +99,13 @@ export default function AnalyticsDashboard() {
   const [detailLoading, setDetailLoading] = useState(false);
   const [sortKey, setSortKey] = useState<keyof DetailRow>("last_seen");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
+  const [activeIid, setActiveIid] = useState<string | null>(searchParams.get("iid"));
+  const [installData, setInstallData] = useState<InstallData | null>(null);
+  const [installLoading, setInstallLoading] = useState(false);
+  const [installError, setInstallError] = useState<string | null>(null);
+  const [installEventFilter, setInstallEventFilter] = useState<string | null>(null);
+  const [installSortKey, setInstallSortKey] = useState<"ts" | "event" | "sid" | "platform" | "app_version">("ts");
+  const [installSortDir, setInstallSortDir] = useState<SortDir>("desc");
 
   const fetchSummary = useCallback(async () => {
     try {
@@ -121,6 +163,45 @@ export default function AnalyticsDashboard() {
     setDetailRows([]);
   }, []);
 
+  const fetchInstall = useCallback(async (iid: string) => {
+    setInstallLoading(true);
+    setInstallError(null);
+    try {
+      const res = await fetch(`/api/analytics/install/${encodeURIComponent(iid)}`, {
+        credentials: "include",
+      });
+      if (res.status === 404) {
+        setInstallError("Install ID not found");
+        return;
+      }
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json();
+      setInstallData(json);
+    } catch (e) {
+      setInstallError(e instanceof Error ? e.message : "Failed to load");
+    } finally {
+      setInstallLoading(false);
+    }
+  }, []);
+
+  const openInstall = useCallback((iid: string) => {
+    setActiveIid(iid);
+    setActiveMetric(null);
+    setInstallEventFilter(null);
+    setInstallSortKey("ts");
+    setInstallSortDir("desc");
+    window.history.pushState(null, "", `/admin/analytics/?iid=${encodeURIComponent(iid)}`);
+    fetchInstall(iid);
+  }, [fetchInstall]);
+
+  const closeInstall = useCallback(() => {
+    setActiveIid(null);
+    setInstallData(null);
+    setInstallError(null);
+    setInstallEventFilter(null);
+    window.history.pushState(null, "", "/admin/analytics/");
+  }, []);
+
   // Auto-refresh summary
   useEffect(() => {
     if (authLoading) return;
@@ -140,6 +221,40 @@ export default function AnalyticsDashboard() {
     return () => clearInterval(interval);
   }, [activeMetric, activeFilter, fetchDetail]);
 
+  // Load install detail from URL param on mount
+  useEffect(() => {
+    if (activeIid && !installData && !installLoading) {
+      fetchInstall(activeIid);
+    }
+  }, [activeIid, installData, installLoading, fetchInstall]);
+
+  // Handle browser back/forward navigation
+  useEffect(() => {
+    const onPopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      const iid = params.get("iid");
+      if (iid) {
+        setActiveIid(iid);
+        setInstallEventFilter(null);
+        fetchInstall(iid);
+      } else {
+        setActiveIid(null);
+        setInstallData(null);
+        setInstallError(null);
+        setInstallEventFilter(null);
+      }
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, [fetchInstall]);
+
+  // Auto-refresh install detail
+  useEffect(() => {
+    if (!activeIid) return;
+    const interval = setInterval(() => fetchInstall(activeIid), REFRESH_INTERVAL);
+    return () => clearInterval(interval);
+  }, [activeIid, fetchInstall]);
+
   const sortedDetail = useMemo(() => {
     const rows = [...detailRows];
     rows.sort((a, b) => {
@@ -154,6 +269,40 @@ export default function AnalyticsDashboard() {
     return rows;
   }, [detailRows, sortKey, sortDir]);
 
+  const installEventTypes = useMemo(() => {
+    if (!installData) return [];
+    const types = new Set(installData.events.map((e) => e.event));
+    return Array.from(types).sort();
+  }, [installData]);
+
+  const sortedInstallEvents = useMemo(() => {
+    if (!installData) return [];
+    let rows = installData.events;
+    if (installEventFilter) {
+      rows = rows.filter((e) => e.event === installEventFilter);
+    }
+    const sorted = [...rows];
+    sorted.sort((a, b) => {
+      const aVal = a[installSortKey];
+      const bVal = b[installSortKey];
+      if (typeof aVal === "number" && typeof bVal === "number") {
+        return installSortDir === "asc" ? aVal - bVal : bVal - aVal;
+      }
+      const cmp = String(aVal ?? "").localeCompare(String(bVal ?? ""));
+      return installSortDir === "asc" ? cmp : -cmp;
+    });
+    return sorted;
+  }, [installData, installSortKey, installSortDir, installEventFilter]);
+
+  const toggleInstallSort = (key: typeof installSortKey) => {
+    if (installSortKey === key) {
+      setInstallSortDir((d) => (d === "asc" ? "desc" : "asc"));
+    } else {
+      setInstallSortKey(key);
+      setInstallSortDir("desc");
+    }
+  };
+
   const toggleSort = (key: keyof DetailRow) => {
     if (sortKey === key) {
       setSortDir((d) => (d === "asc" ? "desc" : "asc"));
@@ -162,9 +311,6 @@ export default function AnalyticsDashboard() {
       setSortDir("desc");
     }
   };
-
-  const sortIndicator = (key: keyof DetailRow) =>
-    sortKey === key ? (sortDir === "asc" ? " ▲" : " ▼") : "";
 
   if (authLoading || (!user?.isAdmin && !error)) {
     return (
@@ -178,6 +324,136 @@ export default function AnalyticsDashboard() {
     return (
       <div className="min-h-screen bg-deadly-bg flex items-center justify-center">
         <p className="text-deadly-red">{error}</p>
+      </div>
+    );
+  }
+
+  // ── Install detail view ────────────────────────────────────────────
+  if (activeIid) {
+    return (
+      <div className="min-h-screen bg-deadly-bg p-6 max-w-6xl mx-auto">
+        <div className="flex items-center gap-3 mb-6">
+          <button
+            onClick={closeInstall}
+            className="text-sm text-zinc-400 hover:text-white transition-colors"
+          >
+            &larr; Analytics
+          </button>
+          <h1 className="text-2xl font-bold text-deadly-red">Install Detail</h1>
+        </div>
+
+        {installError && (
+          <div className="flex items-center justify-center p-12">
+            <p className="text-deadly-red">{installError}</p>
+          </div>
+        )}
+
+        {installLoading && !installData && (
+          <div className="flex items-center justify-center p-12">
+            <p className="text-zinc-400">Loading events...</p>
+          </div>
+        )}
+
+        {installData && (
+          <>
+            <div className="bg-deadly-surface rounded-lg p-4 mb-6 grid grid-cols-2 sm:grid-cols-5 gap-4">
+              <div>
+                <p className="text-xs text-zinc-400 uppercase tracking-wider mb-1">Install ID</p>
+                <p className="text-sm font-mono text-white break-all">{installData.iid}</p>
+              </div>
+              <div>
+                <p className="text-xs text-zinc-400 uppercase tracking-wider mb-1">Platform</p>
+                <p className="text-sm text-white">{installData.platform}</p>
+              </div>
+              <div>
+                <p className="text-xs text-zinc-400 uppercase tracking-wider mb-1">Version</p>
+                <p className="text-sm text-white">{installData.app_version}</p>
+              </div>
+              <div>
+                <p className="text-xs text-zinc-400 uppercase tracking-wider mb-1">First Seen</p>
+                <p className="text-sm text-white">{installData.first_seen}</p>
+              </div>
+              <div>
+                <p className="text-xs text-zinc-400 uppercase tracking-wider mb-1">Last Seen</p>
+                <p className="text-sm text-white">{installData.last_seen}</p>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-sm text-zinc-400">
+                {sortedInstallEvents.length} event{sortedInstallEvents.length !== 1 ? "s" : ""}
+                {installData.total_events > 1000 && !installEventFilter && (
+                  <span className="text-zinc-600 ml-1">(showing last 1000)</span>
+                )}
+              </span>
+              <div className="flex items-center gap-2">
+                {installEventFilter && (
+                  <button
+                    onClick={() => setInstallEventFilter(null)}
+                    className="text-xs text-zinc-400 hover:text-white transition-colors"
+                  >
+                    clear filter
+                  </button>
+                )}
+                <select
+                  value={installEventFilter ?? ""}
+                  onChange={(e) => setInstallEventFilter(e.target.value || null)}
+                  className="bg-deadly-surface text-sm text-zinc-300 rounded px-2 py-1 border border-zinc-700"
+                >
+                  <option value="">All events</option>
+                  {installEventTypes.map((t) => (
+                    <option key={t} value={t}>{t}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            <div className="bg-deadly-surface rounded-lg overflow-hidden">
+              <div className="overflow-auto max-h-[70vh]">
+                <table className="w-full text-sm">
+                  <thead className="sticky top-0 bg-deadly-surface">
+                    <tr className="border-b border-zinc-700">
+                      <InstallSortHeader label="Time" sortKey="ts" current={installSortKey} dir={installSortDir} onClick={toggleInstallSort} />
+                      <InstallSortHeader label="Event" sortKey="event" current={installSortKey} dir={installSortDir} onClick={toggleInstallSort} />
+                      <InstallSortHeader label="Session" sortKey="sid" current={installSortKey} dir={installSortDir} onClick={toggleInstallSort} />
+                      <InstallSortHeader label="Platform" sortKey="platform" current={installSortKey} dir={installSortDir} onClick={toggleInstallSort} />
+                      <InstallSortHeader label="Version" sortKey="app_version" current={installSortKey} dir={installSortDir} onClick={toggleInstallSort} />
+                      <th className="px-4 py-2 text-left text-zinc-400">Props</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {sortedInstallEvents.map((evt) => (
+                      <tr key={evt.id} className="border-b border-zinc-800 last:border-0 hover:bg-zinc-800/50">
+                        <td className="px-4 py-2 text-zinc-400 whitespace-nowrap font-mono text-xs">
+                          {new Date(evt.ts).toISOString().replace("T", " ").slice(0, 19)}
+                        </td>
+                        <td
+                          className="px-4 py-2 text-zinc-200 cursor-pointer hover:text-white"
+                          onClick={() => setInstallEventFilter(evt.event)}
+                        >
+                          {evt.event}
+                        </td>
+                        <td className="px-4 py-2 text-zinc-500 font-mono text-xs">
+                          {evt.sid.slice(0, 8)}...
+                        </td>
+                        <td className="px-4 py-2 text-zinc-300">{evt.platform}</td>
+                        <td className="px-4 py-2 text-zinc-400">{evt.app_version}</td>
+                        <td className="px-4 py-2 text-zinc-500 font-mono text-xs max-w-[300px] truncate">
+                          {evt.props ? formatProps(evt.props) : "\u2014"}
+                        </td>
+                      </tr>
+                    ))}
+                    {sortedInstallEvents.length === 0 && (
+                      <tr>
+                        <td colSpan={6} className="px-4 py-8 text-center text-zinc-500">No events</td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     );
   }
@@ -494,8 +770,16 @@ export default function AnalyticsDashboard() {
                             {row.detail ?? "—"}
                           </td>
                         )}
-                        <td className="px-4 py-2 text-zinc-400 font-mono text-xs">
-                          {row.iid?.slice(0, 8)}...
+                        <td className="px-4 py-2 font-mono text-xs">
+                          <button
+                            className="text-deadly-blue hover:text-white transition-colors underline decoration-zinc-600 hover:decoration-white"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              openInstall(row.iid);
+                            }}
+                          >
+                            {row.iid?.slice(0, 8)}...
+                          </button>
                         </td>
                         <td className="px-4 py-2 text-zinc-300">{row.platform}</td>
                         <td className="px-4 py-2 text-zinc-400">{row.app_version}</td>
@@ -572,4 +856,44 @@ function SortHeader({
       )}
     </th>
   );
+}
+
+type InstallSortKey = "ts" | "event" | "sid" | "platform" | "app_version";
+
+function InstallSortHeader({
+  label,
+  sortKey,
+  current,
+  dir,
+  onClick,
+}: {
+  label: string;
+  sortKey: InstallSortKey;
+  current: InstallSortKey;
+  dir: SortDir;
+  onClick: (key: InstallSortKey) => void;
+}) {
+  const active = current === sortKey;
+  return (
+    <th
+      className="px-4 py-2 text-zinc-400 cursor-pointer hover:text-zinc-200 select-none whitespace-nowrap text-left"
+      onClick={() => onClick(sortKey)}
+    >
+      {label}
+      {active && (
+        <span className="ml-1">{dir === "asc" ? "▲" : "▼"}</span>
+      )}
+    </th>
+  );
+}
+
+function formatProps(propsStr: string): string {
+  try {
+    const obj = JSON.parse(propsStr);
+    return Object.entries(obj)
+      .map(([k, v]) => `${k}=${v}`)
+      .join(", ");
+  } catch {
+    return propsStr;
+  }
 }

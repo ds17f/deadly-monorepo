@@ -9,6 +9,7 @@ import {
   pruneOldEvents,
   type AnalyticsEvent,
   type DetailMetric,
+  getInstallEvents,
 } from "../db/analytics.js";
 import { requireAdmin } from "../auth/middleware.js";
 
@@ -298,6 +299,65 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
         return reply.code(400).send({ error: `Invalid metric: ${metric}` });
       }
       return getDetail(metric as DetailMetric, filter);
+    },
+  );
+
+  // GET /api/analytics/install/:iid — all events for an install ID
+  app.get(
+    "/api/analytics/install/:iid",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Events for a specific install ID (admin)",
+        params: {
+          type: "object",
+          required: ["iid"],
+          properties: {
+            iid: { type: "string" },
+          },
+        },
+        response: {
+          200: {
+            type: "object",
+            properties: {
+              iid: { type: "string" },
+              platform: { type: "string" },
+              app_version: { type: "string" },
+              first_seen: { type: "string" },
+              last_seen: { type: "string" },
+              total_events: { type: "number" },
+              events: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    id: { type: "number" },
+                    event: { type: "string" },
+                    ts: { type: "number" },
+                    sid: { type: "string" },
+                    platform: { type: "string" },
+                    app_version: { type: "string" },
+                    props: { type: ["string", "null"] },
+                  },
+                },
+              },
+            },
+          },
+          404: {
+            type: "object",
+            properties: { error: { type: "string" } },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request, reply) => {
+      const { iid } = request.params as { iid: string };
+      const result = getInstallEvents(iid);
+      if (!result) {
+        return reply.code(404).send({ error: "Install ID not found" });
+      }
+      return result;
     },
   );
 }

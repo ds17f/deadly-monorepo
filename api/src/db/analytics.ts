@@ -69,8 +69,8 @@ const EVENT_SCHEMAS: Record<string, Set<string>> = {
     "listened_ms",
     "reason",
   ]),
-  search: new Set(["query_length", "result_count", "selected_index"]),
-  feature_use: new Set(["feature"]),
+  search: new Set(["query", "query_length", "result_count", "selected_index"]),
+  feature_use: new Set(["feature", "enabled", "value"]),
   error: new Set(["domain", "message", "is_fatal"]),
   cold_start: new Set(["duration_ms"]),
 };
@@ -453,6 +453,51 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
     default:
       return [];
   }
+}
+
+// ── Install detail ──────────────────────────────────────────────────
+
+export interface InstallEvent {
+  id: number;
+  event: string;
+  ts: number;
+  sid: string;
+  platform: string;
+  app_version: string;
+  props: string | null;
+}
+
+export interface InstallSummary {
+  iid: string;
+  platform: string;
+  app_version: string;
+  first_seen: string;
+  last_seen: string;
+  total_events: number;
+  events: InstallEvent[];
+}
+
+export function getInstallEvents(iid: string): InstallSummary | null {
+  const db = getAnalyticsDb();
+
+  const summary = db.prepare(`
+    SELECT iid, platform, app_version,
+      datetime(MIN(ts)/1000, 'unixepoch') AS first_seen,
+      datetime(MAX(ts)/1000, 'unixepoch') AS last_seen,
+      COUNT(*) AS total_events
+    FROM analytics_events WHERE iid = ?
+    GROUP BY iid
+  `).get(iid) as (Omit<InstallSummary, "events"> | undefined);
+
+  if (!summary) return null;
+
+  const events = db.prepare(`
+    SELECT id, event, ts, sid, platform, app_version, props
+    FROM analytics_events WHERE iid = ?
+    ORDER BY ts DESC LIMIT 1000
+  `).all(iid) as InstallEvent[];
+
+  return { ...summary, events };
 }
 
 // ── Cleanup ──────────────────────────────────────────────────────────
