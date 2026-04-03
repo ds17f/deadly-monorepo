@@ -1,11 +1,22 @@
 # Changelog
 
+## [2.22.0] - 2026-04-02
+
+### New Features
+* track settings, menu, setlist, collections, and review interactions (3f15f128)
+
+### Bug Fixes
+* track playback_start in playAll and fix prop key mismatches (2c0b5c68)
+* flush analytics buffer when app goes to background (b8152309)
+
+### Other Changes
+* chore: add ANALYTICS_API_KEY and GOOGLE_ANDROID_CLIENT_ID to secrets setup script (9200c871)
+
+
 ## [2.21.2] - 2026-04-02
 
 ### CI Changes
 * wire GOOGLE_ANDROID_CLIENT_ID into release workflow (6a614b77)
-
-
 ## [2.21.1] - 2026-04-02
 
 ### CI Changes
