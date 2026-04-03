@@ -54,16 +54,18 @@ if [ ! -d ".secrets" ]; then
     exit 1
 fi
 
-echo -e "${BLUE}ℹ️  This will upload 12 secrets to your GitHub repository${NC}"
+echo -e "${BLUE}ℹ️  This will upload 14 secrets to your GitHub repository${NC}"
 echo ""
 echo "Secrets to be uploaded:"
-echo "  Android (6):"
+echo "  Android (8):"
 echo "    - ANDROID_KEYSTORE_BASE64"
 echo "    - ANDROID_KEYSTORE_PASSWORD"
 echo "    - ANDROID_KEY_ALIAS"
 echo "    - ANDROID_KEY_PASSWORD"
 echo "    - PLAY_STORE_JSON_BASE64"
 echo "    - GENIUS_ACCESS_TOKEN"
+echo "    - ANALYTICS_API_KEY"
+echo "    - GOOGLE_ANDROID_CLIENT_ID"
 echo ""
 echo "  iOS (6):"
 echo "    - IOS_CERTIFICATE_BASE64"
@@ -121,6 +123,22 @@ else
     else
         echo -e "${GREEN}✓${NC} Uploading GENIUS_ACCESS_TOKEN..."
         echo "$GENIUS_TOKEN" | gh secret set GENIUS_ACCESS_TOKEN
+    fi
+
+    ANALYTICS_KEY=$(grep analytics.api.key androidApp/local.properties | cut -d'=' -f2)
+    if [ -z "$ANALYTICS_KEY" ]; then
+        echo -e "${YELLOW}⚠️  Warning: analytics.api.key not found in local.properties - skipping ANALYTICS_API_KEY${NC}"
+    else
+        echo -e "${GREEN}✓${NC} Uploading ANALYTICS_API_KEY..."
+        echo "$ANALYTICS_KEY" | gh secret set ANALYTICS_API_KEY
+    fi
+
+    GOOGLE_CLIENT_ID=$(grep google.android.client.id androidApp/local.properties | cut -d'=' -f2)
+    if [ -z "$GOOGLE_CLIENT_ID" ]; then
+        echo -e "${YELLOW}⚠️  Warning: google.android.client.id not found in local.properties - skipping GOOGLE_ANDROID_CLIENT_ID${NC}"
+    else
+        echo -e "${GREEN}✓${NC} Uploading GOOGLE_ANDROID_CLIENT_ID..."
+        echo "$GOOGLE_CLIENT_ID" | gh secret set GOOGLE_ANDROID_CLIENT_ID
     fi
 fi
 
