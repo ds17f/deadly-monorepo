@@ -291,11 +291,8 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       },
       preHandler: requireAdmin,
     },
-    async (
-      request: FastifyRequest<{ Querystring: { metric: string } }>,
-      reply: FastifyReply,
-    ) => {
-      const { metric } = request.query;
+    async (request, reply) => {
+      const { metric } = request.query as { metric: string };
       if (!VALID_METRICS.has(metric)) {
         return reply.code(400).send({ error: `Invalid metric: ${metric}` });
       }
