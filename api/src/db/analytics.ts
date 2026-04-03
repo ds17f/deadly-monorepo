@@ -292,6 +292,138 @@ export function getSummary(): AnalyticsSummary {
   };
 }
 
+// ── Detail queries ──────────────────────────────────────────────────
+
+export type DetailMetric =
+  | "dau" | "wau" | "mau"
+  | "total_installs" | "stale_installs"
+  | "events_today"
+  | "top_shows"
+  | "feature_adoption"
+  | "platform_split"
+  | "playback";
+
+export interface DetailRow {
+  iid: string;
+  platform: string;
+  app_version: string;
+  last_seen: string;
+  event_count: number;
+  detail?: string;
+}
+
+export function getDetail(metric: DetailMetric): DetailRow[] {
+  const db = getAnalyticsDb();
+  const now = Date.now();
+  const dayAgo = now - 24 * 3600 * 1000;
+  const weekAgo = now - 7 * 24 * 3600 * 1000;
+  const monthAgo = now - 30 * 24 * 3600 * 1000;
+  const todayStart = new Date(new Date().toISOString().slice(0, 10)).getTime();
+
+  switch (metric) {
+    case "dau":
+      return db.prepare(`
+        SELECT iid, platform, app_version,
+          datetime(MAX(ts)/1000, 'unixepoch') AS last_seen,
+          COUNT(*) AS event_count
+        FROM analytics_events WHERE event = 'app_open' AND ts > ?
+        GROUP BY iid ORDER BY MAX(ts) DESC
+      `).all(dayAgo) as DetailRow[];
+
+    case "wau":
+      return db.prepare(`
+        SELECT iid, platform, app_version,
+          datetime(MAX(ts)/1000, 'unixepoch') AS last_seen,
+          COUNT(*) AS event_count
+        FROM analytics_events WHERE event = 'app_open' AND ts > ?
+        GROUP BY iid ORDER BY MAX(ts) DESC
+      `).all(weekAgo) as DetailRow[];
+
+    case "mau":
+      return db.prepare(`
+        SELECT iid, platform, app_version,
+          datetime(MAX(ts)/1000, 'unixepoch') AS last_seen,
+          COUNT(*) AS event_count
+        FROM analytics_events WHERE event = 'app_open' AND ts > ?
+        GROUP BY iid ORDER BY MAX(ts) DESC
+      `).all(monthAgo) as DetailRow[];
+
+    case "total_installs":
+      return db.prepare(`
+        SELECT iid, platform, app_version,
+          datetime(MAX(ts)/1000, 'unixepoch') AS last_seen,
+          COUNT(*) AS event_count
+        FROM analytics_events
+        GROUP BY iid ORDER BY MAX(ts) DESC
+      `).all() as DetailRow[];
+
+    case "stale_installs":
+      return db.prepare(`
+        SELECT iid, platform, app_version,
+          datetime(MAX(ts)/1000, 'unixepoch') AS last_seen,
+          COUNT(*) AS event_count
+        FROM analytics_events
+        WHERE iid NOT IN (SELECT DISTINCT iid FROM analytics_events WHERE ts > ?)
+        GROUP BY iid ORDER BY MAX(ts) DESC
+      `).all(monthAgo) as DetailRow[];
+
+    case "events_today":
+      return db.prepare(`
+        SELECT event AS detail, platform, app_version,
+          iid,
+          datetime(ts/1000, 'unixepoch') AS last_seen,
+          1 AS event_count
+        FROM analytics_events WHERE ts >= ?
+        ORDER BY ts DESC LIMIT 500
+      `).all(todayStart) as DetailRow[];
+
+    case "top_shows":
+      return db.prepare(`
+        SELECT json_extract(props, '$.show_id') AS detail,
+          iid, platform, app_version,
+          datetime(ts/1000, 'unixepoch') AS last_seen,
+          1 AS event_count
+        FROM analytics_events
+        WHERE event = 'playback_start' AND ts > ?
+        ORDER BY ts DESC LIMIT 500
+      `).all(monthAgo) as DetailRow[];
+
+    case "feature_adoption":
+      return db.prepare(`
+        SELECT json_extract(props, '$.feature') AS detail,
+          iid, platform, app_version,
+          datetime(ts/1000, 'unixepoch') AS last_seen,
+          1 AS event_count
+        FROM analytics_events
+        WHERE event = 'feature_use' AND ts > ?
+        ORDER BY ts DESC LIMIT 500
+      `).all(monthAgo) as DetailRow[];
+
+    case "platform_split":
+      return db.prepare(`
+        SELECT platform, iid, app_version,
+          datetime(MAX(ts)/1000, 'unixepoch') AS last_seen,
+          COUNT(*) AS event_count
+        FROM analytics_events WHERE event = 'app_open' AND ts > ?
+        GROUP BY iid ORDER BY platform, MAX(ts) DESC
+      `).all(monthAgo) as DetailRow[];
+
+    case "playback":
+      return db.prepare(`
+        SELECT json_extract(props, '$.show_id') AS detail,
+          iid, platform, app_version,
+          datetime(ts/1000, 'unixepoch') AS last_seen,
+          CAST(json_extract(props, '$.listened_ms') AS INTEGER) AS event_count
+        FROM analytics_events
+        WHERE event = 'playback_end' AND ts > ?
+        ORDER BY ts DESC LIMIT 500
+      `).all(monthAgo) as DetailRow[];
+
+    default:
+      return [];
+  }
+}
+
 // ── Cleanup ──────────────────────────────────────────────────────────
 
 export function closeAnalyticsDb(): void {

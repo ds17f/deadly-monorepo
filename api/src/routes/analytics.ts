@@ -4,9 +4,11 @@ import {
   allowedPropsFor,
   insertEvents,
   getSummary,
+  getDetail,
   rollupDay,
   pruneOldEvents,
   type AnalyticsEvent,
+  type DetailMetric,
 } from "../db/analytics.js";
 import { requireAdmin } from "../auth/middleware.js";
 
@@ -244,6 +246,60 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
     },
     async () => {
       return getSummary();
+    },
+  );
+
+  // GET /api/analytics/detail?metric=<type> — drill-down data
+  const VALID_METRICS = new Set([
+    "dau", "wau", "mau", "total_installs", "stale_installs",
+    "events_today", "top_shows", "feature_adoption", "platform_split", "playback",
+  ]);
+
+  app.get(
+    "/api/analytics/detail",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Analytics detail drill-down (admin)",
+        querystring: {
+          type: "object",
+          required: ["metric"],
+          properties: {
+            metric: { type: "string" },
+          },
+        },
+        response: {
+          200: {
+            type: "array",
+            items: {
+              type: "object",
+              properties: {
+                iid: { type: "string" },
+                platform: { type: "string" },
+                app_version: { type: "string" },
+                last_seen: { type: "string" },
+                event_count: { type: "number" },
+                detail: { type: "string" },
+              },
+            },
+          },
+          400: {
+            type: "object",
+            properties: { error: { type: "string" } },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (
+      request: FastifyRequest<{ Querystring: { metric: string } }>,
+      reply: FastifyReply,
+    ) => {
+      const { metric } = request.query;
+      if (!VALID_METRICS.has(metric)) {
+        return reply.code(400).send({ error: `Invalid metric: ${metric}` });
+      }
+      return getDetail(metric as DetailMetric);
     },
   );
 }
