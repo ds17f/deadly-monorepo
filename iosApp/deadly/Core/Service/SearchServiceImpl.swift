@@ -57,6 +57,7 @@ final class SearchServiceImpl: SearchService {
                 return SearchResultShow(show: show, relevanceScore: score, matchType: matchType)
             }
             analyticsService?.track("search", props: [
+                "query": trimmed,
                 "query_length": trimmed.count,
                 "result_count": results.count,
             ])
