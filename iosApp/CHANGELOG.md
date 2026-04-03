@@ -1,8 +1,15 @@
 # Changelog
 
+## [2.25.0] - 2026-04-03
+
+### New Features
+* send search query text in search events (ae0890f0)
+
+### Other Changes
+* chore: add ANALYTICS_API_KEY and GOOGLE_ANDROID_CLIENT_ID to secrets setup script (9200c871)
+
+
 ## [2.24.1] - 2026-04-02
-
-
 ## [2.24.0] - 2026-03-31
 
 ### CI Changes
