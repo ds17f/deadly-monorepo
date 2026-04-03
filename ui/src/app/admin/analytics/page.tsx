@@ -245,14 +245,14 @@ export default function AnalyticsDashboard() {
 
       {/* Platform Split */}
       {totalPlatform > 0 && (
-        <section className="mb-8">
-          <h2
-            className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3 cursor-pointer hover:text-zinc-200 transition-colors"
-            onClick={() => openDetail("platform_split")}
-          >
+        <section
+          className="mb-8 cursor-pointer group"
+          onClick={() => openDetail("platform_split")}
+        >
+          <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3 group-hover:text-zinc-200 transition-colors">
             Platform Split (30d) →
           </h2>
-          <div className="bg-deadly-surface rounded-lg p-4">
+          <div className="bg-deadly-surface rounded-lg p-4 group-hover:bg-zinc-700/50 transition-colors">
             {Object.entries(data.platform_split).map(([platform, count]) => (
               <div key={platform} className="flex items-center gap-3 mb-2 last:mb-0">
                 <span className="text-sm text-zinc-300 w-20">{platform}</span>
@@ -275,14 +275,14 @@ export default function AnalyticsDashboard() {
 
       {/* Top Shows */}
       {data.top_shows.length > 0 && (
-        <section className="mb-8">
-          <h2
-            className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3 cursor-pointer hover:text-zinc-200 transition-colors"
-            onClick={() => openDetail("top_shows")}
-          >
+        <section
+          className="mb-8 cursor-pointer group"
+          onClick={() => openDetail("top_shows")}
+        >
+          <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3 group-hover:text-zinc-200 transition-colors">
             Top Shows (30d) →
           </h2>
-          <div className="bg-deadly-surface rounded-lg overflow-hidden">
+          <div className="bg-deadly-surface rounded-lg overflow-hidden group-hover:bg-zinc-700/50 transition-colors">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-zinc-700">
@@ -312,14 +312,14 @@ export default function AnalyticsDashboard() {
 
       {/* Feature Adoption */}
       {Object.keys(data.feature_adoption).length > 0 && (
-        <section className="mb-8">
-          <h2
-            className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3 cursor-pointer hover:text-zinc-200 transition-colors"
-            onClick={() => openDetail("feature_adoption")}
-          >
+        <section
+          className="mb-8 cursor-pointer group"
+          onClick={() => openDetail("feature_adoption")}
+        >
+          <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3 group-hover:text-zinc-200 transition-colors">
             Feature Adoption (30d) →
           </h2>
-          <div className="bg-deadly-surface rounded-lg p-4">
+          <div className="bg-deadly-surface rounded-lg p-4 group-hover:bg-zinc-700/50 transition-colors">
             {Object.entries(data.feature_adoption).map(
               ([feature, count]) => (
                 <div
