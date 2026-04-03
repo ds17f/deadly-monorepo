@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.23.0] - 2026-04-03
+
+### New Features
+* send search query and improve feature tracking (721c0288)
+
+
 ## [2.22.0] - 2026-04-02
 
 ### New Features
@@ -11,8 +17,6 @@
 
 ### Other Changes
 * chore: add ANALYTICS_API_KEY and GOOGLE_ANDROID_CLIENT_ID to secrets setup script (9200c871)
-
-
 ## [2.21.2] - 2026-04-02
 
 ### CI Changes
