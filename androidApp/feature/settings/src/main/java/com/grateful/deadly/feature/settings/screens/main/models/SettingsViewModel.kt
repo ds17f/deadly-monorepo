@@ -55,7 +55,9 @@ class SettingsViewModel @Inject constructor(
     val includeShowsWithoutRecordings: StateFlow<Boolean> = appPreferences.includeShowsWithoutRecordings
 
     fun toggleIncludeShowsWithoutRecordings() {
-        appPreferences.setIncludeShowsWithoutRecordings(!appPreferences.includeShowsWithoutRecordings.value)
+        val newValue = !appPreferences.includeShowsWithoutRecordings.value
+        appPreferences.setIncludeShowsWithoutRecordings(newValue)
+        analyticsService.track("feature_use", mapOf("feature" to "toggle_shows_without_recordings", "enabled" to newValue))
     }
 
     val analyticsEnabled: StateFlow<Boolean> = appPreferences.analyticsEnabled
@@ -73,6 +75,7 @@ class SettingsViewModel @Inject constructor(
 
     fun setSourceBadgeStyle(value: String) {
         appPreferences.setSourceBadgeStyle(value)
+        analyticsService.track("feature_use", mapOf("feature" to "set_source_badge_style", "value" to value))
     }
 
     val authState: StateFlow<AuthState> = authService.authState
@@ -132,6 +135,7 @@ class SettingsViewModel @Inject constructor(
     }
 
     fun signOut() {
+        analyticsService.track("feature_use", mapOf("feature" to "sign_out"))
         viewModelScope.launch {
             authService.signOut()
         }

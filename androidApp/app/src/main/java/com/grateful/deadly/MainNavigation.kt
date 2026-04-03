@@ -161,7 +161,6 @@ fun MainNavigation(
     // Augment top bar with logo click to open drawer
     val augmentedTopBar = barConfig.topBar?.copy(
         onLogoClick = {
-            appViewModel.trackFeature("open_settings")
             scope.launch { drawerState.open() }
         }
     )
