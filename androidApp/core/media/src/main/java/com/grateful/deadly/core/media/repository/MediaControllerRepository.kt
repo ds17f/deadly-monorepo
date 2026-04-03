@@ -202,6 +202,13 @@ class MediaControllerRepository @Inject constructor(
                             Log.d(TAG, "🕒🎵 [URL] Calling controller.play() to start playback at ${System.currentTimeMillis()}")
                             controller.play()
                             Log.d(TAG, "🕒🎵 [URL] controller.play() call completed at ${System.currentTimeMillis()}")
+                            firePlaybackEnd()
+                            analyticsPlaybackInfo = Triple(showId, recordingId, 1)
+                            analyticsService.track("playback_start", mapOf(
+                                "show_id" to showId,
+                                "recording_id" to recordingId,
+                                "track_index" to 1
+                            ))
                         } else {
                             Log.d(TAG, "🕒🎵 [URL] Recording loaded at position $startPosition (paused) at ${System.currentTimeMillis()}")
                         }
@@ -307,7 +314,7 @@ class MediaControllerRepository @Inject constructor(
                                 analyticsService.track("playback_start", mapOf(
                                     "show_id" to showId,
                                     "recording_id" to recordingId,
-                                    "track_number" to (trackIndex + 1)
+                                    "track_index" to (trackIndex + 1)
                                 ))
                             } else {
                                 Log.d(TAG, "🕒🎵 [URL] Track $trackIndex loaded at position $position (paused) at ${System.currentTimeMillis()}")
@@ -707,13 +714,12 @@ class MediaControllerRepository @Inject constructor(
         val info = analyticsPlaybackInfo ?: return
         val position = _currentPosition.value
         val dur = _duration.value
-        val completionRate = if (dur > 0) (position.toDouble() / dur).coerceIn(0.0, 1.0) else 0.0
         analyticsService.track("playback_end", mapOf(
             "show_id" to info.first,
             "recording_id" to info.second,
-            "track_number" to info.third,
-            "duration_ms" to position,
-            "completion_rate" to (Math.round(completionRate * 100) / 100.0)
+            "track_index" to info.third,
+            "duration_ms" to dur,
+            "listened_ms" to position
         ))
         analyticsPlaybackInfo = null
     }
