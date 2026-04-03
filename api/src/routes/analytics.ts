@@ -266,6 +266,7 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
           required: ["metric"],
           properties: {
             metric: { type: "string" },
+            filter: { type: "string" },
           },
         },
         response: {
@@ -292,11 +293,11 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       preHandler: requireAdmin,
     },
     async (request, reply) => {
-      const { metric } = request.query as { metric: string };
+      const { metric, filter } = request.query as { metric: string; filter?: string };
       if (!VALID_METRICS.has(metric)) {
         return reply.code(400).send({ error: `Invalid metric: ${metric}` });
       }
-      return getDetail(metric as DetailMetric);
+      return getDetail(metric as DetailMetric, filter);
     },
   );
 }

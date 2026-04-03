@@ -312,7 +312,7 @@ export interface DetailRow {
   detail?: string;
 }
 
-export function getDetail(metric: DetailMetric): DetailRow[] {
+export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
   const db = getAnalyticsDb();
   const now = Date.now();
   const dayAgo = now - 24 * 3600 * 1000;
@@ -378,6 +378,17 @@ export function getDetail(metric: DetailMetric): DetailRow[] {
       `).all(todayStart) as DetailRow[];
 
     case "top_shows":
+      if (filter) {
+        return db.prepare(`
+          SELECT json_extract(props, '$.show_id') AS detail,
+            iid, platform, app_version,
+            datetime(ts/1000, 'unixepoch') AS last_seen,
+            1 AS event_count
+          FROM analytics_events
+          WHERE event = 'playback_start' AND ts > ? AND json_extract(props, '$.show_id') = ?
+          ORDER BY ts DESC LIMIT 500
+        `).all(monthAgo, filter) as DetailRow[];
+      }
       return db.prepare(`
         SELECT json_extract(props, '$.show_id') AS detail,
           iid, platform, app_version,
@@ -389,6 +400,17 @@ export function getDetail(metric: DetailMetric): DetailRow[] {
       `).all(monthAgo) as DetailRow[];
 
     case "feature_adoption":
+      if (filter) {
+        return db.prepare(`
+          SELECT json_extract(props, '$.feature') AS detail,
+            iid, platform, app_version,
+            datetime(ts/1000, 'unixepoch') AS last_seen,
+            1 AS event_count
+          FROM analytics_events
+          WHERE event = 'feature_use' AND ts > ? AND json_extract(props, '$.feature') = ?
+          ORDER BY ts DESC LIMIT 500
+        `).all(monthAgo, filter) as DetailRow[];
+      }
       return db.prepare(`
         SELECT json_extract(props, '$.feature') AS detail,
           iid, platform, app_version,
@@ -400,6 +422,15 @@ export function getDetail(metric: DetailMetric): DetailRow[] {
       `).all(monthAgo) as DetailRow[];
 
     case "platform_split":
+      if (filter) {
+        return db.prepare(`
+          SELECT platform, iid, app_version,
+            datetime(MAX(ts)/1000, 'unixepoch') AS last_seen,
+            COUNT(*) AS event_count
+          FROM analytics_events WHERE event = 'app_open' AND ts > ? AND platform = ?
+          GROUP BY iid ORDER BY MAX(ts) DESC
+        `).all(monthAgo, filter) as DetailRow[];
+      }
       return db.prepare(`
         SELECT platform, iid, app_version,
           datetime(MAX(ts)/1000, 'unixepoch') AS last_seen,

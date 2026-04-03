@@ -59,6 +59,7 @@ export default function AnalyticsDashboard() {
   const [loading, setLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const [activeMetric, setActiveMetric] = useState<DetailMetric | null>(null);
+  const [activeFilter, setActiveFilter] = useState<string | undefined>(undefined);
   const [detailRows, setDetailRows] = useState<DetailRow[]>([]);
   const [detailLoading, setDetailLoading] = useState(false);
   const [sortKey, setSortKey] = useState<keyof DetailRow>("last_seen");
@@ -85,10 +86,12 @@ export default function AnalyticsDashboard() {
     }
   }, []);
 
-  const fetchDetail = useCallback(async (metric: DetailMetric) => {
+  const fetchDetail = useCallback(async (metric: DetailMetric, filter?: string) => {
     setDetailLoading(true);
     try {
-      const res = await fetch(`/api/analytics/detail?metric=${metric}`, {
+      const params = new URLSearchParams({ metric });
+      if (filter) params.set("filter", filter);
+      const res = await fetch(`/api/analytics/detail?${params}`, {
         credentials: "include",
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -102,17 +105,19 @@ export default function AnalyticsDashboard() {
   }, []);
 
   const openDetail = useCallback(
-    (metric: DetailMetric) => {
+    (metric: DetailMetric, filter?: string) => {
       setActiveMetric(metric);
+      setActiveFilter(filter);
       setSortKey("last_seen");
       setSortDir("desc");
-      fetchDetail(metric);
+      fetchDetail(metric, filter);
     },
     [fetchDetail],
   );
 
   const closeDetail = useCallback(() => {
     setActiveMetric(null);
+    setActiveFilter(undefined);
     setDetailRows([]);
   }, []);
 
@@ -131,9 +136,9 @@ export default function AnalyticsDashboard() {
   // Auto-refresh detail when open
   useEffect(() => {
     if (!activeMetric) return;
-    const interval = setInterval(() => fetchDetail(activeMetric), REFRESH_INTERVAL);
+    const interval = setInterval(() => fetchDetail(activeMetric, activeFilter), REFRESH_INTERVAL);
     return () => clearInterval(interval);
-  }, [activeMetric, fetchDetail]);
+  }, [activeMetric, activeFilter, fetchDetail]);
 
   const sortedDetail = useMemo(() => {
     const rows = [...detailRows];
@@ -252,9 +257,16 @@ export default function AnalyticsDashboard() {
           <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3 group-hover:text-zinc-200 transition-colors">
             Platform Split (30d) →
           </h2>
-          <div className="bg-deadly-surface rounded-lg p-4 group-hover:bg-zinc-700/50 transition-colors">
+          <div className="bg-deadly-surface rounded-lg p-4">
             {Object.entries(data.platform_split).map(([platform, count]) => (
-              <div key={platform} className="flex items-center gap-3 mb-2 last:mb-0">
+              <div
+                key={platform}
+                className="flex items-center gap-3 mb-2 last:mb-0 cursor-pointer hover:bg-zinc-700/50 rounded px-2 py-1 -mx-2 transition-colors"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  openDetail("platform_split", platform);
+                }}
+              >
                 <span className="text-sm text-zinc-300 w-20">{platform}</span>
                 <div className="flex-1 bg-zinc-800 rounded-full h-5 overflow-hidden">
                   <div
@@ -295,7 +307,11 @@ export default function AnalyticsDashboard() {
                 {data.top_shows.map((show, i) => (
                   <tr
                     key={show.show_id}
-                    className="border-b border-zinc-800 last:border-0"
+                    className="border-b border-zinc-800 last:border-0 cursor-pointer hover:bg-zinc-700/50 transition-colors"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      openDetail("top_shows", show.show_id);
+                    }}
                   >
                     <td className="px-4 py-2 text-zinc-500">{i + 1}</td>
                     <td className="px-4 py-2 text-zinc-200">{show.show_id}</td>
@@ -319,12 +335,16 @@ export default function AnalyticsDashboard() {
           <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3 group-hover:text-zinc-200 transition-colors">
             Feature Adoption (30d) →
           </h2>
-          <div className="bg-deadly-surface rounded-lg p-4 group-hover:bg-zinc-700/50 transition-colors">
+          <div className="bg-deadly-surface rounded-lg p-4">
             {Object.entries(data.feature_adoption).map(
               ([feature, count]) => (
                 <div
                   key={feature}
-                  className="flex items-center gap-3 mb-2 last:mb-0"
+                  className="flex items-center gap-3 mb-2 last:mb-0 cursor-pointer hover:bg-zinc-700/50 rounded px-2 py-1 -mx-2 transition-colors"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    openDetail("feature_adoption", feature);
+                  }}
                 >
                   <span className="text-sm text-zinc-300 w-40 truncate">
                     {feature}
@@ -376,8 +396,21 @@ export default function AnalyticsDashboard() {
             <div className="flex items-center justify-between px-6 py-4 border-b border-zinc-700">
               <h2 className="text-lg font-semibold text-white">
                 {METRIC_LABELS[activeMetric]}
+                {activeFilter && (
+                  <span className="text-sm font-normal text-zinc-400 ml-2">
+                    — {activeFilter}
+                  </span>
+                )}
               </h2>
               <div className="flex items-center gap-4">
+                {activeFilter && (
+                  <button
+                    onClick={() => openDetail(activeMetric, undefined)}
+                    className="text-xs text-zinc-400 hover:text-white transition-colors"
+                  >
+                    ← all
+                  </button>
+                )}
                 <span className="text-xs text-zinc-500">
                   {detailRows.length} rows
                 </span>
