@@ -102,6 +102,7 @@ class SearchServiceImpl @Inject constructor(
             
             Log.d(TAG, "Search completed - ${results.size} results in ${searchDuration}ms")
             analyticsService.track("search", mapOf(
+                "query" to query,
                 "query_length" to query.length,
                 "result_count" to results.size
             ))
