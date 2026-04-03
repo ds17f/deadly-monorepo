@@ -53,6 +53,7 @@ struct SettingsScreen: View {
                         }
                     }
                     Button("Sign Out", role: .destructive) {
+                        container.analyticsService.track("feature_use", props: ["feature": "sign_out"])
                         container.authService.signOut()
                     }
                 } else if container.appPreferences.serverEnvironment == "custom" {
@@ -116,7 +117,10 @@ struct SettingsScreen: View {
             Section("Preferences") {
                 Toggle(isOn: Binding(
                     get: { container.appPreferences.includeShowsWithoutRecordings },
-                    set: { container.appPreferences.includeShowsWithoutRecordings = $0 }
+                    set: {
+                        container.appPreferences.includeShowsWithoutRecordings = $0
+                        container.analyticsService.track("feature_use", props: ["feature": "toggle_shows_without_recordings", "enabled": $0])
+                    }
                 )) {
                     VStack(alignment: .leading, spacing: 2) {
                         Text("Include shows without recordings")
@@ -133,6 +137,7 @@ struct SettingsScreen: View {
                         set: {
                             container.appPreferences.sourceBadgeStyle = $0.rawValue
                             ShowArtworkService.shared.badgeStyle = $0
+                            container.analyticsService.track("feature_use", props: ["feature": "set_source_badge_style", "value": $0.rawValue])
                         }
                     )) {
                         ForEach(SourceBadgeStyle.allCases, id: \.self) { style in
