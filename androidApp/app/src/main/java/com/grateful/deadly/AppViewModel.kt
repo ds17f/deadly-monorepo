@@ -3,6 +3,7 @@ package com.grateful.deadly
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.favorites.FavoritesService
+import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.miniplayer.LastPlayedTrackService
@@ -20,6 +21,7 @@ import javax.inject.Inject
 class AppViewModel @Inject constructor(
     networkMonitor: NetworkMonitor,
     appPreferences: AppPreferences,
+    private val analyticsService: AnalyticsService,
     private val lastPlayedTrackService: LastPlayedTrackService,
     private val showRepository: ShowRepository,
     private val favoritesService: FavoritesService
@@ -42,5 +44,9 @@ class AppViewModel @Inject constructor(
 
     fun addToFavorites(showId: String) {
         viewModelScope.launch { favoritesService.addToFavorites(showId) }
+    }
+
+    fun trackFeature(feature: String) {
+        analyticsService.track("feature_use", mapOf("feature" to feature))
     }
 }

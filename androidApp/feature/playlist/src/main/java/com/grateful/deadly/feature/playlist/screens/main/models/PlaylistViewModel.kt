@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.playlist.PlaylistService
+import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.favorites.ReviewService
@@ -55,6 +56,7 @@ class PlaylistViewModel @Inject constructor(
     private val recentShowsService: RecentShowsService,
     private val reviewService: ReviewService,
     private val equalizerRepository: EqualizerRepository,
+    private val analyticsService: AnalyticsService,
     networkMonitor: NetworkMonitor,
     val appPreferences: AppPreferences,
     @ApplicationContext private val appContext: Context
@@ -687,6 +689,7 @@ class PlaylistViewModel @Inject constructor(
      */
     fun showReviews() {
         Log.d(TAG, "Show reviews requested")
+        analyticsService.track("feature_use", mapOf("feature" to "view_reviews"))
         _baseUiState.value = _baseUiState.value.copy(showReviewDetails = true)
         loadReviews()
     }
@@ -742,6 +745,7 @@ class PlaylistViewModel @Inject constructor(
      */
     fun showSetlist() {
         Log.d(TAG, "Show setlist requested")
+        analyticsService.track("feature_use", mapOf("feature" to "view_setlist"))
         showSetlistModal()
     }
     
@@ -857,6 +861,7 @@ class PlaylistViewModel @Inject constructor(
      */
     fun showMenu() {
         Log.d(TAG, "Show menu requested")
+        analyticsService.track("feature_use", mapOf("feature" to "open_menu"))
         _baseUiState.value = _baseUiState.value.copy(showMenu = true)
     }
     
@@ -1105,6 +1110,7 @@ class PlaylistViewModel @Inject constructor(
      */
     fun showCollectionsSheet() {
         Log.d(TAG, "Show collections sheet requested")
+        analyticsService.track("feature_use", mapOf("feature" to "view_collections"))
         _baseUiState.value = _baseUiState.value.copy(showCollectionsSheet = true)
     }
     
@@ -1413,7 +1419,10 @@ class PlaylistViewModel @Inject constructor(
     fun loadUserReview() {
         val showId = _baseUiState.value.showData?.showId ?: return
         viewModelScope.launch {
-            _userReview.value = reviewService.getShowReview(showId) ?: ShowReview(showId = showId)
+            val existing = reviewService.getShowReview(showId)
+            val isEdit = existing?.hasContent == true
+            analyticsService.track("feature_use", mapOf("feature" to if (isEdit) "edit_review" else "write_review"))
+            _userReview.value = existing ?: ShowReview(showId = showId)
             _reviewLineup.value = playlistService.getCurrentShowLineup()
             _showWriteReview.value = true
         }
@@ -1425,6 +1434,7 @@ class PlaylistViewModel @Inject constructor(
 
     fun deleteUserReview() {
         val showId = _baseUiState.value.showData?.showId ?: return
+        analyticsService.track("feature_use", mapOf("feature" to "delete_review"))
         viewModelScope.launch {
             reviewService.deleteShowReview(showId)
             _hasUserReview.value = false
@@ -1442,6 +1452,7 @@ class PlaylistViewModel @Inject constructor(
     ) {
         val showId = _baseUiState.value.showData?.showId ?: return
         val recordingId = _baseUiState.value.showData?.currentRecordingId
+        analyticsService.track("feature_use", mapOf("feature" to "save_review"))
         viewModelScope.launch {
             reviewService.updateShowNotes(showId, notes)
             reviewService.updateShowRating(showId, rating)
