@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import type { Recording } from "@/types/recording";
 import { usePlayer } from "@/contexts/PlayerContext";
+import { useConnect } from "@/contexts/ConnectContext";
 import RecordingSelector from "./RecordingSelector";
 import TrackList from "./TrackList";
 
@@ -24,6 +25,7 @@ export default function ShowPlayerPanel({
   location,
 }: ShowPlayerPanelProps) {
   const ctx = usePlayer();
+  const { userState, isActiveDevice, playOnDevice } = useConnect();
 
   // Local pending recording for browsing before pressing play
   const [pendingRecordingId, setPendingRecordingId] = useState<string | null>(
@@ -42,7 +44,26 @@ export default function ShowPlayerPanel({
   const isActiveShow = ctx.activeShow?.showId === showId;
   const isPlaying = ctx.status !== "idle" && isActiveShow;
 
+  // Another device is actively playing — Play should redirect content there
+  const remoteActiveDeviceId = userState?.activeDeviceId && !isActiveDevice
+    ? userState.activeDeviceId
+    : null;
+
   function handlePlay() {
+    if (remoteActiveDeviceId && pendingRecordingId) {
+      // Tell the active device to play this show (Spotify-style)
+      playOnDevice(remoteActiveDeviceId, {
+        showId,
+        recordingId: pendingRecordingId,
+        trackIndex: 0,
+        positionMs: 0,
+        status: "playing",
+        date,
+        venue,
+        location,
+      });
+      return;
+    }
     ctx.playShow({
       showId,
       recordings,
@@ -78,7 +99,7 @@ export default function ShowPlayerPanel({
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path d="M8 5v14l11-7z" />
           </svg>
-          Play on Web
+          Play
         </button>
       )}
 

@@ -118,6 +118,7 @@ export interface SessionUpdateMessage {
 
 export interface SessionClaimMessage {
   type: "session_claim";
+  state?: PlaybackState;
 }
 
 export interface SessionPlayOnMessage {

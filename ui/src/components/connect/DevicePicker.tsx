@@ -52,7 +52,7 @@ export default function DevicePicker({
               onClick={() => {
                 if (!isPlayingDevice && currentState) {
                   if (isLocal) {
-                    claimSession();
+                    claimSession(currentState);
                     window.dispatchEvent(new CustomEvent("connect:play_on", { detail: currentState }));
                   } else {
                     playOnDevice(device.deviceId, currentState);

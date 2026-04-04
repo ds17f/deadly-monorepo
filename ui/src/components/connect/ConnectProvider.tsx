@@ -162,8 +162,8 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
     wsRef.current?.send({ type: "session_update", state });
   }, []);
 
-  const claimSession = useCallback(() => {
-    wsRef.current?.send({ type: "session_claim" });
+  const claimSession = useCallback((state?: PlaybackState) => {
+    wsRef.current?.send({ type: "session_claim", ...(state ? { state } : {}) });
   }, []);
 
   const playOnDevice = useCallback((deviceId: string, state: PlaybackState) => {

@@ -2,7 +2,7 @@ import type { FastifyInstance } from "fastify";
 import { requireAuth } from "../auth/middleware.js";
 import { registerDevice, unregisterDevice, relayPlayOn, broadcastPosition, setActiveSession, clearActiveSession, getActiveSession, getDevicesForUser, updateUserState, deleteUserState, getUserState, sendSessionStop } from "./registry.js";
 import { upsertPlaybackPosition } from "../db/userdata.js";
-import type { ConnectMessage, RegisterMessage, CommandMessage, PositionUpdateMessage, SessionUpdateMessage, SessionPlayOnMessage } from "./types.js";
+import type { ConnectMessage, RegisterMessage, CommandMessage, PositionUpdateMessage, SessionUpdateMessage, SessionPlayOnMessage, SessionClaimMessage } from "./types.js";
 import { DEFAULT_CONFIG } from "./types.js";
 
 const log = (tag: string, msg: string) => console.log(`[Connect] ${tag} ${msg}`);
@@ -214,8 +214,9 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
         }
 
         case "session_claim": {
+          const scm = msg as SessionClaimMessage;
           if (!deviceId) return;
-          log("session_claim", `from=${deviceName}`);
+          log("session_claim", `from=${deviceName}${scm.state ? ` show=${scm.state.showId} track=${scm.state.trackIndex}` : ""}`);
           // Stop the old active device if different from the claimer
           const claimState = getUserState(userId);
           if (claimState?.activeDeviceId && claimState.activeDeviceId !== deviceId) {
@@ -228,15 +229,27 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
               deviceId,
               deviceName,
               deviceType,
+              ...(scm.state ? { state: scm.state } : {}),
               updatedAt: Date.now(),
             });
           }
-          // Also update user state — preserve current play/pause state
+          // Build user state update — include show fields when state is provided
+          const claimTracksPatch = scm.state?.tracks ? { tracks: scm.state.tracks } : {};
           updateUserState(userId, {
             activeDeviceId: deviceId,
             activeDeviceName: deviceName,
             activeDeviceType: deviceType,
-            isPlaying: claimState?.isPlaying ?? false,
+            isPlaying: scm.state ? scm.state.status === "playing" : (claimState?.isPlaying ?? false),
+            ...(scm.state ? {
+              showId: scm.state.showId,
+              recordingId: scm.state.recordingId,
+              trackIndex: scm.state.trackIndex,
+              positionMs: scm.state.positionMs,
+              date: scm.state.date,
+              venue: scm.state.venue,
+              location: scm.state.location,
+            } : {}),
+            ...claimTracksPatch,
           });
           break;
         }

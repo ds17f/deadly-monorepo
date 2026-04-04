@@ -616,8 +616,14 @@ export default function PlayerProvider({
         fromDevice: detail.fromDeviceName ?? "another device",
       };
 
-      // Claim the session — we are now the active device
-      claimSession();
+      // Claim the session with the new show state
+      claimSession({
+        showId: detail.showId,
+        recordingId: detail.recordingId,
+        trackIndex: detail.trackIndex,
+        positionMs: detail.positionMs,
+        status: detail.status ?? "playing",
+      });
 
       // If the same recording is already loaded, skip the full playShow flow
       // and directly jump to the correct track + position.  This avoids the

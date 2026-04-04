@@ -85,7 +85,7 @@ export interface ConnectContextValue {
   setUserState: React.Dispatch<React.SetStateAction<UserPlaybackState | null>>;
 
   announcePlayback: (state: PlaybackState) => void;
-  claimSession: () => void;
+  claimSession: (state?: PlaybackState) => void;
   playOnDevice: (deviceId: string, state: PlaybackState) => void;
   sendPositionUpdate: (state: PlaybackState) => void;
   sendCommand: (action: string, seekMs?: number) => void;

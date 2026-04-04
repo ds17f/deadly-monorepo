@@ -37,6 +37,7 @@ function showLabel(show: ViewedShow): { date: string; venue: string } {
 export default function HeaderPlayer() {
   const {
     activeShow,
+    viewedShow,
     tracks,
     currentTrackIndex,
     status,
@@ -380,20 +381,31 @@ export default function HeaderPlayer() {
                       venue: activeShow.venue,
                       location: activeShow.location,
                     }
-                  : userState
+                  : viewedShow && viewedShow.bestRecordingId && (!userState || viewedShow.showId !== userState.showId)
                     ? {
-                        showId: userState.showId,
-                        recordingId: userState.recordingId,
-                        trackIndex: userState.trackIndex,
-                        positionMs: Math.floor(interpolatedMs),
-                        durationMs: userState.durationMs,
-                        trackTitle: userState.trackTitle,
-                        status: userState.isPlaying ? "playing" : "paused",
-                        date: userState.date,
-                        venue: userState.venue,
-                        location: userState.location,
+                        showId: viewedShow.showId,
+                        recordingId: viewedShow.bestRecordingId,
+                        trackIndex: 0,
+                        positionMs: 0,
+                        status: "playing" as const,
+                        date: viewedShow.date,
+                        venue: viewedShow.venue,
+                        location: viewedShow.location,
                       }
-                    : null
+                    : userState
+                      ? {
+                          showId: userState.showId,
+                          recordingId: userState.recordingId,
+                          trackIndex: userState.trackIndex,
+                          positionMs: Math.floor(interpolatedMs),
+                          durationMs: userState.durationMs,
+                          trackTitle: userState.trackTitle,
+                          status: userState.isPlaying ? "playing" : "paused",
+                          date: userState.date,
+                          venue: userState.venue,
+                          location: userState.location,
+                        }
+                      : null
               }
               onClose={closeDevicePicker}
             />
