@@ -65,12 +65,14 @@ export interface ConnectConfig {
   positionUpdateIntervalMs: number;
   seekDivergenceThresholdMs: number;
   redirectMaxAgeSec: number;
+  seekSettleDelayMs: number;
 }
 
 export const DEFAULT_CONNECT_CONFIG: ConnectConfig = {
   positionUpdateIntervalMs: 5000,
   seekDivergenceThresholdMs: 2000,
   redirectMaxAgeSec: 120,
+  seekSettleDelayMs: 500,
 };
 
 export interface ConnectContextValue {

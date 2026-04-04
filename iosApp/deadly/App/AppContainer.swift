@@ -247,7 +247,10 @@ final class AppContainer {
                             }
                             connectLog.notice("[ConnectPlayback] PlayOn: showId=\(state.showId, privacy: .public), recording=\(state.recordingId, privacy: .public), track=\(state.trackIndex), positionMs=\(state.positionMs), adjustedMs=\(adjustedMs)")
                             // Suppress updates until seek is settled to avoid broadcasting pos=0
+                            // Also suppress diff reactions so the diff loop doesn't pause
+                            // the player while we're setting up playback
                             suppressUpdates = true
+                            suppressDiffReaction = true
                             await playlistSvc.loadShow(state.showId)
                             connectLog.notice("[ConnectPlayback] After loadShow: tracks=\(playlistSvc.tracks.count), recording=\(playlistSvc.currentRecording?.identifier ?? "nil", privacy: .public)")
                             if state.recordingId != playlistSvc.currentRecording?.identifier,
@@ -279,11 +282,11 @@ final class AppContainer {
                                 }
                                 if adjustedMs > 0 {
                                     // Use seekAndSettle so the seek actually takes effect
-                                    await player.seekAndSettle(to: TimeInterval(adjustedMs) / 1000.0, shouldPause: false)
+                                    await player.seekAndSettle(to: TimeInterval(adjustedMs) / 1000.0, shouldPause: false, delayMs: connectSvc.config.seekSettleDelayMs)
                                     connectLog.notice("[ConnectPlayback] seekAndSettle to \(adjustedMs)ms (playing)")
                                 }
                             } else if adjustedMs > 0 {
-                                await player.seekAndSettle(to: TimeInterval(adjustedMs) / 1000.0, shouldPause: true)
+                                await player.seekAndSettle(to: TimeInterval(adjustedMs) / 1000.0, shouldPause: true, delayMs: connectSvc.config.seekSettleDelayMs)
                                 connectLog.notice("[ConnectPlayback] seekAndSettle to \(adjustedMs)ms (paused)")
                             } else {
                                 player.pause()

@@ -198,26 +198,47 @@ public final class StreamPlayer {
     /// Seek to a position, ensuring the HTTP range request completes.
     /// When the player needs to end up paused, this briefly plays muted
     /// so the range request fires on an active connection, waits for it
-    /// to land, then restores volume and pauses.
+    /// to land, verifies the position, then pauses and restores volume.
     ///
     /// - Parameters:
     ///   - position: Target time in seconds.
-    ///   - shouldPause: If true, mute→seek→wait→unmute→pause. If false, just seek normally.
-    public func seekAndSettle(to position: TimeInterval, shouldPause: Bool) async {
+    ///   - shouldPause: If true, mute→play→seek→verify→pause→unmute. If false, just seek with verify.
+    ///   - delayMs: Time to wait for the seek to settle (server-configurable via Connect config).
+    public func seekAndSettle(to position: TimeInterval, shouldPause: Bool, delayMs: Int = 500) async {
+        let delay = Duration.milliseconds(delayMs)
         if shouldPause {
             volume = 0
+
+            // Ensure the engine has an active connection so the seek's HTTP range request fires.
+            // Only call play() if not already playing — calling play() on a transitioning engine
+            // can trigger auto-advance via didFinishPlaying.
+            if playbackState != .playing && playbackState != .buffering {
+                play()
+                for _ in 0..<20 {
+                    if playbackState == .playing || playbackState == .buffering { break }
+                    try? await Task.sleep(for: .milliseconds(50))
+                }
+            }
+
             seek(to: position)
-            try? await Task.sleep(for: .milliseconds(300))
-            volume = 1
+            try? await Task.sleep(for: delay)
+
+            // Verify the seek landed; retry once if it didn't
+            if abs(progress.currentTime - position) > 2.0 {
+                logger.notice("seekAndSettle(paused): seek didn't land (at \(self.progress.currentTime)s, wanted \(position)s), retrying")
+                seek(to: position)
+                try? await Task.sleep(for: delay)
+            }
+
             pause()
+            volume = 1
         } else {
             seek(to: position)
-            // Wait briefly then verify the seek landed; retry once if it didn't
-            try? await Task.sleep(for: .milliseconds(300))
+            try? await Task.sleep(for: delay)
             if abs(progress.currentTime - position) > 2.0 {
-                logger.notice("seekAndSettle: seek didn't land (at \(progress.currentTime)s, wanted \(position)s), retrying")
+                logger.notice("seekAndSettle: seek didn't land (at \(self.progress.currentTime)s, wanted \(position)s), retrying")
                 seek(to: position)
-                try? await Task.sleep(for: .milliseconds(300))
+                try? await Task.sleep(for: delay)
             }
         }
     }

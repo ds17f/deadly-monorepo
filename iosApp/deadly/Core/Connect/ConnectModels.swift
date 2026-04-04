@@ -95,6 +95,7 @@ struct ConnectConfig {
     var positionUpdateIntervalMs: Int = 5000
     var seekDivergenceThresholdMs: Int = 2000
     var redirectMaxAgeSec: Int = 120
+    var seekSettleDelayMs: Int = 500
 }
 
 enum ConnectPlaybackEvent {

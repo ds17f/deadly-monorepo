@@ -74,12 +74,14 @@ export interface ConnectConfig {
   positionUpdateIntervalMs: number;
   seekDivergenceThresholdMs: number;
   redirectMaxAgeSec: number;
+  seekSettleDelayMs: number;
 }
 
 export const DEFAULT_CONFIG: ConnectConfig = {
   positionUpdateIntervalMs: 5000,
   seekDivergenceThresholdMs: 2000,
   redirectMaxAgeSec: 120,
+  seekSettleDelayMs: 500,
 };
 
 // ── WebSocket Messages ──────────────────────────────────────────────

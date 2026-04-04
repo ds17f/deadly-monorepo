@@ -171,8 +171,9 @@ final class ConnectService {
                 if let v = configObj["positionUpdateIntervalMs"] as? Int { cfg.positionUpdateIntervalMs = v }
                 if let v = configObj["seekDivergenceThresholdMs"] as? Int { cfg.seekDivergenceThresholdMs = v }
                 if let v = configObj["redirectMaxAgeSec"] as? Int { cfg.redirectMaxAgeSec = v }
+                if let v = configObj["seekSettleDelayMs"] as? Int { cfg.seekSettleDelayMs = v }
                 config = cfg
-                logger.notice("[Connect] Config: interval=\(cfg.positionUpdateIntervalMs)ms, seekThreshold=\(cfg.seekDivergenceThresholdMs)ms, redirectMaxAge=\(cfg.redirectMaxAgeSec)s")
+                logger.notice("[Connect] Config: interval=\(cfg.positionUpdateIntervalMs)ms, seekThreshold=\(cfg.seekDivergenceThresholdMs)ms, redirectMaxAge=\(cfg.redirectMaxAgeSec)s, seekSettle=\(cfg.seekSettleDelayMs)ms")
             }
         case "devices":
             if let devicesData = try? JSONSerialization.data(withJSONObject: obj["devices"] ?? []),

@@ -75,6 +75,7 @@ data class ConnectConfig(
     val positionUpdateIntervalMs: Long = 5000,
     val seekDivergenceThresholdMs: Long = 2000,
     val redirectMaxAgeSec: Long = 120,
+    val seekSettleDelayMs: Long = 500,
 )
 
 sealed class ConnectPlaybackEvent {
