@@ -46,14 +46,14 @@ class ConnectPlaybackHandler @Inject constructor(
                 handleEvent(event)
             }
         }
-        // Periodic session_update every 15s while playing (keeps web progress bar in sync)
+        // Periodic session_update every 5s while playing (keeps web progress bar in sync)
         scope.launch {
             mediaControllerRepository.isPlaying.collect { playing ->
                 periodicReportJob?.cancel()
                 if (playing) {
                     periodicReportJob = scope.launch {
                         while (true) {
-                            delay(15_000)
+                            delay(connectService.config.value.positionUpdateIntervalMs)
                             sendUpdate("playing")
                         }
                     }
@@ -130,13 +130,14 @@ class ConnectPlaybackHandler @Inject constructor(
                     Log.d(TAG, "State diff: track $pTrackIndex → ${state.trackIndex}")
                 }
 
-                // Seek diff (>2s divergence, same track & play state)
+                // Seek diff (divergence > threshold, same track & play state)
+                val seekThreshold = connectService.config.value.seekDivergenceThresholdMs
                 if (state.trackIndex == pTrackIndex &&
                     state.isPlaying == pPlaying &&
-                    abs(state.positionMs - pPositionMs) > 2000
+                    abs(state.positionMs - pPositionMs) > seekThreshold
                 ) {
                     val currentMs = mediaControllerRepository.currentPosition.value
-                    if (abs(state.positionMs - currentMs) > 2000) {
+                    if (abs(state.positionMs - currentMs) > seekThreshold) {
                         mediaControllerRepository.seekToPosition(state.positionMs)
                         Log.d(TAG, "State diff: seek to ${state.positionMs}ms")
                     }
@@ -173,7 +174,14 @@ class ConnectPlaybackHandler @Inject constructor(
             is ConnectPlaybackEvent.PlayOn -> {
                 val state = event.state
                 val shouldPlay = state.status != "paused"
-                Log.d(TAG, "PlayOn: showId=${state.showId}, recording=${state.recordingId}, track=${state.trackIndex}, shouldPlay=$shouldPlay")
+                // Compensate position for server relay + network transit time
+                val relayedAt = event.relayedAt
+                val adjustedPositionMs = if (relayedAt != null && shouldPlay) {
+                    state.positionMs + (System.currentTimeMillis() - relayedAt)
+                } else {
+                    state.positionMs
+                }
+                Log.d(TAG, "PlayOn: showId=${state.showId}, recording=${state.recordingId}, track=${state.trackIndex}, shouldPlay=$shouldPlay, positionMs=${state.positionMs}, adjustedMs=$adjustedPositionMs")
                 lastShowDate = state.date
                 lastVenue = state.venue
                 lastLocation = state.location
@@ -185,7 +193,7 @@ class ConnectPlaybackHandler @Inject constructor(
                     showDate = state.date ?: "",
                     venue = state.venue,
                     location = state.location,
-                    position = state.positionMs,
+                    position = adjustedPositionMs,
                 )
                 if (!shouldPlay) {
                     mediaControllerRepository.pause()

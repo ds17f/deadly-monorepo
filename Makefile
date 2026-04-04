@@ -10,7 +10,7 @@
 .PHONY: android-promote-alpha android-promote-beta android-promote-production
 .PHONY: ios-build-release ios-deploy-testflight
 .PHONY: ios-remote-unlock ios-remote-build ios-remote-install ios-remote-sim ios-remote-test ios-remote-resolve
-.PHONY: android-remote-build android-remote-install
+.PHONY: android-remote-build android-remote-install android-remote-logs
 .PHONY: android-remote-emulator android-remote-emu-list android-remote-emu-stop android-remote-run-emulator
 .PHONY: android-auto-dhu android-remote-auto-dhu
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
@@ -426,6 +426,9 @@ android-remote-build:
 android-remote-install:
 	@echo "Building + installing on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && cd $(REMOTE_ANDROID) && ./gradlew installDebug --console=plain"
+
+android-remote-logs:
+	@ssh -t $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && \$$ANDROID_HOME/platform-tools/adb logcat -v time --pid=\$$($$ANDROID_HOME/platform-tools/adb shell pidof -s com.grateful.deadly) 2>/dev/null || echo 'App not running — showing all deadly logs' && \$$ANDROID_HOME/platform-tools/adb logcat -v time '*:S' 'ConnectPlayback:D' 'ConnectService:D'"
 
 android-remote-emulator:
 	@echo "Starting emulator on $(REMOTE_HOST)..."

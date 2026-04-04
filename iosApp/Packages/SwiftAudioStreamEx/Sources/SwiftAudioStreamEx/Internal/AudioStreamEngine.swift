@@ -15,7 +15,11 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         var tracks: [URL] = []          // original URLs
         var resolved: [URL] = []        // redirect-resolved URLs
         var currentIndex: Int = 0
+        var resolvedAt: Date = .distantPast  // when redirects were last resolved
     }
+
+    /// Max age before redirect URLs are considered stale and need re-resolution.
+    var redirectMaxAge: TimeInterval = 120 // 2 minutes
 
     nonisolated(unsafe) private var queue = QueueState()
     nonisolated(unsafe) private var progressTimer: Timer?
@@ -110,7 +114,7 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
             guard let self else { return }
 
             self.lock.lock()
-            self.queue = QueueState(tracks: urls, resolved: resolved, currentIndex: index)
+            self.queue = QueueState(tracks: urls, resolved: resolved, currentIndex: index, resolvedAt: Date())
             // Stash remaining URLs — they'll be queued in didStartPlaying
             // (play() triggers an async clearQueue() that would wipe anything queued now)
             self.pendingQueueURLs = index + 1 < resolved.count ? Array(resolved[(index + 1)...]) : []
@@ -131,6 +135,17 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
             lock.unlock()
             return false
         }
+
+        let age = Date().timeIntervalSince(queue.resolvedAt)
+        if age > redirectMaxAge {
+            let urls = queue.tracks
+            let nextIndex = queue.currentIndex + 1
+            lock.unlock()
+            logger.notice("advanceToNext: redirects stale (\(Int(age))s old), re-resolving")
+            loadQueue(urls: urls, startingAt: nextIndex)
+            return true
+        }
+
         queue.currentIndex += 1
         let remaining = Array(queue.resolved[(queue.currentIndex)...])
         pendingQueueURLs = remaining.count > 1 ? Array(remaining[1...]) : []
@@ -149,6 +164,17 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
             lock.unlock()
             return false
         }
+
+        let age = Date().timeIntervalSince(queue.resolvedAt)
+        if age > redirectMaxAge {
+            let urls = queue.tracks
+            let prevIndex = queue.currentIndex - 1
+            lock.unlock()
+            logger.notice("rewindToPrevious: redirects stale (\(Int(age))s old), re-resolving")
+            loadQueue(urls: urls, startingAt: prevIndex)
+            return true
+        }
+
         queue.currentIndex -= 1
         let remaining = Array(queue.resolved[(queue.currentIndex)...])
         pendingQueueURLs = remaining.count > 1 ? Array(remaining[1...]) : []
@@ -167,6 +193,17 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
             lock.unlock()
             return false
         }
+
+        let age = Date().timeIntervalSince(queue.resolvedAt)
+        if age > redirectMaxAge {
+            // Redirect URLs are stale — re-resolve the entire queue, then play
+            let urls = queue.tracks
+            lock.unlock()
+            logger.notice("skipTo: redirects stale (\(Int(age))s old), re-resolving")
+            loadQueue(urls: urls, startingAt: index)
+            return true
+        }
+
         queue.currentIndex = index
         let remaining = Array(queue.resolved[index...])
         pendingQueueURLs = remaining.count > 1 ? Array(remaining[1...]) : []

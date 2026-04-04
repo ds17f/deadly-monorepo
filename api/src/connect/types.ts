@@ -68,7 +68,26 @@ export interface UserPlaybackState {
   updatedAt: number;
 }
 
+// ── Server Config ───────────────────────────────────────────────────
+
+export interface ConnectConfig {
+  positionUpdateIntervalMs: number;
+  seekDivergenceThresholdMs: number;
+  redirectMaxAgeSec: number;
+}
+
+export const DEFAULT_CONFIG: ConnectConfig = {
+  positionUpdateIntervalMs: 5000,
+  seekDivergenceThresholdMs: 2000,
+  redirectMaxAgeSec: 120,
+};
+
 // ── WebSocket Messages ──────────────────────────────────────────────
+
+export interface ConfigMessage {
+  type: "config";
+  config: ConnectConfig;
+}
 
 export interface RegisterMessage {
   type: "register";
@@ -109,6 +128,7 @@ export interface SessionPlayOnReceivedMessage {
   type: "session_play_on";
   state: PlaybackState;
   fromDeviceName: string;
+  relayedAt: number;
 }
 
 export interface ActiveSessionMessage {
@@ -135,6 +155,7 @@ export interface ErrorMessage {
 }
 
 export type ConnectMessage =
+  | ConfigMessage
   | RegisterMessage
   | DevicesMessage
   | CommandMessage

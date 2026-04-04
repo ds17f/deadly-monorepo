@@ -89,8 +89,16 @@ struct IncomingPlaybackState: Codable {
     }
 }
 
+// MARK: - Server Config
+
+struct ConnectConfig {
+    var positionUpdateIntervalMs: Int = 5000
+    var seekDivergenceThresholdMs: Int = 2000
+    var redirectMaxAgeSec: Int = 120
+}
+
 enum ConnectPlaybackEvent {
-    case playOn(IncomingPlaybackState)
+    case playOn(IncomingPlaybackState, relayedAt: Int?)
     case stop
 }
 

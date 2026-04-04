@@ -19,6 +19,7 @@ final class ConnectService {
     private(set) var connectionState: ConnectConnectionState = .disconnected
     private(set) var devices: [ConnectDevice] = []
     private(set) var userState: UserPlaybackState?
+    private(set) var config: ConnectConfig = ConnectConfig()
     private(set) var debugLastMessage: String = "(none)"
 
     // MARK: - Playback event callback
@@ -164,6 +165,15 @@ final class ConnectService {
         debugLastMessage = type
 
         switch type {
+        case "config":
+            if let configObj = obj["config"] as? [String: Any] {
+                var cfg = ConnectConfig()
+                if let v = configObj["positionUpdateIntervalMs"] as? Int { cfg.positionUpdateIntervalMs = v }
+                if let v = configObj["seekDivergenceThresholdMs"] as? Int { cfg.seekDivergenceThresholdMs = v }
+                if let v = configObj["redirectMaxAgeSec"] as? Int { cfg.redirectMaxAgeSec = v }
+                config = cfg
+                logger.notice("[Connect] Config: interval=\(cfg.positionUpdateIntervalMs)ms, seekThreshold=\(cfg.seekDivergenceThresholdMs)ms, redirectMaxAge=\(cfg.redirectMaxAgeSec)s")
+            }
         case "devices":
             if let devicesData = try? JSONSerialization.data(withJSONObject: obj["devices"] ?? []),
                let list = try? JSONDecoder().decode([ConnectDevice].self, from: devicesData) {
@@ -182,8 +192,9 @@ final class ConnectService {
             if let stateObj = obj["state"],
                let stateData = try? JSONSerialization.data(withJSONObject: stateObj),
                let state = try? JSONDecoder().decode(IncomingPlaybackState.self, from: stateData) {
-                logger.notice("[Connect] Play on decoded: showId=\(state.showId), track=\(state.trackIndex)")
-                onPlaybackEvent?(.playOn(state))
+                let relayedAt = obj["relayedAt"] as? Int
+                logger.notice("[Connect] Play on decoded: showId=\(state.showId), track=\(state.trackIndex), relayedAt=\(relayedAt ?? 0)")
+                onPlaybackEvent?(.playOn(state, relayedAt: relayedAt))
             } else {
                 logger.warning("[Connect] Failed to decode state from \(type) message")
             }

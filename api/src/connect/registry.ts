@@ -111,6 +111,7 @@ export function relayPlayOn(userId: string, fromDeviceId: string, targetDeviceId
     type: "session_play_on",
     state,
     fromDeviceName,
+    relayedAt: Date.now(),
   });
   return true;
 }
@@ -256,6 +257,7 @@ export function initRedisSubscriber(): void {
             type: "session_play_on",
             state: data.state,
             fromDeviceName: data.fromDeviceName,
+            relayedAt: Date.now(),
           });
         }
       } else if (data.type === "session_relay") {

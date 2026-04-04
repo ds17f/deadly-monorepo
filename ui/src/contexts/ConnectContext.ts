@@ -61,12 +61,25 @@ export interface UserPlaybackState {
   updatedAt: number;
 }
 
+export interface ConnectConfig {
+  positionUpdateIntervalMs: number;
+  seekDivergenceThresholdMs: number;
+  redirectMaxAgeSec: number;
+}
+
+export const DEFAULT_CONNECT_CONFIG: ConnectConfig = {
+  positionUpdateIntervalMs: 5000,
+  seekDivergenceThresholdMs: 2000,
+  redirectMaxAgeSec: 120,
+};
+
 export interface ConnectContextValue {
   isConnected: boolean;
   devices: ConnectDevice[];
   activeSession: ActiveSession | null;
   userState: UserPlaybackState | null;
   isActiveDevice: boolean;
+  connectConfig: ConnectConfig;
   setUserState: React.Dispatch<React.SetStateAction<UserPlaybackState | null>>;
 
   announcePlayback: (state: PlaybackState) => void;
@@ -85,6 +98,7 @@ const DEFAULT_VALUE: ConnectContextValue = {
   activeSession: null,
   userState: null,
   isActiveDevice: false,
+  connectConfig: DEFAULT_CONNECT_CONFIG,
   setUserState: () => {},
   announcePlayback: () => {},
   claimSession: () => {},

@@ -8,6 +8,7 @@ interface ConnectService {
     val connectionState: StateFlow<ConnectConnectionState>
     val devices: StateFlow<List<ConnectDevice>>
     val userState: StateFlow<UserPlaybackState?>
+    val config: StateFlow<ConnectConfig>
     val playbackEvents: SharedFlow<ConnectPlaybackEvent>
     fun connect()
     fun disconnect()

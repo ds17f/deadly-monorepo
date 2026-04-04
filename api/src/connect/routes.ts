@@ -3,6 +3,7 @@ import { requireAuth } from "../auth/middleware.js";
 import { registerDevice, unregisterDevice, relayPlayOn, broadcastPosition, setActiveSession, clearActiveSession, getActiveSession, getDevicesForUser, updateUserState, deleteUserState, getUserState, sendSessionStop } from "./registry.js";
 import { upsertPlaybackPosition } from "../db/userdata.js";
 import type { ConnectMessage, RegisterMessage, CommandMessage, PositionUpdateMessage, SessionUpdateMessage, SessionPlayOnMessage } from "./types.js";
+import { DEFAULT_CONFIG } from "./types.js";
 
 export async function connectRoutes(app: FastifyInstance): Promise<void> {
   app.get("/ws/connect", {
@@ -34,6 +35,8 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
             { ...reg.device, userId },
             socket as unknown as import("ws").WebSocket,
           );
+          // Send config immediately so clients use server-controlled values
+          socket.send(JSON.stringify({ type: "config", config: DEFAULT_CONFIG }));
           break;
         }
 

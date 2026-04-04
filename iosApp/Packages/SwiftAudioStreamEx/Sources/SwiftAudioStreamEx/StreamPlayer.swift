@@ -31,6 +31,12 @@ public final class StreamPlayer {
     /// If playback position is past this threshold (seconds), "previous" restarts instead of going back.
     public var previousTrackThreshold: TimeInterval = 3.0
 
+    /// Max age (seconds) before redirect URLs are considered stale and re-resolved.
+    public var redirectMaxAge: TimeInterval {
+        get { engine.redirectMaxAge }
+        set { engine.redirectMaxAge = newValue }
+    }
+
     /// Player output volume (0.0–1.0). Does not affect system volume.
     public var volume: Float {
         get { engine.volume }
@@ -206,6 +212,13 @@ public final class StreamPlayer {
             pause()
         } else {
             seek(to: position)
+            // Wait briefly then verify the seek landed; retry once if it didn't
+            try? await Task.sleep(for: .milliseconds(300))
+            if abs(progress.currentTime - position) > 2.0 {
+                logger.notice("seekAndSettle: seek didn't land (at \(progress.currentTime)s, wanted \(position)s), retrying")
+                seek(to: position)
+                try? await Task.sleep(for: .milliseconds(300))
+            }
         }
     }
 

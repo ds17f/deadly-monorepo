@@ -3,7 +3,8 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { ConnectContext } from "@/contexts/ConnectContext";
-import type { ConnectDevice, PlaybackState, ActiveSession, UserPlaybackState } from "@/contexts/ConnectContext";
+import type { ConnectDevice, PlaybackState, ActiveSession, UserPlaybackState, ConnectConfig } from "@/contexts/ConnectContext";
+import { DEFAULT_CONNECT_CONFIG } from "@/contexts/ConnectContext";
 import { ConnectWebSocket } from "@/lib/connectWs";
 
 function generateDeviceId(): string {
@@ -41,6 +42,7 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
   const [devices, setDevices] = useState<ConnectDevice[]>([]);
   const [activeSession, setActiveSession] = useState<ActiveSession | null>(null);
   const [userState, setUserState] = useState<UserPlaybackState | null>(null);
+  const [connectConfig, setConnectConfig] = useState<ConnectConfig>(DEFAULT_CONNECT_CONFIG);
   const wsRef = useRef<ConnectWebSocket | null>(null);
 
   const localDeviceId = useMemo(() => {
@@ -73,6 +75,11 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
           fromDeviceName?: string;
         };
         switch (msg.type) {
+          case "config": {
+            const cfg = (msg as Record<string, unknown>).config as ConnectConfig | undefined;
+            if (cfg) setConnectConfig(cfg);
+            break;
+          }
           case "devices":
             setDevices(msg.devices ?? []);
             break;
@@ -97,8 +104,14 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
           }
           case "session_play_on":
             if (msg.state) {
+              const playOnState = msg.state as PlaybackState;
+              // Compensate position for server relay + network transit time
+              const relayedAt = (msg as Record<string, unknown>).relayedAt as number | undefined;
+              const adjusted = relayedAt && playOnState.status === "playing"
+                ? { ...playOnState, positionMs: playOnState.positionMs + (Date.now() - relayedAt) }
+                : playOnState;
               window.dispatchEvent(new CustomEvent("connect:play_on", {
-                detail: { ...msg.state as PlaybackState, fromDeviceName: msg.fromDeviceName },
+                detail: { ...adjusted, fromDeviceName: msg.fromDeviceName },
               }));
             }
             break;
@@ -178,6 +191,7 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
     activeSession,
     userState,
     isActiveDevice,
+    connectConfig,
     setUserState,
     announcePlayback,
     claimSession,
@@ -186,7 +200,7 @@ export default function ConnectProvider({ children }: { children: React.ReactNod
     sendCommand,
     clearState,
   }), [
-    isConnected, devices, activeSession, userState, isActiveDevice, setUserState,
+    isConnected, devices, activeSession, userState, isActiveDevice, connectConfig, setUserState,
     announcePlayback, claimSession, playOnDevice, sendPositionUpdate, sendCommand, clearState,
   ]);
 

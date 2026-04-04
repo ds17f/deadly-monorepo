@@ -39,6 +39,9 @@ class ConnectServiceImpl @Inject constructor(
     private val _userState = MutableStateFlow<UserPlaybackState?>(null)
     override val userState: StateFlow<UserPlaybackState?> = _userState.asStateFlow()
 
+    private val _config = MutableStateFlow(ConnectConfig())
+    override val config: StateFlow<ConnectConfig> = _config.asStateFlow()
+
     private val _playbackEvents = MutableSharedFlow<ConnectPlaybackEvent>(extraBufferCapacity = 8)
     override val playbackEvents: SharedFlow<ConnectPlaybackEvent> = _playbackEvents.asSharedFlow()
 
@@ -166,6 +169,15 @@ class ConnectServiceImpl @Inject constructor(
         }
 
         when (obj["type"]?.jsonPrimitive?.contentOrNull) {
+            "config" -> {
+                val cfg = try {
+                    obj["config"]?.let { json.decodeFromJsonElement<ConnectConfig>(it) }
+                } catch (_: Exception) { null }
+                if (cfg != null) {
+                    _config.value = cfg
+                    Log.d(TAG, "Config: interval=${cfg.positionUpdateIntervalMs}ms, seekThreshold=${cfg.seekDivergenceThresholdMs}ms, redirectMaxAge=${cfg.redirectMaxAgeSec}s")
+                }
+            }
             "devices" -> {
                 val list = obj["devices"]?.let {
                     json.decodeFromJsonElement<List<ConnectDevice>>(it)
@@ -190,8 +202,11 @@ class ConnectServiceImpl @Inject constructor(
                     null
                 }
                 if (state != null) {
-                    Log.d(TAG, "[Connect] Play on: showId=${state.showId}, track=${state.trackIndex}")
-                    _playbackEvents.tryEmit(ConnectPlaybackEvent.PlayOn(state))
+                    val relayedAt = obj["relayedAt"]?.let {
+                        json.decodeFromJsonElement<Long>(it)
+                    }
+                    Log.d(TAG, "[Connect] Play on: showId=${state.showId}, track=${state.trackIndex}, relayedAt=$relayedAt")
+                    _playbackEvents.tryEmit(ConnectPlaybackEvent.PlayOn(state, relayedAt))
                 }
             }
             "session_stop" -> {

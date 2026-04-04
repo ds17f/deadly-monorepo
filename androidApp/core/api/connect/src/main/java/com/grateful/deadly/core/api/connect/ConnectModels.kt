@@ -70,7 +70,14 @@ data class OutgoingPlaybackState(
     val tracks: List<SessionTrack>? = null,
 )
 
+@Serializable
+data class ConnectConfig(
+    val positionUpdateIntervalMs: Long = 5000,
+    val seekDivergenceThresholdMs: Long = 2000,
+    val redirectMaxAgeSec: Long = 120,
+)
+
 sealed class ConnectPlaybackEvent {
-    data class PlayOn(val state: IncomingPlaybackState) : ConnectPlaybackEvent()
+    data class PlayOn(val state: IncomingPlaybackState, val relayedAt: Long? = null) : ConnectPlaybackEvent()
     data object Stop : ConnectPlaybackEvent()
 }

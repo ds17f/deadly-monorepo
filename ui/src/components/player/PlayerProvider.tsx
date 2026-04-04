@@ -18,7 +18,7 @@ export default function PlayerProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const { announcePlayback, sendPositionUpdate, clearState, claimSession, userState, isActiveDevice } = useConnect();
+  const { announcePlayback, sendPositionUpdate, clearState, claimSession, userState, isActiveDevice, connectConfig } = useConnect();
 
   const [activeShow, setActiveShow] = useState<ViewedShow | null>(null);
   const [viewedShow, setViewedShow] = useState<ViewedShow | null>(null);
@@ -323,7 +323,7 @@ export default function PlayerProvider({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Report playback position every 15s while playing, and on pause/track change
+  // Report playback position every 5s while playing, and on pause/track change
   const positionReportRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
@@ -359,7 +359,7 @@ export default function PlayerProvider({
     }
 
     if (status === "playing") {
-      positionReportRef.current = setInterval(reportPosition, 15000);
+      positionReportRef.current = setInterval(reportPosition, connectConfig.positionUpdateIntervalMs);
     } else if (status === "paused") {
       // Report once on pause
       reportPosition();
@@ -371,7 +371,7 @@ export default function PlayerProvider({
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [status, activeShow, selectedRecording, currentTrackIndex, sendPositionUpdate]);
+  }, [status, activeShow, selectedRecording, currentTrackIndex, sendPositionUpdate, connectConfig.positionUpdateIntervalMs]);
 
   // Announce playback state changes via WebSocket for Connect session
   useEffect(() => {
@@ -452,12 +452,9 @@ export default function PlayerProvider({
         audio.pause();
         audio.src = "";
       }
-      // Reset local player state to idle without announcing (server already knows)
+      // Mark as idle but keep show/track/position state so the DevicePicker
+      // can still send an accurate positionMs if the user transfers back.
       setStatus("idle");
-      setCurrentTrackIndex(-1);
-      setTracks(null);
-      setElapsed(0);
-      setDuration(0);
       if ("mediaSession" in navigator) {
         navigator.mediaSession.metadata = null;
       }
@@ -472,11 +469,9 @@ export default function PlayerProvider({
         audio.pause();
         audio.src = "";
       }
+      // Mark as idle but keep show/track/position state so the DevicePicker
+      // can still send an accurate positionMs if the user transfers back.
       setStatus("idle");
-      setCurrentTrackIndex(-1);
-      setTracks(null);
-      setElapsed(0);
-      setDuration(0);
       if ("mediaSession" in navigator) {
         navigator.mediaSession.metadata = null;
       }
@@ -602,13 +597,6 @@ export default function PlayerProvider({
       const detail = (e as CustomEvent).detail as PlaybackState & { fromDeviceName?: string };
       if (!detail) return;
 
-      // Store seek info and play/pause state before loading tracks
-      pendingPlayOnRef.current = {
-        trackIndex: detail.trackIndex,
-        positionMs: detail.positionMs,
-        status: detail.status,
-      };
-
       // Stash play_on context for autoplay prompt
       pendingPlayOnInfoRef.current = {
         showDate: detail.date ?? "",
@@ -618,6 +606,40 @@ export default function PlayerProvider({
 
       // Claim the session — we are now the active device
       claimSession();
+
+      // If the same recording is already loaded, skip the full playShow flow
+      // and directly jump to the correct track + position.  This avoids the
+      // race where playRecording resets to track 0 and the useEffect/setTimeout
+      // chain fails to seek in time.
+      const currentTracks = tracksRef.current;
+      if (
+        selectedRecordingRef.current === detail.recordingId &&
+        currentTracks &&
+        currentTracks.length > 0
+      ) {
+        if (detail.status !== "playing") {
+          suppressAutoplayRef.current = true;
+        }
+        if (detail.trackIndex >= 0 && detail.trackIndex < currentTracks.length) {
+          setCurrentTrackIndex(detail.trackIndex);
+        }
+        if (detail.positionMs > 0) {
+          setTimeout(() => {
+            const audio = getActiveAudio();
+            if (audio) {
+              audio.currentTime = detail.positionMs / 1000;
+            }
+          }, 300);
+        }
+        return;
+      }
+
+      // Different recording — store seek info for the tracks-loaded useEffect
+      pendingPlayOnRef.current = {
+        trackIndex: detail.trackIndex,
+        positionMs: detail.positionMs,
+        status: detail.status,
+      };
 
       // Load and play the show from the provided state
       playShow({
