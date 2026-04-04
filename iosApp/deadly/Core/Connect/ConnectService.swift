@@ -155,6 +155,11 @@ final class ConnectService {
         logger.notice("[Connect] Sent session_update: status=\(state.status)")
     }
 
+    func sendSessionPlayOn(targetDeviceId: String, state: OutgoingPlaybackState) {
+        webSocket.send(SessionPlayOnMessage(targetDeviceId: targetDeviceId, state: state))
+        logger.notice("[Connect] Sent session_play_on: target=\(targetDeviceId.prefix(8)), status=\(state.status)")
+    }
+
     // MARK: - Incoming message handling
 
     private func handleMessage(_ text: String) {

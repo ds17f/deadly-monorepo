@@ -10,7 +10,9 @@ import com.grateful.deadly.core.api.auth.AuthState
 import com.grateful.deadly.core.api.connect.ConnectConnectionState
 import com.grateful.deadly.core.api.connect.ConnectDevice
 import com.grateful.deadly.core.api.connect.ConnectService
+import com.grateful.deadly.core.api.connect.OutgoingPlaybackState
 import com.grateful.deadly.core.api.connect.UserPlaybackState
+import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.migration.MigrationImportService
@@ -40,6 +42,7 @@ class SettingsViewModel @Inject constructor(
     private val authService: AuthService,
     private val analyticsService: AnalyticsService,
     private val connectService: ConnectService,
+    private val mediaControllerRepository: MediaControllerRepository,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
 
@@ -88,6 +91,44 @@ class SettingsViewModel @Inject constructor(
     val connectConnectionState: StateFlow<ConnectConnectionState> = connectService.connectionState
     val connectDevices: StateFlow<List<ConnectDevice>> = connectService.devices
     val connectUserState: StateFlow<UserPlaybackState?> = connectService.userState
+    val localDeviceId: String = connectService.deviceId
+
+    fun sendPlayOnDevice(targetDeviceId: String) {
+        val isActiveDevice = connectService.userState.value?.activeDeviceId == connectService.deviceId
+
+        // If this device is actively playing, use local state (accurate).
+        // Otherwise use the canonical userState from the server.
+        if (isActiveDevice) {
+            val showId = mediaControllerRepository.currentShowId.value ?: return
+            val recordingId = mediaControllerRepository.currentRecordingId.value ?: return
+            connectService.sendSessionPlayOn(
+                targetDeviceId = targetDeviceId,
+                state = OutgoingPlaybackState(
+                    showId = showId,
+                    recordingId = recordingId,
+                    trackIndex = mediaControllerRepository.currentTrackIndex.value,
+                    positionMs = mediaControllerRepository.currentPosition.value,
+                    durationMs = mediaControllerRepository.duration.value,
+                    status = "playing",
+                )
+            )
+        } else {
+            val us = connectService.userState.value ?: return
+            val showId = us.showId ?: return
+            val recordingId = us.recordingId ?: return
+            connectService.sendSessionPlayOn(
+                targetDeviceId = targetDeviceId,
+                state = OutgoingPlaybackState(
+                    showId = showId,
+                    recordingId = recordingId,
+                    trackIndex = us.trackIndex,
+                    positionMs = us.positionMs,
+                    durationMs = us.durationMs,
+                    status = "playing",
+                )
+            )
+        }
+    }
 
     val useBetaMode: StateFlow<Boolean> = appPreferences.useBetaModeFlow
 

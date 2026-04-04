@@ -13,4 +13,5 @@ interface ConnectService {
     fun connect()
     fun disconnect()
     fun sendSessionUpdate(state: OutgoingPlaybackState)
+    fun sendSessionPlayOn(targetDeviceId: String, state: OutgoingPlaybackState)
 }

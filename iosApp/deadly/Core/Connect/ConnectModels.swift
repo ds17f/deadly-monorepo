@@ -41,6 +41,12 @@ struct SessionUpdateMessage: Encodable {
     let state: OutgoingPlaybackState
 }
 
+struct SessionPlayOnMessage: Encodable {
+    let type = "session_play_on"
+    let targetDeviceId: String
+    let state: OutgoingPlaybackState
+}
+
 struct SessionTrack: Encodable {
     let title: String
     let duration: Double  // seconds

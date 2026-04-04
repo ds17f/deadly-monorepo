@@ -302,6 +302,8 @@ fun SettingsScreen(
             connectionState = connectState,
             devices = connectDevices,
             userState = connectUserState,
+            localDeviceId = viewModel.localDeviceId,
+            onPlayOnDevice = { deviceId -> viewModel.sendPlayOnDevice(deviceId) },
             onDismiss = { showDeviceSheet = false }
         )
     }
@@ -531,6 +533,8 @@ private fun ConnectDeviceSheet(
     connectionState: ConnectConnectionState,
     devices: List<ConnectDevice>,
     userState: UserPlaybackState?,
+    localDeviceId: String,
+    onPlayOnDevice: (String) -> Unit,
     onDismiss: () -> Unit
 ) {
     ModalBottomSheet(onDismissRequest = onDismiss) {
@@ -601,9 +605,15 @@ private fun ConnectDeviceSheet(
             } else {
                 devices.forEach { device ->
                     val isActive = userState?.activeDeviceId == device.deviceId
+                    val isLocal = device.deviceId == localDeviceId
+                    val canTransfer = !isActive
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
+                            .then(
+                                if (canTransfer) Modifier.clickable { onPlayOnDevice(device.deviceId) }
+                                else Modifier
+                            )
                             .padding(vertical = 8.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
@@ -615,7 +625,7 @@ private fun ConnectDeviceSheet(
                             modifier = Modifier.size(20.dp)
                         )
                         Spacer(modifier = Modifier.width(12.dp))
-                        Column {
+                        Column(modifier = Modifier.weight(1f)) {
                             Text(
                                 text = device.name,
                                 style = MaterialTheme.typography.bodyMedium,
@@ -623,9 +633,18 @@ private fun ConnectDeviceSheet(
                                         else MaterialTheme.colorScheme.onSurface
                             )
                             Text(
-                                text = device.type.replaceFirstChar { it.uppercase() },
+                                text = if (isLocal) "${device.type.replaceFirstChar { it.uppercase() }} · This device"
+                                       else device.type.replaceFirstChar { it.uppercase() },
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                        if (canTransfer) {
+                            Icon(
+                                painter = IconResources.PlayerControls.Play(),
+                                contentDescription = "Play on this device",
+                                tint = MaterialTheme.colorScheme.primary,
+                                modifier = Modifier.size(20.dp)
                             )
                         }
                     }

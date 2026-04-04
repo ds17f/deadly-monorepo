@@ -583,10 +583,7 @@ export default function PlayerProvider({
     const { trackIndex, positionMs, status } = pendingPlayOnRef.current;
     pendingPlayOnRef.current = null;
 
-    // If the sender was paused, suppress autoplay on the incoming track load
-    if (status !== "playing") {
-      suppressAutoplayRef.current = true;
-    }
+    // play_on always means "start playing" — never suppress autoplay for transfers
 
     if (trackIndex > 0 && trackIndex < tracks.length) {
       playTrack(trackIndex);
@@ -635,20 +632,26 @@ export default function PlayerProvider({
         currentTracks &&
         currentTracks.length > 0
       ) {
-        if (detail.status !== "playing") {
-          suppressAutoplayRef.current = true;
-        }
         if (detail.trackIndex >= 0 && detail.trackIndex < currentTracks.length) {
           setCurrentTrackIndex(detail.trackIndex);
         }
-        if (detail.positionMs > 0) {
-          setTimeout(() => {
-            const audio = getActiveAudio();
-            if (audio) {
+        setTimeout(() => {
+          const audio = getActiveAudio();
+          if (audio) {
+            if (detail.positionMs > 0) {
               audio.currentTime = detail.positionMs / 1000;
             }
-          }, 300);
-        }
+            // Always play on transfer — receiving a play_on means "start playing here"
+            audio.play().catch((err) => {
+              if (err instanceof DOMException && err.name === "NotAllowedError") {
+                setAutoplayBlocked(true);
+                setAutoplayInfo(pendingPlayOnInfoRef.current);
+                autoplayBlockedAudioRef.current = audio;
+              }
+              setStatus("paused");
+            });
+          }
+        }, 300);
         return;
       }
 

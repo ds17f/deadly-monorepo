@@ -1,4 +1,5 @@
 import AuthenticationServices
+import SwiftAudioStreamEx
 import SwiftUI
 import UIKit
 import UniformTypeIdentifiers
@@ -303,7 +304,11 @@ struct SettingsScreen: View {
 
         // MARK: - Connect Device Sheet
         .sheet(isPresented: $showingDeviceSheet) {
-            ConnectDeviceSheet(connectService: container.connectService)
+            ConnectDeviceSheet(
+                connectService: container.connectService,
+                playlistService: container.playlistService,
+                streamPlayer: container.streamPlayer
+            )
         }
 
     }
@@ -336,7 +341,61 @@ struct FavoritesExportShareSheet: UIViewControllerRepresentable {
 
 private struct ConnectDeviceSheet: View {
     var connectService: ConnectService
+    var playlistService: PlaylistServiceImpl
+    var streamPlayer: StreamPlayer
     @Environment(\.dismiss) private var dismiss
+
+    private var isLocalDevice: (ConnectDevice) -> Bool {
+        { $0.deviceId == connectService.deviceId }
+    }
+
+    private func playOnDevice(_ device: ConnectDevice) {
+        let isActiveDevice = connectService.userState?.activeDeviceId == connectService.deviceId
+
+        // If this device is actively playing, use local state (accurate).
+        // Otherwise use the canonical userState from the server.
+        if isActiveDevice, let show = playlistService.currentShow {
+            let posMs = Int(streamPlayer.progress.currentTime * 1000)
+            let durMs = Int(streamPlayer.progress.duration * 1000)
+            let trackIdx = streamPlayer.queueState.currentIndex
+            let tracks = playlistService.tracks.map { track in
+                SessionTrack(title: track.title, duration: track.durationInterval ?? 0)
+            }
+            connectService.sendSessionPlayOn(
+                targetDeviceId: device.deviceId,
+                state: OutgoingPlaybackState(
+                    showId: show.id,
+                    recordingId: playlistService.currentRecording?.identifier ?? "",
+                    trackIndex: trackIdx,
+                    positionMs: posMs,
+                    durationMs: durMs,
+                    trackTitle: streamPlayer.currentTrack?.title,
+                    status: "playing",
+                    date: show.date,
+                    venue: show.venue.name,
+                    location: show.location.displayText,
+                    tracks: tracks
+                )
+            )
+        } else if let us = connectService.userState, let showId = us.showId, let recordingId = us.recordingId {
+            connectService.sendSessionPlayOn(
+                targetDeviceId: device.deviceId,
+                state: OutgoingPlaybackState(
+                    showId: showId,
+                    recordingId: recordingId,
+                    trackIndex: us.trackIndex,
+                    positionMs: us.positionMs,
+                    durationMs: us.durationMs,
+                    trackTitle: us.trackTitle,
+                    status: "playing",
+                    date: us.date,
+                    venue: us.venue,
+                    location: us.location,
+                    tracks: nil
+                )
+            )
+        }
+    }
 
     var body: some View {
         NavigationStack {
@@ -391,17 +450,32 @@ private struct ConnectDeviceSheet: View {
                     } else {
                         ForEach(connectService.devices) { device in
                             let isActive = connectService.userState?.activeDeviceId == device.deviceId
-                            HStack(spacing: 12) {
-                                Image(systemName: "antenna.radiowaves.left.and.right")
-                                    .foregroundStyle(isActive ? DeadlyColors.primary : .secondary)
-                                VStack(alignment: .leading) {
-                                    Text(device.name)
-                                        .foregroundStyle(isActive ? DeadlyColors.primary : .primary)
-                                    Text(device.type.capitalized)
-                                        .font(.callout)
-                                        .foregroundStyle(.secondary)
+                            let isLocal = isLocalDevice(device)
+                            let hasPlaybackState = playlistService.currentShow != nil || connectService.userState?.showId != nil
+                            let canTransfer = !isActive && hasPlaybackState
+                            Button {
+                                if canTransfer {
+                                    playOnDevice(device)
+                                }
+                            } label: {
+                                HStack(spacing: 12) {
+                                    Image(systemName: "antenna.radiowaves.left.and.right")
+                                        .foregroundStyle(isActive ? DeadlyColors.primary : .secondary)
+                                    VStack(alignment: .leading) {
+                                        Text(device.name)
+                                            .foregroundStyle(isActive ? DeadlyColors.primary : .primary)
+                                        Text(isLocal ? "\(device.type.capitalized) · This device" : device.type.capitalized)
+                                            .font(.callout)
+                                            .foregroundStyle(.secondary)
+                                    }
+                                    if canTransfer {
+                                        Spacer()
+                                        Image(systemName: "play.circle")
+                                            .foregroundStyle(DeadlyColors.primary)
+                                    }
                                 }
                             }
+                            .disabled(!canTransfer)
                         }
                     }
                 }
