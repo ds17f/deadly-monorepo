@@ -53,6 +53,7 @@ export default function PlayerProvider({
   const statusRef = useRef<PlaybackStatus>("idle");
   const suppressAutoplayRef = useRef(false);
   const suppressAnnounceRef = useRef(false);
+  const ignoringAudioEventsRef = useRef(false);
   const prevUserStateRef = useRef<{ isPlaying: boolean; trackIndex: number; positionMs: number } | null>(null);
 
   // Keep refs in sync
@@ -125,6 +126,7 @@ export default function PlayerProvider({
     });
 
     audio.addEventListener("playing", () => {
+      if (ignoringAudioEventsRef.current) return;
       if (
         (activeAudioRef.current === "A" && audio === audioARef.current) ||
         (activeAudioRef.current === "B" && audio === audioBRef.current)
@@ -139,6 +141,7 @@ export default function PlayerProvider({
     });
 
     audio.addEventListener("pause", () => {
+      if (ignoringAudioEventsRef.current) return;
       if (
         (activeAudioRef.current === "A" && audio === audioARef.current) ||
         (activeAudioRef.current === "B" && audio === audioBRef.current)
@@ -150,6 +153,7 @@ export default function PlayerProvider({
     });
 
     audio.addEventListener("waiting", () => {
+      if (ignoringAudioEventsRef.current) return;
       if (
         (activeAudioRef.current === "A" && audio === audioARef.current) ||
         (activeAudioRef.current === "B" && audio === audioBRef.current)
@@ -184,6 +188,7 @@ export default function PlayerProvider({
     });
 
     audio.addEventListener("error", () => {
+      if (ignoringAudioEventsRef.current) return;
       if (
         (activeAudioRef.current === "A" && audio === audioARef.current) ||
         (activeAudioRef.current === "B" && audio === audioBRef.current)
@@ -444,9 +449,13 @@ export default function PlayerProvider({
   useEffect(() => {
     if (isActiveDevice) {
       wasActiveRef.current = true;
+      ignoringAudioEventsRef.current = false;
     } else if (wasActiveRef.current) {
       // We were active but no longer — another device claimed the session
       wasActiveRef.current = false;
+      // Suppress async audio events (pause/error) from src="" so they
+      // don't clobber status back to "paused" after we set "idle".
+      ignoringAudioEventsRef.current = true;
       const audio = getActiveAudio();
       if (audio && !audio.paused) {
         audio.pause();
@@ -464,6 +473,7 @@ export default function PlayerProvider({
   // Server-directed stop: the server tells this device to stop playing
   useEffect(() => {
     const handleSessionStop = () => {
+      ignoringAudioEventsRef.current = true;
       const audio = getActiveAudio();
       if (audio && !audio.paused) {
         audio.pause();
@@ -596,6 +606,8 @@ export default function PlayerProvider({
     function handlePlayOn(e: Event) {
       const detail = (e as CustomEvent).detail as PlaybackState & { fromDeviceName?: string };
       if (!detail) return;
+      // Re-enable audio event handlers now that we're resuming local playback
+      ignoringAudioEventsRef.current = false;
 
       // Stash play_on context for autoplay prompt
       pendingPlayOnInfoRef.current = {

@@ -203,6 +203,10 @@ final class AppContainer {
                 let sendUpdate: (String, Bool) -> Void = { [weak playlistSvc, weak player] status, includeTracks in
                     guard let playlistSvc, let player else { return }
                     guard let show = playlistSvc.currentShow else { return }
+                    let posMs = Int(player.progress.currentTime * 1000)
+                    let durMs = Int(player.progress.duration * 1000)
+                    let trackIdx = player.queueState.currentIndex
+                    connectLog.notice("[ConnectPlayback] sendUpdate: status=\(status, privacy: .public), track=\(trackIdx), pos=\(posMs)ms, dur=\(durMs)ms")
                     let tracks: [SessionTrack]? = includeTracks ? playlistSvc.tracks.map { track in
                         SessionTrack(
                             title: track.title,
@@ -212,9 +216,9 @@ final class AppContainer {
                     connectSvc.sendSessionUpdate(OutgoingPlaybackState(
                         showId: show.id,
                         recordingId: playlistSvc.currentRecording?.identifier ?? "",
-                        trackIndex: player.queueState.currentIndex,
-                        positionMs: Int(player.progress.currentTime * 1000),
-                        durationMs: Int(player.progress.duration * 1000),
+                        trackIndex: trackIdx,
+                        positionMs: posMs,
+                        durationMs: durMs,
                         trackTitle: player.currentTrack?.title,
                         status: status,
                         date: show.date,

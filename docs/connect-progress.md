@@ -42,20 +42,21 @@ See the original architecture proposal for the full design: [connect-architectur
 
 ---
 
-## Message Types (11 total)
+## Message Types (12 total)
 
 | Message | Direction | Purpose |
 |---------|-----------|---------|
 | `register` | Client → Server | Device joins session |
 | `devices` | Server → Client | Broadcast connected devices list |
 | `command` | Client → Server | Play, pause, stop, next, prev, seek |
-| `position_update` | Client → Server → Clients | Periodic position sync (~15s) |
+| `position_update` | Client → Server → Clients | Periodic position sync (server-configurable, default 5s) |
 | `session_update` | Client → Server → Clients | Full state on play/pause/stop/track change |
 | `session_claim` | Client → Server | Device claims active playback ownership |
 | `session_play_on` | Client → Server → Target | Transfer playback to another device |
 | `session_stop` | Server → Client | Tell device to stop (mutual exclusion) |
 | `user_state` | Server → Client | Send canonical user playback state |
 | `state_clear` | Client → Server | Clear all playback state |
+| `config` | Server → Client | Server-configurable parameters (intervals, thresholds) |
 | `error` | Server → Client | Error notification |
 
 ---
@@ -90,6 +91,14 @@ This is a **per-recording track list**, scoped to the current show. It does **no
 For a Grateful Dead show app where tracks are sequential within a recording, the per-show track list approach is sufficient unless cross-show playlists are added.
 
 ---
+
+## Known Bugs
+
+| Bug | Platform | Notes |
+|-----|----------|-------|
+| iOS seek doesn't land when play_on arrives as paused | iOS | When a transfer sends `status=paused`, iOS accepts the position but the audio engine doesn't seek reliably while paused. If a `play` command follows, playback resumes from the engine's buffered position (~6s) instead of the intended position. `seekAndSettle` only retries while playing. |
+| session_claim doesn't carry new show state | Web | If the user browses to a different album on the web while another device is active and hits "play on web", `session_claim` only swaps `activeDeviceId` — it doesn't update `showId`/`recordingId`. The web starts playing the old show from the iPhone's position instead of the new album. The claim needs to either send the new show state or the web needs to send a `session_update` immediately after claiming. |
+| Play/pause acts as remote control before claim completes | Web | If the user hits play/pause on the web player while another device is still the active device, it sends `command: play/pause` which toggles the remote device instead of starting local playback. The web should claim the session first (or detect it's not active and claim+play locally). |
 
 ## Remaining Gaps
 

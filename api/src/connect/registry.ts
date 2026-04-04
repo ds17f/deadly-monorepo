@@ -95,6 +95,7 @@ export function relayPlayOn(userId: string, fromDeviceId: string, targetDeviceId
 
   const target = userDevices.get(targetDeviceId);
   if (!target) {
+    log("relay_play_on", `${fromDeviceName} → cross-server target=${targetDeviceId.slice(0, 8)}: pos=${state.positionMs}ms track=${state.trackIndex}`);
     const msg = JSON.stringify({
       type: "play_on_relay",
       userId,
@@ -107,6 +108,7 @@ export function relayPlayOn(userId: string, fromDeviceId: string, targetDeviceId
     return true;
   }
 
+  log("relay_play_on", `${fromDeviceName} → ${target.device.name}: pos=${state.positionMs}ms track=${state.trackIndex}`);
   sendToSocket(target.socket, {
     type: "session_play_on",
     state,
@@ -117,6 +119,8 @@ export function relayPlayOn(userId: string, fromDeviceId: string, targetDeviceId
 }
 
 // ── User Playback State ────────────────────────────────────────────
+
+const log = (tag: string, msg: string) => console.log(`[Connect] ${tag} ${msg}`);
 
 export function updateUserState(userId: string, patch: Partial<UserPlaybackState>): void {
   let state = userStates.get(userId);
@@ -143,6 +147,7 @@ export function updateUserState(userId: string, patch: Partial<UserPlaybackState
     };
   }
   userStates.set(userId, state);
+  log("broadcast", `user_state: device=${state.activeDeviceName ?? "parked"} playing=${state.isPlaying} track=${state.trackIndex} pos=${state.positionMs}ms dur=${state.durationMs}ms`);
   broadcastUserState(userId, state);
 
   // Relay to other server instances
@@ -161,6 +166,7 @@ export function sendSessionStop(userId: string, deviceId: string): void {
   const userDevices = registry.get(userId);
   const device = userDevices?.get(deviceId);
   if (device) {
+    log("session_stop", `→ ${device.device.name} (${device.device.type})`);
     sendToSocket(device.socket, { type: "session_stop" });
   }
 }

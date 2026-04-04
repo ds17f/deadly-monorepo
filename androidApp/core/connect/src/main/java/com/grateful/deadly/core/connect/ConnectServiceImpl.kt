@@ -131,7 +131,7 @@ class ConnectServiceImpl @Inject constructor(
             put("state", json.encodeToJsonElement(state))
         }
         webSocket?.send(msg.toString())
-        Log.d(TAG, "[Connect] Sent session_update: status=${state.status}")
+        Log.d(TAG, "[Connect] Sent session_update: status=${state.status}, pos=${state.positionMs}ms, dur=${state.durationMs}ms")
     }
 
     override fun disconnect() {

@@ -5,6 +5,8 @@ import { upsertPlaybackPosition } from "../db/userdata.js";
 import type { ConnectMessage, RegisterMessage, CommandMessage, PositionUpdateMessage, SessionUpdateMessage, SessionPlayOnMessage } from "./types.js";
 import { DEFAULT_CONFIG } from "./types.js";
 
+const log = (tag: string, msg: string) => console.log(`[Connect] ${tag} ${msg}`);
+
 export async function connectRoutes(app: FastifyInstance): Promise<void> {
   app.get("/ws/connect", {
     schema: { tags: ["connect"], summary: "WebSocket Connect endpoint" },
@@ -31,6 +33,7 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
           deviceId = reg.device.deviceId;
           deviceName = reg.device.name;
           deviceType = reg.device.type;
+          log("register", `${deviceName} (${deviceType}) id=${deviceId.slice(0, 8)}`);
           registerDevice(
             { ...reg.device, userId },
             socket as unknown as import("ws").WebSocket,
@@ -52,6 +55,8 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
             socket.send(JSON.stringify({ type: "error", message: "No active session" }));
             return;
           }
+
+          log("command", `from=${deviceName}: ${action}${cmd.command.seekMs != null ? ` seekMs=${cmd.command.seekMs}` : ""}`);
 
           if (action === "play" || action === "pause") {
             updateUserState(userId, { isPlaying: action === "play" });
@@ -99,6 +104,7 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
         case "position_update": {
           const pos = msg as PositionUpdateMessage;
           if (!deviceId) return;
+          log("pos_update", `from=${deviceName}: track=${pos.state.trackIndex} pos=${pos.state.positionMs}ms status=${pos.state.status}`);
           broadcastPosition(userId, deviceId, pos.state);
           // Persist to DB
           upsertPlaybackPosition(userId, {
@@ -116,6 +122,7 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
         case "session_update": {
           const su = msg as SessionUpdateMessage;
           if (!deviceId) return;
+          log("session_update", `from=${deviceName}: status=${su.state.status} track=${su.state.trackIndex} pos=${su.state.positionMs}ms dur=${su.state.durationMs ?? "?"}ms`);
 
           // Store tracks if provided
           const tracksPatch = su.state.tracks ? { tracks: su.state.tracks } : {};
@@ -208,6 +215,7 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
 
         case "session_claim": {
           if (!deviceId) return;
+          log("session_claim", `from=${deviceName}`);
           // Stop the old active device if different from the claimer
           const claimState = getUserState(userId);
           if (claimState?.activeDeviceId && claimState.activeDeviceId !== deviceId) {
@@ -236,6 +244,7 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
         case "session_play_on": {
           const spo = msg as SessionPlayOnMessage;
           if (!deviceId) return;
+          log("session_play_on", `from=${deviceName} → target=${spo.targetDeviceId.slice(0, 8)}: status=${spo.state.status} track=${spo.state.trackIndex} pos=${spo.state.positionMs}ms`);
           // Stop the old active device if different from the play-on target
           const playOnState = getUserState(userId);
           if (playOnState?.activeDeviceId && playOnState.activeDeviceId !== spo.targetDeviceId) {
@@ -279,6 +288,7 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
 
         case "state_clear": {
           if (!deviceId) return;
+          log("state_clear", `from=${deviceName}`);
           deleteUserState(userId);
           // Also clear legacy
           clearActiveSession(userId);
@@ -292,6 +302,7 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
 
     socket.on("close", () => {
       if (deviceId) {
+        log("disconnect", `${deviceName} (${deviceType})`);
         unregisterDevice(userId, deviceId);
       }
     });

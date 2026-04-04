@@ -151,15 +151,25 @@ class ConnectPlaybackHandler @Inject constructor(
         }
     }
 
-    private fun sendUpdate(status: String, tracks: List<SessionTrack>? = null) {
-        val showId = mediaControllerRepository.currentShowId.value ?: return
-        val recordingId = mediaControllerRepository.currentRecordingId.value ?: return
+    private fun sendUpdate(
+        status: String,
+        tracks: List<SessionTrack>? = null,
+        positionOverrideMs: Long? = null,
+    ) {
+        val showId = mediaControllerRepository.currentShowId.value
+        val recordingId = mediaControllerRepository.currentRecordingId.value
+        Log.d(TAG, "sendUpdate ENTER: status=$status, showId=${showId?.take(20)}, recId=${recordingId?.take(10)}, override=$positionOverrideMs")
+        if (showId == null || recordingId == null) return
+        val pos = positionOverrideMs ?: mediaControllerRepository.currentPosition.value
+        val dur = mediaControllerRepository.duration.value
+        val trackIdx = mediaControllerRepository.currentTrackIndex.value
+        Log.d(TAG, "sendUpdate SEND: status=$status, track=$trackIdx, pos=${pos}ms, dur=${dur}ms, override=${positionOverrideMs != null}")
         connectService.sendSessionUpdate(OutgoingPlaybackState(
             showId = showId,
             recordingId = recordingId,
-            trackIndex = mediaControllerRepository.currentTrackIndex.value,
-            positionMs = mediaControllerRepository.currentPosition.value,
-            durationMs = mediaControllerRepository.duration.value,
+            trackIndex = trackIdx,
+            positionMs = pos,
+            durationMs = dur,
             trackTitle = null,
             status = status,
             date = lastShowDate,
@@ -211,7 +221,7 @@ class ConnectPlaybackHandler @Inject constructor(
                 // echo of this update (which may carry a stale position)
                 suppressDiffReaction = true
                 val reportedStatus = if (shouldPlay) "playing" else "paused"
-                sendUpdate(reportedStatus, tracks = sessionTracks.ifEmpty { null })
+                sendUpdate(reportedStatus, tracks = sessionTracks.ifEmpty { null }, positionOverrideMs = adjustedPositionMs)
             }
             is ConnectPlaybackEvent.Stop -> {
                 Log.d(TAG, "Session taken, pausing")
