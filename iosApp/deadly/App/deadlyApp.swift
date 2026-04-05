@@ -89,7 +89,13 @@ struct deadlyApp: App {
                             ShowArtworkService.shared.populate(sourceTypes)
                         }
                         await container.homeService.refresh()
-                        await container.playbackRestorationService.restoreIfAvailable()
+                        for _ in 0..<10 {
+                            if container.connectService.receivedInitialState { break }
+                            try? await Task.sleep(for: .milliseconds(100))
+                        }
+                        if container.connectService.userState?.showId == nil {
+                            await container.playbackRestorationService.restoreIfAvailable()
+                        }
                     }
                 }) {
                     DataImportScreen(isPresented: $showingImport)
@@ -108,8 +114,16 @@ struct deadlyApp: App {
                             ShowArtworkService.shared.populate(sourceTypes)
                         }
                         ShowArtworkService.shared.badgeStyle = SourceBadgeStyle.fromString(container.appPreferences.sourceBadgeStyle)
-                        // Restore last playback position if the app was killed mid-playback.
-                        await container.playbackRestorationService.restoreIfAvailable()
+                        // Wait briefly for Connect to deliver initial state from
+                        // the server before falling back to local restoration.
+                        // The WebSocket typically connects within ~200ms.
+                        for _ in 0..<10 {
+                            if container.connectService.receivedInitialState { break }
+                            try? await Task.sleep(for: .milliseconds(100))
+                        }
+                        if container.connectService.userState?.showId == nil {
+                            await container.playbackRestorationService.restoreIfAvailable()
+                        }
                     }
                 }
         }

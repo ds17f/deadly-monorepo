@@ -22,6 +22,11 @@ final class ConnectService {
     private(set) var config: ConnectConfig = ConnectConfig()
     private(set) var debugLastMessage: String = "(none)"
 
+    /// True after the first `user_state` has been received since connecting.
+    /// All outgoing messages are gated on this flag to prevent clobbering
+    /// the active session with stale local state on startup.
+    private(set) var receivedInitialState = false
+
     // MARK: - Playback event callback
 
     @ObservationIgnored
@@ -108,6 +113,7 @@ final class ConnectService {
         connectionState = .disconnected
         devices = []
         userState = nil
+        receivedInitialState = false
     }
 
     // MARK: - WebSocket callbacks
@@ -190,8 +196,15 @@ final class ConnectService {
             if let stateObj = obj["state"],
                let stateData = try? JSONSerialization.data(withJSONObject: stateObj),
                let state = try? JSONDecoder().decode(UserPlaybackState.self, from: stateData) {
+                let isFirst = !receivedInitialState
                 userState = state
-                logger.notice("[Connect] User state: playing=\(state.isPlaying), activeDevice=\(state.activeDeviceName ?? "none")")
+                if isFirst {
+                    receivedInitialState = true
+                    logger.notice("[Connect] Initial user state: playing=\(state.isPlaying), activeDevice=\(state.activeDeviceName ?? "none"), show=\(state.showId ?? "nil")")
+                    onPlaybackEvent?(.syncState(state))
+                } else {
+                    logger.notice("[Connect] User state: playing=\(state.isPlaying), activeDevice=\(state.activeDeviceName ?? "none")")
+                }
             }
         case "session_play_on":
             logger.notice("[Connect] Got \(type, privacy: .public), onPlaybackEvent is \(self.onPlaybackEvent == nil ? "nil" : "set", privacy: .public)")

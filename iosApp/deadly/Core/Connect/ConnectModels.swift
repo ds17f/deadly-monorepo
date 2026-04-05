@@ -107,6 +107,9 @@ struct ConnectConfig {
 enum ConnectPlaybackEvent {
     case playOn(IncomingPlaybackState, relayedAt: Int?)
     case stop
+    /// Emitted once after connecting when the server sends the initial user_state.
+    /// The client should sync its UI to this state without clobbering the active session.
+    case syncState(UserPlaybackState)
 }
 
 // MARK: - User Playback State

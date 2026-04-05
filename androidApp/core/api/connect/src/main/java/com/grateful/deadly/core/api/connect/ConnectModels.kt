@@ -81,4 +81,6 @@ data class ConnectConfig(
 sealed class ConnectPlaybackEvent {
     data class PlayOn(val state: IncomingPlaybackState, val relayedAt: Long? = null) : ConnectPlaybackEvent()
     data object Stop : ConnectPlaybackEvent()
+    /** Emitted once after connecting when the server sends the initial user_state. */
+    data class SyncState(val state: UserPlaybackState) : ConnectPlaybackEvent()
 }

@@ -10,6 +10,8 @@ interface ConnectService {
     val userState: StateFlow<UserPlaybackState?>
     val config: StateFlow<ConnectConfig>
     val playbackEvents: SharedFlow<ConnectPlaybackEvent>
+    /** True after the first user_state has been received since connecting. */
+    val receivedInitialState: StateFlow<Boolean>
     fun connect()
     fun disconnect()
     fun sendSessionUpdate(state: OutgoingPlaybackState)

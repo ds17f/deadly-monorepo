@@ -45,6 +45,9 @@ class ConnectServiceImpl @Inject constructor(
     private val _playbackEvents = MutableSharedFlow<ConnectPlaybackEvent>(extraBufferCapacity = 8)
     override val playbackEvents: SharedFlow<ConnectPlaybackEvent> = _playbackEvents.asSharedFlow()
 
+    private val _receivedInitialState = MutableStateFlow(false)
+    override val receivedInitialState: StateFlow<Boolean> = _receivedInitialState.asStateFlow()
+
     private var webSocket: WebSocket? = null
     private var reconnectJob: Job? = null
     private var reconnectDelay = INITIAL_RECONNECT_DELAY
@@ -152,6 +155,7 @@ class ConnectServiceImpl @Inject constructor(
         _connectionState.value = ConnectConnectionState.DISCONNECTED
         _devices.value = emptyList()
         _userState.value = null
+        _receivedInitialState.value = false
     }
 
     private fun sendRegister(ws: WebSocket) {
@@ -201,8 +205,15 @@ class ConnectServiceImpl @Inject constructor(
                 } catch (_: Exception) {
                     null
                 }
+                val isFirst = !_receivedInitialState.value
                 _userState.value = state
-                Log.d(TAG, "[Connect] User state: playing=${state?.isPlaying}, activeDevice=${state?.activeDeviceName}")
+                if (isFirst && state != null) {
+                    _receivedInitialState.value = true
+                    Log.d(TAG, "[Connect] Initial user state: playing=${state.isPlaying}, activeDevice=${state.activeDeviceName}, show=${state.showId}")
+                    _playbackEvents.tryEmit(ConnectPlaybackEvent.SyncState(state))
+                } else {
+                    Log.d(TAG, "[Connect] User state: playing=${state?.isPlaying}, activeDevice=${state?.activeDeviceName}")
+                }
             }
             "session_play_on" -> {
                 val state = try {
