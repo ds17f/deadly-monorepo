@@ -8,6 +8,8 @@ private let wsLog = Logger(subsystem: "com.grateful.deadly", category: "ConnectW
 final class ConnectWebSocket: NSObject, URLSessionWebSocketDelegate {
     private var msgSeq = 0
     private let instanceId = Int.random(in: 1000...9999)
+    /// Incremented on every connect(); stale receive callbacks check this and bail.
+    private var receiveGeneration = 0
 
     var onOpen: (() -> Void)?
     var onClose: (() -> Void)?
@@ -33,10 +35,11 @@ final class ConnectWebSocket: NSObject, URLSessionWebSocketDelegate {
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
 
         let config = URLSessionConfiguration.default
+        receiveGeneration += 1
         session = URLSession(configuration: config, delegate: self, delegateQueue: .main)
         task = session?.webSocketTask(with: request)
         task?.resume()
-        receiveNext()
+        receiveNext(generation: receiveGeneration)
     }
 
     func disconnect() {
@@ -87,21 +90,25 @@ final class ConnectWebSocket: NSObject, URLSessionWebSocketDelegate {
 
     // MARK: - Private
 
-    private func receiveNext() {
+    private func receiveNext(generation: Int) {
         task?.receive { [weak self] result in
-            guard let self else { return }
-            switch result {
-            case .success(let message):
-                if case .string(let text) = message {
-                    self.msgSeq += 1
-                    let seq = self.msgSeq
-                    let prefix = text.prefix(80)
-                    wsLog.notice("[ConnectWS:\(self.instanceId)] recv #\(seq): \(prefix, privacy: .public)")
-                    self.onMessage?(text)
+            // task.receive delivers on a background thread regardless of delegateQueue,
+            // so hop to main before touching any stored state.
+            DispatchQueue.main.async { [weak self] in
+                guard let self, self.receiveGeneration == generation else { return }
+                switch result {
+                case .success(let message):
+                    if case .string(let text) = message {
+                        self.msgSeq += 1
+                        let seq = self.msgSeq
+                        let prefix = text.prefix(80)
+                        wsLog.notice("[ConnectWS:\(self.instanceId)] recv #\(seq): \(prefix, privacy: .public)")
+                        self.onMessage?(text)
+                    }
+                    self.receiveNext(generation: generation)
+                case .failure:
+                    break
                 }
-                self.receiveNext()
-            case .failure:
-                break
             }
         }
     }

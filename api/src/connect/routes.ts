@@ -127,25 +127,30 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
           // Store tracks if provided
           const tracksPatch = su.state.tracks ? { tracks: su.state.tracks } : {};
 
+          const currentState = getUserState(userId);
+          const isActiveDevice = !currentState?.activeDeviceId || currentState.activeDeviceId === deviceId;
+
           if (su.state.status === "stopped") {
-            // Park the user state (don't delete)
-            updateUserState(userId, {
-              showId: su.state.showId,
-              recordingId: su.state.recordingId,
-              trackIndex: su.state.trackIndex,
-              positionMs: su.state.positionMs,
-              durationMs: su.state.durationMs,
-              trackTitle: su.state.trackTitle,
-              date: su.state.date,
-              venue: su.state.venue,
-              location: su.state.location,
-              activeDeviceId: null,
-              activeDeviceName: null,
-              activeDeviceType: null,
-              isPlaying: false,
-              ...tracksPatch,
-            });
-            // Persist to DB on stop
+            // Only park state if this device currently owns it; otherwise just ignore
+            if (isActiveDevice) {
+              updateUserState(userId, {
+                showId: su.state.showId,
+                recordingId: su.state.recordingId,
+                trackIndex: su.state.trackIndex,
+                positionMs: su.state.positionMs,
+                durationMs: su.state.durationMs,
+                trackTitle: su.state.trackTitle,
+                date: su.state.date,
+                venue: su.state.venue,
+                location: su.state.location,
+                activeDeviceId: null,
+                activeDeviceName: null,
+                activeDeviceType: null,
+                isPlaying: false,
+                ...tracksPatch,
+              });
+            }
+            // Persist to DB on stop regardless
             upsertPlaybackPosition(userId, {
               showId: su.state.showId,
               recordingId: su.state.recordingId,
@@ -157,6 +162,9 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
             });
             // Legacy
             clearActiveSession(userId, deviceId);
+          } else if (!isActiveDevice) {
+            // Another device has claimed the session — ignore paused/playing updates from this device
+            log("session_update", `ignored from=${deviceName}: session owned by ${currentState?.activeDeviceName ?? "unknown"}`);
           } else if (su.state.status === "paused") {
             // Paused: keep device set but not playing
             updateUserState(userId, {

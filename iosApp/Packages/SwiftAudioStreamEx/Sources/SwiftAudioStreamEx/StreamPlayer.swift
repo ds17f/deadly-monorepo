@@ -172,15 +172,17 @@ public final class StreamPlayer {
         }
     }
 
-    public func skipTo(index: Int) {
+    @discardableResult
+    public func skipTo(index: Int) -> Bool {
         guard index >= 0, index < tracks.count else {
             logger.warning("skipTo called with invalid index: \(index)")
-            return
+            return false
         }
         let skipped = engine.skipTo(index: index)
         if skipped {
             syncTrackFromEngine()
         }
+        return skipped
     }
 
     public func seek(to time: TimeInterval) {

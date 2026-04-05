@@ -155,9 +155,13 @@ final class PlaylistServiceImpl: PlaylistService {
 
         // If the player already has this recording's queue loaded, skip directly to the index
         // instead of rebuilding the entire queue (avoids redundant network redirect resolution).
+        // If skipTo returns false the engine's redirect resolution is still in-flight — fall
+        // through to a full loadQueue so we always land on the right track.
         if streamPlayer.currentTrack?.metadata["recordingId"] == recording.identifier {
-            streamPlayer.skipTo(index: index)
-            return true
+            if streamPlayer.skipTo(index: index) {
+                return true
+            }
+            logger.warning("playTrack(\(index)): skipTo failed (redirects still resolving), falling through to full loadQueue")
         }
         // Propagate the show's ticket art so mini player and full player can display it.
         // Fall back to archive.org's auto-generated image for the recording.
