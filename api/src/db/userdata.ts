@@ -362,26 +362,6 @@ export function upsertPlaybackPosition(userId: string, pos: PlaybackPositionV3):
     pos.date ?? null, pos.venue ?? null, pos.location ?? null);
 }
 
-export function loadUserPlaybackState(userId: string): import("../connect/types.js").UserPlaybackState | null {
-  const pos = getPlaybackPosition(userId);
-  if (!pos) return null;
-  return {
-    showId: pos.showId,
-    recordingId: pos.recordingId,
-    trackIndex: pos.trackIndex,
-    positionMs: pos.positionMs,
-    durationMs: 0,
-    date: pos.date,
-    venue: pos.venue,
-    location: pos.location,
-    activeDeviceId: null,
-    activeDeviceName: null,
-    activeDeviceType: null,
-    isPlaying: false,
-    updatedAt: Date.now(),
-  };
-}
-
 export function clearPlaybackPosition(userId: string): void {
   const db = getUsersDb();
   db.prepare(`DELETE FROM playback_position WHERE user_id = ?`).run(userId);
