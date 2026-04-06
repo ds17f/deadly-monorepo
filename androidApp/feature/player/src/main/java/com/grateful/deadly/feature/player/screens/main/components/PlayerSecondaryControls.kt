@@ -14,7 +14,6 @@ import com.grateful.deadly.core.design.resources.IconResources
 @Composable
 fun PlayerSecondaryControls(
     isFavorite: Boolean,
-    onConnectClick: () -> Unit,
     onEqualizerClick: () -> Unit,
     onFavoriteClick: () -> Unit,
     onShareClick: () -> Unit,
@@ -28,18 +27,6 @@ fun PlayerSecondaryControls(
     ) {
         // Left section
         Row {
-            // Connections
-            IconButton(
-                onClick = onConnectClick,
-                modifier = Modifier.size(40.dp)
-            ) {
-                Icon(
-                    painter = IconResources.Content.Cast(),
-                    contentDescription = "Connect",
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-
             // Equalizer
             IconButton(
                 onClick = onEqualizerClick,

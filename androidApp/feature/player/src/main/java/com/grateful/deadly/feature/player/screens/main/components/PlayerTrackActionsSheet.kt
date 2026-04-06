@@ -33,7 +33,6 @@ fun PlayerTrackActionsSheet(
     onDownload: () -> Unit,
     onFavorite: () -> Unit,
     onEqualizer: () -> Unit,
-    onConnect: () -> Unit,
     onQueue: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -140,15 +139,6 @@ fun PlayerTrackActionsSheet(
                 icon = IconResources.PlayerControls.Equalizer(),
                 onClick = {
                     onEqualizer()
-                    onDismiss()
-                }
-            )
-
-            ActionMenuRow(
-                text = "Connect",
-                icon = IconResources.Content.Cast(),
-                onClick = {
-                    onConnect()
                     onDismiss()
                 }
             )
