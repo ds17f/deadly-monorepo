@@ -5,7 +5,6 @@ import AppStoreBadge from "@/components/AppStoreBadge";
 import AuthProvider from "@/components/auth/AuthProvider";
 import UserMenu from "@/components/auth/UserMenu";
 import UserDataProvider from "@/components/userdata/UserDataProvider";
-import ConnectProvider from "@/components/connect/ConnectProvider";
 import PlayerProvider from "@/components/player/PlayerProvider";
 import HeaderPlayerWrapper from "@/components/player/HeaderPlayerWrapper";
 import "./globals.css";
@@ -35,7 +34,6 @@ export default function RootLayout({
       <body className="min-h-screen bg-deadly-bg text-white antialiased">
         <AuthProvider>
         <UserDataProvider>
-        <ConnectProvider>
         <PlayerProvider>
           <nav className="border-b border-white/10 px-6 py-4">
             <div className="mx-auto flex max-w-5xl items-center justify-between">
@@ -108,7 +106,6 @@ export default function RootLayout({
             </div>
           </footer>
         </PlayerProvider>
-        </ConnectProvider>
         </UserDataProvider>
         </AuthProvider>
       </body>

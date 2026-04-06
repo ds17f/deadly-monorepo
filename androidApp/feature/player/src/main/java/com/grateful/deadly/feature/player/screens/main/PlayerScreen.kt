@@ -22,7 +22,6 @@ import com.grateful.deadly.feature.player.screens.main.components.PlayerEnhanced
 import com.grateful.deadly.feature.player.screens.main.components.PlayerSecondaryControls
 import com.grateful.deadly.feature.player.screens.main.components.PlayerMaterialPanels
 import com.grateful.deadly.feature.player.screens.main.components.PlayerTrackActionsSheet
-import com.grateful.deadly.feature.player.screens.main.components.PlayerConnectSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerQueueSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerEqualizerSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerMiniPlayer
@@ -64,7 +63,6 @@ fun PlayerScreen(
     var showTrackActionsBottomSheet by remember { mutableStateOf(false) }
     var showQrCode by remember { mutableStateOf(false) }
     var showShareChooser by remember { mutableStateOf(false) }
-    var showConnectBottomSheet by remember { mutableStateOf(false) }
     var showEqualizerBottomSheet by remember { mutableStateOf(false) }
     var showQueueBottomSheet by remember { mutableStateOf(false) }
     // Mini player visibility based on scroll position
@@ -154,7 +152,6 @@ fun PlayerScreen(
             item {
                 PlayerSecondaryControls(
                     isFavorite = isCurrentTrackFavorite,
-                    onConnectClick = { showConnectBottomSheet = true },
                     onEqualizerClick = { showEqualizerBottomSheet = true },
                     onFavoriteClick = { viewModel.toggleCurrentTrackFavorite() },
                     onShareClick = { showShareChooser = true },
@@ -191,7 +188,6 @@ fun PlayerScreen(
                 onDownload = { viewModel.downloadCurrentShow() },
                 onFavorite = { viewModel.toggleCurrentTrackFavorite() },
                 onEqualizer = { showEqualizerBottomSheet = true },
-                onConnect = { showConnectBottomSheet = true },
                 onQueue = { showQueueBottomSheet = true },
             )
         }
@@ -234,12 +230,6 @@ fun PlayerScreen(
                     onDismiss = { showQrCode = false }
                 )
             }
-        }
-
-        if (showConnectBottomSheet) {
-            PlayerConnectSheet(
-                onDismiss = { showConnectBottomSheet = false }
-            )
         }
 
         if (showEqualizerBottomSheet) {
