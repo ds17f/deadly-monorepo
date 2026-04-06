@@ -1,6 +1,7 @@
 import Fastify from "fastify";
 import cors from "@fastify/cors";
 import formbody from "@fastify/formbody";
+import websocket from "@fastify/websocket";
 import swagger from "@fastify/swagger";
 import swaggerUi from "@fastify/swagger-ui";
 import { healthRoutes } from "./routes/health.js";
@@ -11,6 +12,7 @@ import { userRoutes } from "./routes/user.js";
 import { authMiddleware } from "./auth/middleware.js";
 import { analyticsRoutes } from "./routes/analytics.js";
 import { betaRoutes } from "./routes/beta.js";
+import { connectRoutes } from "./connect/routes.js";
 import { devTokenRoutes } from "./auth/dev-token.js";
 import { isDev } from "./env.js";
 
@@ -50,6 +52,7 @@ export function buildApp() {
   });
 
   app.register(formbody);
+  app.register(websocket);
   app.register(healthRoutes);
   app.register(authMiddleware);
   app.register(authRoutes);
@@ -58,6 +61,7 @@ export function buildApp() {
   app.register(userRoutes);
   app.register(analyticsRoutes);
   app.register(betaRoutes);
+  app.register(connectRoutes);
 
   if (isDev) {
     app.register(devTokenRoutes);
