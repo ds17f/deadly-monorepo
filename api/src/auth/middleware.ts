@@ -15,7 +15,7 @@ declare module "fastify" {
   }
 }
 
-async function resolveUser(request: FastifyRequest): Promise<{ id: string; email?: string; name?: string; isAdmin?: boolean } | null> {
+export async function resolveUser(request: FastifyRequest): Promise<{ id: string; email?: string; name?: string; isAdmin?: boolean } | null> {
   // 1. Check Authorization: Bearer header
   const authHeader = request.headers.authorization;
   if (authHeader?.startsWith("Bearer ")) {
