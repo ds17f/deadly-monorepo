@@ -2,7 +2,8 @@
 
 > Redesign of the Deadly Connect system — a Spotify Connect-like feature that
 > synchronizes playback state across multiple devices (iOS, Android, web) through
-> an authoritative server.
+> an authoritative server. This replaces v1 entirely — a clean break, not a
+> migration.
 
 ## Design Principles
 
@@ -18,7 +19,8 @@
    on the server. No special relay paths, no dual state systems.
 5. **Optimistic UI with server reconciliation.** Clients may optimistically
    update their UI on command send, but snap to server state when the broadcast
-   arrives.
+   arrives. Active device acts optimistically; remote control devices show a
+   loading/pending indicator and wait for server confirmation.
 
 ## Why v1 Failed
 
@@ -79,7 +81,7 @@ There is no `status` enum. Status is derived:
 | `false`   | `null`            | **Parked** — nothing active, last position preserved |
 | `false`   | `"abc"`           | **Paused** — device abc has session, playback paused |
 | `true`    | `"abc"`           | **Playing** — device abc is actively playing |
-| `true`    | `null`            | Invalid — server must never produce this |
+| `true`    | `null`            | Invalid — server must never produce this (invariant enforced in `mutate()`) |
 
 ### Initial State
 
@@ -131,11 +133,15 @@ These go through the normal mutation path — server updates `positionMs` and
 interface ConnectDevice {
   deviceId: string;
   userId: string;
-  type: DeviceType;             // "ios" | "android" | "web"
+  type: DeviceType;             // "ios" | "android" | "web" (extensible)
   name: string;
   lastHeartbeat: number;        // Server timestamp of last heartbeat
 }
 ```
+
+`DeviceType` is a string union that can be extended (e.g. `"tvos"`, `"carplay"`)
+without server changes. The server treats all device types identically — the
+type is purely metadata for display ("Playing on Damian's iPhone").
 
 ### Heartbeat & Lease
 
@@ -157,9 +163,14 @@ message whenever it changes (register, unregister, heartbeat eviction).
 
 ## Protocol
 
-WebSocket at `/ws/connect`. Authenticated via the same mechanism as v1.
+WebSocket at `/ws/connect`. Authenticated via JWT bearer token in the
+`Authorization` header (or token query param as fallback for browsers). Uses
+the same `requireAuth` middleware as v1.
 
 ### Client -> Server (3 message types)
+
+Every command includes the sender's device ID implicitly (the server tracks
+which socket belongs to which device after `register`).
 
 #### `register`
 
@@ -256,7 +267,8 @@ Command rejected. Always includes current state for reconciliation.
 
 ## Server Command Processing
 
-All commands go through a single function. Pseudocode:
+All commands go through a single function. The server knows which device sent
+each command (tracked at `register` time). Pseudocode:
 
 ```typescript
 function handleCommand(userId: string, deviceId: string, cmd: Command): void {
@@ -267,7 +279,17 @@ function handleCommand(userId: string, deviceId: string, cmd: Command): void {
   switch (cmd.action) {
     case "play": {
       if (!state.showId) return sendError(deviceId, "Nothing loaded");
-      if (!state.activeDeviceId) return sendError(deviceId, "No active device — use transfer or load");
+      // If parked (no active device), the sender fills the vacancy
+      if (!state.activeDeviceId) {
+        mutate(state, {
+          activeDeviceId: deviceId,
+          activeDeviceName: device.name,
+          activeDeviceType: device.type,
+          playing: true,
+          positionTs: Date.now(),
+        });
+        break;
+      }
       if (state.playing) return; // Already playing, no-op
       // Remote control: resume playback on whoever the active device is
       mutate(state, {
@@ -343,23 +365,12 @@ function handleCommand(userId: string, deviceId: string, cmd: Command): void {
     case "transfer": {
       const target = getDevice(userId, cmd.targetDeviceId);
       if (!target) return sendError(deviceId, "Target device not found");
-      // Snapshot position at transfer time
-      const elapsed = state.playing ? Date.now() - state.positionTs : 0;
-      mutate(state, {
-        activeDeviceId: target.device.deviceId,
-        activeDeviceName: target.device.name,
-        activeDeviceType: target.device.type,
-        playing: true,
-        positionMs: state.positionMs + elapsed,
-        positionTs: Date.now(),
-      });
+      // Two-phase transfer — see "Transfer Protocol" section below
+      beginTransfer(userId, state, target);
       break;
     }
 
     case "load": {
-      // Snapshot position of current track before loading new show
-      const elapsed = state.playing ? Date.now() - state.positionTs : 0;
-      const wasPlaying = state.playing;
       mutate(state, {
         showId: cmd.showId,
         recordingId: cmd.recordingId,
@@ -371,15 +382,14 @@ function handleCommand(userId: string, deviceId: string, cmd: Command): void {
         date: cmd.date ?? null,
         venue: cmd.venue ?? null,
         location: cmd.location ?? null,
-        // If autoplay, claim the device and start playing
+        // If autoplay, play on the CURRENT active device (not the sender).
+        // If no active device (parked), the sender fills the vacancy.
         ...(cmd.autoplay ? {
-          activeDeviceId: deviceId,
-          activeDeviceName: device.name,
-          activeDeviceType: device.type,
+          activeDeviceId: state.activeDeviceId ?? deviceId,
+          activeDeviceName: state.activeDeviceName ?? device.name,
+          activeDeviceType: state.activeDeviceType ?? device.type,
           playing: true,
-        } : {
-          // Keep current device/playing state unless autoplay
-        }),
+        } : {}),
       });
       persist(userId, state);  // Meaningful transition
       break;
@@ -400,10 +410,57 @@ function handleCommand(userId: string, deviceId: string, cmd: Command): void {
 
 function mutate(state: ConnectState, patch: Partial<ConnectState>): void {
   Object.assign(state, patch);
+  // Invariant: cannot be playing without an active device
+  if (state.playing && !state.activeDeviceId) {
+    state.playing = false;
+  }
   state.version++;
   broadcast(state);  // Send full snapshot to all user's devices
 }
 ```
+
+---
+
+## Transfer Protocol
+
+Transfer is the most complex operation because it must guarantee **no audio
+overlap** — the old device must stop before the new device starts. This is a
+hard requirement.
+
+### Two-Phase Transfer with Acknowledgment
+
+When a transfer is requested (e.g. B sends `{ action: "transfer", targetDeviceId: "B" }`):
+
+**Phase 1 — Park (stop the old device):**
+1. Server snapshots position: `positionMs + elapsed`
+2. Server sets `activeDeviceId = null`, `playing = false`, version++, broadcasts.
+3. Device A receives the broadcast, sees it's no longer active, stops audio.
+4. Device A sends `{ action: "position", positionMs: <actual stop position> }` — its
+   true final position at the moment audio stopped.
+
+**Phase 2 — Activate (start the new device):**
+5. Server receives A's final position report, updates `positionMs`.
+6. Server sets `activeDeviceId = B`, `playing = true`, version++, broadcasts.
+7. Device B receives the broadcast, sees it's now active, starts playback at the
+   position A reported.
+
+**Timeout:** If A doesn't report its position within **1 second**, the server
+proceeds with phase 2 using the interpolated position from phase 1. The transfer
+must not hang waiting for a dead device.
+
+**Self-transfer:** If B transfers to itself and B is already the active device,
+this is a no-op. If B is not active, the same two-phase protocol applies.
+
+**No active device (parked):** If the session is parked, phase 1 is skipped —
+the server goes directly to phase 2.
+
+### Why Not Single-Phase?
+
+In a single-phase transfer (just set `activeDeviceId = B` and broadcast), both
+A and B receive the state simultaneously. B starts playing while A is still
+stopping — brief audio overlap. Two-phase guarantees: A stops → gap → B starts.
+
+---
 
 ### Key Behaviors
 
@@ -412,21 +469,24 @@ send `play` or `pause` and it affects the current active device. The
 `activeDeviceId` does not change. If device A is playing and device B sends
 `pause`, A pauses. B sends `play`, A resumes. B is just a remote.
 
-**Transfer is always explicit.** To move playback to a different device, you
-must send `transfer` (targeting another device or yourself) or `load` with
-`autoplay: true`. There is no implicit transfer — pressing play on a non-active
-device does NOT steal the session.
+**`play` when parked fills the vacancy.** If no device is active and a device
+sends `play`, the sending device becomes the active device. This is the only
+case where `play` changes `activeDeviceId`.
 
-**Self-transfer is how you "claim" the session.** If device B wants to take
-over playback from device A, B sends `{ action: "transfer", targetDeviceId: "B" }`.
-The server switches `activeDeviceId` to B and broadcasts. A sees the state
-change and stops itself. This is explicit and unambiguous.
+**`load` with `autoplay` plays on the current active device.** It does NOT
+transfer ownership to the sender. If device A is active and device B sends
+`load` with `autoplay: true`, the server loads the new show and A starts
+playing it. If no device is active (parked), the sender fills the vacancy.
 
-**Devices react to state, not to commands.** There is no `session_stop` message.
-When a device receives a state broadcast where `activeDeviceId` is no longer
-its own ID, it stops playback. When it receives a state where `activeDeviceId`
-IS its own ID and `playing` is true, it starts playback. The state is the
-single source of truth.
+**Transfer is always explicit.** The only ways to change which device is active:
+1. `transfer` targeting another device
+2. `transfer` targeting yourself (self-claim)
+3. Filling a vacancy when parked (via `play` or `load` with `autoplay`)
+
+**Devices react to state, not to commands.** When a device receives a state
+broadcast where `activeDeviceId` is no longer its own ID, it stops playback.
+When it receives a state where `activeDeviceId` IS its own ID and `playing` is
+true, it starts playback. The state is the single source of truth.
 
 **Position snapshotting:** Before any transition that changes playback state
 (pause, stop, transfer, load), the server computes the *actual* current position
@@ -439,6 +499,20 @@ can always reconcile by snapping to the included state.
 ---
 
 ## Client Behavior
+
+### Optimistic UI
+
+Two distinct behaviors depending on whether the local device is actively playing:
+
+**Active device (playing audio locally):** Act optimistically. When the user
+hits play/skip/pause, update the local player immediately. The server broadcast
+arrives ~50ms later — reconcile (usually a no-op since the prediction was
+correct).
+
+**Remote control (not playing audio):** Show a spinner/loading indicator after
+sending a command. Do NOT animate the progress bar or show play state — that
+creates a confusing "looks like it's playing but no sound" experience. Wait for
+the server broadcast to confirm the remote device acted, then update the UI.
 
 ### On Connect
 1. Open WebSocket to `/ws/connect`
@@ -462,20 +536,22 @@ if incoming.activeDeviceId === myDeviceId:
     startPlayback(incoming)     // Transfer landed on me, or resume
   if !incoming.playing && locallyPlaying:
     pausePlayback()
-  // Correct position if diverged > threshold
-  if abs(localPosition - interpolatedServerPosition) > 2000ms:
-    seekTo(interpolatedServerPosition)
+  // Do NOT seek to correct server position drift — the local audio engine
+  // is the authority. Position reports FROM this device keep the server in
+  // sync, not the other way around. Only seek on explicit commands.
 else:
   // I am NOT the active device
   if locallyPlaying:
     stopPlayback()              // I lost active status
-  updateRemoteControlUI(incoming)
+    reportFinalPosition()       // Send position command with actual stop position
+  updateRemoteControlUI(incoming)  // Snap to server position (visual only)
 ```
 
 ### On User Action
-1. Optionally update local UI optimistically
-2. Send `command` to server
-3. Wait for `state` broadcast — snap to it regardless
+1. If active device: update local UI/audio optimistically
+2. If remote control: show loading indicator
+3. Send `command` to server
+4. Wait for `state` broadcast — snap to it
 
 ### On Disconnect / Background
 - Stop heartbeat
@@ -519,21 +595,7 @@ date, venue, location, updated_at
 | Position update bypass | Position goes through `mutateState()` like everything else |
 | `session_claim` complexity | Explicit `transfer` to self; `play`/`pause` are pure remote control |
 | `Object.assign` frankenstate | Single mutation function with position snapshotting |
-
----
-
-## Migration Path
-
-v2 is a clean break. The server endpoint will be `/ws/connect/v2`. Clients can
-be migrated one at a time:
-1. Ship server with both `/ws/connect` (v1) and `/ws/connect/v2` endpoints
-2. Migrate web first (fastest iteration)
-3. Migrate iOS and Android
-4. Remove v1 endpoint
-
-v1 and v2 sessions are independent — a v1 client and v2 client for the same
-user will not see each other. This is acceptable during migration since the
-user controls which app version they're running.
+| Audio overlap on transfer | Two-phase transfer with acknowledgment |
 
 ---
 
@@ -541,7 +603,10 @@ user controls which app version they're running.
 
 - **Track duration unit**: v1 uses seconds in `SessionTrack.duration` but ms
   everywhere else. v2 should standardize on ms (`durationMs`) everywhere.
-- **Volume**: Not in scope for v2. Per-device volume is handled locally.
+- **Remote volume control**: Future feature. Per-device volume reported via
+  `devices` message, `{ action: "volume", level: 0.0-1.0 }` command to change
+  the active device's volume. Hardware volume button interception on mobile
+  when in remote-control mode. Not MVP — defer to a later iteration.
 - **Queue / shuffle / repeat**: Not in scope for v2. Sequential track playback
   only. Can be added as state fields later.
 - **Remote commands from non-active device**: All commands (`play`, `pause`,
