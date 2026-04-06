@@ -51,6 +51,7 @@ dependencies {
     implementation(project(":core:media"))
     implementation(project(":core:api:player"))
     implementation(project(":core:api:favorites"))
+    implementation(project(":core:api:connect"))
     implementation(project(":core:database"))
     
     // Compose BOM

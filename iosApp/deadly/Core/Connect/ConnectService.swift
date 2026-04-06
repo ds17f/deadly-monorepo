@@ -166,6 +166,11 @@ final class ConnectService {
         logger.notice("[Connect] Sent session_play_on: target=\(targetDeviceId.prefix(8)), status=\(state.status)")
     }
 
+    func sendCommand(action: String, seekMs: Int? = nil) {
+        webSocket.send(CommandMessage(command: PlaybackCommandPayload(action: action, seekMs: seekMs)))
+        logger.notice("[Connect] Sent command: action=\(action)")
+    }
+
     // MARK: - Incoming message handling
 
     private func handleMessage(_ text: String) {

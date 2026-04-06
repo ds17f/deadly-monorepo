@@ -8,12 +8,16 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.grateful.deadly.core.api.connect.UserPlaybackState
 import com.grateful.deadly.feature.player.screens.main.components.PlayerTopBar
 import com.grateful.deadly.feature.player.screens.main.components.PlayerCoverArt
 import com.grateful.deadly.feature.player.screens.main.components.PlayerTrackInfoRow
@@ -30,6 +34,37 @@ import com.grateful.deadly.feature.player.screens.main.components.PlayerMiniPlay
 import com.grateful.deadly.core.design.component.QrCodeDisplay
 import com.grateful.deadly.core.design.component.ShareChooserSheet
 import com.grateful.deadly.feature.player.screens.main.models.PlayerViewModel
+
+/**
+ * Interpolates a remote Connect position in ms at ~30 fps.
+ * Restarts (cancels + re-launches) whenever base values change, ensuring
+ * no stale closure survives a new server state broadcast.
+ */
+@Composable
+private fun rememberInterpolatedPosition(userState: UserPlaybackState?): Long {
+    var interpolatedMs by remember { mutableLongStateOf(0L) }
+    LaunchedEffect(userState?.positionMs, userState?.updatedAt, userState?.isPlaying) {
+        val state = userState ?: run { interpolatedMs = 0L; return@LaunchedEffect }
+        if (!state.isPlaying) {
+            interpolatedMs = state.positionMs
+            return@LaunchedEffect
+        }
+        while (isActive) {
+            val nowMs = System.currentTimeMillis()
+            val raw = state.positionMs + (nowMs - state.updatedAt)
+            interpolatedMs = if (state.durationMs > 0) raw.coerceAtMost(state.durationMs) else raw
+            delay(33L)
+        }
+    }
+    return interpolatedMs
+}
+
+private fun formatMs(ms: Long): String {
+    val totalSeconds = ms / 1000
+    val minutes = totalSeconds / 60
+    val seconds = totalSeconds % 60
+    return "%d:%02d".format(minutes, seconds)
+}
 
 /**
  * PlayerScreen - Clean player interface
@@ -53,6 +88,34 @@ fun PlayerScreen(
     val panelState by viewModel.panelState.collectAsState()
     val isCurrentTrackFavorite by viewModel.isCurrentTrackFavorite.collectAsState()
     val equalizerState by viewModel.equalizerState.collectAsState()
+
+    // Connect remote state
+    val isRemoteActive by viewModel.isRemoteActive.collectAsStateWithLifecycle()
+    val connectUserState by viewModel.connectUserState.collectAsStateWithLifecycle()
+    val connectDevices by viewModel.connectDevices.collectAsStateWithLifecycle()
+    val connectConnectionState by viewModel.connectConnectionState.collectAsStateWithLifecycle()
+
+    // Interpolated remote position (only runs when remote is active)
+    val remotePositionMs = rememberInterpolatedPosition(if (isRemoteActive) connectUserState else null)
+
+    // Display overrides — use remote state when another device is active
+    val displayIsPlaying = if (isRemoteActive) connectUserState?.isPlaying ?: false else uiState.isPlaying
+    val displayTitle = if (isRemoteActive) connectUserState?.trackTitle ?: uiState.trackDisplayInfo.title else uiState.trackDisplayInfo.title
+    val displayShowDate = if (isRemoteActive) connectUserState?.date ?: uiState.trackDisplayInfo.showDate else uiState.trackDisplayInfo.showDate
+    val displayVenue = if (isRemoteActive) connectUserState?.venue ?: uiState.trackDisplayInfo.venue else uiState.trackDisplayInfo.venue
+    val displayProgress: Float
+    val displayCurrentTime: String
+    val displayTotalTime: String
+    if (isRemoteActive && connectUserState != null) {
+        val durMs = connectUserState!!.durationMs.coerceAtLeast(1L)
+        displayProgress = (remotePositionMs.toFloat() / durMs.toFloat()).coerceIn(0f, 1f)
+        displayCurrentTime = formatMs(remotePositionMs)
+        displayTotalTime = formatMs(connectUserState!!.durationMs)
+    } else {
+        displayProgress = uiState.progressDisplayInfo.progressPercentage
+        displayCurrentTime = uiState.progressDisplayInfo.currentPosition
+        displayTotalTime = uiState.progressDisplayInfo.totalDuration
+    }
 
     val recordingId = uiState.navigationInfo.recordingId
 
@@ -118,9 +181,9 @@ fun PlayerScreen(
 
                         // Track information with add to playlist button
                         PlayerTrackInfoRow(
-                            trackTitle = uiState.trackDisplayInfo.title,
-                            showDate = uiState.trackDisplayInfo.showDate,
-                            venue = uiState.trackDisplayInfo.venue,
+                            trackTitle = displayTitle,
+                            showDate = displayShowDate,
+                            venue = displayVenue,
                             onAddToPlaylist = {
                                 Toast.makeText(context, "Playlists are coming soon", Toast.LENGTH_SHORT).show()
                             },
@@ -129,18 +192,18 @@ fun PlayerScreen(
 
                         // Progress control section
                         PlayerProgressControl(
-                            currentTime = uiState.progressDisplayInfo.currentPosition,
-                            totalTime = uiState.progressDisplayInfo.totalDuration,
-                            progress = uiState.progressDisplayInfo.progressPercentage,
+                            currentTime = displayCurrentTime,
+                            totalTime = displayTotalTime,
+                            progress = displayProgress,
                             onSeek = viewModel::onSeek,
                             modifier = Modifier.padding(horizontal = 24.dp)
                         )
 
                         // Enhanced primary controls row
                         PlayerEnhancedControls(
-                            isPlaying = uiState.isPlaying,
+                            isPlaying = displayIsPlaying,
                             isLoading = uiState.isLoading,
-                            hasNext = uiState.hasNext,
+                            hasNext = if (isRemoteActive) true else uiState.hasNext,
                             onPlayPause = viewModel::onPlayPauseClicked,
                             onPrevious = viewModel::onPreviousClicked,
                             onNext = viewModel::onNextClicked,
@@ -238,6 +301,14 @@ fun PlayerScreen(
 
         if (showConnectBottomSheet) {
             PlayerConnectSheet(
+                connectionState = connectConnectionState,
+                devices = connectDevices,
+                userState = connectUserState,
+                localDeviceId = viewModel.localDeviceId,
+                onPlayOnDevice = { deviceId ->
+                    viewModel.sendPlayOnDevice(deviceId)
+                    showConnectBottomSheet = false
+                },
                 onDismiss = { showConnectBottomSheet = false }
             )
         }
@@ -261,11 +332,23 @@ fun PlayerScreen(
 
         // Mini Player overlay when scrolled
         if (showMiniPlayer) {
+            val miniUiState = if (isRemoteActive && connectUserState != null) {
+                uiState.copy(
+                    trackDisplayInfo = uiState.trackDisplayInfo.copy(
+                        title = displayTitle,
+                        showDate = displayShowDate,
+                        venue = displayVenue
+                    ),
+                    isPlaying = displayIsPlaying,
+                    progressDisplayInfo = uiState.progressDisplayInfo.copy(
+                        progressPercentage = displayProgress
+                    )
+                )
+            } else uiState
             PlayerMiniPlayer(
-                uiState = uiState,
+                uiState = miniUiState,
                 onPlayPause = viewModel::onPlayPauseClicked,
                 onTapToExpand = {
-                    // Use a coroutine scope to handle the scroll
                     coroutineScope.launch {
                         scrollState.animateScrollToItem(0)
                     }

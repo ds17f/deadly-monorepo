@@ -55,9 +55,10 @@ final class AppContainer {
             let analytics = AnalyticsService(appPreferences: prefs, apiKey: Secrets.analyticsApiKey)
             let auth = MainActor.assumeIsolated { AuthService(appPreferences: prefs) }
             authService = auth
-            connectService = MainActor.assumeIsolated {
+            let connect = MainActor.assumeIsolated {
                 ConnectService(authService: auth, appPreferences: prefs)
             }
+            connectService = connect
             dataImportService = DataImportService(
                 gitHubClient: URLSessionGitHubReleasesClient(),
                 zipExtractor: ZipExtractor(),
@@ -132,7 +133,9 @@ final class AppContainer {
 
             // MiniPlayerService is @MainActor; thin adapter over StreamPlayer for the mini player UI
             let miniPlayer = MainActor.assumeIsolated {
-                MiniPlayerServiceImpl(streamPlayer: player)
+                let svc = MiniPlayerServiceImpl(streamPlayer: player, connectService: connect)
+                svc.startInterpolationLoop()
+                return svc
             }
             miniPlayerService = miniPlayer
 

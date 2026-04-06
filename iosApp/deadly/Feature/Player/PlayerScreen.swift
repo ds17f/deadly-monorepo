@@ -13,8 +13,23 @@ struct PlayerScreen: View {
     @State private var showMessageShare = false
     @State private var showEqualizerSheet = false
     @State private var showPlayerMenuSheet = false
+    @State private var showConnectSheet = false
     @State private var isCurrentTrackFavorite = false
+    /// Interpolated remote position in ms, updated by the .task below.
+    @State private var remotePositionMs: Int = 0
     @Environment(\.appContainer) private var container
+
+    // MARK: - Remote Connect helpers
+
+    /// True when another device owns the active Connect session.
+    private var isRemoteActive: Bool {
+        guard let activeId = container.connectService.userState?.activeDeviceId else { return false }
+        return activeId != container.connectService.deviceId
+    }
+
+    private var remoteState: UserPlaybackState? {
+        isRemoteActive ? container.connectService.userState : nil
+    }
 
     private var playbackError: StreamPlayerError? {
         if case .error(let error) = streamPlayer.playbackState {
@@ -75,19 +90,27 @@ struct PlayerScreen: View {
 
                         Spacer().frame(height: 32)
 
-                        // Track info
+                        // Track info — prefer remote state when another device is active
                         VStack(spacing: 6) {
-                            Text(streamPlayer.currentTrack?.title ?? "")
+                            Text((isRemoteActive ? remoteState?.trackTitle : nil) ?? streamPlayer.currentTrack?.title ?? "")
                                 .font(.title3)
                                 .fontWeight(.semibold)
                                 .foregroundStyle(.primary)
                                 .lineLimit(2)
                                 .multilineTextAlignment(.center)
 
-                            Text(streamPlayer.currentTrack?.albumTitle ?? "")
-                                .font(.subheadline)
-                                .foregroundStyle(.secondary)
-                                .lineLimit(1)
+                            if let remote = remoteState {
+                                let parts = [remote.date, remote.venue].compactMap { $0 }
+                                Text(parts.joined(separator: " — "))
+                                    .font(.subheadline)
+                                    .foregroundStyle(.secondary)
+                                    .lineLimit(1)
+                            } else {
+                                Text(streamPlayer.currentTrack?.albumTitle ?? "")
+                                    .font(.subheadline)
+                                    .foregroundStyle(.secondary)
+                                    .lineLimit(1)
+                            }
                         }
                         .padding(.horizontal, 24)
 
@@ -95,31 +118,51 @@ struct PlayerScreen: View {
 
                         // Progress slider
                         VStack(spacing: 6) {
-                            Slider(
-                                value: Binding(
-                                    get: { sliderValue ?? streamPlayer.progress.progress },
-                                    set: { sliderValue = $0 }
-                                ),
-                                in: 0...1
-                            ) { editing in
-                                if !editing, let value = sliderValue {
-                                    let target = value * streamPlayer.progress.duration
-                                    streamPlayer.seek(to: target)
-                                    sliderValue = nil
-                                }
-                            }
-                            .tint(DeadlyColors.primary)
-                            .padding(.horizontal, 24)
+                            if let remote = remoteState {
+                                // Remote: non-interactive progress bar + interpolated position
+                                let durMs = remote.durationMs > 0 ? remote.durationMs : 1
+                                ProgressView(
+                                    value: Double(remotePositionMs),
+                                    total: Double(durMs)
+                                )
+                                .tint(DeadlyColors.primary)
+                                .padding(.horizontal, 24)
 
-                            HStack {
-                                Text(formatTime(sliderValue.map { $0 * streamPlayer.progress.duration }
-                                                ?? streamPlayer.progress.currentTime))
-                                Spacer()
-                                Text("-\(formatTime(streamPlayer.progress.remaining))")
+                                HStack {
+                                    Text(formatTime(Double(remotePositionMs) / 1000.0))
+                                    Spacer()
+                                    Text("-\(formatTime(Double(durMs - remotePositionMs) / 1000.0))")
+                                }
+                                .font(.caption)
+                                .foregroundStyle(.tertiary)
+                                .padding(.horizontal, 28)
+                            } else {
+                                Slider(
+                                    value: Binding(
+                                        get: { sliderValue ?? streamPlayer.progress.progress },
+                                        set: { sliderValue = $0 }
+                                    ),
+                                    in: 0...1
+                                ) { editing in
+                                    if !editing, let value = sliderValue {
+                                        let target = value * streamPlayer.progress.duration
+                                        streamPlayer.seek(to: target)
+                                        sliderValue = nil
+                                    }
+                                }
+                                .tint(DeadlyColors.primary)
+                                .padding(.horizontal, 24)
+
+                                HStack {
+                                    Text(formatTime(sliderValue.map { $0 * streamPlayer.progress.duration }
+                                                    ?? streamPlayer.progress.currentTime))
+                                    Spacer()
+                                    Text("-\(formatTime(streamPlayer.progress.remaining))")
+                                }
+                                .font(.caption)
+                                .foregroundStyle(.tertiary)
+                                .padding(.horizontal, 28)
                             }
-                            .font(.caption)
-                            .foregroundStyle(.tertiary)
-                            .padding(.horizontal, 28)
                         }
 
                         Spacer().frame(height: 12)
@@ -136,7 +179,11 @@ struct PlayerScreen: View {
                         // Playback controls
                         HStack(spacing: 52) {
                             Button {
-                                streamPlayer.previous()
+                                if isRemoteActive {
+                                    container.connectService.sendCommand(action: "prev")
+                                } else {
+                                    streamPlayer.previous()
+                                }
                             } label: {
                                 Image(systemName: "backward.fill")
                                     .font(.title)
@@ -144,23 +191,33 @@ struct PlayerScreen: View {
                             }
 
                             Button {
-                                streamPlayer.togglePlayPause()
+                                if let remote = remoteState {
+                                    container.connectService.sendCommand(
+                                        action: remote.isPlaying ? "pause" : "play"
+                                    )
+                                } else {
+                                    streamPlayer.togglePlayPause()
+                                }
                             } label: {
-                                Image(systemName: streamPlayer.playbackState.isPlaying
-                                      ? "pause.circle.fill" : "play.circle.fill")
+                                let playing = remoteState?.isPlaying ?? streamPlayer.playbackState.isPlaying
+                                Image(systemName: playing ? "pause.circle.fill" : "play.circle.fill")
                                     .font(.system(size: 70))
                                     .foregroundStyle(DeadlyColors.primary)
                             }
 
                             Button {
-                                streamPlayer.next()
+                                if isRemoteActive {
+                                    container.connectService.sendCommand(action: "next")
+                                } else {
+                                    streamPlayer.next()
+                                }
                             } label: {
                                 Image(systemName: "forward.fill")
                                     .font(.title)
-                                    .foregroundStyle(streamPlayer.queueState.hasNext
+                                    .foregroundStyle(isRemoteActive || streamPlayer.queueState.hasNext
                                                      ? .primary : .tertiary)
                             }
-                            .disabled(!streamPlayer.queueState.hasNext)
+                            .disabled(!isRemoteActive && !streamPlayer.queueState.hasNext)
                         }
 
                         Spacer().frame(height: 24)
@@ -177,6 +234,30 @@ struct PlayerScreen: View {
                     }
                 }
             }
+        }
+        // Interpolation loop for remote progress — restarts whenever base values change.
+        .task(id: "\(remoteState?.positionMs ?? 0)-\(remoteState?.updatedAt ?? 0)-\(remoteState?.isPlaying ?? false)") {
+            guard let state = remoteState else {
+                remotePositionMs = 0
+                return
+            }
+            if !state.isPlaying {
+                remotePositionMs = state.positionMs
+                return
+            }
+            while !Task.isCancelled {
+                let nowMs = Int(Date().timeIntervalSince1970 * 1000)
+                let raw = state.positionMs + (nowMs - state.updatedAt)
+                remotePositionMs = state.durationMs > 0 ? min(raw, state.durationMs) : raw
+                try? await Task.sleep(for: .milliseconds(33))
+            }
+        }
+        .sheet(isPresented: $showConnectSheet) {
+            PlayerConnectSheet(
+                connectService: container.connectService,
+                playlistService: container.playlistService,
+                streamPlayer: streamPlayer
+            )
         }
         .task(id: streamPlayer.currentTrack?.id) {
             let show = container.playlistService.currentShow
@@ -272,11 +353,19 @@ struct PlayerScreen: View {
                         .font(.caption2)
                         .foregroundStyle(.tertiary)
                         .textCase(.uppercase)
-                    Text(streamPlayer.currentTrack?.albumTitle ?? "")
-                        .font(.caption)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(.primary)
-                        .lineLimit(1)
+                    if let remote = remoteState {
+                        Text(remote.date ?? "")
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(.primary)
+                            .lineLimit(1)
+                    } else {
+                        Text(streamPlayer.currentTrack?.albumTitle ?? "")
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(.primary)
+                            .lineLimit(1)
+                    }
                 }
             }
             .buttonStyle(.plain)
@@ -302,6 +391,18 @@ struct PlayerScreen: View {
     private var actionButtons: some View {
         HStack(spacing: 32) {
             Spacer()
+
+            // Connect
+            Button {
+                showConnectSheet = true
+            } label: {
+                let hasRemote = isRemoteActive
+                Image(systemName: "antenna.radiowaves.left.and.right")
+                    .font(.title2)
+                    .foregroundStyle(hasRemote ? DeadlyColors.primary : .secondary)
+                    .frame(width: 44, height: 44)
+            }
+            .buttonStyle(.plain)
 
             // Favorite
             Button {

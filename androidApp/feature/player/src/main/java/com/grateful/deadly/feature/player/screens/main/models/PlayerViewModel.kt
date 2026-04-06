@@ -5,6 +5,11 @@ import android.content.Intent
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.grateful.deadly.core.api.connect.ConnectConnectionState
+import com.grateful.deadly.core.api.connect.ConnectDevice
+import com.grateful.deadly.core.api.connect.ConnectService
+import com.grateful.deadly.core.api.connect.OutgoingPlaybackState
+import com.grateful.deadly.core.api.connect.UserPlaybackState
 import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.favorites.ReviewService
 import com.grateful.deadly.core.api.player.PanelContentService
@@ -12,6 +17,7 @@ import com.grateful.deadly.core.api.player.PlayerService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.media.equalizer.EqualizerRepository
 import com.grateful.deadly.core.media.equalizer.EqualizerState
+import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.model.CurrentTrackInfo
 import com.grateful.deadly.core.model.LineupMember
 import com.grateful.deadly.core.model.PlaybackStatus
@@ -30,6 +36,8 @@ class PlayerViewModel @Inject constructor(
     private val favoritesService: FavoritesService,
     private val reviewService: ReviewService,
     private val equalizerRepository: EqualizerRepository,
+    private val connectService: ConnectService,
+    private val mediaControllerRepository: MediaControllerRepository,
     val appPreferences: AppPreferences,
     @ApplicationContext private val appContext: Context
 ) : ViewModel() {
@@ -37,6 +45,60 @@ class PlayerViewModel @Inject constructor(
     companion object {
         private const val TAG = "PlayerViewModel"
     }
+
+    // ── Connect remote control ────────────────────────────────────────────────
+
+    val connectConnectionState: StateFlow<ConnectConnectionState> = connectService.connectionState
+    val connectDevices: StateFlow<List<ConnectDevice>> = connectService.devices
+    val connectUserState: StateFlow<UserPlaybackState?> = connectService.userState
+    val localDeviceId: String = connectService.deviceId
+
+    /** True when a remote device (not this one) owns the active Connect session. */
+    val isRemoteActive: StateFlow<Boolean> = connectService.userState
+        .map { it?.activeDeviceId != null && it.activeDeviceId != connectService.deviceId }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
+
+    /** Reads upstream directly — avoids stale initial false from WhileSubscribed on resubscribe. */
+    private fun isCurrentlyRemoteActive(): Boolean {
+        val state = connectService.userState.value
+        return state?.activeDeviceId != null && state.activeDeviceId != connectService.deviceId
+    }
+
+    fun sendPlayOnDevice(targetDeviceId: String) {
+        val isActiveDevice = connectService.userState.value?.activeDeviceId == connectService.deviceId
+        if (isActiveDevice) {
+            val showId = mediaControllerRepository.currentShowId.value ?: return
+            val recordingId = mediaControllerRepository.currentRecordingId.value ?: return
+            connectService.sendSessionPlayOn(
+                targetDeviceId = targetDeviceId,
+                state = OutgoingPlaybackState(
+                    showId = showId,
+                    recordingId = recordingId,
+                    trackIndex = mediaControllerRepository.currentTrackIndex.value,
+                    positionMs = mediaControllerRepository.currentPosition.value,
+                    durationMs = mediaControllerRepository.duration.value,
+                    status = "playing",
+                )
+            )
+        } else {
+            val us = connectService.userState.value ?: return
+            val showId = us.showId ?: return
+            val recordingId = us.recordingId ?: return
+            connectService.sendSessionPlayOn(
+                targetDeviceId = targetDeviceId,
+                state = OutgoingPlaybackState(
+                    showId = showId,
+                    recordingId = recordingId,
+                    trackIndex = us.trackIndex,
+                    positionMs = us.positionMs,
+                    durationMs = us.durationMs,
+                    status = "playing",
+                )
+            )
+        }
+    }
+
+    // ── Reactive UI state ─────────────────────────────────────────────────────
 
     // Reactive UI state from PlayerService flows - using unified CurrentTrackInfo, PlaybackStatus, and QueueInfo
     val uiState: StateFlow<PlayerUiState> = combine(
@@ -216,10 +278,15 @@ class PlayerViewModel @Inject constructor(
     }
 
     /**
-     * Toggle play/pause
+     * Toggle play/pause — routes to remote Connect command when another device is active.
      */
     fun onPlayPauseClicked() {
         Log.d(TAG, "🕒🎵 [UI] PlayerViewModel play/pause clicked at ${System.currentTimeMillis()}")
+        if (isCurrentlyRemoteActive()) {
+            val playing = connectService.userState.value?.isPlaying ?: false
+            connectService.sendCommand(if (playing) "pause" else "play")
+            return
+        }
         viewModelScope.launch {
             try {
                 playerService.togglePlayPause()
@@ -230,10 +297,14 @@ class PlayerViewModel @Inject constructor(
     }
 
     /**
-     * Seek to next track
+     * Seek to next track — routes to remote Connect command when another device is active.
      */
     fun onNextClicked() {
         Log.d(TAG, "🕒🎵 [UI] PlayerViewModel next clicked at ${System.currentTimeMillis()}")
+        if (isCurrentlyRemoteActive()) {
+            connectService.sendCommand("next")
+            return
+        }
         viewModelScope.launch {
             try {
                 playerService.seekToNext()
@@ -244,10 +315,14 @@ class PlayerViewModel @Inject constructor(
     }
 
     /**
-     * Seek to previous track
+     * Seek to previous track — routes to remote Connect command when another device is active.
      */
     fun onPreviousClicked() {
         Log.d(TAG, "🕒🎵 [UI] PlayerViewModel previous clicked at ${System.currentTimeMillis()}")
+        if (isCurrentlyRemoteActive()) {
+            connectService.sendCommand("prev")
+            return
+        }
         viewModelScope.launch {
             try {
                 playerService.seekToPrevious()
@@ -258,10 +333,16 @@ class PlayerViewModel @Inject constructor(
     }
 
     /**
-     * Seek to position
+     * Seek to position — routes to remote Connect command when another device is active.
      */
     fun onSeek(position: Float) {
         Log.d(TAG, "🕒🎵 [UI] PlayerViewModel seek to $position at ${System.currentTimeMillis()}")
+        if (isCurrentlyRemoteActive()) {
+            val durMs = connectService.userState.value?.durationMs ?: return
+            val seekMs = (durMs * position).toLong()
+            connectService.sendCommand("seek", seekMs)
+            return
+        }
         viewModelScope.launch {
             try {
                 // Get current duration and convert percentage to milliseconds

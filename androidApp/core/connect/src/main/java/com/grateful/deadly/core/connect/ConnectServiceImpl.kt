@@ -147,6 +147,18 @@ class ConnectServiceImpl @Inject constructor(
         Log.d(TAG, "[Connect] Sent session_play_on: target=${targetDeviceId.take(8)}, status=${state.status}")
     }
 
+    override fun sendCommand(action: String, seekMs: Long?) {
+        val msg = buildJsonObject {
+            put("type", "command")
+            putJsonObject("command") {
+                put("action", action)
+                if (seekMs != null) put("seekMs", seekMs)
+            }
+        }
+        webSocket?.send(msg.toString())
+        Log.d(TAG, "[Connect] Sent command: action=$action")
+    }
+
     override fun disconnect() {
         intentionalClose = true
         reconnectJob?.cancel()

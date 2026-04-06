@@ -47,6 +47,16 @@ struct SessionPlayOnMessage: Encodable {
     let state: OutgoingPlaybackState
 }
 
+struct CommandMessage: Encodable {
+    let type = "command"
+    let command: PlaybackCommandPayload
+}
+
+struct PlaybackCommandPayload: Encodable {
+    let action: String
+    let seekMs: Int?
+}
+
 struct SessionTrack: Encodable {
     let title: String
     let duration: Double  // seconds

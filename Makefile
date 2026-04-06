@@ -10,7 +10,7 @@
 .PHONY: android-promote-alpha android-promote-beta android-promote-production
 .PHONY: ios-build-release ios-deploy-testflight
 .PHONY: ios-remote-unlock ios-remote-build ios-remote-install ios-remote-sim ios-remote-test ios-remote-resolve
-.PHONY: android-remote-build android-remote-install android-remote-logs
+.PHONY: android-remote-build android-remote-install android-remote-logs android-remote-clean
 .PHONY: android-remote-emulator android-remote-emu-list android-remote-emu-stop android-remote-run-emulator
 .PHONY: android-auto-dhu android-remote-auto-dhu
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
@@ -418,6 +418,10 @@ ios-remote-resolve:
 # =============================================================================
 # ANDROID REMOTE BUILD (Linux → Mac)
 # =============================================================================
+
+android-remote-clean:
+	@echo "Cleaning Gradle caches on $(REMOTE_HOST)..."
+	@ssh $(REMOTE_HOST) "cd $(REMOTE_ANDROID) && rm -rf .gradle/configuration-cache build && ./gradlew clean --console=plain"
 
 android-remote-build:
 	@echo "Building on $(REMOTE_HOST)..."
