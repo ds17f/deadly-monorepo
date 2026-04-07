@@ -132,6 +132,21 @@ export function unregisterDevice(userId: string, deviceId: string): void {
 
   const state = userStates.get(userId);
   if (state && state.activeDeviceId === deviceId) {
+    // Snapshot position before clearing active device
+    if (state.showId && state.recordingId && state.playing) {
+      const now = Date.now();
+      const snapshotMs = state.positionMs + (now - state.positionTs);
+      upsertPlaybackPosition(userId, {
+        showId: state.showId,
+        recordingId: state.recordingId,
+        trackIndex: state.trackIndex,
+        positionMs: snapshotMs,
+        date: state.date ?? undefined,
+        venue: state.venue ?? undefined,
+        location: state.location ?? undefined,
+      });
+    }
+
     mutate(userId, {
       activeDeviceId: null,
       activeDeviceName: null,

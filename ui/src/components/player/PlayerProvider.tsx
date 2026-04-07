@@ -3,7 +3,6 @@
 import { useState, useRef, useCallback, useEffect, useMemo } from "react";
 import type { ArchiveTrack, PlaybackStatus } from "@/types/player";
 import { fetchArchiveTracks } from "@/lib/archive";
-import { updatePlaybackPosition } from "@/lib/userDataApi";
 import { PlayerContext } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
 import { useConnect } from "@/contexts/ConnectContext";
@@ -266,40 +265,6 @@ export default function PlayerProvider({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Report playback position every 15s while playing, and on pause/track change
-  const positionReportRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  useEffect(() => {
-    if (positionReportRef.current) {
-      clearInterval(positionReportRef.current);
-      positionReportRef.current = null;
-    }
-
-    function reportPosition() {
-      const audio = getActiveAudio();
-      if (!activeShow || !selectedRecording || !audio || currentTrackIndex < 0) return;
-      const positionMs = Math.floor(audio.currentTime * 1000);
-      updatePlaybackPosition({
-        showId: activeShow.showId,
-        recordingId: selectedRecording,
-        trackIndex: currentTrackIndex,
-        positionMs,
-      }).catch(() => {});
-    }
-
-    if (status === "playing") {
-      positionReportRef.current = setInterval(reportPosition, 15000);
-    } else if (status === "paused") {
-      reportPosition();
-    }
-
-    return () => {
-      if (positionReportRef.current) {
-        clearInterval(positionReportRef.current);
-      }
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [status, activeShow, selectedRecording, currentTrackIndex]);
 
   // React to ConnectState broadcasts
   useEffect(() => {
