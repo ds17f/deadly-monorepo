@@ -207,12 +207,16 @@ final class AppContainer {
             // Analytics — fire-and-forget anonymous usage tracking
             analyticsService = analytics
 
-            // ConnectService — WebSocket device presence
+            // ConnectService — WebSocket device presence + playback coordination
             let auth = authService
             let connect = MainActor.assumeIsolated {
-                ConnectService(appPreferences: prefs, authService: auth)
+                ConnectService(appPreferences: prefs, authService: auth, streamPlayer: player)
             }
             connectService = connect
+
+            // Wire ConnectService into playback services (setter injection to avoid circular deps)
+            playlistSvc.connectService = connect
+            MainActor.assumeIsolated { miniPlayer.connectService = connect }
             let coldStartMs = Int((CFAbsoluteTimeGetCurrent() - initStart) * 1000)
             analytics.track("app_open")
             analytics.track("cold_start", props: ["duration_ms": coldStartMs])
