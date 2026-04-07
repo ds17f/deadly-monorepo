@@ -4,6 +4,7 @@ import Link from "next/link";
 import AppStoreBadge from "@/components/AppStoreBadge";
 import AuthProvider from "@/components/auth/AuthProvider";
 import UserMenu from "@/components/auth/UserMenu";
+import ConnectProvider from "@/components/connect/ConnectProvider";
 import UserDataProvider from "@/components/userdata/UserDataProvider";
 import PlayerProvider from "@/components/player/PlayerProvider";
 import HeaderPlayerWrapper from "@/components/player/HeaderPlayerWrapper";
@@ -33,6 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen bg-deadly-bg text-white antialiased">
         <AuthProvider>
+        <ConnectProvider>
         <UserDataProvider>
         <PlayerProvider>
           <nav className="border-b border-white/10 px-6 py-4">
@@ -107,6 +109,7 @@ export default function RootLayout({
           </footer>
         </PlayerProvider>
         </UserDataProvider>
+        </ConnectProvider>
         </AuthProvider>
       </body>
     </html>
