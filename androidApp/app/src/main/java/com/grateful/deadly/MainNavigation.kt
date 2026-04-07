@@ -36,6 +36,7 @@ import com.grateful.deadly.core.design.scaffold.AppScaffold
 import com.grateful.deadly.core.model.Show
 import com.grateful.deadly.feature.home.navigation.homeGraph
 import com.grateful.deadly.feature.settings.SettingsScreen
+import com.grateful.deadly.feature.settings.navigation.CONNECT_ROUTE
 import com.grateful.deadly.feature.settings.navigation.settingsGraph
 import kotlinx.coroutines.launch
 import com.grateful.deadly.feature.splash.navigation.splashGraph
@@ -198,6 +199,10 @@ fun MainNavigation(
                     onNavigateToPrivacyData = {
                         scope.launch { drawerState.close() }
                         navController.navigate("privacy_data")
+                    },
+                    onNavigateToConnect = {
+                        scope.launch { drawerState.close() }
+                        navController.navigate(CONNECT_ROUTE)
                     }
                 )
             }
