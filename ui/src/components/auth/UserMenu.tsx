@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
+import DeviceList from "@/components/connect/DeviceList";
 
 export default function UserMenu() {
   const { user, isLoading, signOut } = useAuth();
@@ -69,12 +70,13 @@ export default function UserMenu() {
               <p className="text-xs text-white/50">{user.email}</p>
             )}
           </div>
+          <DeviceList />
           <button
             onClick={() => {
               setOpen(false);
               signOut();
             }}
-            className="w-full rounded-md px-2 py-1.5 text-left text-sm text-white/70 transition hover:bg-white/10 hover:text-white"
+            className="mt-2 w-full rounded-md px-2 py-1.5 text-left text-sm text-white/70 transition hover:bg-white/10 hover:text-white"
           >
             Sign out
           </button>
