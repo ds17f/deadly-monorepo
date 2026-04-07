@@ -284,6 +284,19 @@ export default function PlayerProvider({
         audio.pause();
       }
     }
+
+    // If we ARE the active device, sync local audio to server state
+    // (handles remote play/pause commands from other devices)
+    if (isActiveDevice) {
+      const audio = getActiveAudio();
+      if (audio) {
+        if (connectState.playing && audio.paused) {
+          audio.play().catch(() => {});
+        } else if (!connectState.playing && !audio.paused) {
+          audio.pause();
+        }
+      }
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [connectState?.version]);
 
