@@ -16,23 +16,36 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
         self.streamPlayer = streamPlayer
     }
 
+    // MARK: - Remote state helpers
+
+    private var remote: ConnectState? {
+        guard let cs = connectService, cs.isRemoteControlling else { return nil }
+        return cs.connectState
+    }
+
     // MARK: - Computed state
 
     var isVisible: Bool {
-        streamPlayer.playbackState.isActive || hasError
+        streamPlayer.playbackState.isActive || hasError || remote != nil
     }
 
     var trackTitle: String? {
-        streamPlayer.currentTrack?.title
+        if let r = remote {
+            let idx = r.trackIndex
+            return idx < r.tracks.count ? r.tracks[idx].title : nil
+        }
+        return streamPlayer.currentTrack?.title
     }
 
     var albumTitle: String? {
-        streamPlayer.currentTrack?.albumTitle
+        if remote != nil { return nil }
+        return streamPlayer.currentTrack?.albumTitle
     }
 
     /// Extract the archive.org recording ID from the current track's stream URL.
     /// URL format: https://archive.org/download/{recordingId}/{filename}
     var artworkRecordingId: String? {
+        if let r = remote { return r.recordingId }
         guard let url = streamPlayer.currentTrack?.url else { return nil }
         let parts = url.pathComponents
         guard parts.count >= 3, parts[1] == "download" else { return nil }
@@ -40,18 +53,22 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
     }
 
     var artworkURL: String? {
-        streamPlayer.currentTrack?.artworkURL?.absoluteString
+        if remote != nil { return nil }
+        return streamPlayer.currentTrack?.artworkURL?.absoluteString
     }
 
     var isPlaying: Bool {
-        streamPlayer.playbackState.isPlaying
+        if let r = remote { return r.playing }
+        return streamPlayer.playbackState.isPlaying
     }
 
     var hasNext: Bool {
-        streamPlayer.queueState.hasNext
+        if let r = remote { return r.trackIndex < r.tracks.count - 1 }
+        return streamPlayer.queueState.hasNext
     }
 
     var hasError: Bool {
+        if remote != nil { return false }
         if case .error = streamPlayer.playbackState {
             return true
         }
@@ -59,6 +76,7 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
     }
 
     var errorMessage: String? {
+        if remote != nil { return nil }
         if case .error(let error) = streamPlayer.playbackState {
             return error.localizedDescription
         }
@@ -66,15 +84,23 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
     }
 
     var playbackProgress: Double {
-        streamPlayer.progress.progress
+        if let r = remote {
+            return r.durationMs > 0 ? Double(r.positionMs) / Double(r.durationMs) : 0
+        }
+        return streamPlayer.progress.progress
     }
 
     var showDate: String? {
+        if let r = remote { return r.date }
         let d = streamPlayer.currentTrack?.metadata["showDate"]
         return (d?.isEmpty == false) ? d : nil
     }
 
     var venue: String? {
+        if let r = remote {
+            if let v = r.venue, !v.isEmpty { return v }
+            return r.location
+        }
         let v = streamPlayer.currentTrack?.metadata["venue"]
         if v?.isEmpty == false { return v }
         let loc = streamPlayer.currentTrack?.metadata["location"]
@@ -82,6 +108,19 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
     }
 
     var displaySubtitle: String? {
+        if let r = remote {
+            var result = ""
+            if let d = r.date { result += d }
+            if let v = r.venue, !v.isEmpty {
+                if !result.isEmpty { result += " - " }
+                result += v
+            }
+            if let name = r.activeDeviceName {
+                if !result.isEmpty { result += " · " }
+                result += name
+            }
+            return result.isEmpty ? nil : result
+        }
         var result = ""
         if let date = showDate {
             result += date
