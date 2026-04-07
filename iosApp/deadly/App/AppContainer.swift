@@ -31,6 +31,7 @@ final class AppContainer {
     let authService: AuthService
     let playbackRestorationService: PlaybackRestorationService
     let analyticsService: AnalyticsService
+    let connectService: ConnectService
 
     init() {
         let initStart = CFAbsoluteTimeGetCurrent()
@@ -205,6 +206,13 @@ final class AppContainer {
 
             // Analytics — fire-and-forget anonymous usage tracking
             analyticsService = analytics
+
+            // ConnectService — WebSocket device presence
+            let auth = authService
+            let connect = MainActor.assumeIsolated {
+                ConnectService(appPreferences: prefs, authService: auth)
+            }
+            connectService = connect
             let coldStartMs = Int((CFAbsoluteTimeGetCurrent() - initStart) * 1000)
             analytics.track("app_open")
             analytics.track("cold_start", props: ["duration_ms": coldStartMs])

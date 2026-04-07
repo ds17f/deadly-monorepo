@@ -151,6 +151,25 @@ struct SettingsScreen: View {
                 }
             }
 
+            // MARK: - Connect
+            if container.authService.isSignedIn {
+                Section("Connect") {
+                    NavigationLink {
+                        ConnectScreen()
+                    } label: {
+                        HStack {
+                            settingsRow("Connected Devices", systemImage: "iphone.and.arrow.forward")
+                            if container.connectService.isConnected && !container.connectService.devices.isEmpty {
+                                Text("\(container.connectService.devices.count)")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                    }
+                    .foregroundStyle(.primary)
+                }
+            }
+
             // MARK: - Audio
             Section("Audio") {
                 if let onNavigateToEqualizer {
