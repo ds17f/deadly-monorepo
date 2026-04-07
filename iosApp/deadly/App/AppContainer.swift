@@ -215,8 +215,10 @@ final class AppContainer {
             connectService = connect
 
             // Wire ConnectService into playback services (setter injection to avoid circular deps)
-            playlistSvc.connectService = connect
-            MainActor.assumeIsolated { miniPlayer.connectService = connect }
+            MainActor.assumeIsolated {
+                playlistSvc.connectService = connect
+                miniPlayer.connectService = connect
+            }
             let coldStartMs = Int((CFAbsoluteTimeGetCurrent() - initStart) * 1000)
             analytics.track("app_open")
             analytics.track("cold_start", props: ["duration_ms": coldStartMs])
