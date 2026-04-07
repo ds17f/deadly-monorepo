@@ -6,6 +6,7 @@ import { fetchArchiveTracks } from "@/lib/archive";
 import { updatePlaybackPosition } from "@/lib/userDataApi";
 import { PlayerContext } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
+import { useConnect } from "@/contexts/ConnectContext";
 
 const PREV_TRACK_THRESHOLD = 3; // seconds
 const AUDIO_RETRY_DELAYS = [0, 1000, 2000];
@@ -29,6 +30,12 @@ export default function PlayerProvider({
   const [isLoadingTracks, setIsLoadingTracks] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [autoplayBlocked, setAutoplayBlocked] = useState(false);
+  const [pendingCommand, setPendingCommand] = useState<string | null>(null);
+
+  const { state: connectState, myDeviceId, sendCommand } = useConnect();
+
+  const isActiveDevice = connectState !== null && myDeviceId !== null && connectState.activeDeviceId === myDeviceId;
+  const isRemoteControlling = connectState !== null && connectState.activeDeviceId !== null && connectState.activeDeviceId !== myDeviceId;
 
   // Dual audio elements for gapless playback
   const audioARef = useRef<HTMLAudioElement | null>(null);
@@ -294,6 +301,27 @@ export default function PlayerProvider({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [status, activeShow, selectedRecording, currentTrackIndex]);
 
+  // React to ConnectState broadcasts
+  useEffect(() => {
+    if (!connectState) return;
+
+    // Clear pending command if server confirmed the expected state
+    setPendingCommand((prev) => {
+      if (prev === "play" && connectState.playing) return null;
+      if (prev === "pause" && !connectState.playing) return null;
+      return prev;
+    });
+
+    // If another device is now active, pause our local audio
+    if (isRemoteControlling) {
+      const audio = getActiveAudio();
+      if (audio && !audio.paused) {
+        audio.pause();
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [connectState?.version]);
+
   function updateMediaSession(track: ArchiveTrack) {
     if (!("mediaSession" in navigator)) return;
     const showId = activeShow?.showId ?? "";
@@ -304,7 +332,7 @@ export default function PlayerProvider({
     });
   }
 
-  const playRecording = useCallback(async (identifier: string) => {
+  const playRecording = useCallback(async (identifier: string): Promise<ArchiveTrack[]> => {
     setIsLoadingTracks(true);
     setErrorMessage(null);
     try {
@@ -312,27 +340,46 @@ export default function PlayerProvider({
       if (fetchedTracks.length === 0) {
         setErrorMessage("No playable audio files found for this recording.");
         setIsLoadingTracks(false);
-        return;
+        return [];
       }
       setTracks(fetchedTracks);
       setCurrentTrackIndex(0);
+      setIsLoadingTracks(false);
+      return fetchedTracks;
     } catch {
       setErrorMessage("Failed to load tracks from Archive.org.");
+      setIsLoadingTracks(false);
+      return [];
     }
-    setIsLoadingTracks(false);
   }, []);
 
   const playShow = useCallback(
-    (show: ViewedShow) => {
+    async (show: ViewedShow) => {
       setActiveShow(show);
       const recId =
         show.bestRecordingId ?? show.recordings[0]?.identifier ?? null;
       setSelectedRecording(recId);
-      if (recId) {
-        playRecording(recId);
+      if (!recId) return;
+      const fetchedTracks = await playRecording(recId);
+      if (fetchedTracks.length > 0) {
+        sendCommand("load", {
+          showId: show.showId,
+          recordingId: recId,
+          tracks: fetchedTracks.map((t) => ({
+            title: t.title,
+            durationMs: Math.round(t.duration * 1000),
+          })),
+          trackIndex: 0,
+          positionMs: 0,
+          durationMs: Math.round((fetchedTracks[0]?.duration ?? 0) * 1000),
+          date: show.date,
+          venue: show.venue,
+          location: show.location,
+          autoplay: true,
+        });
       }
     },
-    [playRecording]
+    [playRecording, sendCommand]
   );
 
   const playTrack = useCallback((index: number) => {
@@ -347,15 +394,25 @@ export default function PlayerProvider({
   }, []);
 
   const togglePlayPause = useCallback(() => {
+    if (isRemoteControlling && connectState) {
+      // Remote control: send command only, show spinner until server confirms
+      const action = connectState.playing ? "pause" : "play";
+      setPendingCommand(action);
+      sendCommand(action);
+      return;
+    }
+
     const audio = getActiveAudio();
     if (!audio) return;
 
     if (audio.paused) {
       audio.play().catch(() => {});
+      sendCommand("play");
     } else {
       audio.pause();
+      sendCommand("pause");
     }
-  }, []);
+  }, [isRemoteControlling, connectState, sendCommand]);
 
   const nextTrack = useCallback(() => {
     if (!tracks) return;
@@ -448,6 +505,9 @@ export default function PlayerProvider({
       selectedRecording,
       isLoadingTracks,
       errorMessage,
+      isActiveDevice,
+      isRemoteControlling,
+      pendingCommand,
       setViewedShow,
       selectRecording,
       playShow,
@@ -475,6 +535,9 @@ export default function PlayerProvider({
       selectedRecording,
       isLoadingTracks,
       errorMessage,
+      isActiveDevice,
+      isRemoteControlling,
+      pendingCommand,
       selectRecording,
       playShow,
       playRecording,

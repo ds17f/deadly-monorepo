@@ -151,6 +151,13 @@ export default function ConnectProvider({
     };
   }, [clearHeartbeat]);
 
+  const sendCommand = useCallback((action: string, extra?: Record<string, unknown>) => {
+    const ws = wsRef.current;
+    if (ws && ws.readyState === WebSocket.OPEN) {
+      ws.send(JSON.stringify({ type: "command", action, ...extra }));
+    }
+  }, []);
+
   const disconnect = useCallback(() => {
     shouldConnectRef.current = false;
     clearReconnectTimer();
@@ -183,7 +190,7 @@ export default function ConnectProvider({
   }, [user, isLoading]);
 
   return (
-    <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected }}>
+    <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected, sendCommand }}>
       {children}
     </ConnectContext.Provider>
   );

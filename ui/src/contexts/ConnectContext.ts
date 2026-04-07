@@ -8,6 +8,7 @@ export interface ConnectContextValue {
   state: ConnectState | null;
   myDeviceId: string | null;
   connected: boolean;
+  sendCommand: (action: string, extra?: Record<string, unknown>) => void;
 }
 
 export const ConnectContext = createContext<ConnectContextValue | null>(null);

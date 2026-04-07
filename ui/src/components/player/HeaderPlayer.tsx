@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import { usePlayer } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
+import { useConnect } from "@/contexts/ConnectContext";
 
 import QueuePanel from "./QueuePanel";
 import AutoplayPrompt from "./AutoplayPrompt";
@@ -40,11 +41,15 @@ export default function HeaderPlayer() {
     elapsed,
     duration,
     isLoadingTracks,
+    isRemoteControlling,
+    pendingCommand,
     togglePlayPause,
     nextTrack,
     prevTrack,
     seek,
   } = usePlayer();
+
+  const { state: connectState } = useConnect();
 
   const [queueOpen, setQueueOpen] = useState(false);
   const closeQueue = useCallback(() => setQueueOpen(false), []);
@@ -53,15 +58,34 @@ export default function HeaderPlayer() {
     tracks && currentTrackIndex >= 0 ? tracks[currentTrackIndex] : null;
   const hasNext = tracks ? currentTrackIndex < tracks.length - 1 : false;
   const hasPrevious = currentTrackIndex > 0;
-  const isActive = status !== "idle" && currentTrack;
+  const isActive = (status !== "idle" && currentTrack) || isRemoteControlling;
 
-  const progress = duration > 0 ? (elapsed / duration) * 100 : 0;
-  const isPlaying = status === "playing" || status === "buffering";
-  const isLoading = status === "loading" || status === "buffering";
+  // In remote control mode, derive display values from server state
+  const remoteTrackTitle = isRemoteControlling && connectState
+    ? (connectState.tracks[connectState.trackIndex]?.title ?? null)
+    : null;
+  const remoteProgress = isRemoteControlling && connectState && connectState.durationMs > 0
+    ? (connectState.positionMs / connectState.durationMs) * 100
+    : 0;
+  const remoteShowInfo = isRemoteControlling && connectState?.date
+    ? {
+        date: formatShowDate(connectState.date),
+        venue: (connectState.venue ?? "") + (connectState.location ? `, ${connectState.location}` : ""),
+      }
+    : null;
 
-  const showInfo = isActive && activeShow ? showLabel(activeShow) : null;
+  const progress = isRemoteControlling ? remoteProgress : (duration > 0 ? (elapsed / duration) * 100 : 0);
+  const isPlaying = isRemoteControlling
+    ? (connectState?.playing ?? false)
+    : (status === "playing" || status === "buffering");
+  const isLoading = !isRemoteControlling && (status === "loading" || status === "buffering" || isLoadingTracks);
+  const showSpinner = pendingCommand !== null || isLoading;
+
+  const showInfo = isRemoteControlling ? remoteShowInfo : (isActive && activeShow ? showLabel(activeShow) : null);
+  const trackTitle = isRemoteControlling ? (remoteTrackTitle ?? showInfo?.date ?? "--") : (currentTrack?.title ?? showInfo?.date ?? "--");
 
   function handleSeek(e: React.MouseEvent<HTMLDivElement>) {
+    if (isRemoteControlling) return;
     const rect = e.currentTarget.getBoundingClientRect();
     const fraction = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
     seek(fraction);
@@ -74,17 +98,25 @@ export default function HeaderPlayer() {
       <div className="min-w-0 flex-1">
         <div className="flex items-baseline gap-2">
           <p className="truncate text-sm font-medium text-white">
-            {currentTrack?.title ?? showInfo?.date ?? "--"}
+            {trackTitle}
           </p>
-          {tracks && tracks.length > 1 && (
+          {!isRemoteControlling && tracks && tracks.length > 1 && (
             <span className="flex-shrink-0 text-xs tabular-nums text-white/30">
               {currentTrackIndex + 1}/{tracks.length}
+            </span>
+          )}
+          {isRemoteControlling && connectState && connectState.tracks.length > 1 && (
+            <span className="flex-shrink-0 text-xs tabular-nums text-white/30">
+              {connectState.trackIndex + 1}/{connectState.tracks.length}
             </span>
           )}
         </div>
         {showInfo ? (
           <p className="truncate text-xs text-white/40">
             {showInfo.date} — {showInfo.venue}
+            {isRemoteControlling && connectState?.activeDeviceName && (
+              <span className="ml-1 text-white/25">· {connectState.activeDeviceName}</span>
+            )}
           </p>
         ) : null}
       </div>
@@ -92,10 +124,10 @@ export default function HeaderPlayer() {
       {/* Seek bar */}
       <div className="flex flex-shrink-0 items-center gap-2">
         <span className="hidden text-[10px] tabular-nums text-white/30 sm:inline">
-          {formatTime(elapsed)}
+          {formatTime(isRemoteControlling ? (connectState?.positionMs ?? 0) / 1000 : elapsed)}
         </span>
         <div
-          className="h-1.5 w-20 cursor-pointer rounded-full bg-white/10 sm:w-28 md:w-36"
+          className={`h-1.5 w-20 rounded-full bg-white/10 sm:w-28 md:w-36 ${isRemoteControlling ? "cursor-default" : "cursor-pointer"}`}
           onClick={handleSeek}
         >
           <div
@@ -104,7 +136,7 @@ export default function HeaderPlayer() {
           />
         </div>
         <span className="hidden text-[10px] tabular-nums text-white/30 sm:inline">
-          {formatTime(duration)}
+          {formatTime(isRemoteControlling ? (connectState?.durationMs ?? 0) / 1000 : duration)}
         </span>
       </div>
 
@@ -123,11 +155,11 @@ export default function HeaderPlayer() {
 
         <button
           onClick={togglePlayPause}
-          disabled={isLoadingTracks || isLoading}
+          disabled={showSpinner}
           className="rounded-full bg-white p-1.5 text-deadly-bg transition-opacity hover:opacity-90 disabled:opacity-50"
           aria-label={isPlaying ? "Pause" : "Play"}
         >
-          {isLoadingTracks || isLoading ? (
+          {showSpinner ? (
             <svg
               width="16"
               height="16"

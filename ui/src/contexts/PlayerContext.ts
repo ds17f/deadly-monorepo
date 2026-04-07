@@ -26,11 +26,16 @@ export interface PlayerContextValue {
   isLoadingTracks: boolean;
   errorMessage: string | null;
 
+  // Connect integration
+  isActiveDevice: boolean;
+  isRemoteControlling: boolean;
+  pendingCommand: string | null;
+
   // Actions
   setViewedShow: (show: ViewedShow | null) => void;
   selectRecording: (identifier: string) => void;
   playShow: (show: ViewedShow) => void;
-  playRecording: (identifier: string) => void;
+  playRecording: (identifier: string) => Promise<ArchiveTrack[]>;
   playTrack: (index: number) => void;
   togglePlayPause: () => void;
   nextTrack: () => void;
