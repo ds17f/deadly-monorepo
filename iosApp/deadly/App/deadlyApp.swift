@@ -111,11 +111,16 @@ struct deadlyApp: App {
                         // Restore last playback position if the app was killed mid-playback.
                         await container.playbackRestorationService.restoreIfAvailable()
                     }
+                    // Connect WebSocket for device presence (no-op if not signed in)
+                    container.connectService.startIfAuthenticated()
                 }
         }
         .onChange(of: scenePhase) { _, newPhase in
             if newPhase == .background {
                 container.playbackRestorationService.saveNow()
+                container.connectService.stop()
+            } else if newPhase == .active {
+                container.connectService.startIfAuthenticated()
             }
         }
     }
