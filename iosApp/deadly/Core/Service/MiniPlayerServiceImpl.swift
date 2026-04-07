@@ -10,6 +10,7 @@ import SwiftAudioStreamEx
 final class MiniPlayerServiceImpl: MiniPlayerService {
 
     private let streamPlayer: StreamPlayer
+    var connectService: ConnectService?
 
     nonisolated init(streamPlayer: StreamPlayer) {
         self.streamPlayer = streamPlayer
@@ -92,10 +93,37 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
         return result.isEmpty ? nil : result
     }
 
+    // MARK: - Connect state
+
+    var isPendingCommand: Bool {
+        connectService?.pendingCommand != nil
+    }
+
     // MARK: - Actions
 
     func togglePlayPause() {
-        streamPlayer.togglePlayPause()
+        guard let connect = connectService else {
+            streamPlayer.togglePlayPause()
+            return
+        }
+
+        if connect.isRemoteControlling {
+            // Remote control: send command only, wait for server to confirm
+            if connect.connectState?.playing == true {
+                connect.sendPause()
+            } else {
+                connect.sendPlay()
+            }
+        } else {
+            // Active device (or no active device): drive local audio optimistically + send command
+            let wasPlaying = streamPlayer.playbackState.isPlaying
+            streamPlayer.togglePlayPause()
+            if wasPlaying {
+                connect.sendPause()
+            } else {
+                connect.sendPlay()
+            }
+        }
     }
 
     func skipNext() {

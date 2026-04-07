@@ -51,6 +51,9 @@ protocol MiniPlayerService: AnyObject {
     /// Formatted subtitle: "date - venue" matching Android format.
     var displaySubtitle: String? { get }
 
+    /// Whether a command has been sent and we're waiting for the server to confirm.
+    var isPendingCommand: Bool { get }
+
     /// Toggle between play and pause states.
     func togglePlayPause()
 

@@ -64,11 +64,17 @@ struct MiniPlayerOverlay: View {
                         Button {
                             service.togglePlayPause()
                         } label: {
-                            Image(systemName: service.isPlaying ? "pause.fill" : "play.fill")
-                                .font(.title3)
-                                .foregroundStyle(.primary)
+                            if service.isPendingCommand {
+                                ProgressView()
+                                    .frame(width: 24, height: 24)
+                            } else {
+                                Image(systemName: service.isPlaying ? "pause.fill" : "play.fill")
+                                    .font(.title3)
+                                    .foregroundStyle(.primary)
+                            }
                         }
                         .buttonStyle(.plain)
+                        .disabled(service.isPendingCommand)
                     }
                 }
                 .padding(.horizontal, 16)

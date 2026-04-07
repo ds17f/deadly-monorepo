@@ -1,19 +1,33 @@
 import Foundation
+import SwiftAudioStreamEx
 #if canImport(UIKit)
 import UIKit
 #endif
 
 /// Manages the Connect v2 WebSocket connection.
 /// Auto-registers this device, maintains heartbeat, and publishes device/state updates.
+/// Also drives local audio playback in response to server state broadcasts.
 @Observable
 @MainActor
 final class ConnectService: NSObject {
     private(set) var devices: [ConnectDevice] = []
     private(set) var connectState: ConnectState?
     private(set) var isConnected = false
+    private(set) var pendingCommand: String?
+
+    var isActiveDevice: Bool {
+        guard let state = connectState else { return false }
+        return state.activeDeviceId == appPreferences.installId
+    }
+
+    var isRemoteControlling: Bool {
+        guard let state = connectState else { return false }
+        return state.activeDeviceId != nil && state.activeDeviceId != appPreferences.installId
+    }
 
     private let appPreferences: AppPreferences
     private let authService: AuthService
+    private let streamPlayer: StreamPlayer
 
     private var webSocket: URLSessionWebSocketTask?
     private var urlSession: URLSession?
@@ -25,9 +39,10 @@ final class ConnectService: NSObject {
     private static let reconnectDelays: [Double] = [1, 2, 4, 8, 30]
     private static let heartbeatInterval: UInt64 = 15_000_000_000 // 15s in nanoseconds
 
-    init(appPreferences: AppPreferences, authService: AuthService) {
+    init(appPreferences: AppPreferences, authService: AuthService, streamPlayer: StreamPlayer) {
         self.appPreferences = appPreferences
         self.authService = authService
+        self.streamPlayer = streamPlayer
         super.init()
     }
 
@@ -52,6 +67,46 @@ final class ConnectService: NSObject {
         isConnected = false
         devices = []
         connectState = nil
+        pendingCommand = nil
+    }
+
+    // MARK: - Commands
+
+    func sendLoad(
+        showId: String,
+        recordingId: String,
+        tracks: [SessionTrack],
+        trackIndex: Int,
+        positionMs: Int,
+        durationMs: Int,
+        date: String?,
+        venue: String?,
+        location: String?,
+        autoplay: Bool = true
+    ) {
+        var extra: [String: Any] = [
+            "showId": showId,
+            "recordingId": recordingId,
+            "tracks": tracks.map { ["title": $0.title, "durationMs": $0.durationMs] },
+            "trackIndex": trackIndex,
+            "positionMs": positionMs,
+            "durationMs": durationMs,
+            "autoplay": autoplay,
+        ]
+        if let date { extra["date"] = date }
+        if let venue { extra["venue"] = venue }
+        if let location { extra["location"] = location }
+        sendCommand("load", extra: extra)
+    }
+
+    func sendPlay() {
+        pendingCommand = "play"
+        sendCommand("play")
+    }
+
+    func sendPause() {
+        pendingCommand = "pause"
+        sendCommand("pause")
     }
 
     // MARK: - Connection
@@ -63,14 +118,14 @@ final class ConnectService: NSObject {
         let wsBase = baseUrl
             .replacingOccurrences(of: "https://", with: "wss://")
             .replacingOccurrences(of: "http://", with: "ws://")
-        guard let encoded = token.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-              let url = URL(string: "\(wsBase)/ws/connect?token=\(encoded)") else {
-            return
-        }
+        guard let url = URL(string: "\(wsBase)/ws/connect") else { return }
+
+        var request = URLRequest(url: url)
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
 
         let session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
         urlSession = session
-        let task = session.webSocketTask(with: url)
+        let task = session.webSocketTask(with: request)
         webSocket = task
         task.resume()
         receiveMessages()
@@ -103,8 +158,13 @@ final class ConnectService: NSObject {
         let decoder = JSONDecoder()
         switch type {
         case "state":
-            if let stateData = try? JSONSerialization.data(withJSONObject: json["state"] as Any) {
-                connectState = try? decoder.decode(ConnectState.self, from: stateData)
+            if let stateData = try? JSONSerialization.data(withJSONObject: json["state"] as Any),
+               let newState = try? decoder.decode(ConnectState.self, from: stateData) {
+                // Version check: ignore stale broadcasts
+                if let current = connectState, newState.version <= current.version { return }
+                let old = connectState
+                connectState = newState
+                reactToState(old: old, new: newState)
             }
         case "devices":
             if let devicesData = try? JSONSerialization.data(withJSONObject: json["devices"] as Any) {
@@ -113,6 +173,35 @@ final class ConnectService: NSObject {
         default:
             break
         }
+    }
+
+    // MARK: - State Reaction
+
+    private func reactToState(old: ConnectState?, new: ConnectState) {
+        // Clear pending command if the server confirmed the expected transition
+        if let cmd = pendingCommand {
+            if cmd == "play" && new.playing { pendingCommand = nil }
+            else if cmd == "pause" && !new.playing { pendingCommand = nil }
+        }
+
+        // Only drive local audio when this device is the active device
+        guard isActiveDevice else { return }
+
+        if new.playing && !streamPlayer.playbackState.isPlaying {
+            streamPlayer.play()
+        } else if !new.playing && streamPlayer.playbackState.isPlaying {
+            streamPlayer.pause()
+        }
+    }
+
+    // MARK: - Send Helpers
+
+    private func sendCommand(_ action: String, extra: [String: Any] = [:]) {
+        var msg: [String: Any] = ["type": "command", "action": action]
+        for (key, value) in extra { msg[key] = value }
+        guard let data = try? JSONSerialization.data(withJSONObject: msg),
+              let text = String(data: data, encoding: .utf8) else { return }
+        webSocket?.send(.string(text)) { _ in }
     }
 
     // MARK: - Registration
