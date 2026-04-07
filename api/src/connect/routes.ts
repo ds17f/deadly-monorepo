@@ -6,9 +6,12 @@ import {
   registerDevice,
   unregisterDevice,
   handleHeartbeat,
+  handleLoad,
+  handlePlay,
+  handlePause,
   startHeartbeatSweep,
 } from "./state.js";
-import type { ClientMessage, DeviceType } from "./types.js";
+import type { ClientMessage, DeviceType, SessionTrack } from "./types.js";
 
 async function authenticateWs(
   request: FastifyRequest,
@@ -80,7 +83,34 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
         }
 
         case "command": {
-          // Not handled in this ticket — future implementation
+          if (!registeredDeviceId || !msg.action) return;
+          switch (msg.action) {
+            case "load": {
+              const { showId, recordingId, tracks, trackIndex, positionMs, durationMs } = msg as Record<string, unknown>;
+              if (typeof showId !== "string" || typeof recordingId !== "string" || !Array.isArray(tracks)) return;
+              handleLoad(userId!, registeredDeviceId, socket, {
+                showId,
+                recordingId,
+                tracks: tracks as SessionTrack[],
+                trackIndex: typeof trackIndex === "number" ? trackIndex : 0,
+                positionMs: typeof positionMs === "number" ? positionMs : 0,
+                durationMs: typeof durationMs === "number" ? durationMs : 0,
+                date: (msg as Record<string, unknown>).date as string | null,
+                venue: (msg as Record<string, unknown>).venue as string | null,
+                location: (msg as Record<string, unknown>).location as string | null,
+                autoplay: (msg as Record<string, unknown>).autoplay as boolean | undefined,
+              });
+              break;
+            }
+            case "play": {
+              handlePlay(userId!, registeredDeviceId, socket);
+              break;
+            }
+            case "pause": {
+              handlePause(userId!);
+              break;
+            }
+          }
           break;
         }
       }
