@@ -63,6 +63,7 @@ dependencies {
     // Core Dependencies
     implementation(project(":core:api:auth"))
     implementation(project(":core:auth"))
+    implementation(project(":core:connect"))
     implementation(project(":core:design"))
     implementation(project(":core:database"))
     implementation(project(":core:media"))

@@ -14,6 +14,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.core.view.WindowCompat
+import com.grateful.deadly.core.connect.ConnectService
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.theme.DeadlyMaterialTheme
@@ -25,6 +26,7 @@ class MainActivity : ComponentActivity() {
 
     @Inject lateinit var analyticsService: AnalyticsService
     @Inject lateinit var mediaControllerRepository: MediaControllerRepository
+    @Inject lateinit var connectService: ConnectService
 
     private var deepLinkUri by mutableStateOf<Uri?>(null)
 
@@ -52,10 +54,16 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+        connectService.startIfAuthenticated()
+    }
+
     override fun onStop() {
         super.onStop()
         mediaControllerRepository.notifyAppBackgrounded()
         analyticsService.flush()
+        connectService.stop()
     }
 
     override fun onNewIntent(intent: Intent) {
