@@ -1,5 +1,6 @@
 import type { WebSocket } from "ws";
-import type { ConnectState, ConnectDevice, DeviceType } from "./types.js";
+import type { ConnectState, ConnectDevice, DeviceType, SessionTrack } from "./types.js";
+import { upsertPlaybackPosition } from "../db/userdata.js";
 
 interface LiveDevice {
   device: ConnectDevice;
@@ -183,6 +184,116 @@ export function startHeartbeatSweep(): void {
       broadcastDevices(userId);
     }
   }, 10_000);
+}
+
+export interface LoadParams {
+  showId: string;
+  recordingId: string;
+  tracks: SessionTrack[];
+  trackIndex: number;
+  positionMs: number;
+  durationMs: number;
+  date?: string | null;
+  venue?: string | null;
+  location?: string | null;
+  autoplay?: boolean;
+}
+
+export function handleLoad(userId: string, deviceId: string, socket: WebSocket, params: LoadParams): void {
+  const state = userStates.get(userId);
+  if (!state) return;
+
+  const patch: Partial<ConnectState> = {
+    showId: params.showId,
+    recordingId: params.recordingId,
+    tracks: params.tracks,
+    trackIndex: params.trackIndex,
+    positionMs: params.positionMs,
+    positionTs: Date.now(),
+    durationMs: params.durationMs,
+    date: params.date ?? null,
+    venue: params.venue ?? null,
+    location: params.location ?? null,
+  };
+
+  if (params.autoplay) {
+    if (!state.activeDeviceId) {
+      const entry = liveDevices.get(deviceKey(userId, deviceId));
+      if (entry) {
+        patch.activeDeviceId = deviceId;
+        patch.activeDeviceName = entry.device.name;
+        patch.activeDeviceType = entry.device.type;
+      }
+    }
+    patch.playing = true;
+  }
+
+  mutate(userId, patch);
+
+  upsertPlaybackPosition(userId, {
+    showId: params.showId,
+    recordingId: params.recordingId,
+    trackIndex: params.trackIndex,
+    positionMs: params.positionMs,
+    date: params.date ?? undefined,
+    venue: params.venue ?? undefined,
+    location: params.location ?? undefined,
+  });
+}
+
+export function handlePlay(userId: string, deviceId: string, socket: WebSocket): void {
+  const state = userStates.get(userId);
+  if (!state) return;
+
+  if (!state.showId) {
+    sendJson(socket, { type: "error", message: "Nothing loaded", state });
+    return;
+  }
+
+  if (state.playing) return;
+
+  const patch: Partial<ConnectState> = {
+    playing: true,
+    positionTs: Date.now(),
+  };
+
+  if (!state.activeDeviceId) {
+    const entry = liveDevices.get(deviceKey(userId, deviceId));
+    if (!entry) return;
+    patch.activeDeviceId = deviceId;
+    patch.activeDeviceName = entry.device.name;
+    patch.activeDeviceType = entry.device.type;
+  }
+
+  mutate(userId, patch);
+}
+
+export function handlePause(userId: string): void {
+  const state = userStates.get(userId);
+  if (!state) return;
+
+  if (!state.activeDeviceId || !state.playing) return;
+
+  const now = Date.now();
+  const newPositionMs = state.positionMs + (now - state.positionTs);
+
+  mutate(userId, {
+    playing: false,
+    positionMs: newPositionMs,
+    positionTs: now,
+  });
+
+  if (state.showId && state.recordingId) {
+    upsertPlaybackPosition(userId, {
+      showId: state.showId,
+      recordingId: state.recordingId,
+      trackIndex: state.trackIndex,
+      positionMs: newPositionMs,
+      date: state.date ?? undefined,
+      venue: state.venue ?? undefined,
+      location: state.location ?? undefined,
+    });
+  }
 }
 
 export function stopHeartbeatSweep(): void {
