@@ -1,7 +1,5 @@
 import type { FastifyInstance, FastifyRequest } from "fastify";
 import { resolveUser } from "../auth/middleware.js";
-import { decodeJwt } from "../auth/crypto.js";
-import { getAppUserById } from "../db/users.js";
 import {
   registerDevice,
   unregisterDevice,
@@ -13,29 +11,6 @@ import {
 } from "./state.js";
 import type { ClientMessage, DeviceType, SessionTrack } from "./types.js";
 
-async function authenticateWs(
-  request: FastifyRequest,
-): Promise<{ id: string } | null> {
-  // Try normal resolveUser (Bearer header + session cookie)
-  const user = await resolveUser(request);
-  if (user) return user;
-
-  // Fallback: token query param for browsers
-  const token = (request.query as Record<string, string>)?.token;
-  if (token) {
-    const payload = await decodeJwt(token);
-    if (payload?.accountId) {
-      const appUser = getAppUserById(payload.accountId as string);
-      return {
-        id: payload.accountId as string,
-        ...(appUser ? { isAdmin: appUser.is_admin === 1 } : {}),
-      };
-    }
-  }
-
-  return null;
-}
-
 export async function connectRoutes(app: FastifyInstance): Promise<void> {
   startHeartbeatSweep();
 
@@ -43,14 +18,15 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
     let userId: string | null = null;
     let registeredDeviceId: string | null = null;
 
-    // Auth resolves asynchronously; messages arriving before it resolves are
-    // handled by awaiting the same promise.
-    const authPromise = authenticateWs(request).then((user) => {
+    // Auth via session cookie (sent automatically by browser on same-origin WS).
+    // Resolves asynchronously; messages arriving before it resolves await the same promise.
+    const authPromise = resolveUser(request).then((user) => {
       if (!user) {
         socket.close(4003, "Unauthorized");
         return null;
       }
       userId = user.id;
+      request.log.info({ userId }, "ws/connect: authenticated");
       return user;
     });
 
@@ -84,6 +60,7 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
 
         case "command": {
           if (!registeredDeviceId || !msg.action) return;
+          request.log.info({ userId, deviceId: registeredDeviceId, action: msg.action }, "ws/connect: command");
           switch (msg.action) {
             case "load": {
               const { showId, recordingId, tracks, trackIndex, positionMs, durationMs } = msg as Record<string, unknown>;
