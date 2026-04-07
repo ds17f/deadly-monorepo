@@ -35,17 +35,6 @@ function getDeviceName(): string {
   return `${browser}${os}`;
 }
 
-async function fetchToken(): Promise<string | null> {
-  try {
-    const res = await fetch("/api/auth/token", { credentials: "include" });
-    if (!res.ok) return null;
-    const data = await res.json() as { token?: string };
-    return data.token ?? null;
-  } catch {
-    return null;
-  }
-}
-
 export default function ConnectProvider({
   children,
 }: {
@@ -77,18 +66,15 @@ export default function ConnectProvider({
     }
   }, []);
 
-  const connect = useCallback(async () => {
+  const connect = useCallback(() => {
     if (!shouldConnectRef.current) return;
-
-    const token = await fetchToken();
-    if (!token || !shouldConnectRef.current) return;
 
     const deviceId = getOrCreateDeviceId();
     const deviceName = getDeviceName();
     setMyDeviceId(deviceId);
 
     const wsProtocol = window.location.protocol === "https:" ? "wss:" : "ws:";
-    const wsUrl = `${wsProtocol}//${window.location.host}/ws/connect?token=${encodeURIComponent(token)}`;
+    const wsUrl = `${wsProtocol}//${window.location.host}/ws/connect`;
 
     const ws = new WebSocket(wsUrl);
     wsRef.current = ws;
@@ -143,7 +129,7 @@ export default function ConnectProvider({
         Math.min(reconnectAttemptRef.current, RECONNECT_DELAYS_MS.length - 1)
       ];
       reconnectAttemptRef.current += 1;
-      reconnectTimerRef.current = setTimeout(connect, delay);
+      reconnectTimerRef.current = setTimeout(() => connect(), delay);
     };
 
     ws.onerror = () => {
