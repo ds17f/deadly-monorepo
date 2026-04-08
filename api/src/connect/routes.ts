@@ -7,6 +7,7 @@ import {
   handleLoad,
   handlePlay,
   handlePause,
+  handleSeek,
   startHeartbeatSweep,
 } from "./state.js";
 import type { ClientMessage, DeviceType, SessionTrack } from "./types.js";
@@ -85,6 +86,16 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
             }
             case "pause": {
               handlePause(userId!);
+              break;
+            }
+            case "seek": {
+              const { trackIndex, positionMs, durationMs } = msg as Record<string, unknown>;
+              if (typeof trackIndex !== "number") return;
+              handleSeek(userId!, {
+                trackIndex,
+                positionMs: typeof positionMs === "number" ? positionMs : 0,
+                durationMs: typeof durationMs === "number" ? durationMs : undefined,
+              });
               break;
             }
           }

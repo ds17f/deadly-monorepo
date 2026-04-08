@@ -28,6 +28,12 @@ final class ConnectService: NSObject {
         return state.activeDeviceId != nil && state.activeDeviceId != appPreferences.installId
     }
 
+    /// Callback to load a show into the local player. Set by PlaylistServiceImpl
+    /// to avoid circular dependency. Called when Connect state has a recording
+    /// that isn't loaded locally.
+    /// Parameters: (showId, trackIndex, positionMs, autoPlay)
+    var onLoadShow: ((String, Int, Int, Bool) async -> Void)?
+
     private let appPreferences: AppPreferences
     private let authService: AuthService
     private let streamPlayer: StreamPlayer
@@ -118,6 +124,15 @@ final class ConnectService: NSObject {
         sendCommand("pause")
     }
 
+    func sendSeek(trackIndex: Int, positionMs: Int, durationMs: Int) {
+        logger.info("sendSeek: track=\(trackIndex, privacy: .public) pos=\(positionMs, privacy: .public) dur=\(durationMs, privacy: .public)")
+        sendCommand("seek", extra: [
+            "trackIndex": trackIndex,
+            "positionMs": positionMs,
+            "durationMs": durationMs,
+        ])
+    }
+
     // MARK: - Connection
 
     private func connect() async {
@@ -145,7 +160,7 @@ final class ConnectService: NSObject {
         let task = session.webSocketTask(with: request)
         webSocket = task
         task.resume()
-        receiveMessages()
+        // receiveMessages() is started from didOpenWithProtocol delegate
     }
 
     private func receiveMessages() {
@@ -188,7 +203,7 @@ final class ConnectService: NSObject {
                 let myId = appPreferences.installId
                 let isActive = newState.activeDeviceId == myId
                 let isPlaying = streamPlayer.playbackState.isPlaying
-                logger.info("State v\(newState.version, privacy: .public): show=\(newState.showId ?? "nil", privacy: .public) rec=\(newState.recordingId ?? "nil", privacy: .public) track=\(newState.trackIndex, privacy: .public) playing=\(newState.playing, privacy: .public) activeDevice=\(newState.activeDeviceId ?? "nil", privacy: .public) isMe=\(isActive, privacy: .public) localPlaying=\(isPlaying, privacy: .public)")
+                logger.info("State v\(newState.version, privacy: .public): show=\(newState.showId ?? "nil", privacy: .public) rec=\(newState.recordingId ?? "nil", privacy: .public) track=\(newState.trackIndex, privacy: .public)/\(newState.tracks.count, privacy: .public) playing=\(newState.playing, privacy: .public) activeDevice=\(newState.activeDeviceId ?? "nil", privacy: .public) isMe=\(isActive, privacy: .public) localPlaying=\(isPlaying, privacy: .public)")
                 let old = connectState
                 connectState = newState
                 reactToState(old: old, new: newState)
@@ -219,7 +234,20 @@ final class ConnectService: NSObject {
             }
         }
 
-        // Only drive local audio when this device is the active device
+        // If the recording changed (or first state), load the show locally
+        let localRecordingId = streamPlayer.currentTrack?.metadata["recordingId"]
+        if let showId = new.showId, let recId = new.recordingId, recId != localRecordingId {
+            let autoPlay = isActiveDevice && new.playing
+            logger.info("reactToState: NEW RECORDING — server=\(recId, privacy: .public) local=\(localRecordingId ?? "nil", privacy: .public) isActive=\(self.isActiveDevice, privacy: .public) autoPlay=\(autoPlay, privacy: .public) track=\(new.trackIndex, privacy: .public)")
+            if let onLoadShow {
+                Task {
+                    await onLoadShow(showId, new.trackIndex, new.positionMs, autoPlay)
+                }
+            }
+            return
+        }
+
+        // Only drive local play/pause when this device is the active device
         guard isActiveDevice else {
             logger.info("reactToState: not active device, skipping playback control")
             return
@@ -342,6 +370,7 @@ extension ConnectService: URLSessionWebSocketDelegate {
             self.reconnectAttempt = 0
             self.sendRegister()
             self.startHeartbeat()
+            self.receiveMessages()
         }
     }
 

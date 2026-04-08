@@ -141,7 +141,7 @@ export function registerDevice(
   liveDevices.set(key, { device, socket });
 
   const state = getOrCreateState(userId);
-  log(`registerDevice: ${name}[${type}] (${deviceId}) — sending state v${state.version} show=${state.showId} rec=${state.recordingId} playing=${state.playing}`);
+  log(`registerDevice: ${name}[${type}] (${deviceId}) — sending state v${state.version} show=${state.showId} rec=${state.recordingId} track=${state.trackIndex}/${state.tracks.length} pos=${state.positionMs} playing=${state.playing}`);
   sendJson(socket, { type: "state", state });
   broadcastDevices(userId);
 }
@@ -328,6 +328,35 @@ export function handlePause(userId: string): void {
       recordingId: state.recordingId,
       trackIndex: state.trackIndex,
       positionMs: newPositionMs,
+      date: state.date ?? undefined,
+      venue: state.venue ?? undefined,
+      location: state.location ?? undefined,
+    });
+  }
+}
+
+export function handleSeek(userId: string, params: { trackIndex: number; positionMs: number; durationMs?: number }): void {
+  const state = userStates.get(userId);
+  if (!state || !state.showId) return;
+
+  const patch: Partial<ConnectState> = {
+    trackIndex: params.trackIndex,
+    positionMs: params.positionMs,
+    positionTs: Date.now(),
+  };
+  if (typeof params.durationMs === "number") {
+    patch.durationMs = params.durationMs;
+  }
+
+  log(`handleSeek: track=${params.trackIndex} pos=${params.positionMs} dur=${params.durationMs ?? "unchanged"}`);
+  mutate(userId, patch);
+
+  if (state.showId && state.recordingId) {
+    upsertPlaybackPosition(userId, {
+      showId: state.showId,
+      recordingId: state.recordingId,
+      trackIndex: params.trackIndex,
+      positionMs: params.positionMs,
       date: state.date ?? undefined,
       venue: state.venue ?? undefined,
       location: state.location ?? undefined,

@@ -21,9 +21,15 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
 
     // MARK: - Remote state helpers
 
+    /// Returns Connect state when a shared show is loaded and this device isn't
+    /// the active playback device (i.e. local StreamPlayer is not authoritative).
+    /// Covers both "another device is active" and "paused with no active device".
     private var remote: ConnectState? {
-        guard let cs = connectService, cs.isRemoteControlling else { return nil }
-        return cs.connectState
+        guard let cs = connectService,
+              let state = cs.connectState,
+              state.showId != nil,
+              !cs.isActiveDevice else { return nil }
+        return state
     }
 
     // MARK: - Computed state
@@ -56,7 +62,7 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
     }
 
     var artworkURL: String? {
-        if remote != nil { return nil }
+        // Always prefer local artwork (ticket art) even when showing remote state
         return streamPlayer.currentTrack?.artworkURL?.absoluteString
     }
 
