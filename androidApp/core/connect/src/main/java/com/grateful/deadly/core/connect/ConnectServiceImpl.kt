@@ -320,6 +320,15 @@ class ConnectServiceImpl @Inject constructor(
         sendCommand("pause")
     }
 
+    override fun sendSeek(trackIndex: Int, positionMs: Int, durationMs: Int) {
+        Log.d(TAG, "sendSeek: track=$trackIndex pos=$positionMs dur=$durationMs")
+        sendCommand("seek", mapOf(
+            "trackIndex" to trackIndex,
+            "positionMs" to positionMs,
+            "durationMs" to durationMs,
+        ))
+    }
+
     private fun sendCommand(action: String, extra: Map<String, Any> = emptyMap()) {
         val ws = webSocket
         if (ws == null) {

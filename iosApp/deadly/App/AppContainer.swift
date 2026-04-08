@@ -218,6 +218,24 @@ final class AppContainer {
             MainActor.assumeIsolated {
                 playlistSvc.connectService = connect
                 miniPlayer.connectService = connect
+                restorationSvc.connectService = connect
+                connect.onLoadShow = { [weak playlistSvc, weak player] showId, trackIndex, positionMs, autoPlay in
+                    guard let svc = playlistSvc, let player else { return }
+                    svc.suppressConnectNotify = true
+                    defer { svc.suppressConnectNotify = false }
+                    await svc.loadShow(showId)
+                    guard !svc.tracks.isEmpty else { return }
+                    let idx = min(trackIndex, svc.tracks.count - 1)
+                    svc.playTrack(at: idx)
+                    if !autoPlay {
+                        // loadQueue starts playback — poll until playing, then pause
+                        let deadline = Date.now.addingTimeInterval(10)
+                        while player.playbackState != .playing && Date.now < deadline {
+                            try? await Task.sleep(for: .milliseconds(100))
+                        }
+                        player.pause()
+                    }
+                }
             }
             let coldStartMs = Int((CFAbsoluteTimeGetCurrent() - initStart) * 1000)
             analytics.track("app_open")

@@ -13,6 +13,7 @@ final class PlaybackRestorationService {
     private let store: LastPlayedTrackStore
     private let streamPlayer: StreamPlayer
     private let playlistService: PlaylistServiceImpl
+    var connectService: ConnectService?
     private var monitorTask: Task<Void, Never>?
 
     init(
@@ -53,11 +54,18 @@ final class PlaybackRestorationService {
     /// Loads the show from the database, fetches tracks from the network,
     /// starts playback, then immediately pauses at the saved seek position.
     func restoreIfAvailable() async {
+        // If Connect already has a recording loaded, skip local restore —
+        // Connect's reactToState will load the correct shared show.
+        if let connectRec = connectService?.connectState?.recordingId {
+            logger.info("Skipping local restore — Connect has recording: \(connectRec, privacy: .public)")
+            return
+        }
+
         guard let saved = store.load() else {
             logger.info("No saved playback state to restore")
             return
         }
-        logger.info("Restoring: '\(saved.trackTitle)' track \(saved.trackIndex) at \(saved.positionMs)ms")
+        logger.info("Restoring: '\(saved.trackTitle, privacy: .public)' track \(saved.trackIndex, privacy: .public) at \(saved.positionMs, privacy: .public)ms")
 
         await playlistService.loadShow(saved.showId)
 

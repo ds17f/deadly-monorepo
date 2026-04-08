@@ -22,6 +22,8 @@ final class PlaylistServiceImpl: PlaylistService {
     private let analyticsService: AnalyticsService?
     let streamPlayer: StreamPlayer
     var connectService: ConnectService?
+    /// When true, playTrack() skips sending sendLoad to avoid Connect→load→sendLoad loops
+    var suppressConnectNotify = false
 
     /// Tracks the currently playing item for playback_end analytics.
     private var playbackStartInfo: (showId: String, recordingId: String, trackNumber: Int)?
@@ -194,20 +196,23 @@ final class PlaylistServiceImpl: PlaylistService {
         streamPlayer.loadQueue(trackItems, startingAt: index)
 
         // Notify Connect server so all devices receive the new state
-        let sessionTracks = tracks.map { SessionTrack(title: $0.title, durationMs: Int(($0.durationInterval ?? 0) * 1000)) }
-        let firstDurationMs = index < tracks.count ? Int((tracks[index].durationInterval ?? 0) * 1000) : 0
-        connectService?.sendLoad(
-            showId: showId,
-            recordingId: recordingId,
-            tracks: sessionTracks,
-            trackIndex: index,
-            positionMs: 0,
-            durationMs: firstDurationMs,
-            date: currentShow?.date,
-            venue: currentShow?.venue.name,
-            location: currentShow?.location.displayText,
-            autoplay: true
-        )
+        // (suppressed when loading from a Connect state broadcast to avoid loops)
+        if !suppressConnectNotify {
+            let sessionTracks = tracks.map { SessionTrack(title: $0.title, durationMs: Int(($0.durationInterval ?? 0) * 1000)) }
+            let firstDurationMs = index < tracks.count ? Int((tracks[index].durationInterval ?? 0) * 1000) : 0
+            connectService?.sendLoad(
+                showId: showId,
+                recordingId: recordingId,
+                tracks: sessionTracks,
+                trackIndex: index,
+                positionMs: 0,
+                durationMs: firstDurationMs,
+                date: currentShow?.date,
+                venue: currentShow?.venue.name,
+                location: currentShow?.location.displayText,
+                autoplay: true
+            )
+        }
 
         playbackStartInfo = (showId: showId, recordingId: recordingId, trackNumber: index + 1)
         analyticsService?.track("playback_start", props: [

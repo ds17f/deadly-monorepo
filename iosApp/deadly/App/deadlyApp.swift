@@ -108,11 +108,13 @@ struct deadlyApp: App {
                             ShowArtworkService.shared.populate(sourceTypes)
                         }
                         ShowArtworkService.shared.badgeStyle = SourceBadgeStyle.fromString(container.appPreferences.sourceBadgeStyle)
-                        // Restore last playback position if the app was killed mid-playback.
+                        // Start Connect first so it can receive shared state before local restore
+                        container.connectService.startIfAuthenticated()
+                        // Brief wait for WebSocket to connect and receive state
+                        try? await Task.sleep(for: .seconds(1.5))
+                        // Restore last playback position only if Connect has no shared session
                         await container.playbackRestorationService.restoreIfAvailable()
                     }
-                    // Connect WebSocket for device presence (no-op if not signed in)
-                    container.connectService.startIfAuthenticated()
                 }
         }
         .onChange(of: scenePhase) { _, newPhase in

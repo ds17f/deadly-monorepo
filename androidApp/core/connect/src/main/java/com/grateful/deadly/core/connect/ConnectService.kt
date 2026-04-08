@@ -30,4 +30,5 @@ interface ConnectService {
 
     fun sendPlay()
     fun sendPause()
+    fun sendSeek(trackIndex: Int, positionMs: Int, durationMs: Int)
 }
