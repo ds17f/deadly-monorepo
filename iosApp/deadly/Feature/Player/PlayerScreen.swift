@@ -144,7 +144,7 @@ struct PlayerScreen: View {
                             }
 
                             Button {
-                                streamPlayer.togglePlayPause()
+                                container.miniPlayerService.togglePlayPause()
                             } label: {
                                 Image(systemName: streamPlayer.playbackState.isPlaying
                                       ? "pause.circle.fill" : "play.circle.fill")
