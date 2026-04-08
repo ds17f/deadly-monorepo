@@ -1,8 +1,11 @@
 import Foundation
 import SwiftAudioStreamEx
+import os.log
 #if canImport(UIKit)
 import UIKit
 #endif
+
+private let logger = Logger(subsystem: "com.grateful.deadly", category: "ConnectService")
 
 /// Manages the Connect v2 WebSocket connection.
 /// Auto-registers this device, maintains heartbeat, and publishes device/state updates.
@@ -49,7 +52,9 @@ final class ConnectService: NSObject {
     // MARK: - Public Interface
 
     func startIfAuthenticated() {
-        guard authService.token != nil else { return }
+        let hasToken = authService.token != nil
+        logger.info("startIfAuthenticated: token=\(hasToken ? "present" : "null", privacy: .public) shouldConnect=\(self.shouldConnect, privacy: .public)")
+        guard hasToken else { return }
         guard !shouldConnect else { return }
         shouldConnect = true
         reconnectAttempt = 0
@@ -57,6 +62,7 @@ final class ConnectService: NSObject {
     }
 
     func stop() {
+        logger.info("stop() called")
         shouldConnect = false
         reconnectTask?.cancel()
         reconnectTask = nil
@@ -84,6 +90,7 @@ final class ConnectService: NSObject {
         location: String?,
         autoplay: Bool = true
     ) {
+        logger.info("sendLoad: show=\(showId, privacy: .public) rec=\(recordingId, privacy: .public) track=\(trackIndex, privacy: .public) pos=\(positionMs, privacy: .public) dur=\(durationMs, privacy: .public) autoplay=\(autoplay, privacy: .public)")
         var extra: [String: Any] = [
             "showId": showId,
             "recordingId": recordingId,
@@ -100,11 +107,13 @@ final class ConnectService: NSObject {
     }
 
     func sendPlay() {
+        logger.info("sendPlay (pending=\(self.pendingCommand ?? "nil", privacy: .public) -> play)")
         pendingCommand = "play"
         sendCommand("play")
     }
 
     func sendPause() {
+        logger.info("sendPause (pending=\(self.pendingCommand ?? "nil", privacy: .public) -> pause)")
         pendingCommand = "pause"
         sendCommand("pause")
     }
@@ -112,13 +121,21 @@ final class ConnectService: NSObject {
     // MARK: - Connection
 
     private func connect() async {
-        guard shouldConnect, let token = authService.token else { return }
+        guard shouldConnect, let token = authService.token else {
+            logger.warning("connect: bailing — shouldConnect=\(self.shouldConnect, privacy: .public) token=\(self.authService.token != nil ? "present" : "null", privacy: .public)")
+            return
+        }
 
         let baseUrl = appPreferences.apiBaseUrl
         let wsBase = baseUrl
             .replacingOccurrences(of: "https://", with: "wss://")
             .replacingOccurrences(of: "http://", with: "ws://")
-        guard let url = URL(string: "\(wsBase)/ws/connect") else { return }
+        guard let url = URL(string: "\(wsBase)/ws/connect") else {
+            logger.error("connect: invalid URL from base \(wsBase, privacy: .public)")
+            return
+        }
+
+        logger.info("Connecting to \(url.absoluteString, privacy: .public)")
 
         var request = URLRequest(url: url)
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
@@ -139,8 +156,8 @@ final class ConnectService: NSObject {
                 case .success(let message):
                     self.handleMessage(message)
                     self.receiveMessages()
-                case .failure:
-                    // onClose fires via delegate; reconnect logic lives there
+                case .failure(let error):
+                    logger.warning("receiveMessages failure: \(error.localizedDescription, privacy: .public)")
                     break
                 }
             }
@@ -153,7 +170,10 @@ final class ConnectService: NSObject {
         guard case .string(let text) = message,
               let data = text.data(using: .utf8),
               let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
-              let type = json["type"] as? String else { return }
+              let type = json["type"] as? String else {
+            logger.warning("handleMessage: failed to parse message")
+            return
+        }
 
         let decoder = JSONDecoder()
         switch type {
@@ -161,17 +181,27 @@ final class ConnectService: NSObject {
             if let stateData = try? JSONSerialization.data(withJSONObject: json["state"] as Any),
                let newState = try? decoder.decode(ConnectState.self, from: stateData) {
                 // Version check: ignore stale broadcasts
-                if let current = connectState, newState.version <= current.version { return }
+                if let current = connectState, newState.version <= current.version {
+                    logger.debug("Ignoring stale state v\(newState.version, privacy: .public) (current=\(current.version, privacy: .public))")
+                    return
+                }
+                let myId = appPreferences.installId
+                let isActive = newState.activeDeviceId == myId
+                let isPlaying = streamPlayer.playbackState.isPlaying
+                logger.info("State v\(newState.version, privacy: .public): show=\(newState.showId ?? "nil", privacy: .public) rec=\(newState.recordingId ?? "nil", privacy: .public) track=\(newState.trackIndex, privacy: .public) playing=\(newState.playing, privacy: .public) activeDevice=\(newState.activeDeviceId ?? "nil", privacy: .public) isMe=\(isActive, privacy: .public) localPlaying=\(isPlaying, privacy: .public)")
                 let old = connectState
                 connectState = newState
                 reactToState(old: old, new: newState)
+            } else {
+                logger.warning("handleMessage: failed to decode state")
             }
         case "devices":
             if let devicesData = try? JSONSerialization.data(withJSONObject: json["devices"] as Any) {
                 devices = (try? decoder.decode([ConnectDevice].self, from: devicesData)) ?? []
+                logger.info("Devices (\(self.devices.count, privacy: .public)): \(self.devices.map { "\($0.deviceName)[\($0.deviceType)]" }.joined(separator: ", "), privacy: .public)")
             }
         default:
-            break
+            logger.debug("handleMessage: unknown type '\(type, privacy: .public)'")
         }
     }
 
@@ -180,17 +210,30 @@ final class ConnectService: NSObject {
     private func reactToState(old: ConnectState?, new: ConnectState) {
         // Clear pending command if the server confirmed the expected transition
         if let cmd = pendingCommand {
-            if cmd == "play" && new.playing { pendingCommand = nil }
-            else if cmd == "pause" && !new.playing { pendingCommand = nil }
+            if cmd == "play" && new.playing {
+                logger.info("reactToState: pending 'play' confirmed, clearing")
+                pendingCommand = nil
+            } else if cmd == "pause" && !new.playing {
+                logger.info("reactToState: pending 'pause' confirmed, clearing")
+                pendingCommand = nil
+            }
         }
 
         // Only drive local audio when this device is the active device
-        guard isActiveDevice else { return }
+        guard isActiveDevice else {
+            logger.info("reactToState: not active device, skipping playback control")
+            return
+        }
 
-        if new.playing && !streamPlayer.playbackState.isPlaying {
+        let localPlaying = streamPlayer.playbackState.isPlaying
+        if new.playing && !localPlaying {
+            logger.info("reactToState: server says play, local paused -> calling streamPlayer.play()")
             streamPlayer.play()
-        } else if !new.playing && streamPlayer.playbackState.isPlaying {
+        } else if !new.playing && localPlaying {
+            logger.info("reactToState: server says pause, local playing -> calling streamPlayer.pause()")
             streamPlayer.pause()
+        } else {
+            logger.debug("reactToState: no playback change needed (server.playing=\(new.playing, privacy: .public) local.playing=\(localPlaying, privacy: .public))")
         }
     }
 
@@ -200,8 +243,20 @@ final class ConnectService: NSObject {
         var msg: [String: Any] = ["type": "command", "action": action]
         for (key, value) in extra { msg[key] = value }
         guard let data = try? JSONSerialization.data(withJSONObject: msg),
-              let text = String(data: data, encoding: .utf8) else { return }
-        webSocket?.send(.string(text)) { _ in }
+              let text = String(data: data, encoding: .utf8) else {
+            logger.error("sendCommand: failed to serialize \(action, privacy: .public)")
+            return
+        }
+        guard webSocket != nil else {
+            logger.warning("sendCommand: \(action, privacy: .public) DROPPED — webSocket is nil")
+            return
+        }
+        logger.debug("sendCommand: \(action, privacy: .public) (\(text.count, privacy: .public) bytes)")
+        webSocket?.send(.string(text)) { error in
+            if let error {
+                logger.error("sendCommand: \(action, privacy: .public) send error: \(error.localizedDescription, privacy: .public)")
+            }
+        }
     }
 
     // MARK: - Registration
@@ -214,6 +269,7 @@ final class ConnectService: NSObject {
         let deviceName = "iPhone"
         #endif
 
+        logger.info("sendRegister: deviceId=\(deviceId, privacy: .public) name=\(deviceName, privacy: .public)")
         let msg: [String: String] = [
             "type": "register",
             "deviceId": deviceId,
@@ -251,10 +307,14 @@ final class ConnectService: NSObject {
         webSocket = nil
 
         // 4003 = Unauthorized (terminal — token invalid)
-        if !shouldConnect || closeCode == 4003 { return }
+        if !shouldConnect || closeCode == 4003 {
+            logger.info("handleDisconnect: not reconnecting (shouldConnect=\(self.shouldConnect, privacy: .public) code=\(closeCode ?? -1, privacy: .public))")
+            return
+        }
 
         let delay = Self.reconnectDelays[min(reconnectAttempt, Self.reconnectDelays.count - 1)]
         reconnectAttempt += 1
+        logger.info("handleDisconnect: reconnecting in \(delay, privacy: .public)s (attempt \(self.reconnectAttempt, privacy: .public))")
         reconnectTask = Task {
             try? await Task.sleep(nanoseconds: UInt64(delay * 1_000_000_000))
             guard !Task.isCancelled else { return }
@@ -273,9 +333,11 @@ extension ConnectService: URLSessionWebSocketDelegate {
     ) {
         Task { @MainActor [weak self] in
             guard let self, self.shouldConnect else {
+                logger.warning("WebSocket opened but shouldConnect=false, closing")
                 webSocketTask.cancel(with: .normalClosure, reason: nil)
                 return
             }
+            logger.info("Connected (WebSocket open)")
             self.isConnected = true
             self.reconnectAttempt = 0
             self.sendRegister()
@@ -289,6 +351,8 @@ extension ConnectService: URLSessionWebSocketDelegate {
         didCloseWith closeCode: URLSessionWebSocketTask.CloseCode,
         reason: Data?
     ) {
+        let reasonStr = reason.flatMap { String(data: $0, encoding: .utf8) } ?? "(none)"
+        logger.info("WebSocket closed: code=\(closeCode.rawValue, privacy: .public) reason=\(reasonStr, privacy: .public)")
         Task { @MainActor [weak self] in
             self?.handleDisconnect(closeCode: closeCode.rawValue)
         }
@@ -299,7 +363,8 @@ extension ConnectService: URLSessionWebSocketDelegate {
         task: URLSessionTask,
         didCompleteWithError error: Error?
     ) {
-        guard error != nil else { return }
+        guard let error else { return }
+        logger.warning("WebSocket error: \(error.localizedDescription, privacy: .public)")
         Task { @MainActor [weak self] in
             self?.handleDisconnect(closeCode: nil)
         }

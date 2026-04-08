@@ -2,6 +2,7 @@ package com.grateful.deadly.core.miniplayer.service
 
 import android.util.Log
 import com.grateful.deadly.core.api.miniplayer.MiniPlayerService
+import com.grateful.deadly.core.connect.ConnectService
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.media.state.MediaControllerStateUtil
 import com.grateful.deadly.core.model.CurrentTrackInfo
@@ -25,7 +26,8 @@ import javax.inject.Singleton
 @Singleton
 class MiniPlayerServiceImpl @Inject constructor(
     private val mediaControllerRepository: MediaControllerRepository,
-    private val mediaControllerStateUtil: MediaControllerStateUtil
+    private val mediaControllerStateUtil: MediaControllerStateUtil,
+    private val connectService: ConnectService,
 ) : MiniPlayerService {
     
     companion object {
@@ -46,7 +48,41 @@ class MiniPlayerServiceImpl @Inject constructor(
      * Direct command delegation to MediaControllerRepository
      */
     override suspend fun togglePlayPause() {
-        Log.d(TAG, "🕒🎵 [MINI] MiniPlayer togglePlayPause requested at ${System.currentTimeMillis()}")
-        mediaControllerRepository.togglePlayPause()
+        val state = connectService.connectState.value
+        val isActive = connectService.isActiveDevice.value
+        val serverPlaying = state?.playing ?: false
+        val localPlaying = mediaControllerRepository.isPlaying.value
+        val activeDeviceId = state?.activeDeviceId
+
+        val isRemoteControlling = state?.let {
+            it.activeDeviceId != null && !isActive
+        } ?: false
+
+        Log.d(TAG, "togglePlayPause: isRemote=$isRemoteControlling isActive=$isActive " +
+            "serverPlaying=$serverPlaying localPlaying=$localPlaying " +
+            "activeDevice=$activeDeviceId connected=${connectService.isConnected.value}")
+
+        if (isRemoteControlling) {
+            // Remote control: send command only, wait for server to confirm
+            if (serverPlaying) {
+                Log.d(TAG, "togglePlayPause: remote -> sendPause")
+                connectService.sendPause()
+            } else {
+                Log.d(TAG, "togglePlayPause: remote -> sendPlay")
+                connectService.sendPlay()
+            }
+        } else {
+            // Active device or no active device: drive local audio optimistically + send command
+            val wasPlaying = mediaControllerRepository.isPlaying.value
+            Log.d(TAG, "togglePlayPause: local toggle (wasPlaying=$wasPlaying)")
+            mediaControllerRepository.togglePlayPause()
+            if (wasPlaying) {
+                Log.d(TAG, "togglePlayPause: optimistic -> sendPause")
+                connectService.sendPause()
+            } else {
+                Log.d(TAG, "togglePlayPause: optimistic -> sendPlay")
+                connectService.sendPlay()
+            }
+        }
     }
 }

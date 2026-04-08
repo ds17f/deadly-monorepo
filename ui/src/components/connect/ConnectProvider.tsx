@@ -9,6 +9,9 @@ const HEARTBEAT_INTERVAL_MS = 15_000;
 const RECONNECT_DELAYS_MS = [1_000, 2_000, 4_000, 8_000, 30_000];
 const DEVICE_ID_KEY = "deadly-device-id";
 
+const log = (...args: unknown[]) => console.log("[Connect]", ...args);
+const warn = (...args: unknown[]) => console.warn("[Connect]", ...args);
+
 function getOrCreateDeviceId(): string {
   let id = localStorage.getItem(DEVICE_ID_KEY);
   if (!id) {
@@ -51,6 +54,7 @@ export default function ConnectProvider({
   const reconnectTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const reconnectAttemptRef = useRef(0);
   const shouldConnectRef = useRef(false);
+  const currentVersionRef = useRef(0);
 
   const clearHeartbeat = useCallback(() => {
     if (heartbeatRef.current) {
@@ -76,6 +80,7 @@ export default function ConnectProvider({
     const wsProtocol = window.location.protocol === "https:" ? "wss:" : "ws:";
     const wsUrl = `${wsProtocol}//${window.location.host}/ws/connect`;
 
+    log(`Connecting to ${wsUrl} as ${deviceName} (${deviceId})`);
     const ws = new WebSocket(wsUrl);
     wsRef.current = ws;
 
@@ -84,6 +89,7 @@ export default function ConnectProvider({
         ws.close();
         return;
       }
+      log("Connected, sending register");
       setConnected(true);
       reconnectAttemptRef.current = 0;
 
@@ -111,40 +117,63 @@ export default function ConnectProvider({
       }
 
       if (msg.type === "state") {
-        setConnectState(msg.state as ConnectState);
+        const newState = msg.state as ConnectState;
+        if (newState.version <= currentVersionRef.current) {
+          log(`Ignoring stale state v${newState.version} (current=${currentVersionRef.current})`);
+          return;
+        }
+        currentVersionRef.current = newState.version;
+        const isActive = newState.activeDeviceId === deviceId;
+        log(
+          `State v${newState.version}: show=${newState.showId ?? "none"} rec=${newState.recordingId ?? "none"} ` +
+          `track=${newState.trackIndex} playing=${newState.playing} ` +
+          `activeDevice=${newState.activeDeviceId ?? "none"} isMe=${isActive}`
+        );
+        setConnectState(newState);
       } else if (msg.type === "devices") {
-        setDevices(msg.devices as ConnectDevice[]);
+        const devs = msg.devices as ConnectDevice[];
+        log(`Devices (${devs.length}): ${devs.map(d => `${d.deviceName}[${d.deviceType}]`).join(", ")}`);
+        setDevices(devs);
       }
     };
 
     ws.onclose = (event) => {
+      log(`Disconnected: code=${event.code} reason=${event.reason || "(none)"}`);
       clearHeartbeat();
       setConnected(false);
       wsRef.current = null;
 
       // 4003 = Unauthorized (terminal), 4001 = heartbeat timeout (reconnect)
-      if (!shouldConnectRef.current || event.code === 4003) return;
+      if (!shouldConnectRef.current || event.code === 4003) {
+        log(`Not reconnecting: shouldConnect=${shouldConnectRef.current} code=${event.code}`);
+        return;
+      }
 
       const delay = RECONNECT_DELAYS_MS[
         Math.min(reconnectAttemptRef.current, RECONNECT_DELAYS_MS.length - 1)
       ];
       reconnectAttemptRef.current += 1;
+      log(`Reconnecting in ${delay}ms (attempt ${reconnectAttemptRef.current})`);
       reconnectTimerRef.current = setTimeout(() => connect(), delay);
     };
 
     ws.onerror = () => {
-      // onclose fires after onerror; reconnect logic is there
+      warn("WebSocket error (onclose will handle reconnect)");
     };
   }, [clearHeartbeat]);
 
   const sendCommand = useCallback((action: string, extra?: Record<string, unknown>) => {
     const ws = wsRef.current;
     if (ws && ws.readyState === WebSocket.OPEN) {
+      log(`sendCommand: ${action}`, extra ? JSON.stringify(extra).slice(0, 200) : "");
       ws.send(JSON.stringify({ type: "command", action, ...extra }));
+    } else {
+      warn(`sendCommand: ${action} DROPPED — ws not open (readyState=${ws?.readyState})`);
     }
   }, []);
 
   const disconnect = useCallback(() => {
+    log("disconnect() called");
     shouldConnectRef.current = false;
     clearReconnectTimer();
     clearHeartbeat();
@@ -156,16 +185,19 @@ export default function ConnectProvider({
     setConnected(false);
     setDevices([]);
     setConnectState(null);
+    currentVersionRef.current = 0;
   }, [clearHeartbeat, clearReconnectTimer]);
 
   useEffect(() => {
     if (isLoading) return;
 
     if (user) {
+      log(`User authenticated, starting connect`);
       shouldConnectRef.current = true;
       reconnectAttemptRef.current = 0;
       connect();
     } else {
+      log(`No user, disconnecting`);
       disconnect();
     }
 

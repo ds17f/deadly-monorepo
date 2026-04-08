@@ -1,5 +1,8 @@
 import Foundation
 import SwiftAudioStreamEx
+import os.log
+
+private let logger = Logger(subsystem: "com.grateful.deadly", category: "MiniPlayerService")
 
 /// Concrete implementation of `MiniPlayerService` backed by `StreamPlayer`.
 ///
@@ -142,30 +145,44 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
 
     func togglePlayPause() {
         guard let connect = connectService else {
+            logger.info("togglePlayPause: no connectService, direct streamPlayer toggle")
             streamPlayer.togglePlayPause()
             return
         }
 
-        if connect.isRemoteControlling {
+        let isRemote = connect.isRemoteControlling
+        let isActive = connect.isActiveDevice
+        let serverPlaying = connect.connectState?.playing ?? false
+        let localPlaying = streamPlayer.playbackState.isPlaying
+
+        logger.info("togglePlayPause: isRemote=\(isRemote, privacy: .public) isActive=\(isActive, privacy: .public) serverPlaying=\(serverPlaying, privacy: .public) localPlaying=\(localPlaying, privacy: .public)")
+
+        if isRemote {
             // Remote control: send command only, wait for server to confirm
-            if connect.connectState?.playing == true {
+            if serverPlaying {
+                logger.info("togglePlayPause: remote -> sendPause")
                 connect.sendPause()
             } else {
+                logger.info("togglePlayPause: remote -> sendPlay")
                 connect.sendPlay()
             }
         } else {
             // Active device (or no active device): drive local audio optimistically + send command
             let wasPlaying = streamPlayer.playbackState.isPlaying
+            logger.info("togglePlayPause: local toggle (wasPlaying=\(wasPlaying, privacy: .public))")
             streamPlayer.togglePlayPause()
             if wasPlaying {
+                logger.info("togglePlayPause: optimistic -> sendPause")
                 connect.sendPause()
             } else {
+                logger.info("togglePlayPause: optimistic -> sendPlay")
                 connect.sendPlay()
             }
         }
     }
 
     func skipNext() {
+        logger.info("skipNext")
         streamPlayer.next()
     }
 }

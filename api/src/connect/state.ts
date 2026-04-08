@@ -2,6 +2,9 @@ import type { WebSocket } from "ws";
 import type { ConnectState, ConnectDevice, DeviceType, SessionTrack } from "./types.js";
 import { upsertPlaybackPosition } from "../db/userdata.js";
 
+const log = (msg: string) => console.log(`[Connect] ${msg}`);
+const warn = (msg: string) => console.warn(`[Connect] ${msg}`);
+
 interface LiveDevice {
   device: ConnectDevice;
   socket: WebSocket;
@@ -50,17 +53,30 @@ export function getOrCreateState(userId: string): ConnectState {
 
 function sendJson(socket: WebSocket, payload: unknown): void {
   if (socket.readyState === socket.OPEN) {
-    socket.send(JSON.stringify(payload));
+    const msg = JSON.stringify(payload);
+    log(`sendJson: readyState=OPEN, sending ${msg.length} bytes, type=${(payload as Record<string, unknown>)?.type}`);
+    socket.send(msg);
+  } else {
+    warn(`sendJson: SKIPPED — readyState=${socket.readyState} (not OPEN), type=${(payload as Record<string, unknown>)?.type}`);
   }
 }
 
 export function broadcastState(userId: string, state: ConnectState): void {
   const msg = JSON.stringify({ type: "state", state });
+  let sent = 0;
+  let skipped = 0;
   for (const [key, entry] of liveDevices) {
-    if (key.startsWith(`${userId}:`) && entry.socket.readyState === entry.socket.OPEN) {
-      entry.socket.send(msg);
+    if (key.startsWith(`${userId}:`)) {
+      if (entry.socket.readyState === entry.socket.OPEN) {
+        entry.socket.send(msg);
+        sent++;
+      } else {
+        warn(`broadcastState: skipping ${entry.device.name}[${entry.device.type}] — readyState=${entry.socket.readyState}`);
+        skipped++;
+      }
     }
   }
+  log(`broadcastState: v${state.version} show=${state.showId} playing=${state.playing} — sent=${sent} skipped=${skipped}`);
 }
 
 export function broadcastDevices(userId: string): void {
@@ -75,22 +91,27 @@ export function broadcastDevices(userId: string): void {
     }
   }
   const msg = JSON.stringify({ type: "devices", devices });
+  let sent = 0;
   for (const [key, entry] of liveDevices) {
     if (key.startsWith(`${userId}:`) && entry.socket.readyState === entry.socket.OPEN) {
       entry.socket.send(msg);
+      sent++;
     }
   }
+  log(`broadcastDevices: ${devices.map(d => `${d.deviceName}[${d.deviceType}]`).join(", ")} — sent to ${sent} sockets`);
 }
 
 export function mutate(userId: string, patch: Partial<ConnectState>): void {
   const state = userStates.get(userId);
   if (!state) return;
+  const patchKeys = Object.keys(patch).join(",");
   Object.assign(state, patch);
   // Invariant: cannot be playing without an active device
   if (state.playing && !state.activeDeviceId) {
     state.playing = false;
   }
   state.version++;
+  log(`mutate: v${state.version} patch=[${patchKeys}] playing=${state.playing} activeDevice=${state.activeDeviceId}`);
   broadcastState(userId, state);
 }
 
@@ -120,14 +141,17 @@ export function registerDevice(
   liveDevices.set(key, { device, socket });
 
   const state = getOrCreateState(userId);
+  log(`registerDevice: ${name}[${type}] (${deviceId}) — sending state v${state.version} show=${state.showId} rec=${state.recordingId} playing=${state.playing}`);
   sendJson(socket, { type: "state", state });
   broadcastDevices(userId);
 }
 
 export function unregisterDevice(userId: string, deviceId: string): void {
   const key = deviceKey(userId, deviceId);
-  if (!liveDevices.has(key)) return; // idempotent
+  const entry = liveDevices.get(key);
+  if (!entry) return; // idempotent
 
+  log(`unregisterDevice: ${entry.device.name}[${entry.device.type}] (${deviceId})`);
   liveDevices.delete(key);
 
   const state = userStates.get(userId);
