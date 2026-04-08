@@ -26,6 +26,8 @@ struct PlayerScreen: View {
     /// Extract the archive.org recording ID from a stream URL.
     /// URL format: https://archive.org/download/{recordingId}/{filename}
     private var artworkRecordingId: String? {
+        // Use Connect state when available and not the active device
+        if let rid = container.miniPlayerService.artworkRecordingId { return rid }
         guard let url = streamPlayer.currentTrack?.url else { return nil }
         let parts = url.pathComponents
         guard parts.count >= 3, parts[1] == "download" else { return nil }
@@ -77,14 +79,14 @@ struct PlayerScreen: View {
 
                         // Track info
                         VStack(spacing: 6) {
-                            Text(streamPlayer.currentTrack?.title ?? "")
+                            Text(container.miniPlayerService.trackTitle ?? streamPlayer.currentTrack?.title ?? "")
                                 .font(.title3)
                                 .fontWeight(.semibold)
                                 .foregroundStyle(.primary)
                                 .lineLimit(2)
                                 .multilineTextAlignment(.center)
 
-                            Text(streamPlayer.currentTrack?.albumTitle ?? "")
+                            Text(container.miniPlayerService.displaySubtitle ?? streamPlayer.currentTrack?.albumTitle ?? "")
                                 .font(.subheadline)
                                 .foregroundStyle(.secondary)
                                 .lineLimit(1)
@@ -146,7 +148,7 @@ struct PlayerScreen: View {
                             Button {
                                 container.miniPlayerService.togglePlayPause()
                             } label: {
-                                Image(systemName: streamPlayer.playbackState.isPlaying
+                                Image(systemName: container.miniPlayerService.isPlaying
                                       ? "pause.circle.fill" : "play.circle.fill")
                                     .font(.system(size: 70))
                                     .foregroundStyle(DeadlyColors.primary)

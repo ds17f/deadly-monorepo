@@ -34,7 +34,9 @@ export default function PlayerProvider({
   const { state: connectState, myDeviceId, sendCommand } = useConnect();
 
   const isActiveDevice = connectState !== null && myDeviceId !== null && connectState.activeDeviceId === myDeviceId;
-  const isRemoteControlling = connectState !== null && connectState.activeDeviceId !== null && connectState.activeDeviceId !== myDeviceId;
+  // Show Connect state whenever a shared show is loaded and we're not the active device.
+  // Covers both "another device is active" and "paused with no active device".
+  const isRemoteControlling = connectState !== null && connectState.showId !== null && !isActiveDevice;
 
   // Dual audio elements for gapless playback
   const audioARef = useRef<HTMLAudioElement | null>(null);
