@@ -13,6 +13,7 @@ import com.grateful.deadly.core.api.favorites.ReviewService
 import com.grateful.deadly.core.api.recent.RecentShowsService
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.model.ShowReview
+import com.grateful.deadly.core.connect.ConnectService
 import com.grateful.deadly.core.media.equalizer.EqualizerRepository
 import com.grateful.deadly.core.media.equalizer.EqualizerState
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
@@ -57,6 +58,7 @@ class PlaylistViewModel @Inject constructor(
     private val reviewService: ReviewService,
     private val equalizerRepository: EqualizerRepository,
     private val analyticsService: AnalyticsService,
+    private val connectService: ConnectService,
     networkMonitor: NetworkMonitor,
     val appPreferences: AppPreferences,
     @ApplicationContext private val appContext: Context
@@ -1139,6 +1141,8 @@ class PlaylistViewModel @Inject constructor(
                     // Currently playing this show/recording → pause
                     Log.d(TAG, "Media: Pausing current playback")
                     playlistService.pause()
+                    Log.d(TAG, "Connect: sending pause from togglePlayback")
+                    connectService.sendPause()
                 } else {
                     // Either not playing, or different show/recording → start playback
                     Log.d(TAG, "Media: Starting playback (new or resume)")
@@ -1167,38 +1171,37 @@ class PlaylistViewModel @Inject constructor(
                     
                     val recordingId = currentRecording
                     
+                    // Get show context from UI state
+                    val showContext = currentState.showData
+                    if (showContext == null) {
+                        Log.e(TAG, "Cannot start playback: No show data available in UI state")
+                        return@launch
+                    }
+
+                    val showId = showContext.showId
+                    if (showId.isBlank()) {
+                        Log.e(TAG, "Cannot start playback: showId is blank from service")
+                        return@launch
+                    }
+
+                    val showDate = showContext.date
+                    val venue = showContext.venue
+                    val location = showContext.location
+
                     if (currentState.isCurrentShowAndRecording) {
                         Log.d(TAG, "Media: Resuming current recording $recordingId")
                         playlistService.resume()
                     } else {
                         Log.d(TAG, "Media: Play All for new recording $recordingId ($selectedFormat)")
-                        
-                        // Get show context from UI state
-                        val showContext = currentState.showData
-                        if (showContext == null) {
-                            Log.e(TAG, "Cannot start playback: No show data available in UI state")
-                            return@launch
-                        }
-                        
-                        val showId = showContext.showId
-                        if (showId.isBlank()) {
-                            Log.e(TAG, "Cannot start playback: showId is blank from service")
-                            return@launch
-                        }
-                        
-                        val showDate = showContext.date
-                        val venue = showContext?.venue
-                        val location = showContext?.location
-                        
+
                         // Record show play immediately when user intentionally starts playback
                         try {
                             recentShowsService.recordShowPlay(showId)
                             Log.d(TAG, "Recorded show play in RecentShowsService: $showId (Play All)")
                         } catch (e: Exception) {
                             Log.w(TAG, "Failed to record show play in RecentShowsService: $showId", e)
-                            // Don't fail playback if recent shows tracking fails
                         }
-                        
+
                         // Use MediaControllerRepository for Play All logic (new show/recording)
                         mediaControllerRepository.playAll(
                             recordingId = recordingId,
@@ -1210,8 +1213,30 @@ class PlaylistViewModel @Inject constructor(
                             coverImageUrl = showContext.coverImageUrl
                         )
                     }
+
+                    // Always send load to Connect so the server knows which show
+                    // Android wants to play (resume and new-show both need this)
+                    val sessionTracks = _rawTrackData.value.map { t ->
+                        ConnectSessionTrack(
+                            title = t.title,
+                            durationMs = parseDurationToMs(t.duration)
+                        )
+                    }
+                    val firstDurationMs = sessionTracks.firstOrNull()?.durationMs ?: 0
+                    Log.d(TAG, "Connect: sendLoad from togglePlayback — show=$showId rec=$recordingId tracks=${sessionTracks.size}")
+                    connectService.sendLoad(
+                        showId = showId,
+                        recordingId = recordingId,
+                        tracks = sessionTracks,
+                        trackIndex = 0,
+                        positionMs = 0,
+                        durationMs = firstDurationMs,
+                        date = showDate,
+                        venue = venue,
+                        location = location,
+                    )
                 }
-                
+
                 // UI state will be updated via MediaController state observation
                 
             } catch (e: FormatNotAvailableException) {
@@ -1304,7 +1329,29 @@ class PlaylistViewModel @Inject constructor(
                     coverImageUrl = showContext?.coverImageUrl,
                     autoPlay = autoPlay
                 )
-                
+
+                // Notify Connect server
+                val sessionTracks = _rawTrackData.value.map { t ->
+                    ConnectSessionTrack(
+                        title = t.title,
+                        durationMs = parseDurationToMs(t.duration)
+                    )
+                }
+                val trackDurationMs = sessionTracks.getOrNull(trackIndex)?.durationMs ?: 0
+                Log.d(TAG, "Connect: sendLoad from playTrack — show=$showId rec=$recordingId track=$trackIndex tracks=${sessionTracks.size}")
+                connectService.sendLoad(
+                    showId = showId,
+                    recordingId = recordingId,
+                    tracks = sessionTracks,
+                    trackIndex = trackIndex,
+                    positionMs = 0,
+                    durationMs = trackDurationMs,
+                    date = showDate,
+                    venue = venue,
+                    location = location,
+                    autoplay = autoPlay,
+                )
+
                 // UI state will be updated via MediaController state observation
                 
             } catch (e: FormatNotAvailableException) {
@@ -1493,5 +1540,17 @@ class PlaylistViewModel @Inject constructor(
 
     fun resetEqualizer() {
         equalizerRepository.resetToFlat()
+    }
+
+    /** Parse "mm:ss" or "hh:mm:ss" to milliseconds for Connect session tracks. */
+    private fun parseDurationToMs(duration: String): Int {
+        val parts = duration.split(":")
+        return try {
+            when (parts.size) {
+                2 -> (parts[0].toInt() * 60 + parts[1].toInt()) * 1000
+                3 -> (parts[0].toInt() * 3600 + parts[1].toInt() * 60 + parts[2].toInt()) * 1000
+                else -> 0
+            }
+        } catch (_: NumberFormatException) { 0 }
     }
 }

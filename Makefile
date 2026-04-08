@@ -10,7 +10,7 @@
 .PHONY: android-promote-alpha android-promote-beta android-promote-production
 .PHONY: ios-build-release ios-deploy-testflight
 .PHONY: ios-remote-unlock ios-remote-build ios-remote-install ios-remote-sim ios-remote-test ios-remote-resolve
-.PHONY: android-remote-build android-remote-install
+.PHONY: android-remote-clean android-remote-build android-remote-install
 .PHONY: android-remote-emulator android-remote-emu-list android-remote-emu-stop android-remote-run-emulator
 .PHONY: android-auto-dhu android-remote-auto-dhu
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
@@ -195,6 +195,7 @@ help:
 	@echo "  api-remote-health  - Health check against remote API"
 	@echo ""
 	@echo "ANDROID REMOTE BUILD (Linux → Mac):"
+	@echo "  android-remote-clean       - Clean Gradle build cache on Mac"
 	@echo "  android-remote-build       - Build debug APK on Mac"
 	@echo "  android-remote-install     - Build + install to connected Android device"
 	@echo "  android-remote-emulator    - Start Android emulator on Mac"
@@ -418,6 +419,10 @@ ios-remote-resolve:
 # =============================================================================
 # ANDROID REMOTE BUILD (Linux → Mac)
 # =============================================================================
+
+android-remote-clean:
+	@echo "Cleaning Gradle build cache on $(REMOTE_HOST)..."
+	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && cd $(REMOTE_ANDROID) && ./gradlew clean --console=plain"
 
 android-remote-build:
 	@echo "Building on $(REMOTE_HOST)..."
