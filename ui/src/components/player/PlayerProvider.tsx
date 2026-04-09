@@ -30,6 +30,7 @@ export default function PlayerProvider({
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [autoplayBlocked, setAutoplayBlocked] = useState(false);
   const [pendingCommand, setPendingCommand] = useState<string | null>(null);
+  const [pendingTransfer, setPendingTransfer] = useState<string | null>(null);
 
   const { state: connectState, myDeviceId, sendCommand } = useConnect();
 
@@ -46,6 +47,8 @@ export default function PlayerProvider({
   const tracksRef = useRef<ArchiveTrack[] | null>(null);
   const currentTrackIndexRef = useRef(-1);
   const preloadedNextRef = useRef(false);
+  const pendingSeekMsRef = useRef<number | null>(null);
+  const suppressAutoPlayRef = useRef(false);
 
   // Keep refs in sync
   useEffect(() => {
@@ -100,6 +103,18 @@ export default function PlayerProvider({
               preloadedNextRef.current = true;
             }
           }
+        }
+      }
+    });
+
+    audio.addEventListener("loadedmetadata", () => {
+      if (
+        (activeAudioRef.current === "A" && audio === audioARef.current) ||
+        (activeAudioRef.current === "B" && audio === audioBRef.current)
+      ) {
+        if (pendingSeekMsRef.current !== null) {
+          audio.currentTime = pendingSeekMsRef.current / 1000;
+          pendingSeekMsRef.current = null;
         }
       }
     });
@@ -230,13 +245,21 @@ export default function PlayerProvider({
     setErrorMessage(null);
     audio.src = track.url;
 
-    setStatus("loading");
-    audio.play().catch((err) => {
-      if (err instanceof DOMException && err.name === "NotAllowedError") {
-        setAutoplayBlocked(true);
-      }
+    if (suppressAutoPlayRef.current) {
+      // Hydrating for a non-active device — preload only, don't play
+      audio.preload = "auto";
+      audio.load();
+      suppressAutoPlayRef.current = false;
       setStatus("paused");
-    });
+    } else {
+      setStatus("loading");
+      audio.play().catch((err) => {
+        if (err instanceof DOMException && err.name === "NotAllowedError") {
+          setAutoplayBlocked(true);
+        }
+        setStatus("paused");
+      });
+    }
 
     updateMediaSession(track);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -279,16 +302,49 @@ export default function PlayerProvider({
       return prev;
     });
 
-    // If another device is now active, pause our local audio
+    // Clear pending transfer when a device becomes active (transfer resolved)
+    setPendingTransfer((prev) => {
+      if (!prev) return null;
+      if (connectState.activeDeviceId) return null;
+      return prev;
+    });
+
+    // Hydrate local audio when the server recording changes (or first state).
+    // All connected clients stay loaded so transfers are instant.
+    if (connectState.recordingId && connectState.recordingId !== selectedRecording) {
+      const autoPlay = isActiveDevice && connectState.playing;
+      pendingSeekMsRef.current = connectState.positionMs;
+      if (!autoPlay) suppressAutoPlayRef.current = true;
+      setActiveShow({
+        showId: connectState.showId ?? "",
+        recordings: [],
+        bestRecordingId: connectState.recordingId,
+        date: connectState.date ?? "",
+        venue: connectState.venue ?? "",
+        location: connectState.location ?? "",
+      });
+      setSelectedRecording(connectState.recordingId);
+      playRecording(connectState.recordingId).then((fetchedTracks) => {
+        if (fetchedTracks.length > 0) {
+          const targetIndex = connectState.trackIndex < fetchedTracks.length
+            ? connectState.trackIndex : 0;
+          setCurrentTrackIndex(targetIndex);
+        }
+      });
+      return; // skip play/pause sync until tracks are loaded
+    }
+
+    // If another device is now active, pause our local audio and report final position
     if (isRemoteControlling) {
       const audio = getActiveAudio();
       if (audio && !audio.paused) {
+        const positionMs = Math.round(audio.currentTime * 1000);
         audio.pause();
+        sendCommand("position", { positionMs });
       }
     }
 
     // If we ARE the active device, sync local audio to server state
-    // (handles remote play/pause commands from other devices)
     if (isActiveDevice) {
       const audio = getActiveAudio();
       if (audio) {
@@ -394,6 +450,12 @@ export default function PlayerProvider({
     }
   }, [isRemoteControlling, connectState, sendCommand]);
 
+  const transferTo = useCallback((targetDeviceId: string) => {
+    if (!connectState?.showId) return;
+    setPendingTransfer(targetDeviceId);
+    sendCommand("transfer", { targetDeviceId });
+  }, [connectState?.showId, sendCommand]);
+
   const nextTrack = useCallback(() => {
     if (!tracks) return;
     setCurrentTrackIndex((prev) => {
@@ -488,6 +550,8 @@ export default function PlayerProvider({
       isActiveDevice,
       isRemoteControlling,
       pendingCommand,
+      pendingTransfer,
+      transferTo,
       setViewedShow,
       selectRecording,
       playShow,
@@ -518,6 +582,8 @@ export default function PlayerProvider({
       isActiveDevice,
       isRemoteControlling,
       pendingCommand,
+      pendingTransfer,
+      transferTo,
       selectRecording,
       playShow,
       playRecording,

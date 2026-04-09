@@ -30,6 +30,8 @@ export interface PlayerContextValue {
   isActiveDevice: boolean;
   isRemoteControlling: boolean;
   pendingCommand: string | null;
+  pendingTransfer: string | null;
+  transferTo: (targetDeviceId: string) => void;
 
   // Actions
   setViewedShow: (show: ViewedShow | null) => void;
