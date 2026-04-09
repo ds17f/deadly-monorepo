@@ -33,6 +33,9 @@ protocol MiniPlayerService: AnyObject {
     /// Whether there is a next track available in the queue.
     var hasNext: Bool { get }
 
+    /// Whether there is a previous track available in the queue.
+    var hasPrevious: Bool { get }
+
     /// Whether playback is in an error state.
     var hasError: Bool { get }
 
@@ -54,9 +57,27 @@ protocol MiniPlayerService: AnyObject {
     /// Whether a command has been sent and we're waiting for the server to confirm.
     var isPendingCommand: Bool { get }
 
+    /// Playback position in milliseconds (for remote state display).
+    var positionMs: Int { get }
+
+    /// Track duration in milliseconds (for remote state display).
+    var durationMs: Int { get }
+
+    /// Current track index (0-based).
+    var trackIndex: Int { get }
+
+    /// Total number of tracks in the session.
+    var trackCount: Int { get }
+
     /// Toggle between play and pause states.
     func togglePlayPause()
 
     /// Skip to the next track in the queue.
     func skipNext()
+
+    /// Skip to the previous track in the queue.
+    func skipPrev()
+
+    /// Seek to a position expressed as a fraction (0.0–1.0).
+    func seek(fraction: Double)
 }
