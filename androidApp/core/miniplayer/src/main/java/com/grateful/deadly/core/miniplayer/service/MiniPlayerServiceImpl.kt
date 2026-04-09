@@ -11,7 +11,10 @@ import com.grateful.deadly.core.model.QueueInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -36,8 +39,19 @@ class MiniPlayerServiceImpl @Inject constructor(
     
     private val serviceScope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
     
-    // Direct delegation to MediaControllerRepository
-    override val isPlaying: StateFlow<Boolean> = mediaControllerRepository.isPlaying
+    // When remote controlling (another device is active), reflect server playing state.
+    // Otherwise use local MediaController state.
+    override val isPlaying: StateFlow<Boolean> = combine(
+        mediaControllerRepository.isPlaying,
+        connectService.connectState,
+        connectService.isActiveDevice,
+    ) { localPlaying, state, isActive ->
+        if (state != null && state.showId != null && !isActive && state.activeDeviceId != null) {
+            state.playing
+        } else {
+            localPlaying
+        }
+    }.stateIn(serviceScope, SharingStarted.Eagerly, false)
     override val playbackStatus: StateFlow<PlaybackStatus> = mediaControllerRepository.playbackStatus
     override val currentTrackInfo: StateFlow<CurrentTrackInfo?> = 
         mediaControllerStateUtil.createCurrentTrackInfoStateFlow(serviceScope)

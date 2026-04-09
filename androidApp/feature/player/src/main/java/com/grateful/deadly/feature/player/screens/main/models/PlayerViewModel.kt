@@ -42,8 +42,9 @@ class PlayerViewModel @Inject constructor(
     val uiState: StateFlow<PlayerUiState> = combine(
         playerService.currentTrackInfo,
         playerService.playbackStatus,
-        playerService.queueInfo
-    ) { trackInfo, playbackStatus, queueInfo ->
+        playerService.queueInfo,
+        playerService.isPlaying,
+    ) { trackInfo, playbackStatus, queueInfo, isServicePlaying ->
         // Early return for null case - no track playing
         if (trackInfo == null) return@combine PlayerUiState(
             trackDisplayInfo = TrackDisplayInfo(
@@ -93,7 +94,7 @@ class PlayerViewModel @Inject constructor(
                 totalDuration = playerService.formatDuration(playbackStatus.duration),
                 progressPercentage = playbackStatus.progress
             ),
-            isPlaying = trackInfo.playbackState.isPlaying,
+            isPlaying = isServicePlaying,
             isLoading = trackInfo.playbackState.isLoading,
             hasNext = queueInfo.hasNext,
             hasPrevious = queueInfo.hasPrevious,
