@@ -8,6 +8,8 @@ import {
   handlePlay,
   handlePause,
   handleSeek,
+  handleNext,
+  handlePrev,
   handleTransfer,
   handlePosition,
   startHeartbeatSweep,
@@ -98,6 +100,14 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
                 positionMs: typeof positionMs === "number" ? positionMs : 0,
                 durationMs: typeof durationMs === "number" ? durationMs : undefined,
               });
+              break;
+            }
+            case "next": {
+              handleNext(userId!);
+              break;
+            }
+            case "prev": {
+              handlePrev(userId!);
               break;
             }
             case "transfer": {
