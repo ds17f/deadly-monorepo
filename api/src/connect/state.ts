@@ -389,6 +389,64 @@ export function handleSeek(userId: string, params: { trackIndex: number; positio
   }
 }
 
+export function handleNext(userId: string): void {
+  const state = userStates.get(userId);
+  if (!state || !state.showId || state.tracks.length === 0) return;
+
+  const newIndex = state.trackIndex + 1;
+  if (newIndex >= state.tracks.length) return;
+
+  const track = state.tracks[newIndex];
+  log(`handleNext: track=${newIndex}/${state.tracks.length}`);
+  mutate(userId, {
+    trackIndex: newIndex,
+    positionMs: 0,
+    positionTs: Date.now(),
+    durationMs: track.durationMs,
+  });
+
+  if (state.showId && state.recordingId) {
+    upsertPlaybackPosition(userId, {
+      showId: state.showId,
+      recordingId: state.recordingId,
+      trackIndex: newIndex,
+      positionMs: 0,
+      date: state.date ?? undefined,
+      venue: state.venue ?? undefined,
+      location: state.location ?? undefined,
+    });
+  }
+}
+
+export function handlePrev(userId: string): void {
+  const state = userStates.get(userId);
+  if (!state || !state.showId || state.tracks.length === 0) return;
+
+  const newIndex = state.trackIndex - 1;
+  if (newIndex < 0) return;
+
+  const track = state.tracks[newIndex];
+  log(`handlePrev: track=${newIndex}/${state.tracks.length}`);
+  mutate(userId, {
+    trackIndex: newIndex,
+    positionMs: 0,
+    positionTs: Date.now(),
+    durationMs: track.durationMs,
+  });
+
+  if (state.showId && state.recordingId) {
+    upsertPlaybackPosition(userId, {
+      showId: state.showId,
+      recordingId: state.recordingId,
+      trackIndex: newIndex,
+      positionMs: 0,
+      date: state.date ?? undefined,
+      venue: state.venue ?? undefined,
+      location: state.location ?? undefined,
+    });
+  }
+}
+
 function activateTarget(userId: string, targetDeviceId: string, positionMs: number): void {
   const targetEntry = liveDevices.get(deviceKey(userId, targetDeviceId));
   if (!targetEntry) {
