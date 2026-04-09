@@ -17,6 +17,7 @@ final class ConnectService: NSObject {
     private(set) var connectState: ConnectState?
     private(set) var isConnected = false
     private(set) var pendingCommand: String?
+    private(set) var pendingTransfer: String?
 
     var isActiveDevice: Bool {
         guard let state = connectState else { return false }
@@ -133,6 +134,18 @@ final class ConnectService: NSObject {
         ])
     }
 
+    func sendTransfer(targetDeviceId: String) {
+        guard connectState?.showId != nil else { return }
+        logger.info("sendTransfer: target=\(targetDeviceId, privacy: .public)")
+        pendingTransfer = targetDeviceId
+        sendCommand("transfer", extra: ["targetDeviceId": targetDeviceId])
+    }
+
+    func sendPosition(positionMs: Int) {
+        logger.info("sendPosition: pos=\(positionMs, privacy: .public)")
+        sendCommand("position", extra: ["positionMs": positionMs])
+    }
+
     // MARK: - Connection
 
     private func connect() async {
@@ -232,6 +245,22 @@ final class ConnectService: NSObject {
                 logger.info("reactToState: pending 'pause' confirmed, clearing")
                 pendingCommand = nil
             }
+        }
+
+        // Clear pending transfer when a device becomes active (transfer resolved)
+        if pendingTransfer != nil, new.activeDeviceId != nil {
+            logger.info("reactToState: transfer resolved, clearing pendingTransfer")
+            pendingTransfer = nil
+        }
+
+        // If this device was active but no longer is, pause audio and report final position
+        let wasActive = old?.activeDeviceId == appPreferences.installId
+        let nowActive = new.activeDeviceId == appPreferences.installId
+        if wasActive && !nowActive {
+            let positionMs = Int(streamPlayer.progress.currentTime * 1000)
+            logger.info("reactToState: transferred away — pausing and reporting position \(positionMs, privacy: .public)ms")
+            streamPlayer.pause()
+            sendPosition(positionMs: positionMs)
         }
 
         // If the recording changed (or first state), load the show locally
