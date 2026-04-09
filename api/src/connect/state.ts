@@ -16,6 +16,15 @@ const userStates = new Map<string, ConnectState>();
 // `${userId}:${deviceId}` -> LiveDevice
 const liveDevices = new Map<string, LiveDevice>();
 
+interface PendingTransfer {
+  targetDeviceId: string;
+  interpolatedPositionMs: number;
+  timeoutHandle: ReturnType<typeof setTimeout>;
+}
+
+// userId -> PendingTransfer (at most one pending transfer per user)
+const pendingTransfers = new Map<string, PendingTransfer>();
+
 let sweepInterval: ReturnType<typeof setInterval> | null = null;
 
 function deviceKey(userId: string, deviceId: string): string {
@@ -154,6 +163,14 @@ export function unregisterDevice(userId: string, deviceId: string): void {
   log(`unregisterDevice: ${entry.device.name}[${entry.device.type}] (${deviceId})`);
   liveDevices.delete(key);
 
+  // Cancel pending transfer if this device was the target
+  const pending = pendingTransfers.get(userId);
+  if (pending && pending.targetDeviceId === deviceId) {
+    clearTimeout(pending.timeoutHandle);
+    pendingTransfers.delete(userId);
+    log(`unregisterDevice: cancelled pending transfer — target ${deviceId} disconnected`);
+  }
+
   const state = userStates.get(userId);
   if (state && state.activeDeviceId === deviceId) {
     // Snapshot position before clearing active device
@@ -220,6 +237,14 @@ export function startHeartbeatSweep(): void {
           playing: false,
         });
       }
+      // Cancel pending transfer if evicted device was the target
+      const pending = pendingTransfers.get(userId);
+      if (pending && deviceIds.includes(pending.targetDeviceId)) {
+        clearTimeout(pending.timeoutHandle);
+        pendingTransfers.delete(userId);
+        log(`heartbeatSweep: cancelled pending transfer — target evicted`);
+      }
+
       broadcastDevices(userId);
     }
   }, 10_000);
@@ -362,6 +387,110 @@ export function handleSeek(userId: string, params: { trackIndex: number; positio
       location: state.location ?? undefined,
     });
   }
+}
+
+function activateTarget(userId: string, targetDeviceId: string, positionMs: number): void {
+  const targetEntry = liveDevices.get(deviceKey(userId, targetDeviceId));
+  if (!targetEntry) {
+    log(`activateTarget: target ${targetDeviceId} no longer connected, staying parked`);
+    return;
+  }
+
+  mutate(userId, {
+    activeDeviceId: targetDeviceId,
+    activeDeviceName: targetEntry.device.name,
+    activeDeviceType: targetEntry.device.type,
+    playing: true,
+    positionMs,
+    positionTs: Date.now(),
+  });
+}
+
+export function handleTransfer(
+  userId: string,
+  deviceId: string,
+  socket: WebSocket,
+  targetDeviceId: string,
+): void {
+  const state = userStates.get(userId);
+  if (!state) return;
+
+  // Validate target exists
+  const targetEntry = liveDevices.get(deviceKey(userId, targetDeviceId));
+  if (!targetEntry) {
+    sendJson(socket, { type: "error", message: "Target device not found", state });
+    return;
+  }
+
+  // Self-transfer when already active: no-op
+  if (state.activeDeviceId === targetDeviceId) return;
+
+  // Cancel any existing pending transfer
+  const existing = pendingTransfers.get(userId);
+  if (existing) {
+    clearTimeout(existing.timeoutHandle);
+    pendingTransfers.delete(userId);
+  }
+
+  // No active device (parked): skip phase 1, go directly to phase 2
+  if (!state.activeDeviceId) {
+    log(`handleTransfer: parked — activating ${targetEntry.device.name}[${targetEntry.device.type}] directly`);
+    activateTarget(userId, targetDeviceId, state.positionMs);
+    return;
+  }
+
+  // Phase 1 — Park the old device
+  const now = Date.now();
+  const interpolatedPositionMs = state.playing
+    ? state.positionMs + (now - state.positionTs)
+    : state.positionMs;
+
+  log(`handleTransfer: phase 1 — parking, interpolated position ${interpolatedPositionMs}ms`);
+
+  mutate(userId, {
+    activeDeviceId: null,
+    activeDeviceName: null,
+    activeDeviceType: null,
+    playing: false,
+    positionMs: interpolatedPositionMs,
+    positionTs: now,
+  });
+
+  // Set 1s timeout for phase 2 fallback
+  const timeoutHandle = setTimeout(() => {
+    const pending = pendingTransfers.get(userId);
+    if (!pending) return;
+    pendingTransfers.delete(userId);
+    log(`handleTransfer: timeout — proceeding with interpolated position ${pending.interpolatedPositionMs}ms`);
+    activateTarget(userId, pending.targetDeviceId, pending.interpolatedPositionMs);
+  }, 1000);
+
+  pendingTransfers.set(userId, {
+    targetDeviceId,
+    interpolatedPositionMs,
+    timeoutHandle,
+  });
+}
+
+export function handlePosition(userId: string, deviceId: string, positionMs: number): void {
+  const state = userStates.get(userId);
+  if (!state) return;
+
+  // Check if this completes a pending transfer (old device reporting final position)
+  const pending = pendingTransfers.get(userId);
+  if (pending) {
+    clearTimeout(pending.timeoutHandle);
+    pendingTransfers.delete(userId);
+    log(`handleTransfer: phase 2 — old device reported positionMs=${positionMs}`);
+    activateTarget(userId, pending.targetDeviceId, positionMs);
+    return;
+  }
+
+  // Normal position report — only accept from active device
+  if (state.activeDeviceId !== deviceId) return;
+
+  state.positionMs = positionMs;
+  state.positionTs = Date.now();
 }
 
 export function stopHeartbeatSweep(): void {
