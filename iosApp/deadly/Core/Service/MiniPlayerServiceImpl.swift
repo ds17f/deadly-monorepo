@@ -76,6 +76,11 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
         return streamPlayer.queueState.hasNext
     }
 
+    var hasPrevious: Bool {
+        if let r = remote { return r.trackIndex > 0 }
+        return streamPlayer.queueState.hasPrevious
+    }
+
     var hasError: Bool {
         if remote != nil { return false }
         if case .error = streamPlayer.playbackState {
@@ -141,6 +146,26 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
         return result.isEmpty ? nil : result
     }
 
+    var positionMs: Int {
+        if let r = remote { return r.positionMs }
+        return Int(streamPlayer.progress.currentTime * 1000)
+    }
+
+    var durationMs: Int {
+        if let r = remote { return r.durationMs }
+        return Int(streamPlayer.progress.duration * 1000)
+    }
+
+    var trackIndex: Int {
+        if let r = remote { return r.trackIndex }
+        return streamPlayer.queueState.currentIndex
+    }
+
+    var trackCount: Int {
+        if let r = remote { return r.tracks.count }
+        return streamPlayer.queueState.totalTracks
+    }
+
     // MARK: - Connect state
 
     var isPendingCommand: Bool {
@@ -188,7 +213,65 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
     }
 
     func skipNext() {
-        logger.info("skipNext")
-        streamPlayer.next()
+        guard let connect = connectService else {
+            logger.info("skipNext: no connectService, direct streamPlayer.next()")
+            streamPlayer.next()
+            return
+        }
+
+        let isRemote = connect.isRemoteControlling
+
+        if isRemote {
+            logger.info("skipNext: remote -> sendNext")
+            connect.sendNext()
+        } else {
+            logger.info("skipNext: local -> streamPlayer.next() + sendNext")
+            streamPlayer.next()
+            connect.sendNext()
+        }
+    }
+
+    func skipPrev() {
+        guard let connect = connectService else {
+            logger.info("skipPrev: no connectService, direct streamPlayer.previous()")
+            streamPlayer.previous()
+            return
+        }
+
+        let isRemote = connect.isRemoteControlling
+
+        if isRemote {
+            logger.info("skipPrev: remote -> sendPrev")
+            connect.sendPrev()
+        } else {
+            logger.info("skipPrev: local -> streamPlayer.previous() + sendPrev")
+            streamPlayer.previous()
+            connect.sendPrev()
+        }
+    }
+
+    func seek(fraction: Double) {
+        guard let connect = connectService else {
+            logger.info("seek: no connectService, direct streamPlayer.seek()")
+            let target = fraction * streamPlayer.progress.duration
+            streamPlayer.seek(to: target)
+            return
+        }
+
+        let isRemote = connect.isRemoteControlling
+
+        if isRemote {
+            guard let state = connect.connectState else { return }
+            let posMs = Int(fraction * Double(state.durationMs))
+            logger.info("seek: remote -> sendSeek(pos=\(posMs, privacy: .public))")
+            connect.sendSeek(trackIndex: state.trackIndex, positionMs: posMs, durationMs: state.durationMs)
+        } else {
+            let target = fraction * streamPlayer.progress.duration
+            let posMs = Int(target * 1000)
+            let durMs = Int(streamPlayer.progress.duration * 1000)
+            logger.info("seek: local -> streamPlayer.seek(\(target, privacy: .public)) + sendSeek")
+            streamPlayer.seek(to: target)
+            connect.sendSeek(trackIndex: streamPlayer.queueState.currentIndex, positionMs: posMs, durationMs: durMs)
+        }
     }
 }

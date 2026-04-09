@@ -114,14 +114,20 @@ final class ConnectService: NSObject {
     }
 
     func sendPlay() {
-        logger.info("sendPlay (pending=\(self.pendingCommand ?? "nil", privacy: .public) -> play)")
-        pendingCommand = "play"
+        logger.info("sendPlay (pending=\(self.pendingCommand ?? "nil", privacy: .public) serverPlaying=\(self.connectState?.playing ?? false, privacy: .public))")
+        // Only show spinner if the server isn't already playing — a redundant play
+        // won't trigger a state broadcast so pendingCommand would never clear.
+        if connectState?.playing != true {
+            pendingCommand = "play"
+        }
         sendCommand("play")
     }
 
     func sendPause() {
-        logger.info("sendPause (pending=\(self.pendingCommand ?? "nil", privacy: .public) -> pause)")
-        pendingCommand = "pause"
+        logger.info("sendPause (pending=\(self.pendingCommand ?? "nil", privacy: .public) serverPlaying=\(self.connectState?.playing ?? false, privacy: .public))")
+        if connectState?.playing == true {
+            pendingCommand = "pause"
+        }
         sendCommand("pause")
     }
 
@@ -132,6 +138,18 @@ final class ConnectService: NSObject {
             "positionMs": positionMs,
             "durationMs": durationMs,
         ])
+    }
+
+    func sendNext() {
+        logger.info("sendNext (pending=\(self.pendingCommand ?? "nil", privacy: .public) -> next)")
+        pendingCommand = "next"
+        sendCommand("next")
+    }
+
+    func sendPrev() {
+        logger.info("sendPrev (pending=\(self.pendingCommand ?? "nil", privacy: .public) -> prev)")
+        pendingCommand = "prev"
+        sendCommand("prev")
     }
 
     func sendTransfer(targetDeviceId: String) {
@@ -244,6 +262,12 @@ final class ConnectService: NSObject {
             } else if cmd == "pause" && !new.playing {
                 logger.info("reactToState: pending 'pause' confirmed, clearing")
                 pendingCommand = nil
+            } else if (cmd == "next" || cmd == "prev") && new.trackIndex != (old?.trackIndex ?? -1) {
+                logger.info("reactToState: pending '\(cmd, privacy: .public)' confirmed (track \(old?.trackIndex ?? -1, privacy: .public) -> \(new.trackIndex, privacy: .public)), clearing")
+                pendingCommand = nil
+            } else if cmd == "seek" && new.positionMs != (old?.positionMs ?? -1) {
+                logger.info("reactToState: pending 'seek' confirmed, clearing")
+                pendingCommand = nil
             }
         }
 
@@ -276,10 +300,42 @@ final class ConnectService: NSObject {
             return
         }
 
-        // Only drive local play/pause when this device is the active device
+        // Only drive local playback when this device is the active device
         guard isActiveDevice else {
             logger.info("reactToState: not active device, skipping playback control")
             return
+        }
+
+        // When this device just became active (e.g. transfer in), sync local player
+        // to server state — the local player may be at a completely different track/position.
+        let justBecameActive = !wasActive && nowActive
+        if justBecameActive {
+            if self.streamPlayer.queueState.currentIndex != new.trackIndex {
+                logger.info("reactToState: became active, syncing track \(self.streamPlayer.queueState.currentIndex, privacy: .public) -> \(new.trackIndex, privacy: .public)")
+                streamPlayer.skipTo(index: new.trackIndex)
+            }
+            let serverPosition = Double(new.positionMs) / 1000.0
+            if abs(streamPlayer.progress.currentTime - serverPosition) > 1 {
+                logger.info("reactToState: became active, syncing position to \(new.positionMs, privacy: .public)ms")
+                streamPlayer.seek(to: serverPosition)
+            }
+        }
+
+        // React to track changes from remote controllers (while already active)
+        if !justBecameActive, let oldState = old, new.trackIndex != oldState.trackIndex {
+            logger.info("reactToState: track changed \(oldState.trackIndex, privacy: .public) -> \(new.trackIndex, privacy: .public), skipping to index")
+            streamPlayer.skipTo(index: new.trackIndex)
+        }
+
+        // React to seek from remote controllers (while already active)
+        if !justBecameActive, let oldState = old, new.trackIndex == oldState.trackIndex, new.positionMs != oldState.positionMs {
+            // Only seek if the position delta is significant (>2s) to avoid fighting with natural playback progress
+            let delta = abs(new.positionMs - oldState.positionMs)
+            if delta > 2000 {
+                let targetTime = Double(new.positionMs) / 1000.0
+                logger.info("reactToState: seek from remote, jumping to \(new.positionMs, privacy: .public)ms (delta=\(delta, privacy: .public))")
+                streamPlayer.seek(to: targetTime)
+            }
         }
 
         let localPlaying = streamPlayer.playbackState.isPlaying
