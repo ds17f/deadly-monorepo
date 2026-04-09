@@ -8,6 +8,8 @@ import {
   handlePlay,
   handlePause,
   handleSeek,
+  handleTransfer,
+  handlePosition,
   startHeartbeatSweep,
 } from "./state.js";
 import type { ClientMessage, DeviceType, SessionTrack } from "./types.js";
@@ -96,6 +98,18 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
                 positionMs: typeof positionMs === "number" ? positionMs : 0,
                 durationMs: typeof durationMs === "number" ? durationMs : undefined,
               });
+              break;
+            }
+            case "transfer": {
+              const { targetDeviceId } = msg as Record<string, unknown>;
+              if (typeof targetDeviceId !== "string") return;
+              handleTransfer(userId!, registeredDeviceId, socket, targetDeviceId);
+              break;
+            }
+            case "position": {
+              const { positionMs } = msg as Record<string, unknown>;
+              if (typeof positionMs !== "number") return;
+              handlePosition(userId!, registeredDeviceId, positionMs);
               break;
             }
           }
