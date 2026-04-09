@@ -69,6 +69,9 @@ class ConnectServiceImpl @Inject constructor(
     private val _isActiveDevice = MutableStateFlow(false)
     override val isActiveDevice: StateFlow<Boolean> = _isActiveDevice.asStateFlow()
 
+    private val _pendingTransfer = MutableStateFlow<String?>(null)
+    override val pendingTransfer: StateFlow<String?> = _pendingTransfer.asStateFlow()
+
     @Volatile private var currentVersion = 0
 
     @Volatile private var webSocket: WebSocket? = null
@@ -101,6 +104,7 @@ class ConnectServiceImpl @Inject constructor(
         _connectState.value = null
         _pendingCommand.value = null
         _isActiveDevice.value = false
+        _pendingTransfer.value = null
         currentVersion = 0
     }
 
@@ -227,7 +231,24 @@ class ConnectServiceImpl @Inject constructor(
             }
         }
 
-        val isActive = new.activeDeviceId == appPreferences.installId
+        // Clear pending transfer when a device becomes active (transfer resolved)
+        if (_pendingTransfer.value != null && new.activeDeviceId != null) {
+            Log.d(TAG, "reactToState: transfer resolved, clearing pendingTransfer")
+            _pendingTransfer.value = null
+        }
+
+        // If this device was active but no longer is, pause audio and report final position
+        val myId = appPreferences.installId
+        val wasActive = old?.activeDeviceId == myId
+        val nowActive = new.activeDeviceId == myId
+        if (wasActive && !nowActive) {
+            val positionMs = mediaControllerRepository.currentPosition.value.toInt()
+            Log.d(TAG, "reactToState: transferred away — pausing and reporting position ${positionMs}ms")
+            scope.launch { mediaControllerRepository.pause() }
+            sendPosition(positionMs)
+        }
+
+        val isActive = nowActive
         val localRecordingId = mediaControllerRepository.currentRecordingId.value
         val locallyPlaying = mediaControllerRepository.isPlaying.value
 
@@ -318,6 +339,18 @@ class ConnectServiceImpl @Inject constructor(
         Log.d(TAG, "sendPause (pending=${_pendingCommand.value} -> pause)")
         _pendingCommand.value = "pause"
         sendCommand("pause")
+    }
+
+    override fun sendTransfer(targetDeviceId: String) {
+        if (_connectState.value?.showId == null) return
+        Log.d(TAG, "sendTransfer: target=$targetDeviceId")
+        _pendingTransfer.value = targetDeviceId
+        sendCommand("transfer", mapOf("targetDeviceId" to targetDeviceId))
+    }
+
+    override fun sendPosition(positionMs: Int) {
+        Log.d(TAG, "sendPosition: pos=$positionMs")
+        sendCommand("position", mapOf("positionMs" to positionMs))
     }
 
     override fun sendSeek(trackIndex: Int, positionMs: Int, durationMs: Int) {

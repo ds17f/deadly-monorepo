@@ -11,9 +11,13 @@ interface ConnectService {
     val isConnected: StateFlow<Boolean>
     val pendingCommand: StateFlow<String?>
     val isActiveDevice: StateFlow<Boolean>
+    val pendingTransfer: StateFlow<String?>
 
     fun startIfAuthenticated()
     fun stop()
+
+    fun sendTransfer(targetDeviceId: String)
+    fun sendPosition(positionMs: Int)
 
     fun sendLoad(
         showId: String,
