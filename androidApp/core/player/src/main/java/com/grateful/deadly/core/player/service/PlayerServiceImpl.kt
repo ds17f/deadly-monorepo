@@ -3,6 +3,7 @@ package com.grateful.deadly.core.player.service
 import android.util.Log
 import androidx.media3.common.MediaMetadata
 import com.grateful.deadly.core.api.player.PlayerService
+import com.grateful.deadly.core.connect.ConnectService
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.media.state.MediaControllerStateUtil
 import com.grateful.deadly.core.media.service.MetadataHydratorService
@@ -40,7 +41,8 @@ class PlayerServiceImpl @Inject constructor(
     private val mediaControllerStateUtil: MediaControllerStateUtil,
     private val metadataHydratorService: MetadataHydratorService,
     private val showRepository: ShowRepository,
-    private val shareService: ShareService
+    private val shareService: ShareService,
+    private val connectService: ConnectService,
 ) : PlayerService {
     
     companion object {
@@ -50,8 +52,18 @@ class PlayerServiceImpl @Inject constructor(
     
     private val serviceScope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
     
-    // Direct delegation to MediaControllerRepository state flows
-    override val isPlaying: StateFlow<Boolean> = mediaControllerRepository.isPlaying
+    // When remote controlling, reflect server playing state; otherwise local state
+    override val isPlaying: StateFlow<Boolean> = combine(
+        mediaControllerRepository.isPlaying,
+        connectService.connectState,
+        connectService.isActiveDevice,
+    ) { localPlaying, state, isActive ->
+        if (state != null && state.showId != null && !isActive && state.activeDeviceId != null) {
+            state.playing
+        } else {
+            localPlaying
+        }
+    }.stateIn(serviceScope, SharingStarted.Eagerly, false)
     
     override val playbackStatus: StateFlow<PlaybackStatus> = mediaControllerRepository.playbackStatus
     
@@ -91,7 +103,31 @@ class PlayerServiceImpl @Inject constructor(
     override suspend fun togglePlayPause() {
         Log.d(TAG, "🕒🎵 [SERVICE] PlayerService togglePlayPause called at ${System.currentTimeMillis()}")
         try {
-            mediaControllerRepository.togglePlayPause()
+            val state = connectService.connectState.value
+            val isActive = connectService.isActiveDevice.value
+            val isRemoteControlling = state != null && state.activeDeviceId != null && !isActive
+            val serverPlaying = state?.playing ?: false
+
+            if (isRemoteControlling) {
+                // Remote control: send command only, wait for server to confirm
+                if (serverPlaying) {
+                    Log.d(TAG, "togglePlayPause: remote -> sendPause")
+                    connectService.sendPause()
+                } else {
+                    Log.d(TAG, "togglePlayPause: remote -> sendPlay")
+                    connectService.sendPlay()
+                }
+            } else {
+                // Active device or no active device: drive local audio optimistically + send command
+                val wasPlaying = mediaControllerRepository.isPlaying.value
+                Log.d(TAG, "togglePlayPause: local toggle (wasPlaying=$wasPlaying)")
+                mediaControllerRepository.togglePlayPause()
+                if (wasPlaying) {
+                    connectService.sendPause()
+                } else {
+                    connectService.sendPlay()
+                }
+            }
         } catch (e: Exception) {
             Log.e(TAG, "🕒🎵 [ERROR] PlayerService togglePlayPause failed at ${System.currentTimeMillis()}", e)
         }
