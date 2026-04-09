@@ -31,10 +31,20 @@ struct ConnectScreen: View {
                     }
                 } else {
                     Section("Devices") {
+                        let hasSession = service.connectState?.showId != nil
                         ForEach(service.devices) { device in
+                            let isMe = device.deviceId == container.appPreferences.installId
+                            let isDeviceActive = device.deviceId == service.connectState?.activeDeviceId
+                            let isPending = service.pendingTransfer == device.deviceId
                             DeviceRow(
                                 device: device,
-                                isMe: device.deviceId == container.appPreferences.installId
+                                isMe: isMe,
+                                isDeviceActive: isDeviceActive,
+                                hasSession: hasSession,
+                                isPending: isPending,
+                                transferDisabled: service.pendingTransfer != nil,
+                                isRemoteControlling: service.isRemoteControlling,
+                                onTransfer: { service.sendTransfer(targetDeviceId: device.deviceId) }
                             )
                         }
                     }
@@ -50,6 +60,12 @@ struct ConnectScreen: View {
 private struct DeviceRow: View {
     let device: ConnectDevice
     let isMe: Bool
+    let isDeviceActive: Bool
+    let hasSession: Bool
+    let isPending: Bool
+    let transferDisabled: Bool
+    let isRemoteControlling: Bool
+    let onTransfer: () -> Void
 
     var body: some View {
         HStack(spacing: 12) {
@@ -60,16 +76,30 @@ private struct DeviceRow: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(device.deviceName)
                     .font(.body)
-                Text(device.deviceType.label)
+                Text(isMe ? "This Device" : device.deviceType.label)
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
 
-            if isMe {
-                Spacer()
-                Text("This Device")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+            Spacer()
+
+            if hasSession {
+                if isPending {
+                    ProgressView()
+                        .controlSize(.small)
+                } else if isDeviceActive {
+                    Text("Playing")
+                        .font(.caption)
+                        .foregroundStyle(DeadlyColors.primary)
+                } else if isMe && isRemoteControlling {
+                    Button("Play here", action: onTransfer)
+                        .font(.caption)
+                        .disabled(transferDisabled)
+                } else if !isMe {
+                    Button("Play", action: onTransfer)
+                        .font(.caption)
+                        .disabled(transferDisabled)
+                }
             }
         }
     }
