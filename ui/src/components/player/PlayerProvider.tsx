@@ -299,6 +299,7 @@ export default function PlayerProvider({
     setPendingCommand((prev) => {
       if (prev === "play" && connectState.playing) return null;
       if (prev === "pause" && !connectState.playing) return null;
+      if (prev === "next" || prev === "prev" || prev === "seek") return null;
       return prev;
     });
 
@@ -348,6 +349,15 @@ export default function PlayerProvider({
     if (isActiveDevice) {
       const audio = getActiveAudio();
       if (audio) {
+        // Sync track index if server changed it (remote next/prev)
+        if (connectState.trackIndex !== currentTrackIndexRef.current) {
+          setCurrentTrackIndex(connectState.trackIndex);
+        }
+        // Sync position if server changed it (remote seek)
+        const serverPositionS = connectState.positionMs / 1000;
+        if (Math.abs(audio.currentTime - serverPositionS) > 1) {
+          audio.currentTime = serverPositionS;
+        }
         if (connectState.playing && audio.paused) {
           audio.play().catch(() => {});
         } else if (!connectState.playing && !audio.paused) {
@@ -457,14 +467,25 @@ export default function PlayerProvider({
   }, [connectState?.showId, sendCommand]);
 
   const nextTrack = useCallback(() => {
+    if (isRemoteControlling) {
+      setPendingCommand("next");
+      sendCommand("next");
+      return;
+    }
     if (!tracks) return;
     setCurrentTrackIndex((prev) => {
       if (prev < tracks.length - 1) return prev + 1;
       return prev;
     });
-  }, [tracks]);
+    sendCommand("next");
+  }, [tracks, isRemoteControlling, sendCommand]);
 
   const prevTrack = useCallback(() => {
+    if (isRemoteControlling) {
+      setPendingCommand("prev");
+      sendCommand("prev");
+      return;
+    }
     const audio = getActiveAudio();
     if (!audio || !tracks) return;
 
@@ -473,13 +494,30 @@ export default function PlayerProvider({
     } else {
       setCurrentTrackIndex((prev) => Math.max(0, prev - 1));
     }
-  }, [tracks, currentTrackIndex]);
+    sendCommand("prev");
+  }, [tracks, currentTrackIndex, isRemoteControlling, sendCommand]);
 
   const seek = useCallback((fraction: number) => {
+    if (isRemoteControlling && connectState) {
+      const positionMs = Math.round(fraction * connectState.durationMs);
+      setPendingCommand("seek");
+      sendCommand("seek", {
+        trackIndex: connectState.trackIndex,
+        positionMs,
+        durationMs: connectState.durationMs,
+      });
+      return;
+    }
     const audio = getActiveAudio();
     if (!audio || !isFinite(audio.duration)) return;
+    const positionMs = Math.round(fraction * audio.duration * 1000);
     audio.currentTime = fraction * audio.duration;
-  }, []);
+    sendCommand("seek", {
+      trackIndex: currentTrackIndex,
+      positionMs,
+      durationMs: Math.round(audio.duration * 1000),
+    });
+  }, [isRemoteControlling, connectState, currentTrackIndex, sendCommand]);
 
   const close = useCallback(() => {
     setErrorMessage(null);

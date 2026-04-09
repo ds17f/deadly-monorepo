@@ -99,14 +99,13 @@ struct PlayerScreen: View {
                         VStack(spacing: 6) {
                             Slider(
                                 value: Binding(
-                                    get: { sliderValue ?? streamPlayer.progress.progress },
+                                    get: { sliderValue ?? container.miniPlayerService.playbackProgress },
                                     set: { sliderValue = $0 }
                                 ),
                                 in: 0...1
                             ) { editing in
                                 if !editing, let value = sliderValue {
-                                    let target = value * streamPlayer.progress.duration
-                                    streamPlayer.seek(to: target)
+                                    container.miniPlayerService.seek(fraction: value)
                                     sliderValue = nil
                                 }
                             }
@@ -114,10 +113,13 @@ struct PlayerScreen: View {
                             .padding(.horizontal, 24)
 
                             HStack {
-                                Text(formatTime(sliderValue.map { $0 * streamPlayer.progress.duration }
-                                                ?? streamPlayer.progress.currentTime))
+                                let service = container.miniPlayerService
+                                let durSec = Double(service.durationMs) / 1000.0
+                                let posSec = sliderValue.map { $0 * durSec }
+                                    ?? Double(service.positionMs) / 1000.0
+                                Text(formatTime(posSec))
                                 Spacer()
-                                Text("-\(formatTime(streamPlayer.progress.remaining))")
+                                Text("-\(formatTime(max(0, durSec - posSec)))")
                             }
                             .font(.caption)
                             .foregroundStyle(.tertiary)
@@ -127,8 +129,8 @@ struct PlayerScreen: View {
                         Spacer().frame(height: 12)
 
                         // Queue position
-                        if streamPlayer.queueState.totalTracks > 0 {
-                            Text("Track \(streamPlayer.queueState.currentIndex + 1) of \(streamPlayer.queueState.totalTracks)")
+                        if container.miniPlayerService.trackCount > 0 {
+                            Text("Track \(container.miniPlayerService.trackIndex + 1) of \(container.miniPlayerService.trackCount)")
                                 .font(.caption2)
                                 .foregroundStyle(.tertiary)
                         }
@@ -138,7 +140,7 @@ struct PlayerScreen: View {
                         // Playback controls
                         HStack(spacing: 52) {
                             Button {
-                                streamPlayer.previous()
+                                container.miniPlayerService.skipPrev()
                             } label: {
                                 Image(systemName: "backward.fill")
                                     .font(.title)
@@ -155,14 +157,14 @@ struct PlayerScreen: View {
                             }
 
                             Button {
-                                streamPlayer.next()
+                                container.miniPlayerService.skipNext()
                             } label: {
                                 Image(systemName: "forward.fill")
                                     .font(.title)
-                                    .foregroundStyle(streamPlayer.queueState.hasNext
+                                    .foregroundStyle(container.miniPlayerService.hasNext
                                                      ? .primary : .tertiary)
                             }
-                            .disabled(!streamPlayer.queueState.hasNext)
+                            .disabled(!container.miniPlayerService.hasNext)
                         }
 
                         Spacer().frame(height: 24)

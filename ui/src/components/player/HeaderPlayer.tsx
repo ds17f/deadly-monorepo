@@ -85,7 +85,6 @@ export default function HeaderPlayer() {
   const trackTitle = isRemoteControlling ? (remoteTrackTitle ?? showInfo?.date ?? "--") : (currentTrack?.title ?? showInfo?.date ?? "--");
 
   function handleSeek(e: React.MouseEvent<HTMLDivElement>) {
-    if (isRemoteControlling) return;
     const rect = e.currentTarget.getBoundingClientRect();
     const fraction = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
     seek(fraction);
@@ -127,7 +126,7 @@ export default function HeaderPlayer() {
           {formatTime(isRemoteControlling ? (connectState?.positionMs ?? 0) / 1000 : elapsed)}
         </span>
         <div
-          className={`h-1.5 w-20 rounded-full bg-white/10 sm:w-28 md:w-36 ${isRemoteControlling ? "cursor-default" : "cursor-pointer"}`}
+          className="h-1.5 w-20 cursor-pointer rounded-full bg-white/10 sm:w-28 md:w-36"
           onClick={handleSeek}
         >
           <div
@@ -144,7 +143,7 @@ export default function HeaderPlayer() {
       <div className="flex flex-shrink-0 items-center gap-0.5">
         <button
           onClick={prevTrack}
-          disabled={!hasPrevious && elapsed < 3}
+          disabled={showSpinner || (!hasPrevious && elapsed < 3)}
           className="rounded-full p-1.5 text-white/60 transition-colors hover:text-white disabled:text-white/20"
           aria-label="Previous track"
         >
@@ -182,7 +181,7 @@ export default function HeaderPlayer() {
 
         <button
           onClick={nextTrack}
-          disabled={!hasNext}
+          disabled={showSpinner || !hasNext}
           className="rounded-full p-1.5 text-white/60 transition-colors hover:text-white disabled:text-white/20"
           aria-label="Next track"
         >
