@@ -79,6 +79,7 @@ class ConnectServiceImpl @Inject constructor(
     @Volatile private var shouldConnect = false
     @Volatile private var reconnectAttempt = 0
     private var heartbeatJob: Job? = null
+    private var positionReportJob: Job? = null
     private var reconnectJob: Job? = null
 
     override fun startIfAuthenticated() {
@@ -175,6 +176,24 @@ class ConnectServiceImpl @Inject constructor(
     private fun stopHeartbeat() {
         heartbeatJob?.cancel()
         heartbeatJob = null
+    }
+
+    private fun startPositionReporting() {
+        stopPositionReporting()
+        positionReportJob = scope.launch {
+            while (isActive) {
+                delay(5000L)
+                if (isActive) {
+                    val positionMs = mediaControllerRepository.currentPosition.value.toInt()
+                    sendPosition(positionMs)
+                }
+            }
+        }
+    }
+
+    private fun stopPositionReporting() {
+        positionReportJob?.cancel()
+        positionReportJob = null
     }
 
     private fun handleMessage(text: String) {
@@ -279,6 +298,7 @@ class ConnectServiceImpl @Inject constructor(
                     autoPlay = autoPlay,
                 )
             }
+            stopPositionReporting()
             return
         }
 
@@ -297,6 +317,7 @@ class ConnectServiceImpl @Inject constructor(
             } else {
                 Log.d(TAG, "reactToState: NOT ACTIVE — no action needed")
             }
+            stopPositionReporting()
             return
         }
 
@@ -323,9 +344,12 @@ class ConnectServiceImpl @Inject constructor(
             scope.launch { mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, 0L) }
         }
 
-        // React to seek from remote controllers (while already active)
+        // React to seek from remote controllers (while already active).
+        // Compare against local position (not old server state) so our own position
+        // reports echoing back don't cause unnecessary seeks.
         if (!justBecameActive && old != null && new.trackIndex == old.trackIndex && new.positionMs != old.positionMs) {
-            val delta = abs(new.positionMs - old.positionMs)
+            val localPositionMs = mediaControllerRepository.currentPosition.value
+            val delta = abs(new.positionMs.toLong() - localPositionMs)
             if (delta > 2000) {
                 Log.d(TAG, "reactToState: seek from remote, jumping to ${new.positionMs}ms (delta=$delta)")
                 scope.launch { mediaControllerRepository.seekToPosition(new.positionMs.toLong()) }
@@ -341,6 +365,15 @@ class ConnectServiceImpl @Inject constructor(
             scope.launch { mediaControllerRepository.pause() }
         } else {
             Log.d(TAG, "reactToState: ACTIVE + SAME REC — no change (server.playing=${new.playing} local=$locallyPlaying)")
+        }
+
+        // Manage periodic position reporting — run only when active + playing
+        if (nowActive && new.playing) {
+            if (positionReportJob == null) {
+                startPositionReporting()
+            }
+        } else {
+            stopPositionReporting()
         }
     }
 
@@ -445,6 +478,7 @@ class ConnectServiceImpl @Inject constructor(
 
     private fun handleDisconnect(closeCode: Int?) {
         stopHeartbeat()
+        stopPositionReporting()
         _isConnected.value = false
         webSocket = null
 

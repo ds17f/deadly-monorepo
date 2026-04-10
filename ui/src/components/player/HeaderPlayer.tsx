@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { usePlayer } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
 import { useConnect } from "@/contexts/ConnectContext";
@@ -64,8 +64,29 @@ export default function HeaderPlayer() {
   const remoteTrackTitle = isRemoteControlling && connectState
     ? (connectState.tracks[connectState.trackIndex]?.title ?? null)
     : null;
+
+  // Interpolate remote position for smooth progress bar + time display
+  const [interpolatedPositionMs, setInterpolatedPositionMs] = useState(0);
+  const rafRef = useRef<number>(0);
+  useEffect(() => {
+    if (!isRemoteControlling || !connectState) {
+      setInterpolatedPositionMs(0);
+      return;
+    }
+    function tick() {
+      if (!connectState) return;
+      const now = Date.now();
+      const posMs = connectState.playing
+        ? connectState.positionMs + (now - connectState.positionTs)
+        : connectState.positionMs;
+      setInterpolatedPositionMs(Math.max(0, posMs));
+      rafRef.current = requestAnimationFrame(tick);
+    }
+    rafRef.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, [isRemoteControlling, connectState]);
   const remoteProgress = isRemoteControlling && connectState && connectState.durationMs > 0
-    ? (connectState.positionMs / connectState.durationMs) * 100
+    ? Math.min(100, (interpolatedPositionMs / connectState.durationMs) * 100)
     : 0;
   const remoteShowInfo = isRemoteControlling && connectState?.date
     ? {
@@ -123,7 +144,7 @@ export default function HeaderPlayer() {
       {/* Seek bar */}
       <div className="flex flex-shrink-0 items-center gap-2">
         <span className="hidden text-[10px] tabular-nums text-white/30 sm:inline">
-          {formatTime(isRemoteControlling ? (connectState?.positionMs ?? 0) / 1000 : elapsed)}
+          {formatTime(isRemoteControlling ? interpolatedPositionMs / 1000 : elapsed)}
         </span>
         <div
           className="h-1.5 w-20 cursor-pointer rounded-full bg-white/10 sm:w-28 md:w-36"
