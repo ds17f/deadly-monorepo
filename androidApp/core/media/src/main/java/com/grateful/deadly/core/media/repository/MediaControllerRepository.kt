@@ -821,6 +821,13 @@ class MediaControllerRepository @Inject constructor(
             mediaController?.seekTo(positionMs)
         }
     }
+
+    suspend fun seekToMediaItemIndex(index: Int, positionMs: Long = 0L) {
+        Log.d(TAG, "seekToMediaItemIndex: index=$index pos=${positionMs}ms")
+        executeWhenConnected {
+            mediaController?.seekTo(index, positionMs)
+        }
+    }
     
     /**
      * Get current MediaItems from the queue for hydration
