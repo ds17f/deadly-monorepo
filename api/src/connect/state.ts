@@ -550,8 +550,7 @@ export function handlePosition(userId: string, deviceId: string, positionMs: num
   // Normal position report — only accept from active device
   if (state.activeDeviceId !== deviceId) return;
 
-  state.positionMs = positionMs;
-  state.positionTs = Date.now();
+  mutate(userId, { positionMs, positionTs: Date.now() });
 }
 
 export function stopHeartbeatSweep(): void {

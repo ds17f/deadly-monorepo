@@ -15,8 +15,25 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
     private let streamPlayer: StreamPlayer
     var connectService: ConnectService?
 
+    /// Ticks every ~250ms to drive interpolation of remote playback position.
+    /// Reading this in computed properties causes SwiftUI views to re-render.
+    private var interpolationTick: Date = Date()
+    @ObservationIgnored private var interpolationTimer: Timer?
+
     nonisolated init(streamPlayer: StreamPlayer) {
         self.streamPlayer = streamPlayer
+        Task { @MainActor [weak self] in
+            self?.startInterpolationTicker()
+        }
+    }
+
+    private func startInterpolationTicker() {
+        interpolationTimer?.invalidate()
+        interpolationTimer = Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true) { [weak self] _ in
+            Task { @MainActor in
+                self?.interpolationTick = Date()
+            }
+        }
     }
 
     // MARK: - Remote state helpers
@@ -99,9 +116,24 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
 
     var playbackProgress: Double {
         if let r = remote {
-            return r.durationMs > 0 ? Double(r.positionMs) / Double(r.durationMs) : 0
+            guard r.durationMs > 0 else { return 0 }
+            let pos = Double(interpolatedRemotePositionMs(r))
+            return min(1.0, max(0.0, pos / Double(r.durationMs)))
         }
         return streamPlayer.progress.progress
+    }
+
+    /// Interpolate position for a remote (non-active) playing device based on
+    /// positionMs + elapsed wall-clock time since positionTs. Reads interpolationTick
+    /// so SwiftUI observes it and re-renders on each tick.
+    private func interpolatedRemotePositionMs(_ r: ConnectState) -> Int {
+        let nowMs = interpolationTick.timeIntervalSince1970 * 1000
+        if r.playing {
+            let elapsed = max(0, nowMs - r.positionTs)
+            return r.positionMs + Int(elapsed)
+        } else {
+            return r.positionMs
+        }
     }
 
     var showDate: String? {
@@ -147,7 +179,7 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
     }
 
     var positionMs: Int {
-        if let r = remote { return r.positionMs }
+        if let r = remote { return interpolatedRemotePositionMs(r) }
         return Int(streamPlayer.progress.currentTime * 1000)
     }
 

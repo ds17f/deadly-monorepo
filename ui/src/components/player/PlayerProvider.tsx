@@ -368,6 +368,20 @@ export default function PlayerProvider({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [connectState?.version]);
 
+  // Periodic position reporting (~5s) when this device is the active player
+  useEffect(() => {
+    if (!isActiveDevice || !connectState?.playing) return;
+    const id = setInterval(() => {
+      const audio = getActiveAudio();
+      if (audio && !audio.paused) {
+        const positionMs = Math.round(audio.currentTime * 1000);
+        sendCommand("position", { positionMs });
+      }
+    }, 5000);
+    return () => clearInterval(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isActiveDevice, connectState?.playing]);
+
   function updateMediaSession(track: ArchiveTrack) {
     if (!("mediaSession" in navigator)) return;
     const showId = activeShow?.showId ?? "";
