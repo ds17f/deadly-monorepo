@@ -24,6 +24,10 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     /// Set before calling player.play(), consumed in didStartPlaying callback.
     nonisolated(unsafe) private var pendingQueueURLs: [URL] = []
 
+    /// When true, the engine will immediately pause after the next track starts playing.
+    /// Used by skipTo(index:autoplay:false) to load a track without playing it.
+    nonisolated(unsafe) private var pauseAfterSkip = false
+
     /// Minimum duration (seconds) a track must have played to count as a real completion.
     private let minimumPlayDuration: Double = 0.5
 
@@ -161,7 +165,7 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         return true
     }
 
-    func skipTo(index: Int) -> Bool {
+    func skipTo(index: Int, autoplay: Bool = true) -> Bool {
         lock.lock()
         guard index >= 0, index < queue.resolved.count else {
             lock.unlock()
@@ -170,12 +174,15 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         queue.currentIndex = index
         let remaining = Array(queue.resolved[index...])
         pendingQueueURLs = remaining.count > 1 ? Array(remaining[1...]) : []
+        pauseAfterSkip = !autoplay
         lock.unlock()
 
-        logger.info("skipTo: index \(index)")
+        logger.info("skipTo: index \(index) autoplay=\(autoplay)")
 
         player.play(url: remaining[0])
-        startProgressTimer()
+        if autoplay {
+            startProgressTimer()
+        }
         return true
     }
 
@@ -315,8 +322,17 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
 extension AudioStreamEngine: AudioPlayerDelegate {
     func audioPlayerDidStartPlaying(player: AudioPlayer, with entryId: AudioEntryId) {
         logger.notice("delegate: didStartPlaying entry=\(entryId.id)")
-        onStateChange?(.playing)
-        startProgressTimer()
+
+        if pauseAfterSkip {
+            pauseAfterSkip = false
+            logger.notice("delegate: pauseAfterSkip set, pausing immediately")
+            player.pause()
+            stopProgressTimer()
+            onStateChange?(.paused)
+        } else {
+            onStateChange?(.playing)
+            startProgressTimer()
+        }
 
         // Sync currentIndex to the track AudioStreaming is actually playing.
         // This handles gapless auto-advance (where stopReason is .none, not .eof)

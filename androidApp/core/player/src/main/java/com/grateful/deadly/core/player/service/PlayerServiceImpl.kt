@@ -136,13 +136,21 @@ class PlayerServiceImpl @Inject constructor(
     override suspend fun seekToNext() {
         Log.d(TAG, "🕒🎵 [SERVICE] PlayerService seekToNext called at ${System.currentTimeMillis()}")
         try {
-            val wasPlaying = mediaControllerRepository.isPlaying.value
-            mediaControllerRepository.seekToNext()
-            
-            // Auto-play new track if we were paused
-            if (!wasPlaying) {
-                Log.d(TAG, "🕒🎵 [SERVICE] Was paused - starting playback of new track at ${System.currentTimeMillis()}")
-                mediaControllerRepository.play()
+            val state = connectService.connectState.value
+            val isActive = connectService.isActiveDevice.value
+            val isRemoteControlling = state != null && state.activeDeviceId != null && !isActive
+
+            if (isRemoteControlling) {
+                Log.d(TAG, "seekToNext: remote -> sendNext")
+                connectService.sendNext()
+            } else {
+                Log.d(TAG, "seekToNext: local -> seekToNext + sendNext")
+                val wasPlaying = mediaControllerRepository.isPlaying.value
+                mediaControllerRepository.seekToNext()
+                if (!wasPlaying) {
+                    mediaControllerRepository.play()
+                }
+                connectService.sendNext()
             }
         } catch (e: Exception) {
             Log.e(TAG, "🕒🎵 [ERROR] PlayerService seekToNext failed at ${System.currentTimeMillis()}", e)
@@ -152,46 +160,34 @@ class PlayerServiceImpl @Inject constructor(
     override suspend fun seekToPrevious() {
         Log.d(TAG, "🕒🎵 [SERVICE] PlayerService seekToPrevious called at ${System.currentTimeMillis()}")
         try {
-            val currentPositionMs = mediaControllerRepository.currentPosition.value
-            val wasPlaying = mediaControllerRepository.isPlaying.value
-            
-            if (currentPositionMs > PREVIOUS_TRACK_THRESHOLD_MS) {
-                // Restart current track (seek to beginning)
-                Log.d(TAG, "Position ${currentPositionMs}ms > ${PREVIOUS_TRACK_THRESHOLD_MS}ms, restarting track")
-                mediaControllerRepository.seekToPosition(0L)
-                
-                // If paused, stay paused after restart (just reset position)
-                // If playing, continue playing after restart
-                if (wasPlaying) {
-                    Log.d(TAG, "Was playing - continuing playback after restart")
-                } else {
-                    Log.d(TAG, "Was paused - staying paused after restart")
-                }
+            val state = connectService.connectState.value
+            val isActive = connectService.isActiveDevice.value
+            val isRemoteControlling = state != null && state.activeDeviceId != null && !isActive
+
+            if (isRemoteControlling) {
+                Log.d(TAG, "seekToPrevious: remote -> sendPrev")
+                connectService.sendPrev()
             } else {
-                // Check if there's actually a previous track available
-                val queueInfo = queueInfo.value
-                if (queueInfo.hasPrevious) {
-                    // Go to previous track
-                    Log.d(TAG, "Position ${currentPositionMs}ms <= ${PREVIOUS_TRACK_THRESHOLD_MS}ms, seeking to previous track")
-                    mediaControllerRepository.seekToPrevious()
-                    
-                    // Auto-play new track if we were paused
-                    if (!wasPlaying) {
-                        Log.d(TAG, "Was paused - starting playback of previous track")
-                        mediaControllerRepository.play()
-                    }
-                } else {
-                    // First track in queue - restart current track even if < 3 seconds
-                    Log.d(TAG, "Position ${currentPositionMs}ms <= ${PREVIOUS_TRACK_THRESHOLD_MS}ms, but no previous track - restarting current track")
+                val currentPositionMs = mediaControllerRepository.currentPosition.value
+                val wasPlaying = mediaControllerRepository.isPlaying.value
+
+                if (currentPositionMs > PREVIOUS_TRACK_THRESHOLD_MS) {
+                    Log.d(TAG, "Position ${currentPositionMs}ms > ${PREVIOUS_TRACK_THRESHOLD_MS}ms, restarting track")
                     mediaControllerRepository.seekToPosition(0L)
-                    
-                    // If paused, stay paused after restart
-                    if (wasPlaying) {
-                        Log.d(TAG, "Was playing - continuing playback after restart")
+                } else {
+                    val queueInfo = queueInfo.value
+                    if (queueInfo.hasPrevious) {
+                        Log.d(TAG, "Position ${currentPositionMs}ms <= ${PREVIOUS_TRACK_THRESHOLD_MS}ms, seeking to previous track")
+                        mediaControllerRepository.seekToPrevious()
+                        if (!wasPlaying) {
+                            mediaControllerRepository.play()
+                        }
                     } else {
-                        Log.d(TAG, "Was paused - staying paused after restart")
+                        Log.d(TAG, "No previous track - restarting current track")
+                        mediaControllerRepository.seekToPosition(0L)
                     }
                 }
+                connectService.sendPrev()
             }
         } catch (e: Exception) {
             Log.e(TAG, "🕒🎵 [ERROR] PlayerService seekToPrevious failed at ${System.currentTimeMillis()}", e)
@@ -201,7 +197,20 @@ class PlayerServiceImpl @Inject constructor(
     override suspend fun seekToPosition(positionMs: Long) {
         Log.d(TAG, "🕒🎵 [SERVICE] PlayerService seekToPosition(${positionMs}ms) called at ${System.currentTimeMillis()}")
         try {
-            mediaControllerRepository.seekToPosition(positionMs)
+            val state = connectService.connectState.value
+            val isActive = connectService.isActiveDevice.value
+            val isRemoteControlling = state != null && state.activeDeviceId != null && !isActive
+
+            if (isRemoteControlling && state != null) {
+                Log.d(TAG, "seekToPosition: remote -> sendSeek(track=${state.trackIndex} pos=$positionMs dur=${state.durationMs})")
+                connectService.sendSeek(state.trackIndex, positionMs.toInt(), state.durationMs)
+            } else {
+                Log.d(TAG, "seekToPosition: local -> seek + sendSeek")
+                mediaControllerRepository.seekToPosition(positionMs)
+                val trackIndex = mediaControllerRepository.currentTrackIndex.value
+                val durationMs = mediaControllerRepository.duration.value.toInt()
+                connectService.sendSeek(trackIndex, positionMs.toInt(), durationMs)
+            }
         } catch (e: Exception) {
             Log.e(TAG, "🕒🎵 [ERROR] PlayerService seekToPosition failed at ${System.currentTimeMillis()}", e)
         }
