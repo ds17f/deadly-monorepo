@@ -312,7 +312,7 @@ final class ConnectService: NSObject {
         if justBecameActive {
             if self.streamPlayer.queueState.currentIndex != new.trackIndex {
                 logger.info("reactToState: became active, syncing track \(self.streamPlayer.queueState.currentIndex, privacy: .public) -> \(new.trackIndex, privacy: .public)")
-                streamPlayer.skipTo(index: new.trackIndex)
+                streamPlayer.skipTo(index: new.trackIndex, autoplay: new.playing)
             }
             let serverPosition = Double(new.positionMs) / 1000.0
             if abs(streamPlayer.progress.currentTime - serverPosition) > 1 {
@@ -324,7 +324,7 @@ final class ConnectService: NSObject {
         // React to track changes from remote controllers (while already active)
         if !justBecameActive, let oldState = old, new.trackIndex != oldState.trackIndex {
             logger.info("reactToState: track changed \(oldState.trackIndex, privacy: .public) -> \(new.trackIndex, privacy: .public), skipping to index")
-            streamPlayer.skipTo(index: new.trackIndex)
+            streamPlayer.skipTo(index: new.trackIndex, autoplay: new.playing)
         }
 
         // React to seek from remote controllers (while already active)

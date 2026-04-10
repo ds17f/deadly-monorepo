@@ -27,6 +27,7 @@ import okhttp3.WebSocketListener
 import org.json.JSONArray
 import org.json.JSONObject
 import java.util.concurrent.TimeUnit
+import kotlin.math.abs
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -228,6 +229,12 @@ class ConnectServiceImpl @Inject constructor(
             } else if (cmd == "pause" && !new.playing) {
                 Log.d(TAG, "reactToState: pending 'pause' confirmed, clearing")
                 _pendingCommand.value = null
+            } else if ((cmd == "next" || cmd == "prev") && new.trackIndex != (old?.trackIndex ?: -1)) {
+                Log.d(TAG, "reactToState: pending '$cmd' confirmed (track ${old?.trackIndex ?: -1} -> ${new.trackIndex}), clearing")
+                _pendingCommand.value = null
+            } else if (cmd == "seek" && new.positionMs != (old?.positionMs ?: -1)) {
+                Log.d(TAG, "reactToState: pending 'seek' confirmed, clearing")
+                _pendingCommand.value = null
             }
         }
 
@@ -275,18 +282,57 @@ class ConnectServiceImpl @Inject constructor(
             return
         }
 
-        // Not active device — stop local playback if another device took over
+        // Not active device — sync track index and stop local playback
         if (!isActive) {
-            if (locallyPlaying) {
+            // Keep local player in sync with remote track so UI shows correct track info
+            if (old != null && new.trackIndex != old.trackIndex) {
+                Log.d(TAG, "reactToState: NOT ACTIVE — syncing track ${old.trackIndex} -> ${new.trackIndex}")
+                scope.launch {
+                    mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, new.positionMs.toLong())
+                    mediaControllerRepository.pause()
+                }
+            } else if (locallyPlaying) {
                 Log.d(TAG, "reactToState: NOT ACTIVE — pausing local playback")
                 scope.launch { mediaControllerRepository.pause() }
             } else {
-                Log.d(TAG, "reactToState: NOT ACTIVE — no action needed (local not playing)")
+                Log.d(TAG, "reactToState: NOT ACTIVE — no action needed")
             }
             return
         }
 
-        // Active device, same recording — just handle play/pause
+        // When this device just became active (e.g. transfer in), sync local player
+        // to server state — the local player may be at a completely different track/position.
+        val justBecameActive = !wasActive && nowActive
+        if (justBecameActive) {
+            val localTrackIndex = mediaControllerRepository.currentTrackIndex.value
+            if (localTrackIndex != new.trackIndex) {
+                Log.d(TAG, "reactToState: became active, syncing track $localTrackIndex -> ${new.trackIndex}")
+                scope.launch { mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, new.positionMs.toLong()) }
+            } else {
+                val localPositionMs = mediaControllerRepository.currentPosition.value
+                if (abs(localPositionMs - new.positionMs.toLong()) > 1000) {
+                    Log.d(TAG, "reactToState: became active, syncing position to ${new.positionMs}ms")
+                    scope.launch { mediaControllerRepository.seekToPosition(new.positionMs.toLong()) }
+                }
+            }
+        }
+
+        // React to track changes from remote controllers (while already active)
+        if (!justBecameActive && old != null && new.trackIndex != old.trackIndex) {
+            Log.d(TAG, "reactToState: track changed ${old.trackIndex} -> ${new.trackIndex}, skipping to index")
+            scope.launch { mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, 0L) }
+        }
+
+        // React to seek from remote controllers (while already active)
+        if (!justBecameActive && old != null && new.trackIndex == old.trackIndex && new.positionMs != old.positionMs) {
+            val delta = abs(new.positionMs - old.positionMs)
+            if (delta > 2000) {
+                Log.d(TAG, "reactToState: seek from remote, jumping to ${new.positionMs}ms (delta=$delta)")
+                scope.launch { mediaControllerRepository.seekToPosition(new.positionMs.toLong()) }
+            }
+        }
+
+        // Active device, same recording — handle play/pause
         if (new.playing && !locallyPlaying) {
             Log.d(TAG, "reactToState: ACTIVE + SAME REC — server=play local=paused -> play()")
             scope.launch { mediaControllerRepository.play() }
@@ -354,12 +400,25 @@ class ConnectServiceImpl @Inject constructor(
     }
 
     override fun sendSeek(trackIndex: Int, positionMs: Int, durationMs: Int) {
-        Log.d(TAG, "sendSeek: track=$trackIndex pos=$positionMs dur=$durationMs")
+        Log.d(TAG, "sendSeek: track=$trackIndex pos=$positionMs dur=$durationMs (pending=${_pendingCommand.value} -> seek)")
+        _pendingCommand.value = "seek"
         sendCommand("seek", mapOf(
             "trackIndex" to trackIndex,
             "positionMs" to positionMs,
             "durationMs" to durationMs,
         ))
+    }
+
+    override fun sendNext() {
+        Log.d(TAG, "sendNext (pending=${_pendingCommand.value} -> next)")
+        _pendingCommand.value = "next"
+        sendCommand("next")
+    }
+
+    override fun sendPrev() {
+        Log.d(TAG, "sendPrev (pending=${_pendingCommand.value} -> prev)")
+        _pendingCommand.value = "prev"
+        sendCommand("prev")
     }
 
     private fun sendCommand(action: String, extra: Map<String, Any> = emptyMap()) {

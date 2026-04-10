@@ -166,12 +166,12 @@ public final class StreamPlayer {
         }
     }
 
-    public func skipTo(index: Int) {
+    public func skipTo(index: Int, autoplay: Bool = true) {
         guard index >= 0, index < tracks.count else {
             logger.warning("skipTo called with invalid index: \(index)")
             return
         }
-        let skipped = engine.skipTo(index: index)
+        let skipped = engine.skipTo(index: index, autoplay: autoplay)
         if skipped {
             syncTrackFromEngine()
         }
