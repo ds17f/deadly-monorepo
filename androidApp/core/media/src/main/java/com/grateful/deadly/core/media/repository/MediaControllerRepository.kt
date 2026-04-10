@@ -210,6 +210,7 @@ class MediaControllerRepository @Inject constructor(
                                 "track_index" to 1
                             ))
                         } else {
+                            controller.pause()
                             Log.d(TAG, "🕒🎵 [URL] Recording loaded at position $startPosition (paused) at ${System.currentTimeMillis()}")
                         }
                         
@@ -317,6 +318,7 @@ class MediaControllerRepository @Inject constructor(
                                     "track_index" to (trackIndex + 1)
                                 ))
                             } else {
+                                controller.pause()
                                 Log.d(TAG, "🕒🎵 [URL] Track $trackIndex loaded at position $position (paused) at ${System.currentTimeMillis()}")
                             }
                         } else {

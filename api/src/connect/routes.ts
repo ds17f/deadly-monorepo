@@ -12,6 +12,7 @@ import {
   handlePrev,
   handleTransfer,
   handlePosition,
+  handleStop,
   startHeartbeatSweep,
 } from "./state.js";
 import type { ClientMessage, DeviceType, SessionTrack } from "./types.js";
@@ -90,6 +91,10 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
             }
             case "pause": {
               handlePause(userId!);
+              break;
+            }
+            case "stop": {
+              handleStop(userId!);
               break;
             }
             case "seek": {
