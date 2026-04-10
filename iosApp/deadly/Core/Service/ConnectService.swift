@@ -42,6 +42,7 @@ final class ConnectService: NSObject {
     private var webSocket: URLSessionWebSocketTask?
     private var urlSession: URLSession?
     private var heartbeatTask: Task<Void, Never>?
+    private var positionReportTask: Task<Void, Never>?
     private var reconnectTask: Task<Void, Never>?
     private var reconnectAttempt = 0
     private var shouldConnect = false
@@ -297,12 +298,14 @@ final class ConnectService: NSObject {
                     await onLoadShow(showId, new.trackIndex, new.positionMs, autoPlay)
                 }
             }
+            stopPositionReporting()
             return
         }
 
         // Only drive local playback when this device is the active device
         guard isActiveDevice else {
             logger.info("reactToState: not active device, skipping playback control")
+            stopPositionReporting()
             return
         }
 
@@ -327,10 +330,12 @@ final class ConnectService: NSObject {
             streamPlayer.skipTo(index: new.trackIndex, autoplay: new.playing)
         }
 
-        // React to seek from remote controllers (while already active)
+        // React to seek from remote controllers (while already active).
+        // Compare against local position (not old server state) so our own position
+        // reports echoing back don't cause unnecessary seeks.
         if !justBecameActive, let oldState = old, new.trackIndex == oldState.trackIndex, new.positionMs != oldState.positionMs {
-            // Only seek if the position delta is significant (>2s) to avoid fighting with natural playback progress
-            let delta = abs(new.positionMs - oldState.positionMs)
+            let localPositionMs = Int(streamPlayer.progress.currentTime * 1000)
+            let delta = abs(new.positionMs - localPositionMs)
             if delta > 2000 {
                 let targetTime = Double(new.positionMs) / 1000.0
                 logger.info("reactToState: seek from remote, jumping to \(new.positionMs, privacy: .public)ms (delta=\(delta, privacy: .public))")
@@ -347,6 +352,15 @@ final class ConnectService: NSObject {
             streamPlayer.pause()
         } else {
             logger.debug("reactToState: no playback change needed (server.playing=\(new.playing, privacy: .public) local.playing=\(localPlaying, privacy: .public))")
+        }
+
+        // Manage periodic position reporting — run only when active + playing
+        if isActiveDevice && new.playing {
+            if positionReportTask == nil {
+                startPositionReporting()
+            }
+        } else {
+            stopPositionReporting()
         }
     }
 
@@ -394,6 +408,27 @@ final class ConnectService: NSObject {
         webSocket?.send(.string(text)) { _ in }
     }
 
+    // MARK: - Position Reporting
+
+    private static let positionReportInterval: UInt64 = 5_000_000_000 // 5s in nanoseconds
+
+    private func startPositionReporting() {
+        stopPositionReporting()
+        positionReportTask = Task {
+            while !Task.isCancelled {
+                try? await Task.sleep(nanoseconds: Self.positionReportInterval)
+                guard !Task.isCancelled else { break }
+                let positionMs = Int(streamPlayer.progress.currentTime * 1000)
+                sendPosition(positionMs: positionMs)
+            }
+        }
+    }
+
+    private func stopPositionReporting() {
+        positionReportTask?.cancel()
+        positionReportTask = nil
+    }
+
     // MARK: - Heartbeat
 
     private func startHeartbeat() {
@@ -416,6 +451,7 @@ final class ConnectService: NSObject {
 
     private func handleDisconnect(closeCode: Int?) {
         stopHeartbeat()
+        stopPositionReporting()
         isConnected = false
         webSocket = nil
 

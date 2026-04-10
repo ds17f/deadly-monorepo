@@ -16,12 +16,15 @@ import com.grateful.deadly.core.model.PlaybackStatus
 import com.grateful.deadly.core.model.QueueInfo
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -65,7 +68,37 @@ class PlayerServiceImpl @Inject constructor(
         }
     }.stateIn(serviceScope, SharingStarted.Eagerly, false)
     
-    override val playbackStatus: StateFlow<PlaybackStatus> = mediaControllerRepository.playbackStatus
+    // When remote controlling, interpolate position from Connect state so the UI
+    // progress bar and clock advance smoothly between position broadcasts.
+    // Otherwise delegate to the local media controller.
+    private val interpolationTicker = flow {
+        while (true) {
+            emit(Unit)
+            delay(250L)
+        }
+    }
+
+    override val playbackStatus: StateFlow<PlaybackStatus> = combine(
+        mediaControllerRepository.playbackStatus,
+        connectService.connectState,
+        connectService.isActiveDevice,
+        interpolationTicker,
+    ) { localStatus, state, isActive, _ ->
+        val isRemoteControlling = state != null && state.activeDeviceId != null && !isActive
+        if (isRemoteControlling && state != null) {
+            val positionMs = if (state.playing) {
+                state.positionMs.toLong() + (System.currentTimeMillis() - state.positionTs.toLong())
+            } else {
+                state.positionMs.toLong()
+            }
+            PlaybackStatus(
+                currentPosition = positionMs,
+                duration = state.durationMs.toLong(),
+            )
+        } else {
+            localStatus
+        }
+    }.distinctUntilChanged().stateIn(serviceScope, SharingStarted.Eagerly, PlaybackStatus.EMPTY)
     
     // DUPLICATION ELIMINATION: Central CurrentTrackInfo using shared utility
     // Instead of 6+ individual StateFlows extracting metadata pieces,
