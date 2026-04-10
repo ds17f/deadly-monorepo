@@ -238,6 +238,7 @@ class MediaControllerRepository @Inject constructor(
                             ))
                             appPreferences.recordShowPlayed(showId)
                         } else {
+                            controller.pause()
                             Log.d(TAG, "🕒🎵 [URL] Recording loaded at position $startPosition (paused) at ${System.currentTimeMillis()}")
                         }
                         
@@ -356,6 +357,7 @@ class MediaControllerRepository @Inject constructor(
                                 ))
                                 appPreferences.recordShowPlayed(showId)
                             } else {
+                                controller.pause()
                                 Log.d(TAG, "🕒🎵 [URL] Track $trackIndex loaded at position $position (paused) at ${System.currentTimeMillis()}")
                             }
                         } else {

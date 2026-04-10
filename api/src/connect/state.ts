@@ -1,6 +1,6 @@
 import type { WebSocket } from "ws";
 import type { ConnectState, ConnectDevice, DeviceType, SessionTrack } from "./types.js";
-import { upsertPlaybackPosition } from "../db/userdata.js";
+import { upsertPlaybackPosition, getPlaybackPosition } from "../db/userdata.js";
 
 const log = (msg: string) => console.log(`[Connect] ${msg}`);
 const warn = (msg: string) => console.warn(`[Connect] ${msg}`);
@@ -32,6 +32,23 @@ function deviceKey(userId: string, deviceId: string): string {
   return `${userId}:${deviceId}`;
 }
 
+function persistCurrent(userId: string, state: ConnectState): void {
+  if (!state.showId || !state.recordingId) return;
+  const now = Date.now();
+  const positionMs = state.playing
+    ? state.positionMs + (now - state.positionTs)
+    : state.positionMs;
+  upsertPlaybackPosition(userId, {
+    showId: state.showId,
+    recordingId: state.recordingId,
+    trackIndex: state.trackIndex,
+    positionMs,
+    date: state.date ?? undefined,
+    venue: state.venue ?? undefined,
+    location: state.location ?? undefined,
+  });
+}
+
 function initialState(): ConnectState {
   return {
     version: 0,
@@ -56,6 +73,17 @@ export function getOrCreateState(userId: string): ConnectState {
   let state = userStates.get(userId);
   if (!state) {
     state = initialState();
+    const persisted = getPlaybackPosition(userId);
+    if (persisted) {
+      state.showId = persisted.showId;
+      state.recordingId = persisted.recordingId;
+      state.trackIndex = persisted.trackIndex;
+      state.positionMs = persisted.positionMs;
+      state.date = persisted.date ?? null;
+      state.venue = persisted.venue ?? null;
+      state.location = persisted.location ?? null;
+      log(`hydrate: ${userId} show=${persisted.showId} track=${persisted.trackIndex} pos=${persisted.positionMs}`);
+    }
     userStates.set(userId, state);
   }
   return state;
@@ -174,20 +202,7 @@ export function unregisterDevice(userId: string, deviceId: string): void {
 
   const state = userStates.get(userId);
   if (state && state.activeDeviceId === deviceId) {
-    // Snapshot position before clearing active device
-    if (state.showId && state.recordingId && state.playing) {
-      const now = Date.now();
-      const snapshotMs = state.positionMs + (now - state.positionTs);
-      upsertPlaybackPosition(userId, {
-        showId: state.showId,
-        recordingId: state.recordingId,
-        trackIndex: state.trackIndex,
-        positionMs: snapshotMs,
-        date: state.date ?? undefined,
-        venue: state.venue ?? undefined,
-        location: state.location ?? undefined,
-      });
-    }
+    persistCurrent(userId, state);
 
     mutate(userId, {
       activeDeviceId: null,
@@ -231,6 +246,7 @@ export function startHeartbeatSweep(): void {
     for (const [userId, deviceIds] of evictedByUser) {
       const state = userStates.get(userId);
       if (state && state.activeDeviceId && deviceIds.includes(state.activeDeviceId)) {
+        persistCurrent(userId, state);
         mutate(userId, {
           activeDeviceId: null,
           activeDeviceName: null,
@@ -359,6 +375,27 @@ export function handlePause(userId: string): void {
       location: state.location ?? undefined,
     });
   }
+}
+
+export function handleStop(userId: string): void {
+  const state = userStates.get(userId);
+  if (!state || !state.showId) return;
+
+  persistCurrent(userId, state);
+
+  const now = Date.now();
+  const positionMs = state.playing
+    ? state.positionMs + (now - state.positionTs)
+    : state.positionMs;
+
+  mutate(userId, {
+    playing: false,
+    activeDeviceId: null,
+    activeDeviceName: null,
+    activeDeviceType: null,
+    positionMs,
+    positionTs: now,
+  });
 }
 
 export function handleSeek(userId: string, params: { trackIndex: number; positionMs: number; durationMs?: number }): void {
