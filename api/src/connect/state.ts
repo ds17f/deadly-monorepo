@@ -19,6 +19,7 @@ const liveDevices = new Map<string, LiveDevice>();
 interface PendingTransfer {
   targetDeviceId: string;
   interpolatedPositionMs: number;
+  wasPlaying: boolean;
   timeoutHandle: ReturnType<typeof setTimeout>;
 }
 
@@ -447,7 +448,7 @@ export function handlePrev(userId: string): void {
   }
 }
 
-function activateTarget(userId: string, targetDeviceId: string, positionMs: number): void {
+function activateTarget(userId: string, targetDeviceId: string, positionMs: number, playing: boolean): void {
   const targetEntry = liveDevices.get(deviceKey(userId, targetDeviceId));
   if (!targetEntry) {
     log(`activateTarget: target ${targetDeviceId} no longer connected, staying parked`);
@@ -458,7 +459,7 @@ function activateTarget(userId: string, targetDeviceId: string, positionMs: numb
     activeDeviceId: targetDeviceId,
     activeDeviceName: targetEntry.device.name,
     activeDeviceType: targetEntry.device.type,
-    playing: true,
+    playing,
     positionMs,
     positionTs: Date.now(),
   });
@@ -493,17 +494,18 @@ export function handleTransfer(
   // No active device (parked): skip phase 1, go directly to phase 2
   if (!state.activeDeviceId) {
     log(`handleTransfer: parked — activating ${targetEntry.device.name}[${targetEntry.device.type}] directly`);
-    activateTarget(userId, targetDeviceId, state.positionMs);
+    activateTarget(userId, targetDeviceId, state.positionMs, state.playing);
     return;
   }
 
   // Phase 1 — Park the old device
   const now = Date.now();
-  const interpolatedPositionMs = state.playing
+  const wasPlaying = state.playing;
+  const interpolatedPositionMs = wasPlaying
     ? state.positionMs + (now - state.positionTs)
     : state.positionMs;
 
-  log(`handleTransfer: phase 1 — parking, interpolated position ${interpolatedPositionMs}ms`);
+  log(`handleTransfer: phase 1 — parking, interpolated position ${interpolatedPositionMs}ms, wasPlaying=${wasPlaying}`);
 
   mutate(userId, {
     activeDeviceId: null,
@@ -520,12 +522,13 @@ export function handleTransfer(
     if (!pending) return;
     pendingTransfers.delete(userId);
     log(`handleTransfer: timeout — proceeding with interpolated position ${pending.interpolatedPositionMs}ms`);
-    activateTarget(userId, pending.targetDeviceId, pending.interpolatedPositionMs);
+    activateTarget(userId, pending.targetDeviceId, pending.interpolatedPositionMs, pending.wasPlaying);
   }, 1000);
 
   pendingTransfers.set(userId, {
     targetDeviceId,
     interpolatedPositionMs,
+    wasPlaying,
     timeoutHandle,
   });
 }
@@ -539,8 +542,8 @@ export function handlePosition(userId: string, deviceId: string, positionMs: num
   if (pending) {
     clearTimeout(pending.timeoutHandle);
     pendingTransfers.delete(userId);
-    log(`handleTransfer: phase 2 — old device reported positionMs=${positionMs}`);
-    activateTarget(userId, pending.targetDeviceId, positionMs);
+    log(`handleTransfer: phase 2 — old device reported positionMs=${positionMs}, wasPlaying=${pending.wasPlaying}`);
+    activateTarget(userId, pending.targetDeviceId, positionMs, pending.wasPlaying);
     return;
   }
 
