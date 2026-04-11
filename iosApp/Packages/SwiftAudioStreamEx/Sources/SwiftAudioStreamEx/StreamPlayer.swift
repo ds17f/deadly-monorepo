@@ -31,6 +31,10 @@ public final class StreamPlayer {
     /// If playback position is past this threshold (seconds), "previous" restarts instead of going back.
     public var previousTrackThreshold: TimeInterval = 3.0
 
+    /// Called when playback auto-advances to the next track (track ended naturally).
+    /// Not called for explicit `next()`, `previous()`, or `skipTo(index:)`.
+    public var onTrackComplete: (() -> Void)?
+
     /// Player output volume (0.0–1.0). Does not affect system volume.
     public var volume: Float {
         get { engine.volume }
@@ -260,6 +264,7 @@ public final class StreamPlayer {
                 guard let self else { return }
                 self.syncTrackFromEngine()
                 self.logger.info("Track auto-advanced to index \(self.engine.currentIndex)")
+                self.onTrackComplete?()
             }
         }
 

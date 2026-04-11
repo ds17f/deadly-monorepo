@@ -231,6 +231,10 @@ final class PlaylistServiceImpl: PlaylistService {
         // The observer will emit playback_start/_end via the debounced commit path.
         if streamPlayer.currentTrack?.metadata["recordingId"] == recording.identifier {
             streamPlayer.skipTo(index: index)
+            if !suppressConnectNotify {
+                let durationMs = Int((tracks[index].durationInterval ?? 0) * 1000)
+                connectService?.sendSeek(trackIndex: index, positionMs: 0, durationMs: durationMs)
+            }
             return
         }
         // Propagate the show's ticket art so mini player and full player can display it.
