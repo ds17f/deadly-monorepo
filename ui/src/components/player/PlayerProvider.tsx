@@ -49,6 +49,7 @@ export default function PlayerProvider({
   const preloadedNextRef = useRef(false);
   const pendingSeekMsRef = useRef<number | null>(null);
   const suppressAutoPlayRef = useRef(false);
+  const sendCommandRef = useRef(sendCommand);
 
   // Keep refs in sync
   useEffect(() => {
@@ -57,6 +58,9 @@ export default function PlayerProvider({
   useEffect(() => {
     currentTrackIndexRef.current = currentTrackIndex;
   }, [currentTrackIndex]);
+  useEffect(() => {
+    sendCommandRef.current = sendCommand;
+  }, [sendCommand]);
 
   function getActiveAudio(): HTMLAudioElement | null {
     return activeAudioRef.current === "A"
@@ -169,6 +173,7 @@ export default function PlayerProvider({
           }
           preloadedNextRef.current = false;
           setCurrentTrackIndex(idx + 1);
+          sendCommandRef.current("next");
         } else {
           setStatus("paused");
         }
@@ -443,6 +448,14 @@ export default function PlayerProvider({
   );
 
   const playTrack = useCallback((index: number) => {
+    const durationMs = tracks?.[index]?.duration
+      ? Math.round(tracks[index].duration * 1000)
+      : 0;
+    if (isRemoteControlling) {
+      setPendingCommand("seek");
+      sendCommand("seek", { trackIndex: index, positionMs: 0, durationMs });
+      return;
+    }
     // Reset gapless state since user is manually selecting
     preloadedNextRef.current = false;
     const inactive = getInactiveAudio();
@@ -451,7 +464,8 @@ export default function PlayerProvider({
       inactive.removeAttribute("src");
     }
     setCurrentTrackIndex(index);
-  }, []);
+    sendCommand("seek", { trackIndex: index, positionMs: 0, durationMs });
+  }, [tracks, isRemoteControlling, sendCommand]);
 
   const togglePlayPause = useCallback(() => {
     if (isRemoteControlling && connectState) {

@@ -20,8 +20,11 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
@@ -101,6 +104,11 @@ class MediaControllerRepository @Inject constructor(
     
     private val _mediaItemCount = MutableStateFlow(0)
     val mediaItemCount: StateFlow<Int> = _mediaItemCount.asStateFlow()
+
+    // Emits the new track index when playback auto-advances (track ended naturally).
+    // Not emitted for explicit seeks or skips via seekToMediaItemIndex.
+    private val _trackAutoAdvanced = MutableSharedFlow<Int>(extraBufferCapacity = 1)
+    val trackAutoAdvanced: SharedFlow<Int> = _trackAutoAdvanced.asSharedFlow()
 
     // Analytics: tracks the currently playing item for playback_end
     private var analyticsPlaybackInfo: Triple<String, String, Int>? = null // showId, recordingId, trackNumber
@@ -493,11 +501,16 @@ class MediaControllerRepository @Inject constructor(
                             _currentRecordingId.value = extractRecordingIdFromMediaItem(mediaItem)
                             _currentTrackIndex.value = controller.currentMediaItemIndex
                             _mediaItemCount.value = controller.mediaItemCount
-                            
+
                             // Update both position and duration immediately to prevent visual hiccup
                             if (mediaItem != null) {
                                 _currentPosition.value = 0L  // New tracks always start at beginning
                                 _duration.value = controller.duration.coerceAtLeast(0L)
+                            }
+
+                            // Notify Connect on natural track end so all devices stay in sync
+                            if (reason == Player.MEDIA_ITEM_TRANSITION_REASON_AUTO) {
+                                _trackAutoAdvanced.tryEmit(controller.currentMediaItemIndex)
                             }
                         }
                         
