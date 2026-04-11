@@ -324,8 +324,12 @@ final class ConnectService: NSObject {
             }
         }
 
-        // React to track changes from remote controllers (while already active)
-        if !justBecameActive, let oldState = old, new.trackIndex != oldState.trackIndex {
+        // React to track changes from remote controllers (while already active).
+        // Guard against the echo from our own sendNext(): the engine already advanced
+        // locally, so queueState.currentIndex already equals new.trackIndex — calling
+        // skipTo again would restart the track and stop playback.
+        if !justBecameActive, let oldState = old, new.trackIndex != oldState.trackIndex,
+           streamPlayer.queueState.currentIndex != new.trackIndex {
             logger.info("reactToState: track changed \(oldState.trackIndex, privacy: .public) -> \(new.trackIndex, privacy: .public), skipping to index")
             streamPlayer.skipTo(index: new.trackIndex, autoplay: new.playing)
         }
