@@ -33,6 +33,7 @@ import javax.inject.Singleton
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.collect
 
 @Singleton
 class ConnectServiceImpl @Inject constructor(
@@ -81,6 +82,20 @@ class ConnectServiceImpl @Inject constructor(
     private var heartbeatJob: Job? = null
     private var positionReportJob: Job? = null
     private var reconnectJob: Job? = null
+
+    init {
+        // When the local player auto-advances to the next track, notify the Connect
+        // server so all other devices stay in sync. Only fires when we are the active
+        // device (seekToMediaItemIndex from reactToState uses REASON_SEEK, not REASON_AUTO).
+        scope.launch {
+            mediaControllerRepository.trackAutoAdvanced.collect {
+                if (_isActiveDevice.value) {
+                    Log.d(TAG, "trackAutoAdvanced: active device, sending next")
+                    sendNext()
+                }
+            }
+        }
+    }
 
     override fun startIfAuthenticated() {
         val token = authService.getAuthToken()

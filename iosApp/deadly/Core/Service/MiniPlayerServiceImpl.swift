@@ -24,6 +24,9 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
         self.streamPlayer = streamPlayer
         Task { @MainActor [weak self] in
             self?.startInterpolationTicker()
+            streamPlayer.onTrackComplete = { [weak self] in
+                self?.connectService?.sendNext()
+            }
         }
     }
 

@@ -154,6 +154,10 @@ final class PlaylistServiceImpl: PlaylistService {
         // instead of rebuilding the entire queue (avoids redundant network redirect resolution).
         if streamPlayer.currentTrack?.metadata["recordingId"] == recording.identifier {
             streamPlayer.skipTo(index: index)
+            if !suppressConnectNotify {
+                let durationMs = Int((tracks[index].durationInterval ?? 0) * 1000)
+                connectService?.sendSeek(trackIndex: index, positionMs: 0, durationMs: durationMs)
+            }
             return
         }
         // Propagate the show's ticket art so mini player and full player can display it.
