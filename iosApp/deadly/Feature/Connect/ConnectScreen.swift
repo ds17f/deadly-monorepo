@@ -37,7 +37,7 @@ struct ConnectScreen: View {
                             let isMe = device.deviceId == container.appPreferences.installId
                             let isDeviceActive = device.deviceId == service.connectState?.activeDeviceId
                             let isPending = service.pendingTransfer == device.deviceId
-                            DeviceRow(
+                            ConnectDeviceRow(
                                 device: device,
                                 isMe: isMe,
                                 isDeviceActive: isDeviceActive,
@@ -67,56 +67,6 @@ struct ConnectScreen: View {
                 service.sendStop()
             }
             Button("Cancel", role: .cancel) {}
-        }
-    }
-}
-
-// MARK: - DeviceRow
-
-private struct DeviceRow: View {
-    let device: ConnectDevice
-    let isMe: Bool
-    let isDeviceActive: Bool
-    let hasSession: Bool
-    let isPending: Bool
-    let transferDisabled: Bool
-    let isRemoteControlling: Bool
-    let onTransfer: () -> Void
-
-    var body: some View {
-        HStack(spacing: 12) {
-            Image(systemName: device.deviceType.systemImage)
-                .foregroundStyle(DeadlyColors.primary)
-                .frame(width: 24)
-
-            VStack(alignment: .leading, spacing: 2) {
-                Text(device.deviceName)
-                    .font(.body)
-                Text(isMe ? "This Device" : device.deviceType.label)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-            }
-
-            Spacer()
-
-            if hasSession {
-                if isPending {
-                    ProgressView()
-                        .controlSize(.small)
-                } else if isDeviceActive {
-                    Text("Playing")
-                        .font(.caption)
-                        .foregroundStyle(DeadlyColors.primary)
-                } else if isMe && isRemoteControlling {
-                    Button("Play here", action: onTransfer)
-                        .font(.caption)
-                        .disabled(transferDisabled)
-                } else if !isMe {
-                    Button("Play", action: onTransfer)
-                        .font(.caption)
-                        .disabled(transferDisabled)
-                }
-            }
         }
     }
 }
