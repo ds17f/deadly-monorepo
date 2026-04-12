@@ -145,9 +145,8 @@ struct ConnectDeviceRow: View {
                     }
                 }
             }
+            .contentShape(Rectangle())
         }
-        .contentShape(Rectangle())
         .disabled(!isTappable)
-        .buttonStyle(.plain)
     }
 }
