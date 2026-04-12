@@ -29,6 +29,7 @@ import com.grateful.deadly.feature.player.screens.main.components.PlayerMiniPlay
 import com.grateful.deadly.core.design.component.QrCodeDisplay
 import com.grateful.deadly.core.design.component.ShareChooserSheet
 import com.grateful.deadly.feature.player.screens.main.models.PlayerViewModel
+import com.grateful.deadly.feature.settings.screens.connect.ConnectSheet
 
 /**
  * PlayerScreen - Clean player interface
@@ -52,6 +53,7 @@ fun PlayerScreen(
     val panelState by viewModel.panelState.collectAsState()
     val isCurrentTrackFavorite by viewModel.isCurrentTrackFavorite.collectAsState()
     val equalizerState by viewModel.equalizerState.collectAsState()
+    val connectRemoteDeviceName by viewModel.connectRemoteDeviceName.collectAsState()
 
     val recordingId = uiState.navigationInfo.recordingId
 
@@ -65,6 +67,7 @@ fun PlayerScreen(
     var showShareChooser by remember { mutableStateOf(false) }
     var showEqualizerBottomSheet by remember { mutableStateOf(false) }
     var showQueueBottomSheet by remember { mutableStateOf(false) }
+    var showConnectSheet by remember { mutableStateOf(false) }
     // Mini player visibility based on scroll position
     // Show mini player only when player controls are completely off screen
     val showMiniPlayer by remember {
@@ -152,7 +155,9 @@ fun PlayerScreen(
             item {
                 PlayerSecondaryControls(
                     isFavorite = isCurrentTrackFavorite,
+                    connectDeviceName = connectRemoteDeviceName,
                     onEqualizerClick = { showEqualizerBottomSheet = true },
+                    onConnectClick = { showConnectSheet = true },
                     onFavoriteClick = { viewModel.toggleCurrentTrackFavorite() },
                     onShareClick = { showShareChooser = true },
                     onQueueClick = { showQueueBottomSheet = true },
@@ -246,6 +251,12 @@ fun PlayerScreen(
         if (showQueueBottomSheet) {
             PlayerQueueSheet(
                 onDismiss = { showQueueBottomSheet = false }
+            )
+        }
+
+        if (showConnectSheet) {
+            ConnectSheet(
+                onDismiss = { showConnectSheet = false }
             )
         }
 

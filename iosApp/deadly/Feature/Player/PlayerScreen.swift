@@ -13,6 +13,7 @@ struct PlayerScreen: View {
     @State private var showMessageShare = false
     @State private var showEqualizerSheet = false
     @State private var showPlayerMenuSheet = false
+    @State private var showConnectSheet = false
     @State private var isCurrentTrackFavorite = false
     @Environment(\.appContainer) private var container
 
@@ -193,6 +194,9 @@ struct PlayerScreen: View {
                 showErrorAlert = true
             }
         }
+        .sheet(isPresented: $showConnectSheet) {
+            ConnectSheet()
+        }
         .sheet(isPresented: $showEqualizerSheet) {
             EqualizerSheet()
                 .presentationDetents([.medium, .large])
@@ -304,45 +308,67 @@ struct PlayerScreen: View {
 
     @ViewBuilder
     private var actionButtons: some View {
-        HStack(spacing: 32) {
+        HStack {
+            // Left section - Connect
+            Button {
+                showConnectSheet = true
+            } label: {
+                HStack(spacing: 4) {
+                    Image(systemName: "airplayaudio")
+                        .font(.title2)
+                        .foregroundStyle(container.connectService.isRemoteControlling ? DeadlyColors.primary : .secondary)
+                        .frame(width: 44, height: 44)
+                    if container.connectService.isRemoteControlling,
+                       let name = container.connectService.connectState?.activeDeviceName {
+                        Text(name)
+                            .font(.caption2)
+                            .foregroundStyle(DeadlyColors.primary)
+                            .lineLimit(1)
+                            .frame(maxWidth: 100, alignment: .leading)
+                    }
+                }
+            }
+            .buttonStyle(.plain)
+
             Spacer()
 
-            // Favorite
-            Button {
-                toggleFavoriteSong()
-            } label: {
-                Image(systemName: isCurrentTrackFavorite ? "heart.fill" : "heart")
-                    .font(.title2)
-                    .foregroundStyle(isCurrentTrackFavorite ? DeadlyColors.primary : .secondary)
-                    .frame(width: 44, height: 44)
-            }
-            .buttonStyle(.plain)
-            .disabled(currentShowId == nil)
+            // Right section
+            HStack(spacing: 8) {
+                // Equalizer
+                Button {
+                    showEqualizerSheet = true
+                } label: {
+                    Image(systemName: "slider.vertical.3")
+                        .font(.title2)
+                        .foregroundStyle(.secondary)
+                        .frame(width: 44, height: 44)
+                }
+                .buttonStyle(.plain)
 
-            // Equalizer
-            Button {
-                showEqualizerSheet = true
-            } label: {
-                Image(systemName: "slider.vertical.3")
-                    .font(.title2)
-                    .foregroundStyle(.secondary)
-                    .frame(width: 44, height: 44)
-            }
-            .buttonStyle(.plain)
+                // Favorite
+                Button {
+                    toggleFavoriteSong()
+                } label: {
+                    Image(systemName: isCurrentTrackFavorite ? "heart.fill" : "heart")
+                        .font(.title2)
+                        .foregroundStyle(isCurrentTrackFavorite ? DeadlyColors.primary : .secondary)
+                        .frame(width: 44, height: 44)
+                }
+                .buttonStyle(.plain)
+                .disabled(currentShowId == nil)
 
-            // Share
-            Button {
-                showShareChooser = true
-            } label: {
-                Image(systemName: "square.and.arrow.up")
-                    .font(.title2)
-                    .foregroundStyle(.secondary)
-                    .frame(width: 44, height: 44)
+                // Share
+                Button {
+                    showShareChooser = true
+                } label: {
+                    Image(systemName: "square.and.arrow.up")
+                        .font(.title2)
+                        .foregroundStyle(.secondary)
+                        .frame(width: 44, height: 44)
+                }
+                .buttonStyle(.plain)
+                .disabled(currentShowId == nil)
             }
-            .buttonStyle(.plain)
-            .disabled(currentShowId == nil)
-
-            Spacer()
         }
         .padding(.horizontal, 24)
     }
