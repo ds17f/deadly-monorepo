@@ -70,18 +70,20 @@ fun MiniPlayerScreen(
     // Only show MiniPlayer when there's a current track
     if (!uiState.shouldShow || uiState.currentTrack == null) return
 
-    Column {
-        // "Playing on {device}" speech bubble — cold launch only
+    Box(modifier = Modifier.fillMaxWidth()) {
+        // "Playing on {device}" speech bubble — floats above card, doesn't affect layout
         AnimatedVisibility(
             visible = showConnectTooltip && connectRemoteDeviceName != null,
+            modifier = Modifier
+                .align(Alignment.TopEnd)
+                .offset(y = (-48).dp)
+                .padding(end = 46.dp),
             enter = fadeIn() + scaleIn(transformOrigin = TransformOrigin(0.85f, 1f)),
             exit = fadeOut() + scaleOut(transformOrigin = TransformOrigin(0.85f, 1f))
         ) {
             val bubbleColor = MaterialTheme.colorScheme.primary
             Column(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(start = 16.dp, end = 16.dp, bottom = 2.dp)
                     .clickable {
                         viewModel.dismissConnectTooltip()
                         showConnectSheet = true
@@ -112,10 +114,10 @@ fun MiniPlayerScreen(
                         )
                     }
                 }
-                // Downward-pointing arrow aligned toward cast icon
+                // Downward-pointing arrow
                 Canvas(
                     modifier = Modifier
-                        .padding(end = 30.dp)
+                        .padding(end = 12.dp)
                         .size(width = 14.dp, height = 8.dp)
                 ) {
                     val path = Path().apply {
@@ -235,7 +237,7 @@ fun MiniPlayerScreen(
         }
     }
 
-    } // Column
+    } // Box
 
     if (showConnectSheet) {
         ConnectSheet(
