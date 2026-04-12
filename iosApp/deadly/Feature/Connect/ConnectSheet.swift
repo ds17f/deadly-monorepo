@@ -17,31 +17,51 @@ struct ConnectSheet: View {
                         description: Text("Sign in to see and manage connected devices.")
                     )
                 } else {
-                    Section {
-                        HStack(spacing: 8) {
-                            Circle()
-                                .fill(service.isConnected ? Color.green : Color.secondary)
-                                .frame(width: 8, height: 8)
-                            Text(service.isConnected ? "Connected" : "Disconnected")
-                                .foregroundStyle(service.isConnected ? .primary : .secondary)
+                    let hasSession = service.connectState?.showId != nil
+                    let myId = container.appPreferences.installId
+                    let localDevice = service.devices.first { $0.deviceId == myId }
+                    let otherDevices = service.devices.filter { $0.deviceId != myId }
+
+                    // This Device section
+                    Section("This Device") {
+                        if let device = localDevice {
+                            let isDeviceActive = device.deviceId == service.connectState?.activeDeviceId
+                            let isPending = service.pendingTransfer == device.deviceId
+                            ConnectDeviceRow(
+                                device: device,
+                                isMe: true,
+                                isDeviceActive: isDeviceActive,
+                                hasSession: hasSession,
+                                isPending: isPending,
+                                transferDisabled: service.pendingTransfer != nil,
+                                isRemoteControlling: service.isRemoteControlling,
+                                onTransfer: { service.sendTransfer(targetDeviceId: device.deviceId) }
+                            )
+                        } else {
+                            HStack(spacing: 8) {
+                                Circle()
+                                    .fill(service.isConnected ? Color.green : Color.secondary)
+                                    .frame(width: 8, height: 8)
+                                Text(service.isConnected ? "Connected" : "Disconnected")
+                                    .foregroundStyle(service.isConnected ? .primary : .secondary)
+                            }
                         }
                     }
 
-                    if service.devices.isEmpty {
-                        Section("Devices") {
-                            Text("No devices connected")
+                    // Other devices section
+                    if otherDevices.isEmpty {
+                        Section("Other Devices") {
+                            Text("No other devices connected")
                                 .foregroundStyle(.secondary)
                         }
                     } else {
-                        Section("Devices") {
-                            let hasSession = service.connectState?.showId != nil
-                            ForEach(service.devices) { device in
-                                let isMe = device.deviceId == container.appPreferences.installId
+                        Section("Other Devices") {
+                            ForEach(otherDevices) { device in
                                 let isDeviceActive = device.deviceId == service.connectState?.activeDeviceId
                                 let isPending = service.pendingTransfer == device.deviceId
                                 ConnectDeviceRow(
                                     device: device,
-                                    isMe: isMe,
+                                    isMe: false,
                                     isDeviceActive: isDeviceActive,
                                     hasSession: hasSession,
                                     isPending: isPending,
@@ -100,7 +120,7 @@ struct ConnectDeviceRow: View {
         Button(action: onTransfer) {
             HStack(spacing: 12) {
                 Image(systemName: device.deviceType.systemImage)
-                    .foregroundStyle(DeadlyColors.primary)
+                    .foregroundStyle(isDeviceActive ? DeadlyColors.primary : .primary)
                     .frame(width: 24)
 
                 VStack(alignment: .leading, spacing: 2) {
@@ -127,5 +147,6 @@ struct ConnectDeviceRow: View {
             }
         }
         .disabled(!isTappable)
+        .buttonStyle(.plain)
     }
 }

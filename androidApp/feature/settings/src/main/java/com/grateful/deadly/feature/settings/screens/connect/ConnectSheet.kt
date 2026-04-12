@@ -42,25 +42,60 @@ fun ConnectSheet(
                 modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
             )
 
-            // Connection status
-            ListItem(
-                headlineContent = {
-                    Text(if (isConnected) "Connected" else "Disconnected")
-                },
-                leadingContent = {
-                    Surface(
-                        modifier = Modifier.size(10.dp),
-                        shape = CircleShape,
-                        color = if (isConnected) Color(0xFF4CAF50) else MaterialTheme.colorScheme.outline,
-                    ) {}
-                }
+            val hasSession = connectState?.showId != null
+            val isRemoteControlling = connectState?.activeDeviceId != null && !isActiveDevice
+            val localDevice = devices.find { it.deviceId == installId }
+            val otherDevices = devices.filter { it.deviceId != installId }
+
+            // This Device section
+            Text(
+                text = "This Device",
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
             )
+
+            if (localDevice != null) {
+                val isDeviceActive = localDevice.deviceId == connectState?.activeDeviceId
+                val isPending = pendingTransfer == localDevice.deviceId
+                ConnectDeviceRow(
+                    device = localDevice,
+                    isMe = true,
+                    isDeviceActive = isDeviceActive,
+                    hasSession = hasSession,
+                    isPending = isPending,
+                    transferDisabled = pendingTransfer != null,
+                    isRemoteControlling = isRemoteControlling,
+                    onTransfer = { viewModel.transferTo(localDevice.deviceId) },
+                )
+            } else {
+                ListItem(
+                    headlineContent = {
+                        Text(if (isConnected) "Connected" else "Disconnected")
+                    },
+                    leadingContent = {
+                        Surface(
+                            modifier = Modifier.size(10.dp),
+                            shape = CircleShape,
+                            color = if (isConnected) Color(0xFF4CAF50) else MaterialTheme.colorScheme.outline,
+                        ) {}
+                    }
+                )
+            }
 
             HorizontalDivider()
 
-            if (devices.isEmpty()) {
+            // Other Devices section
+            Text(
+                text = "Other Devices",
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+            )
+
+            if (otherDevices.isEmpty()) {
                 ListItem(
-                    headlineContent = { Text("No devices connected") },
+                    headlineContent = { Text("No other devices connected") },
                     supportingContent = {
                         Text(
                             "Other devices signed in to the same account will appear here.",
@@ -69,15 +104,12 @@ fun ConnectSheet(
                     }
                 )
             } else {
-                val hasSession = connectState?.showId != null
-                val isRemoteControlling = connectState?.activeDeviceId != null && !isActiveDevice
-                devices.forEach { device ->
-                    val isMe = device.deviceId == installId
+                otherDevices.forEach { device ->
                     val isDeviceActive = device.deviceId == connectState?.activeDeviceId
                     val isPending = pendingTransfer == device.deviceId
                     ConnectDeviceRow(
                         device = device,
-                        isMe = isMe,
+                        isMe = false,
                         isDeviceActive = isDeviceActive,
                         hasSession = hasSession,
                         isPending = isPending,
@@ -129,7 +161,8 @@ internal fun ConnectDeviceRow(
             Icon(
                 painter = IconResources.Content.Cast(),
                 contentDescription = null,
-                tint = MaterialTheme.colorScheme.primary,
+                tint = if (isDeviceActive) MaterialTheme.colorScheme.primary
+                       else MaterialTheme.colorScheme.onSurface,
                 modifier = Modifier.size(24.dp)
             )
         },
@@ -160,10 +193,6 @@ internal fun ConnectDeviceRow(
                 }
             }
         } else null,
-        modifier = if (isTappable) {
-            Modifier.clickable(onClick = onTransfer)
-        } else {
-            Modifier
-        }
+        modifier = Modifier.clickable(enabled = isTappable, onClick = onTransfer)
     )
 }
