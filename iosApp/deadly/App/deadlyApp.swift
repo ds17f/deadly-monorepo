@@ -114,6 +114,7 @@ struct deadlyApp: App {
                         try? await Task.sleep(for: .seconds(1.5))
                         // Restore last playback position only if Connect has no shared session
                         await container.playbackRestorationService.restoreIfAvailable()
+                        container.isColdLaunch = false
                     }
                 }
         }

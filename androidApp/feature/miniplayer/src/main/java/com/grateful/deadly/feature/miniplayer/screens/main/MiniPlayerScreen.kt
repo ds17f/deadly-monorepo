@@ -1,6 +1,11 @@
 package com.grateful.deadly.feature.miniplayer.screens.main
 
 import android.util.Log
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.scaleOut
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -12,6 +17,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -39,7 +45,16 @@ fun MiniPlayerScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val connectRemoteDeviceName by viewModel.connectRemoteDeviceName.collectAsState()
+    val showConnectTooltip by viewModel.shouldShowConnectTooltip.collectAsState()
     var showConnectSheet by remember { mutableStateOf(false) }
+
+    // Auto-dismiss tooltip after 4 seconds
+    LaunchedEffect(showConnectTooltip) {
+        if (showConnectTooltip) {
+            delay(4000)
+            viewModel.dismissConnectTooltip()
+        }
+    }
 
     // Handle errors with auto-clear
     uiState.error?.let { error ->
@@ -52,7 +67,48 @@ fun MiniPlayerScreen(
     
     // Only show MiniPlayer when there's a current track
     if (!uiState.shouldShow || uiState.currentTrack == null) return
-    
+
+    Column {
+        // "Playing on {device}" tooltip — cold launch only
+        AnimatedVisibility(
+            visible = showConnectTooltip && connectRemoteDeviceName != null,
+            enter = fadeIn() + scaleIn(transformOrigin = TransformOrigin(0.5f, 1f)),
+            exit = fadeOut() + scaleOut(transformOrigin = TransformOrigin(0.5f, 1f))
+        ) {
+            Surface(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp, vertical = 4.dp)
+                    .clickable {
+                        viewModel.dismissConnectTooltip()
+                        showConnectSheet = true
+                    },
+                shape = RoundedCornerShape(20.dp),
+                color = MaterialTheme.colorScheme.surfaceVariant,
+                shadowElevation = 4.dp
+            ) {
+                Row(
+                    modifier = Modifier.padding(horizontal = 14.dp, vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center
+                ) {
+                    Icon(
+                        painter = IconResources.Content.Cast(),
+                        contentDescription = null,
+                        modifier = Modifier.size(14.dp),
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Spacer(modifier = Modifier.width(6.dp))
+                    Text(
+                        text = "Playing on ${connectRemoteDeviceName ?: ""}",
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontWeight = FontWeight.Medium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
+        }
+
     Card(
         modifier = modifier
             .fillMaxWidth()
@@ -158,6 +214,8 @@ fun MiniPlayerScreen(
             )
         }
     }
+
+    } // Column
 
     if (showConnectSheet) {
         ConnectSheet(
