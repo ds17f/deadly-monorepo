@@ -7,6 +7,7 @@ import com.grateful.deadly.core.api.miniplayer.MiniPlayerService
 import com.grateful.deadly.core.connect.ConnectService
 import com.grateful.deadly.core.model.MiniPlayerUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
+import com.grateful.deadly.core.model.AppLaunchState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -43,7 +44,21 @@ class MiniPlayerViewModel @Inject constructor(
     ) { state, isActive ->
         if (state?.activeDeviceId != null && !isActive) state.activeDeviceName else null
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), null)
-    
+
+    private val _tooltipDismissed = MutableStateFlow(false)
+
+    val shouldShowConnectTooltip: StateFlow<Boolean> = combine(
+        connectRemoteDeviceName,
+        _tooltipDismissed
+    ) { deviceName, dismissed ->
+        deviceName != null && !dismissed && AppLaunchState.isColdLaunch
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
+
+    fun dismissConnectTooltip() {
+        _tooltipDismissed.value = true
+        AppLaunchState.isColdLaunch = false
+    }
+
     init {
         Log.d(TAG, "MiniPlayerViewModel initialized")
         initializeService()
