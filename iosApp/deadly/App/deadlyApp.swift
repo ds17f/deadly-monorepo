@@ -125,5 +125,10 @@ struct deadlyApp: App {
                 container.connectService.startIfAuthenticated()
             }
         }
+        .onChange(of: container.networkMonitor.isConnected) { _, isConnected in
+            if isConnected {
+                container.connectService.handleNetworkRestored()
+            }
+        }
     }
 }
