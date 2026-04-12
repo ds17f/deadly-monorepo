@@ -378,9 +378,10 @@ final class ConnectService: NSObject {
 
     private func interpolatedPositionMs(_ state: ConnectState) -> Int {
         guard state.playing else { return state.positionMs }
-        let elapsed = Date().timeIntervalSince1970 - state.positionTs
-        let interpolated = state.positionMs + Int(elapsed * 1000)
-        return min(interpolated, state.durationMs)
+        // positionTs is Date.now() on the server — milliseconds since epoch
+        let elapsedMs = Date().timeIntervalSince1970 * 1000.0 - state.positionTs
+        let interpolated = state.positionMs + Int(elapsedMs)
+        return max(0, min(interpolated, state.durationMs))
     }
 
     // MARK: - Send Helpers
