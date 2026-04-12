@@ -41,6 +41,7 @@ dependencies {
     implementation(project(":core:database"))
     implementation(project(":core:api:auth"))
     implementation(project(":core:media"))
+    implementation(project(":core:network"))
 
     // Hilt
     implementation("com.google.dagger:hilt-android:2.56.1")

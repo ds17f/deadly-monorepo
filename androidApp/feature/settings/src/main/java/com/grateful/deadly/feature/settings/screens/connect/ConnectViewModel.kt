@@ -25,4 +25,8 @@ class ConnectViewModel @Inject constructor(
     fun transferTo(deviceId: String) {
         connectService.sendTransfer(deviceId)
     }
+
+    fun sendStop() {
+        connectService.sendStop()
+    }
 }

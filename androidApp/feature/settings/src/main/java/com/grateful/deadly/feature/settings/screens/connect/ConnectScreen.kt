@@ -55,6 +55,23 @@ fun ConnectScreen(
             HorizontalDivider()
         }
 
+        if (connectState?.showId != null) {
+            item {
+                ListItem(
+                    headlineContent = { Text("Stop Session") },
+                    supportingContent = { Text("End the shared listening session on all devices.") },
+                    trailingContent = {
+                        TextButton(onClick = { viewModel.sendStop() }) {
+                            Text("Stop")
+                        }
+                    }
+                )
+            }
+            item {
+                HorizontalDivider()
+            }
+        }
+
         if (devices.isEmpty()) {
             item {
                 ListItem(
