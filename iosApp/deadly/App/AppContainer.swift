@@ -34,7 +34,7 @@ final class AppContainer {
     let connectService: ConnectService
 
     /// True only during the first launch of the process. Cleared after Connect + restore complete.
-    private(set) var isColdLaunch = true
+    var isColdLaunch = true
 
     init() {
         let initStart = CFAbsoluteTimeGetCurrent()
