@@ -264,7 +264,9 @@ fun PlayerScreen(
         if (showMiniPlayer) {
             PlayerMiniPlayer(
                 uiState = uiState,
+                connectDeviceName = connectRemoteDeviceName,
                 onPlayPause = viewModel::onPlayPauseClicked,
+                onConnectClick = { showConnectSheet = true },
                 onTapToExpand = {
                     // Use a coroutine scope to handle the scroll
                     coroutineScope.launch {

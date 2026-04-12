@@ -45,6 +45,8 @@ dependencies {
     implementation(project(":core:api:miniplayer"))
     implementation(project(":core:model"))
     implementation(project(":core:design"))
+    implementation(project(":core:connect"))
+    implementation(project(":feature:settings"))
     
     // Hilt
     implementation("com.google.dagger:hilt-android:2.56.1")

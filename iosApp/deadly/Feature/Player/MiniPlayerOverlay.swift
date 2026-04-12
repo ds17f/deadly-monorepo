@@ -13,6 +13,8 @@ extension View {
 struct MiniPlayerOverlay: View {
     let service: MiniPlayerServiceImpl
     @Binding var showFullPlayer: Bool
+    @Environment(\.appContainer) private var container
+    @State private var showConnectSheet = false
 
     var body: some View {
         if service.isVisible {
@@ -62,6 +64,16 @@ struct MiniPlayerOverlay: View {
                             .foregroundStyle(.red)
                     } else {
                         Button {
+                            showConnectSheet = true
+                        } label: {
+                            Image(systemName: "airplayaudio")
+                                .font(.title3)
+                                .foregroundStyle(container.connectService.isRemoteControlling ? DeadlyColors.primary : .secondary)
+                                .frame(width: 32, height: 32)
+                        }
+                        .buttonStyle(.plain)
+
+                        Button {
                             service.togglePlayPause()
                         } label: {
                             if service.isPendingCommand {
@@ -90,6 +102,9 @@ struct MiniPlayerOverlay: View {
             }
             .background(Color(.secondarySystemBackground))
             .clipShape(UnevenRoundedRectangle(topLeadingRadius: 12, topTrailingRadius: 12))
+            .sheet(isPresented: $showConnectSheet) {
+                ConnectSheet()
+            }
             .contentShape(Rectangle())
             .onTapGesture {
                 showFullPlayer = true
