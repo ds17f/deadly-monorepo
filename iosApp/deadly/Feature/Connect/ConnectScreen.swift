@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ConnectScreen: View {
     @Environment(\.appContainer) private var container
+    @State private var showingStopConfirm = false
 
     private var service: ConnectService { container.connectService }
 
@@ -52,6 +53,21 @@ struct ConnectScreen: View {
             }
         }
         .navigationTitle("Connected Devices")
+        .toolbar {
+            if service.connectState?.showId != nil {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Stop", role: .destructive) {
+                        showingStopConfirm = true
+                    }
+                }
+            }
+        }
+        .confirmationDialog("Stop Session?", isPresented: $showingStopConfirm, titleVisibility: .visible) {
+            Button("Stop Session", role: .destructive) {
+                service.sendStop()
+            }
+            Button("Cancel", role: .cancel) {}
+        }
     }
 }
 
