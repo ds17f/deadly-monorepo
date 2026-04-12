@@ -9,7 +9,7 @@ enum DeviceType: String, Codable {
 
     var systemImage: String {
         switch self {
-        case .ios: return "iphone"
+        case .ios: return "airplayaudio"
         case .android: return "iphone.and.arrow.forward" // closest available
         case .web: return "globe"
         }
