@@ -319,7 +319,10 @@ export default function PlayerProvider({
     // All connected clients stay loaded so transfers are instant.
     if (connectState.recordingId && connectState.recordingId !== selectedRecording) {
       const autoPlay = isActiveDevice && connectState.playing;
-      pendingSeekMsRef.current = connectState.positionMs;
+      const interpolatedPosMs = connectState.playing
+        ? connectState.positionMs + (Date.now() - connectState.positionTs)
+        : connectState.positionMs;
+      pendingSeekMsRef.current = interpolatedPosMs;
       if (!autoPlay) suppressAutoPlayRef.current = true;
       setActiveShow({
         showId: connectState.showId ?? "",
@@ -358,8 +361,11 @@ export default function PlayerProvider({
         if (connectState.trackIndex !== currentTrackIndexRef.current) {
           setCurrentTrackIndex(connectState.trackIndex);
         }
-        // Sync position if server changed it (remote seek)
-        const serverPositionS = connectState.positionMs / 1000;
+        // Sync position if server changed it (remote seek or reconnect)
+        const interpolatedPosMs = connectState.playing
+          ? connectState.positionMs + (Date.now() - connectState.positionTs)
+          : connectState.positionMs;
+        const serverPositionS = interpolatedPosMs / 1000;
         if (Math.abs(audio.currentTime - serverPositionS) > 1) {
           audio.currentTime = serverPositionS;
         }
