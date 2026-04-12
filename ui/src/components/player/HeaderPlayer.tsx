@@ -49,7 +49,7 @@ export default function HeaderPlayer() {
     seek,
   } = usePlayer();
 
-  const { state: connectState } = useConnect();
+  const { state: connectState, connected } = useConnect();
 
   const [queueOpen, setQueueOpen] = useState(false);
   const closeQueue = useCallback(() => setQueueOpen(false), []);
@@ -100,6 +100,7 @@ export default function HeaderPlayer() {
     ? (connectState?.playing ?? false)
     : (status === "playing" || status === "buffering");
   const isLoading = !isRemoteControlling && (status === "loading" || status === "buffering" || isLoadingTracks);
+  const isDisconnected = isActive && !connected;
   const showSpinner = pendingCommand !== null || isLoading;
 
   const showInfo = isRemoteControlling ? remoteShowInfo : (isActive && activeShow ? showLabel(activeShow) : null);
@@ -131,7 +132,9 @@ export default function HeaderPlayer() {
             </span>
           )}
         </div>
-        {showInfo ? (
+        {isDisconnected ? (
+          <p className="truncate text-xs text-white/30 italic">Reconnecting…</p>
+        ) : showInfo ? (
           <p className="truncate text-xs text-white/40">
             {showInfo.date} — {showInfo.venue}
             {isRemoteControlling && connectState?.activeDeviceName && (
@@ -164,7 +167,7 @@ export default function HeaderPlayer() {
       <div className="flex flex-shrink-0 items-center gap-0.5">
         <button
           onClick={prevTrack}
-          disabled={showSpinner || (!hasPrevious && elapsed < 3)}
+          disabled={showSpinner || isDisconnected || (!hasPrevious && elapsed < 3)}
           className="rounded-full p-1.5 text-white/60 transition-colors hover:text-white disabled:text-white/20"
           aria-label="Previous track"
         >
@@ -175,7 +178,7 @@ export default function HeaderPlayer() {
 
         <button
           onClick={togglePlayPause}
-          disabled={showSpinner}
+          disabled={showSpinner || isDisconnected}
           className="rounded-full bg-white p-1.5 text-deadly-bg transition-opacity hover:opacity-90 disabled:opacity-50"
           aria-label={isPlaying ? "Pause" : "Play"}
         >
@@ -202,7 +205,7 @@ export default function HeaderPlayer() {
 
         <button
           onClick={nextTrack}
-          disabled={showSpinner || !hasNext}
+          disabled={showSpinner || isDisconnected || !hasNext}
           className="rounded-full p-1.5 text-white/60 transition-colors hover:text-white disabled:text-white/20"
           aria-label="Next track"
         >

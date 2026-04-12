@@ -21,7 +21,7 @@ function Spinner() {
 }
 
 export default function DeviceList() {
-  const { devices, state: connectState, myDeviceId } = useConnect();
+  const { devices, state: connectState, myDeviceId, connected, sendCommand } = useConnect();
   const { pendingTransfer, transferTo, isActiveDevice, isRemoteControlling } = usePlayer();
 
   if (devices.length === 0) return null;
@@ -91,6 +91,17 @@ export default function DeviceList() {
           );
         })}
       </ul>
+      {hasSession && (
+        <div className="mt-2 pt-2 border-t border-white/10">
+          <button
+            onClick={() => sendCommand("stop")}
+            disabled={!connected}
+            className="w-full text-left text-xs text-white/40 hover:text-white/70 transition-colors disabled:opacity-30 px-2 py-1"
+          >
+            Stop session
+          </button>
+        </div>
+      )}
     </div>
   );
 }
