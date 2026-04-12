@@ -20,15 +20,19 @@ struct MiniPlayerOverlay: View {
     var body: some View {
         if service.isVisible {
             VStack(spacing: 0) {
-                // "Playing on {device}" tooltip — cold launch only
+                // "Playing on {device}" speech bubble — cold launch only
                 if showPlayingOnTooltip, let deviceName = container.connectService.connectState?.activeDeviceName {
-                    PlayingOnTooltip(deviceName: deviceName)
-                        .onTapGesture {
-                            showPlayingOnTooltip = false
-                            showConnectSheet = true
-                        }
-                        .transition(.opacity.combined(with: .scale(scale: 0.9, anchor: .bottom)))
-                        .padding(.bottom, 4)
+                    HStack {
+                        Spacer()
+                        PlayingOnBubble(deviceName: deviceName)
+                            .onTapGesture {
+                                showPlayingOnTooltip = false
+                                showConnectSheet = true
+                            }
+                            .padding(.trailing, 48) // align arrow near cast icon
+                    }
+                    .transition(.opacity.combined(with: .scale(scale: 0.9, anchor: .bottomTrailing)))
+                    .padding(.bottom, 2)
                 }
                 HStack(spacing: 12) {
                     // Artwork — ticket art from show if available, archive.org img as fallback
@@ -135,23 +139,48 @@ struct MiniPlayerOverlay: View {
     }
 }
 
-// MARK: - Playing On Tooltip
+// MARK: - Playing On Speech Bubble
 
-private struct PlayingOnTooltip: View {
+private struct PlayingOnBubble: View {
     let deviceName: String
+    private let arrowSize: CGFloat = 8
+    private let cornerRadius: CGFloat = 12
 
     var body: some View {
-        HStack(spacing: 6) {
-            Image(systemName: "airplayaudio")
-                .font(.caption)
-            Text("Playing on \(deviceName)")
-                .font(.subheadline)
-                .fontWeight(.medium)
+        VStack(spacing: 0) {
+            HStack(spacing: 6) {
+                Image(systemName: "airplayaudio")
+                    .font(.caption)
+                Text("Playing on \(deviceName)")
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+            }
+            .foregroundStyle(.white)
+            .padding(.horizontal, 14)
+            .padding(.vertical, 8)
+            .background(DeadlyColors.primary)
+            .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+
+            // Downward-pointing arrow aligned to the right
+            HStack {
+                Spacer()
+                Triangle()
+                    .fill(DeadlyColors.primary)
+                    .frame(width: 14, height: arrowSize)
+                    .padding(.trailing, 12)
+            }
         }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 8)
-        .background(Color(.tertiarySystemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 20))
-        .shadow(color: .black.opacity(0.15), radius: 4, y: 2)
+        .shadow(color: .black.opacity(0.2), radius: 6, y: 3)
+    }
+}
+
+private struct Triangle: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        path.move(to: CGPoint(x: rect.minX, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.midX, y: rect.maxY))
+        path.closeSubpath()
+        return path
     }
 }
