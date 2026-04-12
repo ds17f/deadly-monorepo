@@ -6,6 +6,7 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.scaleIn
 import androidx.compose.animation.scaleOut
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -17,6 +18,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -69,42 +71,60 @@ fun MiniPlayerScreen(
     if (!uiState.shouldShow || uiState.currentTrack == null) return
 
     Column {
-        // "Playing on {device}" tooltip — cold launch only
+        // "Playing on {device}" speech bubble — cold launch only
         AnimatedVisibility(
             visible = showConnectTooltip && connectRemoteDeviceName != null,
-            enter = fadeIn() + scaleIn(transformOrigin = TransformOrigin(0.5f, 1f)),
-            exit = fadeOut() + scaleOut(transformOrigin = TransformOrigin(0.5f, 1f))
+            enter = fadeIn() + scaleIn(transformOrigin = TransformOrigin(0.85f, 1f)),
+            exit = fadeOut() + scaleOut(transformOrigin = TransformOrigin(0.85f, 1f))
         ) {
-            Surface(
+            val bubbleColor = MaterialTheme.colorScheme.primary
+            Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 4.dp)
+                    .padding(start = 16.dp, end = 16.dp, bottom = 2.dp)
                     .clickable {
                         viewModel.dismissConnectTooltip()
                         showConnectSheet = true
                     },
-                shape = RoundedCornerShape(20.dp),
-                color = MaterialTheme.colorScheme.surfaceVariant,
-                shadowElevation = 4.dp
+                horizontalAlignment = Alignment.End
             ) {
-                Row(
-                    modifier = Modifier.padding(horizontal = 14.dp, vertical = 8.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.Center
+                Surface(
+                    shape = RoundedCornerShape(12.dp),
+                    color = bubbleColor,
+                    shadowElevation = 6.dp
                 ) {
-                    Icon(
-                        painter = IconResources.Content.Cast(),
-                        contentDescription = null,
-                        modifier = Modifier.size(14.dp),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                    Spacer(modifier = Modifier.width(6.dp))
-                    Text(
-                        text = "Playing on ${connectRemoteDeviceName ?: ""}",
-                        style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.Medium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
+                    Row(
+                        modifier = Modifier.padding(horizontal = 14.dp, vertical = 8.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Icon(
+                            painter = IconResources.Content.Cast(),
+                            contentDescription = null,
+                            modifier = Modifier.size(14.dp),
+                            tint = MaterialTheme.colorScheme.onPrimary
+                        )
+                        Spacer(modifier = Modifier.width(6.dp))
+                        Text(
+                            text = "Playing on ${connectRemoteDeviceName ?: ""}",
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.Medium,
+                            color = MaterialTheme.colorScheme.onPrimary
+                        )
+                    }
+                }
+                // Downward-pointing arrow aligned toward cast icon
+                Canvas(
+                    modifier = Modifier
+                        .padding(end = 30.dp)
+                        .size(width = 14.dp, height = 8.dp)
+                ) {
+                    val path = Path().apply {
+                        moveTo(0f, 0f)
+                        lineTo(size.width, 0f)
+                        lineTo(size.width / 2, size.height)
+                        close()
+                    }
+                    drawPath(path, bubbleColor)
                 }
             }
         }
