@@ -22,17 +22,15 @@ struct MiniPlayerOverlay: View {
             VStack(spacing: 0) {
                 // "Playing on {device}" speech bubble — floats above miniplayer
                 if showPlayingOnTooltip, let deviceName = container.connectService.connectState?.activeDeviceName {
-                    HStack {
-                        Spacer()
-                        PlayingOnBubble(deviceName: deviceName)
-                            .onTapGesture {
-                                showPlayingOnTooltip = false
-                                showConnectSheet = true
-                            }
-                            .padding(.trailing, 48) // align arrow near cast icon
-                    }
-                    .transition(.opacity.combined(with: .scale(scale: 0.9, anchor: .bottomTrailing)))
-                    .padding(.bottom, 2)
+                    PlayingOnBubble(deviceName: deviceName)
+                        .onTapGesture {
+                            showPlayingOnTooltip = false
+                            showConnectSheet = true
+                        }
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .padding(.trailing, 48) // align arrow near cast icon
+                        .transition(.opacity.combined(with: .scale(scale: 0.9, anchor: .bottomTrailing)))
+                        .padding(.bottom, 2)
                 }
 
                 // Miniplayer bar — background and clipping only here
