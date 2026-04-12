@@ -15,10 +15,21 @@ struct MiniPlayerOverlay: View {
     @Binding var showFullPlayer: Bool
     @Environment(\.appContainer) private var container
     @State private var showConnectSheet = false
+    @State private var showPlayingOnTooltip = false
 
     var body: some View {
         if service.isVisible {
             VStack(spacing: 0) {
+                // "Playing on {device}" tooltip — cold launch only
+                if showPlayingOnTooltip, let deviceName = container.connectService.connectState?.activeDeviceName {
+                    PlayingOnTooltip(deviceName: deviceName)
+                        .onTapGesture {
+                            showPlayingOnTooltip = false
+                            showConnectSheet = true
+                        }
+                        .transition(.opacity.combined(with: .scale(scale: 0.9, anchor: .bottom)))
+                        .padding(.bottom, 4)
+                }
                 HStack(spacing: 12) {
                     // Artwork — ticket art from show if available, archive.org img as fallback
                     ShowArtwork(
@@ -111,6 +122,36 @@ struct MiniPlayerOverlay: View {
             }
             .transition(.move(edge: .bottom).combined(with: .opacity))
             .animation(.spring(), value: service.isVisible)
+            .animation(.easeInOut(duration: 0.3), value: showPlayingOnTooltip)
+            .task {
+                guard container.isColdLaunch,
+                      container.connectService.isRemoteControlling,
+                      container.connectService.connectState?.activeDeviceName != nil else { return }
+                showPlayingOnTooltip = true
+                try? await Task.sleep(for: .seconds(4))
+                showPlayingOnTooltip = false
+            }
         }
+    }
+}
+
+// MARK: - Playing On Tooltip
+
+private struct PlayingOnTooltip: View {
+    let deviceName: String
+
+    var body: some View {
+        HStack(spacing: 6) {
+            Image(systemName: "airplayaudio")
+                .font(.caption)
+            Text("Playing on \(deviceName)")
+                .font(.subheadline)
+                .fontWeight(.medium)
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 8)
+        .background(Color(.tertiarySystemBackground))
+        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .shadow(color: .black.opacity(0.15), radius: 4, y: 2)
     }
 }
