@@ -165,6 +165,11 @@ final class ConnectService: NSObject {
         sendCommand("position", extra: ["positionMs": positionMs])
     }
 
+    func sendStop() {
+        logger.info("sendStop")
+        sendCommand("stop")
+    }
+
     // MARK: - Connection
 
     private func connect() async {
@@ -313,13 +318,14 @@ final class ConnectService: NSObject {
         // to server state — the local player may be at a completely different track/position.
         let justBecameActive = !wasActive && nowActive
         if justBecameActive {
+            let targetPositionMs = interpolatedPositionMs(new)
             if self.streamPlayer.queueState.currentIndex != new.trackIndex {
                 logger.info("reactToState: became active, syncing track \(self.streamPlayer.queueState.currentIndex, privacy: .public) -> \(new.trackIndex, privacy: .public)")
                 streamPlayer.skipTo(index: new.trackIndex, autoplay: new.playing)
             }
-            let serverPosition = Double(new.positionMs) / 1000.0
+            let serverPosition = Double(targetPositionMs) / 1000.0
             if abs(streamPlayer.progress.currentTime - serverPosition) > 1 {
-                logger.info("reactToState: became active, syncing position to \(new.positionMs, privacy: .public)ms")
+                logger.info("reactToState: became active, syncing position to \(targetPositionMs, privacy: .public)ms (interpolated from \(new.positionMs, privacy: .public)ms)")
                 streamPlayer.seek(to: serverPosition)
             }
         }
@@ -366,6 +372,15 @@ final class ConnectService: NSObject {
         } else {
             stopPositionReporting()
         }
+    }
+
+    // MARK: - Position Interpolation
+
+    private func interpolatedPositionMs(_ state: ConnectState) -> Int {
+        guard state.playing else { return state.positionMs }
+        let elapsed = Date().timeIntervalSince1970 - state.positionTs
+        let interpolated = state.positionMs + Int(elapsed * 1000)
+        return min(interpolated, state.durationMs)
     }
 
     // MARK: - Send Helpers
@@ -452,6 +467,15 @@ final class ConnectService: NSObject {
     }
 
     // MARK: - Disconnect / Reconnect
+
+    func handleNetworkRestored() {
+        guard shouldConnect, !isConnected else { return }
+        logger.info("handleNetworkRestored: cancelling backoff, reconnecting immediately")
+        reconnectTask?.cancel()
+        reconnectTask = nil
+        reconnectAttempt = 0
+        Task { await connect() }
+    }
 
     private func handleDisconnect(closeCode: Int?) {
         stopHeartbeat()
