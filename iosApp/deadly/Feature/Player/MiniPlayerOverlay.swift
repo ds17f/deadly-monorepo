@@ -20,7 +20,7 @@ struct MiniPlayerOverlay: View {
     var body: some View {
         if service.isVisible {
             VStack(spacing: 0) {
-                // "Playing on {device}" speech bubble — cold launch only
+                // "Playing on {device}" speech bubble — floats above miniplayer
                 if showPlayingOnTooltip, let deviceName = container.connectService.connectState?.activeDeviceName {
                     HStack {
                         Spacer()
@@ -34,7 +34,34 @@ struct MiniPlayerOverlay: View {
                     .transition(.opacity.combined(with: .scale(scale: 0.9, anchor: .bottomTrailing)))
                     .padding(.bottom, 2)
                 }
-                HStack(spacing: 12) {
+
+                // Miniplayer bar — background and clipping only here
+                miniPlayerBar
+            }
+            .sheet(isPresented: $showConnectSheet) {
+                ConnectSheet()
+            }
+            .contentShape(Rectangle())
+            .onTapGesture {
+                showFullPlayer = true
+            }
+            .transition(.move(edge: .bottom).combined(with: .opacity))
+            .animation(.spring(), value: service.isVisible)
+            .animation(.easeInOut(duration: 0.3), value: showPlayingOnTooltip)
+            .task {
+                guard container.isColdLaunch,
+                      container.connectService.isRemoteControlling,
+                      container.connectService.connectState?.activeDeviceName != nil else { return }
+                showPlayingOnTooltip = true
+                try? await Task.sleep(for: .seconds(4))
+                showPlayingOnTooltip = false
+            }
+        }
+    }
+
+    private var miniPlayerBar: some View {
+        VStack(spacing: 0) {
+            HStack(spacing: 12) {
                     // Artwork — ticket art from show if available, archive.org img as fallback
                     ShowArtwork(
                         recordingId: service.artworkRecordingId,
@@ -117,25 +144,6 @@ struct MiniPlayerOverlay: View {
             }
             .background(Color(.secondarySystemBackground))
             .clipShape(UnevenRoundedRectangle(topLeadingRadius: 12, topTrailingRadius: 12))
-            .sheet(isPresented: $showConnectSheet) {
-                ConnectSheet()
-            }
-            .contentShape(Rectangle())
-            .onTapGesture {
-                showFullPlayer = true
-            }
-            .transition(.move(edge: .bottom).combined(with: .opacity))
-            .animation(.spring(), value: service.isVisible)
-            .animation(.easeInOut(duration: 0.3), value: showPlayingOnTooltip)
-            .task {
-                guard container.isColdLaunch,
-                      container.connectService.isRemoteControlling,
-                      container.connectService.connectState?.activeDeviceName != nil else { return }
-                showPlayingOnTooltip = true
-                try? await Task.sleep(for: .seconds(4))
-                showPlayingOnTooltip = false
-            }
-        }
     }
 }
 
