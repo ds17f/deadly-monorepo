@@ -15,7 +15,9 @@ interface ConnectService {
 
     fun startIfAuthenticated()
     fun stop()
+    fun handleNetworkRestored()
 
+    fun sendStop()
     fun sendTransfer(targetDeviceId: String)
     fun sendPosition(positionMs: Int)
 
