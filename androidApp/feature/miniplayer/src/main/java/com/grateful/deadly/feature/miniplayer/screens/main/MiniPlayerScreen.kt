@@ -17,7 +17,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.design.component.ShowArtwork
+import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.feature.miniplayer.screens.main.models.MiniPlayerViewModel
+import com.grateful.deadly.feature.settings.screens.connect.ConnectSheet
 import androidx.compose.ui.graphics.Color
 import kotlinx.coroutines.delay
 
@@ -36,7 +38,9 @@ fun MiniPlayerScreen(
     viewModel: MiniPlayerViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    
+    val connectRemoteDeviceName by viewModel.connectRemoteDeviceName.collectAsState()
+    var showConnectSheet by remember { mutableStateOf(false) }
+
     // Handle errors with auto-clear
     uiState.error?.let { error ->
         LaunchedEffect(error) {
@@ -104,6 +108,20 @@ fun MiniPlayerScreen(
                     }
                 }
                 
+                // Connect button
+                IconButton(
+                    onClick = { showConnectSheet = true },
+                    modifier = Modifier.size(40.dp)
+                ) {
+                    Icon(
+                        painter = IconResources.Content.Cast(),
+                        contentDescription = "Connect",
+                        tint = if (connectRemoteDeviceName != null) MaterialTheme.colorScheme.primary
+                               else MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.size(20.dp)
+                    )
+                }
+
                 // Play/pause button with loading state
                 IconButton(
                     onClick = { viewModel.togglePlayPause() },
@@ -139,5 +157,11 @@ fun MiniPlayerScreen(
                 trackColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.3f)
             )
         }
+    }
+
+    if (showConnectSheet) {
+        ConnectSheet(
+            onDismiss = { showConnectSheet = false }
+        )
     }
 }
