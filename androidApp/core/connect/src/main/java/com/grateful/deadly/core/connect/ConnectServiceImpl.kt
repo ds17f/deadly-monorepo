@@ -8,6 +8,7 @@ import com.grateful.deadly.core.model.ConnectDevice
 import com.grateful.deadly.core.model.ConnectSessionTrack
 import com.grateful.deadly.core.model.ConnectState
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
+import com.grateful.deadly.core.network.monitor.NetworkMonitor
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -34,12 +35,15 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.filter
+import kotlinx.coroutines.flow.drop
 
 @Singleton
 class ConnectServiceImpl @Inject constructor(
     private val appPreferences: AppPreferences,
     private val authService: AuthService,
     private val mediaControllerRepository: MediaControllerRepository,
+    private val networkMonitor: NetworkMonitor,
 ) : ConnectService {
 
     companion object {
@@ -95,6 +99,15 @@ class ConnectServiceImpl @Inject constructor(
                 }
             }
         }
+
+        // When network is restored while we have a pending reconnect, cancel the
+        // backoff and reconnect immediately (mirrors iOS handleNetworkRestored).
+        scope.launch {
+            networkMonitor.isOnline
+                .drop(1) // skip initial value
+                .filter { it }
+                .collect { handleNetworkRestored() }
+        }
     }
 
     override fun startIfAuthenticated() {
@@ -123,6 +136,15 @@ class ConnectServiceImpl @Inject constructor(
         _isActiveDevice.value = false
         _pendingTransfer.value = null
         currentVersion = 0
+    }
+
+    override fun handleNetworkRestored() {
+        if (!shouldConnect || _isConnected.value) return
+        Log.d(TAG, "handleNetworkRestored: cancelling backoff, reconnecting immediately")
+        reconnectJob?.cancel()
+        reconnectJob = null
+        reconnectAttempt = 0
+        connect()
     }
 
     private fun connect() {
@@ -340,15 +362,16 @@ class ConnectServiceImpl @Inject constructor(
         // to server state — the local player may be at a completely different track/position.
         val justBecameActive = !wasActive && nowActive
         if (justBecameActive) {
+            val targetPositionMs = interpolatedPositionMs(new)
             val localTrackIndex = mediaControllerRepository.currentTrackIndex.value
             if (localTrackIndex != new.trackIndex) {
-                Log.d(TAG, "reactToState: became active, syncing track $localTrackIndex -> ${new.trackIndex}")
-                scope.launch { mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, new.positionMs.toLong()) }
+                Log.d(TAG, "reactToState: became active, syncing track $localTrackIndex -> ${new.trackIndex} pos=${targetPositionMs}ms (interpolated from ${new.positionMs}ms)")
+                scope.launch { mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, targetPositionMs.toLong()) }
             } else {
                 val localPositionMs = mediaControllerRepository.currentPosition.value
-                if (abs(localPositionMs - new.positionMs.toLong()) > 1000) {
-                    Log.d(TAG, "reactToState: became active, syncing position to ${new.positionMs}ms")
-                    scope.launch { mediaControllerRepository.seekToPosition(new.positionMs.toLong()) }
+                if (abs(localPositionMs - targetPositionMs.toLong()) > 1000) {
+                    Log.d(TAG, "reactToState: became active, syncing position to ${targetPositionMs}ms (interpolated from ${new.positionMs}ms)")
+                    scope.launch { mediaControllerRepository.seekToPosition(targetPositionMs.toLong()) }
                 }
             }
         }
@@ -393,6 +416,11 @@ class ConnectServiceImpl @Inject constructor(
     }
 
     // -- Commands --
+
+    override fun sendStop() {
+        Log.d(TAG, "sendStop")
+        sendCommand("stop")
+    }
 
     override fun sendLoad(
         showId: String,
@@ -489,6 +517,12 @@ class ConnectServiceImpl @Inject constructor(
             }
         }
         ws.send(obj.toString())
+    }
+
+    private fun interpolatedPositionMs(state: ConnectState): Int {
+        if (!state.playing) return state.positionMs
+        val elapsedMs = System.currentTimeMillis() - state.positionTs.toLong()
+        return (state.positionMs + elapsedMs).toInt().coerceIn(0, state.durationMs)
     }
 
     private fun handleDisconnect(closeCode: Int?) {
