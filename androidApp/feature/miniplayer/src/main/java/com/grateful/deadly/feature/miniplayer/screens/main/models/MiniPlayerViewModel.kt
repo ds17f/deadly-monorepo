@@ -4,12 +4,15 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.miniplayer.MiniPlayerService
+import com.grateful.deadly.core.connect.ConnectService
 import com.grateful.deadly.core.model.MiniPlayerUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -23,7 +26,8 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class MiniPlayerViewModel @Inject constructor(
-    private val miniPlayerService: MiniPlayerService
+    private val miniPlayerService: MiniPlayerService,
+    private val connectService: ConnectService
 ) : ViewModel() {
     
     companion object {
@@ -32,6 +36,13 @@ class MiniPlayerViewModel @Inject constructor(
     
     private val _uiState = MutableStateFlow(MiniPlayerUiState())
     val uiState: StateFlow<MiniPlayerUiState> = _uiState.asStateFlow()
+
+    val connectRemoteDeviceName: StateFlow<String?> = combine(
+        connectService.connectState,
+        connectService.isActiveDevice
+    ) { state, isActive ->
+        if (state?.activeDeviceId != null && !isActive) state.activeDeviceName else null
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), null)
     
     init {
         Log.d(TAG, "MiniPlayerViewModel initialized")
