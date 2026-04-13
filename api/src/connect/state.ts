@@ -590,6 +590,26 @@ export function handlePosition(userId: string, deviceId: string, positionMs: num
   mutate(userId, { positionMs, positionTs: Date.now() });
 }
 
+export function handleVolume(userId: string, deviceId: string, socket: WebSocket, volume: number): void {
+  const state = userStates.get(userId);
+  if (!state || !state.activeDeviceId) return;
+
+  const entry = liveDevices.get(deviceKey(userId, state.activeDeviceId));
+  if (!entry) return;
+
+  log(`handleVolume: relaying volume=${volume} from ${deviceId} to active device ${state.activeDeviceId}`);
+  sendJson(entry.socket, { type: "volume", volume });
+}
+
+export function handleVolumeReport(userId: string, deviceId: string, volume: number): void {
+  log(`handleVolumeReport: device ${deviceId} reported volume=${volume}, broadcasting to others`);
+  for (const [key, entry] of liveDevices) {
+    if (key.startsWith(`${userId}:`) && !key.endsWith(`:${deviceId}`)) {
+      sendJson(entry.socket, { type: "volume_report", deviceId, volume });
+    }
+  }
+}
+
 export function stopHeartbeatSweep(): void {
   if (sweepInterval) {
     clearInterval(sweepInterval);
