@@ -1,5 +1,6 @@
 import Foundation
 import SwiftAudioStreamEx
+import AVFoundation
 import os.log
 #if canImport(UIKit)
 import UIKit
@@ -18,6 +19,8 @@ final class ConnectService: NSObject {
     private(set) var isConnected = false
     private(set) var pendingCommand: String?
     private(set) var pendingTransfer: String?
+    private(set) var activeDeviceVolume: Int = 100
+    var showVolumeUI: Bool = false
 
     var isActiveDevice: Bool {
         guard let state = connectState else { return false }
@@ -46,6 +49,7 @@ final class ConnectService: NSObject {
     private var reconnectTask: Task<Void, Never>?
     private var reconnectAttempt = 0
     private var shouldConnect = false
+    private var volumeObservation: NSKeyValueObservation?
 
     private static let reconnectDelays: [Double] = [1, 2, 4, 8, 30]
     private static let heartbeatInterval: UInt64 = 15_000_000_000 // 15s in nanoseconds
@@ -75,6 +79,7 @@ final class ConnectService: NSObject {
         reconnectTask?.cancel()
         reconnectTask = nil
         stopHeartbeat()
+        stopVolumeObservation()
         let ws = webSocket
         webSocket = nil
         ws?.cancel(with: .normalClosure, reason: nil)
@@ -170,6 +175,16 @@ final class ConnectService: NSObject {
         sendCommand("stop")
     }
 
+    func sendVolume(volume: Int) {
+        logger.info("sendVolume: \(volume, privacy: .public)")
+        sendCommand("volume", extra: ["volume": volume])
+    }
+
+    func sendVolumeReport(volume: Int) {
+        logger.info("sendVolumeReport: \(volume, privacy: .public)")
+        sendCommand("volume_report", extra: ["volume": volume])
+    }
+
     // MARK: - Connection
 
     private func connect() async {
@@ -252,6 +267,18 @@ final class ConnectService: NSObject {
                 devices = (try? decoder.decode([ConnectDevice].self, from: devicesData)) ?? []
                 logger.info("Devices (\(self.devices.count, privacy: .public)): \(self.devices.map { "\($0.deviceName)[\($0.deviceType)]" }.joined(separator: ", "), privacy: .public)")
             }
+        case "volume":
+            if let volume = json["volume"] as? Int {
+                logger.info("handleMessage: volume command \(volume, privacy: .public)")
+                streamPlayer.volume = Float(volume) / 100.0
+                activeDeviceVolume = volume
+                sendVolumeReport(volume: volume)
+            }
+        case "volume_report":
+            if let volume = json["volume"] as? Int {
+                logger.info("handleMessage: volume_report \(volume, privacy: .public)")
+                activeDeviceVolume = volume
+            }
         default:
             logger.debug("handleMessage: unknown type '\(type, privacy: .public)'")
         }
@@ -318,6 +345,9 @@ final class ConnectService: NSObject {
         // to server state — the local player may be at a completely different track/position.
         let justBecameActive = !wasActive && nowActive
         if justBecameActive {
+            let currentVolume = Int(streamPlayer.volume * 100)
+            activeDeviceVolume = currentVolume
+            sendVolumeReport(volume: currentVolume)
             let targetPositionMs = interpolatedPositionMs(new)
             if self.streamPlayer.queueState.currentIndex != new.trackIndex {
                 logger.info("reactToState: became active, syncing track \(self.streamPlayer.queueState.currentIndex, privacy: .public) -> \(new.trackIndex, privacy: .public)")
@@ -451,6 +481,22 @@ final class ConnectService: NSObject {
 
     // MARK: - Heartbeat
 
+    private func startVolumeObservation() {
+        let session = AVAudioSession.sharedInstance()
+        try? session.setActive(true)
+        volumeObservation = session.observe(\.outputVolume, options: [.new]) { [weak self] _, _ in
+            Task { @MainActor [weak self] in
+                guard let self, self.connectState?.activeDeviceId != nil else { return }
+                self.showVolumeUI = true
+            }
+        }
+    }
+
+    private func stopVolumeObservation() {
+        volumeObservation?.invalidate()
+        volumeObservation = nil
+    }
+
     private func startHeartbeat() {
         stopHeartbeat()
         heartbeatTask = Task {
@@ -481,6 +527,7 @@ final class ConnectService: NSObject {
     private func handleDisconnect(closeCode: Int?) {
         stopHeartbeat()
         stopPositionReporting()
+        stopVolumeObservation()
         isConnected = false
         webSocket = nil
 
@@ -520,6 +567,7 @@ extension ConnectService: URLSessionWebSocketDelegate {
             self.reconnectAttempt = 0
             self.sendRegister()
             self.startHeartbeat()
+            self.startVolumeObservation()
             self.receiveMessages()
         }
     }
