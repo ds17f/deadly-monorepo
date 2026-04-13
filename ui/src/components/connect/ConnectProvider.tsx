@@ -49,12 +49,15 @@ export default function ConnectProvider({
   const [myDeviceId, setMyDeviceId] = useState<string | null>(null);
   const [connected, setConnected] = useState(false);
 
+  const [activeDeviceVolume, setActiveDeviceVolume] = useState<number | null>(null);
+
   const wsRef = useRef<WebSocket | null>(null);
   const heartbeatRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const reconnectTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const reconnectAttemptRef = useRef(0);
   const shouldConnectRef = useRef(false);
   const currentVersionRef = useRef(0);
+  const volumeListenersRef = useRef<Array<(volume: number) => void>>([]);
 
   const clearHeartbeat = useCallback(() => {
     if (heartbeatRef.current) {
@@ -134,6 +137,15 @@ export default function ConnectProvider({
         const devs = msg.devices as ConnectDevice[];
         log(`Devices (${devs.length}): ${devs.map(d => `${d.deviceName}[${d.deviceType}]`).join(", ")}`);
         setDevices(devs);
+      } else if (msg.type === "volume") {
+        const volume = msg.volume as number;
+        log(`Volume command: ${volume}`);
+        volumeListenersRef.current.forEach(fn => fn(volume));
+        setActiveDeviceVolume(volume);
+      } else if (msg.type === "volume_report") {
+        const volume = msg.volume as number;
+        log(`Volume report from ${msg.deviceId}: ${volume}`);
+        setActiveDeviceVolume(volume);
       }
     };
 
@@ -162,6 +174,22 @@ export default function ConnectProvider({
     };
   }, [clearHeartbeat]);
 
+  const onVolumeMessage = useCallback((handler: (volume: number) => void) => {
+    volumeListenersRef.current.push(handler);
+    return () => {
+      volumeListenersRef.current = volumeListenersRef.current.filter(fn => fn !== handler);
+    };
+  }, []);
+
+  const reportVolume = useCallback((volume: number) => {
+    setActiveDeviceVolume(volume);
+    const ws = wsRef.current;
+    if (ws && ws.readyState === WebSocket.OPEN) {
+      log(`reportVolume: ${volume}`);
+      ws.send(JSON.stringify({ type: "command", action: "volume_report", volume }));
+    }
+  }, []);
+
   const sendCommand = useCallback((action: string, extra?: Record<string, unknown>) => {
     const ws = wsRef.current;
     if (ws && ws.readyState === WebSocket.OPEN) {
@@ -185,6 +213,7 @@ export default function ConnectProvider({
     setConnected(false);
     setDevices([]);
     setConnectState(null);
+    setActiveDeviceVolume(null);
     currentVersionRef.current = 0;
   }, [clearHeartbeat, clearReconnectTimer]);
 
@@ -208,7 +237,7 @@ export default function ConnectProvider({
   }, [user, isLoading]);
 
   return (
-    <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected, sendCommand }}>
+    <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected, sendCommand, activeDeviceVolume, onVolumeMessage, reportVolume }}>
       {children}
     </ConnectContext.Provider>
   );
