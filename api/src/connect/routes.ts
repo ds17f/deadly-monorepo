@@ -13,6 +13,8 @@ import {
   handleTransfer,
   handlePosition,
   handleStop,
+  handleVolume,
+  handleVolumeReport,
   startHeartbeatSweep,
 } from "./state.js";
 import type { ClientMessage, DeviceType, SessionTrack } from "./types.js";
@@ -125,6 +127,18 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
               const { positionMs } = msg as Record<string, unknown>;
               if (typeof positionMs !== "number") return;
               handlePosition(userId!, registeredDeviceId, positionMs);
+              break;
+            }
+            case "volume": {
+              const { volume } = msg as Record<string, unknown>;
+              if (typeof volume !== "number") return;
+              handleVolume(userId!, registeredDeviceId, socket, volume);
+              break;
+            }
+            case "volume_report": {
+              const { volume } = msg as Record<string, unknown>;
+              if (typeof volume !== "number") return;
+              handleVolumeReport(userId!, registeredDeviceId, volume);
               break;
             }
           }

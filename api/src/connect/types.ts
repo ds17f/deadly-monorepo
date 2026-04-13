@@ -70,4 +70,15 @@ export interface ErrorMessage {
   state: ConnectState;
 }
 
-export type ServerMessage = StateMessage | DevicesMessage | ErrorMessage;
+export interface VolumeMessage {
+  type: "volume";
+  volume: number;
+}
+
+export interface VolumeReportMessage {
+  type: "volume_report";
+  deviceId: string;
+  volume: number;
+}
+
+export type ServerMessage = StateMessage | DevicesMessage | ErrorMessage | VolumeMessage | VolumeReportMessage;
