@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
-import DeviceList from "@/components/connect/DeviceList";
 
 export default function UserMenu() {
   const { user, isLoading, signOut } = useAuth();
@@ -79,7 +78,6 @@ export default function UserMenu() {
               Admin
             </a>
           )}
-          <DeviceList />
           <button
             onClick={() => {
               setOpen(false);

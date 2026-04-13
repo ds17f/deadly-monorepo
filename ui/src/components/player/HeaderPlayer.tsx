@@ -7,6 +7,7 @@ import { useConnect } from "@/contexts/ConnectContext";
 
 import QueuePanel from "./QueuePanel";
 import AutoplayPrompt from "./AutoplayPrompt";
+import DeviceList from "@/components/connect/DeviceList";
 
 function formatTime(seconds: number): string {
   if (!isFinite(seconds) || seconds < 0) return "0:00";
@@ -49,10 +50,23 @@ export default function HeaderPlayer() {
     seek,
   } = usePlayer();
 
-  const { state: connectState, connected } = useConnect();
+  const { state: connectState, connected, devices } = useConnect();
 
   const [queueOpen, setQueueOpen] = useState(false);
   const closeQueue = useCallback(() => setQueueOpen(false), []);
+  const [connectOpen, setConnectOpen] = useState(false);
+  const connectRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!connectOpen) return;
+    function handleClickOutside(e: MouseEvent) {
+      if (connectRef.current && !connectRef.current.contains(e.target as Node)) {
+        setConnectOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [connectOpen]);
 
   const currentTrack =
     tracks && currentTrackIndex >= 0 ? tracks[currentTrackIndex] : null;
@@ -232,7 +246,32 @@ export default function HeaderPlayer() {
         </button>
       )}
 
+
     </div>
+
+      {/* Connect / device selector */}
+      {devices.length > 0 && (
+        <div className="relative flex-shrink-0" ref={connectRef}>
+          <button
+            onClick={() => setConnectOpen((o) => !o)}
+            className={`rounded-full p-1.5 transition-colors ${
+              connectOpen || isRemoteControlling
+                ? "text-deadly-highlight"
+                : "text-white/40 hover:text-white/70"
+            }`}
+            aria-label={connectOpen ? "Close devices" : "Show devices"}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 3H3c-1.1 0-2 .9-2 2v3h2V5h18v14h-7v2h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM1 18v3h3c0-1.66-1.34-3-3-3zm0-4v2c2.76 0 5 2.24 5 5h2c0-3.87-3.13-7-7-7zm0-4v2c4.97 0 9 4.03 9 9h2c0-6.08-4.93-11-11-11z" />
+            </svg>
+          </button>
+          {connectOpen && (
+            <div className="absolute right-0 top-full z-50 mt-2 w-64 rounded-lg border border-white/10 bg-deadly-surface p-3 shadow-lg">
+              <DeviceList />
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Queue panel overlay */}
       {queueOpen && <QueuePanel onClose={closeQueue} />}
