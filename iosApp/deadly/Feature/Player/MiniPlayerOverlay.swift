@@ -19,23 +19,19 @@ struct MiniPlayerOverlay: View {
 
     var body: some View {
         if service.isVisible {
-            VStack(spacing: 0) {
-                // "Playing on {device}" speech bubble — floats above miniplayer
-                if showPlayingOnTooltip, let deviceName = container.connectService.connectState?.activeDeviceName {
-                    PlayingOnBubble(deviceName: deviceName)
-                        .onTapGesture {
-                            showPlayingOnTooltip = false
-                            showConnectSheet = true
-                        }
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-                        .padding(.trailing, 48) // align arrow near cast icon
-                        .transition(.opacity.combined(with: .scale(scale: 0.9, anchor: .bottomTrailing)))
-                        .padding(.bottom, 2)
+            miniPlayerBar
+                .overlay(alignment: .topTrailing) {
+                    if showPlayingOnTooltip, let deviceName = container.connectService.connectState?.activeDeviceName {
+                        PlayingOnBubble(deviceName: deviceName)
+                            .onTapGesture {
+                                showPlayingOnTooltip = false
+                                showConnectSheet = true
+                            }
+                            .padding(.trailing, 46)
+                            .offset(y: -48)
+                            .transition(.opacity.combined(with: .scale(scale: 0.9, anchor: .bottomTrailing)))
+                    }
                 }
-
-                // Miniplayer bar — background and clipping only here
-                miniPlayerBar
-            }
             .sheet(isPresented: $showConnectSheet) {
                 ConnectSheet()
             }
@@ -153,7 +149,7 @@ private struct PlayingOnBubble: View {
     private let cornerRadius: CGFloat = 12
 
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(alignment: .trailing, spacing: 0) {
             HStack(spacing: 6) {
                 Image(systemName: "airplayaudio")
                     .font(.caption)
