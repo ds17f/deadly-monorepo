@@ -39,7 +39,7 @@ struct ConnectScreen: View {
                             let isPending = service.pendingTransfer == device.deviceId
                             ConnectDeviceRow(
                                 device: device,
-                                isMe: isMe,
+                                label: isMe ? "\(device.deviceType.label) (This Device)" : device.deviceType.label,
                                 isDeviceActive: isDeviceActive,
                                 hasSession: hasSession,
                                 isPending: isPending,
