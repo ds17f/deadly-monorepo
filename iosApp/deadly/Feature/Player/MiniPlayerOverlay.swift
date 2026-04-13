@@ -35,6 +35,12 @@ struct MiniPlayerOverlay: View {
             .sheet(isPresented: $showConnectSheet) {
                 ConnectSheet()
             }
+            .onChange(of: container.connectService.showVolumeUI) { _, show in
+                if show {
+                    showConnectSheet = true
+                    container.connectService.showVolumeUI = false
+                }
+            }
             .contentShape(Rectangle())
             .onTapGesture {
                 showFullPlayer = true
