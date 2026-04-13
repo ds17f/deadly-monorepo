@@ -9,6 +9,9 @@ export interface ConnectContextValue {
   myDeviceId: string | null;
   connected: boolean;
   sendCommand: (action: string, extra?: Record<string, unknown>) => void;
+  activeDeviceVolume: number | null;
+  onVolumeMessage: (handler: (volume: number) => void) => () => void;
+  reportVolume: (volume: number) => void;
 }
 
 export const ConnectContext = createContext<ConnectContextValue | null>(null);

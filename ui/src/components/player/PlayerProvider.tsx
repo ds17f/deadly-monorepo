@@ -8,6 +8,7 @@ import type { ViewedShow } from "@/contexts/PlayerContext";
 import { useConnect } from "@/contexts/ConnectContext";
 
 const PREV_TRACK_THRESHOLD = 3; // seconds
+const VOLUME_KEY = "deadly-volume";
 const AUDIO_RETRY_DELAYS = [0, 1000, 2000];
 const GAPLESS_PRELOAD_THRESHOLD = 2; // seconds before end to start preloading
 
@@ -32,7 +33,7 @@ export default function PlayerProvider({
   const [pendingCommand, setPendingCommand] = useState<string | null>(null);
   const [pendingTransfer, setPendingTransfer] = useState<string | null>(null);
 
-  const { state: connectState, myDeviceId, sendCommand } = useConnect();
+  const { state: connectState, myDeviceId, sendCommand, onVolumeMessage, reportVolume } = useConnect();
 
   const isActiveDevice = connectState !== null && myDeviceId !== null && connectState.activeDeviceId === myDeviceId;
   // Show Connect state whenever a shared show is loaded and we're not the active device.
@@ -61,6 +62,34 @@ export default function PlayerProvider({
   useEffect(() => {
     sendCommandRef.current = sendCommand;
   }, [sendCommand]);
+  const reportVolumeRef = useRef(reportVolume);
+  useEffect(() => {
+    reportVolumeRef.current = reportVolume;
+  }, [reportVolume]);
+
+  // Apply incoming volume commands to audio elements and report back
+  useEffect(() => {
+    return onVolumeMessage((volume: number) => {
+      if (!isActiveDevice) return;
+      const level = volume / 100;
+      if (audioARef.current) audioARef.current.volume = level;
+      if (audioBRef.current) audioBRef.current.volume = level;
+      localStorage.setItem(VOLUME_KEY, String(level));
+      reportVolumeRef.current(volume);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [onVolumeMessage, isActiveDevice]);
+
+  // Report current volume when this device becomes active
+  const prevIsActiveDeviceRef = useRef(false);
+  useEffect(() => {
+    if (isActiveDevice && !prevIsActiveDeviceRef.current) {
+      const audio = audioARef.current;
+      const volume = Math.round((audio?.volume ?? 1) * 100);
+      reportVolumeRef.current(volume);
+    }
+    prevIsActiveDeviceRef.current = isActiveDevice;
+  }, [isActiveDevice]);
 
   function getActiveAudio(): HTMLAudioElement | null {
     return activeAudioRef.current === "A"
@@ -205,12 +234,17 @@ export default function PlayerProvider({
 
   // Create audio elements once
   useEffect(() => {
+    const savedVolume = parseFloat(localStorage.getItem(VOLUME_KEY) ?? "1");
+    const initialVolume = isFinite(savedVolume) ? Math.max(0, Math.min(1, savedVolume)) : 1;
+
     const audioA = new Audio();
     audioA.preload = "auto";
+    audioA.volume = initialVolume;
     audioARef.current = audioA;
 
     const audioB = new Audio();
     audioB.preload = "none";
+    audioB.volume = initialVolume;
     audioBRef.current = audioB;
 
     wireAudioEvents(audioA);
