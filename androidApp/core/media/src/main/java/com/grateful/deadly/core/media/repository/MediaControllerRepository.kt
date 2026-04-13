@@ -843,7 +843,14 @@ class MediaControllerRepository @Inject constructor(
             mediaController?.seekTo(index, positionMs)
         }
     }
-    
+
+    suspend fun setVolume(volume: Int) {
+        Log.d(TAG, "setVolume: $volume")
+        executeWhenConnected {
+            mediaController?.volume = volume / 100f
+        }
+    }
+
     /**
      * Get current MediaItems from the queue for hydration
      * Must be called from the main thread (MediaController requirement)

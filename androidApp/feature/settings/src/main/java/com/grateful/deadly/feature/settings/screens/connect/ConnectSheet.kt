@@ -15,6 +15,9 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.ConnectDevice
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -27,7 +30,19 @@ fun ConnectSheet(
     val isConnected by viewModel.isConnected.collectAsState()
     val isActiveDevice by viewModel.isActiveDevice.collectAsState()
     val pendingTransfer by viewModel.pendingTransfer.collectAsState()
+    val activeDeviceVolume by viewModel.activeDeviceVolume.collectAsState()
     val installId = viewModel.installId
+
+    var localVolume by remember { mutableFloatStateOf(100f) }
+    var isDragging by remember { mutableStateOf(false) }
+    val scope = rememberCoroutineScope()
+    var debounceJob by remember { mutableStateOf<Job?>(null) }
+
+    LaunchedEffect(activeDeviceVolume) {
+        if (!isDragging) {
+            localVolume = activeDeviceVolume.toFloat()
+        }
+    }
 
     ModalBottomSheet(onDismissRequest = onDismiss) {
         Column(
@@ -116,6 +131,51 @@ fun ConnectSheet(
                         transferDisabled = pendingTransfer != null,
                         isRemoteControlling = isRemoteControlling,
                         onTransfer = { viewModel.transferTo(device.deviceId) },
+                    )
+                }
+            }
+
+            if (hasSession && connectState?.activeDeviceId != null) {
+                HorizontalDivider()
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 8.dp)
+                ) {
+                    Icon(
+                        painter = IconResources.PlayerControls.VolumeMute(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.size(20.dp)
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Slider(
+                        value = localVolume,
+                        onValueChange = { newValue ->
+                            localVolume = newValue
+                            isDragging = true
+                            debounceJob?.cancel()
+                            debounceJob = scope.launch {
+                                delay(150)
+                                viewModel.sendVolume(newValue.toInt())
+                            }
+                        },
+                        onValueChangeFinished = {
+                            isDragging = false
+                            debounceJob?.cancel()
+                            debounceJob = null
+                            viewModel.sendVolume(localVolume.toInt())
+                        },
+                        valueRange = 0f..100f,
+                        modifier = Modifier.weight(1f)
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Icon(
+                        painter = IconResources.PlayerControls.VolumeUp(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.size(20.dp)
                     )
                 }
             }

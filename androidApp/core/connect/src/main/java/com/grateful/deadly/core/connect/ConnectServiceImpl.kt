@@ -78,6 +78,9 @@ class ConnectServiceImpl @Inject constructor(
     private val _pendingTransfer = MutableStateFlow<String?>(null)
     override val pendingTransfer: StateFlow<String?> = _pendingTransfer.asStateFlow()
 
+    private val _activeDeviceVolume = MutableStateFlow(100)
+    override val activeDeviceVolume: StateFlow<Int> = _activeDeviceVolume.asStateFlow()
+
     @Volatile private var currentVersion = 0
 
     @Volatile private var webSocket: WebSocket? = null
@@ -269,6 +272,18 @@ class ConnectServiceImpl @Inject constructor(
                     }
                     Log.d(TAG, "Devices (${_devices.value.size}): ${_devices.value.joinToString { "${it.deviceName}[${it.deviceType}]" }}")
                 }
+                "volume" -> {
+                    val volume = obj["volume"]?.jsonPrimitive?.content?.toIntOrNull() ?: return
+                    Log.d(TAG, "volume: $volume")
+                    _activeDeviceVolume.value = volume
+                    scope.launch { mediaControllerRepository.setVolume(volume) }
+                    sendVolumeReport(volume)
+                }
+                "volume_report" -> {
+                    val volume = obj["volume"]?.jsonPrimitive?.content?.toIntOrNull() ?: return
+                    Log.d(TAG, "volume_report: $volume")
+                    _activeDeviceVolume.value = volume
+                }
             }
         } catch (e: Exception) {
             Log.w(TAG, "Failed to parse message: ${e.message}")
@@ -362,6 +377,9 @@ class ConnectServiceImpl @Inject constructor(
         // to server state — the local player may be at a completely different track/position.
         val justBecameActive = !wasActive && nowActive
         if (justBecameActive) {
+            // Report current volume so all remote sliders snap to this device's volume.
+            sendVolumeReport(_activeDeviceVolume.value)
+
             val targetPositionMs = interpolatedPositionMs(new)
             val localTrackIndex = mediaControllerRepository.currentTrackIndex.value
             if (localTrackIndex != new.trackIndex) {
@@ -495,6 +513,16 @@ class ConnectServiceImpl @Inject constructor(
         Log.d(TAG, "sendPrev (pending=${_pendingCommand.value} -> prev)")
         _pendingCommand.value = "prev"
         sendCommand("prev")
+    }
+
+    override fun sendVolume(volume: Int) {
+        Log.d(TAG, "sendVolume: $volume")
+        sendCommand("volume", mapOf("volume" to volume))
+    }
+
+    override fun sendVolumeReport(volume: Int) {
+        Log.d(TAG, "sendVolumeReport: $volume")
+        sendCommand("volume_report", mapOf("volume" to volume))
     }
 
     private fun sendCommand(action: String, extra: Map<String, Any> = emptyMap()) {
