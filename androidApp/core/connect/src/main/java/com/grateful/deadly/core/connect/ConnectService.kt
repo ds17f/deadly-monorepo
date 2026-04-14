@@ -45,6 +45,15 @@ interface ConnectService {
     fun sendVolume(volume: Int)
     fun sendVolumeReport(volume: Int)
 
+    /**
+     * Hardware volume key handler. If playback is on a remote device, steps the
+     * remote volume by [delta] (clamped 0..100), shows the ConnectSheet, and
+     * returns true so the caller can suppress the local system volume change.
+     * Returns false when no remote session is active — caller should let the
+     * OS handle the key normally.
+     */
+    fun handleHardwareVolumeKey(delta: Int): Boolean
+
     fun triggerShowVolumeUI()
     fun consumeShowVolumeUI()
 }
