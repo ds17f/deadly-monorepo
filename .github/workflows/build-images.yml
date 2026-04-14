@@ -32,6 +32,10 @@ jobs:
         with:
           ref: ${{ inputs.ref || github.sha }}
 
+      - name: Resolve checked-out SHA
+        id: ref
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
       - name: Read data version
         id: data
         run: echo "version=$(cat data/version)" >> "$GITHUB_OUTPUT"
@@ -60,7 +64,7 @@ jobs:
           context: ./api
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}/api:${{ github.sha }}
+            ghcr.io/${{ github.repository }}/api:${{ steps.ref.outputs.sha }}
             ghcr.io/${{ github.repository }}/api:latest
 
       - name: Build and push UI image
@@ -69,7 +73,7 @@ jobs:
           context: ./ui
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}/ui:${{ github.sha }}
+            ghcr.io/${{ github.repository }}/ui:${{ steps.ref.outputs.sha }}
             ghcr.io/${{ github.repository }}/ui:latest
 
       - name: Generate share pages
@@ -82,12 +86,12 @@ jobs:
           file: ./caddy/Dockerfile
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}/caddy:${{ github.sha }}
+            ghcr.io/${{ github.repository }}/caddy:${{ steps.ref.outputs.sha }}
             ghcr.io/${{ github.repository }}/caddy:latest
 
       - name: Summary
         run: |
-          SHA="${{ github.sha }}"
+          SHA="${{ steps.ref.outputs.sha }}"
           cat >> "$GITHUB_STEP_SUMMARY" <<EOF
           ## Images Published
 
