@@ -395,11 +395,11 @@ export default function PlayerProvider({
         if (connectState.trackIndex !== currentTrackIndexRef.current) {
           setCurrentTrackIndex(connectState.trackIndex);
         }
-        // Sync position if server changed it (remote seek or reconnect)
-        const interpolatedPosMs = connectState.playing
-          ? connectState.positionMs + (Date.now() - connectState.positionTs)
-          : connectState.positionMs;
-        const serverPositionS = interpolatedPosMs / 1000;
+        // Sync position if server changed it (remote seek or reconnect).
+        // Use raw positionMs — no clock interpolation. The active device has
+        // the real audio.currentTime so interpolation adds nothing, and mixing
+        // client/server clocks causes jumps on devices with clock skew.
+        const serverPositionS = connectState.positionMs / 1000;
         if (Math.abs(audio.currentTime - serverPositionS) > 1) {
           audio.currentTime = serverPositionS;
         }
