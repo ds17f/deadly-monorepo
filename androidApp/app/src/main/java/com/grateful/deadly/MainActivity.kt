@@ -70,14 +70,28 @@ class MainActivity : ComponentActivity() {
         deepLinkUri = intent.data
     }
 
-    // Intercept hardware volume keys to surface the ConnectSheet when a Connect
-    // session is active (mirrors iOS KVO on AVAudioSession.outputVolume).
+    // Intercept hardware volume keys. When playback is on a remote Connect
+    // device, step the *remote* volume (Spotify Connect behavior) and consume
+    // the event so the phone's own stream volume doesn't change. Otherwise,
+    // fall through to normal system handling.
     override fun dispatchKeyEvent(event: KeyEvent): Boolean {
-        if (event.action == KeyEvent.ACTION_DOWN &&
-            (event.keyCode == KeyEvent.KEYCODE_VOLUME_UP ||
-             event.keyCode == KeyEvent.KEYCODE_VOLUME_DOWN)) {
-            connectService.triggerShowVolumeUI()
+        val keyCode = event.keyCode
+        if (keyCode != KeyEvent.KEYCODE_VOLUME_UP && keyCode != KeyEvent.KEYCODE_VOLUME_DOWN) {
+            return super.dispatchKeyEvent(event)
+        }
+        val delta = if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) VOLUME_STEP else -VOLUME_STEP
+        // Only act on key-down; key-up just needs to be consumed if we consumed
+        // the down so the OS doesn't half-process the press.
+        if (event.action == KeyEvent.ACTION_DOWN) {
+            if (connectService.handleHardwareVolumeKey(delta)) return true
+        } else if (event.action == KeyEvent.ACTION_UP) {
+            // Probe with delta=0 — returns true iff a remote session is active.
+            if (connectService.handleHardwareVolumeKey(0)) return true
         }
         return super.dispatchKeyEvent(event)
+    }
+
+    companion object {
+        private const val VOLUME_STEP = 2
     }
 }

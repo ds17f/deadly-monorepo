@@ -52,6 +52,8 @@ class ConnectServiceImpl @Inject constructor(
         private const val HEARTBEAT_INTERVAL_MS = 15_000L
         private const val CLOSE_CODE_UNAUTHORIZED = 4003
         private const val DEFAULT_FORMAT = "VBR MP3"
+        private const val HARDWARE_VOLUME_DEBOUNCE_MS = 300L
+        private const val VOLUME_ECHO_SUPPRESS_MS = 1_500L
     }
 
     private val json = Json { ignoreUnknownKeys = true }
@@ -92,6 +94,15 @@ class ConnectServiceImpl @Inject constructor(
     private var heartbeatJob: Job? = null
     private var positionReportJob: Job? = null
     private var reconnectJob: Job? = null
+
+    // Tracks last local sendVolume to suppress our own echoes from volume_report,
+    // which race with rapid hardware-key presses and cause the slider to jump.
+    @Volatile private var lastVolumeSentAtMs: Long = 0L
+
+    // Debounces hardware-volume-key sends so rapid presses coalesce into one
+    // outbound command (and one echo), instead of flooding the websocket.
+    @Volatile private var pendingHardwareVolume: Int? = null
+    private var hardwareVolumeSendJob: Job? = null
 
     init {
         // When the local player auto-advances to the next track, notify the Connect
@@ -285,6 +296,15 @@ class ConnectServiceImpl @Inject constructor(
                 }
                 "volume_report" -> {
                     val volume = obj["volume"]?.jsonPrimitive?.content?.toIntOrNull() ?: return
+                    val sinceLocalSend = System.currentTimeMillis() - lastVolumeSentAtMs
+                    if (sinceLocalSend < VOLUME_ECHO_SUPPRESS_MS) {
+                        // Our own send is still being echoed back. Trust the optimistic
+                        // value on this device rather than letting a stale echo clobber
+                        // a newer press.
+                        Log.d(TAG, "handleMessage: suppressing volume_report $volume " +
+                            "(local send ${sinceLocalSend}ms ago, keeping ${_activeDeviceVolume.value})")
+                        return
+                    }
                     Log.d(TAG, "handleMessage: volume_report $volume")
                     _activeDeviceVolume.value = volume
                 }
@@ -521,12 +541,42 @@ class ConnectServiceImpl @Inject constructor(
 
     override fun sendVolume(volume: Int) {
         Log.d(TAG, "sendVolume: $volume")
+        lastVolumeSentAtMs = System.currentTimeMillis()
         sendCommand("volume", mapOf("volume" to volume))
     }
 
     override fun sendVolumeReport(volume: Int) {
         Log.d(TAG, "sendVolumeReport: $volume")
         sendCommand("volume_report", mapOf("volume" to volume))
+    }
+
+    override fun handleHardwareVolumeKey(delta: Int): Boolean {
+        val activeId = _connectState.value?.activeDeviceId ?: return false
+        val myId = appPreferences.installId
+        // Only intercept when playback is on a *remote* device. If we're the
+        // active device, hardware keys should control the phone's own output.
+        if (activeId == myId) return false
+
+        val current = _activeDeviceVolume.value
+        val next = (current + delta).coerceIn(0, 100)
+        Log.d(TAG, "handleHardwareVolumeKey: delta=$delta $current -> $next (remote=$activeId)")
+        if (next != current) {
+            // Update the UI immediately so the slider feels responsive, but
+            // debounce the outbound command so a burst of key presses coalesces
+            // into a single send (and a single echo). Without this the slider
+            // visibly stutters as stale echoes of earlier sends land.
+            _activeDeviceVolume.value = next
+            pendingHardwareVolume = next
+            hardwareVolumeSendJob?.cancel()
+            hardwareVolumeSendJob = scope.launch {
+                delay(HARDWARE_VOLUME_DEBOUNCE_MS)
+                val v = pendingHardwareVolume ?: return@launch
+                pendingHardwareVolume = null
+                sendVolume(v)
+            }
+        }
+        _showVolumeUI.value = true
+        return true
     }
 
     override fun triggerShowVolumeUI() {

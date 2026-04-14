@@ -1,6 +1,8 @@
 package com.grateful.deadly.feature.settings.screens.connect
 
+import android.view.KeyEvent
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.focusable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -10,12 +12,17 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.key.onPreviewKeyEvent
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.ConnectDevice
 import kotlinx.coroutines.delay
+
+private const val VOLUME_STEP = 2
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -41,9 +48,30 @@ fun ConnectSheet(
         }
     }
 
+    // The sheet renders in its own window, so MainActivity.dispatchKeyEvent
+    // does not receive volume key presses while the sheet is shown. Request
+    // focus on a focusable root and intercept in the Compose key pipeline so
+    // hardware volume still drives the remote device.
+    val volumeFocusRequester = remember { FocusRequester() }
+    LaunchedEffect(Unit) { volumeFocusRequester.requestFocus() }
+
     ModalBottomSheet(onDismissRequest = onDismiss) {
         Column(
             modifier = Modifier
+                .focusRequester(volumeFocusRequester)
+                .focusable()
+                .onPreviewKeyEvent { keyEvent ->
+                    val native = keyEvent.nativeKeyEvent
+                    val kc = native.keyCode
+                    if (kc != KeyEvent.KEYCODE_VOLUME_UP && kc != KeyEvent.KEYCODE_VOLUME_DOWN) {
+                        false
+                    } else if (native.action == KeyEvent.ACTION_DOWN) {
+                        val delta = if (kc == KeyEvent.KEYCODE_VOLUME_UP) VOLUME_STEP else -VOLUME_STEP
+                        viewModel.handleHardwareVolumeKey(delta)
+                    } else if (native.action == KeyEvent.ACTION_UP) {
+                        viewModel.handleHardwareVolumeKey(0)
+                    } else false
+                }
                 .fillMaxWidth()
                 .padding(bottom = 32.dp)
         ) {

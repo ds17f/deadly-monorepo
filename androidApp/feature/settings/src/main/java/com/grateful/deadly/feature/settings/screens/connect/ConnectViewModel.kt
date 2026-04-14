@@ -27,6 +27,9 @@ class ConnectViewModel @Inject constructor(
         connectService.sendVolume(volume)
     }
 
+    fun handleHardwareVolumeKey(delta: Int): Boolean =
+        connectService.handleHardwareVolumeKey(delta)
+
     fun transferTo(deviceId: String) {
         connectService.sendTransfer(deviceId)
     }
