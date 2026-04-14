@@ -12,6 +12,8 @@ interface ConnectService {
     val pendingCommand: StateFlow<String?>
     val isActiveDevice: StateFlow<Boolean>
     val pendingTransfer: StateFlow<String?>
+    val activeDeviceVolume: StateFlow<Int>
+    val showVolumeUI: StateFlow<Boolean>
 
     fun startIfAuthenticated()
     fun stop()
@@ -39,4 +41,10 @@ interface ConnectService {
     fun sendSeek(trackIndex: Int, positionMs: Int, durationMs: Int)
     fun sendNext()
     fun sendPrev()
+
+    fun sendVolume(volume: Int)
+    fun sendVolumeReport(volume: Int)
+
+    fun triggerShowVolumeUI()
+    fun consumeShowVolumeUI()
 }

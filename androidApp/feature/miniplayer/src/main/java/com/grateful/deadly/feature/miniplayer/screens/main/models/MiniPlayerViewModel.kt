@@ -59,6 +59,12 @@ class MiniPlayerViewModel @Inject constructor(
         AppLaunchState.isColdLaunch = false
     }
 
+    val showVolumeUI: StateFlow<Boolean> = connectService.showVolumeUI
+
+    fun consumeShowVolumeUI() {
+        connectService.consumeShowVolumeUI()
+    }
+
     init {
         Log.d(TAG, "MiniPlayerViewModel initialized")
         initializeService()

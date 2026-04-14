@@ -78,6 +78,12 @@ class ConnectServiceImpl @Inject constructor(
     private val _pendingTransfer = MutableStateFlow<String?>(null)
     override val pendingTransfer: StateFlow<String?> = _pendingTransfer.asStateFlow()
 
+    private val _activeDeviceVolume = MutableStateFlow(100)
+    override val activeDeviceVolume: StateFlow<Int> = _activeDeviceVolume.asStateFlow()
+
+    private val _showVolumeUI = MutableStateFlow(false)
+    override val showVolumeUI: StateFlow<Boolean> = _showVolumeUI.asStateFlow()
+
     @Volatile private var currentVersion = 0
 
     @Volatile private var webSocket: WebSocket? = null
@@ -135,6 +141,7 @@ class ConnectServiceImpl @Inject constructor(
         _pendingCommand.value = null
         _isActiveDevice.value = false
         _pendingTransfer.value = null
+        _activeDeviceVolume.value = 100
         currentVersion = 0
     }
 
@@ -269,6 +276,18 @@ class ConnectServiceImpl @Inject constructor(
                     }
                     Log.d(TAG, "Devices (${_devices.value.size}): ${_devices.value.joinToString { "${it.deviceName}[${it.deviceType}]" }}")
                 }
+                "volume" -> {
+                    val volume = obj["volume"]?.jsonPrimitive?.content?.toIntOrNull() ?: return
+                    Log.d(TAG, "handleMessage: volume command $volume")
+                    mediaControllerRepository.setVolume(volume)
+                    _activeDeviceVolume.value = volume
+                    sendVolumeReport(volume)
+                }
+                "volume_report" -> {
+                    val volume = obj["volume"]?.jsonPrimitive?.content?.toIntOrNull() ?: return
+                    Log.d(TAG, "handleMessage: volume_report $volume")
+                    _activeDeviceVolume.value = volume
+                }
             }
         } catch (e: Exception) {
             Log.w(TAG, "Failed to parse message: ${e.message}")
@@ -362,6 +381,9 @@ class ConnectServiceImpl @Inject constructor(
         // to server state — the local player may be at a completely different track/position.
         val justBecameActive = !wasActive && nowActive
         if (justBecameActive) {
+            val currentVolume = mediaControllerRepository.getVolume()
+            _activeDeviceVolume.value = currentVolume
+            sendVolumeReport(currentVolume)
             val targetPositionMs = interpolatedPositionMs(new)
             val localTrackIndex = mediaControllerRepository.currentTrackIndex.value
             if (localTrackIndex != new.trackIndex) {
@@ -495,6 +517,26 @@ class ConnectServiceImpl @Inject constructor(
         Log.d(TAG, "sendPrev (pending=${_pendingCommand.value} -> prev)")
         _pendingCommand.value = "prev"
         sendCommand("prev")
+    }
+
+    override fun sendVolume(volume: Int) {
+        Log.d(TAG, "sendVolume: $volume")
+        sendCommand("volume", mapOf("volume" to volume))
+    }
+
+    override fun sendVolumeReport(volume: Int) {
+        Log.d(TAG, "sendVolumeReport: $volume")
+        sendCommand("volume_report", mapOf("volume" to volume))
+    }
+
+    override fun triggerShowVolumeUI() {
+        if (_connectState.value?.activeDeviceId == null) return
+        Log.d(TAG, "triggerShowVolumeUI")
+        _showVolumeUI.value = true
+    }
+
+    override fun consumeShowVolumeUI() {
+        _showVolumeUI.value = false
     }
 
     private fun sendCommand(action: String, extra: Map<String, Any> = emptyMap()) {
