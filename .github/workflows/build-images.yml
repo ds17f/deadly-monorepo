@@ -99,6 +99,6 @@ jobs:
 
           Deploy with:
           \`\`\`
-          make web-deploy ENV=beta REF=${SHA::7}
+          make web-deploy ENV=beta REF=${SHA}
           \`\`\`
           EOF

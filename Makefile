@@ -419,6 +419,16 @@ ios-remote-resolve:
 # ANDROID REMOTE BUILD (Linux → Mac)
 # =============================================================================
 
+android-remote-clean:
+	@echo "Cleaning Gradle build + configuration caches on $(REMOTE_HOST)..."
+	@# `./gradlew clean` alone is NOT sufficient: it wipes per-module build/ dirs
+	@# but leaves the project-level .gradle/ (configuration cache) intact. Gradle
+	@# can then replay a stale task graph and restore pre-edit compileDebugKotlin
+	@# outputs, shipping stale bytecode in the APK. Remove the configuration
+	@# cache too, and disable both caches for this clean invocation.
+	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && cd $(REMOTE_ANDROID) && rm -rf .gradle app/build && ./gradlew clean --no-configuration-cache --no-build-cache --console=plain"
+
+
 android-remote-build:
 	@echo "Building on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && cd $(REMOTE_ANDROID) && ./gradlew assembleDebug --console=plain"
@@ -639,12 +649,14 @@ infra-output:
 images-build:
 	gh workflow run build-images.yml -f ref=$(shell git rev-parse --abbrev-ref HEAD)
 
-# Deploy web stack to an environment (ENV=beta|prod)
+# Deploy web stack to an environment (ENV=beta|prod, REF=branch|sha)
 #   make web-deploy              # deploy current branch to beta
 #   make web-deploy ENV=prod     # deploy current branch to prod
+#   make web-deploy REF=abc123   # deploy specific ref to beta
 ENV ?= beta
+REF ?= $(shell git rev-parse --abbrev-ref HEAD)
 web-deploy:
-	gh workflow run web-deploy.yml -f environment=$(ENV) -f ref=$(shell git rev-parse --abbrev-ref HEAD)
+	gh workflow run web-deploy.yml -f environment=$(ENV) -f ref=$(REF)
 
 # Promote: deploy whatever image tag is on beta to prod
 web-promote:
