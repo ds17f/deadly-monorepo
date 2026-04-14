@@ -12,6 +12,10 @@ export interface ConnectContextValue {
   activeDeviceVolume: number | null;
   onVolumeMessage: (handler: (volume: number) => void) => () => void;
   reportVolume: (volume: number) => void;
+  // Server-clock - local-clock, in ms. Add to Date.now() to approximate the
+  // server's current wall-clock. 0 until the first time_sync round-trip
+  // completes. See docs/connect-v2-architecture.md "Clock Sync".
+  serverTimeOffsetMs: number;
 }
 
 export const ConnectContext = createContext<ConnectContextValue | null>(null);

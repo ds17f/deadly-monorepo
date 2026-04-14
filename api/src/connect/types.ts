@@ -50,7 +50,12 @@ export interface CommandMessage {
   [key: string]: unknown;
 }
 
-export type ClientMessage = RegisterMessage | HeartbeatMessage | CommandMessage;
+export interface TimeSyncMessage {
+  type: "time_sync";
+  clientTs: number;
+}
+
+export type ClientMessage = RegisterMessage | HeartbeatMessage | CommandMessage | TimeSyncMessage;
 
 // ── Server -> Client messages ────────────────────────────────────────────────
 
@@ -81,4 +86,16 @@ export interface VolumeReportMessage {
   volume: number;
 }
 
-export type ServerMessage = StateMessage | DevicesMessage | ErrorMessage | VolumeMessage | VolumeReportMessage;
+export interface TimeSyncReplyMessage {
+  type: "time_sync";
+  clientTs: number;
+  serverTs: number;
+}
+
+export type ServerMessage =
+  | StateMessage
+  | DevicesMessage
+  | ErrorMessage
+  | VolumeMessage
+  | VolumeReportMessage
+  | TimeSyncReplyMessage;

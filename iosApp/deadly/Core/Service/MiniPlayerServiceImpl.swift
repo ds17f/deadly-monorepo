@@ -129,10 +129,17 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
     /// Interpolate position for a remote (non-active) playing device based on
     /// positionMs + elapsed wall-clock time since positionTs. Reads interpolationTick
     /// so SwiftUI observes it and re-renders on each tick.
+    ///
+    /// `positionTs` is the server's wall-clock, so we translate our local tick
+    /// into server space via `connectService.serverTimeOffsetMs` before
+    /// subtracting — without it, clock-skewed devices scroll the progress bar
+    /// at the wrong position.
     private func interpolatedRemotePositionMs(_ r: ConnectState) -> Int {
-        let nowMs = interpolationTick.timeIntervalSince1970 * 1000
+        let localMs = interpolationTick.timeIntervalSince1970 * 1000
+        let offset = connectService?.serverTimeOffsetMs ?? 0
+        let serverNowMs = localMs + offset
         if r.playing {
-            let elapsed = max(0, nowMs - r.positionTs)
+            let elapsed = max(0, serverNowMs - r.positionTs)
             return r.positionMs + Int(elapsed)
         } else {
             return r.positionMs

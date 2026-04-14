@@ -54,6 +54,9 @@ class ConnectServiceImpl @Inject constructor(
         private const val DEFAULT_FORMAT = "VBR MP3"
         private const val HARDWARE_VOLUME_DEBOUNCE_MS = 300L
         private const val VOLUME_ECHO_SUPPRESS_MS = 1_500L
+        private const val TIME_SYNC_REFRESH_MS = 5L * 60L * 1000L
+        private const val TIME_SYNC_SAMPLES = 3
+        private const val TIME_SYNC_SAMPLE_SPACING_MS = 200L
     }
 
     private val json = Json { ignoreUnknownKeys = true }
@@ -86,7 +89,15 @@ class ConnectServiceImpl @Inject constructor(
     private val _showVolumeUI = MutableStateFlow(false)
     override val showVolumeUI: StateFlow<Boolean> = _showVolumeUI.asStateFlow()
 
+    private val _serverTimeOffsetMs = MutableStateFlow(0L)
+    override val serverTimeOffsetMs: StateFlow<Long> = _serverTimeOffsetMs.asStateFlow()
+
     @Volatile private var currentVersion = 0
+    // Best (lowest) RTT seen in the current time_sync batch. Replies with
+    // higher RTT are dropped; we only update the offset when a sample beats
+    // every prior sample of this batch.
+    @Volatile private var timeSyncBestRttMs = Long.MAX_VALUE
+    private var timeSyncRefreshJob: Job? = null
 
     @Volatile private var webSocket: WebSocket? = null
     @Volatile private var shouldConnect = false
@@ -143,6 +154,7 @@ class ConnectServiceImpl @Inject constructor(
         reconnectJob?.cancel()
         reconnectJob = null
         stopHeartbeat()
+        stopTimeSyncRefresh()
         val ws = webSocket
         webSocket = null
         ws?.close(1000, null)
@@ -153,6 +165,8 @@ class ConnectServiceImpl @Inject constructor(
         _isActiveDevice.value = false
         _pendingTransfer.value = null
         _activeDeviceVolume.value = 100
+        _serverTimeOffsetMs.value = 0L
+        timeSyncBestRttMs = Long.MAX_VALUE
         currentVersion = 0
     }
 
@@ -193,6 +207,7 @@ class ConnectServiceImpl @Inject constructor(
             reconnectAttempt = 0
             sendRegister(webSocket)
             startHeartbeat(webSocket)
+            startTimeSyncRefresh(webSocket)
         }
 
         override fun onMessage(webSocket: WebSocket, text: String) {
@@ -231,6 +246,36 @@ class ConnectServiceImpl @Inject constructor(
     private fun stopHeartbeat() {
         heartbeatJob?.cancel()
         heartbeatJob = null
+    }
+
+    private fun startTimeSyncRefresh(ws: WebSocket) {
+        stopTimeSyncRefresh()
+        runTimeSync(ws)
+        timeSyncRefreshJob = scope.launch {
+            while (isActive) {
+                delay(TIME_SYNC_REFRESH_MS)
+                if (isActive) runTimeSync(ws)
+            }
+        }
+    }
+
+    private fun stopTimeSyncRefresh() {
+        timeSyncRefreshJob?.cancel()
+        timeSyncRefreshJob = null
+    }
+
+    private fun runTimeSync(ws: WebSocket) {
+        // New batch: replies are scored against this batch's running best.
+        timeSyncBestRttMs = Long.MAX_VALUE
+        scope.launch {
+            for (i in 0 until TIME_SYNC_SAMPLES) {
+                if (!isActive) return@launch
+                val sock = webSocket
+                if (sock !== ws) return@launch  // socket replaced; bail
+                sock.send("""{"type":"time_sync","clientTs":${System.currentTimeMillis()}}""")
+                if (i < TIME_SYNC_SAMPLES - 1) delay(TIME_SYNC_SAMPLE_SPACING_MS)
+            }
+        }
     }
 
     private fun startPositionReporting() {
@@ -307,6 +352,22 @@ class ConnectServiceImpl @Inject constructor(
                     }
                     Log.d(TAG, "handleMessage: volume_report $volume")
                     _activeDeviceVolume.value = volume
+                }
+                "time_sync" -> {
+                    val clientTs = obj["clientTs"]?.jsonPrimitive?.content?.toLongOrNull() ?: return
+                    val serverTs = obj["serverTs"]?.jsonPrimitive?.content?.toLongOrNull() ?: return
+                    val now = System.currentTimeMillis()
+                    val rtt = now - clientTs
+                    // NTP-style: assume symmetric one-way delay. serverTs is stamped at
+                    // server send time, so it ≈ server clock at (clientTs + rtt/2).
+                    val offset = serverTs - (clientTs + rtt / 2)
+                    if (rtt < timeSyncBestRttMs) {
+                        timeSyncBestRttMs = rtt
+                        _serverTimeOffsetMs.value = offset
+                        Log.d(TAG, "time_sync: rtt=${rtt}ms offset=${offset}ms (kept)")
+                    } else {
+                        Log.d(TAG, "time_sync: rtt=${rtt}ms offset=${offset}ms (dropped, best=${timeSyncBestRttMs}ms)")
+                    }
                 }
             }
         } catch (e: Exception) {
@@ -613,14 +674,21 @@ class ConnectServiceImpl @Inject constructor(
 
     private fun interpolatedPositionMs(state: ConnectState): Int {
         if (!state.playing) return state.positionMs
-        val elapsedMs = System.currentTimeMillis() - state.positionTs.toLong()
+        // positionTs is server wall-clock; translate our local clock into server
+        // space via serverTimeOffsetMs before subtracting. Without this, devices
+        // with clock skew mis-interpolate position and misseek on transfer.
+        val serverNow = System.currentTimeMillis() + _serverTimeOffsetMs.value
+        val elapsedMs = serverNow - state.positionTs.toLong()
         return (state.positionMs + elapsedMs).toInt().coerceIn(0, state.durationMs)
     }
 
     private fun handleDisconnect(closeCode: Int?) {
         stopHeartbeat()
+        stopTimeSyncRefresh()
         stopPositionReporting()
         _isConnected.value = false
+        _serverTimeOffsetMs.value = 0L
+        timeSyncBestRttMs = Long.MAX_VALUE
         webSocket = null
 
         if (!shouldConnect || closeCode == CLOSE_CODE_UNAUTHORIZED) return

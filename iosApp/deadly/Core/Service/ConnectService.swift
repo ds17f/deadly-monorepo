@@ -22,6 +22,13 @@ final class ConnectService: NSObject {
     private(set) var activeDeviceVolume: Int = 100
     var showVolumeUI: Bool = false
 
+    /// Server-clock minus local-clock, in milliseconds. Add to the local epoch
+    /// time (ms since 1970) to approximate the server's wall-clock when
+    /// comparing against `ConnectState.positionTs`. Starts at 0 and converges
+    /// after the first time_sync round-trip completes. See
+    /// docs/connect-v2-architecture.md "Clock Sync".
+    private(set) var serverTimeOffsetMs: Double = 0
+
     var isActiveDevice: Bool {
         guard let state = connectState else { return false }
         return state.activeDeviceId == appPreferences.installId
@@ -47,12 +54,20 @@ final class ConnectService: NSObject {
     private var heartbeatTask: Task<Void, Never>?
     private var positionReportTask: Task<Void, Never>?
     private var reconnectTask: Task<Void, Never>?
+    private var timeSyncRefreshTask: Task<Void, Never>?
     private var reconnectAttempt = 0
     private var shouldConnect = false
     private var volumeObservation: NSKeyValueObservation?
+    // Lowest RTT seen in the current time_sync batch. Replies with higher RTT
+    // are dropped; only the best (fastest round-trip) sample of each batch
+    // gets promoted to serverTimeOffsetMs.
+    private var timeSyncBestRttMs: Double = .infinity
 
     private static let reconnectDelays: [Double] = [1, 2, 4, 8, 30]
     private static let heartbeatInterval: UInt64 = 15_000_000_000 // 15s in nanoseconds
+    private static let timeSyncRefreshInterval: UInt64 = 5 * 60 * 1_000_000_000 // 5 min
+    private static let timeSyncSamples = 3
+    private static let timeSyncSampleSpacing: UInt64 = 200_000_000 // 200ms
 
     init(appPreferences: AppPreferences, authService: AuthService, streamPlayer: StreamPlayer) {
         self.appPreferences = appPreferences
@@ -79,6 +94,7 @@ final class ConnectService: NSObject {
         reconnectTask?.cancel()
         reconnectTask = nil
         stopHeartbeat()
+        stopTimeSyncRefresh()
         stopVolumeObservation()
         let ws = webSocket
         webSocket = nil
@@ -87,6 +103,8 @@ final class ConnectService: NSObject {
         devices = []
         connectState = nil
         pendingCommand = nil
+        serverTimeOffsetMs = 0
+        timeSyncBestRttMs = .infinity
     }
 
     // MARK: - Commands
@@ -279,6 +297,22 @@ final class ConnectService: NSObject {
                 logger.info("handleMessage: volume_report \(volume, privacy: .public)")
                 activeDeviceVolume = volume
             }
+        case "time_sync":
+            // Server stamps `serverTs` at send time and echoes `clientTs`.
+            // NTP-style: one-way delay ≈ rtt/2, so server clock at our send
+            // moment ≈ clientTs + rtt/2, giving offset = serverTs - that.
+            guard let clientTs = (json["clientTs"] as? NSNumber)?.doubleValue,
+                  let serverTs = (json["serverTs"] as? NSNumber)?.doubleValue else { return }
+            let nowMs = Date().timeIntervalSince1970 * 1000.0
+            let rtt = nowMs - clientTs
+            let offset = serverTs - (clientTs + rtt / 2.0)
+            if rtt < timeSyncBestRttMs {
+                timeSyncBestRttMs = rtt
+                serverTimeOffsetMs = offset
+                logger.info("time_sync: rtt=\(Int(rtt), privacy: .public)ms offset=\(Int(offset), privacy: .public)ms (kept)")
+            } else {
+                logger.debug("time_sync: rtt=\(Int(rtt), privacy: .public)ms offset=\(Int(offset), privacy: .public)ms (dropped, best=\(Int(self.timeSyncBestRttMs), privacy: .public)ms)")
+            }
         default:
             logger.debug("handleMessage: unknown type '\(type, privacy: .public)'")
         }
@@ -408,10 +442,52 @@ final class ConnectService: NSObject {
 
     private func interpolatedPositionMs(_ state: ConnectState) -> Int {
         guard state.playing else { return state.positionMs }
-        // positionTs is Date.now() on the server — milliseconds since epoch
-        let elapsedMs = Date().timeIntervalSince1970 * 1000.0 - state.positionTs
+        // positionTs is the server's wall-clock; translate our local epoch time
+        // into server space via serverTimeOffsetMs before subtracting. Without
+        // this, clients with skewed clocks mis-interpolate and misseek on
+        // transfer (or skip on repeated position broadcasts).
+        let serverNowMs = Date().timeIntervalSince1970 * 1000.0 + serverTimeOffsetMs
+        let elapsedMs = serverNowMs - state.positionTs
         let interpolated = state.positionMs + Int(elapsedMs)
         return max(0, min(interpolated, state.durationMs))
+    }
+
+    // MARK: - Time Sync
+
+    private func startTimeSyncRefresh() {
+        stopTimeSyncRefresh()
+        runTimeSync()
+        timeSyncRefreshTask = Task { [weak self] in
+            while !Task.isCancelled {
+                try? await Task.sleep(nanoseconds: Self.timeSyncRefreshInterval)
+                guard !Task.isCancelled else { break }
+                await MainActor.run { self?.runTimeSync() }
+            }
+        }
+    }
+
+    private func stopTimeSyncRefresh() {
+        timeSyncRefreshTask?.cancel()
+        timeSyncRefreshTask = nil
+    }
+
+    /// Send 3 time_sync probes spaced 200ms apart. Replies are scored in
+    /// `handleMessage`; only the sample with the lowest RTT wins (NTP-style).
+    private func runTimeSync() {
+        timeSyncBestRttMs = .infinity
+        Task { [weak self] in
+            guard let self else { return }
+            for i in 0..<Self.timeSyncSamples {
+                let nowMs = Date().timeIntervalSince1970 * 1000.0
+                let msg = "{\"type\":\"time_sync\",\"clientTs\":\(nowMs)}"
+                await MainActor.run {
+                    self.webSocket?.send(.string(msg)) { _ in }
+                }
+                if i < Self.timeSyncSamples - 1 {
+                    try? await Task.sleep(nanoseconds: Self.timeSyncSampleSpacing)
+                }
+            }
+        }
     }
 
     // MARK: - Send Helpers
@@ -526,9 +602,12 @@ final class ConnectService: NSObject {
 
     private func handleDisconnect(closeCode: Int?) {
         stopHeartbeat()
+        stopTimeSyncRefresh()
         stopPositionReporting()
         stopVolumeObservation()
         isConnected = false
+        serverTimeOffsetMs = 0
+        timeSyncBestRttMs = .infinity
         webSocket = nil
 
         // 4003 = Unauthorized (terminal — token invalid)
@@ -567,6 +646,7 @@ extension ConnectService: URLSessionWebSocketDelegate {
             self.reconnectAttempt = 0
             self.sendRegister()
             self.startHeartbeat()
+            self.startTimeSyncRefresh()
             self.startVolumeObservation()
             self.receiveMessages()
         }

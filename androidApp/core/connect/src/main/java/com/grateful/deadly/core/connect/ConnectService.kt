@@ -15,6 +15,15 @@ interface ConnectService {
     val activeDeviceVolume: StateFlow<Int>
     val showVolumeUI: StateFlow<Boolean>
 
+    /**
+     * Server-clock minus local-clock, in milliseconds. Add to
+     * [System.currentTimeMillis] to approximate the server's wall-clock when
+     * comparing against [ConnectState.positionTs]. Defaults to 0 until the
+     * first time_sync round-trip completes. See
+     * docs/connect-v2-architecture.md "Clock Sync".
+     */
+    val serverTimeOffsetMs: StateFlow<Long>
+
     fun startIfAuthenticated()
     fun stop()
     fun handleNetworkRestored()
