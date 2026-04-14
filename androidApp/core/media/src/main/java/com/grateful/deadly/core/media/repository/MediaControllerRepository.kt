@@ -843,7 +843,25 @@ class MediaControllerRepository @Inject constructor(
             mediaController?.seekTo(index, positionMs)
         }
     }
-    
+
+    // Volume (0-100). Tracks the MediaController volume set via setVolume().
+    // Stored as a StateFlow so it can be read safely from any thread — actual
+    // mediaController.volume writes happen on the Main thread.
+    private val _volume = MutableStateFlow(100)
+    val volume: StateFlow<Int> = _volume.asStateFlow()
+
+    fun setVolume(volume: Int) {
+        Log.d(TAG, "setVolume: $volume")
+        _volume.value = volume
+        repositoryScope.launch {
+            withContext(Dispatchers.Main) {
+                mediaController?.volume = volume / 100f
+            }
+        }
+    }
+
+    fun getVolume(): Int = _volume.value
+
     /**
      * Get current MediaItems from the queue for hydration
      * Must be called from the main thread (MediaController requirement)

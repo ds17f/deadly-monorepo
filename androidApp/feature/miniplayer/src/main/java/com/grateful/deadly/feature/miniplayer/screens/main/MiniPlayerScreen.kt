@@ -48,7 +48,16 @@ fun MiniPlayerScreen(
     val uiState by viewModel.uiState.collectAsState()
     val connectRemoteDeviceName by viewModel.connectRemoteDeviceName.collectAsState()
     val showConnectTooltip by viewModel.shouldShowConnectTooltip.collectAsState()
+    val showVolumeUI by viewModel.showVolumeUI.collectAsState()
     var showConnectSheet by remember { mutableStateOf(false) }
+
+    // Hardware volume button pressed during a Connect session — surface the sheet.
+    LaunchedEffect(showVolumeUI) {
+        if (showVolumeUI) {
+            showConnectSheet = true
+            viewModel.consumeShowVolumeUI()
+        }
+    }
 
     // Auto-dismiss tooltip after 4 seconds
     LaunchedEffect(showConnectTooltip) {

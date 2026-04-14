@@ -84,12 +84,14 @@ fun ConnectScreen(
             val hasSession = connectState?.showId != null
             val isRemoteControlling = connectState?.activeDeviceId != null && !isActiveDevice
             items(devices) { device ->
-                val isMe = device.deviceId == installId
+                val isLocal = device.deviceId == installId
                 val isDeviceActive = device.deviceId == connectState?.activeDeviceId
                 val isPending = pendingTransfer == device.deviceId
+                val label = if (isLocal) "This Device"
+                    else device.deviceType.replaceFirstChar { it.uppercase() }
                 ConnectDeviceRow(
                     device = device,
-                    isMe = isMe,
+                    label = label,
                     isDeviceActive = isDeviceActive,
                     hasSession = hasSession,
                     isPending = isPending,

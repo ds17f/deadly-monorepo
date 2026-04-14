@@ -20,7 +20,12 @@ class ConnectViewModel @Inject constructor(
     val isConnected: StateFlow<Boolean> = connectService.isConnected
     val isActiveDevice: StateFlow<Boolean> = connectService.isActiveDevice
     val pendingTransfer: StateFlow<String?> = connectService.pendingTransfer
+    val activeDeviceVolume: StateFlow<Int> = connectService.activeDeviceVolume
     val installId: String = appPreferences.installId
+
+    fun sendVolume(volume: Int) {
+        connectService.sendVolume(volume)
+    }
 
     fun transferTo(deviceId: String) {
         connectService.sendTransfer(deviceId)

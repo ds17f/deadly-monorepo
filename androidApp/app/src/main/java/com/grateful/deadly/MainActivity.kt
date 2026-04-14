@@ -3,6 +3,7 @@ package com.grateful.deadly
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.KeyEvent
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -67,5 +68,16 @@ class MainActivity : ComponentActivity() {
         super.onNewIntent(intent)
         setIntent(intent)
         deepLinkUri = intent.data
+    }
+
+    // Intercept hardware volume keys to surface the ConnectSheet when a Connect
+    // session is active (mirrors iOS KVO on AVAudioSession.outputVolume).
+    override fun dispatchKeyEvent(event: KeyEvent): Boolean {
+        if (event.action == KeyEvent.ACTION_DOWN &&
+            (event.keyCode == KeyEvent.KEYCODE_VOLUME_UP ||
+             event.keyCode == KeyEvent.KEYCODE_VOLUME_DOWN)) {
+            connectService.triggerShowVolumeUI()
+        }
+        return super.dispatchKeyEvent(event)
     }
 }
