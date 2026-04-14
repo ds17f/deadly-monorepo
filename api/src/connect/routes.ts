@@ -66,6 +66,21 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
           break;
         }
 
+        case "time_sync": {
+          // Stateless clock-offset probe. Echo clientTs, stamp serverTs.
+          // Stamping at send time (not receive) so the server-side processing
+          // delay is included in the round-trip rather than skewing the offset.
+          if (typeof msg.clientTs !== "number") return;
+          if (socket.readyState === socket.OPEN) {
+            socket.send(JSON.stringify({
+              type: "time_sync",
+              clientTs: msg.clientTs,
+              serverTs: Date.now(),
+            }));
+          }
+          break;
+        }
+
         case "command": {
           if (!registeredDeviceId || !msg.action) return;
           request.log.info({ userId, deviceId: registeredDeviceId, action: msg.action }, "ws/connect: command");

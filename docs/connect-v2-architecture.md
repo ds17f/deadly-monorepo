@@ -21,6 +21,12 @@
    update their UI on command send, but snap to server state when the broadcast
    arrives. Active device acts optimistically; remote control devices show a
    loading/pending indicator and wait for server confirmation.
+6. **Clients sync their clocks to the server.** Position interpolation depends
+   on `Date.now() - state.positionTs`, where `positionTs` is the server's
+   wall-clock. Any client whose clock disagrees with the server's by more than
+   ~1s will mis-interpolate and skip or misseek. Every Connect client — current
+   (web/iOS/Android) or future (Alexa, Sonos, CarPlay, tvOS) — MUST measure and
+   apply a server-clock offset. See **Clock Sync** below.
 
 ## Why v1 Failed
 
@@ -113,17 +119,55 @@ state is hydrated with the saved fields, `version: 0`, `playing: false`,
 
 ### Position Interpolation
 
-Clients compute the current playback position without real-time streaming:
+Clients compute the current playback position without real-time streaming.
+`positionTs` is a **server** wall-clock timestamp, so each client must apply
+its measured `serverTimeOffsetMs` (see **Clock Sync**) when interpolating:
 
 ```
+serverNow = Date.now() + serverTimeOffsetMs
 currentPosition = state.playing
-  ? state.positionMs + (Date.now() - state.positionTs)
+  ? state.positionMs + (serverNow - state.positionTs)
   : state.positionMs
 ```
 
 The active device sends periodic `position` commands (~5s) to correct drift.
 These go through the normal mutation path — server updates `positionMs` and
 `positionTs`, increments version, broadcasts.
+
+### Clock Sync
+
+`positionTs` is server wall-clock time. A client whose local clock is offset
+from the server by N ms will read every interpolation as N ms off, causing
+audible skipping (forward jumps when the seek-guard threshold is crossed) or
+misseeks on track changes. Therefore every client measures the offset.
+
+**Protocol** — a stateless `time_sync` round-trip on the same WebSocket:
+
+```
+client → { "type": "time_sync", "clientTs": <localNow ms> }
+server → { "type": "time_sync", "clientTs": <echoed>, "serverTs": <Date.now() ms> }
+```
+
+The server reply is immediate, does not mutate state, and is not broadcast.
+
+**Client algorithm** (identical across platforms):
+
+1. After `register`, send 3 `time_sync` requests spaced ~200ms apart.
+2. For each reply, compute:
+   - `rtt = localNow - clientTs`
+   - `offset = serverTs - (clientTs + rtt / 2)`
+3. Keep the sample with the **smallest RTT** (NTP min-delay heuristic).
+4. Re-run the 3-sample sync every **5 minutes** while connected.
+5. On disconnect, clear the offset; re-sync on reconnect.
+6. Default `serverTimeOffsetMs = 0` until the first sync completes (legacy
+   behavior in the brief pre-sync window).
+
+Apply correction wherever a client compares its local clock against
+`positionTs`:
+
+```
+elapsedMs = (Date.now() + serverTimeOffsetMs) - state.positionTs
+```
 
 ---
 
@@ -167,7 +211,7 @@ WebSocket at `/ws/connect`. Authenticated via JWT bearer token in the
 `Authorization` header (or token query param as fallback for browsers). Uses
 the same `requireAuth` middleware as v1.
 
-### Client -> Server (3 message types)
+### Client -> Server (4 message types)
 
 Every command includes the sender's device ID implicitly (the server tracks
 which socket belongs to which device after `register`).
@@ -221,7 +265,16 @@ Keepalive. No payload needed.
 { "type": "heartbeat" }
 ```
 
-### Server -> Client (3 message types)
+#### `time_sync`
+
+Clock-offset probe. Server echoes `clientTs` and stamps `serverTs`. Stateless;
+does not mutate or broadcast. See **Clock Sync** for the sampling algorithm.
+
+```json
+{ "type": "time_sync", "clientTs": 1718990123456 }
+```
+
+### Server -> Client (4 message types)
 
 #### `state`
 
@@ -260,6 +313,18 @@ Command rejected. Always includes current state for reconciliation.
   "type": "error",
   "message": "Target device not found",
   "state": { ... }
+}
+```
+
+#### `time_sync`
+
+Reply to a client `time_sync` probe. Sent only to the requesting socket.
+
+```json
+{
+  "type": "time_sync",
+  "clientTs": 1718990123456,
+  "serverTs": 1718990123478
 }
 ```
 

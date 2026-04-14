@@ -33,7 +33,7 @@ export default function PlayerProvider({
   const [pendingCommand, setPendingCommand] = useState<string | null>(null);
   const [pendingTransfer, setPendingTransfer] = useState<string | null>(null);
 
-  const { state: connectState, myDeviceId, sendCommand, onVolumeMessage, reportVolume } = useConnect();
+  const { state: connectState, myDeviceId, sendCommand, onVolumeMessage, reportVolume, serverTimeOffsetMs } = useConnect();
 
   const isActiveDevice = connectState !== null && myDeviceId !== null && connectState.activeDeviceId === myDeviceId;
   // Show Connect state whenever a shared show is loaded and we're not the active device.
@@ -354,7 +354,7 @@ export default function PlayerProvider({
     if (connectState.recordingId && connectState.recordingId !== selectedRecording) {
       const autoPlay = isActiveDevice && connectState.playing;
       const interpolatedPosMs = connectState.playing
-        ? connectState.positionMs + (Date.now() - connectState.positionTs)
+        ? connectState.positionMs + ((Date.now() + serverTimeOffsetMs) - connectState.positionTs)
         : connectState.positionMs;
       pendingSeekMsRef.current = interpolatedPosMs;
       if (!autoPlay) suppressAutoPlayRef.current = true;
@@ -395,9 +395,13 @@ export default function PlayerProvider({
         if (connectState.trackIndex !== currentTrackIndexRef.current) {
           setCurrentTrackIndex(connectState.trackIndex);
         }
-        // Sync position if server changed it (remote seek or reconnect)
+        // Sync position if server changed it (remote seek or reconnect).
+        // Translate Date.now() into server-clock via serverTimeOffsetMs before
+        // subtracting positionTs — clients with skewed clocks otherwise jump
+        // by the skew amount on every periodic position broadcast and trip
+        // the seek guard below, causing audible skipping.
         const interpolatedPosMs = connectState.playing
-          ? connectState.positionMs + (Date.now() - connectState.positionTs)
+          ? connectState.positionMs + ((Date.now() + serverTimeOffsetMs) - connectState.positionTs)
           : connectState.positionMs;
         const serverPositionS = interpolatedPosMs / 1000;
         if (Math.abs(audio.currentTime - serverPositionS) > 1) {

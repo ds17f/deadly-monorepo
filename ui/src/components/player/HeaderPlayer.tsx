@@ -50,7 +50,7 @@ export default function HeaderPlayer() {
     seek,
   } = usePlayer();
 
-  const { state: connectState, connected, devices } = useConnect();
+  const { state: connectState, connected, devices, serverTimeOffsetMs } = useConnect();
 
   const [queueOpen, setQueueOpen] = useState(false);
   const closeQueue = useCallback(() => setQueueOpen(false), []);
@@ -89,16 +89,16 @@ export default function HeaderPlayer() {
     }
     function tick() {
       if (!connectState) return;
-      const now = Date.now();
+      const serverNow = Date.now() + serverTimeOffsetMs;
       const posMs = connectState.playing
-        ? connectState.positionMs + (now - connectState.positionTs)
+        ? connectState.positionMs + (serverNow - connectState.positionTs)
         : connectState.positionMs;
       setInterpolatedPositionMs(Math.max(0, posMs));
       rafRef.current = requestAnimationFrame(tick);
     }
     rafRef.current = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(rafRef.current);
-  }, [isRemoteControlling, connectState]);
+  }, [isRemoteControlling, connectState, serverTimeOffsetMs]);
   const remoteProgress = isRemoteControlling && connectState && connectState.durationMs > 0
     ? Math.min(100, (interpolatedPositionMs / connectState.durationMs) * 100)
     : 0;

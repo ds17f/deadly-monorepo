@@ -87,7 +87,8 @@ class PlayerServiceImpl @Inject constructor(
         val isRemoteControlling = state != null && state.activeDeviceId != null && !isActive
         if (isRemoteControlling && state != null) {
             val positionMs = if (state.playing) {
-                state.positionMs.toLong() + (System.currentTimeMillis() - state.positionTs.toLong())
+                val serverNow = System.currentTimeMillis() + connectService.serverTimeOffsetMs.value
+                state.positionMs.toLong() + (serverNow - state.positionTs.toLong())
             } else {
                 state.positionMs.toLong()
             }

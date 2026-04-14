@@ -8,6 +8,9 @@ import type { ConnectDevice, ConnectState } from "@/types/connect";
 const HEARTBEAT_INTERVAL_MS = 15_000;
 const RECONNECT_DELAYS_MS = [1_000, 2_000, 4_000, 8_000, 30_000];
 const DEVICE_ID_KEY = "deadly-device-id";
+const TIME_SYNC_REFRESH_MS = 5 * 60 * 1000;
+const TIME_SYNC_SAMPLES = 3;
+const TIME_SYNC_SAMPLE_SPACING_MS = 200;
 
 const log = (...args: unknown[]) => console.log("[Connect]", ...args);
 const warn = (...args: unknown[]) => console.warn("[Connect]", ...args);
@@ -50,19 +53,46 @@ export default function ConnectProvider({
   const [connected, setConnected] = useState(false);
 
   const [activeDeviceVolume, setActiveDeviceVolume] = useState<number | null>(null);
+  const [serverTimeOffsetMs, setServerTimeOffsetMs] = useState(0);
 
   const wsRef = useRef<WebSocket | null>(null);
   const heartbeatRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const timeSyncRefreshRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const reconnectTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const reconnectAttemptRef = useRef(0);
   const shouldConnectRef = useRef(false);
   const currentVersionRef = useRef(0);
   const volumeListenersRef = useRef<Array<(volume: number) => void>>([]);
+  // Tracks the best (lowest-RTT) sample within the current sync batch so we
+  // can keep updating as better samples arrive but ignore worse ones.
+  const timeSyncBestRttRef = useRef<number>(Number.POSITIVE_INFINITY);
 
   const clearHeartbeat = useCallback(() => {
     if (heartbeatRef.current) {
       clearInterval(heartbeatRef.current);
       heartbeatRef.current = null;
+    }
+  }, []);
+
+  const clearTimeSyncRefresh = useCallback(() => {
+    if (timeSyncRefreshRef.current) {
+      clearInterval(timeSyncRefreshRef.current);
+      timeSyncRefreshRef.current = null;
+    }
+  }, []);
+
+  const runTimeSync = useCallback(() => {
+    const ws = wsRef.current;
+    if (!ws || ws.readyState !== WebSocket.OPEN) return;
+    // New batch: reset best-sample tracking so a fresh best can win over
+    // any sample from the previous batch.
+    timeSyncBestRttRef.current = Number.POSITIVE_INFINITY;
+    for (let i = 0; i < TIME_SYNC_SAMPLES; i++) {
+      setTimeout(() => {
+        const sock = wsRef.current;
+        if (!sock || sock.readyState !== WebSocket.OPEN) return;
+        sock.send(JSON.stringify({ type: "time_sync", clientTs: Date.now() }));
+      }, i * TIME_SYNC_SAMPLE_SPACING_MS);
     }
   }, []);
 
@@ -109,6 +139,10 @@ export default function ConnectProvider({
           ws.send(JSON.stringify({ type: "heartbeat" }));
         }
       }, HEARTBEAT_INTERVAL_MS);
+
+      clearTimeSyncRefresh();
+      runTimeSync();
+      timeSyncRefreshRef.current = setInterval(runTimeSync, TIME_SYNC_REFRESH_MS);
     };
 
     ws.onmessage = (event: MessageEvent<string>) => {
@@ -146,12 +180,32 @@ export default function ConnectProvider({
         const volume = msg.volume as number;
         log(`Volume report from ${msg.deviceId}: ${volume}`);
         setActiveDeviceVolume(volume);
+      } else if (msg.type === "time_sync") {
+        const clientTs = msg.clientTs as number;
+        const serverTs = msg.serverTs as number;
+        const now = Date.now();
+        const rtt = now - clientTs;
+        // NTP-style: assume symmetric one-way delay = rtt/2.
+        // serverTimeOffset = serverNow_at_send - clientNow_at_send.
+        // serverNow_at_send ≈ serverTs (server stamps at send time).
+        // clientNow_at_send ≈ clientTs + rtt/2 (midway through round-trip).
+        const offset = serverTs - (clientTs + rtt / 2);
+        if (rtt < timeSyncBestRttRef.current) {
+          timeSyncBestRttRef.current = rtt;
+          setServerTimeOffsetMs(offset);
+          log(`time_sync: rtt=${rtt}ms offset=${offset}ms (kept)`);
+        } else {
+          log(`time_sync: rtt=${rtt}ms offset=${offset}ms (dropped, best=${timeSyncBestRttRef.current}ms)`);
+        }
       }
     };
 
     ws.onclose = (event) => {
       log(`Disconnected: code=${event.code} reason=${event.reason || "(none)"}`);
       clearHeartbeat();
+      clearTimeSyncRefresh();
+      setServerTimeOffsetMs(0);
+      timeSyncBestRttRef.current = Number.POSITIVE_INFINITY;
       setConnected(false);
       wsRef.current = null;
 
@@ -172,7 +226,7 @@ export default function ConnectProvider({
     ws.onerror = () => {
       warn("WebSocket error (onclose will handle reconnect)");
     };
-  }, [clearHeartbeat]);
+  }, [clearHeartbeat, clearTimeSyncRefresh, runTimeSync]);
 
   const onVolumeMessage = useCallback((handler: (volume: number) => void) => {
     volumeListenersRef.current.push(handler);
@@ -205,6 +259,7 @@ export default function ConnectProvider({
     shouldConnectRef.current = false;
     clearReconnectTimer();
     clearHeartbeat();
+    clearTimeSyncRefresh();
     const ws = wsRef.current;
     if (ws) {
       wsRef.current = null;
@@ -214,8 +269,10 @@ export default function ConnectProvider({
     setDevices([]);
     setConnectState(null);
     setActiveDeviceVolume(null);
+    setServerTimeOffsetMs(0);
+    timeSyncBestRttRef.current = Number.POSITIVE_INFINITY;
     currentVersionRef.current = 0;
-  }, [clearHeartbeat, clearReconnectTimer]);
+  }, [clearHeartbeat, clearReconnectTimer, clearTimeSyncRefresh]);
 
   useEffect(() => {
     if (isLoading) return;
@@ -237,7 +294,7 @@ export default function ConnectProvider({
   }, [user, isLoading]);
 
   return (
-    <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected, sendCommand, activeDeviceVolume, onVolumeMessage, reportVolume }}>
+    <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected, sendCommand, activeDeviceVolume, onVolumeMessage, reportVolume, serverTimeOffsetMs }}>
       {children}
     </ConnectContext.Provider>
   );
