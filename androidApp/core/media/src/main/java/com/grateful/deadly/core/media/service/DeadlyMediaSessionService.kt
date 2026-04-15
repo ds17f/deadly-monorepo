@@ -12,6 +12,7 @@ import android.os.Looper
 import android.util.Log
 import androidx.media3.common.AudioAttributes
 import androidx.media3.common.C
+import androidx.media3.common.ForwardingPlayer
 import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
 import androidx.media3.common.Player
@@ -67,7 +68,11 @@ class DeadlyMediaSessionService : MediaLibraryService() {
     lateinit var equalizerRepository: EqualizerRepository
 
     private lateinit var exoPlayer: ExoPlayer
+    private lateinit var sessionPlayer: ForwardingPlayer
     private var mediaSession: MediaLibrarySession? = null
+
+    /** Set by Connect to intercept notification commands; null = pass-through. */
+    var commandInterceptor: PlaybackCommandInterceptor? = null
     private val serviceScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
     // Simple queue state tracking
@@ -166,6 +171,25 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             .setHandleAudioBecomingNoisy(true)
             .build()
 
+        // Wrap ExoPlayer so notification/session commands can be intercepted
+        sessionPlayer = object : ForwardingPlayer(exoPlayer) {
+            override fun play() {
+                if (commandInterceptor?.onPlay() != true) super.play()
+            }
+            override fun pause() {
+                if (commandInterceptor?.onPause() != true) super.pause()
+            }
+            override fun seekTo(positionMs: Long) {
+                if (commandInterceptor?.onSeekTo(positionMs) != true) super.seekTo(positionMs)
+            }
+            override fun seekToNext() {
+                if (commandInterceptor?.onSeekToNext() != true) super.seekToNext()
+            }
+            override fun seekToPrevious() {
+                if (commandInterceptor?.onSeekToPrevious() != true) super.seekToPrevious()
+            }
+        }
+
         // Initialize equalizer with ExoPlayer's audio session
         equalizerRepository.onAudioSessionReady(exoPlayer.audioSessionId)
 
@@ -207,7 +231,7 @@ class DeadlyMediaSessionService : MediaLibraryService() {
         )
 
         // Create MediaLibrarySession (callback in constructor, not via setter)
-        mediaSession = MediaLibrarySession.Builder(this, exoPlayer, LibrarySessionCallback())
+        mediaSession = MediaLibrarySession.Builder(this, sessionPlayer, LibrarySessionCallback())
             .setSessionActivity(sessionActivityPendingIntent)
             .setId("DeadlySession")
             .setBitmapLoader(WaveformFilteringBitmapLoader(this))
