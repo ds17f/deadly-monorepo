@@ -10,6 +10,7 @@ struct ShowDetailScreen: View {
     private var streamPlayer: StreamPlayer { container.streamPlayer }
     private var downloadService: DownloadServiceImpl { container.downloadService }
     private var networkMonitor: NetworkMonitor { container.networkMonitor }
+    private var connectService: ConnectService { container.connectService }
 
     /// Current show ID - uses the navigated show if available, falls back to initial showId
     private var currentShowId: String {
@@ -514,6 +515,14 @@ struct ShowDetailScreen: View {
     }
 
     private var isCurrentShowPlaying: Bool {
+        // Remote-controlling: use server state
+        if connectService.isRemoteControlling,
+           let state = connectService.connectState,
+           let recording = playlistService.currentRecording,
+           state.recordingId == recording.identifier {
+            return state.playing
+        }
+        // Local/active device: use local player state
         guard let currentTrack = streamPlayer.currentTrack,
               let recording = playlistService.currentRecording else { return false }
         let isThisShow = currentTrack.metadata["recordingId"] == recording.identifier
@@ -529,6 +538,14 @@ struct ShowDetailScreen: View {
     }
 
     private var isCurrentShowActive: Bool {
+        // Remote-controlling: check server state
+        if connectService.isRemoteControlling,
+           let state = connectService.connectState,
+           let recording = playlistService.currentRecording,
+           state.recordingId == recording.identifier {
+            return true
+        }
+        // Local/active device: check local player
         guard let currentTrack = streamPlayer.currentTrack,
               let recording = playlistService.currentRecording else { return false }
         return currentTrack.metadata["recordingId"] == recording.identifier
@@ -537,9 +554,30 @@ struct ShowDetailScreen: View {
     private func handlePlayToggle() {
         if isCurrentShowLoading {
             // Do nothing while loading
+        } else if connectService.isRemoteControlling {
+            // Remote control: send commands only, no local audio
+            if isCurrentShowActive {
+                if connectService.connectState?.playing == true {
+                    connectService.sendPause()
+                } else {
+                    connectService.sendPlay()
+                }
+            } else {
+                // Different show — playTrack already sends sendLoad with autoplay
+                playlistService.playTrack(at: 0)
+                playlistService.recordRecentPlay()
+            }
         } else if isCurrentShowActive {
+            // Local/active device: toggle local + send connect command optimistically
+            let wasPlaying = streamPlayer.playbackState.isPlaying
             streamPlayer.togglePlayPause()
+            if wasPlaying {
+                connectService.sendPause()
+            } else {
+                connectService.sendPlay()
+            }
         } else {
+            // New show — playTrack handles local audio + sendLoad
             playlistService.playTrack(at: 0)
             playlistService.recordRecentPlay()
         }
