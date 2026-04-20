@@ -27,6 +27,10 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
       switch (msg.type) {
         case "register": {
           const reg = msg as RegisterMessage;
+          if (!reg.device?.deviceId) {
+            socket.send(JSON.stringify({ type: "error", message: "Missing device info" }));
+            return;
+          }
           deviceId = reg.device.deviceId;
           deviceName = reg.device.name;
           deviceType = reg.device.type;

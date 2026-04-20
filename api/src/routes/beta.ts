@@ -1,0 +1,384 @@
+import type { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
+import { requireAdmin } from "../auth/middleware.js";
+import {
+  listApplicants,
+  getApplicantById,
+  getApplicantByEmail,
+  insertApplicant,
+  updateApplicantStatus,
+  getSettings,
+  setSetting,
+  countSlotsUsed,
+} from "../db/beta.js";
+import { inviteUser, deleteUser, deleteInvitation, listInvitations, listUsers } from "../apple/appstoreconnect.js";
+
+export async function betaRoutes(app: FastifyInstance): Promise<void> {
+  // GET /api/admin/beta/applicants
+  app.get(
+    "/api/admin/beta/applicants",
+    {
+      schema: {
+        tags: ["beta"],
+        summary: "List all beta applicants (admin)",
+      },
+      preHandler: requireAdmin,
+    },
+    async () => {
+      const applicants = listApplicants();
+      const slotsUsed = countSlotsUsed();
+      const settings = getSettings();
+      const slotCap = Number(settings.slot_cap ?? "100");
+      return { applicants, slotsUsed, slotCap };
+    },
+  );
+
+  // POST /api/admin/beta/applicants — admin-create for testing
+  app.post(
+    "/api/admin/beta/applicants",
+    {
+      schema: {
+        tags: ["beta"],
+        summary: "Create a test applicant (admin)",
+        body: {
+          type: "object",
+          required: ["email", "firstName", "lastName"],
+          properties: {
+            email: { type: "string" },
+            firstName: { type: "string" },
+            lastName: { type: "string" },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request: FastifyRequest, reply: FastifyReply) => {
+      const { email, firstName, lastName } = request.body as {
+        email: string;
+        firstName: string;
+        lastName: string;
+      };
+      const existing = getApplicantByEmail(email);
+      let applicant;
+      if (existing) {
+        if (existing.status !== "removed" && existing.status !== "rejected") {
+          return reply.code(409).send({ error: "Applicant with this email already exists" });
+        }
+        updateApplicantStatus(existing.id, "pending", {
+          last_error: null,
+          asc_invitation_id: null,
+          asc_user_id: null,
+          invited_at: null,
+          removed_at: null,
+        });
+        applicant = getApplicantById(existing.id)!;
+      } else {
+        applicant = insertApplicant(email, firstName, lastName, null, null);
+      }
+
+      const settings = getSettings();
+      if (settings.auto_approve === "true") {
+        try {
+          const result = await inviteUser({ email, firstName, lastName });
+          if (result.ok) {
+            updateApplicantStatus(applicant.id, "invited", {
+              asc_invitation_id: result.invitationId,
+              invited_at: Date.now(),
+            });
+            const updated = getApplicantById(applicant.id)!;
+            return reply.code(201).send(updated);
+          }
+          updateApplicantStatus(applicant.id, "error", { last_error: result.reason });
+        } catch (err) {
+          const message = err instanceof Error ? err.message : "Unknown error";
+          updateApplicantStatus(applicant.id, "error", { last_error: message });
+        }
+      }
+
+      const final = getApplicantById(applicant.id)!;
+      return reply.code(201).send(final);
+    },
+  );
+
+  // POST /api/admin/beta/applicants/:id/approve
+  app.post(
+    "/api/admin/beta/applicants/:id/approve",
+    {
+      schema: {
+        tags: ["beta"],
+        summary: "Approve a pending applicant (admin)",
+      },
+      preHandler: requireAdmin,
+    },
+    async (request: FastifyRequest, reply: FastifyReply) => {
+      const { id } = request.params as { id: string };
+      const applicant = getApplicantById(id);
+      if (!applicant) return reply.code(404).send({ error: "Not found" });
+      if (applicant.status !== "pending") {
+        return reply.code(409).send({ error: `Cannot approve from status '${applicant.status}'` });
+      }
+
+      try {
+        const result = await inviteUser({
+          email: applicant.email,
+          firstName: applicant.first_name ?? "",
+          lastName: applicant.last_name ?? "",
+        });
+
+        if (!result.ok) {
+          updateApplicantStatus(id, "error", { last_error: result.reason });
+          return reply.code(409).send({ error: result.reason });
+        }
+
+        updateApplicantStatus(id, "invited", {
+          asc_invitation_id: result.invitationId,
+          invited_at: Date.now(),
+        });
+        return { ok: true };
+      } catch (err) {
+        const message = err instanceof Error ? err.message : "Unknown error";
+        updateApplicantStatus(id, "error", { last_error: message });
+        return reply.code(502).send({ error: message });
+      }
+    },
+  );
+
+  // POST /api/admin/beta/applicants/:id/reject
+  app.post(
+    "/api/admin/beta/applicants/:id/reject",
+    {
+      schema: {
+        tags: ["beta"],
+        summary: "Reject a pending applicant (admin)",
+      },
+      preHandler: requireAdmin,
+    },
+    async (request: FastifyRequest, reply: FastifyReply) => {
+      const { id } = request.params as { id: string };
+      const applicant = getApplicantById(id);
+      if (!applicant) return reply.code(404).send({ error: "Not found" });
+      if (applicant.status !== "pending") {
+        return reply.code(409).send({ error: `Cannot reject from status '${applicant.status}'` });
+      }
+      updateApplicantStatus(id, "rejected");
+      return { ok: true };
+    },
+  );
+
+  // DELETE /api/admin/beta/applicants/:id
+  app.delete(
+    "/api/admin/beta/applicants/:id",
+    {
+      schema: {
+        tags: ["beta"],
+        summary: "Remove an applicant and revoke ASC access (admin)",
+      },
+      preHandler: requireAdmin,
+    },
+    async (request: FastifyRequest, reply: FastifyReply) => {
+      const { id } = request.params as { id: string };
+      const applicant = getApplicantById(id);
+      if (!applicant) return reply.code(404).send({ error: "Not found" });
+
+      try {
+        if (applicant.asc_user_id) {
+          await deleteUser(applicant.asc_user_id);
+        } else if (applicant.asc_invitation_id) {
+          await deleteInvitation(applicant.asc_invitation_id);
+        }
+      } catch (err) {
+        const message = err instanceof Error ? err.message : "Unknown error";
+        updateApplicantStatus(id, "error", { last_error: message });
+        return reply.code(502).send({ error: message });
+      }
+
+      updateApplicantStatus(id, "removed", { removed_at: Date.now() });
+      return { ok: true };
+    },
+  );
+
+  // POST /api/admin/beta/applicants/:id/retry
+  app.post(
+    "/api/admin/beta/applicants/:id/retry",
+    {
+      schema: {
+        tags: ["beta"],
+        summary: "Retry invitation for errored/expired applicant (admin)",
+      },
+      preHandler: requireAdmin,
+    },
+    async (request: FastifyRequest, reply: FastifyReply) => {
+      const { id } = request.params as { id: string };
+      const applicant = getApplicantById(id);
+      if (!applicant) return reply.code(404).send({ error: "Not found" });
+      if (applicant.status !== "error" && applicant.status !== "expired") {
+        return reply.code(409).send({ error: `Cannot retry from status '${applicant.status}'` });
+      }
+
+      try {
+        const result = await inviteUser({
+          email: applicant.email,
+          firstName: applicant.first_name ?? "",
+          lastName: applicant.last_name ?? "",
+        });
+
+        if (!result.ok) {
+          updateApplicantStatus(id, "error", { last_error: result.reason });
+          return reply.code(409).send({ error: result.reason });
+        }
+
+        updateApplicantStatus(id, "invited", {
+          asc_invitation_id: result.invitationId,
+          invited_at: Date.now(),
+          last_error: null,
+        });
+        return { ok: true };
+      } catch (err) {
+        const message = err instanceof Error ? err.message : "Unknown error";
+        updateApplicantStatus(id, "error", { last_error: message });
+        return reply.code(502).send({ error: message });
+      }
+    },
+  );
+
+  // GET /api/admin/beta/settings
+  app.get(
+    "/api/admin/beta/settings",
+    {
+      schema: {
+        tags: ["beta"],
+        summary: "Get beta settings (admin)",
+      },
+      preHandler: requireAdmin,
+    },
+    async () => {
+      const settings = getSettings();
+      return {
+        auto_approve: settings.auto_approve === "true",
+        slot_cap: Number(settings.slot_cap ?? "100"),
+      };
+    },
+  );
+
+  // PUT /api/admin/beta/settings
+  app.put(
+    "/api/admin/beta/settings",
+    {
+      schema: {
+        tags: ["beta"],
+        summary: "Update beta settings (admin)",
+        body: {
+          type: "object",
+          properties: {
+            auto_approve: { type: "boolean" },
+            slot_cap: { type: "number" },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request: FastifyRequest) => {
+      const { auto_approve, slot_cap } = request.body as {
+        auto_approve?: boolean;
+        slot_cap?: number;
+      };
+      if (auto_approve !== undefined) {
+        setSetting("auto_approve", String(auto_approve));
+      }
+      if (slot_cap !== undefined) {
+        setSetting("slot_cap", String(slot_cap));
+      }
+      const settings = getSettings();
+      return {
+        auto_approve: settings.auto_approve === "true",
+        slot_cap: Number(settings.slot_cap ?? "100"),
+      };
+    },
+  );
+
+  // POST /api/admin/beta/sync — pull current state from App Store Connect
+  app.post(
+    "/api/admin/beta/sync",
+    {
+      schema: {
+        tags: ["beta"],
+        summary: "Sync invitations and users from App Store Connect (admin)",
+      },
+      preHandler: requireAdmin,
+    },
+    async (_request: FastifyRequest, reply: FastifyReply) => {
+      try {
+        const [invitations, users] = await Promise.all([
+          listInvitations(),
+          listUsers(),
+        ]);
+
+        let created = 0;
+        let updated = 0;
+
+        for (const inv of invitations) {
+          const email = inv.attributes.email.toLowerCase();
+          const existing = getApplicantByEmail(email);
+          if (existing) {
+            if (existing.status !== "invited" || existing.asc_invitation_id !== inv.id) {
+              updateApplicantStatus(existing.id, "invited", {
+                asc_invitation_id: inv.id,
+                invited_at: existing.invited_at ?? Date.now(),
+              });
+              updated++;
+            }
+          } else {
+            const applicant = insertApplicant(
+              email,
+              inv.attributes.firstName,
+              inv.attributes.lastName,
+              null,
+              null,
+            );
+            updateApplicantStatus(applicant.id, "invited", {
+              asc_invitation_id: inv.id,
+              invited_at: Date.now(),
+            });
+            created++;
+          }
+        }
+
+        for (const user of users) {
+          const email = user.attributes.username.toLowerCase();
+          const existing = getApplicantByEmail(email);
+          if (existing) {
+            if (existing.status !== "member" && existing.status !== "installed") {
+              updateApplicantStatus(existing.id, "member", {
+                asc_user_id: user.id,
+                member_at: existing.member_at ?? Date.now(),
+              });
+              updated++;
+            } else if (!existing.asc_user_id) {
+              updateApplicantStatus(existing.id, existing.status, {
+                asc_user_id: user.id,
+              });
+              updated++;
+            }
+          } else {
+            const applicant = insertApplicant(
+              email,
+              user.attributes.firstName,
+              user.attributes.lastName,
+              null,
+              null,
+            );
+            updateApplicantStatus(applicant.id, "member", {
+              asc_user_id: user.id,
+              member_at: Date.now(),
+            });
+            created++;
+          }
+        }
+
+        return { ok: true, created, updated, invitations: invitations.length, users: users.length };
+      } catch (err) {
+        const message = err instanceof Error ? err.message : "Unknown error";
+        return reply.code(502).send({ error: message });
+      }
+    },
+  );
+}
