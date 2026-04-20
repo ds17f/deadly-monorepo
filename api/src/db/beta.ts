@@ -67,7 +67,7 @@ export function getApplicantByEmail(email: string): BetaApplicant | undefined {
 export function updateApplicantStatus(
   id: string,
   status: BetaStatus,
-  fields?: Partial<Pick<BetaApplicant, "asc_invitation_id" | "asc_user_id" | "last_error" | "invited_at" | "member_at" | "installed_at" | "removed_at">>,
+  fields?: Partial<Pick<BetaApplicant, "first_name" | "last_name" | "asc_invitation_id" | "asc_user_id" | "last_error" | "invited_at" | "member_at" | "installed_at" | "removed_at">>,
 ): void {
   const db = getUsersDb();
   const sets = ["status = ?"];
