@@ -174,6 +174,8 @@ function initSchema(db: Database.Database): void {
   db.exec(`
     INSERT OR IGNORE INTO beta_settings (key, value) VALUES ('auto_approve', 'true');
     INSERT OR IGNORE INTO beta_settings (key, value) VALUES ('slot_cap', '100');
+    INSERT OR IGNORE INTO beta_settings (key, value) VALUES ('accepting_applications', 'true');
+    INSERT OR IGNORE INTO beta_settings (key, value) VALUES ('sync_enabled', 'true');
   `);
 
   // Migrations: add columns to existing tables

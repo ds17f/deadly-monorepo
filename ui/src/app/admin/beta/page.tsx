@@ -21,7 +21,9 @@ interface BetaApplicant {
 }
 
 interface BetaSettings {
+  accepting_applications: boolean;
   auto_approve: boolean;
+  sync_enabled: boolean;
   slot_cap: number;
   last_synced_at: number | null;
 }
@@ -51,7 +53,7 @@ export default function BetaPage() {
   const { user, isLoading: authLoading } = useAuth();
   const router = useRouter();
   const [applicants, setApplicants] = useState<BetaApplicant[]>([]);
-  const [settings, setSettings] = useState<BetaSettings>({ auto_approve: true, slot_cap: 100, last_synced_at: null });
+  const [settings, setSettings] = useState<BetaSettings>({ accepting_applications: true, auto_approve: true, sync_enabled: true, slot_cap: 100, last_synced_at: null });
   const [slotsUsed, setSlotsUsed] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -96,14 +98,16 @@ export default function BetaPage() {
       return;
     }
     fetchData();
+    const interval = setInterval(fetchData, 15_000);
+    return () => clearInterval(interval);
   }, [authLoading, user?.isAdmin, router, fetchData]);
 
-  const toggleAutoApprove = async () => {
+  const toggleSetting = async (key: "accepting_applications" | "auto_approve" | "sync_enabled") => {
     const res = await fetch("/api/admin/beta/settings", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
-      body: JSON.stringify({ auto_approve: !settings.auto_approve }),
+      body: JSON.stringify({ [key]: !settings[key] }),
     });
     if (res.ok) {
       const data = await res.json();
@@ -274,22 +278,28 @@ export default function BetaPage() {
         </div>
 
         {/* Settings bar */}
-        <div className="bg-deadly-surface rounded-lg p-4 flex items-center gap-6 border border-zinc-800">
-          <label className="flex items-center gap-2 cursor-pointer">
-            <span className="text-sm text-zinc-400">Auto-approve</span>
-            <button
-              onClick={toggleAutoApprove}
-              className={`w-10 h-5 rounded-full relative inline-flex items-center transition-colors ${
-                settings.auto_approve ? "bg-green-600" : "bg-zinc-600"
-              }`}
-            >
-              <span
-                className={`w-4 h-4 rounded-full bg-white transition-transform ${
-                  settings.auto_approve ? "translate-x-[22px]" : "translate-x-[2px]"
+        <div className="bg-deadly-surface rounded-lg p-4 flex flex-wrap items-center gap-6 border border-zinc-800">
+          {([
+            { key: "accepting_applications" as const, label: "Accepting" },
+            { key: "auto_approve" as const, label: "Auto-approve" },
+            { key: "sync_enabled" as const, label: "Sync" },
+          ]).map(({ key, label }) => (
+            <label key={key} className="flex items-center gap-2 cursor-pointer">
+              <span className="text-sm text-zinc-400">{label}</span>
+              <button
+                onClick={() => toggleSetting(key)}
+                className={`w-10 h-5 rounded-full relative inline-flex items-center transition-colors ${
+                  settings[key] ? "bg-green-600" : "bg-zinc-600"
                 }`}
-              />
-            </button>
-          </label>
+              >
+                <span
+                  className={`w-4 h-4 rounded-full bg-white transition-transform ${
+                    settings[key] ? "translate-x-[22px]" : "translate-x-[2px]"
+                  }`}
+                />
+              </button>
+            </label>
+          ))}
 
           <div className="flex items-center gap-3 flex-1 max-w-xs">
             <span className="text-sm text-zinc-400 whitespace-nowrap">
@@ -311,11 +321,13 @@ export default function BetaPage() {
             </span>
           )}
 
-          {(!settings.auto_approve || slotsUsed >= settings.slot_cap) && (
+          {(!settings.accepting_applications || !settings.auto_approve || slotsUsed >= settings.slot_cap) && (
             <div className="text-sm px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded">
-              {slotsUsed >= settings.slot_cap
-                ? "Slots full — new applicants will be waitlisted"
-                : "Auto-approve is off — applicants need manual approval"}
+              {!settings.accepting_applications
+                ? "Applications closed — form is hidden"
+                : slotsUsed >= settings.slot_cap
+                  ? "Slots full — new applicants will be waitlisted"
+                  : "Auto-approve is off — applicants need manual approval"}
             </div>
           )}
         </div>

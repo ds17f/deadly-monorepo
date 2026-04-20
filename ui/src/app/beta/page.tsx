@@ -9,6 +9,7 @@ type ResultStatus = "invited" | "manual_review" | "waitlist_full";
 export default function BetaPage() {
   const [step, setStepRaw] = useState<Step>("intro");
   const [slotsRemaining, setSlotsRemaining] = useState<number | null>(null);
+  const [accepting, setAccepting] = useState(true);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -38,6 +39,7 @@ export default function BetaPage() {
       if (res.ok) {
         const data = await res.json();
         setSlotsRemaining(data.slotsRemaining);
+        setAccepting(data.accepting);
       }
     } catch {
       // non-critical
@@ -90,26 +92,50 @@ export default function BetaPage() {
           <h1 className="text-3xl font-bold">Join the Beta</h1>
           <p className="text-white/70 leading-relaxed">
             The Deadly is currently in closed beta on Apple&apos;s TestFlight.
-            To join, we&apos;ll add you as a limited member of our Apple
-            Developer team (scoped to only this app). You&apos;ll receive two
-            emails from Apple: one to join the team, then a TestFlight invite.
-            There are limited slots.
+            Every Grateful Dead concert — setlists, recordings, and reviews for
+            2,300+ shows from 1965 to 1995. Stream full shows, browse by year,
+            venue, or song, and discover hidden gems from the vault.
           </p>
           <div className="space-y-4 rounded-lg border border-white/10 p-6">
-            <h2 className="text-lg font-semibold">What is The Deadly?</h2>
+            <h2 className="text-lg font-semibold">How it works</h2>
             <p className="text-white/60 leading-relaxed">
-              Every Grateful Dead concert — setlists, recordings, and reviews
-              for 2,300+ shows from 1965 to 1995. Stream full shows, browse by
-              year, venue, or song, and discover hidden gems from the vault.
+              To distribute beta builds, Apple requires us to add you as a
+              limited member of our developer team (scoped only to this app).
+              There are limited slots available.
+            </p>
+            <ol className="list-decimal list-inside space-y-2 text-white/60 text-sm leading-relaxed">
+              <li>
+                <span className="font-medium text-white/80">Submit your Apple ID email below.</span>
+              </li>
+              <li>
+                <span className="font-medium text-white/80">Check your email for an App Store Connect invitation</span>{" "}
+                from <span className="text-white/50 font-mono text-xs">no_reply@email.apple.com</span>.
+                The subject will be &ldquo;You&apos;ve been invited to App Store Connect.&rdquo;
+                Click &ldquo;Accept invitation&rdquo; and follow Apple&apos;s setup flow.
+              </li>
+              <li>
+                <span className="font-medium text-white/80">Wait 1–2 minutes, then check for a second email:</span>{" "}
+                a TestFlight invitation. Open TestFlight on your iPhone and install The Deadly.
+              </li>
+            </ol>
+            <p className="text-white/40 text-xs">
+              Both emails come from Apple, not from us. The first invitation
+              expires in 3 days; the TestFlight invite expires in 14 days.
             </p>
           </div>
           <div className="flex items-center gap-4">
-            <button
-              onClick={() => setStep("form")}
-              className="rounded-lg bg-green-600 px-6 py-3 font-semibold text-white hover:bg-green-500 transition-colors"
-            >
-              Apply for Beta Access
-            </button>
+            {accepting ? (
+              <button
+                onClick={() => setStep("form")}
+                className="rounded-lg bg-green-600 px-6 py-3 font-semibold text-white hover:bg-green-500 transition-colors"
+              >
+                Apply for Beta Access
+              </button>
+            ) : (
+              <div className="rounded-lg border border-zinc-600 bg-zinc-800/50 px-6 py-3 text-white/60">
+                Beta applications are currently closed.
+              </div>
+            )}
             <Link href="/" className="text-white/50 hover:text-white/80">
               Back to home
             </Link>
@@ -198,13 +224,37 @@ export default function BetaPage() {
       )}
 
       {step === "result" && resultStatus === "invited" && (
-        <div className="space-y-4">
+        <div className="space-y-6">
           <h1 className="text-3xl font-bold text-green-400">You&apos;re in!</h1>
-          <p className="text-white/70 leading-relaxed">
-            Check your email — Apple will send your team invitation shortly.
-            Accept it, then open TestFlight to install The Deadly. The invite
-            expires in 14 days.
-          </p>
+          <div className="space-y-4">
+            <p className="text-white/70 leading-relaxed">
+              We&apos;ve sent your invitation. Here&apos;s what to expect:
+            </p>
+            <div className="space-y-3 rounded-lg border border-white/10 p-5">
+              <div className="flex gap-3">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-xs font-bold text-emerald-400">1</span>
+                <p className="text-sm text-white/70">
+                  <span className="font-medium text-white/90">Check your email now</span> for
+                  an App Store Connect invitation from{" "}
+                  <span className="font-mono text-xs text-white/50">no_reply@email.apple.com</span>.
+                  The subject line is &ldquo;You&apos;ve been invited to App Store Connect.&rdquo;
+                  Click &ldquo;Accept invitation&rdquo; and complete Apple&apos;s short setup.
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-xs font-bold text-emerald-400">2</span>
+                <p className="text-sm text-white/70">
+                  <span className="font-medium text-white/90">Wait 1–2 minutes</span>, then
+                  check for a second email: your TestFlight invitation. Open TestFlight on your
+                  iPhone and install The Deadly.
+                </p>
+              </div>
+            </div>
+            <p className="text-xs text-white/40">
+              Both emails come from Apple. The team invitation expires in 3 days;
+              the TestFlight invite expires in 14 days.
+            </p>
+          </div>
           <Link href="/" className="inline-block text-white/50 hover:text-white/80">
             Back to home
           </Link>

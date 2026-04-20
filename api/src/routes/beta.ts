@@ -66,7 +66,8 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
       const slotCap = Number(settings.slot_cap ?? "100");
       const slotsUsed = countSlotsUsed();
       const slotsRemaining = Math.max(0, slotCap - slotsUsed);
-      return { open: slotsRemaining > 0, slotsRemaining };
+      const accepting = settings.accepting_applications !== "false";
+      return { open: slotsRemaining > 0, slotsRemaining, accepting };
     },
   );
 
@@ -89,6 +90,11 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
       },
     },
     async (request: FastifyRequest, reply: FastifyReply) => {
+      const settings = getSettings();
+      if (settings.accepting_applications === "false") {
+        return reply.code(403).send({ error: "Beta applications are currently closed" });
+      }
+
       const ip = request.ip;
       if (isApplyRateLimited(ip)) {
         return reply.code(429).send({ error: "Rate limit exceeded" });
@@ -138,7 +144,6 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
       }
 
       // Slot reserved
-      const settings = getSettings();
       if (settings.auto_approve === "true") {
         try {
           const invResult = await inviteUser({ email, firstName: firstName.trim(), lastName: lastName.trim() });
@@ -406,7 +411,9 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
     async () => {
       const settings = getSettings();
       return {
+        accepting_applications: settings.accepting_applications !== "false",
         auto_approve: settings.auto_approve === "true",
+        sync_enabled: settings.sync_enabled !== "false",
         slot_cap: Number(settings.slot_cap ?? "100"),
         last_synced_at: settings.last_synced_at ? Number(settings.last_synced_at) : null,
       };
@@ -423,7 +430,9 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
         body: {
           type: "object",
           properties: {
+            accepting_applications: { type: "boolean" },
             auto_approve: { type: "boolean" },
+            sync_enabled: { type: "boolean" },
             slot_cap: { type: "number" },
           },
         },
@@ -431,19 +440,29 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
       preHandler: requireAdmin,
     },
     async (request: FastifyRequest) => {
-      const { auto_approve, slot_cap } = request.body as {
+      const { accepting_applications, auto_approve, sync_enabled, slot_cap } = request.body as {
+        accepting_applications?: boolean;
         auto_approve?: boolean;
+        sync_enabled?: boolean;
         slot_cap?: number;
       };
+      if (accepting_applications !== undefined) {
+        setSetting("accepting_applications", String(accepting_applications));
+      }
       if (auto_approve !== undefined) {
         setSetting("auto_approve", String(auto_approve));
+      }
+      if (sync_enabled !== undefined) {
+        setSetting("sync_enabled", String(sync_enabled));
       }
       if (slot_cap !== undefined) {
         setSetting("slot_cap", String(slot_cap));
       }
       const settings = getSettings();
       return {
+        accepting_applications: settings.accepting_applications !== "false",
         auto_approve: settings.auto_approve === "true",
+        sync_enabled: settings.sync_enabled !== "false",
         slot_cap: Number(settings.slot_cap ?? "100"),
         last_synced_at: settings.last_synced_at ? Number(settings.last_synced_at) : null,
       };
@@ -538,6 +557,7 @@ export async function runBetaSync(): Promise<{
         last_name: user.attributes.lastName,
         asc_user_id: user.id,
         member_at: validMemberAt,
+        last_error: null,
       });
       updated++;
 
@@ -632,6 +652,8 @@ export function startBetaSyncSchedule(): void {
   }
 
   const run = () => {
+    const settings = getSettings();
+    if (settings.sync_enabled === "false") return;
     runBetaSync().catch((err) => {
       console.error("Beta sync error:", err);
     });
