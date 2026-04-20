@@ -475,7 +475,10 @@ function AnalyticsDashboard() {
   return (
     <div className="min-h-screen bg-deadly-bg p-6 max-w-5xl mx-auto">
       <div className="flex items-center justify-between mb-8">
-        <h1 className="text-2xl font-bold text-deadly-red">Analytics</h1>
+        <div className="flex items-center gap-4">
+          <h1 className="text-2xl font-bold text-deadly-red">Analytics</h1>
+          <a href="/admin/beta" className="text-sm text-zinc-500 hover:text-zinc-300">Beta →</a>
+        </div>
         <div className="flex items-center gap-3">
           <span className="text-xs text-zinc-600">
             auto-refresh {REFRESH_INTERVAL / 1000}s

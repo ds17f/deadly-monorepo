@@ -1,5 +1,5 @@
-.PHONY: dev dev-up dev-down dev-logs dev-ps api-dev api-install api-build api-typecheck
-.PHONY: docker-remote-pull docker-remote-up docker-remote-down docker-remote-destroy docker-remote-logs docker-remote-ps docker-remote-redeploy docker-remote-redeploy-logs api-remote-dev api-remote-health
+.PHONY: dev dev-up dev-down dev-logs dev-ps api-dev api-install api-build api-typecheck api-test
+.PHONY: docker-remote-pull docker-remote-up docker-remote-down docker-remote-destroy docker-remote-logs docker-remote-ps docker-remote-redeploy docker-remote-redeploy-logs api-remote-dev api-remote-health api-remote-test
 .PHONY: help docs-help docs-install docs-build docs-serve docs-clean docs-pr
 .PHONY: ui-install ui-dev ui-build ui-typecheck ui-data share-pages
 .PHONY: ui-remote-install ui-remote-dev ui-remote-build ui-remote-dev-build ui-dev-build
@@ -53,6 +53,9 @@ api-build:
 # Type-check API
 api-typecheck:
 	cd api && npm run typecheck
+
+api-test:
+	cd api && npm test
 
 # =============================================================================
 # UI (Next.js)
@@ -126,6 +129,7 @@ help:
 	@echo "  api-install      - Install API dependencies"
 	@echo "  api-build        - Build API TypeScript"
 	@echo "  api-typecheck    - Type-check API"
+	@echo "  api-test         - Run API unit tests"
 	@echo ""
 	@echo "UI (Next.js):"
 	@echo "  ui-install       - Install UI dependencies"
@@ -192,6 +196,7 @@ help:
 	@echo ""
 	@echo "API REMOTE (Linux → Mac):"
 	@echo "  api-remote-dev     - Run API directly on Mac (no Docker)"
+	@echo "  api-remote-test    - Run API tests on remote Mac"
 	@echo "  api-remote-health  - Health check against remote API"
 	@echo ""
 	@echo "ANDROID REMOTE BUILD (Linux → Mac):"
@@ -609,6 +614,10 @@ docker-remote-ps:
 api-remote-dev:
 	@echo "Starting API on $(REMOTE_HOST)..."
 	@ssh -t $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH)/api && npm rebuild better-sqlite3 2>/dev/null; npm install && npm run dev"
+
+# Run API tests on remote Mac
+api-remote-test:
+	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && cd $(REMOTE_PATH)/api && npm rebuild better-sqlite3 2>/dev/null; npm install && npm test"
 
 # Health check against remote API
 api-remote-health:

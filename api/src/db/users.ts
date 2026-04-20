@@ -146,6 +146,36 @@ function initSchema(db: Database.Database): void {
       eq_band_levels TEXT,
       updated_at INTEGER NOT NULL DEFAULT (unixepoch())
     );
+
+    CREATE TABLE IF NOT EXISTS beta_applicants (
+      id TEXT PRIMARY KEY,
+      email TEXT UNIQUE NOT NULL COLLATE NOCASE,
+      first_name TEXT,
+      last_name TEXT,
+      status TEXT NOT NULL,
+      asc_invitation_id TEXT,
+      asc_user_id TEXT,
+      last_error TEXT,
+      ip_address TEXT,
+      user_agent TEXT,
+      created_at INTEGER NOT NULL DEFAULT (unixepoch()),
+      invited_at INTEGER,
+      member_at INTEGER,
+      installed_at INTEGER,
+      removed_at INTEGER
+    );
+
+    CREATE TABLE IF NOT EXISTS beta_settings (
+      key TEXT PRIMARY KEY,
+      value TEXT NOT NULL
+    );
+  `);
+
+  db.exec(`
+    INSERT OR IGNORE INTO beta_settings (key, value) VALUES ('auto_approve', 'false');
+    INSERT OR IGNORE INTO beta_settings (key, value) VALUES ('slot_cap', '100');
+    INSERT OR IGNORE INTO beta_settings (key, value) VALUES ('accepting_applications', 'false');
+    INSERT OR IGNORE INTO beta_settings (key, value) VALUES ('sync_enabled', 'false');
   `);
 
   // Migrations: add columns to existing tables
