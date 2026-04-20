@@ -1,5 +1,6 @@
 import type { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
 import { requireAdmin } from "../auth/middleware.js";
+import { notify } from "../notify.js";
 import {
   listApplicants,
   listApplicantsByStatus,
@@ -139,7 +140,7 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
         if (waitlisted) {
           updateApplicantStatus(waitlisted.id, "pending", { last_error: "slots_full" });
         }
-        console.info(`[beta] Waitlist: ${email} (slots full)`);
+        notify("Beta waitlisted", `${email} — slots full`, "warn");
         return { status: "waitlist_full" };
       }
 
@@ -152,19 +153,19 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
               asc_invitation_id: invResult.invitationId,
               invited_at: Math.floor(Date.now() / 1000),
             });
-            console.info(`[beta] Auto-approved: ${email}`);
+            notify("Beta auto-approved", email);
             return { status: "invited" };
           }
-          console.info(`[beta] Auto-approve failed for ${email}: ${invResult.reason}`);
+          notify("Beta auto-approve failed", `${email}: ${invResult.reason}`, "warn");
           return { status: "manual_review" };
         } catch (err) {
           const message = err instanceof Error ? err.message : "Unknown error";
-          console.info(`[beta] Auto-approve error for ${email}: ${message}`);
+          notify("Beta auto-approve error", `${email}: ${message}`, "error");
           return { status: "manual_review" };
         }
       }
 
-      console.info(`[beta] Manual review: ${email}`);
+      notify("New beta application", `${email} — needs manual review`);
       return { status: "manual_review" };
     },
   );
@@ -469,6 +470,22 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
     },
   );
 
+  // POST /api/admin/beta/test-notification
+  app.post(
+    "/api/admin/beta/test-notification",
+    {
+      schema: {
+        tags: ["beta"],
+        summary: "Send a test Slack notification (admin)",
+      },
+      preHandler: requireAdmin,
+    },
+    async () => {
+      notify("Test notification", "Slack notifications are working");
+      return { ok: true };
+    },
+  );
+
   // POST /api/admin/beta/sync — pull current state from App Store Connect
   app.post(
     "/api/admin/beta/sync",
@@ -634,6 +651,14 @@ export async function runBetaSync(): Promise<{
 
   setSetting("last_synced_at", String(now));
 
+  const settings = getSettings();
+  const slotCap = Number(settings.slot_cap ?? "100");
+  const slotsUsed = countSlotsUsed();
+  const pct = Math.round((slotsUsed / slotCap) * 100);
+  if (pct >= 90) {
+    notify("Beta slots at " + pct + "%", `${slotsUsed}/${slotCap} slots used`, "warn");
+  }
+
   return {
     ok: true,
     synced_at: now,
@@ -655,7 +680,8 @@ export function startBetaSyncSchedule(): void {
     const settings = getSettings();
     if (settings.sync_enabled === "false") return;
     runBetaSync().catch((err) => {
-      console.error("Beta sync error:", err);
+      const message = err instanceof Error ? err.message : "Unknown error";
+      notify("Beta sync error", message, "error");
     });
   };
 
