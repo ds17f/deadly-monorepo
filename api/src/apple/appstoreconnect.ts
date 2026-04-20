@@ -266,3 +266,31 @@ export async function getBetaTesterByEmail(email: string): Promise<{ id: string 
   const body: ASCPaginatedResponse<{ id: string }> = await res.json();
   return body.data[0];
 }
+
+export async function createBetaTester(
+  email: string,
+  firstName: string,
+  lastName: string,
+  betaGroupId: string,
+): Promise<{ id: string }> {
+  const res = await ascFetch("/v1/betaTesters", {
+    method: "POST",
+    body: JSON.stringify({
+      data: {
+        type: "betaTesters",
+        attributes: { email, firstName, lastName },
+        relationships: {
+          betaGroups: {
+            data: [{ type: "betaGroups", id: betaGroupId }],
+          },
+        },
+      },
+    }),
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`ASC createBetaTester failed (${res.status}): ${body}`);
+  }
+  const body = await res.json();
+  return { id: body.data.id };
+}

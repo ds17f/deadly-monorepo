@@ -101,6 +101,14 @@ export function setSetting(key: string, value: string): void {
   ).run(key, value);
 }
 
+export function listApplicantsByStatus(...statuses: BetaStatus[]): BetaApplicant[] {
+  const db = getUsersDb();
+  const placeholders = statuses.map(() => "?").join(", ");
+  return db.prepare(
+    `SELECT * FROM beta_applicants WHERE status IN (${placeholders})`,
+  ).all(...statuses) as BetaApplicant[];
+}
+
 export function countSlotsUsed(): number {
   const db = getUsersDb();
   const row = db.prepare(
