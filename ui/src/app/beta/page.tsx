@@ -7,7 +7,7 @@ type Step = "intro" | "form" | "result";
 type ResultStatus = "invited" | "manual_review" | "waitlist_full";
 
 export default function BetaPage() {
-  const [step, setStep] = useState<Step>("intro");
+  const [step, setStepRaw] = useState<Step>("intro");
   const [slotsRemaining, setSlotsRemaining] = useState<number | null>(null);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -15,6 +15,22 @@ export default function BetaPage() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [resultStatus, setResultStatus] = useState<ResultStatus | null>(null);
+
+  const setStep = useCallback((next: Step) => {
+    setStepRaw(next);
+    window.history.pushState({ step: next }, "", `/beta`);
+  }, []);
+
+  useEffect(() => {
+    window.history.replaceState({ step: "intro" }, "", `/beta`);
+    const onPopState = (e: PopStateEvent) => {
+      const s = e.state?.step as Step | undefined;
+      if (s) setStepRaw(s);
+      else setStepRaw("intro");
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
 
   const fetchConfig = useCallback(async () => {
     try {
@@ -171,7 +187,7 @@ export default function BetaPage() {
               </button>
               <button
                 type="button"
-                onClick={() => setStep("intro")}
+                onClick={() => window.history.back()}
                 className="text-white/50 hover:text-white/80"
               >
                 Back
