@@ -64,8 +64,10 @@ export default function BetaPage() {
   const [addFirst, setAddFirst] = useState("");
   const [addLast, setAddLast] = useState("");
   const [syncing, setSyncing] = useState(false);
+  const [testingSend, setTestingSend] = useState(false);
   const [sortKey, setSortKey] = useState<string>("created_at");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
+  const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const fetchData = useCallback(async () => {
     try {
@@ -112,6 +114,22 @@ export default function BetaPage() {
     if (res.ok) {
       const data = await res.json();
       setSettings(data);
+    }
+  };
+
+  const testNotification = async () => {
+    setTestingSend(true);
+    try {
+      const res = await fetch("/api/admin/beta/test-notification", {
+        method: "POST",
+        credentials: "include",
+      });
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        alert(body.error || `Test failed (${res.status})`);
+      }
+    } finally {
+      setTestingSend(false);
     }
   };
 
@@ -258,21 +276,21 @@ export default function BetaPage() {
         </nav>
 
         {/* Header */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-3">
           <h1 className="text-2xl font-bold">Beta Applicants</h1>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2 justify-end">
             <button
               onClick={syncFromASC}
               disabled={syncing}
               className="px-3 py-1.5 bg-deadly-surface border border-zinc-700 rounded text-sm hover:border-zinc-500 disabled:opacity-50"
             >
-              {syncing ? "Syncing..." : "Sync from ASC"}
+              {syncing ? "Syncing..." : <><span className="md:hidden">Sync</span><span className="hidden md:inline">Sync from ASC</span></>}
             </button>
             <button
               onClick={() => setShowAddForm(!showAddForm)}
               className="px-3 py-1.5 bg-deadly-surface border border-zinc-700 rounded text-sm hover:border-zinc-500"
             >
-              + Add Applicant
+              <span className="md:hidden">+ Add</span><span className="hidden md:inline">+ Add Applicant</span>
             </button>
           </div>
         </div>
@@ -301,7 +319,7 @@ export default function BetaPage() {
             </label>
           ))}
 
-          <div className="flex items-center gap-3 flex-1 max-w-xs">
+          <div className="flex items-center gap-3 w-full md:w-auto md:flex-1 md:max-w-xs">
             <span className="text-sm text-zinc-400 whitespace-nowrap">
               Slots: {slotsUsed} / {settings.slot_cap}
             </span>
@@ -334,8 +352,8 @@ export default function BetaPage() {
 
         {/* Add form */}
         {showAddForm && (
-          <form onSubmit={addApplicant} className="bg-deadly-surface rounded-lg p-4 border border-zinc-800 flex gap-3 items-end">
-            <div className="flex-1">
+          <form onSubmit={addApplicant} className="bg-deadly-surface rounded-lg p-4 border border-zinc-800 flex flex-wrap md:flex-nowrap gap-3 items-end">
+            <div className="w-full md:flex-1">
               <label className="block text-xs text-zinc-400 mb-1">Email</label>
               <input
                 type="email"
@@ -381,8 +399,88 @@ export default function BetaPage() {
           </form>
         )}
 
-        {/* Table */}
-        <div className="bg-deadly-surface rounded-lg border border-zinc-800 overflow-x-auto">
+        {/* Mobile list */}
+        <div className="md:hidden space-y-1">
+          {sortedApplicants.length === 0 && (
+            <div className="bg-deadly-surface rounded-lg border border-zinc-800 px-4 py-8 text-center text-zinc-500">
+              No applicants yet
+            </div>
+          )}
+          {sortedApplicants.map((a) => {
+            const isExpanded = expandedId === a.id;
+            return (
+              <div key={a.id} className="bg-deadly-surface rounded-lg border border-zinc-800 overflow-hidden">
+                <button
+                  onClick={() => setExpandedId(isExpanded ? null : a.id)}
+                  className="w-full px-4 py-3 flex items-center gap-3 text-left"
+                >
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-mono truncate">{a.email}</p>
+                  </div>
+                  <span className={`px-2 py-0.5 rounded text-xs font-medium shrink-0 ${STATUS_COLORS[a.status] ?? ""}`}>
+                    {a.status}
+                  </span>
+                  <svg
+                    className={`w-4 h-4 text-zinc-500 shrink-0 transition-transform ${isExpanded ? "rotate-180" : ""}`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {isExpanded && (
+                  <div className="px-4 pb-3 space-y-2 border-t border-zinc-800 pt-2">
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs">
+                      {([a.first_name, a.last_name].filter(Boolean).join(" ")) && (
+                        <>
+                          <span className="text-zinc-500">Name</span>
+                          <span>{[a.first_name, a.last_name].filter(Boolean).join(" ")}</span>
+                        </>
+                      )}
+                      <span className="text-zinc-500">Applied</span>
+                      <span className="text-zinc-400">{formatTs(a.created_at)}</span>
+                      {a.invited_at && (
+                        <>
+                          <span className="text-zinc-500">Invited</span>
+                          <span className="text-zinc-400">{formatTs(a.invited_at)}</span>
+                        </>
+                      )}
+                      {a.member_at && (
+                        <>
+                          <span className="text-zinc-500">Joined</span>
+                          <span className="text-zinc-400">{formatTs(a.member_at)}</span>
+                        </>
+                      )}
+                      {a.installed_at && (
+                        <>
+                          <span className="text-zinc-500">Installed</span>
+                          <span className="text-zinc-400">{formatTs(a.installed_at)}</span>
+                        </>
+                      )}
+                    </div>
+                    {a.last_error && (
+                      <p className="text-xs text-red-400 break-all">{a.last_error}</p>
+                    )}
+                    <div className="pt-1">
+                      <RowActions
+                        applicant={a}
+                        loading={actionLoading === a.id}
+                        confirmRemove={confirmRemove === a.id}
+                        onAction={(action) => doAction(a.id, action)}
+                        onConfirmRemove={() => setConfirmRemove(a.id)}
+                        onCancelRemove={() => setConfirmRemove(null)}
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Desktop table */}
+        <div className="hidden md:block bg-deadly-surface rounded-lg border border-zinc-800 overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-zinc-800 text-zinc-400 text-left">
@@ -451,6 +549,16 @@ export default function BetaPage() {
               ))}
             </tbody>
           </table>
+        </div>
+        {/* Footer */}
+        <div className="pt-2">
+          <button
+            onClick={testNotification}
+            disabled={testingSend}
+            className="px-3 py-1.5 text-xs text-zinc-500 border border-zinc-800 rounded hover:border-zinc-600 hover:text-zinc-300 disabled:opacity-50"
+          >
+            {testingSend ? "Sending..." : "Test Slack notification"}
+          </button>
         </div>
       </div>
     </div>

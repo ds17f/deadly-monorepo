@@ -104,6 +104,7 @@ jobs:
           APP_STORE_CONNECT_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
           APP_STORE_CONNECT_APP_ID: ${{ secrets.APP_STORE_CONNECT_APP_ID }}
           APP_STORE_CONNECT_BETA_GROUP_ID: ${{ secrets.APP_STORE_CONNECT_BETA_GROUP_ID }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
           SITE_ADDRESS="${{ vars.SITE_ADDRESS }}"
           SHARE_ADDRESS="${{ vars.SHARE_ADDRESS }}"
@@ -136,6 +137,7 @@ jobs:
             "APP_STORE_CONNECT_PRIVATE_KEY=${ASC_PRIVATE_KEY_ESCAPED}" \
             "APP_STORE_CONNECT_APP_ID=${APP_STORE_CONNECT_APP_ID}" \
             "APP_STORE_CONNECT_BETA_GROUP_ID=${APP_STORE_CONNECT_BETA_GROUP_ID}" \
+            "SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}" \
             | ssh "$SERVER" 'cat > /opt/deadly/.env && chmod 600 /opt/deadly/.env'
 
       - name: Backup database to B2
