@@ -10,6 +10,7 @@ import {
   getSettings,
   setSetting,
   countSlotsUsed,
+  tryReserveSlot,
 } from "../db/beta.js";
 import {
   inviteUser,
@@ -22,7 +23,149 @@ import {
   addTesterToBetaGroup,
 } from "../apple/appstoreconnect.js";
 
+// ── Rate limiting for public beta apply (3 req/hour/IP) ─────────────
+
+const applyRateLimitWindow = 3_600_000;
+const applyRateLimitMax = 3;
+const applyBuckets = new Map<string, { count: number; resetAt: number }>();
+
+function isApplyRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const bucket = applyBuckets.get(ip);
+  if (!bucket || now > bucket.resetAt) {
+    applyBuckets.set(ip, { count: 1, resetAt: now + applyRateLimitWindow });
+    return false;
+  }
+  bucket.count++;
+  return bucket.count > applyRateLimitMax;
+}
+
+setInterval(() => {
+  const now = Date.now();
+  for (const [ip, bucket] of applyBuckets) {
+    if (now > bucket.resetAt) applyBuckets.delete(ip);
+  }
+}, 300_000).unref();
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export async function betaRoutes(app: FastifyInstance): Promise<void> {
+  // ── Public endpoints ────────────────────────────────────────────────
+
+  // GET /api/beta/config
+  app.get(
+    "/api/beta/config",
+    {
+      schema: {
+        tags: ["beta"],
+        summary: "Get public beta config (slots remaining)",
+      },
+    },
+    async () => {
+      const settings = getSettings();
+      const slotCap = Number(settings.slot_cap ?? "100");
+      const slotsUsed = countSlotsUsed();
+      const slotsRemaining = Math.max(0, slotCap - slotsUsed);
+      return { open: slotsRemaining > 0, slotsRemaining };
+    },
+  );
+
+  // POST /api/beta/apply
+  app.post(
+    "/api/beta/apply",
+    {
+      schema: {
+        tags: ["beta"],
+        summary: "Public beta application",
+        body: {
+          type: "object",
+          required: ["email", "firstName", "lastName"],
+          properties: {
+            email: { type: "string" },
+            firstName: { type: "string" },
+            lastName: { type: "string" },
+          },
+        },
+      },
+    },
+    async (request: FastifyRequest, reply: FastifyReply) => {
+      const ip = request.ip;
+      if (isApplyRateLimited(ip)) {
+        return reply.code(429).send({ error: "Rate limit exceeded" });
+      }
+
+      const { email: rawEmail, firstName, lastName } = request.body as {
+        email: string;
+        firstName: string;
+        lastName: string;
+      };
+
+      const email = rawEmail.trim().toLowerCase();
+      if (!EMAIL_RE.test(email)) {
+        return reply.code(400).send({ error: "Invalid email format" });
+      }
+      if (!firstName.trim() || !lastName.trim()) {
+        return reply.code(400).send({ error: "First and last name are required" });
+      }
+
+      const ua = request.headers["user-agent"] ?? null;
+      const result = tryReserveSlot(email, firstName.trim(), lastName.trim(), ip, ua);
+
+      if (!result.ok) {
+        if (result.reason === "duplicate") {
+          const existing = getApplicantByEmail(email)!;
+          const statusMap: Record<string, string> = {
+            pending: "manual_review",
+            invited: "invited",
+            member: "invited",
+            installed: "invited",
+            error: "manual_review",
+            expired: "manual_review",
+            removed: "manual_review",
+            rejected: "manual_review",
+          };
+          return { status: statusMap[existing.status] ?? "manual_review" };
+        }
+
+        // slots_full — save to waitlist
+        insertApplicant(email, firstName.trim(), lastName.trim(), ip, ua);
+        const waitlisted = getApplicantByEmail(email);
+        if (waitlisted) {
+          updateApplicantStatus(waitlisted.id, "pending", { last_error: "slots_full" });
+        }
+        console.info(`[beta] Waitlist: ${email} (slots full)`);
+        return { status: "waitlist_full" };
+      }
+
+      // Slot reserved
+      const settings = getSettings();
+      if (settings.auto_approve === "true") {
+        try {
+          const invResult = await inviteUser({ email, firstName: firstName.trim(), lastName: lastName.trim() });
+          if (invResult.ok) {
+            updateApplicantStatus(result.id, "invited", {
+              asc_invitation_id: invResult.invitationId,
+              invited_at: Math.floor(Date.now() / 1000),
+            });
+            console.info(`[beta] Auto-approved: ${email}`);
+            return { status: "invited" };
+          }
+          console.info(`[beta] Auto-approve failed for ${email}: ${invResult.reason}`);
+          return { status: "manual_review" };
+        } catch (err) {
+          const message = err instanceof Error ? err.message : "Unknown error";
+          console.info(`[beta] Auto-approve error for ${email}: ${message}`);
+          return { status: "manual_review" };
+        }
+      }
+
+      console.info(`[beta] Manual review: ${email}`);
+      return { status: "manual_review" };
+    },
+  );
+
+  // ── Admin endpoints ─────────────────────────────────────────────────
+
   // GET /api/admin/beta/applicants
   app.get(
     "/api/admin/beta/applicants",
@@ -495,5 +638,5 @@ export function startBetaSyncSchedule(): void {
   };
 
   run();
-  setInterval(run, 900_000).unref();
+  setInterval(run, 60_000).unref();
 }

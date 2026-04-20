@@ -25,7 +25,7 @@ export default function GetTheApp() {
             unoptimized
           />
         </a>
-        <AppStoreBadge />
+        <AppStoreBadge variant="beta" />
       </div>
     </section>
   );

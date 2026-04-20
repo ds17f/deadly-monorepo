@@ -74,7 +74,7 @@ export default function RootLayout({
                     unoptimized
                   />
                 </a>
-                <AppStoreBadge />
+                <AppStoreBadge variant="beta" />
               </div>
               <div className="flex flex-wrap justify-center gap-x-3 gap-y-1">
                 <Link
