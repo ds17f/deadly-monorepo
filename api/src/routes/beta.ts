@@ -347,6 +347,7 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
       } catch (err) {
         const message = err instanceof Error ? err.message : "Unknown error";
         updateApplicantStatus(id, "error", { last_error: message });
+        notify("Beta remove failed", `${applicant.email}: ${message}`, "error");
         return reply.code(502).send({ error: message });
       }
 
