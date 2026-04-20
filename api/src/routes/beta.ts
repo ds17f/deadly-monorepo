@@ -82,7 +82,7 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
           if (result.ok) {
             updateApplicantStatus(applicant.id, "invited", {
               asc_invitation_id: result.invitationId,
-              invited_at: Date.now(),
+              invited_at: Math.floor(Date.now() / 1000),
             });
             const updated = getApplicantById(applicant.id)!;
             return reply.code(201).send(updated);
@@ -131,7 +131,7 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
 
         updateApplicantStatus(id, "invited", {
           asc_invitation_id: result.invitationId,
-          invited_at: Date.now(),
+          invited_at: Math.floor(Date.now() / 1000),
         });
         return { ok: true };
       } catch (err) {
@@ -191,7 +191,7 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
         return reply.code(502).send({ error: message });
       }
 
-      updateApplicantStatus(id, "removed", { removed_at: Date.now() });
+      updateApplicantStatus(id, "removed", { removed_at: Math.floor(Date.now() / 1000) });
       return { ok: true };
     },
   );
@@ -228,7 +228,7 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
 
         updateApplicantStatus(id, "invited", {
           asc_invitation_id: result.invitationId,
-          invited_at: Date.now(),
+          invited_at: Math.floor(Date.now() / 1000),
           last_error: null,
         });
         return { ok: true };
@@ -322,7 +322,7 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
             if (existing.status !== "invited" || existing.asc_invitation_id !== inv.id) {
               updateApplicantStatus(existing.id, "invited", {
                 asc_invitation_id: inv.id,
-                invited_at: existing.invited_at ?? Date.now(),
+                invited_at: existing.invited_at ?? Math.floor(Date.now() / 1000),
               });
               updated++;
             }
@@ -336,7 +336,7 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
             );
             updateApplicantStatus(applicant.id, "invited", {
               asc_invitation_id: inv.id,
-              invited_at: Date.now(),
+              invited_at: Math.floor(Date.now() / 1000),
             });
             created++;
           }
@@ -349,7 +349,7 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
             if (existing.status !== "member" && existing.status !== "installed") {
               updateApplicantStatus(existing.id, "member", {
                 asc_user_id: user.id,
-                member_at: existing.member_at ?? Date.now(),
+                member_at: existing.member_at ?? Math.floor(Date.now() / 1000),
               });
               updated++;
             } else if (!existing.asc_user_id) {
@@ -368,7 +368,7 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
             );
             updateApplicantStatus(applicant.id, "member", {
               asc_user_id: user.id,
-              member_at: Date.now(),
+              member_at: Math.floor(Date.now() / 1000),
             });
             created++;
           }

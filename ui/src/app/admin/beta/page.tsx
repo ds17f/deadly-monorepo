@@ -38,7 +38,7 @@ const STATUS_COLORS: Record<string, string> = {
 
 function formatTs(ts: number | null): string {
   if (!ts) return "—";
-  return new Date(ts).toLocaleDateString("en-US", {
+  return new Date(ts * 1000).toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
     hour: "2-digit",
