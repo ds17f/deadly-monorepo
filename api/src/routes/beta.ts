@@ -140,7 +140,9 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
         if (waitlisted) {
           updateApplicantStatus(waitlisted.id, "pending", { last_error: "slots_full" });
         }
-        notify("Beta waitlisted", `${email} — slots full`, "warn");
+        if (settings.notify_on_signup !== "false") {
+          notify("Beta waitlisted", `${email} — slots full`, "warn");
+        }
         return { status: "waitlist_full" };
       }
 
@@ -153,19 +155,27 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
               asc_invitation_id: invResult.invitationId,
               invited_at: Math.floor(Date.now() / 1000),
             });
-            notify("Beta auto-approved", email);
+            if (settings.notify_on_signup !== "false") {
+              notify("Beta auto-approved", email);
+            }
             return { status: "invited" };
           }
-          notify("Beta auto-approve failed", `${email}: ${invResult.reason}`, "warn");
+          if (settings.notify_on_error !== "false") {
+            notify("Beta auto-approve failed", `${email}: ${invResult.reason}`, "warn");
+          }
           return { status: "manual_review" };
         } catch (err) {
           const message = err instanceof Error ? err.message : "Unknown error";
-          notify("Beta auto-approve error", `${email}: ${message}`, "error");
+          if (settings.notify_on_error !== "false") {
+            notify("Beta auto-approve error", `${email}: ${message}`, "error");
+          }
           return { status: "manual_review" };
         }
       }
 
-      notify("New beta application", `${email} — needs manual review`);
+      if (settings.notify_on_signup !== "false") {
+        notify("New beta application", `${email} — needs manual review`);
+      }
       return { status: "manual_review" };
     },
   );
@@ -347,7 +357,10 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
       } catch (err) {
         const message = err instanceof Error ? err.message : "Unknown error";
         updateApplicantStatus(id, "error", { last_error: message });
-        notify("Beta remove failed", `${applicant.email}: ${message}`, "error");
+        const removeSettings = getSettings();
+        if (removeSettings.notify_on_error !== "false") {
+          notify("Beta remove failed", `${applicant.email}: ${message}`, "error");
+        }
         return reply.code(502).send({ error: message });
       }
 
@@ -416,6 +429,9 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
         accepting_applications: settings.accepting_applications !== "false",
         auto_approve: settings.auto_approve === "true",
         sync_enabled: settings.sync_enabled !== "false",
+        notify_on_signup: settings.notify_on_signup !== "false",
+        notify_on_error: settings.notify_on_error !== "false",
+        notify_on_capacity: settings.notify_on_capacity !== "false",
         slot_cap: Number(settings.slot_cap ?? "100"),
         last_synced_at: settings.last_synced_at ? Number(settings.last_synced_at) : null,
       };
@@ -435,6 +451,9 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
             accepting_applications: { type: "boolean" },
             auto_approve: { type: "boolean" },
             sync_enabled: { type: "boolean" },
+            notify_on_signup: { type: "boolean" },
+            notify_on_error: { type: "boolean" },
+            notify_on_capacity: { type: "boolean" },
             slot_cap: { type: "number" },
           },
         },
@@ -442,10 +461,13 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
       preHandler: requireAdmin,
     },
     async (request: FastifyRequest) => {
-      const { accepting_applications, auto_approve, sync_enabled, slot_cap } = request.body as {
+      const { accepting_applications, auto_approve, sync_enabled, notify_on_signup, notify_on_error, notify_on_capacity, slot_cap } = request.body as {
         accepting_applications?: boolean;
         auto_approve?: boolean;
         sync_enabled?: boolean;
+        notify_on_signup?: boolean;
+        notify_on_error?: boolean;
+        notify_on_capacity?: boolean;
         slot_cap?: number;
       };
       if (accepting_applications !== undefined) {
@@ -457,6 +479,15 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
       if (sync_enabled !== undefined) {
         setSetting("sync_enabled", String(sync_enabled));
       }
+      if (notify_on_signup !== undefined) {
+        setSetting("notify_on_signup", String(notify_on_signup));
+      }
+      if (notify_on_error !== undefined) {
+        setSetting("notify_on_error", String(notify_on_error));
+      }
+      if (notify_on_capacity !== undefined) {
+        setSetting("notify_on_capacity", String(notify_on_capacity));
+      }
       if (slot_cap !== undefined) {
         setSetting("slot_cap", String(slot_cap));
       }
@@ -465,6 +496,9 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
         accepting_applications: settings.accepting_applications !== "false",
         auto_approve: settings.auto_approve === "true",
         sync_enabled: settings.sync_enabled !== "false",
+        notify_on_signup: settings.notify_on_signup !== "false",
+        notify_on_error: settings.notify_on_error !== "false",
+        notify_on_capacity: settings.notify_on_capacity !== "false",
         slot_cap: Number(settings.slot_cap ?? "100"),
         last_synced_at: settings.last_synced_at ? Number(settings.last_synced_at) : null,
       };
@@ -656,7 +690,7 @@ export async function runBetaSync(): Promise<{
   const slotCap = Number(settings.slot_cap ?? "100");
   const slotsUsed = countSlotsUsed();
   const pct = Math.round((slotsUsed / slotCap) * 100);
-  if (pct >= 90) {
+  if (pct >= 90 && settings.notify_on_capacity !== "false") {
     notify("Beta slots at " + pct + "%", `${slotsUsed}/${slotCap} slots used`, "warn");
   }
 
@@ -682,7 +716,10 @@ export function startBetaSyncSchedule(): void {
     if (settings.sync_enabled === "false") return;
     runBetaSync().catch((err) => {
       const message = err instanceof Error ? err.message : "Unknown error";
-      notify("Beta sync error", message, "error");
+      const s = getSettings();
+      if (s.notify_on_error !== "false") {
+        notify("Beta sync error", message, "error");
+      }
     });
   };
 
