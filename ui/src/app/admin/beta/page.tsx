@@ -24,6 +24,9 @@ interface BetaSettings {
   accepting_applications: boolean;
   auto_approve: boolean;
   sync_enabled: boolean;
+  notify_on_signup: boolean;
+  notify_on_error: boolean;
+  notify_on_capacity: boolean;
   slot_cap: number;
   last_synced_at: number | null;
 }
@@ -53,7 +56,8 @@ export default function BetaPage() {
   const { user, isLoading: authLoading } = useAuth();
   const router = useRouter();
   const [applicants, setApplicants] = useState<BetaApplicant[]>([]);
-  const [settings, setSettings] = useState<BetaSettings>({ accepting_applications: true, auto_approve: true, sync_enabled: true, slot_cap: 100, last_synced_at: null });
+  const [settings, setSettings] = useState<BetaSettings>({ accepting_applications: true, auto_approve: true, sync_enabled: true, notify_on_signup: true, notify_on_error: true, notify_on_capacity: true, slot_cap: 100, last_synced_at: null });
+  const [showNotifyPanel, setShowNotifyPanel] = useState(false);
   const [slotsUsed, setSlotsUsed] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -104,7 +108,7 @@ export default function BetaPage() {
     return () => clearInterval(interval);
   }, [authLoading, user?.isAdmin, router, fetchData]);
 
-  const toggleSetting = async (key: "accepting_applications" | "auto_approve" | "sync_enabled") => {
+  const toggleSetting = async (key: "accepting_applications" | "auto_approve" | "sync_enabled" | "notify_on_signup" | "notify_on_error" | "notify_on_capacity") => {
     const res = await fetch("/api/admin/beta/settings", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
@@ -318,6 +322,16 @@ export default function BetaPage() {
               </button>
             </label>
           ))}
+          <button
+            onClick={() => setShowNotifyPanel(!showNotifyPanel)}
+            className={`px-3 py-1 text-sm rounded border ${
+              showNotifyPanel
+                ? "border-zinc-500 text-zinc-200 bg-zinc-700"
+                : "border-zinc-700 text-zinc-400 hover:border-zinc-500 hover:text-zinc-300"
+            }`}
+          >
+            Notifications
+          </button>
 
           <div className="flex items-center gap-3 w-full md:w-auto md:flex-1 md:max-w-xs">
             <span className="text-sm text-zinc-400 whitespace-nowrap">
@@ -397,6 +411,48 @@ export default function BetaPage() {
               Cancel
             </button>
           </form>
+        )}
+
+        {/* Notifications panel */}
+        {showNotifyPanel && (
+          <div className="bg-deadly-surface rounded-lg p-4 border border-zinc-800 space-y-3">
+            <h3 className="text-sm font-medium text-zinc-300">Slack Notifications</h3>
+            <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
+              {([
+                { key: "notify_on_signup" as const, label: "Signups", desc: "New applications & approvals" },
+                { key: "notify_on_error" as const, label: "Errors", desc: "Failures & sync issues" },
+                { key: "notify_on_capacity" as const, label: "Capacity", desc: "Slot usage warnings (90%+)" },
+              ]).map(({ key, label, desc }) => (
+                <label key={key} className="flex items-center gap-3 p-2 rounded hover:bg-zinc-800/50 cursor-pointer">
+                  <button
+                    onClick={() => toggleSetting(key)}
+                    className={`w-10 h-5 rounded-full relative inline-flex items-center transition-colors shrink-0 ${
+                      settings[key] ? "bg-green-600" : "bg-zinc-600"
+                    }`}
+                  >
+                    <span
+                      className={`w-4 h-4 rounded-full bg-white transition-transform ${
+                        settings[key] ? "translate-x-[22px]" : "translate-x-[2px]"
+                      }`}
+                    />
+                  </button>
+                  <div>
+                    <div className="text-sm text-zinc-200">{label}</div>
+                    <div className="text-xs text-zinc-500">{desc}</div>
+                  </div>
+                </label>
+              ))}
+            </div>
+            <div className="pt-2 border-t border-zinc-800">
+              <button
+                onClick={testNotification}
+                disabled={testingSend}
+                className="px-3 py-1.5 text-xs text-zinc-400 border border-zinc-700 rounded hover:border-zinc-500 hover:text-zinc-300 disabled:opacity-50"
+              >
+                {testingSend ? "Sending..." : "Send test ping"}
+              </button>
+            </div>
+          </div>
         )}
 
         {/* Mobile list */}
@@ -549,16 +605,6 @@ export default function BetaPage() {
               ))}
             </tbody>
           </table>
-        </div>
-        {/* Footer */}
-        <div className="pt-2">
-          <button
-            onClick={testNotification}
-            disabled={testingSend}
-            className="px-3 py-1.5 text-xs text-zinc-500 border border-zinc-800 rounded hover:border-zinc-600 hover:text-zinc-300 disabled:opacity-50"
-          >
-            {testingSend ? "Sending..." : "Test Slack notification"}
-          </button>
         </div>
       </div>
     </div>
