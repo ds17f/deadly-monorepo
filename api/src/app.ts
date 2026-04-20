@@ -12,6 +12,7 @@ import { userRoutes } from "./routes/user.js";
 import { authMiddleware } from "./auth/middleware.js";
 import { connectRoutes } from "./connect/routes.js";
 import { analyticsRoutes } from "./routes/analytics.js";
+import { betaRoutes } from "./routes/beta.js";
 import { devTokenRoutes } from "./auth/dev-token.js";
 import { isDev } from "./env.js";
 import { initRedisSubscriber } from "./connect/registry.js";
@@ -43,6 +44,7 @@ export function buildApp() {
         { name: "user", description: "User data sync" },
         { name: "connect", description: "Spotify Connect-style playback" },
         { name: "analytics", description: "Anonymous usage analytics" },
+        { name: "beta", description: "Beta applicant management" },
       ],
     },
   });
@@ -61,6 +63,7 @@ export function buildApp() {
   app.register(userRoutes);
   app.register(connectRoutes);
   app.register(analyticsRoutes);
+  app.register(betaRoutes);
 
   if (isDev) {
     app.register(devTokenRoutes);
