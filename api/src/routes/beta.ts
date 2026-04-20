@@ -315,17 +315,21 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
         let created = 0;
         let updated = 0;
 
+        const now = Math.floor(Date.now() / 1000);
+
         for (const inv of invitations) {
           const email = inv.attributes.email.toLowerCase();
           const existing = getApplicantByEmail(email);
           if (existing) {
-            if (existing.status !== "invited" || existing.asc_invitation_id !== inv.id) {
-              updateApplicantStatus(existing.id, "invited", {
-                asc_invitation_id: inv.id,
-                invited_at: existing.invited_at ?? Math.floor(Date.now() / 1000),
-              });
-              updated++;
-            }
+            const validInvitedAt = existing.invited_at && existing.invited_at < 2_000_000_000
+              ? existing.invited_at : null;
+            updateApplicantStatus(existing.id, "invited", {
+              first_name: inv.attributes.firstName,
+              last_name: inv.attributes.lastName,
+              asc_invitation_id: inv.id,
+              invited_at: validInvitedAt,
+            });
+            updated++;
           } else {
             const applicant = insertApplicant(
               email,
@@ -336,7 +340,6 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
             );
             updateApplicantStatus(applicant.id, "invited", {
               asc_invitation_id: inv.id,
-              invited_at: Math.floor(Date.now() / 1000),
             });
             created++;
           }
@@ -346,18 +349,17 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
           const email = user.attributes.username.toLowerCase();
           const existing = getApplicantByEmail(email);
           if (existing) {
-            if (existing.status !== "member" && existing.status !== "installed") {
-              updateApplicantStatus(existing.id, "member", {
-                asc_user_id: user.id,
-                member_at: existing.member_at ?? Math.floor(Date.now() / 1000),
-              });
-              updated++;
-            } else if (!existing.asc_user_id) {
-              updateApplicantStatus(existing.id, existing.status, {
-                asc_user_id: user.id,
-              });
-              updated++;
-            }
+            const status = existing.status === "installed" ? "installed" as const : "member" as const;
+            const validMemberAt = existing.member_at && existing.member_at < 2_000_000_000
+              ? existing.member_at
+              : (existing.status !== "member" && existing.status !== "installed" ? now : null);
+            updateApplicantStatus(existing.id, status, {
+              first_name: user.attributes.firstName,
+              last_name: user.attributes.lastName,
+              asc_user_id: user.id,
+              member_at: validMemberAt,
+            });
+            updated++;
           } else {
             const applicant = insertApplicant(
               email,
@@ -368,7 +370,6 @@ export async function betaRoutes(app: FastifyInstance): Promise<void> {
             );
             updateApplicantStatus(applicant.id, "member", {
               asc_user_id: user.id,
-              member_at: Math.floor(Date.now() / 1000),
             });
             created++;
           }
