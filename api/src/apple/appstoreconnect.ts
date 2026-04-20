@@ -232,7 +232,7 @@ export async function addTesterToBetaGroup(
       }),
     },
   );
-  if (!res.ok) {
+  if (!res.ok && res.status !== 409) {
     const body = await res.text();
     throw new Error(`ASC addTesterToBetaGroup failed (${res.status}): ${body}`);
   }
