@@ -23,6 +23,7 @@ interface BetaApplicant {
 interface BetaSettings {
   auto_approve: boolean;
   slot_cap: number;
+  last_synced_at: number | null;
 }
 
 const STATUS_COLORS: Record<string, string> = {
@@ -50,7 +51,7 @@ export default function BetaPage() {
   const { user, isLoading: authLoading } = useAuth();
   const router = useRouter();
   const [applicants, setApplicants] = useState<BetaApplicant[]>([]);
-  const [settings, setSettings] = useState<BetaSettings>({ auto_approve: true, slot_cap: 100 });
+  const [settings, setSettings] = useState<BetaSettings>({ auto_approve: true, slot_cap: 100, last_synced_at: null });
   const [slotsUsed, setSlotsUsed] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -303,6 +304,12 @@ export default function BetaPage() {
               />
             </div>
           </div>
+
+          {settings.last_synced_at && (
+            <span className="text-xs text-zinc-500 whitespace-nowrap">
+              Synced {formatTs(settings.last_synced_at)}
+            </span>
+          )}
 
           {(!settings.auto_approve || slotsUsed >= settings.slot_cap) && (
             <div className="text-sm px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded">

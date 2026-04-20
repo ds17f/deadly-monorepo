@@ -3,6 +3,7 @@ import { closeUsersDb } from "./db/users.js";
 import { closeAnalyticsDb } from "./db/analytics.js";
 import { closeRedis } from "./db/redis.js";
 import { startAnalyticsSchedules } from "./routes/analytics.js";
+import { startBetaSyncSchedule } from "./routes/beta.js";
 
 const HOST = process.env.HOST ?? "0.0.0.0";
 const PORT = Number(process.env.PORT ?? 3001);
@@ -13,6 +14,7 @@ async function start() {
   try {
     await app.listen({ host: HOST, port: PORT });
     startAnalyticsSchedules();
+    startBetaSyncSchedule();
   } catch (err) {
     app.log.error(err);
     process.exit(1);
