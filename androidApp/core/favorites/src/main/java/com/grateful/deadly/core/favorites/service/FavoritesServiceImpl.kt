@@ -2,6 +2,8 @@ package com.grateful.deadly.core.favorites.service
 
 import android.util.Log
 import com.grateful.deadly.core.database.AnalyticsService
+import com.grateful.deadly.core.database.AppPreferences
+import com.grateful.deadly.core.database.AppReviewManager
 import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.media.download.MediaDownloadManager
@@ -36,6 +38,8 @@ class FavoritesServiceImpl @Inject constructor(
     private val shareService: ShareService,
     private val mediaDownloadManager: MediaDownloadManager,
     private val analyticsService: AnalyticsService,
+    private val appPreferences: AppPreferences,
+    private val appReviewManager: AppReviewManager,
     @Named("FavoritesApplicationScope") private val coroutineScope: CoroutineScope
 ) : FavoritesService {
 
@@ -88,7 +92,11 @@ class FavoritesServiceImpl @Inject constructor(
     override suspend fun addToFavorites(showId: String): Result<Unit> {
         Log.d(TAG, "addToFavorites('$showId') - using FavoritesRepository")
         val result = favoritesRepository.addShowToFavorites(showId)
-        if (result.isSuccess) analyticsService.track("feature_use", mapOf("feature" to "add_favorite"))
+        if (result.isSuccess) {
+            analyticsService.track("feature_use", mapOf("feature" to "add_favorite"))
+            appPreferences.setHasAddedFavorite(true)
+            appReviewManager.checkAndMaybePrompt()
+        }
         return result
     }
 

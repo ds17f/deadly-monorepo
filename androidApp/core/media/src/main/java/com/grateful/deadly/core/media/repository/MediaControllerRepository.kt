@@ -15,6 +15,7 @@ import com.grateful.deadly.core.model.PlaybackStatus
 import com.grateful.deadly.core.model.PlaybackState
 import com.grateful.deadly.core.model.Track
 import com.grateful.deadly.core.database.AnalyticsService
+import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.network.archive.service.ArchiveService
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
@@ -42,7 +43,8 @@ import javax.inject.Singleton
 class MediaControllerRepository @Inject constructor(
     @ApplicationContext private val context: Context,
     private val archiveService: ArchiveService,
-    private val analyticsService: AnalyticsService
+    private val analyticsService: AnalyticsService,
+    private val appPreferences: AppPreferences
 ) {
     companion object {
         private const val TAG = "MediaControllerRepository"
@@ -209,6 +211,7 @@ class MediaControllerRepository @Inject constructor(
                                 "recording_id" to recordingId,
                                 "track_index" to 1
                             ))
+                            appPreferences.recordShowPlayed(showId)
                         } else {
                             Log.d(TAG, "🕒🎵 [URL] Recording loaded at position $startPosition (paused) at ${System.currentTimeMillis()}")
                         }
@@ -316,6 +319,7 @@ class MediaControllerRepository @Inject constructor(
                                     "recording_id" to recordingId,
                                     "track_index" to (trackIndex + 1)
                                 ))
+                                appPreferences.recordShowPlayed(showId)
                             } else {
                                 Log.d(TAG, "🕒🎵 [URL] Track $trackIndex loaded at position $position (paused) at ${System.currentTimeMillis()}")
                             }

@@ -47,6 +47,10 @@ class AppPreferences @Inject constructor(
         private const val KEY_CUSTOM_DEV_EMAIL = "custom_dev_email"
         private const val KEY_ANALYTICS_ENABLED = "analytics_enabled"
         private const val KEY_INSTALL_ID = "install_id"
+        private const val KEY_INSTALL_DATE = "install_date"
+        private const val KEY_UNIQUE_SHOWS_PLAYED = "unique_shows_played"
+        private const val KEY_LAST_REVIEW_PROMPT_TIME = "last_review_prompt_time"
+        private const val KEY_HAS_ADDED_FAVORITE = "has_added_favorite"
     }
 
     private val _includeShowsWithoutRecordings = MutableStateFlow(
@@ -178,6 +182,44 @@ class AppPreferences @Inject constructor(
             prefs.edit().putString(KEY_INSTALL_ID, newId).apply()
             newId
         }
+    }
+
+    // ── In-App Review ────────────────────────────────────────────────
+
+    val installDate: Long = run {
+        val existing = prefs.getLong(KEY_INSTALL_DATE, 0L)
+        if (existing != 0L) {
+            existing
+        } else {
+            val now = System.currentTimeMillis()
+            prefs.edit().putLong(KEY_INSTALL_DATE, now).apply()
+            now
+        }
+    }
+
+    private val uniqueShowsPlayedSet: MutableSet<String> =
+        (prefs.getStringSet(KEY_UNIQUE_SHOWS_PLAYED, emptySet()) ?: emptySet()).toMutableSet()
+
+    val uniqueShowsPlayedCount: Int
+        @Synchronized get() = uniqueShowsPlayedSet.size
+
+    @Synchronized
+    fun recordShowPlayed(showId: String) {
+        if (uniqueShowsPlayedSet.add(showId)) {
+            prefs.edit().putStringSet(KEY_UNIQUE_SHOWS_PLAYED, uniqueShowsPlayedSet.toSet()).apply()
+        }
+    }
+
+    fun getLastReviewPromptTime(): Long = prefs.getLong(KEY_LAST_REVIEW_PROMPT_TIME, 0L)
+
+    fun setLastReviewPromptTime(time: Long) {
+        prefs.edit().putLong(KEY_LAST_REVIEW_PROMPT_TIME, time).apply()
+    }
+
+    fun getHasAddedFavorite(): Boolean = prefs.getBoolean(KEY_HAS_ADDED_FAVORITE, false)
+
+    fun setHasAddedFavorite(value: Boolean) {
+        prefs.edit().putBoolean(KEY_HAS_ADDED_FAVORITE, value).apply()
     }
 
     // ── Server Environment ───────────────────────────────────────────
