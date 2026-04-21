@@ -18,7 +18,8 @@ import com.grateful.deadly.feature.settings.SettingsViewModel
 
 @Composable
 fun DeveloperScreen(
-    viewModel: SettingsViewModel = hiltViewModel()
+    viewModel: SettingsViewModel = hiltViewModel(),
+    onNavigateBack: () -> Unit = {}
 ) {
     val forceOnline by viewModel.forceOnline.collectAsState()
 
@@ -92,6 +93,15 @@ fun DeveloperScreen(
 
         item { HorizontalDivider() }
 
+        item {
+            DevRow(
+                title = "Trigger review prompt",
+                onClick = { viewModel.triggerReviewPrompt() }
+            )
+        }
+
+        item { HorizontalDivider() }
+
         item { ClearArchiveCacheRow() }
 
         item { HorizontalDivider() }
@@ -112,6 +122,19 @@ fun DeveloperScreen(
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
+            )
+        }
+
+        item { HorizontalDivider() }
+
+        item {
+            DevRow(
+                title = "Hide developer settings",
+                titleColor = MaterialTheme.colorScheme.error,
+                onClick = {
+                    viewModel.lockDeveloperMode()
+                    onNavigateBack()
+                }
             )
         }
     }

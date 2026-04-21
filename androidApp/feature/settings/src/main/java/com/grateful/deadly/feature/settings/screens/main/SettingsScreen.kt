@@ -36,7 +36,9 @@ fun SettingsScreen(
     val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
     val authState by viewModel.authState.collectAsState()
     val serverEnvironment by viewModel.serverEnvironment.collectAsState()
+    val developerModeUnlocked by viewModel.developerModeUnlocked.collectAsState()
     val version = BuildConfig.VERSION_NAME
+    var versionTapCount by remember(developerModeUnlocked) { mutableIntStateOf(0) }
 
     LazyColumn(modifier = Modifier.fillMaxSize()) {
 
@@ -186,6 +188,22 @@ fun SettingsScreen(
             PreferenceRow(
                 title = "Version $version",
                 onClick = {
+                    versionTapCount++
+                    val remaining = 7 - versionTapCount
+                    if (remaining <= 0 && !developerModeUnlocked) {
+                        viewModel.unlockDeveloperMode()
+                        Toast.makeText(context, "Developer mode enabled", Toast.LENGTH_SHORT).show()
+                    } else if (remaining in 1..3 && !developerModeUnlocked) {
+                        Toast.makeText(context, "$remaining taps to enable developer mode", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            )
+        }
+
+        item {
+            PreferenceRow(
+                title = "Release Notes",
+                onClick = {
                     val url = "https://github.com/ds17f/deadly-monorepo/releases/tag/android%2Fv$version"
                     context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                 },
@@ -246,18 +264,20 @@ fun SettingsScreen(
             )
         }
 
-        item {
-            PreferenceRow(
-                title = "Developer",
-                onClick = onNavigateToDeveloper,
-                trailing = {
-                    Icon(
-                        painter = IconResources.Navigation.ChevronRight(),
-                        contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            )
+        if (developerModeUnlocked) {
+            item {
+                PreferenceRow(
+                    title = "Developer",
+                    onClick = onNavigateToDeveloper,
+                    trailing = {
+                        Icon(
+                            painter = IconResources.Navigation.ChevronRight(),
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                )
+            }
         }
 
         item { HorizontalDivider() }

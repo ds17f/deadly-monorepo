@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
+import com.grateful.deadly.core.database.AppReviewManager
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.miniplayer.LastPlayedTrackService
 import com.grateful.deadly.core.model.Show
@@ -24,7 +25,8 @@ class AppViewModel @Inject constructor(
     private val analyticsService: AnalyticsService,
     private val lastPlayedTrackService: LastPlayedTrackService,
     private val showRepository: ShowRepository,
-    private val favoritesService: FavoritesService
+    private val favoritesService: FavoritesService,
+    private val appReviewManager: AppReviewManager
 ) : ViewModel() {
 
     val isOffline: StateFlow<Boolean> = combine(
@@ -49,4 +51,13 @@ class AppViewModel @Inject constructor(
     fun trackFeature(feature: String) {
         analyticsService.track("feature_use", mapOf("feature" to feature))
     }
+
+    // ── In-App Review ────────────────────────────────────────────────
+
+    val showReviewDialog: StateFlow<Boolean> = appReviewManager.showPrePromptDialog
+    val launchInAppReview: StateFlow<Boolean> = appReviewManager.launchInAppReview
+
+    fun onReviewYes() = appReviewManager.onUserSaidYes()
+    fun onReviewDismiss() = appReviewManager.onUserSaidNotReally()
+    fun onInAppReviewLaunched() = appReviewManager.onInAppReviewLaunched()
 }

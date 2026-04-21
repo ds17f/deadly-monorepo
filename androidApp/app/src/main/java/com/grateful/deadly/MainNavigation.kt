@@ -16,6 +16,7 @@ import androidx.compose.material.icons.filled.WifiOff
 import androidx.activity.compose.BackHandler
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -37,7 +38,10 @@ import com.grateful.deadly.core.model.Show
 import com.grateful.deadly.feature.home.navigation.homeGraph
 import com.grateful.deadly.feature.settings.SettingsScreen
 import com.grateful.deadly.feature.settings.navigation.settingsGraph
+import android.app.Activity
+import com.google.android.play.core.review.ReviewManagerFactory
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 import com.grateful.deadly.feature.splash.navigation.splashGraph
 import com.grateful.deadly.feature.search.navigation.searchGraph
 import com.grateful.deadly.feature.playlist.navigation.playlistGraph
@@ -289,6 +293,55 @@ fun MainNavigation(
         }
     }
     } // ModalNavigationDrawer
+
+    // ── In-App Review ────────────────────────────────────────────────
+
+    val showReviewDialog by appViewModel.showReviewDialog.collectAsState()
+    val launchReview by appViewModel.launchInAppReview.collectAsState()
+
+    if (showReviewDialog) {
+        AlertDialog(
+            onDismissRequest = { appViewModel.onReviewDismiss() },
+            title = { Text("Enjoying Deadly?") },
+            text = { Text("Would you mind taking a moment to rate it? Your feedback helps other Deadheads find the app.") },
+            confirmButton = {
+                TextButton(onClick = { appViewModel.onReviewYes() }) {
+                    Text("Yes!")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { appViewModel.onReviewDismiss() }) {
+                    Text("Not really")
+                }
+            }
+        )
+    }
+
+    val activity = LocalContext.current as? Activity
+    if (launchReview && activity != null) {
+        if (BuildConfig.DEBUG) {
+            AlertDialog(
+                onDismissRequest = { appViewModel.onInAppReviewLaunched() },
+                title = { Text("[Debug] In-App Review") },
+                text = { Text("In production, the Google Play review dialog would appear here.") },
+                confirmButton = {
+                    TextButton(onClick = { appViewModel.onInAppReviewLaunched() }) {
+                        Text("OK")
+                    }
+                }
+            )
+        } else {
+            LaunchedEffect(Unit) {
+                try {
+                    val manager = ReviewManagerFactory.create(activity)
+                    val reviewInfo = manager.requestReviewFlow().await()
+                    manager.launchReviewFlow(activity, reviewInfo).await()
+                } catch (_: Exception) {
+                }
+                appViewModel.onInAppReviewLaunched()
+            }
+        }
+    }
 
     pendingDeepLink?.let { deepLink ->
         DeepLinkActionSheet(
