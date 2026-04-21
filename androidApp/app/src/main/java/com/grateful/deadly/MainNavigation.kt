@@ -40,7 +40,6 @@ import com.grateful.deadly.feature.settings.SettingsScreen
 import com.grateful.deadly.feature.settings.navigation.settingsGraph
 import android.app.Activity
 import com.google.android.play.core.review.ReviewManagerFactory
-import com.google.android.play.core.review.testing.FakeReviewManager
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import com.grateful.deadly.feature.splash.navigation.splashGraph
@@ -319,20 +318,29 @@ fun MainNavigation(
     }
 
     val activity = LocalContext.current as? Activity
-    LaunchedEffect(launchReview) {
-        if (!launchReview || activity == null) return@LaunchedEffect
-        try {
-            val manager = if (BuildConfig.DEBUG) {
-                FakeReviewManager(activity)
-            } else {
-                ReviewManagerFactory.create(activity)
+    if (launchReview && activity != null) {
+        if (BuildConfig.DEBUG) {
+            AlertDialog(
+                onDismissRequest = { appViewModel.onInAppReviewLaunched() },
+                title = { Text("[Debug] In-App Review") },
+                text = { Text("In production, the Google Play review dialog would appear here.") },
+                confirmButton = {
+                    TextButton(onClick = { appViewModel.onInAppReviewLaunched() }) {
+                        Text("OK")
+                    }
+                }
+            )
+        } else {
+            LaunchedEffect(Unit) {
+                try {
+                    val manager = ReviewManagerFactory.create(activity)
+                    val reviewInfo = manager.requestReviewFlow().await()
+                    manager.launchReviewFlow(activity, reviewInfo).await()
+                } catch (_: Exception) {
+                }
+                appViewModel.onInAppReviewLaunched()
             }
-            val reviewInfo = manager.requestReviewFlow().await()
-            manager.launchReviewFlow(activity, reviewInfo).await()
-        } catch (_: Exception) {
-            // Google silently suppresses if quota exceeded; nothing to handle
         }
-        appViewModel.onInAppReviewLaunched()
     }
 
     pendingDeepLink?.let { deepLink ->
