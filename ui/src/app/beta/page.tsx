@@ -272,8 +272,8 @@ export default function BetaPage() {
             TestFlight link to install the app.
           </p>
           <p className="text-white/50 text-sm">
-            This usually happens within a day or two. Keep an eye on your inbox
-            (and spam folder).
+            This usually happens pretty quickly based on human review. Keep an
+            eye on your inbox (and spam folder).
           </p>
           <Link href="/" className="inline-block text-white/50 hover:text-white/80">
             Back to home
