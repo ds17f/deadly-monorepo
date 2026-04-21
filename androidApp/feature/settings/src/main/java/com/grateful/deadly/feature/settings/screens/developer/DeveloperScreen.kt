@@ -92,6 +92,15 @@ fun DeveloperScreen(
 
         item { HorizontalDivider() }
 
+        item {
+            DevRow(
+                title = "Trigger review prompt",
+                onClick = { viewModel.triggerReviewPrompt() }
+            )
+        }
+
+        item { HorizontalDivider() }
+
         item { ClearArchiveCacheRow() }
 
         item { HorizontalDivider() }

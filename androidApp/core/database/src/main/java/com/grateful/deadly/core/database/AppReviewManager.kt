@@ -30,6 +30,10 @@ class AppReviewManager @Inject constructor(
         analyticsService.track("review_prompt_shown")
     }
 
+    fun forcePrompt() {
+        _showPrePromptDialog.value = true
+    }
+
     fun onUserSaidYes() {
         _showPrePromptDialog.value = false
         _launchInAppReview.value = true

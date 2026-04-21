@@ -9,6 +9,7 @@ import com.grateful.deadly.core.api.auth.AuthService
 import com.grateful.deadly.core.api.auth.AuthState
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
+import com.grateful.deadly.core.database.AppReviewManager
 import com.grateful.deadly.core.database.migration.MigrationImportService
 import com.grateful.deadly.core.database.migration.MigrationResult
 import com.grateful.deadly.core.database.service.BackupImportExportService
@@ -35,6 +36,7 @@ class SettingsViewModel @Inject constructor(
     private val appPreferences: AppPreferences,
     private val authService: AuthService,
     private val analyticsService: AnalyticsService,
+    private val appReviewManager: AppReviewManager,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
 
@@ -121,6 +123,10 @@ class SettingsViewModel @Inject constructor(
 
     fun toggleForceOnline() {
         appPreferences.setForceOnline(!appPreferences.forceOnline.value)
+    }
+
+    fun triggerReviewPrompt() {
+        appReviewManager.forcePrompt()
     }
 
     fun signInWithGoogle(activity: android.app.Activity, onError: (String) -> Unit) {
