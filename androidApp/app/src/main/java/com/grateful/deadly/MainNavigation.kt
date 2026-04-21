@@ -319,22 +319,20 @@ fun MainNavigation(
     }
 
     val activity = LocalContext.current as? Activity
-    if (launchReview && activity != null) {
-        LaunchedEffect(Unit) {
-            try {
-                val manager = if (BuildConfig.DEBUG) {
-                    FakeReviewManager(activity)
-                } else {
-                    ReviewManagerFactory.create(activity)
-                }
-                val reviewInfo = manager.requestReviewFlow().await()
-                manager.launchReviewFlow(activity, reviewInfo).await()
-            } catch (_: Exception) {
-                // Google silently suppresses if quota exceeded; nothing to handle
-            } finally {
-                appViewModel.onInAppReviewLaunched()
+    LaunchedEffect(launchReview) {
+        if (!launchReview || activity == null) return@LaunchedEffect
+        try {
+            val manager = if (BuildConfig.DEBUG) {
+                FakeReviewManager(activity)
+            } else {
+                ReviewManagerFactory.create(activity)
             }
+            val reviewInfo = manager.requestReviewFlow().await()
+            manager.launchReviewFlow(activity, reviewInfo).await()
+        } catch (_: Exception) {
+            // Google silently suppresses if quota exceeded; nothing to handle
         }
+        appViewModel.onInAppReviewLaunched()
     }
 
     pendingDeepLink?.let { deepLink ->
