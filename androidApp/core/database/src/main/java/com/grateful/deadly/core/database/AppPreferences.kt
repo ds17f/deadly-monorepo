@@ -51,6 +51,7 @@ class AppPreferences @Inject constructor(
         private const val KEY_UNIQUE_SHOWS_PLAYED = "unique_shows_played"
         private const val KEY_LAST_REVIEW_PROMPT_TIME = "last_review_prompt_time"
         private const val KEY_HAS_ADDED_FAVORITE = "has_added_favorite"
+        private const val KEY_DEVELOPER_MODE_UNLOCKED = "developer_mode_unlocked"
     }
 
     private val _includeShowsWithoutRecordings = MutableStateFlow(
@@ -220,6 +221,17 @@ class AppPreferences @Inject constructor(
 
     fun setHasAddedFavorite(value: Boolean) {
         prefs.edit().putBoolean(KEY_HAS_ADDED_FAVORITE, value).apply()
+    }
+
+    private val _developerModeUnlocked = MutableStateFlow(
+        prefs.getBoolean(KEY_DEVELOPER_MODE_UNLOCKED, false)
+    )
+
+    val developerModeUnlocked: StateFlow<Boolean> = _developerModeUnlocked.asStateFlow()
+
+    fun setDeveloperModeUnlocked(value: Boolean) {
+        prefs.edit().putBoolean(KEY_DEVELOPER_MODE_UNLOCKED, value).apply()
+        _developerModeUnlocked.value = value
     }
 
     // ── Server Environment ───────────────────────────────────────────

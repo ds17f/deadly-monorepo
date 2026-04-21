@@ -129,6 +129,12 @@ class SettingsViewModel @Inject constructor(
         appReviewManager.forcePrompt()
     }
 
+    val developerModeUnlocked: StateFlow<Boolean> = appPreferences.developerModeUnlocked
+
+    fun unlockDeveloperMode() {
+        appPreferences.setDeveloperModeUnlocked(true)
+    }
+
     fun signInWithGoogle(activity: android.app.Activity, onError: (String) -> Unit) {
         viewModelScope.launch {
             try {
