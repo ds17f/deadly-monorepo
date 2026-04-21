@@ -1,11 +1,21 @@
 # Changelog
 
+## [2.24.0] - 2026-04-21
+
+### New Features
+* add in-app review prompt (#26) (19cddf4b)
+
+### Other Changes
+* De-brand Grateful Dead references for App Store compliance (#25) (90e82330)
+* chore(ci): Fix build images to tag the built image correctly (4367e5f2)
+* chore(ci): Build Image Full Sha (7a25a26d)
+* Connect v2 architecture design (#23) (9dddcef8)
+
+
 ## [2.23.0] - 2026-04-03
 
 ### New Features
 * send search query and improve feature tracking (721c0288)
-
-
 ## [2.22.0] - 2026-04-02
 
 ### New Features
