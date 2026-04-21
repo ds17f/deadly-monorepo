@@ -1,11 +1,18 @@
 # Changelog
 
+## [2.26.1] - 2026-04-21
+
+### Other Changes
+* De-brand Grateful Dead references for App Store compliance (#25) (90e82330)
+* chore(ci): Fix build images to tag the built image correctly (4367e5f2)
+* chore(ci): Build Image Full Sha (7a25a26d)
+* Connect v2 architecture design (#23) (9dddcef8)
+
+
 ## [2.26.0] - 2026-04-03
 
 ### New Features
 * add settings tracking to match Android parity (a7159106)
-
-
 ## [2.25.0] - 2026-04-03
 
 ### New Features
