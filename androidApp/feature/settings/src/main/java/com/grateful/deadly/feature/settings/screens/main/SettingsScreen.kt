@@ -38,7 +38,7 @@ fun SettingsScreen(
     val serverEnvironment by viewModel.serverEnvironment.collectAsState()
     val developerModeUnlocked by viewModel.developerModeUnlocked.collectAsState()
     val version = BuildConfig.VERSION_NAME
-    var versionTapCount by remember { mutableIntStateOf(0) }
+    var versionTapCount by remember(developerModeUnlocked) { mutableIntStateOf(0) }
 
     LazyColumn(modifier = Modifier.fillMaxSize()) {
 

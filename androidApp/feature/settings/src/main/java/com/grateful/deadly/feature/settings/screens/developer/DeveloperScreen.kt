@@ -18,7 +18,8 @@ import com.grateful.deadly.feature.settings.SettingsViewModel
 
 @Composable
 fun DeveloperScreen(
-    viewModel: SettingsViewModel = hiltViewModel()
+    viewModel: SettingsViewModel = hiltViewModel(),
+    onNavigateBack: () -> Unit = {}
 ) {
     val forceOnline by viewModel.forceOnline.collectAsState()
 
@@ -130,7 +131,10 @@ fun DeveloperScreen(
             DevRow(
                 title = "Hide developer settings",
                 titleColor = MaterialTheme.colorScheme.error,
-                onClick = { viewModel.lockDeveloperMode() }
+                onClick = {
+                    viewModel.lockDeveloperMode()
+                    onNavigateBack()
+                }
             )
         }
     }

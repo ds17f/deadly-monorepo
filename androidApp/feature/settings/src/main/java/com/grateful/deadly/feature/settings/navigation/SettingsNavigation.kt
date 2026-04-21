@@ -63,7 +63,7 @@ fun NavGraphBuilder.developerScreen(
     onNavigateBack: () -> Unit
 ) {
     composable(route = DEVELOPER_ROUTE) {
-        DeveloperScreen()
+        DeveloperScreen(onNavigateBack = onNavigateBack)
     }
 }
 
