@@ -185,33 +185,35 @@ fun SettingsScreen(
         item { SectionHeader("About") }
 
         item {
-            PreferenceRow(
-                title = "Version $version",
-                onClick = {
-                    if (developerModeUnlocked) {
-                        val url = "https://github.com/ds17f/deadly-monorepo/releases/tag/android%2Fv$version"
-                        context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
-                    } else {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable {
                         versionTapCount++
                         val remaining = 7 - versionTapCount
-                        if (remaining <= 0) {
+                        if (remaining <= 0 && !developerModeUnlocked) {
                             viewModel.unlockDeveloperMode()
                             Toast.makeText(context, "Developer mode enabled", Toast.LENGTH_SHORT).show()
-                        } else if (remaining <= 3) {
+                        } else if (remaining in 1..3 && !developerModeUnlocked) {
                             Toast.makeText(context, "$remaining taps to enable developer mode", Toast.LENGTH_SHORT).show()
                         }
                     }
-                },
-                trailing = if (developerModeUnlocked) {
-                    {
-                        Icon(
-                            painter = IconResources.Navigation.ChevronRight(),
-                            contentDescription = null,
-                            tint = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
+                    .padding(horizontal = 16.dp, vertical = 14.dp)
+            ) {
+                Text(
+                    text = "Version $version",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+                Text(
+                    text = "Release notes",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.clickable {
+                        val url = "https://github.com/ds17f/deadly-monorepo/releases/tag/android%2Fv$version"
+                        context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                     }
-                } else null
-            )
+                )
+            }
         }
 
         item {
