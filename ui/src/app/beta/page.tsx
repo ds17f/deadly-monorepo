@@ -262,10 +262,18 @@ export default function BetaPage() {
       )}
 
       {step === "result" && resultStatus === "manual_review" && (
-        <div className="space-y-4">
+        <div className="space-y-6">
           <h1 className="text-3xl font-bold">Thanks for applying!</h1>
           <p className="text-white/70 leading-relaxed">
-            We&apos;ll review your request and email you shortly.
+            Your application is in the queue. When you&apos;re approved, you&apos;ll
+            receive an invitation email from Apple ({" "}
+            <span className="font-mono text-xs text-white/50">no_reply@email.apple.com</span>
+            {" "}) to join App Store Connect. From there, you&apos;ll get a
+            TestFlight link to install the app.
+          </p>
+          <p className="text-white/50 text-sm">
+            This usually happens within a day or two. Keep an eye on your inbox
+            (and spam folder).
           </p>
           <Link href="/" className="inline-block text-white/50 hover:text-white/80">
             Back to home
@@ -274,10 +282,17 @@ export default function BetaPage() {
       )}
 
       {step === "result" && resultStatus === "waitlist_full" && (
-        <div className="space-y-4">
+        <div className="space-y-6">
           <h1 className="text-3xl font-bold">Beta is full right now</h1>
           <p className="text-white/70 leading-relaxed">
-            We&apos;ve saved your email and will reach out if a slot opens.
+            We&apos;ve added you to the waitlist. If a slot opens up, you&apos;ll
+            receive an invitation email from Apple ({" "}
+            <span className="font-mono text-xs text-white/50">no_reply@email.apple.com</span>
+            {" "}) to join App Store Connect. From there, you&apos;ll get a
+            TestFlight link to install the app.
+          </p>
+          <p className="text-white/50 text-sm">
+            No action needed until then — we&apos;ll reach out when there&apos;s room.
           </p>
           <Link href="/" className="inline-block text-white/50 hover:text-white/80">
             Back to home
