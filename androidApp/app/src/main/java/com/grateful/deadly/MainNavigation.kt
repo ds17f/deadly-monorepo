@@ -40,6 +40,7 @@ import com.grateful.deadly.feature.settings.SettingsScreen
 import com.grateful.deadly.feature.settings.navigation.settingsGraph
 import android.app.Activity
 import com.google.android.play.core.review.ReviewManagerFactory
+import com.google.android.play.core.review.testing.FakeReviewManager
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import com.grateful.deadly.feature.splash.navigation.splashGraph
@@ -322,7 +323,11 @@ fun MainNavigation(
         if (launchReview && activity != null) {
             appViewModel.onInAppReviewLaunched()
             try {
-                val manager = ReviewManagerFactory.create(activity)
+                val manager = if (BuildConfig.DEBUG) {
+                    FakeReviewManager(activity)
+                } else {
+                    ReviewManagerFactory.create(activity)
+                }
                 val reviewInfo = manager.requestReviewFlow().await()
                 manager.launchReviewFlow(activity, reviewInfo).await()
             } catch (_: Exception) {
