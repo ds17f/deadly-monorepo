@@ -123,6 +123,16 @@ fun DeveloperScreen(
                 modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
             )
         }
+
+        item { HorizontalDivider() }
+
+        item {
+            DevRow(
+                title = "Hide developer settings",
+                titleColor = MaterialTheme.colorScheme.error,
+                onClick = { viewModel.lockDeveloperMode() }
+            )
+        }
     }
 }
 

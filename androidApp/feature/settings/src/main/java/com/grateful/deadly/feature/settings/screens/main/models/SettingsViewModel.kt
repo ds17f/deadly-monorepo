@@ -135,6 +135,10 @@ class SettingsViewModel @Inject constructor(
         appPreferences.setDeveloperModeUnlocked(true)
     }
 
+    fun lockDeveloperMode() {
+        appPreferences.setDeveloperModeUnlocked(false)
+    }
+
     fun signInWithGoogle(activity: android.app.Activity, onError: (String) -> Unit) {
         viewModelScope.launch {
             try {
