@@ -30,7 +30,10 @@ final class HomeServiceImpl: HomeService {
 
             let todayShows = try showRepository.getShowsForDate(month: month, day: day)
 
-            let collectionRecords = try collectionsDAO.fetchFeatured(limit: 10)
+            let guestRecords = try collectionsDAO.fetchByTag("guest")
+            let acousticRecords = try collectionsDAO.fetchByTag("acoustic")
+            let seen = Set(guestRecords.map(\.id))
+            let collectionRecords = (guestRecords + acousticRecords.filter { !seen.contains($0.id) })
             let collections = collectionRecords.map { record in
                 let tags = (try? JSONDecoder().decode([String].self, from: Data(record.tagsJson.utf8))) ?? []
                 return CollectionSummary(
