@@ -16,6 +16,7 @@ struct ShowArtwork: View {
     var size: CGFloat = DeadlySize.carouselCard
     var cornerRadius: CGFloat = DeadlySize.carouselCornerRadius
     var accessibilityDescription: String = "Show artwork"
+    @Environment(\.appContainer) private var container
     @State private var uiImage: UIImage?
     @State private var loadAttempted = false
 
@@ -24,7 +25,7 @@ struct ShowArtwork: View {
     }
 
     private var resolvedUrl: URL? {
-        if let imageUrl, let url = URL(string: imageUrl) {
+        if container.appPreferences.showTicketImages, let imageUrl, let url = URL(string: imageUrl) {
             return url
         }
         if let recordingId {

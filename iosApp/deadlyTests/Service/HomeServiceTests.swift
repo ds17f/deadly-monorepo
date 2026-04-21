@@ -160,19 +160,18 @@ struct HomeServiceTests {
         #expect(service.content.recentShows.isEmpty)
     }
 
-    @Test("refresh loads featured collections sorted by totalShows desc")
+    @Test("refresh loads featured collections filtered by guest and acoustic tags")
     func featuredCollectionsSortedByShowCount() async throws {
-        try insertCollection(id: "c1", name: "Small Collection", totalShows: 5)
-        try insertCollection(id: "c2", name: "Large Collection", totalShows: 50)
-        try insertCollection(id: "c3", name: "Medium Collection", totalShows: 20)
+        try insertCollection(id: "c1", name: "Official Release", totalShows: 50)
+        try insertCollection(id: "c2", name: "Guest Artist Shows", totalShows: 5, tags: ["guest"])
+        try insertCollection(id: "c3", name: "Acoustic Shows", totalShows: 10, tags: ["acoustic"])
 
         await service.refresh()
 
         let collections = service.content.featuredCollections
-        #expect(collections.count == 3)
-        #expect(collections[0].id == "c2")  // 50
-        #expect(collections[1].id == "c3")  // 20
-        #expect(collections[2].id == "c1")  // 5
+        #expect(collections.count == 2)
+        #expect(collections.contains { $0.id == "c2" })
+        #expect(collections.contains { $0.id == "c3" })
     }
 
     @Test("refresh loads recent shows ordered by recency")

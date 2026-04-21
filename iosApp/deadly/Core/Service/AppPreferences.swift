@@ -18,6 +18,7 @@ final class AppPreferences {
     private static let customDevEmailKey = "custom_dev_email"
     private static let analyticsEnabledKey = "analytics_enabled"
     private static let installIdKey = "install_id"
+    private static let showTicketImagesKey = "show_ticket_images"
 
     /// Server environment: "prod", "beta", or "custom".
     var serverEnvironment: String {
@@ -91,6 +92,10 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(analyticsEnabled, forKey: Self.analyticsEnabledKey) }
     }
 
+    var showTicketImages: Bool {
+        didSet { UserDefaults.standard.set(showTicketImages, forKey: Self.showTicketImagesKey) }
+    }
+
     /// Persistent install ID (UUID). Generated once on first access, survives opt-out/opt-in cycles.
     let installId: String
 
@@ -111,6 +116,7 @@ final class AppPreferences {
             Self.eqPresetKey: "flat",
             Self.shareAttachImageKey: false,
             Self.sourceBadgeStyleKey: "LONG",
+            Self.showTicketImagesKey: false,
         ])
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
         customServerUrl = UserDefaults.standard.string(forKey: Self.customServerUrlKey) ?? ""
@@ -130,6 +136,7 @@ final class AppPreferences {
             ?? "LIST"
         shareAttachImage = UserDefaults.standard.bool(forKey: Self.shareAttachImageKey)
         sourceBadgeStyle = UserDefaults.standard.string(forKey: Self.sourceBadgeStyleKey) ?? "LONG"
+        showTicketImages = UserDefaults.standard.bool(forKey: Self.showTicketImagesKey)
         analyticsEnabled = UserDefaults.standard.object(forKey: Self.analyticsEnabledKey) == nil
             ? true
             : UserDefaults.standard.bool(forKey: Self.analyticsEnabledKey)

@@ -130,6 +130,21 @@ struct SettingsScreen: View {
                     }
                 }
 
+                Toggle(isOn: Binding(
+                    get: { container.appPreferences.showTicketImages },
+                    set: {
+                        container.appPreferences.showTicketImages = $0
+                        container.analyticsService.track("feature_use", props: ["feature": "toggle_ticket_images", "enabled": $0])
+                    }
+                )) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Show ticket images")
+                        Text("Display historical concert ticket stubs as show artwork")
+                            .font(.callout)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Source type badge")
                     Picker("Source type badge", selection: Binding(

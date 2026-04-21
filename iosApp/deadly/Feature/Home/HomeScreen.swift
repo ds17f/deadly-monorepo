@@ -14,7 +14,7 @@ struct HomeScreen: View {
                 }
 
                 if !content.todayInHistory.isEmpty {
-                    carouselSection("Today In Grateful Dead History", shows: content.todayInHistory)
+                    carouselSection("On This Day", shows: content.todayInHistory)
                 }
 
                 if !content.featuredCollections.isEmpty {
