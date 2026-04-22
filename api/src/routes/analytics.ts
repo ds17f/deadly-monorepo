@@ -6,6 +6,7 @@ import {
   getSummary,
   getDetail,
   getTimeseries,
+  getShowPlaybackSummary,
   rollupDay,
   pruneOldEvents,
   type AnalyticsEvent,
@@ -360,6 +361,29 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
         return reply.code(404).send({ error: "Install ID not found" });
       }
       return result;
+    },
+  );
+
+  // GET /api/analytics/playback — show-level listening behavior
+  app.get(
+    "/api/analytics/playback",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Show-level playback analytics (admin)",
+        querystring: {
+          type: "object",
+          properties: {
+            days: { type: "number", default: 30 },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { days } = request.query as { days?: number };
+      const clampedDays = Math.min(Math.max(days ?? 30, 1), 90);
+      return getShowPlaybackSummary(clampedDays);
     },
   );
 

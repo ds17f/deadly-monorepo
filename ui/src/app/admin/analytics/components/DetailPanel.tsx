@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { emojiForId } from "./emojiId";
 
 interface DetailRow {
   iid: string;
@@ -181,7 +182,7 @@ export default function DetailPanel({
               {activeInstall ? (
                 <>
                   <span className="text-zinc-400">{title} &rsaquo; </span>
-                  <span className="font-mono text-sm">{activeInstall.slice(0, 8)}...</span>
+                  <span className="text-sm">{emojiForId(activeInstall)} <span className="font-mono text-zinc-500">{activeInstall.slice(0, 8)}</span></span>
                 </>
               ) : (
                 <>
@@ -323,12 +324,13 @@ export default function DetailPanel({
                           {row.detail ?? "—"}
                         </td>
                       )}
-                      <td className="px-4 py-2 font-mono text-xs">
+                      <td className="px-4 py-2">
                         <button
-                          className="text-deadly-blue hover:text-white transition-colors underline decoration-zinc-600"
+                          className="text-deadly-blue hover:text-white transition-colors"
                           onClick={() => openInstall(row.iid)}
                         >
-                          {row.iid?.slice(0, 8)}...
+                          <span className="mr-1">{emojiForId(row.iid)}</span>
+                          <span className="font-mono text-xs">{row.iid?.slice(0, 8)}</span>
                         </button>
                       </td>
                       <td className="px-4 py-2 text-zinc-300">{row.platform}</td>
@@ -349,8 +351,9 @@ export default function DetailPanel({
                     onClick={() => openInstall(row.iid)}
                   >
                     <div className="flex items-center justify-between mb-1">
-                      <span className="font-mono text-xs text-deadly-blue">
-                        {row.iid?.slice(0, 12)}...
+                      <span className="text-deadly-blue">
+                        <span className="mr-1">{emojiForId(row.iid)}</span>
+                        <span className="font-mono text-xs">{row.iid?.slice(0, 8)}</span>
                       </span>
                       <span className="text-xs text-zinc-500">{relativeTime(row.last_seen)}</span>
                     </div>

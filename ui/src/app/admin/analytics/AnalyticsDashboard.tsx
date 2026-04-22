@@ -8,6 +8,7 @@ import DetailPanel from "./components/DetailPanel";
 import TopShowsList from "./components/TopShowsList";
 import PlatformChart from "./components/PlatformChart";
 import FeatureAdoption from "./components/FeatureAdoption";
+import ShowPlayback from "./components/ShowPlayback";
 
 interface AnalyticsSummary {
   dau: number;
@@ -79,7 +80,6 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
   // Timeseries for sparklines
   const [dauTs, setDauTs] = useState<TimeseriesPoint[]>([]);
   const [eventsTs, setEventsTs] = useState<TimeseriesPoint[]>([]);
-  const [playbackTs, setPlaybackTs] = useState<TimeseriesPoint[]>([]);
 
   // Detail panel state
   const [activeMetric, setActiveMetric] = useState<DetailMetric | null>(null);
@@ -113,14 +113,12 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
 
   const fetchTimeseries = useCallback(async () => {
     try {
-      const [dau, events, playback] = await Promise.all([
+      const [dau, events] = await Promise.all([
         fetch("/api/analytics/timeseries?metric=dau&days=14", { credentials: "include" }).then((r) => r.json()),
         fetch("/api/analytics/timeseries?metric=events&days=14", { credentials: "include" }).then((r) => r.json()),
-        fetch("/api/analytics/timeseries?metric=playback_starts&days=14", { credentials: "include" }).then((r) => r.json()),
       ]);
       setDauTs(dau);
       setEventsTs(events);
-      setPlaybackTs(playback);
     } catch {
       // non-critical
     }
@@ -205,7 +203,6 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
 
   const dauValues = dauTs.map((p) => p.value);
   const eventsValues = eventsTs.map((p) => p.value);
-  const playbackValues = playbackTs.map((p) => p.value);
 
   return (
     <div className="min-h-screen bg-deadly-bg p-4 sm:p-6 max-w-5xl mx-auto">
@@ -286,22 +283,8 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
         onFeatureClick={(f) => openDetail("feature_adoption", f)}
       />
 
-      {/* Playback */}
-      {data.avg_completion_rate !== null && (
-        <section className="mb-6">
-          <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3">
-            Playback
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <MetricCard
-              label="Avg Completion"
-              value={`${Math.round(data.avg_completion_rate * 100)}%`}
-              timeseries={playbackValues}
-              onClick={() => openDetail("playback")}
-            />
-          </div>
-        </section>
-      )}
+      {/* Show Listening */}
+      <ShowPlayback showMap={showMap} />
 
       {/* Detail Panel */}
       {activeMetric && (
