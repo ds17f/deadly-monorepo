@@ -36,6 +36,7 @@ function initSchema(db: Database.Database): void {
     CREATE INDEX IF NOT EXISTS idx_analytics_ts ON analytics_events(ts);
     CREATE INDEX IF NOT EXISTS idx_analytics_platform ON analytics_events(platform);
     CREATE INDEX IF NOT EXISTS idx_analytics_iid ON analytics_events(iid);
+    CREATE INDEX IF NOT EXISTS idx_analytics_event_ts ON analytics_events(event, ts);
 
     CREATE TABLE IF NOT EXISTS analytics_daily_rollup (
       day TEXT NOT NULL,
@@ -290,6 +291,46 @@ export function getSummary(): AnalyticsSummary {
     avg_completion_rate,
     events_today,
   };
+}
+
+// ── Timeseries queries ──────────────────────────────────────────────
+
+export type TimeseriesMetric = "dau" | "events" | "playback_starts";
+
+export interface TimeseriesPoint {
+  day: string;
+  value: number;
+}
+
+export function getTimeseries(metric: TimeseriesMetric, days: number): TimeseriesPoint[] {
+  const db = getAnalyticsDb();
+  const cutoff = Date.now() - days * 24 * 3600 * 1000;
+
+  switch (metric) {
+    case "dau":
+      return db.prepare(`
+        SELECT date(ts / 1000, 'unixepoch') AS day, COUNT(DISTINCT iid) AS value
+        FROM analytics_events WHERE event = 'app_open' AND ts > ?
+        GROUP BY day ORDER BY day ASC
+      `).all(cutoff) as TimeseriesPoint[];
+
+    case "events":
+      return db.prepare(`
+        SELECT date(ts / 1000, 'unixepoch') AS day, COUNT(*) AS value
+        FROM analytics_events WHERE ts > ?
+        GROUP BY day ORDER BY day ASC
+      `).all(cutoff) as TimeseriesPoint[];
+
+    case "playback_starts":
+      return db.prepare(`
+        SELECT date(ts / 1000, 'unixepoch') AS day, COUNT(*) AS value
+        FROM analytics_events WHERE event = 'playback_start' AND ts > ?
+        GROUP BY day ORDER BY day ASC
+      `).all(cutoff) as TimeseriesPoint[];
+
+    default:
+      return [];
+  }
 }
 
 // ── Detail queries ──────────────────────────────────────────────────
