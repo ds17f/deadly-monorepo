@@ -7,19 +7,15 @@ import { emojiForId } from "./emojiId";
 interface ShowListener {
   show_id: string;
   iid: string;
-  sessions: number;
-  tracks_played: number;
-  deepest_track: number;
-  completion_pct: number | null;
+  tracks_played: number[];
   last_seen: string;
+  resumed: boolean;
 }
 
 interface PlaybackData {
   active_listeners: number;
   unique_shows: number;
-  avg_tracks_per_show: number;
-  avg_show_completion: number | null;
-  resume_rate: number | null;
+  resumed_count: number;
   listeners: ShowListener[];
 }
 
@@ -29,9 +25,10 @@ interface ShowName {
   v: string;
   c: string;
   s: string;
+  tc: number;
 }
 
-type SortKey = "last_seen" | "sessions" | "tracks_played" | "deepest_track" | "completion_pct";
+type SortKey = "last_seen" | "progress";
 type SortDir = "asc" | "desc";
 
 function formatDate(d: string): string {
@@ -40,11 +37,9 @@ function formatDate(d: string): string {
 }
 
 function formatLastSeen(iso: string): string {
-  const ms = Date.now() - new Date(iso + "Z").getTime();
-  if (ms < 60_000) return "just now";
-  if (ms < 3600_000) return `${Math.floor(ms / 60_000)}m ago`;
-  if (ms < 86400_000) return `${Math.floor(ms / 3600_000)}h ago`;
-  return `${Math.floor(ms / 86400_000)}d ago`;
+  const date = new Date(iso + "Z");
+  return date.toLocaleDateString("en-US", { month: "short", day: "numeric" }) +
+    " " + date.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
 }
 
 export default function ShowPlayback({ showMap }: { showMap: Map<string, ShowName> }) {
@@ -90,15 +85,12 @@ export default function ShowPlayback({ showMap }: { showMap: Map<string, ShowNam
     }
     const sorted = [...list];
     sorted.sort((a, b) => {
-      const av = a[sortKey];
-      const bv = b[sortKey];
-      if (av === null && bv === null) return 0;
-      if (av === null) return 1;
-      if (bv === null) return -1;
-      if (typeof av === "number" && typeof bv === "number") {
+      if (sortKey === "progress") {
+        const av = a.tracks_played.length;
+        const bv = b.tracks_played.length;
         return sortDir === "asc" ? av - bv : bv - av;
       }
-      const cmp = String(av).localeCompare(String(bv));
+      const cmp = a.last_seen.localeCompare(b.last_seen);
       return sortDir === "asc" ? cmp : -cmp;
     });
     return sorted;
@@ -109,44 +101,46 @@ export default function ShowPlayback({ showMap }: { showMap: Map<string, ShowNam
   const arrow = (key: SortKey) =>
     sortKey === key ? (sortDir === "asc" ? " ▲" : " ▼") : "";
 
+  function TrackBar({ listener }: { listener: ShowListener }) {
+    const show = showMap.get(listener.show_id);
+    const played = new Set(listener.tracks_played.map((t) => t > 0 ? t - 1 : t));
+    const total = show?.tc || (played.size > 0 ? Math.max(...played) + 1 : 0);
+    if (total === 0) return <span className="text-zinc-500 text-xs">{played.size} track{played.size !== 1 ? "s" : ""}</span>;
+
+    return (
+      <div className="flex items-center gap-2">
+        <div className="flex gap-px" title={`${played.size} of ${total} tracks`}>
+          {Array.from({ length: total }, (_, i) => (
+            <div
+              key={i}
+              className={`h-3 rounded-sm ${played.has(i) ? "bg-deadly-blue" : "bg-zinc-700"}`}
+              style={{ width: `${Math.max(Math.min(120 / total, 8), 2)}px` }}
+            />
+          ))}
+        </div>
+        <span className="text-xs text-zinc-500 whitespace-nowrap">{played.size}/{total}</span>
+        {listener.resumed && (
+          <span className="text-xs text-green-400 flex-shrink-0">resumed</span>
+        )}
+      </div>
+    );
+  }
+
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
         <MetricCard label="Active Listeners" value={data.active_listeners} />
         <MetricCard label="Unique Shows" value={data.unique_shows} />
-        <MetricCard
-          label="Avg Tracks/Show"
-          value={data.avg_tracks_per_show}
-        />
-        <MetricCard
-          label="Resume Rate"
-          value={data.resume_rate !== null ? `${data.resume_rate}%` : "—"}
-        />
+        <MetricCard label="Resumed" value={data.resumed_count} />
       </div>
 
-      {data.avg_show_completion !== null && (
-        <div className="bg-deadly-surface rounded-lg p-4 mb-4">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm text-zinc-400">Avg Show Completion</span>
-            <span className="text-sm font-bold text-white">{data.avg_show_completion}%</span>
-          </div>
-          <div className="bg-zinc-800 rounded-full h-3 overflow-hidden">
-            <div
-              className="bg-deadly-blue h-full rounded-full transition-all"
-              style={{ width: `${Math.min(data.avg_show_completion, 100)}%` }}
-            />
-          </div>
-        </div>
-      )}
-
-      {/* Listener activity list */}
       {data.listeners.length > 0 && (
         <div className="bg-deadly-surface rounded-lg overflow-hidden">
           <button
             onClick={() => setExpanded(!expanded)}
             className="w-full px-4 py-3 flex items-center justify-between text-sm text-zinc-400 hover:text-zinc-200 transition-colors"
           >
-            <span>Listening Sessions ({filteredAndSorted.length}{filterIid || excludeIids.size > 0 ? ` of ${data.listeners.length}` : ""})</span>
+            <span>Listening Activity ({filteredAndSorted.length}{filterIid || excludeIids.size > 0 ? ` of ${data.listeners.length}` : ""})</span>
             <span>{expanded ? "▲" : "▼"}</span>
           </button>
 
@@ -189,31 +183,13 @@ export default function ShowPlayback({ showMap }: { showMap: Map<string, ShowNam
                       className="px-4 py-2 text-right text-zinc-400 cursor-pointer hover:text-zinc-200 select-none"
                       onClick={() => toggleSort("last_seen")}
                     >
-                      Last Seen{arrow("last_seen")}
+                      Last Listened{arrow("last_seen")}
                     </th>
                     <th
-                      className="px-4 py-2 text-right text-zinc-400 cursor-pointer hover:text-zinc-200 select-none"
-                      onClick={() => toggleSort("sessions")}
+                      className="px-4 py-2 text-left text-zinc-400 cursor-pointer hover:text-zinc-200 select-none"
+                      onClick={() => toggleSort("progress")}
                     >
-                      Sessions{arrow("sessions")}
-                    </th>
-                    <th
-                      className="px-4 py-2 text-right text-zinc-400 cursor-pointer hover:text-zinc-200 select-none"
-                      onClick={() => toggleSort("tracks_played")}
-                    >
-                      Tracks{arrow("tracks_played")}
-                    </th>
-                    <th
-                      className="px-4 py-2 text-right text-zinc-400 cursor-pointer hover:text-zinc-200 select-none"
-                      onClick={() => toggleSort("deepest_track")}
-                    >
-                      Deepest{arrow("deepest_track")}
-                    </th>
-                    <th
-                      className="px-4 py-2 text-right text-zinc-400 cursor-pointer hover:text-zinc-200 select-none"
-                      onClick={() => toggleSort("completion_pct")}
-                    >
-                      Completion{arrow("completion_pct")}
+                      Progress{arrow("progress")}
                     </th>
                   </tr>
                 </thead>
@@ -254,23 +230,8 @@ export default function ShowPlayback({ showMap }: { showMap: Map<string, ShowNam
                         <td className="px-4 py-2 text-right text-zinc-400 tabular-nums whitespace-nowrap">
                           {formatLastSeen(l.last_seen)}
                         </td>
-                        <td className="px-4 py-2 text-right text-zinc-300 tabular-nums">
-                          {l.sessions > 1 ? (
-                            <span className="text-green-400">{l.sessions}</span>
-                          ) : (
-                            l.sessions
-                          )}
-                        </td>
-                        <td className="px-4 py-2 text-right text-zinc-300 tabular-nums">{l.tracks_played}</td>
-                        <td className="px-4 py-2 text-right text-zinc-400 tabular-nums">#{l.deepest_track}</td>
-                        <td className="px-4 py-2 text-right tabular-nums">
-                          {l.completion_pct !== null ? (
-                            <span className={l.completion_pct >= 80 ? "text-green-400" : l.completion_pct >= 40 ? "text-yellow-400" : "text-zinc-400"}>
-                              {l.completion_pct}%
-                            </span>
-                          ) : (
-                            <span className="text-zinc-600">&mdash;</span>
-                          )}
+                        <td className="px-4 py-2">
+                          <TrackBar listener={l} />
                         </td>
                       </tr>
                     );
@@ -301,28 +262,17 @@ export default function ShowPlayback({ showMap }: { showMap: Map<string, ShowNam
                             hide
                           </button>
                         </span>
-                        {l.completion_pct !== null && (
-                          <span className={`text-xs font-medium ${l.completion_pct >= 80 ? "text-green-400" : l.completion_pct >= 40 ? "text-yellow-400" : "text-zinc-400"}`}>
-                            {l.completion_pct}%
-                          </span>
-                        )}
+                        <span className="text-xs text-zinc-400">{formatLastSeen(l.last_seen)}</span>
                       </div>
                       <p className="text-sm text-zinc-200 mb-1">
                         {show ? `${formatDate(show.d)} — ${show.v}` : l.show_id.slice(0, 40)}
                       </p>
-                      <div className="flex items-center gap-3 text-xs text-zinc-500">
-                        <span>{formatLastSeen(l.last_seen)}</span>
-                        <span>{l.tracks_played} track{l.tracks_played !== 1 ? "s" : ""}</span>
-                        <span>deepest #{l.deepest_track}</span>
-                        {l.sessions > 1 && (
-                          <span className="text-green-400">{l.sessions} sessions</span>
-                        )}
-                      </div>
+                      <TrackBar listener={l} />
                     </div>
                   );
                 })}
                 {filteredAndSorted.length === 0 && (
-                  <p className="text-center text-zinc-500 py-4">No matching sessions</p>
+                  <p className="text-center text-zinc-500 py-4">No matching activity</p>
                 )}
               </div>
             </div>

@@ -348,17 +348,13 @@ export interface ShowListeningSession {
 export interface ShowPlaybackSummary {
   active_listeners: number;
   unique_shows: number;
-  avg_tracks_per_show: number;
-  avg_show_completion: number | null;
-  resume_rate: number | null;
+  resumed_count: number;
   listeners: Array<{
     show_id: string;
     iid: string;
-    sessions: number;
-    tracks_played: number;
-    deepest_track: number;
-    completion_pct: number | null;
+    tracks_played: number[];
     last_seen: string;
+    resumed: boolean;
   }>;
 }
 
@@ -366,14 +362,12 @@ export function getShowPlaybackSummary(days: number): ShowPlaybackSummary {
   const db = getAnalyticsDb();
   const cutoff = Date.now() - days * 24 * 3600 * 1000;
 
-  // Get per-listener per-show aggregates from playback_start
   const starts = db.prepare(`
     SELECT
       json_extract(props, '$.show_id') AS show_id,
       iid,
       COUNT(DISTINCT sid) AS sessions,
-      COUNT(*) AS tracks_played,
-      MAX(COALESCE(CAST(json_extract(props, '$.track_index') AS INTEGER), 0)) AS max_track_index,
+      json_group_array(DISTINCT COALESCE(CAST(json_extract(props, '$.track_index') AS INTEGER), 0)) AS track_indices,
       datetime(MAX(ts) / 1000, 'unixepoch') AS last_seen
     FROM analytics_events
     WHERE event = 'playback_start' AND ts > ?
@@ -383,68 +377,29 @@ export function getShowPlaybackSummary(days: number): ShowPlaybackSummary {
     show_id: string;
     iid: string;
     sessions: number;
-    tracks_played: number;
-    max_track_index: number;
+    track_indices: string;
     last_seen: string;
   }>;
 
-  // Get per-listener per-show listened/duration totals from playback_end
-  const ends = db.prepare(`
-    SELECT
-      json_extract(props, '$.show_id') AS show_id,
-      iid,
-      SUM(CAST(json_extract(props, '$.listened_ms') AS INTEGER)) AS total_listened_ms,
-      SUM(CAST(json_extract(props, '$.duration_ms') AS INTEGER)) AS total_duration_ms
-    FROM analytics_events
-    WHERE event = 'playback_end' AND ts > ?
-      AND json_extract(props, '$.show_id') IS NOT NULL
-    GROUP BY show_id, iid
-  `).all(cutoff) as Array<{
-    show_id: string;
-    iid: string;
-    total_listened_ms: number;
-    total_duration_ms: number;
-  }>;
-
-  const endMap = new Map<string, { listened: number; duration: number }>();
-  for (const e of ends) {
-    endMap.set(`${e.iid}:${e.show_id}`, {
-      listened: e.total_listened_ms ?? 0,
-      duration: e.total_duration_ms ?? 0,
-    });
-  }
-
   const listeners = starts.map((s) => {
-    const end = endMap.get(`${s.iid}:${s.show_id}`);
-    const completion = end && end.duration > 0
-      ? Math.round((end.listened / end.duration) * 100)
-      : null;
+    const indices: number[] = JSON.parse(s.track_indices);
     return {
       show_id: s.show_id,
       iid: s.iid,
-      sessions: s.sessions,
-      tracks_played: s.tracks_played,
-      deepest_track: s.max_track_index,
-      completion_pct: completion,
+      tracks_played: indices.sort((a, b) => a - b),
       last_seen: s.last_seen,
+      resumed: s.sessions > 1,
     };
   });
 
   const uniqueListeners = new Set(starts.map((s) => s.iid));
   const uniqueShows = new Set(starts.map((s) => s.show_id));
-  const multiSession = listeners.filter((l) => l.sessions > 1).length;
-  const withCompletion = listeners.filter((l) => l.completion_pct !== null);
-  const avgCompletion = withCompletion.length > 0
-    ? Math.round(withCompletion.reduce((a, l) => a + l.completion_pct!, 0) / withCompletion.length)
-    : null;
-  const totalTracks = starts.reduce((a, s) => a + s.tracks_played, 0);
+  const resumedCount = listeners.filter((l) => l.resumed).length;
 
   return {
     active_listeners: uniqueListeners.size,
     unique_shows: uniqueShows.size,
-    avg_tracks_per_show: starts.length > 0 ? Math.round((totalTracks / starts.length) * 10) / 10 : 0,
-    avg_show_completion: avgCompletion,
-    resume_rate: listeners.length > 0 ? Math.round((multiSession / listeners.length) * 100) : null,
+    resumed_count: resumedCount,
     listeners: listeners.sort((a, b) => b.last_seen.localeCompare(a.last_seen)),
   };
 }

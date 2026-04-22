@@ -44,6 +44,7 @@ interface ShowName {
   v: string;
   c: string;
   s: string;
+  tc: number;
 }
 
 type DetailMetric =
