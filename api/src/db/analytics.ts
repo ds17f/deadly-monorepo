@@ -358,6 +358,7 @@ export interface ShowPlaybackSummary {
     tracks_played: number;
     deepest_track: number;
     completion_pct: number | null;
+    last_seen: string;
   }>;
 }
 
@@ -372,7 +373,8 @@ export function getShowPlaybackSummary(days: number): ShowPlaybackSummary {
       iid,
       COUNT(DISTINCT sid) AS sessions,
       COUNT(*) AS tracks_played,
-      MAX(COALESCE(CAST(json_extract(props, '$.track_index') AS INTEGER), 0)) AS max_track_index
+      MAX(COALESCE(CAST(json_extract(props, '$.track_index') AS INTEGER), 0)) AS max_track_index,
+      datetime(MAX(ts) / 1000, 'unixepoch') AS last_seen
     FROM analytics_events
     WHERE event = 'playback_start' AND ts > ?
       AND json_extract(props, '$.show_id') IS NOT NULL
@@ -383,6 +385,7 @@ export function getShowPlaybackSummary(days: number): ShowPlaybackSummary {
     sessions: number;
     tracks_played: number;
     max_track_index: number;
+    last_seen: string;
   }>;
 
   // Get per-listener per-show listened/duration totals from playback_end
@@ -423,6 +426,7 @@ export function getShowPlaybackSummary(days: number): ShowPlaybackSummary {
       tracks_played: s.tracks_played,
       deepest_track: s.max_track_index,
       completion_pct: completion,
+      last_seen: s.last_seen,
     };
   });
 
@@ -441,7 +445,7 @@ export function getShowPlaybackSummary(days: number): ShowPlaybackSummary {
     avg_tracks_per_show: starts.length > 0 ? Math.round((totalTracks / starts.length) * 10) / 10 : 0,
     avg_show_completion: avgCompletion,
     resume_rate: listeners.length > 0 ? Math.round((multiSession / listeners.length) * 100) : null,
-    listeners: listeners.sort((a, b) => b.tracks_played - a.tracks_played),
+    listeners: listeners.sort((a, b) => b.last_seen.localeCompare(a.last_seen)),
   };
 }
 

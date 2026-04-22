@@ -16,7 +16,6 @@ interface TopShow {
 interface TopShowsListProps {
   shows: TopShow[];
   showMap: Map<string, ShowInfo>;
-  onClick?: () => void;
   onShowClick?: (showId: string) => void;
 }
 
@@ -25,19 +24,12 @@ function formatDate(d: string): string {
   return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
 }
 
-export default function TopShowsList({ shows, showMap, onClick, onShowClick }: TopShowsListProps) {
+export default function TopShowsList({ shows, showMap, onShowClick }: TopShowsListProps) {
   if (shows.length === 0) return null;
 
   return (
-    <section
-      className={`mb-6 ${onClick ? "cursor-pointer group" : ""}`}
-      onClick={onClick}
-    >
-      <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3 group-hover:text-zinc-200 transition-colors">
-        Top Shows (30d) {onClick && <span className="text-zinc-600">&rarr;</span>}
-      </h2>
-      <div className="space-y-1">
-        {shows.map((show, i) => {
+    <div className="space-y-1">
+      {shows.map((show, i) => {
           const info = showMap.get(show.show_id);
           return (
             <div
@@ -71,7 +63,6 @@ export default function TopShowsList({ shows, showMap, onClick, onShowClick }: T
             </div>
           );
         })}
-      </div>
-    </section>
+    </div>
   );
 }

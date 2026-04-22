@@ -9,6 +9,7 @@ import TopShowsList from "./components/TopShowsList";
 import PlatformChart from "./components/PlatformChart";
 import FeatureAdoption from "./components/FeatureAdoption";
 import ShowPlayback from "./components/ShowPlayback";
+import CollapsibleSection from "./components/CollapsibleSection";
 
 interface AnalyticsSummary {
   dau: number;
@@ -86,6 +87,10 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
   const [activeFilter, setActiveFilter] = useState<string | undefined>(undefined);
   const [detailRows, setDetailRows] = useState<DetailRow[]>([]);
   const [detailLoading, setDetailLoading] = useState(false);
+
+  // Collapse all state
+  const [allCollapsed, setAllCollapsed] = useState(false);
+  const [collapseToggle, setCollapseToggle] = useState(0);
 
   const showMap = useMemo(() => {
     const m = new Map<string, ShowName>();
@@ -204,6 +209,8 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
   const dauValues = dauTs.map((p) => p.value);
   const eventsValues = eventsTs.map((p) => p.value);
 
+  const forceOpen = collapseToggle === 0 ? undefined : !allCollapsed;
+
   return (
     <div className="min-h-screen bg-deadly-bg p-4 sm:p-6 max-w-5xl mx-auto">
       {/* Header */}
@@ -213,6 +220,12 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
           <a href="/admin/beta" className="text-sm text-zinc-500 hover:text-zinc-300">Beta &rarr;</a>
         </div>
         <div className="flex items-center gap-3">
+          <button
+            onClick={() => { setAllCollapsed((c) => !c); setCollapseToggle((t) => t + 1); }}
+            className="text-xs text-zinc-500 hover:text-zinc-300 transition-colors"
+          >
+            {allCollapsed ? "expand all" : "collapse all"}
+          </button>
           <span className="text-xs text-zinc-600 hidden sm:inline">
             auto-refresh {REFRESH_INTERVAL / 1000}s
           </span>
@@ -225,22 +238,16 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
       </div>
 
       {/* Active Users */}
-      <section className="mb-6">
-        <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3">
-          Active Users
-        </h2>
+      <CollapsibleSection title="Active Users" forceOpen={forceOpen}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           <MetricCard label="DAU" value={data.dau} timeseries={dauValues} onClick={() => openDetail("dau")} />
           <MetricCard label="WAU" value={data.wau} timeseries={dauValues} onClick={() => openDetail("wau")} />
           <MetricCard label="MAU" value={data.mau} timeseries={dauValues} onClick={() => openDetail("mau")} />
         </div>
-      </section>
+      </CollapsibleSection>
 
       {/* Install Base */}
-      <section className="mb-6">
-        <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3">
-          Install Base
-        </h2>
+      <CollapsibleSection title="Install Base" forceOpen={forceOpen}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           <MetricCard
             label="Total Installs"
@@ -259,32 +266,37 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
             onClick={() => openDetail("events_today")}
           />
         </div>
-      </section>
+      </CollapsibleSection>
 
       {/* Platform Split */}
-      <PlatformChart
-        data={data.platform_split}
-        onClick={() => openDetail("platform_split")}
-        onPlatformClick={(p) => openDetail("platform_split", p)}
-      />
+      <CollapsibleSection title="Platform Split (30d)" forceOpen={forceOpen} onDetail={() => openDetail("platform_split")}>
+        <PlatformChart
+          data={data.platform_split}
+          onPlatformClick={(p) => openDetail("platform_split", p)}
+        />
+      </CollapsibleSection>
 
       {/* Top Shows */}
-      <TopShowsList
-        shows={data.top_shows}
-        showMap={showMap}
-        onClick={() => openDetail("top_shows")}
-        onShowClick={(id) => openDetail("top_shows", id)}
-      />
+      <CollapsibleSection title="Top Shows (30d)" forceOpen={forceOpen} onDetail={() => openDetail("top_shows")}>
+        <TopShowsList
+          shows={data.top_shows}
+          showMap={showMap}
+          onShowClick={(id) => openDetail("top_shows", id)}
+        />
+      </CollapsibleSection>
 
       {/* Feature Adoption */}
-      <FeatureAdoption
-        data={data.feature_adoption}
-        onClick={() => openDetail("feature_adoption")}
-        onFeatureClick={(f) => openDetail("feature_adoption", f)}
-      />
+      <CollapsibleSection title="Feature Adoption (30d)" forceOpen={forceOpen} onDetail={() => openDetail("feature_adoption")}>
+        <FeatureAdoption
+          data={data.feature_adoption}
+          onFeatureClick={(f) => openDetail("feature_adoption", f)}
+        />
+      </CollapsibleSection>
 
       {/* Show Listening */}
-      <ShowPlayback showMap={showMap} />
+      <CollapsibleSection title="Show Listening (30d)" forceOpen={forceOpen}>
+        <ShowPlayback showMap={showMap} />
+      </CollapsibleSection>
 
       {/* Detail Panel */}
       {activeMetric && (
