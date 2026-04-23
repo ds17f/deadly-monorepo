@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.25.0] - 2026-04-23
+
+### New Features
+* redesign listening dashboard with track bitmap bar (#27) (8b72f119)
+
+### Bug Fixes
+* remove non-Android entries from v2.24.0 changelog (1f889b65)
+
+
 ## [2.24.0] - 2026-04-21
 
 ### New Features
@@ -8,8 +17,6 @@
 ### Other Changes
 * chore(ci): Fix build images to tag the built image correctly (4367e5f2)
 * chore(ci): Build Image Full Sha (7a25a26d)
-
-
 ## [2.23.0] - 2026-04-03
 
 ### New Features
