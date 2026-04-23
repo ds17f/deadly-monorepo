@@ -36,6 +36,7 @@ function initSchema(db: Database.Database): void {
     CREATE INDEX IF NOT EXISTS idx_analytics_ts ON analytics_events(ts);
     CREATE INDEX IF NOT EXISTS idx_analytics_platform ON analytics_events(platform);
     CREATE INDEX IF NOT EXISTS idx_analytics_iid ON analytics_events(iid);
+    CREATE INDEX IF NOT EXISTS idx_analytics_event_ts ON analytics_events(event, ts);
 
     CREATE TABLE IF NOT EXISTS analytics_daily_rollup (
       day TEXT NOT NULL,
@@ -289,6 +290,117 @@ export function getSummary(): AnalyticsSummary {
     feature_adoption,
     avg_completion_rate,
     events_today,
+  };
+}
+
+// ── Timeseries queries ──────────────────────────────────────────────
+
+export type TimeseriesMetric = "dau" | "events" | "playback_starts";
+
+export interface TimeseriesPoint {
+  day: string;
+  value: number;
+}
+
+export function getTimeseries(metric: TimeseriesMetric, days: number): TimeseriesPoint[] {
+  const db = getAnalyticsDb();
+  const cutoff = Date.now() - days * 24 * 3600 * 1000;
+
+  switch (metric) {
+    case "dau":
+      return db.prepare(`
+        SELECT date(ts / 1000, 'unixepoch') AS day, COUNT(DISTINCT iid) AS value
+        FROM analytics_events WHERE event = 'app_open' AND ts > ?
+        GROUP BY day ORDER BY day ASC
+      `).all(cutoff) as TimeseriesPoint[];
+
+    case "events":
+      return db.prepare(`
+        SELECT date(ts / 1000, 'unixepoch') AS day, COUNT(*) AS value
+        FROM analytics_events WHERE ts > ?
+        GROUP BY day ORDER BY day ASC
+      `).all(cutoff) as TimeseriesPoint[];
+
+    case "playback_starts":
+      return db.prepare(`
+        SELECT date(ts / 1000, 'unixepoch') AS day, COUNT(*) AS value
+        FROM analytics_events WHERE event = 'playback_start' AND ts > ?
+        GROUP BY day ORDER BY day ASC
+      `).all(cutoff) as TimeseriesPoint[];
+
+    default:
+      return [];
+  }
+}
+
+// ── Show-level playback queries ─────────────────────────────────────
+
+export interface ShowListeningSession {
+  show_id: string;
+  iid: string;
+  sessions: number;
+  tracks_played: number;
+  max_track_index: number;
+  total_listened_ms: number;
+  total_duration_ms: number;
+}
+
+export interface ShowPlaybackSummary {
+  active_listeners: number;
+  unique_shows: number;
+  resumed_count: number;
+  listeners: Array<{
+    show_id: string;
+    iid: string;
+    tracks_played: number[];
+    last_seen: string;
+    resumed: boolean;
+  }>;
+}
+
+export function getShowPlaybackSummary(days: number): ShowPlaybackSummary {
+  const db = getAnalyticsDb();
+  const cutoff = Date.now() - days * 24 * 3600 * 1000;
+
+  const starts = db.prepare(`
+    SELECT
+      json_extract(props, '$.show_id') AS show_id,
+      iid,
+      COUNT(DISTINCT sid) AS sessions,
+      json_group_array(DISTINCT COALESCE(CAST(json_extract(props, '$.track_index') AS INTEGER), 0)) AS track_indices,
+      datetime(MAX(ts) / 1000, 'unixepoch') AS last_seen
+    FROM analytics_events
+    WHERE event = 'playback_start' AND ts > ?
+      AND json_extract(props, '$.show_id') IS NOT NULL
+    GROUP BY show_id, iid
+  `).all(cutoff) as Array<{
+    show_id: string;
+    iid: string;
+    sessions: number;
+    track_indices: string;
+    last_seen: string;
+  }>;
+
+  const listeners = starts.map((s) => {
+    const indices: number[] = JSON.parse(s.track_indices);
+    return {
+      show_id: s.show_id,
+      iid: s.iid,
+      tracks_played: indices.sort((a, b) => a - b),
+      last_seen: s.last_seen,
+      resumed: s.sessions > 1,
+    };
+  });
+
+  const uniqueListeners = new Set(starts.map((s) => s.iid));
+  const uniqueShows = new Set(starts.map((s) => s.show_id));
+  const resumedCount = listeners.filter((l) => l.resumed).length;
+
+  return {
+    active_listeners: uniqueListeners.size,
+    unique_shows: uniqueShows.size,
+    resumed_count: resumedCount,
+    listeners: listeners.sort((a, b) => b.last_seen.localeCompare(a.last_seen)),
   };
 }
 

@@ -24,6 +24,7 @@ final class PlaylistServiceImpl: PlaylistService {
 
     /// Tracks the currently playing item for playback_end analytics.
     private var playbackStartInfo: (showId: String, recordingId: String, trackNumber: Int)?
+    private var trackObservationTask: Task<Void, Never>?
 
     nonisolated init(
         showRepository: some ShowRepository,
@@ -191,13 +192,48 @@ final class PlaylistServiceImpl: PlaylistService {
             )
         }
         streamPlayer.loadQueue(trackItems, startingAt: index)
+        startTrackObservation()
 
         playbackStartInfo = (showId: showId, recordingId: recordingId, trackNumber: index + 1)
         analyticsService?.track("playback_start", props: [
             "show_id": showId,
             "recording_id": recordingId,
-            "track_number": index + 1,
+            "track_index": index + 1,
         ])
+    }
+
+    private func startTrackObservation() {
+        trackObservationTask?.cancel()
+        trackObservationTask = Task { [weak self] in
+            guard let self else { return }
+            var lastTrackId: UUID? = self.streamPlayer.currentTrack?.id
+            while !Task.isCancelled {
+                await withCheckedContinuation { continuation in
+                    withObservationTracking {
+                        _ = self.streamPlayer.currentTrack
+                    } onChange: {
+                        continuation.resume()
+                    }
+                }
+                guard !Task.isCancelled else { break }
+                let newTrack = self.streamPlayer.currentTrack
+                if let newTrack, newTrack.id != lastTrackId {
+                    lastTrackId = newTrack.id
+                    self.trackPlaybackEnd()
+                    if let showId = newTrack.metadata["showId"],
+                       let recordingId = newTrack.metadata["recordingId"],
+                       let trackNumStr = newTrack.metadata["trackNumber"],
+                       let trackNum = Int(trackNumStr) {
+                        self.playbackStartInfo = (showId: showId, recordingId: recordingId, trackNumber: trackNum)
+                        self.analyticsService?.track("playback_start", props: [
+                            "show_id": showId,
+                            "recording_id": recordingId,
+                            "track_index": trackNum,
+                        ])
+                    }
+                }
+            }
+        }
     }
 
     /// Fires a `playback_end` event for the currently tracked playback, if any.
@@ -208,7 +244,7 @@ final class PlaylistServiceImpl: PlaylistService {
         analyticsService?.track("playback_end", props: [
             "show_id": info.showId,
             "recording_id": info.recordingId,
-            "track_number": info.trackNumber,
+            "track_index": info.trackNumber,
             "duration_ms": Int(progress.currentTime * 1000),
             "completion_rate": round(completionRate * 100) / 100,
         ])

@@ -487,7 +487,6 @@ class MediaControllerRepository @Inject constructor(
                         }
                         
                         override fun onMediaItemTransition(mediaItem: androidx.media3.common.MediaItem?, reason: Int) {
-                            // Fire playback_end for the track that just finished/was skipped
                             firePlaybackEnd()
 
                             _currentMediaItem.value = mediaItem
@@ -495,11 +494,22 @@ class MediaControllerRepository @Inject constructor(
                             _currentRecordingId.value = extractRecordingIdFromMediaItem(mediaItem)
                             _currentTrackIndex.value = controller.currentMediaItemIndex
                             _mediaItemCount.value = controller.mediaItemCount
-                            
-                            // Update both position and duration immediately to prevent visual hiccup
+
                             if (mediaItem != null) {
-                                _currentPosition.value = 0L  // New tracks always start at beginning
+                                _currentPosition.value = 0L
                                 _duration.value = controller.duration.coerceAtLeast(0L)
+
+                                val showId = extractShowIdFromMediaItem(mediaItem)
+                                val recordingId = extractRecordingIdFromMediaItem(mediaItem)
+                                val trackIndex = controller.currentMediaItemIndex + 1
+                                if (showId != null && recordingId != null) {
+                                    analyticsPlaybackInfo = Triple(showId, recordingId, trackIndex)
+                                    analyticsService.track("playback_start", mapOf(
+                                        "show_id" to showId,
+                                        "recording_id" to recordingId,
+                                        "track_index" to trackIndex
+                                    ))
+                                }
                             }
                         }
                         

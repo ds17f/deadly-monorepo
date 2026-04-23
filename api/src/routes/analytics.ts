@@ -5,10 +5,13 @@ import {
   insertEvents,
   getSummary,
   getDetail,
+  getTimeseries,
+  getShowPlaybackSummary,
   rollupDay,
   pruneOldEvents,
   type AnalyticsEvent,
   type DetailMetric,
+  type TimeseriesMetric,
   getInstallEvents,
 } from "../db/analytics.js";
 import { requireAdmin } from "../auth/middleware.js";
@@ -358,6 +361,75 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
         return reply.code(404).send({ error: "Install ID not found" });
       }
       return result;
+    },
+  );
+
+  // GET /api/analytics/playback — show-level listening behavior
+  app.get(
+    "/api/analytics/playback",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Show-level playback analytics (admin)",
+        querystring: {
+          type: "object",
+          properties: {
+            days: { type: "number", default: 30 },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { days } = request.query as { days?: number };
+      const clampedDays = Math.min(Math.max(days ?? 30, 1), 90);
+      return getShowPlaybackSummary(clampedDays);
+    },
+  );
+
+  // GET /api/analytics/timeseries — sparkline data for admin dashboard
+  const VALID_TS_METRICS = new Set(["dau", "events", "playback_starts"]);
+
+  app.get(
+    "/api/analytics/timeseries",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Timeseries data for dashboard sparklines (admin)",
+        querystring: {
+          type: "object",
+          required: ["metric"],
+          properties: {
+            metric: { type: "string" },
+            days: { type: "number", default: 14 },
+          },
+        },
+        response: {
+          200: {
+            type: "array",
+            items: {
+              type: "object",
+              properties: {
+                day: { type: "string" },
+                value: { type: "number" },
+              },
+            },
+          },
+          400: {
+            type: "object",
+            properties: { error: { type: "string" } },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request, reply) => {
+      const { metric, days } = request.query as { metric: string; days?: number };
+      if (!VALID_TS_METRICS.has(metric)) {
+        return reply.code(400).send({ error: `Invalid metric: ${metric}` });
+      }
+      const clampedDays = Math.min(Math.max(days ?? 14, 1), 90);
+      return getTimeseries(metric as TimeseriesMetric, clampedDays);
     },
   );
 }
