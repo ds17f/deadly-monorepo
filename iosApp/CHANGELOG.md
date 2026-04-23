@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.27.0] - 2026-04-23
+
+### New Features
+* redesign listening dashboard with track bitmap bar (#27) (8b72f119)
+
+
 ## [2.26.1] - 2026-04-21
 
 ### Other Changes
@@ -7,8 +13,6 @@
 * chore(ci): Fix build images to tag the built image correctly (4367e5f2)
 * chore(ci): Build Image Full Sha (7a25a26d)
 * Connect v2 architecture design (#23) (9dddcef8)
-
-
 ## [2.26.0] - 2026-04-03
 
 ### New Features
