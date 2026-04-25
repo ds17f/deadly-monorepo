@@ -16,7 +16,7 @@
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
 .PHONY: infra-init infra-plan infra-apply infra-retry infra-destroy infra-output web-deploy web-promote infra-logs infra-ssh images-build
 .PHONY: data-download data-generate data-package data-download-stage01 data-upload-stage01 data-collect data-release data-clean
-.PHONY: db-backup-list db-restore
+.PHONY: db-backup-list db-restore db-pull-analytics
 
 # =============================================================================
 # API & DOCKER COMPOSE
@@ -243,6 +243,7 @@ help:
 	@echo "DATABASE BACKUPS:"
 	@echo "  db-backup-list   - List available database backups in B2"
 	@echo "  db-restore       - Download latest backup (or specific: make db-restore BACKUP=users-XXX.db)"
+	@echo "  db-pull-analytics - Pull analytics.db from prod into api-data/"
 	@echo ""
 	@echo "DOCUMENTATION:"
 	@echo "  docs-help       - Show documentation-specific help"
@@ -781,3 +782,14 @@ db-restore:
 			--endpoint-url $(B2_ENDPOINT) --region us-west-004; \
 	fi
 	@echo "Restored to api-data/users.db"
+
+# Pull analytics.db from prod into local api-data/
+# Uses sqlite3 .backup to produce a consistent snapshot (handles WAL correctly)
+db-pull-analytics:
+	@mkdir -p api-data
+	@echo "Creating consistent backup of analytics.db on prod..."
+	@ssh -i $(PROD_SSH_KEY) deploy@$(PROD_IP) \
+		"sqlite3 /opt/deadly/api-data/analytics.db '.backup /tmp/analytics.db'"
+	@rsync -avz -e "ssh -i $(PROD_SSH_KEY)" deploy@$(PROD_IP):/tmp/analytics.db api-data/analytics.db
+	@rm -f api-data/analytics.db-shm api-data/analytics.db-wal
+	@echo "Done: api-data/analytics.db"
