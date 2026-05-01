@@ -26,6 +26,11 @@ final class PlaylistServiceImpl: PlaylistService {
     private var playbackStartInfo: (showId: String, recordingId: String, trackNumber: Int)?
     private var trackObservationTask: Task<Void, Never>?
 
+    /// Pending track-change emit, gated by a 1s dwell timer so transient
+    /// track flips during queue load don't fire phantom playback_start events.
+    private var pendingPlaybackInfo: (showId: String, recordingId: String, trackNumber: Int)?
+    private var pendingPlaybackTask: Task<Void, Never>?
+
     nonisolated init(
         showRepository: some ShowRepository,
         archiveClient: some ArchiveMetadataClient,
@@ -145,11 +150,9 @@ final class PlaylistServiceImpl: PlaylistService {
         guard index >= 0, index < tracks.count,
               let recording = currentRecording else { return }
 
-        // Fire playback_end for the previous track, if any
-        trackPlaybackEnd()
-
         // If the player already has this recording's queue loaded, skip directly to the index
         // instead of rebuilding the entire queue (avoids redundant network redirect resolution).
+        // The observer will emit playback_start/_end via the debounced commit path.
         if streamPlayer.currentTrack?.metadata["recordingId"] == recording.identifier {
             streamPlayer.skipTo(index: index)
             return
@@ -193,13 +196,8 @@ final class PlaylistServiceImpl: PlaylistService {
         }
         streamPlayer.loadQueue(trackItems, startingAt: index)
         startTrackObservation()
-
-        playbackStartInfo = (showId: showId, recordingId: recordingId, trackNumber: index + 1)
-        analyticsService?.track("playback_start", props: [
-            "show_id": showId,
-            "recording_id": recordingId,
-            "track_index": index + 1,
-        ])
+        // The observer will pick up the eventual settled track and fire
+        // playback_start once it's been current for the dwell window.
     }
 
     private func startTrackObservation() {
@@ -219,21 +217,45 @@ final class PlaylistServiceImpl: PlaylistService {
                 let newTrack = self.streamPlayer.currentTrack
                 if let newTrack, newTrack.id != lastTrackId {
                     lastTrackId = newTrack.id
-                    self.trackPlaybackEnd()
                     if let showId = newTrack.metadata["showId"],
                        let recordingId = newTrack.metadata["recordingId"],
                        let trackNumStr = newTrack.metadata["trackNumber"],
                        let trackNum = Int(trackNumStr) {
-                        self.playbackStartInfo = (showId: showId, recordingId: recordingId, trackNumber: trackNum)
-                        self.analyticsService?.track("playback_start", props: [
-                            "show_id": showId,
-                            "recording_id": recordingId,
-                            "track_index": trackNum,
-                        ])
+                        self.schedulePlaybackChange(
+                            to: (showId: showId, recordingId: recordingId, trackNumber: trackNum)
+                        )
                     }
                 }
             }
         }
+    }
+
+    /// Stage a track change behind a 1s dwell window. If another change comes in
+    /// before the timer fires (queue-load churn, rapid skips), the prior pending
+    /// change is dropped — only the settled track produces analytics events.
+    private func schedulePlaybackChange(to info: (showId: String, recordingId: String, trackNumber: Int)) {
+        pendingPlaybackTask?.cancel()
+        pendingPlaybackInfo = info
+        pendingPlaybackTask = Task { [weak self] in
+            try? await Task.sleep(for: .seconds(1))
+            guard !Task.isCancelled else { return }
+            await MainActor.run {
+                self?.commitPendingPlayback()
+            }
+        }
+    }
+
+    private func commitPendingPlayback() {
+        guard let pending = pendingPlaybackInfo else { return }
+        pendingPlaybackInfo = nil
+        // End the previously committed track (if any), then start the new one.
+        trackPlaybackEnd()
+        playbackStartInfo = pending
+        analyticsService?.track("playback_start", props: [
+            "show_id": pending.showId,
+            "recording_id": pending.recordingId,
+            "track_index": pending.trackNumber,
+        ])
     }
 
     /// Fires a `playback_end` event for the currently tracked playback, if any.
