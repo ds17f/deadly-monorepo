@@ -408,8 +408,8 @@ struct SearchScreen: View {
             } else {
                 ScrollView {
                     LazyVStack(spacing: 0) {
-                        ForEach(displayResults) { result in
-                            SearchResultRow(result: result)
+                        ForEach(Array(displayResults.enumerated()), id: \.element.id) { index, result in
+                            SearchResultRow(result: result, position: index)
                                 .padding(.horizontal, DeadlySpacing.screenPadding)
                                 .padding(.vertical, 6)
                             Divider()

@@ -69,7 +69,7 @@ final class PlaybackRestorationService {
         let trackIndex = min(saved.trackIndex, playlistService.tracks.count - 1)
         let seekPosition = TimeInterval(saved.positionMs) / 1000.0
 
-        playlistService.playTrack(at: trackIndex)
+        playlistService.playTrack(at: trackIndex, source: "restore")
 
         // The engine resolves redirects asynchronously before audio starts.
         // Poll until playing (or time out after 10 seconds).

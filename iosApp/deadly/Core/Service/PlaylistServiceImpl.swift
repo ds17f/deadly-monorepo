@@ -31,6 +31,11 @@ final class PlaylistServiceImpl: PlaylistService {
     private var pendingPlaybackInfo: (showId: String, recordingId: String, trackNumber: Int)?
     private var pendingPlaybackTask: Task<Void, Never>?
 
+    /// Source for the next playback_start emit. Set by `playTrack(at:source:)`,
+    /// consumed (and reset to "auto_advance") on each commit so subsequent
+    /// queue advances are correctly attributed to auto-advance.
+    private var nextPlaybackSource: String = "auto_advance"
+
     nonisolated init(
         showRepository: some ShowRepository,
         archiveClient: some ArchiveMetadataClient,
@@ -146,9 +151,11 @@ final class PlaylistServiceImpl: PlaylistService {
         await selectRecording(recording)
     }
 
-    func playTrack(at index: Int) {
+    func playTrack(at index: Int, source: String) {
         guard index >= 0, index < tracks.count,
               let recording = currentRecording else { return }
+
+        nextPlaybackSource = source
 
         // If the player already has this recording's queue loaded, skip directly to the index
         // instead of rebuilding the entire queue (avoids redundant network redirect resolution).
@@ -248,6 +255,8 @@ final class PlaylistServiceImpl: PlaylistService {
     private func commitPendingPlayback() {
         guard let pending = pendingPlaybackInfo else { return }
         pendingPlaybackInfo = nil
+        let source = nextPlaybackSource
+        nextPlaybackSource = "auto_advance"
         // End the previously committed track (if any), then start the new one.
         trackPlaybackEnd()
         playbackStartInfo = pending
@@ -255,6 +264,7 @@ final class PlaylistServiceImpl: PlaylistService {
             "show_id": pending.showId,
             "recording_id": pending.recordingId,
             "track_index": pending.trackNumber,
+            "source": source,
         ])
     }
 

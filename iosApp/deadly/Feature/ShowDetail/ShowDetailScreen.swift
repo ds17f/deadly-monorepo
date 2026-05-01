@@ -232,7 +232,7 @@ struct ShowDetailScreen: View {
                         )
                         .contentShape(Rectangle())
                         .onTapGesture {
-                            playlistService.playTrack(at: index)
+                            playlistService.playTrack(at: index, source: "browse")
                             playlistService.recordRecentPlay()
                         }
                     }
@@ -540,7 +540,7 @@ struct ShowDetailScreen: View {
         } else if isCurrentShowActive {
             streamPlayer.togglePlayPause()
         } else {
-            playlistService.playTrack(at: 0)
+            playlistService.playTrack(at: 0, source: "browse")
             playlistService.recordRecentPlay()
         }
     }
