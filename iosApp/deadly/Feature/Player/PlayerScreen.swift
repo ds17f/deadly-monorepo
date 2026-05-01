@@ -136,6 +136,7 @@ struct PlayerScreen: View {
                         // Playback controls
                         HStack(spacing: 52) {
                             Button {
+                                container.playlistService.noteUserSkip(forward: false)
                                 streamPlayer.previous()
                             } label: {
                                 Image(systemName: "backward.fill")
@@ -153,6 +154,7 @@ struct PlayerScreen: View {
                             }
 
                             Button {
+                                container.playlistService.noteUserSkip(forward: true)
                                 streamPlayer.next()
                             } label: {
                                 Image(systemName: "forward.fill")

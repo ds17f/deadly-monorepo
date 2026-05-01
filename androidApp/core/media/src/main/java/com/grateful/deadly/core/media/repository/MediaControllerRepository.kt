@@ -107,6 +107,16 @@ class MediaControllerRepository @Inject constructor(
     // Analytics: tracks the currently playing item for playback_end
     private var analyticsPlaybackInfo: Triple<String, String, Int>? = null // showId, recordingId, trackNumber
 
+    // Rolling snapshot of (position, duration) for the active track, refreshed
+    // every position-updater tick. Read at track-change time so listened_ms
+    // reflects the *ending* track, not the new one (whose position resets to 0).
+    private var lastKnownProgress: Pair<Long, Long> = 0L to 0L
+
+    // Explicit reason for the next playback_end emit. Set by skip / app-background
+    // / error paths; consumed (cleared) on each emission. When null, the
+    // transition path falls back to a heuristic on the snapshot.
+    private var pendingEndReason: String? = null
+
     // Unified playback status with computed progress
     val playbackStatus: StateFlow<PlaybackStatus> = combine(
         _currentPosition, _duration
@@ -487,7 +497,9 @@ class MediaControllerRepository @Inject constructor(
                         }
                         
                         override fun onMediaItemTransition(mediaItem: androidx.media3.common.MediaItem?, reason: Int) {
-                            firePlaybackEnd()
+                            val endReason = pendingEndReason ?: defaultEndReasonFromSnapshot()
+                            pendingEndReason = null
+                            firePlaybackEnd(endReason)
 
                             _currentMediaItem.value = mediaItem
                             _currentShowId.value = extractShowIdFromMediaItem(mediaItem)
@@ -515,14 +527,19 @@ class MediaControllerRepository @Inject constructor(
                         
                         override fun onPlaybackStateChanged(playbackState: Int) {
                             Log.d(TAG, "🕒🎵 [EXOPLAYER] ExoPlayer state changed: ${getExoPlayerStateString(currentExoPlayerState)} → ${getExoPlayerStateString(playbackState)}")
-                            
+
                             currentExoPlayerState = playbackState
                             updatePlaybackState()
-                            
+
                             if (playbackState == Player.STATE_READY) {
                                 _duration.value = controller.duration.coerceAtLeast(0L)
                                 _currentPosition.value = controller.currentPosition
                             }
+                        }
+
+                        override fun onPlayerError(error: androidx.media3.common.PlaybackException) {
+                            Log.e(TAG, "🕒🎵 [EXOPLAYER] Player error: ${error.errorCodeName}", error)
+                            firePlaybackEnd(reason = "network_error")
                         }
                     })
                     
@@ -724,18 +741,28 @@ class MediaControllerRepository @Inject constructor(
         }
     }
     
-    private fun firePlaybackEnd() {
+    private fun firePlaybackEnd(reason: String? = null) {
         val info = analyticsPlaybackInfo ?: return
-        val position = _currentPosition.value
-        val dur = _duration.value
-        analyticsService.track("playback_end", mapOf(
+        val (position, dur) = lastKnownProgress
+        val props = mutableMapOf<String, Any>(
             "show_id" to info.first,
             "recording_id" to info.second,
             "track_index" to info.third,
             "duration_ms" to dur,
             "listened_ms" to position
-        ))
+        )
+        if (reason != null) props["reason"] = reason
+        analyticsService.track("playback_end", props)
         analyticsPlaybackInfo = null
+        lastKnownProgress = 0L to 0L
+    }
+
+    /// Heuristic: if the snapshot was within ~2s of the track end, treat the
+    /// track as completed. Otherwise leave reason unset.
+    private fun defaultEndReasonFromSnapshot(): String? {
+        val (pos, dur) = lastKnownProgress
+        if (dur <= 0L) return null
+        return if (pos >= dur - 2000L) "completed" else null
     }
 
     private fun extractShowIdFromMediaItem(mediaItem: androidx.media3.common.MediaItem?): String? {
@@ -808,25 +835,40 @@ class MediaControllerRepository @Inject constructor(
             while (true) {
                 val controller = mediaController
                 if (controller != null) {
-                    _currentPosition.value = controller.currentPosition
+                    val pos = controller.currentPosition
+                    val dur = controller.duration.coerceAtLeast(0L)
+                    _currentPosition.value = pos
+                    // Refresh the rolling snapshot only while a track is committed,
+                    // and skip frames where the player hasn't loaded a duration yet.
+                    if (analyticsPlaybackInfo != null && dur > 0) {
+                        lastKnownProgress = pos to dur
+                    }
                 }
                 kotlinx.coroutines.delay(1000) // Update every second
             }
         }
     }
-    
+
     suspend fun seekToNext() {
         Log.d(TAG, "seekToNext - calling seekToNextMediaItem")
+        pendingEndReason = "skipped_next"
         executeWhenConnected {
             mediaController?.seekToNextMediaItem()
         }
     }
-    
+
     suspend fun seekToPrevious() {
         Log.d(TAG, "seekToPrevious - calling seekToPreviousMediaItem")
+        pendingEndReason = "skipped_prev"
         executeWhenConnected {
             mediaController?.seekToPreviousMediaItem()
         }
+    }
+
+    /// Called from MainActivity.onStop so the in-flight track gets attributed
+    /// to backgrounding rather than appearing as a half-listened mystery event.
+    fun notifyAppBackgrounded() {
+        firePlaybackEnd(reason = "app_backgrounded")
     }
     
     suspend fun seekToPosition(positionMs: Long) {

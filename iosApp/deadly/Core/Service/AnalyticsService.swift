@@ -5,9 +5,8 @@ import UIKit
 
 /// Fire-and-forget anonymous analytics client.
 /// Buffers events in memory and flushes to the server periodically.
-final class AnalyticsService: Sendable {
+final class AnalyticsService: @unchecked Sendable {
     private let appPreferences: AppPreferences
-    private let baseURL: String
     private let apiKey: String
     private let platform = "ios"
     private let sessionId = UUID().uuidString
@@ -17,9 +16,15 @@ final class AnalyticsService: Sendable {
     private let flushInterval: TimeInterval = 30
     private let maxBufferSize = 50
 
+    /// Computed each flush so changes to the dev custom-server setting take
+    /// effect immediately without needing an app restart.
+    private var baseURL: String { appPreferences.apiBaseUrl }
+
+    private let flushQueue = DispatchQueue(label: "deadly.analytics.flush", qos: .utility)
+    private var flushTimer: DispatchSourceTimer?
+
     init(appPreferences: AppPreferences, apiKey: String) {
         self.appPreferences = appPreferences
-        self.baseURL = appPreferences.apiBaseUrl
         self.apiKey = apiKey
         self.appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "unknown"
 
@@ -94,13 +99,13 @@ final class AnalyticsService: Sendable {
     // MARK: - Private
 
     private func startFlushTimer() {
-        let interval = flushInterval
-        Task.detached { [weak self] in
-            while !Task.isCancelled {
-                try? await Task.sleep(for: .seconds(interval))
-                self?.flush()
-            }
+        let timer = DispatchSource.makeTimerSource(queue: flushQueue)
+        timer.schedule(deadline: .now() + flushInterval, repeating: flushInterval)
+        timer.setEventHandler { [weak self] in
+            self?.flush()
         }
+        timer.resume()
+        flushTimer = timer
     }
 }
 

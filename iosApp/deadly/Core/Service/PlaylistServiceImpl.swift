@@ -1,5 +1,8 @@
 import Foundation
 import SwiftAudioStreamEx
+#if canImport(UIKit)
+import UIKit
+#endif
 
 @Observable
 @MainActor
@@ -36,6 +39,20 @@ final class PlaylistServiceImpl: PlaylistService {
     /// queue advances are correctly attributed to auto-advance.
     private var nextPlaybackSource: String = "auto_advance"
 
+    /// Rolling snapshot of the active track's progress, refreshed on every
+    /// progress tick. Read at track-change time so `listened_ms` reflects the
+    /// *ending* track, not the new one (which has already advanced by the
+    /// time the change observer fires).
+    private var lastKnownProgress: (currentTime: TimeInterval, duration: TimeInterval) = (0, 0)
+
+    /// Explicit reason for the next `playback_end` emit (skipped_next, etc).
+    /// When nil, the commit path falls back to a heuristic based on snapshot.
+    private var nextPlaybackEndReason: String?
+
+    private var progressObservationTask: Task<Void, Never>?
+    private var playbackStateObservationTask: Task<Void, Never>?
+    private var willResignActiveObserver: NSObjectProtocol?
+
     nonisolated init(
         showRepository: some ShowRepository,
         archiveClient: some ArchiveMetadataClient,
@@ -52,7 +69,24 @@ final class PlaylistServiceImpl: PlaylistService {
         self.streamPlayer = streamPlayer
         self.downloadService = downloadService
         self.analyticsService = analyticsService
+
+        MainActor.assumeIsolated {
+            self.startProgressObservation()
+            self.startPlaybackStateObservation()
+            self.willResignActiveObserver = NotificationCenter.default.addObserver(
+                forName: UIApplication.willResignActiveNotification,
+                object: nil,
+                queue: .main
+            ) { [weak self] _ in
+                MainActor.assumeIsolated {
+                    self?.endActivePlayback(reason: "app_backgrounded")
+                }
+            }
+        }
     }
+
+    // PlaylistServiceImpl lives for the full app lifetime, so no deinit cleanup
+    // is needed. Observation tasks self-terminate via `[weak self]` capture.
 
     // MARK: - Show Navigation
 
@@ -211,6 +245,19 @@ final class PlaylistServiceImpl: PlaylistService {
         trackObservationTask?.cancel()
         trackObservationTask = Task { [weak self] in
             guard let self else { return }
+            // Stage the *current* track immediately so the first track of a
+            // freshly-loaded queue gets a playback_start. Without this, the
+            // observer only ever fires on transitions and the initial track
+            // is silently dropped.
+            if let initialTrack = self.streamPlayer.currentTrack,
+               let showId = initialTrack.metadata["showId"],
+               let recordingId = initialTrack.metadata["recordingId"],
+               let trackNumStr = initialTrack.metadata["trackNumber"],
+               let trackNum = Int(trackNumStr) {
+                self.schedulePlaybackChange(
+                    to: (showId: showId, recordingId: recordingId, trackNumber: trackNum)
+                )
+            }
             var lastTrackId: UUID? = self.streamPlayer.currentTrack?.id
             while !Task.isCancelled {
                 await withCheckedContinuation { continuation in
@@ -257,8 +304,11 @@ final class PlaylistServiceImpl: PlaylistService {
         pendingPlaybackInfo = nil
         let source = nextPlaybackSource
         nextPlaybackSource = "auto_advance"
+        // Derive reason from explicit signal, else heuristic on the snapshot.
+        let reason = nextPlaybackEndReason ?? defaultEndReasonFromSnapshot()
+        nextPlaybackEndReason = nil
         // End the previously committed track (if any), then start the new one.
-        trackPlaybackEnd()
+        trackPlaybackEnd(reason: reason)
         playbackStartInfo = pending
         analyticsService?.track("playback_start", props: [
             "show_id": pending.showId,
@@ -268,18 +318,97 @@ final class PlaylistServiceImpl: PlaylistService {
         ])
     }
 
+    /// Heuristic: if the snapshot was within ~2s of the track's end, the
+    /// track finished naturally. Otherwise leave reason unset.
+    private func defaultEndReasonFromSnapshot() -> String? {
+        let (current, total) = lastKnownProgress
+        guard total > 0 else { return nil }
+        return current >= total - 2 ? "completed" : nil
+    }
+
     /// Fires a `playback_end` event for the currently tracked playback, if any.
-    private func trackPlaybackEnd() {
+    private func trackPlaybackEnd(reason: String?) {
         guard let info = playbackStartInfo else { return }
-        let progress = streamPlayer.progress
-        analyticsService?.track("playback_end", props: [
+        let snap = lastKnownProgress
+        var props: [String: Any] = [
             "show_id": info.showId,
             "recording_id": info.recordingId,
             "track_index": info.trackNumber,
-            "listened_ms": Int(progress.currentTime * 1000),
-            "duration_ms": Int(progress.duration * 1000),
-        ])
+            "listened_ms": Int(snap.currentTime * 1000),
+            "duration_ms": Int(snap.duration * 1000),
+        ]
+        if let reason {
+            props["reason"] = reason
+        }
+        analyticsService?.track("playback_end", props: props)
         playbackStartInfo = nil
+        lastKnownProgress = (0, 0)
+    }
+
+    /// Public entry point for callers (skip handlers, lifecycle observer)
+    /// to attribute the next emitted `playback_end` to a specific cause.
+    func noteUserSkip(forward: Bool) {
+        nextPlaybackEndReason = forward ? "skipped_next" : "skipped_prev"
+    }
+
+    /// End the active track immediately with an explicit reason. Used for
+    /// `app_backgrounded` and `network_error` where there's no track-change
+    /// observer event to drive the commit path.
+    private func endActivePlayback(reason: String) {
+        guard playbackStartInfo != nil else { return }
+        trackPlaybackEnd(reason: reason)
+    }
+
+    private func startProgressObservation() {
+        progressObservationTask?.cancel()
+        progressObservationTask = Task { [weak self] in
+            guard let self else { return }
+            while !Task.isCancelled {
+                await withCheckedContinuation { continuation in
+                    withObservationTracking {
+                        _ = self.streamPlayer.progress
+                    } onChange: {
+                        continuation.resume()
+                    }
+                }
+                guard !Task.isCancelled else { break }
+                let p = self.streamPlayer.progress
+                // Refresh only when the player is on the same track currently
+                // attributed to playbackStartInfo. During the dwell window
+                // after a transition, currentTrack has already advanced but
+                // playbackStartInfo still points to the prior track — writing
+                // here would overwrite the prior track's snapshot with the
+                // new track's early progress (~1s) and corrupt listened_ms.
+                if let info = self.playbackStartInfo,
+                   let track = self.streamPlayer.currentTrack,
+                   track.metadata["recordingId"] == info.recordingId,
+                   let trackNumStr = track.metadata["trackNumber"],
+                   Int(trackNumStr) == info.trackNumber,
+                   p.duration > 0 {
+                    self.lastKnownProgress = (p.currentTime, p.duration)
+                }
+            }
+        }
+    }
+
+    private func startPlaybackStateObservation() {
+        playbackStateObservationTask?.cancel()
+        playbackStateObservationTask = Task { [weak self] in
+            guard let self else { return }
+            while !Task.isCancelled {
+                await withCheckedContinuation { continuation in
+                    withObservationTracking {
+                        _ = self.streamPlayer.playbackState
+                    } onChange: {
+                        continuation.resume()
+                    }
+                }
+                guard !Task.isCancelled else { break }
+                if case .error = self.streamPlayer.playbackState {
+                    self.endActivePlayback(reason: "network_error")
+                }
+            }
+        }
     }
 
     func recordRecentPlay() {
