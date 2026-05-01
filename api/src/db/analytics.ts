@@ -72,7 +72,7 @@ const EVENT_SCHEMAS: Record<string, Set<string>> = {
   ]),
   search: new Set(["query", "query_length", "result_count", "selected_index"]),
   feature_use: new Set(["feature", "enabled", "value"]),
-  error: new Set(["domain", "message", "is_fatal"]),
+  error: new Set(["source", "message", "is_fatal"]),
   cold_start: new Set(["duration_ms"]),
 };
 
