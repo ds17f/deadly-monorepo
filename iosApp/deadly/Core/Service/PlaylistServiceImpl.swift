@@ -240,13 +240,12 @@ final class PlaylistServiceImpl: PlaylistService {
     private func trackPlaybackEnd() {
         guard let info = playbackStartInfo else { return }
         let progress = streamPlayer.progress
-        let completionRate = progress.duration > 0 ? progress.currentTime / progress.duration : 0
         analyticsService?.track("playback_end", props: [
             "show_id": info.showId,
             "recording_id": info.recordingId,
             "track_index": info.trackNumber,
-            "duration_ms": Int(progress.currentTime * 1000),
-            "completion_rate": round(completionRate * 100) / 100,
+            "listened_ms": Int(progress.currentTime * 1000),
+            "duration_ms": Int(progress.duration * 1000),
         ])
         playbackStartInfo = nil
     }
