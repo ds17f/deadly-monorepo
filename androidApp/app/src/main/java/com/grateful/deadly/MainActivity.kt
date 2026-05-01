@@ -15,6 +15,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.core.view.WindowCompat
 import com.grateful.deadly.core.database.AnalyticsService
+import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.theme.DeadlyMaterialTheme
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -23,6 +24,7 @@ import javax.inject.Inject
 class MainActivity : ComponentActivity() {
 
     @Inject lateinit var analyticsService: AnalyticsService
+    @Inject lateinit var mediaControllerRepository: MediaControllerRepository
 
     private var deepLinkUri by mutableStateOf<Uri?>(null)
 
@@ -52,6 +54,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onStop() {
         super.onStop()
+        mediaControllerRepository.notifyAppBackgrounded()
         analyticsService.flush()
     }
 
