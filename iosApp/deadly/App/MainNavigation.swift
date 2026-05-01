@@ -138,7 +138,7 @@ struct MainNavigation: View {
                             await container.playlistService.selectRecording(rec)
                         }
                         let idx = trackNumber.map { max(0, $0 - 1) } ?? 0
-                        container.playlistService.playTrack(at: idx)
+                        container.playlistService.playTrack(at: idx, source: "deeplink")
                         container.playlistService.recordRecentPlay()
                         showFullPlayer = true
                     }
