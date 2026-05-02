@@ -321,13 +321,11 @@ interface CompletionStyle {
 }
 
 const COMPLETION_STYLES: Record<string, CompletionStyle> = {
-  track_complete: { label: "completed", className: "text-emerald-400" },
-  next: { label: "skipped (next)", className: "text-amber-400" },
-  prev: { label: "skipped (prev)", className: "text-amber-400" },
-  pause: { label: "paused", className: "text-sky-300" },
-  stop: { label: "stopped", className: "text-zinc-400" },
-  error: { label: "error", className: "text-red-400" },
-  session_stop: { label: "session ended", className: "text-zinc-500" },
+  completed: { label: "completed", className: "text-emerald-400" },
+  skipped_next: { label: "skipped (next)", className: "text-amber-400" },
+  skipped_prev: { label: "skipped (prev)", className: "text-amber-400" },
+  app_backgrounded: { label: "backgrounded", className: "text-sky-300" },
+  network_error: { label: "network error", className: "text-red-400" },
 };
 
 const IN_PROGRESS_STYLE: CompletionStyle = {
