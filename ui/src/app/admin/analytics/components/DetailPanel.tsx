@@ -1,7 +1,30 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { ReactNode, useCallback, useEffect, useMemo, useState } from "react";
 import { emojiForId } from "./emojiId";
+
+const SHOW_ID_RE = /^\d{4}-\d{2}-\d{2}$/;
+
+function isShowId(value: string): boolean {
+  return SHOW_ID_RE.test(value);
+}
+
+function ShowLink({ id, className }: { id: string; className?: string }) {
+  return (
+    <a
+      href={`/shows/${id}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={(e) => e.stopPropagation()}
+      className={
+        className ??
+        "text-deadly-blue hover:text-white underline decoration-dotted underline-offset-2 transition-colors"
+      }
+    >
+      {id}
+    </a>
+  );
+}
 
 interface DetailRow {
   iid: string;
@@ -51,15 +74,30 @@ function relativeTime(iso: string): string {
   return `${Math.floor(ms / 86400_000)}d ago`;
 }
 
-function formatProps(propsStr: string): string {
+function PropsDisplay({ propsStr }: { propsStr: string }): ReactNode {
+  let obj: Record<string, unknown>;
   try {
-    const obj = JSON.parse(propsStr);
-    return Object.entries(obj)
-      .map(([k, v]) => `${k}=${v}`)
-      .join(", ");
+    obj = JSON.parse(propsStr);
   } catch {
     return propsStr;
   }
+  const entries = Object.entries(obj);
+  return (
+    <>
+      {entries.map(([k, v], i) => {
+        const value = String(v);
+        const linkable =
+          (k === "target_id" || k === "show_id") && isShowId(value);
+        return (
+          <span key={k}>
+            {i > 0 && ", "}
+            <span>{k}=</span>
+            {linkable ? <ShowLink id={value} /> : <span>{value}</span>}
+          </span>
+        );
+      })}
+    </>
+  );
 }
 
 export default function DetailPanel({
@@ -76,15 +114,6 @@ export default function DetailPanel({
   const [installData, setInstallData] = useState<InstallData | null>(null);
   const [installLoading, setInstallLoading] = useState(false);
   const [installEventFilter, setInstallEventFilter] = useState<string | null>(null);
-
-  const toggleSort = (key: keyof DetailRow) => {
-    if (sortKey === key) {
-      setSortDir((d) => (d === "asc" ? "desc" : "asc"));
-    } else {
-      setSortKey(key);
-      setSortDir("desc");
-    }
-  };
 
   const sortedRows = useMemo(() => {
     const sorted = [...rows];
@@ -281,7 +310,7 @@ export default function DetailPanel({
                       </div>
                       {evt.props && (
                         <p className="text-xs text-zinc-600 font-mono mt-1 break-all">
-                          {formatProps(evt.props)}
+                          <PropsDisplay propsStr={evt.props} />
                         </p>
                       )}
                     </div>
@@ -302,105 +331,87 @@ export default function DetailPanel({
             </div>
           ) : (
             <>
-              {/* Desktop table */}
-              <table className="w-full text-sm hidden lg:table">
-                <thead className="sticky top-0 bg-deadly-surface">
-                  <tr className="border-b border-zinc-700">
-                    {sortedRows.some((r) => r.detail != null) && (
-                      <SortHeader label="Detail" sortKey="detail" current={sortKey} dir={sortDir} onClick={toggleSort} />
-                    )}
-                    <SortHeader label="Install ID" sortKey="iid" current={sortKey} dir={sortDir} onClick={toggleSort} />
-                    <SortHeader label="Platform" sortKey="platform" current={sortKey} dir={sortDir} onClick={toggleSort} />
-                    <SortHeader label="Version" sortKey="app_version" current={sortKey} dir={sortDir} onClick={toggleSort} />
-                    <SortHeader label="Last Seen" sortKey="last_seen" current={sortKey} dir={sortDir} onClick={toggleSort} />
-                    <SortHeader label="Count" sortKey="event_count" current={sortKey} dir={sortDir} onClick={toggleSort} align="right" />
-                  </tr>
-                </thead>
-                <tbody>
-                  {sortedRows.map((row, i) => (
-                    <tr key={i} className="border-b border-zinc-800 last:border-0 hover:bg-zinc-800/50">
-                      {sortedRows.some((r) => r.detail != null) && (
-                        <td className="px-4 py-2 text-zinc-200 max-w-[200px] truncate">
-                          {row.detail ?? "—"}
-                        </td>
-                      )}
-                      <td className="px-4 py-2">
-                        <button
-                          className="text-deadly-blue hover:text-white transition-colors"
-                          onClick={() => openInstall(row.iid)}
-                        >
-                          <span className="mr-1">{emojiForId(row.iid)}</span>
-                          <span className="font-mono text-xs">{row.iid?.slice(0, 8)}</span>
-                        </button>
-                      </td>
-                      <td className="px-4 py-2 text-zinc-300">{row.platform}</td>
-                      <td className="px-4 py-2 text-zinc-400">{row.app_version}</td>
-                      <td className="px-4 py-2 text-zinc-400">{row.last_seen}</td>
-                      <td className="px-4 py-2 text-right text-zinc-300">{row.event_count}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              {/* Sort controls */}
+              <div className="flex items-center gap-2 px-3 pt-3 pb-1 text-xs text-zinc-500">
+                <span>Sort</span>
+                <select
+                  value={sortKey}
+                  onChange={(e) => setSortKey(e.target.value as keyof DetailRow)}
+                  className="bg-zinc-800 text-zinc-300 rounded px-2 py-1 border border-zinc-700"
+                >
+                  {sortedRows.some((r) => r.detail != null) && (
+                    <option value="detail">Detail</option>
+                  )}
+                  <option value="iid">Install</option>
+                  <option value="platform">Platform</option>
+                  <option value="app_version">Version</option>
+                  <option value="last_seen">Last seen</option>
+                  <option value="event_count">Count</option>
+                </select>
+                <button
+                  onClick={() => setSortDir((d) => (d === "asc" ? "desc" : "asc"))}
+                  className="text-zinc-300 hover:text-white px-2 py-1 rounded border border-zinc-700 bg-zinc-800"
+                  aria-label="Toggle sort direction"
+                >
+                  {sortDir === "asc" ? "▲" : "▼"}
+                </button>
+              </div>
 
-              {/* Mobile card list */}
-              <div className="lg:hidden p-3 space-y-2">
-                {sortedRows.map((row, i) => (
-                  <div
-                    key={i}
-                    className="bg-zinc-800/50 rounded-lg p-3 active:bg-zinc-700/50"
-                    onClick={() => openInstall(row.iid)}
-                  >
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-deadly-blue">
-                        <span className="mr-1">{emojiForId(row.iid)}</span>
-                        <span className="font-mono text-xs">{row.iid?.slice(0, 8)}</span>
-                      </span>
-                      <span className="text-xs text-zinc-500">{relativeTime(row.last_seen)}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-xs">
-                      <span className="text-zinc-300">{row.platform}</span>
-                      <span className="text-zinc-500">v{row.app_version}</span>
-                      {row.detail && (
-                        <span className="text-zinc-400 truncate">{row.detail}</span>
+              {/* Card list */}
+              <div className="p-3 space-y-2">
+                {sortedRows.map((row, i) => {
+                  const detail = row.detail;
+                  const detailIsShow = detail != null && isShowId(detail);
+                  return (
+                    <div
+                      key={i}
+                      className="bg-zinc-800/50 rounded-lg p-3 hover:bg-zinc-800 active:bg-zinc-700/50 cursor-pointer"
+                      onClick={() => openInstall(row.iid)}
+                    >
+                      {detail && (
+                        <div className="flex items-baseline justify-between gap-3 mb-1.5">
+                          <span className="text-sm text-zinc-100 break-all">
+                            {detailIsShow ? (
+                              <ShowLink id={detail} />
+                            ) : (
+                              detail
+                            )}
+                          </span>
+                          <span className="text-sm text-zinc-300 tabular-nums flex-shrink-0">
+                            {row.event_count}
+                          </span>
+                        </div>
                       )}
-                      <span className="ml-auto text-zinc-400">{row.event_count}</span>
+                      <div className="flex items-center justify-between gap-2 text-xs">
+                        <button
+                          className="text-deadly-blue hover:text-white transition-colors flex items-center gap-1 min-w-0"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            openInstall(row.iid);
+                          }}
+                        >
+                          <span>{emojiForId(row.iid)}</span>
+                          <span className="font-mono">{row.iid?.slice(0, 8)}</span>
+                        </button>
+                        <div className="flex items-center gap-2 text-zinc-400 flex-shrink-0">
+                          <span>{row.platform}</span>
+                          <span className="text-zinc-500">v{row.app_version}</span>
+                          <span className="text-zinc-500">{relativeTime(row.last_seen)}</span>
+                          {!detail && (
+                            <span className="text-zinc-300 tabular-nums ml-1">
+                              {row.event_count}
+                            </span>
+                          )}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </>
           )}
         </div>
       </div>
     </>
-  );
-}
-
-function SortHeader({
-  label,
-  sortKey,
-  current,
-  dir,
-  onClick,
-  align,
-}: {
-  label: string;
-  sortKey: keyof DetailRow;
-  current: keyof DetailRow;
-  dir: SortDir;
-  onClick: (key: keyof DetailRow) => void;
-  align?: "right";
-}) {
-  const active = current === sortKey;
-  return (
-    <th
-      className={`px-4 py-2 text-zinc-400 cursor-pointer hover:text-zinc-200 select-none whitespace-nowrap ${
-        align === "right" ? "text-right" : "text-left"
-      }`}
-      onClick={() => onClick(sortKey)}
-    >
-      {label}
-      {active && <span className="ml-1">{dir === "asc" ? "▲" : "▼"}</span>}
-    </th>
   );
 }
