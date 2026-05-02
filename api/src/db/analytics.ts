@@ -71,7 +71,14 @@ const EVENT_SCHEMAS: Record<string, Set<string>> = {
     "reason",
   ]),
   search: new Set(["query", "query_length", "result_count", "selected_index"]),
-  feature_use: new Set(["feature", "enabled", "value"]),
+  feature_use: new Set([
+    "feature",
+    "enabled",
+    "value",
+    "target_type",
+    "target_id",
+    "category",
+  ]),
   error: new Set(["source", "message", "is_fatal"]),
   cold_start: new Set(["duration_ms"]),
 };
@@ -155,6 +162,19 @@ export function pruneOldEvents(): void {
 
 // ── Summary queries ──────────────────────────────────────────────────
 
+export type FeatureCategory =
+  | "action"
+  | "preference"
+  | "navigation"
+  | "uncategorized";
+
+export interface FeatureAdoptionEntry {
+  feature: string;
+  uses: number;
+}
+
+export type FeatureAdoption = Record<FeatureCategory, FeatureAdoptionEntry[]>;
+
 export interface AnalyticsSummary {
   dau: number;
   wau: number;
@@ -163,7 +183,7 @@ export interface AnalyticsSummary {
   stale_installs_30d: number;
   platform_split: Record<string, number>;
   top_shows: Array<{ show_id: string; plays: number }>;
-  feature_adoption: Record<string, number>;
+  feature_adoption: FeatureAdoption;
   avg_completion_rate: number | null;
   events_today: number;
 }
@@ -242,16 +262,38 @@ export function getSummary(): AnalyticsSummary {
     )
     .all(monthAgo) as Array<{ show_id: string; plays: number }>;
 
-  // Feature adoption (last 30 days)
+  // Feature adoption (last 30 days), bucketed by category
   const featureRows = db
     .prepare(
-      `SELECT json_extract(props, '$.feature') AS feature, COUNT(*) AS uses
+      `SELECT
+       json_extract(props, '$.feature') AS feature,
+       json_extract(props, '$.category') AS category,
+       COUNT(*) AS uses
      FROM analytics_events
-     WHERE event = 'feature_use' AND ts > ? GROUP BY feature ORDER BY uses DESC`,
+     WHERE event = 'feature_use' AND ts > ?
+     GROUP BY feature, category ORDER BY uses DESC`,
     )
-    .all(monthAgo) as Array<{ feature: string; uses: number }>;
-  const feature_adoption: Record<string, number> = {};
-  for (const r of featureRows) feature_adoption[r.feature] = r.uses;
+    .all(monthAgo) as Array<{
+    feature: string;
+    category: string | null;
+    uses: number;
+  }>;
+  const feature_adoption: FeatureAdoption = {
+    action: [],
+    preference: [],
+    navigation: [],
+    uncategorized: [],
+  };
+  for (const r of featureRows) {
+    if (!r.feature) continue;
+    const bucket: FeatureCategory =
+      r.category === "action" ||
+      r.category === "preference" ||
+      r.category === "navigation"
+        ? r.category
+        : "uncategorized";
+    feature_adoption[bucket].push({ feature: r.feature, uses: r.uses });
+  }
 
   // Average completion rate (last 30 days)
   const completion = db
@@ -513,8 +555,15 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
 
     case "feature_adoption":
       if (filter) {
+        // When drilling into a specific feature, surface target_id (when
+        // present) so per-target counts are visible. Falls back to feature
+        // name for events without a target_id.
         return db.prepare(`
-          SELECT json_extract(props, '$.feature') AS detail,
+          SELECT
+            COALESCE(
+              json_extract(props, '$.target_id'),
+              json_extract(props, '$.feature')
+            ) AS detail,
             iid, platform, app_version,
             datetime(ts/1000, 'unixepoch') AS last_seen,
             1 AS event_count
