@@ -136,7 +136,6 @@ final class DownloadServiceImpl: DownloadService {
 
     func downloadShow(_ showId: String, recordingId: String?) async throws {
         logger.debug("Starting download for show: \(showId)")
-        analyticsService?.track("feature_use", props: ["feature": "download_show"])
 
         // Resolve recording
         let resolvedRecordingId: String
@@ -147,6 +146,14 @@ final class DownloadServiceImpl: DownloadService {
         } else {
             throw DownloadError.noRecordingFound
         }
+
+        analyticsService?.track("feature_use", props: [
+            "feature": "download_show",
+            "category": "action",
+            "target_type": "show",
+            "target_id": showId,
+            "recording_id": resolvedRecordingId,
+        ])
 
         // Fetch tracks
         let allTracks = try await archiveClient.fetchTracks(recordingId: resolvedRecordingId)

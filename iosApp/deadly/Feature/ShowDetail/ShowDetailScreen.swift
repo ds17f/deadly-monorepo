@@ -47,6 +47,12 @@ struct ShowDetailScreen: View {
         .navigationBarTitleDisplayMode(.inline)
         .task {
             await playlistService.loadShow(showId)
+            container.analyticsService.track("feature_use", props: [
+                "feature": "view_show",
+                "category": "action",
+                "target_type": "show",
+                "target_id": showId,
+            ])
             isFavorite = (try? container.favoritesService.isFavorite(showId: showId)) ?? false
             let review = try? container.reviewService.getShowReview(showId)
             userReview = review?.hasContent == true ? review : nil

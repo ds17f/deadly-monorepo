@@ -93,7 +93,12 @@ class FavoritesServiceImpl @Inject constructor(
         Log.d(TAG, "addToFavorites('$showId') - using FavoritesRepository")
         val result = favoritesRepository.addShowToFavorites(showId)
         if (result.isSuccess) {
-            analyticsService.track("feature_use", mapOf("feature" to "add_favorite"))
+            analyticsService.track("feature_use", mapOf(
+                "feature" to "add_favorite",
+                "category" to "action",
+                "target_type" to "show",
+                "target_id" to showId,
+            ))
             appPreferences.setHasAddedFavorite(true)
             appReviewManager.checkAndMaybePrompt()
         }
@@ -104,7 +109,12 @@ class FavoritesServiceImpl @Inject constructor(
     override suspend fun removeFromFavorites(showId: String): Result<Unit> {
         Log.d(TAG, "removeFromFavorites('$showId') - using FavoritesRepository")
         val result = favoritesRepository.removeShowFromFavorites(showId)
-        if (result.isSuccess) analyticsService.track("feature_use", mapOf("feature" to "remove_favorite"))
+        if (result.isSuccess) analyticsService.track("feature_use", mapOf(
+            "feature" to "remove_favorite",
+            "category" to "action",
+            "target_type" to "show",
+            "target_id" to showId,
+        ))
         return result
     }
 
@@ -168,7 +178,13 @@ class FavoritesServiceImpl @Inject constructor(
 
     override suspend fun downloadShow(showId: String, recordingId: String?): Result<Unit> {
         Log.d(TAG, "downloadShow('$showId', recording=$recordingId)")
-        analyticsService.track("feature_use", mapOf("feature" to "download_show"))
+        analyticsService.track("feature_use", buildMap {
+            put("feature", "download_show")
+            put("category", "action")
+            put("target_type", "show")
+            put("target_id", showId)
+            if (recordingId != null) put("recording_id", recordingId)
+        })
         // Auto-add to favorites if not already present
         if (!favoritesRepository.isShowFavorite(showId)) {
             favoritesRepository.addShowToFavorites(showId)
@@ -238,7 +254,13 @@ class FavoritesServiceImpl @Inject constructor(
             shareService.shareShow(show, recording)
 
             Log.d(TAG, "Successfully shared show: ${show.displayTitle}")
-            analyticsService.track("feature_use", mapOf("feature" to "share_show"))
+            analyticsService.track("feature_use", mapOf(
+                "feature" to "share_show",
+                "category" to "action",
+                "target_type" to "show",
+                "target_id" to showId,
+                "recording_id" to recording.identifier,
+            ))
             Result.success(Unit)
 
         } catch (e: Exception) {

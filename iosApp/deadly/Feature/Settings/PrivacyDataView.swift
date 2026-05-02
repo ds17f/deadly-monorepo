@@ -17,7 +17,7 @@ struct PrivacyDataView: View {
                     set: { disabling in
                         let newEnabled = !disabling
                         let event = newEnabled ? "analytics_opt_in" : "analytics_opt_out"
-                        container.analyticsService.track("feature_use", props: ["feature": event])
+                        container.analyticsService.track("feature_use", props: ["feature": event, "category": "account"])
                         container.analyticsService.flush()
                         container.appPreferences.analyticsEnabled = newEnabled
                     }
