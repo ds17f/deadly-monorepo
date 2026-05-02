@@ -355,6 +355,15 @@ class PlaylistViewModel @Inject constructor(
 
                 Log.d(TAG, "Show loaded successfully: ${showData?.displayDate} - showing DB data immediately")
 
+                showData?.showId?.let { loadedShowId ->
+                    analyticsService.track("feature_use", mapOf(
+                        "feature" to "view_show",
+                        "category" to "action",
+                        "target_type" to "show",
+                        "target_id" to loadedShowId,
+                    ))
+                }
+
                 // Start track loading in background
                 loadTrackListAsync()
 
@@ -689,7 +698,15 @@ class PlaylistViewModel @Inject constructor(
      */
     fun showReviews() {
         Log.d(TAG, "Show reviews requested")
-        analyticsService.track("feature_use", mapOf("feature" to "view_reviews"))
+        val showId = _baseUiState.value.showData?.showId
+        analyticsService.track("feature_use", buildMap {
+            put("feature", "view_reviews")
+            put("category", "action")
+            if (showId != null) {
+                put("target_type", "show")
+                put("target_id", showId)
+            }
+        })
         _baseUiState.value = _baseUiState.value.copy(showReviewDetails = true)
         loadReviews()
     }
@@ -745,7 +762,15 @@ class PlaylistViewModel @Inject constructor(
      */
     fun showSetlist() {
         Log.d(TAG, "Show setlist requested")
-        analyticsService.track("feature_use", mapOf("feature" to "view_setlist"))
+        val showId = _baseUiState.value.showData?.showId
+        analyticsService.track("feature_use", buildMap {
+            put("feature", "view_setlist")
+            put("category", "action")
+            if (showId != null) {
+                put("target_type", "show")
+                put("target_id", showId)
+            }
+        })
         showSetlistModal()
     }
     
@@ -861,7 +886,15 @@ class PlaylistViewModel @Inject constructor(
      */
     fun showMenu() {
         Log.d(TAG, "Show menu requested")
-        analyticsService.track("feature_use", mapOf("feature" to "open_menu"))
+        val showId = _baseUiState.value.showData?.showId
+        analyticsService.track("feature_use", buildMap {
+            put("feature", "open_menu")
+            put("category", "action")
+            if (showId != null) {
+                put("target_type", "show")
+                put("target_id", showId)
+            }
+        })
         _baseUiState.value = _baseUiState.value.copy(showMenu = true)
     }
     
@@ -1110,7 +1143,15 @@ class PlaylistViewModel @Inject constructor(
      */
     fun showCollectionsSheet() {
         Log.d(TAG, "Show collections sheet requested")
-        analyticsService.track("feature_use", mapOf("feature" to "view_collections"))
+        val showId = _baseUiState.value.showData?.showId
+        analyticsService.track("feature_use", buildMap {
+            put("feature", "view_collections")
+            put("category", "action")
+            if (showId != null) {
+                put("target_type", "show")
+                put("target_id", showId)
+            }
+        })
         _baseUiState.value = _baseUiState.value.copy(showCollectionsSheet = true)
     }
     
@@ -1421,7 +1462,12 @@ class PlaylistViewModel @Inject constructor(
         viewModelScope.launch {
             val existing = reviewService.getShowReview(showId)
             val isEdit = existing?.hasContent == true
-            analyticsService.track("feature_use", mapOf("feature" to if (isEdit) "edit_review" else "write_review"))
+            analyticsService.track("feature_use", mapOf(
+                "feature" to if (isEdit) "edit_review" else "write_review",
+                "category" to "action",
+                "target_type" to "show",
+                "target_id" to showId,
+            ))
             _userReview.value = existing ?: ShowReview(showId = showId)
             _reviewLineup.value = playlistService.getCurrentShowLineup()
             _showWriteReview.value = true
@@ -1434,7 +1480,12 @@ class PlaylistViewModel @Inject constructor(
 
     fun deleteUserReview() {
         val showId = _baseUiState.value.showData?.showId ?: return
-        analyticsService.track("feature_use", mapOf("feature" to "delete_review"))
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "delete_review",
+            "category" to "action",
+            "target_type" to "show",
+            "target_id" to showId,
+        ))
         viewModelScope.launch {
             reviewService.deleteShowReview(showId)
             _hasUserReview.value = false
@@ -1452,7 +1503,13 @@ class PlaylistViewModel @Inject constructor(
     ) {
         val showId = _baseUiState.value.showData?.showId ?: return
         val recordingId = _baseUiState.value.showData?.currentRecordingId
-        analyticsService.track("feature_use", mapOf("feature" to "save_review"))
+        analyticsService.track("feature_use", buildMap {
+            put("feature", "save_review")
+            put("category", "action")
+            put("target_type", "show")
+            put("target_id", showId)
+            if (recordingId != null) put("recording_id", recordingId)
+        })
         viewModelScope.launch {
             reviewService.updateShowNotes(showId, notes)
             reviewService.updateShowRating(showId, rating)

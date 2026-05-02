@@ -58,7 +58,12 @@ final class FavoritesServiceImpl {
                     Column("favoritedAt").set(to: now)
                 )
         }
-        analyticsService?.track("feature_use", props: ["feature": "add_favorite"])
+        analyticsService?.track("feature_use", props: [
+            "feature": "add_favorite",
+            "category": "action",
+            "target_type": "show",
+            "target_id": showId,
+        ])
     }
 
     func removeFromFavorites(showId: String) throws {
@@ -71,7 +76,12 @@ final class FavoritesServiceImpl {
                     Column("favoritedAt").set(to: nil as Int64?)
                 )
         }
-        analyticsService?.track("feature_use", props: ["feature": "remove_favorite"])
+        analyticsService?.track("feature_use", props: [
+            "feature": "remove_favorite",
+            "category": "action",
+            "target_type": "show",
+            "target_id": showId,
+        ])
     }
 
     func isFavorite(showId: String) throws -> Bool {
