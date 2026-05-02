@@ -238,7 +238,48 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
               },
               feature_adoption: {
                 type: "object",
-                additionalProperties: { type: "number" },
+                properties: {
+                  action: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        feature: { type: "string" },
+                        uses: { type: "number" },
+                      },
+                    },
+                  },
+                  preference: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        feature: { type: "string" },
+                        uses: { type: "number" },
+                      },
+                    },
+                  },
+                  navigation: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        feature: { type: "string" },
+                        uses: { type: "number" },
+                      },
+                    },
+                  },
+                  uncategorized: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        feature: { type: "string" },
+                        uses: { type: "number" },
+                      },
+                    },
+                  },
+                },
               },
               avg_completion_rate: { type: ["number", "null"] },
               events_today: { type: "number" },

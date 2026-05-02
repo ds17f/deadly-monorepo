@@ -11,6 +11,18 @@ import FeatureAdoption from "./components/FeatureAdoption";
 import ShowPlayback from "./components/ShowPlayback";
 import CollapsibleSection from "./components/CollapsibleSection";
 
+interface FeatureAdoptionEntry {
+  feature: string;
+  uses: number;
+}
+
+interface FeatureAdoption {
+  action: FeatureAdoptionEntry[];
+  preference: FeatureAdoptionEntry[];
+  navigation: FeatureAdoptionEntry[];
+  uncategorized: FeatureAdoptionEntry[];
+}
+
 interface AnalyticsSummary {
   dau: number;
   wau: number;
@@ -19,7 +31,7 @@ interface AnalyticsSummary {
   stale_installs_30d: number;
   platform_split: Record<string, number>;
   top_shows: Array<{ show_id: string; plays: number }>;
-  feature_adoption: Record<string, number>;
+  feature_adoption: FeatureAdoption;
   avg_completion_rate: number | null;
   events_today: number;
 }
