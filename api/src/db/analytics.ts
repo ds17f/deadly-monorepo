@@ -387,6 +387,13 @@ export interface ShowListeningSession {
   total_duration_ms: number;
 }
 
+export type TrackOutcome = "complete" | "skipped" | "error" | "partial";
+
+export interface TrackPlay {
+  index: number;
+  outcome: TrackOutcome;
+}
+
 export interface ShowPlaybackSummary {
   active_listeners: number;
   unique_shows: number;
@@ -394,48 +401,120 @@ export interface ShowPlaybackSummary {
   listeners: Array<{
     show_id: string;
     iid: string;
-    tracks_played: number[];
+    tracks: TrackPlay[];
     last_seen: string;
     resumed: boolean;
   }>;
+}
+
+/**
+ * Map a `playback_end.reason` to a track outcome. Unknown reasons fall through
+ * to "partial" so the track still shows as "heard something" rather than
+ * disappearing from the bar.
+ */
+function reasonToOutcome(reason: string | null): TrackOutcome {
+  switch (reason) {
+    case "track_complete":
+      return "complete";
+    case "next":
+    case "prev":
+      return "skipped";
+    case "error":
+      return "error";
+    default:
+      // pause, stop, session_stop, or anything unknown: the user heard *some*
+      // of the track but didn't finish it.
+      return "partial";
+  }
 }
 
 export function getShowPlaybackSummary(days: number): ShowPlaybackSummary {
   const db = getAnalyticsDb();
   const cutoff = Date.now() - days * 24 * 3600 * 1000;
 
-  const starts = db.prepare(`
+  // Pull every playback_start / playback_end in the window. Track outcomes
+  // require both sides — playback_end carries the reason, playback_start is
+  // the only signal when a track was started but never ended.
+  const rows = db.prepare(`
     SELECT
-      json_extract(props, '$.show_id') AS show_id,
       iid,
-      COUNT(DISTINCT sid) AS sessions,
-      json_group_array(DISTINCT COALESCE(CAST(json_extract(props, '$.track_index') AS INTEGER), 0)) AS track_indices,
-      datetime(MAX(ts) / 1000, 'unixepoch') AS last_seen
+      sid,
+      ts,
+      event,
+      json_extract(props, '$.show_id') AS show_id,
+      COALESCE(CAST(json_extract(props, '$.track_index') AS INTEGER), 0) AS track_index,
+      json_extract(props, '$.reason') AS reason
     FROM analytics_events
-    WHERE event = 'playback_start' AND ts > ?
+    WHERE event IN ('playback_start', 'playback_end')
+      AND ts > ?
       AND json_extract(props, '$.show_id') IS NOT NULL
-    GROUP BY show_id, iid
+    ORDER BY ts ASC
   `).all(cutoff) as Array<{
-    show_id: string;
     iid: string;
-    sessions: number;
-    track_indices: string;
-    last_seen: string;
+    sid: string;
+    ts: number;
+    event: string;
+    show_id: string;
+    track_index: number;
+    reason: string | null;
   }>;
 
-  const listeners = starts.map((s) => {
-    const indices: number[] = JSON.parse(s.track_indices);
+  // Group by (iid, show_id) and within that by track_index. The latest event
+  // wins — playback_end overrides playback_start at the same index, and a
+  // newer skip overrides an older complete (e.g. user replayed and skipped).
+  interface Group {
+    iid: string;
+    show_id: string;
+    sessions: Set<string>;
+    lastTs: number;
+    tracks: Map<number, { ts: number; outcome: TrackOutcome }>;
+  }
+
+  const groups = new Map<string, Group>();
+  for (const r of rows) {
+    const key = `${r.iid}::${r.show_id}`;
+    let g = groups.get(key);
+    if (!g) {
+      g = {
+        iid: r.iid,
+        show_id: r.show_id,
+        sessions: new Set(),
+        lastTs: 0,
+        tracks: new Map(),
+      };
+      groups.set(key, g);
+    }
+    g.sessions.add(r.sid);
+    if (r.ts > g.lastTs) g.lastTs = r.ts;
+
+    const prior = g.tracks.get(r.track_index);
+    // playback_start without a later end → "partial" (still in progress / not
+    // finalised). It only wins if there's no event yet for this track.
+    if (r.event === "playback_start") {
+      if (!prior) g.tracks.set(r.track_index, { ts: r.ts, outcome: "partial" });
+      continue;
+    }
+    // playback_end: latest wins.
+    if (!prior || r.ts >= prior.ts) {
+      g.tracks.set(r.track_index, { ts: r.ts, outcome: reasonToOutcome(r.reason) });
+    }
+  }
+
+  const listeners = Array.from(groups.values()).map((g) => {
+    const tracks: TrackPlay[] = Array.from(g.tracks.entries())
+      .map(([index, v]) => ({ index, outcome: v.outcome }))
+      .sort((a, b) => a.index - b.index);
     return {
-      show_id: s.show_id,
-      iid: s.iid,
-      tracks_played: indices.sort((a, b) => a - b),
-      last_seen: s.last_seen,
-      resumed: s.sessions > 1,
+      show_id: g.show_id,
+      iid: g.iid,
+      tracks,
+      last_seen: new Date(g.lastTs).toISOString().replace("T", " ").slice(0, 19),
+      resumed: g.sessions.size > 1,
     };
   });
 
-  const uniqueListeners = new Set(starts.map((s) => s.iid));
-  const uniqueShows = new Set(starts.map((s) => s.show_id));
+  const uniqueListeners = new Set(listeners.map((l) => l.iid));
+  const uniqueShows = new Set(listeners.map((l) => l.show_id));
   const resumedCount = listeners.filter((l) => l.resumed).length;
 
   return {

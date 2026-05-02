@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState, useCallback, useMemo } from "react";
 import MetricCard from "./components/MetricCard";
 import DetailPanel from "./components/DetailPanel";
+import InstallDetailPanel from "./components/InstallDetailPanel";
 import TopShowsList from "./components/TopShowsList";
 import PlatformChart from "./components/PlatformChart";
 import FeatureAdoption from "./components/FeatureAdoption";
@@ -100,6 +101,11 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
   const [activeFilter, setActiveFilter] = useState<string | undefined>(undefined);
   const [detailRows, setDetailRows] = useState<DetailRow[]>([]);
   const [detailLoading, setDetailLoading] = useState(false);
+
+  // Install detail modal — opened from any iid reference in the dashboard
+  const [activeInstall, setActiveInstall] = useState<string | null>(null);
+  const openInstall = useCallback((iid: string) => setActiveInstall(iid), []);
+  const closeInstall = useCallback(() => setActiveInstall(null), []);
 
   // Collapse all state
   const [allCollapsed, setAllCollapsed] = useState(false);
@@ -308,7 +314,7 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
 
       {/* Show Listening */}
       <CollapsibleSection title="Show Listening (30d)" forceOpen={forceOpen}>
-        <ShowPlayback showMap={showMap} />
+        <ShowPlayback showMap={showMap} onOpenInstall={openInstall} />
       </CollapsibleSection>
 
       {/* Detail Panel */}
@@ -320,7 +326,13 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
           loading={detailLoading}
           onClose={closeDetail}
           onClearFilter={activeFilter ? () => openDetail(activeMetric) : undefined}
+          onOpenInstall={openInstall}
         />
+      )}
+
+      {/* Install Detail (stacks on top of DetailPanel when both open) */}
+      {activeInstall && (
+        <InstallDetailPanel iid={activeInstall} onClose={closeInstall} />
       )}
     </div>
   );
