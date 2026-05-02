@@ -414,16 +414,16 @@ export interface ShowPlaybackSummary {
  */
 function reasonToOutcome(reason: string | null): TrackOutcome {
   switch (reason) {
-    case "track_complete":
+    case "completed":
       return "complete";
-    case "next":
-    case "prev":
+    case "skipped_next":
+    case "skipped_prev":
       return "skipped";
-    case "error":
+    case "network_error":
       return "error";
     default:
-      // pause, stop, session_stop, or anything unknown: the user heard *some*
-      // of the track but didn't finish it.
+      // app_backgrounded, null (legacy), or anything unknown: the user heard
+      // some of the track but didn't finish it.
       return "partial";
   }
 }
