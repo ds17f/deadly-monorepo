@@ -2,7 +2,9 @@
 
 import { ReactNode, useMemo, useState } from "react";
 
-const SHOW_ID_RE = /^\d{4}-\d{2}-\d{2}$/;
+// Show IDs are slugs that start with YYYY-MM-DD and continue with venue/city,
+// e.g. 1971-04-27-fillmore-east-new-york-ny-usa. Bare YYYY-MM-DD also matches.
+const SHOW_ID_RE = /^\d{4}-\d{2}-\d{2}(-[\w-]+)?$/;
 
 function isShowId(value: unknown): value is string {
   return typeof value === "string" && SHOW_ID_RE.test(value);

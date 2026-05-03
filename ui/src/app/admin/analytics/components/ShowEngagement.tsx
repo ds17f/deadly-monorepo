@@ -115,7 +115,8 @@ function Section({
 
 export default function ShowEngagement({ data, showMap, onShowClick }: Props) {
   const buckets: ActionShowsBucket[] = ["favorited", "downloaded", "reviewed", "shared"];
-  const total = buckets.reduce((acc, b) => acc + (data[b]?.length ?? 0), 0);
+  const safe = data ?? ({} as Partial<TopShowsByAction>);
+  const total = buckets.reduce((acc, b) => acc + (safe[b]?.length ?? 0), 0);
   if (total === 0) {
     return (
       <p className="text-sm text-zinc-500 italic">
@@ -131,7 +132,7 @@ export default function ShowEngagement({ data, showMap, onShowClick }: Props) {
         <Section
           key={b}
           label={SECTION_LABELS[b]}
-          rows={data[b] ?? []}
+          rows={safe[b] ?? []}
           showMap={showMap}
           onShowClick={onShowClick}
         />

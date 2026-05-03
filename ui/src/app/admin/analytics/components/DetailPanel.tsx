@@ -3,7 +3,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { emojiForId } from "./emojiId";
 
-const SHOW_ID_RE = /^\d{4}-\d{2}-\d{2}$/;
+// Show IDs are slugs starting with YYYY-MM-DD; venue/city tail is optional.
+const SHOW_ID_RE = /^\d{4}-\d{2}-\d{2}(-[\w-]+)?$/;
 
 function isShowId(value: string): boolean {
   return SHOW_ID_RE.test(value);
