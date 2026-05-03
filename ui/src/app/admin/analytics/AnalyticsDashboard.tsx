@@ -11,6 +11,7 @@ import PlatformChart from "./components/PlatformChart";
 import FeatureAdoption from "./components/FeatureAdoption";
 import ShowPlayback from "./components/ShowPlayback";
 import CollapsibleSection from "./components/CollapsibleSection";
+import ShowEngagement, { TopShowsByAction } from "./components/ShowEngagement";
 
 interface FeatureAdoptionEntry {
   feature: string;
@@ -32,6 +33,7 @@ interface AnalyticsSummary {
   stale_installs_30d: number;
   platform_split: Record<string, number>;
   top_shows: Array<{ show_id: string; plays: number }>;
+  top_shows_by_action: TopShowsByAction;
   feature_adoption: FeatureAdoption;
   avg_completion_rate: number | null;
   events_today: number;
@@ -299,6 +301,15 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
       <CollapsibleSection title="Top Shows (30d)" forceOpen={forceOpen} onDetail={() => openDetail("top_shows")}>
         <TopShowsList
           shows={data.top_shows}
+          showMap={showMap}
+          onShowClick={(id) => openDetail("top_shows", id)}
+        />
+      </CollapsibleSection>
+
+      {/* Show Engagement (favorites / downloads / reviews / shares) */}
+      <CollapsibleSection title="Show Engagement (30d)" forceOpen={forceOpen}>
+        <ShowEngagement
+          data={data.top_shows_by_action}
           showMap={showMap}
           onShowClick={(id) => openDetail("top_shows", id)}
         />

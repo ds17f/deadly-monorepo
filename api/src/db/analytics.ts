@@ -175,6 +175,10 @@ export interface FeatureAdoptionEntry {
 
 export type FeatureAdoption = Record<FeatureCategory, FeatureAdoptionEntry[]>;
 
+export type ActionShowsBucket = "favorited" | "downloaded" | "reviewed" | "shared";
+
+export type ActionShowsRow = { show_id: string; users: number };
+
 export interface AnalyticsSummary {
   dau: number;
   wau: number;
@@ -183,6 +187,7 @@ export interface AnalyticsSummary {
   stale_installs_30d: number;
   platform_split: Record<string, number>;
   top_shows: Array<{ show_id: string; plays: number }>;
+  top_shows_by_action: Record<ActionShowsBucket, ActionShowsRow[]>;
   feature_adoption: FeatureAdoption;
   avg_completion_rate: number | null;
   events_today: number;
@@ -295,6 +300,39 @@ export function getSummary(): AnalyticsSummary {
     feature_adoption[bucket].push({ feature: r.feature, uses: r.uses });
   }
 
+  // Top show targets per action feature (last 30 days). Uses target_id with
+  // a show_id fallback for any pre-DEAD-324 events that still carry only
+  // show_id. Counts distinct iids — "popularity" measured in users, not raw
+  // taps.
+  function topShowsForFeatures(features: string[], limit: number): ActionShowsRow[] {
+    const placeholders = features.map(() => "?").join(", ");
+    return db
+      .prepare(
+        `SELECT
+           COALESCE(json_extract(props, '$.target_id'), json_extract(props, '$.show_id')) AS show_id,
+           COUNT(DISTINCT iid) AS users
+         FROM analytics_events
+         WHERE event = 'feature_use'
+           AND ts > ?
+           AND json_extract(props, '$.feature') IN (${placeholders})
+           AND COALESCE(json_extract(props, '$.target_id'), json_extract(props, '$.show_id')) IS NOT NULL
+         GROUP BY show_id
+         ORDER BY users DESC, show_id ASC
+         LIMIT ?`,
+      )
+      .all(monthAgo, ...features, limit) as ActionShowsRow[];
+  }
+
+  const top_shows_by_action: Record<ActionShowsBucket, ActionShowsRow[]> = {
+    favorited: topShowsForFeatures(["add_favorite"], 10),
+    downloaded: topShowsForFeatures(["download_show"], 10),
+    reviewed: topShowsForFeatures(
+      ["write_review", "edit_review", "save_review"],
+      10,
+    ),
+    shared: topShowsForFeatures(["share_show"], 10),
+  };
+
   // Average completion rate (last 30 days)
   const completion = db
     .prepare(
@@ -329,6 +367,7 @@ export function getSummary(): AnalyticsSummary {
     stale_installs_30d,
     platform_split,
     top_shows,
+    top_shows_by_action,
     feature_adoption,
     avg_completion_rate,
     events_today,
