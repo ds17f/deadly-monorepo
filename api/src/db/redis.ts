@@ -4,24 +4,33 @@ const REDIS_URL = process.env.REDIS_URL ?? "redis://localhost:6379";
 
 let publisher: Redis | null = null;
 let subscriber: Redis | null = null;
+let warned = false;
+
+function warnOnce(): void {
+  if (warned) return;
+  warned = true;
+  console.warn(
+    "\n[Redis] Not available at %s\n" +
+    "  Connect (multi-device playback sync) will not work until Redis is running.\n" +
+    "  To fix:  docker run -d --name redis -p 6379:6379 redis:7-alpine\n",
+    REDIS_URL
+  );
+}
+
+function makeClient(): Redis {
+  const client = new Redis(REDIS_URL, { lazyConnect: true, maxRetriesPerRequest: 3 });
+  client.on("error", warnOnce);
+  client.connect().catch(() => {});
+  return client;
+}
 
 export function getPublisher(): Redis {
-  if (!publisher) {
-    publisher = new Redis(REDIS_URL, { lazyConnect: true, maxRetriesPerRequest: 3 });
-    publisher.connect().catch(() => {
-      // Redis is optional — Connect features degrade gracefully
-    });
-  }
+  if (!publisher) publisher = makeClient();
   return publisher;
 }
 
 export function getSubscriber(): Redis {
-  if (!subscriber) {
-    subscriber = new Redis(REDIS_URL, { lazyConnect: true, maxRetriesPerRequest: 3 });
-    subscriber.connect().catch(() => {
-      // Redis is optional
-    });
-  }
+  if (!subscriber) subscriber = makeClient();
   return subscriber;
 }
 
