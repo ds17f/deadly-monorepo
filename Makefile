@@ -18,6 +18,9 @@
 .PHONY: data-download data-generate data-package data-download-stage01 data-upload-stage01 data-collect data-release data-clean
 .PHONY: db-backup-list db-restore db-pull-analytics
 
+# Load KEYCHAIN_PASSWORD from .env if not set in environment
+KEYCHAIN_PASSWORD ?= $(shell grep -E '^KEYCHAIN_PASSWORD=' .env 2>/dev/null | cut -d= -f2- | tr -d '"')
+
 # =============================================================================
 # API & DOCKER COMPOSE
 # =============================================================================
@@ -382,7 +385,7 @@ ios-deploy-testflight:
 # IOS REMOTE BUILD (Linux → Mac)
 # =============================================================================
 
-REMOTE_HOST    ?= dsilbergleithcu@worklaptop.local
+REMOTE_HOST    ?= dsilbergleithcu@worklaptop.home.silberg.cloud
 REMOTE_PATH    ?= ~/Developer/ai/claude-personal/container-home/workspace/Developer/deadly-monorepo
 REMOTE_IOS     ?= $(REMOTE_PATH)/iosApp
 REMOTE_ANDROID ?= $(REMOTE_PATH)/androidApp
@@ -622,7 +625,7 @@ api-remote-test:
 
 # Health check against remote API
 api-remote-health:
-	@curl -s http://worklaptop.local:3001/api/health | python3 -m json.tool
+	@curl -s http://worklaptop.home.silberg.cloud:3001/api/health | python3 -m json.tool
 
 # =============================================================================
 # INFRASTRUCTURE (OCI)

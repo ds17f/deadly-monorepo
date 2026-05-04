@@ -137,7 +137,7 @@ Each LLM provider has a complete, independent configuration block in `config.jso
 {
   "providers": {
     "lmstudio": {
-      "endpoint": "http://worklaptop.local:1234/v1",
+      "endpoint": "http://worklaptop.home.silberg.cloud:1234/v1",
       "api_key": "dummy-key",
       "model": "current_model",
       "rate_limiting": {
@@ -443,7 +443,7 @@ Edit `scripts/review-processor/config.json` with your settings:
 {
   "providers": {
     "lmstudio": {
-      "endpoint": "http://worklaptop.local:1234/v1",
+      "endpoint": "http://worklaptop.home.silberg.cloud:1234/v1",
       "api_key": "dummy-key",
       "model": "current_model"
     }
