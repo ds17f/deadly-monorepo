@@ -13,6 +13,7 @@
 .PHONY: android-remote-build android-remote-install
 .PHONY: android-remote-emulator android-remote-emu-list android-remote-emu-stop android-remote-run-emulator
 .PHONY: android-auto-dhu android-remote-auto-dhu
+.PHONY: android-build android-emulator android-emu-list android-emu-stop android-run-emulator
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
 .PHONY: infra-init infra-plan infra-apply infra-retry infra-destroy infra-output web-deploy web-promote infra-logs infra-ssh images-build
 .PHONY: data-download data-generate data-package data-download-stage01 data-upload-stage01 data-collect data-release data-clean
@@ -156,7 +157,12 @@ help:
 	@echo "  ios-release-version      - iOS release with specific version (make ios-release-version VERSION=1.2.3)"
 	@echo "  ios-release-dry-run      - Preview iOS release without making changes"
 	@echo ""
+	@echo "  android-build            - Build debug APK locally"
 	@echo "  android-install          - Build debug + install to connected Android device (USB)"
+	@echo "  android-emulator         - Start Android emulator locally"
+	@echo "  android-emu-list         - List available AVDs locally"
+	@echo "  android-emu-stop         - Stop all running emulators locally"
+	@echo "  android-run-emulator     - Start emulator + build + install + launch locally"
 	@echo "  android-auto-dhu         - Launch Android Auto Desktop Head Unit"
 	@echo ""
 	@echo "ANDROID PROMOTIONS:"
@@ -337,8 +343,23 @@ setup-env-secrets:
 # ANDROID FASTLANE
 # =============================================================================
 
+android-build:
+	cd androidApp && $(MAKE) build
+
 android-install:
 	cd androidApp && ./gradlew installDebug
+
+android-emulator:
+	cd androidApp && $(MAKE) emu-start
+
+android-emu-list:
+	cd androidApp && $(MAKE) emu-list
+
+android-emu-stop:
+	cd androidApp && $(MAKE) emu-stop
+
+android-run-emulator:
+	cd androidApp && $(MAKE) run-emulator
 
 # Launch Android Auto Desktop Head Unit (requires emulator/device with head unit server running)
 android-auto-dhu:

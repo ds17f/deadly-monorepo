@@ -350,6 +350,8 @@ emu-list:
 		$$ANDROID_HOME/emulator/emulator -list-avds; \
 	elif [ -f "$$HOME/Library/Android/sdk/emulator/emulator" ]; then \
 		$$HOME/Library/Android/sdk/emulator/emulator -list-avds; \
+	elif [ -f "$$HOME/Android/Sdk/emulator/emulator" ]; then \
+		$$HOME/Android/Sdk/emulator/emulator -list-avds; \
 	elif [ -f "/usr/local/share/android-commandlinetools/emulator/emulator" ]; then \
 		/usr/local/share/android-commandlinetools/emulator/emulator -list-avds; \
 	else \
@@ -376,6 +378,8 @@ emu-start:
 		EMULATOR_CMD="$$ANDROID_HOME/emulator/emulator"; \
 	elif [ -f "$$HOME/Library/Android/sdk/emulator/emulator" ]; then \
 		EMULATOR_CMD="$$HOME/Library/Android/sdk/emulator/emulator"; \
+	elif [ -f "$$HOME/Android/Sdk/emulator/emulator" ]; then \
+		EMULATOR_CMD="$$HOME/Android/Sdk/emulator/emulator"; \
 	elif [ -f "/usr/local/share/android-commandlinetools/emulator/emulator" ]; then \
 		EMULATOR_CMD="/usr/local/share/android-commandlinetools/emulator/emulator"; \
 	else \
@@ -408,6 +412,8 @@ emu-cold-boot:
 		EMULATOR_CMD="$$ANDROID_HOME/emulator/emulator"; \
 	elif [ -f "$$HOME/Library/Android/sdk/emulator/emulator" ]; then \
 		EMULATOR_CMD="$$HOME/Library/Android/sdk/emulator/emulator"; \
+	elif [ -f "$$HOME/Android/Sdk/emulator/emulator" ]; then \
+		EMULATOR_CMD="$$HOME/Android/Sdk/emulator/emulator"; \
 	elif [ -f "/usr/local/share/android-commandlinetools/emulator/emulator" ]; then \
 		EMULATOR_CMD="/usr/local/share/android-commandlinetools/emulator/emulator"; \
 	else \
