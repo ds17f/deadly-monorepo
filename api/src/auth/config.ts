@@ -1,30 +1,71 @@
 import type { AuthConfig } from "@auth/core";
+import type { Provider } from "@auth/core/providers";
 import Google from "@auth/core/providers/google";
 import Apple from "@auth/core/providers/apple";
+import Credentials from "@auth/core/providers/credentials";
 import { SqliteAdapter } from "./adapter.js";
-import { getAppUserByAuthId } from "../db/users.js";
+import { getAppUserByAuthId, getUsersDb } from "../db/users.js";
 import { generateAppleSecret } from "./apple-secret.js";
+import { isDev } from "../env.js";
 
 const appleClientSecret = await generateAppleSecret();
 
+const providers: Provider[] = [
+  Google({
+    clientId: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+  }),
+  Apple({
+    clientId: process.env.APPLE_CLIENT_ID!,
+    clientSecret: appleClientSecret,
+    // Apple's OIDC discovery omits userinfo_endpoint, causing @auth/core to
+    // throw. Explicit endpoints skip discovery. The userinfo URL is never
+    // fetched — Apple is OIDC so identity comes from the ID token.
+    token: { url: "https://appleid.apple.com/auth/token" },
+    userinfo: { url: "https://appleid.apple.com" },
+    client: { token_endpoint_auth_method: "client_secret_post" },
+  }),
+];
+
+// Dev sign-in: passwordless email-only credentials provider.
+// Hard-gated by THREE conditions to prevent accidental prod exposure:
+//   1. NODE_ENV !== "production" (the isDev flag)
+//   2. ENABLE_DEV_SIGNIN=1 must be explicitly set (lives only in local api/.env;
+//      a CI check forbids it from appearing in any deploy/infra config)
+//   3. Hard refusal to start if NODE_ENV=production yet the flag is set
+const devSigninRequested = process.env.ENABLE_DEV_SIGNIN === "1";
+if (process.env.NODE_ENV === "production" && devSigninRequested) {
+  throw new Error(
+    "FATAL: ENABLE_DEV_SIGNIN=1 with NODE_ENV=production. Refusing to start."
+  );
+}
+const devSigninEnabled = isDev && devSigninRequested;
+
+if (devSigninEnabled) {
+  console.warn(
+    "⚠️  DEV SIGN-IN ENABLED — passwordless email login active. Never run with this in production."
+  );
+  providers.push(
+    Credentials({
+      id: "dev",
+      name: "Dev",
+      credentials: { email: { label: "Email", type: "email" } },
+      async authorize(credentials) {
+        const email = typeof credentials?.email === "string" ? credentials.email : "";
+        if (!email) return null;
+        const row = getUsersDb().prepare(
+          `SELECT auth_user_id, email, name FROM accounts WHERE email = ?`
+        ).get(email) as { auth_user_id: string; email: string; name: string | null } | undefined;
+        if (!row?.auth_user_id) return null;
+        return { id: row.auth_user_id, email: row.email, name: row.name };
+      },
+    })
+  );
+}
+
 export const authConfig: AuthConfig = {
   adapter: SqliteAdapter(),
-  providers: [
-    Google({
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    }),
-    Apple({
-      clientId: process.env.APPLE_CLIENT_ID!,
-      clientSecret: appleClientSecret,
-      // Apple's OIDC discovery omits userinfo_endpoint, causing @auth/core to
-      // throw. Explicit endpoints skip discovery. The userinfo URL is never
-      // fetched — Apple is OIDC so identity comes from the ID token.
-      token: { url: "https://appleid.apple.com/auth/token" },
-      userinfo: { url: "https://appleid.apple.com" },
-      client: { token_endpoint_auth_method: "client_secret_post" },
-    }),
-  ],
+  providers,
   secret: process.env.AUTH_SECRET,
   session: { strategy: "jwt" },
   basePath: "/api/auth",

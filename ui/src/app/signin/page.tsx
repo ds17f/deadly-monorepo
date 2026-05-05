@@ -8,11 +8,17 @@ function SignInForm() {
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl") || "/";
   const [csrfToken, setCsrfToken] = useState("");
+  const [devEnabled, setDevEnabled] = useState(false);
+  const [devEmail, setDevEmail] = useState("");
 
   useEffect(() => {
     fetch("/api/auth/csrf")
       .then((res) => res.json())
       .then((data) => setCsrfToken(data.csrfToken));
+    fetch("/api/auth/providers")
+      .then((res) => res.json())
+      .then((data) => setDevEnabled(Boolean(data?.dev)))
+      .catch(() => {});
   }, []);
 
   return (
@@ -87,6 +93,36 @@ function SignInForm() {
       <p className="mt-4 text-center text-xs text-white/30">
         We use single sign-on to keep your account secure. We only receive your name and email.
       </p>
+
+      {devEnabled && (
+        <>
+          <div className="my-4 flex items-center gap-3">
+            <div className="h-px flex-1 bg-yellow-500/30" />
+            <span className="text-xs text-yellow-500/70">dev only</span>
+            <div className="h-px flex-1 bg-yellow-500/30" />
+          </div>
+          <form method="POST" action="/api/auth/callback/dev" className="space-y-2">
+            <input type="hidden" name="csrfToken" value={csrfToken} />
+            <input type="hidden" name="callbackUrl" value={callbackUrl} />
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="email@example.com"
+              value={devEmail}
+              onChange={(e) => setDevEmail(e.target.value)}
+              className="w-full rounded-lg border border-yellow-500/30 bg-black/40 px-4 py-3 text-sm text-white placeholder-white/30 focus:border-yellow-500/60 focus:outline-none"
+            />
+            <button
+              type="submit"
+              disabled={!csrfToken || !devEmail}
+              className="flex w-full items-center justify-center gap-3 rounded-lg bg-yellow-500/20 px-4 py-3 text-sm font-medium text-yellow-300 border border-yellow-500/40 transition hover:bg-yellow-500/30 disabled:opacity-50"
+            >
+              Dev sign in
+            </button>
+          </form>
+        </>
+      )}
     </div>
   );
 }

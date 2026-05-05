@@ -1,0 +1,41 @@
+name: Security - Dev Sign-In Leak Check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Forbid ENABLE_DEV_SIGNIN in deploy/infra
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Grep for ENABLE_DEV_SIGNIN outside allowed files
+        run: |
+          set -euo pipefail
+          # Only the auth config consumes this flag. It must never appear in
+          # docker-compose, infra IaC, k8s manifests, deploy workflows, env
+          # examples, or any other config that could ship to production.
+          ALLOWED='^\(api/src/auth/config\.ts\|\.github/workflows/security-dev-signin\.yml\):'
+          MATCHES=$(git grep -n 'ENABLE_DEV_SIGNIN' || true)
+          if [ -z "$MATCHES" ]; then
+            echo "OK: no occurrences."
+            exit 0
+          fi
+          echo "$MATCHES"
+          BAD=$(echo "$MATCHES" | grep -v "$ALLOWED" || true)
+          if [ -n "$BAD" ]; then
+            echo
+            echo "ERROR: ENABLE_DEV_SIGNIN appears in disallowed file(s):"
+            echo "$BAD"
+            echo
+            echo "This flag enables passwordless dev sign-in. It must only live"
+            echo "in local api/.env (gitignored) and be referenced by"
+            echo "api/src/auth/config.ts. Never commit it to compose/infra/CI."
+            exit 1
+          fi
+          echo "OK: only allowed references."
