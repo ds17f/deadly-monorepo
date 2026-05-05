@@ -1,4 +1,4 @@
-.PHONY: dev dev-up dev-down dev-logs dev-ps api-dev api-install api-build api-typecheck api-test
+.PHONY: dev docker-pull docker-up docker-down docker-destroy docker-logs docker-ps docker-redeploy docker-redeploy-logs api-dev api-install api-build api-typecheck api-test
 .PHONY: docker-remote-pull docker-remote-up docker-remote-down docker-remote-destroy docker-remote-logs docker-remote-ps docker-remote-redeploy docker-remote-redeploy-logs api-remote-dev api-remote-health api-remote-test
 .PHONY: help docs-help docs-install docs-build docs-serve docs-clean docs-pr
 .PHONY: ui-install ui-dev ui-build ui-typecheck ui-data share-pages
@@ -26,21 +26,35 @@ KEYCHAIN_PASSWORD ?= $(shell grep -E '^KEYCHAIN_PASSWORD=' .env 2>/dev/null | cu
 # API & DOCKER COMPOSE
 # =============================================================================
 
+# Pre-pull base images
+docker-pull:
+	docker pull node:22-slim && docker pull caddy:2-alpine && docker pull redis:7-alpine
+
 # Start full stack locally (Docker Compose dev mode)
-dev-up:
+docker-up:
 	docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build -d
 
 # Stop the local stack
-dev-down:
+docker-down:
 	docker compose -f docker-compose.yml -f docker-compose.dev.yml down
 
+# Destroy the local stack (removes containers, images, and volumes for a clean rebuild)
+docker-destroy:
+	docker compose -f docker-compose.yml -f docker-compose.dev.yml down --rmi local -v
+
 # View logs from all services
-dev-logs:
+docker-logs:
 	docker compose -f docker-compose.yml -f docker-compose.dev.yml logs -f
 
 # Show running service status
-dev-ps:
+docker-ps:
 	docker compose -f docker-compose.yml -f docker-compose.dev.yml ps
+
+# Destroy + rebuild + start the local stack
+docker-redeploy: docker-destroy docker-up
+
+# Destroy + rebuild + start + tail logs
+docker-redeploy-logs: docker-redeploy docker-logs
 
 # Run API locally without Docker (for quick iteration)
 api-dev:
@@ -125,10 +139,14 @@ help:
 	@echo "========================================"
 	@echo ""
 	@echo "API & LOCAL DEV:"
-	@echo "  dev-up           - Start full stack locally (Caddy + API + Redis via Docker Compose)"
-	@echo "  dev-down         - Stop the local stack"
-	@echo "  dev-logs         - View logs from all services"
-	@echo "  dev-ps           - Show running service status"
+	@echo "  docker-pull         - Pre-pull base images (node, caddy, redis)"
+	@echo "  docker-up           - Start full stack locally (Caddy + API + Redis via Docker Compose)"
+	@echo "  docker-down         - Stop the local stack"
+	@echo "  docker-destroy      - Destroy the local stack (containers, images, volumes)"
+	@echo "  docker-logs         - View logs from all services"
+	@echo "  docker-ps           - Show running service status"
+	@echo "  docker-redeploy     - Destroy + rebuild + start"
+	@echo "  docker-redeploy-logs - Destroy + rebuild + start + tail logs"
 	@echo "  api-dev          - Run API locally without Docker (fast iteration)"
 	@echo "  api-install      - Install API dependencies"
 	@echo "  api-build        - Build API TypeScript"

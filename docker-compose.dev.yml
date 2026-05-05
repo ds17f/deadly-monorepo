@@ -14,9 +14,9 @@ services:
       - "8080:80"
       - "8081:8081"
     volumes:
-      - ./Caddyfile.dev:/etc/caddy/Caddyfile:ro
+      - ./Caddyfile.dev:/etc/caddy/Caddyfile:ro,z
       - ui_static:/srv/ui:ro
-      - ./web:/srv/share:ro
+      - ./web:/srv/share:ro,z
     depends_on:
       - api
       - ui
@@ -30,8 +30,8 @@ services:
     ports:
       - "3001:3001"
     volumes:
-      - ./api/src:/app/src:ro
-      - ./api-data:/app/data
+      - ./api/src:/app/src:ro,z
+      - ./api-data:/app/data:z
     environment:
       - NODE_ENV=development
       - LOG_LEVEL=debug
