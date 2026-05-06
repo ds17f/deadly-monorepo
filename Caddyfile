@@ -1,3 +1,8 @@
+# Redirect www.<site> → apex so users who type/bookmark www don't hit a TLS error
+www.{$SITE_ADDRESS} {
+	redir https://{$SITE_ADDRESS}{uri} permanent
+}
+
 # Main site — SITE_ADDRESS set per environment in .env
 {$SITE_ADDRESS} {
 	handle /api/* {
