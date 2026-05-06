@@ -14,9 +14,8 @@ export default function BetaPage() {
         <h1 className="text-3xl font-bold">The Deadly is on the App Store</h1>
         <p className="text-white/70 leading-relaxed">
           Thank you for being part of the closed beta. The app is now live on
-          the App Store — please follow the steps below to migrate off the
-          TestFlight build. Your favorites, reviews, and preferences can come
-          with you.
+          the App Store — moving over takes about 30 seconds. Your favorites,
+          reviews, and preferences come with you automatically.
         </p>
         <div className="pt-2">
           <AppStoreBadge width={180} height={54} />
@@ -27,40 +26,11 @@ export default function BetaPage() {
         <li className="space-y-2 rounded-lg border border-white/10 p-6">
           <h2 className="text-lg font-semibold">
             <span className="mr-2 text-emerald-400">1.</span>
-            Export your favorites from the beta app
-          </h2>
-          <p className="text-white/60 leading-relaxed text-sm">
-            Open the TestFlight version of The Deadly and go to{" "}
-            <span className="font-medium text-white/80">
-              Settings → Favorites &amp; Data → Export Favorites
-            </span>
-            . You&apos;ll get a JSON file containing your favorites, reviews,
-            and preferences. Save it somewhere you can find it later (Files
-            app, iCloud Drive, AirDrop to yourself, or email).
-          </p>
-        </li>
-
-        <li className="space-y-2 rounded-lg border border-white/10 p-6">
-          <h2 className="text-lg font-semibold">
-            <span className="mr-2 text-emerald-400">2.</span>
-            Remove the TestFlight build
-          </h2>
-          <p className="text-white/60 leading-relaxed text-sm">
-            Long-press The Deadly icon on your home screen and tap{" "}
-            <span className="font-medium text-white/80">Remove App → Delete App</span>.
-            You can also open TestFlight, tap The Deadly, scroll to the bottom,
-            and tap{" "}
-            <span className="font-medium text-white/80">Stop Testing</span>.
-          </p>
-        </li>
-
-        <li className="space-y-2 rounded-lg border border-white/10 p-6">
-          <h2 className="text-lg font-semibold">
-            <span className="mr-2 text-emerald-400">3.</span>
             Install from the App Store
           </h2>
           <p className="text-white/60 leading-relaxed text-sm">
-            Get the public release here:
+            Tap the badge below to install the public release. It&apos;ll
+            replace your TestFlight build in place — all your data stays put.
           </p>
           <div className="pt-2">
             <AppStoreBadge width={160} height={48} />
@@ -69,16 +39,13 @@ export default function BetaPage() {
 
         <li className="space-y-2 rounded-lg border border-white/10 p-6">
           <h2 className="text-lg font-semibold">
-            <span className="mr-2 text-emerald-400">4.</span>
-            Import your favorites
+            <span className="mr-2 text-emerald-400">2.</span>
+            Delete TestFlight (optional)
           </h2>
           <p className="text-white/60 leading-relaxed text-sm">
-            Open the App Store version and go to{" "}
-            <span className="font-medium text-white/80">
-              Settings → Favorites &amp; Data → Import Favorites
-            </span>
-            . Pick the JSON file you exported in step 1 and your favorites,
-            reviews, and preferences will be restored.
+            Once you&apos;ve confirmed the App Store version is working, you
+            can remove the TestFlight app from your home screen. That&apos;s
+            it — no export/import needed.
           </p>
         </li>
       </ol>
