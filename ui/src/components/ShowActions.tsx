@@ -108,7 +108,7 @@ export default function ShowActions({
             unoptimized
           />
         </a>
-        <AppStoreBadge variant="beta" />
+        <AppStoreBadge />
       </div>
 
       {archiveId && (
