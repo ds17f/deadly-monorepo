@@ -28,8 +28,8 @@ Plan for migrating the deadly web stack off DigitalOcean (free credits expiring)
 - [x] `.github/workflows/web-deploy.yml` — `provider` input added (default `hetzner`), TF dir per provider.
 - [ ] `.github/workflows/web-deploy.yml` — `update_dns` checkbox (default off; flip default later for beta).
 - [ ] `caddy/Caddyfile.cutover` — DO-side variant that proxies API/WS to Hetzner over validated TLS.
-- [ ] `scripts/pull-cert-from-do.sh` — pulls live LE cert + key from DO into `.secrets/` (Phase 0).
-- [ ] `scripts/push-cert-to-hetzner.sh` — pushes cert from `.secrets/` into Hetzner Caddy storage (Phase 1).
+- [x] `scripts/pull-cert-from-do.sh` — pulls live LE cert + key from DO into `.secrets/` (Phase 0).
+- [x] `scripts/push-cert-to-hetzner.sh` — pushes cert from `.secrets/` into Hetzner Caddy volume (Phase 1).
 - [ ] `scripts/migrate-cutover.sh` — orchestrates snapshot → ship → swap → verify, with `--rollback`.
 
 ## DNS
@@ -70,16 +70,12 @@ Everything in this phase is pure prep — laptop-side scripting, GitHub workflow
 2. **Pull the live LE cert from DO into `.secrets/`.** The cert is bound to the hostname, not the IP, so it's portable. We stage it locally so Phase 1 can install it on Hetzner without needing DO ↔ HZ direct SSH at provisioning time.
 
    ```bash
-   # scripts/pull-cert-from-do.sh
-   mkdir -p .secrets/le-cert
-   ssh deploy@$DO_IP 'docker compose exec -T caddy tar -czf - -C /data/caddy/certificates/acme-v02.api.letsencrypt.org-directory thedeadly.app' \
-     > .secrets/le-cert/thedeadly.app.tar.gz
+   DO_IP=<do-ip> scripts/pull-cert-from-do.sh
    ```
 
-   `.secrets/` is gitignored. **Re-run this script just before Phase 1.2** if more than a few weeks have passed — DO Caddy may have renewed and our copy could be stale (LE renews ~30 days before expiry). Quick check:
-   ```bash
-   tar -xzOf .secrets/le-cert/thedeadly.app.tar.gz thedeadly.app/thedeadly.app.crt | openssl x509 -noout -enddate
-   ```
+   Streams `tar -czf -` from inside DO's Caddy container directly to `.secrets/le-cert/thedeadly.app.tar.gz`. Also extracts the `.crt` (no key) for inspection. `.secrets/` is gitignored.
+
+   **Re-run before Phase 1.3** if more than a few weeks have passed — DO Caddy may have renewed and our copy could be stale (LE renews ~30 days before expiry). The push script also checks expiry and refuses to ship an already-expired cert.
 
 3. **Create `caddy/Caddyfile.cutover`** — DO-side variant of the live Caddyfile that proxies `/api/*` and `/ws/*` to `https://${HETZNER_IP}` with **validated** TLS, using `tls_server_name thedeadly.app` so Caddy validates the cert against the hostname instead of the IP. Static UI continues to serve from the bind-mounted `ui-out`. The Hetzner IP is interpolated by the cutover script before upload.
 
@@ -111,7 +107,7 @@ Goal: prove the Hetzner stack works end-to-end with the real cert, before touchi
 |---|------|-----|--------|
 | 1.1 | (If needed) re-pull cert from DO | `scripts/pull-cert-from-do.sh` — only if `.secrets/le-cert` is older than a couple weeks. | `openssl x509 -enddate` on the cert shows >60 days remaining. |
 | 1.2 | Provision Hetzner prod box | Run **Web - Infra** with `action=launch, provider=hetzner, environment=prod`. | Workflow prints IP. SSH works as `deploy@<hz-ip>`. |
-| 1.3 | Push LE cert from `.secrets/` to Hetzner | `scripts/push-cert-to-hetzner.sh` — extracts the tarball into Hetzner's Caddy storage volume; ensures Caddy UID owns the files; key is `0600`. | `ssh deploy@$HZ_IP 'docker compose exec caddy ls /data/caddy/certificates/.../thedeadly.app/'` shows cert + key. |
+| 1.3 | Push LE cert from `.secrets/` to Hetzner | `HZ_IP=<hz-ip> scripts/push-cert-to-hetzner.sh` — extracts the tarball into the `deadly_caddy_data` docker volume via a throwaway `busybox` container, **before** Caddy's first start. UIDs/perms are preserved from the DO tarball; this works because both sides use the same Caddy image. | Script verifies extraction via `docker run --rm -v deadly_caddy_data:/data busybox ls .../thedeadly.app/`. |
 | 1.4 | Deploy code with empty DBs | Run **Web - Deploy** with `environment=prod, provider=hetzner, ref=main, update_dns=false`. | `curl --resolve thedeadly.app:443:<hz-ip> https://thedeadly.app/api/health` returns 200 **and serves the real LE cert** (`curl -vI` confirms issuer is Let's Encrypt, not Caddy Internal). Schemas auto-created on first start. |
 | 1.5 | Snapshot DO DBs (live) and ship to HZ for testing | `ssh deploy@$DO_IP 'sqlite3 /opt/deadly/api-data/users.db ".backup /tmp/users.db" && sqlite3 /opt/deadly/api-data/analytics.db ".backup /tmp/analytics.db"'`, then `scp` DO→local→HZ to `/opt/deadly/api-data/`, fix ownership, `docker compose restart api`. **No DO downtime — `.backup` is an online operation.** This rehearses Phase 2.2 + 2.3. | Row counts on HZ match DO snapshot. |
 | 1.6 | Real-data smoke test via `/etc/hosts` override | On laptop, add `<HZ_IP>  thedeadly.app` and `<HZ_IP>  share.thedeadly.app` to `/etc/hosts`. Visit `https://thedeadly.app` in a browser. Browse the site, log in (full OAuth round-trip — Google redirects back to the hostname, which now points to HZ on your laptop), check favorites, exercise analytics. **Remove the hosts entries when done.** Chrome caches DNS — restart browser or flush via `chrome://net-internals/#dns` if needed. | Real LE cert in browser (no warning). UI loads, login works, your real data appears. |
