@@ -32,7 +32,7 @@ Plan for migrating the deadly web stack off DigitalOcean (free credits expiring)
 - [x] `scripts/push-cert-to-hetzner.sh` — pushes cert from `.secrets/` into Hetzner Caddy volume (Phase 1).
 - [x] `scripts/migrate-cutover.sh` — orchestrates snapshot → ship → swap → verify, with `--rollback`.
 
-Local tooling required to run the cutover script: `jq`, `envsubst` (gettext), `dig` (bind-utils), plus SSH access to both boxes.
+Local tooling required to run the cutover script: `jq`, `envsubst` (gettext), `dig` (bind-utils), `aws` (awscli2), plus SSH access to both boxes.
 
 ## DNS
 
@@ -110,7 +110,7 @@ Goal: prove the Hetzner stack works end-to-end with the real cert, before touchi
 | # | What | How | Verify |
 |---|------|-----|--------|
 | 1.1 | (If needed) re-pull cert from DO | `scripts/pull-cert-from-do.sh` — only if `.secrets/le-cert` is older than a couple weeks. | `openssl x509 -enddate` on the cert shows >60 days remaining. |
-| 1.2 | Provision Hetzner prod box | Run **Web - Infra** with `action=launch, provider=hetzner, environment=prod`. | Workflow prints IP. SSH works as `deploy@<hz-ip>`. |
+| 1.2 | Provision Hetzner prod box | Run **Web - Infra** with `action=launch, provider=hetzner, environment=prod`. | ✔️ Done 2026-05-07 (run 25498015079). Prod IPv4: `178.156.208.143`, IPv6: `2a01:4ff:f0:5676::1`. Terraform state in B2 bucket `deadly-tfstate` (endpoint `s3.us-west-004.backblazeb2.com`); credentials in `.secrets/b2-api-keys.txt` and GitHub `B2_TFSTATE_KEY_ID` / `B2_TFSTATE_APP_KEY` secrets. |
 | 1.3 | Push LE cert from `.secrets/` to Hetzner | `HZ_IP=<hz-ip> scripts/push-cert-to-hetzner.sh` — extracts the tarball into the `deadly_caddy_data` docker volume via a throwaway `busybox` container, **before** Caddy's first start. UIDs/perms are preserved from the DO tarball; this works because both sides use the same Caddy image. | Script verifies extraction via `docker run --rm -v deadly_caddy_data:/data busybox ls .../thedeadly.app/`. |
 | 1.4 | Deploy code with empty DBs | Run **Web - Deploy** with `environment=prod, provider=hetzner, ref=main, update_dns=false`. | `curl --resolve thedeadly.app:443:<hz-ip> https://thedeadly.app/api/health` returns 200 **and serves the real LE cert** (`curl -vI` confirms issuer is Let's Encrypt, not Caddy Internal). Schemas auto-created on first start. |
 | 1.5 | Snapshot DO DBs (live) and ship to HZ for testing | `ssh deploy@$DO_IP 'sqlite3 /opt/deadly/api-data/users.db ".backup /tmp/users.db" && sqlite3 /opt/deadly/api-data/analytics.db ".backup /tmp/analytics.db"'`, then `scp` DO→local→HZ to `/opt/deadly/api-data/`, fix ownership, `docker compose restart api`. **No DO downtime — `.backup` is an online operation.** This rehearses Phase 2.2 + 2.3. | Row counts on HZ match DO snapshot. |
@@ -229,4 +229,4 @@ scripts/migrate-cutover.sh --do-ip <ip> --rollback
 
 **Interactive prompts** at: preflight (confirm IPs and mode), end of Phase 2 (`c` continue / `r` rollback / `w` wait & re-prompt), and (if `--flip-dns`) before the GoDaddy PATCH.
 
-**Local tool deps:** `jq`, `envsubst`, `dig`, `ssh`/`scp`, `curl`. The script does not check for these — install them if missing (Fedora: `dnf install jq gettext bind-utils`).
+**Local tool deps:** `jq`, `envsubst`, `dig`, `ssh`/`scp`, `curl`, `aws` (for B2 backups in Phase 0.5). The script does not check for these — install them if missing (Fedora: `dnf install jq gettext bind-utils awscli2`).
