@@ -716,15 +716,15 @@ web-promote:
 	echo "Promoting image tag: $$BETA_TAG"; \
 	gh workflow run web-deploy.yml -f environment=prod -f ref=$$BETA_TAG
 
-# Resolve server IPs from DigitalOcean API
+# Resolve server IPs from Hetzner Cloud API (label_selector=env=<env>)
 PROD_SSH_KEY   ?= ssh-key-2026-03-15.key
-PROD_DO_TOKEN  = $(shell grep '^do_token' infra/digitalocean/terraform.tfvars 2>/dev/null | cut -d'"' -f2)
-PROD_IP       ?= $(shell curl -sf -H "Authorization: Bearer $(PROD_DO_TOKEN)" \
-                  "https://api.digitalocean.com/v2/droplets?tag_name=prod" \
-                  | python3 -c "import sys,json;d=json.load(sys.stdin)['droplets'][0]['networks']['v4'];print(next(n['ip_address'] for n in d if n['type']=='public'))" 2>/dev/null)
-BETA_IP       ?= $(shell curl -sf -H "Authorization: Bearer $(PROD_DO_TOKEN)" \
-                  "https://api.digitalocean.com/v2/droplets?tag_name=beta" \
-                  | python3 -c "import sys,json;d=json.load(sys.stdin)['droplets'][0]['networks']['v4'];print(next(n['ip_address'] for n in d if n['type']=='public'))" 2>/dev/null)
+HCLOUD_TOKEN   = $(shell tr -d '[:space:]' < .secrets/hetzner-key.txt 2>/dev/null)
+PROD_IP       ?= $(shell curl -sf -H "Authorization: Bearer $(HCLOUD_TOKEN)" \
+                  "https://api.hetzner.cloud/v1/servers?label_selector=env=prod" \
+                  | python3 -c "import sys,json;print(json.load(sys.stdin)['servers'][0]['public_net']['ipv4']['ip'])" 2>/dev/null)
+BETA_IP       ?= $(shell curl -sf -H "Authorization: Bearer $(HCLOUD_TOKEN)" \
+                  "https://api.hetzner.cloud/v1/servers?label_selector=env=beta" \
+                  | python3 -c "import sys,json;print(json.load(sys.stdin)['servers'][0]['public_net']['ipv4']['ip'])" 2>/dev/null)
 
 # View logs from a server (ENV=beta|prod, SERVICE=api, LINES=100)
 #   make infra-logs                # beta, all services, last 100 lines + follow
