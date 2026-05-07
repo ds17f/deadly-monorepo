@@ -7,21 +7,31 @@ on:
         description: "Target environment"
         type: choice
         options:
-          - alpha
           - beta
           - prod
-        default: alpha
+        default: beta
+      provider:
+        description: "Cloud provider hosting the target"
+        type: choice
+        options:
+          - hetzner
+          - digitalocean
+        default: hetzner
       ref:
         description: "Git ref to deploy (resolves to image tag)"
         default: "main"
         type: string
+      update_dns:
+        description: "Point GoDaddy A records at this server's IP after deploy"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
 
 jobs:
   deploy:
-    name: "Deploy to ${{ inputs.environment }}"
+    name: "Deploy to ${{ inputs.environment }} (${{ inputs.provider }})"
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment }}
     env:
@@ -56,16 +66,22 @@ jobs:
       - name: Get server IP from Terraform
         id: server
         run: |
-          cd infra/digitalocean
-          cat > terraform.tfvars <<EOF
+          cd infra/${{ inputs.provider }}
+          if [ "${{ inputs.provider }}" = "digitalocean" ]; then
+            cat > terraform.tfvars <<EOF
           do_token = "${{ secrets.DO_API_TOKEN }}"
           EOF
+          elif [ "${{ inputs.provider }}" = "hetzner" ]; then
+            cat > terraform.tfvars <<EOF
+          hcloud_token = "${{ secrets.HCLOUD_TOKEN }}"
+          EOF
+          fi
           echo "${{ secrets.SSH_PUBLIC_KEY }}" > ../../ssh-key-2026-03-15.key.pub
 
           terraform init -input=false > /dev/null
           IP=$(terraform output -raw ${{ inputs.environment }}_ip 2>/dev/null || true)
           if [ -z "$IP" ]; then
-            echo "::error::No droplet found for environment '${{ inputs.environment }}' in Terraform state"
+            echo "::error::No server found for environment '${{ inputs.environment }}' in ${{ inputs.provider }} Terraform state"
             exit 1
           fi
           echo "ip=${IP}" >> "$GITHUB_OUTPUT"
@@ -224,6 +240,65 @@ jobs:
           done
           echo "::warning::Health check did not pass within 2 minutes"
           exit 1
+
+      - name: Update DNS (GoDaddy)
+        if: inputs.update_dns
+        env:
+          GODADDY_KEY: ${{ secrets.GODADDY_KEY }}
+          GODADDY_SECRET: ${{ secrets.GODADDY_SECRET }}
+          SITE_ADDRESS: ${{ vars.SITE_ADDRESS }}
+          SHARE_ADDRESS: ${{ vars.SHARE_ADDRESS }}
+          NEW_IP: ${{ steps.server.outputs.ip }}
+        run: |
+          set -euo pipefail
+          DOMAIN="thedeadly.app"
+
+          update_record() {
+            local fqdn="$1"
+            local name
+            if [ "$fqdn" = "$DOMAIN" ]; then
+              name="@"
+            else
+              name="${fqdn%.$DOMAIN}"
+            fi
+
+            echo "==> $fqdn (name=$name)"
+            local current
+            current=$(curl -fsS \
+              -H "Authorization: sso-key $GODADDY_KEY:$GODADDY_SECRET" \
+              "https://api.godaddy.com/v1/domains/$DOMAIN/records/A/$name" \
+              | jq -r '.[0].data // empty')
+
+            if [ "$current" = "$NEW_IP" ]; then
+              echo "    already $NEW_IP — no PATCH needed"
+              return 0
+            fi
+
+            echo "    $current -> $NEW_IP — PUTting record"
+            curl -fsS -X PUT \
+              -H "Authorization: sso-key $GODADDY_KEY:$GODADDY_SECRET" \
+              -H "Content-Type: application/json" \
+              -d "[{\"data\":\"$NEW_IP\",\"ttl\":600}]" \
+              "https://api.godaddy.com/v1/domains/$DOMAIN/records/A/$name" \
+              > /dev/null
+            echo "    OK"
+          }
+
+          update_record "$SITE_ADDRESS"
+          update_record "$SHARE_ADDRESS"
+
+          echo "==> Polling dig @1.1.1.1 for $SITE_ADDRESS -> $NEW_IP (up to ~700s)"
+          DEADLINE=$(( $(date +%s) + 700 ))
+          while [ "$(date +%s)" -lt "$DEADLINE" ]; do
+            RESOLVED=$(dig @1.1.1.1 +short "$SITE_ADDRESS" A | head -1)
+            if [ "$RESOLVED" = "$NEW_IP" ]; then
+              echo "    1.1.1.1 now resolves $SITE_ADDRESS to $NEW_IP"
+              exit 0
+            fi
+            echo "    currently resolves to '${RESOLVED:-<empty>}', sleeping 15s..."
+            sleep 15
+          done
+          echo "::warning::DNS did not propagate to 1.1.1.1 within 700s. The GoDaddy PATCH itself succeeded; propagation may still be in progress."
 
       - name: Job summary
         if: always()

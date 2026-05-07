@@ -1,0 +1,73 @@
+# Cutover-mode Caddyfile for the DO box during the Hetzner migration.
+#
+# Identical to the production Caddyfile EXCEPT that /api/* and /ws/* are
+# reverse-proxied over validated HTTPS to the Hetzner box at ${HETZNER_IP}
+# instead of the local api:3001 service. DO Caddy continues to serve the
+# bind-mounted static UI from /srv/ui.
+#
+# ${HETZNER_IP} is substituted at upload time by scripts/migrate-cutover.sh
+# (envsubst). It is NOT a Caddy env-var reference — Caddy's env-var syntax
+# is {$VAR}, with the $ inside the braces. The form ${VAR} below is bash.
+#
+# tls_server_name pins TLS validation to the hostname (thedeadly.app) so the
+# real LE cert validates cleanly even though we dial by IP. Both DO and HZ
+# hold the same cert, copied from DO in Phase 0.2.
+
+# Redirect www.<site> → apex
+www.{$SITE_ADDRESS} {
+	redir https://{$SITE_ADDRESS}{uri} permanent
+}
+
+# Main site — API/WS proxied to Hetzner; static UI served locally
+{$SITE_ADDRESS} {
+	handle /api/* {
+		reverse_proxy https://${HETZNER_IP} {
+			transport http {
+				tls
+				tls_server_name {$SITE_ADDRESS}
+			}
+			header_up Host {host}
+		}
+	}
+
+	handle /ws/* {
+		reverse_proxy https://${HETZNER_IP} {
+			transport http {
+				tls
+				tls_server_name {$SITE_ADDRESS}
+			}
+			header_up Host {host}
+		}
+	}
+
+	# Serve AASA with correct Content-Type for iOS Universal Links
+	handle /.well-known/apple-app-site-association {
+		root * /srv/ui
+		header Content-Type application/json
+		file_server
+	}
+
+	handle {
+		root * /srv/ui
+		file_server
+		try_files {path} {path}/index.html {path}.html /index.html
+	}
+}
+
+# Share site — static-only on DO; unchanged from production
+{$SHARE_ADDRESS} {
+	handle /.well-known/apple-app-site-association {
+		root * /srv/share
+		header Content-Type application/json
+		file_server
+	}
+
+	@recording path_regexp recording ^/shows/([^/]+)/recording/.*$
+	rewrite @recording /shows/{re.recording.1}/
+
+	handle {
+		root * /srv/share
+		file_server
+		try_files {path} {path}/index.html /index.html
+	}
+}
