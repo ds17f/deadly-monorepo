@@ -86,6 +86,55 @@ curl_resolve_health() {
     "https://${SITE_ADDRESS}/api/health" -o /dev/null
 }
 
+# Row-count fingerprint of the prod DBs. Output is sorted "db.table=count"
+# lines covering every user table in each DB, so two fingerprints can be
+# compared with plain `diff` without hardcoding table names.
+#
+# Args: ssh-target  users-db-path  analytics-db-path
+rowcount_remote() {
+  local target="$1" users="$2" analytics="$3"
+  ssh "${SSH_OPTS[@]}" "$target" '
+    set -e
+    fingerprint() {
+      local label="$1" db="$2"
+      sqlite3 "$db" "SELECT name FROM sqlite_master WHERE type='\''table'\'' AND name NOT LIKE '\''sqlite_%'\'' ORDER BY name" \
+        | while read -r t; do
+            c=$(sqlite3 "$db" "SELECT COUNT(*) FROM \"$t\"")
+            echo "${label}.${t}=${c}"
+          done
+    }
+    fingerprint users '"$users"'
+    fingerprint analytics '"$analytics"'
+  ' | sort
+}
+
+# Captures DO's live-DB fingerprint. Must be called *after* phase 2.1
+# (api stopped) so the counts cannot drift while we work.
+DO_BASELINE_FILE=""
+
+capture_do_baseline() {
+  DO_BASELINE_FILE="$(mktemp -t do-baseline.XXXXXX)"
+  rowcount_remote "$DO_SSH" \
+    /opt/deadly/api-data/users.db \
+    /opt/deadly/api-data/analytics.db \
+    > "$DO_BASELINE_FILE"
+  echo "DO baseline (writer stopped, this is the truth):"
+  sed 's/^/  /' "$DO_BASELINE_FILE"
+}
+
+assert_matches_baseline() {
+  local label="$1" file="$2"
+  if diff -u "$DO_BASELINE_FILE" "$file" > /tmp/cutover-rowcount-diff.$$ 2>&1; then
+    ok "$label row counts match DO baseline"
+    rm -f /tmp/cutover-rowcount-diff.$$
+  else
+    echo "error: $label row counts diverge from DO baseline:" >&2
+    cat /tmp/cutover-rowcount-diff.$$ >&2
+    rm -f /tmp/cutover-rowcount-diff.$$
+    exit 1
+  fi
+}
+
 # -------------------------------------------------------------- phases ---
 
 preflight() {
@@ -126,7 +175,11 @@ preflight() {
 phase_2_1_stop_do_api() {
   phase "2.1 — stop DO API"
   ssh_do 'cd /opt/deadly && docker compose stop api'
-  ok "DO API stopped"
+  # Confirm the writer is actually gone before we trust any row counts.
+  ssh_do 'cd /opt/deadly && docker compose ps -a api --format "{{.State}}" | grep -qi exited' \
+    || { echo "error: DO api container is not Exited after stop" >&2; ssh_do "cd /opt/deadly && docker compose ps -a api" >&2; exit 1; }
+  ok "DO API stopped (container Exited)"
+  capture_do_baseline
 }
 
 phase_2_2_snapshot_dbs() {
@@ -136,6 +189,16 @@ phase_2_2_snapshot_dbs() {
     sqlite3 api-data/analytics.db ".backup /tmp/analytics.db" && \
     ls -la /tmp/users.db /tmp/analytics.db'
   ok "snapshots taken on DO"
+
+  # Read row counts directly from the snapshot files. This proves the
+  # .backup output is intact and identical to the live DB the writer
+  # had just stopped touching.
+  local snap; snap="$(mktemp -t do-snapshot.XXXXXX)"
+  rowcount_remote "$DO_SSH" /tmp/users.db /tmp/analytics.db > "$snap"
+  echo "DO snapshot fingerprint:"
+  sed 's/^/  /' "$snap"
+  assert_matches_baseline "DO snapshot" "$snap"
+  rm -f "$snap"
 }
 
 phase_2_3_ship_dbs() {
@@ -172,6 +235,19 @@ phase_2_4_restart_hz_api() {
   done
   echo "error: HZ /api/health did not come back after restart" >&2
   exit 1
+}
+
+phase_2_4b_verify_hz_rowcounts() {
+  phase "2.4b — verify HZ row counts match DO baseline"
+  local hz; hz="$(mktemp -t hz-rowcount.XXXXXX)"
+  rowcount_remote "$HZ_SSH" \
+    /opt/deadly/api-data/users.db \
+    /opt/deadly/api-data/analytics.db \
+    > "$hz"
+  echo "HZ fingerprint:"
+  sed 's/^/  /' "$hz"
+  assert_matches_baseline "HZ" "$hz"
+  rm -f "$hz"
 }
 
 phase_2_5_2_6_swap_do_caddy() {
@@ -330,6 +406,7 @@ phase_2_1_stop_do_api
 phase_2_2_snapshot_dbs
 phase_2_3_ship_dbs
 phase_2_4_restart_hz_api
+phase_2_4b_verify_hz_rowcounts
 phase_2_5_2_6_swap_do_caddy
 phase_2_7_soak
 phase_3_flip_dns

@@ -2,6 +2,40 @@
 
 Plan for migrating the deadly web stack off DigitalOcean (free credits expiring) to Hetzner Cloud.
 
+## Status (as of 2026-05-07)
+
+**Phases 0–3 done.** Production traffic is being served by Hetzner. DNS is flipped. DO is idle.
+
+- Phase 0 — artifacts built ✓
+- Phase 1 — Hetzner prod stood up, soaked, real-data smoke tested ✓
+- Phase 2 — cutover ran via `scripts/migrate-cutover.sh` at ~17:00 UTC ✓
+- Phase 3 — apex A flipped to `178.156.208.143`, fully propagated to all major resolvers within ~15 min ✓
+- **Phase 4 — Decommission** (T+24h, i.e. **2026-05-08 afternoon**) ← next
+- **Phase 5 — Force cert renewal** (any time after Phase 4) ← next
+
+**Live IPs:**
+- Hetzner prod: `178.156.208.143` (this is what `thedeadly.app` resolves to now)
+- DO prod (idle, awaiting destroy): `147.182.140.188`
+
+**If you're picking this up cold:** start at the [Phase 4 checklist](#phase-4--decommission-t24h). Everything before it is reference for what already happened.
+
+## Next steps (cold-session checklist)
+
+For when you re-open this doc tomorrow with no working memory.
+
+1. **Sanity check** — confirm HZ is still serving and DNS still resolves there:
+   ```bash
+   dig @1.1.1.1 +short thedeadly.app A   # expect 178.156.208.143
+   curl -fsS https://thedeadly.app/api/health   # expect 200
+   ```
+2. **Phase 4.1** — tail DO Caddy access log; expect silence on `/api/*` and `/ws/*`. Command in §4.1.
+3. **Phase 4.2** — confirm a post-cutover backup exists in B2. Command in §4.2.
+4. **Phase 4.3** — run **Web - Infra** workflow with `action=destroy, provider=digitalocean, environment=prod`. This is the irreversible one — only after 4.1 and 4.2 are clean.
+5. **Phase 4.4–4.8** — DO beta destroy, Terraform cleanup, drop DO from workflow inputs, revoke `DO_API_TOKEN`, wipe `.secrets/le-cert/` and `.secrets/cutover-dbs/`. None are urgent; do at your leisure.
+6. **Phase 5 (any time, before cert hits 60 days remaining)** — force a cert renewal on HZ to prove the ACME path works. Steps in §5.
+
+If anything in step 1 looks wrong, **stop** and read the [Learnings](#learnings-2026-05-07-cutover-run) section before touching anything — that's where the actual gotchas from the live run are recorded.
+
 ## Goals
 
 - Drop monthly hosting cost (~$4–5/mo on Hetzner vs. $24/mo on DO).
@@ -121,6 +155,8 @@ After Phase 1, Hetzner prod is running with the real cert and a recent (but soon
 
 ## Phase 2 — Cutover (the actual moment, ~5 minutes wall-clock)
 
+**Status: ✓ Done 2026-05-07 (~17:00 UTC).** `scripts/migrate-cutover.sh --do-ip 147.182.140.188 --hz-ip 178.156.208.143` (no `--flip-dns`). All baseline/snapshot/HZ row-count fingerprints matched exactly. ~30–60s window of `/api/*` 502s between 2.1 (api stop) and 2.6 (Caddy reload). After 2.6, real third-party traffic flowed cleanly: an Android client (v2.24.0) did `app_open` → `cold_start` → `playback_start` for `gd91-06-14`, all written to HZ `analytics.db` while DNS still pointed at DO. Soaked ~30 min before flipping DNS. **Two script bugs fixed during the run; see [Learnings](#learnings-2026-05-07-cutover-run).**
+
 This is where `scripts/migrate-cutover.sh` runs. Each numbered step below corresponds to a step in the script.
 
 | # | What | How | Verify |
@@ -137,25 +173,79 @@ This is where `scripts/migrate-cutover.sh` runs. Each numbered step below corres
 
 ## Phase 3 — DNS flip (when you're confident)
 
-Soak as long as you want — minutes, hours, overnight. When ready:
+**Status: ✓ Done 2026-05-07 (~17:30 UTC).** Surgical apex-only PATCH via direct curl (not the script — see learnings). Within ~15 min, ns73/ns74 (GoDaddy authoritative) and 1.1.1.1 / 8.8.8.8 / 9.9.9.9 all resolved `thedeadly.app` to `178.156.208.143`.
+
+**Important correction to original plan:** `share.thedeadly.app` and `www.thedeadly.app` are **CNAMEs to `@`** in GoDaddy, not separate A records. Only the apex `@` A record needed to change; `share` and `www` followed automatically. The `phase_3_flip_dns` function in the cutover script tries to PATCH `share.thedeadly.app` as an A record and would have errored — patch needed in script before next migration.
+
+**The PATCH that ran:**
+```bash
+KEY=$(cat .secrets/godaddy-key.txt)
+curl -fsS -X PUT \
+  -H "Authorization: sso-key $KEY" \
+  -H "Content-Type: application/json" \
+  -d '[{"data":"178.156.208.143","ttl":600}]' \
+  "https://api.godaddy.com/v1/domains/thedeadly.app/records/A/@"
+```
+
+**GoDaddy authoritative lag.** When PATCHing, GoDaddy's control plane (UI + API GET) updates immediately, but `ns73`/`ns74` continue serving the old answer for ~10–15 min on their own internal schedule. Don't panic if `dig @ns73` lags after a 200 from the API — it'll catch up. Same quirk hit us earlier in the day when lowering TTL from 3600 → 600.
 
 | # | What | How | Verify |
 |---|------|-----|--------|
-| 3.1 | PATCH GoDaddy A records | Either via the deploy workflow (`update_dns=true`) or one-off `curl` from the cutover script. Both `thedeadly.app` and `share.thedeadly.app` → Hetzner IP. | `dig @1.1.1.1 thedeadly.app` returns Hetzner IP within a few seconds. |
-| 3.2 | Watch traffic shift | Tail Caddy logs on both. DO Caddy shows requests tapering; Hetzner Caddy shows requests ramping. | After ~600s, DO traffic should be near zero. Both sides serve the same valid cert throughout — no trust warnings at any point. |
+| 3.1 | PATCH GoDaddy apex A record | Direct `curl` (above). `share` and `www` are CNAMEs → `@`, no separate change needed. | `curl -H "Authorization: sso-key $KEY" .../records/A/@` returns the new IP. |
+| 3.2 | Wait for authoritative NS to publish | Patience — control plane is instant, NS layer lags ~10–15 min. | `dig @ns73.domaincontrol.com thedeadly.app A` returns HZ IP. |
+| 3.3 | Watch traffic shift | Tail Caddy logs on both. DO Caddy tapers; Hetzner Caddy ramps. | After ~600s past NS publish, DO traffic should be near zero. Same cert on both sides throughout — no trust warnings at any point. |
 
 ## Phase 4 — Decommission (T+24h)
 
-| # | What | How |
-|---|------|-----|
-| 4.1 | Confirm DO is receiving zero API traffic | Tail Caddy access log on DO; should be silent. |
-| 4.2 | Confirm Hetzner backups working | Check B2 bucket; deploy workflow's backup step runs on prod deploys. |
-| 4.3 | Destroy DO prod | **Web - Infra** with `action=destroy, provider=digitalocean, environment=prod`. |
-| 4.4 | Destroy DO beta (if it was launched) | Same workflow, `environment=beta`. |
-| 4.5 | Clean up `infra/digitalocean/*.tf` | Remove dev/legacy `digitalocean_droplet.server` and `alpha` resources; keep DO module retired. |
-| 4.6 | Optionally drop DO from CI | Remove `digitalocean` choice from workflow inputs if you don't expect to fall back. |
-| 4.7 | Revoke DO API token | DO console → API → revoke. Optionally delete `DO_API_TOKEN` GitHub secret. |
-| 4.8 | Delete staged cert from `.secrets/` | `rm -rf .secrets/le-cert/` | Directory gone. Hetzner is the sole holder of the prod private key. |
+**Earliest start: 2026-05-08 ~17:00 UTC** (24h after DNS flip). Wait so any cached resolvers fully age out and we're confident HZ has been stable solo.
+
+### 4.1 — Confirm DO is receiving zero API traffic
+
+```bash
+ssh -i ssh-key-2026-03-15.key deploy@147.182.140.188 \
+  'cd /opt/deadly && docker compose logs caddy --since 1h --tail 100 | grep -E "/(api|ws)/" | head -20'
+```
+
+Expect: empty (or only health-check noise). If real `/api/*` requests are still arriving, hold off on destroy — something has DO IP cached or hardcoded. Check mobile app builds in particular.
+
+### 4.2 — Confirm Hetzner backups are working
+
+The web-deploy workflow's backup step runs on prod deploys and pushes to B2. Confirm at least one HZ-origin backup exists:
+
+```bash
+aws s3 ls s3://deadly-backups/db/ --endpoint-url https://s3.us-west-004.backblazeb2.com \
+  --profile <whichever profile reads B2_TFSTATE_KEY_ID/APP_KEY> | tail
+```
+
+If the latest backup pre-dates the cutover, kick a no-op deploy to force one: **Web - Deploy** with `environment=prod, provider=hetzner, ref=main, update_dns=false`.
+
+### 4.3 — Destroy DO prod
+
+Run **Web - Infra** workflow with `action=destroy, provider=digitalocean, environment=prod`. This frees the droplet and its public IP. Terraform state in B2 records the destroy.
+
+### 4.4 — Destroy DO beta (if it was ever launched)
+
+Same workflow, `environment=beta`. Probably a no-op — beta on DO was never used during this migration.
+
+### 4.5 — Clean up `infra/digitalocean/*.tf`
+
+Remove the legacy `digitalocean_droplet.server` and `alpha` resources from the Terraform files. Keep the DO module file present-but-empty (or as a stub) so `terraform init` still works if anyone runs against historical state. Don't blow away state.
+
+### 4.6 — Optionally drop DO from CI
+
+Edit `.github/workflows/infra-manage.yml` and `web-deploy.yml` to remove `digitalocean` from the `provider` choice list. Only do this once you're confident there's no fallback need (you can always add it back).
+
+### 4.7 — Revoke DO API token
+
+DO console → API → revoke `DO_API_TOKEN`. Then: `gh secret delete DO_API_TOKEN` (optional but tidy).
+
+### 4.8 — Delete staged cert from `.secrets/`
+
+```bash
+rm -rf .secrets/le-cert/ .secrets/cutover-dbs/
+```
+
+After this, Hetzner is the sole holder of the prod private key. The `.secrets/cutover-dbs/` staging dir from the script also has copies of users.db / analytics.db — wipe those too.
 
 ## Phase 5 — Force a cert renewal to verify the renewal path
 
@@ -175,6 +265,8 @@ After this phase, we've verified the full renewal path works against this Hetzne
 
 ## Rollback
 
+**No longer applicable as of 2026-05-07** — DNS is flipped, DO API is stopped, HZ is the source of truth. The pre-Phase-3 rollback below is kept for reference only. If something goes wrong now, the recovery is "spin DO back up, restore last B2 backup, flip DNS back" — messy and lossy. Avoid.
+
 At any point during Phase 2, before Phase 3 (DNS flip):
 
 - Re-deploy the original Caddyfile on DO and restart DO API:
@@ -189,14 +281,39 @@ After Phase 3 (DNS flipped), rollback means flipping DNS back to DO **and** copy
 
 The cutover script (`scripts/migrate-cutover.sh --rollback`) automates the pre-Phase-3 rollback.
 
+## Learnings (2026-05-07 cutover run)
+
+Things we found out during the actual run that the plan didn't predict. **These are real and should be applied next time, or fixed in `scripts/migrate-cutover.sh` before any future migration.**
+
+1. **`docker compose ps` hides stopped containers.** The original 2.1 verification (`docker compose ps api | grep -E "Exited|exited"`) failed even though the api was correctly stopped — `ps` without `-a` only shows running containers. Fixed in script to `docker compose ps -a api --format "{{.State}}" | grep -qi exited`. Cost: one false-alarm script abort with DO API already stopped (i.e. user-visible 502s prolonged ~1 min while we fixed and re-ran).
+
+2. **Hardcoded table names in row-count fingerprint don't survive contact with reality.** Original implementation hardcoded `daily_rollups` — actual table is `analytics_daily_rollup`. Fixed by querying `sqlite_master` dynamically and counting every user table in each DB. The script now adapts to whatever schema is actually there. Cost: another false-alarm abort with DO already stopped, ~1 more min of 502s.
+
+3. **`share.thedeadly.app` is a CNAME → `@`, not an A record.** `phase_3_flip_dns` in the script tries to PATCH it as an A record and would have errored. **This is unfixed in the script.** For this run we did the surgical apex-only PATCH manually and `share` + `www` followed via their CNAMEs. Before the next migration, fix the script to either (a) detect record type per host, or (b) only PATCH the apex when CNAMEs are configured to follow.
+
+4. **GoDaddy authoritative NS lag is real and ~10–15 min.** Both for TTL changes earlier in the day and for the actual A-record flip. Control plane (UI + API GET) updates instantly; `ns73`/`ns74` lag. Don't assume something is broken when `dig @ns73` still shows the old answer right after a 200 from the GoDaddy API. Plan for it; don't re-PATCH thinking the first one didn't take.
+
+5. **The two-stage row-count fingerprint additions caught nothing — and that was the goal.** Baseline (after 2.1) → snapshot (read from `/tmp/*.db` on DO after `.backup`) → HZ post-restart all matched exactly. This is the discipline you want: prove the data integrity rather than assume it. Worth keeping.
+
+6. **The cutover proxy is *fully* transparent end-to-end.** Real Android client (v2.24.0) did `app_open` → `cold_start` → `playback_start` while DNS still pointed at DO; analytics rows landed on HZ with HZ-side `received_at` timestamps. Nothing in the client knows or cares. Same will be true on rollback if it ever happens.
+
+7. **DO Caddyfile.cutover needed `caddy reload`, not restart.** The script does this correctly via `docker compose exec -T caddy caddy reload`. Reload is zero-downtime; the previous TLS connections drain naturally. Don't change this to a restart.
+
 ## Open risks
 
-- **Private key staged in `.secrets/`.** The LE private key briefly lives on the laptop in `.secrets/le-cert/` between Phase 0.2 (pull) and Phase 1.3 (push). `.secrets/` is gitignored. Delete the staged copy after Phase 4 decommission — no reason to keep prod private keys around.
-- **Cert renewal post-cutover.** The copied cert is valid ~90 days from its original issuance. Caddy on Hetzner attempts renewal ~30 days before expiry; DNS resolves to Hetzner by then, HTTP-01 succeeds. If cutover happens close to expiry, force a renewal on DO before pulling the cert so we start with a fresh ~90 days.
-- **Stale cert in `.secrets/`.** If Phase 1 slips weeks after Phase 0.2, DO Caddy may have renewed and our staged copy is no longer the live cert. Re-run `pull-cert-from-do.sh` right before Phase 1.3 (Phase 1.1 covers this).
-- **OAuth provider redirect URIs**: the registered callbacks (`https://thedeadly.app/api/auth/callback/google`, etc.) don't change. They go through DO Caddy → Hetzner during cutover, then directly to Hetzner after DNS flip. No re-registration needed.
-- **Service worker caching**: if the web app ships a service worker, some users may see stale assets. Worth a quick check (`ls ui-out/sw.js` or similar). If present, consider a cache-bust as part of the cutover.
-- **GHA workflows running concurrent with cutover** could re-deploy and clobber the cutover Caddyfile. Pause merges to `main` during the cutover window, or rely on the fact that the cutover script is the last thing to touch DO.
+### Still active (deal with these)
+
+- **Private key staged in `.secrets/`.** The LE private key currently lives in `.secrets/le-cert/` on the laptop. `.secrets/` is gitignored. **Delete in Phase 4.8.** Also `.secrets/cutover-dbs/` has copies of `users.db` / `analytics.db` from the cutover — same treatment.
+- **Phase 5 cert renewal smoke test.** The cert HZ is currently serving was obtained from DO via copy. It will renew via ACME at T-30 days, but we haven't *proven* HZ's renewal path works. Force a renewal (Phase 5) before T-30 days so we don't find out at expiry.
+- **`scripts/migrate-cutover.sh` `phase_3_flip_dns` is broken** for this domain's DNS shape (tries to PATCH `share.thedeadly.app` as an A record; it's a CNAME). Not blocking anything now since DNS is already flipped, but fix before any future migration touches this script.
+- **`scripts/setup-infra-secrets.sh` is untested end-to-end.** During this migration we pushed `HCLOUD_TOKEN`, `GODADDY_KEY`, and `GODADDY_SECRET` manually via `gh secret set` to avoid risking the iOS/Android signing/release secrets that the script also touches. Before relying on the script for future onboarding or rotations, exercise it in full.
+
+### Resolved (informational, no action needed)
+
+- ~~OAuth provider redirect URIs~~: confirmed during soak — Google OAuth round-tripped via DO→HZ proxy, no re-registration needed. Now goes directly to HZ.
+- ~~Stale cert in `.secrets/`~~: pull was done on the same day as push; cert had ~45 days remaining when shipped to HZ.
+- ~~GHA workflows clobbering cutover Caddyfile~~: nobody pushed during the cutover window. Going forward the active Caddyfile on DO is moot since DO is being decommissioned.
+- ~~Service worker caching~~: not a factor — no service worker shipped.
 - **`scripts/setup-infra-secrets.sh` is untested end-to-end.** During this migration we pushed `HCLOUD_TOKEN`, `GODADDY_KEY`, and `GODADDY_SECRET` manually via `gh secret set` to avoid risking the iOS/Android signing/release secrets that the script also touches. Before relying on the script for future onboarding or rotations, exercise it in full and confirm every secret it manages (B2, DO, Hetzner, GoDaddy, SSH, plus any mobile signing material it covers) round-trips correctly without disrupting active mobile release pipelines.
 
 ## Cost summary
