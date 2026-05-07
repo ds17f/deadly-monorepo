@@ -26,11 +26,13 @@ Plan for migrating the deadly web stack off DigitalOcean (free credits expiring)
 - [x] `scripts/setup-infra-secrets.sh` — uploads `HCLOUD_TOKEN`, `GODADDY_KEY`, `GODADDY_SECRET`.
 - [x] `.github/workflows/infra-manage.yml` — `hetzner` provider option (default), `alpha` removed.
 - [x] `.github/workflows/web-deploy.yml` — `provider` input added (default `hetzner`), TF dir per provider.
-- [ ] `.github/workflows/web-deploy.yml` — `update_dns` checkbox (default off; flip default later for beta).
-- [ ] `caddy/Caddyfile.cutover` — DO-side variant that proxies API/WS to Hetzner over validated TLS.
+- [x] `.github/workflows/web-deploy.yml` — `update_dns` checkbox (default off; flip default later for beta).
+- [x] `caddy/Caddyfile.cutover` — DO-side variant that proxies API/WS to Hetzner over validated TLS.
 - [x] `scripts/pull-cert-from-do.sh` — pulls live LE cert + key from DO into `.secrets/` (Phase 0).
 - [x] `scripts/push-cert-to-hetzner.sh` — pushes cert from `.secrets/` into Hetzner Caddy volume (Phase 1).
-- [ ] `scripts/migrate-cutover.sh` — orchestrates snapshot → ship → swap → verify, with `--rollback`.
+- [x] `scripts/migrate-cutover.sh` — orchestrates snapshot → ship → swap → verify, with `--rollback`.
+
+Local tooling required to run the cutover script: `jq`, `envsubst` (gettext), `dig` (bind-utils), plus SSH access to both boxes.
 
 ## DNS
 
@@ -207,37 +209,21 @@ vs. current DO prod alone at ~$24/mo.
 
 ---
 
-# Cutover script outline
+# Cutover script
 
-`scripts/migrate-cutover.sh` — invoke with `--do-ip`, `--hz-ip`, optional `--rollback`. Pseudocode:
+`scripts/migrate-cutover.sh` orchestrates Phase 2 and (optionally) Phase 3. Each phase function in the script corresponds to a numbered step in this doc.
 
 ```
-parse args
-load HCLOUD_TOKEN, GODADDY_KEY, GODADDY_SECRET from .secrets/
-preflight checks:
-  - confirm DNS TTL is 600
-  - confirm Hetzner /api/health responds (via --resolve)
-  - confirm DO /api/health responds
-  - prompt: "Continue with cutover? (y/n)"
-
-phase 2.1: ssh DO -> docker compose stop api
-phase 2.2: ssh DO -> sqlite3 .backup for both DBs
-phase 2.3: scp DO:/tmp/*.db -> local -> Hetzner:/opt/deadly/api-data/
-phase 2.4: ssh Hetzner -> docker compose restart api
-           verify health via --resolve
-phase 2.5: render Caddyfile.cutover with $HZ_IP, scp to DO
-phase 2.6: ssh DO -> docker cp + caddy reload
-           verify proxy works (curl real DNS -> DO -> Hetzner)
-phase 2.7: prompt: "Soak window. Test in browser. Continue to DNS flip? (y/n/rollback)"
-
-phase 3.1: PATCH GoDaddy A records (only if --flip-dns specified)
-phase 3.2: poll dig @1.1.1.1 for up to ~700s; timeout = soft warn
-phase 3.3: print summary, exit
+scripts/migrate-cutover.sh --do-ip <ip> --hz-ip <ip> [--flip-dns]
+scripts/migrate-cutover.sh --do-ip <ip> --rollback
 ```
 
-Rollback path (`--rollback`):
-```
-ssh DO -> caddy reload original Caddyfile
-ssh DO -> docker compose start api
-print summary
-```
+**Flags:**
+- `--do-ip <ip>` — required
+- `--hz-ip <ip>` — required unless `--rollback`
+- `--flip-dns` — after Phase 2 + soak, also do Phase 3 (PATCH GoDaddy A records). Reads `.secrets/godaddy-key.txt` (KEY:SECRET pair). Without this flag, Phase 3 is skipped and you can flip DNS later via the **Web - Deploy** workflow with `update_dns=true`.
+- `--rollback` — restore DO from `Caddyfile.original.bak` (saved on DO at swap time) and start the DO API. Only valid pre-DNS-flip.
+
+**Interactive prompts** at: preflight (confirm IPs and mode), end of Phase 2 (`c` continue / `r` rollback / `w` wait & re-prompt), and (if `--flip-dns`) before the GoDaddy PATCH.
+
+**Local tool deps:** `jq`, `envsubst`, `dig`, `ssh`/`scp`, `curl`. The script does not check for these — install them if missing (Fedora: `dnf install jq gettext bind-utils`).
