@@ -92,11 +92,11 @@ ui-dev:
 
 # Build static UI export
 ui-build:
-	cd ui && npm run build
+	cd ui && npm run build && mkdir -p dist && rsync -a --delete out/ dist/
 
 # Fast dev build — only 10 pages for quick iteration
 ui-dev-build:
-	cd ui && DEV_PAGES=10 npm run build
+	cd ui && DEV_PAGES=10 npm run build && mkdir -p dist && rsync -a --delete out/ dist/
 
 # Type-check UI
 ui-typecheck:

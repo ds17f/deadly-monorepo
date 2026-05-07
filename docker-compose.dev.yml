@@ -14,7 +14,7 @@ services:
       - "8081:8081"
     volumes: !override
       - ./Caddyfile.dev:/etc/caddy/Caddyfile:ro,z
-      - ./ui/out:/srv/ui:ro,z
+      - ./ui/dist:/srv/ui:ro,z
       - ./web:/srv/share:ro,z
     depends_on:
       - api
