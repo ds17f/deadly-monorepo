@@ -28,14 +28,21 @@ TARBALL="$OUT_DIR/thedeadly.app.tar.gz"
 HOSTNAME="thedeadly.app"
 CERT_BASE="/data/caddy/certificates/acme-v02.api.letsencrypt.org-directory"
 
+SSH_KEY="${SSH_KEY:-$REPO_ROOT/ssh-key-2026-03-15.key}"
+if [ ! -f "$SSH_KEY" ]; then
+  echo "error: SSH key not found at $SSH_KEY. Set SSH_KEY env var to override." >&2
+  exit 1
+fi
+SSH_OPTS=(-i "$SSH_KEY" -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new)
+
 mkdir -p "$OUT_DIR"
 
 echo "==> Verifying cert exists on DO Caddy at $DO_IP"
-ssh "deploy@$DO_IP" "cd /opt/deadly && docker compose exec -T caddy ls $CERT_BASE/$HOSTNAME/" \
+ssh "${SSH_OPTS[@]}" "deploy@$DO_IP" "cd /opt/deadly && docker compose exec -T caddy ls $CERT_BASE/$HOSTNAME/" \
   || { echo "error: cert dir not found on DO. Is Caddy running and has it acquired a cert?" >&2; exit 1; }
 
 echo "==> Pulling cert tarball into $TARBALL"
-ssh "deploy@$DO_IP" "cd /opt/deadly && docker compose exec -T caddy tar -czf - -C $CERT_BASE $HOSTNAME" \
+ssh "${SSH_OPTS[@]}" "deploy@$DO_IP" "cd /opt/deadly && docker compose exec -T caddy tar -czf - -C $CERT_BASE $HOSTNAME" \
   > "$TARBALL"
 
 echo "==> Extracting .crt for inspection"

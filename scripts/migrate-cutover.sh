@@ -50,6 +50,14 @@ SHARE_ADDRESS="share.$DOMAIN"
 DO_SSH="deploy@$DO_IP"
 HZ_SSH="deploy@$HZ_IP"
 
+SSH_KEY="${SSH_KEY:-$REPO_ROOT/ssh-key-2026-03-15.key}"
+if [ ! -f "$SSH_KEY" ]; then
+  echo "error: SSH key not found at $SSH_KEY. Set SSH_KEY env var to override." >&2
+  exit 1
+fi
+SSH_OPTS=(-i "$SSH_KEY" -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new -o BatchMode=yes)
+SCP_OPTS=(-i "$SSH_KEY" -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new)
+
 # -------------------------------------------------------------- helpers ---
 
 if [ -t 1 ]; then
@@ -68,8 +76,9 @@ confirm() {
   [[ "$reply" =~ ^[Yy]$ ]]
 }
 
-ssh_do() { ssh -o BatchMode=yes "$DO_SSH" "$@"; }
-ssh_hz() { ssh -o BatchMode=yes "$HZ_SSH" "$@"; }
+ssh_do() { ssh "${SSH_OPTS[@]}" "$DO_SSH" "$@"; }
+ssh_hz() { ssh "${SSH_OPTS[@]}" "$HZ_SSH" "$@"; }
+scp_()   { scp "${SCP_OPTS[@]}" "$@"; }
 
 curl_resolve_health() {
   local ip="$1"
@@ -133,12 +142,12 @@ phase_2_3_ship_dbs() {
   phase "2.3 — ship DO snapshots → local → HZ"
   local stage="${REPO_ROOT}/.secrets/cutover-dbs"
   mkdir -p "$stage"
-  scp "$DO_SSH:/tmp/users.db" "$stage/users.db"
-  scp "$DO_SSH:/tmp/analytics.db" "$stage/analytics.db"
+  scp_ "$DO_SSH:/tmp/users.db" "$stage/users.db"
+  scp_ "$DO_SSH:/tmp/analytics.db" "$stage/analytics.db"
   ok "pulled to $stage"
 
-  scp "$stage/users.db" "$HZ_SSH:/tmp/users.db"
-  scp "$stage/analytics.db" "$HZ_SSH:/tmp/analytics.db"
+  scp_ "$stage/users.db" "$HZ_SSH:/tmp/users.db"
+  scp_ "$stage/analytics.db" "$HZ_SSH:/tmp/analytics.db"
   ssh_hz 'sudo install -o deploy -g deploy -m 0644 /tmp/users.db /opt/deadly/api-data/users.db && \
           sudo install -o deploy -g deploy -m 0644 /tmp/analytics.db /opt/deadly/api-data/analytics.db && \
           rm /tmp/users.db /tmp/analytics.db'
@@ -172,7 +181,7 @@ phase_2_5_2_6_swap_do_caddy() {
   ssh_do 'cd /opt/deadly && docker compose exec -T caddy cat /etc/caddy/Caddyfile > Caddyfile.original.bak'
   ok "backed up DO's original Caddyfile to /opt/deadly/Caddyfile.original.bak"
 
-  scp "$rendered" "$DO_SSH:/opt/deadly/Caddyfile.cutover.rendered"
+  scp_ "$rendered" "$DO_SSH:/opt/deadly/Caddyfile.cutover.rendered"
   ssh_do 'cd /opt/deadly && docker compose cp Caddyfile.cutover.rendered caddy:/etc/caddy/Caddyfile'
   ssh_do 'cd /opt/deadly && docker compose exec -T caddy caddy validate --config /etc/caddy/Caddyfile'
   ok "validated"

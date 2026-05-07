@@ -27,6 +27,13 @@ HOSTNAME="thedeadly.app"
 VOLUME="deadly_caddy_data"
 CERT_BASE_IN_VOLUME="caddy/certificates/acme-v02.api.letsencrypt.org-directory"
 
+SSH_KEY="${SSH_KEY:-$REPO_ROOT/ssh-key-2026-03-15.key}"
+if [ ! -f "$SSH_KEY" ]; then
+  echo "error: SSH key not found at $SSH_KEY. Set SSH_KEY env var to override." >&2
+  exit 1
+fi
+SSH_OPTS=(-i "$SSH_KEY" -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new)
+
 if [ ! -f "$TARBALL" ]; then
   echo "error: $TARBALL not found. Run scripts/pull-cert-from-do.sh first." >&2
   exit 1
@@ -47,17 +54,17 @@ if [ "$DAYS_LEFT" -lt 30 ]; then
 fi
 
 echo "==> Ensuring volume $VOLUME exists on $HZ_IP"
-ssh "deploy@$HZ_IP" "docker volume create $VOLUME >/dev/null"
+ssh "${SSH_OPTS[@]}" "deploy@$HZ_IP" "docker volume create $VOLUME >/dev/null"
 
 echo "==> Streaming tarball into $VOLUME:/$CERT_BASE_IN_VOLUME/"
 # busybox tar can't create parent dirs from -C, so mkdir -p first.
-ssh "deploy@$HZ_IP" "docker run --rm -i -v $VOLUME:/data busybox sh -c '
+ssh "${SSH_OPTS[@]}" "deploy@$HZ_IP" "docker run --rm -i -v $VOLUME:/data busybox sh -c '
   mkdir -p /data/$CERT_BASE_IN_VOLUME &&
   tar -xzf - -C /data/$CERT_BASE_IN_VOLUME
 '" < "$TARBALL"
 
 echo "==> Verifying cert is in the volume"
-ssh "deploy@$HZ_IP" "docker run --rm -v $VOLUME:/data busybox ls /data/$CERT_BASE_IN_VOLUME/$HOSTNAME/"
+ssh "${SSH_OPTS[@]}" "deploy@$HZ_IP" "docker run --rm -v $VOLUME:/data busybox ls /data/$CERT_BASE_IN_VOLUME/$HOSTNAME/"
 
 echo
 echo "==> Done. Caddy will pick up the cert on its first start (Phase 1.4 deploy)."
