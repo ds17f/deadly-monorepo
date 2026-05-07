@@ -195,6 +195,7 @@ The cutover script (`scripts/migrate-cutover.sh --rollback`) automates the pre-P
 - **OAuth provider redirect URIs**: the registered callbacks (`https://thedeadly.app/api/auth/callback/google`, etc.) don't change. They go through DO Caddy → Hetzner during cutover, then directly to Hetzner after DNS flip. No re-registration needed.
 - **Service worker caching**: if the web app ships a service worker, some users may see stale assets. Worth a quick check (`ls ui-out/sw.js` or similar). If present, consider a cache-bust as part of the cutover.
 - **GHA workflows running concurrent with cutover** could re-deploy and clobber the cutover Caddyfile. Pause merges to `main` during the cutover window, or rely on the fact that the cutover script is the last thing to touch DO.
+- **`scripts/setup-infra-secrets.sh` is untested end-to-end.** During this migration we pushed `HCLOUD_TOKEN`, `GODADDY_KEY`, and `GODADDY_SECRET` manually via `gh secret set` to avoid risking the iOS/Android signing/release secrets that the script also touches. Before relying on the script for future onboarding or rotations, exercise it in full and confirm every secret it manages (B2, DO, Hetzner, GoDaddy, SSH, plus any mobile signing material it covers) round-trips correctly without disrupting active mobile release pipelines.
 
 ## Cost summary
 
