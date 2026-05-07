@@ -50,12 +50,31 @@ if [ ! -f "infra/digitalocean/terraform.tfvars" ]; then
 fi
 DO_TOKEN=$(grep do_token infra/digitalocean/terraform.tfvars | sed 's/.*"\(.*\)"/\1/')
 
+# Read Hetzner token (bare token, one line)
+if [ ! -f ".secrets/hetzner-key.txt" ]; then
+    echo -e "${RED}Error: .secrets/hetzner-key.txt not found${NC}"
+    exit 1
+fi
+HCLOUD_TOKEN=$(tr -d '[:space:]' < .secrets/hetzner-key.txt)
+
+# Read GoDaddy API credentials (KEY:SECRET format, one line)
+if [ ! -f ".secrets/godaddy-key.txt" ]; then
+    echo -e "${RED}Error: .secrets/godaddy-key.txt not found${NC}"
+    exit 1
+fi
+GODADDY_RAW=$(tr -d '[:space:]' < .secrets/godaddy-key.txt)
+GODADDY_KEY="${GODADDY_RAW%%:*}"
+GODADDY_SECRET="${GODADDY_RAW#*:}"
+
 echo "Secrets to upload:"
 echo "  B2_TFSTATE_KEY_ID"
 echo "  B2_TFSTATE_APP_KEY"
 echo "  B2_BACKUPS_KEY_ID"
 echo "  B2_BACKUPS_APP_KEY"
 echo "  DO_API_TOKEN"
+echo "  HCLOUD_TOKEN"
+echo "  GODADDY_KEY"
+echo "  GODADDY_SECRET"
 echo "  SSH_PRIVATE_KEY"
 echo "  SSH_PUBLIC_KEY"
 echo ""
@@ -86,6 +105,21 @@ echo -e "${BLUE}Uploading DO secret...${NC}"
 
 echo -e "${GREEN}+${NC} DO_API_TOKEN"
 echo "$DO_TOKEN" | gh secret set DO_API_TOKEN
+
+echo ""
+echo -e "${BLUE}Uploading Hetzner secret...${NC}"
+
+echo -e "${GREEN}+${NC} HCLOUD_TOKEN"
+echo "$HCLOUD_TOKEN" | gh secret set HCLOUD_TOKEN
+
+echo ""
+echo -e "${BLUE}Uploading GoDaddy secrets...${NC}"
+
+echo -e "${GREEN}+${NC} GODADDY_KEY"
+echo -n "$GODADDY_KEY" | gh secret set GODADDY_KEY
+
+echo -e "${GREEN}+${NC} GODADDY_SECRET"
+echo -n "$GODADDY_SECRET" | gh secret set GODADDY_SECRET
 
 echo ""
 echo -e "${BLUE}Uploading SSH secrets...${NC}"

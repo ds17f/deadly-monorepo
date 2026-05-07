@@ -15,18 +15,18 @@ on:
         required: true
         type: choice
         options:
+          - hetzner
           - digitalocean
           - oci
-        default: digitalocean
+        default: hetzner
       environment:
         description: "Environment to manage"
         required: true
         type: choice
         options:
-          - alpha
           - beta
           - prod
-        default: alpha
+        default: beta
 
 permissions:
   contents: read
@@ -55,6 +55,10 @@ jobs:
             cat > terraform.tfvars <<EOF
           do_token = "${{ secrets.DO_API_TOKEN }}"
           EOF
+          elif [ "${{ inputs.provider }}" = "hetzner" ]; then
+            cat > terraform.tfvars <<EOF
+          hcloud_token = "${{ secrets.HCLOUD_TOKEN }}"
+          EOF
           fi
 
       - name: Write SSH public key
@@ -73,6 +77,10 @@ jobs:
           if [ "$PROVIDER" = "digitalocean" ]; then
             echo "droplet=-target=digitalocean_droplet.${ENV}" >> "$GITHUB_OUTPUT"
             echo "firewall=-target=digitalocean_firewall.${ENV}" >> "$GITHUB_OUTPUT"
+            echo "output_key=${ENV}_ip" >> "$GITHUB_OUTPUT"
+          elif [ "$PROVIDER" = "hetzner" ]; then
+            echo "droplet=-target=hcloud_server.${ENV}" >> "$GITHUB_OUTPUT"
+            echo "firewall=-target=hcloud_firewall.${ENV}" >> "$GITHUB_OUTPUT"
             echo "output_key=${ENV}_ip" >> "$GITHUB_OUTPUT"
           else
             echo "droplet=-target=oci_core_instance.${ENV}" >> "$GITHUB_OUTPUT"
