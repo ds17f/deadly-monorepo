@@ -148,15 +148,21 @@ phase_2_3_ship_dbs() {
 
   scp_ "$stage/users.db" "$HZ_SSH:/tmp/users.db"
   scp_ "$stage/analytics.db" "$HZ_SSH:/tmp/analytics.db"
-  ssh_hz 'sudo install -o deploy -g deploy -m 0644 /tmp/users.db /opt/deadly/api-data/users.db && \
+  # Stop API + remove DB+WAL+SHM before placing snapshots. If we leave a stale
+  # WAL next to the new DB, sqlite re-applies the empty WAL on restart and the
+  # snapshot looks empty. See Phase 1.5 WAL gotcha in MIGRATION.md.
+  ssh_hz 'cd /opt/deadly && docker compose stop api && \
+          sudo rm -f /opt/deadly/api-data/users.db /opt/deadly/api-data/users.db-wal /opt/deadly/api-data/users.db-shm \
+                     /opt/deadly/api-data/analytics.db /opt/deadly/api-data/analytics.db-wal /opt/deadly/api-data/analytics.db-shm && \
+          sudo install -o deploy -g deploy -m 0644 /tmp/users.db /opt/deadly/api-data/users.db && \
           sudo install -o deploy -g deploy -m 0644 /tmp/analytics.db /opt/deadly/api-data/analytics.db && \
           rm /tmp/users.db /tmp/analytics.db'
-  ok "shipped to HZ /opt/deadly/api-data/"
+  ok "shipped to HZ /opt/deadly/api-data/ (API stopped, WAL/SHM cleared)"
 }
 
 phase_2_4_restart_hz_api() {
-  phase "2.4 — restart HZ API to load fresh DBs"
-  ssh_hz 'cd /opt/deadly && docker compose restart api'
+  phase "2.4 — start HZ API to load fresh DBs"
+  ssh_hz 'cd /opt/deadly && docker compose start api'
   for i in $(seq 1 12); do
     if curl_resolve_health "$HZ_IP"; then
       ok "HZ /api/health green (attempt $i)"
