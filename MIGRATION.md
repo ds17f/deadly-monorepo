@@ -11,7 +11,8 @@ Plan for migrating the deadly web stack off DigitalOcean (free credits expiring)
 - Phase 2 — cutover ran via `scripts/migrate-cutover.sh` at ~17:00 UTC ✓
 - Phase 3 — apex A flipped to `178.156.208.143`, fully propagated to all major resolvers within ~15 min ✓
 - **Phase 4 — Decommission** (T+24h, i.e. **2026-05-08 afternoon**) ← next
-- **Phase 5 — Force cert renewal** (any time after Phase 4) ← next
+- **Phase 5 — Force cert renewal** (any time after Phase 4)
+- **Phase 6 — Repo cleanup** (after Phase 5 verified) ← deletes this doc
 
 **Live IPs:**
 - Hetzner prod: `178.156.208.143` (this is what `thedeadly.app` resolves to now)
@@ -33,6 +34,7 @@ For when you re-open this doc tomorrow with no working memory.
 4. **Phase 4.3** — run **Web - Infra** workflow with `action=destroy, provider=digitalocean, environment=prod`. This is the irreversible one — only after 4.1 and 4.2 are clean.
 5. **Phase 4.4–4.8** — DO beta destroy, Terraform cleanup, drop DO from workflow inputs, revoke `DO_API_TOKEN`, wipe `.secrets/le-cert/` and `.secrets/cutover-dbs/`. None are urgent; do at your leisure.
 6. **Phase 5 (any time, before cert hits 60 days remaining)** — force a cert renewal on HZ to prove the ACME path works. Steps in §5.
+7. **Phase 6 (after Phase 5 succeeds)** — delete this doc and the one-shot migration scripts from the repo. Steps in §6.
 
 If anything in step 1 looks wrong, **stop** and read the [Learnings](#learnings-2026-05-07-cutover-run) section before touching anything — that's where the actual gotchas from the live run are recorded.
 
@@ -280,6 +282,32 @@ At any point during Phase 2, before Phase 3 (DNS flip):
 After Phase 3 (DNS flipped), rollback means flipping DNS back to DO **and** copying any post-cutover Hetzner DB writes back to DO. This is messy and we should avoid needing it. Soak in Phase 2.7 long enough to be confident before flipping DNS.
 
 The cutover script (`scripts/migrate-cutover.sh --rollback`) automates the pre-Phase-3 rollback.
+
+## Phase 6 — Repo cleanup (delete migration artifacts)
+
+Once Phase 4 (DO destroyed) and Phase 5 (cert renewal verified on HZ) are both done, this doc and the one-shot scripts have served their purpose. Delete them so they don't rot in the tree. Git history preserves them.
+
+Run from repo root on a fresh branch:
+
+```bash
+git checkout -b chore/web-remove-migration-artifacts
+git rm MIGRATION.md
+git rm scripts/migrate-cutover.sh
+git rm scripts/pull-cert-from-do.sh
+git rm scripts/push-cert-to-hetzner.sh
+git rm caddy/Caddyfile.cutover
+# If Phase 4.5 left infra/digitalocean/ as an empty stub, remove it now:
+git rm -r infra/digitalocean/   # only if no live state references it
+git commit -m "chore(web): remove DO→Hetzner migration artifacts"
+```
+
+Sanity checks before merging:
+- `grep -r "Caddyfile.cutover\|migrate-cutover\|pull-cert-from-do\|push-cert-to-hetzner" .github/ scripts/ caddy/` returns nothing.
+- `.github/workflows/web-deploy.yml` and `infra-manage.yml` no longer reference `digitalocean` as a provider option (Phase 4.6).
+- `gh secret list` shows no `DO_API_TOKEN` (Phase 4.7).
+- `.secrets/le-cert/` and `.secrets/cutover-dbs/` are gone locally (Phase 4.8).
+
+If any of those still reference DO, finish the relevant Phase 4 sub-step before this cleanup commit.
 
 ## Learnings (2026-05-07 cutover run)
 
