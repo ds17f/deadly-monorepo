@@ -64,6 +64,8 @@ There is a brief (~30 sec) write-freeze on DO during the DB snapshot. After that
 
 Everything in this phase is pure prep — laptop-side scripting, GitHub workflow edits, and pulling the cert from DO. Hetzner is not involved yet.
 
+**Status:** Steps 1–4 complete. Hetzner Terraform module + workflow wiring committed (`33143b8f`). `HCLOUD_TOKEN`, `GODADDY_KEY`, `GODADDY_SECRET` pushed manually via `gh secret set` (see Open risks for why we skipped `setup-infra-secrets.sh`). LE cert staged at `.secrets/le-cert/thedeadly.app.tar.gz`. Step 5 (analytics.db backup) deferred to immediately before Phase 2 cutover.
+
 1. **Add the `update_dns` input to `web-deploy.yml`** (default `false`). When checked, after deploy succeeds the workflow:
    - Fetches the env's IP from Terraform output.
    - Gets the current GoDaddy A record for `${SITE_ADDRESS}`.
