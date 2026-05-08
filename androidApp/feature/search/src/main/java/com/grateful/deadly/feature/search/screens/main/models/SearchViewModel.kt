@@ -162,6 +162,21 @@ class SearchViewModel @Inject constructor(
     }
 
     /**
+     * Record that the user tapped a search result at the given 0-based position.
+     * Fires a `search` event with `selected_index` so the search → playback
+     * funnel can be measured.
+     */
+    fun onResultTap(index: Int) {
+        viewModelScope.launch {
+            try {
+                searchService.recordResultTap(index)
+            } catch (e: Exception) {
+                Log.e(TAG, "Failed to record result tap", e)
+            }
+        }
+    }
+
+    /**
      * Clear search query and results
      */
     fun onClearSearch() {

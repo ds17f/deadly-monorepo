@@ -1248,7 +1248,8 @@ class PlaylistViewModel @Inject constructor(
                             showDate = showDate,
                             venue = venue,
                             location = location,
-                            coverImageUrl = showContext.coverImageUrl
+                            coverImageUrl = showContext.coverImageUrl,
+                            source = "browse"
                         )
                     }
                 }
@@ -1343,7 +1344,8 @@ class PlaylistViewModel @Inject constructor(
                     venue = venue,
                     location = location,
                     coverImageUrl = showContext?.coverImageUrl,
-                    autoPlay = autoPlay
+                    autoPlay = autoPlay,
+                    source = "browse"
                 )
                 
                 // UI state will be updated via MediaController state observation

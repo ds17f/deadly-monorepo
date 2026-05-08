@@ -117,6 +117,11 @@ class MediaControllerRepository @Inject constructor(
     // transition path falls back to a heuristic on the snapshot.
     private var pendingEndReason: String? = null
 
+    // Source for the next playback_start emit. Set by playAll / playTrack callers,
+    // consumed (and reset to "auto_advance") on each emission so subsequent queue
+    // transitions are correctly attributed to auto-advance.
+    private var nextPlaybackSource: String = "auto_advance"
+
     // Unified playback status with computed progress
     val playbackStatus: StateFlow<PlaybackStatus> = combine(
         _currentPosition, _duration
@@ -149,8 +154,10 @@ class MediaControllerRepository @Inject constructor(
         location: String?,
         coverImageUrl: String? = null,
         startPosition: Long = 0L,
-        autoPlay: Boolean = true
+        autoPlay: Boolean = true,
+        source: String = "browse"
     ) {
+        nextPlaybackSource = source
         Log.d(TAG, "playAll: $recordingId ($format) at position $startPosition")
         
         executeWhenConnected {
@@ -216,10 +223,13 @@ class MediaControllerRepository @Inject constructor(
                             Log.d(TAG, "🕒🎵 [URL] controller.play() call completed at ${System.currentTimeMillis()}")
                             firePlaybackEnd()
                             analyticsPlaybackInfo = Triple(showId, recordingId, 1)
+                            val emitSource = nextPlaybackSource
+                            nextPlaybackSource = "auto_advance"
                             analyticsService.track("playback_start", mapOf(
                                 "show_id" to showId,
                                 "recording_id" to recordingId,
-                                "track_index" to 1
+                                "track_index" to 1,
+                                "source" to emitSource
                             ))
                             appPreferences.recordShowPlayed(showId)
                         } else {
@@ -253,8 +263,10 @@ class MediaControllerRepository @Inject constructor(
         location: String?,
         coverImageUrl: String? = null,
         position: Long = 0L,
-        autoPlay: Boolean = true
+        autoPlay: Boolean = true,
+        source: String = "browse"
     ) {
+        nextPlaybackSource = source
         Log.d(TAG, "playTrack: index=$trackIndex, recording=$recordingId ($format) at position $position")
         
         executeWhenConnected {
@@ -324,10 +336,13 @@ class MediaControllerRepository @Inject constructor(
                                 Log.d(TAG, "🕒🎵 [URL] controller.play() for track $trackIndex completed at ${System.currentTimeMillis()}")
                                 firePlaybackEnd()
                                 analyticsPlaybackInfo = Triple(showId, recordingId, trackIndex + 1)
+                                val emitSource = nextPlaybackSource
+                                nextPlaybackSource = "auto_advance"
                                 analyticsService.track("playback_start", mapOf(
                                     "show_id" to showId,
                                     "recording_id" to recordingId,
-                                    "track_index" to (trackIndex + 1)
+                                    "track_index" to (trackIndex + 1),
+                                    "source" to emitSource
                                 ))
                                 appPreferences.recordShowPlayed(showId)
                             } else {
@@ -516,10 +531,13 @@ class MediaControllerRepository @Inject constructor(
                                 val trackIndex = controller.currentMediaItemIndex + 1
                                 if (showId != null && recordingId != null) {
                                     analyticsPlaybackInfo = Triple(showId, recordingId, trackIndex)
+                                    val emitSource = nextPlaybackSource
+                                    nextPlaybackSource = "auto_advance"
                                     analyticsService.track("playback_start", mapOf(
                                         "show_id" to showId,
                                         "recording_id" to recordingId,
-                                        "track_index" to trackIndex
+                                        "track_index" to trackIndex,
+                                        "source" to emitSource
                                     ))
                                 }
                             }

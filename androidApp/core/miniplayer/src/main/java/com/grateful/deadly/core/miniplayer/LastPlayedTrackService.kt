@@ -156,7 +156,8 @@ class LastPlayedTrackService @Inject constructor(
                 venue = lastTrack.venue,
                 location = lastTrack.location,
                 position = lastTrack.positionMs,
-                autoPlay = false
+                autoPlay = false,
+                source = "restore"
             )
             
             Log.d(TAG, "Successfully restored last played track")
