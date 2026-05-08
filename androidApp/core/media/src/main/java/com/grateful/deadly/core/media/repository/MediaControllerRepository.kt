@@ -494,6 +494,26 @@ class MediaControllerRepository @Inject constructor(
                         override fun onIsPlayingChanged(isPlaying: Boolean) {
                             if (isPlaying) {
                                 Log.d(TAG, "🕒🎵 [AUDIO] MediaController detected AUDIO STARTED at ${System.currentTimeMillis()}")
+                                // If no playback_start has been emitted for the current item
+                                // (restore loaded items with playWhenReady=false), emit now
+                                // that playback has actually begun.
+                                if (analyticsPlaybackInfo == null) {
+                                    val mediaItem = controller.currentMediaItem
+                                    val showId = mediaItem?.let { extractShowIdFromMediaItem(it) }
+                                    val recordingId = mediaItem?.let { extractRecordingIdFromMediaItem(it) }
+                                    val trackIndex = controller.currentMediaItemIndex + 1
+                                    if (showId != null && recordingId != null) {
+                                        analyticsPlaybackInfo = Triple(showId, recordingId, trackIndex)
+                                        val emitSource = nextPlaybackSource
+                                        nextPlaybackSource = "auto_advance"
+                                        analyticsService.track("playback_start", mapOf(
+                                            "show_id" to showId,
+                                            "recording_id" to recordingId,
+                                            "track_index" to trackIndex,
+                                            "source" to emitSource
+                                        ))
+                                    }
+                                }
                             } else {
                                 Log.d(TAG, "🕒🎵 [AUDIO] MediaController detected audio stopped at ${System.currentTimeMillis()}")
                             }
@@ -530,15 +550,23 @@ class MediaControllerRepository @Inject constructor(
                                 val recordingId = extractRecordingIdFromMediaItem(mediaItem)
                                 val trackIndex = controller.currentMediaItemIndex + 1
                                 if (showId != null && recordingId != null) {
-                                    analyticsPlaybackInfo = Triple(showId, recordingId, trackIndex)
-                                    val emitSource = nextPlaybackSource
-                                    nextPlaybackSource = "auto_advance"
-                                    analyticsService.track("playback_start", mapOf(
-                                        "show_id" to showId,
-                                        "recording_id" to recordingId,
-                                        "track_index" to trackIndex,
-                                        "source" to emitSource
-                                    ))
+                                    // Only emit when the player actually intends to play.
+                                    // Restore loads items with playWhenReady=false; emission
+                                    // is deferred to onIsPlayingChanged so it fires only if
+                                    // the user presses play.
+                                    if (controller.playWhenReady) {
+                                        analyticsPlaybackInfo = Triple(showId, recordingId, trackIndex)
+                                        val emitSource = nextPlaybackSource
+                                        nextPlaybackSource = "auto_advance"
+                                        analyticsService.track("playback_start", mapOf(
+                                            "show_id" to showId,
+                                            "recording_id" to recordingId,
+                                            "track_index" to trackIndex,
+                                            "source" to emitSource
+                                        ))
+                                    } else {
+                                        analyticsPlaybackInfo = null
+                                    }
                                 }
                             }
                         }
