@@ -322,7 +322,12 @@ class MediaControllerRepository @Inject constructor(
                             // Set LOADING state before ExoPlayer operations
                             _playbackState.value = PlaybackState.LOADING
                             Log.d(TAG, "🕒🎵 [STATE] Manual LOADING state set before setMediaItems for track $trackIndex")
-                            
+
+                            // Force playWhenReady to match the caller's intent before prepare().
+                            // After a cold start (e.g. force-kill), ExoPlayer's default is
+                            // playWhenReady=true, which would auto-start the restored track.
+                            controller.playWhenReady = autoPlay
+
                             controller.setMediaItems(mediaItems, trackIndex, position)
                             Log.d(TAG, "🕒🎵 [URL] MediaController.setMediaItems(track=$trackIndex, pos=$position) completed at ${System.currentTimeMillis()}")
                             controller.prepare()
