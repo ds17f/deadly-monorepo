@@ -34,3 +34,4 @@ services:
       - NODE_ENV=development
       - LOG_LEVEL=debug
       - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+      - ENABLE_DEV_SIGNIN=${ENABLE_DEV_SIGNIN:-}
