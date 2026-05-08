@@ -80,7 +80,8 @@ final class AppContainer {
                 showReviewDAO: ShowReviewDAO(database: db),
                 favoriteSongDAO: FavoriteSongDAO(database: db),
                 showPlayerTagDAO: ShowPlayerTagDAO(database: db),
-                showDAO: ShowDAO(database: db)
+                showDAO: ShowDAO(database: db),
+                analyticsService: analytics
             )
             reviewService = revService
             favoritesService = FavoritesServiceImpl(

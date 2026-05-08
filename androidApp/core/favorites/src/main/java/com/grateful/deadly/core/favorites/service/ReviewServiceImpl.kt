@@ -1,6 +1,7 @@
 package com.grateful.deadly.core.favorites.service
 
 import com.grateful.deadly.core.api.favorites.ReviewService
+import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.dao.FavoriteSongDao
 import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.dao.ShowPlayerTagDao
@@ -23,7 +24,8 @@ class ReviewServiceImpl @Inject constructor(
     @AppDatabase private val showReviewDao: ShowReviewDao,
     @AppDatabase private val favoriteSongDao: FavoriteSongDao,
     @AppDatabase private val showPlayerTagDao: ShowPlayerTagDao,
-    @AppDatabase private val showDao: ShowDao
+    @AppDatabase private val showDao: ShowDao,
+    private val analyticsService: AnalyticsService,
 ) : ReviewService {
 
     override suspend fun getShowReview(showId: String): ShowReview? {
@@ -100,6 +102,13 @@ class ReviewServiceImpl @Inject constructor(
                 )
             )
         }
+        val targetId = "$showId/${recordingId.orEmpty()}/${trackNumber ?: 0}"
+        analyticsService.track("feature_use", mapOf(
+            "feature" to if (isFav) "remove_favorite" else "add_favorite",
+            "category" to "action",
+            "target_type" to "recording_track",
+            "target_id" to targetId,
+        ))
     }
 
     override fun isSongFavoriteFlow(showId: String, trackTitle: String, recordingId: String?): Flow<Boolean> {
