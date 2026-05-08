@@ -886,15 +886,6 @@ class PlaylistViewModel @Inject constructor(
      */
     fun showMenu() {
         Log.d(TAG, "Show menu requested")
-        val showId = _baseUiState.value.showData?.showId
-        analyticsService.track("feature_use", buildMap {
-            put("feature", "open_menu")
-            put("category", "action")
-            if (showId != null) {
-                put("target_type", "show")
-                put("target_id", showId)
-            }
-        })
         _baseUiState.value = _baseUiState.value.copy(showMenu = true)
     }
     
@@ -1143,15 +1134,6 @@ class PlaylistViewModel @Inject constructor(
      */
     fun showCollectionsSheet() {
         Log.d(TAG, "Show collections sheet requested")
-        val showId = _baseUiState.value.showData?.showId
-        analyticsService.track("feature_use", buildMap {
-            put("feature", "view_collections")
-            put("category", "action")
-            if (showId != null) {
-                put("target_type", "show")
-                put("target_id", showId)
-            }
-        })
         _baseUiState.value = _baseUiState.value.copy(showCollectionsSheet = true)
     }
     
