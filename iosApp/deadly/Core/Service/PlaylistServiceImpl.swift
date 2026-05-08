@@ -63,6 +63,16 @@ final class PlaylistServiceImpl: PlaylistService {
     /// When nil, the commit path falls back to a heuristic based on snapshot.
     private var nextPlaybackEndReason: String?
 
+    /// Previous `streamPlayer.playbackState` snapshot, used by the observation
+    /// loop to detect transitions (e.g. .playing → .buffering = mid-playback
+    /// stall) since the observation API only delivers the new value.
+    private var previousPlaybackState: PlaybackState = .idle
+
+    /// Stall detection: timestamp set when we transition .playing → .buffering.
+    /// Cleared on the next non-buffering state; emits playback_stall if the
+    /// duration exceeded 3s.
+    private var stallStartedAt: Date?
+
     private var progressObservationTask: Task<Void, Never>?
     private var playbackStateObservationTask: Task<Void, Never>?
     private var willResignActiveObserver: NSObjectProtocol?
@@ -446,13 +456,57 @@ final class PlaylistServiceImpl: PlaylistService {
                     }
                 }
                 guard !Task.isCancelled else { break }
-                if case .error = self.streamPlayer.playbackState {
+                let prev = self.previousPlaybackState
+                let next = self.streamPlayer.playbackState
+                self.previousPlaybackState = next
+
+                // Stall detection: only mid-playback rebuffer counts. Initial
+                // load goes .loading → .buffering → .playing and isn't a stall.
+                if next == .buffering && prev == .playing {
+                    self.stallStartedAt = Date()
+                } else if prev == .buffering && next != .buffering {
+                    if let started = self.stallStartedAt {
+                        let durationMs = Int(Date().timeIntervalSince(started) * 1000)
+                        if durationMs > 3000, let info = self.playbackStartInfo {
+                            self.analyticsService?.track("playback_stall", props: [
+                                "show_id": info.showId,
+                                "recording_id": info.recordingId,
+                                "track_index": info.trackNumber,
+                                "stall_duration_ms": durationMs,
+                            ])
+                        }
+                        self.stallStartedAt = nil
+                    }
+                }
+
+                if case .error(let err) = next {
+                    if let info = self.playbackStartInfo {
+                        self.analyticsService?.track("playback_error", props: [
+                            "show_id": info.showId,
+                            "recording_id": info.recordingId,
+                            "track_index": info.trackNumber,
+                            "error_code": Self.errorCode(for: err),
+                            "error_message": err.localizedDescription,
+                            "is_fatal": true,
+                        ])
+                    }
                     self.endActivePlayback(reason: "network_error")
                 }
-                if self.streamPlayer.playbackState.isPlaying {
+                if next.isPlaying {
                     self.flushDeferredStart()
                 }
             }
+        }
+    }
+
+    private static func errorCode(for error: StreamPlayerError) -> String {
+        switch error {
+        case .trackLoadFailed: return "track_load_failed"
+        case .networkError: return "network_error"
+        case .audioSessionError: return "audio_session_error"
+        case .invalidQueueIndex: return "invalid_queue_index"
+        case .engineError: return "engine_error"
+        case .unknown: return "unknown"
         }
     }
 

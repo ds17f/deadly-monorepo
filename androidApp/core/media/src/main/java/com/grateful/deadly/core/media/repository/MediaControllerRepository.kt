@@ -122,6 +122,11 @@ class MediaControllerRepository @Inject constructor(
     // transitions are correctly attributed to auto-advance.
     private var nextPlaybackSource: String = "auto_advance"
 
+    // Stall detection: timestamp when we entered STATE_BUFFERING from STATE_READY
+    // (i.e. mid-playback rebuffer, not initial load). Cleared when we leave
+    // BUFFERING; emits playback_stall if the duration exceeded 3s.
+    private var stallStartedAtMs: Long? = null
+
     // Unified playback status with computed progress
     val playbackStatus: StateFlow<PlaybackStatus> = combine(
         _currentPosition, _duration
@@ -577,10 +582,33 @@ class MediaControllerRepository @Inject constructor(
                         }
                         
                         override fun onPlaybackStateChanged(playbackState: Int) {
-                            Log.d(TAG, "🕒🎵 [EXOPLAYER] ExoPlayer state changed: ${getExoPlayerStateString(currentExoPlayerState)} → ${getExoPlayerStateString(playbackState)}")
+                            val prevState = currentExoPlayerState
+                            Log.d(TAG, "🕒🎵 [EXOPLAYER] ExoPlayer state changed: ${getExoPlayerStateString(prevState)} → ${getExoPlayerStateString(playbackState)}")
 
                             currentExoPlayerState = playbackState
                             updatePlaybackState()
+
+                            // Stall detection: only count BUFFERING as a stall if we were
+                            // already READY (i.e. mid-playback rebuffer). Initial load
+                            // goes IDLE/ENDED → BUFFERING → READY and isn't user-perceived.
+                            if (playbackState == Player.STATE_BUFFERING && prevState == Player.STATE_READY) {
+                                stallStartedAtMs = System.currentTimeMillis()
+                            } else if (prevState == Player.STATE_BUFFERING && playbackState != Player.STATE_BUFFERING) {
+                                stallStartedAtMs?.let { startedAt ->
+                                    val durationMs = System.currentTimeMillis() - startedAt
+                                    if (durationMs > 3000L) {
+                                        analyticsPlaybackInfo?.let { (showId, recordingId, trackIndex) ->
+                                            analyticsService.track("playback_stall", mapOf(
+                                                "show_id" to showId,
+                                                "recording_id" to recordingId,
+                                                "track_index" to trackIndex,
+                                                "stall_duration_ms" to durationMs,
+                                            ))
+                                        }
+                                    }
+                                    stallStartedAtMs = null
+                                }
+                            }
 
                             if (playbackState == Player.STATE_READY) {
                                 _duration.value = controller.duration.coerceAtLeast(0L)
@@ -590,6 +618,16 @@ class MediaControllerRepository @Inject constructor(
 
                         override fun onPlayerError(error: androidx.media3.common.PlaybackException) {
                             Log.e(TAG, "🕒🎵 [EXOPLAYER] Player error: ${error.errorCodeName}", error)
+                            analyticsPlaybackInfo?.let { (showId, recordingId, trackIndex) ->
+                                analyticsService.track("playback_error", mapOf(
+                                    "show_id" to showId,
+                                    "recording_id" to recordingId,
+                                    "track_index" to trackIndex,
+                                    "error_code" to error.errorCodeName,
+                                    "error_message" to (error.message ?: ""),
+                                    "is_fatal" to true,
+                                ))
+                            }
                             firePlaybackEnd(reason = "network_error")
                         }
                     })
