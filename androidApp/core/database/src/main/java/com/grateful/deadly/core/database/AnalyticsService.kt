@@ -57,12 +57,7 @@ class AnalyticsService @Inject constructor(
     }
 
     fun flush() {
-        val events = mutableListOf<AnalyticsEvent>()
-        // Drain buffer atomically
-        while (buffer.isNotEmpty()) {
-            val event = buffer.removeFirstOrNull() ?: break
-            events.add(event)
-        }
+        val events = drainBuffer()
         if (events.isEmpty()) return
 
         scope.launch {
@@ -74,7 +69,39 @@ class AnalyticsService @Inject constructor(
         }
     }
 
-    private fun postEvents(events: List<AnalyticsEvent>) {
+    /**
+     * Force-flushes the buffer and reports success/failure.
+     * Unlike [flush], events are restored to the buffer on failure so they can
+     * be retried later. Intended for the developer "Flush Analytics" tool.
+     */
+    fun flushNow(onComplete: (Boolean, Int, String?) -> Unit) {
+        val events = drainBuffer()
+        if (events.isEmpty()) {
+            onComplete(true, 0, null)
+            return
+        }
+
+        scope.launch {
+            try {
+                postEvents(events, throwOnHttpError = true)
+                onComplete(true, events.size, null)
+            } catch (e: Exception) {
+                buffer.addAll(0, events)
+                onComplete(false, events.size, e.message ?: e.javaClass.simpleName)
+            }
+        }
+    }
+
+    private fun drainBuffer(): MutableList<AnalyticsEvent> {
+        val events = mutableListOf<AnalyticsEvent>()
+        while (buffer.isNotEmpty()) {
+            val event = buffer.removeFirstOrNull() ?: break
+            events.add(event)
+        }
+        return events
+    }
+
+    private fun postEvents(events: List<AnalyticsEvent>, throwOnHttpError: Boolean = false) {
         val baseUrl = appPreferences.apiBaseUrl
         val url = URL("$baseUrl/api/analytics")
         val connection = url.openConnection() as HttpURLConnection
@@ -109,7 +136,10 @@ class AnalyticsService @Inject constructor(
                 os.write(payload.toString().toByteArray(Charsets.UTF_8))
             }
 
-            connection.responseCode // trigger the request
+            val code = connection.responseCode
+            if (throwOnHttpError && code !in 200..299) {
+                throw java.io.IOException("HTTP $code")
+            }
         } finally {
             connection.disconnect()
         }

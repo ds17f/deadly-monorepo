@@ -137,6 +137,10 @@ class SettingsViewModel @Inject constructor(
         appReviewManager.forcePrompt()
     }
 
+    fun flushAnalytics(onComplete: (Boolean, Int, String?) -> Unit) {
+        analyticsService.flushNow(onComplete)
+    }
+
     val developerModeUnlocked: StateFlow<Boolean> = appPreferences.developerModeUnlocked
 
     fun unlockDeveloperMode() {

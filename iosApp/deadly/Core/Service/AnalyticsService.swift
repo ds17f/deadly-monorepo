@@ -67,7 +67,45 @@ final class AnalyticsService: @unchecked Sendable {
         let events = buffer.drain()
         guard !events.isEmpty else { return }
 
-        guard let url = URL(string: "\(baseURL)/api/analytics") else { return }
+        guard let request = buildPostRequest(for: events) else { return }
+
+        // Fire-and-forget — silently discard failures
+        URLSession.shared.dataTask(with: request).resume()
+    }
+
+    /// Force-flushes the buffer and reports success/failure via `completion`.
+    /// On failure, events are restored to the buffer so they can be retried.
+    /// Intended for the developer "Flush Analytics" tool.
+    func flushNow(completion: @escaping (Bool, Int, String?) -> Void) {
+        let events = buffer.drain()
+        guard !events.isEmpty else {
+            completion(true, 0, nil)
+            return
+        }
+
+        guard let request = buildPostRequest(for: events) else {
+            buffer.prepend(events)
+            completion(false, events.count, "Invalid analytics URL")
+            return
+        }
+
+        URLSession.shared.dataTask(with: request) { [weak self] _, response, error in
+            if let error = error {
+                self?.buffer.prepend(events)
+                completion(false, events.count, error.localizedDescription)
+                return
+            }
+            if let http = response as? HTTPURLResponse, !(200..<300).contains(http.statusCode) {
+                self?.buffer.prepend(events)
+                completion(false, events.count, "HTTP \(http.statusCode)")
+                return
+            }
+            completion(true, events.count, nil)
+        }.resume()
+    }
+
+    private func buildPostRequest(for events: [AnalyticsEvent]) -> URLRequest? {
+        guard let url = URL(string: "\(baseURL)/api/analytics") else { return nil }
 
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -91,9 +129,7 @@ final class AnalyticsService: @unchecked Sendable {
 
         let body: [String: Any] = ["events": payload]
         request.httpBody = try? JSONSerialization.data(withJSONObject: body)
-
-        // Fire-and-forget — silently discard failures
-        URLSession.shared.dataTask(with: request).resume()
+        return request
     }
 
     // MARK: - Private
@@ -133,6 +169,12 @@ private final class AnalyticsBuffer: @unchecked Sendable {
         let drained = events
         events.removeAll()
         return drained
+    }
+
+    func prepend(_ restored: [AnalyticsEvent]) {
+        lock.lock()
+        defer { lock.unlock() }
+        events.insert(contentsOf: restored, at: 0)
     }
 }
 

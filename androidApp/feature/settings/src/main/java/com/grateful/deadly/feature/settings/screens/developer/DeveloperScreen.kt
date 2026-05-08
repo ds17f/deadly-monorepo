@@ -102,6 +102,10 @@ fun DeveloperScreen(
 
         item { HorizontalDivider() }
 
+        item { FlushAnalyticsRow(onFlush = viewModel::flushAnalytics) }
+
+        item { HorizontalDivider() }
+
         item { ClearArchiveCacheRow() }
 
         item { HorizontalDivider() }
@@ -186,6 +190,49 @@ private fun DevRow(
             text = title,
             style = MaterialTheme.typography.bodyLarge,
             color = titleColor
+        )
+    }
+}
+
+@Composable
+private fun FlushAnalyticsRow(
+    onFlush: (onComplete: (Boolean, Int, String?) -> Unit) -> Unit
+) {
+    var inFlight by remember { mutableStateOf(false) }
+    var showResult by remember { mutableStateOf(false) }
+    var success by remember { mutableStateOf(false) }
+    var count by remember { mutableStateOf(0) }
+    var errorMessage by remember { mutableStateOf<String?>(null) }
+
+    DevRow(
+        title = if (inFlight) "Flushing analytics…" else "Flush analytics",
+        onClick = {
+            if (inFlight) return@DevRow
+            inFlight = true
+            onFlush { ok, n, err ->
+                success = ok
+                count = n
+                errorMessage = err
+                inFlight = false
+                showResult = true
+            }
+        }
+    )
+
+    if (showResult) {
+        AlertDialog(
+            onDismissRequest = { showResult = false },
+            title = { Text(if (success) "Flushed" else "Flush failed") },
+            text = {
+                Text(
+                    if (success) {
+                        if (count == 0) "Buffer was empty." else "Sent $count event(s)."
+                    } else {
+                        "Failed to send $count event(s). They have been preserved in the buffer.\n\n${errorMessage ?: "Unknown error"}"
+                    }
+                )
+            },
+            confirmButton = { TextButton(onClick = { showResult = false }) { Text("OK") } }
         )
     }
 }
