@@ -39,6 +39,20 @@ final class PlaylistServiceImpl: PlaylistService {
     /// queue advances are correctly attributed to auto-advance.
     private var nextPlaybackSource: String = "auto_advance"
 
+    /// When true, the next track-change commit stores the start info as a
+    /// deferred emission instead of firing `playback_start`. The deferred
+    /// emission fires when the player actually transitions to `.playing`.
+    /// Used by restore: queue loads briefly enter `.playing` before pausing,
+    /// so a state-only gate races; this flag makes the suppression explicit.
+    var suppressNextStartEmission: Bool = false
+
+    /// A start emission that was deferred because the player wasn't yet
+    /// playing (set during restore commits). Fires from the playback-state
+    /// observer when the user actually begins playback. Cleared if the user
+    /// navigates to a different track instead.
+    private var deferredStartInfo: (showId: String, recordingId: String, trackNumber: Int)?
+    private var deferredStartSource: String?
+
     /// Rolling snapshot of the active track's progress, refreshed on every
     /// progress tick. Read at track-change time so `listened_ms` reflects the
     /// *ending* track, not the new one (which has already advanced by the
@@ -309,11 +323,39 @@ final class PlaylistServiceImpl: PlaylistService {
         nextPlaybackEndReason = nil
         // End the previously committed track (if any), then start the new one.
         trackPlaybackEnd(reason: reason)
+
+        // A new explicit play action invalidates any deferred restore start —
+        // the user has moved on without playing the restored track.
+        deferredStartInfo = nil
+        deferredStartSource = nil
+
+        if suppressNextStartEmission {
+            suppressNextStartEmission = false
+            deferredStartInfo = pending
+            deferredStartSource = source
+            return
+        }
+
         playbackStartInfo = pending
         analyticsService?.track("playback_start", props: [
             "show_id": pending.showId,
             "recording_id": pending.recordingId,
             "track_index": pending.trackNumber,
+            "source": source,
+        ])
+    }
+
+    /// Emit a deferred `playback_start` (queued during restore) now that the
+    /// player has actually transitioned to `.playing`.
+    private func flushDeferredStart() {
+        guard let deferred = deferredStartInfo, let source = deferredStartSource else { return }
+        deferredStartInfo = nil
+        deferredStartSource = nil
+        playbackStartInfo = deferred
+        analyticsService?.track("playback_start", props: [
+            "show_id": deferred.showId,
+            "recording_id": deferred.recordingId,
+            "track_index": deferred.trackNumber,
             "source": source,
         ])
     }
@@ -406,6 +448,9 @@ final class PlaylistServiceImpl: PlaylistService {
                 guard !Task.isCancelled else { break }
                 if case .error = self.streamPlayer.playbackState {
                     self.endActivePlayback(reason: "network_error")
+                }
+                if self.streamPlayer.playbackState.isPlaying {
+                    self.flushDeferredStart()
                 }
             }
         }

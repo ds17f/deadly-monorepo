@@ -69,6 +69,12 @@ final class PlaybackRestorationService {
         let trackIndex = min(saved.trackIndex, playlistService.tracks.count - 1)
         let seekPosition = TimeInterval(saved.positionMs) / 1000.0
 
+        // Suppress the immediate playback_start emission. The restore flow
+        // briefly enters `.playing` before seeking and pausing, which would
+        // otherwise produce a phantom start event for a track the user never
+        // chose to play. Emission is deferred until the user actually presses
+        // play on the restored track.
+        playlistService.suppressNextStartEmission = true
         playlistService.playTrack(at: trackIndex, source: "restore")
 
         // The engine resolves redirects asynchronously before audio starts.
