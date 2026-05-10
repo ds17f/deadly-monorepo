@@ -215,7 +215,14 @@ export function pruneOldEvents(): void {
 
   const cutoff = Date.now() - days * 24 * 3600 * 1000;
   const db = getAnalyticsDb();
-  db.prepare("DELETE FROM analytics_events WHERE ts < ?").run(cutoff);
+  const result = db
+    .prepare("DELETE FROM analytics_events WHERE ts < ?")
+    .run(cutoff);
+  if (result.changes > 0) {
+    console.log(
+      `[analytics] pruned ${result.changes} raw event(s) older than ${days} days`,
+    );
+  }
 }
 
 // ── Summary queries ──────────────────────────────────────────────────
