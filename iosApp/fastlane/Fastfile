@@ -217,10 +217,14 @@ platform :ios do
       skip_binary_upload: true,
       precheck_include_in_app_purchases: false,
       release_notes: release_notes_hash,
+      # Note: content_rights_contains_third_party_content is *not* included
+      # here. It maps to ASC's contentRightsDeclaration, which can't be
+      # patched once the app has a stable value (already set on this app
+      # from a prior submission). Sending it triggers ASC error 409:
+      # "An attribute value is not acceptable for the current resource state".
       submission_information: {
         add_id_info_uses_idfa: false,
         export_compliance_uses_encryption: false,
-        content_rights_contains_third_party_content: false,
       }
     )
 
