@@ -645,6 +645,9 @@ export interface LiveListener {
   recording_id: string | null;
   track_index: number | null;
   source: string | null;
+  /** Per-track outcomes for this session of this show, same shape as the
+   *  Show Listening bitmap. Empty when show_id is null. */
+  tracks: TrackPlay[];
 }
 
 /**
@@ -661,10 +664,13 @@ export function getLiveListeners(): LiveListener[] {
   const db = getAnalyticsDb();
   const windowStart = Date.now() - 45 * 60 * 1000;
 
-  return db
+  // Pull `sid` too so we can resolve the bitmap for *this* listening session
+  // of this show (rather than every time the listener has ever played it).
+  const rows = db
     .prepare(
       `SELECT
          s.iid,
+         s.sid,
          s.platform,
          s.app_version,
          s.ts AS started_at,
@@ -685,7 +691,80 @@ export function getLiveListeners(): LiveListener[] {
          )
        ORDER BY s.ts DESC`,
     )
-    .all(windowStart) as LiveListener[];
+    .all(windowStart) as Array<{
+      iid: string;
+      sid: string;
+      platform: string;
+      app_version: string;
+      started_at: number;
+      show_id: string | null;
+      recording_id: string | null;
+      track_index: number | null;
+      source: string | null;
+    }>;
+
+  // For each live listener, materialize the bitmap for their current
+  // (iid, sid, show_id) by replaying the same per-track outcome rules
+  // used by getShowPlaybackSummary. Look back 6h so a long jam session
+  // earlier in the same sid still contributes to the bar.
+  const sessionLookback = Date.now() - 6 * 3600 * 1000;
+  const trackQuery = db.prepare(
+    `SELECT
+       event, ts,
+       COALESCE(CAST(json_extract(props, '$.track_index') AS INTEGER), 0) AS track_index,
+       json_extract(props, '$.reason') AS reason
+     FROM analytics_events
+     WHERE iid = ? AND sid = ?
+       AND json_extract(props, '$.show_id') = ?
+       AND event IN ('playback_start', 'playback_end')
+       AND ts >= ?
+     ORDER BY ts ASC`,
+  );
+
+  return rows.map((r) => {
+    let tracks: TrackPlay[] = [];
+    if (r.show_id) {
+      const events = trackQuery.all(
+        r.iid,
+        r.sid,
+        r.show_id,
+        sessionLookback,
+      ) as Array<{
+        event: string;
+        ts: number;
+        track_index: number;
+        reason: string | null;
+      }>;
+      const acc = new Map<number, { ts: number; outcome: TrackOutcome }>();
+      for (const e of events) {
+        const prior = acc.get(e.track_index);
+        if (e.event === "playback_start") {
+          if (!prior) acc.set(e.track_index, { ts: e.ts, outcome: "partial" });
+          continue;
+        }
+        if (!prior || e.ts >= prior.ts) {
+          acc.set(e.track_index, {
+            ts: e.ts,
+            outcome: reasonToOutcome(e.reason),
+          });
+        }
+      }
+      tracks = Array.from(acc.entries())
+        .map(([index, v]) => ({ index, outcome: v.outcome }))
+        .sort((a, b) => a.index - b.index);
+    }
+    return {
+      iid: r.iid,
+      platform: r.platform,
+      app_version: r.app_version,
+      started_at: r.started_at,
+      show_id: r.show_id,
+      recording_id: r.recording_id,
+      track_index: r.track_index,
+      source: r.source,
+      tracks,
+    };
+  });
 }
 
 // ── Search quality ─────────────────────────────────────────────────

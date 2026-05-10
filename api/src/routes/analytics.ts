@@ -606,6 +606,16 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
                     recording_id: { type: ["string", "null"] },
                     track_index: { type: ["number", "null"] },
                     source: { type: ["string", "null"] },
+                    tracks: {
+                      type: "array",
+                      items: {
+                        type: "object",
+                        properties: {
+                          index: { type: "number" },
+                          outcome: { type: "string" },
+                        },
+                      },
+                    },
                   },
                 },
               },

@@ -2,6 +2,13 @@
 
 import { useEffect, useState } from "react";
 
+type TrackOutcome = "complete" | "skipped" | "error" | "partial";
+
+interface TrackPlay {
+  index: number;
+  outcome: TrackOutcome;
+}
+
 interface LiveListener {
   iid: string;
   platform: string;
@@ -11,6 +18,37 @@ interface LiveListener {
   recording_id: string | null;
   track_index: number | null;
   source: string | null;
+  tracks: TrackPlay[];
+}
+
+const OUTCOME_COLOR: Record<TrackOutcome, string> = {
+  complete: "bg-emerald-500",
+  skipped: "bg-amber-400",
+  error: "bg-red-500",
+  partial: "bg-sky-400",
+};
+
+function TrackOutcomeBar({ tracks }: { tracks: TrackPlay[] }) {
+  if (tracks.length === 0) return null;
+  // Render up to the highest-indexed track played; missing indexes render
+  // as muted slots so a "skipped track 3 of 8" reads as a visible gap.
+  const max = Math.max(...tracks.map((t) => t.index));
+  const byIndex = new Map(tracks.map((t) => [t.index, t.outcome]));
+  const slots: Array<TrackOutcome | null> = [];
+  for (let i = 0; i <= max; i++) slots.push(byIndex.get(i) ?? null);
+  return (
+    <div className="flex gap-[2px] mt-1">
+      {slots.map((o, i) => (
+        <div
+          key={i}
+          className={`h-2 flex-1 rounded-sm ${
+            o ? OUTCOME_COLOR[o] : "bg-zinc-800"
+          }`}
+          title={`Track ${i}: ${o ?? "not yet played"}`}
+        />
+      ))}
+    </div>
+  );
 }
 
 const POLL_INTERVAL_MS = 15_000;
@@ -80,23 +118,26 @@ export default function ListeningNow() {
       {listeners.map((l) => (
         <div
           key={`${l.iid}-${l.started_at}`}
-          className="flex items-baseline gap-3 bg-deadly-surface rounded-lg p-2 text-sm"
+          className="bg-deadly-surface rounded-lg p-2 text-sm"
         >
-          <span className="font-mono text-xs text-zinc-500 w-20 shrink-0 tabular-nums">
-            {relativeAge(l.started_at)}
-          </span>
-          <span className="text-zinc-300 w-24 shrink-0">
-            {formatShowDate(l.show_id)}
-          </span>
-          <span className="text-zinc-500 w-14 shrink-0">
-            {l.track_index != null ? `track ${l.track_index}` : "—"}
-          </span>
-          <span className="text-zinc-500 w-24 shrink-0 truncate">
-            {l.source ? (SOURCE_LABELS[l.source] ?? l.source) : "—"}
-          </span>
-          <span className="text-xs text-zinc-600 ml-auto truncate">
-            {l.platform} {l.app_version}
-          </span>
+          <div className="flex items-baseline gap-3">
+            <span className="font-mono text-xs text-zinc-500 w-20 shrink-0 tabular-nums">
+              {relativeAge(l.started_at)}
+            </span>
+            <span className="text-zinc-300 w-24 shrink-0">
+              {formatShowDate(l.show_id)}
+            </span>
+            <span className="text-zinc-500 w-14 shrink-0">
+              {l.track_index != null ? `track ${l.track_index}` : "—"}
+            </span>
+            <span className="text-zinc-500 w-24 shrink-0 truncate">
+              {l.source ? (SOURCE_LABELS[l.source] ?? l.source) : "—"}
+            </span>
+            <span className="text-xs text-zinc-600 ml-auto truncate">
+              {l.platform} {l.app_version}
+            </span>
+          </div>
+          <TrackOutcomeBar tracks={l.tracks} />
         </div>
       ))}
     </div>
