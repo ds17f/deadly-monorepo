@@ -11,6 +11,7 @@ interface ShowInfo {
 interface TopShow {
   show_id: string;
   listeners: number;
+  plays: number;
 }
 
 interface TopShowsListProps {
@@ -57,9 +58,14 @@ export default function TopShowsList({ shows, showMap, onShowClick }: TopShowsLi
                   <p className="text-sm text-zinc-300 font-mono">{show.show_id}</p>
                 )}
               </div>
-              <span className="text-sm text-zinc-400 flex-shrink-0 tabular-nums">
-                {show.listeners} listener{show.listeners !== 1 ? "s" : ""}
-              </span>
+              <div className="flex flex-col items-end flex-shrink-0 tabular-nums">
+                <span className="text-sm text-zinc-300">
+                  {show.listeners} listener{show.listeners !== 1 ? "s" : ""}
+                </span>
+                <span className="text-xs text-zinc-500">
+                  {show.plays} play{show.plays !== 1 ? "s" : ""}
+                </span>
+              </div>
             </div>
           );
         })}
