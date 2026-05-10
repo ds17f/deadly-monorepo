@@ -25,18 +25,23 @@ Tickets in this wave: DEAD-303, 314, 315, 316, 321, 323, 324, 325, 328, 329, 331
 
 Folded into this branch since they were small, additive, and de-risk the data we're about to start collecting more of.
 
-#### Wave 3 — Dashboard / metrics (in progress on this branch)
+#### Wave 3 — Dashboard / metrics (done on this branch)
 - ✅ DEAD-327 — admin watershed reference (`857c11be`): typed per-version table at `/admin/analytics-versions`. Versions are seeded `TBD`; fill in at release cut.
-- 🔲 DEAD-318 — realistic `avg_completion_rate` metric
-- 🔲 DEAD-317 — distinct-listener Top Shows query with listen-time gate
-- 🔲 DEAD-304 — surface completion rate per show
-- 🔲 DEAD-308 — retention cohorts D1/D7/D30 by install week
-- 🔲 DEAD-309 — search quality metrics: zero-result, abandon rates
-- 🔲 DEAD-330 — admin dashboard: Plays by source panel
-- 🔲 DEAD-320 — remaining admin clarity bits
-- 🔲 DEAD-302 — Listening Now live activity (may need mobile heartbeat → could rejoin mobile bundle)
+- ✅ DEAD-318 — realistic `avg_completion_rate` (`e5eea766`): ≥1min gate, capped at 100%, surfaced as a card on the dashboard.
+- ✅ DEAD-317 — distinct-listener Top Shows (`842e1067` + `2f4b7fee` + `7ac6ca04`): replaced raw playback_start count; renamed `plays` → `track_plays`; restored play count alongside listeners.
+- ✅ DEAD-304 — per-show completion rate (`8e7b160b`): SUM(listened) / SUM(duration) with ≥5-play gate; rendered alongside listener + tracks-played in the Top Shows list.
+- ✅ DEAD-308 — D1/D7/D30 cohort retention (`1251cc93`): weekly cohorts, hatched cells for not-yet-mature buckets.
+- ✅ DEAD-309 — search quality panel (`dc21e014`): zero-result rate, abandon rate, median rank, top zero-result + successful queries.
+- ✅ DEAD-330 — Plays by Source panel (`463788e6`): horizontal bars w/ humanized source labels; "(unattributed)" bucket for pre-watershed legacy rows; click-through drill.
+- ✅ DEAD-320 — admin clarity polish (`99a22cdb`): unit + hint props on MetricCards, italicized "(30d)" qualifiers, "Active installs by platform" renamed from "Platform Split", Stale Installs tooltip.
+- ✅ DEAD-302 — Listening Now (`a8271000` + `8e675813` + `07b8212f` + `71293a91` + `bdf15f7f` + `36c92ddc`): 45-min window, inline bitmap matching Show Listening, emoji+iid prefix.
 
-These render against current data immediately and improve as new mobile events flow in post-ship. Date-gating against the watershed reference (`api/src/analytics-watershed.ts`) keeps pre-watershed rows out of metrics that depend on the new shape.
+**Plus extras layered on top of the ticket scope:**
+- ✅ Growth chart of new installs by day, stacked by platform (`9344fa37` + `2db50465` + `cf3a38cd`).
+- ✅ Top-Shows day-range selector (1d / 7d / 14d / 30d / 60d / 180d / 1y) + cover art on each row (`428a4511`).
+- ✅ Show Listening (old bottom panel) removed since the new headline sections replace it (`c8491abc`). Component + endpoint left in place for a future history view.
+
+All Wave-3 panels render against current data immediately and improve as new mobile events flow in post-ship. Watershed-gated fields (`playback_start.source`, `search.selected_index`, `feature_use.target_id/provider`) start populating once the mobile bundle ships and the watershed entries are filled in.
 
 ### How we reach "done"
 
