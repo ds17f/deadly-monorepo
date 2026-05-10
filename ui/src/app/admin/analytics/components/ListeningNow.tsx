@@ -79,7 +79,7 @@ function TrackOutcomeBar({
   if (total === 0) return null;
 
   return (
-    <div className="flex items-center gap-2 mt-1">
+    <div className="flex items-center gap-2">
       <div className="flex gap-px" title={`${heard} of ${total} tracks`}>
         {Array.from({ length: total }, (_, i) => {
           const outcome = outcomeByPos.get(i);
@@ -175,29 +175,27 @@ export default function ListeningNow({
       {listeners.map((l) => (
         <div
           key={`${l.iid}-${l.started_at}`}
-          className="bg-deadly-surface rounded-lg p-2 text-sm"
+          className="bg-deadly-surface rounded-lg px-2 py-1.5 text-sm flex items-center gap-3"
         >
-          <div className="flex items-baseline gap-3">
-            <span className="font-mono text-xs text-zinc-500 w-20 shrink-0 tabular-nums">
-              {relativeAge(l.started_at)}
-            </span>
-            <span className="text-zinc-300 w-24 shrink-0">
-              {formatShowDate(l.show_id)}
-            </span>
-            <span className="text-zinc-500 w-14 shrink-0">
-              {l.track_index != null ? `track ${l.track_index}` : "—"}
-            </span>
-            <span className="text-zinc-500 w-24 shrink-0 truncate">
-              {l.source ? (SOURCE_LABELS[l.source] ?? l.source) : "—"}
-            </span>
-            <span className="text-xs text-zinc-600 ml-auto truncate">
-              {l.platform} {l.app_version}
-            </span>
-          </div>
+          <span className="font-mono text-xs text-zinc-500 w-20 shrink-0 tabular-nums">
+            {relativeAge(l.started_at)}
+          </span>
+          <span className="text-zinc-300 w-24 shrink-0">
+            {formatShowDate(l.show_id)}
+          </span>
+          <span className="text-zinc-500 w-14 shrink-0">
+            {l.track_index != null ? `track ${l.track_index}` : "—"}
+          </span>
+          <span className="text-zinc-500 w-24 shrink-0 truncate">
+            {l.source ? (SOURCE_LABELS[l.source] ?? l.source) : "—"}
+          </span>
           <TrackOutcomeBar
             tracks={l.tracks}
             totalTracks={l.show_id ? showMap?.get(l.show_id)?.tc : undefined}
           />
+          <span className="text-xs text-zinc-600 ml-auto truncate shrink-0">
+            {l.platform} {l.app_version}
+          </span>
         </div>
       ))}
     </div>
