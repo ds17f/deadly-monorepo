@@ -22,7 +22,10 @@ jobs:
           # env examples, or any other config that could ship to production.
           # docker-compose.dev.yml is local-only and forwards the var with an
           # empty default; safe to allowlist.
-          ALLOWED='^\(api/src/auth/config\.ts\|\.github/workflows/security-dev-signin\.yml\|docker-compose\.dev\.yml\):'
+          # iosApp/CHANGELOG.md and androidApp/CHANGELOG.md are auto-generated
+          # from conventional-commit subjects, and a historical chore commit
+          # mentioned the flag by name — doc reference, not config that ships.
+          ALLOWED='^\(api/src/auth/config\.ts\|\.github/workflows/security-dev-signin\.yml\|docker-compose\.dev\.yml\|iosApp/CHANGELOG\.md\|androidApp/CHANGELOG\.md\):'
           MATCHES=$(git grep -n 'ENABLE_DEV_SIGNIN' || true)
           if [ -z "$MATCHES" ]; then
             echo "OK: no occurrences."
