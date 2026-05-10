@@ -361,7 +361,7 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
   const VALID_METRICS = new Set([
     "dau", "wau", "mau", "total_installs", "stale_installs",
     "events_today", "top_shows", "feature_adoption", "platform_split", "playback",
-    "playback_source",
+    "playback_source", "new_installs",
   ]);
 
   app.get(
@@ -493,7 +493,9 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
   );
 
   // GET /api/analytics/timeseries — sparkline data for admin dashboard
-  const VALID_TS_METRICS = new Set(["dau", "events", "playback_starts"]);
+  const VALID_TS_METRICS = new Set([
+    "dau", "events", "playback_starts", "new_installs",
+  ]);
 
   app.get(
     "/api/analytics/timeseries",

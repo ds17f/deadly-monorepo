@@ -783,7 +783,11 @@ export function getSearchQuality(days = 30): SearchQuality {
   };
 }
 
-export type TimeseriesMetric = "dau" | "events" | "playback_starts";
+export type TimeseriesMetric =
+  | "dau"
+  | "events"
+  | "playback_starts"
+  | "new_installs";
 
 export interface TimeseriesPoint {
   day: string;
@@ -813,6 +817,24 @@ export function getTimeseries(metric: TimeseriesMetric, days: number): Timeserie
       return db.prepare(`
         SELECT date(ts / 1000, 'unixepoch') AS day, COUNT(*) AS value
         FROM analytics_events WHERE event = 'playback_start' AND ts > ?
+        GROUP BY day ORDER BY day ASC
+      `).all(cutoff) as TimeseriesPoint[];
+
+    case "new_installs":
+      // Each iid's first-ever timestamp = first-seen day; group by that
+      // day. We allow first_ts to fall outside the lookback window only
+      // if filtering to it would hide installs that first appeared
+      // before the window — which is what we want here.
+      return db.prepare(`
+        WITH first_seen AS (
+          SELECT iid, MIN(ts) AS first_ts
+          FROM analytics_events
+          GROUP BY iid
+        )
+        SELECT date(first_ts / 1000, 'unixepoch') AS day,
+               COUNT(*) AS value
+        FROM first_seen
+        WHERE first_ts > ?
         GROUP BY day ORDER BY day ASC
       `).all(cutoff) as TimeseriesPoint[];
 
@@ -981,7 +1003,8 @@ export type DetailMetric =
   | "feature_adoption"
   | "platform_split"
   | "playback"
-  | "playback_source";
+  | "playback_source"
+  | "new_installs";
 
 export interface DetailRow {
   iid: string;
@@ -1056,6 +1079,42 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
         FROM analytics_events WHERE ts >= ?
         ORDER BY ts DESC LIMIT 500
       `).all(todayStart) as DetailRow[];
+
+    case "new_installs":
+      // Filter is a YYYY-MM-DD day. List the iids whose first-ever event
+      // landed on that day. Without filter, list the most recent
+      // first-seen iids overall.
+      if (filter) {
+        return db.prepare(`
+          WITH first_seen AS (
+            SELECT iid, MIN(ts) AS first_ts FROM analytics_events GROUP BY iid
+          )
+          SELECT
+            f.iid,
+            (SELECT platform FROM analytics_events WHERE iid = f.iid ORDER BY ts ASC LIMIT 1) AS platform,
+            (SELECT app_version FROM analytics_events WHERE iid = f.iid ORDER BY ts ASC LIMIT 1) AS app_version,
+            datetime(f.first_ts/1000, 'unixepoch') AS last_seen,
+            (SELECT COUNT(*) FROM analytics_events WHERE iid = f.iid) AS event_count,
+            date(f.first_ts/1000, 'unixepoch') AS detail
+          FROM first_seen f
+          WHERE date(f.first_ts/1000, 'unixepoch') = ?
+          ORDER BY f.first_ts DESC LIMIT 500
+        `).all(filter) as DetailRow[];
+      }
+      return db.prepare(`
+        WITH first_seen AS (
+          SELECT iid, MIN(ts) AS first_ts FROM analytics_events GROUP BY iid
+        )
+        SELECT
+          f.iid,
+          (SELECT platform FROM analytics_events WHERE iid = f.iid ORDER BY ts ASC LIMIT 1) AS platform,
+          (SELECT app_version FROM analytics_events WHERE iid = f.iid ORDER BY ts ASC LIMIT 1) AS app_version,
+          datetime(f.first_ts/1000, 'unixepoch') AS last_seen,
+          (SELECT COUNT(*) FROM analytics_events WHERE iid = f.iid) AS event_count,
+          date(f.first_ts/1000, 'unixepoch') AS detail
+        FROM first_seen f
+        ORDER BY f.first_ts DESC LIMIT 500
+      `).all() as DetailRow[];
 
     case "playback_source":
       if (filter) {

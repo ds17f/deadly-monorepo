@@ -12,6 +12,7 @@ import RetentionCohorts from "./components/RetentionCohorts";
 import SearchQuality from "./components/SearchQuality";
 import PlaysBySource from "./components/PlaysBySource";
 import ListeningNow from "./components/ListeningNow";
+import GrowthChart from "./components/GrowthChart";
 import FeatureAdoption from "./components/FeatureAdoption";
 import ShowPlayback from "./components/ShowPlayback";
 import CollapsibleSection from "./components/CollapsibleSection";
@@ -85,7 +86,8 @@ type DetailMetric =
   | "feature_adoption"
   | "platform_split"
   | "playback"
-  | "playback_source";
+  | "playback_source"
+  | "new_installs";
 
 const METRIC_LABELS: Record<DetailMetric, string> = {
   dau: "Daily Active Users",
@@ -99,6 +101,7 @@ const METRIC_LABELS: Record<DetailMetric, string> = {
   platform_split: "Active installs by platform (30d)",
   playback: "Playback (30d)",
   playback_source: "Plays by Source (30d)",
+  new_installs: "New Installs",
 };
 
 const REFRESH_INTERVAL = 30_000;
@@ -278,6 +281,15 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
       {/* Listening Now */}
       <CollapsibleSection title="Listening Now (last 45 min)" forceOpen={forceOpen}>
         <ListeningNow />
+      </CollapsibleSection>
+
+      {/* Growth */}
+      <CollapsibleSection
+        title="Growth (60d)"
+        forceOpen={forceOpen}
+        onDetail={() => openDetail("new_installs")}
+      >
+        <GrowthChart onDayClick={(day) => openDetail("new_installs", day)} />
       </CollapsibleSection>
 
       {/* Active Users */}
