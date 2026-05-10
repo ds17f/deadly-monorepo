@@ -633,6 +633,58 @@ export function getRetentionCohorts(weeks = 12): RetentionCohort[] {
     .all(oldestWeekStart, todayDay, todayDay, todayDay) as RetentionCohort[];
 }
 
+// ── Listening Now ──────────────────────────────────────────────────
+
+export interface LiveListener {
+  iid: string;
+  platform: string;
+  app_version: string;
+  /** Wall-clock ms when the playback_start fired. */
+  started_at: number;
+  show_id: string | null;
+  recording_id: string | null;
+  track_index: number | null;
+  source: string | null;
+}
+
+/**
+ * Approximate "currently listening" set. Returns each `playback_start`
+ * from the last 5 minutes that has no subsequent `playback_end` for the
+ * same (iid, sid, show_id, track_index). Sessions that crash or are
+ * force-killed without emitting `playback_end` will linger for up to
+ * 5 minutes — that's a deliberate trade for not requiring a heartbeat.
+ */
+export function getLiveListeners(): LiveListener[] {
+  const db = getAnalyticsDb();
+  const fiveMinAgo = Date.now() - 5 * 60 * 1000;
+
+  return db
+    .prepare(
+      `SELECT
+         s.iid,
+         s.platform,
+         s.app_version,
+         s.ts AS started_at,
+         json_extract(s.props, '$.show_id') AS show_id,
+         json_extract(s.props, '$.recording_id') AS recording_id,
+         json_extract(s.props, '$.track_index') AS track_index,
+         json_extract(s.props, '$.source') AS source
+       FROM analytics_events s
+       WHERE s.event = 'playback_start' AND s.ts >= ?
+         AND NOT EXISTS (
+           SELECT 1 FROM analytics_events e
+           WHERE e.event = 'playback_end'
+             AND e.iid = s.iid
+             AND e.sid = s.sid
+             AND e.ts >= s.ts
+             AND json_extract(e.props, '$.show_id') = json_extract(s.props, '$.show_id')
+             AND json_extract(e.props, '$.track_index') = json_extract(s.props, '$.track_index')
+         )
+       ORDER BY s.ts DESC`,
+    )
+    .all(fiveMinAgo) as LiveListener[];
+}
+
 // ── Search quality ─────────────────────────────────────────────────
 
 export interface SearchQuality {

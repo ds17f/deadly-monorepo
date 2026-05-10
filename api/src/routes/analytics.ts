@@ -15,6 +15,7 @@ import {
   getInstallEvents,
   getRetentionCohorts,
   getSearchQuality,
+  getLiveListeners,
 } from "../db/analytics.js";
 import { requireAdmin } from "../auth/middleware.js";
 import { ANALYTICS_WATERSHED } from "../analytics-watershed.js";
@@ -535,6 +536,42 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       const clampedDays = Math.min(Math.max(days ?? 14, 1), 90);
       return getTimeseries(metric as TimeseriesMetric, clampedDays);
     },
+  );
+
+  // GET /api/analytics/live — currently-listening sessions (last 5 min, no end).
+  app.get(
+    "/api/analytics/live",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Currently listening (admin)",
+        response: {
+          200: {
+            type: "object",
+            properties: {
+              listeners: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    iid: { type: "string" },
+                    platform: { type: "string" },
+                    app_version: { type: "string" },
+                    started_at: { type: "number" },
+                    show_id: { type: ["string", "null"] },
+                    recording_id: { type: ["string", "null"] },
+                    track_index: { type: ["number", "null"] },
+                    source: { type: ["string", "null"] },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async () => ({ listeners: getLiveListeners() }),
   );
 
   // GET /api/analytics/search-quality — zero-result + abandon + ranking-quality stats.

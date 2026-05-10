@@ -11,6 +11,7 @@ import PlatformChart from "./components/PlatformChart";
 import RetentionCohorts from "./components/RetentionCohorts";
 import SearchQuality from "./components/SearchQuality";
 import PlaysBySource from "./components/PlaysBySource";
+import ListeningNow from "./components/ListeningNow";
 import FeatureAdoption from "./components/FeatureAdoption";
 import ShowPlayback from "./components/ShowPlayback";
 import CollapsibleSection from "./components/CollapsibleSection";
@@ -273,6 +274,11 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
           )}
         </div>
       </div>
+
+      {/* Listening Now */}
+      <CollapsibleSection title="Listening Now (last 5 min)" forceOpen={forceOpen}>
+        <ListeningNow />
+      </CollapsibleSection>
 
       {/* Active Users */}
       <CollapsibleSection title="Active Users" forceOpen={forceOpen}>
