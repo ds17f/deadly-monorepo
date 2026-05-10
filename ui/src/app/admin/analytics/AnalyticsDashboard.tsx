@@ -8,6 +8,7 @@ import DetailPanel from "./components/DetailPanel";
 import InstallDetailPanel from "./components/InstallDetailPanel";
 import TopShowsList from "./components/TopShowsList";
 import PlatformChart from "./components/PlatformChart";
+import RetentionCohorts from "./components/RetentionCohorts";
 import FeatureAdoption from "./components/FeatureAdoption";
 import ShowPlayback from "./components/ShowPlayback";
 import CollapsibleSection from "./components/CollapsibleSection";
@@ -309,6 +310,11 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
           data={data.platform_split}
           onPlatformClick={(p) => openDetail("platform_split", p)}
         />
+      </CollapsibleSection>
+
+      {/* Retention Cohorts */}
+      <CollapsibleSection title="Retention Cohorts (12 weeks)" forceOpen={forceOpen}>
+        <RetentionCohorts />
       </CollapsibleSection>
 
       {/* Top Shows */}

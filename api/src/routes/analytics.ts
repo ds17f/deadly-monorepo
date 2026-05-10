@@ -13,6 +13,7 @@ import {
   type DetailMetric,
   type TimeseriesMetric,
   getInstallEvents,
+  getRetentionCohorts,
 } from "../db/analytics.js";
 import { requireAdmin } from "../auth/middleware.js";
 import { ANALYTICS_WATERSHED } from "../analytics-watershed.js";
@@ -520,6 +521,49 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       }
       const clampedDays = Math.min(Math.max(days ?? 14, 1), 90);
       return getTimeseries(metric as TimeseriesMetric, clampedDays);
+    },
+  );
+
+  // GET /api/analytics/retention — weekly install cohorts with D1/D7/D30 return rates.
+  app.get(
+    "/api/analytics/retention",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Weekly cohort retention (admin)",
+        querystring: {
+          type: "object",
+          properties: {
+            weeks: { type: "number", default: 12 },
+          },
+        },
+        response: {
+          200: {
+            type: "object",
+            properties: {
+              cohorts: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    cohort_week: { type: "string" },
+                    cohort_size: { type: "number" },
+                    d1: { type: ["number", "null"] },
+                    d7: { type: ["number", "null"] },
+                    d30: { type: ["number", "null"] },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { weeks } = request.query as { weeks?: number };
+      const clamped = Math.min(Math.max(weeks ?? 12, 1), 52);
+      return { cohorts: getRetentionCohorts(clamped) };
     },
   );
 

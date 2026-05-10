@@ -537,6 +537,73 @@ export function getSummary(): AnalyticsSummary {
 
 // ── Timeseries queries ──────────────────────────────────────────────
 
+// ── Retention cohorts ──────────────────────────────────────────────
+
+export interface RetentionCohort {
+  /** ISO-style "YYYY-Www" — week the install first opened the app. */
+  cohort_week: string;
+  /** Distinct installs first seen during this week. */
+  cohort_size: number;
+  /** Distinct installs with an app_open exactly N days after install_day.
+   *  Null when the cohort is younger than N days (not enough time elapsed). */
+  d1: number | null;
+  d7: number | null;
+  d30: number | null;
+}
+
+/**
+ * Weekly cohort retention: for each install-week, how many returned on
+ * D1, D7, and D30. "Returned on day N" means an `app_open` exists on the
+ * calendar day install_day + N (strict). Cohorts younger than N days
+ * report null for that bucket so the UI can render a hatched / "—" cell
+ * instead of misleading 0%. Defaults to the last 12 weeks of cohorts.
+ */
+export function getRetentionCohorts(weeks = 12): RetentionCohort[] {
+  const db = getAnalyticsDb();
+  const oldestWeekStart = Date.now() - weeks * 7 * 24 * 3600 * 1000;
+  const todayDay = new Date().toISOString().slice(0, 10);
+
+  return db
+    .prepare(
+      `WITH first_open AS (
+         SELECT iid,
+                MIN(ts) AS install_ts,
+                date(MIN(ts) / 1000, 'unixepoch') AS install_day
+         FROM analytics_events
+         WHERE event = 'app_open'
+         GROUP BY iid
+         HAVING install_ts >= ?
+       ),
+       active AS (
+         SELECT DISTINCT iid, date(ts / 1000, 'unixepoch') AS active_day
+         FROM analytics_events
+         WHERE event = 'app_open'
+       )
+       SELECT
+         strftime('%Y-W%W', f.install_day) AS cohort_week,
+         COUNT(DISTINCT f.iid) AS cohort_size,
+         CASE WHEN date(?, '-1 day') >= MAX(f.install_day)
+              THEN COUNT(DISTINCT CASE WHEN a1.iid IS NOT NULL THEN f.iid END)
+              ELSE NULL END AS d1,
+         CASE WHEN date(?, '-7 day') >= MAX(f.install_day)
+              THEN COUNT(DISTINCT CASE WHEN a7.iid IS NOT NULL THEN f.iid END)
+              ELSE NULL END AS d7,
+         CASE WHEN date(?, '-30 day') >= MAX(f.install_day)
+              THEN COUNT(DISTINCT CASE WHEN a30.iid IS NOT NULL THEN f.iid END)
+              ELSE NULL END AS d30
+       FROM first_open f
+       LEFT JOIN active a1
+         ON a1.iid = f.iid AND a1.active_day = date(f.install_day, '+1 day')
+       LEFT JOIN active a7
+         ON a7.iid = f.iid AND a7.active_day = date(f.install_day, '+7 day')
+       LEFT JOIN active a30
+         ON a30.iid = f.iid AND a30.active_day = date(f.install_day, '+30 day')
+       GROUP BY cohort_week
+       ORDER BY cohort_week DESC`,
+    )
+    .all(oldestWeekStart, todayDay, todayDay, todayDay) as RetentionCohort[];
+}
+
 export type TimeseriesMetric = "dau" | "events" | "playback_starts";
 
 export interface TimeseriesPoint {
