@@ -194,7 +194,7 @@ struct PlaylistServiceTests {
         try insertRecording(identifier: recordingId, showId: showId)
 
         await service.loadShow(showId)
-        service.playTrack(at: 1)
+        service.playTrack(at: 1, source: "test")
 
         #expect(streamPlayer.currentTrack?.title == "Song Two")
     }
