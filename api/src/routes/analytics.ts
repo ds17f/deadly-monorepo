@@ -241,6 +241,17 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
                   },
                 },
               },
+              plays_by_source: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    source: { type: "string" },
+                    plays: { type: "number" },
+                    distinct_listeners: { type: "number" },
+                  },
+                },
+              },
               top_shows_by_action: {
                 type: "object",
                 properties: {
@@ -349,6 +360,7 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
   const VALID_METRICS = new Set([
     "dau", "wau", "mau", "total_installs", "stale_installs",
     "events_today", "top_shows", "feature_adoption", "platform_split", "playback",
+    "playback_source",
   ]);
 
   app.get(

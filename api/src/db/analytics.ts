@@ -258,6 +258,14 @@ export interface AnalyticsSummary {
     completion_rate: number | null;
   }>;
   top_shows_by_action: Record<ActionShowsBucket, ActionShowsRow[]>;
+  /** playback_start grouped by `source`. Pre-watershed rows have null source
+   *  and are surfaced as "(unattributed)" so the legacy bucket is visible
+   *  rather than silently disappearing. */
+  plays_by_source: Array<{
+    source: string;
+    plays: number;
+    distinct_listeners: number;
+  }>;
   feature_adoption: FeatureAdoption;
   avg_completion_rate: number | null;
   avg_completion_sample_count: number;
@@ -507,6 +515,26 @@ export function getSummary(): AnalyticsSummary {
     : null;
   const avg_completion_sample_count = completion?.sample_count ?? 0;
 
+  // Plays by source (last 30d). Null source bucketed as "(unattributed)" so
+  // pre-watershed rows from clients that didn't yet emit `source` are
+  // visible rather than silently dropped.
+  const plays_by_source = db
+    .prepare(
+      `SELECT
+         COALESCE(json_extract(props, '$.source'), '(unattributed)') AS source,
+         COUNT(*) AS plays,
+         COUNT(DISTINCT iid) AS distinct_listeners
+       FROM analytics_events
+       WHERE event = 'playback_start' AND ts > ?
+       GROUP BY source
+       ORDER BY plays DESC`,
+    )
+    .all(monthAgo) as Array<{
+      source: string;
+      plays: number;
+      distinct_listeners: number;
+    }>;
+
   // Events today
   const todayStart =
     new Date(new Date().toISOString().slice(0, 10)).getTime();
@@ -528,6 +556,7 @@ export function getSummary(): AnalyticsSummary {
     platform_split,
     top_shows,
     top_shows_by_action,
+    plays_by_source,
     feature_adoption,
     avg_completion_rate,
     avg_completion_sample_count,
@@ -896,7 +925,8 @@ export type DetailMetric =
   | "top_shows"
   | "feature_adoption"
   | "platform_split"
-  | "playback";
+  | "playback"
+  | "playback_source";
 
 export interface DetailRow {
   iid: string;
@@ -971,6 +1001,37 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
         FROM analytics_events WHERE ts >= ?
         ORDER BY ts DESC LIMIT 500
       `).all(todayStart) as DetailRow[];
+
+    case "playback_source":
+      if (filter) {
+        // Drill into a specific source: list recent plays from it. The "(unattributed)"
+        // bucket maps to legacy rows where source was never emitted.
+        const filterClause =
+          filter === "(unattributed)"
+            ? "json_extract(props, '$.source') IS NULL"
+            : "json_extract(props, '$.source') = ?";
+        const params: (string | number)[] = [monthAgo];
+        if (filter !== "(unattributed)") params.push(filter);
+        return db.prepare(`
+          SELECT json_extract(props, '$.show_id') AS detail,
+            iid, platform, app_version,
+            datetime(ts/1000, 'unixepoch') AS last_seen,
+            1 AS event_count
+          FROM analytics_events
+          WHERE event = 'playback_start' AND ts > ? AND ${filterClause}
+          ORDER BY ts DESC LIMIT 500
+        `).all(...params) as DetailRow[];
+      }
+      return db.prepare(`
+        SELECT
+          COALESCE(json_extract(props, '$.source'), '(unattributed)') AS detail,
+          iid, platform, app_version,
+          datetime(ts/1000, 'unixepoch') AS last_seen,
+          1 AS event_count
+        FROM analytics_events
+        WHERE event = 'playback_start' AND ts > ?
+        ORDER BY ts DESC LIMIT 500
+      `).all(monthAgo) as DetailRow[];
 
     case "top_shows":
       if (filter) {

@@ -10,6 +10,7 @@ import TopShowsList from "./components/TopShowsList";
 import PlatformChart from "./components/PlatformChart";
 import RetentionCohorts from "./components/RetentionCohorts";
 import SearchQuality from "./components/SearchQuality";
+import PlaysBySource from "./components/PlaysBySource";
 import FeatureAdoption from "./components/FeatureAdoption";
 import ShowPlayback from "./components/ShowPlayback";
 import CollapsibleSection from "./components/CollapsibleSection";
@@ -39,6 +40,11 @@ interface AnalyticsSummary {
     listeners: number;
     track_plays: number;
     completion_rate: number | null;
+  }>;
+  plays_by_source: Array<{
+    source: string;
+    plays: number;
+    distinct_listeners: number;
   }>;
   top_shows_by_action: TopShowsByAction;
   feature_adoption: FeatureAdoption;
@@ -77,7 +83,8 @@ type DetailMetric =
   | "top_shows"
   | "feature_adoption"
   | "platform_split"
-  | "playback";
+  | "playback"
+  | "playback_source";
 
 const METRIC_LABELS: Record<DetailMetric, string> = {
   dau: "Daily Active Users",
@@ -90,6 +97,7 @@ const METRIC_LABELS: Record<DetailMetric, string> = {
   feature_adoption: "Feature Adoption (30d)",
   platform_split: "Platform Split (30d)",
   playback: "Playback (30d)",
+  playback_source: "Plays by Source (30d)",
 };
 
 const REFRESH_INTERVAL = 30_000;
@@ -310,6 +318,18 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
         <PlatformChart
           data={data.platform_split}
           onPlatformClick={(p) => openDetail("platform_split", p)}
+        />
+      </CollapsibleSection>
+
+      {/* Plays by Source */}
+      <CollapsibleSection
+        title="Plays by Source (30d)"
+        forceOpen={forceOpen}
+        onDetail={() => openDetail("playback_source")}
+      >
+        <PlaysBySource
+          data={data.plays_by_source}
+          onSourceClick={(s) => openDetail("playback_source", s)}
         />
       </CollapsibleSection>
 
