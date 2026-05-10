@@ -12,6 +12,13 @@ final class SearchServiceImpl: SearchService {
     private(set) var isLoading = false
     private(set) var query = ""
 
+    // Last emitted search analytics tuple, used to suppress duplicate `search`
+    // events fired within a short window (~2s) for the same (query, length,
+    // result_count). Production data showed ~22% dupe pairs from SwiftUI
+    // re-render / repeat-onChange paths invoking search() twice.
+    private var lastEmittedSearch: (query: String, queryLength: Int, resultCount: Int, at: Date)?
+    private static let searchDedupWindow: TimeInterval = 2.0
+
     nonisolated init(showSearchDAO: ShowSearchDAO, showDAO: ShowDAO, showRepository: any ShowRepository, appPreferences: AppPreferences, analyticsService: AnalyticsService? = nil) {
         self.showSearchDAO = showSearchDAO
         self.showDAO = showDAO
@@ -56,11 +63,21 @@ final class SearchServiceImpl: SearchService {
                 let matchType = determineMatchType(show, query: trimmed)
                 return SearchResultShow(show: show, relevanceScore: score, matchType: matchType)
             }
-            analyticsService?.track("search", props: [
-                "query": trimmed,
-                "query_length": trimmed.count,
-                "result_count": results.count,
-            ])
+            let now = Date()
+            let isDuplicate = lastEmittedSearch.map { last in
+                last.query == trimmed
+                    && last.queryLength == trimmed.count
+                    && last.resultCount == results.count
+                    && now.timeIntervalSince(last.at) < Self.searchDedupWindow
+            } ?? false
+            if !isDuplicate {
+                lastEmittedSearch = (trimmed, trimmed.count, results.count, now)
+                analyticsService?.track("search", props: [
+                    "query": trimmed,
+                    "query_length": trimmed.count,
+                    "result_count": results.count,
+                ])
+            }
         } catch {
             results = []
             analyticsService?.track("error", props: [

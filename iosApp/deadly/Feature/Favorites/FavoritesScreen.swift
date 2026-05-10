@@ -279,7 +279,7 @@ struct FavoritesScreen: View {
                 await container.playlistService.selectRecording(rec)
             }
             let idx = track.trackNumber.map { max(0, $0 - 1) } ?? 0
-            container.playlistService.playTrack(at: idx)
+            container.playlistService.playTrack(at: idx, source: "library_favorites")
             container.playlistService.recordRecentPlay()
             showFullPlayer = true
         }

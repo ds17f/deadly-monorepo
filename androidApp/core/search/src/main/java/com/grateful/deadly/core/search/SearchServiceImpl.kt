@@ -120,6 +120,18 @@ class SearchServiceImpl @Inject constructor(
         return Result.success(Unit)
     }
     
+    override suspend fun recordResultTap(selectedIndex: Int) {
+        val query = _currentQuery.value
+        if (query.isBlank()) return
+        val results = _searchResults.value
+        analyticsService.track("search", mapOf(
+            "query" to query,
+            "query_length" to query.length,
+            "result_count" to results.size,
+            "selected_index" to selectedIndex
+        ))
+    }
+
     override suspend fun clearSearch(): Result<Unit> {
         _currentQuery.value = ""
         _searchResults.value = emptyList()

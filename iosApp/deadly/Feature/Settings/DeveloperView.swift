@@ -8,6 +8,11 @@ struct DeveloperView: View {
     @State private var clearCacheSuccess = false
     @State private var showingReimportConfirm = false
     @State private var showingImport = false
+    @State private var flushInFlight = false
+    @State private var showingFlushResult = false
+    @State private var flushSuccess = false
+    @State private var flushCount = 0
+    @State private var flushError: String?
 
     var body: some View {
         List {
@@ -58,6 +63,21 @@ struct DeveloperView: View {
 
                 LabeledContent("Database Version", value: dataVersion ?? "No data")
 
+                Button(flushInFlight ? "Flushing analytics…" : "Flush analytics") {
+                    guard !flushInFlight else { return }
+                    flushInFlight = true
+                    container.analyticsService.flushNow { ok, n, err in
+                        DispatchQueue.main.async {
+                            flushSuccess = ok
+                            flushCount = n
+                            flushError = err
+                            flushInFlight = false
+                            showingFlushResult = true
+                        }
+                    }
+                }
+                .disabled(flushInFlight)
+
                 Button("Clear All Caches") {
                     showingClearCacheAlert = true
                 }
@@ -81,6 +101,16 @@ struct DeveloperView: View {
             Button("Cancel", role: .cancel) {}
         } message: {
             Text("This will delete all cached images, track lists, and reviews. The data will be re-downloaded when needed.")
+        }
+
+        .alert(flushSuccess ? "Flushed" : "Flush Failed", isPresented: $showingFlushResult) {
+            Button("OK") {}
+        } message: {
+            if flushSuccess {
+                Text(flushCount == 0 ? "Buffer was empty." : "Sent \(flushCount) event(s).")
+            } else {
+                Text("Failed to send \(flushCount) event(s). They have been preserved in the buffer.\n\n\(flushError ?? "Unknown error")")
+            }
         }
 
         .alert(clearCacheSuccess ? "Caches Cleared" : "Clear Failed", isPresented: $showingClearCacheResult) {

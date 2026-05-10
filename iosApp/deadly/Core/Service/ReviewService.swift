@@ -6,12 +6,14 @@ struct ReviewService: Sendable {
     private let favoriteSongDAO: FavoriteSongDAO
     private let showPlayerTagDAO: ShowPlayerTagDAO
     private let showDAO: ShowDAO
+    private let analyticsService: AnalyticsService?
 
-    init(showReviewDAO: ShowReviewDAO, favoriteSongDAO: FavoriteSongDAO, showPlayerTagDAO: ShowPlayerTagDAO, showDAO: ShowDAO) {
+    init(showReviewDAO: ShowReviewDAO, favoriteSongDAO: FavoriteSongDAO, showPlayerTagDAO: ShowPlayerTagDAO, showDAO: ShowDAO, analyticsService: AnalyticsService? = nil) {
         self.showReviewDAO = showReviewDAO
         self.favoriteSongDAO = favoriteSongDAO
         self.showPlayerTagDAO = showPlayerTagDAO
         self.showDAO = showDAO
+        self.analyticsService = analyticsService
     }
 
     // MARK: - Show-level review
@@ -70,6 +72,13 @@ struct ReviewService: Sendable {
             )
             try favoriteSongDAO.insert(record)
         }
+        let targetId = "\(showId)/\(recordingId ?? "")/\(trackNumber ?? 0)"
+        analyticsService?.track("feature_use", props: [
+            "feature": isFav ? "remove_favorite" : "add_favorite",
+            "category": "action",
+            "target_type": "recording_track",
+            "target_id": targetId,
+        ])
     }
 
     func isSongFavorite(showId: String, trackTitle: String, recordingId: String?) throws -> Bool {

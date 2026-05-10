@@ -51,7 +51,7 @@ final class AppContainer {
             let prefs = AppPreferences()
             appPreferences = prefs
             let analytics = AnalyticsService(appPreferences: prefs, apiKey: Secrets.analyticsApiKey)
-            authService = MainActor.assumeIsolated { AuthService(appPreferences: prefs) }
+            authService = MainActor.assumeIsolated { AuthService(appPreferences: prefs, analyticsService: analytics) }
             dataImportService = DataImportService(
                 gitHubClient: URLSessionGitHubReleasesClient(),
                 zipExtractor: ZipExtractor(),
@@ -80,7 +80,8 @@ final class AppContainer {
                 showReviewDAO: ShowReviewDAO(database: db),
                 favoriteSongDAO: FavoriteSongDAO(database: db),
                 showPlayerTagDAO: ShowPlayerTagDAO(database: db),
-                showDAO: ShowDAO(database: db)
+                showDAO: ShowDAO(database: db),
+                analyticsService: analytics
             )
             reviewService = revService
             favoritesService = FavoritesServiceImpl(

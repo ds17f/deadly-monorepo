@@ -2,6 +2,10 @@ import SwiftUI
 
 struct SearchResultRow: View {
     let result: SearchResultShow
+    /// Zero-based position of this row in the displayed result list. Emitted as
+    /// `selected_index` on the `search` event when the row is tapped, so we can
+    /// measure the search → playback funnel.
+    var position: Int? = nil
     @Environment(\.appContainer) private var container
     @State private var isFavorite = false
     @State private var showReviews = false
@@ -46,6 +50,16 @@ struct SearchResultRow: View {
             .accessibilityElement(children: .combine)
         }
         .buttonStyle(.plain)
+        .simultaneousGesture(TapGesture().onEnded {
+            guard let position else { return }
+            let search = container.searchService
+            container.analyticsService.track("search", props: [
+                "query": search.query,
+                "query_length": search.query.count,
+                "result_count": search.results.count,
+                "selected_index": position,
+            ])
+        })
         .contextMenu {
             favoriteContextMenu
         } preview: {

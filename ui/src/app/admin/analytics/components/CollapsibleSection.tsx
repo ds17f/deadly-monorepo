@@ -29,7 +29,20 @@ export default function CollapsibleSection({
           className="flex items-center gap-2 group text-left"
         >
           <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider group-hover:text-zinc-200 transition-colors">
-            {title}
+            {(() => {
+              // Subdued styling on a trailing parenthesized qualifier like
+              // "(30d)" so the time window reads as metadata, not part of the title.
+              const m = title.match(/^(.*?)\s*(\([^)]*\))\s*$/);
+              if (!m) return title;
+              return (
+                <>
+                  {m[1]}
+                  <span className="ml-1.5 italic font-normal normal-case tracking-normal text-zinc-500">
+                    {m[2]}
+                  </span>
+                </>
+              );
+            })()}
           </h2>
           <span className="text-xs text-zinc-600 group-hover:text-zinc-400 transition-colors">
             {open ? "▲" : "▼"}

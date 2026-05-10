@@ -107,6 +107,26 @@ class MediaControllerRepository @Inject constructor(
     // Analytics: tracks the currently playing item for playback_end
     private var analyticsPlaybackInfo: Triple<String, String, Int>? = null // showId, recordingId, trackNumber
 
+    // Rolling snapshot of (position, duration) for the active track, refreshed
+    // every position-updater tick. Read at track-change time so listened_ms
+    // reflects the *ending* track, not the new one (whose position resets to 0).
+    private var lastKnownProgress: Pair<Long, Long> = 0L to 0L
+
+    // Explicit reason for the next playback_end emit. Set by skip / app-background
+    // / error paths; consumed (cleared) on each emission. When null, the
+    // transition path falls back to a heuristic on the snapshot.
+    private var pendingEndReason: String? = null
+
+    // Source for the next playback_start emit. Set by playAll / playTrack callers,
+    // consumed (and reset to "auto_advance") on each emission so subsequent queue
+    // transitions are correctly attributed to auto-advance.
+    private var nextPlaybackSource: String = "auto_advance"
+
+    // Stall detection: timestamp when we entered STATE_BUFFERING from STATE_READY
+    // (i.e. mid-playback rebuffer, not initial load). Cleared when we leave
+    // BUFFERING; emits playback_stall if the duration exceeded 3s.
+    private var stallStartedAtMs: Long? = null
+
     // Unified playback status with computed progress
     val playbackStatus: StateFlow<PlaybackStatus> = combine(
         _currentPosition, _duration
@@ -139,8 +159,10 @@ class MediaControllerRepository @Inject constructor(
         location: String?,
         coverImageUrl: String? = null,
         startPosition: Long = 0L,
-        autoPlay: Boolean = true
+        autoPlay: Boolean = true,
+        source: String = "browse"
     ) {
+        nextPlaybackSource = source
         Log.d(TAG, "playAll: $recordingId ($format) at position $startPosition")
         
         executeWhenConnected {
@@ -206,10 +228,13 @@ class MediaControllerRepository @Inject constructor(
                             Log.d(TAG, "🕒🎵 [URL] controller.play() call completed at ${System.currentTimeMillis()}")
                             firePlaybackEnd()
                             analyticsPlaybackInfo = Triple(showId, recordingId, 1)
+                            val emitSource = nextPlaybackSource
+                            nextPlaybackSource = "auto_advance"
                             analyticsService.track("playback_start", mapOf(
                                 "show_id" to showId,
                                 "recording_id" to recordingId,
-                                "track_index" to 1
+                                "track_index" to 1,
+                                "source" to emitSource
                             ))
                             appPreferences.recordShowPlayed(showId)
                         } else {
@@ -243,8 +268,10 @@ class MediaControllerRepository @Inject constructor(
         location: String?,
         coverImageUrl: String? = null,
         position: Long = 0L,
-        autoPlay: Boolean = true
+        autoPlay: Boolean = true,
+        source: String = "browse"
     ) {
+        nextPlaybackSource = source
         Log.d(TAG, "playTrack: index=$trackIndex, recording=$recordingId ($format) at position $position")
         
         executeWhenConnected {
@@ -300,7 +327,12 @@ class MediaControllerRepository @Inject constructor(
                             // Set LOADING state before ExoPlayer operations
                             _playbackState.value = PlaybackState.LOADING
                             Log.d(TAG, "🕒🎵 [STATE] Manual LOADING state set before setMediaItems for track $trackIndex")
-                            
+
+                            // Force playWhenReady to match the caller's intent before prepare().
+                            // After a cold start (e.g. force-kill), ExoPlayer's default is
+                            // playWhenReady=true, which would auto-start the restored track.
+                            controller.playWhenReady = autoPlay
+
                             controller.setMediaItems(mediaItems, trackIndex, position)
                             Log.d(TAG, "🕒🎵 [URL] MediaController.setMediaItems(track=$trackIndex, pos=$position) completed at ${System.currentTimeMillis()}")
                             controller.prepare()
@@ -314,10 +346,13 @@ class MediaControllerRepository @Inject constructor(
                                 Log.d(TAG, "🕒🎵 [URL] controller.play() for track $trackIndex completed at ${System.currentTimeMillis()}")
                                 firePlaybackEnd()
                                 analyticsPlaybackInfo = Triple(showId, recordingId, trackIndex + 1)
+                                val emitSource = nextPlaybackSource
+                                nextPlaybackSource = "auto_advance"
                                 analyticsService.track("playback_start", mapOf(
                                     "show_id" to showId,
                                     "recording_id" to recordingId,
-                                    "track_index" to (trackIndex + 1)
+                                    "track_index" to (trackIndex + 1),
+                                    "source" to emitSource
                                 ))
                                 appPreferences.recordShowPlayed(showId)
                             } else {
@@ -469,6 +504,26 @@ class MediaControllerRepository @Inject constructor(
                         override fun onIsPlayingChanged(isPlaying: Boolean) {
                             if (isPlaying) {
                                 Log.d(TAG, "🕒🎵 [AUDIO] MediaController detected AUDIO STARTED at ${System.currentTimeMillis()}")
+                                // If no playback_start has been emitted for the current item
+                                // (restore loaded items with playWhenReady=false), emit now
+                                // that playback has actually begun.
+                                if (analyticsPlaybackInfo == null) {
+                                    val mediaItem = controller.currentMediaItem
+                                    val showId = mediaItem?.let { extractShowIdFromMediaItem(it) }
+                                    val recordingId = mediaItem?.let { extractRecordingIdFromMediaItem(it) }
+                                    val trackIndex = controller.currentMediaItemIndex + 1
+                                    if (showId != null && recordingId != null) {
+                                        analyticsPlaybackInfo = Triple(showId, recordingId, trackIndex)
+                                        val emitSource = nextPlaybackSource
+                                        nextPlaybackSource = "auto_advance"
+                                        analyticsService.track("playback_start", mapOf(
+                                            "show_id" to showId,
+                                            "recording_id" to recordingId,
+                                            "track_index" to trackIndex,
+                                            "source" to emitSource
+                                        ))
+                                    }
+                                }
                             } else {
                                 Log.d(TAG, "🕒🎵 [AUDIO] MediaController detected audio stopped at ${System.currentTimeMillis()}")
                             }
@@ -487,7 +542,9 @@ class MediaControllerRepository @Inject constructor(
                         }
                         
                         override fun onMediaItemTransition(mediaItem: androidx.media3.common.MediaItem?, reason: Int) {
-                            firePlaybackEnd()
+                            val endReason = pendingEndReason ?: defaultEndReasonFromSnapshot()
+                            pendingEndReason = null
+                            firePlaybackEnd(endReason)
 
                             _currentMediaItem.value = mediaItem
                             _currentShowId.value = extractShowIdFromMediaItem(mediaItem)
@@ -503,26 +560,75 @@ class MediaControllerRepository @Inject constructor(
                                 val recordingId = extractRecordingIdFromMediaItem(mediaItem)
                                 val trackIndex = controller.currentMediaItemIndex + 1
                                 if (showId != null && recordingId != null) {
-                                    analyticsPlaybackInfo = Triple(showId, recordingId, trackIndex)
-                                    analyticsService.track("playback_start", mapOf(
-                                        "show_id" to showId,
-                                        "recording_id" to recordingId,
-                                        "track_index" to trackIndex
-                                    ))
+                                    // Only emit when the player actually intends to play.
+                                    // Restore loads items with playWhenReady=false; emission
+                                    // is deferred to onIsPlayingChanged so it fires only if
+                                    // the user presses play.
+                                    if (controller.playWhenReady) {
+                                        analyticsPlaybackInfo = Triple(showId, recordingId, trackIndex)
+                                        val emitSource = nextPlaybackSource
+                                        nextPlaybackSource = "auto_advance"
+                                        analyticsService.track("playback_start", mapOf(
+                                            "show_id" to showId,
+                                            "recording_id" to recordingId,
+                                            "track_index" to trackIndex,
+                                            "source" to emitSource
+                                        ))
+                                    } else {
+                                        analyticsPlaybackInfo = null
+                                    }
                                 }
                             }
                         }
                         
                         override fun onPlaybackStateChanged(playbackState: Int) {
-                            Log.d(TAG, "🕒🎵 [EXOPLAYER] ExoPlayer state changed: ${getExoPlayerStateString(currentExoPlayerState)} → ${getExoPlayerStateString(playbackState)}")
-                            
+                            val prevState = currentExoPlayerState
+                            Log.d(TAG, "🕒🎵 [EXOPLAYER] ExoPlayer state changed: ${getExoPlayerStateString(prevState)} → ${getExoPlayerStateString(playbackState)}")
+
                             currentExoPlayerState = playbackState
                             updatePlaybackState()
-                            
+
+                            // Stall detection: only count BUFFERING as a stall if we were
+                            // already READY (i.e. mid-playback rebuffer). Initial load
+                            // goes IDLE/ENDED → BUFFERING → READY and isn't user-perceived.
+                            if (playbackState == Player.STATE_BUFFERING && prevState == Player.STATE_READY) {
+                                stallStartedAtMs = System.currentTimeMillis()
+                            } else if (prevState == Player.STATE_BUFFERING && playbackState != Player.STATE_BUFFERING) {
+                                stallStartedAtMs?.let { startedAt ->
+                                    val durationMs = System.currentTimeMillis() - startedAt
+                                    if (durationMs > 3000L) {
+                                        analyticsPlaybackInfo?.let { (showId, recordingId, trackIndex) ->
+                                            analyticsService.track("playback_stall", mapOf(
+                                                "show_id" to showId,
+                                                "recording_id" to recordingId,
+                                                "track_index" to trackIndex,
+                                                "stall_duration_ms" to durationMs,
+                                            ))
+                                        }
+                                    }
+                                    stallStartedAtMs = null
+                                }
+                            }
+
                             if (playbackState == Player.STATE_READY) {
                                 _duration.value = controller.duration.coerceAtLeast(0L)
                                 _currentPosition.value = controller.currentPosition
                             }
+                        }
+
+                        override fun onPlayerError(error: androidx.media3.common.PlaybackException) {
+                            Log.e(TAG, "🕒🎵 [EXOPLAYER] Player error: ${error.errorCodeName}", error)
+                            analyticsPlaybackInfo?.let { (showId, recordingId, trackIndex) ->
+                                analyticsService.track("playback_error", mapOf(
+                                    "show_id" to showId,
+                                    "recording_id" to recordingId,
+                                    "track_index" to trackIndex,
+                                    "error_code" to error.errorCodeName,
+                                    "error_message" to (error.message ?: ""),
+                                    "is_fatal" to true,
+                                ))
+                            }
+                            firePlaybackEnd(reason = "network_error")
                         }
                     })
                     
@@ -724,18 +830,28 @@ class MediaControllerRepository @Inject constructor(
         }
     }
     
-    private fun firePlaybackEnd() {
+    private fun firePlaybackEnd(reason: String? = null) {
         val info = analyticsPlaybackInfo ?: return
-        val position = _currentPosition.value
-        val dur = _duration.value
-        analyticsService.track("playback_end", mapOf(
+        val (position, dur) = lastKnownProgress
+        val props = mutableMapOf<String, Any>(
             "show_id" to info.first,
             "recording_id" to info.second,
             "track_index" to info.third,
             "duration_ms" to dur,
             "listened_ms" to position
-        ))
+        )
+        if (reason != null) props["reason"] = reason
+        analyticsService.track("playback_end", props)
         analyticsPlaybackInfo = null
+        lastKnownProgress = 0L to 0L
+    }
+
+    /// Heuristic: if the snapshot was within ~2s of the track end, treat the
+    /// track as completed. Otherwise leave reason unset.
+    private fun defaultEndReasonFromSnapshot(): String? {
+        val (pos, dur) = lastKnownProgress
+        if (dur <= 0L) return null
+        return if (pos >= dur - 2000L) "completed" else null
     }
 
     private fun extractShowIdFromMediaItem(mediaItem: androidx.media3.common.MediaItem?): String? {
@@ -808,25 +924,40 @@ class MediaControllerRepository @Inject constructor(
             while (true) {
                 val controller = mediaController
                 if (controller != null) {
-                    _currentPosition.value = controller.currentPosition
+                    val pos = controller.currentPosition
+                    val dur = controller.duration.coerceAtLeast(0L)
+                    _currentPosition.value = pos
+                    // Refresh the rolling snapshot only while a track is committed,
+                    // and skip frames where the player hasn't loaded a duration yet.
+                    if (analyticsPlaybackInfo != null && dur > 0) {
+                        lastKnownProgress = pos to dur
+                    }
                 }
                 kotlinx.coroutines.delay(1000) // Update every second
             }
         }
     }
-    
+
     suspend fun seekToNext() {
         Log.d(TAG, "seekToNext - calling seekToNextMediaItem")
+        pendingEndReason = "skipped_next"
         executeWhenConnected {
             mediaController?.seekToNextMediaItem()
         }
     }
-    
+
     suspend fun seekToPrevious() {
         Log.d(TAG, "seekToPrevious - calling seekToPreviousMediaItem")
+        pendingEndReason = "skipped_prev"
         executeWhenConnected {
             mediaController?.seekToPreviousMediaItem()
         }
+    }
+
+    /// Called from MainActivity.onStop so the in-flight track gets attributed
+    /// to backgrounding rather than appearing as a half-listened mystery event.
+    fun notifyAppBackgrounded() {
+        firePlaybackEnd(reason = "app_backgrounded")
     }
     
     suspend fun seekToPosition(positionMs: Long) {

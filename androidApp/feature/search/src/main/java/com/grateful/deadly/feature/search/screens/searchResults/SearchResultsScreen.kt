@@ -7,6 +7,7 @@ import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -310,13 +311,16 @@ fun SearchResultsScreen(
                     }
                     SearchStatus.SUCCESS -> {
                         // Virtualized — only visible items are composed
-                        items(
+                        itemsIndexed(
                             items = sortedResults,
-                            key = { it.show.id }
-                        ) { result ->
+                            key = { _, result -> result.show.id }
+                        ) { index, result ->
                             SearchResultCard(
                                 searchResult = result,
-                                onShowSelected = onNavigateToShow,
+                                onShowSelected = { showId ->
+                                    viewModel.onResultTap(index)
+                                    onNavigateToShow(showId)
+                                },
                                 onShowLongPress = { showId ->
                                     keyboardController?.hide()
                                     selectedShowForActions = sortedResults.find { it.show.id == showId }

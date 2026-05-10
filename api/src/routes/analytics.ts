@@ -13,8 +13,14 @@ import {
   type DetailMetric,
   type TimeseriesMetric,
   getInstallEvents,
+  getRetentionCohorts,
+  getSearchQuality,
+  getLiveListeners,
+  getGrowthByPlatform,
+  getTopShows,
 } from "../db/analytics.js";
 import { requireAdmin } from "../auth/middleware.js";
+import { ANALYTICS_WATERSHED } from "../analytics-watershed.js";
 
 const VALID_PLATFORMS = new Set(["ios", "android", "web"]);
 const MAX_EVENTS_PER_BATCH = 100;
@@ -232,15 +238,115 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
                   type: "object",
                   properties: {
                     show_id: { type: "string" },
+                    listeners: { type: "number" },
+                    track_plays: { type: "number" },
+                    completion_rate: { type: ["number", "null"] },
+                  },
+                },
+              },
+              plays_by_source: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    source: { type: "string" },
                     plays: { type: "number" },
+                    distinct_listeners: { type: "number" },
+                  },
+                },
+              },
+              top_shows_by_action: {
+                type: "object",
+                properties: {
+                  favorited: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        show_id: { type: "string" },
+                        users: { type: "number" },
+                      },
+                    },
+                  },
+                  downloaded: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        show_id: { type: "string" },
+                        users: { type: "number" },
+                      },
+                    },
+                  },
+                  reviewed: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        show_id: { type: "string" },
+                        users: { type: "number" },
+                      },
+                    },
+                  },
+                  shared: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        show_id: { type: "string" },
+                        users: { type: "number" },
+                      },
+                    },
                   },
                 },
               },
               feature_adoption: {
                 type: "object",
-                additionalProperties: { type: "number" },
+                properties: {
+                  action: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        feature: { type: "string" },
+                        uses: { type: "number" },
+                      },
+                    },
+                  },
+                  preference: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        feature: { type: "string" },
+                        uses: { type: "number" },
+                      },
+                    },
+                  },
+                  navigation: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        feature: { type: "string" },
+                        uses: { type: "number" },
+                      },
+                    },
+                  },
+                  uncategorized: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        feature: { type: "string" },
+                        uses: { type: "number" },
+                      },
+                    },
+                  },
+                },
               },
               avg_completion_rate: { type: ["number", "null"] },
+              avg_completion_sample_count: { type: "number" },
               events_today: { type: "number" },
             },
           },
@@ -257,6 +363,7 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
   const VALID_METRICS = new Set([
     "dau", "wau", "mau", "total_installs", "stale_installs",
     "events_today", "top_shows", "feature_adoption", "platform_split", "playback",
+    "playback_source", "new_installs",
   ]);
 
   app.get(
@@ -388,7 +495,9 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
   );
 
   // GET /api/analytics/timeseries — sparkline data for admin dashboard
-  const VALID_TS_METRICS = new Set(["dau", "events", "playback_starts"]);
+  const VALID_TS_METRICS = new Set([
+    "dau", "events", "playback_starts", "new_installs",
+  ]);
 
   app.get(
     "/api/analytics/timeseries",
@@ -431,6 +540,245 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       const clampedDays = Math.min(Math.max(days ?? 14, 1), 90);
       return getTimeseries(metric as TimeseriesMetric, clampedDays);
     },
+  );
+
+  // GET /api/analytics/top-shows — most-listened shows over a configurable window.
+  app.get(
+    "/api/analytics/top-shows",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Top shows by distinct listeners (admin)",
+        querystring: {
+          type: "object",
+          properties: {
+            days: { type: "number", default: 30 },
+            limit: { type: "number", default: 20 },
+          },
+        },
+        response: {
+          200: {
+            type: "object",
+            properties: {
+              shows: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    show_id: { type: "string" },
+                    listeners: { type: "number" },
+                    track_plays: { type: "number" },
+                    completion_rate: { type: ["number", "null"] },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { days, limit } = request.query as { days?: number; limit?: number };
+      const clampedDays = Math.min(Math.max(days ?? 30, 1), 365);
+      const clampedLimit = Math.min(Math.max(limit ?? 20, 1), 100);
+      return { shows: getTopShows(clampedDays, clampedLimit) };
+    },
+  );
+
+  // GET /api/analytics/growth — new installs per day, broken out by platform.
+  app.get(
+    "/api/analytics/growth",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "New installs per day by platform (admin)",
+        querystring: {
+          type: "object",
+          properties: { days: { type: "number", default: 60 } },
+        },
+        response: {
+          200: {
+            type: "object",
+            properties: {
+              days: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    day: { type: "string" },
+                    ios: { type: "number" },
+                    android: { type: "number" },
+                    web: { type: "number" },
+                    total: { type: "number" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { days } = request.query as { days?: number };
+      const clamped = Math.min(Math.max(days ?? 60, 1), 365);
+      return { days: getGrowthByPlatform(clamped) };
+    },
+  );
+
+  // GET /api/analytics/live — currently-listening sessions (last 5 min, no end).
+  app.get(
+    "/api/analytics/live",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Currently listening (admin)",
+        response: {
+          200: {
+            type: "object",
+            properties: {
+              listeners: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    iid: { type: "string" },
+                    platform: { type: "string" },
+                    app_version: { type: "string" },
+                    started_at: { type: "number" },
+                    show_id: { type: ["string", "null"] },
+                    recording_id: { type: ["string", "null"] },
+                    track_index: { type: ["number", "null"] },
+                    source: { type: ["string", "null"] },
+                    tracks: {
+                      type: "array",
+                      items: {
+                        type: "object",
+                        properties: {
+                          index: { type: "number" },
+                          outcome: { type: "string" },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async () => ({ listeners: getLiveListeners() }),
+  );
+
+  // GET /api/analytics/search-quality — zero-result + abandon + ranking-quality stats.
+  app.get(
+    "/api/analytics/search-quality",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Search quality metrics (admin)",
+        querystring: {
+          type: "object",
+          properties: { days: { type: "number", default: 30 } },
+        },
+        response: {
+          200: {
+            type: "object",
+            properties: {
+              total_searches: { type: "number" },
+              zero_result_count: { type: "number" },
+              abandon_count: { type: "number" },
+              median_selected_index: { type: ["number", "null"] },
+              top_zero_result: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    query: { type: "string" },
+                    count: { type: "number" },
+                  },
+                },
+              },
+              top_successful: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    query: { type: "string" },
+                    count: { type: "number" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { days } = request.query as { days?: number };
+      const clamped = Math.min(Math.max(days ?? 30, 1), 90);
+      return getSearchQuality(clamped);
+    },
+  );
+
+  // GET /api/analytics/retention — weekly install cohorts with D1/D7/D30 return rates.
+  app.get(
+    "/api/analytics/retention",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Weekly cohort retention (admin)",
+        querystring: {
+          type: "object",
+          properties: {
+            weeks: { type: "number", default: 12 },
+          },
+        },
+        response: {
+          200: {
+            type: "object",
+            properties: {
+              cohorts: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    cohort_week: { type: "string" },
+                    cohort_size: { type: "number" },
+                    d1: { type: ["number", "null"] },
+                    d7: { type: ["number", "null"] },
+                    d30: { type: ["number", "null"] },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { weeks } = request.query as { weeks?: number };
+      const clamped = Math.min(Math.max(weeks ?? 12, 1), 52);
+      return { cohorts: getRetentionCohorts(clamped) };
+    },
+  );
+
+  // GET /api/analytics/watershed — per-event/prop reliable-from versions per platform.
+  app.get(
+    "/api/analytics/watershed",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Event-version watershed table (admin)",
+      },
+      preHandler: requireAdmin,
+    },
+    async () => ({ entries: ANALYTICS_WATERSHED }),
   );
 }
 

@@ -69,7 +69,20 @@ final class PlaybackRestorationService {
         let trackIndex = min(saved.trackIndex, playlistService.tracks.count - 1)
         let seekPosition = TimeInterval(saved.positionMs) / 1000.0
 
-        playlistService.playTrack(at: trackIndex)
+        // Two cooperating gates suppress the phantom playback_start that
+        // would otherwise fire during restore:
+        //   1. `suppressNextStartEmission` — the +1s dwell `commitPendingPlayback`
+        //      stashes the start info into `deferredStartInfo` instead of emitting.
+        //   2. `isRestoring` — held for the entire restore body. The playback-state
+        //      observer skips its `.playing → flushDeferredStart` call while set,
+        //      so restore's own seek-while-playing trick doesn't flush. After this
+        //      function returns the player is paused, so the next `.playing`
+        //      transition is the user actually pressing play, which flushes.
+        // The defer guarantees `isRestoring` clears even on early return.
+        playlistService.isRestoring = true
+        defer { playlistService.isRestoring = false }
+        playlistService.suppressNextStartEmission = true
+        playlistService.playTrack(at: trackIndex, source: "restore")
 
         // The engine resolves redirects asynchronously before audio starts.
         // Poll until playing (or time out after 10 seconds).

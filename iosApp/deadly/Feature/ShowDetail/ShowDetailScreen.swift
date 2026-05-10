@@ -47,6 +47,12 @@ struct ShowDetailScreen: View {
         .navigationBarTitleDisplayMode(.inline)
         .task {
             await playlistService.loadShow(showId)
+            container.analyticsService.track("feature_use", props: [
+                "feature": "view_show",
+                "category": "action",
+                "target_type": "show",
+                "target_id": showId,
+            ])
             isFavorite = (try? container.favoritesService.isFavorite(showId: showId)) ?? false
             let review = try? container.reviewService.getShowReview(showId)
             userReview = review?.hasContent == true ? review : nil
@@ -232,7 +238,7 @@ struct ShowDetailScreen: View {
                         )
                         .contentShape(Rectangle())
                         .onTapGesture {
-                            playlistService.playTrack(at: index)
+                            playlistService.playTrack(at: index, source: "browse")
                             playlistService.recordRecentPlay()
                         }
                     }
@@ -540,7 +546,7 @@ struct ShowDetailScreen: View {
         } else if isCurrentShowActive {
             streamPlayer.togglePlayPause()
         } else {
-            playlistService.playTrack(at: 0)
+            playlistService.playTrack(at: 0, source: "browse")
             playlistService.recordRecentPlay()
         }
     }

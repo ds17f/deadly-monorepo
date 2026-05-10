@@ -9,7 +9,7 @@
 .PHONY: android-build-release android-build-bundle android-deploy-testing
 .PHONY: android-promote-alpha android-promote-beta android-promote-production
 .PHONY: ios-build-release ios-deploy-testflight ios-promote
-.PHONY: ios-remote-unlock ios-remote-build ios-remote-install ios-remote-sim ios-remote-test ios-remote-resolve
+.PHONY: remote-sync ios-remote-unlock ios-remote-build ios-remote-install ios-remote-sim ios-remote-test ios-remote-resolve
 .PHONY: android-remote-build android-remote-install
 .PHONY: android-remote-emulator android-remote-emu-list android-remote-emu-stop android-remote-run-emulator
 .PHONY: android-auto-dhu android-remote-auto-dhu
@@ -438,8 +438,34 @@ REMOTE_PATH    ?= ~/Developer/ai/claude-personal/container-home/workspace/Develo
 REMOTE_IOS     ?= $(REMOTE_PATH)/iosApp
 REMOTE_ANDROID ?= $(REMOTE_PATH)/androidApp
 
+# Sync working tree to Mac (rsync, excludes build artifacts).
+# Chained from every Linux→Mac build target so edits land on the Mac before
+# xcodebuild/gradle runs there.
+remote-sync:
+	@echo "Syncing to $(REMOTE_HOST):$(REMOTE_PATH)..."
+	@rsync -avz --delete \
+		--exclude='.git' \
+		--exclude='.claude' \
+		--exclude='PLANS' \
+		--exclude='androidApp/app/build' \
+		--exclude='androidApp/**/build' \
+		--exclude='androidApp/.gradle' \
+		--exclude='iosApp/build' \
+		--exclude='iosApp/**/build' \
+		--exclude='iosApp/**/.build' \
+		--exclude='node_modules' \
+		--exclude='ui/.next' \
+		--exclude='ui/out' \
+		--exclude='ui/dist' \
+		--exclude='.secrets' \
+		--exclude='data/stage01-collected-data' \
+		--exclude='data/stage02-generated-data' \
+		--exclude='data/data.zip' \
+		--exclude='data/scripts/.venv' \
+		./ $(REMOTE_HOST):$(REMOTE_PATH)/
+
 # Build debug on Mac
-ios-remote-build:
+ios-remote-build: remote-sync
 	@echo "Building on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'generic/platform=iOS Simulator' build 2>&1 | tail -20"
 
@@ -449,21 +475,21 @@ ios-remote-unlock:
 	@ssh -t $(REMOTE_HOST) "security unlock-keychain ~/Library/Keychains/login.keychain-db"
 
 # Build + install to connected device (requires USB-connected iPhone + KEYCHAIN_PASSWORD env var)
-ios-remote-install:
+ios-remote-install: remote-sync
 	@echo "Building on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "security unlock-keychain -p '$(KEYCHAIN_PASSWORD)' ~/Library/Keychains/login.keychain-db && cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'generic/platform=iOS' -allowProvisioningUpdates build 2>&1 | tail -20"
 	@echo "Installing to device..."
 	@ssh $(REMOTE_HOST) 'DEVICE_ID=$$(xcrun devicectl list devices 2>/dev/null | grep -oE "[0-9A-F]{8}-([0-9A-F]{4}-){3}[0-9A-F]{12}" | head -1) && APP_PATH=$$(cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination "generic/platform=iOS" -showBuildSettings 2>/dev/null | grep " BUILT_PRODUCTS_DIR" | head -1 | awk "{print \$$3}")/deadly.app && xcrun devicectl device install app --device "$$DEVICE_ID" "$$APP_PATH" 2>&1'
 
 # Build + launch on iPhone 17 simulator
-ios-remote-sim:
+ios-remote-sim: remote-sync
 	@echo "Building for simulator on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 17' build 2>&1 | tail -20"
 	@echo "Launching on simulator..."
 	@ssh $(REMOTE_HOST) 'APP_PATH=$$(cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination "platform=iOS Simulator,name=iPhone 17" -showBuildSettings 2>/dev/null | grep " BUILT_PRODUCTS_DIR" | head -1 | awk "{print \$$3}")/deadly.app && xcrun simctl boot "iPhone 17" 2>/dev/null; xcrun simctl install booted "$$APP_PATH" && xcrun simctl launch booted com.grateful.deadly && open -a Simulator'
 
 # Run tests on Mac simulator
-ios-remote-test:
+ios-remote-test: remote-sync
 	@echo "Running tests on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "cd $(REMOTE_IOS) && xcodebuild test -project deadly.xcodeproj -scheme deadly -destination 'platform=iOS Simulator,name=iPhone 17' 2>&1 | tail -40"
 
@@ -486,11 +512,11 @@ android-remote-clean:
 	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && cd $(REMOTE_ANDROID) && rm -rf .gradle app/build && ./gradlew clean --no-configuration-cache --no-build-cache --console=plain"
 
 
-android-remote-build:
+android-remote-build: remote-sync
 	@echo "Building on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && cd $(REMOTE_ANDROID) && ./gradlew assembleDebug --console=plain"
 
-android-remote-install:
+android-remote-install: remote-sync
 	@echo "Building + installing on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "export ANDROID_HOME=\$$HOME/Library/Android/sdk && cd $(REMOTE_ANDROID) && ./gradlew installDebug --console=plain"
 

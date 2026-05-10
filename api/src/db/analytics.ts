@@ -15,7 +15,35 @@ export function getAnalyticsDb(): Database.Database {
   db.pragma("busy_timeout = 5000");
 
   initSchema(db);
+  ensureUniqueEventIndex(db);
   return db;
+}
+
+/**
+ * Strict-dedup guard: a unique index on (iid, sid, event, ts) plus
+ * `INSERT OR IGNORE` in `insertEvents` neutralizes client-retry duplicates.
+ * Existing dupes block index creation, so we pre-dedupe on first run only —
+ * the check on `sqlite_master` keeps subsequent startups O(1) instead of
+ * scanning the table.
+ */
+function ensureUniqueEventIndex(db: Database.Database): void {
+  const exists = db
+    .prepare(
+      `SELECT 1 FROM sqlite_master
+       WHERE type = 'index' AND name = 'uniq_analytics_event'`,
+    )
+    .get();
+  if (exists) return;
+
+  db.exec(`
+    DELETE FROM analytics_events
+    WHERE id NOT IN (
+      SELECT MIN(id) FROM analytics_events
+      GROUP BY iid, sid, event, ts
+    );
+    CREATE UNIQUE INDEX uniq_analytics_event
+      ON analytics_events(iid, sid, event, ts);
+  `);
 }
 
 function initSchema(db: Database.Database): void {
@@ -70,9 +98,44 @@ const EVENT_SCHEMAS: Record<string, Set<string>> = {
     "listened_ms",
     "reason",
   ]),
+  playback_error: new Set([
+    "show_id",
+    "recording_id",
+    "track_index",
+    "error_code",
+    "error_message",
+    "is_fatal",
+  ]),
+  playback_stall: new Set([
+    "show_id",
+    "recording_id",
+    "track_index",
+    "stall_duration_ms",
+  ]),
   search: new Set(["query", "query_length", "result_count", "selected_index"]),
-  feature_use: new Set(["feature", "enabled", "value"]),
-  error: new Set(["domain", "message", "is_fatal"]),
+  feature_use: new Set([
+    "feature",
+    "enabled",
+    "value",
+    "target_type",
+    "target_id",
+    "category",
+    "provider",
+    "error_reason",
+  ]),
+  download_complete: new Set([
+    "target_type",
+    "target_id",
+    "duration_ms",
+    "bytes",
+  ]),
+  download_failed: new Set([
+    "target_type",
+    "target_id",
+    "duration_ms",
+    "error_reason",
+  ]),
+  error: new Set(["source", "message", "is_fatal"]),
   cold_start: new Set(["duration_ms"]),
 };
 
@@ -96,8 +159,10 @@ export interface AnalyticsEvent {
 
 export function insertEvents(events: AnalyticsEvent[]): void {
   const db = getAnalyticsDb();
+  // OR IGNORE pairs with the uniq_analytics_event unique index to swallow
+  // client-retry duplicates (same iid+sid+event+ts) without erroring the batch.
   const stmt = db.prepare(`
-    INSERT INTO analytics_events (event, ts, iid, sid, platform, app_version, props)
+    INSERT OR IGNORE INTO analytics_events (event, ts, iid, sid, platform, app_version, props)
     VALUES (?, ?, ?, ?, ?, ?, ?)
   `);
 
@@ -150,10 +215,34 @@ export function pruneOldEvents(): void {
 
   const cutoff = Date.now() - days * 24 * 3600 * 1000;
   const db = getAnalyticsDb();
-  db.prepare("DELETE FROM analytics_events WHERE ts < ?").run(cutoff);
+  const result = db
+    .prepare("DELETE FROM analytics_events WHERE ts < ?")
+    .run(cutoff);
+  if (result.changes > 0) {
+    console.log(
+      `[analytics] pruned ${result.changes} raw event(s) older than ${days} days`,
+    );
+  }
 }
 
 // ── Summary queries ──────────────────────────────────────────────────
+
+export type FeatureCategory =
+  | "action"
+  | "preference"
+  | "navigation"
+  | "uncategorized";
+
+export interface FeatureAdoptionEntry {
+  feature: string;
+  uses: number;
+}
+
+export type FeatureAdoption = Record<FeatureCategory, FeatureAdoptionEntry[]>;
+
+export type ActionShowsBucket = "favorited" | "downloaded" | "reviewed" | "shared";
+
+export type ActionShowsRow = { show_id: string; users: number };
 
 export interface AnalyticsSummary {
   dau: number;
@@ -162,9 +251,24 @@ export interface AnalyticsSummary {
   total_installs: number;
   stale_installs_30d: number;
   platform_split: Record<string, number>;
-  top_shows: Array<{ show_id: string; plays: number }>;
-  feature_adoption: Record<string, number>;
+  top_shows: Array<{
+    show_id: string;
+    listeners: number;
+    track_plays: number;
+    completion_rate: number | null;
+  }>;
+  top_shows_by_action: Record<ActionShowsBucket, ActionShowsRow[]>;
+  /** playback_start grouped by `source`. Pre-watershed rows have null source
+   *  and are surfaced as "(unattributed)" so the legacy bucket is visible
+   *  rather than silently disappearing. */
+  plays_by_source: Array<{
+    source: string;
+    plays: number;
+    distinct_listeners: number;
+  }>;
+  feature_adoption: FeatureAdoption;
   avg_completion_rate: number | null;
+  avg_completion_sample_count: number;
   events_today: number;
 }
 
@@ -232,40 +336,204 @@ export function getSummary(): AnalyticsSummary {
   const platform_split: Record<string, number> = {};
   for (const r of platformRows) platform_split[r.platform] = r.c;
 
-  // Top 10 shows (last 30 days)
+  // Top 10 shows by distinct listeners (last 30 days). Counts each install
+  // once per show, only when a matching playback_end recorded ≥30s of
+  // listening — filters out previews and accidental relaunches.
+  // Pairs each start to the same install/session/show within 4h.
+  const TOP_SHOWS_MIN_LISTEN_MS = 30_000;
+  const TOP_SHOWS_MAX_PAIR_WINDOW_MS = 4 * 3600 * 1000;
+  // Per-show completion rate (SUM listened / SUM duration), gated to shows
+  // with ≥5 playback_end events to avoid noise from one-off plays. Null
+  // below the threshold so the UI can render a "—" instead of a misleading
+  // small-sample number.
+  const TOP_SHOWS_COMPLETION_MIN_ENDS = 5;
   const top_shows = db
     .prepare(
-      `SELECT json_extract(props, '$.show_id') AS show_id, COUNT(*) AS plays
-     FROM analytics_events
-     WHERE event = 'playback_start' AND ts > ?
-     GROUP BY show_id ORDER BY plays DESC LIMIT 10`,
+      `WITH listens AS (
+         SELECT DISTINCT
+           json_extract(s.props, '$.show_id') AS show_id,
+           s.iid
+         FROM analytics_events s
+         JOIN analytics_events e
+           ON e.event = 'playback_end'
+           AND e.iid = s.iid
+           AND e.sid = s.sid
+           AND json_extract(e.props, '$.show_id') = json_extract(s.props, '$.show_id')
+           AND e.ts BETWEEN s.ts AND s.ts + ?
+           AND CAST(json_extract(e.props, '$.listened_ms') AS REAL) >= ?
+         WHERE s.event = 'playback_start' AND s.ts > ?
+       ),
+       track_plays AS (
+         SELECT
+           json_extract(props, '$.show_id') AS show_id,
+           COUNT(*) AS track_plays
+         FROM analytics_events
+         WHERE event = 'playback_start' AND ts > ?
+         GROUP BY show_id
+       ),
+       completions AS (
+         SELECT
+           json_extract(props, '$.show_id') AS show_id,
+           SUM(
+             MIN(
+               CAST(json_extract(props, '$.listened_ms') AS REAL),
+               CAST(json_extract(props, '$.duration_ms') AS REAL)
+             )
+           ) AS sum_listened,
+           SUM(CAST(json_extract(props, '$.duration_ms') AS REAL)) AS sum_duration,
+           COUNT(*) AS end_count
+         FROM analytics_events
+         WHERE event = 'playback_end' AND ts > ?
+           AND CAST(json_extract(props, '$.duration_ms') AS REAL) > 0
+         GROUP BY show_id
+       )
+       SELECT
+         l.show_id,
+         COUNT(*) AS listeners,
+         COALESCE(p.track_plays, 0) AS track_plays,
+         CASE
+           WHEN c.end_count >= ? AND c.sum_duration > 0
+           THEN c.sum_listened / c.sum_duration
+           ELSE NULL
+         END AS completion_rate
+       FROM listens l
+       LEFT JOIN track_plays p ON p.show_id = l.show_id
+       LEFT JOIN completions c ON c.show_id = l.show_id
+       GROUP BY l.show_id, p.track_plays, c.end_count, c.sum_duration, c.sum_listened
+       ORDER BY listeners DESC, track_plays DESC
+       LIMIT 10`,
     )
-    .all(monthAgo) as Array<{ show_id: string; plays: number }>;
+    .all(
+      TOP_SHOWS_MAX_PAIR_WINDOW_MS,
+      TOP_SHOWS_MIN_LISTEN_MS,
+      monthAgo,
+      monthAgo,
+      monthAgo,
+      TOP_SHOWS_COMPLETION_MIN_ENDS,
+    ) as Array<{
+      show_id: string;
+      listeners: number;
+      track_plays: number;
+      completion_rate: number | null;
+    }>;
 
-  // Feature adoption (last 30 days)
+  // Feature adoption (last 30 days), bucketed by category
   const featureRows = db
     .prepare(
-      `SELECT json_extract(props, '$.feature') AS feature, COUNT(*) AS uses
+      `SELECT
+       json_extract(props, '$.feature') AS feature,
+       json_extract(props, '$.category') AS category,
+       COUNT(*) AS uses
      FROM analytics_events
-     WHERE event = 'feature_use' AND ts > ? GROUP BY feature ORDER BY uses DESC`,
+     WHERE event = 'feature_use' AND ts > ?
+     GROUP BY feature, category ORDER BY uses DESC`,
     )
-    .all(monthAgo) as Array<{ feature: string; uses: number }>;
-  const feature_adoption: Record<string, number> = {};
-  for (const r of featureRows) feature_adoption[r.feature] = r.uses;
+    .all(monthAgo) as Array<{
+    feature: string;
+    category: string | null;
+    uses: number;
+  }>;
+  const feature_adoption: FeatureAdoption = {
+    action: [],
+    preference: [],
+    navigation: [],
+    uncategorized: [],
+  };
+  for (const r of featureRows) {
+    if (!r.feature) continue;
+    const bucket: FeatureCategory =
+      r.category === "action" ||
+      r.category === "preference" ||
+      r.category === "navigation"
+        ? r.category
+        : "uncategorized";
+    feature_adoption[bucket].push({ feature: r.feature, uses: r.uses });
+  }
 
-  // Average completion rate (last 30 days)
+  // Top show targets per action feature (last 30 days). Uses target_id with
+  // a show_id fallback for any pre-DEAD-324 events that still carry only
+  // show_id. Counts distinct iids — "popularity" measured in users, not raw
+  // taps.
+  function topShowsForFeatures(features: string[], limit: number): ActionShowsRow[] {
+    const placeholders = features.map(() => "?").join(", ");
+    return db
+      .prepare(
+        `SELECT
+           COALESCE(json_extract(props, '$.target_id'), json_extract(props, '$.show_id')) AS show_id,
+           COUNT(DISTINCT iid) AS users
+         FROM analytics_events
+         WHERE event = 'feature_use'
+           AND ts > ?
+           AND json_extract(props, '$.feature') IN (${placeholders})
+           AND COALESCE(json_extract(props, '$.target_id'), json_extract(props, '$.show_id')) IS NOT NULL
+         GROUP BY show_id
+         ORDER BY users DESC, show_id ASC
+         LIMIT ?`,
+      )
+      .all(monthAgo, ...features, limit) as ActionShowsRow[];
+  }
+
+  const top_shows_by_action: Record<ActionShowsBucket, ActionShowsRow[]> = {
+    favorited: topShowsForFeatures(["add_favorite"], 10),
+    downloaded: topShowsForFeatures(["download_show"], 10),
+    reviewed: topShowsForFeatures(
+      ["write_review", "edit_review", "save_review"],
+      10,
+    ),
+    shared: topShowsForFeatures(["share_show"], 10),
+  };
+
+  // Average completion rate (last 30 days), restricted to "real listens":
+  // both listened_ms and duration_ms ≥ 60s. Short previews and 1-second
+  // skips would otherwise drag the average toward zero.
+  // listened_ms is capped at duration_ms so replays / over-runs don't
+  // produce ratios > 1.
+  const MIN_LISTEN_MS = 60_000;
   const completion = db
     .prepare(
-      `SELECT AVG(
-      CAST(json_extract(props, '$.listened_ms') AS REAL) /
-      NULLIF(CAST(json_extract(props, '$.duration_ms') AS REAL), 0)
-    ) AS avg_rate
-    FROM analytics_events WHERE event = 'playback_end' AND ts > ?`,
+      `SELECT
+         AVG(
+           MIN(
+             CAST(json_extract(props, '$.listened_ms') AS REAL),
+             CAST(json_extract(props, '$.duration_ms') AS REAL)
+           ) /
+           CAST(json_extract(props, '$.duration_ms') AS REAL)
+         ) AS avg_rate,
+         COUNT(*) AS sample_count
+       FROM analytics_events
+       WHERE event = 'playback_end'
+         AND ts > ?
+         AND CAST(json_extract(props, '$.listened_ms') AS REAL) >= ?
+         AND CAST(json_extract(props, '$.duration_ms') AS REAL) >= ?`,
     )
-    .get(monthAgo) as { avg_rate: number | null };
+    .get(monthAgo, MIN_LISTEN_MS, MIN_LISTEN_MS) as {
+    avg_rate: number | null;
+    sample_count: number;
+  };
   const avg_completion_rate = completion?.avg_rate
     ? Math.round(completion.avg_rate * 1000) / 1000
     : null;
+  const avg_completion_sample_count = completion?.sample_count ?? 0;
+
+  // Plays by source (last 30d). Null source bucketed as "(unattributed)" so
+  // pre-watershed rows from clients that didn't yet emit `source` are
+  // visible rather than silently dropped.
+  const plays_by_source = db
+    .prepare(
+      `SELECT
+         COALESCE(json_extract(props, '$.source'), '(unattributed)') AS source,
+         COUNT(*) AS plays,
+         COUNT(DISTINCT iid) AS distinct_listeners
+       FROM analytics_events
+       WHERE event = 'playback_start' AND ts > ?
+       GROUP BY source
+       ORDER BY plays DESC`,
+    )
+    .all(monthAgo) as Array<{
+      source: string;
+      plays: number;
+      distinct_listeners: number;
+    }>;
 
   // Events today
   const todayStart =
@@ -287,15 +555,455 @@ export function getSummary(): AnalyticsSummary {
     stale_installs_30d,
     platform_split,
     top_shows,
+    top_shows_by_action,
+    plays_by_source,
     feature_adoption,
     avg_completion_rate,
+    avg_completion_sample_count,
     events_today,
   };
 }
 
 // ── Timeseries queries ──────────────────────────────────────────────
 
-export type TimeseriesMetric = "dau" | "events" | "playback_starts";
+// ── Retention cohorts ──────────────────────────────────────────────
+
+export interface RetentionCohort {
+  /** ISO-style "YYYY-Www" — week the install first opened the app. */
+  cohort_week: string;
+  /** Distinct installs first seen during this week. */
+  cohort_size: number;
+  /** Distinct installs with an app_open exactly N days after install_day.
+   *  Null when the cohort is younger than N days (not enough time elapsed). */
+  d1: number | null;
+  d7: number | null;
+  d30: number | null;
+}
+
+/**
+ * Weekly cohort retention: for each install-week, how many returned on
+ * D1, D7, and D30. "Returned on day N" means an `app_open` exists on the
+ * calendar day install_day + N (strict). Cohorts younger than N days
+ * report null for that bucket so the UI can render a hatched / "—" cell
+ * instead of misleading 0%. Defaults to the last 12 weeks of cohorts.
+ */
+export function getRetentionCohorts(weeks = 12): RetentionCohort[] {
+  const db = getAnalyticsDb();
+  const oldestWeekStart = Date.now() - weeks * 7 * 24 * 3600 * 1000;
+  const todayDay = new Date().toISOString().slice(0, 10);
+
+  return db
+    .prepare(
+      `WITH first_open AS (
+         SELECT iid,
+                MIN(ts) AS install_ts,
+                date(MIN(ts) / 1000, 'unixepoch') AS install_day
+         FROM analytics_events
+         WHERE event = 'app_open'
+         GROUP BY iid
+         HAVING install_ts >= ?
+       ),
+       active AS (
+         SELECT DISTINCT iid, date(ts / 1000, 'unixepoch') AS active_day
+         FROM analytics_events
+         WHERE event = 'app_open'
+       )
+       SELECT
+         strftime('%Y-W%W', f.install_day) AS cohort_week,
+         COUNT(DISTINCT f.iid) AS cohort_size,
+         CASE WHEN date(?, '-1 day') >= MAX(f.install_day)
+              THEN COUNT(DISTINCT CASE WHEN a1.iid IS NOT NULL THEN f.iid END)
+              ELSE NULL END AS d1,
+         CASE WHEN date(?, '-7 day') >= MAX(f.install_day)
+              THEN COUNT(DISTINCT CASE WHEN a7.iid IS NOT NULL THEN f.iid END)
+              ELSE NULL END AS d7,
+         CASE WHEN date(?, '-30 day') >= MAX(f.install_day)
+              THEN COUNT(DISTINCT CASE WHEN a30.iid IS NOT NULL THEN f.iid END)
+              ELSE NULL END AS d30
+       FROM first_open f
+       LEFT JOIN active a1
+         ON a1.iid = f.iid AND a1.active_day = date(f.install_day, '+1 day')
+       LEFT JOIN active a7
+         ON a7.iid = f.iid AND a7.active_day = date(f.install_day, '+7 day')
+       LEFT JOIN active a30
+         ON a30.iid = f.iid AND a30.active_day = date(f.install_day, '+30 day')
+       GROUP BY cohort_week
+       ORDER BY cohort_week DESC`,
+    )
+    .all(oldestWeekStart, todayDay, todayDay, todayDay) as RetentionCohort[];
+}
+
+// ── Top Shows (parameterized by window) ────────────────────────────
+
+export interface TopShowRow {
+  show_id: string;
+  listeners: number;
+  track_plays: number;
+  completion_rate: number | null;
+}
+
+const TOP_SHOWS_MIN_LISTEN_MS_PARAM = 30_000;
+const TOP_SHOWS_MAX_PAIR_WINDOW_MS_PARAM = 4 * 3600 * 1000;
+const TOP_SHOWS_COMPLETION_MIN_ENDS_PARAM = 5;
+
+/**
+ * Same query as the summary's top_shows but with a configurable window.
+ * Limits to top 20 (UI may render fewer) and filters tiny-sample shows
+ * out of the completion column the same way the summary does.
+ */
+export function getTopShows(days: number, limit = 20): TopShowRow[] {
+  const db = getAnalyticsDb();
+  const cutoff = Date.now() - days * 24 * 3600 * 1000;
+  return db
+    .prepare(
+      `WITH listens AS (
+         SELECT DISTINCT
+           json_extract(s.props, '$.show_id') AS show_id,
+           s.iid
+         FROM analytics_events s
+         JOIN analytics_events e
+           ON e.event = 'playback_end'
+           AND e.iid = s.iid
+           AND e.sid = s.sid
+           AND json_extract(e.props, '$.show_id') = json_extract(s.props, '$.show_id')
+           AND e.ts BETWEEN s.ts AND s.ts + ?
+           AND CAST(json_extract(e.props, '$.listened_ms') AS REAL) >= ?
+         WHERE s.event = 'playback_start' AND s.ts > ?
+       ),
+       track_plays AS (
+         SELECT
+           json_extract(props, '$.show_id') AS show_id,
+           COUNT(*) AS track_plays
+         FROM analytics_events
+         WHERE event = 'playback_start' AND ts > ?
+         GROUP BY show_id
+       ),
+       completions AS (
+         SELECT
+           json_extract(props, '$.show_id') AS show_id,
+           SUM(
+             MIN(
+               CAST(json_extract(props, '$.listened_ms') AS REAL),
+               CAST(json_extract(props, '$.duration_ms') AS REAL)
+             )
+           ) AS sum_listened,
+           SUM(CAST(json_extract(props, '$.duration_ms') AS REAL)) AS sum_duration,
+           COUNT(*) AS end_count
+         FROM analytics_events
+         WHERE event = 'playback_end' AND ts > ?
+           AND CAST(json_extract(props, '$.duration_ms') AS REAL) > 0
+         GROUP BY show_id
+       )
+       SELECT
+         l.show_id,
+         COUNT(*) AS listeners,
+         COALESCE(p.track_plays, 0) AS track_plays,
+         CASE
+           WHEN c.end_count >= ? AND c.sum_duration > 0
+           THEN c.sum_listened / c.sum_duration
+           ELSE NULL
+         END AS completion_rate
+       FROM listens l
+       LEFT JOIN track_plays p ON p.show_id = l.show_id
+       LEFT JOIN completions c ON c.show_id = l.show_id
+       GROUP BY l.show_id, p.track_plays, c.end_count, c.sum_duration, c.sum_listened
+       ORDER BY listeners DESC, track_plays DESC
+       LIMIT ?`,
+    )
+    .all(
+      TOP_SHOWS_MAX_PAIR_WINDOW_MS_PARAM,
+      TOP_SHOWS_MIN_LISTEN_MS_PARAM,
+      cutoff,
+      cutoff,
+      cutoff,
+      TOP_SHOWS_COMPLETION_MIN_ENDS_PARAM,
+      limit,
+    ) as TopShowRow[];
+}
+
+// ── Listening Now ──────────────────────────────────────────────────
+
+export interface LiveListener {
+  iid: string;
+  platform: string;
+  app_version: string;
+  /** Wall-clock ms when the playback_start fired. */
+  started_at: number;
+  show_id: string | null;
+  recording_id: string | null;
+  track_index: number | null;
+  source: string | null;
+  /** Per-track outcomes for this session of this show, same shape as the
+   *  Show Listening bitmap. Empty when show_id is null. */
+  tracks: TrackPlay[];
+}
+
+/**
+ * Approximate "currently listening" set. Returns each `playback_start`
+ * from the last 45 minutes that has no subsequent `playback_end` for
+ * the same (iid, sid, show_id, track_index). The window is long enough
+ * to cover the longest Grateful Dead jams ("Dark Star", "Playin' in
+ * the Band", etc, which routinely exceed 25 minutes) without losing
+ * an active listener mid-track. Sessions that crash or are force-killed
+ * without emitting `playback_end` will linger for up to 45 minutes —
+ * a deliberate trade for not requiring a heartbeat.
+ */
+export function getLiveListeners(): LiveListener[] {
+  const db = getAnalyticsDb();
+  const windowStart = Date.now() - 45 * 60 * 1000;
+
+  // Pull `sid` too so we can resolve the bitmap for *this* listening session
+  // of this show (rather than every time the listener has ever played it).
+  const rows = db
+    .prepare(
+      `SELECT
+         s.iid,
+         s.sid,
+         s.platform,
+         s.app_version,
+         s.ts AS started_at,
+         json_extract(s.props, '$.show_id') AS show_id,
+         json_extract(s.props, '$.recording_id') AS recording_id,
+         json_extract(s.props, '$.track_index') AS track_index,
+         json_extract(s.props, '$.source') AS source
+       FROM analytics_events s
+       WHERE s.event = 'playback_start' AND s.ts >= ?
+         AND NOT EXISTS (
+           SELECT 1 FROM analytics_events e
+           WHERE e.event = 'playback_end'
+             AND e.iid = s.iid
+             AND e.sid = s.sid
+             AND e.ts >= s.ts
+             AND json_extract(e.props, '$.show_id') = json_extract(s.props, '$.show_id')
+             AND json_extract(e.props, '$.track_index') = json_extract(s.props, '$.track_index')
+         )
+       ORDER BY s.ts DESC`,
+    )
+    .all(windowStart) as Array<{
+      iid: string;
+      sid: string;
+      platform: string;
+      app_version: string;
+      started_at: number;
+      show_id: string | null;
+      recording_id: string | null;
+      track_index: number | null;
+      source: string | null;
+    }>;
+
+  // For each live listener, materialize the bitmap for their current
+  // (iid, sid, show_id) by replaying the same per-track outcome rules
+  // used by getShowPlaybackSummary. Look back 6h so a long jam session
+  // earlier in the same sid still contributes to the bar.
+  const sessionLookback = Date.now() - 6 * 3600 * 1000;
+  const trackQuery = db.prepare(
+    `SELECT
+       event, ts,
+       COALESCE(CAST(json_extract(props, '$.track_index') AS INTEGER), 0) AS track_index,
+       json_extract(props, '$.reason') AS reason
+     FROM analytics_events
+     WHERE iid = ? AND sid = ?
+       AND json_extract(props, '$.show_id') = ?
+       AND event IN ('playback_start', 'playback_end')
+       AND ts >= ?
+     ORDER BY ts ASC`,
+  );
+
+  return rows.map((r) => {
+    let tracks: TrackPlay[] = [];
+    if (r.show_id) {
+      const events = trackQuery.all(
+        r.iid,
+        r.sid,
+        r.show_id,
+        sessionLookback,
+      ) as Array<{
+        event: string;
+        ts: number;
+        track_index: number;
+        reason: string | null;
+      }>;
+      const acc = new Map<number, { ts: number; outcome: TrackOutcome }>();
+      for (const e of events) {
+        const prior = acc.get(e.track_index);
+        if (e.event === "playback_start") {
+          if (!prior) acc.set(e.track_index, { ts: e.ts, outcome: "partial" });
+          continue;
+        }
+        if (!prior || e.ts >= prior.ts) {
+          acc.set(e.track_index, {
+            ts: e.ts,
+            outcome: reasonToOutcome(e.reason),
+          });
+        }
+      }
+      tracks = Array.from(acc.entries())
+        .map(([index, v]) => ({ index, outcome: v.outcome }))
+        .sort((a, b) => a.index - b.index);
+    }
+    return {
+      iid: r.iid,
+      platform: r.platform,
+      app_version: r.app_version,
+      started_at: r.started_at,
+      show_id: r.show_id,
+      recording_id: r.recording_id,
+      track_index: r.track_index,
+      source: r.source,
+      tracks,
+    };
+  });
+}
+
+// ── Search quality ─────────────────────────────────────────────────
+
+export interface SearchQuality {
+  total_searches: number;
+  /** Searches whose result_count was 0. */
+  zero_result_count: number;
+  /** Searches with no selected_index (user didn't tap a result). */
+  abandon_count: number;
+  /** Median position of the selected result. Lower is better. */
+  median_selected_index: number | null;
+  top_zero_result: Array<{ query: string; count: number }>;
+  top_successful: Array<{ query: string; count: number }>;
+}
+
+export function getSearchQuality(days = 30): SearchQuality {
+  const db = getAnalyticsDb();
+  const cutoff = Date.now() - days * 24 * 3600 * 1000;
+
+  const overview = db
+    .prepare(
+      `SELECT
+         COUNT(*) AS total_searches,
+         COUNT(CASE WHEN json_extract(props, '$.result_count') = 0 THEN 1 END) AS zero_result_count,
+         COUNT(CASE WHEN json_extract(props, '$.selected_index') IS NULL THEN 1 END) AS abandon_count
+       FROM analytics_events
+       WHERE event = 'search' AND ts > ?`,
+    )
+    .get(cutoff) as {
+    total_searches: number;
+    zero_result_count: number;
+    abandon_count: number;
+  };
+
+  // Pull all selected_index values to compute median in JS — SQLite has no
+  // MEDIAN. Cheap at this volume; revisit if search events ever get to
+  // millions/day.
+  const selectedRows = db
+    .prepare(
+      `SELECT CAST(json_extract(props, '$.selected_index') AS INTEGER) AS si
+       FROM analytics_events
+       WHERE event = 'search' AND ts > ?
+         AND json_extract(props, '$.selected_index') IS NOT NULL`,
+    )
+    .all(cutoff) as Array<{ si: number }>;
+  const selectedIndices = selectedRows
+    .map((r) => r.si)
+    .filter((n) => Number.isFinite(n))
+    .sort((a, b) => a - b);
+  const median_selected_index =
+    selectedIndices.length === 0
+      ? null
+      : selectedIndices.length % 2 === 1
+        ? selectedIndices[(selectedIndices.length - 1) / 2]
+        : (selectedIndices[selectedIndices.length / 2 - 1] +
+            selectedIndices[selectedIndices.length / 2]) /
+          2;
+
+  // Top 20 zero-result queries. Filtered to length ≥ 3 to skip the noise
+  // of users still typing — single chars dominate raw counts otherwise.
+  const top_zero_result = db
+    .prepare(
+      `SELECT json_extract(props, '$.query') AS query, COUNT(*) AS count
+       FROM analytics_events
+       WHERE event = 'search' AND ts > ?
+         AND json_extract(props, '$.result_count') = 0
+         AND length(TRIM(json_extract(props, '$.query'))) >= 3
+       GROUP BY query
+       ORDER BY count DESC, query ASC
+       LIMIT 20`,
+    )
+    .all(cutoff) as Array<{ query: string; count: number }>;
+
+  const top_successful = db
+    .prepare(
+      `SELECT json_extract(props, '$.query') AS query, COUNT(*) AS count
+       FROM analytics_events
+       WHERE event = 'search' AND ts > ?
+         AND CAST(json_extract(props, '$.result_count') AS INTEGER) > 0
+         AND length(TRIM(json_extract(props, '$.query'))) >= 3
+       GROUP BY query
+       ORDER BY count DESC, query ASC
+       LIMIT 20`,
+    )
+    .all(cutoff) as Array<{ query: string; count: number }>;
+
+  return {
+    total_searches: overview.total_searches,
+    zero_result_count: overview.zero_result_count,
+    abandon_count: overview.abandon_count,
+    median_selected_index,
+    top_zero_result,
+    top_successful,
+  };
+}
+
+// ── Growth (per-platform new installs by day) ──────────────────────
+
+export interface GrowthDay {
+  day: string;
+  ios: number;
+  android: number;
+  web: number;
+  total: number;
+}
+
+/**
+ * New installs per day, broken out by platform. An iid's platform is
+ * the platform of its first event. Window is the last `days` days
+ * inclusive.
+ */
+export function getGrowthByPlatform(days = 60): GrowthDay[] {
+  const db = getAnalyticsDb();
+  const cutoff = Date.now() - days * 24 * 3600 * 1000;
+
+  const rows = db
+    .prepare(
+      `WITH first_seen AS (
+         SELECT iid, MIN(ts) AS first_ts FROM analytics_events GROUP BY iid
+       )
+       SELECT
+         date(f.first_ts/1000, 'unixepoch') AS day,
+         (SELECT platform FROM analytics_events WHERE iid = f.iid ORDER BY ts ASC LIMIT 1) AS platform,
+         COUNT(*) AS value
+       FROM first_seen f
+       WHERE f.first_ts > ?
+       GROUP BY day, platform
+       ORDER BY day ASC`,
+    )
+    .all(cutoff) as Array<{ day: string; platform: string; value: number }>;
+
+  const byDay = new Map<string, GrowthDay>();
+  for (const r of rows) {
+    const slot =
+      byDay.get(r.day) ??
+      ({ day: r.day, ios: 0, android: 0, web: 0, total: 0 } as GrowthDay);
+    if (r.platform === "ios") slot.ios += r.value;
+    else if (r.platform === "android") slot.android += r.value;
+    else if (r.platform === "web") slot.web += r.value;
+    slot.total += r.value;
+    byDay.set(r.day, slot);
+  }
+  return Array.from(byDay.values()).sort((a, b) => a.day.localeCompare(b.day));
+}
+
+export type TimeseriesMetric =
+  | "dau"
+  | "events"
+  | "playback_starts"
+  | "new_installs";
 
 export interface TimeseriesPoint {
   day: string;
@@ -328,6 +1036,24 @@ export function getTimeseries(metric: TimeseriesMetric, days: number): Timeserie
         GROUP BY day ORDER BY day ASC
       `).all(cutoff) as TimeseriesPoint[];
 
+    case "new_installs":
+      // Each iid's first-ever timestamp = first-seen day; group by that
+      // day. We allow first_ts to fall outside the lookback window only
+      // if filtering to it would hide installs that first appeared
+      // before the window — which is what we want here.
+      return db.prepare(`
+        WITH first_seen AS (
+          SELECT iid, MIN(ts) AS first_ts
+          FROM analytics_events
+          GROUP BY iid
+        )
+        SELECT date(first_ts / 1000, 'unixepoch') AS day,
+               COUNT(*) AS value
+        FROM first_seen
+        WHERE first_ts > ?
+        GROUP BY day ORDER BY day ASC
+      `).all(cutoff) as TimeseriesPoint[];
+
     default:
       return [];
   }
@@ -345,6 +1071,13 @@ export interface ShowListeningSession {
   total_duration_ms: number;
 }
 
+export type TrackOutcome = "complete" | "skipped" | "error" | "partial";
+
+export interface TrackPlay {
+  index: number;
+  outcome: TrackOutcome;
+}
+
 export interface ShowPlaybackSummary {
   active_listeners: number;
   unique_shows: number;
@@ -352,48 +1085,120 @@ export interface ShowPlaybackSummary {
   listeners: Array<{
     show_id: string;
     iid: string;
-    tracks_played: number[];
+    tracks: TrackPlay[];
     last_seen: string;
     resumed: boolean;
   }>;
+}
+
+/**
+ * Map a `playback_end.reason` to a track outcome. Unknown reasons fall through
+ * to "partial" so the track still shows as "heard something" rather than
+ * disappearing from the bar.
+ */
+function reasonToOutcome(reason: string | null): TrackOutcome {
+  switch (reason) {
+    case "completed":
+      return "complete";
+    case "skipped_next":
+    case "skipped_prev":
+      return "skipped";
+    case "network_error":
+      return "error";
+    default:
+      // app_backgrounded, null (legacy), or anything unknown: the user heard
+      // some of the track but didn't finish it.
+      return "partial";
+  }
 }
 
 export function getShowPlaybackSummary(days: number): ShowPlaybackSummary {
   const db = getAnalyticsDb();
   const cutoff = Date.now() - days * 24 * 3600 * 1000;
 
-  const starts = db.prepare(`
+  // Pull every playback_start / playback_end in the window. Track outcomes
+  // require both sides — playback_end carries the reason, playback_start is
+  // the only signal when a track was started but never ended.
+  const rows = db.prepare(`
     SELECT
-      json_extract(props, '$.show_id') AS show_id,
       iid,
-      COUNT(DISTINCT sid) AS sessions,
-      json_group_array(DISTINCT COALESCE(CAST(json_extract(props, '$.track_index') AS INTEGER), 0)) AS track_indices,
-      datetime(MAX(ts) / 1000, 'unixepoch') AS last_seen
+      sid,
+      ts,
+      event,
+      json_extract(props, '$.show_id') AS show_id,
+      COALESCE(CAST(json_extract(props, '$.track_index') AS INTEGER), 0) AS track_index,
+      json_extract(props, '$.reason') AS reason
     FROM analytics_events
-    WHERE event = 'playback_start' AND ts > ?
+    WHERE event IN ('playback_start', 'playback_end')
+      AND ts > ?
       AND json_extract(props, '$.show_id') IS NOT NULL
-    GROUP BY show_id, iid
+    ORDER BY ts ASC
   `).all(cutoff) as Array<{
-    show_id: string;
     iid: string;
-    sessions: number;
-    track_indices: string;
-    last_seen: string;
+    sid: string;
+    ts: number;
+    event: string;
+    show_id: string;
+    track_index: number;
+    reason: string | null;
   }>;
 
-  const listeners = starts.map((s) => {
-    const indices: number[] = JSON.parse(s.track_indices);
+  // Group by (iid, show_id) and within that by track_index. The latest event
+  // wins — playback_end overrides playback_start at the same index, and a
+  // newer skip overrides an older complete (e.g. user replayed and skipped).
+  interface Group {
+    iid: string;
+    show_id: string;
+    sessions: Set<string>;
+    lastTs: number;
+    tracks: Map<number, { ts: number; outcome: TrackOutcome }>;
+  }
+
+  const groups = new Map<string, Group>();
+  for (const r of rows) {
+    const key = `${r.iid}::${r.show_id}`;
+    let g = groups.get(key);
+    if (!g) {
+      g = {
+        iid: r.iid,
+        show_id: r.show_id,
+        sessions: new Set(),
+        lastTs: 0,
+        tracks: new Map(),
+      };
+      groups.set(key, g);
+    }
+    g.sessions.add(r.sid);
+    if (r.ts > g.lastTs) g.lastTs = r.ts;
+
+    const prior = g.tracks.get(r.track_index);
+    // playback_start without a later end → "partial" (still in progress / not
+    // finalised). It only wins if there's no event yet for this track.
+    if (r.event === "playback_start") {
+      if (!prior) g.tracks.set(r.track_index, { ts: r.ts, outcome: "partial" });
+      continue;
+    }
+    // playback_end: latest wins.
+    if (!prior || r.ts >= prior.ts) {
+      g.tracks.set(r.track_index, { ts: r.ts, outcome: reasonToOutcome(r.reason) });
+    }
+  }
+
+  const listeners = Array.from(groups.values()).map((g) => {
+    const tracks: TrackPlay[] = Array.from(g.tracks.entries())
+      .map(([index, v]) => ({ index, outcome: v.outcome }))
+      .sort((a, b) => a.index - b.index);
     return {
-      show_id: s.show_id,
-      iid: s.iid,
-      tracks_played: indices.sort((a, b) => a - b),
-      last_seen: s.last_seen,
-      resumed: s.sessions > 1,
+      show_id: g.show_id,
+      iid: g.iid,
+      tracks,
+      last_seen: new Date(g.lastTs).toISOString().replace("T", " ").slice(0, 19),
+      resumed: g.sessions.size > 1,
     };
   });
 
-  const uniqueListeners = new Set(starts.map((s) => s.iid));
-  const uniqueShows = new Set(starts.map((s) => s.show_id));
+  const uniqueListeners = new Set(listeners.map((l) => l.iid));
+  const uniqueShows = new Set(listeners.map((l) => l.show_id));
   const resumedCount = listeners.filter((l) => l.resumed).length;
 
   return {
@@ -413,7 +1218,9 @@ export type DetailMetric =
   | "top_shows"
   | "feature_adoption"
   | "platform_split"
-  | "playback";
+  | "playback"
+  | "playback_source"
+  | "new_installs";
 
 export interface DetailRow {
   iid: string;
@@ -489,6 +1296,73 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
         ORDER BY ts DESC LIMIT 500
       `).all(todayStart) as DetailRow[];
 
+    case "new_installs":
+      // Filter is a YYYY-MM-DD day. List the iids whose first-ever event
+      // landed on that day. Without filter, list the most recent
+      // first-seen iids overall.
+      if (filter) {
+        return db.prepare(`
+          WITH first_seen AS (
+            SELECT iid, MIN(ts) AS first_ts FROM analytics_events GROUP BY iid
+          )
+          SELECT
+            f.iid,
+            (SELECT platform FROM analytics_events WHERE iid = f.iid ORDER BY ts ASC LIMIT 1) AS platform,
+            (SELECT app_version FROM analytics_events WHERE iid = f.iid ORDER BY ts ASC LIMIT 1) AS app_version,
+            datetime(f.first_ts/1000, 'unixepoch') AS last_seen,
+            (SELECT COUNT(*) FROM analytics_events WHERE iid = f.iid) AS event_count,
+            date(f.first_ts/1000, 'unixepoch') AS detail
+          FROM first_seen f
+          WHERE date(f.first_ts/1000, 'unixepoch') = ?
+          ORDER BY f.first_ts DESC LIMIT 500
+        `).all(filter) as DetailRow[];
+      }
+      return db.prepare(`
+        WITH first_seen AS (
+          SELECT iid, MIN(ts) AS first_ts FROM analytics_events GROUP BY iid
+        )
+        SELECT
+          f.iid,
+          (SELECT platform FROM analytics_events WHERE iid = f.iid ORDER BY ts ASC LIMIT 1) AS platform,
+          (SELECT app_version FROM analytics_events WHERE iid = f.iid ORDER BY ts ASC LIMIT 1) AS app_version,
+          datetime(f.first_ts/1000, 'unixepoch') AS last_seen,
+          (SELECT COUNT(*) FROM analytics_events WHERE iid = f.iid) AS event_count,
+          date(f.first_ts/1000, 'unixepoch') AS detail
+        FROM first_seen f
+        ORDER BY f.first_ts DESC LIMIT 500
+      `).all() as DetailRow[];
+
+    case "playback_source":
+      if (filter) {
+        // Drill into a specific source: list recent plays from it. The "(unattributed)"
+        // bucket maps to legacy rows where source was never emitted.
+        const filterClause =
+          filter === "(unattributed)"
+            ? "json_extract(props, '$.source') IS NULL"
+            : "json_extract(props, '$.source') = ?";
+        const params: (string | number)[] = [monthAgo];
+        if (filter !== "(unattributed)") params.push(filter);
+        return db.prepare(`
+          SELECT json_extract(props, '$.show_id') AS detail,
+            iid, platform, app_version,
+            datetime(ts/1000, 'unixepoch') AS last_seen,
+            1 AS event_count
+          FROM analytics_events
+          WHERE event = 'playback_start' AND ts > ? AND ${filterClause}
+          ORDER BY ts DESC LIMIT 500
+        `).all(...params) as DetailRow[];
+      }
+      return db.prepare(`
+        SELECT
+          COALESCE(json_extract(props, '$.source'), '(unattributed)') AS detail,
+          iid, platform, app_version,
+          datetime(ts/1000, 'unixepoch') AS last_seen,
+          1 AS event_count
+        FROM analytics_events
+        WHERE event = 'playback_start' AND ts > ?
+        ORDER BY ts DESC LIMIT 500
+      `).all(monthAgo) as DetailRow[];
+
     case "top_shows":
       if (filter) {
         return db.prepare(`
@@ -513,8 +1387,15 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
 
     case "feature_adoption":
       if (filter) {
+        // When drilling into a specific feature, surface target_id (when
+        // present) so per-target counts are visible. Falls back to feature
+        // name for events without a target_id.
         return db.prepare(`
-          SELECT json_extract(props, '$.feature') AS detail,
+          SELECT
+            COALESCE(
+              json_extract(props, '$.target_id'),
+              json_extract(props, '$.feature')
+            ) AS detail,
             iid, platform, app_version,
             datetime(ts/1000, 'unixepoch') AS last_seen,
             1 AS event_count

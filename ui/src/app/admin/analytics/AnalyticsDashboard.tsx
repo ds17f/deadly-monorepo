@@ -5,11 +5,29 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState, useCallback, useMemo } from "react";
 import MetricCard from "./components/MetricCard";
 import DetailPanel from "./components/DetailPanel";
+import InstallDetailPanel from "./components/InstallDetailPanel";
 import TopShowsList from "./components/TopShowsList";
 import PlatformChart from "./components/PlatformChart";
+import RetentionCohorts from "./components/RetentionCohorts";
+import SearchQuality from "./components/SearchQuality";
+import PlaysBySource from "./components/PlaysBySource";
+import ListeningNow from "./components/ListeningNow";
+import GrowthChart from "./components/GrowthChart";
 import FeatureAdoption from "./components/FeatureAdoption";
-import ShowPlayback from "./components/ShowPlayback";
 import CollapsibleSection from "./components/CollapsibleSection";
+import ShowEngagement, { TopShowsByAction } from "./components/ShowEngagement";
+
+interface FeatureAdoptionEntry {
+  feature: string;
+  uses: number;
+}
+
+interface FeatureAdoption {
+  action: FeatureAdoptionEntry[];
+  preference: FeatureAdoptionEntry[];
+  navigation: FeatureAdoptionEntry[];
+  uncategorized: FeatureAdoptionEntry[];
+}
 
 interface AnalyticsSummary {
   dau: number;
@@ -18,9 +36,21 @@ interface AnalyticsSummary {
   total_installs: number;
   stale_installs_30d: number;
   platform_split: Record<string, number>;
-  top_shows: Array<{ show_id: string; plays: number }>;
-  feature_adoption: Record<string, number>;
+  top_shows: Array<{
+    show_id: string;
+    listeners: number;
+    track_plays: number;
+    completion_rate: number | null;
+  }>;
+  plays_by_source: Array<{
+    source: string;
+    plays: number;
+    distinct_listeners: number;
+  }>;
+  top_shows_by_action: TopShowsByAction;
+  feature_adoption: FeatureAdoption;
   avg_completion_rate: number | null;
+  avg_completion_sample_count: number;
   events_today: number;
 }
 
@@ -45,6 +75,7 @@ interface ShowName {
   c: string;
   s: string;
   tc: number;
+  img: string | null;
 }
 
 type DetailMetric =
@@ -54,7 +85,9 @@ type DetailMetric =
   | "top_shows"
   | "feature_adoption"
   | "platform_split"
-  | "playback";
+  | "playback"
+  | "playback_source"
+  | "new_installs";
 
 const METRIC_LABELS: Record<DetailMetric, string> = {
   dau: "Daily Active Users",
@@ -63,10 +96,12 @@ const METRIC_LABELS: Record<DetailMetric, string> = {
   total_installs: "Total Installs",
   stale_installs: "Stale Installs (30d)",
   events_today: "Events Today",
-  top_shows: "Top Shows (30d)",
+  top_shows: "Most-listened shows (30d)",
   feature_adoption: "Feature Adoption (30d)",
-  platform_split: "Platform Split (30d)",
+  platform_split: "Active installs by platform (30d)",
   playback: "Playback (30d)",
+  playback_source: "Plays by Source (30d)",
+  new_installs: "New Installs",
 };
 
 const REFRESH_INTERVAL = 30_000;
@@ -88,6 +123,11 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
   const [activeFilter, setActiveFilter] = useState<string | undefined>(undefined);
   const [detailRows, setDetailRows] = useState<DetailRow[]>([]);
   const [detailLoading, setDetailLoading] = useState(false);
+
+  // Install detail modal — opened from any iid reference in the dashboard
+  const [activeInstall, setActiveInstall] = useState<string | null>(null);
+  const openInstall = useCallback((iid: string) => setActiveInstall(iid), []);
+  const closeInstall = useCallback(() => setActiveInstall(null), []);
 
   // Collapse all state
   const [allCollapsed, setAllCollapsed] = useState(false);
@@ -238,12 +278,59 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
         </div>
       </div>
 
+      {/* Listening Now */}
+      <CollapsibleSection title="Listening Now (last 45 min)" forceOpen={forceOpen}>
+        <ListeningNow showMap={showMap} />
+      </CollapsibleSection>
+
+      {/* Most-listened shows */}
+      <CollapsibleSection
+        title="Most-listened shows"
+        forceOpen={forceOpen}
+        onDetail={() => openDetail("top_shows")}
+      >
+        <TopShowsList
+          showMap={showMap}
+          onShowClick={(id) => openDetail("top_shows", id)}
+        />
+      </CollapsibleSection>
+
+      {/* Growth */}
+      <CollapsibleSection
+        title="Growth (60d)"
+        forceOpen={forceOpen}
+        onDetail={() => openDetail("new_installs")}
+      >
+        <GrowthChart onDayClick={(day) => openDetail("new_installs", day)} />
+      </CollapsibleSection>
+
       {/* Active Users */}
       <CollapsibleSection title="Active Users" forceOpen={forceOpen}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          <MetricCard label="DAU" value={data.dau} timeseries={dauValues} onClick={() => openDetail("dau")} />
-          <MetricCard label="WAU" value={data.wau} timeseries={dauValues} onClick={() => openDetail("wau")} />
-          <MetricCard label="MAU" value={data.mau} timeseries={dauValues} onClick={() => openDetail("mau")} />
+          <MetricCard
+            label="DAU"
+            value={data.dau}
+            unit="user"
+            hint="Distinct installs that opened the app today"
+            timeseries={dauValues}
+            onClick={() => openDetail("dau")}
+          />
+          <MetricCard
+            label="WAU"
+            value={data.wau}
+            unit="user"
+            hint="Distinct installs that opened the app in the last 7 days"
+            timeseries={dauValues}
+            onClick={() => openDetail("wau")}
+          />
+          <MetricCard
+            label="MAU"
+            value={data.mau}
+            unit="user"
+            hint="Distinct installs that opened the app in the last 30 days"
+            timeseries={dauValues}
+            onClick={() => openDetail("mau")}
+          />
         </div>
       </CollapsibleSection>
 
@@ -253,34 +340,70 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
           <MetricCard
             label="Total Installs"
             value={data.total_installs}
+            unit="install"
+            hint="Distinct iids ever seen"
             onClick={() => openDetail("total_installs")}
           />
           <MetricCard
             label="Stale (30d)"
             value={data.stale_installs_30d}
+            unit="install"
+            hint="Seen ever, not seen in last 30 days"
             onClick={() => openDetail("stale_installs")}
           />
           <MetricCard
             label="Events Today"
             value={data.events_today}
+            unit="event"
             timeseries={eventsValues}
             onClick={() => openDetail("events_today")}
+          />
+          <MetricCard
+            label="Avg Completion (≥1min listens, 30d)"
+            value={
+              data.avg_completion_rate != null
+                ? `${Math.round(data.avg_completion_rate * 100)}%`
+                : "—"
+            }
+            hint="Average of MIN(listened_ms, duration_ms) / duration_ms across playback_end events where both fields are ≥60s"
           />
         </div>
       </CollapsibleSection>
 
       {/* Platform Split */}
-      <CollapsibleSection title="Platform Split (30d)" forceOpen={forceOpen} onDetail={() => openDetail("platform_split")}>
+      <CollapsibleSection title="Active installs by platform (30d)" forceOpen={forceOpen} onDetail={() => openDetail("platform_split")}>
         <PlatformChart
           data={data.platform_split}
           onPlatformClick={(p) => openDetail("platform_split", p)}
         />
       </CollapsibleSection>
 
-      {/* Top Shows */}
-      <CollapsibleSection title="Top Shows (30d)" forceOpen={forceOpen} onDetail={() => openDetail("top_shows")}>
-        <TopShowsList
-          shows={data.top_shows}
+      {/* Plays by Source */}
+      <CollapsibleSection
+        title="Plays by Source (30d)"
+        forceOpen={forceOpen}
+        onDetail={() => openDetail("playback_source")}
+      >
+        <PlaysBySource
+          data={data.plays_by_source}
+          onSourceClick={(s) => openDetail("playback_source", s)}
+        />
+      </CollapsibleSection>
+
+      {/* Retention Cohorts */}
+      <CollapsibleSection title="Retention Cohorts (12 weeks)" forceOpen={forceOpen}>
+        <RetentionCohorts />
+      </CollapsibleSection>
+
+      {/* Search Quality */}
+      <CollapsibleSection title="Search Quality (30d)" forceOpen={forceOpen}>
+        <SearchQuality />
+      </CollapsibleSection>
+
+      {/* Show Engagement (favorites / downloads / reviews / shares) */}
+      <CollapsibleSection title="Show Engagement (30d)" forceOpen={forceOpen}>
+        <ShowEngagement
+          data={data.top_shows_by_action}
           showMap={showMap}
           onShowClick={(id) => openDetail("top_shows", id)}
         />
@@ -294,11 +417,6 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
         />
       </CollapsibleSection>
 
-      {/* Show Listening */}
-      <CollapsibleSection title="Show Listening (30d)" forceOpen={forceOpen}>
-        <ShowPlayback showMap={showMap} />
-      </CollapsibleSection>
-
       {/* Detail Panel */}
       {activeMetric && (
         <DetailPanel
@@ -308,7 +426,13 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
           loading={detailLoading}
           onClose={closeDetail}
           onClearFilter={activeFilter ? () => openDetail(activeMetric) : undefined}
+          onOpenInstall={openInstall}
         />
+      )}
+
+      {/* Install Detail (stacks on top of DetailPanel when both open) */}
+      {activeInstall && (
+        <InstallDetailPanel iid={activeInstall} onClose={closeInstall} />
       )}
     </div>
   );

@@ -5,9 +5,8 @@ import UIKit
 
 /// Fire-and-forget anonymous analytics client.
 /// Buffers events in memory and flushes to the server periodically.
-final class AnalyticsService: Sendable {
+final class AnalyticsService: @unchecked Sendable {
     private let appPreferences: AppPreferences
-    private let baseURL: String
     private let apiKey: String
     private let platform = "ios"
     private let sessionId = UUID().uuidString
@@ -17,9 +16,15 @@ final class AnalyticsService: Sendable {
     private let flushInterval: TimeInterval = 30
     private let maxBufferSize = 50
 
+    /// Computed each flush so changes to the dev custom-server setting take
+    /// effect immediately without needing an app restart.
+    private var baseURL: String { appPreferences.apiBaseUrl }
+
+    private let flushQueue = DispatchQueue(label: "deadly.analytics.flush", qos: .utility)
+    private var flushTimer: DispatchSourceTimer?
+
     init(appPreferences: AppPreferences, apiKey: String) {
         self.appPreferences = appPreferences
-        self.baseURL = appPreferences.apiBaseUrl
         self.apiKey = apiKey
         self.appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "unknown"
 
@@ -62,7 +67,45 @@ final class AnalyticsService: Sendable {
         let events = buffer.drain()
         guard !events.isEmpty else { return }
 
-        guard let url = URL(string: "\(baseURL)/api/analytics") else { return }
+        guard let request = buildPostRequest(for: events) else { return }
+
+        // Fire-and-forget — silently discard failures
+        URLSession.shared.dataTask(with: request).resume()
+    }
+
+    /// Force-flushes the buffer and reports success/failure via `completion`.
+    /// On failure, events are restored to the buffer so they can be retried.
+    /// Intended for the developer "Flush Analytics" tool.
+    func flushNow(completion: @escaping (Bool, Int, String?) -> Void) {
+        let events = buffer.drain()
+        guard !events.isEmpty else {
+            completion(true, 0, nil)
+            return
+        }
+
+        guard let request = buildPostRequest(for: events) else {
+            buffer.prepend(events)
+            completion(false, events.count, "Invalid analytics URL")
+            return
+        }
+
+        URLSession.shared.dataTask(with: request) { [weak self] _, response, error in
+            if let error = error {
+                self?.buffer.prepend(events)
+                completion(false, events.count, error.localizedDescription)
+                return
+            }
+            if let http = response as? HTTPURLResponse, !(200..<300).contains(http.statusCode) {
+                self?.buffer.prepend(events)
+                completion(false, events.count, "HTTP \(http.statusCode)")
+                return
+            }
+            completion(true, events.count, nil)
+        }.resume()
+    }
+
+    private func buildPostRequest(for events: [AnalyticsEvent]) -> URLRequest? {
+        guard let url = URL(string: "\(baseURL)/api/analytics") else { return nil }
 
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -86,21 +129,19 @@ final class AnalyticsService: Sendable {
 
         let body: [String: Any] = ["events": payload]
         request.httpBody = try? JSONSerialization.data(withJSONObject: body)
-
-        // Fire-and-forget — silently discard failures
-        URLSession.shared.dataTask(with: request).resume()
+        return request
     }
 
     // MARK: - Private
 
     private func startFlushTimer() {
-        let interval = flushInterval
-        Task.detached { [weak self] in
-            while !Task.isCancelled {
-                try? await Task.sleep(for: .seconds(interval))
-                self?.flush()
-            }
+        let timer = DispatchSource.makeTimerSource(queue: flushQueue)
+        timer.schedule(deadline: .now() + flushInterval, repeating: flushInterval)
+        timer.setEventHandler { [weak self] in
+            self?.flush()
         }
+        timer.resume()
+        flushTimer = timer
     }
 }
 
@@ -128,6 +169,12 @@ private final class AnalyticsBuffer: @unchecked Sendable {
         let drained = events
         events.removeAll()
         return drained
+    }
+
+    func prepend(_ restored: [AnalyticsEvent]) {
+        lock.lock()
+        defer { lock.unlock() }
+        events.insert(contentsOf: restored, at: 0)
     }
 }
 

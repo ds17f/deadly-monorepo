@@ -59,7 +59,11 @@ class SettingsViewModel @Inject constructor(
     fun toggleIncludeShowsWithoutRecordings() {
         val newValue = !appPreferences.includeShowsWithoutRecordings.value
         appPreferences.setIncludeShowsWithoutRecordings(newValue)
-        analyticsService.track("feature_use", mapOf("feature" to "toggle_shows_without_recordings", "enabled" to newValue))
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "toggle_shows_without_recordings",
+            "category" to "preference",
+            "enabled" to newValue,
+        ))
     }
 
     val analyticsEnabled: StateFlow<Boolean> = appPreferences.analyticsEnabled
@@ -68,7 +72,7 @@ class SettingsViewModel @Inject constructor(
         val newValue = !appPreferences.analyticsEnabled.value
         // Track the toggle event before the flag changes
         val event = if (newValue) "analytics_opt_in" else "analytics_opt_out"
-        analyticsService.track("feature_use", mapOf("feature" to event))
+        analyticsService.track("feature_use", mapOf("feature" to event, "category" to "account"))
         analyticsService.flush()
         appPreferences.setAnalyticsEnabled(newValue)
     }
@@ -77,7 +81,11 @@ class SettingsViewModel @Inject constructor(
 
     fun setSourceBadgeStyle(value: String) {
         appPreferences.setSourceBadgeStyle(value)
-        analyticsService.track("feature_use", mapOf("feature" to "set_source_badge_style", "value" to value))
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_source_badge_style",
+            "category" to "preference",
+            "value" to value,
+        ))
     }
 
     val authState: StateFlow<AuthState> = authService.authState
@@ -129,6 +137,10 @@ class SettingsViewModel @Inject constructor(
         appReviewManager.forcePrompt()
     }
 
+    fun flushAnalytics(onComplete: (Boolean, Int, String?) -> Unit) {
+        analyticsService.flushNow(onComplete)
+    }
+
     val developerModeUnlocked: StateFlow<Boolean> = appPreferences.developerModeUnlocked
 
     fun unlockDeveloperMode() {
@@ -151,7 +163,7 @@ class SettingsViewModel @Inject constructor(
     }
 
     fun signOut() {
-        analyticsService.track("feature_use", mapOf("feature" to "sign_out"))
+        analyticsService.track("feature_use", mapOf("feature" to "sign_out", "category" to "account"))
         viewModelScope.launch {
             authService.signOut()
         }

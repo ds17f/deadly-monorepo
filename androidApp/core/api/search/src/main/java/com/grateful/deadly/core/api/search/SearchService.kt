@@ -103,6 +103,15 @@ interface SearchService {
      * Used for era browsing where filter chips handle the filtering.
      */
     suspend fun loadAllShows(): Result<Unit>
+
+    /**
+     * Record that the user tapped a search result at [selectedIndex] (0-based).
+     * Emits a `search` analytics event with `selected_index` populated so the
+     * search → playback funnel can be measured.
+     */
+    suspend fun recordResultTap(selectedIndex: Int) {
+        // Default no-op for stubs.
+    }
     
     /**
      * Populate search service with test data for UI development.

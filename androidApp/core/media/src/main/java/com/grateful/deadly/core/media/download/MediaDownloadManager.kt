@@ -8,6 +8,7 @@ import androidx.media3.exoplayer.offline.Download
 import androidx.media3.exoplayer.offline.DownloadManager
 import androidx.media3.exoplayer.offline.DownloadRequest
 import androidx.media3.exoplayer.offline.DownloadService
+import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.model.FavoritesDownloadStatus
 import com.grateful.deadly.core.model.ShowDownloadProgress
@@ -27,12 +28,78 @@ class MediaDownloadManager @Inject constructor(
     private val downloadManager: DownloadManager,
     @DownloadCache private val cache: Cache,
     private val archiveService: ArchiveService,
-    private val showRepository: ShowRepository
+    private val showRepository: ShowRepository,
+    private val analyticsService: AnalyticsService,
 ) {
 
     companion object {
         private const val TAG = "MediaDownloadManager"
         private val FORMAT_PRIORITY = listOf("VBR MP3", "MP3", "Ogg Vorbis")
+    }
+
+    /** Wall-clock start time per show, used for download_complete duration_ms. */
+    private val showDownloadStartedAt = mutableMapOf<String, Long>()
+
+    /** Shows we've already emitted a terminal result for in this session. */
+    private val showDownloadEmitted = mutableSetOf<String>()
+
+    init {
+        downloadManager.addListener(object : DownloadManager.Listener {
+            override fun onDownloadChanged(
+                downloadManager: DownloadManager,
+                download: Download,
+                finalException: Exception?
+            ) {
+                val showId = extractShowId(download) ?: return
+                maybeEmitShowDownloadResult(showId, finalException?.message)
+            }
+
+            override fun onDownloadRemoved(downloadManager: DownloadManager, download: Download) {}
+        })
+    }
+
+    private fun maybeEmitShowDownloadResult(showId: String, errorReason: String?) {
+        if (showDownloadEmitted.contains(showId)) return
+        val downloads = getDownloadsForShow(showId)
+        if (downloads.isEmpty()) return
+
+        val states = downloads.map { it.state }
+        val stillRunning = states.any {
+            it == Download.STATE_DOWNLOADING || it == Download.STATE_QUEUED ||
+                it == Download.STATE_RESTARTING
+        }
+        if (stillRunning) return
+
+        val allCompleted = states.all { it == Download.STATE_COMPLETED }
+        val anyFailed = states.any { it == Download.STATE_FAILED }
+        val totalBytes = downloads.sumOf { it.bytesDownloaded }
+        val durationMs = showDownloadStartedAt[showId]?.let {
+            System.currentTimeMillis() - it
+        } ?: 0L
+
+        when {
+            allCompleted -> {
+                analyticsService.track("download_complete", mapOf(
+                    "target_type" to "show",
+                    "target_id" to showId,
+                    "duration_ms" to durationMs,
+                    "bytes" to totalBytes,
+                ))
+                showDownloadEmitted.add(showId)
+                showDownloadStartedAt.remove(showId)
+            }
+            anyFailed -> {
+                val reason = errorReason ?: "unknown"
+                analyticsService.track("download_failed", mapOf(
+                    "target_type" to "show",
+                    "target_id" to showId,
+                    "duration_ms" to durationMs,
+                    "error_reason" to reason,
+                ))
+                showDownloadEmitted.add(showId)
+                showDownloadStartedAt.remove(showId)
+            }
+        }
     }
 
     /**
@@ -77,6 +144,8 @@ class MediaDownloadManager @Inject constructor(
             }
 
             Log.d(TAG, "Queued ${audioTracks.size} track downloads for show $showId")
+            showDownloadStartedAt[showId] = System.currentTimeMillis()
+            showDownloadEmitted.remove(showId)
             Result.success(Unit)
         } catch (e: Exception) {
             Log.e(TAG, "Error downloading show $showId", e)
