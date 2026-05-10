@@ -15,7 +15,35 @@ export function getAnalyticsDb(): Database.Database {
   db.pragma("busy_timeout = 5000");
 
   initSchema(db);
+  ensureUniqueEventIndex(db);
   return db;
+}
+
+/**
+ * Strict-dedup guard: a unique index on (iid, sid, event, ts) plus
+ * `INSERT OR IGNORE` in `insertEvents` neutralizes client-retry duplicates.
+ * Existing dupes block index creation, so we pre-dedupe on first run only —
+ * the check on `sqlite_master` keeps subsequent startups O(1) instead of
+ * scanning the table.
+ */
+function ensureUniqueEventIndex(db: Database.Database): void {
+  const exists = db
+    .prepare(
+      `SELECT 1 FROM sqlite_master
+       WHERE type = 'index' AND name = 'uniq_analytics_event'`,
+    )
+    .get();
+  if (exists) return;
+
+  db.exec(`
+    DELETE FROM analytics_events
+    WHERE id NOT IN (
+      SELECT MIN(id) FROM analytics_events
+      GROUP BY iid, sid, event, ts
+    );
+    CREATE UNIQUE INDEX uniq_analytics_event
+      ON analytics_events(iid, sid, event, ts);
+  `);
 }
 
 function initSchema(db: Database.Database): void {
@@ -131,8 +159,10 @@ export interface AnalyticsEvent {
 
 export function insertEvents(events: AnalyticsEvent[]): void {
   const db = getAnalyticsDb();
+  // OR IGNORE pairs with the uniq_analytics_event unique index to swallow
+  // client-retry duplicates (same iid+sid+event+ts) without erroring the batch.
   const stmt = db.prepare(`
-    INSERT INTO analytics_events (event, ts, iid, sid, platform, app_version, props)
+    INSERT OR IGNORE INTO analytics_events (event, ts, iid, sid, platform, app_version, props)
     VALUES (?, ?, ?, ?, ?, ?, ?)
   `);
 
