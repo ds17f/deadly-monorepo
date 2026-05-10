@@ -1,5 +1,63 @@
 # Changelog
 
+## [2.26.0] - 2026-05-10
+
+### New Features
+* top shows day-range selector + cover art + reorder (0a1401b8)
+* bitmap progress bar inline on Listening Now rows (a9d2e398)
+* split growth chart by platform (75bcbb65)
+* growth chart of new installs by day (b99e1a8c)
+* Listening Now live activity panel (DEAD-302) (de58c745)
+* plays by source panel (DEAD-330) (714db87a)
+* search quality panel (DEAD-309) (6f3390de)
+* D1/D7/D30 cohort retention table (DEAD-308) (20c0d207)
+* per-show completion rate (DEAD-304) (62c8393e)
+* show plays alongside listeners in Top Shows (7a84004e)
+* top shows by distinct listeners (DEAD-317) (732c4126)
+* realistic avg_completion_rate (DEAD-318) (cad25bb9)
+* per-version analytics watershed reference (DEAD-327) (8c38056b)
+* set raw-event retention default to 180 days (DEAD-326) (d976b1fc)
+* strict dedup guard on event insert (DEAD-319) (7e1ed1ac)
+* add event watershed registry and admin endpoint (0aa8cb97)
+* emit auth journey and download lifecycle events (DEAD-322) (53a0c0fc)
+* allowlist download lifecycle and playback failure events (7b198926)
+* emit playback_error and playback_stall (DEAD-306) (dd22e7c1)
+* emit feature_use for song favorites (DEAD-332) (7e248b89)
+* add Flush Analytics developer tool (25cacf02)
+* drop low-signal navigation events (e46621c2)
+* populate playback_start.source and search.selected_index (c33765f4)
+* show-level engagement panel (favorites, downloads, reviews, shares) (c2b37eb5)
+* per-install event timeline and per-track outcome bars (54232f3e)
+* add target_id and category to feature_use events (f787f0bf)
+* bucket feature_use by category with target_id drill-down (aab4db11)
+* add reason field to playback_end events (b45e52c2)
+
+### Bug Fixes
+* widen Listening Now window to 45 min (47cec05a)
+* include top_shows_by_action in summary response schema (a000dd37)
+* include listeners and sample_count in summary response (03ef8e43)
+* respect autoPlay flag when restoring track (2f284f4a)
+* defer playback_start on restore until actual play (e02fa2bf)
+* match actual playback_end reason strings emitted by mobile (3b6745e7)
+* accept source instead of domain on error events (20925aee)
+* warn once when Redis is unavailable with actionable hint (95b1e189)
+
+### Code Refactoring
+* rename top_shows.plays → track_plays (958ffb7d)
+
+### Documentation Updates
+* mark Wave 3 complete in DEAD-311 plan (47623ae2)
+
+### Other Changes
+* chore(build): restore remote-sync rsync for Linux→Mac builds (85a3aac0)
+* chore(build): forward ENABLE_DEV_SIGNIN to api container in dev compose (b525c8ca)
+* chore(build): preserve ui-served inode across dev rebuilds (86d8bfe8)
+* chore(build): bind-mount ./ui/out into Caddy in dev, skip UI build container (b69ba115)
+* chore(build): rename dev-* compose targets to docker-* and add SELinux labels (92a02ea3)
+* chore(build): add Linux Android SDK path and top-level android-* targets (2c42afe0)
+* chore: update worklaptop hostname and source KEYCHAIN_PASSWORD from .env (da27176f)
+
+
 ## [2.25.0] - 2026-04-23
 
 ### New Features
@@ -7,8 +65,6 @@
 
 ### Bug Fixes
 * remove non-Android entries from v2.24.0 changelog (1f889b65)
-
-
 ## [2.24.0] - 2026-04-21
 
 ### New Features
