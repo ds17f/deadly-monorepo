@@ -783,6 +783,55 @@ export function getSearchQuality(days = 30): SearchQuality {
   };
 }
 
+// ── Growth (per-platform new installs by day) ──────────────────────
+
+export interface GrowthDay {
+  day: string;
+  ios: number;
+  android: number;
+  web: number;
+  total: number;
+}
+
+/**
+ * New installs per day, broken out by platform. An iid's platform is
+ * the platform of its first event. Window is the last `days` days
+ * inclusive.
+ */
+export function getGrowthByPlatform(days = 60): GrowthDay[] {
+  const db = getAnalyticsDb();
+  const cutoff = Date.now() - days * 24 * 3600 * 1000;
+
+  const rows = db
+    .prepare(
+      `WITH first_seen AS (
+         SELECT iid, MIN(ts) AS first_ts FROM analytics_events GROUP BY iid
+       )
+       SELECT
+         date(f.first_ts/1000, 'unixepoch') AS day,
+         (SELECT platform FROM analytics_events WHERE iid = f.iid ORDER BY ts ASC LIMIT 1) AS platform,
+         COUNT(*) AS value
+       FROM first_seen f
+       WHERE f.first_ts > ?
+       GROUP BY day, platform
+       ORDER BY day ASC`,
+    )
+    .all(cutoff) as Array<{ day: string; platform: string; value: number }>;
+
+  const byDay = new Map<string, GrowthDay>();
+  for (const r of rows) {
+    const slot =
+      byDay.get(r.day) ??
+      ({ day: r.day, ios: 0, android: 0, web: 0, total: 0 } as GrowthDay);
+    if (r.platform === "ios") slot.ios += r.value;
+    else if (r.platform === "android") slot.android += r.value;
+    else if (r.platform === "web") slot.web += r.value;
+    slot.total += r.value;
+    byDay.set(r.day, slot);
+  }
+  return Array.from(byDay.values()).sort((a, b) => a.day.localeCompare(b.day));
+}
+
 export type TimeseriesMetric =
   | "dau"
   | "events"

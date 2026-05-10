@@ -16,6 +16,7 @@ import {
   getRetentionCohorts,
   getSearchQuality,
   getLiveListeners,
+  getGrowthByPlatform,
 } from "../db/analytics.js";
 import { requireAdmin } from "../auth/middleware.js";
 import { ANALYTICS_WATERSHED } from "../analytics-watershed.js";
@@ -537,6 +538,47 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       }
       const clampedDays = Math.min(Math.max(days ?? 14, 1), 90);
       return getTimeseries(metric as TimeseriesMetric, clampedDays);
+    },
+  );
+
+  // GET /api/analytics/growth — new installs per day, broken out by platform.
+  app.get(
+    "/api/analytics/growth",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "New installs per day by platform (admin)",
+        querystring: {
+          type: "object",
+          properties: { days: { type: "number", default: 60 } },
+        },
+        response: {
+          200: {
+            type: "object",
+            properties: {
+              days: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    day: { type: "string" },
+                    ios: { type: "number" },
+                    android: { type: "number" },
+                    web: { type: "number" },
+                    total: { type: "number" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { days } = request.query as { days?: number };
+      const clamped = Math.min(Math.max(days ?? 60, 1), 365);
+      return { days: getGrowthByPlatform(clamped) };
     },
   );
 

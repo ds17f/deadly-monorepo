@@ -2,27 +2,36 @@
 
 import { useEffect, useState } from "react";
 
-interface DayPoint {
+interface GrowthDay {
   day: string;
-  value: number;
+  ios: number;
+  android: number;
+  web: number;
+  total: number;
 }
+
+// Match the platform colors used by PlatformChart (ios=blue, android=green,
+// web=purple) so the dashboard reads consistently.
+const PLATFORM_COLORS: Record<"ios" | "android" | "web", string> = {
+  ios: "bg-blue-500",
+  android: "bg-green-500",
+  web: "bg-purple-500",
+};
 
 export default function GrowthChart({
   onDayClick,
 }: {
   onDayClick?: (day: string) => void;
 }) {
-  const [data, setData] = useState<DayPoint[] | null>(null);
+  const [data, setData] = useState<GrowthDay[] | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("/api/analytics/timeseries?metric=new_installs&days=60", {
-      credentials: "include",
-    })
+    fetch("/api/analytics/growth?days=60", { credentials: "include" })
       .then(async (res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const body = (await res.json()) as DayPoint[];
-        setData(body);
+        const body = (await res.json()) as { days: GrowthDay[] };
+        setData(body.days);
         setError(null);
       })
       .catch((e: unknown) =>
@@ -36,52 +45,78 @@ export default function GrowthChart({
   if (data.length === 0)
     return <p className="text-sm text-zinc-500 italic">No installs yet.</p>;
 
-  const max = Math.max(...data.map((p) => p.value));
-  const total = data.reduce((s, p) => s + p.value, 0);
-  const peak = data.reduce((best, p) => (p.value > best.value ? p : best), data[0]);
+  const max = Math.max(...data.map((p) => p.total));
+  const total = data.reduce((s, p) => s + p.total, 0);
+  const peak = data.reduce(
+    (best, p) => (p.total > best.total ? p : best),
+    data[0],
+  );
 
   return (
     <div className="space-y-3">
-      <div className="flex items-baseline gap-6 text-xs text-zinc-400">
+      <div className="flex items-baseline gap-6 text-xs text-zinc-400 flex-wrap">
         <span>
-          <span className="text-zinc-200 font-semibold">{total.toLocaleString()}</span>{" "}
+          <span className="text-zinc-200 font-semibold">
+            {total.toLocaleString()}
+          </span>{" "}
           new installs over {data.length} days
         </span>
         <span>
           peak{" "}
-          <span className="text-zinc-200 font-semibold">{peak.value}</span> on{" "}
+          <span className="text-zinc-200 font-semibold">{peak.total}</span> on{" "}
           {peak.day}
         </span>
+        <div className="flex items-center gap-3 ml-auto">
+          <span className="flex items-center gap-1.5">
+            <span className="inline-block w-2.5 h-2.5 bg-blue-500 rounded-sm" />
+            iOS
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="inline-block w-2.5 h-2.5 bg-green-500 rounded-sm" />
+            Android
+          </span>
+        </div>
       </div>
+
       <div className="flex items-end gap-[2px] h-32 bg-zinc-900/40 rounded p-2">
         {data.map((p) => {
-          const heightPct = max === 0 ? 0 : (p.value / max) * 100;
+          const totalPct = max === 0 ? 0 : (p.total / max) * 100;
+          // Within a single bar, slice the height proportionally between
+          // the platforms so iOS sits on top of Android (and Android on
+          // top of web if present).
+          const segments = (
+            [
+              { key: "ios", n: p.ios },
+              { key: "android", n: p.android },
+              { key: "web", n: p.web },
+            ] as const
+          ).filter((s) => s.n > 0);
           return (
             <button
               key={p.day}
               onClick={() => onDayClick?.(p.day)}
-              className="flex-1 group relative"
-              title={`${p.day}: ${p.value} install${p.value !== 1 ? "s" : ""}`}
-              style={{ height: "100%" }}
+              className="flex-1 group relative h-full"
+              title={`${p.day}: ${p.ios} iOS + ${p.android} Android${p.web ? ` + ${p.web} web` : ""} = ${p.total}`}
             >
-              <div className="absolute bottom-0 left-0 right-0 flex items-end h-full">
-                <div
-                  className="w-full bg-deadly-blue/70 group-hover:bg-deadly-blue rounded-t transition-colors"
-                  style={{ height: `${heightPct}%`, minHeight: p.value > 0 ? 1 : 0 }}
-                />
+              <div className="absolute bottom-0 left-0 right-0 flex flex-col-reverse rounded-t overflow-hidden"
+                   style={{ height: `${totalPct}%`, minHeight: p.total > 0 ? 1 : 0 }}>
+                {segments.map((seg) => (
+                  <div
+                    key={seg.key}
+                    className={`${PLATFORM_COLORS[seg.key]} group-hover:brightness-110 transition-[filter] w-full`}
+                    style={{ flexGrow: seg.n }}
+                  />
+                ))}
               </div>
             </button>
           );
         })}
       </div>
-      {/* Tick labels: ~one every 7 bars so a 60-day view shows ~9 dates
-          without crowding. Each label sits on its bar's column. */}
+
       <div className="flex gap-[2px] px-1 -mt-2">
         {data.map((p, i) => {
           const tickEvery = Math.max(1, Math.round(data.length / 9));
           const showTick = i % tickEvery === 0 || i === data.length - 1;
-          // Strip year for the visible labels — matches MM-DD which is
-          // dense enough at this width.
           const short = p.day.slice(5);
           return (
             <div
