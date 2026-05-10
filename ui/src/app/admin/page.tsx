@@ -6,6 +6,7 @@ import { useEffect } from "react";
 
 const ADMIN_PAGES = [
   { href: "/admin/analytics", title: "Analytics", description: "Usage metrics, installs, and feature adoption" },
+  { href: "/admin/analytics-versions", title: "Analytics Watershed", description: "Per-platform reliable-from versions for each event/prop" },
   { href: "/admin/beta", title: "Beta", description: "Manage TestFlight beta applicants and invitations" },
 ];
 

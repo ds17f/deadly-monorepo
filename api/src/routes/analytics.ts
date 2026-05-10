@@ -15,7 +15,7 @@ import {
   getInstallEvents,
 } from "../db/analytics.js";
 import { requireAdmin } from "../auth/middleware.js";
-import { getAllWatersheds } from "../db/eventWatersheds.js";
+import { ANALYTICS_WATERSHED } from "../analytics-watershed.js";
 
 const VALID_PLATFORMS = new Set(["ios", "android", "web"]);
 const MAX_EVENTS_PER_BATCH = 100;
@@ -475,23 +475,17 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
     },
   );
 
-  // GET /api/analytics/watersheds — event/field cutover timestamps for chart markers.
+  // GET /api/analytics/watershed — per-event/prop reliable-from versions per platform.
   app.get(
-    "/api/analytics/watersheds",
+    "/api/analytics/watershed",
     {
       schema: {
         tags: ["analytics"],
-        summary: "Event/field watershed timestamps (admin)",
-        response: {
-          200: {
-            type: "object",
-            additionalProperties: { type: "string" },
-          },
-        },
+        summary: "Event-version watershed table (admin)",
       },
       preHandler: requireAdmin,
     },
-    async () => getAllWatersheds(),
+    async () => ({ entries: ANALYTICS_WATERSHED }),
   );
 }
 

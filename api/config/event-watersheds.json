@@ -1,4 +1,0 @@
-{
-  "_format": "Map of event name or 'event.field' to an ISO-8601 timestamp. Dashboard queries that depend on a field/event introduced after analytics began should filter by ts >= the watershed for that key, so pre-watershed rows (which lack the new shape) don't skew metrics or look like a sudden drop. Edit this file and restart the API to apply changes.",
-  "_example": "playback_end.reason: \"2026-05-15T00:00:00Z\""
-}
