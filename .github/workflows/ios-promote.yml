@@ -1,0 +1,73 @@
+name: Mobile - iOS Promote
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to promote to the App Store (e.g. 1.2.3)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: macos-26
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+      with:
+        fetch-depth: 0
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@7bae1d00b5db9166f4f0fc47985a3a5702cb58f0 # v1.227.0
+      with:
+        ruby-version: '3.3'
+        bundler-cache: false
+
+    - name: Install fastlane
+      run: gem install fastlane
+
+    - name: Decode App Store Connect API key
+      run: |
+        mkdir -p .secrets
+        echo "${{ secrets.APP_STORE_CONNECT_KEY_BASE64 }}" | base64 -d > .secrets/AuthKey_V862XWV7WB.p8
+
+    - name: Extract release notes from CHANGELOG
+      run: |
+        VERSION="${{ inputs.version }}"
+        RAW=$(awk "/^## \[${VERSION}\]/{flag=1; next} /^## \[/{flag=0} flag" iosApp/CHANGELOG.md | sed '/^[[:space:]]*$/d')
+        if [ ${#RAW} -gt 4000 ]; then
+          RAW="${RAW:0:3997}..."
+        fi
+        echo "RELEASE_NOTES<<EOF" >> "$GITHUB_ENV"
+        echo "$RAW" >> "$GITHUB_ENV"
+        echo "EOF" >> "$GITHUB_ENV"
+
+    - name: Submit to App Store via fastlane
+      id: promote
+      run: |
+        cd iosApp
+        fastlane promote_to_production version:"${{ inputs.version }}"
+
+    - name: Update release status (success)
+      if: success()
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        chmod +x scripts/update-release-status.sh
+        ./scripts/update-release-status.sh ios "${{ inputs.version }}" "App Store" deployed
+
+    - name: Update release status (failure)
+      if: failure() && steps.promote.outcome == 'failure'
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        chmod +x scripts/update-release-status.sh
+        ./scripts/update-release-status.sh ios "${{ inputs.version }}" "App Store" failed
+
+    - name: Clean up
+      if: always()
+      run: rm -f .secrets/AuthKey_V862XWV7WB.p8

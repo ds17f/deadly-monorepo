@@ -18,9 +18,11 @@ jobs:
         run: |
           set -euo pipefail
           # Only the auth config consumes this flag. It must never appear in
-          # docker-compose, infra IaC, k8s manifests, deploy workflows, env
-          # examples, or any other config that could ship to production.
-          ALLOWED='^\(api/src/auth/config\.ts\|\.github/workflows/security-dev-signin\.yml\):'
+          # the prod docker-compose, infra IaC, k8s manifests, deploy workflows,
+          # env examples, or any other config that could ship to production.
+          # docker-compose.dev.yml is local-only and forwards the var with an
+          # empty default; safe to allowlist.
+          ALLOWED='^\(api/src/auth/config\.ts\|\.github/workflows/security-dev-signin\.yml\|docker-compose\.dev\.yml\):'
           MATCHES=$(git grep -n 'ENABLE_DEV_SIGNIN' || true)
           if [ -z "$MATCHES" ]; then
             echo "OK: no occurrences."
