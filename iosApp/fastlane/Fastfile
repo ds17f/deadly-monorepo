@@ -206,6 +206,7 @@ platform :ios do
 
     deliver(
       api_key: api_key,
+      app_identifier: "com.grateful.deadly",
       app_version: version,
       submit_for_review: true,
       automatic_release: true,
