@@ -6,12 +6,15 @@ import android.util.Log
 import androidx.credentials.CredentialManager
 import androidx.credentials.CustomCredential
 import androidx.credentials.GetCredentialRequest
+import androidx.credentials.exceptions.GetCredentialCancellationException
+import androidx.credentials.exceptions.NoCredentialException
 import com.google.android.libraries.identity.googleid.GetGoogleIdOption
 import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import com.grateful.deadly.core.api.auth.AuthService
 import com.grateful.deadly.core.api.auth.AuthState
 import com.grateful.deadly.core.api.auth.AuthUser
+import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -29,6 +32,7 @@ class AuthServiceImpl(
     private val context: Context,
     private val appPreferences: AppPreferences,
     private val googleClientId: String,
+    private val analyticsService: AnalyticsService? = null,
 ) : AuthService {
 
     companion object {
@@ -122,30 +126,56 @@ class AuthServiceImpl(
         "${KEY_USER_JSON}_${appPreferences.serverEnvironment.value}"
 
     override suspend fun signInWithGoogle(activity: Activity) {
-        // Use GetSignInWithGoogleOption which always shows the Google Sign-In
-        // bottom sheet, even when no credentials are cached on the device.
-        // GetGoogleIdOption silently fails with NoCredentialException if the
-        // OAuth client isn't fully propagated or no accounts are authorized.
-        val signInOption = GetSignInWithGoogleOption.Builder(googleClientId)
-            .build()
+        trackAuthEvent("sign_in_attempt", provider = "google")
+        try {
+            // Use GetSignInWithGoogleOption which always shows the Google Sign-In
+            // bottom sheet, even when no credentials are cached on the device.
+            // GetGoogleIdOption silently fails with NoCredentialException if the
+            // OAuth client isn't fully propagated or no accounts are authorized.
+            val signInOption = GetSignInWithGoogleOption.Builder(googleClientId)
+                .build()
 
-        val request = GetCredentialRequest.Builder()
-            .addCredentialOption(signInOption)
-            .build()
+            val request = GetCredentialRequest.Builder()
+                .addCredentialOption(signInOption)
+                .build()
 
-        val result = credentialManager.getCredential(activity, request)
-        val credential = result.credential
+            val result = credentialManager.getCredential(activity, request)
+            val credential = result.credential
 
-        if (credential is CustomCredential &&
-            credential.type == GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL
-        ) {
-            val googleIdTokenCredential = GoogleIdTokenCredential.createFrom(credential.data)
-            val idToken = googleIdTokenCredential.idToken
-            exchangeToken(provider = "google", idToken = idToken)
-        } else {
-            throw IllegalStateException("Unexpected credential type: ${credential.type}")
+            if (credential is CustomCredential &&
+                credential.type == GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL
+            ) {
+                val googleIdTokenCredential = GoogleIdTokenCredential.createFrom(credential.data)
+                val idToken = googleIdTokenCredential.idToken
+                exchangeToken(provider = "google", idToken = idToken)
+            } else {
+                trackAuthEvent("sign_in_failure", provider = "google", errorReason = "invalid_credential")
+                throw IllegalStateException("Unexpected credential type: ${credential.type}")
+            }
+        } catch (e: TokenExchangeException) {
+            trackAuthEvent("sign_in_failure", provider = "google", errorReason = e.reason)
+            throw e
+        } catch (e: Exception) {
+            trackAuthEvent("sign_in_failure", provider = "google", errorReason = classifyAuthError(e))
+            throw e
         }
     }
+
+    /**
+     * Map credential / network exceptions to a small fixed vocabulary so we
+     * never write provider-side strings (which can include user emails on
+     * "user not found" responses) into analytics.
+     */
+    private fun classifyAuthError(e: Throwable): String = when (e) {
+        is GetCredentialCancellationException -> "cancelled"
+        is NoCredentialException -> "no_credential"
+        is IllegalStateException -> "invalid_credential"
+        is java.io.IOException -> "network"
+        else -> "unknown"
+    }
+
+    /** Thrown by exchangeToken to carry an already-classified reason out. */
+    private class TokenExchangeException(val reason: String, message: String) : RuntimeException(message)
 
     private suspend fun exchangeToken(provider: String, idToken: String, name: String? = null) {
         val baseUrl = appPreferences.apiBaseUrl
@@ -159,21 +189,31 @@ class AuthServiceImpl(
             bodyMap,
         )
 
-        val response = withContext(Dispatchers.IO) {
-            val request = Request.Builder()
-                .url("$baseUrl/api/auth/mobile/token")
-                .post(bodyJson.toRequestBody("application/json".toMediaType()))
-                .build()
-            httpClient.newCall(request).execute()
+        val response = try {
+            withContext(Dispatchers.IO) {
+                val request = Request.Builder()
+                    .url("$baseUrl/api/auth/mobile/token")
+                    .post(bodyJson.toRequestBody("application/json".toMediaType()))
+                    .build()
+                httpClient.newCall(request).execute()
+            }
+        } catch (e: java.io.IOException) {
+            throw TokenExchangeException("network", "Token exchange network error")
         }
 
         if (!response.isSuccessful) {
-            val errorBody = response.body?.string() ?: "Unknown error"
-            throw RuntimeException("Token exchange failed (${response.code}): $errorBody")
+            val code = response.code
+            response.body?.close()
+            throw TokenExchangeException("server_$code", "Token exchange failed ($code)")
         }
 
-        val responseBody = response.body?.string() ?: throw RuntimeException("Empty response")
-        val tokenResponse = json.decodeFromString<TokenResponse>(responseBody)
+        val responseBody = response.body?.string()
+            ?: throw TokenExchangeException("decode_error", "Empty response")
+        val tokenResponse = try {
+            json.decodeFromString<TokenResponse>(responseBody)
+        } catch (e: Exception) {
+            throw TokenExchangeException("decode_error", "Token exchange decode error")
+        }
 
         // Save to prefs
         prefs.edit()
@@ -182,6 +222,17 @@ class AuthServiceImpl(
             .apply()
 
         _authState.value = AuthState.SignedIn(tokenResponse.user.toAuthUser())
+        trackAuthEvent("sign_in_success", provider = provider)
+    }
+
+    private fun trackAuthEvent(feature: String, provider: String, errorReason: String? = null) {
+        val props = buildMap<String, Any> {
+            put("feature", feature)
+            put("category", "account")
+            put("provider", provider)
+            if (errorReason != null) put("error_reason", errorReason)
+        }
+        analyticsService?.track("feature_use", props)
     }
 
     override suspend fun signOut() {

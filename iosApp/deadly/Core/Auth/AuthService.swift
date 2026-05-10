@@ -14,6 +14,7 @@ final class AuthService: NSObject {
     private(set) var token: String?
 
     private let appPreferences: AppPreferences
+    private let analyticsService: AnalyticsService?
 
     /// Keychain keys are namespaced by environment so tokens don't collide.
     private var tokenKeychainKey: String {
@@ -24,8 +25,9 @@ final class AuthService: NSObject {
         "auth_user_\(appPreferences.serverEnvironment)"
     }
 
-    init(appPreferences: AppPreferences) {
+    init(appPreferences: AppPreferences, analyticsService: AnalyticsService? = nil) {
         self.appPreferences = appPreferences
+        self.analyticsService = analyticsService
         super.init()
         restoreSession()
     }
@@ -86,20 +88,28 @@ final class AuthService: NSObject {
     func signInWithApple() async throws {
         isLoading = true
         defer { isLoading = false }
+        trackAuthEvent("sign_in_attempt", provider: "apple")
 
         let request = ASAuthorizationAppleIDProvider().createRequest()
         request.requestedScopes = [.fullName, .email]
 
-        let authorization = try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<ASAuthorization, Error>) in
-            appleSignInContinuation = continuation
-            let controller = ASAuthorizationController(authorizationRequests: [request])
-            controller.delegate = self
-            controller.performRequests()
+        let authorization: ASAuthorization
+        do {
+            authorization = try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<ASAuthorization, Error>) in
+                appleSignInContinuation = continuation
+                let controller = ASAuthorizationController(authorizationRequests: [request])
+                controller.delegate = self
+                controller.performRequests()
+            }
+        } catch {
+            trackAuthEvent("sign_in_failure", provider: "apple", reason: classifyAppleError(error))
+            throw error
         }
 
         guard let credential = authorization.credential as? ASAuthorizationAppleIDCredential,
               let idTokenData = credential.identityToken,
               let idToken = String(data: idTokenData, encoding: .utf8) else {
+            trackAuthEvent("sign_in_failure", provider: "apple", reason: "invalid_credential")
             throw AuthError.missingCredential
         }
 
@@ -118,9 +128,17 @@ final class AuthService: NSObject {
     func signInWithGoogle(presenting viewController: UIViewController) async throws {
         isLoading = true
         defer { isLoading = false }
+        trackAuthEvent("sign_in_attempt", provider: "google")
 
-        let result = try await GIDSignIn.sharedInstance.signIn(withPresenting: viewController)
+        let result: GIDSignInResult
+        do {
+            result = try await GIDSignIn.sharedInstance.signIn(withPresenting: viewController)
+        } catch {
+            trackAuthEvent("sign_in_failure", provider: "google", reason: classifyGoogleError(error))
+            throw error
+        }
         guard let idToken = result.user.idToken?.tokenString else {
+            trackAuthEvent("sign_in_failure", provider: "google", reason: "invalid_credential")
             throw AuthError.missingCredential
         }
 
@@ -134,10 +152,19 @@ final class AuthService: NSObject {
         var body: [String: String] = ["provider": provider, "idToken": idToken]
         if let name { body["name"] = name }
 
-        let (data, response) = try await apiClient.post(path: "/api/auth/mobile/token", body: body)
+        let data: Data
+        let response: URLResponse
+        do {
+            (data, response) = try await apiClient.post(path: "/api/auth/mobile/token", body: body)
+        } catch {
+            trackAuthEvent("sign_in_failure", provider: provider, reason: "network")
+            throw error
+        }
 
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            let statusCode = (response as? HTTPURLResponse)?.statusCode ?? 0
             let errorBody = String(data: data, encoding: .utf8) ?? "Unknown error"
+            trackAuthEvent("sign_in_failure", provider: provider, reason: "server_\(statusCode)")
             throw AuthError.serverError(errorBody)
         }
 
@@ -146,7 +173,13 @@ final class AuthService: NSObject {
             let user: AuthUser
         }
 
-        let tokenResponse = try JSONDecoder().decode(TokenResponse.self, from: data)
+        let tokenResponse: TokenResponse
+        do {
+            tokenResponse = try JSONDecoder().decode(TokenResponse.self, from: data)
+        } catch {
+            trackAuthEvent("sign_in_failure", provider: provider, reason: "decode_error")
+            throw error
+        }
         currentUser = tokenResponse.user
         token = tokenResponse.token
 
@@ -157,6 +190,46 @@ final class AuthService: NSObject {
         if let userData = try? JSONEncoder().encode(tokenResponse.user) {
             KeychainHelper.save(key: userKeychainKey, data: userData)
         }
+        trackAuthEvent("sign_in_success", provider: provider)
+    }
+
+    private func trackAuthEvent(_ feature: String, provider: String, reason: String? = nil) {
+        var props: [String: Any] = [
+            "feature": feature,
+            "category": "account",
+            "provider": provider,
+        ]
+        if let reason { props["error_reason"] = reason }
+        analyticsService?.track("feature_use", props: props)
+    }
+
+    /// Map Apple sign-in errors to a small, sanitized vocabulary so we never
+    /// log provider-side strings (which can include user emails) into analytics.
+    private func classifyAppleError(_ error: Error) -> String {
+        if let asError = error as? ASAuthorizationError {
+            switch asError.code {
+            case .canceled: return "cancelled"
+            case .invalidResponse, .notHandled, .failed: return "apple_failed"
+            case .notInteractive: return "no_credential"
+            default: return "unknown"
+            }
+        }
+        if (error as NSError).domain == NSURLErrorDomain { return "network" }
+        return "unknown"
+    }
+
+    /// Same intent as `classifyAppleError` for the Google SDK path.
+    private func classifyGoogleError(_ error: Error) -> String {
+        let nsError = error as NSError
+        if nsError.domain == kGIDSignInErrorDomain {
+            switch GIDSignInError.Code(rawValue: nsError.code) {
+            case .canceled: return "cancelled"
+            case .hasNoAuthInKeychain: return "no_credential"
+            default: return "google_failed"
+            }
+        }
+        if nsError.domain == NSURLErrorDomain { return "network" }
+        return "unknown"
     }
 
     // MARK: - Sign Out

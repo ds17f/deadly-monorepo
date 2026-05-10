@@ -46,6 +46,14 @@ final class PlaylistServiceImpl: PlaylistService {
     /// so a state-only gate races; this flag makes the suppression explicit.
     var suppressNextStartEmission: Bool = false
 
+    /// True for the duration of `PlaybackRestorationService.restoreIfAvailable`.
+    /// Restore's seek-while-playing trick drives the player through `.playing`,
+    /// which would otherwise flush the deferred-emit set up by
+    /// `suppressNextStartEmission`. The playback-state observer skips the
+    /// flush while this is set; the restore service clears it via `defer`
+    /// so even an early return leaves emissions enabled again.
+    var isRestoring: Bool = false
+
     /// A start emission that was deferred because the player wasn't yet
     /// playing (set during restore commits). Fires from the playback-state
     /// observer when the user actually begins playback. Cleared if the user
@@ -66,7 +74,7 @@ final class PlaylistServiceImpl: PlaylistService {
     /// Previous `streamPlayer.playbackState` snapshot, used by the observation
     /// loop to detect transitions (e.g. .playing → .buffering = mid-playback
     /// stall) since the observation API only delivers the new value.
-    private var previousPlaybackState: PlaybackState = .idle
+    private var previousPlaybackState: SwiftAudioStreamEx.PlaybackState = .idle
 
     /// Stall detection: timestamp set when we transition .playing → .buffering.
     /// Cleared on the next non-buffering state; emits playback_stall if the
@@ -492,7 +500,7 @@ final class PlaylistServiceImpl: PlaylistService {
                     }
                     self.endActivePlayback(reason: "network_error")
                 }
-                if next.isPlaying {
+                if next.isPlaying && !self.isRestoring {
                     self.flushDeferredStart()
                 }
             }

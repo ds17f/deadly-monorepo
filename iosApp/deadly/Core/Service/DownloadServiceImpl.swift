@@ -31,6 +31,15 @@ final class DownloadServiceImpl: DownloadService {
     /// Per-show queue of records waiting to start, in track order.
     private var pendingDownloads: [String: [DownloadTaskRecord]] = [:]
 
+    /// Wall-clock time the user initiated the download, used to compute
+    /// `duration_ms` on the eventual `download_complete`/`download_failed`.
+    private var showDownloadStartedAt: [String: Date] = [:]
+
+    /// Shows we've already emitted a terminal download result for in this
+    /// session, to avoid double-emitting if more tasks settle after the
+    /// first terminal aggregate.
+    private var showDownloadEmitted: Set<String> = []
+
     nonisolated init(
         archiveClient: some ArchiveMetadataClient,
         showRepository: some ShowRepository,
@@ -154,6 +163,8 @@ final class DownloadServiceImpl: DownloadService {
             "target_id": showId,
             "recording_id": resolvedRecordingId,
         ])
+        showDownloadStartedAt[showId] = Date()
+        showDownloadEmitted.remove(showId)
 
         // Fetch tracks
         let allTracks = try await archiveClient.fetchTracks(recordingId: resolvedRecordingId)
@@ -414,6 +425,7 @@ final class DownloadServiceImpl: DownloadService {
         taskToIdentifier[task.taskIdentifier] = nil
         updateProgress(for: identifier.showId)
         startNextDownloads(for: identifier.showId)
+        maybeEmitShowDownloadResult(showId: identifier.showId)
     }
 
     private func handleProgress(task: URLSessionDownloadTask, bytesWritten: Int64, totalBytes: Int64) {
@@ -457,6 +469,50 @@ final class DownloadServiceImpl: DownloadService {
         taskToIdentifier[task.taskIdentifier] = nil
         updateProgress(for: identifier.showId)
         startNextDownloads(for: identifier.showId)
+        maybeEmitShowDownloadResult(showId: identifier.showId, errorReason: error.localizedDescription)
+    }
+
+    /// Emit `download_complete` or `download_failed` once all tasks for the
+    /// show have settled (no remaining pending/downloading). Idempotent per
+    /// session via `showDownloadEmitted`.
+    private func maybeEmitShowDownloadResult(showId: String, errorReason: String? = nil) {
+        guard !showDownloadEmitted.contains(showId) else { return }
+        let tasks = (try? downloadTaskDAO.fetchForShow(showId)) ?? []
+        guard !tasks.isEmpty else { return }
+
+        let states = tasks.map { $0.downloadState }
+        let stillRunning = states.contains(.downloading) || states.contains(.pending)
+        if stillRunning { return }
+
+        let allCompleted = states.allSatisfy { $0 == .completed }
+        let anyFailed = states.contains(.failed)
+        let totalBytes = tasks.reduce(0) { $0 + $1.bytesDownloaded }
+        let durationMs = showDownloadStartedAt[showId].map {
+            Int(Date().timeIntervalSince($0) * 1000)
+        } ?? 0
+
+        if allCompleted {
+            analyticsService?.track("download_complete", props: [
+                "target_type": "show",
+                "target_id": showId,
+                "duration_ms": durationMs,
+                "bytes": totalBytes,
+            ])
+            showDownloadEmitted.insert(showId)
+            showDownloadStartedAt[showId] = nil
+        } else if anyFailed {
+            let reason = errorReason
+                ?? tasks.first(where: { $0.downloadState == .failed })?.errorMessage
+                ?? "unknown"
+            analyticsService?.track("download_failed", props: [
+                "target_type": "show",
+                "target_id": showId,
+                "duration_ms": durationMs,
+                "error_reason": reason,
+            ])
+            showDownloadEmitted.insert(showId)
+            showDownloadStartedAt[showId] = nil
+        }
     }
 
     private func handlePause(identifier: String, resumeData: Data?) {

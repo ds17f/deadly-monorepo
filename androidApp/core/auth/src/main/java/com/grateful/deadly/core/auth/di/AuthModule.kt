@@ -3,6 +3,7 @@ package com.grateful.deadly.core.auth.di
 import android.content.Context
 import com.grateful.deadly.core.api.auth.AuthService
 import com.grateful.deadly.core.auth.AuthServiceImpl
+import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import dagger.Module
 import dagger.Provides
@@ -22,9 +23,11 @@ object AuthModule {
         @ApplicationContext context: Context,
         appPreferences: AppPreferences,
         @Named("googleAndroidClientId") googleClientId: String,
+        analyticsService: AnalyticsService,
     ): AuthService = AuthServiceImpl(
         context = context,
         appPreferences = appPreferences,
         googleClientId = googleClientId,
+        analyticsService = analyticsService,
     )
 }
