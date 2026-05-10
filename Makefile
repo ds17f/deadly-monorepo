@@ -8,7 +8,7 @@
 .PHONY: setup-signing setup-github-secrets setup-env-secrets setup-hooks
 .PHONY: android-build-release android-build-bundle android-deploy-testing
 .PHONY: android-promote-alpha android-promote-beta android-promote-production
-.PHONY: ios-build-release ios-deploy-testflight
+.PHONY: ios-build-release ios-deploy-testflight ios-promote
 .PHONY: ios-remote-unlock ios-remote-build ios-remote-install ios-remote-sim ios-remote-test ios-remote-resolve
 .PHONY: android-remote-build android-remote-install
 .PHONY: android-remote-emulator android-remote-emu-list android-remote-emu-stop android-remote-run-emulator
@@ -202,6 +202,7 @@ help:
 	@echo "IOS FASTLANE:"
 	@echo "  ios-build-release    - Build signed iOS release IPA"
 	@echo "  ios-deploy-testflight - Deploy to TestFlight"
+	@echo "  ios-promote          - Submit TestFlight build for App Store review (make ios-promote VERSION=1.2.3)"
 	@echo ""
 	@echo "IOS LOCAL BUILD (macOS):"
 	@echo "  ios-build            - Build debug for simulator"
@@ -419,6 +420,14 @@ ios-build-release:
 ios-deploy-testflight:
 	@echo "Deploying to TestFlight..."
 	@cd iosApp && fastlane deploy_testflight
+
+ios-promote:
+	@if [ -z "$(VERSION)" ]; then \
+		echo "Usage: make ios-promote VERSION=1.2.3"; \
+		exit 1; \
+	fi
+	@echo "Submitting iOS v$(VERSION) for App Store review..."
+	@cd iosApp && fastlane promote_to_production version:$(VERSION)
 
 # =============================================================================
 # IOS REMOTE BUILD (Linux → Mac)

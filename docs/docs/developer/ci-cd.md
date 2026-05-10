@@ -313,6 +313,28 @@ fastlane deploy_testflight
 make ios-deploy-testflight
 ```
 
+#### App Store Promotion
+
+**promote_to_production** - Submit a TestFlight build for App Store review
+
+Picks the latest TestFlight build for the given version, submits for App Review, and configures it to auto-release to all users immediately on approval (no phased rollout).
+
+```bash
+cd iosApp
+fastlane promote_to_production version:1.2.3
+
+# Or use Makefile:
+make ios-promote VERSION=1.2.3
+```
+
+Submission settings (in `Fastfile`):
+- `submit_for_review: true` — sends to App Review
+- `automatic_release: true` — releases on approval without manual click
+- `phased_release: false` — 100% rollout immediately (toggle to `true` for Apple's 7-day ramp)
+- `submission_information` — declares no IDFA, no encryption, no third-party content. Update if app behavior changes.
+
+Release notes are read from `RELEASE_NOTES` env var (the workflow extracts them from `iosApp/CHANGELOG.md`). If empty, App Store Connect's existing "What's New" text is preserved.
+
 #### Certificate Management
 
 **sync_certs** - Placeholder for certificate syncing
@@ -381,6 +403,30 @@ This lane is a placeholder. Configure it for your certificate management strateg
 
 **Artifacts** (backup only):
 - `release-ipa` - Signed IPA file
+
+### iOS Promote Workflow
+
+**File**: `.github/workflows/ios-promote.yml`
+
+**Triggers**:
+- Manual `workflow_dispatch` only — run from GitHub → Actions → **Mobile - iOS Promote** → Run workflow
+
+**Inputs**:
+- `version` (required) — e.g. `1.2.3`. Must match a build already in TestFlight.
+
+**Steps**:
+1. Checkout code (full history)
+2. Set up Ruby and install fastlane
+3. Decode App Store Connect API key
+4. Extract release notes for `version` from `iosApp/CHANGELOG.md`
+5. Run `fastlane promote_to_production version:<version>` — submits for review with auto-release, no phased rollout
+6. Update the GitHub Release's "App Store" status row to ✅ / ❌
+7. Clean up API key
+
+**Result**:
+- Build is submitted for App Review (typically 1–24 hours)
+- On approval, releases to 100% of auto-update users immediately
+- The corresponding `ios/v<version>` GitHub Release status table is updated
 
 ### Accessing Releases
 
@@ -532,8 +578,15 @@ cd iosApp && fastlane deploy_device
    ```
 
    **iOS**:
-   - In App Store Connect, submit for App Review from TestFlight
-   - Or promote to production via App Store Connect web interface
+   ```bash
+   # Submit the TestFlight build to the App Store (auto-release on approval)
+   make ios-promote VERSION=1.2.3
+   ```
+   Or trigger via GitHub → Actions → **Mobile - iOS Promote** → Run workflow.
+
+   This calls `fastlane promote_to_production`, which submits for App Review and auto-releases to all users on approval (1–24h review window). No phased rollout — full 100% release immediately on approval.
+
+   To gate manually instead, skip the promote target and submit via App Store Connect → TestFlight → "Submit to App Review".
 
 ---
 
