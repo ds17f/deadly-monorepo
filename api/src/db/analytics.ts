@@ -251,7 +251,7 @@ export interface AnalyticsSummary {
   total_installs: number;
   stale_installs_30d: number;
   platform_split: Record<string, number>;
-  top_shows: Array<{ show_id: string; listeners: number; plays: number }>;
+  top_shows: Array<{ show_id: string; listeners: number; track_plays: number }>;
   top_shows_by_action: Record<ActionShowsBucket, ActionShowsRow[]>;
   feature_adoption: FeatureAdoption;
   avg_completion_rate: number | null;
@@ -345,10 +345,10 @@ export function getSummary(): AnalyticsSummary {
            AND CAST(json_extract(e.props, '$.listened_ms') AS REAL) >= ?
          WHERE s.event = 'playback_start' AND s.ts > ?
        ),
-       plays AS (
+       track_plays AS (
          SELECT
            json_extract(props, '$.show_id') AS show_id,
-           COUNT(*) AS plays
+           COUNT(*) AS track_plays
          FROM analytics_events
          WHERE event = 'playback_start' AND ts > ?
          GROUP BY show_id
@@ -356,11 +356,11 @@ export function getSummary(): AnalyticsSummary {
        SELECT
          l.show_id,
          COUNT(*) AS listeners,
-         COALESCE(p.plays, 0) AS plays
+         COALESCE(p.track_plays, 0) AS track_plays
        FROM listens l
-       LEFT JOIN plays p ON p.show_id = l.show_id
-       GROUP BY l.show_id, p.plays
-       ORDER BY listeners DESC, plays DESC
+       LEFT JOIN track_plays p ON p.show_id = l.show_id
+       GROUP BY l.show_id, p.track_plays
+       ORDER BY listeners DESC, track_plays DESC
        LIMIT 10`,
     )
     .all(
@@ -368,7 +368,7 @@ export function getSummary(): AnalyticsSummary {
       TOP_SHOWS_MIN_LISTEN_MS,
       monthAgo,
       monthAgo,
-    ) as Array<{ show_id: string; listeners: number; plays: number }>;
+    ) as Array<{ show_id: string; listeners: number; track_plays: number }>;
 
   // Feature adoption (last 30 days), bucketed by category
   const featureRows = db

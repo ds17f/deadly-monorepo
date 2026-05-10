@@ -234,7 +234,7 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
                   properties: {
                     show_id: { type: "string" },
                     listeners: { type: "number" },
-                    plays: { type: "number" },
+                    track_plays: { type: "number" },
                   },
                 },
               },
