@@ -238,6 +238,51 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
                   },
                 },
               },
+              top_shows_by_action: {
+                type: "object",
+                properties: {
+                  favorited: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        show_id: { type: "string" },
+                        users: { type: "number" },
+                      },
+                    },
+                  },
+                  downloaded: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        show_id: { type: "string" },
+                        users: { type: "number" },
+                      },
+                    },
+                  },
+                  reviewed: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        show_id: { type: "string" },
+                        users: { type: "number" },
+                      },
+                    },
+                  },
+                  shared: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        show_id: { type: "string" },
+                        users: { type: "number" },
+                      },
+                    },
+                  },
+                },
+              },
               feature_adoption: {
                 type: "object",
                 properties: {
