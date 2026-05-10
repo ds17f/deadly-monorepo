@@ -251,7 +251,7 @@ export interface AnalyticsSummary {
   total_installs: number;
   stale_installs_30d: number;
   platform_split: Record<string, number>;
-  top_shows: Array<{ show_id: string; plays: number }>;
+  top_shows: Array<{ show_id: string; listeners: number }>;
   top_shows_by_action: Record<ActionShowsBucket, ActionShowsRow[]>;
   feature_adoption: FeatureAdoption;
   avg_completion_rate: number | null;
@@ -323,15 +323,39 @@ export function getSummary(): AnalyticsSummary {
   const platform_split: Record<string, number> = {};
   for (const r of platformRows) platform_split[r.platform] = r.c;
 
-  // Top 10 shows (last 30 days)
+  // Top 10 shows by distinct listeners (last 30 days). Counts each install
+  // once per show, only when a matching playback_end recorded ≥30s of
+  // listening — filters out previews and accidental relaunches.
+  // Pairs each start to the same install/session/show within 4h.
+  const TOP_SHOWS_MIN_LISTEN_MS = 30_000;
+  const TOP_SHOWS_MAX_PAIR_WINDOW_MS = 4 * 3600 * 1000;
   const top_shows = db
     .prepare(
-      `SELECT json_extract(props, '$.show_id') AS show_id, COUNT(*) AS plays
-     FROM analytics_events
-     WHERE event = 'playback_start' AND ts > ?
-     GROUP BY show_id ORDER BY plays DESC LIMIT 10`,
+      `WITH listens AS (
+         SELECT DISTINCT
+           json_extract(s.props, '$.show_id') AS show_id,
+           s.iid
+         FROM analytics_events s
+         JOIN analytics_events e
+           ON e.event = 'playback_end'
+           AND e.iid = s.iid
+           AND e.sid = s.sid
+           AND json_extract(e.props, '$.show_id') = json_extract(s.props, '$.show_id')
+           AND e.ts BETWEEN s.ts AND s.ts + ?
+           AND CAST(json_extract(e.props, '$.listened_ms') AS REAL) >= ?
+         WHERE s.event = 'playback_start' AND s.ts > ?
+       )
+       SELECT show_id, COUNT(*) AS listeners
+       FROM listens
+       GROUP BY show_id
+       ORDER BY listeners DESC
+       LIMIT 10`,
     )
-    .all(monthAgo) as Array<{ show_id: string; plays: number }>;
+    .all(
+      TOP_SHOWS_MAX_PAIR_WINDOW_MS,
+      TOP_SHOWS_MIN_LISTEN_MS,
+      monthAgo,
+    ) as Array<{ show_id: string; listeners: number }>;
 
   // Feature adoption (last 30 days), bucketed by category
   const featureRows = db

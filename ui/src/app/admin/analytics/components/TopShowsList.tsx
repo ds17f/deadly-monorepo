@@ -10,7 +10,7 @@ interface ShowInfo {
 
 interface TopShow {
   show_id: string;
-  plays: number;
+  listeners: number;
 }
 
 interface TopShowsListProps {
@@ -58,7 +58,7 @@ export default function TopShowsList({ shows, showMap, onShowClick }: TopShowsLi
                 )}
               </div>
               <span className="text-sm text-zinc-400 flex-shrink-0 tabular-nums">
-                {show.plays} play{show.plays !== 1 ? "s" : ""}
+                {show.listeners} listener{show.listeners !== 1 ? "s" : ""}
               </span>
             </div>
           );

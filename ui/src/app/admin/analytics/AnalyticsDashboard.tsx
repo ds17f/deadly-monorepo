@@ -32,7 +32,7 @@ interface AnalyticsSummary {
   total_installs: number;
   stale_installs_30d: number;
   platform_split: Record<string, number>;
-  top_shows: Array<{ show_id: string; plays: number }>;
+  top_shows: Array<{ show_id: string; listeners: number }>;
   top_shows_by_action: TopShowsByAction;
   feature_adoption: FeatureAdoption;
   avg_completion_rate: number | null;
@@ -79,7 +79,7 @@ const METRIC_LABELS: Record<DetailMetric, string> = {
   total_installs: "Total Installs",
   stale_installs: "Stale Installs (30d)",
   events_today: "Events Today",
-  top_shows: "Top Shows (30d)",
+  top_shows: "Most-listened shows (30d)",
   feature_adoption: "Feature Adoption (30d)",
   platform_split: "Platform Split (30d)",
   playback: "Playback (30d)",
@@ -307,7 +307,7 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
       </CollapsibleSection>
 
       {/* Top Shows */}
-      <CollapsibleSection title="Top Shows (30d)" forceOpen={forceOpen} onDetail={() => openDetail("top_shows")}>
+      <CollapsibleSection title="Most-listened shows (30d)" forceOpen={forceOpen} onDetail={() => openDetail("top_shows")}>
         <TopShowsList
           shows={data.top_shows}
           showMap={showMap}
