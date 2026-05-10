@@ -233,6 +233,7 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
                   type: "object",
                   properties: {
                     show_id: { type: "string" },
+                    listeners: { type: "number" },
                     plays: { type: "number" },
                   },
                 },
@@ -283,6 +284,7 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
                 },
               },
               avg_completion_rate: { type: ["number", "null"] },
+              avg_completion_sample_count: { type: "number" },
               events_today: { type: "number" },
             },
           },
