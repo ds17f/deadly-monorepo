@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "16.1.6",
+    "next": "^16.2.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "qrcode.react": "^4.2.0"
@@ -20,5 +20,8 @@
     "@types/react-dom": "^19",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "overrides": {
+    "postcss": "^8.5.10"
   }
 }
