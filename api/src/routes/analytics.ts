@@ -15,6 +15,7 @@ import {
   getInstallEvents,
 } from "../db/analytics.js";
 import { requireAdmin } from "../auth/middleware.js";
+import { getAllWatersheds } from "../db/eventWatersheds.js";
 
 const VALID_PLATFORMS = new Set(["ios", "android", "web"]);
 const MAX_EVENTS_PER_BATCH = 100;
@@ -472,6 +473,25 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       const clampedDays = Math.min(Math.max(days ?? 14, 1), 90);
       return getTimeseries(metric as TimeseriesMetric, clampedDays);
     },
+  );
+
+  // GET /api/analytics/watersheds — event/field cutover timestamps for chart markers.
+  app.get(
+    "/api/analytics/watersheds",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Event/field watershed timestamps (admin)",
+        response: {
+          200: {
+            type: "object",
+            additionalProperties: { type: "string" },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async () => getAllWatersheds(),
   );
 }
 
