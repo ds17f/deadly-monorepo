@@ -14,7 +14,6 @@ import PlaysBySource from "./components/PlaysBySource";
 import ListeningNow from "./components/ListeningNow";
 import GrowthChart from "./components/GrowthChart";
 import FeatureAdoption from "./components/FeatureAdoption";
-import ShowPlayback from "./components/ShowPlayback";
 import CollapsibleSection from "./components/CollapsibleSection";
 import ShowEngagement, { TopShowsByAction } from "./components/ShowEngagement";
 
@@ -416,11 +415,6 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
           data={data.feature_adoption}
           onFeatureClick={(f) => openDetail("feature_adoption", f)}
         />
-      </CollapsibleSection>
-
-      {/* Show Listening */}
-      <CollapsibleSection title="Show Listening (30d)" forceOpen={forceOpen}>
-        <ShowPlayback showMap={showMap} onOpenInstall={openInstall} />
       </CollapsibleSection>
 
       {/* Detail Panel */}
