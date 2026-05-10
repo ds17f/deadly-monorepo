@@ -75,7 +75,7 @@ export default function ListeningNow() {
     <div className="space-y-1">
       <p className="text-xs text-zinc-500 mb-2">
         {listeners.length} active session{listeners.length !== 1 ? "s" : ""} ·
-        sessions without a playback_end ghost for up to 5 min
+        window covers the longest Dead jams; killed sessions ghost up to 45 min
       </p>
       {listeners.map((l) => (
         <div

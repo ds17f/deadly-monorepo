@@ -649,14 +649,17 @@ export interface LiveListener {
 
 /**
  * Approximate "currently listening" set. Returns each `playback_start`
- * from the last 5 minutes that has no subsequent `playback_end` for the
- * same (iid, sid, show_id, track_index). Sessions that crash or are
- * force-killed without emitting `playback_end` will linger for up to
- * 5 minutes — that's a deliberate trade for not requiring a heartbeat.
+ * from the last 45 minutes that has no subsequent `playback_end` for
+ * the same (iid, sid, show_id, track_index). The window is long enough
+ * to cover the longest Grateful Dead jams ("Dark Star", "Playin' in
+ * the Band", etc, which routinely exceed 25 minutes) without losing
+ * an active listener mid-track. Sessions that crash or are force-killed
+ * without emitting `playback_end` will linger for up to 45 minutes —
+ * a deliberate trade for not requiring a heartbeat.
  */
 export function getLiveListeners(): LiveListener[] {
   const db = getAnalyticsDb();
-  const fiveMinAgo = Date.now() - 5 * 60 * 1000;
+  const windowStart = Date.now() - 45 * 60 * 1000;
 
   return db
     .prepare(
@@ -682,7 +685,7 @@ export function getLiveListeners(): LiveListener[] {
          )
        ORDER BY s.ts DESC`,
     )
-    .all(fiveMinAgo) as LiveListener[];
+    .all(windowStart) as LiveListener[];
 }
 
 // ── Search quality ─────────────────────────────────────────────────

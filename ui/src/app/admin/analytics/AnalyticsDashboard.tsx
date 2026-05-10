@@ -276,7 +276,7 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
       </div>
 
       {/* Listening Now */}
-      <CollapsibleSection title="Listening Now (last 5 min)" forceOpen={forceOpen}>
+      <CollapsibleSection title="Listening Now (last 45 min)" forceOpen={forceOpen}>
         <ListeningNow />
       </CollapsibleSection>
 
