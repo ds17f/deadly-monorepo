@@ -12,6 +12,7 @@ interface TopShow {
   show_id: string;
   listeners: number;
   track_plays: number;
+  completion_rate: number | null;
 }
 
 interface TopShowsListProps {
@@ -64,6 +65,14 @@ export default function TopShowsList({ shows, showMap, onShowClick }: TopShowsLi
                 </span>
                 <span className="text-xs text-zinc-500">
                   {show.track_plays} track{show.track_plays !== 1 ? "s" : ""} played
+                </span>
+                <span
+                  className="text-xs text-zinc-500"
+                  title="Completion: total listened / total duration across all playback_end events for this show (≥5 plays required)"
+                >
+                  {show.completion_rate != null
+                    ? `${Math.round(show.completion_rate * 100)}% completed`
+                    : <span className="text-zinc-600">— completion</span>}
                 </span>
               </div>
             </div>

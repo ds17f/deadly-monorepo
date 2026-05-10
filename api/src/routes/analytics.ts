@@ -235,6 +235,7 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
                     show_id: { type: "string" },
                     listeners: { type: "number" },
                     track_plays: { type: "number" },
+                    completion_rate: { type: ["number", "null"] },
                   },
                 },
               },

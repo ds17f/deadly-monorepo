@@ -32,7 +32,12 @@ interface AnalyticsSummary {
   total_installs: number;
   stale_installs_30d: number;
   platform_split: Record<string, number>;
-  top_shows: Array<{ show_id: string; listeners: number; track_plays: number }>;
+  top_shows: Array<{
+    show_id: string;
+    listeners: number;
+    track_plays: number;
+    completion_rate: number | null;
+  }>;
   top_shows_by_action: TopShowsByAction;
   feature_adoption: FeatureAdoption;
   avg_completion_rate: number | null;

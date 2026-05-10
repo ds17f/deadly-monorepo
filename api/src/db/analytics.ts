@@ -251,7 +251,12 @@ export interface AnalyticsSummary {
   total_installs: number;
   stale_installs_30d: number;
   platform_split: Record<string, number>;
-  top_shows: Array<{ show_id: string; listeners: number; track_plays: number }>;
+  top_shows: Array<{
+    show_id: string;
+    listeners: number;
+    track_plays: number;
+    completion_rate: number | null;
+  }>;
   top_shows_by_action: Record<ActionShowsBucket, ActionShowsRow[]>;
   feature_adoption: FeatureAdoption;
   avg_completion_rate: number | null;
@@ -329,6 +334,11 @@ export function getSummary(): AnalyticsSummary {
   // Pairs each start to the same install/session/show within 4h.
   const TOP_SHOWS_MIN_LISTEN_MS = 30_000;
   const TOP_SHOWS_MAX_PAIR_WINDOW_MS = 4 * 3600 * 1000;
+  // Per-show completion rate (SUM listened / SUM duration), gated to shows
+  // with ≥5 playback_end events to avoid noise from one-off plays. Null
+  // below the threshold so the UI can render a "—" instead of a misleading
+  // small-sample number.
+  const TOP_SHOWS_COMPLETION_MIN_ENDS = 5;
   const top_shows = db
     .prepare(
       `WITH listens AS (
@@ -352,14 +362,36 @@ export function getSummary(): AnalyticsSummary {
          FROM analytics_events
          WHERE event = 'playback_start' AND ts > ?
          GROUP BY show_id
+       ),
+       completions AS (
+         SELECT
+           json_extract(props, '$.show_id') AS show_id,
+           SUM(
+             MIN(
+               CAST(json_extract(props, '$.listened_ms') AS REAL),
+               CAST(json_extract(props, '$.duration_ms') AS REAL)
+             )
+           ) AS sum_listened,
+           SUM(CAST(json_extract(props, '$.duration_ms') AS REAL)) AS sum_duration,
+           COUNT(*) AS end_count
+         FROM analytics_events
+         WHERE event = 'playback_end' AND ts > ?
+           AND CAST(json_extract(props, '$.duration_ms') AS REAL) > 0
+         GROUP BY show_id
        )
        SELECT
          l.show_id,
          COUNT(*) AS listeners,
-         COALESCE(p.track_plays, 0) AS track_plays
+         COALESCE(p.track_plays, 0) AS track_plays,
+         CASE
+           WHEN c.end_count >= ? AND c.sum_duration > 0
+           THEN c.sum_listened / c.sum_duration
+           ELSE NULL
+         END AS completion_rate
        FROM listens l
        LEFT JOIN track_plays p ON p.show_id = l.show_id
-       GROUP BY l.show_id, p.track_plays
+       LEFT JOIN completions c ON c.show_id = l.show_id
+       GROUP BY l.show_id, p.track_plays, c.end_count, c.sum_duration, c.sum_listened
        ORDER BY listeners DESC, track_plays DESC
        LIMIT 10`,
     )
@@ -368,7 +400,14 @@ export function getSummary(): AnalyticsSummary {
       TOP_SHOWS_MIN_LISTEN_MS,
       monthAgo,
       monthAgo,
-    ) as Array<{ show_id: string; listeners: number; track_plays: number }>;
+      monthAgo,
+      TOP_SHOWS_COMPLETION_MIN_ENDS,
+    ) as Array<{
+      show_id: string;
+      listeners: number;
+      track_plays: number;
+      completion_rate: number | null;
+    }>;
 
   // Feature adoption (last 30 days), bucketed by category
   const featureRows = db
