@@ -21,6 +21,15 @@ interface LiveListener {
   tracks: TrackPlay[];
 }
 
+interface ShowName {
+  id: string;
+  d: string;
+  v: string;
+  c: string;
+  s: string;
+  tc: number;
+}
+
 const OUTCOME_COLOR: Record<TrackOutcome, string> = {
   complete: "bg-emerald-500",
   skipped: "bg-amber-400",
@@ -28,25 +37,69 @@ const OUTCOME_COLOR: Record<TrackOutcome, string> = {
   partial: "bg-sky-400",
 };
 
-function TrackOutcomeBar({ tracks }: { tracks: TrackPlay[] }) {
-  if (tracks.length === 0) return null;
-  // Render up to the highest-indexed track played; missing indexes render
-  // as muted slots so a "skipped track 3 of 8" reads as a visible gap.
-  const max = Math.max(...tracks.map((t) => t.index));
-  const byIndex = new Map(tracks.map((t) => [t.index, t.outcome]));
-  const slots: Array<TrackOutcome | null> = [];
-  for (let i = 0; i <= max; i++) slots.push(byIndex.get(i) ?? null);
+const OUTCOME_LABEL: Record<TrackOutcome, string> = {
+  complete: "complete",
+  skipped: "skipped",
+  error: "error",
+  partial: "partial",
+};
+
+const SEVERITY: Record<TrackOutcome, number> = {
+  partial: 0,
+  complete: 1,
+  skipped: 2,
+  error: 3,
+};
+
+/**
+ * Same bar shape as the Show Listening panel: each slot is one of the
+ * show's actual tracks (when total track count is known) so an unplayed
+ * track 8 of 12 reads as four trailing dim slots, not a missing tail.
+ * Falls back to length-of-events when track count is unavailable.
+ */
+function TrackOutcomeBar({
+  tracks,
+  totalTracks,
+}: {
+  tracks: TrackPlay[];
+  totalTracks: number | undefined;
+}) {
+  if (tracks.length === 0 && !totalTracks) return null;
+  const outcomeByPos = new Map<number, TrackOutcome>();
+  for (const t of tracks) {
+    const pos = t.index > 0 ? t.index - 1 : t.index;
+    const prior = outcomeByPos.get(pos);
+    if (!prior || SEVERITY[t.outcome] > SEVERITY[prior]) {
+      outcomeByPos.set(pos, t.outcome);
+    }
+  }
+  const heard = outcomeByPos.size;
+  const maxPos = heard > 0 ? Math.max(...outcomeByPos.keys()) + 1 : 0;
+  const total = totalTracks && totalTracks > 0 ? totalTracks : maxPos;
+  if (total === 0) return null;
+
   return (
-    <div className="flex gap-[2px] mt-1">
-      {slots.map((o, i) => (
-        <div
-          key={i}
-          className={`h-2 flex-1 rounded-sm ${
-            o ? OUTCOME_COLOR[o] : "bg-zinc-800"
-          }`}
-          title={`Track ${i}: ${o ?? "not yet played"}`}
-        />
-      ))}
+    <div className="flex items-center gap-2 mt-1">
+      <div className="flex gap-px" title={`${heard} of ${total} tracks`}>
+        {Array.from({ length: total }, (_, i) => {
+          const outcome = outcomeByPos.get(i);
+          const cls = outcome ? OUTCOME_COLOR[outcome] : "bg-zinc-700";
+          const label = outcome
+            ? `track ${i + 1}: ${OUTCOME_LABEL[outcome]}`
+            : `track ${i + 1}: not played`;
+          return (
+            <div
+              key={i}
+              title={label}
+              className={`h-3 rounded-sm ${cls}`}
+              style={{ width: `${Math.max(Math.min(120 / total, 8), 2)}px` }}
+            />
+          );
+        })}
+      </div>
+      <span className="text-xs text-zinc-500 whitespace-nowrap">
+        {heard}/{total}
+      </span>
     </div>
   );
 }
@@ -74,7 +127,11 @@ function formatShowDate(showId: string | null): string {
   return m ? m[1] : showId.slice(0, 24);
 }
 
-export default function ListeningNow() {
+export default function ListeningNow({
+  showMap,
+}: {
+  showMap?: Map<string, ShowName>;
+} = {}) {
   const [listeners, setListeners] = useState<LiveListener[] | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -137,7 +194,10 @@ export default function ListeningNow() {
               {l.platform} {l.app_version}
             </span>
           </div>
-          <TrackOutcomeBar tracks={l.tracks} />
+          <TrackOutcomeBar
+            tracks={l.tracks}
+            totalTracks={l.show_id ? showMap?.get(l.show_id)?.tc : undefined}
+          />
         </div>
       ))}
     </div>
