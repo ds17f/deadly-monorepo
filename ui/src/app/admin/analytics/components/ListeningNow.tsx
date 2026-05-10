@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { emojiForId } from "./emojiId";
 
 type TrackOutcome = "complete" | "skipped" | "error" | "partial";
 
@@ -177,6 +178,15 @@ export default function ListeningNow({
           key={`${l.iid}-${l.started_at}`}
           className="bg-deadly-surface rounded-lg px-2 py-1.5 text-sm flex items-center gap-3"
         >
+          <span
+            className="inline-flex items-center gap-1 shrink-0 w-24"
+            title={l.iid}
+          >
+            <span>{emojiForId(l.iid)}</span>
+            <span className="font-mono text-xs text-zinc-400">
+              {l.iid.slice(0, 8)}
+            </span>
+          </span>
           <span className="font-mono text-xs text-zinc-500 w-20 shrink-0 tabular-nums">
             {relativeAge(l.started_at)}
           </span>
