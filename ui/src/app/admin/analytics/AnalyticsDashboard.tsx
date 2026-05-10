@@ -9,6 +9,7 @@ import InstallDetailPanel from "./components/InstallDetailPanel";
 import TopShowsList from "./components/TopShowsList";
 import PlatformChart from "./components/PlatformChart";
 import RetentionCohorts from "./components/RetentionCohorts";
+import SearchQuality from "./components/SearchQuality";
 import FeatureAdoption from "./components/FeatureAdoption";
 import ShowPlayback from "./components/ShowPlayback";
 import CollapsibleSection from "./components/CollapsibleSection";
@@ -315,6 +316,11 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
       {/* Retention Cohorts */}
       <CollapsibleSection title="Retention Cohorts (12 weeks)" forceOpen={forceOpen}>
         <RetentionCohorts />
+      </CollapsibleSection>
+
+      {/* Search Quality */}
+      <CollapsibleSection title="Search Quality (30d)" forceOpen={forceOpen}>
+        <SearchQuality />
       </CollapsibleSection>
 
       {/* Top Shows */}

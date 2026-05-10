@@ -604,6 +604,101 @@ export function getRetentionCohorts(weeks = 12): RetentionCohort[] {
     .all(oldestWeekStart, todayDay, todayDay, todayDay) as RetentionCohort[];
 }
 
+// ── Search quality ─────────────────────────────────────────────────
+
+export interface SearchQuality {
+  total_searches: number;
+  /** Searches whose result_count was 0. */
+  zero_result_count: number;
+  /** Searches with no selected_index (user didn't tap a result). */
+  abandon_count: number;
+  /** Median position of the selected result. Lower is better. */
+  median_selected_index: number | null;
+  top_zero_result: Array<{ query: string; count: number }>;
+  top_successful: Array<{ query: string; count: number }>;
+}
+
+export function getSearchQuality(days = 30): SearchQuality {
+  const db = getAnalyticsDb();
+  const cutoff = Date.now() - days * 24 * 3600 * 1000;
+
+  const overview = db
+    .prepare(
+      `SELECT
+         COUNT(*) AS total_searches,
+         COUNT(CASE WHEN json_extract(props, '$.result_count') = 0 THEN 1 END) AS zero_result_count,
+         COUNT(CASE WHEN json_extract(props, '$.selected_index') IS NULL THEN 1 END) AS abandon_count
+       FROM analytics_events
+       WHERE event = 'search' AND ts > ?`,
+    )
+    .get(cutoff) as {
+    total_searches: number;
+    zero_result_count: number;
+    abandon_count: number;
+  };
+
+  // Pull all selected_index values to compute median in JS — SQLite has no
+  // MEDIAN. Cheap at this volume; revisit if search events ever get to
+  // millions/day.
+  const selectedRows = db
+    .prepare(
+      `SELECT CAST(json_extract(props, '$.selected_index') AS INTEGER) AS si
+       FROM analytics_events
+       WHERE event = 'search' AND ts > ?
+         AND json_extract(props, '$.selected_index') IS NOT NULL`,
+    )
+    .all(cutoff) as Array<{ si: number }>;
+  const selectedIndices = selectedRows
+    .map((r) => r.si)
+    .filter((n) => Number.isFinite(n))
+    .sort((a, b) => a - b);
+  const median_selected_index =
+    selectedIndices.length === 0
+      ? null
+      : selectedIndices.length % 2 === 1
+        ? selectedIndices[(selectedIndices.length - 1) / 2]
+        : (selectedIndices[selectedIndices.length / 2 - 1] +
+            selectedIndices[selectedIndices.length / 2]) /
+          2;
+
+  // Top 20 zero-result queries. Filtered to length ≥ 3 to skip the noise
+  // of users still typing — single chars dominate raw counts otherwise.
+  const top_zero_result = db
+    .prepare(
+      `SELECT json_extract(props, '$.query') AS query, COUNT(*) AS count
+       FROM analytics_events
+       WHERE event = 'search' AND ts > ?
+         AND json_extract(props, '$.result_count') = 0
+         AND length(TRIM(json_extract(props, '$.query'))) >= 3
+       GROUP BY query
+       ORDER BY count DESC, query ASC
+       LIMIT 20`,
+    )
+    .all(cutoff) as Array<{ query: string; count: number }>;
+
+  const top_successful = db
+    .prepare(
+      `SELECT json_extract(props, '$.query') AS query, COUNT(*) AS count
+       FROM analytics_events
+       WHERE event = 'search' AND ts > ?
+         AND CAST(json_extract(props, '$.result_count') AS INTEGER) > 0
+         AND length(TRIM(json_extract(props, '$.query'))) >= 3
+       GROUP BY query
+       ORDER BY count DESC, query ASC
+       LIMIT 20`,
+    )
+    .all(cutoff) as Array<{ query: string; count: number }>;
+
+  return {
+    total_searches: overview.total_searches,
+    zero_result_count: overview.zero_result_count,
+    abandon_count: overview.abandon_count,
+    median_selected_index,
+    top_zero_result,
+    top_successful,
+  };
+}
+
 export type TimeseriesMetric = "dau" | "events" | "playback_starts";
 
 export interface TimeseriesPoint {

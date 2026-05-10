@@ -14,6 +14,7 @@ import {
   type TimeseriesMetric,
   getInstallEvents,
   getRetentionCohorts,
+  getSearchQuality,
 } from "../db/analytics.js";
 import { requireAdmin } from "../auth/middleware.js";
 import { ANALYTICS_WATERSHED } from "../analytics-watershed.js";
@@ -521,6 +522,58 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       }
       const clampedDays = Math.min(Math.max(days ?? 14, 1), 90);
       return getTimeseries(metric as TimeseriesMetric, clampedDays);
+    },
+  );
+
+  // GET /api/analytics/search-quality — zero-result + abandon + ranking-quality stats.
+  app.get(
+    "/api/analytics/search-quality",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Search quality metrics (admin)",
+        querystring: {
+          type: "object",
+          properties: { days: { type: "number", default: 30 } },
+        },
+        response: {
+          200: {
+            type: "object",
+            properties: {
+              total_searches: { type: "number" },
+              zero_result_count: { type: "number" },
+              abandon_count: { type: "number" },
+              median_selected_index: { type: ["number", "null"] },
+              top_zero_result: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    query: { type: "string" },
+                    count: { type: "number" },
+                  },
+                },
+              },
+              top_successful: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    query: { type: "string" },
+                    count: { type: "number" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { days } = request.query as { days?: number };
+      const clamped = Math.min(Math.max(days ?? 30, 1), 90);
+      return getSearchQuality(clamped);
     },
   );
 
