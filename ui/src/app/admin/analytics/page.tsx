@@ -2,17 +2,21 @@ import { Suspense } from "react";
 import { buildShowIndex, getShowById } from "@/lib/shows";
 import AnalyticsDashboard from "./AnalyticsDashboard";
 
-function loadShowNames(): Array<{ id: string; d: string; v: string; c: string; s: string; tc: number }> {
+function loadShowNames(): Array<{ id: string; d: string; v: string; c: string; s: string; tc: number; img: string | null }> {
   try {
     return buildShowIndex().map((entry) => {
       let tc = 0;
+      let img: string | null = null;
       try {
         const show = getShowById(entry.id);
         if (show.setlist) {
           tc = show.setlist.reduce((sum, set) => sum + (set.songs?.length ?? 0), 0);
         }
+        if (show.ticket_images && show.ticket_images.length > 0) {
+          img = show.ticket_images[0].url;
+        }
       } catch { /* show file missing */ }
-      return { id: entry.id, d: entry.d, v: entry.v, c: entry.c, s: entry.s, tc };
+      return { id: entry.id, d: entry.d, v: entry.v, c: entry.c, s: entry.s, tc, img };
     });
   } catch {
     return [];

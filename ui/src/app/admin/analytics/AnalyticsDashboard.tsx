@@ -76,6 +76,7 @@ interface ShowName {
   c: string;
   s: string;
   tc: number;
+  img: string | null;
 }
 
 type DetailMetric =
@@ -283,6 +284,18 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
         <ListeningNow showMap={showMap} />
       </CollapsibleSection>
 
+      {/* Most-listened shows */}
+      <CollapsibleSection
+        title="Most-listened shows"
+        forceOpen={forceOpen}
+        onDetail={() => openDetail("top_shows")}
+      >
+        <TopShowsList
+          showMap={showMap}
+          onShowClick={(id) => openDetail("top_shows", id)}
+        />
+      </CollapsibleSection>
+
       {/* Growth */}
       <CollapsibleSection
         title="Growth (60d)"
@@ -386,15 +399,6 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
       {/* Search Quality */}
       <CollapsibleSection title="Search Quality (30d)" forceOpen={forceOpen}>
         <SearchQuality />
-      </CollapsibleSection>
-
-      {/* Top Shows */}
-      <CollapsibleSection title="Most-listened shows (30d)" forceOpen={forceOpen} onDetail={() => openDetail("top_shows")}>
-        <TopShowsList
-          shows={data.top_shows}
-          showMap={showMap}
-          onShowClick={(id) => openDetail("top_shows", id)}
-        />
       </CollapsibleSection>
 
       {/* Show Engagement (favorites / downloads / reviews / shares) */}

@@ -17,6 +17,7 @@ import {
   getSearchQuality,
   getLiveListeners,
   getGrowthByPlatform,
+  getTopShows,
 } from "../db/analytics.js";
 import { requireAdmin } from "../auth/middleware.js";
 import { ANALYTICS_WATERSHED } from "../analytics-watershed.js";
@@ -538,6 +539,50 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       }
       const clampedDays = Math.min(Math.max(days ?? 14, 1), 90);
       return getTimeseries(metric as TimeseriesMetric, clampedDays);
+    },
+  );
+
+  // GET /api/analytics/top-shows — most-listened shows over a configurable window.
+  app.get(
+    "/api/analytics/top-shows",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Top shows by distinct listeners (admin)",
+        querystring: {
+          type: "object",
+          properties: {
+            days: { type: "number", default: 30 },
+            limit: { type: "number", default: 20 },
+          },
+        },
+        response: {
+          200: {
+            type: "object",
+            properties: {
+              shows: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    show_id: { type: "string" },
+                    listeners: { type: "number" },
+                    track_plays: { type: "number" },
+                    completion_rate: { type: ["number", "null"] },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { days, limit } = request.query as { days?: number; limit?: number };
+      const clampedDays = Math.min(Math.max(days ?? 30, 1), 365);
+      const clampedLimit = Math.min(Math.max(limit ?? 20, 1), 100);
+      return { shows: getTopShows(clampedDays, clampedLimit) };
     },
   );
 
