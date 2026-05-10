@@ -5,6 +5,10 @@ import Sparkline from "./Sparkline";
 interface MetricCardProps {
   label: string;
   value: string | number;
+  /** Singular form of the unit (rendered as plural unless value === "1"). */
+  unit?: string;
+  /** Tooltip on the label, for inline disambiguation. */
+  hint?: string;
   timeseries?: number[];
   onClick?: () => void;
 }
@@ -25,8 +29,13 @@ function computeDelta(data: number[]): { text: string; positive: boolean } | nul
   };
 }
 
-export default function MetricCard({ label, value, timeseries, onClick }: MetricCardProps) {
+export default function MetricCard({ label, value, unit, hint, timeseries, onClick }: MetricCardProps) {
   const delta = timeseries ? computeDelta(timeseries) : null;
+  const unitLabel = unit
+    ? typeof value === "number"
+      ? `${unit}${value === 1 ? "" : "s"}`
+      : unit
+    : null;
 
   return (
     <div
@@ -37,12 +46,19 @@ export default function MetricCard({ label, value, timeseries, onClick }: Metric
     >
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0 flex-1">
-          <p className="text-xs text-zinc-400 uppercase tracking-wider mb-1">
+          <p
+            className="text-xs text-zinc-400 uppercase tracking-wider mb-1"
+            title={hint}
+          >
             {label}
+            {hint && <span className="ml-1 text-zinc-600 cursor-help">ⓘ</span>}
             {onClick && <span className="ml-1 text-zinc-600">&rarr;</span>}
           </p>
           <div className="flex items-baseline gap-2">
             <p className="text-2xl sm:text-3xl font-bold text-white">{value}</p>
+            {unitLabel && (
+              <span className="text-sm text-zinc-500">{unitLabel}</span>
+            )}
             {delta && (
               <span
                 className={`text-xs font-medium ${

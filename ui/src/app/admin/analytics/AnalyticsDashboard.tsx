@@ -95,7 +95,7 @@ const METRIC_LABELS: Record<DetailMetric, string> = {
   events_today: "Events Today",
   top_shows: "Most-listened shows (30d)",
   feature_adoption: "Feature Adoption (30d)",
-  platform_split: "Platform Split (30d)",
+  platform_split: "Active installs by platform (30d)",
   playback: "Playback (30d)",
   playback_source: "Plays by Source (30d)",
 };
@@ -277,9 +277,30 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
       {/* Active Users */}
       <CollapsibleSection title="Active Users" forceOpen={forceOpen}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          <MetricCard label="DAU" value={data.dau} timeseries={dauValues} onClick={() => openDetail("dau")} />
-          <MetricCard label="WAU" value={data.wau} timeseries={dauValues} onClick={() => openDetail("wau")} />
-          <MetricCard label="MAU" value={data.mau} timeseries={dauValues} onClick={() => openDetail("mau")} />
+          <MetricCard
+            label="DAU"
+            value={data.dau}
+            unit="user"
+            hint="Distinct installs that opened the app today"
+            timeseries={dauValues}
+            onClick={() => openDetail("dau")}
+          />
+          <MetricCard
+            label="WAU"
+            value={data.wau}
+            unit="user"
+            hint="Distinct installs that opened the app in the last 7 days"
+            timeseries={dauValues}
+            onClick={() => openDetail("wau")}
+          />
+          <MetricCard
+            label="MAU"
+            value={data.mau}
+            unit="user"
+            hint="Distinct installs that opened the app in the last 30 days"
+            timeseries={dauValues}
+            onClick={() => openDetail("mau")}
+          />
         </div>
       </CollapsibleSection>
 
@@ -289,16 +310,21 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
           <MetricCard
             label="Total Installs"
             value={data.total_installs}
+            unit="install"
+            hint="Distinct iids ever seen"
             onClick={() => openDetail("total_installs")}
           />
           <MetricCard
             label="Stale (30d)"
             value={data.stale_installs_30d}
+            unit="install"
+            hint="Seen ever, not seen in last 30 days"
             onClick={() => openDetail("stale_installs")}
           />
           <MetricCard
             label="Events Today"
             value={data.events_today}
+            unit="event"
             timeseries={eventsValues}
             onClick={() => openDetail("events_today")}
           />
@@ -309,12 +335,13 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
                 ? `${Math.round(data.avg_completion_rate * 100)}%`
                 : "—"
             }
+            hint="Average of MIN(listened_ms, duration_ms) / duration_ms across playback_end events where both fields are ≥60s"
           />
         </div>
       </CollapsibleSection>
 
       {/* Platform Split */}
-      <CollapsibleSection title="Platform Split (30d)" forceOpen={forceOpen} onDetail={() => openDetail("platform_split")}>
+      <CollapsibleSection title="Active installs by platform (30d)" forceOpen={forceOpen} onDetail={() => openDetail("platform_split")}>
         <PlatformChart
           data={data.platform_split}
           onPlatformClick={(p) => openDetail("platform_split", p)}
