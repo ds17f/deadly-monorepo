@@ -255,6 +255,7 @@ export interface AnalyticsSummary {
   top_shows_by_action: Record<ActionShowsBucket, ActionShowsRow[]>;
   feature_adoption: FeatureAdoption;
   avg_completion_rate: number | null;
+  avg_completion_sample_count: number;
   events_today: number;
 }
 
@@ -398,19 +399,37 @@ export function getSummary(): AnalyticsSummary {
     shared: topShowsForFeatures(["share_show"], 10),
   };
 
-  // Average completion rate (last 30 days)
+  // Average completion rate (last 30 days), restricted to "real listens":
+  // both listened_ms and duration_ms ≥ 60s. Short previews and 1-second
+  // skips would otherwise drag the average toward zero.
+  // listened_ms is capped at duration_ms so replays / over-runs don't
+  // produce ratios > 1.
+  const MIN_LISTEN_MS = 60_000;
   const completion = db
     .prepare(
-      `SELECT AVG(
-      CAST(json_extract(props, '$.listened_ms') AS REAL) /
-      NULLIF(CAST(json_extract(props, '$.duration_ms') AS REAL), 0)
-    ) AS avg_rate
-    FROM analytics_events WHERE event = 'playback_end' AND ts > ?`,
+      `SELECT
+         AVG(
+           MIN(
+             CAST(json_extract(props, '$.listened_ms') AS REAL),
+             CAST(json_extract(props, '$.duration_ms') AS REAL)
+           ) /
+           CAST(json_extract(props, '$.duration_ms') AS REAL)
+         ) AS avg_rate,
+         COUNT(*) AS sample_count
+       FROM analytics_events
+       WHERE event = 'playback_end'
+         AND ts > ?
+         AND CAST(json_extract(props, '$.listened_ms') AS REAL) >= ?
+         AND CAST(json_extract(props, '$.duration_ms') AS REAL) >= ?`,
     )
-    .get(monthAgo) as { avg_rate: number | null };
+    .get(monthAgo, MIN_LISTEN_MS, MIN_LISTEN_MS) as {
+    avg_rate: number | null;
+    sample_count: number;
+  };
   const avg_completion_rate = completion?.avg_rate
     ? Math.round(completion.avg_rate * 1000) / 1000
     : null;
+  const avg_completion_sample_count = completion?.sample_count ?? 0;
 
   // Events today
   const todayStart =
@@ -435,6 +454,7 @@ export function getSummary(): AnalyticsSummary {
     top_shows_by_action,
     feature_adoption,
     avg_completion_rate,
+    avg_completion_sample_count,
     events_today,
   };
 }

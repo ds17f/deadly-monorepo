@@ -36,6 +36,7 @@ interface AnalyticsSummary {
   top_shows_by_action: TopShowsByAction;
   feature_adoption: FeatureAdoption;
   avg_completion_rate: number | null;
+  avg_completion_sample_count: number;
   events_today: number;
 }
 
@@ -285,6 +286,14 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
             value={data.events_today}
             timeseries={eventsValues}
             onClick={() => openDetail("events_today")}
+          />
+          <MetricCard
+            label="Avg Completion (≥1min listens, 30d)"
+            value={
+              data.avg_completion_rate != null
+                ? `${Math.round(data.avg_completion_rate * 100)}%`
+                : "—"
+            }
           />
         </div>
       </CollapsibleSection>
