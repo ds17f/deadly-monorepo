@@ -74,9 +74,24 @@ export default function GrowthChart({
           );
         })}
       </div>
-      <div className="flex justify-between text-[10px] text-zinc-600 font-mono px-1">
-        <span>{data[0]?.day}</span>
-        <span>{data[data.length - 1]?.day}</span>
+      {/* Tick labels: ~one every 7 bars so a 60-day view shows ~9 dates
+          without crowding. Each label sits on its bar's column. */}
+      <div className="flex gap-[2px] px-1 -mt-2">
+        {data.map((p, i) => {
+          const tickEvery = Math.max(1, Math.round(data.length / 9));
+          const showTick = i % tickEvery === 0 || i === data.length - 1;
+          // Strip year for the visible labels — matches MM-DD which is
+          // dense enough at this width.
+          const short = p.day.slice(5);
+          return (
+            <div
+              key={p.day}
+              className="flex-1 text-center text-[10px] text-zinc-600 font-mono"
+            >
+              {showTick ? short : ""}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
