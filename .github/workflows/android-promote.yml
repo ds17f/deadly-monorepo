@@ -25,6 +25,13 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+      with:
+        # Check out the tag for the version being promoted so the
+        # CHANGELOG entry the awk-extract reads is guaranteed to match
+        # the version. Without this, a release commit that lives only on
+        # the source feature branch (not main) leaves promote-time
+        # release notes empty.
+        ref: android/v${{ inputs.version }}
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@a6e6f86333f0a2523ece813039b8b4be04560854 # v1.190.0
@@ -54,6 +61,12 @@ jobs:
       run: |
         VERSION="${{ inputs.version }}"
         RAW=$(awk "/^## \[${VERSION}\]/{flag=1; next} /^## \[/{flag=0} flag" androidApp/CHANGELOG.md | sed '/^[[:space:]]*$/d')
+        if [ -z "$RAW" ]; then
+          echo "::error::No CHANGELOG entry found for version ${VERSION} in androidApp/CHANGELOG.md." >&2
+          echo "::error::Play Console needs release notes per track; an empty value silently truncates them." >&2
+          echo "::error::Check that the android/v${VERSION} tag points at a commit containing the '## [${VERSION}]' section." >&2
+          exit 1
+        fi
         if [ ${#RAW} -gt 500 ]; then
           RAW="${RAW:0:497}..."
         fi
