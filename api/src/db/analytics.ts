@@ -77,7 +77,60 @@ function initSchema(db: Database.Database): void {
       props_summary TEXT,
       PRIMARY KEY (day, event, platform, app_version)
     );
+
+    CREATE TABLE IF NOT EXISTS watched_installs (
+      iid TEXT PRIMARY KEY,
+      name TEXT,
+      notes TEXT,
+      watched_at INTEGER NOT NULL
+    );
   `);
+}
+
+// ── Watched installs ──────────────────────────────────────────────────
+
+export interface WatchedInstall {
+  iid: string;
+  name: string | null;
+  notes: string | null;
+  watched_at: number;
+}
+
+export function getWatchedInstalls(): WatchedInstall[] {
+  const db = getAnalyticsDb();
+  return db
+    .prepare(
+      `SELECT iid, name, notes, watched_at
+       FROM watched_installs
+       ORDER BY watched_at DESC`,
+    )
+    .all() as WatchedInstall[];
+}
+
+export function setWatchedInstall(
+  iid: string,
+  name: string | null,
+  notes: string | null,
+): WatchedInstall {
+  const db = getAnalyticsDb();
+  const now = Date.now();
+  db.prepare(
+    `INSERT INTO watched_installs (iid, name, notes, watched_at)
+     VALUES (?, ?, ?, ?)
+     ON CONFLICT(iid) DO UPDATE SET
+       name = excluded.name,
+       notes = excluded.notes`,
+  ).run(iid, name, notes, now);
+  return db
+    .prepare(
+      `SELECT iid, name, notes, watched_at FROM watched_installs WHERE iid = ?`,
+    )
+    .get(iid) as WatchedInstall;
+}
+
+export function removeWatchedInstall(iid: string): void {
+  const db = getAnalyticsDb();
+  db.prepare(`DELETE FROM watched_installs WHERE iid = ?`).run(iid);
 }
 
 // ── Valid events and their allowed prop keys ─────────────────────────

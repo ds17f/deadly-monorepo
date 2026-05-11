@@ -1,6 +1,7 @@
 "use client";
 
 import { emojiForId } from "./emojiId";
+import { useWatchedInstalls } from "./WatchedInstallsContext";
 
 export type TrackOutcome = "complete" | "skipped" | "error" | "partial";
 
@@ -173,25 +174,59 @@ export function ListeningRow({
   const sourceLabel = source ? (SOURCE_LABELS[source] ?? source) : "—";
   const age = relativeAge(ts);
   const trackLabel = track_index != null ? `track ${track_index}` : "—";
+  const { isWatched, nameFor, setWatched, unwatch } = useWatchedInstalls();
+  const watched = isWatched(iid);
+  const friendlyName = nameFor(iid);
+
+  const toggleWatch = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (watched) unwatch(iid);
+    else setWatched(iid, null, null);
+  };
+
+  const StarButton = (
+    <button
+      onClick={toggleWatch}
+      title={watched ? "Stop watching" : "Watch this install"}
+      className={`shrink-0 w-4 text-center leading-none transition-colors ${
+        watched
+          ? "text-amber-400 hover:text-amber-300"
+          : "text-zinc-600 hover:text-amber-300"
+      }`}
+      aria-label={watched ? "Unwatch" : "Watch"}
+    >
+      {watched ? "★" : "☆"}
+    </button>
+  );
 
   return (
     <div
       onClick={onClick}
       className={`bg-deadly-surface rounded-lg text-sm ${
         interactive ? "cursor-pointer hover:bg-zinc-800 transition-colors" : ""
-      }`}
+      } ${watched ? "ring-1 ring-amber-500/40" : ""}`}
     >
       {/* Mobile: stacked two-line card */}
       <div className="sm:hidden px-3 py-2 flex flex-col gap-1.5">
-        <div className="flex items-center gap-2">
-          <span className="inline-flex items-center gap-1 shrink-0" title={iid}>
-            <span>{emojiForId(iid)}</span>
-            <span className="font-mono text-xs text-zinc-400">
-              {iid.slice(0, 8)}
-            </span>
+        <div className="flex items-center gap-2 min-w-0">
+          <span
+            className="inline-flex items-center gap-1 min-w-0 flex-1"
+            title={iid}
+          >
+            {StarButton}
+            <span className="shrink-0">{emojiForId(iid)}</span>
+            {friendlyName ? (
+              <span className="text-zinc-200 truncate min-w-0">
+                {friendlyName}
+              </span>
+            ) : (
+              <span className="font-mono text-xs text-zinc-400 shrink-0">
+                {iid.slice(0, 8)}
+              </span>
+            )}
           </span>
-          <ShowDateLink showId={show_id} className="text-zinc-300 ml-1" />
-          <span className="font-mono text-xs text-zinc-500 ml-auto tabular-nums">
+          <ShowDateLink showId={show_id} className="text-zinc-300 shrink-0" />
+          <span className="font-mono text-xs text-zinc-500 shrink-0 tabular-nums">
             {age}
           </span>
         </div>
@@ -208,13 +243,20 @@ export function ListeningRow({
       {/* Desktop: single horizontal row */}
       <div className="hidden sm:flex items-center gap-3 px-2 py-1.5">
         <span
-          className="inline-flex items-center gap-1 shrink-0 w-24"
+          className="inline-flex items-center gap-1 shrink-0 w-40"
           title={iid}
         >
-          <span>{emojiForId(iid)}</span>
-          <span className="font-mono text-xs text-zinc-400">
-            {iid.slice(0, 8)}
-          </span>
+          {StarButton}
+          <span className="shrink-0">{emojiForId(iid)}</span>
+          {friendlyName ? (
+            <span className="text-zinc-200 truncate min-w-0">
+              {friendlyName}
+            </span>
+          ) : (
+            <span className="font-mono text-xs text-zinc-400 shrink-0">
+              {iid.slice(0, 8)}
+            </span>
+          )}
         </span>
         <span className="font-mono text-xs text-zinc-500 w-20 shrink-0 tabular-nums">
           {age}

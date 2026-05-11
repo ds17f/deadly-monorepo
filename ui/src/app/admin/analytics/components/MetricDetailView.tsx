@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { emojiForId } from "./emojiId";
+import { useWatchedInstalls } from "./WatchedInstallsContext";
 
 const SHOW_ID_RE = /^\d{4}-\d{2}-\d{2}(-[\w-]+)?$/;
 function isShowId(value: string): boolean {
@@ -67,6 +67,7 @@ interface Props {
 
 export default function MetricDetailView({ metric, filter, backHref }: Props) {
   const router = useRouter();
+  const { isWatched, nameFor, setWatched, unwatch } = useWatchedInstalls();
   const [rows, setRows] = useState<DetailRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [sortKey, setSortKey] = useState<SortKey>("last_seen");
@@ -119,12 +120,12 @@ export default function MetricDetailView({ metric, filter, backHref }: Props) {
       <div className="max-w-3xl mx-auto p-4 sm:p-6">
         {/* Header */}
         <div className="mb-3 flex items-center gap-3">
-          <Link
-            href={backHref}
+          <button
+            onClick={() => router.push(backHref)}
             className="text-zinc-400 hover:text-white text-sm flex items-center gap-1"
           >
             <span>&larr;</span> Back
-          </Link>
+          </button>
         </div>
         <div className="mb-3 flex items-baseline justify-between gap-2 flex-wrap">
           <h1 className="text-lg font-semibold text-white">
@@ -137,12 +138,12 @@ export default function MetricDetailView({ metric, filter, backHref }: Props) {
           </h1>
           <div className="flex items-center gap-3">
             {filter && (
-              <Link
-                href={`/admin/analytics?metric=${metric}`}
+              <button
+                onClick={() => router.push(`/admin/analytics?metric=${metric}`)}
                 className="text-xs text-zinc-400 hover:text-white"
               >
                 clear filter
-              </Link>
+              </button>
             )}
             <span className="text-xs text-zinc-500">{rows.length} rows</span>
           </div>
@@ -183,15 +184,28 @@ export default function MetricDetailView({ metric, filter, backHref }: Props) {
               {sortedRows.map((row, i) => {
                 const detail = row.detail;
                 const detailIsShow = detail != null && isShowId(detail);
+                const rowWatched = isWatched(row.iid);
                 return (
-                  <button
+                  <div
                     key={i}
+                    role="button"
+                    tabIndex={0}
                     onClick={() =>
                       router.push(
                         `/admin/analytics?install=${encodeURIComponent(row.iid)}`,
                       )
                     }
-                    className="w-full text-left bg-zinc-800/50 hover:bg-zinc-800 active:bg-zinc-700/50 rounded px-2.5 py-1.5 flex flex-col gap-0.5"
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        router.push(
+                          `/admin/analytics?install=${encodeURIComponent(row.iid)}`,
+                        );
+                      }
+                    }}
+                    className={`w-full text-left bg-zinc-800/50 hover:bg-zinc-800 active:bg-zinc-700/50 rounded px-2.5 py-1.5 flex flex-col gap-0.5 cursor-pointer ${
+                      rowWatched ? "ring-1 ring-amber-500/40" : ""
+                    }`}
                   >
                     {detail && (
                       <div className="flex items-baseline justify-between gap-2 min-w-0 text-sm">
@@ -205,8 +219,32 @@ export default function MetricDetailView({ metric, filter, backHref }: Props) {
                     )}
                     <div className="flex items-center justify-between gap-2 text-xs">
                       <span className="flex items-center gap-1 min-w-0 text-deadly-blue">
-                        <span>{emojiForId(row.iid)}</span>
-                        <span className="font-mono">{row.iid?.slice(0, 8)}</span>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            if (rowWatched) unwatch(row.iid);
+                            else setWatched(row.iid, null, null);
+                          }}
+                          title={rowWatched ? "Stop watching" : "Watch this install"}
+                          aria-label={rowWatched ? "Unwatch" : "Watch"}
+                          className={`shrink-0 w-4 text-center leading-none transition-colors ${
+                            rowWatched
+                              ? "text-amber-400 hover:text-amber-300"
+                              : "text-zinc-600 hover:text-amber-300"
+                          }`}
+                        >
+                          {rowWatched ? "★" : "☆"}
+                        </button>
+                        <span className="shrink-0">{emojiForId(row.iid)}</span>
+                        {nameFor(row.iid) ? (
+                          <span className="text-zinc-200 truncate min-w-0">
+                            {nameFor(row.iid)}
+                          </span>
+                        ) : (
+                          <span className="font-mono shrink-0">
+                            {row.iid?.slice(0, 8)}
+                          </span>
+                        )}
                       </span>
                       <span className="flex items-center gap-1.5 text-zinc-500 flex-shrink-0">
                         <span>{row.platform}</span>
@@ -219,7 +257,7 @@ export default function MetricDetailView({ metric, filter, backHref }: Props) {
                         )}
                       </span>
                     </div>
-                  </button>
+                  </div>
                 );
               })}
             </div>

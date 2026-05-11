@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ListeningRow, type TrackPlay } from "./listeningRow";
+import { useWatchedInstalls } from "./WatchedInstallsContext";
 
 interface LiveListener {
   iid: string;
@@ -29,10 +30,13 @@ const POLL_INTERVAL_MS = 15_000;
 export default function ListeningNow({
   showMap,
   onOpenInstall,
+  watchedOnly = false,
 }: {
   showMap?: Map<string, ShowName>;
   onOpenInstall?: (iid: string) => void;
+  watchedOnly?: boolean;
 } = {}) {
+  const { isWatched } = useWatchedInstalls();
   const [listeners, setListeners] = useState<LiveListener[] | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -59,10 +63,16 @@ export default function ListeningNow({
   if (listeners === null)
     return <p className="text-sm text-zinc-500">Loading…</p>;
 
-  if (listeners.length === 0) {
+  const visible = watchedOnly
+    ? listeners.filter((l) => isWatched(l.iid))
+    : listeners;
+
+  if (visible.length === 0) {
     return (
       <p className="text-sm text-zinc-500 italic">
-        No active sessions in the last 5 minutes.
+        {watchedOnly
+          ? "No watched installs are currently listening."
+          : "No active sessions in the last 5 minutes."}
       </p>
     );
   }
@@ -70,10 +80,10 @@ export default function ListeningNow({
   return (
     <div className="space-y-1">
       <p className="text-xs text-zinc-500 mb-2">
-        {listeners.length} active session{listeners.length !== 1 ? "s" : ""} ·
-        window covers the longest Dead jams; killed sessions ghost up to 45 min
+        {visible.length} active session{visible.length !== 1 ? "s" : ""}
+        {watchedOnly ? " (watched only)" : " · window covers the longest Dead jams; killed sessions ghost up to 45 min"}
       </p>
-      {listeners.map((l) => (
+      {visible.map((l) => (
         <ListeningRow
           key={`${l.iid}-${l.started_at}`}
           rowKey={`${l.iid}-${l.started_at}`}

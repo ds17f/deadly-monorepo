@@ -17,6 +17,8 @@ import GrowthChart from "./components/GrowthChart";
 import FeatureAdoption from "./components/FeatureAdoption";
 import CollapsibleSection from "./components/CollapsibleSection";
 import ShowEngagement, { TopShowsByAction } from "./components/ShowEngagement";
+import { WatchedInstallsProvider } from "./components/WatchedInstallsContext";
+import WatchedInstallsPanel from "./components/WatchedInstallsPanel";
 
 interface FeatureAdoptionEntry {
   feature: string;
@@ -108,7 +110,15 @@ const METRIC_LABELS: Record<DetailMetric, string> = {
 const REFRESH_INTERVAL = 30_000;
 const DASH_SCROLL_KEY = "__analytics_dashboard_scroll";
 
-export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[] }) {
+export default function AnalyticsDashboard(props: { showNames: ShowName[] }) {
+  return (
+    <WatchedInstallsProvider>
+      <AnalyticsDashboardInner {...props} />
+    </WatchedInstallsProvider>
+  );
+}
+
+function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
   const { user, isLoading: authLoading } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -147,6 +157,10 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
   // Collapse all state
   const [allCollapsed, setAllCollapsed] = useState(false);
   const [collapseToggle, setCollapseToggle] = useState(0);
+
+  // Page-wide "watched only" filter — when on, hide aggregate panels and
+  // restrict iid lists (Listening Now / Recent Listening) to flagged installs.
+  const [watchedOnly, setWatchedOnly] = useState(false);
 
   const showMap = useMemo(() => {
     const m = new Map<string, ShowName>();
@@ -235,7 +249,13 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
 
   // Route to detail views based on URL
   if (activeInstall) {
-    return <InstallDetailView iid={activeInstall} backHref="/admin/analytics" />;
+    return (
+      <InstallDetailView
+        iid={activeInstall}
+        backHref="/admin/analytics"
+        showMap={showMap}
+      />
+    );
   }
   if (activeMetric) {
     return (
@@ -284,7 +304,22 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
           <h1 className="text-xl sm:text-2xl font-bold text-deadly-red">Analytics</h1>
           <a href="/admin/beta" className="text-sm text-zinc-500 hover:text-zinc-300">Beta &rarr;</a>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 flex-wrap">
+          <button
+            onClick={() => setWatchedOnly((v) => !v)}
+            className={`text-xs px-2 py-1 rounded border transition-colors ${
+              watchedOnly
+                ? "border-amber-500/60 bg-amber-500/10 text-amber-300"
+                : "border-zinc-700 text-zinc-400 hover:bg-zinc-800"
+            }`}
+            title={
+              watchedOnly
+                ? "Showing only watched installs — click to show all"
+                : "Filter to watched installs"
+            }
+          >
+            ★ {watchedOnly ? "Watched only" : "Watched"}
+          </button>
           <button
             onClick={() => { setAllCollapsed((c) => !c); setCollapseToggle((t) => t + 1); }}
             className="text-xs text-zinc-500 hover:text-zinc-300 transition-colors"
@@ -302,16 +337,30 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
         </div>
       </div>
 
+      {/* Watched installs */}
+      <CollapsibleSection title="Watched installs" forceOpen={forceOpen}>
+        <WatchedInstallsPanel onOpenInstall={openInstall} />
+      </CollapsibleSection>
+
       {/* Listening Now */}
       <CollapsibleSection title="Listening Now (last 45 min)" forceOpen={forceOpen}>
-        <ListeningNow showMap={showMap} onOpenInstall={openInstall} />
+        <ListeningNow
+          showMap={showMap}
+          onOpenInstall={openInstall}
+          watchedOnly={watchedOnly}
+        />
       </CollapsibleSection>
 
       {/* Recent Listening (finished sessions, last 24h) */}
       <CollapsibleSection title="Recent Listening (24h)" forceOpen={forceOpen}>
-        <RecentListening showMap={showMap} onOpenInstall={openInstall} />
+        <RecentListening
+          showMap={showMap}
+          onOpenInstall={openInstall}
+          watchedOnly={watchedOnly}
+        />
       </CollapsibleSection>
 
+      {watchedOnly ? null : <>
       {/* Most-listened shows */}
       <CollapsibleSection
         title="Most-listened shows"
@@ -445,6 +494,7 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
           onFeatureClick={(f) => openDetail("feature_adoption", f)}
         />
       </CollapsibleSection>
+      </>}
 
     </div>
   );

@@ -19,6 +19,9 @@ import {
   getRecentListening,
   getGrowthByPlatform,
   getTopShows,
+  getWatchedInstalls,
+  setWatchedInstall,
+  removeWatchedInstall,
 } from "../db/analytics.js";
 import { requireAdmin } from "../auth/middleware.js";
 import { ANALYTICS_WATERSHED } from "../analytics-watershed.js";
@@ -846,6 +849,66 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       preHandler: requireAdmin,
     },
     async () => ({ entries: ANALYTICS_WATERSHED }),
+  );
+
+  // ── Watched installs ──────────────────────────────────────────────
+
+  // GET /api/analytics/watched — list of flagged installs with optional names.
+  app.get(
+    "/api/analytics/watched",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Watched installs (admin)",
+      },
+      preHandler: requireAdmin,
+    },
+    async () => ({ watched: getWatchedInstalls() }),
+  );
+
+  // PUT /api/analytics/watched/:iid — upsert a watched install. Body may
+  // include { name, notes }; both optional and may be null.
+  app.put<{
+    Params: { iid: string };
+    Body: { name?: string | null; notes?: string | null };
+  }>(
+    "/api/analytics/watched/:iid",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Flag an install for monitoring (admin)",
+        body: {
+          type: "object",
+          properties: {
+            name: { type: ["string", "null"] },
+            notes: { type: ["string", "null"] },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { iid } = request.params;
+      const name = request.body?.name ?? null;
+      const notes = request.body?.notes ?? null;
+      return setWatchedInstall(iid, name, notes);
+    },
+  );
+
+  // DELETE /api/analytics/watched/:iid — remove watch flag.
+  app.delete<{ Params: { iid: string } }>(
+    "/api/analytics/watched/:iid",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Unflag an install (admin)",
+      },
+      preHandler: requireAdmin,
+    },
+    async (request, reply) => {
+      removeWatchedInstall(request.params.iid);
+      reply.code(204).send();
+    },
   );
 }
 

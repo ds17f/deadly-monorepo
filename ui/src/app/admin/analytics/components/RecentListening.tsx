@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ListeningRow, type TrackPlay } from "./listeningRow";
+import { useWatchedInstalls } from "./WatchedInstallsContext";
 
 const INITIAL_VISIBLE = 10;
 
@@ -34,10 +35,13 @@ const POLL_INTERVAL_MS = 60_000;
 export default function RecentListening({
   showMap,
   onOpenInstall,
+  watchedOnly = false,
 }: {
   showMap?: Map<string, ShowName>;
   onOpenInstall?: (iid: string) => void;
+  watchedOnly?: boolean;
 } = {}) {
+  const { isWatched } = useWatchedInstalls();
   const [sessions, setSessions] = useState<RecentSession[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [expanded, setExpanded] = useState(false);
@@ -78,13 +82,27 @@ export default function RecentListening({
     );
   }
 
-  const visible = expanded ? sessions : sessions.slice(0, INITIAL_VISIBLE);
-  const hiddenCount = sessions.length - visible.length;
+  const filtered = watchedOnly
+    ? sessions.filter((s) => isWatched(s.iid))
+    : sessions;
+  const visible = expanded ? filtered : filtered.slice(0, INITIAL_VISIBLE);
+  const hiddenCount = filtered.length - visible.length;
+
+  if (filtered.length === 0) {
+    return (
+      <p className="text-sm text-zinc-500 italic">
+        {watchedOnly
+          ? "No watched installs have played in the last 24h."
+          : "No completed listening sessions in the last 24 hours."}
+      </p>
+    );
+  }
 
   return (
     <div className="space-y-1">
       <p className="text-xs text-zinc-500 mb-2">
-        {sessions.length} session{sessions.length !== 1 ? "s" : ""} in the last 24h
+        {filtered.length} session{filtered.length !== 1 ? "s" : ""} in the last 24h
+        {watchedOnly ? " (watched only)" : ""}
       </p>
       {visible.map((s) => (
         <ListeningRow
@@ -102,7 +120,7 @@ export default function RecentListening({
           onClick={onOpenInstall ? () => onOpenInstall(s.iid) : undefined}
         />
       ))}
-      {sessions.length > INITIAL_VISIBLE && (
+      {filtered.length > INITIAL_VISIBLE && (
         <button
           onClick={() => setExpanded((v) => !v)}
           className="w-full text-xs text-zinc-400 hover:text-white py-2 mt-1 transition-colors"

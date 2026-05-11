@@ -303,10 +303,15 @@ function groupBySession(events: InstallEvent[]): Session[] {
   const sessions: Session[] = [];
   for (const [sid, list] of bySid) {
     const sorted = [...list].sort((a, b) => a.ts - b.ts);
+    // Build the timeline in asc order so playback_start → playback_end pairing
+    // works (it scans forward), then flip for display so the most recent event
+    // in the session is at the top — matching the session ordering on the page.
+    const items = buildTimeline(sorted);
+    items.reverse();
     sessions.push({
       sid,
       events: sorted,
-      items: buildTimeline(sorted),
+      items,
       startTs: sorted[0]!.ts,
       endTs: sorted[sorted.length - 1]!.ts,
       platform: sorted[0]!.platform,
