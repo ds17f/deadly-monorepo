@@ -59,7 +59,13 @@ function ShowRow({
       <span className="text-zinc-500 text-sm font-mono w-5 text-right flex-shrink-0 pt-0.5">
         {rank}
       </span>
-      <div className="min-w-0 flex-1">
+      <a
+        href={`/shows/${row.show_id}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={(e) => e.stopPropagation()}
+        className="min-w-0 flex-1 hover:text-deadly-blue transition-colors"
+      >
         {info ? (
           <>
             <p className="text-sm text-zinc-200">{formatDate(info.d)}</p>
@@ -68,9 +74,9 @@ function ShowRow({
             </p>
           </>
         ) : (
-          <p className="text-sm text-zinc-300 font-mono">{row.show_id}</p>
+          <p className="text-sm text-zinc-300 font-mono break-all">{row.show_id}</p>
         )}
-      </div>
+      </a>
       <span className="text-sm text-zinc-400 flex-shrink-0 tabular-nums">
         {row.users} user{row.users !== 1 ? "s" : ""}
       </span>

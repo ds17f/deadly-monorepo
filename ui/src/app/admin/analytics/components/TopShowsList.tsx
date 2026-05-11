@@ -111,7 +111,13 @@ export default function TopShowsList({ showMap, onShowClick }: TopShowsListProps
                 ) : (
                   <div className="w-10 h-10 rounded bg-zinc-800 shrink-0" />
                 )}
-                <div className="min-w-0 flex-1">
+                <a
+                  href={`/shows/${show.show_id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="min-w-0 flex-1 hover:text-deadly-blue transition-colors"
+                >
                   {info ? (
                     <>
                       <p className="text-sm text-zinc-200">{formatDate(info.d)}</p>
@@ -120,9 +126,9 @@ export default function TopShowsList({ showMap, onShowClick }: TopShowsListProps
                       </p>
                     </>
                   ) : (
-                    <p className="text-sm text-zinc-300 font-mono">{show.show_id}</p>
+                    <p className="text-sm text-zinc-300 font-mono break-all">{show.show_id}</p>
                   )}
-                </div>
+                </a>
                 <div className="flex flex-col items-end shrink-0 tabular-nums">
                   <span className="text-sm text-zinc-300">
                     {show.listeners} listener{show.listeners !== 1 ? "s" : ""}

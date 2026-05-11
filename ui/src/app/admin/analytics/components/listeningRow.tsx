@@ -53,6 +53,28 @@ export function formatShowDate(showId: string | null): string {
   return m ? m[1] : showId.slice(0, 24);
 }
 
+function ShowDateLink({
+  showId,
+  className,
+}: {
+  showId: string | null;
+  className?: string;
+}) {
+  const label = formatShowDate(showId);
+  if (!showId) return <span className={className}>{label}</span>;
+  return (
+    <a
+      href={`/shows/${showId}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={(e) => e.stopPropagation()}
+      className={`${className ?? ""} hover:text-deadly-blue hover:underline decoration-dotted underline-offset-2 transition-colors`}
+    >
+      {label}
+    </a>
+  );
+}
+
 /**
  * Same bar shape as the Show Listening panel: each slot is one of the
  * show's actual tracks (when total track count is known) so an unplayed
@@ -150,7 +172,6 @@ export function ListeningRow({
   const interactive = !!onClick;
   const sourceLabel = source ? (SOURCE_LABELS[source] ?? source) : "—";
   const age = relativeAge(ts);
-  const showDate = formatShowDate(show_id);
   const trackLabel = track_index != null ? `track ${track_index}` : "—";
 
   return (
@@ -169,7 +190,7 @@ export function ListeningRow({
               {iid.slice(0, 8)}
             </span>
           </span>
-          <span className="text-zinc-300 ml-1">{showDate}</span>
+          <ShowDateLink showId={show_id} className="text-zinc-300 ml-1" />
           <span className="font-mono text-xs text-zinc-500 ml-auto tabular-nums">
             {age}
           </span>
@@ -198,7 +219,7 @@ export function ListeningRow({
         <span className="font-mono text-xs text-zinc-500 w-20 shrink-0 tabular-nums">
           {age}
         </span>
-        <span className="text-zinc-300 w-24 shrink-0">{showDate}</span>
+        <ShowDateLink showId={show_id} className="text-zinc-300 w-24 shrink-0" />
         <span className="text-zinc-500 w-14 shrink-0">{trackLabel}</span>
         <span className="text-zinc-500 w-24 shrink-0 truncate">
           {sourceLabel}
