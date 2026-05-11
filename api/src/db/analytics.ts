@@ -754,6 +754,12 @@ export function getLiveListeners(): LiveListener[] {
 
   // Pull `sid` too so we can resolve the bitmap for *this* listening session
   // of this show (rather than every time the listener has ever played it).
+  //
+  // A user can only listen to one thing at a time. The unmatched-start filter
+  // can leave multiple ghosts per iid when the client emits a new
+  // `playback_start` without a corresponding `playback_end` for the previous
+  // one (force-quit, crash, network drop, rapid show switches). Take only the
+  // most recent unmatched start per iid as the listener's current state.
   const rows = db
     .prepare(
       `SELECT
@@ -777,9 +783,24 @@ export function getLiveListeners(): LiveListener[] {
              AND json_extract(e.props, '$.show_id') = json_extract(s.props, '$.show_id')
              AND json_extract(e.props, '$.track_index') = json_extract(s.props, '$.track_index')
          )
+         AND s.ts = (
+           SELECT MAX(s2.ts) FROM analytics_events s2
+           WHERE s2.event = 'playback_start'
+             AND s2.iid = s.iid
+             AND s2.ts >= ?
+             AND NOT EXISTS (
+               SELECT 1 FROM analytics_events e2
+               WHERE e2.event = 'playback_end'
+                 AND e2.iid = s2.iid
+                 AND e2.sid = s2.sid
+                 AND e2.ts >= s2.ts
+                 AND json_extract(e2.props, '$.show_id') = json_extract(s2.props, '$.show_id')
+                 AND json_extract(e2.props, '$.track_index') = json_extract(s2.props, '$.track_index')
+             )
+         )
        ORDER BY s.ts DESC`,
     )
-    .all(windowStart) as Array<{
+    .all(windowStart, windowStart) as Array<{
       iid: string;
       sid: string;
       platform: string;
