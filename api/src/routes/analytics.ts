@@ -16,8 +16,12 @@ import {
   getRetentionCohorts,
   getSearchQuality,
   getLiveListeners,
+  getRecentListening,
   getGrowthByPlatform,
   getTopShows,
+  getWatchedInstalls,
+  setWatchedInstall,
+  removeWatchedInstall,
 } from "../db/analytics.js";
 import { requireAdmin } from "../auth/middleware.js";
 import { ANALYTICS_WATERSHED } from "../analytics-watershed.js";
@@ -673,6 +677,72 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
     async () => ({ listeners: getLiveListeners() }),
   );
 
+  // GET /api/analytics/recent-listening — finished sessions in the last N hours.
+  app.get(
+    "/api/analytics/recent-listening",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Recent listening sessions (admin)",
+        querystring: {
+          type: "object",
+          properties: {
+            hours: { type: "number", default: 24 },
+            limit: { type: "number", default: 100 },
+          },
+        },
+        response: {
+          200: {
+            type: "object",
+            properties: {
+              sessions: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    iid: { type: "string" },
+                    platform: { type: "string" },
+                    app_version: { type: "string" },
+                    started_at: { type: "number" },
+                    last_event_at: { type: "number" },
+                    show_id: { type: ["string", "null"] },
+                    recording_id: { type: ["string", "null"] },
+                    track_index: { type: ["number", "null"] },
+                    source: { type: ["string", "null"] },
+                    session_count: { type: "number" },
+                    ended: { type: "boolean" },
+                    tracks: {
+                      type: "array",
+                      items: {
+                        type: "object",
+                        properties: {
+                          index: { type: "number" },
+                          outcome: { type: "string" },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { hours, limit } = request.query as {
+        hours?: number;
+        limit?: number;
+      };
+      const clampedHours = Math.min(Math.max(hours ?? 24, 1), 168);
+      const clampedLimit = Math.min(Math.max(limit ?? 100, 1), 500);
+      return {
+        sessions: getRecentListening(clampedHours, clampedLimit),
+      };
+    },
+  );
+
   // GET /api/analytics/search-quality — zero-result + abandon + ranking-quality stats.
   app.get(
     "/api/analytics/search-quality",
@@ -779,6 +849,66 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       preHandler: requireAdmin,
     },
     async () => ({ entries: ANALYTICS_WATERSHED }),
+  );
+
+  // ── Watched installs ──────────────────────────────────────────────
+
+  // GET /api/analytics/watched — list of flagged installs with optional names.
+  app.get(
+    "/api/analytics/watched",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Watched installs (admin)",
+      },
+      preHandler: requireAdmin,
+    },
+    async () => ({ watched: getWatchedInstalls() }),
+  );
+
+  // PUT /api/analytics/watched/:iid — upsert a watched install. Body may
+  // include { name, notes }; both optional and may be null.
+  app.put<{
+    Params: { iid: string };
+    Body: { name?: string | null; notes?: string | null };
+  }>(
+    "/api/analytics/watched/:iid",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Flag an install for monitoring (admin)",
+        body: {
+          type: "object",
+          properties: {
+            name: { type: ["string", "null"] },
+            notes: { type: ["string", "null"] },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { iid } = request.params;
+      const name = request.body?.name ?? null;
+      const notes = request.body?.notes ?? null;
+      return setWatchedInstall(iid, name, notes);
+    },
+  );
+
+  // DELETE /api/analytics/watched/:iid — remove watch flag.
+  app.delete<{ Params: { iid: string } }>(
+    "/api/analytics/watched/:iid",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Unflag an install (admin)",
+      },
+      preHandler: requireAdmin,
+    },
+    async (request, reply) => {
+      removeWatchedInstall(request.params.iid);
+      reply.code(204).send();
+    },
   );
 }
 

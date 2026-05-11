@@ -1,21 +1,24 @@
 "use client";
 
 import { useAuth } from "@/contexts/AuthContext";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState, useCallback, useMemo } from "react";
 import MetricCard from "./components/MetricCard";
-import DetailPanel from "./components/DetailPanel";
-import InstallDetailPanel from "./components/InstallDetailPanel";
+import InstallDetailView from "./components/InstallDetailView";
+import MetricDetailView from "./components/MetricDetailView";
 import TopShowsList from "./components/TopShowsList";
 import PlatformChart from "./components/PlatformChart";
 import RetentionCohorts from "./components/RetentionCohorts";
 import SearchQuality from "./components/SearchQuality";
 import PlaysBySource from "./components/PlaysBySource";
 import ListeningNow from "./components/ListeningNow";
+import RecentListening from "./components/RecentListening";
 import GrowthChart from "./components/GrowthChart";
 import FeatureAdoption from "./components/FeatureAdoption";
 import CollapsibleSection from "./components/CollapsibleSection";
 import ShowEngagement, { TopShowsByAction } from "./components/ShowEngagement";
+import { WatchedInstallsProvider } from "./components/WatchedInstallsContext";
+import WatchedInstallsPanel from "./components/WatchedInstallsPanel";
 
 interface FeatureAdoptionEntry {
   feature: string;
@@ -105,10 +108,20 @@ const METRIC_LABELS: Record<DetailMetric, string> = {
 };
 
 const REFRESH_INTERVAL = 30_000;
+const DASH_SCROLL_KEY = "__analytics_dashboard_scroll";
 
-export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[] }) {
+export default function AnalyticsDashboard(props: { showNames: ShowName[] }) {
+  return (
+    <WatchedInstallsProvider>
+      <AnalyticsDashboardInner {...props} />
+    </WatchedInstallsProvider>
+  );
+}
+
+function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
   const { user, isLoading: authLoading } = useAuth();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [data, setData] = useState<AnalyticsSummary | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -118,20 +131,36 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
   const [dauTs, setDauTs] = useState<TimeseriesPoint[]>([]);
   const [eventsTs, setEventsTs] = useState<TimeseriesPoint[]>([]);
 
-  // Detail panel state
-  const [activeMetric, setActiveMetric] = useState<DetailMetric | null>(null);
-  const [activeFilter, setActiveFilter] = useState<string | undefined>(undefined);
-  const [detailRows, setDetailRows] = useState<DetailRow[]>([]);
-  const [detailLoading, setDetailLoading] = useState(false);
+  // URL-driven detail views — ?install=<iid> or ?metric=<m>&filter=<f>
+  const activeInstall = searchParams.get("install");
+  const activeMetric = searchParams.get("metric") as DetailMetric | null;
+  const activeFilter = searchParams.get("filter") ?? undefined;
 
-  // Install detail modal — opened from any iid reference in the dashboard
-  const [activeInstall, setActiveInstall] = useState<string | null>(null);
-  const openInstall = useCallback((iid: string) => setActiveInstall(iid), []);
-  const closeInstall = useCallback(() => setActiveInstall(null), []);
+  const openInstall = useCallback(
+    (iid: string) => {
+      sessionStorage.setItem(DASH_SCROLL_KEY, String(window.scrollY));
+      router.push(`/admin/analytics?install=${encodeURIComponent(iid)}`);
+    },
+    [router],
+  );
+
+  const openDetail = useCallback(
+    (metric: DetailMetric, filter?: string) => {
+      sessionStorage.setItem(DASH_SCROLL_KEY, String(window.scrollY));
+      const params = new URLSearchParams({ metric });
+      if (filter) params.set("filter", filter);
+      router.push(`/admin/analytics?${params.toString()}`);
+    },
+    [router],
+  );
 
   // Collapse all state
   const [allCollapsed, setAllCollapsed] = useState(false);
   const [collapseToggle, setCollapseToggle] = useState(0);
+
+  // Page-wide "watched only" filter — when on, hide aggregate panels and
+  // restrict iid lists (Listening Now / Recent Listening) to flagged installs.
+  const [watchedOnly, setWatchedOnly] = useState(false);
 
   const showMap = useMemo(() => {
     const m = new Map<string, ShowName>();
@@ -170,36 +199,6 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
     }
   }, []);
 
-  const fetchDetail = useCallback(async (metric: DetailMetric, filter?: string) => {
-    setDetailLoading(true);
-    try {
-      const params = new URLSearchParams({ metric });
-      if (filter) params.set("filter", filter);
-      const res = await fetch(`/api/analytics/detail?${params}`, { credentials: "include" });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      setDetailRows(await res.json());
-    } catch {
-      setDetailRows([]);
-    } finally {
-      setDetailLoading(false);
-    }
-  }, []);
-
-  const openDetail = useCallback(
-    (metric: DetailMetric, filter?: string) => {
-      setActiveMetric(metric);
-      setActiveFilter(filter);
-      fetchDetail(metric, filter);
-    },
-    [fetchDetail],
-  );
-
-  const closeDetail = useCallback(() => {
-    setActiveMetric(null);
-    setActiveFilter(undefined);
-    setDetailRows([]);
-  }, []);
-
   // Auth + initial load
   useEffect(() => {
     if (authLoading) return;
@@ -216,12 +215,57 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
     return () => clearInterval(interval);
   }, [authLoading, user?.isAdmin, router, fetchSummary, fetchTimeseries]);
 
-  // Auto-refresh detail when open
+  // Restore dashboard scroll position when returning from a detail view.
+  // Panels (ListeningNow, RecentListening, TopShowsList) fetch their own
+  // data after mount, so the document height grows over time. Poll until
+  // the page is tall enough to actually reach the saved Y, then scroll.
   useEffect(() => {
-    if (!activeMetric) return;
-    const interval = setInterval(() => fetchDetail(activeMetric, activeFilter), REFRESH_INTERVAL);
-    return () => clearInterval(interval);
-  }, [activeMetric, activeFilter, fetchDetail]);
+    if (activeInstall || activeMetric) return;
+    if (!data) return;
+    const saved = sessionStorage.getItem(DASH_SCROLL_KEY);
+    if (saved == null) return;
+    sessionStorage.removeItem(DASH_SCROLL_KEY);
+    const targetY = parseInt(saved, 10);
+    if (!Number.isFinite(targetY)) return;
+
+    let attempts = 0;
+    let cancelled = false;
+    const tryScroll = () => {
+      if (cancelled) return;
+      const maxY =
+        document.documentElement.scrollHeight - window.innerHeight;
+      if (maxY >= targetY || attempts >= 30) {
+        window.scrollTo(0, Math.min(targetY, Math.max(0, maxY)));
+        return;
+      }
+      attempts++;
+      setTimeout(tryScroll, 100);
+    };
+    tryScroll();
+    return () => {
+      cancelled = true;
+    };
+  }, [data, activeInstall, activeMetric]);
+
+  // Route to detail views based on URL
+  if (activeInstall) {
+    return (
+      <InstallDetailView
+        iid={activeInstall}
+        backHref="/admin/analytics"
+        showMap={showMap}
+      />
+    );
+  }
+  if (activeMetric) {
+    return (
+      <MetricDetailView
+        metric={activeMetric}
+        filter={activeFilter}
+        backHref="/admin/analytics"
+      />
+    );
+  }
 
   if (authLoading || (!user?.isAdmin && !error)) {
     return (
@@ -253,14 +297,29 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
   const forceOpen = collapseToggle === 0 ? undefined : !allCollapsed;
 
   return (
-    <div className="min-h-screen bg-deadly-bg p-4 sm:p-6 max-w-5xl mx-auto">
+    <div className="min-h-screen bg-deadly-bg p-4 sm:p-6 max-w-5xl mx-auto overflow-x-hidden">
       {/* Header */}
       <div className="flex items-center justify-between mb-6 sm:mb-8">
         <div className="flex items-center gap-4">
           <h1 className="text-xl sm:text-2xl font-bold text-deadly-red">Analytics</h1>
           <a href="/admin/beta" className="text-sm text-zinc-500 hover:text-zinc-300">Beta &rarr;</a>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 flex-wrap">
+          <button
+            onClick={() => setWatchedOnly((v) => !v)}
+            className={`text-xs px-2 py-1 rounded border transition-colors ${
+              watchedOnly
+                ? "border-amber-500/60 bg-amber-500/10 text-amber-300"
+                : "border-zinc-700 text-zinc-400 hover:bg-zinc-800"
+            }`}
+            title={
+              watchedOnly
+                ? "Showing only watched installs — click to show all"
+                : "Filter to watched installs"
+            }
+          >
+            ★ {watchedOnly ? "Watched only" : "Watched"}
+          </button>
           <button
             onClick={() => { setAllCollapsed((c) => !c); setCollapseToggle((t) => t + 1); }}
             className="text-xs text-zinc-500 hover:text-zinc-300 transition-colors"
@@ -278,11 +337,30 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
         </div>
       </div>
 
-      {/* Listening Now */}
-      <CollapsibleSection title="Listening Now (last 45 min)" forceOpen={forceOpen}>
-        <ListeningNow showMap={showMap} />
+      {/* Watched installs */}
+      <CollapsibleSection title="Watched installs" forceOpen={forceOpen}>
+        <WatchedInstallsPanel onOpenInstall={openInstall} />
       </CollapsibleSection>
 
+      {/* Listening Now */}
+      <CollapsibleSection title="Listening Now (last 45 min)" forceOpen={forceOpen}>
+        <ListeningNow
+          showMap={showMap}
+          onOpenInstall={openInstall}
+          watchedOnly={watchedOnly}
+        />
+      </CollapsibleSection>
+
+      {/* Recent Listening (finished sessions, last 24h) */}
+      <CollapsibleSection title="Recent Listening (24h)" forceOpen={forceOpen}>
+        <RecentListening
+          showMap={showMap}
+          onOpenInstall={openInstall}
+          watchedOnly={watchedOnly}
+        />
+      </CollapsibleSection>
+
+      {watchedOnly ? null : <>
       {/* Most-listened shows */}
       <CollapsibleSection
         title="Most-listened shows"
@@ -416,24 +494,8 @@ export default function AnalyticsDashboard({ showNames }: { showNames: ShowName[
           onFeatureClick={(f) => openDetail("feature_adoption", f)}
         />
       </CollapsibleSection>
+      </>}
 
-      {/* Detail Panel */}
-      {activeMetric && (
-        <DetailPanel
-          title={METRIC_LABELS[activeMetric]}
-          filter={activeFilter}
-          rows={detailRows}
-          loading={detailLoading}
-          onClose={closeDetail}
-          onClearFilter={activeFilter ? () => openDetail(activeMetric) : undefined}
-          onOpenInstall={openInstall}
-        />
-      )}
-
-      {/* Install Detail (stacks on top of DetailPanel when both open) */}
-      {activeInstall && (
-        <InstallDetailPanel iid={activeInstall} onClose={closeInstall} />
-      )}
     </div>
   );
 }
