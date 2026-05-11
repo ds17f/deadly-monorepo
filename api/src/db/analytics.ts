@@ -792,55 +792,14 @@ export function getLiveListeners(): LiveListener[] {
     }>;
 
   // For each live listener, materialize the bitmap for their current
-  // (iid, sid, show_id) by replaying the same per-track outcome rules
-  // used by getShowPlaybackSummary. Look back 6h so a long jam session
-  // earlier in the same sid still contributes to the bar.
+  // (iid, sid, show_id). Look back 6h so a long jam session earlier in
+  // the same sid still contributes to the bar.
   const sessionLookback = Date.now() - 6 * 3600 * 1000;
-  const trackQuery = db.prepare(
-    `SELECT
-       event, ts,
-       COALESCE(CAST(json_extract(props, '$.track_index') AS INTEGER), 0) AS track_index,
-       json_extract(props, '$.reason') AS reason
-     FROM analytics_events
-     WHERE iid = ? AND sid = ?
-       AND json_extract(props, '$.show_id') = ?
-       AND event IN ('playback_start', 'playback_end')
-       AND ts >= ?
-     ORDER BY ts ASC`,
-  );
 
   return rows.map((r) => {
-    let tracks: TrackPlay[] = [];
-    if (r.show_id) {
-      const events = trackQuery.all(
-        r.iid,
-        r.sid,
-        r.show_id,
-        sessionLookback,
-      ) as Array<{
-        event: string;
-        ts: number;
-        track_index: number;
-        reason: string | null;
-      }>;
-      const acc = new Map<number, { ts: number; outcome: TrackOutcome }>();
-      for (const e of events) {
-        const prior = acc.get(e.track_index);
-        if (e.event === "playback_start") {
-          if (!prior) acc.set(e.track_index, { ts: e.ts, outcome: "partial" });
-          continue;
-        }
-        if (!prior || e.ts >= prior.ts) {
-          acc.set(e.track_index, {
-            ts: e.ts,
-            outcome: reasonToOutcome(e.reason),
-          });
-        }
-      }
-      tracks = Array.from(acc.entries())
-        .map(([index, v]) => ({ index, outcome: v.outcome }))
-        .sort((a, b) => a.index - b.index);
-    }
+    const tracks = r.show_id
+      ? buildTrackBitmap(r.iid, r.sid, r.show_id, sessionLookback)
+      : [];
     return {
       iid: r.iid,
       platform: r.platform,
@@ -1110,6 +1069,199 @@ function reasonToOutcome(reason: string | null): TrackOutcome {
       // some of the track but didn't finish it.
       return "partial";
   }
+}
+
+/**
+ * Replay playback_start / playback_end events for an (iid, show_id) into a
+ * per-track outcome bitmap. When `sid` is provided, only that session is
+ * considered (Listening Now — single live session). When `sid` is null, all
+ * sessions for this user/show are merged (Recent Listening — cumulative
+ * listening across app launches).
+ */
+function buildTrackBitmap(
+  iid: string,
+  sid: string | null,
+  showId: string,
+  sinceMs: number,
+): TrackPlay[] {
+  const db = getAnalyticsDb();
+  const sql = `SELECT
+         event, ts,
+         COALESCE(CAST(json_extract(props, '$.track_index') AS INTEGER), 0) AS track_index,
+         json_extract(props, '$.reason') AS reason
+       FROM analytics_events
+       WHERE iid = ?${sid != null ? " AND sid = ?" : ""}
+         AND json_extract(props, '$.show_id') = ?
+         AND event IN ('playback_start', 'playback_end')
+         AND ts >= ?
+       ORDER BY ts ASC`;
+  const params = sid != null ? [iid, sid, showId, sinceMs] : [iid, showId, sinceMs];
+  const events = db.prepare(sql).all(...params) as Array<{
+    event: string;
+    ts: number;
+    track_index: number;
+    reason: string | null;
+  }>;
+
+  const acc = new Map<number, { ts: number; outcome: TrackOutcome }>();
+  for (const e of events) {
+    const prior = acc.get(e.track_index);
+    if (e.event === "playback_start") {
+      if (!prior) acc.set(e.track_index, { ts: e.ts, outcome: "partial" });
+      continue;
+    }
+    if (!prior || e.ts >= prior.ts) {
+      acc.set(e.track_index, { ts: e.ts, outcome: reasonToOutcome(e.reason) });
+    }
+  }
+  return Array.from(acc.entries())
+    .map(([index, v]) => ({ index, outcome: v.outcome }))
+    .sort((a, b) => a.index - b.index);
+}
+
+// ── Recent Listening ───────────────────────────────────────────────
+
+export interface RecentListeningSession {
+  iid: string;
+  platform: string;
+  app_version: string;
+  /** Earliest playback_start across all sessions of this (iid, show_id). */
+  started_at: number;
+  /** Most recent playback event across all sessions of this (iid, show_id). */
+  last_event_at: number;
+  show_id: string | null;
+  recording_id: string | null;
+  /** track_index of the most recent playback event. */
+  track_index: number | null;
+  /** source from the first playback_start across all sessions. */
+  source: string | null;
+  /** Per-track outcomes merged across all sessions of this (iid, show_id). */
+  tracks: TrackPlay[];
+  /** Number of distinct sids (app sessions) the user used for this show. */
+  session_count: number;
+  /** True if any session has a playback_end. */
+  ended: boolean;
+}
+
+/**
+ * Recent listening, deduped by (iid, show_id). One row per user-show pair —
+ * if the same install listened to the same show across multiple app sessions
+ * (sids) in the window, those are merged into a single row with cumulative
+ * track bitmap and earliest/latest timestamps. Excludes any (iid, show_id)
+ * still considered live by getLiveListeners() to avoid double-counting.
+ */
+export function getRecentListening(
+  hours = 24,
+  limit = 100,
+): RecentListeningSession[] {
+  const db = getAnalyticsDb();
+  const now = Date.now();
+  const windowStart = now - hours * 3600 * 1000;
+  const liveWindowStart = now - 45 * 60 * 1000;
+
+  const rows = db
+    .prepare(
+      `WITH show_events AS (
+         SELECT
+           iid,
+           sid,
+           json_extract(props, '$.show_id') AS show_id,
+           event,
+           ts,
+           platform,
+           app_version,
+           json_extract(props, '$.recording_id') AS recording_id,
+           CAST(json_extract(props, '$.track_index') AS INTEGER) AS track_index,
+           json_extract(props, '$.source') AS source
+         FROM analytics_events
+         WHERE event IN ('playback_start', 'playback_end')
+           AND ts >= ?
+           AND json_extract(props, '$.show_id') IS NOT NULL
+       ),
+       agg AS (
+         SELECT
+           iid,
+           show_id,
+           MIN(ts) AS started_at,
+           MAX(ts) AS last_event_at,
+           COUNT(DISTINCT sid) AS session_count,
+           MAX(CASE WHEN event = 'playback_end' THEN 1 ELSE 0 END) AS has_end,
+           MAX(CASE WHEN event = 'playback_start' THEN ts ELSE 0 END) AS last_start_ts
+         FROM show_events
+         GROUP BY iid, show_id
+       )
+       SELECT
+         a.iid,
+         a.show_id,
+         a.started_at,
+         a.last_event_at,
+         a.session_count,
+         a.has_end,
+         (SELECT platform FROM show_events
+            WHERE iid = a.iid AND show_id = a.show_id
+            ORDER BY ts DESC LIMIT 1) AS platform,
+         (SELECT app_version FROM show_events
+            WHERE iid = a.iid AND show_id = a.show_id
+            ORDER BY ts DESC LIMIT 1) AS app_version,
+         (SELECT recording_id FROM show_events
+            WHERE iid = a.iid AND show_id = a.show_id
+              AND event = 'playback_start'
+            ORDER BY ts ASC LIMIT 1) AS recording_id,
+         (SELECT track_index FROM show_events
+            WHERE iid = a.iid AND show_id = a.show_id
+            ORDER BY ts DESC LIMIT 1) AS track_index,
+         (SELECT source FROM show_events
+            WHERE iid = a.iid AND show_id = a.show_id
+              AND event = 'playback_start'
+            ORDER BY ts ASC LIMIT 1) AS source
+       FROM agg a
+       WHERE NOT EXISTS (
+         SELECT 1 FROM analytics_events s
+         WHERE s.event = 'playback_start'
+           AND s.iid = a.iid
+           AND json_extract(s.props, '$.show_id') = a.show_id
+           AND s.ts >= ?
+           AND NOT EXISTS (
+             SELECT 1 FROM analytics_events e
+             WHERE e.event = 'playback_end'
+               AND e.iid = s.iid
+               AND e.sid = s.sid
+               AND e.ts >= s.ts
+               AND json_extract(e.props, '$.show_id') = json_extract(s.props, '$.show_id')
+               AND json_extract(e.props, '$.track_index') = json_extract(s.props, '$.track_index')
+           )
+       )
+       ORDER BY a.last_event_at DESC
+       LIMIT ?`,
+    )
+    .all(windowStart, liveWindowStart, limit) as Array<{
+      iid: string;
+      show_id: string;
+      started_at: number;
+      last_event_at: number;
+      session_count: number;
+      has_end: number;
+      platform: string;
+      app_version: string;
+      recording_id: string | null;
+      track_index: number | null;
+      source: string | null;
+    }>;
+
+  return rows.map((r) => ({
+    iid: r.iid,
+    platform: r.platform,
+    app_version: r.app_version,
+    started_at: r.started_at,
+    last_event_at: r.last_event_at,
+    show_id: r.show_id,
+    recording_id: r.recording_id,
+    track_index: r.track_index,
+    source: r.source,
+    tracks: buildTrackBitmap(r.iid, null, r.show_id, r.started_at),
+    session_count: r.session_count,
+    ended: r.has_end === 1,
+  }));
 }
 
 export function getShowPlaybackSummary(days: number): ShowPlaybackSummary {

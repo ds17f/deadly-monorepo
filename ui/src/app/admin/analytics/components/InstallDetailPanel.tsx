@@ -54,6 +54,16 @@ export default function InstallDetailPanel({ iid, zIndexBase = 60, onClose }: Pr
     return () => window.removeEventListener("keydown", handleKey);
   }, [onClose]);
 
+  // Lock body scroll while panel is open so the page behind doesn't scroll
+  // when the user tries to scroll the panel content.
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, []);
+
   const filteredEvents = useMemo(() => {
     if (!data) return [];
     if (!eventFilter) return data.events;
@@ -75,11 +85,11 @@ export default function InstallDetailPanel({ iid, zIndexBase = 60, onClose }: Pr
       <div
         className="fixed bg-deadly-surface flex flex-col
           inset-x-0 bottom-0 h-[85vh] rounded-t-2xl
-          lg:inset-x-auto lg:right-0 lg:top-0 lg:bottom-0 lg:h-full lg:w-[560px] lg:rounded-none lg:rounded-l-2xl
+          sm:inset-x-auto sm:right-0 sm:top-0 sm:bottom-0 sm:h-full sm:w-[560px] sm:max-w-[100vw] sm:rounded-none sm:rounded-l-2xl
         "
         style={{ zIndex: zIndexBase + 1 }}
       >
-        <div className="lg:hidden flex justify-center py-2">
+        <div className="sm:hidden flex justify-center py-2">
           <div className="w-10 h-1 bg-zinc-600 rounded-full" />
         </div>
 
@@ -100,7 +110,7 @@ export default function InstallDetailPanel({ iid, zIndexBase = 60, onClose }: Pr
         </div>
 
         {/* Content */}
-        <div className="flex-1 overflow-auto">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden overscroll-contain">
           {loading && !data ? (
             <div className="flex items-center justify-center p-12">
               <p className="text-zinc-400">Loading events...</p>

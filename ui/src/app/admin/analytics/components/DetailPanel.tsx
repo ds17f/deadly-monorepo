@@ -90,18 +90,28 @@ export default function DetailPanel({
     return () => window.removeEventListener("keydown", handleKey);
   }, [onClose]);
 
+  // Lock body scroll while panel is open so the page behind doesn't scroll
+  // when the user tries to scroll the panel content (touch & wheel).
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, []);
+
   return (
     <>
       {/* Backdrop */}
       <div className="fixed inset-0 bg-black/50 z-40" onClick={onClose} />
 
-      {/* Panel — bottom sheet on mobile, side panel on desktop */}
+      {/* Panel — bottom sheet on phones, side panel on tablet/desktop */}
       <div className="fixed z-50 bg-deadly-surface flex flex-col
         inset-x-0 bottom-0 h-[85vh] rounded-t-2xl
-        lg:inset-x-auto lg:right-0 lg:top-0 lg:bottom-0 lg:h-full lg:w-[560px] lg:rounded-none lg:rounded-l-2xl
+        sm:inset-x-auto sm:right-0 sm:top-0 sm:bottom-0 sm:h-full sm:w-[560px] sm:max-w-[100vw] sm:rounded-none sm:rounded-l-2xl
       ">
-        {/* Drag indicator (mobile) */}
-        <div className="lg:hidden flex justify-center py-2">
+        {/* Drag indicator (phones only) */}
+        <div className="sm:hidden flex justify-center py-2">
           <div className="w-10 h-1 bg-zinc-600 rounded-full" />
         </div>
 
@@ -137,7 +147,7 @@ export default function DetailPanel({
         </div>
 
         {/* Content */}
-        <div className="flex-1 overflow-auto">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden overscroll-contain">
           {loading ? (
             <div className="flex items-center justify-center p-12">
               <p className="text-zinc-400">Loading...</p>
@@ -182,12 +192,12 @@ export default function DetailPanel({
                   return (
                     <div
                       key={i}
-                      className="bg-zinc-800/50 rounded-lg p-3 hover:bg-zinc-800 active:bg-zinc-700/50 cursor-pointer"
+                      className="bg-zinc-800/50 rounded-lg p-3 hover:bg-zinc-800 active:bg-zinc-700/50 cursor-pointer overflow-hidden"
                       onClick={() => onOpenInstall(row.iid)}
                     >
                       {detail && (
-                        <div className="flex items-baseline justify-between gap-3 mb-1.5">
-                          <span className="text-sm text-zinc-100 break-all">
+                        <div className="flex items-baseline justify-between gap-3 mb-1.5 min-w-0">
+                          <span className="text-sm text-zinc-100 break-words min-w-0 flex-1 [overflow-wrap:anywhere]">
                             {detailIsShow ? (
                               <ShowLink id={detail} />
                             ) : (
@@ -199,9 +209,9 @@ export default function DetailPanel({
                           </span>
                         </div>
                       )}
-                      <div className="flex items-center justify-between gap-2 text-xs">
+                      <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-2 text-xs">
                         <button
-                          className="text-deadly-blue hover:text-white transition-colors flex items-center gap-1 min-w-0"
+                          className="text-deadly-blue hover:text-white transition-colors flex items-center gap-1 min-w-0 self-start"
                           onClick={(e) => {
                             e.stopPropagation();
                             onOpenInstall(row.iid);
@@ -210,12 +220,12 @@ export default function DetailPanel({
                           <span>{emojiForId(row.iid)}</span>
                           <span className="font-mono">{row.iid?.slice(0, 8)}</span>
                         </button>
-                        <div className="flex items-center gap-2 text-zinc-400 flex-shrink-0">
+                        <div className="flex items-center flex-wrap gap-x-2 gap-y-0.5 text-zinc-400 sm:flex-shrink-0 sm:flex-nowrap">
                           <span>{row.platform}</span>
                           <span className="text-zinc-500">v{row.app_version}</span>
                           <span className="text-zinc-500">{relativeTime(row.last_seen)}</span>
                           {!detail && (
-                            <span className="text-zinc-300 tabular-nums ml-1">
+                            <span className="text-zinc-300 tabular-nums sm:ml-1">
                               {row.event_count}
                             </span>
                           )}

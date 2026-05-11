@@ -369,10 +369,10 @@ function PlaybackPairCard({
     (start?.props && start.props !== "{}") || (end?.props && end.props !== "{}");
 
   return (
-    <div className="relative pl-4">
+    <div className="relative pl-4 min-w-0">
       <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-full ${style.edge}`} />
       <div
-        className={`bg-zinc-800/50 rounded-lg p-2.5 ${
+        className={`bg-zinc-800/50 rounded-lg p-2.5 overflow-hidden ${
           hasExpandable ? "cursor-pointer hover:bg-zinc-800" : ""
         }`}
         onClick={hasExpandable ? () => setExpanded((v) => !v) : undefined}
@@ -385,7 +385,7 @@ function PlaybackPairCard({
             {timeOfDay(tsForTime)}
           </span>
         </div>
-        <div className="text-sm text-zinc-200 break-words flex flex-wrap items-baseline gap-x-1">
+        <div className="text-sm text-zinc-200 [overflow-wrap:anywhere] flex flex-wrap items-baseline gap-x-1 min-w-0">
           {isShowId(showId) ? (
             <ShowLink id={showId} />
           ) : (
@@ -437,11 +437,11 @@ function EventCard({ evt }: { evt: InstallEvent }) {
   const hasProps = !!evt.props && evt.props !== "{}";
 
   return (
-    <div className="relative pl-4">
+    <div className="relative pl-4 min-w-0">
       {/* Left edge color bar */}
       <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-full ${style.edge}`} />
       <div
-        className={`bg-zinc-800/50 rounded-lg p-2.5 ${hasProps ? "cursor-pointer hover:bg-zinc-800" : ""}`}
+        className={`bg-zinc-800/50 rounded-lg p-2.5 overflow-hidden ${hasProps ? "cursor-pointer hover:bg-zinc-800" : ""}`}
         onClick={hasProps ? () => setExpanded((v) => !v) : undefined}
       >
         <div className="flex items-baseline justify-between gap-2 mb-0.5">
@@ -452,7 +452,7 @@ function EventCard({ evt }: { evt: InstallEvent }) {
             {timeOfDay(evt.ts)}
           </span>
         </div>
-        <div className="text-sm text-zinc-200 break-words">{eventSummary(evt)}</div>
+        <div className="text-sm text-zinc-200 [overflow-wrap:anywhere]">{eventSummary(evt)}</div>
         {hasProps && expanded && evt.props && (
           <p className="text-xs text-zinc-600 font-mono mt-2 break-all border-t border-zinc-700/50 pt-2">
             <PropsRaw propsStr={evt.props} />
@@ -475,15 +475,15 @@ function SessionGroup({ session, defaultOpen }: { session: Session; defaultOpen:
     <div className="bg-zinc-900/40 rounded-lg overflow-hidden border border-zinc-800">
       <button
         onClick={() => setOpen((v) => !v)}
-        className="w-full px-3 py-2 flex items-center justify-between gap-2 hover:bg-zinc-800/50 transition-colors"
+        className="w-full px-3 py-2 flex items-start sm:items-center justify-between gap-2 hover:bg-zinc-800/50 transition-colors text-left"
       >
-        <div className="flex items-center gap-2 min-w-0">
-          <span className="text-zinc-500 text-xs">{open ? "▾" : "▸"}</span>
-          <span className="text-sm text-zinc-200">
+        <div className="flex items-center gap-2 min-w-0 flex-wrap">
+          <span className="text-zinc-500 text-xs flex-shrink-0">{open ? "▾" : "▸"}</span>
+          <span className="text-sm text-zinc-200 whitespace-nowrap">
             {dateStr} {timeOfDay(session.startTs)}
           </span>
-          <span className="text-xs text-zinc-500">· {formatMs(duration)}</span>
-          <span className="text-xs text-zinc-500">· {session.events.length} events</span>
+          <span className="text-xs text-zinc-500 whitespace-nowrap">· {formatMs(duration)}</span>
+          <span className="text-xs text-zinc-500 whitespace-nowrap">· {session.events.length} events</span>
         </div>
         <span className="text-xs text-zinc-500 flex-shrink-0">
           {relativeTime(session.startTs)}

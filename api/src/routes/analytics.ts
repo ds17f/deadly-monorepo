@@ -16,6 +16,7 @@ import {
   getRetentionCohorts,
   getSearchQuality,
   getLiveListeners,
+  getRecentListening,
   getGrowthByPlatform,
   getTopShows,
 } from "../db/analytics.js";
@@ -671,6 +672,72 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       preHandler: requireAdmin,
     },
     async () => ({ listeners: getLiveListeners() }),
+  );
+
+  // GET /api/analytics/recent-listening — finished sessions in the last N hours.
+  app.get(
+    "/api/analytics/recent-listening",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Recent listening sessions (admin)",
+        querystring: {
+          type: "object",
+          properties: {
+            hours: { type: "number", default: 24 },
+            limit: { type: "number", default: 100 },
+          },
+        },
+        response: {
+          200: {
+            type: "object",
+            properties: {
+              sessions: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    iid: { type: "string" },
+                    platform: { type: "string" },
+                    app_version: { type: "string" },
+                    started_at: { type: "number" },
+                    last_event_at: { type: "number" },
+                    show_id: { type: ["string", "null"] },
+                    recording_id: { type: ["string", "null"] },
+                    track_index: { type: ["number", "null"] },
+                    source: { type: ["string", "null"] },
+                    session_count: { type: "number" },
+                    ended: { type: "boolean" },
+                    tracks: {
+                      type: "array",
+                      items: {
+                        type: "object",
+                        properties: {
+                          index: { type: "number" },
+                          outcome: { type: "string" },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { hours, limit } = request.query as {
+        hours?: number;
+        limit?: number;
+      };
+      const clampedHours = Math.min(Math.max(hours ?? 24, 1), 168);
+      const clampedLimit = Math.min(Math.max(limit ?? 100, 1), 500);
+      return {
+        sessions: getRecentListening(clampedHours, clampedLimit),
+      };
+    },
   );
 
   // GET /api/analytics/search-quality — zero-result + abandon + ranking-quality stats.
