@@ -25,10 +25,12 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import kotlinx.coroutines.withTimeoutOrNull
 import android.net.Uri
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -967,6 +969,23 @@ class MediaControllerRepository @Inject constructor(
         }
     }
     
+    /**
+     * Wait briefly for connection, then report whether the session already has
+     * a queue loaded (e.g. the service survived from a prior Android Auto
+     * session). Used by app-launch restore paths to avoid clobbering live
+     * playback with a stale snapshot from SharedPreferences.
+     */
+    suspend fun hasActiveQueue(timeoutMs: Long = 3000L): Boolean {
+        withTimeoutOrNull(timeoutMs) {
+            connectionState.first {
+                it == ConnectionState.Connected || it == ConnectionState.Failed
+            }
+        }
+        return withContext(Dispatchers.Main) {
+            (mediaController?.mediaItemCount ?: 0) > 0
+        }
+    }
+
     /**
      * Get current MediaItems from the queue for hydration
      * Must be called from the main thread (MediaController requirement)
