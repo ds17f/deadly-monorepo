@@ -581,6 +581,40 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             return Futures.immediateFuture(LibraryResult.ofItemList(paged, params))
         }
 
+        // Called by Android Auto, system media resume cards (Android 12+),
+        // Wear OS, and Assistant when the user (or AA's auto-resume setting)
+        // wants to resume playback after the app has been killed. Returning
+        // the last queue + position lets these surfaces show a resumable
+        // session; whether playback starts automatically is controlled by
+        // the requesting surface (e.g. Android Auto's own auto-resume toggle),
+        // matching Spotify/YT Music behaviour.
+        override fun onPlaybackResumption(
+            mediaSession: MediaSession,
+            controller: MediaSession.ControllerInfo
+        ): ListenableFuture<MediaSession.MediaItemsWithStartPosition> = serviceScope.future {
+            Log.d(TAG, "[RESUME] onPlaybackResumption from ${controller.packageName}")
+            val prefs = getSharedPreferences("last_played_track", MODE_PRIVATE)
+            val showId = prefs.getString("show_id", null)
+            val recordingId = prefs.getString("recording_id", null)
+            val format = prefs.getString("selected_format", null)
+            if (showId == null || recordingId == null || format == null) {
+                Log.d(TAG, "[RESUME] No last-played session, declining resume")
+                throw UnsupportedOperationException("No resumable session")
+            }
+            val trackIndex = prefs.getInt("track_index", 0)
+            val positionMs = prefs.getLong("position_ms", 0L)
+            val tracks = browseTreeProvider.resolveRecordingToPlayableTracks(
+                showId, recordingId, format
+            )
+            if (tracks.isEmpty()) {
+                Log.w(TAG, "[RESUME] No tracks resolved for $showId/$recordingId")
+                throw UnsupportedOperationException("No tracks resolved")
+            }
+            val safeIndex = trackIndex.coerceIn(0, tracks.size - 1)
+            Log.d(TAG, "[RESUME] Returning ${tracks.size} tracks, idx=$safeIndex, pos=${positionMs}ms")
+            MediaSession.MediaItemsWithStartPosition(tracks, safeIndex, positionMs)
+        }
+
         override fun onSetMediaItems(
             mediaSession: MediaSession,
             controller: MediaSession.ControllerInfo,
