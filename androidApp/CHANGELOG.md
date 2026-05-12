@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.27.0] - 2026-05-12
+
+### New Features
+* autoplay/resume via onPlaybackResumption (DEAD-336) (#39) (06b4561a)
+
+### Bug Fixes
+* disable periodic position updates to stop queue snap-back (DEAD-337) (#38) (405e1eab)
+* don't clobber live session on app re-launch (DEAD-229) (#37) (9bd63c3c)
+
+### CI Changes
+* promote workflows must check out the version tag, not main (#34) (5dfbcc20)
+
+
 ## [2.26.0] - 2026-05-10
 
 ### New Features
@@ -56,8 +69,6 @@
 * chore(build): rename dev-* compose targets to docker-* and add SELinux labels (92a02ea3)
 * chore(build): add Linux Android SDK path and top-level android-* targets (2c42afe0)
 * chore: update worklaptop hostname and source KEYCHAIN_PASSWORD from .env (da27176f)
-
-
 ## [2.25.0] - 2026-04-23
 
 ### New Features
