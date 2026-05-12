@@ -206,11 +206,20 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
         )
 
-        // Create MediaLibrarySession (callback in constructor, not via setter)
+        // Create MediaLibrarySession (callback in constructor, not via setter).
+        //
+        // setPeriodicPositionUpdateEnabled(false): workaround for an Android Auto
+        // companion app bug (16.6.x and earlier) where every periodic position
+        // update triggers the AA browse/queue UI to reset its scroll state,
+        // making the in-car queue unusable while audio is playing. Disabling the
+        // periodic push does not affect transport, metadata, or seek updates —
+        // AA still polls the controller for current position when it needs it.
+        // See androidx/media#2192.
         mediaSession = MediaLibrarySession.Builder(this, exoPlayer, LibrarySessionCallback())
             .setSessionActivity(sessionActivityPendingIntent)
             .setId("DeadlySession")
             .setBitmapLoader(WaveformFilteringBitmapLoader(this))
+            .setPeriodicPositionUpdateEnabled(false)
             .build()
 
         Log.d(TAG, "[MEDIA] DeadlyMediaSessionService onCreate completed")
