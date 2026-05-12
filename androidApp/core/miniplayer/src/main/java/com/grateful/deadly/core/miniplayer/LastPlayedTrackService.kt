@@ -138,12 +138,23 @@ class LastPlayedTrackService @Inject constructor(
      */
     suspend fun restoreLastPlayedTrack() {
         try {
+            // If the MediaSession service survived from a prior session (e.g.
+            // user was on Android Auto, exited the car without pausing, then
+            // tapped the phone notification), a queue is already loaded. Calling
+            // playTrack here would clobber it via setMediaItems+prepare, jumping
+            // to the slightly-stale SharedPreferences snapshot and replacing the
+            // live artwork with the ArtworkProvider fallback (DEAD-229).
+            if (mediaControllerRepository.hasActiveQueue()) {
+                Log.d(TAG, "Active session already has a queue — skipping restore")
+                return
+            }
+
             val lastTrack = getLastPlayedTrack()
             if (lastTrack == null) {
                 Log.d(TAG, "No last played track to restore")
                 return
             }
-            
+
             Log.d(TAG, "Restoring last played track: ${lastTrack.trackTitle}")
             
             // Load track into MediaController with exact position (without auto-playing)
