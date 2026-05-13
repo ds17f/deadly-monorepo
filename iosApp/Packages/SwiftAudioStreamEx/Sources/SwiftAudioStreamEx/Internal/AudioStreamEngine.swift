@@ -24,6 +24,17 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     /// Set before calling player.play(), consumed in didStartPlaying callback.
     nonisolated(unsafe) private var pendingQueueURLs: [URL] = []
 
+    /// Monotonically-increasing token bumped on every `loadQueue` call. A stale
+    /// `resolveAllRedirects` completion whose captured generation no longer matches
+    /// is dropped — this prevents a previously-tapped recording from clobbering
+    /// the queue after the user switches recordings mid-load.
+    nonisolated(unsafe) private var loadGeneration: Int = 0
+
+    /// Last error reported via the AudioStreaming delegate, preserved so it can be
+    /// surfaced when `mapState` later transitions to `.error` (which otherwise has
+    /// no context and falls back to a generic "Player error" string).
+    nonisolated(unsafe) private var lastError: StreamPlayerError?
+
     /// Minimum duration (seconds) a track must have played to count as a real completion.
     private let minimumPlayDuration: Double = 0.5
 
@@ -104,20 +115,36 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     /// Resolves all redirects upfront, then plays track at `index` and queues all remaining
     /// tracks with AudioStreaming's internal gapless queue.
     func loadQueue(urls: [URL], startingAt index: Int) {
-        logger.notice("loadQueue: \(urls.count) tracks, starting at \(index)")
+        lock.lock()
+        loadGeneration += 1
+        let generation = loadGeneration
+        lock.unlock()
+
+        let firstName = urls.first?.lastPathComponent ?? "(none)"
+        let lastName = urls.last?.lastPathComponent ?? "(none)"
+        logger.notice("[PB] loadQueue gen=\(generation, privacy: .public) count=\(urls.count, privacy: .public) startIdx=\(index, privacy: .public) first=\(firstName, privacy: .public) last=\(lastName, privacy: .public)")
 
         resolveAllRedirects(for: urls) { [weak self] resolved in
             guard let self else { return }
 
             self.lock.lock()
+            guard generation == self.loadGeneration else {
+                self.lock.unlock()
+                self.logger.warning("[PB] loadQueue stale gen=\(generation, privacy: .public) current=\(self.loadGeneration, privacy: .public) — dropping completion")
+                return
+            }
             self.queue = QueueState(tracks: urls, resolved: resolved, currentIndex: index)
             // Stash remaining URLs — they'll be queued in didStartPlaying
             // (play() triggers an async clearQueue() that would wipe anything queued now)
             self.pendingQueueURLs = index + 1 < resolved.count ? Array(resolved[(index + 1)...]) : []
+            let snapshot = self.queueSnapshotLocked()
             self.lock.unlock()
 
-            guard index < resolved.count else { return }
-            self.logger.notice("all \(resolved.count) redirects resolved, starting playback at \(index)")
+            guard index < resolved.count else {
+                self.logger.warning("[PB] loadQueue resolved count=\(resolved.count, privacy: .public) but startIdx=\(index, privacy: .public) is out of bounds")
+                return
+            }
+            self.logger.notice("[PB] loadQueue resolved gen=\(generation, privacy: .public) \(snapshot, privacy: .public) — play \(resolved[index].absoluteString, privacy: .public)")
 
             // Play the first track — remaining tracks queued after didStartPlaying fires
             self.player.play(url: resolved[index])
@@ -127,16 +154,20 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
 
     func advanceToNext() -> Bool {
         lock.lock()
+        let before = queue.currentIndex
         guard queue.currentIndex < queue.resolved.count - 1 else {
+            let snapshot = queueSnapshotLocked()
             lock.unlock()
+            logger.warning("[PB] advanceToNext guarded: at end of queue \(snapshot, privacy: .public)")
             return false
         }
         queue.currentIndex += 1
         let remaining = Array(queue.resolved[(queue.currentIndex)...])
         pendingQueueURLs = remaining.count > 1 ? Array(remaining[1...]) : []
+        let snapshot = queueSnapshotLocked()
         lock.unlock()
 
-        logger.info("advanceToNext: skip to index \(self.currentIndex)")
+        logger.notice("[PB] advanceToNext \(before, privacy: .public) → \(self.currentIndex, privacy: .public) \(snapshot, privacy: .public) play=\(remaining[0].absoluteString, privacy: .public)")
 
         player.play(url: remaining[0])
         startProgressTimer()
@@ -145,16 +176,20 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
 
     func rewindToPrevious() -> Bool {
         lock.lock()
+        let before = queue.currentIndex
         guard queue.currentIndex > 0 else {
+            let snapshot = queueSnapshotLocked()
             lock.unlock()
+            logger.warning("[PB] rewindToPrevious guarded: at start of queue \(snapshot, privacy: .public)")
             return false
         }
         queue.currentIndex -= 1
         let remaining = Array(queue.resolved[(queue.currentIndex)...])
         pendingQueueURLs = remaining.count > 1 ? Array(remaining[1...]) : []
+        let snapshot = queueSnapshotLocked()
         lock.unlock()
 
-        logger.info("rewindToPrevious: to index \(self.currentIndex)")
+        logger.notice("[PB] rewindToPrevious \(before, privacy: .public) → \(self.currentIndex, privacy: .public) \(snapshot, privacy: .public) play=\(remaining[0].absoluteString, privacy: .public)")
 
         player.play(url: remaining[0])
         startProgressTimer()
@@ -163,16 +198,20 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
 
     func skipTo(index: Int) -> Bool {
         lock.lock()
+        let before = queue.currentIndex
         guard index >= 0, index < queue.resolved.count else {
+            let snapshot = queueSnapshotLocked()
             lock.unlock()
+            logger.warning("[PB] skipTo guarded: invalid index=\(index, privacy: .public) \(snapshot, privacy: .public)")
             return false
         }
         queue.currentIndex = index
         let remaining = Array(queue.resolved[index...])
         pendingQueueURLs = remaining.count > 1 ? Array(remaining[1...]) : []
+        let snapshot = queueSnapshotLocked()
         lock.unlock()
 
-        logger.info("skipTo: index \(index)")
+        logger.notice("[PB] skipTo \(before, privacy: .public) → \(index, privacy: .public) \(snapshot, privacy: .public) play=\(remaining[0].absoluteString, privacy: .public)")
 
         player.play(url: remaining[0])
         startProgressTimer()
@@ -237,6 +276,14 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         lock.unlock()
         player.removeFromQueue(url: removedResolved)
         return true
+    }
+
+    // MARK: - Diagnostics
+
+    /// Compact one-line description of queue state for log messages.
+    /// Caller MUST hold `lock`.
+    private func queueSnapshotLocked() -> String {
+        "idx=\(queue.currentIndex)/\(queue.resolved.count) pending=\(pendingQueueURLs.count)"
     }
 
     // MARK: - Progress timer
@@ -314,7 +361,10 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
 
 extension AudioStreamEngine: AudioPlayerDelegate {
     func audioPlayerDidStartPlaying(player: AudioPlayer, with entryId: AudioEntryId) {
-        logger.notice("delegate: didStartPlaying entry=\(entryId.id)")
+        lock.lock()
+        let entrySnapshot = queueSnapshotLocked()
+        lock.unlock()
+        logger.notice("[PB] didStartPlaying entry=\(entryId.id, privacy: .public) \(entrySnapshot, privacy: .public)")
         onStateChange?(.playing)
         startProgressTimer()
 
@@ -323,15 +373,21 @@ extension AudioStreamEngine: AudioPlayerDelegate {
         // and keeps the index correct regardless of how the transition happened.
         lock.lock()
         if let actualIndex = queue.resolved.firstIndex(where: { $0.absoluteString == entryId.id }) {
+            let previousIndex = queue.currentIndex
             let wasAutoAdvance = actualIndex != queue.currentIndex
             queue.currentIndex = actualIndex
             lock.unlock()
+            logger.notice("[PB] didStartPlaying matched prev=\(previousIndex, privacy: .public) → actual=\(actualIndex, privacy: .public) wasAutoAdvance=\(wasAutoAdvance, privacy: .public)")
             if wasAutoAdvance {
-                logger.notice("auto-advance detected: now at index \(actualIndex)")
                 onTrackComplete?()
             }
         } else {
+            // The URL AudioStreaming reports doesn't match anything in our queue.
+            // This is the silent-desync trap — log loudly so we can see it.
+            let resolvedNames = queue.resolved.map { $0.lastPathComponent }.joined(separator: ",")
+            let resolvedCount = queue.resolved.count
             lock.unlock()
+            logger.warning("[PB] didStartPlaying NO MATCH for entry=\(entryId.id, privacy: .public) — queue has \(resolvedCount, privacy: .public) tracks: [\(resolvedNames, privacy: .public)]")
         }
 
         // Now safe to queue remaining tracks — play()'s deferred clearQueue() has already fired
@@ -341,17 +397,17 @@ extension AudioStreamEngine: AudioPlayerDelegate {
         lock.unlock()
 
         if !pending.isEmpty {
-            logger.notice("queueing \(pending.count) deferred tracks for gapless playback")
+            logger.notice("[PB] queueing \(pending.count, privacy: .public) deferred tracks for gapless playback")
             player.queue(urls: pending)
         }
     }
 
     func audioPlayerDidFinishBuffering(player: AudioPlayer, with entryId: AudioEntryId) {
-        logger.notice("delegate: didFinishBuffering entry=\(entryId.id)")
+        logger.notice("[PB] didFinishBuffering entry=\(entryId.id, privacy: .public)")
     }
 
     func audioPlayerStateChanged(player: AudioPlayer, with newState: AudioPlayerState, previous: AudioPlayerState) {
-        logger.notice("delegate: stateChanged \(String(describing: previous)) → \(String(describing: newState))")
+        logger.notice("[PB] stateChanged \(String(describing: previous), privacy: .public) → \(String(describing: newState), privacy: .public)")
         let mapped = mapState(newState)
         onStateChange?(mapped)
 
@@ -366,22 +422,26 @@ extension AudioStreamEngine: AudioPlayerDelegate {
     }
 
     func audioPlayerDidFinishPlaying(player: AudioPlayer, entryId: AudioEntryId, stopReason: AudioPlayerStopReason, progress: Double, duration: Double) {
-        logger.notice("delegate: didFinishPlaying entry=\(entryId.id) reason=\(String(describing: stopReason)) progress=\(progress, format: .fixed(precision: 1)) duration=\(duration, format: .fixed(precision: 1))")
-
         // Check if the last track in the queue just finished (end of queue)
         lock.lock()
         let isLastTrack = queue.currentIndex >= queue.tracks.count - 1
+        let snapshot = queueSnapshotLocked()
         lock.unlock()
 
+        logger.notice("[PB] didFinishPlaying entry=\(entryId.id, privacy: .public) reason=\(String(describing: stopReason), privacy: .public) progress=\(progress, format: .fixed(precision: 1), privacy: .public) duration=\(duration, format: .fixed(precision: 1), privacy: .public) \(snapshot, privacy: .public) isLastTrack=\(isLastTrack, privacy: .public)")
+
         if stopReason == .eof && isLastTrack {
-            logger.notice("final track finished, queue ended")
+            logger.notice("[PB] final track finished, queue ended")
             onStateChange?(.ended)
         }
     }
 
     func audioPlayerUnexpectedError(player: AudioPlayer, error: AudioPlayerError) {
-        logger.error("delegate: unexpectedError \(error.localizedDescription)")
         let mapped = StreamPlayerError.engineError(error.localizedDescription)
+        lock.lock()
+        lastError = mapped
+        lock.unlock()
+        logger.error("[PB] unexpectedError type=\(String(describing: error), privacy: .public) desc=\(error.localizedDescription, privacy: .public)")
         onError?(mapped)
         onStateChange?(.error(mapped))
     }
@@ -409,7 +469,10 @@ extension AudioStreamEngine: AudioPlayerDelegate {
         case .stopped:
             return .idle
         case .error:
-            return .error(.unknown("Player error"))
+            lock.lock()
+            let preserved = lastError
+            lock.unlock()
+            return .error(preserved ?? .unknown("Player error"))
         case .disposed:
             return .idle
         }

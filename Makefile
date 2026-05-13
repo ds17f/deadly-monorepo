@@ -19,8 +19,11 @@
 .PHONY: data-download data-generate data-package data-download-stage01 data-upload-stage01 data-collect data-release data-clean
 .PHONY: db-backup-list db-restore db-pull-analytics
 
-# Load KEYCHAIN_PASSWORD from .env if not set in environment
+# Load KEYCHAIN_PASSWORD from .env if not set in environment.
+# Exported so recipes that read $$KEYCHAIN_PASSWORD from the shell (rather than
+# interpolating it into the command line via $(KEYCHAIN_PASSWORD)) can see it.
 KEYCHAIN_PASSWORD ?= $(shell grep -E '^KEYCHAIN_PASSWORD=' .env 2>/dev/null | cut -d= -f2- | tr -d '"')
+export KEYCHAIN_PASSWORD
 
 # =============================================================================
 # API & DOCKER COMPOSE
@@ -474,10 +477,16 @@ ios-remote-unlock:
 	@echo "Unlocking keychain on $(REMOTE_HOST)..."
 	@ssh -t $(REMOTE_HOST) "security unlock-keychain ~/Library/Keychains/login.keychain-db"
 
-# Build + install to connected device (requires USB-connected iPhone + KEYCHAIN_PASSWORD env var)
+# Build + install to connected device (requires USB-connected iPhone + KEYCHAIN_PASSWORD env var).
+# Password is piped to ssh stdin and forwarded to `security unlock-keychain` via stdin —
+# never placed on a command line, so it doesn't appear in `ps` on the Mac.
 ios-remote-install: remote-sync
+	@if [ -z "$$KEYCHAIN_PASSWORD" ]; then echo "KEYCHAIN_PASSWORD env var must be set." >&2; exit 1; fi
 	@echo "Building on $(REMOTE_HOST)..."
-	@ssh $(REMOTE_HOST) "security unlock-keychain -p '$(KEYCHAIN_PASSWORD)' ~/Library/Keychains/login.keychain-db && cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'generic/platform=iOS' -allowProvisioningUpdates build 2>&1 | tail -20"
+	@printf '%s\n' "$$KEYCHAIN_PASSWORD" | ssh $(REMOTE_HOST) "IFS= read -r PASS; \
+		printf '%s\n' \"\$$PASS\" | security unlock-keychain ~/Library/Keychains/login.keychain-db && \
+		unset PASS && \
+		cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'generic/platform=iOS' -allowProvisioningUpdates build 2>&1 | tail -20"
 	@echo "Installing to device..."
 	@ssh $(REMOTE_HOST) 'DEVICE_ID=$$(xcrun devicectl list devices 2>/dev/null | grep -oE "[0-9A-F]{8}-([0-9A-F]{4}-){3}[0-9A-F]{12}" | head -1) && APP_PATH=$$(cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination "generic/platform=iOS" -showBuildSettings 2>/dev/null | grep " BUILT_PRODUCTS_DIR" | head -1 | awk "{print \$$3}")/deadly.app && xcrun devicectl device install app --device "$$DEVICE_ID" "$$APP_PATH" 2>&1'
 
@@ -497,6 +506,77 @@ ios-remote-test: remote-sync
 ios-remote-resolve:
 	@echo "Resolving packages on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "cd $(REMOTE_IOS) && xcodebuild -resolvePackageDependencies -project deadly.xcodeproj 2>&1 | tail -20"
+
+# -----------------------------------------------------------------------------
+# Device logs from a USB-tethered iPhone on the remote Mac.
+# Stream lines tagged "[PB]" (the playback layer's filter tag — see
+# iosApp/Packages/SwiftAudioStreamEx/LOGGING.md) or collect the last N minutes.
+#
+# `IOS_DEVICE_UDID` may be set explicitly; if blank it is auto-detected from
+# whichever device is currently paired/tethered on the Mac. `IOS_LOG_FILTER`
+# overrides the predicate (default "[PB]"). `IOS_LOG_MINUTES` overrides the
+# collect window (default 20).
+# -----------------------------------------------------------------------------
+IOS_LOG_FILTER     ?= [PB]
+IOS_LOG_MINUTES    ?= 20
+IOS_LOG_DIR        ?= logs/ios
+# Set to 1 to also rsync the raw .logarchive back from the Mac. Off by default
+# because an hour of device logs can be 200+ MB and the filtered .txt is what
+# you usually want. The archive stays on the Mac in a tmp dir even when off.
+IOS_LOG_KEEP_ARCHIVE ?= 0
+
+.PHONY: ios-remote-log-stream ios-remote-log-collect ios-remote-log-devices
+
+# Hardware UDID autodetect (snippet inlined into each remote recipe).
+# Picks the first hardware UDID (`XXXXXXXX-XXXXXXXXXXXXXXXX` 25-char form)
+# from `xcrun devicectl list devices --json-output -`. The regex excludes
+# simulator UUIDs and the CoreDevice identifier (both full 36-char UUIDs).
+# Override by exporting IOS_DEVICE_UDID locally before running make.
+
+# List paired devices on the Mac (handy for picking a UDID if autodetect grabs the wrong one).
+ios-remote-log-devices:
+	@ssh $(REMOTE_HOST) 'xcrun devicectl list devices 2>/dev/null'
+
+# Live-stream device syslog filtered by IOS_LOG_FILTER (default "[PB]").
+# Writes a timestamped copy under $(IOS_LOG_DIR)/ on THIS machine while also
+# echoing to your terminal. Requires libimobiledevice on the Mac
+# (one-time setup: `brew install libimobiledevice`).
+ios-remote-log-stream:
+	@mkdir -p $(IOS_LOG_DIR)
+	@TS=$$(date +%Y%m%d-%H%M%S); OUT="$(IOS_LOG_DIR)/stream-$$TS.txt"; \
+		echo "Streaming iOS device logs from $(REMOTE_HOST) (filter='$(IOS_LOG_FILTER)')."; \
+		echo "Saving to $$OUT — Ctrl-C to stop."; \
+		ssh -t $(REMOTE_HOST) 'if ! command -v idevicesyslog >/dev/null 2>&1; then echo "idevicesyslog not installed on the Mac. Run: brew install libimobiledevice" >&2; exit 1; fi; UDID=$${IOS_DEVICE_UDID:-$$(xcrun devicectl list devices --json-output - 2>/dev/null | grep -oE "[0-9A-F]{8}-[0-9A-F]{16}" | head -1)}; if [ -z "$$UDID" ]; then echo "No tethered iOS device found. Run: make ios-remote-log-devices" >&2; exit 1; fi; echo "Using device $$UDID" >&2; idevicesyslog -u "$$UDID" -m "$(IOS_LOG_FILTER)"' | tee "$$OUT"
+
+# Pull the last IOS_LOG_MINUTES of unified logs off the device via the Mac,
+# filter by IOS_LOG_FILTER, and save the result locally under $(IOS_LOG_DIR)/.
+# Also fetches the raw .logarchive back via scp for deeper inspection.
+#
+# The Mac sudo password is read from $$KEYCHAIN_PASSWORD on THIS machine and
+# piped to ssh's stdin (NOT placed on the command line). The remote shell
+# reads the first stdin line into a local variable and feeds it to `sudo -S`.
+# This keeps the password out of `ps` argv on both the local and remote hosts.
+ios-remote-log-collect:
+	@if [ -z "$$KEYCHAIN_PASSWORD" ]; then echo "KEYCHAIN_PASSWORD env var must be set (used to drive sudo -S on the Mac)." >&2; exit 1; fi
+	@mkdir -p $(IOS_LOG_DIR)
+	@TS=$$(date +%Y%m%d-%H%M%S); \
+		TXT_LOCAL="$(IOS_LOG_DIR)/collect-$$TS.txt"; \
+		ARCHIVE_LOCAL="$(IOS_LOG_DIR)/collect-$$TS.logarchive"; \
+		REMOTE_TMP=$$(ssh $(REMOTE_HOST) 'mktemp -d'); \
+		REMOTE_ARCHIVE="$$REMOTE_TMP/iphone_logs.logarchive"; \
+		echo "Collecting last $(IOS_LOG_MINUTES)m of device logs on $(REMOTE_HOST) (filter='$(IOS_LOG_FILTER)')..."; \
+		printf '%s\n' "$$KEYCHAIN_PASSWORD" | ssh $(REMOTE_HOST) 'IFS= read -r PASS; UDID=$${IOS_DEVICE_UDID:-$$(xcrun devicectl list devices --json-output - 2>/dev/null | grep -oE "[0-9A-F]{8}-[0-9A-F]{16}" | head -1)}; if [ -z "$$UDID" ]; then echo "No tethered iOS device found. Run: make ios-remote-log-devices" >&2; exit 1; fi; echo "Using device $$UDID" >&2; printf "%s\n" "$$PASS" | sudo -S -p "" /usr/bin/log collect --device-udid "$$UDID" --last $(IOS_LOG_MINUTES)m --output '"$$REMOTE_ARCHIVE"' >&2 && unset PASS && /usr/bin/log show '"$$REMOTE_ARCHIVE"' --style compact --predicate "eventMessage CONTAINS \"$(IOS_LOG_FILTER)\""' > "$$TXT_LOCAL"; \
+		echo "Filtered text saved → $$TXT_LOCAL"; \
+		if [ "$(IOS_LOG_KEEP_ARCHIVE)" = "1" ]; then \
+			echo "Fetching raw .logarchive (this can be large)..."; \
+			scp -r -q $(REMOTE_HOST):"$$REMOTE_ARCHIVE" "$$ARCHIVE_LOCAL" && echo "Archive saved → $$ARCHIVE_LOCAL"; \
+		else \
+			echo "Skipping raw .logarchive fetch (set IOS_LOG_KEEP_ARCHIVE=1 to enable)."; \
+		fi; \
+		ssh $(REMOTE_HOST) "rm -rf $$REMOTE_TMP" 2>/dev/null || true; \
+		echo ""; \
+		echo "--- Preview (last 40 lines of $$TXT_LOCAL) ---"; \
+		tail -40 "$$TXT_LOCAL"
 
 # =============================================================================
 # ANDROID REMOTE BUILD (Linux → Mac)
@@ -660,10 +740,16 @@ docker-remote-pull:
 	@echo "Pulling base images on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && docker pull node:22-slim && docker pull caddy:2-alpine && docker pull redis:7-alpine"
 
-# Build + start full stack on remote Mac (requires KEYCHAIN_PASSWORD env var)
+# Build + start full stack on remote Mac (requires KEYCHAIN_PASSWORD env var).
+# Password is piped to ssh stdin and forwarded to `security unlock-keychain` via stdin —
+# never on a command line, so it does not appear in `ps` on the Mac.
 docker-remote-up:
+	@if [ -z "$$KEYCHAIN_PASSWORD" ]; then echo "KEYCHAIN_PASSWORD env var must be set." >&2; exit 1; fi
 	@echo "Starting stack on $(REMOTE_HOST)..."
-	@ssh $(REMOTE_HOST) "security unlock-keychain -p '$(KEYCHAIN_PASSWORD)' ~/Library/Keychains/login.keychain-db && $(REMOTE_ENVPATH) && cd $(REMOTE_PATH) && docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build -d"
+	@printf '%s\n' "$$KEYCHAIN_PASSWORD" | ssh $(REMOTE_HOST) "IFS= read -r PASS; \
+		printf '%s\n' \"\$$PASS\" | security unlock-keychain ~/Library/Keychains/login.keychain-db && \
+		unset PASS && \
+		$(REMOTE_ENVPATH) && cd $(REMOTE_PATH) && docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build -d"
 
 # Stop stack on remote Mac
 docker-remote-down:

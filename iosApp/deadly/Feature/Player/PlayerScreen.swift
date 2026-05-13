@@ -8,6 +8,7 @@ struct PlayerScreen: View {
 
     @State private var sliderValue: Double?
     @State private var showErrorAlert = false
+    @State private var showBugReportSheet = false
     @State private var showQRShare = false
     @State private var showShareChooser = false
     @State private var showMessageShare = false
@@ -239,14 +240,27 @@ struct PlayerScreen: View {
             Button("Retry") {
                 streamPlayer.play()
             }
+            Button("Send Bug Report") {
+                showBugReportSheet = true
+            }
             Button("Dismiss", role: .cancel) {
                 // Just dismiss
             }
         } message: {
             if let error = playbackError {
-                Text(error.localizedDescription)
+                Text("\(String(describing: error))\n\(error.localizedDescription)\n\nIf this keeps happening, tap Send Bug Report.")
             } else {
                 Text("An error occurred during playback. Please check your network connection and try again.")
+            }
+        }
+        .sheet(isPresented: $showBugReportSheet) {
+            NavigationStack {
+                BugReportView(filterContains: "[PB]")
+                    .toolbar {
+                        ToolbarItem(placement: .topBarTrailing) {
+                            Button("Done") { showBugReportSheet = false }
+                        }
+                    }
             }
         }
     }

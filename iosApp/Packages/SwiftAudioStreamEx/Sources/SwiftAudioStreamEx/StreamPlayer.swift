@@ -93,10 +93,12 @@ public final class StreamPlayer {
     /// Load a queue of tracks and optionally begin playback.
     public func loadQueue(_ tracks: [TrackItem], startingAt index: Int = 0, autoPlay: Bool = true) {
         guard !tracks.isEmpty else {
-            logger.warning("loadQueue called with empty tracks array")
+            logger.warning("[PB] loadQueue called with empty tracks array")
             return
         }
         let startIndex = min(max(index, 0), tracks.count - 1)
+        let firstTitle = tracks[startIndex].title
+        logger.notice("[PB] StreamPlayer.loadQueue count=\(tracks.count, privacy: .public) requestedIdx=\(index, privacy: .public) clampedIdx=\(startIndex, privacy: .public) autoPlay=\(autoPlay, privacy: .public) startTitle=\(firstTitle, privacy: .public)")
 
         // Stop current playback immediately so the UI feels responsive before redirect resolution.
         engine.stop()
@@ -117,7 +119,7 @@ public final class StreamPlayer {
 
         updateNowPlaying()
         nowPlayingManager.loadArtwork(from: currentTrack?.artworkURL)
-        logger.info("Queue loaded: \(tracks.count) tracks, starting at \(startIndex)")
+        logger.notice("[PB] StreamPlayer.loadQueue submitted to engine count=\(tracks.count, privacy: .public) startIdx=\(startIndex, privacy: .public)")
     }
 
     // MARK: - Playback controls
@@ -140,40 +142,59 @@ public final class StreamPlayer {
     }
 
     public func next() {
-        guard queueState.hasNext else { return }
+        let idx = queueState.currentIndex
+        let total = queueState.totalTracks
+        guard queueState.hasNext else {
+            logger.warning("[PB] StreamPlayer.next guarded: no next (idx=\(idx, privacy: .public)/\(total, privacy: .public))")
+            return
+        }
+        logger.notice("[PB] StreamPlayer.next requested at idx=\(idx, privacy: .public)/\(total, privacy: .public)")
         let advanced = engine.advanceToNext()
         if advanced {
             syncTrackFromEngine()
+        } else {
+            logger.warning("[PB] StreamPlayer.next engine refused to advance")
         }
     }
 
     public func previous() {
+        let idx = queueState.currentIndex
+        let total = queueState.totalTracks
+
         // If past threshold, restart current track
         if progress.currentTime > previousTrackThreshold {
+            logger.notice("[PB] StreamPlayer.previous restart-current at idx=\(idx, privacy: .public)/\(total, privacy: .public) (progress=\(self.progress.currentTime, format: .fixed(precision: 1), privacy: .public)s)")
             seek(to: 0)
             return
         }
 
         // If at first track, also restart
         guard queueState.hasPrevious else {
+            logger.notice("[PB] StreamPlayer.previous restart-current at first track (idx=\(idx, privacy: .public)/\(total, privacy: .public))")
             seek(to: 0)
             return
         }
 
+        logger.notice("[PB] StreamPlayer.previous requested at idx=\(idx, privacy: .public)/\(total, privacy: .public)")
         let rewound = engine.rewindToPrevious()
         if rewound {
             syncTrackFromEngine()
+        } else {
+            logger.warning("[PB] StreamPlayer.previous engine refused to rewind")
         }
     }
 
     public func skipTo(index: Int) {
         guard index >= 0, index < tracks.count else {
-            logger.warning("skipTo called with invalid index: \(index)")
+            logger.warning("[PB] StreamPlayer.skipTo invalid index=\(index, privacy: .public) total=\(self.tracks.count, privacy: .public)")
             return
         }
+        logger.notice("[PB] StreamPlayer.skipTo target=\(index, privacy: .public) from=\(self.queueState.currentIndex, privacy: .public)")
         let skipped = engine.skipTo(index: index)
         if skipped {
             syncTrackFromEngine()
+        } else {
+            logger.warning("[PB] StreamPlayer.skipTo engine refused")
         }
     }
 
@@ -258,8 +279,10 @@ public final class StreamPlayer {
         engine.onTrackComplete = { [weak self] in
             Task { @MainActor in
                 guard let self else { return }
+                let previousTitle = self.currentTrack?.title ?? "(none)"
                 self.syncTrackFromEngine()
-                self.logger.info("Track auto-advanced to index \(self.engine.currentIndex)")
+                let newTitle = self.currentTrack?.title ?? "(none)"
+                self.logger.notice("[PB] onTrackComplete prev=\(previousTitle, privacy: .public) → newIdx=\(self.engine.currentIndex, privacy: .public) new=\(newTitle, privacy: .public)")
             }
         }
 
@@ -274,7 +297,7 @@ public final class StreamPlayer {
             Task { @MainActor in
                 guard let self else { return }
                 self.playbackState = .error(error)
-                self.logger.error("Engine error: \(error.localizedDescription)")
+                self.logger.error("[PB] onError case=\(String(describing: error), privacy: .public) desc=\(error.localizedDescription, privacy: .public)")
             }
         }
     }
@@ -317,7 +340,11 @@ public final class StreamPlayer {
 
     private func syncTrackFromEngine() {
         let index = engine.currentIndex
-        guard index >= 0, index < tracks.count else { return }
+        guard index >= 0, index < tracks.count else {
+            logger.warning("[PB] syncTrackFromEngine out-of-bounds idx=\(index, privacy: .public) total=\(self.tracks.count, privacy: .public)")
+            return
+        }
+        logger.notice("[PB] syncTrackFromEngine idx=\(index, privacy: .public) title=\(self.tracks[index].title, privacy: .public)")
         currentTrack = tracks[index]
         progress = .zero
         updateQueueState(index: index)

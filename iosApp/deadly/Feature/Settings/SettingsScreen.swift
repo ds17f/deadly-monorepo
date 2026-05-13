@@ -222,6 +222,15 @@ struct SettingsScreen: View {
                 .foregroundStyle(.primary)
             }
 
+            // MARK: - Support
+            Section("Support") {
+                NavigationLink {
+                    BugReportView()
+                } label: {
+                    Label("Send Bug Report", systemImage: "ladybug")
+                }
+            }
+
             // MARK: - About
             Section("About") {
                 Button {
