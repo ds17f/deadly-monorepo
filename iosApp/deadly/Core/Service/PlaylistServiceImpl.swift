@@ -217,7 +217,7 @@ final class PlaylistServiceImpl: PlaylistService {
         await selectRecording(recording)
     }
 
-    func playTrack(at index: Int, source: String) {
+    func playTrack(at index: Int, source: String, autoPlay: Bool = true) {
         guard index >= 0, index < tracks.count,
               let recording = currentRecording else { return }
 
@@ -226,6 +226,8 @@ final class PlaylistServiceImpl: PlaylistService {
         // If the player already has this recording's queue loaded, skip directly to the index
         // instead of rebuilding the entire queue (avoids redundant network redirect resolution).
         // The observer will emit playback_start/_end via the debounced commit path.
+        // Note: skipTo always starts playback — autoPlay=false only applies when we build a
+        // fresh queue. Restore never hits this branch because nothing is loaded at launch.
         if streamPlayer.currentTrack?.metadata["recordingId"] == recording.identifier {
             streamPlayer.skipTo(index: index)
             return
@@ -267,7 +269,7 @@ final class PlaylistServiceImpl: PlaylistService {
                 ]
             )
         }
-        streamPlayer.loadQueue(trackItems, startingAt: index)
+        streamPlayer.loadQueue(trackItems, startingAt: index, autoPlay: autoPlay)
         startTrackObservation()
         // The observer will pick up the eventual settled track and fire
         // playback_start once it's been current for the dwell window.

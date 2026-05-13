@@ -35,6 +35,38 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     /// no context and falls back to a generic "Player error" string).
     nonisolated(unsafe) private var lastError: StreamPlayerError?
 
+    /// True once any URL has been handed to the underlying player. Used by
+    /// `startCurrent()` to distinguish "queue is loaded but never started"
+    /// (call `play(url:)`) from "already playing/paused" (call `play()` to resume).
+    /// Reset on every `loadQueue`. Guarded by `lock`.
+    nonisolated(unsafe) private var hasStartedAnyTrack: Bool = false
+
+    /// When `startCurrent()` is called before `resolveAllRedirects` finishes,
+    /// we remember the intent and the resolve handler honors it by starting
+    /// playback once URLs land. Guarded by `lock`.
+    nonisolated(unsafe) private var playWhenResolved: Bool = false
+
+    /// Number of retries already attempted for the current network failure
+    /// burst. Reset on success or on a new queue load. Guarded by `lock`.
+    nonisolated(unsafe) private var retryAttempts: Int = 0
+
+    /// Hard deadline for the current retry burst. After this point further
+    /// errors are surfaced to the user rather than retried. Guarded by `lock`.
+    nonisolated(unsafe) private var retryDeadline: Date?
+
+    /// Backoff schedule for network-error retries. Total ~7s, under the
+    /// `maxRetryDuration` budget below.
+    private let retryDelays: [TimeInterval] = [1.0, 2.0, 4.0]
+
+    /// Maximum total time spent retrying before the error reaches the user.
+    private let maxRetryDuration: TimeInterval = 10.0
+
+    /// One-shot debug delay (seconds) injected before the NEXT `loadQueue`'s
+    /// redirect-resolve completion fires. Used to deterministically force the
+    /// stale-generation race when paired with a quick second `loadQueue`.
+    /// Cleared after use. Guarded by `lock`.
+    nonisolated(unsafe) private var debugNextResolveDelay: TimeInterval = 0
+
     /// Minimum duration (seconds) a track must have played to count as a real completion.
     private let minimumPlayDuration: Double = 0.5
 
@@ -112,26 +144,53 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
 
     // MARK: - Queue management
 
-    /// Resolves all redirects upfront, then plays track at `index` and queues all remaining
-    /// tracks with AudioStreaming's internal gapless queue.
-    func loadQueue(urls: [URL], startingAt index: Int) {
+    /// Resolves all redirects upfront, then (if `autoPlay`) plays track at `index`
+    /// and queues all remaining tracks with AudioStreaming's internal gapless queue.
+    /// When `autoPlay` is false the queue is populated and ready, but playback is
+    /// not started — call `startCurrent()` later to begin the loaded track.
+    func loadQueue(urls: [URL], startingAt index: Int, autoPlay: Bool = true) {
         lock.lock()
         loadGeneration += 1
         let generation = loadGeneration
+        hasStartedAnyTrack = false
+        playWhenResolved = false
+        retryAttempts = 0
+        retryDeadline = nil
         lock.unlock()
 
         let firstName = urls.first?.lastPathComponent ?? "(none)"
         let lastName = urls.last?.lastPathComponent ?? "(none)"
-        logger.notice("[PB] loadQueue gen=\(generation, privacy: .public) count=\(urls.count, privacy: .public) startIdx=\(index, privacy: .public) first=\(firstName, privacy: .public) last=\(lastName, privacy: .public)")
+        logger.notice("[PB] loadQueue gen=\(generation, privacy: .public) count=\(urls.count, privacy: .public) startIdx=\(index, privacy: .public) autoPlay=\(autoPlay, privacy: .public) first=\(firstName, privacy: .public) last=\(lastName, privacy: .public)")
 
         resolveAllRedirects(for: urls) { [weak self] resolved in
             guard let self else { return }
 
+            // Optional one-shot delay used by `debugForceRaceCondition()` to
+            // deterministically reorder concurrent loadQueue completions.
             self.lock.lock()
-            guard generation == self.loadGeneration else {
-                self.lock.unlock()
-                self.logger.warning("[PB] loadQueue stale gen=\(generation, privacy: .public) current=\(self.loadGeneration, privacy: .public) — dropping completion")
+            let delay = self.debugNextResolveDelay
+            self.debugNextResolveDelay = 0
+            self.lock.unlock()
+            if delay > 0 {
+                self.logger.warning("[PB] DEBUG delaying resolve gen=\(generation, privacy: .public) by \(delay, format: .fixed(precision: 1), privacy: .public)s")
+                DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+                    self?.processResolveCompletion(resolved: resolved, urls: urls, index: index, generation: generation, autoPlay: autoPlay)
+                }
                 return
+            }
+            self.processResolveCompletion(resolved: resolved, urls: urls, index: index, generation: generation, autoPlay: autoPlay)
+        }
+    }
+
+    /// Body of the `resolveAllRedirects` completion. Extracted so the debug
+    /// delay can defer it without forking the closure body.
+    private func processResolveCompletion(resolved: [URL], urls: [URL], index: Int, generation: Int, autoPlay: Bool) {
+            self.lock.lock()
+            // TEMP A/B: stale-gen guard disabled to confirm the original race bug.
+            // Still log when a stale completion would have been dropped, then let it
+            // proceed and clobber so we can observe the broken behavior in the wild.
+            if generation != self.loadGeneration {
+                self.logger.warning("[PB] loadQueue stale gen=\(generation, privacy: .public) current=\(self.loadGeneration, privacy: .public) — GUARD DISABLED, allowing clobber")
             }
             self.queue = QueueState(tracks: urls, resolved: resolved, currentIndex: index)
             // Stash remaining URLs — they'll be queued in didStartPlaying
@@ -144,12 +203,66 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
                 self.logger.warning("[PB] loadQueue resolved count=\(resolved.count, privacy: .public) but startIdx=\(index, privacy: .public) is out of bounds")
                 return
             }
-            self.logger.notice("[PB] loadQueue resolved gen=\(generation, privacy: .public) \(snapshot, privacy: .public) — play \(resolved[index].absoluteString, privacy: .public)")
 
-            // Play the first track — remaining tracks queued after didStartPlaying fires
-            self.player.play(url: resolved[index])
-            self.startProgressTimer()
+            // Capture whether play was requested while we were resolving.
+            self.lock.lock()
+            let pendingPlay = self.playWhenResolved
+            self.playWhenResolved = false
+            self.lock.unlock()
+
+            if autoPlay || pendingPlay {
+                let reason = autoPlay ? "autoPlay" : "pendingPlay"
+                self.logger.notice("[PB] loadQueue resolved gen=\(generation, privacy: .public) \(snapshot, privacy: .public) — play (\(reason, privacy: .public)) \(resolved[index].absoluteString, privacy: .public)")
+                self.lock.lock()
+                self.hasStartedAnyTrack = true
+                self.lock.unlock()
+                self.player.play(url: resolved[index])
+                self.startProgressTimer()
+            } else {
+                self.logger.notice("[PB] loadQueue resolved gen=\(generation, privacy: .public) \(snapshot, privacy: .public) — autoPlay=false, deferring playback start")
+            }
+    }
+
+    /// Set a one-shot delay for the next `loadQueue` resolve completion. Used
+    /// by the developer "Force stale-gen race" tool.
+    func setDebugNextResolveDelay(_ seconds: TimeInterval) {
+        lock.lock()
+        debugNextResolveDelay = seconds
+        lock.unlock()
+    }
+
+    /// Start playback of the queue's current index. Used when `loadQueue` was
+    /// called with `autoPlay: false` and the user later presses play.
+    /// Idempotent: if a track has already been started, this resumes via the
+    /// underlying player's `play()` (resume) instead of restarting.
+    /// If `resolveAllRedirects` hasn't completed yet, the intent is stashed
+    /// (`playWhenResolved`) and the resolve handler kicks playback off.
+    func startCurrent() {
+        lock.lock()
+        if hasStartedAnyTrack {
+            lock.unlock()
+            logger.notice("[PB] startCurrent: already started, resuming")
+            player.resume()
+            startProgressTimer()
+            return
         }
+        guard !queue.resolved.isEmpty, queue.currentIndex < queue.resolved.count else {
+            // Redirects not yet resolved — record intent; resolve handler will start.
+            playWhenResolved = true
+            let snapshot = queueSnapshotLocked()
+            lock.unlock()
+            logger.notice("[PB] startCurrent: deferring until resolve \(snapshot, privacy: .public)")
+            return
+        }
+        let url = queue.resolved[queue.currentIndex]
+        hasStartedAnyTrack = true
+        playWhenResolved = false
+        let snapshot = queueSnapshotLocked()
+        lock.unlock()
+
+        logger.notice("[PB] startCurrent \(snapshot, privacy: .public) play=\(url.absoluteString, privacy: .public)")
+        player.play(url: url)
+        startProgressTimer()
     }
 
     func advanceToNext() -> Bool {
@@ -164,6 +277,7 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         queue.currentIndex += 1
         let remaining = Array(queue.resolved[(queue.currentIndex)...])
         pendingQueueURLs = remaining.count > 1 ? Array(remaining[1...]) : []
+        hasStartedAnyTrack = true
         let snapshot = queueSnapshotLocked()
         lock.unlock()
 
@@ -186,6 +300,7 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         queue.currentIndex -= 1
         let remaining = Array(queue.resolved[(queue.currentIndex)...])
         pendingQueueURLs = remaining.count > 1 ? Array(remaining[1...]) : []
+        hasStartedAnyTrack = true
         let snapshot = queueSnapshotLocked()
         lock.unlock()
 
@@ -208,6 +323,7 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         queue.currentIndex = index
         let remaining = Array(queue.resolved[index...])
         pendingQueueURLs = remaining.count > 1 ? Array(remaining[1...]) : []
+        hasStartedAnyTrack = true
         let snapshot = queueSnapshotLocked()
         lock.unlock()
 
@@ -365,7 +481,11 @@ extension AudioStreamEngine: AudioPlayerDelegate {
         let entrySnapshot = queueSnapshotLocked()
         lock.unlock()
         logger.notice("[PB] didStartPlaying entry=\(entryId.id, privacy: .public) \(entrySnapshot, privacy: .public)")
-        onStateChange?(.playing)
+        // NOTE: previously fired `onStateChange?(.playing)` here, but this
+        // signal is synthetic — AudioStreaming may still be buffering for
+        // seconds afterward. Letting the real `audioPlayerStateChanged` →
+        // `.playing` drive the state lets `playWithPendingSeek` and the UI
+        // distinguish "URL accepted" from "audio actually flowing".
         startProgressTimer()
 
         // Sync currentIndex to the track AudioStreaming is actually playing.
@@ -375,6 +495,16 @@ extension AudioStreamEngine: AudioPlayerDelegate {
         if let actualIndex = queue.resolved.firstIndex(where: { $0.absoluteString == entryId.id }) {
             let previousIndex = queue.currentIndex
             let wasAutoAdvance = actualIndex != queue.currentIndex
+            // Reject spurious auto-advance while a retry is pending: when the
+            // current track errors mid-buffer, AudioStreaming pops to the next
+            // pre-queued track and reports it as a gapless transition. That
+            // looks like a skip to the user. Suppress the index update; the
+            // scheduled retry will replay the correct track shortly.
+            if wasAutoAdvance, retryDeadline != nil {
+                lock.unlock()
+                logger.warning("[PB] suppressing auto-advance during retry: prev=\(previousIndex, privacy: .public) attempted=\(actualIndex, privacy: .public) entry=\(entryId.id, privacy: .public)")
+                return
+            }
             queue.currentIndex = actualIndex
             lock.unlock()
             logger.notice("[PB] didStartPlaying matched prev=\(previousIndex, privacy: .public) → actual=\(actualIndex, privacy: .public) wasAutoAdvance=\(wasAutoAdvance, privacy: .public)")
@@ -414,6 +544,12 @@ extension AudioStreamEngine: AudioPlayerDelegate {
         switch newState {
         case .playing:
             startProgressTimer()
+            // Real playback achieved — clear retry budget so the next failure
+            // burst gets a fresh 10s window.
+            lock.lock()
+            retryAttempts = 0
+            retryDeadline = nil
+            lock.unlock()
         case .paused, .stopped, .ready, .disposed:
             stopProgressTimer()
         default:
@@ -437,13 +573,107 @@ extension AudioStreamEngine: AudioPlayerDelegate {
     }
 
     func audioPlayerUnexpectedError(player: AudioPlayer, error: AudioPlayerError) {
-        let mapped = StreamPlayerError.engineError(error.localizedDescription)
+        logger.error("[PB] unexpectedError type=\(String(describing: error), privacy: .public) desc=\(error.localizedDescription, privacy: .public)")
+
+        let isNetwork = isNetworkError(error)
+        if attemptRetry(isNetworkFailure: isNetwork) {
+            return
+        }
+
+        let mapped: StreamPlayerError = isNetwork
+            ? .networkError("Can't reach the archive. Check your connection and try again.")
+            : .engineError(error.localizedDescription)
         lock.lock()
         lastError = mapped
+        retryDeadline = nil
+        retryAttempts = 0
         lock.unlock()
-        logger.error("[PB] unexpectedError type=\(String(describing: error), privacy: .public) desc=\(error.localizedDescription, privacy: .public)")
         onError?(mapped)
         onStateChange?(.error(mapped))
+    }
+
+    /// Inject a synthetic network failure for debugging the retry/backoff path
+    /// without depending on real network conditions. Wires through the same
+    /// `attemptRetry` logic as a real failure.
+    func debugInjectNetworkFailure() {
+        logger.error("[PB] DEBUG injected synthetic network failure")
+        if attemptRetry(isNetworkFailure: true) {
+            return
+        }
+        let mapped: StreamPlayerError = .networkError("Can't reach the archive. Check your connection and try again.")
+        lock.lock()
+        lastError = mapped
+        retryDeadline = nil
+        retryAttempts = 0
+        lock.unlock()
+        onError?(mapped)
+        onStateChange?(.error(mapped))
+    }
+
+    /// Schedule a retry of the current URL if this looks like a transient
+    /// network failure and we're inside the retry budget. Returns `true` if
+    /// a retry was scheduled (caller should NOT surface the error).
+    private func attemptRetry(isNetworkFailure: Bool) -> Bool {
+        guard isNetworkFailure else { return false }
+
+        lock.lock()
+        if retryDeadline == nil {
+            retryDeadline = Date.now.addingTimeInterval(maxRetryDuration)
+            retryAttempts = 0
+        }
+        let attempts = retryAttempts
+        let deadline = retryDeadline ?? Date.now
+        let withinBudget = attempts < retryDelays.count && Date.now < deadline
+        guard withinBudget, queue.currentIndex < queue.resolved.count else {
+            lock.unlock()
+            return false
+        }
+        let delay = retryDelays[attempts]
+        let url = queue.resolved[queue.currentIndex]
+        retryAttempts += 1
+        let attemptNumber = retryAttempts
+        lock.unlock()
+
+        logger.warning("[PB] retry attempt=\(attemptNumber, privacy: .public)/\(self.retryDelays.count, privacy: .public) in \(delay, format: .fixed(precision: 1), privacy: .public)s url=\(url.absoluteString, privacy: .public)")
+
+        // CRITICAL: stop the player immediately so AudioStreaming doesn't
+        // auto-advance to the next pre-queued track while we're waiting for
+        // the retry to fire. Without this, an error on the current track
+        // causes the library's internal queue to pop forward and report
+        // `wasAutoAdvance=true` on the next URL — exactly the "skips to next
+        // song after a glitch" symptom from the original bug report.
+        player.stop()
+
+        // Surface buffering so the UI keeps showing a spinner while we wait.
+        onStateChange?(.buffering)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+            guard let self else { return }
+            self.lock.lock()
+            // Bail if a new queue or a successful play has reset retry state.
+            guard self.retryDeadline != nil, self.queue.currentIndex < self.queue.resolved.count else {
+                self.lock.unlock()
+                return
+            }
+            let retryURL = self.queue.resolved[self.queue.currentIndex]
+            let pending = self.queue.currentIndex + 1 < self.queue.resolved.count
+                ? Array(self.queue.resolved[(self.queue.currentIndex + 1)...])
+                : []
+            // We just stopped the player; the gapless queue is gone. Re-stash
+            // pending URLs so `didStartPlaying` re-queues them.
+            self.pendingQueueURLs = pending
+            self.lock.unlock()
+            self.logger.notice("[PB] retry firing url=\(retryURL.absoluteString, privacy: .public) (will re-queue \(pending.count, privacy: .public) pending)")
+            self.player.play(url: retryURL)
+        }
+        return true
+    }
+
+    private func isNetworkError(_ error: AudioPlayerError) -> Bool {
+        // AudioPlayerError doesn't expose a stable case discriminator, so
+        // string-match on the well-known "networkError" / "serverError" tokens.
+        let desc = String(describing: error).lowercased()
+        return desc.contains("network") || desc.contains("server")
     }
 
     func audioPlayerDidCancel(player: AudioPlayer, queuedItems: [AudioEntryId]) {

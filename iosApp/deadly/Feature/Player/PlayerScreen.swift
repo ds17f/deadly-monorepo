@@ -24,6 +24,13 @@ struct PlayerScreen: View {
         return nil
     }
 
+    private var playbackErrorTitle: String {
+        if case .networkError = playbackError {
+            return "Can't reach the archive"
+        }
+        return "Playback Error"
+    }
+
     /// Extract the archive.org recording ID from a stream URL.
     /// URL format: https://archive.org/download/{recordingId}/{filename}
     private var artworkRecordingId: String? {
@@ -145,13 +152,25 @@ struct PlayerScreen: View {
                                     .foregroundStyle(.primary)
                             }
 
-                            Button {
-                                streamPlayer.togglePlayPause()
-                            } label: {
-                                Image(systemName: streamPlayer.playbackState.isPlaying
-                                      ? "pause.circle.fill" : "play.circle.fill")
-                                    .font(.system(size: 70))
-                                    .foregroundStyle(DeadlyColors.primary)
+                            let buffering: Bool = {
+                                switch streamPlayer.playbackState {
+                                case .loading, .buffering: return true
+                                default: return false
+                                }
+                            }()
+                            if streamPlayer.isPreparing || (buffering && !streamPlayer.playbackState.isPlaying) {
+                                ProgressView()
+                                    .controlSize(.large)
+                                    .frame(width: 70, height: 70)
+                            } else {
+                                Button {
+                                    streamPlayer.togglePlayPause()
+                                } label: {
+                                    Image(systemName: streamPlayer.playbackState.isPlaying
+                                          ? "pause.circle.fill" : "play.circle.fill")
+                                        .font(.system(size: 70))
+                                        .foregroundStyle(DeadlyColors.primary)
+                                }
                             }
 
                             Button {
@@ -236,7 +255,7 @@ struct PlayerScreen: View {
                 )
             }
         }
-        .alert("Playback Error", isPresented: $showErrorAlert) {
+        .alert(playbackErrorTitle, isPresented: $showErrorAlert) {
             Button("Retry") {
                 streamPlayer.play()
             }
@@ -248,7 +267,7 @@ struct PlayerScreen: View {
             }
         } message: {
             if let error = playbackError {
-                Text("\(String(describing: error))\n\(error.localizedDescription)\n\nIf this keeps happening, tap Send Bug Report.")
+                Text("\(error.localizedDescription)\n\nIf this keeps happening, tap Send Bug Report.")
             } else {
                 Text("An error occurred during playback. Please check your network connection and try again.")
             }

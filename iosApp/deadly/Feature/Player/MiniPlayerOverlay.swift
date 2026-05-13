@@ -60,6 +60,11 @@ struct MiniPlayerOverlay: View {
                         Image(systemName: "exclamationmark.triangle.fill")
                             .font(.title3)
                             .foregroundStyle(.red)
+                    } else if service.isSkeleton || service.isPreparing || (service.isBuffering && !service.isPlaying) {
+                        // Skeleton, first-play seek dance, or engine still
+                        // buffering before audio actually starts. Show spinner.
+                        ProgressView()
+                            .controlSize(.regular)
                     } else {
                         Button {
                             service.togglePlayPause()

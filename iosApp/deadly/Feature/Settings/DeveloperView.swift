@@ -82,6 +82,14 @@ struct DeveloperView: View {
                     showingClearCacheAlert = true
                 }
 
+                Button("Inject Network Error") {
+                    container.streamPlayer.debugInjectNetworkError()
+                }
+
+                Button("Force Stale-Gen Race") {
+                    container.streamPlayer.debugForceRaceCondition()
+                }
+
                 Button("Force Re-Import") {
                     showingReimportConfirm = true
                 }

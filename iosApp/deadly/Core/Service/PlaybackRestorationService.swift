@@ -51,18 +51,20 @@ final class PlaybackRestorationService {
 
     /// Restore the last saved playback position, if one exists.
     /// Loads the show from the database, fetches tracks from the network,
-    /// starts playback, then immediately pauses at the saved seek position.
+    /// then loads the queue WITHOUT auto-playing — the saved seek is stashed
+    /// on `streamPlayer.pendingSeekOnFirstPlay` and applied when the user
+    /// eventually presses play. No audio is produced during restore.
     func restoreIfAvailable() async {
         guard let saved = store.load() else {
-            logger.info("No saved playback state to restore")
+            logger.info("[PB] No saved playback state to restore")
             return
         }
-        logger.info("Restoring: '\(saved.trackTitle)' track \(saved.trackIndex) at \(saved.positionMs)ms")
+        logger.info("[PB] Restoring: '\(saved.trackTitle)' track \(saved.trackIndex) at \(saved.positionMs)ms")
 
         await playlistService.loadShow(saved.showId)
 
         guard !playlistService.tracks.isEmpty else {
-            logger.warning("No tracks loaded for show \(saved.showId), skipping restore")
+            logger.warning("[PB] No tracks loaded for show \(saved.showId), skipping restore")
             return
         }
 
@@ -70,42 +72,28 @@ final class PlaybackRestorationService {
         let seekPosition = TimeInterval(saved.positionMs) / 1000.0
 
         // Two cooperating gates suppress the phantom playback_start that
-        // would otherwise fire during restore:
+        // would otherwise fire when the user later presses play:
         //   1. `suppressNextStartEmission` — the +1s dwell `commitPendingPlayback`
         //      stashes the start info into `deferredStartInfo` instead of emitting.
-        //   2. `isRestoring` — held for the entire restore body. The playback-state
-        //      observer skips its `.playing → flushDeferredStart` call while set,
-        //      so restore's own seek-while-playing trick doesn't flush. After this
-        //      function returns the player is paused, so the next `.playing`
-        //      transition is the user actually pressing play, which flushes.
+        //   2. `isRestoring` — held for the entire restore body so the playback-state
+        //      observer doesn't fire spurious analytics during the silent queue load.
         // The defer guarantees `isRestoring` clears even on early return.
         playlistService.isRestoring = true
         defer { playlistService.isRestoring = false }
         playlistService.suppressNextStartEmission = true
-        playlistService.playTrack(at: trackIndex, source: "restore")
 
-        // The engine resolves redirects asynchronously before audio starts.
-        // Poll until playing (or time out after 10 seconds).
-        let deadline = Date.now.addingTimeInterval(10)
-        while streamPlayer.playbackState != .playing && Date.now < deadline {
-            try? await Task.sleep(for: .milliseconds(100))
-        }
-
-        guard streamPlayer.playbackState == .playing else {
-            logger.warning("Timed out waiting for playback, skipping seek")
-            return
-        }
-
-        // Mute, seek while playing (so the HTTP range request fires on an active
-        // connection), wait for seek to land, then unmute and pause.
+        // Load the queue without auto-playing. The slider will show the saved
+        // position immediately via `pendingSeekOnFirstPlay` + the duration
+        // fallback in `StreamPlayer.onProgressUpdate` (uses TrackItem.duration
+        // when the engine hasn't reported one yet).
+        playlistService.playTrack(at: trackIndex, source: "restore", autoPlay: false)
         if seekPosition > 0 {
-            streamPlayer.volume = 0
-            streamPlayer.seek(to: seekPosition)
-            try? await Task.sleep(for: .milliseconds(300))
-            streamPlayer.volume = 1
+            streamPlayer.pendingSeekOnFirstPlay = seekPosition
+            // Optimistically reflect the saved position in the published progress
+            // so the slider and time label match before any engine ticks arrive.
+            streamPlayer.applyOptimisticProgress(currentTime: seekPosition)
         }
-        streamPlayer.pause()
-        logger.info("Restored at track \(trackIndex), position \(seekPosition, format: .fixed(precision: 1))s — paused")
+        logger.info("[PB] Restored at track \(trackIndex), pendingSeek=\(seekPosition, format: .fixed(precision: 1))s — idle until user presses play")
     }
 
     // MARK: - Private

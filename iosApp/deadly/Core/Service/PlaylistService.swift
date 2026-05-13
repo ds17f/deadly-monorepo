@@ -22,8 +22,10 @@ protocol PlaylistService: AnyObject {
     func selectRecording(_ recording: Recording) async
     /// Begin playback at `index`. `source` records where the play originated
     /// (e.g. "browse", "library_favorites", "deeplink", "restore") and is
-    /// emitted on the resulting `playback_start` analytics event.
-    func playTrack(at index: Int, source: String)
+    /// emitted on the resulting `playback_start` analytics event. If `autoPlay`
+    /// is false, the queue is loaded but playback does not start — used by
+    /// restore so the user has to actually press play to begin audio.
+    func playTrack(at index: Int, source: String, autoPlay: Bool)
     func recordRecentPlay()
 
     /// Record that the user is about to skip forward/back so the next
@@ -34,4 +36,11 @@ protocol PlaylistService: AnyObject {
     // Navigate to adjacent shows by date
     func navigateToNextShow() async -> Bool
     func navigateToPreviousShow() async -> Bool
+}
+
+extension PlaylistService {
+    /// Convenience that defaults `autoPlay` to true, preserving the pre-restore call sites.
+    func playTrack(at index: Int, source: String) {
+        playTrack(at: index, source: source, autoPlay: true)
+    }
 }

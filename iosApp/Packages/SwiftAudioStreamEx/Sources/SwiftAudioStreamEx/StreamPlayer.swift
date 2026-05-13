@@ -26,6 +26,20 @@ public final class StreamPlayer {
     /// Current queue state (index, total, hasNext/hasPrevious).
     public private(set) var queueState: QueueState = .empty
 
+    /// Seek target to apply the first time the user starts playback after
+    /// `loadQueue`. Used by playback restoration so we can load a queue without
+    /// auto-playing, then land the saved position once the user actually presses
+    /// play. `seek(to:)` is only honored while the engine is actively playing —
+    /// so on first play we briefly mute, start, wait for `.playing`, seek, and
+    /// unmute. Cleared at the start of every `loadQueue` and after first play.
+    public var pendingSeekOnFirstPlay: TimeInterval?
+
+    /// True while the first-play seek dance is running: from the moment `play()`
+    /// is called with a pending seek until the engine has reached `.playing` and
+    /// the seek has landed. Surface to the UI as a spinner so users see something
+    /// happen during the ~600–900ms of mute + buffer + seek.
+    public private(set) var isPreparing: Bool = false
+
     // MARK: - Configuration
 
     /// If playback position is past this threshold (seconds), "previous" restarts instead of going back.
@@ -106,6 +120,11 @@ public final class StreamPlayer {
             playbackState = .loading
         }
         progress = .zero
+        // A new queue invalidates any pending first-play seek from a prior load.
+        if pendingSeekOnFirstPlay != nil {
+            logger.notice("[PB] loadQueue clearing pendingSeekOnFirstPlay")
+            pendingSeekOnFirstPlay = nil
+        }
 
         self.tracks = tracks
         self.currentTrack = tracks[startIndex]
@@ -115,7 +134,7 @@ public final class StreamPlayer {
         remoteCommandManager.setup()
 
         let urls = tracks.map(\.url)
-        engine.loadQueue(urls: urls, startingAt: startIndex)
+        engine.loadQueue(urls: urls, startingAt: startIndex, autoPlay: autoPlay)
 
         updateNowPlaying()
         nowPlayingManager.loadArtwork(from: currentTrack?.artworkURL)
@@ -126,7 +145,66 @@ public final class StreamPlayer {
 
     public func play() {
         guard !tracks.isEmpty else { return }
-        engine.play()
+        // Ignore taps while the first-play seek dance is running; it will land
+        // on its own and the UI shows a spinner in the meantime.
+        if isPreparing {
+            logger.notice("[PB] play ignored: isPreparing")
+            return
+        }
+        if let seekTarget = pendingSeekOnFirstPlay {
+            pendingSeekOnFirstPlay = nil
+            playWithPendingSeek(seekTarget)
+        } else {
+            engine.startCurrent()
+        }
+    }
+
+    /// Start playback and apply a pending seek as soon as the engine reaches
+    /// `.playing`. Mutes output during the brief pre-seek window so the user
+    /// only hears audio from the saved position.
+    private func playWithPendingSeek(_ target: TimeInterval) {
+        logger.notice("[PB] play with pendingSeek=\(target, format: .fixed(precision: 1), privacy: .public)s")
+        let savedVolume = volume
+        isPreparing = true
+        volume = 0
+        engine.startCurrent()
+        Task { @MainActor [weak self] in
+            guard let self else { return }
+            let overallDeadline = Date.now.addingTimeInterval(30)
+
+            // Phase 1: wait for the engine to first reach `.playing` so seek
+            // can fire its HTTP range request on an active connection.
+            while self.playbackState != .playing && Date.now < overallDeadline {
+                try? await Task.sleep(for: .milliseconds(50))
+            }
+            guard self.playbackState == .playing else {
+                self.logger.warning("[PB] play+seek: timed out reaching initial .playing")
+                self.volume = savedVolume
+                self.isPreparing = false
+                return
+            }
+
+            // Phase 2: issue the seek. AudioStreaming typically transitions
+            // `.playing → .bufferring` while fetching the requested byte range.
+            self.seek(to: target)
+
+            // Phase 3: wait for the post-seek rebuffer to complete. We watch
+            // for the next `.playing` after the state leaves `.playing`. If
+            // the engine never left `.playing` (cached/no rebuffer), the
+            // initial check still passes and we proceed.
+            try? await Task.sleep(for: .milliseconds(100))
+            while self.playbackState != .playing && Date.now < overallDeadline {
+                try? await Task.sleep(for: .milliseconds(50))
+            }
+            if self.playbackState != .playing {
+                self.logger.warning("[PB] play+seek: timed out waiting for post-seek .playing")
+            } else {
+                self.logger.notice("[PB] play+seek: settled at target — unmuting")
+            }
+
+            self.volume = savedVolume
+            self.isPreparing = false
+        }
     }
 
     public func pause() {
@@ -199,10 +277,58 @@ public final class StreamPlayer {
     }
 
     public func seek(to time: TimeInterval) {
+        // If the user manually seeks before first play, redirect the pending
+        // first-play seek to their chosen position rather than the restored one.
+        if pendingSeekOnFirstPlay != nil {
+            logger.notice("[PB] seek before first play — updating pendingSeekOnFirstPlay=\(time, format: .fixed(precision: 1), privacy: .public)s")
+            pendingSeekOnFirstPlay = time
+        }
         engine.seek(to: time)
         // Immediately update progress for responsive UI
         progress = PlaybackProgress(currentTime: time, duration: progress.duration)
         nowPlayingManager.updateElapsedTime(time, isPlaying: playbackState.isPlaying)
+    }
+
+    /// Fire a synthetic network failure into the engine to exercise the retry
+    /// and auto-advance-suppression paths without depending on real network
+    /// conditions. Intended for in-app debugging only.
+    public func debugInjectNetworkError() {
+        engine.debugInjectNetworkFailure()
+    }
+
+    /// Force the stale-generation race: load the current queue twice in quick
+    /// succession with a 3s delay injected on the first resolve. Whichever
+    /// loadQueue wins the resolve race ends up controlling the queue. With
+    /// the stale-gen guard enabled the late completion should be dropped;
+    /// without it, the older completion clobbers the newer one (the original
+    /// "tapped X but Y played" bug). Intended for in-app debugging only.
+    public func debugForceRaceCondition() {
+        guard !tracks.isEmpty else {
+            logger.warning("[PB] DEBUG race: no queue loaded — load a show first")
+            return
+        }
+        let saved = tracks
+        let savedIndex = queueState.currentIndex
+        logger.error("[PB] DEBUG forcing race: loading queue twice; first resolve delayed 3s")
+        engine.setDebugNextResolveDelay(3.0)
+        loadQueue(saved, startingAt: savedIndex, autoPlay: false)
+        Task { @MainActor [weak self] in
+            try? await Task.sleep(for: .milliseconds(100))
+            guard let self else { return }
+            self.logger.error("[PB] DEBUG forcing race: second loadQueue firing")
+            self.loadQueue(saved, startingAt: savedIndex, autoPlay: false)
+        }
+    }
+
+    /// Publish an optimistic `currentTime` without touching the engine.
+    /// Used by playback restoration so the slider and time label reflect the
+    /// saved position before the user presses play. Duration falls back to the
+    /// current track's known duration when the engine hasn't reported one yet.
+    public func applyOptimisticProgress(currentTime: TimeInterval) {
+        let duration = progress.duration > 0
+            ? progress.duration
+            : (currentTrack?.duration ?? 0)
+        progress = PlaybackProgress(currentTime: currentTime, duration: duration)
     }
 
     public func seek(by offset: TimeInterval) {
@@ -289,7 +415,21 @@ public final class StreamPlayer {
         engine.onProgressUpdate = { [weak self] newProgress in
             Task { @MainActor in
                 guard let self else { return }
-                self.progress = newProgress
+                // Don't overwrite progress while the first-play seek dance is
+                // running: the engine ticks `currentTime=0` between play-start
+                // and seek-landing, which would flash the slider to 0. The
+                // dance's `seek(to:)` writes the correct position directly.
+                if self.isPreparing { return }
+                // If the engine hasn't yet reported a duration (e.g. paused during
+                // initial buffering after restore), fall back to the playlist's
+                // known duration so the slider denominator is non-zero.
+                let effectiveDuration = newProgress.duration > 0
+                    ? newProgress.duration
+                    : (self.currentTrack?.duration ?? 0)
+                self.progress = PlaybackProgress(
+                    currentTime: newProgress.currentTime,
+                    duration: effectiveDuration
+                )
             }
         }
 

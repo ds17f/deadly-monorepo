@@ -51,6 +51,20 @@ protocol MiniPlayerService: AnyObject {
     /// Formatted subtitle: "date - venue" matching Android format.
     var displaySubtitle: String? { get }
 
+    /// True while the mini player is showing a skeleton from saved state
+    /// (e.g. on launch before the queue is loaded). Controls are disabled
+    /// in this state because there's no engine queue yet to act on.
+    var isSkeleton: Bool { get }
+
+    /// True while the first-play seek dance is running. UI should show a
+    /// spinner instead of the play/pause button during this window.
+    var isPreparing: Bool { get }
+
+    /// True while the engine is loading / buffering audio before playback
+    /// can begin. Includes initial buffer after tapping play, and stalls
+    /// mid-track when the network can't keep up.
+    var isBuffering: Bool { get }
+
     /// Toggle between play and pause states.
     func togglePlayPause()
 
