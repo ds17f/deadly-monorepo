@@ -156,6 +156,10 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         playWhenResolved = false
         retryAttempts = 0
         retryDeadline = nil
+        // Capture the debug delay NOW so it binds to this generation, not
+        // whichever loadQueue's resolve completes first.
+        let delayThisResolve = debugNextResolveDelay
+        debugNextResolveDelay = 0
         lock.unlock()
 
         let firstName = urls.first?.lastPathComponent ?? "(none)"
@@ -165,15 +169,11 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         resolveAllRedirects(for: urls) { [weak self] resolved in
             guard let self else { return }
 
-            // Optional one-shot delay used by `debugForceRaceCondition()` to
-            // deterministically reorder concurrent loadQueue completions.
-            self.lock.lock()
-            let delay = self.debugNextResolveDelay
-            self.debugNextResolveDelay = 0
-            self.lock.unlock()
-            if delay > 0 {
-                self.logger.warning("[PB] DEBUG delaying resolve gen=\(generation, privacy: .public) by \(delay, format: .fixed(precision: 1), privacy: .public)s")
-                DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+            // `delayThisResolve` was captured at the start of this specific
+            // loadQueue call, so it always binds to THIS generation.
+            if delayThisResolve > 0 {
+                self.logger.warning("[PB] DEBUG delaying resolve gen=\(generation, privacy: .public) by \(delayThisResolve, format: .fixed(precision: 1), privacy: .public)s")
+                DispatchQueue.main.asyncAfter(deadline: .now() + delayThisResolve) { [weak self] in
                     self?.processResolveCompletion(resolved: resolved, urls: urls, index: index, generation: generation, autoPlay: autoPlay)
                 }
                 return
@@ -186,11 +186,10 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     /// delay can defer it without forking the closure body.
     private func processResolveCompletion(resolved: [URL], urls: [URL], index: Int, generation: Int, autoPlay: Bool) {
             self.lock.lock()
-            // TEMP A/B: stale-gen guard disabled to confirm the original race bug.
-            // Still log when a stale completion would have been dropped, then let it
-            // proceed and clobber so we can observe the broken behavior in the wild.
-            if generation != self.loadGeneration {
-                self.logger.warning("[PB] loadQueue stale gen=\(generation, privacy: .public) current=\(self.loadGeneration, privacy: .public) — GUARD DISABLED, allowing clobber")
+            guard generation == self.loadGeneration else {
+                self.lock.unlock()
+                self.logger.warning("[PB] loadQueue stale gen=\(generation, privacy: .public) current=\(self.loadGeneration, privacy: .public) — dropping completion")
+                return
             }
             self.queue = QueueState(tracks: urls, resolved: resolved, currentIndex: index)
             // Stash remaining URLs — they'll be queued in didStartPlaying

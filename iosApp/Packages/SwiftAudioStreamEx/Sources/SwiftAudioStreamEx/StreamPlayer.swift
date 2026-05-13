@@ -296,27 +296,41 @@ public final class StreamPlayer {
         engine.debugInjectNetworkFailure()
     }
 
-    /// Force the stale-generation race: load the current queue twice in quick
-    /// succession with a 3s delay injected on the first resolve. Whichever
-    /// loadQueue wins the resolve race ends up controlling the queue. With
-    /// the stale-gen guard enabled the late completion should be dropped;
-    /// without it, the older completion clobbers the newer one (the original
-    /// "tapped X but Y played" bug). Intended for in-app debugging only.
+    /// Force the stale-generation race so the bug is user-visible.
+    ///
+    /// Loads the queue TWICE in quick succession with a 3s delay injected on
+    /// the FIRST resolve. The first load uses the current tracks REVERSED;
+    /// the second load uses the originals. The fast (newer) completion wins
+    /// the race and starts audio on the original first track. The delayed
+    /// (older) completion then arrives — with the stale-gen guard it is
+    /// dropped (queue stays correct); without the guard it clobbers
+    /// `engine.queue.resolved` with the reversed URLs.
+    ///
+    /// After the race, audio + UI show the original track 1, but the next
+    /// time anything reads from the engine's queue (skip-next, skipTo, or a
+    /// natural track-end auto-advance), it picks from the reversed URLs and
+    /// audibly jumps to the wrong track. Intended for in-app debugging only.
     public func debugForceRaceCondition() {
-        guard !tracks.isEmpty else {
-            logger.warning("[PB] DEBUG race: no queue loaded — load a show first")
+        guard !tracks.isEmpty, tracks.count >= 2 else {
+            logger.warning("[PB] DEBUG race: need at least 2 tracks loaded")
             return
         }
-        let saved = tracks
-        let savedIndex = queueState.currentIndex
-        logger.error("[PB] DEBUG forcing race: loading queue twice; first resolve delayed 3s")
+        let original = tracks
+        let reversed = Array(tracks.reversed())
+        let startIndex = queueState.currentIndex
+        logger.error("[PB] DEBUG forcing race: first load=REVERSED tracks (delayed 3s), second load=ORIGINAL")
         engine.setDebugNextResolveDelay(3.0)
-        loadQueue(saved, startingAt: savedIndex, autoPlay: false)
+        // First load — REVERSED tracks, resolve delayed. This is the older
+        // generation; if the guard is enabled its completion will be dropped.
+        loadQueue(reversed, startingAt: startIndex, autoPlay: false)
         Task { @MainActor [weak self] in
             try? await Task.sleep(for: .milliseconds(100))
             guard let self else { return }
-            self.logger.error("[PB] DEBUG forcing race: second loadQueue firing")
-            self.loadQueue(saved, startingAt: savedIndex, autoPlay: false)
+            self.logger.error("[PB] DEBUG forcing race: second loadQueue firing (ORIGINAL tracks, autoPlay)")
+            // Second load — ORIGINAL tracks, fast resolve, auto-play so the
+            // user hears the correct track 1 starting before the older
+            // completion arrives.
+            self.loadQueue(original, startingAt: startIndex, autoPlay: true)
         }
     }
 
