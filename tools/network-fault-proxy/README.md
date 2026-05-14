@@ -7,9 +7,9 @@ paths can be exercised against a *real* stream error (not a synthetic one).
 ## One-time setup
 
 1. Install `uv` (provides `uvx`). Already done via `mise use -g uv@latest`.
-2. Open Fedora firewall port 8080 if needed:
+2. Open Fedora firewall port 8888 if needed:
    ```bash
-   sudo firewall-cmd --add-port=8080/tcp        # this session only
+   sudo firewall-cmd --add-port=8888/tcp        # this session only
    ```
 3. Find this machine's LAN IP:
    ```bash
@@ -17,7 +17,7 @@ paths can be exercised against a *real* stream error (not a synthetic one).
    ```
 4. iPhone → Settings → Wi-Fi → (i) on your network → Configure Proxy → Manual:
    - Server: that LAN IP
-   - Port: 8080
+   - Port: 8888
 5. Start the proxy (see below), then on the iPhone open Safari to
    `http://mitm.it` → "Apple iOS" → download profile → Settings → General →
    VPN & Device Management → install → Settings → General → About →

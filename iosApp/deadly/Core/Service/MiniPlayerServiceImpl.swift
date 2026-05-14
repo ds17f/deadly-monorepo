@@ -50,6 +50,10 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
         }
     }
 
+    var isRetrying: Bool {
+        streamPlayer.isRetrying
+    }
+
     var isVisible: Bool {
         streamPlayer.playbackState.isActive
             || streamPlayer.currentTrack != nil

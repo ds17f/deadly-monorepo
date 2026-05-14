@@ -65,6 +65,9 @@ protocol MiniPlayerService: AnyObject {
     /// mid-track when the network can't keep up.
     var isBuffering: Bool { get }
 
+    /// True while the engine is auto-retrying after a transient network failure.
+    var isRetrying: Bool { get }
+
     /// Toggle between play and pause states.
     func togglePlayPause()
 

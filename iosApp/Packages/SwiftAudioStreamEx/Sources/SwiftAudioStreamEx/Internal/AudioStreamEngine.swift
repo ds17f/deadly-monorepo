@@ -72,6 +72,17 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     /// from 0:00 before the seek takes effect.
     nonisolated(unsafe) private var savedVolumeBeforeRetry: Float?
 
+    /// Background work item that fires if the underlying player has been
+    /// stuck in `.bufferring` for too long without firing `unexpectedError`.
+    /// AudioStreaming sometimes hangs silently when the network dies (no
+    /// error, no state change), leaving the UI spinning forever. The
+    /// watchdog converts that into a synthetic network failure so our
+    /// retry / surfaced-error path runs normally.
+    nonisolated(unsafe) private var bufferingStallWatchdog: DispatchWorkItem?
+
+    /// Seconds of continuous `.bufferring` before the stall watchdog fires.
+    private let bufferingStallTimeout: TimeInterval = 15.0
+
     /// Most recent user-driven seek target. Set by `seek(to:)`, cleared on
     /// the next `.playing` state change (by which point the seek has landed
     /// and `player.progress` is the authoritative source again). Consulted
@@ -606,6 +617,91 @@ extension AudioStreamEngine: AudioPlayerDelegate {
         logger.notice("[PB] didFinishBuffering entry=\(entryId.id, privacy: .public)")
     }
 
+    private func armBufferingStallWatchdog() {
+        cancelBufferingStallWatchdog()
+        let timeout = bufferingStallTimeout
+        let work = DispatchWorkItem { [weak self] in
+            guard let self else { return }
+            self.logger.warning("[PB] buffering stalled for \(timeout, format: .fixed(precision: 1), privacy: .public)s — synthesizing network failure")
+            self.synthesizeNetworkStall()
+        }
+        lock.lock()
+        bufferingStallWatchdog = work
+        lock.unlock()
+        DispatchQueue.main.asyncAfter(deadline: .now() + timeout, execute: work)
+    }
+
+    private func cancelBufferingStallWatchdog() {
+        lock.lock()
+        let work = bufferingStallWatchdog
+        bufferingStallWatchdog = nil
+        lock.unlock()
+        work?.cancel()
+    }
+
+    /// Drive the retry/error path as if AudioStreaming had fired
+    /// `unexpectedError` with a network failure. Used by the buffering stall
+    /// watchdog when the underlying player hangs silently in `.bufferring`.
+    private func synthesizeNetworkStall() {
+        // Don't double-fire after we've already surrendered.
+        // Note: don't bail when retryDeadline != nil — a stall that fires
+        // mid-retry means the *previous* retry attempt also stalled, and
+        // attemptRetry should be allowed to either schedule the next attempt
+        // or fall through to the surfaced-error path when the budget is up.
+        lock.lock()
+        let alreadySurfaced = hasSurfacedFinalError
+        lock.unlock()
+        if alreadySurfaced {
+            return
+        }
+
+        // Same prep as the real error path: capture position + mute (so the
+        // post-retry `.playing` handler will re-seek and unmute).
+        let actualProgress = player.progress
+        lock.lock()
+        let pendingSeekTarget = lastUserSeekTarget
+        let currentPosition: TimeInterval = {
+            if let seekTarget = pendingSeekTarget {
+                return actualProgress > seekTarget + 1 ? actualProgress : seekTarget
+            }
+            return actualProgress
+        }()
+        if savedVolumeBeforeRetry == nil, player.volume > 0 {
+            savedVolumeBeforeRetry = player.volume
+        }
+        if resumePositionForRetry == nil, currentPosition > 0 {
+            resumePositionForRetry = currentPosition
+            logger.notice("[PB] stall: captured resume position=\(currentPosition, format: .fixed(precision: 1), privacy: .public)s; muting")
+        }
+        lock.unlock()
+        player.volume = 0
+
+        if attemptRetry(isNetworkFailure: true) {
+            return
+        }
+
+        // Out of budget — surface the error directly, same as the real path.
+        let mapped: StreamPlayerError = .networkError("Can't reach Archive.org. Check your connection and try again.")
+        lock.lock()
+        lastError = mapped
+        retryDeadline = nil
+        retryAttempts = 0
+        hasStartedAnyTrack = false
+        let savedVolume = savedVolumeBeforeRetry
+        savedVolumeBeforeRetry = nil
+        let surfacedResume = resumePositionForRetry
+        resumePositionForRetry = nil
+        hasSurfacedFinalError = true
+        lock.unlock()
+        if let restore = savedVolume {
+            player.volume = restore
+        }
+        player.stop()
+        onRetryStateChange?(false)
+        onError?(mapped, surfacedResume)
+        onStateChange?(.error(mapped))
+    }
+
     func audioPlayerStateChanged(player: AudioPlayer, with newState: AudioPlayerState, previous: AudioPlayerState) {
         logger.notice("[PB] stateChanged \(String(describing: previous), privacy: .public) → \(String(describing: newState), privacy: .public)")
 
@@ -628,6 +724,16 @@ extension AudioStreamEngine: AudioPlayerDelegate {
 
         let mapped = mapState(newState)
         onStateChange?(mapped)
+
+        // Stall watchdog: start when we enter `.bufferring`, cancel on any
+        // other state. AudioStreaming sometimes hangs there silently when
+        // the network dies (no `unexpectedError`), leaving the UI spinning
+        // forever.
+        if newState == .bufferring {
+            armBufferingStallWatchdog()
+        } else {
+            cancelBufferingStallWatchdog()
+        }
 
         switch newState {
         case .playing:
@@ -724,7 +830,14 @@ extension AudioStreamEngine: AudioPlayerDelegate {
             // Always remember the original volume before we mute — even if
             // we don't have a resume position to apply, we still need to
             // restore the volume on success or final error.
-            if savedVolumeBeforeRetry == nil {
+            //
+            // BUT: if `player.volume` is already 0, someone (typically the
+            // StreamPlayer's playWithPendingSeek dance) has muted us before
+            // calling play. Saving 0 here would cascade: a later "restore"
+            // sets volume back to 0, and the audio stays muted forever.
+            // Skip the save in that case — the muter is responsible for
+            // restoring their own mute when their flow completes.
+            if savedVolumeBeforeRetry == nil, player.volume > 0 {
                 savedVolumeBeforeRetry = player.volume
             }
             if resumePositionForRetry == nil, currentPosition > 0 {

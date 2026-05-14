@@ -478,13 +478,16 @@ ios-remote-unlock:
 	@ssh -t $(REMOTE_HOST) "security unlock-keychain ~/Library/Keychains/login.keychain-db"
 
 # Build + install to connected device (requires USB-connected iPhone + KEYCHAIN_PASSWORD env var).
-# Password is piped to ssh stdin and forwarded to `security unlock-keychain` via stdin —
-# never placed on a command line, so it doesn't appear in `ps` on the Mac.
+# Password is piped to ssh stdin so it isn't on the local command line, then on
+# the Mac it's read into a shell var and passed to `security` via `-p`. macOS
+# stopped accepting passwords on stdin for `security unlock-keychain`, so the
+# flag is required. The password is briefly visible in the Mac's `ps` for the
+# milliseconds the command runs — acceptable on a personal dev laptop.
 ios-remote-install: remote-sync
 	@if [ -z "$$KEYCHAIN_PASSWORD" ]; then echo "KEYCHAIN_PASSWORD env var must be set." >&2; exit 1; fi
 	@echo "Building on $(REMOTE_HOST)..."
 	@printf '%s\n' "$$KEYCHAIN_PASSWORD" | ssh $(REMOTE_HOST) "IFS= read -r PASS; \
-		printf '%s\n' \"\$$PASS\" | security unlock-keychain ~/Library/Keychains/login.keychain-db && \
+		security unlock-keychain -p \"\$$PASS\" ~/Library/Keychains/login.keychain-db && \
 		unset PASS && \
 		cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'generic/platform=iOS' -allowProvisioningUpdates build 2>&1 | tail -20"
 	@echo "Installing to device..."
@@ -741,13 +744,12 @@ docker-remote-pull:
 	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && docker pull node:22-slim && docker pull caddy:2-alpine && docker pull redis:7-alpine"
 
 # Build + start full stack on remote Mac (requires KEYCHAIN_PASSWORD env var).
-# Password is piped to ssh stdin and forwarded to `security unlock-keychain` via stdin —
-# never on a command line, so it does not appear in `ps` on the Mac.
+# See `ios-remote-install` for the rationale on using `security -p` vs stdin.
 docker-remote-up:
 	@if [ -z "$$KEYCHAIN_PASSWORD" ]; then echo "KEYCHAIN_PASSWORD env var must be set." >&2; exit 1; fi
 	@echo "Starting stack on $(REMOTE_HOST)..."
 	@printf '%s\n' "$$KEYCHAIN_PASSWORD" | ssh $(REMOTE_HOST) "IFS= read -r PASS; \
-		printf '%s\n' \"\$$PASS\" | security unlock-keychain ~/Library/Keychains/login.keychain-db && \
+		security unlock-keychain -p \"\$$PASS\" ~/Library/Keychains/login.keychain-db && \
 		unset PASS && \
 		$(REMOTE_ENVPATH) && cd $(REMOTE_PATH) && docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build -d"
 

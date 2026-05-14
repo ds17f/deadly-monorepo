@@ -173,6 +173,12 @@ public final class StreamPlayer {
         let savedVolume = volume
         isPreparing = true
         volume = 0
+        // Clear stale `.error` so the wait Task doesn't see the previous
+        // failure's state and bail out immediately. The engine is about to
+        // emit fresh state changes; treat them as authoritative.
+        if case .error = playbackState {
+            playbackState = .loading
+        }
         engine.startCurrent()
         Task { @MainActor [weak self] in
             guard let self else { return }
@@ -180,11 +186,18 @@ public final class StreamPlayer {
 
             // Phase 1: wait for the engine to first reach `.playing` so seek
             // can fire its HTTP range request on an active connection.
+            // Abort early on `.error` — engine surrendered, no point waiting
+            // out the deadline while the user hears nothing.
             while self.playbackState != .playing && Date.now < overallDeadline {
+                if case .error = self.playbackState { break }
                 try? await Task.sleep(for: .milliseconds(50))
             }
             guard self.playbackState == .playing else {
-                self.logger.warning("[PB] play+seek: timed out reaching initial .playing")
+                if case .error = self.playbackState {
+                    self.logger.warning("[PB] play+seek: aborted (engine errored before .playing)")
+                } else {
+                    self.logger.warning("[PB] play+seek: timed out reaching initial .playing")
+                }
                 self.volume = savedVolume
                 self.isPreparing = false
                 return
@@ -440,6 +453,12 @@ public final class StreamPlayer {
                 // and seek-landing, which would flash the slider to 0. The
                 // dance's `seek(to:)` writes the correct position directly.
                 if self.isPreparing { return }
+                // Same reasoning during auto-retries: `player.play(url:)` for
+                // each retry resets the underlying player's progress to 0,
+                // which the timer reports. Freezing keeps the slider where it
+                // was; the post-retry seek lands the correct position once
+                // we reach `.playing`.
+                if self.isRetrying { return }
                 // If the engine hasn't yet reported a duration (e.g. paused during
                 // initial buffering after restore), fall back to the playlist's
                 // known duration so the slider denominator is non-zero.

@@ -157,7 +157,9 @@ struct PlayerScreen: View {
                                 default: return false
                                 }
                             }()
-                            if streamPlayer.isPreparing || (buffering && !streamPlayer.playbackState.isPlaying) {
+                            if streamPlayer.isPreparing
+                                || streamPlayer.isRetrying
+                                || (buffering && !streamPlayer.playbackState.isPlaying) {
                                 ProgressView()
                                     .controlSize(.large)
                                     .frame(width: 70, height: 70)
