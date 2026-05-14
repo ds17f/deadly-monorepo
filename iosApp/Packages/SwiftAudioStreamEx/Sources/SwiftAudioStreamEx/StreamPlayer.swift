@@ -40,6 +40,12 @@ public final class StreamPlayer {
     /// happen during the ~600–900ms of mute + buffer + seek.
     public private(set) var isPreparing: Bool = false
 
+    /// True while the engine is automatically retrying a transient network
+    /// failure. The UI can surface this as a "Network trouble — retrying"
+    /// banner so the user understands what's happening between the silent
+    /// mute and the eventual recovery (or user-visible error).
+    public private(set) var isRetrying: Bool = false
+
     // MARK: - Configuration
 
     /// If playback position is past this threshold (seconds), "previous" restarts instead of going back.
@@ -447,9 +453,26 @@ public final class StreamPlayer {
             }
         }
 
-        engine.onError = { [weak self] error in
+        engine.onRetryStateChange = { [weak self] retrying in
             Task { @MainActor in
                 guard let self else { return }
+                self.logger.notice("[PB] StreamPlayer.isRetrying → \(retrying, privacy: .public)")
+                self.isRetrying = retrying
+            }
+        }
+
+        engine.onError = { [weak self] error, resumePosition in
+            Task { @MainActor in
+                guard let self else { return }
+                // Engine snapshotted the position at the moment of failure
+                // (before `player.stop()` wiped it). Use that directly — reading
+                // `self.progress.currentTime` here is unreliable because the
+                // last progress tick may have reported 0 once the underlying
+                // player went idle.
+                if let resume = resumePosition, resume > 0 {
+                    self.pendingSeekOnFirstPlay = resume
+                    self.logger.notice("[PB] onError will resume at \(resume, format: .fixed(precision: 1), privacy: .public)s on next play")
+                }
                 self.playbackState = .error(error)
                 self.logger.error("[PB] onError case=\(String(describing: error), privacy: .public) desc=\(error.localizedDescription, privacy: .public)")
             }

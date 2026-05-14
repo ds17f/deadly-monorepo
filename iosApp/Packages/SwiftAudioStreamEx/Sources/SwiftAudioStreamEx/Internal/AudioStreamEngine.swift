@@ -61,6 +61,35 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     /// Maximum total time spent retrying before the error reaches the user.
     private let maxRetryDuration: TimeInterval = 10.0
 
+    /// Position captured at the moment of network failure. Applied as a seek
+    /// the next time AudioStreaming reaches `.playing` (either from an
+    /// automatic retry or a manual user retry), so audio resumes from where
+    /// the stream dropped instead of restarting at 0:00.
+    nonisolated(unsafe) private var resumePositionForRetry: TimeInterval?
+
+    /// Volume captured when `resumePositionForRetry` is set. Restored after
+    /// the post-retry seek lands so the user doesn't hear the brief audio
+    /// from 0:00 before the seek takes effect.
+    nonisolated(unsafe) private var savedVolumeBeforeRetry: Float?
+
+    /// Most recent user-driven seek target. Set by `seek(to:)`, cleared on
+    /// the next `.playing` state change (by which point the seek has landed
+    /// and `player.progress` is the authoritative source again). Consulted
+    /// in `audioPlayerUnexpectedError` when capturing the resume position —
+    /// without this, a failed-seek error captures `player.progress` which
+    /// AudioStreaming may have reset to 0 while fetching the new range,
+    /// causing the manual/auto retry to play from the beginning instead of
+    /// where the user seeked.
+    nonisolated(unsafe) private var lastUserSeekTarget: TimeInterval?
+
+    /// True once we've exhausted the retry budget and shown the user-facing
+    /// error. Used to silently drop any subsequent `unexpectedError` callbacks
+    /// AudioStreaming fires from its own internal recovery — without this the
+    /// retry cycle restarts indefinitely after we've already given up.
+    /// Reset when the user manually retries (`startCurrent`) or a new queue
+    /// is loaded.
+    nonisolated(unsafe) private var hasSurfacedFinalError: Bool = false
+
     /// One-shot debug delay (seconds) injected before the NEXT `loadQueue`'s
     /// redirect-resolve completion fires. Used to deterministically force the
     /// stale-generation race when paired with a quick second `loadQueue`.
@@ -74,7 +103,18 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     nonisolated(unsafe) var onStateChange: ((PlaybackState) -> Void)?
     nonisolated(unsafe) var onTrackComplete: (() -> Void)?
     nonisolated(unsafe) var onProgressUpdate: ((PlaybackProgress) -> Void)?
-    nonisolated(unsafe) var onError: ((StreamPlayerError) -> Void)?
+    /// Fired when the engine surfaces a user-visible playback failure.
+    /// The second parameter, when non-nil, is the playback position at the
+    /// moment of failure — passed through so the StreamPlayer can land
+    /// there on the user's manual retry. Reading `progress.currentTime`
+    /// from the StreamPlayer at this point is unreliable because the
+    /// underlying player has already been stopped.
+    nonisolated(unsafe) var onError: ((StreamPlayerError, TimeInterval?) -> Void)?
+    /// Called when the retry-with-backoff path enters or exits the active state.
+    /// `true` while the engine is automatically retrying after a transient
+    /// network failure; `false` once playback resumes or the retry budget is
+    /// exhausted (the user-facing error fires after the latter).
+    nonisolated(unsafe) var onRetryStateChange: ((Bool) -> Void)?
 
     override init() {
         let config = AudioPlayerConfiguration(
@@ -118,6 +158,9 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
 
     func seek(to time: TimeInterval) {
         logger.info("seek to \(time, format: .fixed(precision: 1))s")
+        lock.lock()
+        lastUserSeekTarget = time
+        lock.unlock()
         player.seek(to: time)
     }
 
@@ -156,11 +199,20 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         playWhenResolved = false
         retryAttempts = 0
         retryDeadline = nil
+        // A new queue invalidates any pending post-error resume from a prior load.
+        let staleVolume = savedVolumeBeforeRetry
+        resumePositionForRetry = nil
+        savedVolumeBeforeRetry = nil
+        lastUserSeekTarget = nil
+        hasSurfacedFinalError = false
         // Capture the debug delay NOW so it binds to this generation, not
         // whichever loadQueue's resolve completes first.
         let delayThisResolve = debugNextResolveDelay
         debugNextResolveDelay = 0
         lock.unlock()
+        if let restore = staleVolume {
+            player.volume = restore
+        }
 
         let firstName = urls.first?.lastPathComponent ?? "(none)"
         let lastName = urls.last?.lastPathComponent ?? "(none)"
@@ -238,7 +290,15 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     /// (`playWhenResolved`) and the resolve handler kicks playback off.
     func startCurrent() {
         lock.lock()
-        if hasStartedAnyTrack {
+        // User-driven retry clears the "we gave up" gate so future errors can
+        // trigger the retry path again.
+        let wasInError = hasSurfacedFinalError
+        hasSurfacedFinalError = false
+        // After a surfaced error the underlying player has been `.stop()`'d
+        // and `player.resume()` is a no-op — force a fresh `play(url:)` even
+        // if we'd previously started playback. Otherwise the user taps Retry
+        // and nothing happens.
+        if hasStartedAnyTrack && !wasInError {
             lock.unlock()
             logger.notice("[PB] startCurrent: already started, resuming")
             player.resume()
@@ -277,6 +337,9 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         let remaining = Array(queue.resolved[(queue.currentIndex)...])
         pendingQueueURLs = remaining.count > 1 ? Array(remaining[1...]) : []
         hasStartedAnyTrack = true
+        // User-driven navigation clears the "we gave up" gate so any future
+        // error during this play gets a fresh retry budget.
+        hasSurfacedFinalError = false
         let snapshot = queueSnapshotLocked()
         lock.unlock()
 
@@ -300,6 +363,9 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         let remaining = Array(queue.resolved[(queue.currentIndex)...])
         pendingQueueURLs = remaining.count > 1 ? Array(remaining[1...]) : []
         hasStartedAnyTrack = true
+        // User-driven navigation clears the "we gave up" gate so any future
+        // error during this play gets a fresh retry budget.
+        hasSurfacedFinalError = false
         let snapshot = queueSnapshotLocked()
         lock.unlock()
 
@@ -323,6 +389,9 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         let remaining = Array(queue.resolved[index...])
         pendingQueueURLs = remaining.count > 1 ? Array(remaining[1...]) : []
         hasStartedAnyTrack = true
+        // User-driven navigation clears the "we gave up" gate so any future
+        // error during this play gets a fresh retry budget.
+        hasSurfacedFinalError = false
         let snapshot = queueSnapshotLocked()
         lock.unlock()
 
@@ -494,14 +563,16 @@ extension AudioStreamEngine: AudioPlayerDelegate {
         if let actualIndex = queue.resolved.firstIndex(where: { $0.absoluteString == entryId.id }) {
             let previousIndex = queue.currentIndex
             let wasAutoAdvance = actualIndex != queue.currentIndex
-            // Reject spurious auto-advance while a retry is pending: when the
-            // current track errors mid-buffer, AudioStreaming pops to the next
-            // pre-queued track and reports it as a gapless transition. That
-            // looks like a skip to the user. Suppress the index update; the
-            // scheduled retry will replay the correct track shortly.
-            if wasAutoAdvance, retryDeadline != nil {
+            // Reject spurious auto-advance while a retry is pending OR after
+            // we've already surfaced a final error: when the current track
+            // errors, AudioStreaming pops to the next pre-queued track and
+            // reports it as a gapless transition. That looks like a skip
+            // to the user and silently advances `queue.currentIndex` away
+            // from the failed track, breaking the manual retry path.
+            if wasAutoAdvance, retryDeadline != nil || hasSurfacedFinalError {
                 lock.unlock()
-                logger.warning("[PB] suppressing auto-advance during retry: prev=\(previousIndex, privacy: .public) attempted=\(actualIndex, privacy: .public) entry=\(entryId.id, privacy: .public)")
+                let reason = retryDeadline != nil ? "retry pending" : "final error surfaced"
+                logger.warning("[PB] suppressing auto-advance (\(reason, privacy: .public)): prev=\(previousIndex, privacy: .public) attempted=\(actualIndex, privacy: .public) entry=\(entryId.id, privacy: .public)")
                 return
             }
             queue.currentIndex = actualIndex
@@ -537,6 +608,24 @@ extension AudioStreamEngine: AudioPlayerDelegate {
 
     func audioPlayerStateChanged(player: AudioPlayer, with newState: AudioPlayerState, previous: AudioPlayerState) {
         logger.notice("[PB] stateChanged \(String(describing: previous), privacy: .public) → \(String(describing: newState), privacy: .public)")
+
+        // After we've surfaced a final error, AudioStreaming's internal recovery
+        // keeps thrashing through bufferring/error/stopped/etc. Propagating each
+        // change makes `playbackState` oscillate, which flips the UI between
+        // the error card and a spinner. Latch the error state until the user
+        // acts (which clears `hasSurfacedFinalError` via `startCurrent` etc).
+        lock.lock()
+        let suppressed = hasSurfacedFinalError
+        lock.unlock()
+        if suppressed {
+            logger.notice("[PB] stateChanged ignored (final error surfaced)")
+            // Still stop the progress timer so we don't tick during the noise.
+            if newState == .paused || newState == .stopped || newState == .ready || newState == .disposed {
+                stopProgressTimer()
+            }
+            return
+        }
+
         let mapped = mapState(newState)
         onStateChange?(mapped)
 
@@ -544,11 +633,36 @@ extension AudioStreamEngine: AudioPlayerDelegate {
         case .playing:
             startProgressTimer()
             // Real playback achieved — clear retry budget so the next failure
-            // burst gets a fresh 10s window.
+            // burst gets a fresh 10s window. Also clear the "we gave up"
+            // gate; recovery happened.
             lock.lock()
+            let wasRetrying = retryDeadline != nil
             retryAttempts = 0
             retryDeadline = nil
+            hasSurfacedFinalError = false
+            // Seek has settled — clear the saved target so future
+            // unrelated errors fall back to `player.progress`.
+            lastUserSeekTarget = nil
+            // If a network failure captured a resume position, apply it now
+            // that audio is flowing. Seek before unmuting so the user never
+            // hears the brief audio from 0:00 before the seek lands.
+            let pendingResume = resumePositionForRetry
+            let savedVolume = savedVolumeBeforeRetry
+            resumePositionForRetry = nil
+            savedVolumeBeforeRetry = nil
             lock.unlock()
+            if let resume = pendingResume {
+                logger.notice("[PB] post-retry seek to \(resume, format: .fixed(precision: 1), privacy: .public)s")
+                player.seek(to: resume)
+                // Give the seek a moment to land, then restore volume.
+                let unmuteVolume = savedVolume ?? 1.0
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
+                    self?.player.volume = unmuteVolume
+                }
+            }
+            if wasRetrying {
+                onRetryStateChange?(false)
+            }
         case .paused, .stopped, .ready, .disposed:
             stopProgressTimer()
         default:
@@ -574,20 +688,90 @@ extension AudioStreamEngine: AudioPlayerDelegate {
     func audioPlayerUnexpectedError(player: AudioPlayer, error: AudioPlayerError) {
         logger.error("[PB] unexpectedError type=\(String(describing: error), privacy: .public) desc=\(error.localizedDescription, privacy: .public)")
 
+        // Drop late callbacks: after we've surrendered, AudioStreaming may keep
+        // emitting unexpectedError as its own internal recovery thrashes. We've
+        // already shown the user the error; ignore until they retry manually.
+        lock.lock()
+        let alreadySurfaced = hasSurfacedFinalError
+        lock.unlock()
+        if alreadySurfaced {
+            logger.warning("[PB] unexpectedError suppressed (final error already surfaced)")
+            return
+        }
+
         let isNetwork = isNetworkError(error)
+        if isNetwork {
+            // Capture position + mute BEFORE retry fires. The next time the
+            // underlying player reaches `.playing`, the state-change handler
+            // seeks to this position and restores the volume.
+            // Prefer the user's most recent seek target over `player.progress`
+            // — when a seek triggers the error (because the range request
+            // failed), AudioStreaming may have reset its progress reading
+            // to 0 while preparing for the new range, so player.progress
+            // here is unreliable.
+            let actualProgress = player.progress
+            lock.lock()
+            let pendingSeekTarget = lastUserSeekTarget
+            let currentPosition: TimeInterval = {
+                if let seekTarget = pendingSeekTarget {
+                    // If the seek hadn't settled yet, the user's intent is the
+                    // target. If actualProgress is meaningfully past it, the
+                    // user has heard audio beyond the seek, so prefer that.
+                    return actualProgress > seekTarget + 1 ? actualProgress : seekTarget
+                }
+                return actualProgress
+            }()
+            // Always remember the original volume before we mute — even if
+            // we don't have a resume position to apply, we still need to
+            // restore the volume on success or final error.
+            if savedVolumeBeforeRetry == nil {
+                savedVolumeBeforeRetry = player.volume
+            }
+            if resumePositionForRetry == nil, currentPosition > 0 {
+                resumePositionForRetry = currentPosition
+                logger.notice("[PB] captured resume position=\(currentPosition, format: .fixed(precision: 1), privacy: .public)s for retry; muting")
+            } else if resumePositionForRetry == nil {
+                logger.notice("[PB] no resume position (track had no progress); muting for retry")
+            }
+            lock.unlock()
+            player.volume = 0
+        }
         if attemptRetry(isNetworkFailure: isNetwork) {
             return
         }
 
         let mapped: StreamPlayerError = isNetwork
-            ? .networkError("Can't reach the archive. Check your connection and try again.")
+            ? .networkError("Can't reach Archive.org. Check your connection and try again.")
             : .engineError(error.localizedDescription)
         lock.lock()
         lastError = mapped
         retryDeadline = nil
         retryAttempts = 0
+        // Reset hasStartedAnyTrack so the next play() reaches `player.play(url:)`
+        // (fresh start) instead of `player.resume()`, which is a no-op once the
+        // underlying player has hit `.stopped`/`.error`.
+        hasStartedAnyTrack = false
+        // Auto-retries failed. Restore the volume we muted at error capture so
+        // StreamPlayer's manual-retry dance (which snapshots `volume`) sees a
+        // sane value and doesn't end up muted forever after restoring.
+        // Also clear `resumePositionForRetry` so the post-`.playing` handler
+        // doesn't double-seek alongside StreamPlayer's manual-retry dance,
+        // which captures the same position into `pendingSeekOnFirstPlay`.
+        let savedVolume = savedVolumeBeforeRetry
+        savedVolumeBeforeRetry = nil
+        let surfacedResume = resumePositionForRetry
+        resumePositionForRetry = nil
+        // Latch the "we gave up" gate. Subsequent unexpectedError callbacks
+        // from AudioStreaming's own internal thrashing are silently dropped.
+        hasSurfacedFinalError = true
         lock.unlock()
-        onError?(mapped)
+        if let restore = savedVolume {
+            player.volume = restore
+        }
+        // Halt AudioStreaming so it stops generating further error callbacks.
+        player.stop()
+        onRetryStateChange?(false)
+        onError?(mapped, surfacedResume)
         onStateChange?(.error(mapped))
     }
 
@@ -599,13 +783,24 @@ extension AudioStreamEngine: AudioPlayerDelegate {
         if attemptRetry(isNetworkFailure: true) {
             return
         }
-        let mapped: StreamPlayerError = .networkError("Can't reach the archive. Check your connection and try again.")
+        let mapped: StreamPlayerError = .networkError("Can't reach Archive.org. Check your connection and try again.")
         lock.lock()
         lastError = mapped
         retryDeadline = nil
         retryAttempts = 0
+        hasStartedAnyTrack = false
+        let savedVolume = savedVolumeBeforeRetry
+        savedVolumeBeforeRetry = nil
+        let surfacedResume = resumePositionForRetry
+        resumePositionForRetry = nil
+        hasSurfacedFinalError = true
         lock.unlock()
-        onError?(mapped)
+        if let restore = savedVolume {
+            player.volume = restore
+        }
+        player.stop()
+        onRetryStateChange?(false)
+        onError?(mapped, surfacedResume)
         onStateChange?(.error(mapped))
     }
 
@@ -634,6 +829,13 @@ extension AudioStreamEngine: AudioPlayerDelegate {
         lock.unlock()
 
         logger.warning("[PB] retry attempt=\(attemptNumber, privacy: .public)/\(self.retryDelays.count, privacy: .public) in \(delay, format: .fixed(precision: 1), privacy: .public)s url=\(url.absoluteString, privacy: .public)")
+
+        // Notify on first retry so the UI can show "Network trouble — retrying".
+        if attemptNumber == 1 {
+            let callbackSet = self.onRetryStateChange != nil
+            logger.notice("[PB] firing onRetryStateChange(true) — callback set=\(callbackSet, privacy: .public)")
+            onRetryStateChange?(true)
+        }
 
         // CRITICAL: stop the player immediately so AudioStreaming doesn't
         // auto-advance to the next pre-queued track while we're waiting for

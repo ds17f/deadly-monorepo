@@ -61,7 +61,12 @@ final class PlaybackRestorationService {
         }
         logger.info("[PB] Restoring: '\(saved.trackTitle)' track \(saved.trackIndex) at \(saved.positionMs)ms")
 
-        await playlistService.loadShow(saved.showId)
+        // Pass the saved recordingId so we restore the EXACT recording we
+        // were playing — not whatever the user's "preferred" or the show's
+        // "best" recording happens to be now. Different recordings can have
+        // different track listings (e.g. one has a "Tuning" track, the other
+        // doesn't) and different title metadata.
+        await playlistService.loadShow(saved.showId, recordingId: saved.recordingId)
 
         guard !playlistService.tracks.isEmpty else {
             logger.warning("[PB] No tracks loaded for show \(saved.showId), skipping restore")

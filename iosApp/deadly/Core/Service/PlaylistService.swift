@@ -18,7 +18,7 @@ protocol PlaylistService: AnyObject {
     var hasNextShow: Bool { get }
     var hasPreviousShow: Bool { get }
 
-    func loadShow(_ showId: String) async
+    func loadShow(_ showId: String, recordingId: String?) async
     func selectRecording(_ recording: Recording) async
     /// Begin playback at `index`. `source` records where the play originated
     /// (e.g. "browse", "library_favorites", "deeplink", "restore") and is
@@ -42,5 +42,10 @@ extension PlaylistService {
     /// Convenience that defaults `autoPlay` to true, preserving the pre-restore call sites.
     func playTrack(at index: Int, source: String) {
         playTrack(at: index, source: source, autoPlay: true)
+    }
+
+    /// Convenience that omits the recording override (preserves existing call sites).
+    func loadShow(_ showId: String) async {
+        await loadShow(showId, recordingId: nil)
     }
 }

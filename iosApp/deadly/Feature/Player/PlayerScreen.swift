@@ -7,7 +7,6 @@ struct PlayerScreen: View {
     var onViewShow: ((String) -> Void)? = nil
 
     @State private var sliderValue: Double?
-    @State private var showErrorAlert = false
     @State private var showBugReportSheet = false
     @State private var showQRShare = false
     @State private var showShareChooser = false
@@ -26,7 +25,7 @@ struct PlayerScreen: View {
 
     private var playbackErrorTitle: String {
         if case .networkError = playbackError {
-            return "Can't reach the archive"
+            return "Can't reach Archive.org"
         }
         return "Playback Error"
     }
@@ -206,11 +205,6 @@ struct PlayerScreen: View {
             await container.panelContentService.loadContent(show: show, songTitle: title)
             loadFavoriteState()
         }
-        .onChange(of: playbackError) { _, newError in
-            if newError != nil {
-                showErrorAlert = true
-            }
-        }
         .sheet(isPresented: $showEqualizerSheet) {
             EqualizerSheet()
                 .presentationDetents([.medium, .large])
@@ -255,23 +249,6 @@ struct PlayerScreen: View {
                 )
             }
         }
-        .alert(playbackErrorTitle, isPresented: $showErrorAlert) {
-            Button("Retry") {
-                streamPlayer.play()
-            }
-            Button("Send Bug Report") {
-                showBugReportSheet = true
-            }
-            Button("Dismiss", role: .cancel) {
-                // Just dismiss
-            }
-        } message: {
-            if let error = playbackError {
-                Text("\(error.localizedDescription)\n\nIf this keeps happening, tap Send Bug Report.")
-            } else {
-                Text("An error occurred during playback. Please check your network connection and try again.")
-            }
-        }
         .sheet(isPresented: $showBugReportSheet) {
             NavigationStack {
                 BugReportView(filterContains: "[PB]")
@@ -282,6 +259,14 @@ struct PlayerScreen: View {
                     }
             }
         }
+        // Slim status banner above the safe-area bottom — same style as the
+        // miniplayer's offline banner. The full player covers the tab bar
+        // OfflineBanner, so re-apply it here.
+        .offlineBanner(
+            isConnected: container.networkMonitor.isConnected,
+            isRetrying: streamPlayer.isRetrying,
+            errorMessage: playbackError.map { _ in playbackErrorTitle }
+        )
     }
 
     // MARK: - Subviews
@@ -470,6 +455,7 @@ struct PlayerScreen: View {
             .padding(.horizontal, 16)
         }
     }
+
 
     private func formatTime(_ seconds: TimeInterval) -> String {
         guard seconds.isFinite, seconds >= 0 else { return "0:00" }

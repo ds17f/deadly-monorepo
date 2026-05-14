@@ -178,13 +178,17 @@ final class PlaylistServiceImpl: PlaylistService {
 
     // MARK: - PlaylistService
 
-    func loadShow(_ showId: String) async {
+    func loadShow(_ showId: String, recordingId: String? = nil) async {
         do {
             let show = try showRepository.getShowById(showId)
             currentShow = show
-            // Check for user's preferred recording before falling back to best.
-            if let preferredId = try? recordingPreferenceDAO.fetchRecordingId(showId),
-               let preferred = try? showRepository.getRecordingById(preferredId) {
+            // Caller-specified recording (e.g. playback restore) wins. Otherwise
+            // fall back to the user's preferred recording, then the show's best.
+            if let explicitId = recordingId,
+               let explicit = try? showRepository.getRecordingById(explicitId) {
+                currentRecording = explicit
+            } else if let preferredId = try? recordingPreferenceDAO.fetchRecordingId(showId),
+                      let preferred = try? showRepository.getRecordingById(preferredId) {
                 currentRecording = preferred
             } else if let bestId = show?.bestRecordingId {
                 currentRecording = try showRepository.getRecordingById(bestId)

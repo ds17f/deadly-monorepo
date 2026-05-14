@@ -19,6 +19,16 @@ struct MainNavigation: View {
 
     private var isOffline: Bool { !container.networkMonitor.isConnected }
 
+    private var playbackBannerError: String? {
+        if case .error(let err) = container.streamPlayer.playbackState {
+            if case .networkError = err {
+                return "Can't reach Archive.org"
+            }
+            return "Playback error"
+        }
+        return nil
+    }
+
     var body: some View {
         TabView(selection: tabSelection) {
             Tab("Home", systemImage: "house", value: .home) {
@@ -36,7 +46,7 @@ struct MainNavigation: View {
                         }
                 }
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
-                .offlineBanner(isConnected: container.networkMonitor.isConnected)
+                .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
             }
             Tab("Search", systemImage: "magnifyingglass", value: .search) {
                 NavigationStack(path: $searchStack) {
@@ -47,7 +57,7 @@ struct MainNavigation: View {
                         }
                 }
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
-                .offlineBanner(isConnected: container.networkMonitor.isConnected)
+                .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
             }
             Tab("Favorites", systemImage: "heart.fill", value: .favorites) {
                 NavigationStack(path: $favoritesStack) {
@@ -64,7 +74,7 @@ struct MainNavigation: View {
                         }
                 }
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
-                .offlineBanner(isConnected: container.networkMonitor.isConnected)
+                .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
             }
             Tab("Collections", systemImage: "square.stack", value: .collections) {
                 NavigationStack(path: $collectionsStack) {
@@ -81,7 +91,7 @@ struct MainNavigation: View {
                         }
                 }
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
-                .offlineBanner(isConnected: container.networkMonitor.isConnected)
+                .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
             }
         }
         .overlay {
