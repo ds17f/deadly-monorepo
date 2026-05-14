@@ -86,3 +86,6 @@ data/scripts/.venv/
 data/scripts/review-processor/.venv/
 data/scripts/review-processor/.review-processor/
 data/backups/
+
+# Captured device logs from `make ios-remote-log-{stream,collect}`
+logs/

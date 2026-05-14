@@ -7,7 +7,7 @@ struct PlayerScreen: View {
     var onViewShow: ((String) -> Void)? = nil
 
     @State private var sliderValue: Double?
-    @State private var showErrorAlert = false
+    @State private var showBugReportSheet = false
     @State private var showQRShare = false
     @State private var showShareChooser = false
     @State private var showMessageShare = false
@@ -21,6 +21,13 @@ struct PlayerScreen: View {
             return error
         }
         return nil
+    }
+
+    private var playbackErrorTitle: String {
+        if case .networkError = playbackError {
+            return "Can't reach Archive.org"
+        }
+        return "Playback Error"
     }
 
     /// Extract the archive.org recording ID from a stream URL.
@@ -144,13 +151,27 @@ struct PlayerScreen: View {
                                     .foregroundStyle(.primary)
                             }
 
-                            Button {
-                                streamPlayer.togglePlayPause()
-                            } label: {
-                                Image(systemName: streamPlayer.playbackState.isPlaying
-                                      ? "pause.circle.fill" : "play.circle.fill")
-                                    .font(.system(size: 70))
-                                    .foregroundStyle(DeadlyColors.primary)
+                            let buffering: Bool = {
+                                switch streamPlayer.playbackState {
+                                case .loading, .buffering: return true
+                                default: return false
+                                }
+                            }()
+                            if streamPlayer.isPreparing
+                                || streamPlayer.isRetrying
+                                || (buffering && !streamPlayer.playbackState.isPlaying) {
+                                ProgressView()
+                                    .controlSize(.large)
+                                    .frame(width: 70, height: 70)
+                            } else {
+                                Button {
+                                    streamPlayer.togglePlayPause()
+                                } label: {
+                                    Image(systemName: streamPlayer.playbackState.isPlaying
+                                          ? "pause.circle.fill" : "play.circle.fill")
+                                        .font(.system(size: 70))
+                                        .foregroundStyle(DeadlyColors.primary)
+                                }
                             }
 
                             Button {
@@ -185,11 +206,6 @@ struct PlayerScreen: View {
             let title = streamPlayer.currentTrack?.title
             await container.panelContentService.loadContent(show: show, songTitle: title)
             loadFavoriteState()
-        }
-        .onChange(of: playbackError) { _, newError in
-            if newError != nil {
-                showErrorAlert = true
-            }
         }
         .sheet(isPresented: $showEqualizerSheet) {
             EqualizerSheet()
@@ -235,20 +251,24 @@ struct PlayerScreen: View {
                 )
             }
         }
-        .alert("Playback Error", isPresented: $showErrorAlert) {
-            Button("Retry") {
-                streamPlayer.play()
-            }
-            Button("Dismiss", role: .cancel) {
-                // Just dismiss
-            }
-        } message: {
-            if let error = playbackError {
-                Text(error.localizedDescription)
-            } else {
-                Text("An error occurred during playback. Please check your network connection and try again.")
+        .sheet(isPresented: $showBugReportSheet) {
+            NavigationStack {
+                BugReportView(filterContains: "[PB]")
+                    .toolbar {
+                        ToolbarItem(placement: .topBarTrailing) {
+                            Button("Done") { showBugReportSheet = false }
+                        }
+                    }
             }
         }
+        // Slim status banner above the safe-area bottom — same style as the
+        // miniplayer's offline banner. The full player covers the tab bar
+        // OfflineBanner, so re-apply it here.
+        .offlineBanner(
+            isConnected: container.networkMonitor.isConnected,
+            isRetrying: streamPlayer.isRetrying,
+            errorMessage: playbackError.map { _ in playbackErrorTitle }
+        )
     }
 
     // MARK: - Subviews
@@ -437,6 +457,7 @@ struct PlayerScreen: View {
             .padding(.horizontal, 16)
         }
     }
+
 
     private func formatTime(_ seconds: TimeInterval) -> String {
         guard seconds.isFinite, seconds >= 0 else { return "0:00" }

@@ -125,9 +125,13 @@ final class AppContainer {
                 EqualizerService(streamPlayer: player, preferences: prefs)
             }
 
-            // MiniPlayerService is @MainActor; thin adapter over StreamPlayer for the mini player UI
-            let miniPlayer = MainActor.assumeIsolated {
-                MiniPlayerServiceImpl(streamPlayer: player)
+            // MiniPlayerService is @MainActor; thin adapter over StreamPlayer for the mini player UI.
+            // Seed the skeleton from LastPlayedTrackStore so the bar renders immediately on launch,
+            // before PlaybackRestorationService has finished loading the show/queue.
+            let miniPlayer = MainActor.assumeIsolated { () -> MiniPlayerServiceImpl in
+                let svc = MiniPlayerServiceImpl(streamPlayer: player)
+                svc.seedRestoredTrack(LastPlayedTrackStore().load())
+                return svc
             }
             miniPlayerService = miniPlayer
 

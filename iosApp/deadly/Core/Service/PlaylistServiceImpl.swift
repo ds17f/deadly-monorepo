@@ -178,13 +178,17 @@ final class PlaylistServiceImpl: PlaylistService {
 
     // MARK: - PlaylistService
 
-    func loadShow(_ showId: String) async {
+    func loadShow(_ showId: String, recordingId: String? = nil) async {
         do {
             let show = try showRepository.getShowById(showId)
             currentShow = show
-            // Check for user's preferred recording before falling back to best.
-            if let preferredId = try? recordingPreferenceDAO.fetchRecordingId(showId),
-               let preferred = try? showRepository.getRecordingById(preferredId) {
+            // Caller-specified recording (e.g. playback restore) wins. Otherwise
+            // fall back to the user's preferred recording, then the show's best.
+            if let explicitId = recordingId,
+               let explicit = try? showRepository.getRecordingById(explicitId) {
+                currentRecording = explicit
+            } else if let preferredId = try? recordingPreferenceDAO.fetchRecordingId(showId),
+                      let preferred = try? showRepository.getRecordingById(preferredId) {
                 currentRecording = preferred
             } else if let bestId = show?.bestRecordingId {
                 currentRecording = try showRepository.getRecordingById(bestId)
@@ -217,7 +221,7 @@ final class PlaylistServiceImpl: PlaylistService {
         await selectRecording(recording)
     }
 
-    func playTrack(at index: Int, source: String) {
+    func playTrack(at index: Int, source: String, autoPlay: Bool = true) {
         guard index >= 0, index < tracks.count,
               let recording = currentRecording else { return }
 
@@ -226,6 +230,8 @@ final class PlaylistServiceImpl: PlaylistService {
         // If the player already has this recording's queue loaded, skip directly to the index
         // instead of rebuilding the entire queue (avoids redundant network redirect resolution).
         // The observer will emit playback_start/_end via the debounced commit path.
+        // Note: skipTo always starts playback — autoPlay=false only applies when we build a
+        // fresh queue. Restore never hits this branch because nothing is loaded at launch.
         if streamPlayer.currentTrack?.metadata["recordingId"] == recording.identifier {
             streamPlayer.skipTo(index: index)
             return
@@ -267,7 +273,7 @@ final class PlaylistServiceImpl: PlaylistService {
                 ]
             )
         }
-        streamPlayer.loadQueue(trackItems, startingAt: index)
+        streamPlayer.loadQueue(trackItems, startingAt: index, autoPlay: autoPlay)
         startTrackObservation()
         // The observer will pick up the eventual settled track and fire
         // playback_start once it's been current for the dwell window.
