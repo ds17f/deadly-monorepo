@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.28.1] - 2026-05-14
+
+### Bug Fixes
+* DEAD-335 — race + auto-advance + retry recovery (#40) (479f58dd)
+
+
 ## [2.28.0] - 2026-05-10
 
 ### New Features
@@ -61,8 +67,6 @@
 * chore(build): rename dev-* compose targets to docker-* and add SELinux labels (92a02ea3)
 * chore(build): add Linux Android SDK path and top-level android-* targets (2c42afe0)
 * chore: update worklaptop hostname and source KEYCHAIN_PASSWORD from .env (da27176f)
-
-
 ## [2.27.0] - 2026-04-23
 
 ### New Features
