@@ -161,10 +161,10 @@ if [ "$VERSION_PROVIDED" = false ]; then
     | grep -E "^fix(\([^)]+\))?:" || echo "")
   FIXES_COUNT=$(echo "$FIXES" | grep -v "^$" | wc -l | tr -d ' ')
 
-  # Count total commits (handle case where single commit has no trailing newline)
-  COMMIT_HASHES=$(git log ${FROM_REVISION} --pretty=format:"%H")
-  if [ -n "$COMMIT_HASHES" ]; then
-    TOTAL_COMMITS=$(echo "$COMMIT_HASHES" | wc -l | tr -d ' ')
+  # Count total platform-relevant commits (filter out other-platform / excluded-component commits)
+  RELEVANT_SUBJECTS=$(git log ${FROM_REVISION} --pretty=format:"%s" | filter_platform)
+  if [ -n "$RELEVANT_SUBJECTS" ]; then
+    TOTAL_COMMITS=$(echo "$RELEVANT_SUBJECTS" | grep -c -v "^$" | tr -d ' ')
   else
     TOTAL_COMMITS=0
   fi
@@ -189,11 +189,12 @@ if [ "$VERSION_PROVIDED" = false ]; then
     echo -e "${BLUE}ℹ️ New features detected - incrementing minor version${NC}"
     NEW_MINOR=$((MINOR + 1))
     NEW_PATCH=0
-  elif [ "$FIXES_COUNT" -gt 0 ] || [ "$TOTAL_COMMITS" -gt 0 ]; then
-    echo -e "${BLUE}ℹ️ Bug fixes or other changes detected - incrementing patch version${NC}"
+  elif [ "$FIXES_COUNT" -gt 0 ]; then
+    echo -e "${BLUE}ℹ️ Bug fixes detected - incrementing patch version${NC}"
     NEW_PATCH=$((PATCH + 1))
   else
-    echo -e "${RED}❌ Error: No changes detected since last release${NC}"
+    echo -e "${RED}❌ Error: No user-facing changes detected since last release${NC}"
+    echo -e "${RED}   (only feat/fix/breaking commits trigger a release; build/docs/refactor/chore do not)${NC}"
     exit 1
   fi
 
@@ -267,48 +268,13 @@ extract_commits() {
   fi
 }
 
-# Extract different types of commits
-# feat and fix exclude ci-scoped commits — those go in CI Changes
+# User-facing changelog: only feat/fix/perf are included. CI-scoped feat/fix
+# (e.g. fix(ios/ci): ...) are internal plumbing and excluded.
+# refactor/docs/test/build/ci/chore/misc are intentionally dropped — users
+# don't care about them in release notes.
 extract_commits "feat" "New Features" "([^)]*ci"
 extract_commits "fix" "Bug Fixes" "([^)]*ci"
 extract_commits "perf" "Performance Improvements"
-extract_commits "refactor" "Code Refactoring"
-extract_commits "docs" "Documentation Updates"
-extract_commits "test" "Tests"
-extract_commits "build" "Build System"
-
-# CI Changes: pure ci: type + feat/fix commits with ci in scope, both filtered by platform
-CI_FROM_TYPE=$(git log ${FROM_REVISION} --pretty=format:"* %s (%h)" \
-  | grep "^* ci" \
-  | filter_platform \
-  || true)
-CI_FROM_FEAT_FIX=$(git log ${FROM_REVISION} --pretty=format:"* %s (%h)" \
-  | grep -E "^\* (feat|fix)" \
-  | grep "([^)]*ci" \
-  | filter_platform \
-  || true)
-CI_COMMITS=$(printf "%s\n%s" "$CI_FROM_TYPE" "$CI_FROM_FEAT_FIX" | grep -v "^$" || true)
-if [ -n "$CI_COMMITS" ]; then
-  echo "### CI Changes" >> "$TEMP_CHANGELOG"
-  echo "$CI_COMMITS" | while IFS= read -r commit; do
-    clean_msg=$(echo "$commit" | sed "s/^\* [a-z]*[^:]*: //")
-    echo "* $clean_msg" >> "$TEMP_CHANGELOG"
-  done
-  echo "" >> "$TEMP_CHANGELOG"
-fi
-
-# Get miscellaneous commits (those not following conventional commit format)
-# Exclude opposite-platform commits and release chore commits
-MISC_COMMITS=$(git log ${FROM_REVISION} --pretty=format:"* %s (%h)" \
-  | filter_platform \
-  | grep -v "^* chore: release " \
-  | grep -v "^* \(feat\|fix\|perf\|refactor\|docs\|test\|build\|ci\)" || true)
-
-if [ -n "$MISC_COMMITS" ]; then
-  echo "### Other Changes" >> "$TEMP_CHANGELOG"
-  echo "$MISC_COMMITS" >> "$TEMP_CHANGELOG"
-  echo "" >> "$TEMP_CHANGELOG"
-fi
 
 # Add existing changelog content (skip the header and empty sections)
 if [ -f "$CHANGELOG_FILE" ] && [ -s "$CHANGELOG_FILE" ]; then
