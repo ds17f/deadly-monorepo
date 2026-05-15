@@ -151,6 +151,27 @@ test runs, same as the Android non-OkHttp case. If we ever ship
 hermetic mode in release builds we can revisit this with ATS-level
 allowlisting in the test target.
 
+## Canonical test scenarios
+
+The behaviors both platforms implement against the hermetic server
+live in
+[`docs/playback-test-scenarios.md`](https://github.com/ds17f/deadly-monorepo/blob/main/docs/playback-test-scenarios.md)
+— platform-neutral, prioritized by motivating bug class (DEAD-335,
+DEAD-336, DEAD-344). When a new bug class is found, add a scenario;
+both platforms implement it.
+
+## Synthetic `data.zip`
+
+The full Grateful Dead catalog (`dead-metadata/data.zip`) is ~13MB
+with 20k+ files — loads slowly, includes content tests don't need.
+For catalog-driven scenarios, point WireMock's `data.zip` mapping at
+[`hermetic/fixtures/synthetic/data.zip`](https://github.com/ds17f/deadly-monorepo/blob/main/hermetic/fixtures/synthetic/)
+(~50KB, 6 hand-picked shows). Same schema as the real catalog; both
+platforms' data layers load it unchanged.
+
+Regenerate via `uv run hermetic/scripts/build_synthetic_datazip.py`
+if shows are added or removed.
+
 ## Capture workflow
 
 Fixtures are derived from real archive.org traffic. Pipeline:
