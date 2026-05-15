@@ -18,6 +18,7 @@ final class DownloadServiceImpl: DownloadService {
     private let downloadTaskDAO: DownloadTaskDAO
     private let storageManager: DownloadStorageManager
     private let analyticsService: AnalyticsService?
+    private let appPreferences: AppPreferences
 
     private let sessionDelegate: DownloadSessionDelegate
     private let urlSession: URLSession
@@ -46,7 +47,8 @@ final class DownloadServiceImpl: DownloadService {
         favoritesDAO: FavoritesDAO,
         downloadTaskDAO: DownloadTaskDAO,
         storageManager: DownloadStorageManager,
-        analyticsService: AnalyticsService? = nil
+        analyticsService: AnalyticsService? = nil,
+        appPreferences: AppPreferences
     ) {
         self.archiveClient = archiveClient
         self.showRepository = showRepository
@@ -54,6 +56,7 @@ final class DownloadServiceImpl: DownloadService {
         self.downloadTaskDAO = downloadTaskDAO
         self.storageManager = storageManager
         self.analyticsService = analyticsService
+        self.appPreferences = appPreferences
 
         let delegate = DownloadSessionDelegate()
         self.sessionDelegate = delegate
@@ -343,7 +346,10 @@ final class DownloadServiceImpl: DownloadService {
     // MARK: - Private
 
     private func startDownloadTask(_ record: DownloadTaskRecord) {
-        guard let url = URL(string: record.remoteURL) else { return }
+        guard let parsed = URL(string: record.remoteURL) else { return }
+        // Background URLSession bypasses our HermeticURLProtocol — apply the
+        // rewrite explicitly here so hermetic mode catches offline downloads.
+        let url = appPreferences.hermeticRewrite(parsed)
 
         let task: URLSessionDownloadTask
         if let resumeData = record.resumeData {

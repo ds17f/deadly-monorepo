@@ -163,7 +163,8 @@ final class AppContainer {
                     favoritesDAO: FavoritesDAO(database: db),
                     downloadTaskDAO: DownloadTaskDAO(database: db),
                     storageManager: DownloadStorageManager(),
-                    analyticsService: analytics
+                    analyticsService: analytics,
+                    appPreferences: prefs
                 )
             }
             downloadService = downloadSvc

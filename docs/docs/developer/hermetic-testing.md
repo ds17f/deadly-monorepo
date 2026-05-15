@@ -104,24 +104,13 @@ gaps live.
 | GitHub releases (`data.zip`) | ✅ via `GitHubNetworkModule` | ✅ via URLProtocol |
 | Genius lyrics | ✅ via `GeniusNetworkModule` | ✅ via URLProtocol |
 | Wikipedia | ✅ via `WikipediaNetworkModule` | ✅ via URLProtocol |
-| Audio playback (AVPlayer / ExoPlayer) | ❌ see below | ✅ `PlaylistServiceImpl` + `CarPlayTrackResolver` |
-| Image loading | ❌ Coil uses its own OkHttp | ✅ AsyncImage uses URLSession |
-| Auth (the deadly API) | ❌ standalone `OkHttpClient()` | ✅ URLProtocol |
-| Background URLSession | n/a | ❌ URLProtocol limitation |
+| Audio playback (AVPlayer / ExoPlayer) | ✅ via `OkHttpDataSource` | ✅ `PlaylistServiceImpl` + `CarPlayTrackResolver` |
+| Image loading | ✅ Coil `ImageLoader` with `@BaseOkHttp` | ✅ AsyncImage uses URLSession |
+| Auth (the deadly API) | ✅ via injected `@BaseOkHttp` client | ✅ URLProtocol |
+| Background URLSession (downloads) | n/a | ✅ explicit `hermeticRewrite()` at task creation |
 
-### Known gaps (tracked as one umbrella follow-up)
+### Remaining caveats
 
-- **Android — ExoPlayer audio** uses `DefaultHttpDataSource`, not
-  OkHttp. The hermetic interceptor doesn't see it. Fix: swap to
-  `OkHttpDataSource.Factory(@BaseOkHttp client)` in
-  `core/media/download/DownloadCacheModule.kt`. ~10 lines.
-- **Android — `AuthServiceImpl`** instantiates a bare `OkHttpClient()`
-  inline (`AuthServiceImpl.kt:46`). Fix: inject `@BaseOkHttp` instead.
-- **Android — Coil image loader** uses its built-in OkHttp internally.
-  Fix: provide a custom `ImageLoader` via DI using the base client.
-- **iOS — background URLSessions** aren't intercepted by URLProtocol.
-  Rare path (used for long-running downloads); document as a known
-  limitation, route explicitly if hermetic-mode coverage is needed.
 - **Reload button is a no-op** on both platforms. Clients re-read the
   URL on every request, so the next call routes correctly without any
   explicit reload — but caches keyed by recording ID may serve stale

@@ -7,8 +7,10 @@ import android.os.Build
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.database.StandaloneDatabaseProvider
 import androidx.media3.datasource.DataSource
-import androidx.media3.datasource.DefaultHttpDataSource
+import androidx.media3.datasource.okhttp.OkHttpDataSource
 import androidx.media3.datasource.cache.Cache
+import com.grateful.deadly.core.network.hermetic.BaseOkHttp
+import okhttp3.OkHttpClient
 import androidx.media3.datasource.cache.CacheDataSource
 import androidx.media3.datasource.cache.NoOpCacheEvictor
 import androidx.media3.datasource.cache.SimpleCache
@@ -66,11 +68,16 @@ object DownloadCacheModule {
     @Provides
     @Singleton
     @UpstreamDataSourceFactory
-    fun provideUpstreamDataSourceFactory(): DataSource.Factory {
-        return DefaultHttpDataSource.Factory()
+    fun provideUpstreamDataSourceFactory(@BaseOkHttp baseClient: OkHttpClient): DataSource.Factory {
+        // Use OkHttp instead of DefaultHttpDataSource so audio playback flows
+        // through the same OkHttp stack as the rest of the app — including the
+        // HermeticInterceptor, which lets hermetic mode catch ExoPlayer traffic.
+        val client = baseClient.newBuilder()
+            .connectTimeout(CONNECT_TIMEOUT_MS.toLong(), java.util.concurrent.TimeUnit.MILLISECONDS)
+            .readTimeout(READ_TIMEOUT_MS.toLong(), java.util.concurrent.TimeUnit.MILLISECONDS)
+            .build()
+        return OkHttpDataSource.Factory(client)
             .setUserAgent(USER_AGENT)
-            .setConnectTimeoutMs(CONNECT_TIMEOUT_MS)
-            .setReadTimeoutMs(READ_TIMEOUT_MS)
     }
 
     @Provides

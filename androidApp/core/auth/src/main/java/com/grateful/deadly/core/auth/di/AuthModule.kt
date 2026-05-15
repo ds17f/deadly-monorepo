@@ -5,11 +5,13 @@ import com.grateful.deadly.core.api.auth.AuthService
 import com.grateful.deadly.core.auth.AuthServiceImpl
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
+import com.grateful.deadly.core.network.hermetic.BaseOkHttp
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import okhttp3.OkHttpClient
 import javax.inject.Named
 import javax.inject.Singleton
 
@@ -24,10 +26,12 @@ object AuthModule {
         appPreferences: AppPreferences,
         @Named("googleAndroidClientId") googleClientId: String,
         analyticsService: AnalyticsService,
+        @BaseOkHttp baseHttpClient: OkHttpClient,
     ): AuthService = AuthServiceImpl(
         context = context,
         appPreferences = appPreferences,
         googleClientId = googleClientId,
         analyticsService = analyticsService,
+        httpClient = baseHttpClient,
     )
 }

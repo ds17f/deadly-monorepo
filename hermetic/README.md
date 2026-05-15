@@ -124,11 +124,11 @@ the configured hermetic server with the original host as the first path
 segment.
 
 See [`docs/docs/developer/hermetic-testing.md`](../docs/docs/developer/hermetic-testing.md#coverage)
-for the full coverage matrix — what's caught (most of archive, GitHub,
-Genius, Wikipedia, image loading, AVPlayer audio on iOS) and what
-isn't (ExoPlayer audio + Auth + Coil on Android; background
-URLSessions on iOS). Gaps are tracked as a single umbrella follow-up
-under DEAD-346.
+for the full coverage matrix. All major traffic surfaces are now
+caught on both platforms (archive, GitHub, Genius, Wikipedia, audio
+playback, image loading, auth, iOS background downloads). The only
+remaining caveat is that the reload button is a no-op until cache
+invalidation lands with DEAD-352 / DEAD-355.
 
 ## SELinux note (Fedora/RHEL)
 

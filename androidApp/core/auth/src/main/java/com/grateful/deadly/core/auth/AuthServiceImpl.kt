@@ -33,6 +33,7 @@ class AuthServiceImpl(
     private val appPreferences: AppPreferences,
     private val googleClientId: String,
     private val analyticsService: AnalyticsService? = null,
+    private val httpClient: OkHttpClient,
 ) : AuthService {
 
     companion object {
@@ -43,7 +44,6 @@ class AuthServiceImpl(
     }
 
     private val json = Json { ignoreUnknownKeys = true }
-    private val httpClient = OkHttpClient()
     private val credentialManager = CredentialManager.create(context)
 
     private val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
