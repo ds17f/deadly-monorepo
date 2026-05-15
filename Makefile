@@ -80,6 +80,32 @@ hermetic-logs:
 hermetic-ps:
 	docker compose -f hermetic/docker-compose.yml ps
 
+# -----------------------------------------------------------------------------
+# Capture pipeline: mitmproxy → WireMock mappings
+# Requires uv/uvx on PATH (provided by mise). See hermetic/scripts/README.md.
+# -----------------------------------------------------------------------------
+
+# Start mitmproxy in capture mode. Writes a .flow file under hermetic/fixtures/captures/
+# Drive your dev device through this proxy (LAN proxy at port 8888) then Ctrl+C to stop.
+# Override CAPTURE_HOSTS to widen/narrow capture scope.
+CAPTURE_HOSTS ?= \\.archive\\.org
+CAPTURE_PORT  ?= 8888
+CAPTURE_FILE  ?= hermetic/fixtures/captures/$(shell date +%Y%m%d-%H%M%S).flow
+capture-start:
+	@mkdir -p hermetic/fixtures/captures
+	@echo "Capturing to $(CAPTURE_FILE) (Ctrl+C to stop)"
+	@echo "Allowed hosts regex: $(CAPTURE_HOSTS)   port: $(CAPTURE_PORT)"
+	uvx --from mitmproxy mitmdump \
+	  --listen-port $(CAPTURE_PORT) \
+	  --allow-hosts '$(CAPTURE_HOSTS)' \
+	  -w "$(CAPTURE_FILE)"
+
+# Convert a captured .flow file into WireMock mappings + body files.
+#   make capture-convert FLOW=hermetic/fixtures/captures/<file>.flow
+capture-convert:
+	@if [ -z "$(FLOW)" ]; then echo "usage: make capture-convert FLOW=<path/to/file.flow>"; exit 2; fi
+	uv run hermetic/scripts/flow_to_wiremock.py "$(FLOW)"
+
 # Run API locally without Docker (for quick iteration)
 api-dev:
 	cd api && npm run dev

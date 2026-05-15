@@ -68,10 +68,21 @@ override is wired manually per platform. After those tickets:
 
 ## Capture workflow
 
-Fixtures are derived from real archive.org traffic via mitmproxy. The
-capture pipeline lives in `tools/network-fault-proxy/` and is extended
-in **DEAD-348**. Once captured, mappings live in `hermetic/fixtures/`
-and are committed to the repo.
+Fixtures are derived from real archive.org traffic. Pipeline:
+
+1. **Capture**: `make capture-start` runs `mitmdump` on port 8888 and
+   records to `hermetic/fixtures/captures/<timestamp>.flow`. Point a
+   dev device's HTTP proxy at this machine and drive the scenario.
+2. **Convert**: `make capture-convert FLOW=...` runs
+   [`hermetic/scripts/flow_to_wiremock.py`](https://github.com/ds17f/deadly-monorepo/blob/main/hermetic/scripts/flow_to_wiremock.py),
+   which sanitizes the capture (header allowlist, drop cookies/auth)
+   and emits WireMock mappings + body files into
+   `hermetic/fixtures/mappings/` and `hermetic/fixtures/__files/`.
+3. **Commit**: the mappings, the bodies, and the raw `.flow` so the
+   conversion can be re-run if the converter changes.
+
+The unrelated `tools/network-fault-proxy/` (a fault-injection mitmproxy
+addon for testing retry paths) stays where it is.
 
 ## What's not here
 

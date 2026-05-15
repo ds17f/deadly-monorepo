@@ -6,8 +6,9 @@ services:
     ports:
       - "${HERMETIC_PORT:-8090}:8080"
     volumes:
-      - ./fixtures/mappings:/home/wiremock/mappings:ro
-      - ./fixtures/__files:/home/wiremock/__files:ro
+      # :z is SELinux relabel-shared (required on Fedora/RHEL). Harmless on other distros.
+      - ./fixtures/mappings:/home/wiremock/mappings:ro,z
+      - ./fixtures/__files:/home/wiremock/__files:ro,z
     command:
       - --global-response-templating
       - --verbose

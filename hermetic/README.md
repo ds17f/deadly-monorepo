@@ -12,6 +12,9 @@ Implementation work is tracked under DEAD-346.
 hermetic/
   docker-compose.yml   # WireMock service (Caddy + TLS added in DEAD-356)
   README.md            # this file
+  scripts/             # capture → mapping conversion tooling
+    flow_to_wiremock.py
+    README.md
   fixtures/
     mappings/          # WireMock stub mappings (captured + curated)
     __files/           # binary bodies (audio, images, data.zip)
@@ -56,6 +59,70 @@ WireMock's admin surface lives at `/__admin`. Tests configure
 scenario-specific behavior here at runtime — adding stubs, injecting
 delays, returning errors for the next N requests, resetting state. See
 https://wiremock.org/docs/standalone/admin-api-reference/.
+
+## Capture workflow
+
+Fixtures are derived from real archive.org traffic. The pipeline:
+
+```text
+   real device → mitmproxy → archive.org
+                    ↓
+                .flow file
+                    ↓
+   flow_to_wiremock.py
+                    ↓
+   hermetic/fixtures/mappings/  + hermetic/fixtures/__files/
+                    ↓
+              WireMock serves
+```
+
+### 1. Capture
+
+From the monorepo root:
+
+```bash
+make capture-start
+```
+
+This runs `mitmdump` on port 8888, restricted to archive.org hosts,
+writing to `hermetic/fixtures/captures/<timestamp>.flow`. Point your
+dev device's HTTP proxy at this machine's LAN IP on port 8888 (one-time
+mitmproxy cert install required — see
+`tools/network-fault-proxy/README.md`).
+
+Drive the app through the scenarios you want to fixture. Stop with
+Ctrl+C.
+
+Tune the capture scope via env vars:
+
+```bash
+CAPTURE_HOSTS='\.archive\.org|\.thedeadly\.app' make capture-start
+CAPTURE_PORT=9999 make capture-start
+```
+
+### 2. Convert
+
+```bash
+make capture-convert FLOW=hermetic/fixtures/captures/<file>.flow
+```
+
+This emits sanitized mappings and body files into `hermetic/fixtures/`.
+See `hermetic/scripts/README.md` for what survives the sanitization
+pass and what's dropped.
+
+### 3. Commit
+
+Review the generated mappings + bodies, drop anything irrelevant, then
+commit the artifacts. The raw `.flow` file under `captures/` is also
+committed so the conversion can be re-run if the converter changes.
+
+## SELinux note (Fedora/RHEL)
+
+The compose file mounts fixture directories with the `:z` flag, which
+performs an SELinux relabel-shared on the host directory so the
+WireMock container can read it. Harmless on distros without SELinux.
+If you run WireMock via raw `docker run`, remember to add `:ro,z` to
+your `-v` flags.
 
 ## What goes here vs. elsewhere
 
