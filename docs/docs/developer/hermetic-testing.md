@@ -117,8 +117,39 @@ gaps live.
   data across mirror swaps. Concrete cache invalidation lands with
   DEAD-352 (data isolation) / DEAD-355 (CI smoke).
 
-The host-check guard (DEAD-353, future) will surface anything still
-escaping by failing loudly during test runs.
+## Host-check guard (DEAD-353)
+
+A safety net: when hermetic mode is on, every outbound request must
+target the hermetic host. If something slips past the normal rewrite
+plumbing, the guard fails the request loudly.
+
+**Android** — `HostCheckInterceptor` (`core/network/hermetic/`)
+installed on the shared `@BaseOkHttp` `OkHttpClient` AFTER
+`HermeticInterceptor`. When hermetic mode is on and a request's host
+doesn't match the configured base, it throws `IOException` with the
+offending URL.  Catches:
+
+- A new module that builds its own `OkHttpClient.Builder()` instead of
+  injecting `@BaseOkHttp`
+- An idempotence-guard or parse-failure edge case in
+  `HermeticInterceptor`
+
+What it does **not** catch on Android: anything using a non-OkHttp
+HTTP client (e.g., `HttpURLConnection`, `java.net.http.HttpClient`).
+That's surfaced at test time via WireMock's request journal — any
+expected request that doesn't show up is an escape.
+
+**iOS** — no runtime counterpart. `HermeticURLProtocol`
+unconditionally intercepts `URLSession.shared` traffic and the
+`StreamPlayer` `urlTransformer` unconditionally rewrites every URL
+handed to the audio engine. There's no logical layer between those
+and the network where a guard could sit that the existing code paths
+don't already cover. AVPlayer / CFNetwork code that bypasses both
+would also bypass any imaginable in-process guard; that class of
+escape is detected externally via WireMock's request journal during
+test runs, same as the Android non-OkHttp case. If we ever ship
+hermetic mode in release builds we can revisit this with ATS-level
+allowlisting in the test target.
 
 ## Capture workflow
 

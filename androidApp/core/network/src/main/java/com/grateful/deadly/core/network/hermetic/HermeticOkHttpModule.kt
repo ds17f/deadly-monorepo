@@ -32,8 +32,14 @@ object HermeticOkHttpModule {
     @BaseOkHttp
     fun provideBaseOkHttpClient(
         hermeticInterceptor: HermeticInterceptor,
+        hostCheckInterceptor: HostCheckInterceptor,
     ): OkHttpClient =
         OkHttpClient.Builder()
+            // Order matters: hermetic rewrites first, host-check verifies the
+            // rewritten URL actually targets the hermetic host. Anything that
+            // slips past the rewrite (a new client not built from @BaseOkHttp,
+            // an idempotence edge case) is caught here and thrown loudly.
             .addInterceptor(hermeticInterceptor)
+            .addInterceptor(hostCheckInterceptor)
             .build()
 }
