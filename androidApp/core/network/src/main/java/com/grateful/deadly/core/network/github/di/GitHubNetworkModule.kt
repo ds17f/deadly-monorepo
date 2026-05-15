@@ -1,6 +1,7 @@
 package com.grateful.deadly.core.network.github.di
 
 import com.grateful.deadly.core.network.github.api.GitHubReleasesApi
+import com.grateful.deadly.core.network.hermetic.BaseOkHttp
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,8 +27,8 @@ object GitHubNetworkModule {
     @Provides
     @Singleton
     @GitHub
-    fun provideGitHubOkHttpClient(): OkHttpClient {
-        return OkHttpClient.Builder()
+    fun provideGitHubOkHttpClient(@BaseOkHttp baseClient: OkHttpClient): OkHttpClient {
+        return baseClient.newBuilder()
             .addInterceptor(HttpLoggingInterceptor().apply {
                 level = HttpLoggingInterceptor.Level.BASIC
             })

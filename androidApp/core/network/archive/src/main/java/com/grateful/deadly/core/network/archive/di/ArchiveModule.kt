@@ -3,11 +3,13 @@ package com.grateful.deadly.core.network.archive.di
 import com.grateful.deadly.core.network.archive.api.ArchiveApiService
 import com.grateful.deadly.core.network.archive.service.ArchiveService
 import com.grateful.deadly.core.network.archive.service.ArchiveServiceImpl
+import com.grateful.deadly.core.network.hermetic.BaseOkHttp
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json
@@ -40,14 +42,15 @@ abstract class ArchiveModule {
         @Provides
         @Singleton
         @ArchiveRetrofit
-        fun provideArchiveRetrofit(): Retrofit {
+        fun provideArchiveRetrofit(@BaseOkHttp baseClient: OkHttpClient): Retrofit {
             val json = Json {
                 ignoreUnknownKeys = true
                 encodeDefaults = true
             }
-            
+
             return Retrofit.Builder()
                 .baseUrl("https://archive.org/")
+                .client(baseClient.newBuilder().build())
                 .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
                 .build()
         }

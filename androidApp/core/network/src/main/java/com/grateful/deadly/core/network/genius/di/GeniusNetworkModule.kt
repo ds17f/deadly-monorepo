@@ -3,6 +3,7 @@ package com.grateful.deadly.core.network.genius.di
 import com.grateful.deadly.core.network.genius.api.GeniusApi
 import com.grateful.deadly.core.network.genius.service.GeniusService
 import com.grateful.deadly.core.network.genius.service.GeniusServiceImpl
+import com.grateful.deadly.core.network.hermetic.BaseOkHttp
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -37,8 +38,8 @@ abstract class GeniusNetworkModule {
         @Provides
         @Singleton
         @Genius
-        fun provideGeniusOkHttpClient(): OkHttpClient {
-            return OkHttpClient.Builder()
+        fun provideGeniusOkHttpClient(@BaseOkHttp baseClient: OkHttpClient): OkHttpClient {
+            return baseClient.newBuilder()
                 .addInterceptor(HttpLoggingInterceptor().apply {
                     level = HttpLoggingInterceptor.Level.BASIC
                 })

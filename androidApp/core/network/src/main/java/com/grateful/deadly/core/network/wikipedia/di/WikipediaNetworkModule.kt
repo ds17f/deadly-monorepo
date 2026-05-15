@@ -1,5 +1,6 @@
 package com.grateful.deadly.core.network.wikipedia.di
 
+import com.grateful.deadly.core.network.hermetic.BaseOkHttp
 import com.grateful.deadly.core.network.wikipedia.api.WikipediaApi
 import com.grateful.deadly.core.network.wikipedia.service.WikipediaService
 import com.grateful.deadly.core.network.wikipedia.service.WikipediaServiceImpl
@@ -36,12 +37,12 @@ abstract class WikipediaNetworkModule {
         @Provides
         @Singleton
         @Wikipedia
-        fun provideWikipediaRetrofit(): Retrofit {
+        fun provideWikipediaRetrofit(@BaseOkHttp baseClient: OkHttpClient): Retrofit {
             val json = Json {
                 ignoreUnknownKeys = true
                 isLenient = true
             }
-            val client = OkHttpClient.Builder()
+            val client = baseClient.newBuilder()
                 .addInterceptor(Interceptor { chain ->
                     chain.proceed(
                         chain.request().newBuilder()

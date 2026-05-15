@@ -39,7 +39,10 @@ android {
 dependencies {
     // V2 dependencies
     implementation(project(":core:model"))
-    
+
+    // Shared base OkHttpClient with HermeticInterceptor + cross-cutting concerns
+    implementation(project(":core:network"))
+
     // Networking
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")

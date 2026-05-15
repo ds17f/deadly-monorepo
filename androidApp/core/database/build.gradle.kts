@@ -40,7 +40,9 @@ android {
 dependencies {
     implementation(project(":core:model"))
     implementation(project(":core:domain"))
-    implementation(project(":core:network"))
+    // `api` (not `implementation`) so consumers of AppPreferences can also see
+    // its supertype HermeticConfigProvider (declared in core:network).
+    api(project(":core:network"))
     
     implementation("androidx.core:core-ktx:1.12.0")
     

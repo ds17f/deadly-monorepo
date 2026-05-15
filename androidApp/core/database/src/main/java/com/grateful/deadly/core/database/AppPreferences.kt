@@ -24,7 +24,7 @@ import javax.inject.Singleton
 @Singleton
 class AppPreferences @Inject constructor(
     @ApplicationContext context: Context
-) {
+) : com.grateful.deadly.core.network.hermetic.HermeticConfigProvider {
     private val prefs: SharedPreferences =
         context.getSharedPreferences("app_preferences", Context.MODE_PRIVATE)
 
@@ -52,6 +52,8 @@ class AppPreferences @Inject constructor(
         private const val KEY_LAST_REVIEW_PROMPT_TIME = "last_review_prompt_time"
         private const val KEY_HAS_ADDED_FAVORITE = "has_added_favorite"
         private const val KEY_DEVELOPER_MODE_UNLOCKED = "developer_mode_unlocked"
+        private const val KEY_HERMETIC_MODE_ENABLED = "hermetic_mode_enabled"
+        private const val KEY_HERMETIC_BASE_URL = "hermetic_base_url"
     }
 
     private val _includeShowsWithoutRecordings = MutableStateFlow(
@@ -313,5 +315,41 @@ class AppPreferences @Inject constructor(
 
     /** @deprecated Use [setServerEnvironment] instead. */
     fun setUseBetaShareLinks(value: Boolean) = setServerEnvironment(if (value) "beta" else "prod")
+
+    // ── Hermetic test framework ──────────────────────────────────────
+    //
+    // When hermetic mode is enabled, all outbound HTTP traffic is rewritten
+    // by HermeticInterceptor to target hermeticBaseUrl, with the original
+    // host pushed into the URL as the first path segment. See DEAD-351 and
+    // hermetic/README.md.
+
+    private val _hermeticModeEnabled: MutableStateFlow<Boolean> =
+        MutableStateFlow(prefs.getBoolean(KEY_HERMETIC_MODE_ENABLED, false))
+    private val _hermeticBaseUrl: MutableStateFlow<String> =
+        MutableStateFlow(prefs.getString(KEY_HERMETIC_BASE_URL, "") ?: "")
+
+    /** True when the app is routing external traffic through the hermetic server. */
+    val hermeticModeEnabled: StateFlow<Boolean> = _hermeticModeEnabled.asStateFlow()
+
+    fun setHermeticModeEnabled(value: Boolean) {
+        prefs.edit().putBoolean(KEY_HERMETIC_MODE_ENABLED, value).apply()
+        _hermeticModeEnabled.value = value
+    }
+
+    /** Base URL of the hermetic server, e.g. "http://10.0.2.2:8090". Empty means disabled. */
+    val hermeticBaseUrl: StateFlow<String> = _hermeticBaseUrl.asStateFlow()
+
+    fun setHermeticBaseUrl(value: String) {
+        prefs.edit().putString(KEY_HERMETIC_BASE_URL, value).apply()
+        _hermeticBaseUrl.value = value
+    }
+
+    /**
+     * Effective hermetic base URL — non-null only when the toggle is on AND a URL is set.
+     * Read by `HermeticInterceptor` on every request (via the
+     * [com.grateful.deadly.core.network.hermetic.HermeticConfigProvider] interface).
+     */
+    override val effectiveHermeticBaseUrl: String?
+        get() = _hermeticBaseUrl.value.takeIf { it.isNotBlank() && _hermeticModeEnabled.value }
 
 }

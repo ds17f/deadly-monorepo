@@ -27,6 +27,9 @@ fun DeveloperScreen(
     val customServerUrl by viewModel.customServerUrl.collectAsState()
     val customDevEmail by viewModel.customDevEmail.collectAsState()
 
+    val hermeticModeEnabled by viewModel.hermeticModeEnabled.collectAsState()
+    val hermeticBaseUrl by viewModel.hermeticBaseUrl.collectAsState()
+
     val environments = listOf("prod" to "Production", "beta" to "Beta", "custom" to "Custom")
 
     LazyColumn(modifier = Modifier.fillMaxSize()) {
@@ -78,6 +81,48 @@ fun DeveloperScreen(
                         .padding(horizontal = 16.dp, vertical = 4.dp)
                 )
             }
+        }
+
+        item { HorizontalDivider() }
+
+        item {
+            Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)) {
+                Text(text = "Hermetic test server", style = MaterialTheme.typography.bodyLarge)
+                Text(
+                    text = "Route external traffic (archive.org, GitHub, Genius, Wikipedia) through a local WireMock server. Audio playback and auth not yet covered.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
+
+        item {
+            DevToggleRow(
+                title = "Enable hermetic mode",
+                subtitle = "When on, all OkHttp traffic is rewritten to the URL below",
+                checked = hermeticModeEnabled,
+                onCheckedChange = { viewModel.setHermeticModeEnabled(it) }
+            )
+        }
+
+        item {
+            OutlinedTextField(
+                value = hermeticBaseUrl,
+                onValueChange = { viewModel.setHermeticBaseUrl(it) },
+                label = { Text("Hermetic server URL") },
+                placeholder = { Text("http://10.0.2.2:8090") },
+                singleLine = true,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp, vertical = 4.dp)
+            )
+        }
+
+        item {
+            DevRow(
+                title = "Reload against hermetic server",
+                onClick = { viewModel.reloadAgainstHermeticServer() }
+            )
         }
 
         item { HorizontalDivider() }

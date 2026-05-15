@@ -113,6 +113,35 @@ class SettingsViewModel @Inject constructor(
         appPreferences.setCustomDevEmail(value)
     }
 
+    // ── Hermetic test server ─────────────────────────────────────────
+
+    val hermeticModeEnabled: StateFlow<Boolean> = appPreferences.hermeticModeEnabled
+    val hermeticBaseUrl: StateFlow<String> = appPreferences.hermeticBaseUrl
+
+    fun setHermeticModeEnabled(value: Boolean) {
+        appPreferences.setHermeticModeEnabled(value)
+    }
+
+    fun setHermeticBaseUrl(value: String) {
+        appPreferences.setHermeticBaseUrl(value)
+    }
+
+    /**
+     * Hermetic-mode reload hook. Network clients re-read
+     * [AppPreferences.effectiveHermeticBaseUrl] on every request, so flipping
+     * the toggle takes effect for the next call automatically — no DI scope
+     * reset is needed.
+     *
+     * This action is a hook for future cache-invalidation work
+     * (DEAD-352 / DEAD-355); for now the "Clear Archive Cache" row below
+     * does the relevant cache flush manually.
+     */
+    fun reloadAgainstHermeticServer() {
+        // No-op for the moment. Kept as a UI affordance so the workflow is
+        // visible; concrete reload semantics land with the cache-invalidation
+        // follow-ups.
+    }
+
     fun fetchDevToken() {
         val impl = authService as? com.grateful.deadly.core.auth.AuthServiceImpl ?: run {
             Log.w(TAG, "fetchDevToken: authService is not AuthServiceImpl")
