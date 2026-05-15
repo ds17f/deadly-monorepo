@@ -50,9 +50,15 @@ final class HermeticURLProtocol: URLProtocol {
     override class func canInit(with request: URLRequest) -> Bool {
         // Avoid re-entering on our own forwarded request.
         if URLProtocol.property(forKey: handledKey, in: request) != nil { return false }
-        guard let scheme = request.url?.scheme?.lowercased(),
+        guard let url = request.url,
+              let scheme = url.scheme?.lowercased(),
               scheme == "http" || scheme == "https" else { return false }
-        return currentBaseURL != nil
+        guard let base = currentBaseURL else { return false }
+        // Idempotence: if the request already targets the hermetic host, leave
+        // it alone — guards against double-rewriting URLs that somehow flow
+        // through unmarked (e.g. restored from persistent state).
+        if url.host == base.host && url.port == base.port { return false }
+        return true
     }
 
     override class func canonicalRequest(for request: URLRequest) -> URLRequest {

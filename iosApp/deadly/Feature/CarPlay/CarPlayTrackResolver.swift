@@ -93,8 +93,10 @@ final class CarPlayTrackResolver {
             if let localURL = downloadService?.localURL(for: recordingId, trackFilename: track.name) {
                 url = localURL
             } else {
-                // Hermetic rewrite for AVPlayer-bound audio (URLProtocol doesn't catch this).
-                url = appPreferences.hermeticRewrite(track.streamURL(recordingId: recordingId))
+                // Original archive.org URL — StreamPlayer applies the hermetic
+                // rewrite at the engine boundary, so the URL passing through here
+                // (and any persistence-layer state derived from it) stays canonical.
+                url = track.streamURL(recordingId: recordingId)
             }
             return TrackItem(
                 url: url,

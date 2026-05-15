@@ -85,11 +85,20 @@ public final class StreamPlayer {
 
     // MARK: - Init
 
-    public init() {
+    /// Optional last-second URL transformer applied to every URL handed to the
+    /// audio engine. Used by hermetic-mode rewriting on the host app — keeping
+    /// the transform at this boundary means `TrackItem.url` and any
+    /// persistence-layer state hold the *original* URL, so flipping hermetic
+    /// mode on/off doesn't leave stale rewritten URLs in storage. Default is
+    /// the identity transform.
+    private let urlTransformer: @Sendable (URL) -> URL
+
+    public init(urlTransformer: (@Sendable (URL) -> URL)? = nil) {
         self.engine = AudioStreamEngine()
         self.sessionManager = AudioSessionManager()
         self.nowPlayingManager = NowPlayingManager()
         self.remoteCommandManager = RemoteCommandManager()
+        self.urlTransformer = urlTransformer ?? { $0 }
 
         setupEngineCallbacks()
         setupSessionCallbacks()
@@ -102,6 +111,7 @@ public final class StreamPlayer {
         self.sessionManager = AudioSessionManager()
         self.nowPlayingManager = NowPlayingManager()
         self.remoteCommandManager = RemoteCommandManager()
+        self.urlTransformer = { $0 }
 
         setupEngineCallbacks()
         setupSessionCallbacks()
@@ -139,7 +149,7 @@ public final class StreamPlayer {
         sessionManager.configure()
         remoteCommandManager.setup()
 
-        let urls = tracks.map(\.url)
+        let urls = tracks.map { urlTransformer($0.url) }
         engine.loadQueue(urls: urls, startingAt: startIndex, autoPlay: autoPlay)
 
         updateNowPlaying()
@@ -373,7 +383,7 @@ public final class StreamPlayer {
 
     public func append(_ track: TrackItem) {
         tracks.append(track)
-        engine.appendTrack(url: track.url)
+        engine.appendTrack(url: urlTransformer(track.url))
         updateQueueState(index: engine.currentIndex)
         remoteCommandManager.updateCommandState(
             hasNext: queueState.hasNext,
@@ -388,7 +398,7 @@ public final class StreamPlayer {
         } else {
             tracks.append(track)
         }
-        engine.insertNext(url: track.url)
+        engine.insertNext(url: urlTransformer(track.url))
         updateQueueState(index: engine.currentIndex)
         remoteCommandManager.updateCommandState(
             hasNext: queueState.hasNext,

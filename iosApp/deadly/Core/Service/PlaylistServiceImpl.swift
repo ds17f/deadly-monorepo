@@ -257,9 +257,10 @@ final class PlaylistServiceImpl: PlaylistService {
             if let localURL = downloadService?.localURL(for: recordingId, trackFilename: track.name) {
                 url = localURL
             } else {
-                // Hermetic mode rewrites the AVPlayer-bound audio URL to route through
-                // the configured WireMock server. No-op when hermetic mode is off.
-                url = appPreferences.hermeticRewrite(track.streamURL(recordingId: recordingId))
+                // Original archive.org URL. StreamPlayer applies the hermetic
+                // rewrite (if any) at the audio engine boundary, so the URL
+                // persisted via the playback engine stays canonical.
+                url = track.streamURL(recordingId: recordingId)
             }
             return TrackItem(
                 url: url,

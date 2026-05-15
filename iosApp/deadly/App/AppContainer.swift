@@ -108,7 +108,13 @@ final class AppContainer {
 
             // StreamPlayer is @MainActor; AppContainer is always created on the main
             // thread (from deadlyApp which is @MainActor), so assumeIsolated is safe.
-            let player = MainActor.assumeIsolated { StreamPlayer() }
+            // Hermetic mode rewrites at the engine boundary, so TrackItem.url
+            // and any persistence-layer state hold original archive.org URLs;
+            // flipping the toggle on/off doesn't leave stale rewritten URLs.
+            let prefsForTransform = prefs
+            let player = MainActor.assumeIsolated {
+                StreamPlayer(urlTransformer: { prefsForTransform.hermeticRewrite($0) })
+            }
             streamPlayer = player
 
             // Set app logo as fallback for lock screen / Now Playing when artwork unavailable
