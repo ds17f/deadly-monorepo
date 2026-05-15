@@ -116,6 +116,20 @@ Review the generated mappings + bodies, drop anything irrelevant, then
 commit the artifacts. The raw `.flow` file under `captures/` is also
 committed so the conversion can be re-run if the converter changes.
 
+## Coverage
+
+The Android and iOS apps now have a Developer Settings "Hermetic mode"
+toggle (DEAD-350 / DEAD-351). When on, outbound traffic is rewritten to
+the configured hermetic server with the original host as the first path
+segment.
+
+See [`docs/docs/developer/hermetic-testing.md`](../docs/docs/developer/hermetic-testing.md#coverage)
+for the full coverage matrix — what's caught (most of archive, GitHub,
+Genius, Wikipedia, image loading, AVPlayer audio on iOS) and what
+isn't (ExoPlayer audio + Auth + Coil on Android; background
+URLSessions on iOS). Gaps are tracked as a single umbrella follow-up
+under DEAD-346.
+
 ## SELinux note (Fedora/RHEL)
 
 The compose file mounts fixture directories with the `:z` flag, which

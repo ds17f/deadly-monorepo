@@ -56,15 +56,80 @@ the conventional layout WireMock auto-loads on startup.
 
 ## How the app points at it
 
-The Developer Settings "Hermetic server URL" field lands in
-**DEAD-350** (iOS) and **DEAD-351** (Android). Until then, base-URL
-override is wired manually per platform. After those tickets:
+Both platforms now have a "Hermetic mode" toggle + URL field in
+Developer Settings (DEAD-350 on iOS, DEAD-351 on Android). The
+underlying model is **one switch, all traffic** — when the toggle is
+on, every outbound HTTP(S) request `https://<host>/<path>` is
+rewritten to `http://<hermetic>/<host>/<path>`. The original host
+becomes the first path segment so a single WireMock instance can
+serve any number of upstreams:
 
-- Open the app in a Debug build
-- Developer Settings → Hermetic server URL → `http://localhost:8090`
-  (simulator) / `http://10.0.2.2:8090` (Android emulator) /
-  `http://<lan-ip>:8090` (real device)
-- Tap reload — the app re-bootstraps against the container
+```text
+https://archive.org/metadata/foo  →  http://10.0.2.2:8090/archive.org/metadata/foo
+https://api.github.com/repos/...  →  http://10.0.2.2:8090/api.github.com/repos/...
+```
+
+Steps to use:
+
+- Open the app in a Debug build (release builds don't ship the toggle UI yet)
+- Developer Settings → **Hermetic mode** → enable
+- **Hermetic server URL** → `http://localhost:8090` (iOS simulator) /
+  `http://10.0.2.2:8090` (Android emulator) / `http://<lan-ip>:8090`
+  (real device)
+- Tap "Reload against hermetic server"
+
+### Platform implementations
+
+- **Android** (`HermeticInterceptor` in `core/network/hermetic/`) — an
+  OkHttp interceptor applied to a shared `@BaseOkHttp` `OkHttpClient`.
+  All upstream network modules (archive, github, genius, wikipedia)
+  inject the base client and call `.newBuilder()` to add their own
+  quirks, so the interceptor wires through transparently.
+- **iOS** (`HermeticURLProtocol` in `Core/Network/`) — a `URLProtocol`
+  registered against `URLSession.shared` at app launch. AVPlayer
+  bypasses URLProtocol (it uses CFNetwork directly), so audio URL
+  construction sites call `AppPreferences.hermeticRewrite(_:)`
+  explicitly.
+
+## Coverage
+
+What hermetic mode currently catches, what it doesn't, and where the
+gaps live.
+
+### Caught
+
+| Surface | Android | iOS |
+|---|---|---|
+| archive.org metadata fetches | ✅ via `ArchiveModule` | ✅ via URLProtocol |
+| GitHub releases (`data.zip`) | ✅ via `GitHubNetworkModule` | ✅ via URLProtocol |
+| Genius lyrics | ✅ via `GeniusNetworkModule` | ✅ via URLProtocol |
+| Wikipedia | ✅ via `WikipediaNetworkModule` | ✅ via URLProtocol |
+| Audio playback (AVPlayer / ExoPlayer) | ❌ see below | ✅ `PlaylistServiceImpl` + `CarPlayTrackResolver` |
+| Image loading | ❌ Coil uses its own OkHttp | ✅ AsyncImage uses URLSession |
+| Auth (the deadly API) | ❌ standalone `OkHttpClient()` | ✅ URLProtocol |
+| Background URLSession | n/a | ❌ URLProtocol limitation |
+
+### Known gaps (tracked as one umbrella follow-up)
+
+- **Android — ExoPlayer audio** uses `DefaultHttpDataSource`, not
+  OkHttp. The hermetic interceptor doesn't see it. Fix: swap to
+  `OkHttpDataSource.Factory(@BaseOkHttp client)` in
+  `core/media/download/DownloadCacheModule.kt`. ~10 lines.
+- **Android — `AuthServiceImpl`** instantiates a bare `OkHttpClient()`
+  inline (`AuthServiceImpl.kt:46`). Fix: inject `@BaseOkHttp` instead.
+- **Android — Coil image loader** uses its built-in OkHttp internally.
+  Fix: provide a custom `ImageLoader` via DI using the base client.
+- **iOS — background URLSessions** aren't intercepted by URLProtocol.
+  Rare path (used for long-running downloads); document as a known
+  limitation, route explicitly if hermetic-mode coverage is needed.
+- **Reload button is a no-op** on both platforms. Clients re-read the
+  URL on every request, so the next call routes correctly without any
+  explicit reload — but caches keyed by recording ID may serve stale
+  data across mirror swaps. Concrete cache invalidation lands with
+  DEAD-352 (data isolation) / DEAD-355 (CI smoke).
+
+The host-check guard (DEAD-353, future) will surface anything still
+escaping by failing loudly during test runs.
 
 ## Capture workflow
 
