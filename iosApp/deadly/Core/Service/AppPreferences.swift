@@ -136,6 +136,15 @@ final class AppPreferences {
               var components = URLComponents(url: base, resolvingAgainstBaseURL: false)
         else { return url }
 
+        // Idempotence guard: don't re-rewrite a URL that's already targeting
+        // the hermetic host. Without this, URLs that were rewritten and then
+        // persisted (e.g. PlaylistServiceImpl saving the AVPlayer URL to
+        // restore last-played state) would gain another `/<host>/` prefix on
+        // every restart.
+        if host == base.host && url.port == base.port {
+            return url
+        }
+
         let originalPath = url.path
         var newPath = components.path
         if !newPath.hasSuffix("/") { newPath += "/" }

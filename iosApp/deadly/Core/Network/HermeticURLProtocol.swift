@@ -1,4 +1,5 @@
 import Foundation
+import os.log
 
 /// URLSession-layer hook that rewrites outbound HTTP(S) requests when the
 /// app is in hermetic mode. The original host is pushed into the path as
@@ -25,6 +26,7 @@ import Foundation
 /// Tracked in DEAD-350. See `hermetic/README.md`.
 final class HermeticURLProtocol: URLProtocol {
 
+    private static let log = Logger(subsystem: "com.grateful.deadly", category: "HermeticURLProtocol")
     private static let handledKey = "HermeticURLProtocolHandled"
     private static let lock = NSLock()
     private static var baseURLProvider: () -> URL? = { nil }
@@ -74,6 +76,8 @@ final class HermeticURLProtocol: URLProtocol {
         }
         URLProtocol.setProperty(true, forKey: Self.handledKey, in: mutable)
         mutable.url = rewritten
+
+        Self.log.debug("\(originalURL.absoluteString, privacy: .public) → \(rewritten.absoluteString, privacy: .public)")
 
         // Forward via a session that does NOT include HermeticURLProtocol,
         // so we don't re-enter ourselves.
