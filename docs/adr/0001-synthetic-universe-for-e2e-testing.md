@@ -87,19 +87,23 @@ existing open-source tools, not a custom-built fixture server:
    approximations. The capture step is a one-off per scenario; the
    resulting mappings are committed to the repo.
 
-3. **Shared fixtures committed to the monorepo.** Under
-   `test/fixtures/`:
+3. **Shared fixtures and runtime committed to the monorepo** under a
+   dedicated `hermetic/` root that co-locates the compose definition,
+   future TLS frontend (Caddy), and the fixture data:
    ```
-   test/fixtures/
-     mappings/              # WireMock stub mappings (recorded + curated)
-       archive-show-A.json
-       releases-data.json
-       ...
-     __files/               # Binary bodies (audio, images, data.zip)
-       gd1972-05-16d1t01.mp3
-       ...
-     captures/              # Raw mitmproxy flows, retained for re-conversion
-     synthetic/             # Hand-authored mappings for non-real test data
+   hermetic/
+     docker-compose.yml     # WireMock service (Caddy added later)
+     README.md              # how to bring it up
+     fixtures/
+       mappings/            # WireMock stub mappings (recorded + curated)
+         archive-show-A.json
+         releases-data.json
+         ...
+       __files/             # Binary bodies (audio, images, data.zip)
+         gd1972-05-16d1t01.mp3
+         ...
+       captures/            # Raw mitmproxy flows, retained for re-conversion
+       synthetic/           # Hand-authored mappings for non-real test data
    ```
    These fixtures are platform-neutral — iOS, Android, and web all
    consume them via the same WireMock container. The synthetic
@@ -144,8 +148,9 @@ existing open-source tools, not a custom-built fixture server:
    Android and web tests, TestContainers handles it natively. For iOS,
    we use a CI-side container exposed on a known port, with a shell
    helper for local dev (`make playback-fixture-up` / `down`).
-   Docker Compose definition at the monorepo root coordinates dev,
-   CI, and manual on-device testing against the same image.
+   Docker Compose definition under `hermetic/` coordinates dev, CI,
+   and manual on-device testing against the same image. Root `Makefile`
+   exposes `make hermetic-up` / `hermetic-down` / `hermetic-logs`.
 
 ## Consequences
 

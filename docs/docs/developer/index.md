@@ -23,6 +23,7 @@ deadly-monorepo/
 │   └── fastlane/     # Android build automation
 ├── iosApp/           # iOS native application
 │   └── fastlane/     # iOS build automation
+├── hermetic/         # WireMock fake-backend test framework + fixtures
 ├── version.properties # Single source of truth for versioning
 ├── scripts/          # Release and automation scripts
 └── docs/             # Documentation (you are here!)
@@ -33,6 +34,9 @@ deadly-monorepo/
 ### Release Management
 - **[Version Management](version-management.md)** - How versioning works, conventional commits, and creating releases
 - **[CI/CD System](ci-cd.md)** - Complete guide to automated builds, GitHub Actions, and secrets
+
+### Testing
+- **[Hermetic Testing](hermetic-testing.md)** - WireMock-based fake backend for offline / deterministic end-to-end runs
 
 ### Build Guides
 - **Android**: See [CI/CD documentation](ci-cd.md#android-fastlane) for fastlane lanes

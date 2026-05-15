@@ -41,8 +41,9 @@ Specifically:
 
 ### 1. Shared fixture container
 
-A single WireMock container image, defined in `test/fixture-server/`
-and run via `docker-compose.yml` at the monorepo root. Image is the
+A single WireMock container image, defined in `hermetic/docker-compose.yml`
+under the dedicated `hermetic/` root (separate from the production
+`docker-compose.yml` that hosts UI/API/Caddy/Redis). Image is the
 upstream `wiremock/wiremock`; we add no custom code to the container
 itself — only mappings and binary fixtures loaded at startup.
 
@@ -61,10 +62,10 @@ looks the same as a test in Kotlin or TypeScript doing the same.
 
 ### 2. Shared fixture data
 
-Under `test/fixtures/`:
+Under `hermetic/fixtures/`:
 
 ```
-test/fixtures/
+hermetic/fixtures/
   mappings/              # WireMock stub mappings (recorded + curated)
   __files/               # Binary bodies (audio, images, data.zip)
   captures/              # Raw mitmproxy flows
@@ -200,5 +201,5 @@ layer is small and worth keeping native.
   vocabulary from 0002 is shared.
 - `PLANS/DEAD-344.md` — the immediate motivation (iOS playback) that
   triggered all three ADRs.
-- Monorepo layout under `test/fixtures/`, `tools/network-fault-proxy/`,
+- Monorepo layout under `hermetic/`, `tools/network-fault-proxy/`,
   `docs/playback-events.md`, `docs/playback-test-scenarios.md`.

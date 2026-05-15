@@ -59,6 +59,27 @@ docker-redeploy: docker-destroy docker-up
 # Destroy + rebuild + start + tail logs
 docker-redeploy-logs: docker-redeploy docker-logs
 
+# =============================================================================
+# Hermetic test framework (WireMock-based fake backend)
+# See hermetic/README.md and docs/adr/0001-synthetic-universe-for-e2e-testing.md
+# =============================================================================
+
+# Start the hermetic WireMock container (port 8090 by default; override HERMETIC_PORT)
+hermetic-up:
+	docker compose -f hermetic/docker-compose.yml up -d
+
+# Stop and remove the hermetic container
+hermetic-down:
+	docker compose -f hermetic/docker-compose.yml down
+
+# Tail hermetic container logs
+hermetic-logs:
+	docker compose -f hermetic/docker-compose.yml logs -f
+
+# Show hermetic container status
+hermetic-ps:
+	docker compose -f hermetic/docker-compose.yml ps
+
 # Run API locally without Docker (for quick iteration)
 api-dev:
 	cd api && npm run dev

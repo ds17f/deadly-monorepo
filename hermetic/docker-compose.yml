@@ -1,0 +1,19 @@
+services:
+  wiremock:
+    image: wiremock/wiremock:3.10.0
+    container_name: hermetic-wiremock
+    restart: unless-stopped
+    ports:
+      - "${HERMETIC_PORT:-8090}:8080"
+    volumes:
+      - ./fixtures/mappings:/home/wiremock/mappings:ro
+      - ./fixtures/__files:/home/wiremock/__files:ro
+    command:
+      - --global-response-templating
+      - --verbose
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://localhost:8080/__admin/health || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s

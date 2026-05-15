@@ -25,6 +25,12 @@ This is a **monorepo** containing separate iOS and Android native applications:
   - `version` - Pinned data version read by all platforms + CI
   - Produces `data.zip` consumed by iOS, Android, and web via GitHub Releases
 
+- **hermetic/** - WireMock-based fake backend for offline / deterministic end-to-end
+  testing (ADR-0001 / ADR-0003, epic DEAD-346). Runtime in `hermetic/docker-compose.yml`;
+  fixtures under `hermetic/fixtures/{mappings,__files,captures,synthetic}/`.
+  Make targets: `hermetic-up`, `hermetic-down`, `hermetic-logs`, `hermetic-ps`
+  (port 8090 by default; override with `HERMETIC_PORT`).
+
 **Note**: The directory structure differs from AGENTS.md documentation. Actual paths are `iosApp/` and `androidApp/`, not `deadly/` and `dead/v2/`.
 
 ## Build & Development Commands
