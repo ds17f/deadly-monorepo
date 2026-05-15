@@ -148,10 +148,21 @@ def convert_flow(
         (files_dir / file_name).write_bytes(body)
         response["bodyFileName"] = file_name
 
+    # WireMock matches against the path the *app* sends. With hermetic mode
+    # on, the app rewrites every outbound URL to `/<original-host>/<path>`
+    # (see HermeticInterceptor on Android, HermeticURLProtocol on iOS), so the
+    # mapping must match that shape — not the original captured path.
+    host = (req.host or "").lower()
+    original_path = req.path  # path + query
+    if host and not original_path.startswith(f"/{host}/") and original_path != f"/{host}":
+        match_url = f"/{host}{original_path}"
+    else:
+        match_url = original_path
+
     mapping = {
         "request": {
             "method": req.method,
-            "url": req.path,  # path + query
+            "url": match_url,
         },
         "response": response,
     }
