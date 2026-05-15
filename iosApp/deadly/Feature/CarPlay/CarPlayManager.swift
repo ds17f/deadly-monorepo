@@ -33,7 +33,8 @@ final class CarPlayManager {
             showRepository: container.showRepository,
             archiveClient: container.archiveClient,
             recordingPreferenceDAO: RecordingPreferenceDAO(database: container.database),
-            downloadService: container.downloadService
+            downloadService: container.downloadService,
+            appPreferences: container.appPreferences
         )
         self.placeholderImage = UIImage(named: "deadly_logo_square")
     }

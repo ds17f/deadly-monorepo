@@ -14,6 +14,15 @@ class DeadlyAppDelegate: NSObject, UIApplicationDelegate {
     ) -> Bool {
         DeadlyAppDelegate.shared = self
 
+        // Hermetic test framework (DEAD-350): when the toggle is on in Developer
+        // Settings, route all URLSession traffic through the configured WireMock
+        // server. AVPlayer / CFNetwork-direct traffic bypasses URLProtocol and is
+        // handled separately at audio URL construction sites.
+        URLProtocol.registerClass(HermeticURLProtocol.self)
+        HermeticURLProtocol.setBaseURLProvider { [weak self] in
+            self?.container.appPreferences.effectiveHermeticBaseURL
+        }
+
         // Force opaque nav bar so scroll content doesn't show through
         let navAppearance = UINavigationBarAppearance()
         navAppearance.configureWithOpaqueBackground()

@@ -23,6 +23,7 @@ final class PlaylistServiceImpl: PlaylistService {
     private let recordingPreferenceDAO: RecordingPreferenceDAO
     private let downloadService: DownloadService?
     private let analyticsService: AnalyticsService?
+    private let appPreferences: AppPreferences
     let streamPlayer: StreamPlayer
 
     /// Tracks the currently playing item for playback_end analytics.
@@ -92,7 +93,8 @@ final class PlaylistServiceImpl: PlaylistService {
         recordingPreferenceDAO: RecordingPreferenceDAO,
         streamPlayer: StreamPlayer,
         downloadService: DownloadService? = nil,
-        analyticsService: AnalyticsService? = nil
+        analyticsService: AnalyticsService? = nil,
+        appPreferences: AppPreferences
     ) {
         self.showRepository = showRepository
         self.archiveClient = archiveClient
@@ -101,6 +103,7 @@ final class PlaylistServiceImpl: PlaylistService {
         self.streamPlayer = streamPlayer
         self.downloadService = downloadService
         self.analyticsService = analyticsService
+        self.appPreferences = appPreferences
 
         MainActor.assumeIsolated {
             self.startProgressObservation()
@@ -254,7 +257,9 @@ final class PlaylistServiceImpl: PlaylistService {
             if let localURL = downloadService?.localURL(for: recordingId, trackFilename: track.name) {
                 url = localURL
             } else {
-                url = track.streamURL(recordingId: recordingId)
+                // Hermetic mode rewrites the AVPlayer-bound audio URL to route through
+                // the configured WireMock server. No-op when hermetic mode is off.
+                url = appPreferences.hermeticRewrite(track.streamURL(recordingId: recordingId))
             }
             return TrackItem(
                 url: url,

@@ -176,7 +176,8 @@ final class AppContainer {
                 recordingPreferenceDAO: RecordingPreferenceDAO(database: db),
                 streamPlayer: player,
                 downloadService: downloadSvc,
-                analyticsService: analytics
+                analyticsService: analytics,
+                appPreferences: prefs
             )
             playlistService = playlistSvc
 

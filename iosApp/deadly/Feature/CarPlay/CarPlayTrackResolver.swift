@@ -9,6 +9,7 @@ final class CarPlayTrackResolver {
     private let archiveClient: any ArchiveMetadataClient
     private let recordingPreferenceDAO: RecordingPreferenceDAO
     private let downloadService: DownloadService?
+    private let appPreferences: AppPreferences
 
     private static let formatPriority = ["VBR MP3", "MP3", "Ogg Vorbis"]
 
@@ -16,12 +17,14 @@ final class CarPlayTrackResolver {
         showRepository: some ShowRepository,
         archiveClient: some ArchiveMetadataClient,
         recordingPreferenceDAO: RecordingPreferenceDAO,
-        downloadService: DownloadService? = nil
+        downloadService: DownloadService? = nil,
+        appPreferences: AppPreferences
     ) {
         self.showRepository = showRepository
         self.archiveClient = archiveClient
         self.recordingPreferenceDAO = recordingPreferenceDAO
         self.downloadService = downloadService
+        self.appPreferences = appPreferences
     }
 
     struct ResolvedShow {
@@ -90,7 +93,8 @@ final class CarPlayTrackResolver {
             if let localURL = downloadService?.localURL(for: recordingId, trackFilename: track.name) {
                 url = localURL
             } else {
-                url = track.streamURL(recordingId: recordingId)
+                // Hermetic rewrite for AVPlayer-bound audio (URLProtocol doesn't catch this).
+                url = appPreferences.hermeticRewrite(track.streamURL(recordingId: recordingId))
             }
             return TrackItem(
                 url: url,

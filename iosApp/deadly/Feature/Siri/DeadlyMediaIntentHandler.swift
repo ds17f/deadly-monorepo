@@ -14,7 +14,8 @@ final class DeadlyMediaIntentHandler: NSObject, INPlayMediaIntentHandling {
             showRepository: container.showRepository,
             archiveClient: container.archiveClient,
             recordingPreferenceDAO: RecordingPreferenceDAO(database: container.database),
-            downloadService: container.downloadService
+            downloadService: container.downloadService,
+            appPreferences: container.appPreferences
         )
         super.init()
     }

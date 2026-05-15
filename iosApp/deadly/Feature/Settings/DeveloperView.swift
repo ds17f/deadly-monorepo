@@ -50,6 +50,33 @@ struct DeveloperView: View {
                 }
 
                 Toggle(isOn: Binding(
+                    get: { container.appPreferences.hermeticModeEnabled },
+                    set: { container.appPreferences.hermeticModeEnabled = $0 }
+                )) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Hermetic mode")
+                        Text("Route external traffic (archive.org, GitHub, lyrics, etc.) through a local WireMock server.")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+
+                TextField("Hermetic server URL", text: Binding(
+                    get: { container.appPreferences.hermeticBaseURL },
+                    set: { container.appPreferences.hermeticBaseURL = $0 }
+                ))
+                .textInputAutocapitalization(.never)
+                .autocorrectionDisabled()
+                .keyboardType(.URL)
+
+                Button("Reload against hermetic server") {
+                    // Network clients re-read the URL on every request, so the next
+                    // call automatically picks up the new routing — this button is a
+                    // hook for future cache-invalidation work (DEAD-352 / DEAD-355).
+                }
+                .disabled(!container.appPreferences.hermeticModeEnabled || container.appPreferences.hermeticBaseURL.isEmpty)
+
+                Toggle(isOn: Binding(
                     get: { container.appPreferences.forceOnline },
                     set: { container.appPreferences.forceOnline = $0 }
                 )) {
