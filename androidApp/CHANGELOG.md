@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.27.1] - 2026-05-17
+
+### Bug Fixes
+* seed controller state on connect to restore MiniPlayer (DEAD-360) (#41) (7458b7b4)
+
+
 ## [2.27.0] - 2026-05-12
 
 ### New Features
@@ -11,8 +17,6 @@
 
 ### CI Changes
 * promote workflows must check out the version tag, not main (#34) (5dfbcc20)
-
-
 ## [2.26.0] - 2026-05-10
 
 ### New Features
