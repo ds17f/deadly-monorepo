@@ -29,22 +29,21 @@ import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 
-# Hand-picked canonical shows. Each is recognizable to Dead listeners,
-# covers a different era, and exercises different fixture shapes
-# (recordings present vs. empty, single vs. multi-recording, etc.).
+# Hand-picked canonical shows. Start minimal — add a show only when a
+# specific test scenario actually needs the coverage it gives. The
+# corresponding WireMock mappings (metadata, audio, images) all have to
+# be hand-authored, so each addition has real fixture-authoring cost.
+#
+# Currently 1 show, 4 recordings — enough for the happy-path verification
+# scenarios (cold launch, list rendering, show detail, recording selection,
+# playback, next/prev track). Empty-recordings edge case, multi-show
+# navigation, era coverage etc. are deferred until a test demands them.
 CANONICAL_SHOWS = [
-    # 1965 — early Acid Test era, no archive recordings (edge case: empty `recordings`)
-    "1965-12-04-big-nigs-house-san-jose-ca-usa",
-    # 1969 — early Pigpen era at the Fillmore West, recordings present
-    "1969-02-27-fillmore-west-san-francisco-ca-usa",
-    # 1972 — Europe '72, London Lyceum
+    # 1972 — Europe '72, London Lyceum. Small show (4 recordings) so the
+    # recording-selection scenario can be exercised without a huge fixture
+    # set, and the Europe '72 catalog is well-known enough to be obvious
+    # what's going on when debugging fixtures.
     "1972-05-26-the-strand-lyceum-london-england",
-    # 1977 — the legendary Cornell show, multi-recording
-    "1977-05-08-barton-hall-cornell-u-ithaca-ny-usa",
-    # 1990 — late-Brent / Bruce era, big arena show
-    "1990-03-29-nassau-coliseum-uniondale-ny-usa",
-    # 1993 — Vince era, a representative late show
-    "1993-05-16-sam-boyd-silver-bowl-u-n-l-v-las-vegas-nv-usa",
 ]
 
 
