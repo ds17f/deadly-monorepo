@@ -635,7 +635,32 @@ class MediaControllerRepository @Inject constructor(
                     })
                     
                     Log.d(TAG, "MediaController connected successfully")
-                    
+
+                    // Seed state flows from the controller's existing state.
+                    // Player.Listener callbacks do not replay current state on
+                    // attach, so when we connect to a session that already has
+                    // a queue loaded (e.g. AA started playback via
+                    // onPlaybackResumption while the phone was asleep, or the
+                    // service survived an app re-launch), nothing fires and
+                    // _currentRecordingId stays null — which keeps the MiniPlayer
+                    // hidden even though playback is live (DEAD-360).
+                    val initialItem = controller.currentMediaItem
+                    if (initialItem != null) {
+                        _currentMediaItem.value = initialItem
+                        _currentTrack.value = controller.mediaMetadata
+                        _currentShowId.value = extractShowIdFromMediaItem(initialItem)
+                        _currentRecordingId.value = extractRecordingIdFromMediaItem(initialItem)
+                        _currentTrackIndex.value = controller.currentMediaItemIndex
+                        _mediaItemCount.value = controller.mediaItemCount
+                        _isPlaying.value = controller.isPlaying
+                        currentIsPlaying = controller.isPlaying
+                        currentExoPlayerState = controller.playbackState
+                        _duration.value = controller.duration.coerceAtLeast(0L)
+                        _currentPosition.value = controller.currentPosition.coerceAtLeast(0L)
+                        updatePlaybackState()
+                        Log.d(TAG, "Seeded state from existing controller: show=${_currentShowId.value}, rec=${_currentRecordingId.value}, idx=${_currentTrackIndex.value}, count=${_mediaItemCount.value}, isPlaying=${controller.isPlaying}")
+                    }
+
                     // Start position updater for MiniPlayer
                     startPositionUpdater()
                     
