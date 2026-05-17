@@ -10,7 +10,6 @@ services:
       - ./fixtures/mappings:/home/wiremock/mappings:ro,z
       - ./fixtures/__files:/home/wiremock/__files:ro,z
     command:
-      - --global-response-templating
       - --verbose
     healthcheck:
       test: ["CMD-SHELL", "wget -q -O /dev/null http://localhost:8080/__admin/health || exit 1"]

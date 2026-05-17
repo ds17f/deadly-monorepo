@@ -48,6 +48,7 @@ RESPONSE_HEADER_ALLOWLIST = {
     "last-modified",
     "cache-control",
     "vary",
+    "location",
 }
 # Allowed-by-prefix (archive.org informational headers, useful in logs)
 RESPONSE_HEADER_ALLOWLIST_PREFIXES = ("x-archive-",)
