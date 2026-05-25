@@ -57,6 +57,7 @@ fun HomeScreen(
             item {
                 RecentShowsGrid(
                     shows = uiState.homeContent.recentShows,
+                    rows = uiState.homeContent.recentRows,
                     onShowClick = onNavigateToShow,
                     onShowLongPress = { show ->
                         detailShow = show

@@ -122,6 +122,17 @@ class SettingsViewModel @Inject constructor(
         ))
     }
 
+    val homeRecentRows: StateFlow<Int> = appPreferences.homeRecentRows
+
+    fun setHomeRecentRows(value: Int) {
+        appPreferences.setHomeRecentRows(value)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_home_recent_rows",
+            "category" to "preference",
+            "value" to value.toString(),
+        ))
+    }
+
     val authState: StateFlow<AuthState> = authService.authState
 
     val useBetaMode: StateFlow<Boolean> = appPreferences.useBetaModeFlow

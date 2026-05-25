@@ -25,24 +25,23 @@ import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.core.model.Show
 
 /**
- * Recent Shows Grid - 2-column layout showing recently played shows.
- * Defaults to 4 (2x2) to keep the home screen short; a "Show more" /
- * "Show less" footer reveals up to 8.
+ * Recent Shows Grid - 2-column layout. The number of rows is a user
+ * preference (1..4); each row holds 2 shows. Set in Settings.
  */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun RecentShowsGrid(
     shows: List<Show>,
+    rows: Int,
     onShowClick: (String) -> Unit,
     onShowLongPress: (Show) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    var expanded by rememberSaveable { mutableStateOf(false) }
-    val limit = if (expanded) 8 else 4
-    val displayShows = shows.take(limit)
+    val clampedRows = rows.coerceIn(1, 4)
+    val displayShows = shows.take(clampedRows * 2)
     val rowCount = (displayShows.size + 1) / 2
+    if (rowCount == 0) return
     val gridHeight = (rowCount * 80 + (rowCount - 1) * 4).dp
-    val canExpand = shows.size > 4
 
     Column(modifier = modifier.fillMaxWidth()) {
         Text(
@@ -67,17 +66,6 @@ fun RecentShowsGrid(
                     onShowClick = { onShowClick(show.id) },
                     onShowLongPress = { onShowLongPress(show) }
                 )
-            }
-        }
-
-        if (canExpand) {
-            TextButton(
-                onClick = { expanded = !expanded },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 4.dp),
-            ) {
-                Text(if (expanded) "Show less" else "Show more")
             }
         }
     }

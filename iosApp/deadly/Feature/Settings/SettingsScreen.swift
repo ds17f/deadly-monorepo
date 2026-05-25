@@ -223,6 +223,29 @@ struct SettingsScreen: View {
                             .foregroundStyle(.secondary)
                     }
                 }
+
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Recently Played rows")
+                    Picker("Recently Played rows", selection: Binding(
+                        get: { container.appPreferences.homeRecentRows },
+                        set: { newRows in
+                            container.appPreferences.homeRecentRows = newRows
+                            container.analyticsService.track("feature_use", props: [
+                                "feature": "set_home_recent_rows",
+                                "category": "preference",
+                                "value": String(newRows),
+                            ])
+                        }
+                    )) {
+                        ForEach(1...4, id: \.self) { rows in
+                            Text("\(rows)").tag(rows)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    Text("How many rows of recent shows on the home screen (2 shows per row).")
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
+                }
             }
 
             // MARK: - Audio

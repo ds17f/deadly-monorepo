@@ -55,6 +55,7 @@ class AppPreferences @Inject constructor(
         private const val KEY_PLAYER_CONTROLS_STYLE = "player_controls_style"
         private const val KEY_HOME_TRENDING_WINDOW = "home_trending_window"
         private const val KEY_HOME_TRENDING_ABOVE_TODAY = "home_trending_above_today"
+        private const val KEY_HOME_RECENT_ROWS = "home_recent_rows"
     }
 
     private val _homeTrendingAboveToday = MutableStateFlow(
@@ -67,6 +68,19 @@ class AppPreferences @Inject constructor(
     fun setHomeTrendingAboveToday(value: Boolean) {
         prefs.edit().putBoolean(KEY_HOME_TRENDING_ABOVE_TODAY, value).apply()
         _homeTrendingAboveToday.value = value
+    }
+
+    private val _homeRecentRows = MutableStateFlow(
+        prefs.getInt(KEY_HOME_RECENT_ROWS, 2).coerceIn(1, 4)
+    )
+
+    /** How many rows of Recently Played to render on the home screen (1..4). Each row holds 2 shows. */
+    val homeRecentRows: StateFlow<Int> = _homeRecentRows.asStateFlow()
+
+    fun setHomeRecentRows(value: Int) {
+        val clamped = value.coerceIn(1, 4)
+        prefs.edit().putInt(KEY_HOME_RECENT_ROWS, clamped).apply()
+        _homeRecentRows.value = clamped
     }
 
     private val _homeTrendingWindow = MutableStateFlow(

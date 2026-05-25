@@ -47,6 +47,8 @@ data class HomeContent(
     val trendingWindow: TrendingWindow,
     /** When true, Trending renders above Today in History; otherwise below. */
     val trendingAboveToday: Boolean,
+    /** How many rows of Recently Played to render (1..4). Each row = 2 shows. */
+    val recentRows: Int,
     val lastRefresh: Long
 ) {
     companion object {
@@ -57,6 +59,7 @@ data class HomeContent(
             trendingShows = emptyList(),
             trendingWindow = TrendingWindow.NOW,
             trendingAboveToday = false,
+            recentRows = 2,
             lastRefresh = 0L
         )
     }

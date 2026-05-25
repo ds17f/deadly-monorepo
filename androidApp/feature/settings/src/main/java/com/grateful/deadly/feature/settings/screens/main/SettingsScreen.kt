@@ -38,6 +38,7 @@ fun SettingsScreen(
     val playerControlsStyle by viewModel.playerControlsStyle.collectAsState()
     val homeTrendingWindow by viewModel.homeTrendingWindow.collectAsState()
     val homeTrendingAboveToday by viewModel.homeTrendingAboveToday.collectAsState()
+    val homeRecentRows by viewModel.homeRecentRows.collectAsState()
     val authState by viewModel.authState.collectAsState()
     val serverEnvironment by viewModel.serverEnvironment.collectAsState()
     val developerModeUnlocked by viewModel.developerModeUnlocked.collectAsState()
@@ -156,6 +157,13 @@ fun SettingsScreen(
                 subtitle = "Move the Trending section below \"Today In Grateful Dead History\" by turning this off.",
                 checked = homeTrendingAboveToday,
                 onCheckedChange = { viewModel.toggleHomeTrendingAboveToday() }
+            )
+        }
+
+        item {
+            HomeRecentRowsRow(
+                currentRows = homeRecentRows,
+                onSelected = { viewModel.setHomeRecentRows(it) }
             )
         }
 
@@ -543,6 +551,41 @@ private fun PlayerControlsStyleRow(
 }
 
 // ── Source badge style selector ──────────────────────────────────────────────
+
+@Composable
+private fun HomeRecentRowsRow(
+    currentRows: Int,
+    onSelected: (Int) -> Unit
+) {
+    val options = listOf(1, 2, 3, 4)
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+    ) {
+        Text(text = "Recently Played rows", style = MaterialTheme.typography.bodyLarge)
+        Text(
+            text = "How many rows of recent shows on the home screen (2 shows per row)",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+            options.forEachIndexed { index, rows ->
+                SegmentedButton(
+                    selected = currentRows == rows,
+                    onClick = { onSelected(rows) },
+                    shape = SegmentedButtonDefaults.itemShape(
+                        index = index,
+                        count = options.size
+                    )
+                ) {
+                    Text(rows.toString())
+                }
+            }
+        }
+    }
+}
 
 @Composable
 private fun HomeTrendingWindowRow(

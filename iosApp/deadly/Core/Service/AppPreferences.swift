@@ -21,6 +21,7 @@ final class AppPreferences {
     private static let playerControlsStyleKey = "player_controls_style"
     private static let homeTrendingWindowKey = "home_trending_window"
     private static let homeTrendingAboveTodayKey = "home_trending_above_today"
+    private static let homeRecentRowsKey = "home_recent_rows"
 
     /// Server environment: "prod", "beta", or "custom".
     var serverEnvironment: String {
@@ -109,6 +110,15 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(homeTrendingAboveToday, forKey: Self.homeTrendingAboveTodayKey) }
     }
 
+    /// Rows of Recently Played to render on home (1..4). Each row = 2 shows.
+    var homeRecentRows: Int {
+        didSet {
+            let clamped = max(1, min(4, homeRecentRows))
+            if clamped != homeRecentRows { homeRecentRows = clamped; return }
+            UserDefaults.standard.set(homeRecentRows, forKey: Self.homeRecentRowsKey)
+        }
+    }
+
     /// Persistent install ID (UUID). Generated once on first access, survives opt-out/opt-in cycles.
     let installId: String
 
@@ -132,6 +142,7 @@ final class AppPreferences {
             Self.playerControlsStyleKey: "skipTrack",
             Self.homeTrendingWindowKey: "now",
             Self.homeTrendingAboveTodayKey: false,
+            Self.homeRecentRowsKey: 2,
         ])
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
         customServerUrl = UserDefaults.standard.string(forKey: Self.customServerUrlKey) ?? ""
@@ -154,6 +165,7 @@ final class AppPreferences {
         playerControlsStyle = UserDefaults.standard.string(forKey: Self.playerControlsStyleKey) ?? "skipTrack"
         homeTrendingWindow = UserDefaults.standard.string(forKey: Self.homeTrendingWindowKey) ?? "now"
         homeTrendingAboveToday = UserDefaults.standard.bool(forKey: Self.homeTrendingAboveTodayKey)
+        homeRecentRows = max(1, min(4, UserDefaults.standard.integer(forKey: Self.homeRecentRowsKey)))
         analyticsEnabled = UserDefaults.standard.object(forKey: Self.analyticsEnabledKey) == nil
             ? true
             : UserDefaults.standard.bool(forKey: Self.analyticsEnabledKey)

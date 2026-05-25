@@ -50,29 +50,31 @@ class HomeServiceImpl @Inject constructor(
     private val serviceScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
     
     // Reactive combination of all home content sources
-    // Pair the two preference flows so the main combine stays at 5 args
+    // Bundle the preference flows so the main combine stays at 5 args
     // (Flow.combine's typed overloads top out at 5).
-    private val trendingPrefs = combine(
+    private data class HomePrefs(val windowKey: String, val aboveToday: Boolean, val recentRows: Int)
+    private val homePrefs = combine(
         appPreferences.homeTrendingWindow,
         appPreferences.homeTrendingAboveToday,
-    ) { windowKey, aboveToday -> windowKey to aboveToday }
+        appPreferences.homeRecentRows,
+    ) { windowKey, aboveToday, recentRows -> HomePrefs(windowKey, aboveToday, recentRows) }
 
     override val homeContent: StateFlow<HomeContent> = combine(
         recentShowsService.recentShows,
         loadTodayInHistoryFlow(),
         collectionsService.featuredCollections,
         trendingService.trending,
-        trendingPrefs
+        homePrefs
     ) { recentShows, todayInHistory, featuredCollections, trending, prefs ->
-        val (windowKey, aboveToday) = prefs
-        val window = TrendingWindow.fromKey(windowKey)
+        val window = TrendingWindow.fromKey(prefs.windowKey)
         HomeContent(
             recentShows = recentShows,
             todayInHistory = todayInHistory,
             featuredCollections = featuredCollections,
             trendingShows = trending.forWindow(window),
             trendingWindow = window,
-            trendingAboveToday = aboveToday,
+            trendingAboveToday = prefs.aboveToday,
+            recentRows = prefs.recentRows,
             lastRefresh = System.currentTimeMillis()
         )
     }.stateIn(
